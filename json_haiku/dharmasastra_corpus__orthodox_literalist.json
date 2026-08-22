@@ -2,185 +2,484 @@
   "header": {
     "constraint_id": "dharmasastra_corpus__orthodox_literalist",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "module_name_override": "constraint_dharmasastra_corpus__orthodox_literalist",
-    "story_uid": "2b712d62-2802-4f94-9574-5c5cc43834ba"
+    "story_uid": "d21418ff-c45b-4e3b-a5b7-589ae771a326"
   },
   "base_properties": {
-    "extractiveness": 0.82,
-    "suppression": 0.88,
+    "extractiveness": 0.87,
+    "suppression": 0.91,
     "theater_ratio": 0.42,
-    "accessibility_collapse": 0.91,
-    "resistance": 0.73,
+    "accessibility_collapse": 0.89,
+    "resistance": 0.76,
     "claimed_type": "snare",
-    "human_readable": "Orthodox Literalist Dharmasastra Hierarchy",
-    "topic_domain": "religious/legal/social",
+    "human_readable": "Dharmasastra Varna Hierarchy: Orthodox Literalist Reading",
+    "topic_domain": "religious/legal/normative",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "brahmin_ritual_monopoly",
-      "dvija_property_rights",
-      "patriarchal_household_authority"
+      "brahmin_priesthood",
+      "kshatriya_rulers",
+      "vaishya_merchants"
     ],
     "victims": [
-      "dalits_untouchables",
-      "shudras_laboring_castes",
-      "women_excluded_ritual",
-      "excluded_from_vedic_education"
+      "shudras",
+      "dalits",
+      "women_all_varnas"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "brahmin_priesthood",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Interprets and enforces Dharmasastra prescriptions through ritual authority, textual commentary, and educational gatekeeping. Claims hereditary right to Vedic knowledge and ritual conduct. Sets the boundaries of legitimate religious practice and determines who may perform sacred functions. Birth-locked into this role; social identity and professional authority are fused with Brahmin status and textual mastery."
+    },
+    {
+      "name": "kshatriya_rulers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Derive legitimacy from Dharmasastra's prescription of Kshatriya rule and martial duty. Use varna hierarchy to justify hierarchical governance and enforcement of caste law. Benefit from a framework that places them second only to Brahmins and subordinates all others. Identity and authority are constitutionally entwined with varna status and dharmic kingship."
+    },
+    {
+      "name": "vaishya_merchants",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Occupy the third varna, permitted to accumulate wealth and conduct commerce while shielded from the lowest ritual status. Benefit from access to education, ritual participation, and freedom to conduct economic activity denied to Shudras and Dalits. Constrained by varna duties but not by enforced ritual purity violations. Exit would mean relinquishing merchant-caste identity and the wealth-accumulation freedom it permits."
+    },
+    {
+      "name": "shudras",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Prescribed to serve the upper three varnas with no claim to Vedic knowledge, ritual purity, or political authority. Excluded from learning sacred texts and performing Vedic rites. Forced to accept occupational specialization inherited from birth. Required to pay taxes and rents to rulers and landholding Brahmins and Kshatriyas. Exit means social death and loss of all community structures and identity."
+    },
+    {
+      "name": "dalits",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Placed entirely outside the varna system as 'untouchable,' assigned occupations involving ritual pollution (tanning, leather work, removal of human and animal waste). Subject to enforced segregation, denied access to water sources, temples, and public spaces shared with caste Hindus. Prescribed duties include touching no one ritually higher, bearing additional humiliation burdens, and providing menial labor without compensation. Exit from untouchability status is structurally impossible within the framework."
+    },
+    {
+      "name": "women_all_varnas",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Excluded from Vedic learning and independent ritual authority across all varnas. Subject to lifelong guardianship: first father, then husband, then son. Denied property rights, access to public life, and independent decision-making. Prescribed duties emphasize obedience, sexual fidelity, and service. Identity as wife, mother, and dutiful dependent is the only legitimate frame; exit to independent life is socially and economically impossible."
+    },
+    {
+      "name": "reformist_interpreters",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hindu reformers who argue for reinterpretation of Dharmasastra to separate its ethical core from time-bound caste prescriptions. Are systematically excluded from orthodox textual authority structures. Can publish arguments and attract intellectual followers but cannot access institutional control of temples, schools, or ritual authority. Their exclusion is maintained by the very authority structure they critique."
+    },
+    {
+      "name": "abolitionist_movements",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Dalit and women's movements rejecting Dharmasastra entirely and demanding abolition of caste. Lack access to institutional authority over religious education and interpretation. Can organize resistance and advocate for legal prohibition but are structurally silenced within orthodox textual authority circles. Their exclusion and suppression are structural to maintaining the constraint."
+    },
+    {
+      "name": "brahminical_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Modern academic scholars analyzing Dharmasastra texts, their historical context, and their interpretive traditions. Take testimony from affected communities, study variant commentaries, and map the text's use in justifying oppression. Their analysis documents how the constraint operates and persists."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The Dharmasastra framework purports to establish cosmic order (rita) and social stability by prescribing each varna with divinely ordained duties (svadharma). The coordination problem framed is: how is social organization legitimated, and who determines proper ritual and occupational roles? The answer: through eternal textual prescription, interpreted by Brahmins, enforced by Kshatriya rulers.",
+    "transfer_function": "Moves labor, ritual deference, sexual control, and economic surplus from lower varnas and all women upward: Shudras and Dalits provide service labor and pay taxes; women provide domestic and reproductive labor; upper-caste males claim exclusive rights to Vedic knowledge, ritual authority, property, and political power. The constraint transfers dignity and autonomy upward and outward from those prescribed lowest.",
+    "absent_voices": "Dalits and Shudras are explicitly excluded from participation in Vedic knowledge and ritual authority — their objections to their prescribed roles cannot be voiced within the framework's own terms (since they lack standing to interpret dharma). Women across all varnas are excluded from independent theological voice and education. Reformist and abolitionist interpreters are systematically excluded from institutional authority over textual interpretation and religious education, though they can mount external critiques.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Dharmasastra varna hierarchy and its claim to revealed, eternal validity disappeared overnight, the entire institutional structure legitimating Brahminical priesthood, Kshatriya rule, gender subordination, and caste-based occupational assignment would lose its primary warrant. Alternative social orderings (democratic governance, occupational choice, gender equality, inter-caste intermarriage) could emerge. The constraint's persistence depends on its authority being accepted as sacred and immutable; loss of that framing would trigger institutional reorganization.",
+    "founding_problem": "In early Vedic period, the constraint was justified as solving the problem of how a complex, stratified agricultural society organizes labor and ritual authority. The problem framed was: how are specialized roles assigned and maintained? The Dharmasastra answer: through birth-determined varna and jati, justified as cosmic necessity.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The founding problem — justifying occupational specialization in a pre-industrial agricultural economy — ceased to be live once industrialization, democratic governance, and market economies arrived. Modern Hindu scholars outside the orthodox literalist tradition, Dalit scholars, and women's-rights advocates attest the founding problem is obsolete. Even orthodox scholars acknowledge the problem's historical anchorage, though they argue the prescription's eternal validity transcends its original context. Legislative history (abolition of untouchability in India's Constitution) and international human-rights consensus document the problem's displacement. No credible secular authority defending occupational caste-assignment exists outside the literalist reading itself."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.78
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.79
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.81
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 32,
       "value": 0.82
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.82
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.37
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.39
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.42
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 5,
       "value": 0.84
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.85
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 16,
+      "metric": "base_extractiveness",
+      "time_point": 10,
       "value": 0.86
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 24,
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.87
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
       "value": 0.87
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 32,
+      "time_point": 0,
       "value": 0.88
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.88
+      "time_point": 5,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.91
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.91
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "The orthodox literalist reading of Dharmasastra treats the varna/jati hierarchy and its associated prescriptions as eternal, revealed cosmic truth requiring literal observance across generations. This is ONE READING of a contested kernel (the Dharmasastra textual corpus) whose meaning is disputed. The literalist reading benefits upper castes (especially Brahmins) and those positioned high in the occupational hierarchy, while imposing systematic extraction on Shudras, Dalits, and women. The constraint persists through identity-lock (caste identity fusion with hereditary role), institutional monopoly (Brahmin interpretive authority), and suppression (social sanction, legal disability, exclusion from education). This reading sits in structural opposition to the reformist reading (which treats caste prescriptions as time-bound) and the abolitionist reading (which treats the framework as fundamentally illegitimate).",
+    "narrative_context": "The orthodox literalist reading of Dharmasastra asserts that the varna hierarchy and its occupational prescriptions are eternal, divinely revealed truths inscribed in sacred texts and requiring literal observance. Under this reading, Brahminical priesthood, Kshatriya rulership, Vaishya commerce, Shudra servitude, and the exclusion of Dalits constitute a cosmic order (rita) that should not be questioned or reformed. Women across all varnas are prescribed subordination and exclusion from Vedic knowledge. The constraint extracts labor, dignity, and autonomy from lower castes and all women and concentrates authority and benefit in upper-caste males. This is ONE reading of the contested Dharmasastra kernel; sibling readings (reformist_contextual, abolitionist_rejection) claim different ε values and different victim structures because they instantiate different understandings of the same textual corpus.",
     "key_agents": [
-      "brahmin_ritual_authority: Institutional agenda-setter, interprets and enforces the constraint, claims monopoly on textual meaning, identity-locked to the literalist framework",
-      "upper_caste_landholders: Institutional beneficiaries, retain property and household authority, constrained exit (identity/status loss if hierarchy dissolves)",
-      "shudras_laboring_castes: Powerless payers, bound to hereditary labor, barred from Vedic study, identity-locked to subordination",
-      "dalits_untouchables: Powerless payers, constitutionally outside varna, assigned polluting work, ritual exclusion enforced textually",
-      "women_dvija_brahmin: Moderate-power payers, excluded from Vedic ritual and independent authority, identity-locked through household dependence",
-      "reformist_reinterpreters: Excluded actors, propose contextual reading, face institutional marginalization from orthodox monopoly",
-      "abolitionist_movements: Excluded actors, reject framework entirely, access power only through exit and legal/modern institutions",
-      "modern_secular_state: Observer seat, constitutional authority forbids caste discrimination while citizens organize through caste"
+      "brahmin_priesthood: Guards the interpretation of sacred texts and Vedic knowledge; justifies their authority as revealed and eternal.",
+      "kshatriya_rulers: Derive legitimacy from the varna framework for hierarchical governance and enforcement of caste law.",
+      "vaishya_merchants: Benefit from third-varna status and access to wealth-accumulation, constrained but privileged relative to Shudras and Dalits.",
+      "shudras: Prescribed to serve, excluded from Vedic knowledge and ritual purity, trapped in inherited occupational roles.",
+      "dalits: Placed outside the varna system entirely, subject to enforced segregation and humiliation, assigned polluting occupations.",
+      "women_all_varnas: Excluded from Vedic learning and independent authority across all castes, prescribed lifelong guardianship and subordination.",
+      "reformist_interpreters: Argue for reinterpretation separating dharma's ethical core from caste prescriptions; systematically excluded from institutional authority.",
+      "abolitionist_movements: Reject Dharmasastra entirely and demand abolition of caste; silenced within orthodox authority structures."
     ],
-    "logic_rationale": "Extractiveness is high (0.82) and rising slightly because the constraint systematically transfers labor, property rights, and authority from subordinated to dominant groups, justified by claims of eternal cosmic necessity. Suppression is highest of all metrics (0.88) because the constraint's persistence depends absolutely on preventing exit: Shudras and Dalits cannot leave their caste without complete social death; women cannot escape household subordination without becoming social outcasts. Theater ratio is moderate (0.42, rising to 0.42 at interval end) because the constraint performs real coordination (ritual calendar, occupational specialization) alongside extraction — the coordination components are genuine but increasingly theatricalized as the founding problem (cosmic order maintenance) becomes empirically unmaintainable in modern contexts. Accessibility collapse is very high (0.91) because once a person's caste identity is established at birth, alternatives are not merely constrained but existentially foreclosed within the constraint-governed society — exit means death to one's community. Resistance is substantial (0.73) because excluded populations have mounted continuous, escalating resistance through reform movements, religious conversions, legal challenges, and mass mobilization, especially under modern legal frameworks. The measurement series is authored on a shared grid across all three metrics at every time point; extractiveness shows slight rise as institutional hardening occurs (increasingly formal enforcement in modern period); theater ratio rises as the founding cosmological claim becomes less credible while the institutional structure persists; suppression requirement stays high and stable because the constraint cannot be maintained without active enforcement. Cyclical dynamics are not primary here; the constraint shows long-term institutional stability despite eroding legitimacy.",
-    "perspectival_gap": "The brahmin_ritual_authority and upper_caste_landholders will compute as experiencing a rope or coordination benefit (genuine institutional function, low directionality toward extraction for those high in the hierarchy). The shudras_laboring_castes and dalits_untouchables will compute as experiencing a snare (high directionality toward extraction, trapped exit, no genuine benefit). Women_dvija_brahmin occupy a mixed position: moderate power but identity-locked exit and structural subordination place them substantially toward the target end despite upper-caste birth. The reformist and abolitionist excluded seats, if they had access to institutional power, would detect the snare structure immediately; their exclusion is itself part of the enforcement machinery. This seat divergence is structural, not normative: the engine computes it from power atoms, exit options, and beneficiary/victim declarations.",
-    "directionality_logic": "Brahmin ritual authority: d ≈ 0.1 (powerful, identity-locked but beneficiary side of that lock, monopoly position = arbitrage-grade mobility within the system). Upper-caste landholders: d ≈ 0.15–0.25 (powerful but constrained by caste rules; beneficiary of extraction but pay in ritual obligation and marriage restriction; exit is possible but costs status). Shudras: d ≈ 0.85–0.92 (powerless, identity-locked to subordination, extraction with no reciprocal benefit, trapped exit). Dalits: d ≈ 0.95 (powerless, identity-locked to exclusion, maximum extraction, zero alternatives within the constraint). Women_dvija: d ≈ 0.60–0.70 (moderate power, identity-locked to household subordination, victim of extraction despite upper-caste birth). The directionality profile is highly asymmetric because the constraint is fundamentally extractive and identity-locking to the powerless and female. No overrides are necessary; the derivation chain (beneficiary/victim + exit + power) produces accurate d values.",
-    "mandatrophy_analysis": "Mandatrophy detection: founding_problem_status='contested' + disappearance_verdict='world_rearranges' signals that the founding problem (cosmic order maintenance via hierarchy) is NOT live — the modern state, constitutional frameworks, and egalitarian social organizations show that social order can be maintained without the prescribed hierarchy. The constraint persists through institutional inertia (Brahmin authority structures persist despite losing their foundational claim), identity-lock (caste membership remains socially constitutive), and active suppression (legal disability of Dalits persisted into modern legal codes). The theater ratio rising while extractiveness plateaus suggests an increasing proportion of enforcement activity is theatrical maintenance (defending the literalist claim despite its empirical weakness) rather than functional coordination. This profile is classic mandatrophy: the founding mandate has outlived its function; the constraint persists as inherited institutional power and identity-fusion rather than because the problem it claims to solve is live.",
-    "kernel_context": "This constraint is the ORTHODOX_LITERALIST reading of the dharmasastra_corpus kernel. The kernel is the Dharmasastra textual corpus and the question of what authority governs its interpretation and application. This reading instantiates the claim that the corpus embodies eternal, revealed cosmic truth requiring literal observance. The sibling readings are: (1) REFORMIST_CONTEXTUAL — dharmasastra reflects historical social conditions; the ethical core (dharma as righteous conduct) is separable from time-bound caste prescriptions, permitting reinterpretation and reform; (2) ABOLITIONIST_REJECTION — the dharmasastra framework is fundamentally oppressive; no legitimate authority remains within the textual or institutional tradition; the entire caste system and its textual foundation must be abandoned. The orthodox literalist reading forecloses the abolitionist reading (literalism asserts the text is eternally binding; abolition asserts it is illegitimate — no framework holds both) but coexists with the reformist reading (both treat the text as authoritative but read it differently; different institutional factions hold each). The distinguishing claim of the literalist reading is that eternal, immutable cosmic truth is encoded in the text and requires precise behavioral conformity; the reformist reading separates historical prescription from timeless ethical principle, permitting adaptation. The abolitionist reading rejects the authority structure entirely."
+    "logic_rationale": "Extractiveness is very high (0.87) because the constraint systematically moves labor, dignity, autonomy, and economic surplus upward; it is decoupled from service provision (the 'cosmic order' framing invokes no cost-sharing, only duty-compliance from below). Suppression is higher still (0.91) because the constraint's persistence depends on silencing competing interpretations, denying education and textual authority to those prescribed lowest, and enforcing ritual purity rules backed by social ostracism and economic penalties. Theater ratio is moderate (0.42): the ritual and textual functions are real (temples function, scholarship occurs), but an increasing share of institutional effort goes to defending the hierarchy against internal and external challenge rather than performing its purported coordination role. Accessibility_collapse is very high (0.89) because once the framework is understood, alternatives appear structurally unavailable within its logic — Dalits and Shudras cannot 'choose' a different varna; women cannot 'exit' to gender equality within the framework. Resistance is substantial (0.76) because Dalit movements, women's movements, and reformist voices mount continuous challenge to the constraint's legitimacy.",
+    "perspectival_gap": "The beneficiary seats (Brahmin priesthood, Kshatriya rulers) should perceive the constraint as genuine cosmic order and legitimate coordination — they authored its claim and benefit from its enforcement. The victim seats (Shudras, Dalits, women) should perceive it as coerced extraction justified by false authority — they bear its costs and are denied voice in its interpretation. The engine computes this divergence from the directionality structure: beneficiaries approach d=0.0 (full subsidy), targets approach d=1.0 (full extraction). Vaishya merchants sit intermediately — they benefit from third-varna privilege but remain subject to some hierarchical constraints, giving them partial interest in the framework's stability but also potential arbitrage (if occupational rules loosen, their wealth could translate to caste upward mobility, but only through breaking the constraint).",
+    "directionality_logic": "Brahmin priesthood: identity-locked beneficiary (d ≈ 0.05). Their entire professional identity, educational pathway, and social authority rest on being Brahmin and sole interpreters of Dharmasastra. Exit means losing priesthood, ritual authority, textual mastery authority, and caste status — all their identity markers are fused with this role. Kshatriya rulers: identity-locked beneficiary (d ≈ 0.08). Rulership and legitimacy derive from varna status; exit means losing governance authority justified by the framework. Vaishya merchants: beneficiary with constrained exit (d ≈ 0.20). They benefit from third-varna status and wealth-accumulation freedom, but their exit is constrained: leaving merchant communities and pursuing other occupations would forfeit their wealth-accumulation privilege. Shudras: trapped target (d ≈ 0.95). They are assigned servitude, denied education and ritual authority, and forced to provide labor without commensurate return. Their exit is structurally impossible — they cannot change varna and have no alternative social role. Dalits: trapped target (d ≈ 0.99). They are placed entirely outside the varna system, subjected to enforced segregation and humiliating occupations. Exit from untouchability is logically impossible within the framework. Women (all varnas): identity-locked target (d ≈ 0.92). Their identity as daughters, wives, mothers is constitutively dependent on male guardianship and subordination. Exit to independent life is economically and socially impossible; their entire identity frame binds them to the hierarchy.",
+    "mandatrophy_analysis": "The founding problem (justifying occupational specialization in pre-industrial agricultural economies) is DEAD. Modern Hindu societies have industrialized, adopted democratic governance, opened education and occupational choice, and legally abolished untouchability. The constraint persists not because the founding problem lives but because the beneficiary seats (Brahminical priesthood, Kshatriya-descended rulers, Vaishya merchants) continue to extract authority and material benefit from it. The reformist reading emerged precisely to resolve this mandatrophy: it claims the ethical core of dharma (righteous conduct) is eternal while the caste prescriptions are time-bound and superseded. The abolitionist reading goes further: it denies the constraint's legitimacy entirely and demands its abolition. The orthodox literalist reading responds by reasserting the constraint's eternal, revealed status — it rejects the mandatrophy framing itself, treating the founding problem as still live at the cosmic level even if its empirical instantiation has changed. The constraint's persistence despite founding-problem death is precisely the signal that it is snare, not coordination.",
+    "kernel_context": "This constraint is the ORTHODOX LITERALIST reading of the contested Dharmasastra kernel. The kernel is the stable textual corpus (Manusmriti, Yajnavalkya Smriti, Narada Smriti) that multiple parties read differently. This reading instantiates the claim that the varna hierarchy and gender subordination are eternal, revealed prescriptions requiring literal observance. The sibling readings are: (1) reformist_contextual — argues the ethical core of dharma is eternal but the caste prescriptions reflect historical conditions and are supersedable; (2) abolitionist_rejection — rejects the constraint entirely and demands abolition of caste and the textual framework's authority. The three readings share the same textual kernel but diverge sharply on the ε value, victim structure, and legitimate authority. This reading (orthodox_literalist) has the highest ε (0.87), the broadest victim set (all women + Shudras + Dalits), and the most concentrated beneficiary set (upper-caste males). The reformist reading would substantially lower ε by claiming the caste prescriptions are separable and superseded. The abolitionist reading would reject the constraint entirely and attribute its persistence to coercive power rather than legitimate authority."
   },
   "omegas": [
     {
-      "id": "suppression_structural_vs_internalized",
-      "question": "Is the measured suppression (0.88) structurally imposed (social sanction, legal disability, economic exclusion) or substantially internalized (caste identity as self-concept, acceptance of prescribed role as deserved or natural)?",
-      "resolution_mechanism": "Longitudinal tracking of identity claims post-exit: if Shudras and Dalits who exit caste-organized communities retain caste-identity salience and reproduce the constraint's status hierarchy internally, suppression is substantially internalized; if identity shifts rapidly away from caste upon exit, suppression is primarily structural.",
-      "impact": "If internalized, the constraint's effective suppression is higher than structural measures suggest — the target carries enforcement mechanisms with them after exit, limiting reformist efficacy. If structural, dismantling the institutional apparatus (Brahmin authority, legal disability, occupational assignment) would be sufficient to break the constraint.",
+      "id": "structural_vs_internalized_suppression",
+      "question": "How much of the measured suppression (0.91) operates through structural barriers (ritual purity segregation, legal exclusion, economic restriction) versus internalized beliefs (socialization into acceptance, identity fusion with subordination)?",
+      "resolution_mechanism": "Post-legal-abolition trajectories: in Indian post-Constitutional context, when structural barriers (untouchability, gender property restrictions) were legally abolished, did suppression persist and at what intensity? Comparison with communities that experienced similar structural barriers but different socialization histories.",
+      "impact": "If suppression is mostly structural, removing the constraint would liberate subordinated groups relatively quickly. If suppression is heavily internalized, the constraint's persistence would require not just legal abolition but sustained de-conditioning and identity reconstruction — persistence might outlast the structural constraint itself.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinction between structural suppression (external enforcement) and internalized suppression (identity-fusion) in caste hierarchy"
+      "description": "Whether suppression is structural (external barriers) or internalized (cognitive/identity patterns that persist after barrier removal)."
     },
     {
-      "id": "cosmic_order_claim_empirical_status",
-      "question": "Is the founding claim — that social order depends on the prescribed varna hierarchy to maintain cosmic order (rita) — empirically testable or deontological/metaphysical and thus outside empirical falsification?",
-      "resolution_mechanism": "Historical and comparative: did egalitarian or non-hierarchical societies maintain order? Do modern societies without caste hierarchy show systemic chaos? Or is the cosmic order claim a non-falsifiable metaphysical assertion immune to empirical evidence?",
-      "impact": "If empirically contingent, rising evidence that order persists without hierarchy undermines the founding problem's live status (mandatrophy). If deontological/metaphysical, no empirical evidence falsifies it — the constraint persists on non-empirical authority grounds. If the claim shifts between empirical and metaphysical framing depending on refutation attempts, that is itself a sign of extraction (using different justification frameworks to defend the same hierarchy).",
-      "confidence": "high",
+      "id": "eternal_vs_historical_referent",
+      "question": "When the orthodox literalist reading claims Dharmasastra prescriptions are 'eternal,' does it refer to a timeless cosmic order (metaphysical claim) or to the permanence of the textual corpus itself (historical/textual claim)?",
+      "resolution_mechanism": "Analysis of orthodox commentarial tradition: do Brahminical scholars distinguish between the eternal validity of the dharmic principles and the application of those principles in different yugas (ages)? If they do distinguish, the eternality claim may be narrower than the literalist framing suggests.",
+      "impact": "If eternality is a metaphysical claim, the constraint's persistence would require continued belief in cosmic order—losing that belief would dissolve the authority structure. If eternality is a textual-permanence claim, the constraint persists as long as the texts are treated as authoritative, regardless of whether their prescriptions are applied literally.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the cosmic order claim is empirically falsifiable or metaphysical (non-falsifiable)"
+      "description": "The semantics of 'eternal' in the orthodox literalist reading."
     },
     {
-      "id": "literalist_reading_textual_necessity",
-      "question": "Does the Dharmasastra textual corpus require literalist reading for coherence, or is reformist (contextual) reading an equally valid interpretation of the same text?",
-      "resolution_mechanism": "Scholarly consensus among textual historians and comparative jurists: if literalist and reformist readings both produce internally coherent interpretations of the corpus, neither is textually necessitated. If literalist reading requires reading *against* the text's internal contextualizations and reformist reading requires reading *with* them, literalism is interpretively weaker.",
-      "impact": "If literalism is textually required, it is harder to dislodge (the text itself enforces it); if it is one optional reading among coherent alternatives, it is maintained by institutional monopoly (Brahmin interpretation authority) rather than textual inevitability, which weakens the constraint's legitimacy.",
-      "confidence": "high",
+      "id": "beneficiary_awareness_and_consent",
+      "question": "Do the beneficiary seats (Brahmin priesthood, Kshatriya rulers, Vaishya merchants) actively defend the constraint because they consciously extract from it, or do they defend it because they have internalized its legitimacy as cosmic order?",
+      "resolution_mechanism": "Historical documentation of Brahminical responses to challenge: do orthodox scholars argue they preserve the constraint because it is true and eternal, or because its preservation maintains their authority? Textual analysis of commentarial tradition for explicit acknowledgment of extractive benefit.",
+      "impact": "If beneficiaries defend the constraint primarily from internalized legitimacy-belief, they would experience it as mountain or rope even though it is snare. If they consciously defend extraction, they fully understand its coercive operation and are engaged in deliberate oppression. This affects the narrative of constraint persistence: is it false consciousness or deliberate capture?",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether beneficiary defense of the constraint rests on internalized legitimacy or conscious extraction."
+    },
+    {
+      "id": "reading_committer_ambiguity",
+      "question": "Is the 'orthodox literalist reading' a genuine live intellectual position held by contemporary Hindu scholars and practitioners, or is it an authored analytical construction that no actual person fully embodies?",
+      "resolution_mechanism": "Ethnographic and textual study of contemporary Hindu orthodox scholars: do any of them explicitly defend the varna hierarchy and gender subordination as eternal prescriptions in the literal sense this reading claims? Or do contemporary orthodox interpreters rely on implicit acceptance and deflection rather than explicit defense?",
+      "impact": "If the reading is truly live, the constraint has active defenders and this story accurately captures how it persists. If the reading is analytically constructed, the actual persistence mechanism may involve more unconscious maintenance and less explicit defense than this analysis suggests—the performance/theater ratio might be understated.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether literalist reading is textually necessary or one optional interpretation"
+      "description": "Whether the orthodox literalist reading represents a live position or an analytical reconstruction."
     },
     {
-      "id": "kernel_contest_foreclosure",
-      "question": "Does the literalist reading's core premise (eternal cosmic necessity) logically foreclose the abolitionist reading, or can both be held by different parties without internal logical contradiction within each party's framework?",
-      "resolution_mechanism": "Formal analysis of the two readings' foundational axioms: if literalism asserts 'cosmic order requires hierarchy' and abolition asserts 'no legitimate authority exists in this framework,' these contradict at the level of what is true about cosmic order, not merely what is preferred. If they contradict at the truth level, literalism forecloses abolition within any single framework; if they only differ in what one chooses to do about the claimed truth, they coexist.",
-      "impact": "If literalism logically forecloses abolition, the readings are competitors for a single epistemic slot — one must be wrong. If they coexist, they are different commitments held by different institutional factions, and the constraint persists through institutional power (which reading captures authority) rather than epistemic defeat of alternatives.",
+      "id": "reading_kernel_boundary",
+      "question": "Is the Dharmasastra textual corpus itself the kernel, or is 'Hinduism as a religious tradition with caste as its core organizing principle' the broader kernel, and Dharmasastra is one authoritative instantiation of it?",
+      "resolution_mechanism": "Map the boundaries of the contested readings: do the reformist and abolitionist readings also contest the Dharmasastra texts specifically, or do they contest caste as a principle that extends beyond Dharmasastra? If caste contestation extends beyond Dharmasastra, the kernel may be broader than the textual corpus.",
+      "impact": "If the kernel is the Dharmasastra corpus, this constraint is the orthodox literalist reading of those specific texts. If the kernel is 'caste as organizing principle,' Dharmasastra is one authority among others (Vedic hymns, practice traditions, ritual commentaries), and this reading is one way of defending caste through textual authority rather than the only way caste is justified.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Logical foreclosure vs. coexistence of literalist and abolitionist readings"
+      "description": "The appropriate boundaries of the contested kernel."
     }
   ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 25,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.87
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.91
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.9
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.88
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.89
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.87
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.84
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.86
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.79
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.82
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.83
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.81
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.83
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.89
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.91
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.92
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.92
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.9
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.91
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.88
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.9
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.71
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.8
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.68
+      }
+    ]
+  },
   "boltzmann": {
     "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
@@ -189,62 +488,70 @@
     "affects_constraints": [
       "dharmasastra_corpus__reformist_contextual",
       "dharmasastra_corpus__abolitionist_rejection",
-      "brahminical_ritual_monopoly",
-      "caste_based_occupational_assignment"
+      "caste_enforcement_legal_apparatus",
+      "gender_guardianship_hindu_law",
+      "ritual_purity_segregation_mechanisms"
     ],
-    "dual_formulation_note": "The dharmasastra_corpus kernel instantiates three structurally distinct constraints: (1) orthodox_literalist (this file) treats the hierarchy as eternal, revealed, and extractive (snare); (2) reformist_contextual treats caste prescriptions as time-bound and the ethical core as separable (potential tangled_rope with reform pathway); (3) abolitionist_rejection treats the entire framework as illegitimate (snare with no escape within the system). These are not different views of one constraint — they are different constraints instantiated by different readings of the same textual kernel. The literalist reading forecloses the abolitionist reading (they contradict on cosmic order necessity) but coexists with the reformist reading (both treat the text as authoritative but interpret it differently). Epsilon values differ substantially: literalism maintains high extraction via identity-lock; reformism could reduce extraction if the contextual reading gained institutional authority; abolition rejects the entire extractive apparatus. Each reading's ε is stable within its own framework and would only change if that reading's authority eroded. The three stories are linked by kernel contest, not by causal dependency — they are alternative interpretations of the same authoritative text, competing for institutional recognition."
+    "dual_formulation_note": "The Dharmasastra corpus kernel is contested across three distinct readings: (1) orthodox_literalist (this story) — claims eternal, revealed varna hierarchy with high ε and broad victim set; (2) reformist_contextual — separates eternal ethical dharma from time-bound caste prescriptions, substantially lowering ε; (3) abolitionist_rejection — rejects the constraint entirely. These are not different measurements of one constraint; they are three structurally distinct constraints instantiating the same kernel. Each reading declares a different ε, different beneficiary/victim structure, and different claim about the constraint's legitimacy. The three stories are linked via network.affects_constraints to show their kernel kinship and mutual influence."
   },
   "directionality_overrides": [
     {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
       "power_atom": "organized",
-      "d_value": 0.68
+      "d_value": 0.88
     }
   ],
+  "gain_flow": "brahmin_priesthood",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "eternal_cosmic_hierarchy_literalism",
-    "drift_state": {
-      "moment": "modern_legal_constitutional_era",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "dharmasastra_corpus__reformist_contextual",
-        "relation": "coexists_with"
+        "sibling_id": "reformist_contextual",
+        "relation": "forecloses"
       },
       {
-        "sibling_id": "dharmasastra_corpus__abolitionist_rejection",
+        "sibling_id": "abolitionist_rejection",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "eternal_cosmic_necessity_hierarchy",
+        "atom": "varna_hierarchy_eternal_revealed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "textual_immutability_binding",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
-      },
-      {
-        "atom": "textual_literalism_non_negotiable",
-        "role": "foundational",
-        "status": "overridden",
-        "grounding_type": "conventional"
       }
-    ]
+    ],
+    "reference_frame": "vedic_cosmic_order_eternally_prescribed",
+    "drift_state": {
+      "moment": "contemporary_post_abolition_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

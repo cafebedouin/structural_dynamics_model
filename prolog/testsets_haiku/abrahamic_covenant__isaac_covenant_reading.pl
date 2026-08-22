@@ -43,6 +43,13 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,48 +74,48 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: abrahamic_covenant__isaac_covenant_reading
- *   human_readable: Abrahamic Covenant Transmitted Exclusively Through Isaac (Institutional Jewish Reading)
- *   domain: religious_studies/institutional_authority/theological_interpretation
+ *   human_readable: Exclusive Covenant Through Isaac (Abrahamic Covenant, Isaac Reading)
+ *   domain: religious/theological/institutional
  *
  * SUMMARY:
- *   Genesis 17:19-21 records God's explicit statement to Abraham: 'My
- *   covenant I will establish with Isaac.' Rabbinic tradition interprets this
- *   passage as mandating exclusive transmission of Abraham's covenant through
- *   Isaac's line, explicitly excluding Ishmael from covenantal inheritance.
- *   This reading has been institutionalized across 2000 years of Jewish
- *   theology, law, and communal practice. Islamic tradition contests this
- *   reading, holding instead that the covenant continues through Ishmael to
- *   Muhammad and the Islamic community. The Isaac-exclusive reading operates
- *   as a constraint because its maintenance requires active institutional
- *   enforcement: suppression of alternative readings, exclusion of Islamic
- *   covenant claims from legitimacy, and reinforcement through education,
- *   liturgy, and theological discourse. The constraint benefits Jewish
- *   institutional continuity (by establishing a clear, exclusive narrative of
- *   covenant inheritance) while extracting costs from Ishmael-lineage
- *   claimants and Islamic tradition (by delegitimizing their covenant claims
- *   and forcing them to maintain competing readings against institutional
- *   pressure). This is a TANGLED ROPE constraint: it solves a genuine
- *   coordination problem (Jewish identity and covenant continuity across
- *   diaspora and historical disruption) AND operates as asymmetric extraction
- *   (benefiting rabbinic authority and Jewish institutional continuity while
- *   imposing costs on excluded parties). Enforcement is active: rabbinic
- *   authority maintains the reading through exclusion of alternatives,
- *   delegitimation of competing exegesis, and institutional transmission
- *   mechanisms. The claim/metric independence rule requires that the
- *   constraint be CLAIMED as the institutional reading asserts it
- *   (coordination function, theological doctrine) while the metrics describe
- *   the extraction and enforcement actually observed. The engine computes
- *   whether the measured extraction and suppression exceed what coordination
- *   function requires.
+ *   Genesis 17:19-21 records God's covenant with Abraham, emphasizing the
+ *   transmission through Isaac: 'My covenant I will establish with Isaac,
+ *   whom Sarah will bear to you at this set time next year... But as for
+ *   Ishmael, I have heard you; I will bless him, too... yet My covenant I
+ *   will establish with Isaac' (Genesis 17:19-21, JPS translation). The
+ *   Isaac-exclusive reading interprets this passage as dividing the covenant
+ *   into two streams: an exclusive covenant of chosenness through Isaac
+ *   (transmitted to Jacob/Israel), and a subordinate blessing of material
+ *   prosperity for Ishmael and his descendants, but not covenant inclusion.
+ *   This reading has become institutionalized in Jewish theological tradition
+ *   as foundational to Jewish chosenness doctrine and the exclusive
+ *   legitimacy of Jewish covenantal standing. It is also defended in
+ *   Christian supersessionist contexts as validation of Christian replacement
+ *   of Israel. But it is contested: an alternative inclusive reading (the
+ *   Ishmael reading) argues the text's covenant language encompasses Ishmael
+ *   as well, and Islamic tradition reads the covenant as continuing through
+ *   Ishmael to Muhammad. The constraint story narrates the Isaac-exclusive
+ *   reading as a structural arrangement that benefits institutional Jewish
+ *   continuity and exclusively-covenantal doctrines, while extracting
+ *   recognition and covenantal standing from Ishmaelite claimants and Islamic
+ *   tradition. The constraint's persistence depends on active enforcement of
+ *   this reading's authority in Jewish textual interpretation and
+ *   institutional religious authority. The measured extraction (0.82
+ *   terminal) is high because the constraint excludes an entire lineage from
+ *   covenantal standing while claiming to implement a divine mandate;
+ *   suppression is substantial (0.71) because alternative readings must be
+ *   actively kept out of legitimate discourse; theater is moderate (0.28)
+ *   because much of the reading's enforcement is textual/interpretive
+ *   (argument-based), not purely institutional command.
  *
  * KEY AGENTS:
- *   - rabbinic_authority_tradition: Institutional defender and enforcer of the Isaac-exclusive reading; uses institutional power to maintain the reading's authority and suppress alternatives.
- *   - jewish_institutional_continuity: Beneficiary that depends structurally on the reading for narrative coherence of Jewish peoplehood and covenant inheritance.
- *   - jewish_faithful_practitioners: Practitioners who receive the reading as the framework of their religious identity; benefit from coherent theological narrative; pay through identity-lock that prevents exit without losing religious identity.
- *   - ishmael_lineage_claimants: Victim set (including Islamic tradition) that is structurally excluded from covenant inheritance by the reading; faces institutional pressure from rabbinic and Christian authorities enforcing the exclusive reading.
- *   - islamic_tradition: Organized victim that maintains competing covenant reading (Ishmael as covenant bearer) against institutional pressure from Jewish and Christian institutional authorities.
- *   - christian_supersessionist_tradition: Observer seat (primarily beneficiary as secondary role) that, despite fundamental disagreement with rabbinic Judaism, reinforces the exclusion of Ishmael and thus shares structural interest with rabbinic authority in suppressing Islamic covenant claims.
- *   - modern_critical_biblical_scholarship: Observer seat that documents the Isaac-exclusive reading as ONE reading among textual alternatives; scholars face institutional pressure from religious authorities defending the reading's authority.
+ *   - jewish_institutional_authority: rabbinical councils, denominational hierarchies, theological academies that maintain and transmit the Isaac-exclusive reading
+ *   - jewish_faithful_communities: believers whose identity and theological legitimacy rest on the chosenness doctrine enabled by the exclusive reading
+ *   - ishmaelite_descendant_claimants: Arab, Palestinian, and other communities claiming Abrahamic covenant standing through Ishmael
+ *   - islamic_theological_tradition: scholars and authorities reading the covenant as inclusive of Ishmael and extending through Islamic prophetic succession
+ *   - christian_supersessionist_institutions: Christian theological bodies that use the Isaac reading to argue for Christian replacement of Israel
+ *   - contemporary_comparative_theology: academic and interfaith scholars proposing alternative readings emphasizing covenant inclusivity
+ *   - textual_scholars: biblical exegetes and historians examining the original meaning of Genesis 17:19-21
  */
 
 /* ==========================================================================
@@ -115,61 +123,123 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(abrahamic_covenant__isaac_covenant_reading, 0.81).
-domain_priors:suppression_score(abrahamic_covenant__isaac_covenant_reading, 0.78).
-domain_priors:theater_ratio(abrahamic_covenant__isaac_covenant_reading, 0.42).
+domain_priors:base_extractiveness(abrahamic_covenant__isaac_covenant_reading, 0.82).
+domain_priors:suppression_score(abrahamic_covenant__isaac_covenant_reading, 0.71).
+domain_priors:theater_ratio(abrahamic_covenant__isaac_covenant_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, extractiveness, 0.81).
-narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 0.78).
-narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, extractiveness, 0.82).
+narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, accessibility_collapse, 0.88).
-narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(abrahamic_covenant__isaac_covenant_reading, resistance, 0.42).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(abrahamic_covenant__isaac_covenant_reading, tangled_rope).
-narrative_ontology:human_readable(abrahamic_covenant__isaac_covenant_reading, "Abrahamic Covenant Transmitted Exclusively Through Isaac (Institutional Jewish Reading)").
-narrative_ontology:topic_domain(abrahamic_covenant__isaac_covenant_reading, "religious_studies/institutional_authority/theological_interpretation").
+narrative_ontology:human_readable(abrahamic_covenant__isaac_covenant_reading, "Exclusive Covenant Through Isaac (Abrahamic Covenant, Isaac Reading)").
+narrative_ontology:topic_domain(abrahamic_covenant__isaac_covenant_reading, "religious/theological/institutional").
 
 domain_priors:requires_active_enforcement(abrahamic_covenant__isaac_covenant_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(abrahamic_covenant__isaac_covenant_reading, '715317f5-4458-4259-a8ee-1899475206e6').
-narrative_ontology:cs_kernel_codification('715317f5-4458-4259-a8ee-1899475206e6', fixed_text).
-narrative_ontology:cs_authority_grounding('715317f5-4458-4259-a8ee-1899475206e6', lineage).
-narrative_ontology:cs_interpretation_layer_present('715317f5-4458-4259-a8ee-1899475206e6').
-narrative_ontology:cs_reading_relation('715317f5-4458-4259-a8ee-1899475206e6', abrahamic_covenant__ishmael_covenant_reading, coexists_with).
-narrative_ontology:cs_reading_relation('715317f5-4458-4259-a8ee-1899475206e6', abrahamic_covenant__land_promise_constraint, influences).
-narrative_ontology:cs_reading_relation('715317f5-4458-4259-a8ee-1899475206e6', abrahamic_covenant__christian_supersessionist_reading, coexists_with).
-narrative_ontology:cs_axiom('715317f5-4458-4259-a8ee-1899475206e6', foundational, isaac_exclusive_covenant_inheritance).
-narrative_ontology:cs_axiom_status(isaac_exclusive_covenant_inheritance, holdable).
-narrative_ontology:cs_axiom_grounding('715317f5-4458-4259-a8ee-1899475206e6', isaac_exclusive_covenant_inheritance, theological).
-narrative_ontology:cs_axiom('715317f5-4458-4259-a8ee-1899475206e6', foundational, ishmael_explicitly_excluded_from_covenant).
-narrative_ontology:cs_axiom_status(ishmael_explicitly_excluded_from_covenant, holdable).
-narrative_ontology:cs_axiom_grounding('715317f5-4458-4259-a8ee-1899475206e6', ishmael_explicitly_excluded_from_covenant, theological).
-narrative_ontology:cs_reference_frame('715317f5-4458-4259-a8ee-1899475206e6', isaac_exclusive_covenantal_lineage).
-narrative_ontology:cs_drift_state('715317f5-4458-4259-a8ee-1899475206e6', contemporary_interfaith_contestation_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('715317f5-4458-4259-a8ee-1899475206e6', '').
+narrative_ontology:cs_story_uid(abrahamic_covenant__isaac_covenant_reading, '0b9402f3-a10b-432b-b700-162d10b3a1c9').
+narrative_ontology:cs_kernel_codification('0b9402f3-a10b-432b-b700-162d10b3a1c9', fixed_text).
+narrative_ontology:cs_authority_grounding('0b9402f3-a10b-432b-b700-162d10b3a1c9', lineage).
+narrative_ontology:cs_interpretation_layer_present('0b9402f3-a10b-432b-b700-162d10b3a1c9').
+narrative_ontology:cs_reading_relation('0b9402f3-a10b-432b-b700-162d10b3a1c9', abrahamic_covenant__ishmael_covenant_reading, forecloses).
+narrative_ontology:cs_reading_relation('0b9402f3-a10b-432b-b700-162d10b3a1c9', abrahamic_covenant__land_promise_constraint, influences).
+narrative_ontology:cs_axiom('0b9402f3-a10b-432b-b700-162d10b3a1c9', foundational, covenant_transmission_lineally_exclusive).
+narrative_ontology:cs_axiom_status(covenant_transmission_lineally_exclusive, holdable).
+narrative_ontology:cs_axiom_grounding('0b9402f3-a10b-432b-b700-162d10b3a1c9', covenant_transmission_lineally_exclusive, deontological).
+narrative_ontology:cs_axiom('0b9402f3-a10b-432b-b700-162d10b3a1c9', secondary, jewish_chosenness_doctrine_enabled).
+narrative_ontology:cs_axiom_status(jewish_chosenness_doctrine_enabled, holdable).
+narrative_ontology:cs_axiom_grounding('0b9402f3-a10b-432b-b700-162d10b3a1c9', jewish_chosenness_doctrine_enabled, deontological).
+narrative_ontology:cs_reference_frame('0b9402f3-a10b-432b-b700-162d10b3a1c9', exclusive_isaac_covenant).
+narrative_ontology:cs_drift_state('0b9402f3-a10b-432b-b700-162d10b3a1c9', contemporary_pluralist_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('0b9402f3-a10b-432b-b700-162d10b3a1c9', '2026-06-12T14:23:47Z').
 narrative_ontology:cs_kernel_id(abrahamic_covenant__isaac_covenant_reading, abrahamic_covenant).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(abrahamic_covenant__isaac_covenant_reading, jewish_institutional_continuity).
-narrative_ontology:constraint_beneficiary(abrahamic_covenant__isaac_covenant_reading, rabbinic_authority_tradition).
-narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, ishmael_lineage_claimants).
-narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, islamic_tradition_covenant_claims).
-narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, pre_rabbinic_alternative_readings).
+narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, ishmaelite_descendant_claimants).
+narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, islamic_tradition).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(abrahamic_covenant__isaac_covenant_reading, jewish_faith_communities).
+narrative_ontology:constraint_beneficiary(abrahamic_covenant__isaac_covenant_reading, christian_supersessionist_institutions).
+narrative_ontology:constraint_victim(abrahamic_covenant__isaac_covenant_reading, islamic_theological_tradition).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Rabbinical councils, theological academies, denominational hierarchies (Orthodox, Conservative, Reform, and Jewish renewal movements) maintain, teach, and defend the Isaac-exclusive reading as foundational to Jewish theology and identity. They interpret Genesis 17:19-21 and related texts, establish canon law (Halakha) based on this interpretation, and control institutional education and authority. They set the terms of who participates in covenant and who does not. Their institutional standing and authority rest on the legitimacy of the reading they maintain.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, jewish_institutional_authority, agenda_setter,
+    institutional, civilizational, identity_locked, global).
+
+% Jewish believers whose identity, belonging, and theological framework depend on the chosenness doctrine enabled by the exclusive covenant reading. They receive the benefit of a coherent identity, institutional community, and theological legitimacy. Their exit from this identity is culturally and religiously impossible — identity_locked because the constraint is constitutive of their identity itself.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, jewish_faith_communities, beneficiary,
+    moderate, civilizational, identity_locked, global).
+
+% Arab, Palestinian, and other communities tracing descent from Ishmael who claim Abrahamic covenant standing and inheritance. They bear the cost of systematic exclusion from covenantal legitimacy based on the Isaac reading. Their claims to covenant-grounded identity and rights are delegitimized by the reading. They are trapped in the constraint because their very identity (as descendants of Ishmael) is what the constraint excludes — they cannot exit without abandoning their genealogical and identity claims.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, ishmaelite_descendant_claimants, payer,
+    moderate, civilizational, identity_locked, global).
+
+% Islamic scholars, theologians, and religious authorities who read the Abrahamic covenant as inclusive of Ishmael and extending through Islamic prophetic succession (Ishmael → Muhammad). They bear the cost of having their reading systematically delegitimized and excluded from mainstream Abrahamic discourse by the Isaac reading. Islamic tradition's claim to Abrahamic legitimacy and prophetic authority is undermined. They are constrained in exit because rejecting the Abrahamic covenant entirely would abandon a core legitimacy source for Islamic theology, but accepting the Isaac reading means abandoning their own covenantal claims.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, islamic_theological_tradition, payer,
+    institutional, civilizational, constrained, global).
+
+% Christian theological bodies (Catholic, Orthodox, mainstream Protestant) that use the Isaac reading to argue for Christian replacement of Israel in covenantal standing. They benefit from the reading insofar as it validates their claim that Jews lost covenantal status (which Christians then inherit). However, they are also observers: the constraint's primary operation is Jewish institutional continuity, not Christian beneficiary. Their exit from supersessionism would require reframing entire Christological theology, making them constrained rather than freely mobile.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, christian_supersessionist_institutions, beneficiary,
+    institutional, civilizational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(abrahamic_covenant__isaac_covenant_reading, christian_supersessionist_institutions, observer).
+
+% Academic scholars, interfaith activists, and theological innovators proposing alternative, inclusive readings of the Abrahamic covenant that would transcend the Isaac/Ishmael boundary. They are excluded from institutional Jewish theological authority because they question the foundational reading. They have high exit mobility (they can pursue careers outside religious institutional structures) but are systematically kept out of authoritative theological discourse within institutional Judaism.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, contemporary_comparative_theology, excluded,
+    moderate, biographical, mobile, global).
+
+% Academic historians, philologists, and exegetes who examine Genesis 17:19-21 in its original context and compare interpretations across traditions. They can provide evidence about whether the text explicitly forecloses Ishmael or permits inclusive readings. Their findings can support or challenge the reading's textual legitimacy. They are observers with professional mobility — they can pursue careers in secular academia independent of theological institutional control.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, biblical_textual_scholars, observer,
+    moderate, biographical, mobile, global).
+
+% The text of Genesis 17:19-21 itself, treated as an entity for analytical purposes. It is the fixed reference point that all readings interpret. As a non-agent, it is excluded from beneficiary/victim derivation but is included for narrative completeness — all readings in the Abrahamic covenant family rest on this text.
+narrative_ontology:constraint_stakeholder(abrahamic_covenant__isaac_covenant_reading, genesis_kernel, observer,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(abrahamic_covenant__isaac_covenant_reading, genesis_kernel).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(abrahamic_covenant__isaac_covenant_reading, jewish_institutional_authority).
+narrative_ontology:fixing_cost_class(abrahamic_covenant__isaac_covenant_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes and maintains Jewish covenantal identity and institutional continuity: the exclusive Isaac reading provides a theological foundation for Jewish distinctiveness, chosenness, and institutional authority to interpret and transmit covenant. It solves the coordination problem of how Israel maintains coherent identity and religious legitimacy across time and dispersion.
+% TRANSFER_FUNCTION: Transfers covenantal standing and theological legitimacy FROM Ishmaelite claimants and Islamic tradition TO Jewish institutional authority and Jewish faith communities. It moves recognition, authority to interpret covenant, and the claim to be the 'chosen people' exclusively to the Jewish institutional seat. It also transfers legitimacy FROM alternative (inclusive) readings TO the exclusive reading through institutional gatekeeping and textual authority control.
+% ABSENT_VOICES: Ishmaelite/Islamic claimants and contemporary comparative theologians are largely excluded from authoritative theological institutions that define the reading. Ishmaelite claimants would argue that Genesis 17 includes Ishmael and that the text's emphasis on Isaac does not mandate exclusion; Islamic theology would argue that the covenant continues through Ishmael to Muhammad and that Islamic tradition has full Abrahamic standing. Comparative theologians would argue for readings that transcend the exclusive boundary and recognize Abrahamic covenant as shared across religions. These voices are structurally kept out of institutional Jewish theological discourse — they have platforms in academic theology, Islamic tradition, and interfaith movements, but not in authoritative Jewish institutional interpretation.
+% DISAPPEARANCE_RATIONALE: If the constraint disappeared overnight — if the Isaac-exclusive reading lost institutional authority and alternative inclusive readings were admitted to legitimate theological discourse — the religious and political landscape would reorganize substantially. Jewish institutional identity would need to reframe chosenness doctrine (possibly as moral responsibility rather than exclusive covenantal standing); Islamic tradition and Ishmaelite claimants would gain theological legitimacy for their Abrahamic inheritance claims; geopolitical claims grounded in covenant (particularly Israeli territorial claims derived from covenantal land promises) would lose a primary legitimacy source; interfaith relations would reframe toward more symmetric Abrahamic partnership; Jewish-Muslim conflict narratives would lose scriptural-exclusive grounding. The constraint's disappearance would reshape institutional religious authority, theological education, and geopolitical legitimacy claims.
+% FOUNDING_PROBLEM: How does Israel maintain its covenant standing with God and distinguish itself as the chosen people among other religions?
+% FOUNDING_PROBLEM_CORROBORATION: Jewish institutional theology and rabbinical tradition attest the founding problem is live: Jewish chosenness and covenant standing remain central to Jewish identity and institutional theology (Orthodox, Conservative movements especially). However, outside corroboration from comparative religion scholars and Islamic/Ishmaelite claimants contests this: they argue the founding problem has been reframed by secular pluralism and modern interfaith dialogue — the question now is not 'how does Israel maintain exclusive covenant standing' but 'how do we recognize shared Abrahamic inheritance across religions.' Contemporary Jewish renewal and Reform movements also produce internal debate on whether chosenness doctrine is sustainable in pluralist contexts. The founding problem has shifted from theology to geopolitics: it now primarily grounds territorial claims (Israeli state legitimacy via covenant land promises) rather than pure theological distinctiveness, as secular nationalism has partially replaced theology as identity ground.
+narrative_ontology:disappearance_verdict(abrahamic_covenant__isaac_covenant_reading, world_rearranges).
+narrative_ontology:founding_problem_status(abrahamic_covenant__isaac_covenant_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(abrahamic_covenant__isaac_covenant_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(abrahamic_covenant__isaac_covenant_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(abrahamic_covenant__isaac_covenant_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(abrahamic_covenant__isaac_covenant_reading, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -189,16 +259,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.81 at interval end) is high because the reading reserves covenant status exclusively for Jewish institutional continuity, transferring all covenantal capital FROM Ishmael's line TO Isaac's line. This is not a minor interpretive difference; it defines who is inside and outside the covenant community. The extraction is sustained not by accident but by deliberate institutional enforcement across 2000 years (measurement series shows extraction rising from 0.55 at t0 to 0.81 at t2000, demonstrating accumulation). Suppression (0.78) is high because the reading's persistence depends on actively excluding alternative readings: Islamic covenant claims must be delegitimized; pre-rabbinic Jewish readings must be overwritten; modern critical scholarship must be treated as exegetically false. Accessibility to alternatives collapses from 0.50 at t0 to 0.78 at t2000 at the individual level (faithful practitioners internalize the reading as non-negotiable), while organizational and institutional levels show even steeper collapse (0.85+). This high accessibility collapse indicates the constraint functions like a natural law for practitioners embedded in the tradition (the reading appears inevitable, not chosen). Theater ratio (0.42) reflects that the reading carries genuine theological content (not pure theater), but a growing share of institutional effort defends covenant exclusivity rather than theological truth — institutional preservation increasingly dominates the reading's maintenance over time. Resistance (0.71) is substantial, indicating that Islamic, Christian, and academic counter-readings persist despite institutional suppression. The measurement series show monotonic accumulation in extractiveness and suppression, with theater ratio stabilizing after t1500 (suggesting the institutional machinery reached steady-state enforcement).
+ *   Extractiveness is high (terminal 0.82) because the constraint performs two functions simultaneously: (1) it establishes an identity boundary that excludes Ishmael and his lineage from covenantal standing, and (2) it grounds institutional Jewish claims to exclusive covenantal legitimacy that can be deployed to support material claims (territorial, political, legal). The extraction is not merely theological — it is a reading that powers actual exclusions. The measurement series from t=0 (earliest rabbinic formalization) to t=2000 (contemporary era) shows rising extractiveness as the reading became increasingly institutional: early phases (t=0-400) involved interpretive competition and theological debate (lower extraction); middle phases (t=400-1200) involved crystallization into institutional authority and formal rejection of alternatives (rising extraction); late phases (t=1200-2000) show high extraction maintained through institutional gatekeeping and textual authority, with theater_ratio rising as explicitly covenantal exclusion rhetoric becomes softened by interfaith language and theological reframing. Suppression rises substantially over the interval as alternative readings emerge and must be actively suppressed: early suppression is low because alternatives have not yet formed; later suppression is high because textual scholars, Islamic tradition, and interfaith movements all propose alternative readings that must be excluded from legitimate institutional discourse. Theater ratio is lowest in early phases (the reading is straightforward textual claim) and rises in late phases as institutional defense of the reading becomes more rhetorical and less textual-literal. The claimed type is tangled_rope: the constraint both coordinates Jewish institutional identity and communal belonging (rope function) while simultaneously extracting covenantal standing from Ishmael and his descendants (extraction function). The extraction is asymmetric — institutional Jewish communities benefit while Ishmaelite claimants and Islamic tradition bear costs — and the arrangement requires active enforcement to persist (textual gatekeeping, institutional control of biblical interpretation, suppression of alternative readings). The claim/metric gap is deliberate: the constraint is claimed as tangled_rope (mixed coordination/extraction) while the authored metrics show high extraction, high suppression, and rising theater — the engine measures how the reading actually operates in institutional context, not what its theological framing claims.
  *
  * PERSPECTIVAL GAP:
- *   The rabbinic authority and jewish_institutional_continuity seats experience the constraint as coordination function (solving the problem of covenant identity in diaspora) and theological truth (correctly interpreting Genesis 17). From these seats, enforcement is experienced as transmission of truth and maintenance of authentic tradition, not suppression. The ishmael_lineage_claimants and islamic_tradition seats experience the constraint as asymmetric extraction: the same institutional enforcement appears as suppression of their legitimate covenant reading and delegitimization of their religious tradition. Jewish faithful practitioners sit between: they receive genuine coordination benefit (coherent theological narrative, community membership) and simultaneously bear extraction cost (the identity-lock that prevents them from accepting Islamic covenant claims without leaving Judaism). Modern critical biblical scholars, occupying an observer seat, see the constraint's operation as institutional power enforcing one reading among textual alternatives. Christian observers see institutional reinforcement of a reading that happens to support Christian supersessionism (the exclusion of Ishmael reinforces Christian claims that post-Abrahamic revelation transferred to Christianity). The engine computes per-seat type classification from these divergent perspectives; the wide divergence is the structural fact the constraint story exists to model.
+ *   The Jewish institutional beneficiary seat (rabbinical authority, community leaders) experiences the constraint as coordination: it establishes and maintains Jewish identity, community continuity, and the theological foundation for Jewish chosenness and standing. From this seat, the reading is a coordination function solving the problem of how Israel maintains its covenantal status and identity. The Ishmaelite/Islamic claimant seat experiences the same constraint as pure extraction: a reading that systematically denies them standing, legitimacy, and the ability to claim Abrahamic covenant inheritance. From this seat, the constraint is enforced exclusion grounded in a contested textual reading. A hypothetical Christian supersessionist seat experiences a mixed function: they benefit from the reading insofar as it validates Christian displacement of Jewish covenant (extraction from Jews, subsidy to Christians), but they also use the reading as theology not identity-foundation (the coordination benefit is to Christian institutions, not their own exclusive standing). The engine computes per-seat directionality from the structural data: Jewish institutional beneficiaries get d near the beneficiary end (low extraction for them, positive subsidy flow); Ishmaelite/Islamic claimants get d near the target end (high extraction, loss of standing); Christian institutions get a mixed d (they receive theological ammunition but are not the primary beneficiaries of Jewish covenantal exclusivity). The perspectival gap is structural: the same reading operates as beneficial coordination for one seat and extractive exclusion for another.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derivation follows from beneficiary/victim declarations and exit options. Rabbinic authority and jewish_institutional_continuity are beneficiaries (d near 0.0 — they collect covenant-inheritance capital); their identity-lock and institutional power mean they cannot exit without dissolving institutional continuity (exit_options: trapped for rabbinic authority; identity_locked for jewish_institutional_continuity even though they are beneficiaries because exiting would mean losing the institutional continuity they benefit from). Ishmael_lineage_claimants and islamic_tradition are victims (d near 1.0 — they bear exclusion cost); their identity-lock prevents exit without abandoning Ishmael's covenant role in Islamic theology. Jewish faithful practitioners occupy hybrid position: beneficiary in receiving coordination function; payer in bearing identity-lock (cannot accept Islamic reading without leaving Judaism). The coercion_grid shows suppression rising across all four levels (structural, organizational, class, individual), with individual-level suppression reaching 0.65 at t2000 — practitioners internalize the reading as non-negotiable, suggesting partial identity-lock mechanism. The directionality for each seat is derivable from power, exit_options, and beneficiary/victim membership; no override is needed because the structural data capture the asymmetry.
+ *   Jewish institutional continuity (beneficiary): The constraint enables and sustains Jewish covenantal standing, identity, and institutional authority. Rabbinical institutions benefit directly from the exclusive reading because it grounds their authority to interpret and transmit covenant. From the beneficiary seat, the constraint solves a genuine problem (how does Israel maintain its covenantal standing and distinguish itself from other Abrahamic religions) and persists because it is institutionally maintained and theologically defended. Directionality for this agent: d~0.1 (near full beneficiary), low effective extraction. Ishmaelite descendant claimants (victims): The constraint denies them covenantal standing, legitimacy as participants in Abrahamic covenant, and grounds for claims based on covenant inheritance. This is a structured exclusion that requires suppression to maintain (alternative readings and Ishmaelite/Islamic claims must be actively rejected). Directionality for this agent: d~0.92 (near full target), high effective extraction. Islamic theological tradition (victims): Similar to Ishmaelite claimants, but institutional: Islamic theology claims the covenant continues through Ishmael to Muhammad, and the Isaac-exclusive reading delegitimizes this claim. The constraint extracts Islamic tradition's ability to claim Abrahamic legitimacy and grounds for theological authority. Directionality: d~0.89 (near full target), high effective extraction. Christian supersessionist institutions (complex mixed): These benefit from the reading insofar as it validates Christian displacement of Jewish covenant (d~0.25, moderate beneficiary), but they are not the primary beneficiaries — the reading's main effect is to benefit Jewish institutional authority, not Christian. The extraction is deflected: Christians use the Jewish reading to justify their own displacement theology, but they do not directly extract from the constraint's operation. Exit options for all seats are deeply constrained: Jewish institutions cannot abandon the reading without losing covenantal legitimacy; Islamic and Ishmaelite actors cannot exit the constraint without abandoning their own covenantal claims; Christian institutions are identity_locked into supersessionist theology and cannot easily adopt inclusive readings without theological reorganization.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (covenantal identity continuity in diaspora) was live at t0 and remains contested at t2000. Rabbinic and Jewish institutional authorities affirm it as live (the need to maintain covenant continuity remains relevant). Islamic tradition contests it: Islamic theology holds the covenant passes through Ishmael to Muhammad, so there is no 'Jewish continuity problem' — only an institutional reading that excludes Ishmael to ground Jewish particularity. Modern scholarship contests it: historians argue the founding problem was solved in antiquity; the reading persists now as tradition and institutional practice rather than response to a live problem. The disappearance_verdict is 'contested' (the parties dispute what would rearrange if the reading vanished). The mismatch between founding_problem_status (contested) and disappearance_verdict (contested) prevents mandatrophy classification: the constraint is neither clearly resolved nor clearly abandoned. However, the measurement series show accumulating extraction (0.55→0.81 over 2000 years) despite contested founding status, suggesting the constraint's persistence increasingly depends on institutional benefit (extraction) rather than founding-problem resolution. This pattern indicates POTENTIAL mandatrophy: the founding problem has shifted from live (t0) to contested/dead (t2000), while extraction has accumulated, suggesting institutional benefit increasingly dominates the reading's maintenance. The T17 abductive trigger (mountain_extraction_accumulation) would flag this as a candidate for mandatrophy review if the constraint were classified as mountain (which it is not — it's tangled_rope, so T17 does not fire). However, the measurement data establish the empirical fact of accumulation that mandatrophy investigation would examine.
+ *   The founding problem (t=0): How does Israel maintain its covenant standing and distinguish itself as the chosen people? This is a live problem for Jewish institutional identity and theology. The founding problem persists into the contemporary era: Jewish chosenness doctrine remains central to Jewish identity, and the exclusive covenant reading continues to be invoked to ground Jewish institutional claims and theological distinctiveness. The constraint does NOT exhibit classic mandatrophy (founding problem solved but constraint persists). Instead, it exhibits what might be called 'identity mandatrophy': the founding problem (covenant distinctiveness) is structurally permanent — it is reframed rather than solved. As secularization and pluralism advance, the founding problem mutates: Jews no longer invoke the covenant primarily for theological distinctiveness (Christianity and Islam now share Abrahamic identity broadly), but the constraint persists because it grounds institutional Jewish claims to land, law, and political standing (via Israel-state theology). The extractive function increases relative to the coordinative function over time: early phases involve genuine theological coordination (how do we establish chosenness?), late phases involve instrumental extraction (how do we ground territorial and political claims?). The measured rising extraction reflects this mutation. The constraint does NOT disappear because it is now deployed for institutional and state legitimacy, not merely theological coordination. A mandatrophy flag would trigger if theater_ratio rose above ~0.65 (indicating mostly performative maintenance) and disappearance_verdict were 'world_unchanged' (founding problem solved but constraint persists theatrically); current metrics show theater_ratio only at 0.28 and the founding problem remains institutionally live, so classic mandatrophy is not triggered. However, the rising extraction and theater over time, combined with the constraint's role in grounding geopolitical claims, suggest the constraint is shifting from theological coordination toward political/territorial extraction — a drift that warrants monitoring.
  */
 
 /* ==========================================================================
@@ -206,54 +276,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_contest_identity,
-    'Is the Isaac-exclusive reading a constraint, or is the contested kernel itself the constraint?',
-    'The committer frame (OQ-83 Rules 1–2) authorizes generating THIS reading as ONE constraint among sibling readings. The kernel contest is routed to this omega: it names the structural uncertainty whether the object of analysis is the reading (a specific institutional interpretation with determinate ε) or the kernel (the contested textual tradition that admits multiple readings). This story takes the reading as the constraint; sibling stories take other readings. Each reading is a separate constraint with separate ε values, not facets of one polymorphic constraint.',
-    'If the constraint object were the kernel rather than the reading, ε would be indeterminate (the kernel permits multiple readings); structural data (beneficiary, victim, enforcement mechanism) would differ per reading. By assigning the constraint to the reading, ε is determinate (0.81 for this reading''s extraction); structural data are specific to this reading''s operation.',
+    reading_kernel_identity,
+    'Is this a reading of a contested kernel (the Abrahamic covenant) or a standalone theological claim?',
+    'Genealogical analysis: the reading''s legitimacy depends on grounding in Genesis 17:19-21 as its authority source. If the text-kernel is abandoned or reinterpreted, the reading''s standing shifts. Trace which institutional actors invoke Genesis 17 as binding authority.',
+    'If kernel-grounded: the constraint''s persistence depends on maintaining the authority of the founding text and the reading''s interpretation of it. If the reading is reframed as post-hoc theological doctrine rather than textual reading, its ε and enforcement mechanism change fundamentally.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_contest_identity, conceptual, 'Kernel vs. reading as the constraint object.').
+narrative_ontology:omega_variable(reading_kernel_identity, conceptual, 'Whether this constraint is a kernel reading or a derived theological doctrine.').
 
 omega_variable(
-    theological_truth_vs_institutional_extraction,
-    'Is the Isaac-exclusive reading true as a theological proposition, or is it extracted benefit for rabbinic institutional power?',
-    'The framework brackets theological truth (whether the reading is doctrinally correct). It measures whether the reading''s persistence depends on institutional enforcement and whether identifiable parties benefit from its maintenance. Both conditions hold. The ambiguity is irreducible: external observers cannot adjudicate whether the reading''s truth-value explains its enforcement, or whether institutional benefit explains its enforcement and retrospective theological rationalization provides the cover. Theologically committed parties affirm the first; institutional-analysis observers affirm the second.',
-    'If the reading''s persistence is explained by theological truth-claim alone, suppression and enforcement should be minimal (the truth needs no suppression). High measured suppression (0.78) suggests institutional benefit as a primary driver; this narrows the set of plausible explanations but does not eliminate theological truth-claim as a genuine component.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(theological_truth_vs_institutional_extraction, preference, 'Whether the constraint operates as theological doctrine or institutional extraction or both.').
-
-omega_variable(
-    ishmael_lineage_identity_lock,
-    'Is the measured identity-lock for Ishmael lineage claimants structural (economic, legal, geographic barriers to exit) or internalized (belief, identity fusion, cognitive patterns that persist after structural barriers are removed)?',
-    'Post-suppression trajectory: in contexts where Islamic communities have institutional power and can enforce counter-readings without suppression, do the suppression effects on Jewish participants persist? If yes, identity-lock is partially internalized. Conversely, where Jewish institutional authority loses suppressive power, do Islamic communities freely maintain their reading? If no, structural dependence persists despite reduced suppression.',
-    'If identity-lock is purely structural, removing rabbinic institutional enforcement would enable free exit (Ishmael-lineage claimants could adopt the Isaac-exclusive reading without cognitive cost). If partially internalized, the suppression cost persists in individual belief and identity-formation even after institutional removal. High internalized component makes the constraint''s effective suppression higher than the structural measure (0.78) suggests.',
+    exclusion_mechanism_structural_vs_interpretive,
+    'Is the exclusion of Ishmael a direct textual mandate or an interpretive choice reading restrictive language into permissive text?',
+    'Comparative reading analysis: examine whether Genesis 17:19-21 explicitly forecloses Ishmael or merely directs emphasis to Isaac. Cross-reference with Jewish, Christian, and Islamic exegetical traditions. Documentary evidence from early rabbinic commentary (Talmud, Midrash) on whether the text permits or mandates Ishmaelite exclusion.',
+    'If the mandate is direct (text-explicit): the constraint is a literal covenant constraint with high accessibility collapse (alternatives are logically unavailable). If interpretive: the constraint''s suppression is higher (the exclusion must be enforced through selective reading and institutional control of textual authority), and alternative readings become empirically live.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(ishmael_lineage_identity_lock, empirical, 'Whether identity-lock in religious covenant reading is structural or internalized suppression.').
+narrative_ontology:omega_variable(exclusion_mechanism_structural_vs_interpretive, empirical, 'Whether Ishmael''s exclusion is textually explicit or interpretively enforced.').
 
 omega_variable(
-    kernel_reading_identity,
-    'Which sibling reading of the abrahamic_covenant kernel is THIS constraint instantiating?',
-    'This constraint instantiates the isaac_covenant_reading: the interpretation that Genesis 17:19-21 mandates exclusive transmission of covenant through Isaac, explicitly excluding Ishmael. This is the committer-axis declaration. The sibling readings (ishmael_covenant_reading, land_promise_constraint, and implicitly christian_supersessionist_reading) are OTHER constraints, generated separately. The ε-invariance principle requires separate files for readings with different ε values, different beneficiary/victim structures, and different enforcement mechanisms.',
-    'Each reading is a distinct constraint with its own classification. The Isaac-exclusive reading shows high extraction (0.81) because exclusion of Ishmael''s line transfers covenant status exclusively to Jewish institutional continuity. The ishmael_covenant_reading, if generated, would show different ε (likely higher or lower depending on whether Islamic institutional enforcement is measured) and different victim/beneficiary sets. The readings do NOT collapse into one polymorphic constraint.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'This constraint is the isaac_covenant_reading of the abrahamic_covenant kernel.').
-
-omega_variable(
-    rabbinic_institutional_trap,
-    'Is the rabbinic institutional commitment to the Isaac-exclusive reading itself trapped (cannot exit without institutional dissolution) or can rabbinic authority reform or abandon the reading without losing institutional continuity?',
-    'Historical: have rabbinic communities successfully revised earlier authoritative interpretations without institutional dissolution? If yes, exit is not fully trapped. Contemporary: do rabbinic reformers or critics who challenge the Isaac-exclusive reading face institutional penalties (ostracism, delegitimation, loss of authority status)? If yes, structural trapping is enforced.',
-    'If rabbinic authority is fully trapped by the reading, the reading''s persistence is structural lock-in (institutional continuity depends on reading maintenance). If rabbinic authority retains reform capacity, the reading persists because of institutional benefit (extraction) rather than structural necessity. Measured suppression (0.78) suggests some institutional flexibility exists (not absolute lock) but at substantial cost.',
+    institutional_beneficiary_identity,
+    'Does the constraint benefit ''Jewish continuity'' as an institutional entity, individual Jewish believers, or the covenant''s theological legitimacy as such?',
+    'Institutional analysis: identify which organizational actors (Jewish denominations, state entities, diaspora communities) actively defend the Isaac-exclusive reading and what material benefits accrue to them (territorial claims, legal status, diaspora identity maintenance). Distinguish between theological benefit (the reading vindicates doctrine) and material benefit (the reading powers institutional claims).',
+    'If the primary beneficiary is institutional Jewish authority structures: the constraint is extractive beyond its coordination function — the exclusive reading powers material exclusions (territorial/legal claims). If the primary beneficiary is theological coherence, the extraction metric is lower and the constraint becomes more clearly rope-like. The beneficiary''s identity shifts the constraint''s classification between the payer seats.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(rabbinic_institutional_trap, empirical, 'Whether rabbinic institutional authority is structurally trapped by the Isaac-exclusive reading or retains reform capacity.').
+narrative_ontology:omega_variable(institutional_beneficiary_identity, empirical, 'Whether the beneficiary is institutional, theological, or both.').
+
+omega_variable(
+    alternative_reading_suppression,
+    'In contemporary Jewish, Christian, and Islamic communities, how actively are alternative readings (inclusive Abrahamic covenant, Ishmaelite covenant validity) suppressed, and through what mechanisms?',
+    'Ethnographic and textual analysis of contemporary religious communities: examine which readings are taught in seminaries and schools, which are published in official commentary, which are marginalized as heterodox. Survey institutional religious authority (rabbinical councils, theological academies, fatwa-issuing bodies) on whether they permit, tolerate, or actively suppress alternative readings.',
+    'High suppression (active enforcement, alternatives excluded from legitimate discourse) supports the tangled_rope classification and high measured suppression. Low suppression (alternatives coexist as live theological positions) would shift the classification toward rope and lower suppression values. The measured suppression metric is empirically tied to the enforcement machinery''s operation.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_reading_suppression, empirical, 'The degree to which alternative readings are institutionally suppressed.').
+
+omega_variable(
+    victim_set_scope_and_standing,
+    'Who are the actual victims of this constraint''s operation: Ishmaelite historical descendants (now Arabs), Islamic theological tradition, or abstract covenantal claimants?',
+    'Institutional and genealogical analysis: trace who invokes covenant exclusion as grounds for material claims (land, recognition, legitimacy) and who bears costs from that exclusion. Examine whether Ishmaelite/Arab/Islamic actors accept the constraint''s frame (acknowledge exclusion) or reject it (contest the reading). Document whether the exclusion''s enforcement is active (legal, territorial, diplomatic) or passive (institutional dismissal).',
+    'If victims are primarily institutional (Islamic tradition as a religious system competing for legitimate Abrahamic inheritance): the constraint is a theological/identity boundary with moderate direct enforcement costs. If victims are material claimants (populations dispossessed via covenant-grounded territorial claims): the constraint''s extraction includes material dispossession and suppression is higher. The victim identity shifts the directionality from payer seats and the constraint''s effective extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(victim_set_scope_and_standing, empirical, 'The identity and location of the constraint''s victims.').
 
 
 /* ==========================================================================
@@ -267,28 +337,28 @@ narrative_ontology:interval(abrahamic_covenant__isaac_covenant_reading, 0, 2000)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(abra_tr_t0, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(abra_tr_t250, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 250, 0.28).
-narrative_ontology:measurement(abra_tr_t500, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 500, 0.33).
-narrative_ontology:measurement(abra_tr_t1000, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 1000, 0.4).
-narrative_ontology:measurement(abra_tr_t1500, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 1500, 0.42).
-narrative_ontology:measurement(abra_tr_t2000, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 2000, 0.42).
+narrative_ontology:measurement(abra_tr_t0, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(abra_tr_t400, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 400, 0.12).
+narrative_ontology:measurement(abra_tr_t800, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 800, 0.18).
+narrative_ontology:measurement(abra_tr_t1200, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 1200, 0.24).
+narrative_ontology:measurement(abra_tr_t1600, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 1600, 0.27).
+narrative_ontology:measurement(abra_tr_t2000, abrahamic_covenant__isaac_covenant_reading, theater_ratio, 2000, 0.28).
 
 % Extraction over time
-narrative_ontology:measurement(abra_be_t0, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 0, 0.55).
-narrative_ontology:measurement(abra_be_t250, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 250, 0.68).
-narrative_ontology:measurement(abra_be_t500, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 500, 0.74).
-narrative_ontology:measurement(abra_be_t1000, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 1000, 0.79).
-narrative_ontology:measurement(abra_be_t1500, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 1500, 0.81).
-narrative_ontology:measurement(abra_be_t2000, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 2000, 0.81).
+narrative_ontology:measurement(abra_be_t0, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(abra_be_t400, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 400, 0.62).
+narrative_ontology:measurement(abra_be_t800, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 800, 0.71).
+narrative_ontology:measurement(abra_be_t1200, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 1200, 0.76).
+narrative_ontology:measurement(abra_be_t1600, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 1600, 0.8).
+narrative_ontology:measurement(abra_be_t2000, abrahamic_covenant__isaac_covenant_reading, base_extractiveness, 2000, 0.82).
 
 % Suppression requirement over time
-narrative_ontology:measurement(abra_su_t0, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 0, 0.45).
-narrative_ontology:measurement(abra_su_t250, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 250, 0.58).
-narrative_ontology:measurement(abra_su_t500, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 500, 0.68).
-narrative_ontology:measurement(abra_su_t1000, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 1000, 0.74).
-narrative_ontology:measurement(abra_su_t1500, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 1500, 0.77).
-narrative_ontology:measurement(abra_su_t2000, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 2000, 0.78).
+narrative_ontology:measurement(abra_su_t0, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 0, 0.35).
+narrative_ontology:measurement(abra_su_t400, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 400, 0.48).
+narrative_ontology:measurement(abra_su_t800, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 800, 0.58).
+narrative_ontology:measurement(abra_su_t1200, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 1200, 0.65).
+narrative_ontology:measurement(abra_su_t1600, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 1600, 0.69).
+narrative_ontology:measurement(abra_su_t2000, abrahamic_covenant__isaac_covenant_reading, suppression_requirement, 2000, 0.71).
 
 
 /* ==========================================================================
@@ -299,10 +369,10 @@ narrative_ontology:coordination_type(abrahamic_covenant__isaac_covenant_reading,
 narrative_ontology:boltzmann_floor_override(abrahamic_covenant__isaac_covenant_reading, 0.12).
 narrative_ontology:affects_constraint(abrahamic_covenant__isaac_covenant_reading, abrahamic_covenant__ishmael_covenant_reading).
 narrative_ontology:affects_constraint(abrahamic_covenant__isaac_covenant_reading, abrahamic_covenant__land_promise_constraint).
-narrative_ontology:affects_constraint(abrahamic_covenant__isaac_covenant_reading, abrahamic_covenant__christian_supersessionist_reading).
+narrative_ontology:affects_constraint(abrahamic_covenant__isaac_covenant_reading, jewish_chosenness_doctrine__institutional_authority).
 
 % DUAL FORMULATION NOTE:
-% The abrahamic_covenant kernel decomposes into four constraint stories: (1) isaac_covenant_reading (this story) — exclusive transmission through Isaac to Jewish institutional continuity; (2) ishmael_covenant_reading — inclusive transmission through Ishmael to Islamic tradition; (3) land_promise_constraint — territorial covenant component; (4) christian_supersessionist_reading (implicit) — covenant transferred to Christian Church. Each reading is a separate constraint with distinct ε, beneficiary/victim structure, and enforcement mechanism. ε-invariance principle: measuring the constraint via Isaac-exclusive reading yields high extraction (0.81); measuring via Ishmael-inclusive reading yields different extraction profile; measuring via land promise yields territorial-dispute extraction. These are not observational variations of one constraint — they are structurally distinct constraints arising from different readings of the kernel. All four stories share kernel_id: abrahamic_covenant; each story's constraint_id carries the reading_id (isaac_covenant_reading, ishmael_covenant_reading, etc.).
+% This constraint is part of the Abrahamic covenant family (kernel_id: abrahamic_covenant). The Isaac-exclusive reading is decomposed from the ishmael-inclusive reading (abrahamic_covenant__ishmael_covenant_reading) because they produce different ε values (0.82 vs. 0.35) and different victim sets from the same kernel, violating ε-invariance if folded into one story. The land_promise_constraint (territorial dimension of covenant) is a separate decomposition because covenant_identity and land_allocation have different beneficiary structures (institutional Jewish continuity vs. territorial Israeli claims) and different sibling readings. All three stories share the kernel_id and are linked via network.affects_constraints so the constraint family is visibly connected. The relationship is: isaac_covenant_reading (this story) affects ishmael_covenant_reading (if the Isaac reading is weakened, Islamic readings become live) and affects land_promise_constraint (covenant identity feeds into land legitimacy claims).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

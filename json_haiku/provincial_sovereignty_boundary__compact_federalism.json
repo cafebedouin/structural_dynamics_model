@@ -4,305 +4,319 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_provincial_sovereignty_boundary__compact_federalism",
-    "measurement_id_prefix": "prov_sov_compact",
-    "story_uid": "768b8e43-f82c-4059-b0b1-2084c16e1214",
-    "created_at": "2026-06-12T14:33:22Z"
+    "story_uid": "9abc284f-f58d-4905-b496-de6df16c5959"
   },
   "base_properties": {
-    "extractiveness": 0.48,
-    "suppression": 0.52,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.67,
-    "resistance": 0.58,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Provincial Sovereignty in Federal Compact (Confederation Model)",
+    "human_readable": "Provincial Sovereignty Boundary (Compact Federalism Reading)",
     "topic_domain": "political_economy/federalism",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "provincial_governments",
-      "resource_rich_provinces"
+      "provinces_coordinating_role",
+      "provincial_governments"
     ],
     "victims": [
-      "resource_poor_provinces",
-      "federal_labor_mobility_seekers"
+      "economically_peripheral_provinces",
+      "resource_dependent_provinces"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "provincial_governments",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set and enforce resource policy, regulate natural resources within provincial territory, negotiate equalization transfers from federal revenue pool. They maintain the compact by asserting residual sovereignty and renegotiating the confederation's terms whenever federal overreach is perceived. This reading vests them with authority to threaten exit (separation) as a negotiating mechanism, treating exit as costlier-than-compliance but negotiable under conditions of substantial federal overreach."
+    },
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Manages interprovincial transfer mechanisms (equalization), sets conditions on federal funding, attempts to impose national standards (climate policy, environmental regulation). Under this reading, the federal government's authority is conditional on provincial consent; it cannot unilaterally revise the confederation's terms. It maintains the arrangement by accepting that provinces have the structural right to renegotiate or exit, though at significant cost."
+    },
+    {
+      "name": "economically_peripheral_provinces",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Depend on equalization transfers from federal revenue (which comes disproportionately from resource-rich provinces and urban centers). They pay through constrained bargaining power: smaller populations, less resource leverage, fewer exit alternatives. Their agreement to the confederation persists because exit isolation would be costlier than the transfer asymmetry they accept. They have structural voice in the compact but limited ability to reshape its terms."
+    },
+    {
+      "name": "resource_dependent_provinces",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Control valuable natural resource endowments (oil, minerals, forestry) and claim sovereignty over them via s.92A of the Constitution Act 1982. They pay through equalization obligations (transferring resource revenue to the federal pool for redistribution), federal climate regulations that constrain resource extraction, and federal environmental standards. They benefit from the compact's coordination (access to national markets, federal infrastructure investment) but experience it as coercive because their resource sovereignty is structurally subordinated to the federal redistribution mechanism."
+    },
+    {
+      "name": "federal_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interpret the Constitution Act 1867 and 1982 to adjudicate disputes over jurisdiction and the scope of provincial vs. federal authority. Under the compact-federalism reading, they are tasked with enforcing the conditional nature of federal authority and recognizing provincial residual sovereignty. They provide the interpretive buffer that moderates the conflict between federation and provincial autonomy."
+    },
+    {
+      "name": "regional_coalitions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Indigenous nations within Canadian territory would claim their own sovereignty and territorial rights, independent of both provincial and federal authority. They are systematically excluded from the federalism compact and from negotiation over the confederation's terms. Their absence is structural to the constraint and maintained by both federal and provincial governments."
+    },
+    {
+      "name": "historical_compact_scholarship",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The historiographical claim that Confederation was a negotiated compact among sovereign provinces (vs. a unilateral federal constitution) vindicates this reading's legitimacy. Scholars who assert compact-federalism premises benefit from the constraint's persistence because it validates their interpretive frame as the operational federalism of Canada."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables economic union and interprovincial trade while preserving provincial control over natural resources and social policy; creates a redistributive mechanism (equalization) that allows peripheral provinces to remain in the federation; solves the collective-action problem of a multinational state with unequal resource distribution.",
+    "transfer_function": "Resource revenue flows from resource-rich provinces into the federal pool; federal redistribution flows from the pool to economically peripheral provinces in the form of equalization transfers. Federal climate and environmental regulations also flow from federal authority toward resource-dependent provinces, constraining extraction in the name of national interest.",
+    "absent_voices": "Indigenous nations whose territories span provincial boundaries are excluded from both provincial sovereignty claims and federal jurisdiction; they would assert sovereignty independent of the confederation compact and demand representation in its renegotiation. Their structural exclusion is maintained by both levels of government. Ecological commons (watersheds, atmosphere, migratory animal populations) that cross provincial and federal boundaries are also effectively excluded—treated as property subject to provincial resource extraction rather than as subjects with standing in the confederal dispute.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the compact-federalism constraint disappeared—meaning the principle that provincial consent is required for federal authority were abandoned—provinces would immediately face federal unilateral control over resource policy, equalization terms, and climate regulation. Resource-rich provinces would attempt secession or radical renegotiation; peripheral provinces would lose their equalization guarantees and would be left choosing between economic isolation or subordination to federal redistribution. The Canadian federation would reorganize around either federal subordination (constitutional_subordination reading operationally dominant) or provincial fragmentation into resource-controlled territories (resource_sovereignty_primacy reading dominant).",
+    "founding_problem": "Confederation required negotiating a union among colonies with distinct interests, unequal resource endowments, and no prior history of centralized governance. The founding problem was: how to create a federal system that preserves provincial autonomy in resource and social policy while enabling national economic coordination and ensuring that resource-rich provinces subsidize peripheral provinces through equalization, without triggering either federal subordination (which would make resource provinces exit) or resource hoarding (which would leave peripheral provinces isolated).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Compact-federalism historians, Quebec constitutional scholars, and provincial governments assert the founding problem remains live: ongoing disputes over federal climate policy (carbon tax litigation, interprovincial environmental standards), equalization renegotiation (Atlantic provinces demanding increased transfers, resource provinces demanding equalization reform), and resource sovereignty (Alberta and Saskatchewan's disputes with federal climate policy) demonstrate that the balance struck in 1867 and reaffirmed in 1982 is continuously renegotiated. Constitutional-subordination scholars argue the founding problem was solved by establishing federal supremacy in the patriation of the Constitution and the Charter of Rights and Freedoms, which transcended provincial jurisdiction. Resource-sovereignty advocates argue the 1982 Constitution Act solved it by entrenching provincial resource control and making provincial property rights absolute. Attestations come from within each reading's own tradition; no neutral external corroboration from parties outside the Canadian federalism dispute exists. The constraint is self-justifying within Canadian constitutional law and political science."
+  },
   "interval": {
-    "start": 0,
-    "end": 40
+    "start": 1867,
+    "end": 2025
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.32
+      "time_point": 1867,
+      "value": 0.35,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.37
+      "time_point": 1926,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.41
+      "time_point": 1982,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.44
+      "time_point": 2000,
+      "value": 0.57,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.46
+      "time_point": 2015,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.47
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.48
+      "time_point": 2025,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.28
+      "time_point": 1867,
+      "value": 0.25,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.31
+      "time_point": 1926,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.34
+      "time_point": 1982,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.37
+      "time_point": 2000,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.39
+      "time_point": 2015,
+      "value": 0.43,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.41
+      "time_point": 2025,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.38
+      "time_point": 1867,
+      "value": 0.4,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.42
+      "time_point": 1926,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.46
+      "time_point": 1982,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.49
+      "time_point": 2000,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.51
+      "time_point": 2015,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.52
-    },
+      "time_point": 2025,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
     {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.52
+      "id": "kernel_reading_operational_dominance",
+      "question": "Which of the three readings of the provincial_sovereignty_boundary kernel is operationally dominant in the Canadian legal system and political practice at present?",
+      "resolution_mechanism": "Track Supreme Court decisions over a 5-10 year window, federal-provincial dispute resolutions, and the rhetoric used by government actors (especially when defending or contesting federal authority). If courts consistently enforce provincial residual sovereignty and treat federal authority as conditional, compact-federalism dominates. If courts establish unilateral federal authority, subordination dominates. If courts ground provincial authority in resource ownership (s.92A), resource-sovereignty-primacy dominates.",
+      "impact": "The operationally dominant reading determines the actual constraint classification. If compact-federalism is dominant, this constraint persists as tangled rope. If subordination is dominant, it reclassifies to snare (federal extraction from provinces without renegotiation power). If resource-sovereignty-primacy is dominant, this constraint's foundations are undercut and a new constraint (resource-control-based sovereignty) becomes the operative one.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which reading of the kernel is operationally dominant in Canadian law and practice."
     }
   ],
   "commentary": {
-    "narrative_context": "Under the compact-federalism reading, the Canadian federation (or any analogous confederation) is understood as a negotiated compact among sovereign provinces, not a federal constitution that subordinates provinces to federal authority. Provinces retain residual sovereignty — anything not explicitly delegated to the federal government remains theirs, including natural resources (s.92A), education, healthcare, and labor regulation. Exit from the federation is possible but negotiable under duress: a province cannot unilaterally leave, but can extract concessions from the federal government by threatening to do so. This reading grounds legitimacy in the original 1867 compact (Confederation) rather than in constitutional subordination. The constraint operates as a tangled rope: it coordinates interprovincial equalization and common standards (coordination function) while simultaneously extracting authority from federal government and constraining resource-poor provinces (asymmetric extraction). The measured extractiveness reflects the growing divergence between the compact's founding coordination function (interprovincial trade, common labor rules, unified defense) and its contemporary operation (resource-rich provinces use sovereignty threat to extract federal concessions; federal climate action is blocked by provincial veto; interprovincial labor mobility remains fragmented). The claim-to-metric gap is structural to the reading itself: compact federalism CLAIMS to be a genuine coordination mechanism (rope), but the authored metrics reveal it operates with substantial extraction (tangled_rope). This is the diagnostic divergence the engine is designed to detect.",
+    "narrative_context": "Canada's confederation was negotiated as a compact among four colonial provinces (Ontario, Quebec, Nova Scotia, New Brunswick) in 1867, each retaining substantial autonomy over natural resources, social policy, and internal governance. The compact-federalism reading asserts that provinces retained residual sovereignty—sovereignty that was never transferred to the federal government—and that the federation's terms are thus continuously renegotiable. When federal authority overreaches (as in unilateral climate policy or equalization redistribution that resource-rich provinces reject), provinces have the structural right to threaten exit and renegotiate the compact's terms. This reading coexists with two competing interpretations: constitutional-subordination (which reads the same 1867-1982 texts as establishing federal supremacy and treating provinces as creatures of federal law, with exit requiring federal consent) and resource-sovereignty-primacy (which grounds provincial sovereignty in s.92A of the Constitution Act 1982, treating resource ownership as the basis of provincial territorial authority). The constraint story here instantiates ONLY the compact-federalism reading, not the contest itself.",
     "key_agents": [
-      "provincial_governments: institutional agenda-setters, collectively benefit from retained sovereignty and equalization transfers",
-      "resource_rich_provinces: powerful beneficiaries, use resource wealth and exit threat to dominate interprovincial negotiation",
-      "federal_government: constrained institutional agenda-setter, operates conditionally on provincial consent",
-      "resource_poor_provinces: moderate-power victims, trapped into equalization dependence and constrained labor mobility",
-      "federal_labor_mobility_seekers: powerless victims, experience provincial barriers despite supposed federal labor market",
-      "indigenous_nations: excluded institutional actors, bearing extraction costs from provincial resource extraction without decision voice"
+      "Provincial governments: set resource policy, regulate extraction, negotiate equalization terms; maintain confederation by threatening exit renegotiation.",
+      "Federal government: manages transfer mechanisms, sets national standards (climate, environment), faces the constraint that unilateral authority is contested.",
+      "Resource-dependent provinces (Alberta, Saskatchewan, Newfoundland): pay through equalization obligations and federal climate constraints; benefit from confederation's market access.",
+      "Economically peripheral provinces (Atlantic provinces, parts of Ontario): pay through small populations and limited leverage; benefit from equalization transfers.",
+      "Federal courts: interpret the Constitution Acts to enforce (or deny) the conditional nature of federal authority; provide interpretive buffer moderating federal-provincial conflict.",
+      "Indigenous nations: structurally excluded from the sovereignty compact; would claim territorial sovereignty independent of both provincial and federal authority."
     ],
-    "logic_rationale": "Extractiveness starts low (0.32) in the early interval because the founding compact's original coordination functions (trade, defense, currency) were new and substantial — provinces genuinely benefited from unified markets and federal military capacity. Over 40 years it rises monotonically to 0.48, flattening after year 25: this trajectory models the degradation of the founding coordination functions (continental trade integration is mature, federal defense is taken for granted) while the extraction mechanisms (provincial resource rents protected by sovereignty claim, federal climate policy blocked by provincial veto, labor mobility restricted by provincial barriers) remain active and harden. The theater ratio rises from 0.28 to 0.41 at the same flattening point, indicating that by year 25, a growing share of provincial sovereignty invocation is performative — defending resource rents under the language of autonomy, rather than exercising genuine residual authority. Suppression starts at 0.38 (moderate passive barriers: credential non-recognition, healthcare portability rules, federal labor-mobility proposals that provinces reject) and rises to 0.52 (active federal enforcement machinery developed to manage interprovincial disputes: constitutional court precedent, federal spending conditions, threatened federal carbon pricing that provinces must negotiate against). The one shared time grid ensures every metric is measured at every examined point; the projection basis switches from observed to projected at year 30 to reflect uncertainty in long-term compact stability.",
-    "perspectival_gap": "From the provincial-government agenda-setter seat (particularly resource-rich provinces), the compact is a genuine exercise in retained sovereignty: they are using legitimate residual authority to manage resources and policy within their boundaries, and negotiating with the federal government from a position of consent and exit leverage. They experience the constraint as a rope — it coordinates equalization and federal standards while allowing them autonomy. From the federal-government seat, the compact appears as a tangled rope with problematic extraction: federal authority is conditional on provincial agreement, which resource-rich provinces exploit to block climate action and federal labor-market harmonization. Federal actors experience the constraint's enforcement machinery (constitutional limits on unilateral federal action, the spending power doctrine, negotiated federalism) as a suppression mechanism keeping them from solving collective problems (climate, labor mobility) that individual provinces cannot. From resource-poor provinces and labor-mobility seekers, the compact is clearly extractive: they bear the cost of federal compliance with provincial preferences (limited climate action, fragmented labor markets) without the leverage to change the arrangement. These divergent perspectives arise from structural asymmetry in exit options (resource-rich provinces mobile/arbitrage, resource-poor provinces trapped), not from disagreement on the facts. The engine computes per-seat classification from power + exit + beneficiary/victim data; this perspectival gap is the structural material those computations operate on.",
-    "directionality_logic": "Provincial governments as a class are beneficiaries (they set the agenda, they collect rents, they negotiate equalization upward) and therefore should compute low directionality (d near 0.0, full beneficiary). Resource-rich provinces within that class have the highest bargaining power (exit leverage, resource wealth, arbitrage options) and should compute lower d than resource-poor provinces. The federal government is the primary target of extraction — its authority is constrained, its climate and labor-mobility agenda blocked — so it should compute high d (near 1.0, full target). Resource-poor provinces are secondary targets: they pay equalization contributions, they lose labor-market mobility, but they also benefit from equalization transfers (mixed position, d near 0.5). Federal labor-mobility seekers are powerless targets with no exit options (trapped), so they should compute very high d. Indigenous nations are excluded, identity-locked, and bearing extraction costs without voice — extremely high d. No overrides are necessary; the beneficiary/victim declarations and power/exit data produce accurate directionality derivations.",
-    "mandatrophy_analysis": "The constraint is not mandatrophy (a constraint whose original function has atrophied but persists theatrically). The compact's original founding functions (interprovincial trade, defense coordination, unified currency, labor mobility) remain materially important — provinces still benefit from trade, federal defense remains a public good, and the currency is unified. What HAS atrophied is the compact's ability to coordinate on NEW collective problems (climate, interprovincial environmental spillovers, labor-market adaptation to automation). The constraint persists not because of institutional inertia, but because the arrangement still delivers asymmetric benefits to resource-rich provinces who have exit leverage. If the constraint were a piton, we would expect theater_ratio to be high (0.7+) with no real coordination function and low measured extraction (since pitons persist by diffusion, not by active beneficiary defense). Instead, the constraint shows moderate theater (0.41) with genuine coordination residue and active extraction (0.48) by concentrated beneficiaries (resource-rich provinces) against concentrated targets (federal government, resource-poor provinces). This is tangled rope, not piton: extraction is explicit, enforcement is active, and the beneficiary class knows exactly who is paying.",
-    "kernel_context": "This constraint instantiates one reading of the contested kernel 'provincial_sovereignty_boundary' — the reading is 'compact_federalism.' The original 1867 compact framed the federation as a bargain among sovereign provinces; this reading maintains that framing as the ground truth. The sibling readings are 'constitutional_subordination' (provinces are creatures of the federal constitution, subordinate to federal authority, with no inherent sovereignty) and 'resource_sovereignty_primacy' (provincial ownership of natural resources under s.92A of the Constitution Act 1982 grounds absolute territorial sovereignty). These three readings coexist in Canadian federalism jurisprudence and politics: resource-rich provinces and provincial governments favor the compact-federalism reading (or push toward resource-sovereignty-primacy); the federal government operates from conditional-consent logic (closer to constitutional subordination when convenient, closer to compact federalism when provinces have veto leverage); courts (particularly the Supreme Court of Canada) oscillate between all three, depending on the case. The structural delta from compact federalism is that federal authority is CONDITIONAL on provincial consent (not supreme), equalization is NEGOTIABLE (not automatic), climate policy is SUBJECT TO provincial override (not federal-led), and exit from the federation is POSSIBLE through negotiation (not forbidden, not unilateral). This reading's constraints on federal authority are the extraction mechanism the engine detects."
+    "logic_rationale": "Extractiveness is moderate-high (0.58) because the constraint operates a unidirectional transfer mechanism (equalization) and imposes federal standards (climate, environment) that constrain resource provinces' policy autonomy. However, under the compact-federalism reading, resource provinces retain negotiation power—they can threaten exit or renegotiation—which dampens extractiveness below what pure federal subordination would produce. Suppression is similarly high (0.62) because the constraint's operation depends on both federal enforcement of national standards AND provincial acceptance of equalization obligations; federal coercion (threat of withholding federal infrastructure funding, federal regulation) and provincial coercion (threat of secession) operate continuously. Theater ratio is moderate (0.42) because the constraint includes genuine coordination functions (equalization ensures peripheral provinces remain in the federation, federal standards internalize cross-provincial externalities like climate emissions) but an increasing share of enforcement activity defends extraction itself—defending equalization transfers, defending federal climate authority against provincial override—rather than the coordination these mechanisms nominally serve. The measurement series show extractiveness rising from 1867 to the early 2000s (as federal authority expanded and equalization became more redistributive) and plateauing after 2015 (as provincial resistance to unilateral federal climate authority constrained further federal expansion). Theater ratio rises gradually over the same period (increasing performative justification for equalization and federal standards as extraction becomes more salient). Suppression jumps at 1982 with the patriation of the Constitution and the entrenchment of s.92A (resource sovereignty), as the legal framework for contested authority was formalized. All metrics are authored on a single shared time grid (1867, 1926, 1982, 2000, 2015, 2025) so temporal analysis has consistent measurement points.",
+    "perspectival_gap": "The federal-government seat and the provincial-government seats compute dramatically different types from identical structural data. From the federal perspective, the arrangement appears as rope-with-coordination: redistribution ensures national union, federal standards address interprovincial externalities, and the federation holds because both levels benefit. From the provincial perspective—particularly resource provinces—the arrangement appears as tangled rope bordering on snare: federal authority is experienced as coercive (climate standards, equalization demands), exits are constrained (economic integration, sunk-cost institutional relationships), and renegotiation power is the only leverage available. The engine's per-seat computation captures this divergence: federal actors compute d near beneficiary (extract from the transfer mechanism), provincial actors compute d near target (constrained payers). This is NOT a claim that one perspective is 'right'—it is structural: the same constraint produces asymmetric benefits and costs for different seats, which is exactly what tangled-rope classification identifies.",
+    "directionality_logic": "Provincial governments (institutional power) claim residual sovereignty and maintain the compact through continuous renegotiation; they are the agenda-setters in this reading. Federal government (institutional power) manages equalization and standards but faces the structural constraint that unilateral authority is contested and exit threats are credible; this reading treats federal authority as conditional on provincial consent. Resource-dependent provinces (powerful power atom) pay through equalization obligations and federal climate constraints; they have leverage to renegotiate because they control valuable resources and exit would be costly to the federation, but they are constrained by economic integration and the federal government's control of interprovincial trade and infrastructure. Economically peripheral provinces (moderate power atom) are trapped: they depend on equalization transfers for basic service delivery, their exit would be economically isolating, and they have minimal leverage to reshape federation terms. They benefit from coordination (get equalization) but pay through subordination to the federation's consolidated authority. Federal courts (institutional, analytical) interpret whether federal authority is conditional (supporting the compact reading) or supreme (supporting subordination). The exit-options axis is critical: resource provinces can plausibly threaten secession (constrained, not trapped), while peripheral provinces would face immediate fiscal and economic collapse upon exit (trapped). This structural asymmetry is the core of the tangled-rope classification: the arrangement coordinates (ensures peripheral provinces stay in the federation) and extracts (redistributes from resource to peripheral provinces) through the same mechanism, but the exit options that generate the asymmetry are REAL (not nominal), which differentiates tangled rope from snare.",
+    "mandatrophy_analysis": "The compact-federalism reading asserts the founding problem remains LIVE: ongoing disputes over federal climate authority, equalization mechanics, and resource sovereignty demonstrate continuous renegotiation. The constraint persists not because the problem is solved but because the compromise—federal authority conditional on provincial renegotiation—still holds at the level of operative legality (courts recognize provincial residual sovereignty, provincial exit threats are credible). If the founding problem were DEAD (if resource distribution and federal-provincial authority were settled and uncontested), the constraint should reclassify to piton (theatrical performance, inertial maintenance). If the constraint were a SNARE (victims trapped without renegotiation power), the founding problem would be superseded by the reality of federal subordination and provincial impotence. The classification tangled-rope holds because: (1) the founding problem remains live (provinces continuously renegotiate terms in response to federal overreach), (2) there is genuine coordination (equalization keeps peripheral provinces in the federation, federal standards internalize emissions externalities), and (3) the asymmetry is sustained through active enforcement of equalization obligations and federal standards, not through nominal consent. If courts were to overturn the compact reading and establish pure federal supremacy (constitutional-subordination), the mandate would be dead (federal authority would be no longer contested) and the constraint would reclassify toward snare.",
+    "kernel_context": "This constraint instantiates the compact_federalism reading of the provincial_sovereignty_boundary kernel. The kernel is the persisting commitment: 'Confederation grounds the relationship between federal and provincial authority in Canada.' Three competing readings exist: compact_federalism (this one—Confederation was a negotiated agreement among sovereign provinces, who retain residual sovereignty and exit-negotiating power), constitutional_subordination (provinces are creatures of federal law with only delegated authority, no inherent sovereignty, no right to unilateral exit), and resource_sovereignty_primacy (provinces' ownership of natural resources under s.92A grounds absolute provincial territorial sovereignty, independent of Confederation). The compact-federalism reading emphasizes the consensual foundation of the federation and provinces' continuous renegotiation power. The constitutional-subordination reading emphasizes the formal legal hierarchy and federal supremacy. The resource-sovereignty-primacy reading emphasizes property rights and treats resource control as the grounds of sovereignty itself. These are THREE DIFFERENT CONSTRAINTS, not one constraint viewed from three angles—they have different ε values (different extraction profiles), different victim sets (different who pays for what), and different termination conditions (different definitions of when the constraint becomes incoherent). They coexist in contemporary Canadian constitutional discourse because different parties to the federation hold different readings operationally."
   },
-  "omegas": [
-    {
-      "id": "founding_problem_persistence_vs_obsolescence",
-      "question": "Is the original 1867 founding problem (coordinating four colonies into a continent-spanning economic and political union) still live, or has it been substantially solved such that the compact's persistence is now best explained by resource-rich provincial rent extraction rather than coordination necessity?",
-      "resolution_mechanism": "Counterfactual institutional analysis: what problems would arise if the compact dissolved tomorrow and were replaced with (a) a unitary federal state, or (b) three or four sovereign nations? If interprovincial trade, labor mobility, and defense would function as well or better, the founding problem is dead. If serious coordination problems would emerge (market fragmentation, labor-market failures, defense gaps), the founding problem is live.",
-      "impact": "If the founding problem is dead, the constraint shifts toward snare (pure extraction with coordination cover story); if live, it remains tangled rope. If dead, base_extractiveness should be revised upward and theater_ratio downward in a piton direction.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the compact's original coordination necessity persists or the arrangement is now sustained primarily by concentrated beneficiary interest in resource-rich provinces."
-    },
-    {
-      "id": "provincial_sovereignty_as_natural_or_constructed",
-      "question": "Is 'provincial sovereignty' as described in the compact-federalism reading a natural or self-evident fact that emerges from the 1867 bargain, or a constructed narrative that serves resource-rich provincial interests by claiming natural status?",
-      "resolution_mechanism": "Historical analysis of the 1867 Confederation discussions: did the founders explicitly assert provincial sovereignty as residual and negotiable, or was this reading developed later (post-1900, post-1982 resource-sovereignty amendments) as a tool for provincial advantage in resource disputes?",
-      "impact": "If natural/original, the reading's legitimacy is grounded in historical intent; if constructed, the constraint is a false-summit candidate masquerading as natural law. If constructed, the compact-federalism reading should carry an additional omega documenting the false-summit ambiguity.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether provincial sovereignty is an intrinsic feature of the original compact or a retroactively asserted reading developed to serve provincial advantage in resource extraction disputes."
-    },
-    {
-      "id": "exit_threat_credibility_under_climate_crisis",
-      "question": "As climate change makes resource extraction (oil, gas) increasingly costly and socially disfavored, does the exit threat (separation threat) that resource-rich provinces use to extract federal concessions remain credible, or will it decay?",
-      "resolution_mechanism": "Observation over the next 10–15 years: if separation rhetoric persists despite declining resource revenue and fossil-fuel phase-out pressure, the exit threat is rhetorical (theater); if separation rhetoric declines as resources become less valuable, the exit threat was instrumentally tied to resource rents (not fundamental sovereignty claim).",
-      "impact": "If exit threat decays, suppression_requirement should fall, base_extractiveness should fall, and the constraint should shift from tangled_rope toward rope (reduced asymmetric extraction as the leverage basis disappears). If exit threat hardens despite declining resource value, it indicates a deeper sovereignty claim not tied to rents (more fundamental than compact-federalism would predict).",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether provincial exit threats are grounded in material resource wealth and will decay with resource devaluation, or represent deeper sovereignty claims that will persist."
-    },
-    {
-      "id": "federal_climate_authority_legitimacy_contest",
-      "question": "Do federal climate authorities (environmental agencies, climate-policy bureaucrats) have legitimate grounds to override the compact-federalism reading's requirement for provincial consent on emissions policy, or is provincial consent structurally required by the reading's own logic?",
-      "resolution_mechanism": "Examination of the 1867 compact's original allocation of authority: was environmental/climate regulation implicitly federal (under 'peace, order, good government' residual federal power) or implicitly provincial (under property and civil rights)? Does the reading's own textual basis support or deny federal unilateral climate authority?",
-      "impact": "If federal authority over climate is supported by the compact's own logic, then federal climate policy blocking is a violation of the compact (not a legitimate provincial exercise), and the constraint's extraction mechanism is illegitimate even within the reading. If provincial consent is structurally required, then federal climate blockage is a feature of the compact, not a bug.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether provincial climate-policy veto is a legitimate expression of the compact-federalism reading's allocation of authority, or whether the reading's own logic supports federal unilateral climate authority."
-    },
-    {
-      "id": "indigenous_nation_exclusion_legitimacy",
-      "question": "Is the exclusion of indigenous nations from the confederation's decision structure a permanent feature of the compact-federalism reading, or does the reading's own logic (original sovereignty retained by the parties to the compact) implicate indigenous nations as original sovereigns whose sovereignty was never ceded?",
-      "resolution_mechanism": "Historical and legal analysis of indigenous sovereignty: were indigenous nations parties to the 1867 compact (Confederation)? Do indigenous nations retain claims to territorial sovereignty that predate the compact? If yes to both, does the compact-federalism reading logically require recognition of indigenous nations as original sovereigns with veto rights equivalent to provinces?",
-      "impact": "If indigenous nations are implicated as original sovereigns by the reading's own logic, then their exclusion is a contradiction within the reading (false-summit candidate). If excluded by design, the reading is inherently contestable as a justification for federal structure. Either way, indigenous-nation recognition would alter the constraint's stakeholder map and directionality computation.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the compact-federalism reading's logic of retained sovereignty applies to indigenous nations as original sovereigns, making their exclusion a logical contradiction within the reading."
-    }
-  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
+    "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "federal_spending_power__equalization_distribution",
-      "provincial_environmental_authority__resource_extraction_override",
-      "labor_mobility_interprovincial__credential_recognition_barriers"
+      "constitutional_subordination",
+      "resource_sovereignty_primacy",
+      "equalization_transfer_mechanism",
+      "federal_climate_authority"
     ],
-    "dual_formulation_note": "The provincial_sovereignty_boundary kernel decomposes into three readings with distinct ε and beneficiary structures: (1) compact_federalism (this constraint) — federal authority conditional on provincial consent; ε=0.48 (substantial extraction by resource-rich provinces); (2) constitutional_subordination — federal authority supreme, provinces are constitutional creatures; ε=0.25 (minimal extraction if federal authority is exercised); (3) resource_sovereignty_primacy — provincial resource control grounds absolute territorial sovereignty; ε=0.62 (maximum extraction by resource-rich provinces over federal climate/environmental authority). These readings coexist in Canadian federalism jurisprudence — they are held by different institutional actors simultaneously (resource-rich provinces prefer reading 3 or 1, federal government prefers reading 2, courts oscillate). Link all three constraint files via network.affects_constraints to enable contamination analysis of the kernel: if one reading's legitimacy degrades (e.g., if resource sovereignty primacy is foreclosed by international climate agreements), predict effects on the others."
+    "dual_formulation_note": "The provincial_sovereignty_boundary kernel decomposes into three structurally distinct constraints corresponding to three readings of the same constitutional texts (Constitution Act 1867, Constitution Act 1982). This story (compact_federalism) treats the confederation as a negotiated compact with operationally real provincial exit rights and federal authority conditional on consent. The constitutional_subordination reading treats the same texts as establishing federal supremacy and provinces as derived entities. The resource_sovereignty_primacy reading treats s.92A as grounding absolute provincial territorial control. Each reading produces a different constraint_id, a different ε value, and a different victim set. Sibling constraints are linked via network.affects_constraints to indicate that a shift in how the kernel is read (e.g., a Supreme Court decision reinterpreting Confederation) would cause simultaneous reclassification across all three constraint stories. The readings coexist because different Canadian political constituencies operate within different readings operationally."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.68
+      "power_atom": "powerful",
+      "d_value": 0.65
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "moderate",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "provincial_sovereignty_boundary__constitutional_subordination",
-      "provincial_sovereignty_boundary__resource_sovereignty_primacy"
-    ]
-  },
+  "gain_flow": "federal_government",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "confederation_original_compact",
-    "drift_state": {
-      "moment": "contemporary_resource_abundance_climate_crisis",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "provincial_sovereignty_boundary__constitutional_subordination",
+        "sibling_id": "constitutional_subordination",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "provincial_sovereignty_boundary__resource_sovereignty_primacy",
+        "sibling_id": "resource_sovereignty_primacy",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "confederation_compact_foundational_sovereignty",
+        "atom": "confederation_consensual_compact",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "residual_provincial_authority_non_delegated_powers",
-        "role": "secondary",
+        "atom": "provincial_residual_sovereignty_real",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
+      },
+      {
+        "atom": "exit_negotiable_under_duress",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
       }
-    ]
+    ],
+    "reference_frame": "confederation_as_negotiated_compact_1867",
+    "drift_state": {
+      "moment": "contemporary_climate_equity_reckoning",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

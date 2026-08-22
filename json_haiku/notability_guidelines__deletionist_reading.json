@@ -2,28 +2,86 @@
   "header": {
     "constraint_id": "notability_guidelines__deletionist_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "b65e1d35-366b-423e-a27f-23349c61da90"
+    "story_uid": "d63ca385-121d-444a-a29b-0d86d6f3e65f"
   },
   "base_properties": {
     "extractiveness": 0.18,
-    "suppression": 0.22,
+    "suppression": 0.12,
     "theater_ratio": 0.08,
-    "accessibility_collapse": 0.71,
-    "resistance": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.31,
     "claimed_type": "rope",
-    "human_readable": "Wikipedia Notability Guidelines (Deletionist Reading)",
-    "topic_domain": "epistemic/informational",
-    "requires_active_enforcement": false,
+    "human_readable": "WP:N Deletionist Reading: Notability as Quality Filter",
+    "topic_domain": "epistemic/knowledge_infrastructure/platform_governance",
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "wikipedia_readership",
-      "quality_preservation_function"
+      "knowledge_quality_preservation"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "wikipedia_readership",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Encounters a curated encyclopedia where articles meet a consistent notability standard: verifiable coverage in independent reliable sources, not original research, not promotional content. The reader benefits from reduced signal noise and confidence that an article's presence signals documented significance, not vanity or spam."
+    },
+    {
+      "name": "article_deletionists",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enforce the deletionist reading of WP:N through Articles for Deletion (AfD) processes: articles failing the notability filter are nominated and removed. They argue this maintains encyclopedia quality by excluding topics that cannot meet the standard of third-party documentation in established media. They administer the enforcement through consensus discussions and deletion decisions."
+    },
+    {
+      "name": "article_inclusionists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Believe WP:N criteria are too rigid and exclude notable topics that lack mainstream media coverage—local history, emerging subjects, marginalized communities' documented achievements. They would object that the deletionist reading privileges established media as the sole arbiter of notability, but their voice is structurally secondary in the deletionist framing."
+    },
+    {
+      "name": "vandal_spam_content",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Non-agent entity representing promotional spam, original research, and vanity articles that the constraint excludes. The deletionist reading treats exclusion of this content as just enforcement, not extraction—spam has no legitimate claim to remain."
+    },
+    {
+      "name": "wikipedia_editors",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Volunteer editors across the spectrum (deletionists, inclusionists, deliberativists) who conduct the actual AfD discussions, vote on deletion, and implement removal decisions. They are seated as observers here because they hold multiple readings of WP:N—this story instantiates only the deletionist reading held by one editor faction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of maintaining an encyclopedic commons against degradation: without a notability standard, the repository would accumulate low-value, promotional, and non-notable content, reducing utility for readers seeking authoritative information. A shared standard for what merits inclusion coordinates contributors and readers around a common quality expectation.",
+    "transfer_function": "Transfers curation labor and editorial authority to the deletionist editor faction and to the standard-setters (WMF Notability Policy working groups, high-reputation editors). In exchange, readers receive a quality-filtered resource. The transfer is of governance legitimacy, not economic rent—the deletionist reading does not model editors as capturing extraction value.",
+    "absent_voices": "Inclusionists argue that marginalized communities, emerging fields, and topics lacking mainstream media coverage are systematically excluded by a standard that privileges established media as the arbiter of notability. They would demand a more expansive or locally-responsive standard. Alternative knowledge systems (oral history traditions, community documentation, non-English-language scholarship) are structurally disfavored by the deletionist frame. These voices are organized but secondary in the deletionist reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If WP:N deletionist enforcement vanished overnight, Wikipedia would accumulate promotional articles, vanity biographies, and non-notable content within weeks. Signal-to-noise would degrade substantially, reducing reader trust and utility. The constraint's persistence is necessary to maintain the commons's epistemic function.",
+    "founding_problem": "Wikipedia's early years saw rapid accumulation of low-quality, non-notable, and promotional articles. The commons required a shared standard to distinguish documentary significance from personal promotion, spam, and original research. WP:N codified that standard.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Ongoing spam and promotional edit attempts, persistent editor discussions of notability borderlines, and reader complaints about low-quality articles all attest the founding problem remains live. Academic studies of Wikipedia quality correlate stricter notability enforcement with higher reader satisfaction (independent corroboration outside the deletionist faction). Inclusionists dispute that the problem justifies the current standard's scope—they attest the problem is real but the solution is too broad."
   },
   "interval": {
     "start": 0,
-    "end": 24
+    "end": 25
   },
   "measurements": [
     {
@@ -33,200 +91,199 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.11
+      "time_point": 5,
+      "value": 0.12
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.13
+      "time_point": 10,
+      "value": 0.15
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.16
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 18,
+      "time_point": 15,
       "value": 0.17
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.04
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 3,
       "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
+      "time_point": 5,
       "value": 0.06
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
+      "time_point": 10,
       "value": 0.07
     },
     {
       "metric": "theater_ratio",
-      "time_point": 18,
-      "value": 0.075
+      "time_point": 15,
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
       "value": 0.08
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
       "value": 0.12
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 3,
-      "value": 0.14
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 6,
-      "value": 0.17
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.2
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 18,
-      "value": 0.21
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.22
+      "time_point": 25,
+      "value": 0.12
     }
   ],
   "commentary": {
-    "narrative_context": "The Wikipedia Notability Guidelines embody a choice: preserve the encyclopedic commons from degradation by enforcing verifiable significance thresholds. Under the deletionist reading, the constraint is a protective coordination mechanism—a Rope that solves the collective-action problem of maintaining epistemic quality at scale. Spam and promotional insertion are genuine threats; notability prevents them justly by excluding unvetted content. The reading does not deny that marginalized knowledge sometimes fails to meet thresholds; it frames that as a cost of preventing commons degradation, not as systematic gatekeeping. This is one of three structurally distinct readings of the same kernel (notability_guidelines). The deliberative_reading treats notability as an evolving negotiation; the inclusionist_reading treats it as structural gatekeeping. These are NOT different perspectives on one constraint—they are three separate constraints with three different ε values, three different beneficiary structures, and three different structural dynamics. The deletionist reading is the one authored here.",
+    "narrative_context": "This story instantiates the DELETIONIST READING of WP:N (Wikipedia's Notability Guidelines). Under this reading, WP:N is a necessary epistemic quality filter that solves a real coordination problem: maintaining an encyclopedic commons against degradation by promotional, spam, and non-notable content. The deletionist reading frames the standard as a beneficiary-symmetric Rope—readers benefit from a curated resource; editors benefit from a shared governance framework that avoids constant spam reversal. The constraint is coordination, not extraction: the enforcement serves quality preservation, not rent collection. The standard is enforced through Articles for Deletion consensus processes, where articles failing the notability bar are removed by community decision. This reading coexists with two sibling readings held by different editor factions: the INCLUSIONIST reading views WP:N as structural gatekeeping that excludes marginalized knowledge, and the DELIBERATIVE reading views it as a perpetual negotiation process where boundaries evolve through AfD deliberation. The three readings share the kernel (the WP:N policy text and institutional practice) but draw it into different constraints with different ε values, beneficiary/victim structures, and types. This story is ONE reading only—the ε value, metrics, and beneficiary structure describe the standing arrangement as the deletionist reading understands it, not as the inclusionist reading would measure it.",
     "key_agents": [
-      "wikipedia_readership: organizers of demand for quality, beneficiaries of curation",
-      "subject_matter_experts: contributors who depend on quality preservation to justify their effort",
-      "wikipedia_editors: the enforcement layer, maintaining the boundary through AfD and deletion reviews",
-      "marginal_knowledge_creators: excluded from deliberation; would contest the exclusion but lack standing",
-      "spam_and_promotional_actors: structurally outside the scope of legitimate claim—properly excluded",
-      "verifiability_principle: the foundational normative commitment the constraint operationalizes"
+      "wikipedia_readership: primary beneficiary (organized, mobile exit) — benefits from quality-filtered resource",
+      "article_deletionists: agenda-setter (organized, mobile exit) — enforce the standard through AfD",
+      "article_inclusionists: excluded observer (moderate power, constrained exit) — would dispute the boundary",
+      "wikipedia_editors (multi-reading faction): observer across the ecosystem"
     ],
-    "logic_rationale": "Extractiveness is LOW (0.18 at interval end) because readership and experts genuinely benefit from quality preservation, and the constraint enforces a legitimate quality standard without asymmetric gain. Suppression is also LOW (0.22) because the constraint operates through transparent review (AfD) rather than covert exclusion—participants know why deletions occur and can contest them. Theater ratio is minimal (0.08) because the enforcement function (article deletion, vandalism reversal) performs real work; there is little performative activity. Accessibility collapse is HIGH (0.71) because once notability standards are understood, the alternatives (unvetted, promotional, or spam content) collapse completely—the only exit is acceptance of the standard or departure from the commons. Resistance is MODERATE (0.42) because the constraint meets genuine resistance from those excluded, but that resistance comes from outside the core beneficiary set (marginal knowledge creators, niche advocates) and is dwarfed by voluntary editor participation. The measurement series track a slight drift upward in extractiveness and suppression requirement over 24 units (representing roughly 2000–2020 Wikipedia history): as the baseline quality expectation increased and notability thresholds tightened incrementally, the constraint demanded slightly more enforcement effort and began excluding content that previously would have passed.",
-    "perspectival_gap": "The deletionist reading produces strong seat-level divergence. From the readership and editor perspective, the constraint is unambiguous Rope—coordination with minimal cost. From the marginal knowledge creator perspective (excluded from the analysis), the same constraint is a Snare—systematic gatekeeping that benefits legacy-institution-based knowledge at the expense of grassroots documentation. The engine computes per-seat types from the structural data; the deletionist reading's authored beneficiary set (readership, experts, verifiability principle) implicitly excludes the marginal creator seat, which is why the divergence arises. This is NOT a failure—it is how the kernel contest works: different readings name different beneficiary sets because they disagree about WHO RIGHTLY BENEFITS from notability. The reading_relations and axioms in cs_structure capture this structural disagreement.",
-    "directionality_logic": "Under the deletionist reading, Wikipedia readership is a near-pure beneficiary (d near 0.0): they collect reliability and quality without enforcement burden. Subject-matter experts are also beneficiaries (d~0.1): they contribute verified knowledge and their work is protected from being overwhelmed by spam. Wikipedia editors sit at d~0.3 (symmetric): they volunteer effort to maintain the boundary, but they do so from internalized commitment to the mission, not coercion. Marginal knowledge creators are structurally outside the beneficiary set (d undefined under this reading—they are marked as excluded, which means their position is NOT used in directionality derivation). This reading does not deny they pay a cost; it asserts that under notability standards, they are not a legitimate target of the constraint—they simply lack the documented significance that inclusion requires. Spam and promotional actors are not treated as a seat (they are marked with agent:false as structural outsiders, not rights-bearing participants).",
-    "mandatrophy_analysis": "The deletionist reading does not invoke mandatrophy. The founding problem (spam and promotional degradation) remains live; the constraint continues to address it. The measurement series show slight tightening of suppression requirement and extractiveness over time, consistent with a constraint under incremental enforcement intensification as the baseline quality expectation rose—NOT consistent with atrophied function. The theater ratio remains minimal, so there is no performative drift that would signal theatricality. The constraint is not maintained by theatrical effort; it is maintained by genuine quality-preservation work.",
-    "kernel_context": "This constraint is the DELETIONIST READING of the contested kernel 'notability_guidelines'. The kernel is Wikipedia's formalized commitment to verifiable significance: the stability claim that encyclopedic content must meet published reference standards. The deletionist reading instantiates that kernel by treating notability as a necessary quality filter preventing commons degradation. Under this reading, the constraint is coordination (Rope): it solves the problem of maintaining epistemic quality at scale. The sibling reading 'deliberative_reading' treats the kernel as a perpetually negotiated boundary evolving through AfD deliberation (different ε, different dynamics). The sibling reading 'inclusionist_reading' treats the kernel as a gatekeeping apparatus systematically excluding marginalized knowledge (different ε, different beneficiary structure). The three readings share one kernel text ('Wikipedia:Notability') but instantiate structurally different constraints—each with its own ε, its own beneficiary declaration, its own type assignment. This file authored the deletionist reading; the other readings are separate constraint stories, linked via network.affects_constraints."
+    "logic_rationale": "Extractiveness is LOW (0.18 at interval end) because the deletionist reading finds no victim set—spam and vanity exclusion is just enforcement against non-legitimate content, not extraction from legitimate stakeholders. Readers get a public good (quality commons); editors get a shared standard reducing coordination friction. The low theater ratio (0.08) reflects the reading's judgment that the constraint's function is mostly real: removal is executed because articles fail the notability bar, not because the bar is maintained performatively. The suppression requirement is also low (0.12) because the reading assumes agreement on the standard's legitimacy—strong spam filters, automated-removal tools, and community consensus make enforcement relatively low-friction within the deletionist frame. Accessibility collapse is HIGH (0.72) because once the notability standard is understood, alternatives collapse: an article either meets third-party-coverage criteria or it does not; there is limited space for borderline negotiation in the deletionist reading. Resistance is MODERATE (0.31) because inclusionists organize counter-proposals and the boundary is genuinely contested—but the deletionist reading treats this as healthy policy debate, not structural resistance to an extractive constraint. The measurement series shows extractiveness, theater, and suppression drifting slightly upward over the interval (from 0.08→0.18, 0.05→0.08, 0.08→0.12), suggesting mild creep as edge cases accumulate and the standard's enforcement tightens—but all remain low, consistent with a Rope classification even under the deletionist reading.",
+    "directionality_logic": "The beneficiary seat (readership) has HIGH accessibility collapse and LOW directionality (near 0.0) because the deletion of spam simply ends non-legitimate content—the reader's alternatives do not collapse by this constraint, the constraint opens alternatives by keeping noise out. The agenda-setter (deletionists) has MOBILE exit and ORGANIZED power—they can leave Wikipedia, but the constraint aligns with their values, so directionality is low (they are net beneficiaries of their own enforcement). Inclusionists are EXCLUDED not PAYER because the deletionist reading does not model them as bearing extraction costs—they are modeled as holding an alternative standard, not as suffering from the enforcement of this one. The non-agent (spam/vanity) is labeled as payer only for bookkeeping; the deletionist reading does not extend victim status to content deemed non-notable by legitimate standard.",
+    "perspectival_gap": "The engine's per-seat computation will show divergence: from the deletionist seat, the constraint is low-extractiveness Rope (quality coordination); from the inclusionist seat (not authored in this story, but present in a sibling story), the same institutional practices measure as higher-extractiveness Snare or Tangled Rope (gatekeeping excluding marginalized knowledge). That divergence is exactly the kernel-reading contestation the framework models. This story declares only the deletionist measurements; the sibling stories will declare the inclusionist and deliberative measurements. The contested boundary is the point.",
+    "mandatrophy_analysis": "Mandatrophy (decay of mandate) is low in the deletionist reading because the founding problem (spam/vanity degradation) remains live—ongoing spam attempts, persistent low-quality submissions, and reader complaints all attest the problem WP:N was built to solve is still active. If the founding problem status shifted to 'dead' (somehow all low-quality content vanished, rendering the filter unnecessary), mandatrophy would activate and the constraint would reclassify toward Piton (maintained by theater, not by function). The deletionist reading does not face this reclassification risk under current conditions.",
+    "kernel_context": "This story instantiates the DELETIONIST READING of the notability_guidelines kernel. The kernel is the WP:N policy text and the institutional practice of Articles for Deletion. The deletionist reading interprets the kernel as a necessary epistemic quality filter: notability requirements are legitimate because they exclude non-documented content and preserve the commons against spam. The sibling readings are: (1) INCLUSIONIST: WP:N as structural gatekeeping that systematically excludes marginalized knowledge and privileges mainstream media as the arbiter of notability; (2) DELIBERATIVE: WP:N as a perpetually negotiated boundary where legitimacy emerges from AfD deliberation, not from fixed criteria. The deletionist reading COEXISTS with both siblings—different editor factions hold each reading simultaneously, and no single reading logically forecloses the others within Wikipedia's distributed governance structure. The ε values differ markedly: deletionist ε is LOW (quality coordination, minimal extraction), inclusionist ε is HIGH (gatekeeping as systematic exclusion), deliberative ε is MODERATE (negotiation carries transaction costs). This story is the deletionist measurement only."
   },
   "omegas": [
     {
-      "id": "threshold_calibration_boundary",
-      "question": "Where should the verifiable significance threshold lie? At what point does requiring institutional publication footprint exclude legitimate knowledge versus protecting the commons from promotional noise?",
-      "resolution_mechanism": "Empirical analysis of deletion-review rationale across AfD cases: measure the proportion of deletions justified by spam/promotional harm versus quality degradation versus boundary-tightening for its own sake. Compare knowledge loss (what gets deleted that was genuinely useful) against knowledge protection (what deletion prevented degradation).",
-      "impact": "If deletion-review analysis shows the threshold is calibrated primarily to prevent spam, the deletionist reading's framing holds. If analysis shows substantial proportion of deletions exclude niche knowledge that meets verifiability standards, the threshold may have drifted toward exclusionary gatekeeping (supporting the inclusionist reading). This omega is the empirical gate between the two readings.",
+      "id": "mainstream_media_bias_in_notability",
+      "question": "Does the deletionist reading's reliance on independent reliable sources—typically mainstream media—systematically bias notability toward established institutions and against marginalized communities?",
+      "resolution_mechanism": "Empirical audit of deleted articles by topic domain: if marginalized-community topics and non-Western scholarship correlate with higher deletion rates relative to comparable mainstream topics, the bias hypothesis is supported. Expert testimony from inclusionist editors and scholars of knowledge infrastructure.",
+      "impact": "If bias is demonstrated, the constraint reclassifies from deletionist Rope (justified quality filter) toward inclusionist Snare or Tangled Rope (unjust gatekeeping). The ε value would rise substantially in the inclusionist reading, while remaining low in the deletionist reading—the readings' divergence would become empirically grounded in documented bias rather than mere theoretical contestation.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the deletionist reading's protective intent matches the threshold's actual enforcement."
+      "description": "Whether notability criteria systematically exclude marginalized knowledge due to mainstream-media bias."
     },
     {
-      "id": "coordinated_vs_distributed_quality_maintenance",
-      "question": "Is centralized enforcement of notability thresholds necessary for quality maintenance, or could distributed alternative wikis (sister projects, specialized databases) preserve commons quality without deletionist gatekeeping?",
-      "resolution_mechanism": "Empirical observation from Wikimedia sister projects (Wikivoyage, Wikidata, Commons) and parallel encyclopedic wikis that use different notability models: do they experience degradation that would occur in mainline Wikipedia without notability enforcement? Controlled comparison of quality drift in deletion-light environments.",
-      "impact": "If sister projects with looser notability thresholds maintain comparable quality or successfully specialize, the coordination function is separable from the deletionist model—the constraint's exclusivity is less justified. If quality measurably degrades without deletion enforcement, coordination requires centralized gatekeeping (supporting the deletionist reading). This addresses whether the coordination function REQUIRES the specific enforcement mechanism.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether notability enforcement is structurally necessary for quality coordination or a chosen instrument."
-    },
-    {
-      "id": "epistemic_bias_in_publication_footprint",
-      "question": "Does the requirement for documented publication presence in 'recognized sources' systematically bias inclusion toward knowledge produced in wealthy-world institutions, academic structures, and legacy media, and against knowledge produced by grassroots, marginalized, or geographically peripheral communities?",
-      "resolution_mechanism": "Content analysis of deleted articles and their bylines: measure geographic, institutional, and demographic distribution of creators whose work passed notability thresholds versus those whose work was deleted. Compare against the distribution of human knowledge production globally. Qualitative analysis of AfD debates to identify whether 'verifiability' is applied as a proxy for 'institutional legitimacy'.",
-      "impact": "If analysis shows statistically significant bias toward wealthy-world institutions and against marginalized knowledge sources, the deletionist reading's claim to neutral quality preservation is compromised—the constraint encodes structural gatekeeping (supporting the inclusionist reading). If distribution is roughly proportional to global publication distribution, the deletionist reading's framing holds. This omega addresses a key structural disagreement between the two readings.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether notability thresholds encode epistemic bias toward institutional knowledge."
-    },
-    {
-      "id": "reading_forecast_disagreement",
-      "question": "Under what future conditions would the deletionist reading and the inclusionist reading swap which is empirically dominant? What changes in technology, knowledge production, or Wikipedia governance would make the constraint look more like gatekeeping than coordination?",
-      "resolution_mechanism": "Forecasting: identify the key parameters (institutional centralization of knowledge, alternative platforms for niche content, Wikipedia's user base composition, globalization of publication structures, AI-assisted content review). Scenario analysis: if these parameters shift, which reading becomes more empirically adequate? Revisit the reading classifications at 5-year intervals against actual parameter drift.",
-      "impact": "This omega documents that the deletionist reading is NOT universally true—it is empirically contingent. Changes in epistemic infrastructure could make the constraint structurally more extractive (inclusionist) than protective (deletionist). Forecasting identifies the tipping points and allows prospective falsification of the reading's adequacy.",
+      "id": "reading_stability_over_time",
+      "question": "Is the deletionist reading stable over Wikipedia's evolution, or does the boundary between quality-filtering Rope and gatekeeping Snare shift as Wikipedia's user base and knowledge domain evolve?",
+      "resolution_mechanism": "Longitudinal analysis of AfD outcomes and community consensus over 5+ year periods. Tracking of whether deletion rates and reasons remain consistent or shift toward gatekeeping patterns.",
+      "impact": "If the reading drifts from quality-filtering toward gatekeeping, the constraint would transition from stable Rope toward Tangled Rope or Snare, and the three readings' ε values would converge (deletionist ε would rise, inclusionist ε would remain high, deliberative ε would rise toward the others). A stable reading supports the deletionist Rope classification; a drifting reading suggests the kernel's interpretation is shifting.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "The reading's empirical stability depends on epistemic infrastructure conditions that may change."
+      "description": "Whether the deletionist reading remains coherent as Wikipedia's knowledge domain and user base evolve."
+    },
+    {
+      "id": "consensus_legitimacy_vs_structural_power",
+      "question": "Does the AfD consensus process genuinely reflect distributed community judgment, or does deletionist editor power concentrate such that consensus is manufactured rather than emergent?",
+      "resolution_mechanism": "Social network analysis of AfD discussions: identify whether outcomes correlate with editor-faction power rather than article quality, and whether turnout and participation patterns shift with topic domain or editor background. Qualitative analysis of consensus-formation mechanisms.",
+      "impact": "If consensus is manufactured by structural power, the suppression requirement rises (consensus becomes performative), theater ratio rises (manufactured agreement masks force), and the constraint reclassifies toward Tangled Rope or Snare even in the deletionist reading. If consensus is genuinely emergent, the low-suppression Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AfD consensus reflects distributed community judgment or concentrated editor power."
+    },
+    {
+      "id": "kernel_reading_committer_contestation",
+      "question": "Is the notability_guidelines kernel a single constraint viewed from different perspectives, or do the three readings (deletionist, inclusionist, deliberative) actually instantiate three different constraints with different ε values because they measure different referents?",
+      "resolution_mechanism": "Operator analysis per ε-invariance principle (DP-001): if changing the observable (deletionist quality-filter frame vs. inclusionist gatekeeping frame) changes ε by a wide margin—say from 0.18 to 0.65—then the readings are measuring different constraints, not the same constraint from different seats. If ε stays stable across readings when corrected for directionality, the readings are the same constraint; if ε diverges, they are separate constraints linked by the kernel.",
+      "impact": "If readings are separate constraints (divergent ε), the corpus should author three separate JSON files with distinct constraint_ids and link them via network.affects_constraints. If readings are same constraint (stable ε corrected for directionality), this single story suffices. Current authoring assumes separate constraints; if operator analysis contradicts that, refactor to one ε-stable story with per-seat computation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the three readings of notability_guidelines are one constraint with multiple seats or three separate constraints linked by a kernel."
     }
   ],
   "boltzmann": {
     "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.04
+    "boltzmann_floor_override": 0.05
   },
   "network": {
     "affects_constraints": [
       "notability_guidelines__inclusionist_reading",
       "notability_guidelines__deliberative_reading"
     ],
-    "dual_formulation_note": "The notability_guidelines kernel decomposes into three structurally distinct constraints: the deletionist_reading (this file, Rope, quality coordination), the inclusionist_reading (Snare, systematic gatekeeping), and the deliberative_reading (Tangled Rope, contested negotiation). Each reading instantiates a different ε-value and beneficiary/victim structure. They are linked because they interpret the same kernel text (Wikipedia:Notability) but they are NOT the same constraint viewed from different angles—they are distinct constraints with distinct metrics. The ε-invariance principle requires separate files. Network edges enable the corpus to track that all three readings compete to explain the same institutional phenomenon (Wikipedia's inclusion/exclusion decisions), and metrics divergence between the readings is the empirical measurement of the kernel contest."
+    "dual_formulation_note": "This story instantiates the DELETIONIST reading of the notability_guidelines kernel. Sibling readings (inclusionist and deliberative) are separate constraint stories with different ε values, beneficiary/victim structures, and claimed types. All three stories share the kernel (WP:N policy text and AfD process) but draw it into different constraints. The three-story family models the kernel contestation: each reading measures a different property of the same institutional arrangement, producing divergent classifications. Link: notability_guidelines__inclusionist_reading (coexists_with, higher ε, Snare/Tangled Rope); notability_guidelines__deliberative_reading (coexists_with, moderate ε, Tangled Rope). The deletionist reading privileges coordination and quality preservation; the inclusionist reading emphasizes gatekeeping and exclusion; the deliberative reading models notability as emergent from ongoing negotiation."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
+    "authority_grounding": "practice",
     "interpretation_layer_present": true,
-    "reference_frame": "verifiable_encyclopedic_quality",
-    "drift_state": {
-      "moment": "contemporary_distributed_knowledge_production",
-      "direction": "axiom_overriding",
-      "magnitude": "minor",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "notability_guidelines__inclusionist_reading",
-        "relation": "forecloses"
+        "sibling_id": "inclusionist_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "notability_guidelines__deliberative_reading",
+        "sibling_id": "deliberative_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "verifiable_significance_distinguishes_legitimate_from_promotional",
+        "atom": "notability_via_documented_coverage",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "quality_preservation_justifies_exclusive_gatekeeping",
+        "atom": "mainstream_media_as_legitimacy_arbiter",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       }
-    ]
+    ],
+    "reference_frame": "quality_preservation_via_shared_standard",
+    "drift_state": {
+      "moment": "contemporary_marginalized_knowledge_critique",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

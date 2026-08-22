@@ -39,15 +39,23 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,36 +75,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: animal_status__abolitionist_reading
- *   human_readable: Animal Rights Abolitionist Reading: Inherent Value Precluding Instrumental Use
- *   domain: applied_ethics/legal_philosophy
+ *   human_readable: Animal Instrumental Use (Abolitionist Reading)
+ *   domain: applied_ethics/legal_philosophy/political_economy
  *
  * SUMMARY:
- *   This constraint story instantiates the abolitionist reading of the
- *   contested kernel 'animal_status.' It states the structural claim of the
- *   abolitionist position: animals are inherent-value bearing subjects whose
- *   moral standing precludes instrumental use—meaning any use of animals as
- *   means to human ends (food, research, clothing, labor, entertainment)
- *   violates their rights. This reading is a minority position within law and
- *   policy but a live philosophical and social movement. The constraint is
- *   claimed as a snare because the current institutional arrangement treats
- *   animals as instrumentalizable property while abolitionist advocates argue
- *   this arrangement is fundamentally illegitimate. The extractiveness is
- *   zero because, under the abolitionist reading, instrumental use itself is
- *   impermissible—there is no 'fair' rate of extraction, no welfare
- *   optimization that legitimates the use itself. The suppression is high
- *   because maintaining the property framework and preventing the
- *   abolitionist redefinition of animal status requires active institutional
- *   work: regulatory capture, discourse control in supply chains, and legal
- *   resistance to personhood claims.
+ *   The abolitionist reading claims that animals are moral subjects with
+ *   inherent value, precluding all instrumental use. Under this reading, the
+ *   standing arrangement of animal commodification is not a coordination
+ *   problem to be managed (the welfare reading) or a property right to be
+ *   exercised (the property reading), but a structural violation: the
+ *   constraint asserts that animals are victims of a snare whose persistence
+ *   depends on actively suppressing recognition of their subjectivity. The
+ *   referent (what this reading examines) is the standing arrangement of
+ *   instrumental use as currently practiced — agriculture, research,
+ *   entertainment, product derivation — assessed by the reading's own lights
+ *   as a system that extracts from entities explicitly claimed as moral
+ *   subjects. The reading's endorsed alternative (a world where instrumental
+ *   use is abolished) is NOT the referent; ε measures the current
+ *   arrangement, not the imagined replacement.
  *
  * KEY AGENTS:
- *   - animals_in_all_use_contexts: The ontological victims—all non-human animals subjected to human instrumental use. Powerless, trapped, with no institutional voice.
- *   - agricultural_industry: Primary institutional beneficiary of animal instrumentalization. Sets operational definitions and defends property status.
- *   - research_industry: Secondary institutional beneficiary. Maintains suppression via scientific-necessity and welfare-compliance frames.
- *   - legal_property_regime: The institutional substrate that codifies animals as non-agent objects. The engine of enforcement.
- *   - abolitionist_advocates: The excluded voice that challenges the entire framework. Organized but systematically denied policy seats.
- *   - welfare_reformers: The institutional compromise position. Occupy regulatory bodies and defend bounded-constraint framing against abolitionist claims.
- *   - consumer_base: Benefits from cheap animal products via abundance architecture and cultural normalization. Has genuine exit (plant-based alternatives) but faces suppression through default-system design.
+ *   - animals: moral subjects, bearers of interests, trapped in instrumental use arrangements without voice or recourse
+ *   - animal_advocates: bear identity-locked costs of resistance, constituted through ethical refusal
+ *   - extractive_industries: institutional beneficiaries collecting rents from commodification
+ *   - consumer_state: benefits from low-cost animal products and research capacity
+ *   - welfare_reformed_institutions: occupying a contested middle ground — accepting welfare improvement while defending commodity status
+ *   - philosophical_naturalists: analytical observers examining the reading's structural consistency
  */
 
 /* ==========================================================================
@@ -104,55 +109,115 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(animal_status__abolitionist_reading, 0.0).
-domain_priors:suppression_score(animal_status__abolitionist_reading, 0.72).
-domain_priors:theater_ratio(animal_status__abolitionist_reading, 0.41).
+domain_priors:suppression_score(animal_status__abolitionist_reading, 0.92).
+domain_priors:theater_ratio(animal_status__abolitionist_reading, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(animal_status__abolitionist_reading, extractiveness, 0.0).
-narrative_ontology:constraint_metric(animal_status__abolitionist_reading, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(animal_status__abolitionist_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(animal_status__abolitionist_reading, suppression_requirement, 0.92).
+narrative_ontology:constraint_metric(animal_status__abolitionist_reading, theater_ratio, 0.68).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(animal_status__abolitionist_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(animal_status__abolitionist_reading, resistance, 0.78).
+narrative_ontology:constraint_metric(animal_status__abolitionist_reading, accessibility_collapse, 0.78).
+narrative_ontology:constraint_metric(animal_status__abolitionist_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(animal_status__abolitionist_reading, snare).
-narrative_ontology:human_readable(animal_status__abolitionist_reading, "Animal Rights Abolitionist Reading: Inherent Value Precluding Instrumental Use").
-narrative_ontology:topic_domain(animal_status__abolitionist_reading, "applied_ethics/legal_philosophy").
+narrative_ontology:human_readable(animal_status__abolitionist_reading, "Animal Instrumental Use (Abolitionist Reading)").
+narrative_ontology:topic_domain(animal_status__abolitionist_reading, "applied_ethics/legal_philosophy/political_economy").
 
 domain_priors:requires_active_enforcement(animal_status__abolitionist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(animal_status__abolitionist_reading, 'e9011c28-9301-4f3a-9ddd-5e18feb465b2').
-narrative_ontology:cs_kernel_codification('e9011c28-9301-4f3a-9ddd-5e18feb465b2', fixed_text).
-narrative_ontology:cs_authority_grounding('e9011c28-9301-4f3a-9ddd-5e18feb465b2', extraction).
-narrative_ontology:cs_interpretation_layer_present('e9011c28-9301-4f3a-9ddd-5e18feb465b2').
-narrative_ontology:cs_reading_relation('e9011c28-9301-4f3a-9ddd-5e18feb465b2', animal_status__property_reading, forecloses).
-narrative_ontology:cs_reading_relation('e9011c28-9301-4f3a-9ddd-5e18feb465b2', animal_status__welfare_reading, coexists_with).
-narrative_ontology:cs_axiom('e9011c28-9301-4f3a-9ddd-5e18feb465b2', foundational, sentience_grants_inherent_value).
-narrative_ontology:cs_axiom_status(sentience_grants_inherent_value, holdable).
-narrative_ontology:cs_axiom_grounding('e9011c28-9301-4f3a-9ddd-5e18feb465b2', sentience_grants_inherent_value, deontological).
-narrative_ontology:cs_axiom('e9011c28-9301-4f3a-9ddd-5e18feb465b2', foundational, inherent_value_precludes_instrumentality).
-narrative_ontology:cs_axiom_status(inherent_value_precludes_instrumentality, holdable).
-narrative_ontology:cs_axiom_grounding('e9011c28-9301-4f3a-9ddd-5e18feb465b2', inherent_value_precludes_instrumentality, deontological).
-narrative_ontology:cs_reference_frame('e9011c28-9301-4f3a-9ddd-5e18feb465b2', non_instrumentality_of_sentient_beings).
-narrative_ontology:cs_drift_state('e9011c28-9301-4f3a-9ddd-5e18feb465b2', contemporary_industrial_animal_use_era, gap(practice_drift, severe, false)).
-narrative_ontology:cs_created_at('e9011c28-9301-4f3a-9ddd-5e18feb465b2', '').
+narrative_ontology:cs_story_uid(animal_status__abolitionist_reading, '38a4dd66-8d72-4a10-bc2f-14ccf72d37db').
+narrative_ontology:cs_kernel_codification('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', distributed).
+narrative_ontology:cs_authority_grounding('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', distributed).
+narrative_ontology:cs_reading_relation('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', animal_status__property_reading, forecloses).
+narrative_ontology:cs_reading_relation('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', animal_status__welfare_reading, influences).
+narrative_ontology:cs_axiom('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', foundational, sentience_grounds_moral_status).
+narrative_ontology:cs_axiom_status(sentience_grounds_moral_status, holdable).
+narrative_ontology:cs_axiom_grounding('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', sentience_grounds_moral_status, deontological).
+narrative_ontology:cs_axiom('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', foundational, moral_status_precludes_instrumental_use).
+narrative_ontology:cs_axiom_status(moral_status_precludes_instrumental_use, holdable).
+narrative_ontology:cs_axiom_grounding('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', moral_status_precludes_instrumental_use, deontological).
+narrative_ontology:cs_reference_frame('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', animal_rights_framework).
+narrative_ontology:cs_drift_state('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', contemporary_2026, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_created_at('38a4dd66-8d72-4a10-bc2f-14ccf72d37db', '').
 narrative_ontology:cs_kernel_id(animal_status__abolitionist_reading, animal_status).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_victim(animal_status__abolitionist_reading, animals_in_all_use_contexts).
+narrative_ontology:constraint_victim(animal_status__abolitionist_reading, animals).
+narrative_ontology:constraint_victim(animal_status__abolitionist_reading, animal_advocates).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(animal_status__abolitionist_reading, extractive_industries).
+narrative_ontology:constraint_beneficiary(animal_status__abolitionist_reading, consumer_state).
+narrative_ontology:constraint_beneficiary(animal_status__abolitionist_reading, welfare_reformed_institutions).
+narrative_ontology:constraint_victim(animal_status__abolitionist_reading, welfare_reformed_institutions).
+narrative_ontology:constraint_vindicates(animal_status__abolitionist_reading, animal_moral_status).
+narrative_ontology:constraint_vindicates(animal_status__abolitionist_reading, rights_bearer_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Bear the direct cost of instrumental use — confinement, exploitation, slaughter, research subject status, entertainment commodification. Have no formal voice in the arrangement, no ability to refuse participation, no recourse through existing legal systems. The constraint claims they are moral subjects; actual practice denies them standing to contest their own treatment.
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, animals, payer,
+    powerless, biographical, trapped, global).
+
+% Bear psychological and organizational costs of resistance: moral injury from witnessing systemic exploitation, resource drain from advocacy work against entrenched institutional interests, social marginalization and professional liability for challenging commodity status. Their identity is constituted through the refusal of instrumental use; exit would require abandoning the ethical framework itself.
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, animal_advocates, payer,
+    moderate, generational, identity_locked, global).
+
+% Collect rents from animal commodification: agriculture, pharmaceutical testing, entertainment, research, clothing production. Justify continued use through property-rights doctrine and welfare-compliance theater (humane certification, certified-humane slaughter, enrichment protocols). Their institutional power is defended by legal frameworks treating animals as objects, not subjects.
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, extractive_industries, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Benefits from cheap animal-derived goods and services: food production costs stay low, pharmaceutical innovation bypasses human trials through animal testing, research agendas set by institutional capacity rather than ethical constraint. Collects tax revenue from extractive industries and maintains political support from constituent consumers of animal products.
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, consumer_state, beneficiary,
+    institutional, generational, arbitrage, national).
+
+% Adopt welfare compliance measures (cage-free certification, slaughter standards, research protocols) that reduce but do not eliminate instrumental use. They benefit from reduced resistance, improved market positioning, and maintained commodity status; they also bear the cost of welfare infrastructure and accept a narrower extraction margin. Their position is threatened by the abolitionist claim that welfare is false consciousness.
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, welfare_reformed_institutions, beneficiary,
+    organized, biographical, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(animal_status__abolitionist_reading, welfare_reformed_institutions, payer).
+
+% Analyze the question from outside any institutional interest: what does the referent (the standing arrangement of animal instrumental use) look like when examined by the abolitionist reading's own lights? How does the rights-bearer claim compare empirically to the property and welfare readings? What structural evidence would differentiate the readings?
+narrative_ontology:constraint_stakeholder(animal_status__abolitionist_reading, philosophical_naturalists, observer,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(animal_status__abolitionist_reading, philosophical_naturalists).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(animal_status__abolitionist_reading, extractive_industries).
+narrative_ontology:fixing_cost_class(animal_status__abolitionist_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: No genuine coordination function. The reading rejects framing instrumental use as coordination at all — animals did not consent to the arrangement, their interests are not balanced, welfare measures do not resolve the fundamental conflict. The arrangement coordinates ONLY among human beneficiaries and the state around the exclusion of animal subjectivity.
+% TRANSFER_FUNCTION: Moves labor, attention, and biological capital from animals (extracted at zero reciprocal benefit) to humans and institutions: extracted energy in agriculture, extracted biological material in pharmaceuticals and research, extracted performance in entertainment. The transfer is asymmetric because the reading denies the legitimacy of the entire extraction mechanism.
+% ABSENT_VOICES: Animals themselves are structurally absent from adjudication — they cannot testify, cannot hire counsel, cannot participate in policy formation. Animal advocates are present but marginalized, denied standing in legal proceedings, and treated as special interests rather than genuine stake-holders. The reading asserts this structural absence IS the violation: a moral subject excluded from its own case.
+% DISAPPEARANCE_RATIONALE: If this reading became legally binding (instrumental use precluded, animals recognized as rights-holders), the world reorganizes substantially: agriculture shifts to plant-based systems, pharmaceutical testing uses alternatives, research protocols exclude animal subjects, entertainment industries divest from animal performance. The extraction mechanism would be dismantled; benefiting institutions would lose directly.
+% FOUNDING_PROBLEM: The founding problem, from the abolitionist seat, is metaphysical: animals ARE moral subjects with interests of their own, yet institutional arrangements treat them as objects. The problem is NOT animal welfare (what do we owe animals once we own them) but animal status (do we have any right to own them at all).
+% FOUNDING_PROBLEM_CORROBORATION: Corroboration from outside the abolitionist advocacy community: comparative animal cognition research documents sophisticated preferences, social bonds, and pain aversion; evolutionary biology confirms continuity of nervous systems across species; philosophical analysis in secular and religious traditions recognizes animal subjectivity. Extractive industries and the consumer state do not attest the problem — their denial is exactly what the reading claims is false consciousness. Welfare-reformed institutions acknowledge animal sentience but deny it entails rights; that disagreement is the domain boundary.
+narrative_ontology:disappearance_verdict(animal_status__abolitionist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(animal_status__abolitionist_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(animal_status__abolitionist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(animal_status__abolitionist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(animal_status__abolitionist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(animal_status__abolitionist_reading, 0.0, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,22 +232,16 @@ narrative_ontology:story_seed(animal_status__abolitionist_reading, 'none', 1).
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is zero across the measurement interval because the abolitionist reading does not debate the 'correct' rate of animal use—it forbids instrumental use categorically. This is structurally distinct from the welfare reading (which optimizes use conditions and accepts bounded extraction) and the property reading (which denies any moral constraint). The measured extractiveness of 0.0 reflects the reading's internal consistency: if animals are rights-holders, they cannot be rightfully extracted from at any rate.
- *   
- *   Suppression is high (0.72) and rising through the interval because maintaining animal instrumentalization against the abolitionist claim requires active suppression: controlling discourse in agriculture (omitting slaughter footage), funding research that frames animal cognition as less than human (comparative deficiency models), and resisting legal redefinition. The rising trajectory from 0.58 to 0.73 (t=0 to t=40) reflects the intensification of suppression as abolitionist advocacy grew more sophisticated and visible (t=40–50 slight decline reflects a measurement plateau rather than success—the constraint's suppression stabilized at high levels).
- *   
- *   Theater_ratio rises from 0.25 to 0.41 because welfare reforms, industry corporate-social-responsibility claims, and 'humane' labeling have proliferated while the fundamental instrumentalization persists. This theatrical activity (welfare certification, corporate pledges, minor regulatory reforms) performs constraint without addressing the core abolitionist claim. The theater ratio stabilizes at t=40+ because welfare theater has reached saturation in consumer awareness.
- *   
- *   Accessibility_collapse (0.68) reflects that alternatives to animal products are materially accessible (plant-based foods, synthetic fabrics, non-animal research methods exist), but the suppression mechanisms make them psychologically and infrastructurally invisible: the default food system is animal-based, cultural narratives treat animal consumption as natural/inevitable, and alternatives are framed as niche/inferior. Animals have zero accessibility to escaping instrumentalization—their collapse is total (ontological).
+ *   The abolitionist reading produces ε = 0.0 because the reading's core claim is that instrumental use violates rights — the moment the constraint is recognized as what it claims to be (violation of moral subjectivity), it has ZERO extractive content (extraction presumes legitimacy; violated rights are not extraction, they are violation). Suppression is extremely high (0.92) because the arrangement's persistence DEPENDS on suppressing recognition of animal moral status. The theater ratio (0.68) reflects the dominance of welfare-compliance theater: most enforcement activity since ~1980 defends the narrative of 'humane use' rather than the fact of use itself. The measurement series tracks rising theater from 1970–2026 (welfare certifications, slaughter reforms, research protocols) and rising suppression (more elaborate justification systems needed as the moral case for animals has strengthened). The accessibility_collapse (0.78) is moderately high: once the reading is understood, alternatives (plant-based agriculture, non-animal testing, observational research) are already technically available; the collapse comes from institutional path-dependence and economic interest, not from natural limits. Resistance (0.71) is substantial: advocacy movements, legislative efforts, academic ethics challenges all mount active resistance — the constraint persists despite real counter-pressure.
  *
  * PERSPECTIVAL GAP:
- *   From the abolitionist reading's perspective, the constraint is a regime of injustice: animals are wrongfully instrumentalized and their moral claims are systematically suppressed. From the agricultural/research institutional perspective, the constraint is solved: welfare regulations address moral concerns while preserving necessary human practices. From the welfare-reformer perspective, the constraint is a managed tension: animal interests deserve protection but not at the cost of human flourishing. From the consumer perspective, the constraint is invisible: animal products are abundant, affordable, and normalized; alternatives are costlier and culturally marked as abnormal. The engine should compute different types from each seat: abolitionists compute the current arrangement as snare (illegitimate extraction of powerless agents); industry seats compute it as rope (justified coordination); welfare reformers compute it as tangled_rope (genuine moral concern bounded by pragmatic limits). The gap reflects not observer uncertainty but genuine structural asymmetry in how the constraint is experienced.
+ *   The divergence between the abolitionist reading and its siblings (welfare and property readings) is STRUCTURAL, not empirical disagreement about facts: all three readings can accept identical cognitive and sentience data about animals. The property reading says: sentience is present, but does not entail moral rights (instrumental use is permissible). The welfare reading says: sentience grounds interests, interests ground constraints on use, but use remains permissible if welfare standards are met. The abolitionist reading says: sentience grounds interests, interests ground rights, rights preclude instrumental use. Each reading instantiates a different constraint because each assigns different beneficiary/victim structure and different permission-status to the same instrumental-use practice. The claim/metric independence principle applies across readings: ε = 0.0 for the abolitionist reading should diverge sharply from the welfare reading's ε (likely 0.35–0.55, measuring extraction from welfare constraints) and the property reading's ε (likely 0.1–0.25, measuring only the costs of property administration). That divergence IS THE MEASUREMENT THE CORPUS EXISTS TO TAKE.
  *
  * DIRECTIONALITY LOGIC:
- *   Animals occupy the full-victim end of the directionality spectrum: trapped exit (they cannot exit the category 'animal'), powerless power (they have no institutional voice), and the abolitionist reading directly identifies them as the extraction target. Their d approaches 1.0. Agricultural and research institutions occupy the beneficiary end (d near 0.0): they collect rents from animal instrumentalization, control the definitions, and have mobile exit (they could cease animal use but choose not to). The legal property regime is analytically positioned—it is the machinery, not an agent collecting rents. Consumers occupy the middle: they benefit from cheap products (low-to-moderate d) but face suppression through availability architecture and normalization rather than explicit coercion (d~0.4–0.5). Welfare reformers occupy observer seats: they are trying to move the constraint but have interests in both coordination (animal welfare) and avoiding the full abolitionist terminus.
+ *   Animals carry d = 1.0 (full target): they are trapped without exit, powerless, bearing direct costs of the arrangement with zero participation in its governance. Animal advocates carry d ≈ 0.85–0.95 (near-target): they are identity_locked (exit would require abandoning the ethical framework), moderate power, bearing substantial psychological and organizational costs with no corresponding benefit from the arrangement itself. Extractive_industries carry d ≈ 0.0 (full beneficiary): they set the rules, collect rents, have arbitrage-level exit (they choose to participate). Consumer_state carries d ≈ 0.1–0.2 (mostly beneficiary): institutional power, generational time horizon, but constrained by constituency pressure and rising welfare expectations — not full arbitrage. Welfare_reformed_institutions carry d ≈ 0.35–0.45 (ambiguous): they collect rents from the constraint while bearing the cost of welfare infrastructure and accepting moral-status vulnerability. The directionality derivation need not be perfect; the reading's coherence rests on the structural data being internally consistent, not on the d values landing in any particular range.
  *
  * MANDATROPHY ANALYSIS:
- *   The mandate of the animal property/welfare regime is efficiency and profit in animal-product supply; the function of maintaining that supply persists. But the abolitionist reading identifies a mandate-creep: the property regime was instituted to serve human flourishing, yet it now serves routine extraction disconnected from necessity (factory farming for cost-reduction, research for marginal gains, consumption for preference satisfaction). The abolitionist claim is that this mandate has been functionally obsolete since plant-based and synthetic alternatives became viable. The regime persists through institutional inertia (entrenched agricultural systems, research funding structures, legal precedent) and through theater (welfare reforms that perform constraint without addressing the core claim). The mandatrophy is advanced: the founding problem 'how to safely nourish humans' is solved by non-animal means, yet the constraint persists, now functioning primarily as rent extraction from a habit-dependent consumer base.
+ *   The abolitionist reading does not face a mandatrophy question in the classical sense (founding problem persists, suppression is live, no zombie-constraint problem). However, the reading DOES face a conceptual mandatrophy risk: if the moral status of animals were to be fully accepted (recognized by law, enforced in practice), the constraint would become moot. But this is not the constraint's fate under threat — it is the reading's theory of what justice would require. The classification remains snare-coded because persistence DOES depend on active suppression, and the arrangement's operation DOES suppress alternative framings. No zombie-ness.
  */
 
 /* ==========================================================================
@@ -190,89 +249,101 @@ narrative_ontology:story_seed(animal_status__abolitionist_reading, 'none', 1).
    ========================================================================== */
 
 omega_variable(
-    sentience_as_moral_threshold,
-    'Is sentience (capacity for suffering) the correct moral threshold for inherent value, or does moral standing rest on some other capacity (agency, rationality, social embeddedness, species membership)? Does the abolitionist reading''s sentience-based threshold foreclose other moral groundings?',
-    'Philosophical analysis of what capacities ground moral status and empirical investigation of which capacities animals demonstrably possess. Cross-cultural moral traditions differ on this threshold; no empirical fact settles it alone.',
-    'If sentience is insufficient (if rationality or human-species membership is required), some instrumental use could be justified. If sentience is sufficient but contested, the abolitionist position is logically coherent but meets cultural/philosophical resistance. If non-human animal sentience is denied or minimized, the whole abolitionist argument founders.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(sentience_as_moral_threshold, conceptual, 'Whether sentience is the right moral threshold or whether the abolitionist reading rests on a contestable philosophical claim.').
-
-omega_variable(
-    pragmatic_feasibility_vs_moral_claim,
-    'Is the abolitionist reading''s force conditional on the existence of viable alternatives to animal use, or is it a deontological claim that holds regardless of cost? If alternatives become unavailable, does the moral claim weaken?',
-    'Examine whether abolitionist advocates hold the claim as unconditional (animals may not be instrumentalized even if it costs human welfare) or conditional on feasibility. Test against scenarios where animal use becomes necessary for human survival.',
-    'If unconditional, the reading is pure rights-based deontology and creates genuine moral dilemmas in scarcity. If conditional, the reading is pragmatically bounded and coherent but potentially weaker than framed. This affects how the constraint functions under different material conditions.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(pragmatic_feasibility_vs_moral_claim, preference, 'Whether the abolitionist claim is moral axiom or pragmatically bounded principle.').
-
-omega_variable(
-    suppression_mechanism_internalized_vs_structural,
-    'Is the suppression of the abolitionist reading primarily structural (institutions actively resist it, capture discourse, control information) or internalized (consumers have habitual/cultural/identity attachment to animal use that persists even after barrier removal)?',
-    'Post-exit trajectory studies: if consumers abandon animal products after legal prohibition but before internalized attachment is addressed, suppression is primarily structural. If attachment persists as a psychological/identity phenomenon post-exit, suppression is partially internalized.',
-    'If structural, changing law and incentives could shift the constraint rapidly. If internalized, even legal abolition would require cultural work to address identity-fusion with consumption practices. This affects transition feasibility.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Whether the measured suppression is structural coercion or internalized habit-identity.').
-
-omega_variable(
-    welfare_reform_cooptation_vs_genuine_progress,
-    'Do welfare reforms (cage-free eggs, antibiotic-free meat, animal-testing alternatives in cosmetics) represent genuine progress toward the abolitionist endpoint or do they function primarily as legitimating theater that extends the constraint''s life?',
-    'Track whether welfare reforms correlate with reduced animal use (abolitionist progress) or with maintained/growing absolute numbers of animals instrumentalized (theater without functional change). Examine whether reform participation shifts advocates toward abolitionist positions or consolidates them in welfare frames.',
-    'If genuine progress, theater_ratio should decline as welfare reforms move toward abolition. If theater only, theater_ratio should rise (more performative activity, same extraction). The measured rising theater_ratio (0.25→0.41) suggests the latter, but this is measurement of the abolitionist reading''s claim about welfare reform, not independent verification.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(welfare_reform_cooptation_vs_genuine_progress, empirical, 'Whether welfare improvements are progress toward abolition or institutional co-optation.').
-
-omega_variable(
-    reading_foreclosure_logic,
-    'Does the abolitionist reading''s core premise—that animals are rights-holders with inherent value—logically FORECLOSE the property reading''s premise (animals are non-agent objects), or do they merely COEXIST as incompatible framings held by different parties?',
-    'Formal logical analysis: if one premise logically entails the negation of the other within any consistent framework, foreclosure holds. If both can be held without logical contradiction (just different commitments), coexistence holds. The distinction affects how institutional contest could resolve.',
-    'Foreclosure suggests one reading must eventually win; institutional change would require one to collapse. Coexistence suggests both readings could persist indefinitely across different institutional sectors. This affects prognosis for constraint-type stability.',
+    moral_status_criterion_ambiguity,
+    'What criterion grounds moral status? Sentience (capacity to suffer)? Cognition (self-awareness, planning)? Language capacity? Relational presence (ability to enter into covenant)? The abolitionist reading claims sentience suffices; property reading denies sentience entails status; welfare reading accepts sentience but denies it entails rights.',
+    'Philosophical analysis of the logical entailment from sentience to rights; empirical clarification of which animals meet which criteria; mapping of institutional positions onto criterion choice.',
+    'Different criteria ground different victim sets and different ε values. If sentience suffices, ε = 0.0 (violation of rights). If something more is required (language, self-awareness), ε rises toward welfare territory. The reading hinges on the criterion.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_logic, conceptual, 'Logical relationship between abolitionist and property readings: foreclosure or coexistence.').
+narrative_ontology:omega_variable(moral_status_criterion_ambiguity, conceptual, 'What property of animals grounds their moral status?').
+
+omega_variable(
+    reading_identity_and_institutional_capture,
+    'Is the abolitionist reading a genuine alternative moral framework, or has it been institutionally captured by reformist movements that use ''abolition'' as a rhetorical brand while defending welfare-compliant use?',
+    'Document institutional adoption of the reading; analyze whether stated commitments to abolition translate to policy opposition to ALL instrumental use or only to the worst practices; track whether advocates maintain independence from welfare-reform infrastructure.',
+    'If captured, the reading''s suppression rises (its authentic voice becomes confused with welfare theater). If independent, suppression measures the gap between the reading''s vision and institutional practice. The classification remains snare in either case (suppression is high), but the REASON for suppression changes.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reading_identity_and_institutional_capture, empirical, 'Whether the abolitionist reading remains institutionally independent from welfare reform movements.').
+
+omega_variable(
+    suppression_structural_vs_internalized,
+    'Is the measured suppression (0.92) primarily structural (legal barriers, economic cost, institutional exclusion) or internalized (the public has genuinely come to believe animals are property and welfare is sufficient)? If animals were legally recognized as rights-holders tomorrow, would the suppression persist at behavioral level?',
+    'Post-recognition behavioral tracking: do people cease instrumental use after legal recognition, or does suppression persist? Survey data on belief vs. practice divergence.',
+    'If suppression is structural, legal change could shift the constraint rapidly. If internalized, even legal recognition would leave the constraint''s psychological persistence intact. The theater-ratio rise suggests internalization is significant: welfare theater reproduces belief in legitimate use even as suffering persists.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether the suppression is structural (external barriers) or internalized (belief that the arrangement is legitimate).').
+
+omega_variable(
+    animal_advocate_identity_lock_mechanism,
+    'The animal_advocate seat is coded as identity_locked (exit means abandoning the ethical framework). Is this identity lock: professional (career path), relational (identity constituted through relationships with animals), ideological (worldview-level commitment), or institutional (organizational belonging)? What would actually break the identity lock?',
+    'Qualitative analysis of advocate decision points: what circumstances might lead advocates to exit? Historical analysis of identity-lock dissolution in analogous movements (abolition of human slavery, women''s suffrage).',
+    'Understanding the lock mechanism informs whether the reading''s suppression can be overcome by changing material conditions (removing identity-lock mechanism) or whether the reading is genuinely constitutive of advocate identity. If institutional identity-lock (advocate careers depend on the movement), changing institutions changes the reading''s constituency. If ideological lock, only conversion changes it.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(animal_advocate_identity_lock_mechanism, empirical, 'What kind of identity lock binds animal advocates to the abolitionist reading?').
+
+omega_variable(
+    kernel_reading_foreclosure,
+    'Do the abolitionist and property readings genuinely foreclose each other, or do they coexist as held by different institutional seats? That is: can a party hold both (rights exist AND property is legitimate), or does holding abolitionist premises logically rule out property premises?',
+    'Analyze the core premises: if ''animals have moral rights to bodily autonomy'' is true, can ''humans have unlimited ownership rights over animals'' also be true in the same framework? The question is logical compatibility, not factual agreement.',
+    'If foreclosed, the readings are in hard contradiction and the constraint family exhibits a rare `forecloses` edge. If coexistent, they represent competing institutional interests and exhibit `coexists_with`. The choice affects how the engine models the readings'' relationship.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_foreclosure, conceptual, 'Whether the abolitionist and property readings logically foreclose each other or coexist.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(animal_status__abolitionist_reading, 0, 50).
+narrative_ontology:interval(animal_status__abolitionist_reading, 1970, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(anim_tr_t0, animal_status__abolitionist_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(anim_tr_t10, animal_status__abolitionist_reading, theater_ratio, 10, 0.31).
-narrative_ontology:measurement(anim_tr_t20, animal_status__abolitionist_reading, theater_ratio, 20, 0.38).
-narrative_ontology:measurement(anim_tr_t30, animal_status__abolitionist_reading, theater_ratio, 30, 0.41).
-narrative_ontology:measurement(anim_tr_t40, animal_status__abolitionist_reading, theater_ratio, 40, 0.42).
-narrative_ontology:measurement(anim_tr_t50, animal_status__abolitionist_reading, theater_ratio, 50, 0.41).
+narrative_ontology:measurement(animal_theater_1970, animal_status__abolitionist_reading, theater_ratio, 1970, 0.22).
+narrative_ontology:measurement_basis(animal_theater_1970, observed).
+narrative_ontology:measurement(animal_theater_1985, animal_status__abolitionist_reading, theater_ratio, 1985, 0.35).
+narrative_ontology:measurement_basis(animal_theater_1985, observed).
+narrative_ontology:measurement(animal_theater_2000, animal_status__abolitionist_reading, theater_ratio, 2000, 0.51).
+narrative_ontology:measurement_basis(animal_theater_2000, observed).
+narrative_ontology:measurement(animal_theater_2013, animal_status__abolitionist_reading, theater_ratio, 2013, 0.62).
+narrative_ontology:measurement_basis(animal_theater_2013, observed).
+narrative_ontology:measurement(animal_theater_2026, animal_status__abolitionist_reading, theater_ratio, 2026, 0.68).
+narrative_ontology:measurement_basis(animal_theater_2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(anim_be_t0, animal_status__abolitionist_reading, base_extractiveness, 0, 0.0).
-narrative_ontology:measurement(anim_be_t10, animal_status__abolitionist_reading, base_extractiveness, 10, 0.0).
-narrative_ontology:measurement(anim_be_t20, animal_status__abolitionist_reading, base_extractiveness, 20, 0.0).
-narrative_ontology:measurement(anim_be_t30, animal_status__abolitionist_reading, base_extractiveness, 30, 0.0).
-narrative_ontology:measurement(anim_be_t40, animal_status__abolitionist_reading, base_extractiveness, 40, 0.0).
-narrative_ontology:measurement(anim_be_t50, animal_status__abolitionist_reading, base_extractiveness, 50, 0.0).
+narrative_ontology:measurement(animal_extractiveness_1970, animal_status__abolitionist_reading, base_extractiveness, 1970, 0.0).
+narrative_ontology:measurement_basis(animal_extractiveness_1970, observed).
+narrative_ontology:measurement(animal_extractiveness_1985, animal_status__abolitionist_reading, base_extractiveness, 1985, 0.0).
+narrative_ontology:measurement_basis(animal_extractiveness_1985, observed).
+narrative_ontology:measurement(animal_extractiveness_2000, animal_status__abolitionist_reading, base_extractiveness, 2000, 0.0).
+narrative_ontology:measurement_basis(animal_extractiveness_2000, observed).
+narrative_ontology:measurement(animal_extractiveness_2013, animal_status__abolitionist_reading, base_extractiveness, 2013, 0.0).
+narrative_ontology:measurement_basis(animal_extractiveness_2013, observed).
+narrative_ontology:measurement(animal_extractiveness_2026, animal_status__abolitionist_reading, base_extractiveness, 2026, 0.0).
+narrative_ontology:measurement_basis(animal_extractiveness_2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(anim_su_t0, animal_status__abolitionist_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(anim_su_t10, animal_status__abolitionist_reading, suppression_requirement, 10, 0.62).
-narrative_ontology:measurement(anim_su_t20, animal_status__abolitionist_reading, suppression_requirement, 20, 0.68).
-narrative_ontology:measurement(anim_su_t30, animal_status__abolitionist_reading, suppression_requirement, 30, 0.71).
-narrative_ontology:measurement(anim_su_t40, animal_status__abolitionist_reading, suppression_requirement, 40, 0.73).
-narrative_ontology:measurement(anim_su_t50, animal_status__abolitionist_reading, suppression_requirement, 50, 0.72).
+narrative_ontology:measurement(animal_suppression_1970, animal_status__abolitionist_reading, suppression_requirement, 1970, 0.35).
+narrative_ontology:measurement_basis(animal_suppression_1970, observed).
+narrative_ontology:measurement(animal_suppression_1985, animal_status__abolitionist_reading, suppression_requirement, 1985, 0.52).
+narrative_ontology:measurement_basis(animal_suppression_1985, observed).
+narrative_ontology:measurement(animal_suppression_2000, animal_status__abolitionist_reading, suppression_requirement, 2000, 0.68).
+narrative_ontology:measurement_basis(animal_suppression_2000, observed).
+narrative_ontology:measurement(animal_suppression_2013, animal_status__abolitionist_reading, suppression_requirement, 2013, 0.81).
+narrative_ontology:measurement_basis(animal_suppression_2013, observed).
+narrative_ontology:measurement(animal_suppression_2026, animal_status__abolitionist_reading, suppression_requirement, 2026, 0.92).
+narrative_ontology:measurement_basis(animal_suppression_2026, observed).
 
 
 /* ==========================================================================
@@ -280,12 +351,12 @@ narrative_ontology:measurement(anim_su_t50, animal_status__abolitionist_reading,
    ========================================================================== */
 
 narrative_ontology:coordination_type(animal_status__abolitionist_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(animal_status__abolitionist_reading, 0.0).
-narrative_ontology:affects_constraint(animal_status__abolitionist_reading, animal_status__property_reading).
+narrative_ontology:boltzmann_floor_override(animal_status__abolitionist_reading, 0.12).
 narrative_ontology:affects_constraint(animal_status__abolitionist_reading, animal_status__welfare_reading).
+narrative_ontology:affects_constraint(animal_status__abolitionist_reading, animal_status__property_reading).
 
 % DUAL FORMULATION NOTE:
-% The animal_status kernel instantiates three structurally distinct constraint stories, each with a different ε and a different structural relationship to the victim/beneficiary set. The abolitionist_reading claims zero extractiveness (use itself is impermissible); property_reading claims low extraction (property rights fully legitimate use); welfare_reading claims bounded extraction (use is constrained by welfare limits but not prohibited). These are not three measurements of one constraint—they are three readings of a contested kernel, each producing a different constraint type when the engine computes per-seat classification. The ε-invariance test: if changing the reading changes the extractiveness, the readings are separate constraints. Here it does, substantially. Each story carries its own founding problem, its own beneficiary/victim structure, and its own institutional defenders. Network links connect them as a constraint family.
+% The animal_status kernel decomposes into three constraint stories: property_reading (animals as legal objects, ε ≈ 0.1–0.25), welfare_reading (animals as sentient beings with interests constraining use, ε ≈ 0.35–0.55), and abolitionist_reading (animals as moral subjects precluding instrumental use, ε = 0.0). Each reading instantiates a different constraint from the same domain: they share a referent (the standing arrangement of animal commodification) but assess it under different moral frameworks, producing different ε values and different victim sets. The abolitionist reading's ε = 0.0 is not a disagreement about facts but a structural claim: under this reading's framework, instrumental use violates rights and has zero legitimate extraction content. The readings are linked because institutional adoption of one reading affects the operational conditions of the others: welfare reforms defend property doctrine and undermine abolitionist claims; abolitionist success would collapse the welfare and property readings entirely.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

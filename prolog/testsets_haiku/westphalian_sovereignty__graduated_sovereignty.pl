@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,37 +74,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: westphalian_sovereignty__graduated_sovereignty
- *   human_readable: Graduated Sovereignty: External Discretionary Reclassification of State Capacity
- *   domain: international_law/political_philosophy/global_governance
+ *   human_readable: Graduated Sovereignty Assessment and Reclassification Regime
+ *   domain: international_law/political_philosophy
  *
  * SUMMARY:
- *   The graduated-sovereignty reading operationalizes the claim that
- *   sovereignty exists on a spectrum determined by state capacity and
- *   governance legitimacy, as measured by powerful-state institutions and
- *   international bodies. This reading authorizes external
- *   interveners—wealthy nations, the UN Security Council, the World Bank, the
- *   IMF, regional military alliances—to classify states as insufficiently
- *   capable or governed, and to condition aid, investment, and recognition on
- *   institutional reforms, transparency measures, and policy alignment with
- *   intervener preferences. Weak states that are reclassified lose de facto
- *   control over policy; populations within reclassified states experience
- *   military intervention, structural adjustment programs, and loss of
- *   economic sovereignty. The reading is presented as humanitarian
- *   capacity-building; the structural effect is extraction—transfer of policy
- *   autonomy and resource access from weak states to powerful interveners,
- *   justified by the language of measurement and improvement. This is one
- *   reading of the contested westphalian_sovereignty kernel; the competing
- *   absolute_sovereignty and conditional_sovereignty readings produce
- *   structurally different constraints with different victim sets and
- *   extraction patterns.
+ *   The graduated sovereignty reading of the Westphalian kernel asserts that
+ *   sovereignty is not binary or absolute but exists on a spectrum determined
+ *   by state capacity (institutional ability to provide public goods, enforce
+ *   contracts, maintain monopoly of force) and governance legitimacy (whether
+ *   a state's authority is endorsed by its population and meets international
+ *   standards of rights protection and rule of law). This reading authorizes
+ *   external actors—multilateral institutions, powerful states, and assessor
+ *   bodies—to classify states on this spectrum and to impose conditionality,
+ *   intervene, or restructure governance in states deemed low-capacity or
+ *   low-legitimacy. The structural delta from sibling readings is precisely
+ *   this: external discretion to reclassify states, and the transformation of
+ *   sovereignty from a status held by consent into a graduated achievement
+ *   conditional on external approval. Weak states and post-colonial states
+ *   become the victims of reclassification; high-capacity states and external
+ *   interveners become the beneficiaries of the authority to assess and
+ *   impose conditions.
  *
  * KEY AGENTS:
- *   - Powerful external interveners (wealthy nations, permanent UN Security Council members, NATO) — set capacity standards, deploy forces, extract concessions, face no reciprocal reclassification
- *   - Weak state governments — reclassified and constrained, lose autonomy, bear conditionality costs
- *   - Populations in reclassified states — experience military/economic intervention, resource extraction, externally-imposed governance
- *   - International authority institutions (World Bank, IMF, UN, regional development banks) — operationalize reclassification, administer conditionality, extract resource access and policy leverage
- *   - State capacity measurement bodies (governance indices, rating agencies, think tanks) — author the measurement standards and conduct the evaluations that trigger reclassification
- *   - Resistance movements in weak states — resist external intervention and measurement-based reclassification; mobilize at high cost against vastly superior institutional resources
+ *   - High-capacity states (USA, EU, Japan, etc.): institutional power, arbitrage exit, define and assess standards
+ *   - External interveners (IMF, World Bank, UN Security Council permanent members): institutional power, collect authority to condition and intervene
+ *   - Western governance assessors (academic bodies, policy institutions, expert networks): institutional power, set metrics and certification
+ *   - Low-capacity states (fragile states, post-conflict states): powerless, identity-locked, perpetually subject to reclassification
+ *   - Post-colonial states (inherited institutional deficits, perpetual assessment targets): moderate power, constrained exit, structurally incentivized to mimic interveners
+ *   - States with contested legitimacy (disputed governments, civil war, revolutionary transitions): moderate power, constrained exit, legitimacy itself becomes externally-evaluated
+ *   - Absolute sovereignty defenders (excluded from assessment bodies): moderate power, trapped by the classification regime itself
  */
 
 /* ==========================================================================
@@ -116,48 +121,116 @@ narrative_ontology:constraint_metric(westphalian_sovereignty__graduated_sovereig
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(westphalian_sovereignty__graduated_sovereignty, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(westphalian_sovereignty__graduated_sovereignty, resistance, 0.69).
+narrative_ontology:constraint_metric(westphalian_sovereignty__graduated_sovereignty, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(westphalian_sovereignty__graduated_sovereignty, snare).
-narrative_ontology:human_readable(westphalian_sovereignty__graduated_sovereignty, "Graduated Sovereignty: External Discretionary Reclassification of State Capacity").
-narrative_ontology:topic_domain(westphalian_sovereignty__graduated_sovereignty, "international_law/political_philosophy/global_governance").
+narrative_ontology:human_readable(westphalian_sovereignty__graduated_sovereignty, "Graduated Sovereignty Assessment and Reclassification Regime").
+narrative_ontology:topic_domain(westphalian_sovereignty__graduated_sovereignty, "international_law/political_philosophy").
 
 domain_priors:requires_active_enforcement(westphalian_sovereignty__graduated_sovereignty).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(westphalian_sovereignty__graduated_sovereignty, '94c14a2f-e5f6-4d30-a5b9-914fea2a2e63').
-narrative_ontology:cs_kernel_codification('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', distributed).
-narrative_ontology:cs_authority_grounding('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', extraction).
-narrative_ontology:cs_interpretation_layer_present('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63').
-narrative_ontology:cs_reading_relation('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', westphalian_sovereignty__absolute_sovereignty, forecloses).
-narrative_ontology:cs_reading_relation('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', westphalian_sovereignty__conditional_sovereignty, influences).
-narrative_ontology:cs_axiom('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', foundational, sovereignty_is_continuous_not_binary).
-narrative_ontology:cs_axiom_status(sovereignty_is_continuous_not_binary, holdable).
-narrative_ontology:cs_axiom_grounding('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', sovereignty_is_continuous_not_binary, empirically_contingent).
-narrative_ontology:cs_axiom('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', foundational, capacity_measurement_determines_legitimacy).
-narrative_ontology:cs_axiom_status(capacity_measurement_determines_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', capacity_measurement_determines_legitimacy, instrumental).
-narrative_ontology:cs_reference_frame('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', measured_capacity_hierarchy).
-narrative_ontology:cs_drift_state('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', contemporary_2025, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('94c14a2f-e5f6-4d30-a5b9-914fea2a2e63', '').
+narrative_ontology:cs_story_uid(westphalian_sovereignty__graduated_sovereignty, '6867088a-a5b8-444f-9fa7-7ecc39fd06fe').
+narrative_ontology:cs_kernel_codification('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', formalized).
+narrative_ontology:cs_authority_grounding('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', extraction).
+narrative_ontology:cs_interpretation_layer_present('6867088a-a5b8-444f-9fa7-7ecc39fd06fe').
+narrative_ontology:cs_reading_relation('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', westphalian_sovereignty__absolute_sovereignty, forecloses).
+narrative_ontology:cs_reading_relation('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', westphalian_sovereignty__conditional_sovereignty, influences).
+narrative_ontology:cs_axiom('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', foundational, sovereignty_graduated_spectrum).
+narrative_ontology:cs_axiom_status(sovereignty_graduated_spectrum, holdable).
+narrative_ontology:cs_axiom_grounding('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', sovereignty_graduated_spectrum, empirically_contingent).
+narrative_ontology:cs_axiom('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', foundational, external_assessment_legitimacy).
+narrative_ontology:cs_axiom_status(external_assessment_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', external_assessment_legitimacy, conventional).
+narrative_ontology:cs_reference_frame('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', capacity_contingent_authority).
+narrative_ontology:cs_drift_state('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', contemporary_institutional_proliferation, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('6867088a-a5b8-444f-9fa7-7ecc39fd06fe', '').
 narrative_ontology:cs_kernel_id(westphalian_sovereignty__graduated_sovereignty, westphalian_sovereignty).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, powerful_external_interveners).
-narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, international_authority_institutions).
-narrative_ontology:constraint_victim(westphalian_sovereignty__graduated_sovereignty, weak_state_governments).
-narrative_ontology:constraint_victim(westphalian_sovereignty__graduated_sovereignty, populations_in_reclassified_states).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, high_capacity_states).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, external_interveners).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, western_governance_assessors).
+narrative_ontology:constraint_victim(westphalian_sovereignty__graduated_sovereignty, low_capacity_states).
+narrative_ontology:constraint_victim(westphalian_sovereignty__graduated_sovereignty, post_colonial_states).
+narrative_ontology:constraint_victim(westphalian_sovereignty__graduated_sovereignty, states_with_contested_legitimacy).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__graduated_sovereignty, subnational_movements).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Institutionalize assessments of state capacity and governance legitimacy, controlling the metrics, the assessment bodies, and the remedial consequences. Justify interventions in weak or contested states as conditional on their failure to meet graduated sovereignty standards. Capture the authority to determine which states qualify as fully sovereign and which must accept external tutelage or conditionality.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, high_capacity_states, agenda_setter,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(westphalian_sovereignty__graduated_sovereignty, high_capacity_states, beneficiary).
+
+% Gain discretionary authority to intervene in, govern, or condition aid to states classified as low-capacity or low-legitimacy. Operate multilateral institutions (IMF, World Bank, UN Security Council) that embed capacity assessment and conditionality. Frame interventions as remedial support rather than extraction.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, external_interveners, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Academic, policy, and multilateral expert communities that define what counts as legitimate governance and adequate state capacity. Their assessments provide the epistemic authority for graduated sovereignty classifications. Shape which states are certified as meeting standards and which face remedial requirements.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, western_governance_assessors, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Face continuous reclassification as low-capacity or low-legitimacy. Subject to conditionality on aid, loans, and trade access. Must implement governance reforms designed externally to prove they meet graduated sovereignty thresholds. Cannot exit the assessment regime without losing access to critical finance and markets; sovereignty is conditional on passing external review.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, low_capacity_states, payer,
+    powerless, generational, identity_locked, global).
+
+% Inherit institutional legacies from colonial administrations and are perpetually assessed as failing to meet Western governance standards. Face interventions justified as helping them build capacity. Confront a structural incentive to replicate the institutional forms of the interveners rather than developing indigenous governance. Sovereignty is framed as achievable through institutional mimicry.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, post_colonial_states, payer,
+    moderate, generational, constrained, global).
+
+% Disputed as to whether their governments hold legitimate authority (by whom, and according to which standard?). Face competing assessments from different interveners and standards bodies. Subject to interventions or withdrawal of recognition justified as conditional on legitimacy proof. Legitimacy itself becomes an externally-evaluated criterion they must satisfy, not an internal political achievement.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, states_with_contested_legitimacy, payer,
+    moderate, generational, constrained, global).
+
+% States and movements that hold Westphalian or absolute sovereignty readings would argue that graduated sovereignty regimes violate non-interference norms and enable neo-colonialism. They are excluded from the assessment standard-setting bodies and their objections are reframed as anti-accountability or anti-governance rhetoric.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, absolute_sovereignty_defenders, excluded,
+    moderate, generational, trapped, global).
+
+% May benefit from graduated sovereignty frameworks when external interveners support their claims against incumbent states, or may face repression when interveners classify the incumbent state as having legitimate authority. Their relationship to the constraint is contingent on the assessment of the state they oppose.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, subnational_movements, beneficiary,
+    moderate, biographical, constrained, regional).
+
+% Monitor whether graduated sovereignty assessments operate as capacity support or as neo-colonial reclassification machinery. Examine whether the metrics for capacity and legitimacy are applied uniformly or systematically disadvantage non-Western governance forms.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__graduated_sovereignty, international_observers, observer,
+    analytical, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(westphalian_sovereignty__graduated_sovereignty, external_interveners).
+narrative_ontology:fixing_cost_class(westphalian_sovereignty__graduated_sovereignty, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establish transparent criteria for state capacity and governance legitimacy so that the international community can calibrate support, conditionality, and intervention proportionately rather than arbitrarily.
+% TRANSFER_FUNCTION: Transfers authority to assess and judge states (and to impose conditionality) from state governments and their peoples to external experts and interveners. Transfers agency to design governance reforms from elected or indigenous leadership to external advisors and conditionality-setting institutions.
+% ABSENT_VOICES: States that contest the legitimacy of external assessment standards have no seat in standard-setting bodies — they are the assessed, not the assessors. Indigenous or non-Western governance frameworks are excluded by definition (they do not match Western bureaucratic capacity definitions). Subnational movements are present only as instrumental tools for interveners, not as agents with autonomous voice.
+% DISAPPEARANCE_RATIONALE: If graduated sovereignty assessment regimes disappeared, the authority to intervene in weak states would lose its epistemic justification; states would revert to defending sovereignty on consent-based or absolute grounds; conditionality on aid and loans would lose its legitimacy framing; the global power structure would reorganize around explicit force or alliance rather than capacity certification.
+% FOUNDING_PROBLEM: Some states lack the institutional capacity to provide basic public goods (courts, finance, healthcare) and their legitimacy is contested. International actors need a framework for when support is warranted versus when internal governance is adequate. The concern: how to help without imposing, how to establish accountability without enabling coercive intervention.
+% FOUNDING_PROBLEM_CORROBORATION: High-capacity states and international institutions attest that state capacity and legitimacy remain variable and justify conditionality and intervention as supportive. Post-colonial states and sovereignty-centered legal traditions attest that the founding problem was solved by decolonization and that graduated sovereignty perpetuates external dependency framed as technical assistance. Subaltern legal scholars and post-colonial analysts corroborate the latter reading with historical documentation of conditionality as neo-colonial extraction.
+narrative_ontology:disappearance_verdict(westphalian_sovereignty__graduated_sovereignty, world_rearranges).
+narrative_ontology:founding_problem_status(westphalian_sovereignty__graduated_sovereignty, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(westphalian_sovereignty__graduated_sovereignty, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(westphalian_sovereignty__graduated_sovereignty, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(westphalian_sovereignty__graduated_sovereignty, 'none', 1).
+narrative_ontology:epsilon_provenance(westphalian_sovereignty__graduated_sovereignty, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,16 +250,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.62 at interval end) because the constraint transfers policy autonomy, resource access, and territorial control from weak states to powerful interveners without commensurate benefit to the reclassified populations—the extraction is asymmetric and persistent. Suppression is higher (0.71) because the constraint's maintenance depends on actively excluding alternative frameworks (absolute_sovereignty, conditional_sovereignty readings) and suppressing resistance from reclassified states that dispute the legitimacy of external measurement and intervention authority. Suppression requirement has risen sharply from 0.48 in 1995 to 0.71 in 2025 because as reclassification has become routine and resistance has grown, the institutional machinery required to maintain the graduated-sovereignty frame has intensified (more intrusive measurement, more conditional aid, more military intervention, more data collection on 'governance'). Theater ratio is moderate-high (0.48) because a substantial share of the framing and activity is performance: the 'capacity-building' narrative obscures resource extraction; the 'good governance' standards encode powerful-state preferences; the 'humanitarian intervention' justification masks geopolitical ambition. The measurement series shows extractiveness rising steeply 1995-2008 (post-Cold War era, post-9/11 security anxieties) then plateauing 2008-2025 (retrenchment of intervention, greater state resistance, China/Russia institutional alternatives), while suppression requirement continues rising (maintaining the framework requires more institutional effort as legitimacy is contested). The temporal pattern suggests the constraint has matured into its extractive equilibrium: extractiveness has settled at the level where compliance costs roughly balance intervener benefits, while suppression has hardened because resistance is persistent and institutional alternatives are emerging.
+ *   Extractiveness is 0.62 at interval end because the graduated sovereignty framework enables systematic extraction of policy autonomy and governance authority from weak states without their consent—authority to set conditions, restructure institutions, and judge legitimacy accrues to external actors. Suppression is 0.71 because dissent from graduated sovereignty framing is suppressed via expert consensus and institutional gatekeeping: objections are reframed as 'anti-accountability' or 'sovereignty maximalism' rather than engaged as legitimate defenses of self-determination. Theater ratio of 0.48 reflects that a genuine coordination function (establishing capacity and legitimacy standards) coexists with a substantial extractive function (authority capture and institutional conditionality that benefits interveners). The measurement series tracks accumulation: extractiveness rises from 0.35 to 0.62 as the graduated sovereignty framework becomes institutionalized, as conditionality spreads, and as low-capacity states find themselves perpetually assessed and reclassified. Theater ratio rises as the framing shifts from humanitarian support to institutional reform conditionality to governance restructuring. Suppression requirement rises as resistance from post-colonial states and sovereignty-defending traditions intensifies and must be suppressed via expert authority and institutional gatekeeping.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter seats (powerful interveners, international institutions) and the payer seats (weak states, reclassified populations) should compute radically different constraint types. From the agenda-setter seat, graduated sovereignty is rope or tangled_rope—a coordination mechanism solving genuine problems (weak states' governance failures, humanitarian crises, security threats) while bearing asymmetric costs. From the payer seat, it is a snare—the coordination story is cover; the actual function is extraction; the measurement standards are weaponized; exit is impossible and resistance is futile. The engine computes this divergence from the structural data: the payer seats have trapped exit, high d directionality toward the target end, and no beneficiary position; the agenda-setter seats have arbitrage exit, low d toward the beneficiary end, and control over the rules. This perspectival gap is the central feature of the reading—it explains why the constraint persists despite producing no improvement in outcomes for reclassified states.
+ *   From the perspective of high-capacity states and international institutions, graduated sovereignty is a framework for legitimate conditionality and supportive intervention—a way to help states build capacity and improve governance. From the perspective of low-capacity and post-colonial states, the same framework is a mechanism of neo-colonial extraction: authority over their own governance is transferred to external assessors, conditionality on aid perpetuates dependency, and they face a structural incentive to abandon indigenous institutions and replicate Western bureaucratic forms. The engine should compute this divergence from the structural data: high-capacity institutional actors with arbitrage exit experience the constraint as enabling their beneficial authority (low χ, beneficiary directionality); powerless or identity-locked actors in weak states experience it as coercive reclassification (high χ, target directionality). The authored claim (snare) reflects the target-seat perception; high-capacity seats might perceive it as rope or scaffold (supportive conditionality toward capacity-building). The claim/metric independence principle preserves this gap rather than reconciling it.
  *
  * DIRECTIONALITY LOGIC:
- *   Powerful external interveners hold d near 0.0 (beneficiary end): they define the standards, collect the extraction (policy concessions, resource access, military bases, geopolitical alignment), and face no reciprocal reclassification. International institutions hold d near 0.1-0.2 (beneficiary with some cost): they administer the framework, benefit from expanded mandates and staff growth, but bear some reputational and operational costs when interventions fail. Weak state governments hold d near 0.8-0.9 (target end): they pay autonomy, bear conditionality costs, and cannot exit. Populations in reclassified states hold d near 0.85-0.95 (full target): they bear military intervention, economic extraction, and loss of sovereignty without any seat in the process. Resistance movements hold d near 0.90 (full target): they mobilize against structural odds and are systematically suppressed. Measurement bodies hold d near 0.1 (beneficiary end): they author the standards and conduct the evaluations; they face no accountability for bias or error. This directionality distribution is what makes the constraint a snare: it extracts from the powerless and trapped, concentrating extraction on those with no exit and no voice in the measurement process.
+ *   High-capacity states and external interveners are the structural beneficiaries: they control the metrics, the assessment bodies, and the conditionality machinery. Their directionality is near 0.0 (full beneficiary: they collect authority and set rules). Low-capacity and post-colonial states are the targets: they bear the cost of perpetual reclassification, conditionality on aid and trade, and external governance imposition. Their directionality is near 1.0 (full target: they must submit to external assessment and intervention). States with contested legitimacy sit higher on the target end (0.7-0.9) because their legitimacy is the subject of external evaluation—they cannot exit by proving capacity alone; they must satisfy external legitimacy assessments. Subnational movements occupy a split position: when the external intervener opposes the incumbent state they may be beneficiaries (gaining support), but when the intervener supports the incumbent, they are victims. The asymmetry is structural to the constraint: the intervener's classification decision determines whether a subnational movement gains or loses agency.
  *
  * MANDATROPHY ANALYSIS:
- *   The graduated-sovereignty reading does not resolve mandatrophy; it exemplifies it. The founding problem (weak states create humanitarian crises and security threats) is contested as to whether it is live or dead. Powerful interveners claim it is live and cite ongoing state fragility as justification for expanded intervention. Reclassified states and resistance scholars claim the founding problem is dead—that state fragility is often a product of past intervention, resource extraction, and imposed structural adjustment. The evidence is mixed: some reclassified states (Rwanda post-1994, Liberia) show some governance improvement; many others (Afghanistan, Iraq, Libya, Mali) show systematic degradation of state capacity and increased violence after intervention. The constraint persists despite mixed or negative outcomes because the extraction mechanism is not dependent on achieving the founding goal—the mechanism persists because powerful interveners benefit from the discretion to intervene and the international institutions benefit from expanded mandates. This is the characteristic signature of mandatrophy: the constraint's stated function (capacity-building, humanitarian relief) has outlived its credibility, but the constraint persists because the institutional infrastructure that administers it collects rents from its operation, and because exit is impossible for the reclassified populations. The graduated-sovereignty reading is a perfect case study in how a legitimate coordinating constraint (if it worked) can degrade into a pure extraction mechanism once the founding problem is solved or revealed as unsolvable by the stated mechanisms.
+ *   The founding problem—'some states lack capacity and legitimacy'—is contested as to whether it is still live. High-capacity states and interveners attest that capacity variation persists and justifies graduated sovereignty. Post-colonial states and sovereignty traditions attest that the problem was solved by decolonization and that graduated sovereignty is a new problem (neo-colonial extraction) disguised as the solution to the old one. The constraint's persistence depends on this contestation: if the founding problem were dead and acknowledged as solved, the graduated sovereignty framework would lose justification and would need to be defended on other grounds (e.g., 'intervention is sometimes justified as humanitarian'). The constraint avoids mandatrophy by keeping the founding problem contested—neither fully alive nor fully dead, leaving the framework in continuous operation. The theater ratio (0.48) reflects this: a substantial fraction of enforcement activity defends the assessment regime itself rather than solving the founding problem, but the problem's contested status preserves the justification.
  */
 
 /* ==========================================================================
@@ -194,111 +267,112 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    measurement_framework_bias,
-    'Who authors the capacity and governance standards by which states are reclassified, and do those standards encode the preferences and institutional interests of the powerful states that define them?',
-    'Comparative analysis of capacity metrics authored by powerful-state institutions versus those authored by weak-state analysts; measurement bias audits; longitudinal tracking of reclassification consistency across states with similar objective characteristics but different geopolitical alignments.',
-    'If measurement standards are biased in favor of powerful-state preferences (e.g., favoring market liberalization, Western-style governance, NATO alignment), the graduated-sovereignty reading becomes a cover story for neo-colonial extraction. If standards are objective and consistently applied across state types regardless of geopolitical alignment, the reading retains legitimacy as coordination.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(measurement_framework_bias, empirical, 'Whether capacity measurement standards are objective or biased toward powerful states'' interests.').
-
-omega_variable(
-    intervention_outcome_paradox,
-    'Do external interventions under graduated-sovereignty framework actually improve state capacity and governance outcomes in reclassified states, or do they systematically leave states more dependent and less capable than before?',
-    'Longitudinal data on governance indicators, economic indicators, and state institutional capacity before and after intervention; comparison with counterfactual case studies of similar states that were not intervened upon; tracking of conditionality compliance and autonomy loss.',
-    'If interventions improve outcomes, the constraint operates as coordinate improvement with asymmetric cost-bearing—a tangled_rope with real coordination value. If interventions systematically degrade outcomes while extracting resources and autonomy, the constraint is a snare: the stated function (capacity-building) is theater; the actual function is extraction.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(intervention_outcome_paradox, empirical, 'Whether intervention outcomes vindicate the capacity-building narrative or refute it.').
-
-omega_variable(
-    reciprocal_reclassification_absence,
-    'Why are powerful states never reclassified as having insufficient capacity or governance legitimacy, even when they engage in systematic human rights abuses, institutional capture, or state failure in specific domains?',
-    'Analysis of reclassification criteria and application across state power levels; documentation of powerful states'' immunity from the same standards applied to weak states; investigation of how criteria would be applied if reciprocal measurement were authorized.',
-    'Absence of reciprocal reclassification suggests the framework is structurally designed to extract from weak states only—it is a pure snare, not a coordination mechanism with asymmetric cost. Presence of reciprocal reclassification would support a tangled-rope reading (coordination with extraction costs borne unequally but by all).',
+    capacity_metrics_construct,
+    'Are the metrics used to assess state capacity—institutional strength, bureaucratic efficiency, fiscal capacity, security force control—neutral measures of ability, or are they constructed to systematically advantage Western institutional forms and disadvantage alternative governance structures?',
+    'Comparative analysis of indigenous governance systems'' outcomes in development, rights protection, and public goods provision versus Western institutions in comparable resource contexts. Cross-cultural institutional assessment not filtered through Western institutional templates.',
+    'If the metrics are construct-biased, the assessment regime is not measuring capacity but imposing a specific institutional form as the definition of capacity. The ε and classification would shift toward pure extraction (snare, not rope). If the metrics are culturally neutral, graduated sovereignty may retain some coordination function.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reciprocal_reclassification_absence, conceptual, 'Whether graduated-sovereignty standards are universally applied or weaponized against weak states only.').
+narrative_ontology:omega_variable(capacity_metrics_construct, conceptual, 'Whether capacity metrics are neutral or institutionally constructed.').
 
 omega_variable(
-    kernel_reading_contest,
-    'Is sovereignty a spectrum determined by capacity (graduated_sovereignty reading) or an unconditional right of statehood (absolute_sovereignty reading) or a conditional responsibility framework (conditional_sovereignty reading)?',
-    'Comparison of extractive outcomes and legitimacy claims across the three readings; analysis of which reading produces the most extractive pattern and which produces coordinated improvement. The kernel contest cannot be resolved by measuring the world — it is resolved by choosing which reading the international system will operationalize.',
-    'This omega routes the committer frame: if absolute_sovereignty is operationalized, external intervention loses normative legitimacy and extraction must be naked. If conditional_sovereignty is operationalized, intervention requires demonstrable human rights violations, not capacity measurement. If graduated_sovereignty persists, the measurement discretion remains with powerful states, enabling continued extraction. The three readings produce different constraint types (absolute → piton/scaffold of absolute-sovereignty doctrine; conditional → tangled_rope with real coordination; graduated → snare enabling neo-colonial extraction).',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Which reading of the westphalian_sovereignty kernel will the international system operationalize, and what extraction pattern follows from each?').
-
-omega_variable(
-    suppression_mechanism_internalization,
-    'Is the measured suppression (0.71) structural—imposed externally through military, economic, and institutional force—or internalized—does the reclassified state''s own leadership internalize the capacity-deficit narrative and self-impose the reforms external interveners demand?',
-    'Post-exit trajectory analysis: when external pressure is removed or negotiations shift power balance, do reclassified states maintain the adopted reforms (internalized suppression) or revert to prior institutional forms (structural suppression)? Analysis of leadership''s private vs. public statements about the legitimacy of reclassification. Comparison of reform adoption rates when conditionality is hard-enforced versus when it is voluntary.',
-    'If suppression is largely internalized, the constraint''s effective suppression is higher than the measured 0.71—the target carries the suppression with them even if external pressure decreases. If suppression is structural, it is reversible if the external machinery is dismantled. Internalization suggests the constraint operates at the identity and cognition level; structural suppression operates at the institutional level only.',
+    legitimacy_assessment_locus,
+    'Should legitimacy be assessed by external observers or internal populations? Who counts as the judge of whether a government holds legitimate authority?',
+    'Empirical measurement of correlation between external legitimacy assessments and internal population support. Cases where the two diverge reveal whose assessment the constraint privileges.',
+    'If external assessments diverge from internal consent and the constraint privileges external assessments, the constraint transfers legitimacy judgment from populations to external experts—core extractive function. If internal consent is privileged, graduated sovereignty retains some basis in democratic legitimacy.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression of state autonomy is structurally imposed or internalized by reclassified states'' own leadership.').
+narrative_ontology:omega_variable(legitimacy_assessment_locus, preference, 'The locus of legitimacy authority—internal or external.').
+
+omega_variable(
+    graduated_vs_absolute_foreclosure,
+    'Do the graduated sovereignty and absolute sovereignty readings logically foreclose each other, or can they coexist as live positions held by different parties?',
+    'Test whether a state can hold both commitments simultaneously: does accepting that capacity varies logically commit one to accepting external assessment and conditionality? Or can capacity variation be acknowledged while defending absolute non-interference?',
+    'If the readings foreclose each other, graduated sovereignty is a contested challenge to the absolute reading, not a reconciliation. If they coexist, the constraint maps onto a stable multipolar legitimacy system rather than a displacement mechanism.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(graduated_vs_absolute_foreclosure, conceptual, 'Logical structure of the relationship between graduated and absolute sovereignty readings.').
+
+omega_variable(
+    conditionality_efficacy,
+    'Does external conditionality on aid, loans, and trade actually improve state capacity and governance legitimacy, or does it extract policy autonomy while leaving underlying capacity problems unsolved?',
+    'Longitudinal study of states subject to IMF/World Bank conditionality: measure capacity and legitimacy before, during, and after conditionality periods. Control for counterfactual (what capacity trajectory would have occurred without conditionality).',
+    'If conditionality improves capacity and legitimacy, the constraint has genuine coordination function and is snare-flavored but not pure extraction. If it extracts policy autonomy without improving outcomes, the constraint is pure snare. If it worsens outcomes (dependency trap), the constraint is a snare with degraded performance.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(conditionality_efficacy, empirical, 'Whether graduated sovereignty conditionality produces the capacity improvements it justifies itself as producing.').
+
+omega_variable(
+    neo_colonial_assessment_bias,
+    'Are the actors conducting graduated sovereignty assessments (Western states, IMF, World Bank, academic bodies) sufficiently insulated from benefiting from the assessments they make, or do they systematically assess in ways that justify their own continued authority and conditionality?',
+    'Meta-analysis of assessment outcomes: do low-capacity classifications correlate with geopolitical alignment with Western interests, resource dependence, or other factors predictive of intervener benefit? Do assessment standards change over time to keep the assessed states in the low-capacity category?',
+    'If assessors benefit from their own assessments, the framework is institutionally captured and the ε should be higher (pure extraction enabling intervener benefit). If assessments are independent, some coordination function is preserved.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(neo_colonial_assessment_bias, empirical, 'Whether graduated sovereignty assessments are free from institutional capture by benefiting states and institutions.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(westphalian_sovereignty__graduated_sovereignty, 1995, 2025).
+narrative_ontology:interval(westphalian_sovereignty__graduated_sovereignty, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(west_tr_t1995, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 1995, 0.28).
-narrative_ontology:measurement(west_tr_t2001, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 2001, 0.35).
-narrative_ontology:measurement(west_tr_t2008, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 2008, 0.41).
-narrative_ontology:measurement(west_tr_t2015, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 2015, 0.46).
-narrative_ontology:measurement(west_tr_t2020, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 2020, 0.48).
-narrative_ontology:measurement(west_tr_t2025, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 2025, 0.48).
+narrative_ontology:measurement(west_tr_t0, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(west_tr_t7, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 7, 0.32).
+narrative_ontology:measurement(west_tr_t14, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 14, 0.38).
+narrative_ontology:measurement(west_tr_t21, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 21, 0.44).
+narrative_ontology:measurement(west_tr_t28, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 28, 0.47).
+narrative_ontology:measurement(west_tr_t35, westphalian_sovereignty__graduated_sovereignty, theater_ratio, 35, 0.48).
 
 % Extraction over time
-narrative_ontology:measurement(west_be_t1995, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 1995, 0.45).
-narrative_ontology:measurement(west_be_t2001, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 2001, 0.52).
-narrative_ontology:measurement(west_be_t2008, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 2008, 0.58).
-narrative_ontology:measurement(west_be_t2015, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 2015, 0.61).
-narrative_ontology:measurement(west_be_t2020, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 2020, 0.62).
-narrative_ontology:measurement(west_be_t2025, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 2025, 0.62).
+narrative_ontology:measurement(west_be_t0, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(west_be_t7, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 7, 0.42).
+narrative_ontology:measurement(west_be_t14, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 14, 0.51).
+narrative_ontology:measurement(west_be_t21, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 21, 0.58).
+narrative_ontology:measurement(west_be_t28, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 28, 0.61).
+narrative_ontology:measurement(west_be_t35, westphalian_sovereignty__graduated_sovereignty, base_extractiveness, 35, 0.62).
 
 % Suppression requirement over time
-narrative_ontology:measurement(west_su_t1995, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 1995, 0.48).
-narrative_ontology:measurement(west_su_t2001, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 2001, 0.55).
-narrative_ontology:measurement(west_su_t2008, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 2008, 0.64).
-narrative_ontology:measurement(west_su_t2015, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 2015, 0.7).
-narrative_ontology:measurement(west_su_t2020, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 2020, 0.71).
-narrative_ontology:measurement(west_su_t2025, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 2025, 0.71).
+narrative_ontology:measurement(west_su_t0, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 0, 0.54).
+narrative_ontology:measurement(west_su_t7, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 7, 0.59).
+narrative_ontology:measurement(west_su_t14, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 14, 0.64).
+narrative_ontology:measurement(west_su_t21, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 21, 0.68).
+narrative_ontology:measurement(west_su_t28, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 28, 0.7).
+narrative_ontology:measurement(west_su_t35, westphalian_sovereignty__graduated_sovereignty, suppression_requirement, 35, 0.71).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(westphalian_sovereignty__graduated_sovereignty, global_infrastructure).
+narrative_ontology:coordination_type(westphalian_sovereignty__graduated_sovereignty, enforcement_mechanism).
 narrative_ontology:boltzmann_floor_override(westphalian_sovereignty__graduated_sovereignty, 0.25).
-narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, westphalian_sovereignty__absolute_sovereignty).
-narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, westphalian_sovereignty__conditional_sovereignty).
+narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, conditional_sovereignty).
+narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, absolute_sovereignty).
+narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, humanitarian_intervention_doctrine).
 narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, structural_adjustment_programs).
-narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, conditional_development_lending).
-narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, responsibility_to_protect_doctrine).
+narrative_ontology:affects_constraint(westphalian_sovereignty__graduated_sovereignty, international_institution_authority).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the westphalian_sovereignty kernel. The absolute_sovereignty and conditional_sovereignty readings are sibling constraints in the same kernel family. Each reading operationalizes a different interpretation of what the westphalian commitment to sovereign statehood permits. Graduated-sovereignty differs structurally by transferring legitimacy from formal statehood (absolute) or documented violations (conditional) to capacity measurement—which enables discretionary external intervention justified by measurement standards authored by the interveners themselves.
+% This constraint is one reading of the WESTPHALIAN KERNEL (state sovereignty). The absolute_sovereignty and conditional_sovereignty constraints are sibling readings from the same kernel. All three share the same referent (the international commitment to state sovereignty) but instantiate different constraint structures: absolute sovereignty denies external authority to assess or condition; conditional sovereignty bases intervention on specific violations; graduated sovereignty institutionalizes continuous assessment and conditionality. The three readings compete to define the legitimacy of external intervention and the scope of state authority. Graduated sovereignty INFLUENCES the others by institutionalizing a regime that displaces binary frameworks and creates a continuous spectrum of authority contestation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(westphalian_sovereignty__graduated_sovereignty, institutional, 0.05).
+constraint_indexing:directionality_override(westphalian_sovereignty__graduated_sovereignty, powerless, 0.85).
+constraint_indexing:directionality_override(westphalian_sovereignty__graduated_sovereignty, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

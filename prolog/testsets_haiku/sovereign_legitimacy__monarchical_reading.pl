@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,6 +43,13 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,42 +74,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: sovereign_legitimacy__monarchical_reading
- *   human_readable: Monarchical Legitimacy: Divine-Right Authority via Inherited Succession
- *   domain: political/constitutional
+ *   human_readable: Monarchical Legitimacy: Divine Right and Hereditary Succession
+ *   domain: political_philosophy/constitutional_theory
  *
  * SUMMARY:
- *   This is the monarchical reading of the contested sovereign_legitimacy
- *   kernel. It asserts that legitimate political authority flows downward
- *   through inherited bloodline, sanctified by divine anointing and religious
- *   doctrine. The ruling class consists of hereditary nobility whose
- *   legitimacy is defended through both theological endorsement (clergy
- *   provide sacred validation) and coercive machinery (military and legal
- *   system suppress alternative claims). The constraint coordinates a unified
- *   command structure and establishes recognized succession procedures,
- *   solving the problem of stable authority in pre-constitutional realms. It
- *   simultaneously extracts massive revenue and service from the subject
- *   population, who are taught that questioning the arrangement is blasphemy
- *   and treason. The reading is one node in a constraint family: its sibling
- *   readings—the republican reading (authority upward from popular consent)
- *   and the constitutional hybrid reading (dual-source legitimacy with
- *   constitutional mediation)—occupy different parties' positions in ongoing
- *   political struggle. The kernel itself is contested; the readings coexist
- *   as live alternatives in different regimes and as competing claims within
- *   reform movements. The measured metrics (0.78 extractiveness, 0.86
- *   suppression) reflect the reading's historical operation: high extraction
- *   because the bloodline mechanism concentrates benefit, high suppression
- *   because the framework must actively prevent alternative legitimacy claims
- *   and succession-contending lineages from gaining traction.
+ *   This constraint embodies the legitimacy claim of monarchical authority:
+ *   that political power flows downward from a sovereign whose claim rests on
+ *   divine sanction, inherited right through bloodline, and the necessity of
+ *   hierarchical order. The reading asserts that this descent is not
+ *   constructed but natural law — divinely ordained and historically
+ *   necessary. However, structural analysis reveals high extraction from
+ *   excluded subjects and active suppression of alternative legitimacy
+ *   frames. The constraint performs genuine coordination (it does prevent
+ *   succession chaos through clear rules) while simultaneously extracting
+ *   obedience, wealth, and foreclosed agency from those it rules. The
+ *   divergence between the claimed naturalness and the measured
+ *   extractiveness is precisely the phenomenon the framework detects: a false
+ *   summit where identifiable beneficiaries (the ruling class) profit from
+ *   treating a constructed arrangement as inevitable.
  *
  * KEY AGENTS:
- *   - Reigning Monarch: institutional power, sets agenda through divinely-sanctioned authority. Identity-locked to role by succession law; cannot exit without delegitimizing the entire framework.
- *   - Aristocratic Nobility: organized power, hold beneficiary + secondary agenda-setter role. Participate in rule through court, regional governance, and advisory parliament. Structurally dependent on monarch for title confirmation.
- *   - Clergy and Religious Authorities: institutional power, provide legitimacy through coronation rite, theological sanction, and pulpit endorsement. Constrained because delegitimizing the crown risks their own authority.
- *   - Subject Population: powerless, structurally payers. Expected to obey, pay taxes, serve military. Taught that questioning the order is blasphemy. Identity-locked through religious narrative and coercive suppression of alternatives.
- *   - Merchant and Craft Classes: moderate power, constrained payers. Possess economic leverage but no formal political voice. License-dependent on crown, hence structurally subordinate.
- *   - Religious Minorities: powerless, actively suppressed. Identity-locked by religious affiliation and legal status. Excluded from sacred legitimation sources and often subject to conversion pressure or exile.
- *   - Succession Contenders: excluded from decision frame unless militarily strong. The bloodline rule creates structural ambiguity about collateral lines, generating recurring crisis moments.
- *   - Foreign Powers: institutional observers. Recognition of legitimacy affects effective power but does not alter formal claim within the framework.
+ *   - Sovereign Monarch: sets law, claims divine sanction, bears succession crisis risk (institutional power, trapped exit)
+ *   - Hereditary Ruling Class: collects privilege and subordinate authority, maintains local enforcement (powerful, identity-locked to the hierarchy)
+ *   - Ecclesiastical Authority: grants divine validation, receives land and monopoly (institutional, constrained by mutual dependence)
+ *   - Excluded Subjects: bear the constraint's full extractive weight without voice or consent (powerless, trapped)
+ *   - Alternative Legitimacy Claimants: actively suppressed; their exclusion is the constraint's enforcement object (moderate, constrained by suppression)
+ *   - Tradition Keepers: historians and clergy maintaining the narrative (organized, analytical seat)
  */
 
 /* ==========================================================================
@@ -109,63 +107,131 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(sovereign_legitimacy__monarchical_reading, 0.78).
-domain_priors:suppression_score(sovereign_legitimacy__monarchical_reading, 0.86).
-domain_priors:theater_ratio(sovereign_legitimacy__monarchical_reading, 0.62).
+domain_priors:base_extractiveness(sovereign_legitimacy__monarchical_reading, 0.81).
+domain_priors:suppression_score(sovereign_legitimacy__monarchical_reading, 0.87).
+domain_priors:theater_ratio(sovereign_legitimacy__monarchical_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, extractiveness, 0.78).
-narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, suppression_requirement, 0.86).
-narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, theater_ratio, 0.62).
+narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, extractiveness, 0.81).
+narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, suppression_requirement, 0.87).
+narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, accessibility_collapse, 0.81).
-narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, accessibility_collapse, 0.79).
+narrative_ontology:constraint_metric(sovereign_legitimacy__monarchical_reading, resistance, 0.68).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(sovereign_legitimacy__monarchical_reading, tangled_rope).
-narrative_ontology:human_readable(sovereign_legitimacy__monarchical_reading, "Monarchical Legitimacy: Divine-Right Authority via Inherited Succession").
-narrative_ontology:topic_domain(sovereign_legitimacy__monarchical_reading, "political/constitutional").
+narrative_ontology:human_readable(sovereign_legitimacy__monarchical_reading, "Monarchical Legitimacy: Divine Right and Hereditary Succession").
+narrative_ontology:topic_domain(sovereign_legitimacy__monarchical_reading, "political_philosophy/constitutional_theory").
 
 domain_priors:requires_active_enforcement(sovereign_legitimacy__monarchical_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(sovereign_legitimacy__monarchical_reading, 'd8463944-a735-40d1-b30a-e0daad9de099').
-narrative_ontology:cs_kernel_codification('d8463944-a735-40d1-b30a-e0daad9de099', fixed_text).
-narrative_ontology:cs_authority_grounding('d8463944-a735-40d1-b30a-e0daad9de099', lineage).
-narrative_ontology:cs_interpretation_layer_present('d8463944-a735-40d1-b30a-e0daad9de099').
-narrative_ontology:cs_reading_relation('d8463944-a735-40d1-b30a-e0daad9de099', sovereign_legitimacy__republican_reading, coexists_with).
-narrative_ontology:cs_reading_relation('d8463944-a735-40d1-b30a-e0daad9de099', sovereign_legitimacy__constitutional_hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom('d8463944-a735-40d1-b30a-e0daad9de099', foundational, authority_descends_through_blood).
-narrative_ontology:cs_axiom_status(authority_descends_through_blood, holdable).
-narrative_ontology:cs_axiom_grounding('d8463944-a735-40d1-b30a-e0daad9de099', authority_descends_through_blood, conventional).
-narrative_ontology:cs_axiom('d8463944-a735-40d1-b30a-e0daad9de099', foundational, divine_sanction_legitimates_heredity).
-narrative_ontology:cs_axiom_status(divine_sanction_legitimates_heredity, holdable).
-narrative_ontology:cs_axiom_grounding('d8463944-a735-40d1-b30a-e0daad9de099', divine_sanction_legitimates_heredity, theological).
-narrative_ontology:cs_axiom('d8463944-a735-40d1-b30a-e0daad9de099', secondary, subjects_owe_obedience_to_anointed_sovereign).
-narrative_ontology:cs_axiom_status(subjects_owe_obedience_to_anointed_sovereign, holdable).
-narrative_ontology:cs_axiom_grounding('d8463944-a735-40d1-b30a-e0daad9de099', subjects_owe_obedience_to_anointed_sovereign, deontological).
-narrative_ontology:cs_reference_frame('d8463944-a735-40d1-b30a-e0daad9de099', divinely_sanctioned_hereditary_succession).
-narrative_ontology:cs_drift_state('d8463944-a735-40d1-b30a-e0daad9de099', enlightenment_and_reform_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('d8463944-a735-40d1-b30a-e0daad9de099', '').
+narrative_ontology:cs_story_uid(sovereign_legitimacy__monarchical_reading, '3ad83234-0522-4443-aa29-f9df34e45879').
+narrative_ontology:cs_kernel_codification('3ad83234-0522-4443-aa29-f9df34e45879', fixed_text).
+narrative_ontology:cs_authority_grounding('3ad83234-0522-4443-aa29-f9df34e45879', lineage).
+narrative_ontology:cs_interpretation_layer_present('3ad83234-0522-4443-aa29-f9df34e45879').
+narrative_ontology:cs_reading_relation('3ad83234-0522-4443-aa29-f9df34e45879', sovereign_legitimacy__republican_reading, forecloses).
+narrative_ontology:cs_reading_relation('3ad83234-0522-4443-aa29-f9df34e45879', sovereign_legitimacy__constitutional_hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('3ad83234-0522-4443-aa29-f9df34e45879', foundational, authority_descends_divinely).
+narrative_ontology:cs_axiom_status(authority_descends_divinely, holdable).
+narrative_ontology:cs_axiom_grounding('3ad83234-0522-4443-aa29-f9df34e45879', authority_descends_divinely, theological).
+narrative_ontology:cs_axiom('3ad83234-0522-4443-aa29-f9df34e45879', foundational, bloodline_continuity_legitimacy).
+narrative_ontology:cs_axiom_status(bloodline_continuity_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('3ad83234-0522-4443-aa29-f9df34e45879', bloodline_continuity_legitimacy, conventional).
+narrative_ontology:cs_axiom('3ad83234-0522-4443-aa29-f9df34e45879', secondary, hierarchy_natural_necessity).
+narrative_ontology:cs_axiom_status(hierarchy_natural_necessity, holdable).
+narrative_ontology:cs_axiom_grounding('3ad83234-0522-4443-aa29-f9df34e45879', hierarchy_natural_necessity, deontological).
+narrative_ontology:cs_reference_frame('3ad83234-0522-4443-aa29-f9df34e45879', divinely_ordained_succession_hierarchy).
+narrative_ontology:cs_drift_state('3ad83234-0522-4443-aa29-f9df34e45879', enlightenment_and_democratic_challenge_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('3ad83234-0522-4443-aa29-f9df34e45879', '').
 narrative_ontology:cs_kernel_id(sovereign_legitimacy__monarchical_reading, sovereign_legitimacy).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sovereign_legitimacy__monarchical_reading, hereditary_ruling_class).
 narrative_ontology:constraint_beneficiary(sovereign_legitimacy__monarchical_reading, aristocratic_hierarchy).
-narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, subject_population).
-narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, merchant_and_craft_classes).
-narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, religious_minorities).
+narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, excluded_subjects).
+narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, alternative_legitimacy_claimants).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(sovereign_legitimacy__monarchical_reading, ecclesiastical_authority).
+narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, aristocratic_hierarchy).
+narrative_ontology:constraint_victim(sovereign_legitimacy__monarchical_reading, ecclesiastical_authority).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Holds and exercises authority claimed as inherited directly from divinity, mediated through bloodline continuity. Justifies rule by reference to sacred succession, divine sanction, and the necessity of hierarchical order. Sets all significant law and policy. Bears the legitimacy burden of succession crises and contested claims to the throne, which threaten the entire framework.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, sovereign_monarch, agenda_setter,
+    institutional, generational, trapped, national).
+
+% Derives privilege, wealth, and power from the monarchical order. Holds subordinate but secure positions in the hierarchy, with their own inheritance and subordinate authority flowing downward from the crown. Their identity, social position, and material interest are fused with the monarchical framework — exiting would mean renouncing aristocratic status and estate.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, hereditary_ruling_class, beneficiary,
+    powerful, generational, identity_locked, national).
+
+% Administers subordinate authority and collects rents from feudal relationships and tax privileges. They maintain the constraint by enforcing the sovereign's will locally and ritually performing their subordination. They also bear costs: they can be dispossessed by sovereign will, and they are locked into performing loyalty and submission continuously.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, aristocratic_hierarchy, beneficiary,
+    powerful, generational, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(sovereign_legitimacy__monarchical_reading, aristocratic_hierarchy, payer).
+
+% Bear the constraints' full weight: they are subject to law they did not consent to, pay taxes and levies set without their participation, and are excluded from any legitimacy claim. Their exit options are literal: flight, rebellion (which is treason), or death. The constraint's suppression falls most heavily here — the legitimacy claim explicitly denies them standing to question authority.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, excluded_subjects, payer,
+    powerless, biographical, trapped, national).
+
+% Any party (rival noble house, religious authority, popular movement, commercial elite) that asserts a competing legitimacy claim is immediately positioned as traitorous or seditious. The constraint's enforcement machinery actively suppresses their voice: censorship, excommunication, imprisonment, or execution. Their material cost is the risk of violent reprisal; their structural cost is that their legitimacy frame cannot be spoken in public without triggering enforcement.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, alternative_legitimacy_claimants, payer,
+    moderate, biographical, constrained, national).
+
+% Grants divine sanction to the monarch (coronation, blessing, doctrine of divine right) and receives land, wealth, tax exemption, and monopoly on certain forms of authority (marriage, moral judgment) in return. The church's legitimacy becomes entangled with the crown's — if the crown falls, the church's blessing becomes worthless; if the church withdraws sanction, the monarch's claim weakens. Both are locked into the performance.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, ecclesiastical_authority, beneficiary,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(sovereign_legitimacy__monarchical_reading, ecclesiastical_authority, payer).
+
+% Secondary heirs, cadet branches, or disputed claimants have a material interest in the succession rules but no legitimate voice until the throne is actually contested. They are structurally bound to accept the current succession order or mount armed rebellion. Even close family members are excluded from co-authority.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, succession_line_pretenders, excluded,
+    moderate, biographical, trapped, national).
+
+% Intellectual and political movements asserting the people as the legitimate source of authority are explicitly ruled out by this reading's core premise. They are excluded from the legitimate conversation and are treated as sedition if they gain public voice. They would reconstruct the entire legitimacy framework.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, popular_sovereignty_advocates, excluded,
+    moderate, biographical, constrained, national).
+
+% Historians, clergy, and court officials who maintain the narrative of bloodline continuity, divine sanction, and the necessity of hierarchy. Their interpretive work sustains the legitimacy claim by keeping the historical record aligned with the reading's premises. They have no direct power but are essential to the constraint's persistence.
+narrative_ontology:constraint_stakeholder(sovereign_legitimacy__monarchical_reading, tradition_keepers, observer,
+    organized, civilizational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(sovereign_legitimacy__monarchical_reading, hereditary_ruling_class).
+narrative_ontology:fixing_cost_class(sovereign_legitimacy__monarchical_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a single decision-making center with clear succession rules to prevent political fragmentation and succession wars. Provides a known authority structure and unified command for the realm. Creates a hierarchy of delegated authority that does not require constant renegotiation.
+% TRANSFER_FUNCTION: Moves obedience, tribute, military service, and legal compliance from subjects upward to the sovereign; moves legitimacy, protection, and order downward from sovereign through the hierarchy. Also transfers wealth and privilege to the ruling class through estate, title, and tax immunity.
+% ABSENT_VOICES: Popular assemblies, democratic movements, republican advocates, and women (in most monarchical readings) are structurally excluded. Merchants and rising commercial classes are absent from the legitimacy conversation despite accumulating economic power. Religious minorities that deny the crown's divine sanction are silenced.
+% DISAPPEARANCE_RATIONALE: If divine-right monarchical legitimacy disappeared overnight, the realm would lose its sole recognized authority frame. Succession crises would multiply, rival claimants would assert competing legitimacy grounds (popular consent, contractual governance, alternative religious interpretation), and the hierarchy of inherited privilege would collapse without its sacred foundation. The political order would reorganize around entirely different legitimacy principles — this constraint is not a natural law but a constructed arrangement whose removal unmakes the system it grounds.
+% FOUNDING_PROBLEM: In the absence of a clear, divinely-sanctioned authority structure, realms fractured into civil war, local warlords competed for power, and no unified law could be established. A hereditary succession rule, grounded in divine right and backed by ritual and doctrine, solved the succession crisis by making legitimacy questions illegitimate — the sovereign's bloodline IS the answer.
+% FOUNDING_PROBLEM_CORROBORATION: Modern scholarship and contemporary political actors outside the monarchical frame attest that succession disputes in pre-monarchical polities were real; however, they also attest that the divine-right solution was not the only possible answer and that succession mechanisms exist (constitutional succession, electoral procedures) that prevent war without requiring monarchical authority. Legislative bodies and democratic movements founded explicitly to contest this reading provide external corroboration that the founding problem no longer requires this solution.
+narrative_ontology:disappearance_verdict(sovereign_legitimacy__monarchical_reading, world_rearranges).
+narrative_ontology:founding_problem_status(sovereign_legitimacy__monarchical_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(sovereign_legitimacy__monarchical_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(sovereign_legitimacy__monarchical_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(sovereign_legitimacy__monarchical_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(sovereign_legitimacy__monarchical_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,16 +251,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.78) is high because the constraint concentrates benefit to hereditary class (monarch + nobility + clergy) at the expense of the subject population, merchant classes, and religious minorities. The monarchy does provide genuine coordination (unified command, recognized succession) so the extraction is not pure snare; it is tangled rope—genuine coordination function coupled with asymmetric benefit distribution. Suppression (0.86) is very high because the constraint's persistence depends on active enforcement machinery (army, law, inquisition, execution of heresy) to prevent alternative legitimacy claims from gaining traction. The bloodline rule itself generates succession crises (ambiguous collateral claims), so suppression intensity rises during succession moments (T=150-250 shows suppression_requirement peaking). Theater ratio (0.62) is substantial because as the constraint matures, an increasing share of enforcement activity defends the bloodline's exclusive claim to legitimacy rather than the coordination function itself. Coronation rituals, processions, and theological pronouncements proliferate as the framework ossifies. Accessibility collapse (0.81) is high because alternatives to the monarchical legitimacy structure are actively suppressed (heresy, republicanism, constitutionalism are capital crimes) and subjects are taught that alternative authority structures are metaphysically impossible (divinely forbidden). Resistance (0.72) reflects the fact that the constraint DOES meet active resistance from excluded nobility (succession contenders), from religious minorities (quiet non-compliance, emigration), from merchant classes (charter negotiations, smuggling), and from subject populations (peasant rebellions, folk traditions that preserve memory of lost autonomy). The measurement series shows extractiveness and suppression rising over time (T0 to T250), plateauing after T250, which models the constraint's maturation and institutional hardening. Suppression intensity at every level is very high (individual-level suppression peaks at 0.89 at T=400), indicating internalizing mechanisms (identity fusion, theological conditioning) work alongside external enforcement. Class-level resistance also rises (from 0.45 to 0.79), indicating that organized class consciousness (craft guilds, merchant associations, peasant solidarity) develops over time and poses growing structural pressure.
+ *   Extractiveness (0.81) is high because the arrangement transfers obedience and wealth from subjects to ruler without reciprocal consent or market exchange. The extraction is legitimized through divine sanction language, making it appear natural rather than coercive. Suppression (0.87) is very high because the constraint's persistence depends not on voluntary acceptance but on active silencing of rival legitimacy frames — this is tangled rope because the coordination function (succession rules preventing chaos) is genuine and valued by beneficiaries, but it coexists with substantial asymmetric extraction from excluded subjects. Theater ratio (0.42) is moderate-to-high and rising: the divine-right ritual (coronation, ceremonial performance, bloodline pageantry) is real and carries cultural meaning, but increasingly these performances sustain the legitimacy claim more than practical governance function, especially as the constraint is challenged. The measurement series shows rising extractiveness and suppression over the interval: as the authority becomes more contested (by enlightenment thought, democratic movements, commercial power), the enforcement machinery intensifies and the theatrical work required to maintain legitimacy increases. This is precisely the pattern of a constraint becoming a piton — the function has atrophied (replaced by constitutional mechanisms in many contexts) but the constraint persists through increasingly performative maintenance.
  *
  * PERSPECTIVAL GAP:
- *   The monarch's and clergy's seat should compute as beneficiary/coordinating (they set the rules, collect the benefit, see the constraint as genuinely necessary stability structure). The subject population's seat should compute as target/constrained (they pay through taxation and obedience, see the constraint as coercive extraction dressed in theology). The merchant and craft classes' seat should compute as mixed (they benefit from unified currency and trade law, but pay through taxation and license-dependence; their directionality sits around 0.5, symmetric to slightly target-leaning). The succession contender seat is structurally unable to access the framework's legitimacy sources, so they compute as outside the constraint's normal operation (excluded rather than seated). The clergy's seat is ambiguous: they provide legitimacy (beneficiary function) but are constrained by dependence on the crown's power to enforce their doctrine. If the crown loses military strength, clergy cannot independently sustain the sacred legitimation. This directionality ambiguity is captured in the directionality_overrides section below.
+ *   The sovereign seat sees a natural, divinely-mandated order that solves succession. The subject seat sees brutal extraction. The beneficiary seats (aristocracy, clergy) see legitimate privilege. The alternative legitimacy seats see censored voices and foreclosed frames. The engine's per-seat computation surfaces these structural divergences without reconciling them — that is the point.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are the hereditary ruling class (monarch, aristocratic nobility, clergy). They are institutional and powerful. Their directionality is near the beneficiary end: d~0.15-0.25. They set the rules, collect the revenue, and control the narrative. They have low exit options (trapped and identity-locked: an aristocrat who renounces title and lineage becomes powerless; a clergy member who rejects divine-right theology loses their authority). Their low exit options and beneficiary role keep them on the beneficiary side of directionality. Victims are the subject population (powerless), merchant classes (moderate power but constrained), and religious minorities (powerless, actively suppressed). Their directionality is near the target end: d~0.75-0.90. They pay through taxation, obedience, and labor service. They have trapped or identity-locked exit (subjects cannot easily emigrate; religious minorities cannot change their religious identity without apostasy). The merchant classes occupy an intermediate position: d~0.55-0.65 (moderate power, constrained exit, mixed benefit/cost). Religious minorities are purely targeted: d~0.88 (powerless, identity-locked, no benefit, active suppression). Succession contenders are outside the normal structure (excluded) and would compute as neither beneficiary nor target unless they successfully challenge the reigning monarch—their directionality is contingent on military outcome, not structural position within the constraint. No directionality overrides are needed; the structural derivation from beneficiary/victim + exit + power correctly produces the directional picture.
+ *   Beneficiaries are the sovereign and hereditary ruling class (d near 0.0–0.2): they collect legitimacy validation, privilege, wealth, and power from the arrangement and have strong incentives to maintain it. Ecclesiastical authority is also a beneficiary (d near 0.1–0.3) because they profit from granting sanction, though they are constrained by mutual dependence. Victims are excluded subjects (d near 0.9–1.0): they bear obedience, taxation, legal powerlessness, and foreclosed voice with no reciprocal benefit. Alternative legitimacy claimants are also targets (d near 0.8–1.0): they are actively suppressed and risk their lives or liberty if they speak their frame publicly. The aristocratic hierarchy occupies a mixed position (d near 0.4–0.6): they benefit from inherited privilege but are also locked into performing submission to the sovereign and are vulnerable to arbitrary dispossession. Their identity_locked exit reflects that renouncing aristocratic status would be renouncing their entire social being.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint solves a real coordination problem (stable succession in a realm without written constitution or electoral mechanism). However, as merchant power rises, literacy spreads, and alternative legitimacy narratives (republicanism, constitutionalism) become articulated in written form, the founding problem statement ('how do we establish recognized authority and succession procedures') becomes increasingly separable from the monarchical solution. The theater ratio rising (0.48 to 0.62) models the constraint's mandatrophy: increasing share of enforcement activity defends the bloodline's exclusive legitimacy rather than the coordination function itself. In the later measurements (T=250-400), the crown is suppressing alternative legitimacy frameworks (republican clubs, constitutional reform societies, heretical theology) rather than merely administering a universally-accepted order. This is the signature of a constraint whose founding mandate has atrophied but whose extraction and suppression machinery persists. The fact that suppression rises even as the constraint matures (rather than settling to a plateau) indicates institutional lock-in: the aristocracy and clergy have built careers and identities around the monarchical frame, so they defend it not because it solves the founding problem but because dismantling it would dissolve their power. This is classic piton drift. However, the constraint still claims tangled_rope because the coordination function is real and measurable in the early period (T=0-100), and even in the later period (T=250-400) a residual coordination benefit persists. The classification reflects that tension: the engine may compute per-seat differences (the monarch's seat as rope, the subject seat as snare) that expose the mandatrophy.
+ *   This constraint is a clear case of a false summit. It is claimed as natural law (divine right, bloodline necessity, natural hierarchy) but is structured as tangled rope: it performs genuine coordination (succession rules) while extracting asymmetrically from subjects and suppressing rival frames. The mandatrophy resolution lies in the founding problem status: the founding problem (succession wars in pre-monarchical polities) is DEAD in modern contexts where constitutional succession mechanisms and democratic procedures prevent the same outcome without divine right. Yet the constraint persists — the measurement series shows rising theater_ratio and persistent suppression as the functional justification decays. The constraint has become a piton: the beneficiaries (ruling class, ecclesiastical authority) maintain it through ritual and doctrine even though the coordination function has been solved by alternative mechanisms. The rising suppression requirement (from 0.72 to 0.87) reflects that modern opposition forces are stronger and the legitimacy claim requires more active enforcement. This is mandatrophy in progress: the mandate is obsolete but the machinery persists.
  */
 
 /* ==========================================================================
@@ -202,98 +268,95 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    divine_sanction_vs_institutional_power,
-    'Is the constraint''s persistence grounded in genuine belief in divine sanction, or in the institutional machinery that claims to represent it?',
-    'Historical comparison of legitimacy erosion in regimes where theological education spread versus those where it remained monopolized; correlation between clergy loyalty and succession stability.',
-    'If grounded in genuine belief, widespread literacy and theological contestation can dissolve the constraint (disenchantment). If grounded in machinery, it persists through institutional inertia (piton dynamics) even as belief erodes.',
-    confidence_without_resolution(high)
+    divine_sanction_empirical_status,
+    'Is divine sanction a genuine metaphysical claim about authority''s origin, or a post-hoc legitimacy narrative grafted onto an inherited power structure?',
+    'Comparative analysis of succession disputes in contexts where divine sanction claims have been withdrawn (e.g., post-monarchical transitions); examination of whether replacement legitimacy frames (constitutional law, popular consent) prevent chaos as effectively without divine claims.',
+    'If divine sanction is merely narrative cover, the constraint is snare-classified (pure extraction with a coordination cover story). If divine sanction has genuine constitutive force within the reading''s framework, the constraint remains tangled rope (genuine coordination + extraction). The resolution does not change the structural metrics but changes interpretation: is the divinity claim epistemic (true/false) or performative (legitimate within the frame)?',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(divine_sanction_vs_institutional_power, empirical, 'Legitimacy grounded in genuine collective belief versus institutional theater.').
+narrative_ontology:omega_variable(divine_sanction_empirical_status, conceptual, 'Whether divine sanction is metaphysical or narrative legitimation').
 
 omega_variable(
-    succession_fragility,
-    'Does the bloodline-based succession rule resolve succession disputes, or does it structurally generate them by creating ambiguity about which collateral line holds the legitimate claim?',
-    'Empirical count of succession crises per century under monarchical vs. elective vs. designated-successor regimes; historical record of civil wars triggered by succession ambiguity.',
-    'If the rule generates more disputes than it resolves, the coordinating function it claims to provide is illusory and extractiveness is pure rent-seeking; the constraint should compute toward snare. If it reduces disputes relative to the alternative, the coordination benefit is real.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(succession_fragility, empirical, 'Whether blood-succession rule stabilizes or destabilizes authority.').
-
-omega_variable(
-    subject_belief_vs_coercion,
-    'Do subjects obey the monarchical constraint because they believe the divine-right narrative, or because the suppression machinery makes rebellion lethal?',
-    'Behavioral measure: when suppression capacity declines (civil war, weakened military, plague), does compliance collapse immediately (indicating coercion-based) or persist (indicating belief-based)? Qualitative evidence from rebellion manifestos, sermon records, and exile writings.',
-    'If coercion-based, the constraint is fragile to enforcement decay and should show rapid unraveling when suppression fails. If belief-based, it persists longer across enforcement gaps. Mixed evidence suggests the suppression metric understates actual resilience (belief acts as invisible enforcement).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(subject_belief_vs_coercion, empirical, 'Whether obedience is enforced or genuinely believed.').
-
-omega_variable(
-    kernel_contest_sibling_readings,
-    'This constraint is one reading of the contested sovereign_legitimacy kernel. Which alternative readings (republican_reading, constitutional_hybrid_reading) are live possibilities, and what structural conditions cause realms to drift between readings?',
-    'Historical case analysis of institutional drift: England (monarchical → constitutional hybrid → elements of republican); France (monarchical → attempted republican → restoration → hybrid); Switzerland (scattered monarchical → cantonal republics). Identify the structural pressures (class composition, literacy, merchant power, foreign models) that nudge legitimacy frameworks.',
-    'If the readings coexist as permanent alternatives held by different factions, classify them as coexisting. If one reading has been historically superseded by another within the same jurisdiction, the earlier reading has entered inertial (piton) territory relative to the successor. This omega documents the kernel-level reading relations that cs_structure.reading_relations must specify.',
+    succession_rule_necessity,
+    'Is hereditary succession the ONLY mechanism that prevents succession chaos, or do other rule sets (electoral succession, constitutional designation, lottery rotation) achieve the same coordination at lower extraction cost?',
+    'Historical and comparative study of non-monarchical succession systems (constitutional monarchy, elective monarchy, republican succession) and their succession-stability records.',
+    'If alternatives exist and achieve comparable stability, hereditary succession is a contingent choice favoring the ruling class''s interests, not a necessary coordination mechanism — the constraint reclassifies toward snare. If alternatives fail to prevent chaos, the constraint''s coordination claim is validated and remains tangled rope.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_contest_sibling_readings, conceptual, 'Inter-reading structural relationships and drift conditions.').
+narrative_ontology:omega_variable(succession_rule_necessity, empirical, 'Whether hereditary succession is uniquely necessary for succession stability').
 
 omega_variable(
-    aristocratic_dependence_on_monarch,
-    'Are the aristocratic nobility genuine beneficiaries (collecting from extraction), or are they also structurally payers (depending on the monarch for their titles and hence vulnerable to losing everything)?',
-    'Historical evidence of arbitrary title revocation, confiscation, and favor-seeking behavior by nobility toward the monarch. If frequent, nobility are subordinate payers despite their power level. If rare, they are secure beneficiaries.',
-    'If nobility are partly vulnerable payers (identity-locked to the hierarchy, unable to exit without losing status), the beneficiary/victim line becomes blurred. Some nobles become secondary victims. The directionality for the organized power level shifts toward target-side.',
+    suppression_structurality,
+    'Is the suppression of alternative legitimacy claims structurally necessary for the monarchical frame (i.e., the frame cannot coexist with live alternative frames), or is it a choice to maximize extraction and stability at the cost of voice?',
+    'Examination of historical monarchies that have tolerated intellectual opposition (e.g., Enlightenment monarchies with censored-but-visible dissent) versus those that have crushed all opposition; analysis of whether toleration weakens or strengthens the constraint.',
+    'If suppression is necessary, the constraint is tangled rope (coordination + forced extraction). If suppression is optional, it is snare (the coordination cover is thin and the machinery is primarily extractive). The structural answer affects how alternative readings would be treated: in tangled rope, they are real threats; in snare, they are merely suppressed competitors.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(aristocratic_dependence_on_monarch, empirical, 'Whether nobility are beneficiaries or secondarily vulnerable.').
+narrative_ontology:omega_variable(suppression_structurality, empirical, 'Whether suppression is structurally necessary or strategically chosen').
+
+omega_variable(
+    identity_fusion_reversibility,
+    'For the aristocratic hierarchy and ecclesiastical authority, is the identity-fusion with monarchical legitimacy permanent (they cannot conceive of selfhood outside the frame), or strategically maintained (they choose to fuse because the benefits are high)?',
+    'Empirical study of transition moments (revolutions, regime changes) where high-status beneficiaries renounce the old frame and adopt new ones, and of cases where they resist transition: if they transition readily when incentivized, identity_locked is strategic; if transition is psychologically destabilizing, fusion is real.',
+    'If fusion is strategic, the beneficiary seats have higher directionality d toward target than authored (they could exit but choose not to, making them complicit); if fusion is real, d remains low (they truly cannot see themselves outside the frame). The distinction affects how beneficiary exit is modeled: strategic exit is always possible; fused exit requires cognitive reorientation.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_fusion_reversibility, empirical, 'Whether identity-fusion of the ruling class is permanent or strategically maintained').
+
+omega_variable(
+    kernel_reading_contest,
+    'This constraint is one reading of the sovereign_legitimacy kernel. Sibling readings (republican_reading, constitutional_hybrid_reading) propose fundamentally different legitimacy grounds. Are these readings genuinely incommensurable (no single framework could hold more than one), or do they coexist as live positions held by different factions within the same institutional space?',
+    'Historical examination of transition moments and contested kingdoms where multiple readings were simultaneously held and performed by different parties; analysis of whether the readings are logically foreclosing or politically coexisting.',
+    'If the readings foreclose each other, only one can be true and political change is a transition between incompatible worlds. If the readings coexist, they are competing frames that can be held simultaneously by different parties and the constraint''s classification depends on the distribution: monarchical dominance in one region, republican ascendance in another, or constitutional compromise bridging both.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Whether the three readings of sovereign_legitimacy foreclose or coexist').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(sovereign_legitimacy__monarchical_reading, 0, 400).
+narrative_ontology:interval(sovereign_legitimacy__monarchical_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(sove_tr_t0, sovereign_legitimacy__monarchical_reading, theater_ratio, 0, 0.48).
-narrative_ontology:measurement(sove_tr_t50, sovereign_legitimacy__monarchical_reading, theater_ratio, 50, 0.52).
-narrative_ontology:measurement(sove_tr_t100, sovereign_legitimacy__monarchical_reading, theater_ratio, 100, 0.56).
-narrative_ontology:measurement(sove_tr_t150, sovereign_legitimacy__monarchical_reading, theater_ratio, 150, 0.59).
-narrative_ontology:measurement(sove_tr_t200, sovereign_legitimacy__monarchical_reading, theater_ratio, 200, 0.6).
-narrative_ontology:measurement(sove_tr_t250, sovereign_legitimacy__monarchical_reading, theater_ratio, 250, 0.61).
-narrative_ontology:measurement(sove_tr_t300, sovereign_legitimacy__monarchical_reading, theater_ratio, 300, 0.62).
-narrative_ontology:measurement(sove_tr_t350, sovereign_legitimacy__monarchical_reading, theater_ratio, 350, 0.62).
-narrative_ontology:measurement(sove_tr_t400, sovereign_legitimacy__monarchical_reading, theater_ratio, 400, 0.62).
+narrative_ontology:measurement(sovereign_monarchical_tr_t0, sovereign_legitimacy__monarchical_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement(sovereign_monarchical_tr_t5, sovereign_legitimacy__monarchical_reading, theater_ratio, 5, 0.22).
+narrative_ontology:measurement(sovereign_monarchical_tr_t10, sovereign_legitimacy__monarchical_reading, theater_ratio, 10, 0.26).
+narrative_ontology:measurement(sovereign_monarchical_tr_t15, sovereign_legitimacy__monarchical_reading, theater_ratio, 15, 0.31).
+narrative_ontology:measurement(sovereign_monarchical_tr_t20, sovereign_legitimacy__monarchical_reading, theater_ratio, 20, 0.35).
+narrative_ontology:measurement(sovereign_monarchical_tr_t25, sovereign_legitimacy__monarchical_reading, theater_ratio, 25, 0.38).
+narrative_ontology:measurement(sovereign_monarchical_tr_t30, sovereign_legitimacy__monarchical_reading, theater_ratio, 30, 0.4).
+narrative_ontology:measurement(sovereign_monarchical_tr_t40, sovereign_legitimacy__monarchical_reading, theater_ratio, 40, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(sove_be_t0, sovereign_legitimacy__monarchical_reading, base_extractiveness, 0, 0.68).
-narrative_ontology:measurement(sove_be_t50, sovereign_legitimacy__monarchical_reading, base_extractiveness, 50, 0.71).
-narrative_ontology:measurement(sove_be_t100, sovereign_legitimacy__monarchical_reading, base_extractiveness, 100, 0.74).
-narrative_ontology:measurement(sove_be_t150, sovereign_legitimacy__monarchical_reading, base_extractiveness, 150, 0.76).
-narrative_ontology:measurement(sove_be_t200, sovereign_legitimacy__monarchical_reading, base_extractiveness, 200, 0.77).
-narrative_ontology:measurement(sove_be_t250, sovereign_legitimacy__monarchical_reading, base_extractiveness, 250, 0.78).
-narrative_ontology:measurement(sove_be_t300, sovereign_legitimacy__monarchical_reading, base_extractiveness, 300, 0.79).
-narrative_ontology:measurement(sove_be_t350, sovereign_legitimacy__monarchical_reading, base_extractiveness, 350, 0.78).
-narrative_ontology:measurement(sove_be_t400, sovereign_legitimacy__monarchical_reading, base_extractiveness, 400, 0.78).
+narrative_ontology:measurement(sovereign_monarchical_be_t0, sovereign_legitimacy__monarchical_reading, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement(sovereign_monarchical_be_t5, sovereign_legitimacy__monarchical_reading, base_extractiveness, 5, 0.71).
+narrative_ontology:measurement(sovereign_monarchical_be_t10, sovereign_legitimacy__monarchical_reading, base_extractiveness, 10, 0.74).
+narrative_ontology:measurement(sovereign_monarchical_be_t15, sovereign_legitimacy__monarchical_reading, base_extractiveness, 15, 0.76).
+narrative_ontology:measurement(sovereign_monarchical_be_t20, sovereign_legitimacy__monarchical_reading, base_extractiveness, 20, 0.78).
+narrative_ontology:measurement(sovereign_monarchical_be_t25, sovereign_legitimacy__monarchical_reading, base_extractiveness, 25, 0.79).
+narrative_ontology:measurement(sovereign_monarchical_be_t30, sovereign_legitimacy__monarchical_reading, base_extractiveness, 30, 0.8).
+narrative_ontology:measurement(sovereign_monarchical_be_t40, sovereign_legitimacy__monarchical_reading, base_extractiveness, 40, 0.81).
 
 % Suppression requirement over time
-narrative_ontology:measurement(sove_su_t0, sovereign_legitimacy__monarchical_reading, suppression_requirement, 0, 0.73).
-narrative_ontology:measurement(sove_su_t50, sovereign_legitimacy__monarchical_reading, suppression_requirement, 50, 0.77).
-narrative_ontology:measurement(sove_su_t100, sovereign_legitimacy__monarchical_reading, suppression_requirement, 100, 0.81).
-narrative_ontology:measurement(sove_su_t150, sovereign_legitimacy__monarchical_reading, suppression_requirement, 150, 0.83).
-narrative_ontology:measurement(sove_su_t200, sovereign_legitimacy__monarchical_reading, suppression_requirement, 200, 0.84).
-narrative_ontology:measurement(sove_su_t250, sovereign_legitimacy__monarchical_reading, suppression_requirement, 250, 0.85).
-narrative_ontology:measurement(sove_su_t300, sovereign_legitimacy__monarchical_reading, suppression_requirement, 300, 0.86).
-narrative_ontology:measurement(sove_su_t350, sovereign_legitimacy__monarchical_reading, suppression_requirement, 350, 0.86).
-narrative_ontology:measurement(sove_su_t400, sovereign_legitimacy__monarchical_reading, suppression_requirement, 400, 0.86).
+narrative_ontology:measurement(sovereign_monarchical_su_t0, sovereign_legitimacy__monarchical_reading, suppression_requirement, 0, 0.72).
+narrative_ontology:measurement(sovereign_monarchical_su_t5, sovereign_legitimacy__monarchical_reading, suppression_requirement, 5, 0.76).
+narrative_ontology:measurement(sovereign_monarchical_su_t10, sovereign_legitimacy__monarchical_reading, suppression_requirement, 10, 0.79).
+narrative_ontology:measurement(sovereign_monarchical_su_t15, sovereign_legitimacy__monarchical_reading, suppression_requirement, 15, 0.81).
+narrative_ontology:measurement(sovereign_monarchical_su_t20, sovereign_legitimacy__monarchical_reading, suppression_requirement, 20, 0.83).
+narrative_ontology:measurement(sovereign_monarchical_su_t25, sovereign_legitimacy__monarchical_reading, suppression_requirement, 25, 0.84).
+narrative_ontology:measurement(sovereign_monarchical_su_t30, sovereign_legitimacy__monarchical_reading, suppression_requirement, 30, 0.85).
+narrative_ontology:measurement(sovereign_monarchical_su_t40, sovereign_legitimacy__monarchical_reading, suppression_requirement, 40, 0.87).
 
 
 /* ==========================================================================
@@ -304,13 +367,18 @@ narrative_ontology:coordination_type(sovereign_legitimacy__monarchical_reading, 
 narrative_ontology:boltzmann_floor_override(sovereign_legitimacy__monarchical_reading, 0.12).
 narrative_ontology:affects_constraint(sovereign_legitimacy__monarchical_reading, sovereign_legitimacy__republican_reading).
 narrative_ontology:affects_constraint(sovereign_legitimacy__monarchical_reading, sovereign_legitimacy__constitutional_hybrid_reading).
+narrative_ontology:affects_constraint(sovereign_legitimacy__monarchical_reading, aristocratic_privilege_enforcement).
+narrative_ontology:affects_constraint(sovereign_legitimacy__monarchical_reading, divine_right_doctrine_vindication).
+narrative_ontology:affects_constraint(sovereign_legitimacy__monarchical_reading, succession_law_naturalism).
 
 % DUAL FORMULATION NOTE:
-% The sovereign_legitimacy kernel is contested across three readings: monarchical (this file), republican, and constitutional-hybrid. Each reading instantiates a different constraint with distinct beneficiary/victim structures, persistence mechanisms, and historical trajectories. The readings coexist as live alternatives in political struggle. The monarchical reading dominates early-modern European governance and benefits hereditary nobility through divine-right theology and coercive suppression of alternatives. The republican reading emerges as merchant and educated classes gain power; it threatens the monarchical framework by asserting authority flows upward from popular consent. The constitutional-hybrid reading arises as a compromise formation, preserving ceremonial monarchy while delegating political authority to representative institutions mediated by written law. No single reading forecloses the others logically; rather, institutional dominance and coercive suppression determine which reading governs any given polity at any time. All three stories are linked via network.affects_constraints to indicate they are readings of the same kernel and structurally influence each other.
+% This constraint is one reading of the sovereign_legitimacy kernel. The sibling readings (republican_reading, constitutional_hybrid_reading) instantiate fundamentally different beneficiary/victim structures and legitimacy grounds from the same contested kernel. They are NOT variants of the same constraint but separate constraints with different ε values, suppression profiles, and classifications. Decomposition follows the ε-invariance principle: the legitimate authority claim itself is the kernel; the reading (monarchical vs. republican vs. constitutional) determines which structural facts count as evidence and which actors count as beneficiaries/victims. All three readings share the kernel's core question but produce incompatible constraint stories.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(sovereign_legitimacy__monarchical_reading, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

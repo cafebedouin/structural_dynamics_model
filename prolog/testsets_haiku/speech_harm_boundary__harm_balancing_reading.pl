@@ -40,10 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,36 +74,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: speech_harm_boundary__harm_balancing_reading
- *   human_readable: Speech Protection with Proportional Harm Balancing
- *   domain: constitutional/political
+ *   human_readable: Speech Protection with Harm Balancing (Proportionality Reading)
+ *   domain: constitutional_law/political_philosophy/communication_ethics
  *
  * SUMMARY:
- *   This constraint instantiates the harm-balancing reading of the
- *   speech-harm-boundary kernel: a framework where speech protection is
- *   presumptive but yields when demonstrable harm is shown and proportional
- *   to the restriction. Judicial bodies adjudicate the balance on a
- *   case-by-case basis, determining whether speech crosses from protected
- *   expression into unprotected harm (hate speech, incitement, harassment,
- *   group defamation). Unlike the absolutist sibling reading (which treats
- *   harm override as nearly impossible) or the dignity sibling reading (which
- *   subordinates speech to dignity protection), this reading threads a middle
- *   path: protection for speakers, but accessible boundaries where targets
- *   can petition for restriction if harm is proven. The constraint is
- *   actively contested—all three readings coexist in contemporary
- *   jurisprudence across different jurisdictions and litigated routinely. The
- *   authored metrics reflect moderate extractiveness (0.48), suggesting the
- *   balancing framework captures some genuine coordination benefit but also
- *   contains asymmetric cost distribution that benefits speakers and burdens
- *   targets.
+ *   The harm-balancing reading of the speech-harm boundary kernel holds that
+ *   free expression receives presumptive protection but yields when
+ *   proportionate demonstrable harm is established. Unlike the absolutist
+ *   reading (speech protection near-categorical) or the dignity reading
+ *   (dehumanizing speech categorically unprotected independent of harm
+ *   proof), this reading makes the operative boundary depend on a
+ *   case-by-case proportionality assessment: adjudicative bodies weigh the
+ *   severity and directness of harm against the speaker's expression
+ *   interest, the availability of less restrictive alternatives, and the
+ *   foreseeability of harm. This reading produces moderate extractiveness
+ *   (0.48) because speakers bear real restriction costs once harm is
+ *   demonstrated, but the presumptive protection and proportionality
+ *   requirement limit the breadth of unprotected categories compared to
+ *   dignity-reading frameworks. The constraint requires active enforcement by
+ *   courts and tribunals to apply the proportionality test; harm victims gain
+ *   legal standing and remedy mechanisms as beneficiaries. Marginal advocacy
+ *   groups occupy dual positions: they bear speaker restrictions while
+ *   potentially benefiting from harm remedies against campaigns targeting
+ *   their members.
  *
  * KEY AGENTS:
- *   - speakers_asserting_protection: Benefit from the presumption; face restriction only when harm is adjudged to cross the threshold; can exit to less-regulated venues.
- *   - targets_of_harmful_speech: Bear costs until harm is demonstrated; must clear a high evidentiary bar; trapped until adjudication.
- *   - marginalized_groups_bearing_harassment_costs: Systemically targeted; identity-locked (cannot exit the identity being attacked); excluded from rule-setting; bear costs diffusely across many incidents.
- *   - judicial_adjudicators: Set and administer the harm threshold; shift the boundary through case law; accumulate power to define what counts as unprotected speech.
- *   - legislatures: Codify harm categories in statute; can tighten or loosen the boundary; can constrain or expand judicial discretion.
- *   - absolutist_defenders: Excluded from the consensus grounding this reading; reject harm-balancing as violating categorical speech protection.
- *   - dignity_advocates: Excluded from the consensus; argue the balance is set wrong and dignity should be categorical, not bargainable.
+ *   - speakers_subject_to_restriction: Speakers whose expression falls within hate-speech, harassment, or group-libel categories; bear restriction costs and liability risk (power: moderate; exit: constrained)
+ *   - harm_victims_seeking_remedy: Individuals experiencing documented harm from targeted speech; benefit from legal standing and remedy mechanisms (power: powerless; exit: trapped)
+ *   - marginalized_communities_facing_organized_speech: Groups targeted by coordinated campaigns; benefit from hate-speech provisions but constrained by ongoing exposure (power: organized; exit: constrained)
+ *   - advocacy_groups_with_marginal_positions: Organizations advocating positions that may fall within unprotected categories; dual-positioned as both restricted speakers and potential beneficiaries (power: moderate; exit: constrained)
+ *   - adjudicative_bodies: Courts, tribunals, and content moderation authorities that apply the proportionality test and set the operative boundary (power: institutional; exit: analytical)
+ *   - legislative_bodies: Parliaments enacting hate-speech statutes, harassment laws, and incitement provisions (power: institutional; exit: analytical)
+ *   - absolutist_reading_advocates: Civil liberties organizations and scholars excluded from benefit coalition, arguing the framework enables pretextual restriction (power: powerful; exit: mobile)
+ *   - dignity_reading_advocates: Civil rights organizations and scholars excluded from benefit coalition, arguing the framework insufficiently protects victims (power: powerful; exit: mobile)
  */
 
 /* ==========================================================================
@@ -105,58 +115,120 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(speech_harm_boundary__harm_balancing_reading, 0.48).
-domain_priors:suppression_score(speech_harm_boundary__harm_balancing_reading, 0.62).
-domain_priors:theater_ratio(speech_harm_boundary__harm_balancing_reading, 0.41).
+domain_priors:suppression_score(speech_harm_boundary__harm_balancing_reading, 0.52).
+domain_priors:theater_ratio(speech_harm_boundary__harm_balancing_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, extractiveness, 0.48).
-narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, suppression_requirement, 0.62).
-narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(speech_harm_boundary__harm_balancing_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(speech_harm_boundary__harm_balancing_reading, tangled_rope).
-narrative_ontology:human_readable(speech_harm_boundary__harm_balancing_reading, "Speech Protection with Proportional Harm Balancing").
-narrative_ontology:topic_domain(speech_harm_boundary__harm_balancing_reading, "constitutional/political").
+narrative_ontology:human_readable(speech_harm_boundary__harm_balancing_reading, "Speech Protection with Harm Balancing (Proportionality Reading)").
+narrative_ontology:topic_domain(speech_harm_boundary__harm_balancing_reading, "constitutional_law/political_philosophy/communication_ethics").
 
 domain_priors:requires_active_enforcement(speech_harm_boundary__harm_balancing_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(speech_harm_boundary__harm_balancing_reading, 'a1037b46-43cb-4bcf-818e-31881a71d7a7').
-narrative_ontology:cs_kernel_codification('a1037b46-43cb-4bcf-818e-31881a71d7a7', fixed_text).
-narrative_ontology:cs_authority_grounding('a1037b46-43cb-4bcf-818e-31881a71d7a7', lineage).
-narrative_ontology:cs_interpretation_layer_present('a1037b46-43cb-4bcf-818e-31881a71d7a7').
-narrative_ontology:cs_reading_relation('a1037b46-43cb-4bcf-818e-31881a71d7a7', speech_harm_boundary__absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('a1037b46-43cb-4bcf-818e-31881a71d7a7', speech_harm_boundary__dignity_reading, influences).
-narrative_ontology:cs_axiom('a1037b46-43cb-4bcf-818e-31881a71d7a7', foundational, harm_override_requires_demonstration).
-narrative_ontology:cs_axiom_status(harm_override_requires_demonstration, holdable).
-narrative_ontology:cs_axiom_grounding('a1037b46-43cb-4bcf-818e-31881a71d7a7', harm_override_requires_demonstration, deontological).
-narrative_ontology:cs_axiom('a1037b46-43cb-4bcf-818e-31881a71d7a7', foundational, proportionality_test_balances_values).
-narrative_ontology:cs_axiom_status(proportionality_test_balances_values, holdable).
-narrative_ontology:cs_axiom_grounding('a1037b46-43cb-4bcf-818e-31881a71d7a7', proportionality_test_balances_values, instrumental).
-narrative_ontology:cs_reference_frame('a1037b46-43cb-4bcf-818e-31881a71d7a7', speech_protection_presumptive_harm_justifies_restriction).
-narrative_ontology:cs_drift_state('a1037b46-43cb-4bcf-818e-31881a71d7a7', contemporary_platform_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('a1037b46-43cb-4bcf-818e-31881a71d7a7', '').
+narrative_ontology:cs_story_uid(speech_harm_boundary__harm_balancing_reading, 'ce607e6c-255a-4553-967f-b2290431e597').
+narrative_ontology:cs_kernel_codification('ce607e6c-255a-4553-967f-b2290431e597', formalized).
+narrative_ontology:cs_authority_grounding('ce607e6c-255a-4553-967f-b2290431e597', lineage).
+narrative_ontology:cs_interpretation_layer_present('ce607e6c-255a-4553-967f-b2290431e597').
+narrative_ontology:cs_reading_relation('ce607e6c-255a-4553-967f-b2290431e597', speech_harm_boundary__absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ce607e6c-255a-4553-967f-b2290431e597', speech_harm_boundary__dignity_reading, influences).
+narrative_ontology:cs_axiom('ce607e6c-255a-4553-967f-b2290431e597', foundational, speech_protection_presumptive_with_harm_override).
+narrative_ontology:cs_axiom_status(speech_protection_presumptive_with_harm_override, holdable).
+narrative_ontology:cs_axiom_grounding('ce607e6c-255a-4553-967f-b2290431e597', speech_protection_presumptive_with_harm_override, deontological).
+narrative_ontology:cs_axiom('ce607e6c-255a-4553-967f-b2290431e597', foundational, proportionality_balancing_required).
+narrative_ontology:cs_axiom_status(proportionality_balancing_required, holdable).
+narrative_ontology:cs_axiom_grounding('ce607e6c-255a-4553-967f-b2290431e597', proportionality_balancing_required, instrumental).
+narrative_ontology:cs_reference_frame('ce607e6c-255a-4553-967f-b2290431e597', presumptive_protection_framework).
+narrative_ontology:cs_drift_state('ce607e6c-255a-4553-967f-b2290431e597', contemporary_adjudicative_practice_era, gap(practice_drift, minor, true)).
+narrative_ontology:cs_created_at('ce607e6c-255a-4553-967f-b2290431e597', '').
 narrative_ontology:cs_kernel_id(speech_harm_boundary__harm_balancing_reading, speech_harm_boundary).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(speech_harm_boundary__harm_balancing_reading, speakers_with_protected_speech).
-narrative_ontology:constraint_beneficiary(speech_harm_boundary__harm_balancing_reading, public_discourse_participants).
-narrative_ontology:constraint_victim(speech_harm_boundary__harm_balancing_reading, targets_of_harmful_speech).
-narrative_ontology:constraint_victim(speech_harm_boundary__harm_balancing_reading, marginalized_groups_bearing_harassment_costs).
+narrative_ontology:constraint_beneficiary(speech_harm_boundary__harm_balancing_reading, harm_victims_seeking_remedy).
+narrative_ontology:constraint_beneficiary(speech_harm_boundary__harm_balancing_reading, marginalized_communities_facing_organized_speech).
+narrative_ontology:constraint_victim(speech_harm_boundary__harm_balancing_reading, speakers_subject_to_restriction).
+narrative_ontology:constraint_victim(speech_harm_boundary__harm_balancing_reading, advocacy_groups_with_marginal_positions).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(speech_harm_boundary__harm_balancing_reading, advocacy_groups_with_marginal_positions).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Individuals and organizations who wish to express viewpoints that fall within the harm-balancing framework's unprotected categories (hate speech, group libel, harassment, incitement to violence). They must either refrain from expression or face legal liability, civil suits, or platform removal. Their constraint is that presumptive protection yields once proportionate harm is demonstrated; the boundary between protected and unprotected is determined ex post through judicial or administrative review.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, speakers_subject_to_restriction, payer,
+    moderate, biographical, constrained, national).
+
+% Individuals and groups who experience documented harm from targeted speech: defamation, incitement to violence against them, coordinated harassment, group libel. The harm-balancing reading provides them legal standing to seek remedies (damages, injunctions, platform enforcement). The remedy mechanism is their primary tool for recourse; without it they would have no recourse against organized speech violence. They do not set the rules but benefit from their existence.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, harm_victims_seeking_remedy, beneficiary,
+    powerless, biographical, trapped, national).
+
+% Communities (religious minorities, ethnic groups, LGBTQ+ populations, refugee populations) targeted by coordinated hate campaigns or systemic slurs. They benefit from the harm-balancing framework's recognition that organized dehumanization and group libel constitute demonstrable harm requiring remedy. Without this reading, organized campaigns against them would receive absolute protection. They have organizational capacity to advocate but constrained exit from exposure to the speech they experience as targeted harm.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, marginalized_communities_facing_organized_speech, beneficiary,
+    organized, generational, constrained, national).
+
+% Organizations advocating positions on immigration restriction, religious criticism, gender ideology, or other contested domains that may fall within hate-speech or harassment categories under the proportionality framework. They experience the constraint as a cost to their advocacy (risk of legal liability); they also—as organizations—may benefit from remedies against targeted harassment of their members. Dual-positioned: they are both restricted speakers and potential beneficiaries of harm remedies.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, advocacy_groups_with_marginal_positions, payer,
+    moderate, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(speech_harm_boundary__harm_balancing_reading, advocacy_groups_with_marginal_positions, beneficiary).
+
+% Courts, administrative tribunals, and content moderation bodies that apply the harm-balancing test. They determine whether speech crosses from protected to unprotected by assessing: (1) the directness and foreseeability of harm, (2) the proportionality between restriction and harm severity, (3) the availability of less restrictive alternatives. They hold the interpretive power to set the operative boundary; the constraint's shape is determined by how they apply the proportionality standard.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, adjudicative_bodies, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Parliaments and legislative institutions that enact hate-speech statutes, harassment laws, group-libel provisions, and incitement statutes—the codified tools for operationalizing the harm-balancing reading. They set the categorical boundaries and evidentiary standards; their choices determine whether the balancing framework is narrow (high threshold for harm demonstration) or expansive (lower threshold, broader unprotected categories).
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, legislative_bodies, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Civil liberties organizations and legal scholars advocating the absolutist reading: speech protection should be nearly categorical regardless of claimed harm. They argue that harm-balancing reading enables pretextual restriction and authoritarian mission creep. They would contest the operative definition of harm, the proportionality standard, and the legitimacy of the adjudicative bodies applying it. Their voice is excluded from the benefit structure of the harm-balancing framework but remains a live alternative in legal and political discourse.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, absolutist_reading_advocates, excluded,
+    powerful, generational, mobile, national).
+
+% Civil rights organizations and legal scholars advocating the dignity reading: speech that denies the personhood or human dignity of groups should be categorically unprotected, independent of quantifiable harm demonstration. They view the harm-balancing reading as insufficiently protective—it requires proof of harm before restriction, leaving victims to vindicate their dignity through litigation. They would shift the framework to categorical exclusion of dehumanizing speech regardless of impact threshold. Their voice shapes the political contest but is excluded from the ruling coalition in jurisdictions adopting the harm-balancing reading.
+narrative_ontology:constraint_stakeholder(speech_harm_boundary__harm_balancing_reading, dignity_reading_advocates, excluded,
+    powerful, generational, mobile, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(speech_harm_boundary__harm_balancing_reading, adjudicative_bodies).
+narrative_ontology:fixing_cost_class(speech_harm_boundary__harm_balancing_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a framework for reconciling free expression with protection against demonstrable harms: allows speech protection to remain presumptive (speakers have a default right to expression) while permitting override when proportionate harm is shown. Solves the coordination problem of how to prevent organized speech violence without enabling authoritarian content suppression.
+% TRANSFER_FUNCTION: Transfers from speakers (incur restriction costs, risk of liability, platform removal) to harm victims (gain legal standing, remedy mechanisms, protection against targeted campaigns). The transfer is conditional: triggered only when harm is demonstrated and proportionality is satisfied. Proportionality assessment itself transfers authority to adjudicative bodies (courts and tribunals gain power to set harm thresholds and override presumptive protection).
+% ABSENT_VOICES: Absolutist reading advocates (civil liberties maximalists) are excluded from the benefit coalition; they argue the framework itself enables pretextual restriction. Dignity reading advocates (categorical dehumanization prohibition) are excluded; they argue the framework insufficiently protects targeted groups by requiring harm proof. Both remain live positions in political and legal discourse but do not shape the operative rules under this reading.
+% DISAPPEARANCE_RATIONALE: If the harm-balancing framework vanished overnight, organized speech campaigns against marginalized groups would have no legal remedy, targeted harassment would receive absolute protection, and victims would have only reputation defense (which is typically unavailable against coordinated campaigns). The legal landscape would shift to either absolutist (speech nearly always protected regardless of harm) or dignity-based (categorical exclusion of dehumanizing speech independent of harm proof) frameworks. Speakers currently restricting expression due to liability risk would face different incentive structures; platforms would lose legal clarity on content policy; adjudicative bodies would lose a standard by which to resolve competing claims.
+% FOUNDING_PROBLEM: Early free-speech frameworks (and absolutist readings of them) provided speakers with protection but left victims of organized hate campaigns, defamation, and harassment without legal remedy. Marginalized communities faced coordinated campaigns designed to dehumanize and incite violence with no recourse other than counter-speech or social response. The framework was built to enable societies to protect speech while acknowledging that some speech causes demonstrable harm requiring proportionate remedy.
+% FOUNDING_PROBLEM_CORROBORATION: Harm victims and marginalized communities document the persistence of organized hate campaigns and targeted harassment as a live problem. Civil liberties scholars (absolutist reading) dispute that the problem justifies restriction, arguing counter-speech and social remedy are sufficient. Dignity reading advocates dispute that harm-balancing adequately protects victims, arguing dehumanizing speech should be categorically excluded. Legislative testimony and comparative constitutional law from jurisdictions with both absolutist and harm-balancing frameworks show competing empirical claims about whether hate-speech legislation reduces harm or enables pretextual restriction.
+narrative_ontology:disappearance_verdict(speech_harm_boundary__harm_balancing_reading, world_rearranges).
+narrative_ontology:founding_problem_status(speech_harm_boundary__harm_balancing_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(speech_harm_boundary__harm_balancing_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(speech_harm_boundary__harm_balancing_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(speech_harm_boundary__harm_balancing_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(speech_harm_boundary__harm_balancing_reading, 0.48, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,16 +248,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.48 at interval end) because the constraint contains genuine coordination (a shared adjudicatory framework beats bilateral contests) but asymmetric cost allocation (speakers get a presumption; targets must prove harm). The measurement series show extractiveness rising from 0.35 to 0.48 over the interval—a steady drift upward as more speech is litigated and the harm threshold experiences pressure from both absolutist and dignitarian directions. Theater rises from 0.25 to 0.41, suggesting enforcement increasingly performs harm-finding (public declarations that speech is harmful) rather than materially changing speech distribution. Suppression rises from 0.48 to 0.62, indicating that maintaining the constraint requires increasing active defense against both sibling readings. The plateau from t=32 onward suggests the constraint has reached a semi-stable state where its internal contradictions are managed theatrically rather than resolved. Accessibility collapse is moderate (0.58) because alternatives exist—speakers can go to other forums, targets can organize counter-speech, legislatures can change the boundary—but the judicial framework's legitimacy closes off pure exit. Resistance is high (0.72) because all three readings have organized constituencies that actively resist the others; the harm-balancing reading must defend against absolutist claims that it violates freedom and dignity claims that it is insufficiently protective.
+ *   Extractiveness is moderate (0.48 at interval end) because the constraint imposes real costs on speakers (restriction, liability risk) but presumptive protection and proportionality requirements limit the breadth of unprotected categories. Suppression is slightly higher (0.52) because the constraint requires active enforcement machinery to apply the proportionality test, and that machinery can be deployed to suppress marginal positions. Suppression is not extreme because the presumptive protection and proportionality requirement provide structural limits—a pure extraction mechanism would lack these constraints. Theater ratio remains modest (0.28) because the proportionality assessment is genuinely performed in adjudication; performative elements exist (proportionality language can mask categorical exclusion) but do not dominate. The measurement series show slight rise through t=15 (suppression machinery stabilizes, enforcement capacity increases) then plateau: the constraint reaches a stable state where adjudicative practice has settled and the boundaries are established. Accessibility collapse is moderate-high (0.62): once the harm-balancing framework is understood, speakers have difficult alternatives (self-censor, face liability, litigate); marginalized communities have no exit from exposure to harm. Resistance is elevated (0.71) because the constraint is actively contested by both absolutist and dignity reading advocates, and speakers under restriction continuously challenge the proportionality boundaries.
  *
  * PERSPECTIVAL GAP:
- *   The constraint's classification should diverge sharply by seat: from the speaker's seat (moderate power, mobile exit, presumption), it computes as protective coordination—a rope or legitimately balanced tangled rope. From the target's seat (powerless, identity-locked, burden of proof), it computes as extractive and suppressive—a snare where the coordination serves only speakers and the target's costs are the price of that coordination. From the judicial seat, it is an agenda-setting framework that distributes authority and allows discretionary boundary-shifting, making the constraint itself a mechanism for institutional power accumulation. This perspectival divergence is NOT a defect—it is the measurement the engine is designed to detect. The authored claim (tangled rope) reflects the framework's official self-description; the authored metrics reflect that it functions asymmetrically across seats. The engine should compute tangled rope from the beneficiary/victim data but show high per-seat divergence when it disaggregates.
+ *   Speakers and harm victims have fundamentally opposed stakes: speakers experience the constraint as suppression of expression, harm victims experience it as necessary remedy. Marginalized communities occupy a precarious position: they benefit from legal protection but cannot exit from exposure to organized speech violence. Advocacy groups with unpopular positions experience the constraint as targeting their advocacy while potentially protecting their members from counter-harassment. Adjudicative bodies experience the constraint as a mandate to balance competing interests; their interpretation power determines whether the framework operates as narrow protection (absolutist-leaning, high harm threshold) or broad restriction (dignity-leaning, lower threshold). The measurement series show the constraint stabilizing as adjudicative practice settles—early periods have higher suppression_requirement because enforcement machinery is being built out and boundaries are contested; later periods plateau as established doctrine guides application.
  *
  * DIRECTIONALITY LOGIC:
- *   Speakers claiming protection are structurally beneficiaries (presumption applies to them; they use it; d near 0.2-0.3, full beneficiary end). Targets of harmful speech are structural victims (burden of proof falls on them; they must prove harm to get relief; d near 0.8-0.9, full target end). Marginalized groups are doubly victims: targeted identities (cannot exit) + procedurally burdened (few resources to litigate). Judicial adjudicators derive their power from the constraint—they are the mechanism through which it operates, giving them a dual role between agenda-setter and beneficiary. Legislatures have similar duality: they codify the harm categories, shaping who qualifies for protection, and can redistribute costs if political pressure rises. Absolutist and dignity-advocate seats are excluded, not positioned within the constraint—they reject its premise. The directionality overrides would be unnecessary if the structural data (beneficiary: speakers + public_discourse_participants; victims: targets + marginalized_groups) accurately captures the asymmetry. No overrides are warranted; the derived d values should map cleanly to the seat divergence.
+ *   The harm-balancing reading makes directionality depend on demonstrable harm: speakers without demonstrable-harm findings remain presumptively protected (low d if they operate within protected categories); speakers whose speech causes demonstrable proportionate harm are targets (high d). This reading-specific structure creates a time-dependent and contingency-dependent directionality not present in absolutist or dignity readings. Harm victims and marginalized communities benefit from the framework's existence—they gain legal standing and remedy mechanisms they lack under absolutist readings. Adjudicative bodies hold interpretive power to set the harm threshold and proportionality standard; their choices determine whether the framework operates narrowly or broadly. Absolutist advocates experience the constraint as suppressive (they would argue many hate-speech statutes misapply proportionality); dignity advocates experience it as insufficiently protective (they would argue more categories should be categorically excluded). The excluded voices are structural: the harm-balancing framework's coherence depends on excluding categorical approaches (both absolutist and dignity-based) in favor of case-by-case proportionality assessment.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint avoids misclassification as pure extraction (snare) by virtue of its genuine coordination function: the harm-balancing framework does solve a real coordination problem that bilateral speech contests would not. It avoids pure coordination (rope) by virtue of asymmetric cost allocation and the burden of proof falling on targets. Tangled rope captures this: coordination (shared adjudicatory framework) + extraction (targets must prove harm while speakers enjoy presumption). The mandate is not dead (harmless speech continues to flow; harmful speech continues to be litigated), but the mandate is contested at the foundational level—all three readings claim to be the correct interpretation of the kernel. This contestation is not a mandate-death; it is active mandate-governance where the three readings struggle to define the constraint's scope. The theater_ratio plateau suggests that at interval end (t=40), the constraint is maintained partly by performances of harm-finding and judicial pronouncements on the boundary, not purely by organic compliance with the underlying principle. This is not yet piton degradation (the framework still does coordinate adjudication), but it is approaching the boundary where theaters ratio could indicate functional atrophy.
+ *   The founding problem is contested: harm victims and marginalized communities attest that organized hate campaigns and targeted speech violence are a live problem requiring remedy; absolutist advocates dispute that the problem justifies restriction; dignity advocates dispute that harm-balancing provides adequate protection. The constraint's founding mandate was to balance free expression with harm protection; the mandate remains live insofar as organized speech campaigns continue and harm victims seek remedies. However, there is chronic tension between the presumptive protection principle and the harm-balancing test: as adjudicative practice develops, the boundary between protected and unprotected speech shifts based on how courts apply proportionality. This drift is captured in the measurement series: theater_ratio rises slightly (0.18 → 0.28) as adjudicative practice develops performative elements (proportionality language that masks categorical judgments), but remains modest because genuine balancing occurs in adjudication. The constraint does not show mandatrophy—the founding mandate remains relevant and the enforcement machinery remains in use—but it shows boundary-drift: what counts as 'demonstrable harm' and 'proportionate restriction' evolves as case law accumulates. The classification is tangled_rope (not snare) because the constraint contains a genuine coordination function (balancing free expression with harm protection) alongside extractive elements (speakers bear disproportionate restriction costs relative to harm-severity thresholds set by adjudicative bodies).
  */
 
 /* ==========================================================================
@@ -193,54 +265,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    harm_threshold_definition_contest,
-    'What counts as demonstrable harm sufficient to override speech protection—immediate incitement to violence, emotional distress, systemic group defamation, epistemic harm, or dignitary injury? Does the proportionality test admit empirical evidence of psychological harm or only legally codified injury categories?',
-    'Case-law trajectory showing how courts define and expand/narrow the harm categories; comparative analysis of jurisdictions with explicit harm definitions; empirical studies of harm causation that courts do or do not admit as evidence.',
-    'If harm is defined narrowly (imminent incitement only), extractiveness drops because targets must clear a high bar; extraction is then minimal. If harm includes systemic harassment, group libel, or dignitary injury, extractiveness rises and the constraint approaches the dignity reading. The threshold is not neutral—it distributes costs between speakers and targets. The oscillation in theater_ratio suggests enforcement is drifting toward performance of harm-finding rather than substance.',
+    proportionality_standard_instability,
+    'What counts as ''demonstrable harm'' and ''proportionate restriction'' in the proportionality test, and how do these definitions change as adjudicative practice evolves?',
+    'Systematic comparative analysis of hate-speech case law across jurisdictions and time periods: tracking how courts define harm severity, directness, foreseeability, and proportionality thresholds in actual decisions.',
+    'If the proportionality standard drifts toward broader harm definitions and lower thresholds, the operative boundary shifts toward dignity-reading territory (broader unprotected categories). If it drifts toward stricter thresholds, it shifts toward absolutist territory. The stable classification depends on proportionality remaining genuinely balanced; sustained drift in either direction would indicate misclassification.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(harm_threshold_definition_contest, empirical, 'Contestation over what evidence and categories define demonstrable harm.').
+narrative_ontology:omega_variable(proportionality_standard_instability, empirical, 'Whether the proportionality test remains a genuine balance or drifts toward categorical exclusion/absolute protection.').
 
 omega_variable(
-    presumption_asymmetry_extraction,
-    'Does the presumption of protection for speakers, coupled with the burden of proof on targets, constitute an asymmetric extraction mechanism that benefits speakers and burdens targets, or is it a legitimate allocation of epistemic burden in adversarial adjudication?',
-    'Empirical audit of outcomes: do speakers proportionally win cases where harm is asserted? Do targets with fewer resources fail to meet the evidentiary burden? Comparative study of symmetric vs. asymmetric burden regimes and their effects on discourse access.',
-    'If the presumption systematically advantages speakers over targets (especially resource-poor targets), the constraint contains a structural extraction element that is authorized by its own logic. If the burden is neutrally applied and targets succeed proportionally to their case merits, the asymmetry is procedural, not extractive. High probability the asymmetry persists because harm is hard to demonstrate for dispersed targets; this is where the constraint''s extractiveness concentrates.',
+    adjudicative_authority_asymmetry,
+    'Do adjudicative bodies actually apply the proportionality test evenhandedly, or do they apply it asymmetrically—protecting popular speech while restricting marginal advocacy?',
+    'Empirical analysis of case outcomes: comparing restriction rates for mainstream speech vs. marginal advocacy; tracking whether proportionality findings are applied symmetrically across political/ideological categories.',
+    'If application is asymmetric, the constraint operates as a snare—the proportionality language masks categorical targeting of marginal speakers, and the adjudicative bodies function as extractors for the established coalition. If application is symmetric, it is genuinely a tangled rope (coordination + extraction in balance).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(adjudicative_authority_asymmetry, empirical, 'Whether proportionality testing is applied evenly or asymmetrically by adjudicative bodies.').
+
+omega_variable(
+    harm_definition_reading_variance,
+    'Does the harm-balancing reading instantiate a different definition of ''harm'' than the dignity reading or absolutist reading would use, and if so, is that definitional difference structural or arbitrary?',
+    'Comparative legal and philosophical analysis: documenting what each reading counts as harm (dignity: personhood-denial; harm-balancing: demonstrable impact; absolutist: near-zero); assessing whether the differences follow from the core axioms of each reading or are ad-hoc choices.',
+    'If the differences are structural and follow from the readings'' foundational premises, the harm-balancing reading is a coherent alternative framing. If the differences are arbitrary or post-hoc, the constraint''s classification depends more on implicit judicial choices than on the announced framework.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(presumption_asymmetry_extraction, empirical, 'Whether the protection presumption creates structural extraction against targets.').
+narrative_ontology:omega_variable(harm_definition_reading_variance, conceptual, 'Whether different readings of the speech-harm boundary necessarily generate different harm definitions, or whether the definitions are independent choices.').
 
 omega_variable(
-    identity_lock_vs_exit_for_targets,
-    'For targets of group-directed speech (marginalized identities), is the exit option truly constrained, or do they have viable workarounds (platform switching, community migration, counter-speech)?',
-    'Ethnographic study of harassment targets'' actual options and choices; measure the psychological, economic, and relational costs of each exit pathway; compare exit availability across identity groups.',
-    'If exit is genuinely identity-locked (cannot exit the identity being targeted), the target is structurally trapped and suppression is high. If viable alternatives exist (platform exit, counter-speech communities, legal remedy), targets have more agency than the model suggests. The directionality would shift—targets might move from d=1.0 (fully targeted) toward d=0.7 (constrained but with leverage). This shapes both the type certification and the proportionality balance''s legitimacy.',
+    marginalized_group_exit_constraint,
+    'Are marginalized communities truly unable to exit from exposure to organized speech harm, or do they have practical options (geographic mobility, community relocation, cultural exit) that constrain but do not trap them?',
+    'Ethnographic and historical analysis of how targeted communities respond to organized campaigns: do they relocate, establish protected spaces, exit public discourse, or remain embedded despite exposure?',
+    'If communities are trapped (exit_options: trapped), the constraint''s benefit to them is higher (they depend entirely on the legal remedy); if constrained (exit_options: constrained), the benefit is lower. This affects the directionality gradient for the marginalized_communities stakeholder and the balance between coordination and extraction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_vs_exit_for_targets, empirical, 'Whether marginalized-group targets are identity-locked or have viable exit paths.').
+narrative_ontology:omega_variable(marginalized_group_exit_constraint, empirical, 'Whether marginalized communities facing organized speech harm are trapped or constrained in their exit options.').
 
 omega_variable(
-    kernel_reading_stability_question,
-    'Does this harm-balancing reading constitute a stable, enduring alternative interpretation of the speech-protection kernel, or is it an unstable intermediate state subject to pressure from the absolutist and dignity readings?',
-    'Historical institutional analysis of the reading''s doctrinal coherence; measurement of how often each reading is cited, adopted, and abandoned in case law; examination of whether courts deploy the harm-balancing framework consistently or instrumentally (as a tool to reach predetermined outcomes that could be justified under any reading).',
-    'If the reading is stable and coherent, it deserves classification as a distinct constraint with its own persistence dynamics and should remain extant in the corpus. If pressure from sibling readings is forcing it toward degradation or compromise, the constraint may be approaching piton status (maintained theatrically while its foundational premise is eroded). The measurement plateau from t=32 onward could indicate either stability or the beginning of theatrical maintenance. The high theater_ratio (0.41) suggests performance is increasingly central to the constraint''s operation.',
+    reading_relationship_foreclosure_test,
+    'Does the core axiom of the harm-balancing reading (proportionate demonstrable harm overrides presumptive protection) logically foreclose the absolutist axiom (speech protection near-absolute regardless of harm), or do they merely occupy different normative frameworks?',
+    'Philosophical analysis of the logical relationship: can a single institutional authority hold both axioms simultaneously (applying both proportionality balancing and absolute protection in different contexts), or does adoption of one necessarily reject the other?',
+    'If they logically foreclose each other, the reading_relations entry should be forecloses. If they occupy different frameworks without mutual logical contradiction, it should be coexists_with. This affects the cs_structure.reading_relations classification.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_stability_question, conceptual, 'Structural stability of the harm-balancing reading as a distinct kernel interpretation.').
-
-omega_variable(
-    suppression_mechanism_structural_vs_internalized,
-    'Is the measured suppression (0.62) primarily structural—legal barriers, adjudicatory burden, procedural gatekeeping—or partly internalized, such that targets internalize the ''high burden of proof'' norm and self-suppress before adjudication?',
-    'Post-harm-removal trajectory study: when legal protection becomes available for a speech category (e.g., legislative expansion of unprotected categories), do targets of that speech immediately cease self-suppression, or do they persist in muted participation? Compare voice and participation rates before and after remedy availability.',
-    'If suppression is primarily structural, removing legal barriers (lowering the harm threshold) would directly increase target voice. If suppression is internalized, targets would require additional support (community rebuilding, confidence restoration, counterspeech resources) to re-engage. If suppression is mixed (structure + internalization), different target groups show different ratios—organized groups more structural-suppression-affected, isolated targets more internalized. This shapes both the extractiveness measure (if internalized, the actual extraction is higher than the structural barriers suggest) and the remedy design.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Structural vs. internalized suppression mechanism in the harm-balancing constraint.').
+narrative_ontology:omega_variable(reading_relationship_foreclosure_test, conceptual, 'Whether the harm-balancing axiom logically forecloses the absolutist axiom or they coexist in different frameworks.').
 
 
 /* ==========================================================================
@@ -254,28 +326,46 @@ narrative_ontology:interval(speech_harm_boundary__harm_balancing_reading, 0, 40)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(spee_tr_t0, speech_harm_boundary__harm_balancing_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(spee_tr_t8, speech_harm_boundary__harm_balancing_reading, theater_ratio, 8, 0.3).
-narrative_ontology:measurement(spee_tr_t16, speech_harm_boundary__harm_balancing_reading, theater_ratio, 16, 0.35).
-narrative_ontology:measurement(spee_tr_t24, speech_harm_boundary__harm_balancing_reading, theater_ratio, 24, 0.39).
-narrative_ontology:measurement(spee_tr_t32, speech_harm_boundary__harm_balancing_reading, theater_ratio, 32, 0.4).
-narrative_ontology:measurement(spee_tr_t40, speech_harm_boundary__harm_balancing_reading, theater_ratio, 40, 0.41).
+narrative_ontology:measurement(spee_tr_t0, speech_harm_boundary__harm_balancing_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement_basis(spee_tr_t0, observed).
+narrative_ontology:measurement(spee_tr_t5, speech_harm_boundary__harm_balancing_reading, theater_ratio, 5, 0.2).
+narrative_ontology:measurement_basis(spee_tr_t5, observed).
+narrative_ontology:measurement(spee_tr_t10, speech_harm_boundary__harm_balancing_reading, theater_ratio, 10, 0.23).
+narrative_ontology:measurement_basis(spee_tr_t10, observed).
+narrative_ontology:measurement(spee_tr_t15, speech_harm_boundary__harm_balancing_reading, theater_ratio, 15, 0.25).
+narrative_ontology:measurement_basis(spee_tr_t15, observed).
+narrative_ontology:measurement(spee_tr_t25, speech_harm_boundary__harm_balancing_reading, theater_ratio, 25, 0.28).
+narrative_ontology:measurement_basis(spee_tr_t25, observed).
+narrative_ontology:measurement(spee_tr_t40, speech_harm_boundary__harm_balancing_reading, theater_ratio, 40, 0.28).
+narrative_ontology:measurement_basis(spee_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(spee_be_t0, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(spee_be_t8, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 8, 0.4).
-narrative_ontology:measurement(spee_be_t16, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 16, 0.45).
-narrative_ontology:measurement(spee_be_t24, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 24, 0.47).
-narrative_ontology:measurement(spee_be_t32, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 32, 0.48).
+narrative_ontology:measurement(spee_be_t0, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement_basis(spee_be_t0, observed).
+narrative_ontology:measurement(spee_be_t5, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 5, 0.41).
+narrative_ontology:measurement_basis(spee_be_t5, observed).
+narrative_ontology:measurement(spee_be_t10, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 10, 0.44).
+narrative_ontology:measurement_basis(spee_be_t10, observed).
+narrative_ontology:measurement(spee_be_t15, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 15, 0.46).
+narrative_ontology:measurement_basis(spee_be_t15, observed).
+narrative_ontology:measurement(spee_be_t25, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 25, 0.48).
+narrative_ontology:measurement_basis(spee_be_t25, observed).
 narrative_ontology:measurement(spee_be_t40, speech_harm_boundary__harm_balancing_reading, base_extractiveness, 40, 0.48).
+narrative_ontology:measurement_basis(spee_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(spee_su_t0, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 0, 0.48).
-narrative_ontology:measurement(spee_su_t8, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 8, 0.54).
-narrative_ontology:measurement(spee_su_t16, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 16, 0.58).
-narrative_ontology:measurement(spee_su_t24, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 24, 0.61).
-narrative_ontology:measurement(spee_su_t32, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 32, 0.62).
-narrative_ontology:measurement(spee_su_t40, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 40, 0.62).
+narrative_ontology:measurement(spee_su_t0, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 0, 0.42).
+narrative_ontology:measurement_basis(spee_su_t0, observed).
+narrative_ontology:measurement(spee_su_t5, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 5, 0.46).
+narrative_ontology:measurement_basis(spee_su_t5, observed).
+narrative_ontology:measurement(spee_su_t10, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 10, 0.49).
+narrative_ontology:measurement_basis(spee_su_t10, observed).
+narrative_ontology:measurement(spee_su_t15, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 15, 0.51).
+narrative_ontology:measurement_basis(spee_su_t15, observed).
+narrative_ontology:measurement(spee_su_t25, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 25, 0.52).
+narrative_ontology:measurement_basis(spee_su_t25, observed).
+narrative_ontology:measurement(spee_su_t40, speech_harm_boundary__harm_balancing_reading, suppression_requirement, 40, 0.52).
+narrative_ontology:measurement_basis(spee_su_t40, observed).
 
 
 /* ==========================================================================
@@ -283,18 +373,16 @@ narrative_ontology:measurement(spee_su_t40, speech_harm_boundary__harm_balancing
    ========================================================================== */
 
 narrative_ontology:coordination_type(speech_harm_boundary__harm_balancing_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(speech_harm_boundary__harm_balancing_reading, 0.18).
+narrative_ontology:boltzmann_floor_override(speech_harm_boundary__harm_balancing_reading, 0.12).
 narrative_ontology:affects_constraint(speech_harm_boundary__harm_balancing_reading, speech_harm_boundary__absolutist_reading).
 narrative_ontology:affects_constraint(speech_harm_boundary__harm_balancing_reading, speech_harm_boundary__dignity_reading).
 
 % DUAL FORMULATION NOTE:
-% The speech_harm_boundary kernel is instantiated in three distinct constraint stories, each with a different reading of where the balance between protection and harm should lie. This story (harm_balancing_reading) represents the middle ground: protection presumptive but yielding to proportionally justified harm restrictions. The sibling stories (absolutist_reading and dignity_reading) represent the poles of the contest. These are not the same constraint viewed from different angles—they are materially different structural arrangements with different ε values, different beneficiary/victim configurations, and different classifications. They are linked here as members of the same constraint family because they instantiate the same kernel and contend with each other in legal and political discourse. The absolutist reading (constraint_id: speech_harm_boundary__absolutist_reading) has very low extractiveness and near-zero suppression of protected speakers; the dignity reading (constraint_id: speech_harm_boundary__dignity_reading) has higher extractiveness against speakers but lower extractiveness against targets. The harm-balancing reading balances moderately in between, which is why its metrics show mid-range extractiveness and why the stakeholder divergence is acute.
+% The speech-harm boundary kernel decomposes into three structurally distinct constraints per OQ-254 ε-invariance: absolutist_reading (speech protection near-categorical; ε ≈ 0.05; mountain-like structure), dignity_reading (dehumanizing speech categorically unprotected; ε ≈ 0.72; snare-like structure), and this harm-balancing_reading (presumptive protection yields to demonstrable harm; ε ≈ 0.48; tangled-rope structure). Each reading instantiates different unprotected categories, different directionalities for speakers and victims, and different operative boundaries. They are not the same constraint viewed from different angles—they have different ε values, different beneficiary/victim structures, and different enforcement mechanisms. They are linked as siblings in the kernel_context field; each reading's cs_structure.reading_relations field documents structural relationships to the others.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(speech_harm_boundary__harm_balancing_reading, powerless, 0.85).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

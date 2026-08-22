@@ -2,193 +2,304 @@
   "header": {
     "constraint_id": "us_constitution_text__positivist_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "99a114be-08c6-4c83-9ae1-10267551b4e9"
+    "story_uid": "7ed22f92-ef0d-45ea-9afb-899e6d0e2fbc",
+    "created_at": "2026-06-19T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.62,
     "suppression": 0.58,
-    "theater_ratio": 0.41,
+    "theater_ratio": 0.31,
     "accessibility_collapse": 0.72,
     "resistance": 0.68,
     "claimed_type": "tangled_rope",
-    "human_readable": "Constitutional Validity via Formal Enactment (Positivist Reading)",
+    "human_readable": "Constitutional Positivist Reading: Formal Enactment Validity",
     "topic_domain": "constitutional_law/legal_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_stability_apparatus",
-      "appellate_judiciary"
+      "institutional_stability_defenders",
+      "predictability_dependent_actors"
     ],
     "victims": [
-      "substantive_justice_claimants",
-      "marginalized_constituencies_lacking_formal_voice"
+      "substantive_justice_seekers",
+      "historically_marginalized_groups"
+    ],
+    "vindicated_propositions": [
+      "rule_of_law_formalism",
+      "constitutional_amendment_supremacy",
+      "judicial_role_constraint"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "institutional_stability_defenders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judges, legislators, executive officials, and scholars who benefit from predictable constitutional interpretation locked to formal enactment text and procedure. Their position is that constitutional meaning is what the text says as formally enacted; allowing judges to reinterpret based on evolving morality or historical claims destabilizes institutional legitimacy and rule of law. They do not collect rents but do collect institutional authority and interpretive deference from this reading."
+    },
+    {
+      "name": "positivist_legal_theorists",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Articulate and defend the positivist reading: constitutional validity tracks formal enactment (ratification through Article V amendment process), not moral content, historical intent, or living adaptation. They set the interpretive frame through scholarship, judicial opinions, and law school pedagogy. They administer the boundary between valid (formally enacted) and invalid (substantive claims lacking formal enactment) constitutional claims."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must enforce the positivist reading through judicial review: declining to adjudicate substantive justice claims on constitutional grounds unless those claims are grounded in formally enacted text. They bear the cost of rejecting meritorious-seeming claims that lack textual anchor, and the institutional cost of defending unpopular outcomes that the text technically permits. At the same time, they administer enforcement of the reading through interpretation and precedent."
+    },
+    {
+      "name": "substantive_justice_seekers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Parties seeking constitutional remedies for injustice, discrimination, or rights violations on substantive grounds (moral claims, evolving social understanding, historical wrongs) that lack explicit textual foundation in the formal enactment. Under the positivist reading, their claims are categorically foreclosed unless they can be reframed as textual interpretation—a constraint they cannot exit without constitutional amendment (Article V) or waiting for the judiciary to reinterpret (non-exiting paths for most claimants)."
+    },
+    {
+      "name": "historically_marginalized_groups",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "People systematically excluded from the original enactment (women, enslaved people, non-property-holders, racial minorities) cannot easily appeal to the positivist reading for remedy because the formal text that excluded them is also what binds the constraint. Their moral claims for historical correction are categorically outside the frame: the reading accepts the text as written, not as it should have been written. They cannot exit the jurisdiction; their identity as citizens is what makes the constraint bind."
+    },
+    {
+      "name": "originalist_judges",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Jurists who argue that the original public understanding at ratification governs meaning. They would object that the positivist reading ignores the semantic content the enactors themselves intended, collapsing validity into mere formal procedure and losing the constraint that original meaning supplies. They are not in the positivist frame but contest it from within constitutional interpretation."
+    },
+    {
+      "name": "living_constitutionalist_jurists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Scholars and judges who argue constitutional meaning evolves with society and that formalism deadlocks the system against necessary adaptation. They would testify that the positivist reading makes the Constitution rigid and prevents it from serving its adaptive function, forcing substantive reform onto the political branches when the judiciary could interpret dynamically. They are excluded from the positivist frame but actively contest its premises."
+    },
+    {
+      "name": "amendment_process_gatekeepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The formal amendment process (Article V: 2/3 Congress + 3/4 state ratification) is the sole mechanism for constitutional change under the positivist reading. This gatekeeping function is both a feature (stability, deliberation) and a constraint (nearly impossible supermajority requirement makes amendment the hardest law to change). This mechanism's role as THE valid path for constitutional change is what the positivist reading enforces."
+    },
+    {
+      "name": "legal_interpretive_community",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Law professors, judges, practicing attorneys, and constitutional scholars who study and debate the reading's coherence, implications, and fit with American jurisprudence. They are neither benefiting nor paying (they are observers), but they generate the discourse that legitimates or challenges the positivist framing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of what counts as binding law in a written-constitution system: every legal actor (judges, legislators, citizens) coordinates on the rule that constitutional validity derives from formal enactment procedure, not from posterior moral evaluation or textual reinterpretation. This creates predictable, common-knowledge baseline for constitutional argumentation.",
+    "transfer_function": "Transfers interpretive authority from individual judges and moral philosophers to the formal text and the Article V amendment process. Substantive justice claims that cannot anchor to the text transfer from the judiciary into the political branches, where they must win formal amendment or statutory change. The constraint moves authority AWAY from outcome-sensitive interpretation and TOWARD procedure-bound interpretation.",
+    "absent_voices": "Historically excluded parties (women, enslaved people, property-less citizens, racial minorities at the time of enactment) are structurally absent from the legitimacy base of the formal text they are now bound by. Their objection—that a text written by and for a narrow subset of the population should not govern those it excluded—cannot be heard within the positivist frame because the frame accepts the text as-is. Originalists and living constitutionalists would also object that the positivist reading evacuates semantic meaning and evolutionary purpose.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the positivist reading disappeared and were replaced by outcome-sensitive or historically-sensitive interpretation, constitutional law would reorganize: judges would have much broader authority to reframe claims in light of contemporary justice standards or original intent; substantive justice claims would no longer be categorically foreclosed; the Article V amendment process would become less functionally critical as a legitimacy requirement. The entire structure of American constitutional adjudication rides on some account of validity; the positivist reading is ONE such account, and losing it would force a wholesale reorganization of the judiciary's interpretive constraints.",
+    "founding_problem": "The Constitution is a fixed text enacted in 1787 and amended through a specified process (Article V). A framework for legal interpretation must address: what makes a constitutional claim valid? Is it the text's formal enactment status, its original meaning, its contemporary application, its moral content, or something else? The positivist reading solves this by tying validity solely to formal enactment procedure—the text is binding because it went through Article V ratification, regardless of its content or how times have changed.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The positivist reading's account of the founding problem is attested by legal positivists, rule-of-law formalists, and institutional-constraint theorists. However, originalists attest that the founding problem is ALSO about recovering semantic content (what the text MEANT at enactment); living constitutionalists attest that the problem is ALSO about enabling constitutional meaning to serve an adaptive function as society evolves. Jurisprudential history (law review scholarship, Supreme Court divided opinions over centuries) and comparative constitutional law (other democracies' approaches to written constitutions) confirm that the 'what makes a claim valid?' problem is real and differently answered across interpretive traditions. The positivist answer is ONE coherent solution; the contest is real, not a manufactured ambiguity."
   },
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 235
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.53
+      "time_point": 47,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.58
+      "time_point": 94,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.61
+      "time_point": 141,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
-      "value": 0.62
+      "time_point": 188,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.48
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.51
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 16,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.58
+      "time_point": 235,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.32
+      "time_point": 47,
+      "value": 0.16,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.36
+      "time_point": 94,
+      "value": 0.21,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.39
+      "time_point": 141,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.41
+      "time_point": 188,
+      "value": 0.3,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.41
+      "time_point": 235,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.41
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 47,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 94,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 141,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 188,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 235,
+      "value": 0.58,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The positivist reading of the U.S. Constitution holds that constitutional validity derives from formal enactment procedures (the text itself, as amended through Article V), not from moral content, historical original meaning (beyond what the formal text captures), or evolving social consensus. Judges operate under this constraint by treating the Constitution as a fixed legal document whose meaning is determined by its formal text and amendment procedures, not by judicial philosophy or substantive outcomes. This is ONE READING of the contested kernel 'us_constitution_text'. Sibling readings (originalist_reading, living_constitutionalist_reading) share the same constitutional document but derive different constraints from competing interpretive premises. The claim/metric gap is structural: the constraint is CLAIMED as a tangled_rope (genuine coordination of judicial behavior toward predictability, plus active suppression of substantive-justice interpretation) and the metrics describe substantial extraction (0.62 at interval end) because substantive justice claims not formally authorized are categorically excluded. The engine measures this divergence; the story does not reconcile claim to metrics.",
+    "narrative_context": "The positivist reading of US constitutional validity holds that a constitutional claim is valid if and only if it traces to formally enacted text (the Constitution as written and amended through Article V procedure). Validity does not depend on moral content, historical intent, or contemporary justice—it depends on procedural pedigree. This reading solves the interpretive problem of what binds judges: the formal text and the formal amendment process, not judges' evolving moral views or historical claims. The reading's beneficiaries are institutional stability and rule-of-law predictability; its victims are substantive justice claims that cannot anchor to the text, and historically marginalized groups who were excluded from the original enactment. The tension this generates is the constraint: the reading coordinates on a procedure for validity, but that very procedure forecloses claims that lack textual foundation, even meritorious ones. This is measured as a tangled rope—genuine coordination function (common baseline for constitutional argument) bundled with asymmetric extraction (judges constrained from remedying injustice without amendment; marginalized groups unable to appeal to constitutional morality).",
     "key_agents": [
-      "appellate_judiciary: Institutional agenda-setter. Binds itself to formal procedural constraint; enforces it against substantive-outcome arguments.",
-      "institutional_stability_apparatus: Institutional beneficiary. Executive, legislative, state institutions benefit from predictable constitutional baseline.",
-      "substantive_justice_claimants: Organized payers. Must pursue Article V amendment path rather than judicial sympathy.",
-      "marginalized_constituencies_lacking_formal_voice: Powerless, trapped payers. Excluded by the formal text itself; have no recourse unless text is amended.",
-      "originalist_interpreters: Institutional observer, partial beneficiary. Overlap with positivism on text-boundedness; diverge on historical reconstruction.",
-      "living_constitutionalist_interpreters: Institutional excluded. Structurally locked out by the constraint itself.",
-      "amendment_proponents: Organized payers. Face the Article V super-majority gauntlet as the only legitimate path to change."
+      "Positivist legal theorists: agenda-setter role, define the reading and its boundaries",
+      "Federal judiciary: constrained payer role, must enforce textual constraint despite substantive tension",
+      "Substantive justice seekers: payer role, foreclosed from constitutional remedies lacking textual anchor",
+      "Historically marginalized groups: powerless payer role, identity-locked to the jurisdiction, excluded from the original text that binds them",
+      "Institutional stability defenders: beneficiary role, gain predictable, rule-bound constitutional adjudication",
+      "Originalist and living constitutionalist jurists: excluded role, contest the positivist frame from within constitutional interpretation"
     ],
-    "logic_rationale": "Extractiveness rises from 0.48 (interval start) to 0.62 (plateau at t=32+) because the constraint's operation increasingly locks out justice claims: as society evolves and new injustices emerge, the formal text's silence on them becomes more obviously a cost borne by substantive claimants. The plateau reflects institutional stability: once positivist textualism is entrenched in the judiciary, the extraction level stabilizes — judges are bound by oath and doctrine. Suppression starts lower (0.48) but also rises and plateaus (0.58) because enforcement requires active rejection of living-constitutionalist and moral-philosophy arguments; judges must actively police the boundary between formal authorization and substantive equity. Theater rises from 0.28 to 0.41 and plateaus, reflecting increasing performative activity: judges write opinions explaining why formal text does not authorize what substantive justice would require, performing the constraint even when the outcome is obviously unjust from outside the positivist frame. The measurement series share one time grid at seven points, ensuring every metric is authored at every examined time point. The plateau at t=32+ reflects institutional lock-in: positivism, once the reigning judicial orthodoxy, becomes self-reinforcing and stable.",
-    "perspectival_gap": "The appellate_judiciary seat and the substantive_justice_claimants seat experience radically different constraint types. From the judiciary's position (particularly lower courts bound by precedent), the arrangement is genuine coordination: all judges applying the same fixed-text rule creates predictability and rule of law. From the substantive claimant's position, the same structure is a mechanism of foreclosure: their claims are categorically barred from judicial remedy, and they have no exit except through the (nearly impossible) Article V amendment process. The engine computes these divergent classifications from the structural data: institutional beneficiaries with arbitrage exit will see coordination; powerless, trapped victims will see extraction. The authorized claim reflects the positivist self-understanding; the metrics reflect the structural asymmetry.",
-    "directionality_logic": "Directionality for appellate_judiciary is near-beneficiary (~0.15): they control the constraint, benefit from its stability function, and have constrained but high-status exit (can reinterpret within textualist bounds). Directionality for substantive_justice_claimants is near-target (~0.85): they bear the cost (exclusion from judicial remedy), have no meaningful exit (trapped or identity-locked to the same jurisdiction), and do not control the constraint. Marginalized constituencies are at the far target end (~0.95): powerless, trapped, and bearing the cumulative cost of formal textual exclusion across generations. Originalist interpreters sit near neutral (~0.45): they benefit from text-boundedness but their historical-reconstruction layer sometimes conflicts with pure positivism, creating productive tension. Living constitutionalists are excluded from institutional power but retain scholarly voice, placing them near-target in judicial institutional terms (~0.75) but with higher analytical exit options. Amendment proponents are constrained payers (~0.70): they must expend enormous political capital on Article V even when their substantive claim is widely supported.",
-    "mandatrophy_analysis": "The positivist reading must maintain a genuine coordination function to avoid being reclassified as pure snare. The coordination is real: judges coordinating on a fixed textual reference does solve the collective action problem of judicial behavior and establishes predictability. However, the extraction component is also real: substantive justice claims not formally authorized are definitively barred. This is exactly the tangled_rope structure: BOTH genuine coordination (rule-of-law predictability) AND asymmetric extraction (substantive claims locked out) operating through the same mechanism (text-boundedness). If the coordination function atrophied — if judges began applying positivism as pure rent-seeking, with no actual predictability or rule-of-law benefit — the constraint would reclassify as snare (pure extraction). The theater ratio's rise (0.28 to 0.41) is diagnostic: judges are increasingly performing the constraint by writing lengthy opinions about why formal text bars justice, rather than simply applying straightforward textual rules. If theater exceeds 0.65 while suppression remains high, the coordinate function would become suspect. At current levels, the tangled_rope classification holds: the constraint solves a real coordination problem (judicial behavior) while extracting a real cost (foreclosure of substantive claims).",
-    "kernel_context": "This constraint is the POSITIVIST READING of the contested kernel 'us_constitution_text'. The kernel is the U.S. Constitution itself — a formal, written document claiming to bind government and courts. The reading assumes constitutional VALIDITY derives from formal enactment procedures (the text, as amended through Article V), NOT from moral content, historical original meaning, or evolving social consensus. The sibling readings are: (1) originalist_reading — validity derives from original public meaning at ratification; (2) living_constitutionalist_reading — validity derives from evolving interpretation of constitutional principles adapted to contemporary circumstances. These are not three views of the same constraint. They are three structurally distinct constraints sharing one kernel (the text). Each reading instantiates different ε, different beneficiary/victim structures, and different classifications. The positivist reading emphasizes procedural constraint (source-validity, not outcome-validity); the originalist reading emphasizes historical constraint (original understanding, not contemporary meaning); the living constitutionalist reading emphasizes adaptive constraint (evolutionary interpretation, not textual fixity). Each is a different story with a different constraint ID, different metrics, and different stakeholders."
+    "logic_rationale": "Extractiveness starts at 0.48 (moderate: the positivist reading does provide genuine coordination value through shared baseline, but it also forecloses substantive claims with no formal anchor) and rises to 0.62 (by contemporary era, decades of jurisprudence have accumulated cases where the reading's foreclosure of non-textual claims becomes more salient—marginalized groups' historical claims, evolving rights claims, have all been categorically rejected for lack of textual foundation). Theater ratio is low-moderate (0.12→0.31): the formalism is functionally real (judges do genuinely constrain themselves to the text and Article V), but an increasing share of the reading's persistence is performative—recurrent invocation of 'just following the text' while actively interpreting what the text means, what counts as 'the text,' and how formal amendment is practically impossible. Suppression is moderate (0.42→0.58): the reading relies partly on structural foreclosure (substantive justice claims cannot be made in constitutional court; they must go to political process) and partly on active judicial enforcement (judges actively refusing to extend constitutional protection to new claims). The trajectory shows growing extractiveness and theater as the reading ages: the coordination value remains steady, but the cost to non-beneficiaries accumulates, and the reading's maintenance increasingly requires performative insistence that judges are 'just following the text' when their own interpretive choices are doing real work. Measurements are placed at ~47-year intervals to track major historical shifts (ratification era, Reconstruction, progressive era, civil rights, contemporary).",
+    "perspectival_gap": "The positivist legal theorist and institutional-stability defender seats compute the reading as valid rope—genuine coordination, mutual benefit through predictability, no serious costs. The federal judiciary seat experiences tangled rope—they genuinely benefit from having clear, textual, defensible constraints on their power, but they bear the cost of rejecting meritorious claims and defending the boundary even when doing so seems unjust. The substantive justice seeker and historically marginalized group seats experience this as a snare—they are foreclosed from even making certain arguments in court, and the foreclosure is defended as inevitable procedure rather than choice. The originalist and living constitutionalist seats would classify this as a false summit (a constraint presented as natural procedure that is actually a constructed reading that advantages certain outcomes). These divergences should compute clearly from the structural data: the payer seats have constrained exit (they cannot opt out of federal jurisdiction or the Constitution's binding force), while the beneficiary seats have analytical exit (they can choose to defend or refute the reading intellectually). The suppression score reflects that substantive claims face structural barriers plus active enforcement: they are not merely foreclosed in principle but actively rejected in practice.",
+    "directionality_logic": "Directionality derivation: Institutional stability defenders are the structural beneficiaries—they collect lower litigation risk, clearer boundaries, and institutional legitimacy from the reading. They have analytical exit: they can choose to adopt a different reading. d ≈ 0.1–0.2 (near beneficiary end). Federal judiciary sits at d ≈ 0.4–0.5 (symmetric): they gain interpretive clarity and institutional constraint (a feature they want, to legitimate their review power), but they pay by foreclosing remedies and defending unpopular textual outcomes. Substantive justice seekers are constrained payers with moderate power: they want constitutional remedies but the reading forecloses them unless they can reframe as textual interpretation. d ≈ 0.7 (toward target end). Historically marginalized groups are the canonical targets: they are powerless, identity-locked (citizenship makes the jurisdiction inescapable), and the very text that binds them excluded them from authorship. Their directionality should be near 1.0 (maximum target). The suppression score is high for these seats because their barriers to exit are multiple: geographic, political (they cannot easily constitute a new polity), and identity-fused (their status as citizens is what makes the Constitution apply). The reading does not scale suppression by scope or power—suppression is structural (the foreclosure is structural, not amplified). But directionality does scale effective extraction: the powerless, identity-locked seats have higher χ from the same ε than mobile, powerful seats.",
+    "mandatrophy_analysis": "The positivist reading's mandate is: Constitutional validity derives from formal enactment (Article V ratification), not from moral content or interpretive evolution. The founding problem was: What makes a constitutional claim valid in a written-constitution system with a fixed text and difficult amendment process? The positivist answer is coherent: procedure is the anchor, not content or intent or morality. However, mandatrophy emerges when examining whether the reading's survival depends on the mandate or on the extraction it enables. The reading persists partly because it coordinates on a real problem (how should judges be constrained?) and partly because it forecloses challenges to structural inequalities written into the original text. The mandate alone (\"procedure determines validity\") is genuine and lived. But the reading's persistence ALSO depends on suppressing non-textual justice claims—which suggests that if the mandate became impossible (e.g., if Article V itself were amended to enable easier constitutional change, or if judges adopted living constitutionalism), the reading would lose a major source of its power. The mandatrophy verdict is UNRESOLVED: the reading is not dead (it remains a live jurisprudential position), but it is contested (originalists and living constitutionalists offer competing mandates), and the persistence of the positivist reading against those competitors depends not just on the mandate but on institutional power (which readings judges adopt, which ones law schools teach). Theater-ratio rise (0.12→0.31) suggests increasing performativity: the reading is maintained partly by the scaffold of 'just following the text' even as interpretive choices do real work. This is consistent with a reading that has solved a coordination problem but now persists partly due to path dependence and extraction benefit—a tangled rope verging on piton. The theater rise does NOT yet warrant a piton classification because the reading's fundamental function (constraining judges to formal procedures) is still operationally real, not merely theatrical.",
+    "kernel_context": "This constraint instantiates the positivist reading of the contested kernel us_constitution_text. The kernel is the written Constitution itself—the fixed text ratified in 1787 and amended through Article V. The sibling readings are originalist_reading (constitutional meaning fixed at ratification, interpretation must recover original public understanding) and living_constitutionalist_reading (constitutional meaning evolves with society, interpretation must adapt principles to contemporary circumstances). These three readings offer competing answers to the question: What determines valid constitutional interpretation? The positivist reading answers: formal enactment procedure. The originalist reading answers: original public meaning at ratification. The living constitutionalist reading answers: adaptive meaning as society evolves. No single framework can hold all three simultaneously; they compete for institutional adoption and judicial authority. The positivist reading forecloses the living constitutionalist reading within any given case (a judge cannot simultaneously say 'validity derives from formal procedure' and 'validity derives from contemporary meaning'), but both remain live positions across the judiciary and legal academy—different judges, different schools, different courts adopt different readings. The originalist reading coexists with positivism when both emphasize formal procedure (the positivist emphasizes that the procedure itself is binding; the originalist emphasizes that the procedure's semantic content at ratification is binding), but they can foreclose each other when originalists argue that positivism evacuates meaning and positivists argue that originalism smuggles in non-textual semantic claims. The kernel context is recorded in this field to indicate that the positivist reading's classification is reading-indexed: its ε value, its beneficiary/victim structure, its enforcement machinery, are all specific to this reading's frame. Other readings of the same kernel will have different ε values and different structural relationships."
   },
   "omegas": [
     {
-      "id": "formalism_vs_realism_in_textual_constraint",
-      "question": "Does the positivist reading's claim that formal text constrains judges actually bind them, or is the constraint performative — judges choosing to appear bound while retaining substantive discretion?",
-      "resolution_mechanism": "Comparative analysis of judicial outcomes across different constitutional interpretive schools, holding facts constant: if originalists, living constitutionalists, and positivists reach systematically different holdings on identical facts, formalism is performing rather than constraining.",
-      "impact": "If performative, the constraint reclassifies from tangled_rope (real coordination + real extraction) toward piton (theatrical maintenance of a defunct coordination function). If binding, the tangled_rope classification is strengthened.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether formal textual constraint genuinely binds judicial discretion or is theatrical."
-    },
-    {
-      "id": "coordination_vs_institutional_capture_distinction",
-      "question": "Does the positivist reading's coordination function (predictable judicial behavior) serve rule of law, or does it primarily serve institutional capture by entrenched power — locking in distributions that benefit incumbent institutions?",
-      "resolution_mechanism": "Historical analysis of whom positivism has benefited: does the constraint's stability equally protect all stakeholders, or does it disproportionately protect incumbent institutional winners (federal government, property holders, organized interests)? Do marginalized constituencies gain stability that protects their rights, or lose access to courts that might extend protections?",
-      "impact": "If genuinely neutral coordination, the constraint's extractiveness should be symmetric across stakeholders. If institutionally captured, the constraint's extractiveness should concentrate on powerless and trapped victims while beneficiaries with exit options absorb little cost.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether formal procedural constraint serves neutral rule-of-law coordination or entrenches incumbent power."
-    },
-    {
-      "id": "sibling_reading_foreclosure_vs_coexistence",
-      "question": "Does the positivist reading's core premise — that formal procedure, not moral content or historical intent, determines validity — logically foreclose originalism and living constitutionalism, or can these readings coexist as different institutional interpretive frameworks?",
-      "resolution_mechanism": "Philosophical analysis: does 'validity derives from formal procedure' entail 'NOT from original intent' and 'NOT from evolving meaning'? Or can originalists claim their historical reconstruction is part of the formal text's interpretation, and living constitutionalists claim textual principles evolve? If the premises can be disambiguated, coexistence is possible; if they directly contradict, foreclosure holds.",
-      "impact": "If foreclosure: positivism represents a fundamental epistemic break from originalism and living constitutionalism, suggesting the constraint is incommensurable with the other readings. If coexistence: the three readings are different emphases within a shared framework, and the constraint's classification might depend on institutional context (which reading dominates in which court).",
+      "id": "kernel_identity_tension",
+      "question": "Is the positivist reading a genuine constraint on judges, or is it a reading that reads itself as constraint? Does formal procedure bind independently, or does the reading bind by being the judges' chosen interpretive frame?",
+      "resolution_mechanism": "Comparative analysis: if judges in jurisdictions with different constitutional traditions apply formal-procedure constraints without accepting positivist framing, the constraint is structural (procedure binds independently). If formal procedure only constrains where judges adopt the positivist reading, the reading is the constraint, not the procedure itself.",
+      "impact": "If the reading IS the constraint (not the procedure), then the reading is contingent on institutional adoption and could be replaced. If the procedure binds independently, the reading is expressing something real about written constitutions in general, not just American jurisprudence. This affects whether the reading can be changed by judges (adoption choice) or whether it is structurally imposed.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether positivism's core premise logically excludes sibling readings or permits institutional coexistence."
+      "description": "Whether formal procedure is a structural constraint or a reading-contingent interpretive frame."
     },
     {
-      "id": "substantive_justice_exclusion_internalization",
-      "question": "Among marginalized constituencies experiencing high d (near-target extraction), how much of their apparent acceptance of the constraint reflects genuine belief in formal proceduralism versus internalized suppression — the belief that justice through courts is impossible, even when formal authorization is technically available?",
-      "resolution_mechanism": "Post-amendment observational data: if a constituency's formal access to constitutional remedy improves (e.g., through Fourteenth Amendment ratification, Nineteenth Amendment, recent equal-protection victories), does their resistance to the positivist constraint increase? Rising resistance post-authorization would indicate prior internalization; stable acceptance would indicate genuine proceduralist belief.",
-      "impact": "If internalized suppression dominates, the measured suppression (0.58) understates the constraint's effective extraction on these constituencies — they carry the constraint even after formal authorization improves. If genuine proceduralism, the suppression measure is accurate.",
-      "confidence": "low",
+      "id": "historical_exclusion_paradox",
+      "question": "How can the positivist reading claim to bind historically excluded groups (women, enslaved people, minorities) who were not parties to the original enactment and who explicitly rejected when they were admitted? Does the reading's legitimacy hold for those who were excluded from authorship?",
+      "resolution_mechanism": "Jurisprudential examination of whether exclusion affects the binding force of formal enactment. Comparative analysis of how other democracies treat constitutions enacted by limited electorates. Philosophical analysis of whether consent is retroactively applied to heirs of excluded people.",
+      "impact": "If exclusion undermines the binding force, the reading must explain how legitimacy carries across generations and demographic shifts. If it does not, the reading's universality is compromised, and the extraction from historically marginalized groups becomes explicit structural targeting. This affects whether the reading can be said to coordinate on a shared baseline (if some parties never consented, the baseline is not shared).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether formal enactment's binding force is compromised when the enactment excluded those it now governs."
+    },
+    {
+      "id": "amendment_impossibility_cycle",
+      "question": "The Article V amendment process is practically impossible (requires 2/3 Congress + 3/4 states, no supermajority can sustain). Does the positivist reading's reliance on Article V as the sole path for constitutional change make substantive reform structurally unavailable, and does this entrench injustices the reading forecloses from judicial remedy?",
+      "resolution_mechanism": "Historical measurement: count amendments since 1789 and their timing relative to major justice movements. Causal analysis: where political reform succeeded despite constitutional barriers (civil rights statutes, statutory remedies), did the positivist reading's foreclosure of judicial constitutional remedies increase the burden on political process?",
+      "impact": "If Article V impossibility creates a structural trap—substantive injustices can neither be remedied by courts (positivist foreclosure) nor by constitutional amendment (practical impossibility)—then the reading enables a particular form of entrenchment. This would support the interpretation that the reading extracts from marginalized groups by closing both the judicial and constitutional remedy paths, leaving only ordinary legislation. This would strengthen the snare classification from the payer perspective.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether marginalized constituencies' acceptance of formal procedural constraint reflects belief or internalized suppression."
+      "description": "Whether the positivist reading's mandatory route through Article V creates a structural trap for substantive reform."
+    },
+    {
+      "id": "formalism_vs_interpretive_choice",
+      "question": "To what extent does the positivist reading's insistence on 'just following the text' evacuate judges' inevitable interpretive choices? If judges must still interpret what the text means and what counts as 'the text,' is the formalism hiding rather than eliminating judicial discretion?",
+      "resolution_mechanism": "Doctrinal analysis: trace how the 'neutral' formal approach produces different outcomes depending on what judges count as 'the text' (original framing, historical amendments, structural inference, etc.). Measure whether judge-created law (common law constitutional reasoning) under the positivist frame differs predictably from explicitly outcome-oriented interpretation.",
+      "impact": "If formalism masks discretion rather than eliminating it, the theater-ratio metric's rise is explained—the reading's increasing performativity reflects that judges are doing interpretive work while insisting they are merely following formal procedure. This supports the tangled-rope classification: genuine coordination function (shared commitment to textual anchor) alongside hidden extraction (judges retain discretion while claiming not to). If formalism genuinely constrains discretion, the theater-ratio rise would need a different explanation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal procedure genuinely eliminates judicial discretion or merely redirects and hides it."
+    },
+    {
+      "id": "reading_sibling_foreclosure_structure",
+      "question": "Does the positivist reading logically foreclose its sibling readings (originalist and living constitutionalist), or do all three readings coexist as live positions held by different judicial and scholarly camps?",
+      "resolution_mechanism": "Examine whether a single judge or court can hold positivist commitments AND originalist commitments (e.g., 'validity derives from formal procedure AND we must recover original meaning'). If coherent integration is possible, the readings coexist. If holding both requires explicit contradiction, the readings foreclose each other.",
+      "impact": "If coexistence is possible, all three readings are live interpretive frames competing for institutional adoption—none is foreclosed by logical contradiction. This affects how the kernel contest is modeled: it becomes an institutional choice about which reading to adopt, not a logical determination of which reading survives. If foreclosure is strict, the sibling readings must be modeled as mutually exclusive live options with one reading's adoption requiring another's rejection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the positivist reading logically forecloses originalist and living constitutionalist readings or coexists with them as distinct institutional choices."
     }
   ],
   "boltzmann": {
@@ -200,53 +311,66 @@
       "us_constitution_text__originalist_reading",
       "us_constitution_text__living_constitutionalist_reading"
     ],
-    "dual_formulation_note": "The US Constitution kernel decomposes into three structurally distinct constraints: positivist_reading (validity from formal procedure), originalist_reading (validity from original public meaning), and living_constitutionalist_reading (validity from evolving interpretation). The ε-invariance principle requires separate stories because measuring constitutional validity through the lens of formal procedure yields fundamentally different extraction structures than measuring through historical intent or adaptive meaning. Each reading produces a different beneficiary/victim structure and different ε. Positivism extracts from substantive-justice claimants locked out by textual silence. Originalism extracts from those whose concerns post-date the Founding. Living constitutionalism extracts from those seeking interpretive stability. Network links capture the logical and institutional dependencies: positivism and originalism both resist evolutionary interpretation (but for different reasons); living constitutionalism resists both procedural and historical constraints. All three coexist as competing institutional interpretive schools."
+    "dual_formulation_note": "The positivist reading is one of three structurally distinct interpretations of the US Constitution as a kernel. The three readings (positivist, originalist, living constitutionalist) instantiate different constraints because they have different beneficiary/victim structures, different enforcement mechanisms, and different ε values. The positivist reading constrains judges to formal procedure (Article V, ratified text); originalism constrains judges to original public meaning; living constitutionalism constrains judges to adaptive interpretation. These are not angles on one constraint—they are three different constraints with the same referent (the Constitution). The positivist reading's ε measures how much the formal-procedure constraint extracts from substantive justice seekers and marginalized groups; other readings' ε values would measure different extraction structures. Linked through network.affects_constraints because the positivist reading's adoption affects whether originalist and living constitutionalist readings are live options in judicial practice: if positivism becomes the only accepted reading, originalism and living constitutionalism lose institutional seats; if pluralism persists, all three remain live."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ],
+  "gain_flow": "institutional_stability_defenders",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "us_constitution_text__originalist_reading",
+        "sibling_id": "originalist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "us_constitution_text__living_constitutionalist_reading",
+        "sibling_id": "living_constitutionalist_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "formal_procedure_validity_exhaustive",
+        "atom": "formal_procedure_determines_validity",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "moral_content_irrelevant_to_constitutional_validity",
+        "atom": "article_v_amendment_exclusivity",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "constitutional_validity_from_formal_enactment",
+    "reference_frame": "formal_enactment_legitimacy",
     "drift_state": {
-      "moment": "contemporary_judicial_practice",
+      "moment": "contemporary",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

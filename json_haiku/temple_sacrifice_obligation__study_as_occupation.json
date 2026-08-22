@@ -4,213 +4,273 @@
     "version": "1.0",
     "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "6e08cee7-aaed-48e6-b44c-ba773f88f6c3"
+    "story_uid": "acdb246d-06f9-451c-a528-e7beed8d265c"
   },
   "base_properties": {
-    "extractiveness": 0.12,
-    "suppression": 0.08,
-    "theater_ratio": 0.22,
-    "accessibility_collapse": 0.78,
-    "resistance": 0.15,
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.22,
     "claimed_type": "rope",
-    "human_readable": "Study of Sacrifice Law as Legitimate Occupation of Temple Obligation",
+    "human_readable": "Study of Sacrifice Law as Fulfillment of Temple Obligation",
     "topic_domain": "religious/halakhic",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
     "beneficiaries": [
-      "rabbinic_scholars",
-      "jewish_communities"
+      "talmudic_scholars",
+      "halakhic_tradition"
+    ],
+    "vindicated_propositions": [
+      "substitutionary_intellectual_performance",
+      "perpetual_obligation_doctrine"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "talmudic_scholars",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Perform the obligation through daily study and recitation of sacrifice law. The arrangement legitimizes intellectual engagement with Temple ritual as equivalent to ritual performance itself. Their entire institutional identity is constituted through perpetual engagement with sacrificial texts."
+    },
+    {
+      "name": "jewish_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "situation": "The community preserves connection to Temple obligation through study practice even without the Temple's physical existence. The obligation remains alive in textual and intellectual form rather than lapsing. Participation is structured through synagogue study and daily prayer-integrated recitation."
+    },
+    {
+      "name": "halakhic_tradition",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The system of legal interpretation and transmission that codified study-as-occupation as a valid fulfillment mechanism. Adjudicates what counts as legitimate obligation-discharge. The tradition itself absorbs the impossibility of Temple performance without surfacing the need for fundamental revision."
+    },
+    {
+      "name": "messianic_restoration_contingent",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Holds that study is preservation only, not fulfillment; that the obligation remains unfulfilled pending Temple restoration. They contest the adequacy of the study-as-occupation solution but remain embedded in the same institutional framework."
+    },
+    {
+      "name": "temple_restoration_movements",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Would argue that study-as-occupation displaces the urgent necessity of actual restoration; that intellectual substitution produces complacency about literal Temple reconstitution. Their dissent from the study-occupation framing is structurally suppressed by the mainstream interpretive authority."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "External vantage point from which to analyze how the constraint operates: what it coordinates, what closure it establishes, how authority structures absorb the impossibility of literal performance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains alive and binding a perpetual obligation whose original performance context (the Temple) no longer exists. Study preserves the obligation in functional form, keeping the Jewish legal tradition's continuity intact across the rupture of 70 CE and onwards. The constraint solves the problem of how a commandment can remain normatively binding when its performance is structurally impossible.",
+    "transfer_function": "Moves the locus of obligation fulfillment from Temple performance (impossible) to intellectual engagement with sacrificial texts (possible). No transfer of material goods or status occurs; the transfer is of the obligation's discharge vehicle itself.",
+    "absent_voices": "Temple restoration advocates, messianic-activation theologians, and those who read the obligation as genuinely suspended rather than transmuted into study. They would object that study-as-occupation eliminates the pressure for literal Temple return and substitutes comfortable textual engagement for urgent restoration. Their dissent is structurally de-emphasized in mainstream halakhic discourse.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the constraint disappeared—if study were declared NOT to fulfill the obligation—the Jewish community would face immediate bifurcation: some would pursue literal Temple restoration as the only lawful path; others would declare the obligation genuinely void. The authority structure currently prevents this contestation from surfacing as a live question by treating study-as-occupation as settled law, not as substitute arrangement awaiting Temple return.",
+    "founding_problem": "The destruction of the Second Temple in 70 CE made performance of the daily sacrifice obligation impossible. The constraint developed as a halakhic solution: how can a binding obligation persist when its performance condition is no longer met? Talmudic authorities interpreted scriptural and early rabbinic sources to establish that textual engagement with sacrifice law constitutes legitimate fulfillment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Mainstream halakhic authorities (Maimonides, Karo, contemporary decisors) attest the problem remains solved by the study arrangement and requires no further action. Messianic and restoration-focused theological voices attest the problem is NOT solved—that study is occupation, not resolution, and the obligation truly awaits Temple return. Historical-critical scholars and some contemporary Jewish philosophers attest the foundational problem is theological, not practical: the constraint preserves a narrative of perpetual obligation without acknowledging that the original performance context is gone."
+  },
   "interval": {
-    "start": 0,
-    "end": 20
+    "start": 70,
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 70,
+      "value": 0.08,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.11
+      "time_point": 500,
+      "value": 0.12,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.12
+      "time_point": 1000,
+      "value": 0.14,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.12
+      "time_point": 1500,
+      "value": 0.15,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.12
+      "time_point": 1900,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.18
+      "time_point": 70,
+      "value": 0.05,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.19
+      "time_point": 500,
+      "value": 0.08,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.21
+      "time_point": 1000,
+      "value": 0.1,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.22
+      "time_point": 1500,
+      "value": 0.12,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.22
+      "time_point": 1900,
+      "value": 0.13,
+      "basis": "observed"
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.07
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.075
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.08
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.08
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.08
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.12,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "After the Temple's destruction in 70 CE, Jewish law preserved the obligation to bring offerings but made performance impossible. Rabbinic interpretation developed the reading that study of sacrifice law constitutes legitimate occupation of the obligation in the Temple's absence. This constraint is ONE READING of the contested kernel temple_sacrifice_obligation. The study-as-occupation reading claims that intellectual engagement with sacrificial law fulfills the obligation relationally — the obligation persists and is genuinely occupied through study, not merely archived or suspended. This reading coexists with two sibling readings: messianic-suspension (the obligation waits, neither fulfilled nor violated) and study-as-archiving (study preserves knowledge for future restoration but does not fulfill the obligation). The constraint itself carries minimal extractiveness because study is the obligation's current, legitimate form — no victim set exists; no one is coerced into compliance because the constraint aligns participants' interests (scholars benefit from interpretive authority, communities benefit from a coherent practice modality). The theater ratio is modest (0.22) because some portion of the ongoing study elaboration serves rhetorical and identity-maintenance functions alongside genuine legal interpretation.",
+    "narrative_context": "The study-as-occupation reading claims that engagement with sacrifice law in the Jewish intellectual tradition constitutes a legitimate fulfillment of the perpetual obligation to make daily offerings. After the Temple's destruction in 70 CE, halakhic authorities developed this interpretation: textual study and recitation of sacrificial procedures replace the performance they describe. The constraint operates through a hermeneutic system that absorbs the impossibility of literal performance without requiring that the obligation be revised or abandoned. Low extractiveness reflects that no party bears an asymmetric burden—the obligation is fulfilled through study participation, which scholars value intrinsically. No victim class emerges because the constraint redefines what counts as fulfillment rather than imposing an unfulfillable burden.",
     "key_agents": [
-      "rabbinic_scholars: institutional beneficiary and agenda-setter. Possess the interpretive authority to declare study as legitimate occupation; their interpretive labor constitutes the occupation itself.",
-      "jewish_communities: organized beneficiary. Sustain the obligation through participation in study-based ritual cycles and support for scholars.",
-      "messianic_restoration_awaiting_movement: moderate-power observer. Sees study as placeholder rather than occupation; awaits actual Temple performance.",
-      "alternative_halakhic_authority_holders: excluded moderate-power actors. Would introduce competing readings but are marginalized from consensus-setting."
+      "Talmudic scholars and halakhic authorities: agenda-setters and primary beneficiaries; their institutional identity is constituted through perpetual engagement with sacrifice texts.",
+      "Jewish community: collective beneficiary; the constraint preserves living connection to Temple obligation through study practice.",
+      "Halakhic tradition: non-agent authority structure; codifies study-as-occupation as legitimate fulfillment mechanism.",
+      "Messianic restoration contingent: observers and implicit dissenters; holds that study preserves but does not fulfill.",
+      "Temple restoration movements: excluded voices; would argue study displaces urgency of literal restoration."
     ],
-    "logic_rationale": "Extractiveness is very low (0.12 at interval end) because the constraint is structurally integrative: no party is forced to accept loss or constraint from another party's gain. Rabbinic scholars gain interpretive authority and community status; communities gain a coherent practice modality. The extraction that does exist is minimal and consists of: (1) the differential authority granted to scholars (not all interpretations are equally valid — the constraint privileges rabbinic over lay interpretation, a modest asymmetry), and (2) the implicit cost to alternatives (communities that might wish to read the obligation as suspended or to release it entirely have that position marginalized). Suppression is very low (0.08) because the constraint persists not through coercion but through alignment of interests and because alternatives are marginalized through interpretive authority rather than active enforcement. Theater ratio is modest because the constraint does real work (it genuinely solves the obligation-without-performance problem) but also serves identity-maintenance (emphasizing the continuity of Jewish law after institutional collapse) and communal meaning-making functions that are performative in character. The measurement series is stable across the interval because the constraint has been in steady state for nearly 2,000 years — no significant drift in extractiveness, suppression, or theater ratio. Accessibility collapse is high (0.78) because once the constraint is understood (study occupies the obligation), alternatives become intellectually difficult to sustain within a single coherent framework — the constraint absorbs the interpretive space. Resistance is low (0.15) because the constraint aligns with beneficiary interests and because resistance to it comes from outside the authoritative interpretive community (marginal voices) rather than from those who actually live the practice.",
-    "directionality_logic": "Rabbinic scholars sit as beneficiaries (d near 0.0–0.2 range): they gain interpretive authority, community status, and the institutional role that the constraint creates. Jewish communities sit as beneficiaries (d near 0.15–0.30 range): they gain a coherent practice modality and sustained religious identity, though constrained by the obligation itself (cannot simply release the obligation or choose alternative modalities). The obligation is a genuine constraint they bear, but one they regard as binding and meaningful, not extractive. The messianic-restoration-awaiting movement sits as an observer (d analytical): their resistance to the study-as-occupation reading is not enough to override the consensus within mainstream rabbinic institutions. Alternative authority holders are excluded (not in the directionality computation, but their exclusion means their target position is not registered). No pure-target seat exists in this constraint; the lowest-power seat (alternative authority holders) is excluded rather than extracted from. This is structurally different from a snare or tangled rope, where identifiable victims bear costs.",
-    "perspectival_gap": "The perspectival gap is minimal because the constraint is integrative, not extractive. All seated parties (rabbinic scholars, communities, messianic-restoration-awaiting movement) broadly agree that study-as-occupation is at least a coherent and legitimate reading; they may disagree about whether it is permanent or provisional, but not about whether it is structurally valid. The marginal disagreement sits with excluded voices (alternative readings) rather than seated parties. The engine should compute the rabbinic-scholar seat as beneficiary and the community seat as beneficiary-with-minimal-target-load, with no seat strongly opposing the constraint from within the authoritative framework.",
-    "mandatrophy_analysis": "The constraint exhibits no mandatrophy: the founding problem (obligation-without-performance after Temple destruction) remains live, the constraint genuinely solves it, and the solution is not performing obsolete functions for inertial reasons. The study-as-occupation reading has been continuously elaborated and refined throughout rabbinic history, indicating that the mandate is actively renewed, not merely repeated. However, the existence of sibling readings (messianic-suspension, study-as-archiving) indicates that the constraint is not universally accepted as the sole legitimate reading — it is contested but dominant. This is not mandatrophy (where a solution persists despite the problem being gone) but rather a live constraint operating within a contested interpretive field.",
-    "kernel_context": "This constraint instantiates the study_as_occupation reading of the kernel temple_sacrifice_obligation. The kernel is the obligation to bring offerings, codified in Torah and elaborated in halakhic tradition. The reading asserts that study of sacrifice law constitutes legitimate occupation of the obligation in the Temple's absence — study is not merely preserving knowledge or maintaining a suspended obligation, but actively fulfilling it through intellectual engagement. Sibling readings instantiate alternative interpretations: messianic_suspension treats the obligation as suspended (neither fulfilled nor violated) pending restoration; study_as_archiving treats study as preservation of knowledge for future restoration but explicitly denies that study fulfills the obligation. These readings coexist within Jewish religious thought — different communities and scholars emphasize different readings, but the study-as-occupation reading is dominant within mainstream rabbinic institutions. The committer structure reveals that the authority to declare one reading dominant versus another is itself a structural power held by rabbinic institutions, and that this power is not equally distributed across competing readings."
+    "logic_rationale": "Extractiveness is very low (0.15 final) because the constraint coordinates a genuine obligation through a intellectually accessible medium, and no identified party bears asymmetric burden. The community fulfills its obligation by studying; scholars pursue intellectual engagement that they intrinsically value. Theater is also low (0.12) because the study practice is substantive—Talmudic texts on sacrifice are lengthy, complex, and studied seriously for their own legal content, not merely performed to maintain ritual form. Resistance is modest (0.22) because dissenting voices exist (messianic, restoration-focused) but remain minority positions within the halakhic consensus; the interpretive tradition has largely settled the matter. Accessibility collapse is moderate (0.35) because once the study-as-occupation doctrine is internalized, alternatives become hard to perceive—the intellectual tradition legitimizes this path and de-emphasizes messianic or suspensionist alternatives—but because the Temple does not physically exist, the gap between study and performance remains theoretically visible to any observer. The time-series is near-flat because the constraint stabilized centuries ago; modest upward drift in theater_ratio reflects increased scholastic systematization (Maimonidean codification, Shulchan Aruch formalization) which formalized study obligations but did not fundamentally change extractiveness.",
+    "perspectival_gap": "All seats experience this as a coordination solution, not as extraction. Scholars and community are beneficiaries not because they collect rents but because study fulfills an obligation they accept as binding. No victim seats exist under this reading. The potential perspectival divide emerges between the study-as-occupation seat (this constraint) and the messianic-suspension or archiving readings: if a speaker holds messianic_suspension, they experience this constraint as intellectually suppressing the acknowledged unfulfillment of the obligation; if they hold study-as-archiving, they experience study as preservation-only and thus as perpetuating a false closure. But WITHIN the study-as-occupation frame, no asymmetry emerges.",
+    "directionality_logic": "All named agents sit near the beneficiary end (d near 0.0) because none are trapped or identity-locked into bearing costs against their values. Talmudic scholars are identity-locked, but their lock is TOWARD the study practice, not against it—their professional and spiritual identity is constituted through text engagement they affirm. The Jewish community experiences low d (beneficiary-side) because study is experienced as fulfilling an obligation they accept. Even the messianic contingent, who contest this reading, are identity-locked within the halakhic tradition itself—they hold an alternative reading, not an external position. No party is structurally pushed into this obligation against their values (the constraint is not imposed on the powerless); it is internally held by a committed tradition.",
+    "mandatrophy_analysis": "This constraint does NOT exhibit mandatrophy. The founding problem (Temple destruction, need for perpetual obligation to survive the rupture) remains live—the Jewish legal and spiritual tradition continues to treat the obligation as binding. The study mechanism remains the operative discharge vehicle. No gap emerges between the declared purpose (keeping the obligation alive in perpetually binding form) and the actual operation (study as legitimate fulfillment). The absence of victimhood and the low theater ratio confirm that the constraint is not persisting as theatrical zombie after its function atrophied. If mandatrophy were present, we would expect high theater_ratio (study performed as ritual form without substantive legal engagement) and either disappearance of the constraint from halakhic discourse or explicit redefinition. Neither has occurred.",
+    "kernel_context": "This constraint instantiates the study_as_occupation reading of the temple_sacrifice_obligation kernel. The kernel is the standing obligation to make daily sacrificial offerings, originally performed in the Temple. After 70 CE, three coherent readings emerged: (1) messianic_suspension: the obligation is suspended, not fulfilled, awaiting Temple return; (2) study_as_archiving: study preserves the obligation's knowledge for future restoration but does not discharge it; (3) study_as_occupation: study constitutes legitimate fulfillment. This JSON instantiates reading (3). The sibling readings are modeled as separate constraints with different ε values, victim/beneficiary structures, and authority relationships. They share the same kernel (the perpetual obligation to make offerings) but generate different constraint types and extraction profiles."
   },
+  "omegas": [
+    {
+      "id": "substitutionary_adequacy_of_study",
+      "question": "Does textual engagement with sacrificial law genuinely constitute fulfillment of the obligation, or is it a hermeneutically creative substitute that perpetuates obligation while eliminating performance pressure?",
+      "resolution_mechanism": "Philosophical or theological analysis of the justificatory structure: does the halakhic tradition provide principled grounds for the equivalence of study and performance, or does it rest on authority-assertion? Comparative analysis with other substitutionary obligation-discharge mechanisms in Jewish law (prayer as substitute for Temple sacrifice itself, for example).",
+      "impact": "If study is genuinely adequate per the tradition's own logic, the constraint operates as pure coordination. If the adequacy rests on authority-closure rather than principled equivalence, the constraint begins to accumulate low-level extractiveness (the authority structure extracts deference by foreclosing the question).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the equivalence of study to performance is logically grounded or authority-imposed."
+    },
+    {
+      "id": "messianic_obligation_status_under_study",
+      "question": "If the Messiah comes and the Temple is rebuilt, does the obligation shift from study back to performance immediately, or does study-as-occupation retain status as an acceptable alternative form?",
+      "resolution_mechanism": "Examination of halakhic sources that address the post-messianic scenario; theological traditions that envision Temple restoration; contemporary decisors' treatment of the question.",
+      "impact": "If study is TRULY a substitute and retains legitimacy post-restoration, the constraint is reading-invariant (orthogonal to messianic status). If study is merely a stopgap—legitimate only in the Temple's absence—the constraint is contingent on a specific historical state and would require reclassification in a restored scenario. This determines whether the constraint should be modeled as a permanent halakhic principle or a historically-bound accommodation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether study-as-occupation is a permanent principle or contingent on Temple absence."
+    },
+    {
+      "id": "authority_closure_mechanism",
+      "question": "Does the authority structure actively suppress messianic and restoration-focused interpretations of the obligation, or do those alternatives remain genuinely open positions within the halakhic discourse?",
+      "resolution_mechanism": "Analysis of how contemporary halakhic literature treats messianic_suspension and archiving readings; whether dissenting voices are engaged or dismissed; degree to which Temple restoration theology is integrated into or marginalized from mainstream halakhic study.",
+      "impact": "If alternatives are actively suppressed, a low-level suppression metric (0.05) may underestimate the constraint's social force—the authority structure is quietly de-emphasizing rival readings. If alternatives remain genuinely open, the low suppression reflects accurate situation. This affects whether the constraint should carry omega on suppression mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which the halakhic authority structure allows alternative readings to surface in discourse."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.1
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
       "temple_sacrifice_obligation__messianic_suspension",
       "temple_sacrifice_obligation__study_as_archiving"
     ],
-    "dual_formulation_note": "temple_sacrifice_obligation is a contested kernel with three structurally distinct constraint readings. Each reading—study_as_occupation, messianic_suspension, study_as_archiving—instantiates a different obligation-modality and authority structure. They are linked via network.affects_constraints because the dominant reading (study_as_occupation) marginalizes and influences the plausibility of the other readings. Study-as-occupation is the steady-state institutional reading; messianic_suspension and study_as_archiving are the live alternatives. All three are authored as separate constraint stories with distinct epsilon-values, beneficiary/victim structures, and authority groundings."
+    "dual_formulation_note": "This constraint is one reading of the temple_sacrifice_obligation kernel. The kernel is the standing Jewish obligation to make daily sacrificial offerings, which became impossible after the Temple's destruction in 70 CE. Three structurally distinct constraint stories instantiate three readings: (1) study_as_occupation (this file) models study as legitimate fulfillment, low extractiveness, rope-type; (2) messianic_suspension models the obligation as suspended pending restoration, minimal coordination function, mountain-type; (3) study_as_archiving models study as preservation without fulfillment, moderate extractiveness, tangled_rope-type (the tradition extracts deference while perpetuating the unfulfilled obligation). Each reading has its own ε value, victim/beneficiary structure, and authority relationship. They coexist within the Jewish halakhic tradition, held by different parties and communities. The network links represent how each reading influences the others' framing conditions."
   },
-  "omegas": [
-    {
-      "id": "study_as_genuine_occupation_vs_substitute",
-      "question": "Does study of sacrifice law constitute genuine occupation of the obligation, or is it a substitute modality that the obligation has de facto shifted to due to impossibility of performance?",
-      "resolution_mechanism": "Textual and hermeneutical analysis of rabbinic sources asking whether the obligation itself changed (study became the original performance-modality) or only its execution-form changed (study replaces animal sacrifice but the obligation remains fundamentally about sacrifice). Comparison with other religious traditions' handling of impossible obligations (Hindu fire sacrifice, Christian sacrifice interpretations) to identify structural parallels.",
-      "impact": "If study is genuine occupation, the constraint is structurally integrative and low-extractive. If study is a substitute modality, the constraint may be higher-extractive (imposed by rabbis rather than derived from the obligation's nature) and may generate resistance from those who dispute the interpretive authority.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether study fulfills or replaces the obligation."
-    },
-    {
-      "id": "permanence_vs_provisionality",
-      "question": "Is study-as-occupation a permanent resolution of the obligation-without-performance problem, or a provisional solution pending messianic restoration?",
-      "resolution_mechanism": "Analysis of rabbinic discourse across centuries: does the tradition treat study-as-occupation as final, or as explicitly temporary? Do references to the future Temple imply the current study-based modality is always-already understood as provisional?",
-      "impact": "If permanent, the constraint is a genuine new coordination form. If provisional, it carries a hidden dependency on messianic restoration that may increase theater ratio and complicate the classification if messianic expectation fades.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the study-as-occupation reading is final or waiting."
-    },
-    {
-      "id": "excluded_voice_representation",
-      "question": "What proportion of contemporary Jewish communities and scholars actively assent to the study-as-occupation reading versus holding the constraint as merely dominant institutional position?",
-      "resolution_mechanism": "Survey of contemporary Jewish religious thought, comparison of textual traditions emphasizing different readings, ethnographic evidence from different Jewish communities' practice and emphasis.",
-      "impact": "High assent would confirm the constraint as genuinely integrative. Lower assent might indicate the constraint's dominance relies more on institutional authority than on consensus, increasing effective suppression and extractiveness.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Degree of actual vs. enforced assent to study-as-occupation reading."
-    },
-    {
-      "id": "reading_drift_over_time",
-      "question": "Has the study-as-occupation reading's framing or emphasis shifted over the 2,000-year interval? Has the rhetorical weight on identity-maintenance versus genuine legal interpretation shifted?",
-      "resolution_mechanism": "Diachronic analysis of rabbinic texts, commentaries, and modern Jewish writings on the obligation. Track whether the justification for study-as-occupation emphasizes its intrinsic rightness versus its necessity-given-Temple-absence versus its role in sustaining Jewish continuity.",
-      "impact": "A drift toward identity-maintenance emphasis would suggest rising theater ratio and potential classification movement toward piton. Stable emphasis on intrinsic rightness would suggest theater ratio remains low.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the reading's functional justification has shifted over centuries."
-    }
-  ],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "temple_sacrifice_obligation__messianic_suspension",
+        "sibling_id": "messianic_suspension",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "temple_sacrifice_obligation__study_as_archiving",
-        "relation": "coexists_with"
+        "sibling_id": "study_as_archiving",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "study_occupies_obligation_intrinsically",
+        "atom": "study_constitutes_legitimate_fulfillment",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "rabbinic_interpretation_binding",
+        "atom": "perpetual_obligation_doctrine",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "study_as_legitimate_occupation",
+    "reference_frame": "study_as_valid_obligation_discharge",
     "drift_state": {
-      "moment": "contemporary",
+      "moment": "contemporary_halakhic_consensus",
       "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

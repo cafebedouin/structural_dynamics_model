@@ -2,274 +2,384 @@
   "header": {
     "constraint_id": "commerce_clause_scope__narrow_originalist",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "ab74a97f-9a3a-4aba-939c-d674ba5053e6"
+    "story_uid": "d95abe1e-063d-451d-9a5b-c8b5ca973f93"
   },
   "base_properties": {
     "extractiveness": 0.28,
     "suppression": 0.15,
     "theater_ratio": 0.22,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.71,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
     "claimed_type": "rope",
-    "human_readable": "Commerce Clause Scope (Narrow Originalist Reading)",
-    "topic_domain": "constitutional/federalism/economic",
+    "human_readable": "Narrow Originalist Commerce Clause: Interstate Trade Facilitation",
+    "topic_domain": "constitutional/federalism",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "state_governments",
-      "local_business_operators",
-      "decentralized_regulatory_experimenters"
+      "local_businesses",
+      "decentralized_experimentation_advocates"
     ],
     "victims": [
-      "national_regulatory_uniformity_advocates",
-      "civil_rights_enforcement_regimes",
-      "environmental_protection_coalitions"
+      "national_regulatory_uniformity",
+      "federal_civil_rights_enforcement",
+      "marginalized_groups_in_recalcitrant_states"
+    ],
+    "vindicated_propositions": [
+      "federalism_structural_limit",
+      "enumerated_powers_doctrine",
+      "original_public_meaning_textualism"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Retain broad autonomy to regulate economic activity that occurs wholly within state borders, including labor conditions, environmental practices, consumer protection, and health standards. Under this reading, states can experiment with divergent regulatory regimes on non-interstate matters without federal preemption. They collect regulatory authority and preserve political flexibility."
+    },
+    {
+      "name": "local_businesses",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Face only uniform federal rules for genuinely interstate transactions; intrastate operations remain subject to state and local regulation alone. Small and regional firms benefit from lower compliance burden if federal rules do not reach their markets. They avoid the cost of conforming to multiple federal regulatory regimes."
+    },
+    {
+      "name": "federal_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforces the boundary between interstate and intrastate commerce by striking down federal statutes that regulate activity the reading categorizes as purely local (environmental rules applied to intrastate pollution, labor law applied to intrastate employment, civil rights law applied to local accommodations). The constraint operates through constitutional interpretation; the federal judiciary is the enforcement machinery."
+    },
+    {
+      "name": "national_regulatory_uniformity",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A doctrine/policy goal that cannot be achieved if the reading holds. Uniform national labor standards, environmental protection, and consumer safety across all states cannot be enforced via the Commerce Clause if the clause is confined to facilitating interstate trade. This is not an agent; it appears here as the structural victim of the constraint's operation."
+    },
+    {
+      "name": "federal_civil_rights_enforcement",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The enforcement apparatus for national civil rights standards becomes constitutionally unreliable under this reading. Public accommodations law, voting rights enforcement, and anti-discrimination statutes lose their Commerce Clause foundation to the extent they regulate activity the reading classes as intrastate. This is a structural victim rather than an actor."
+    },
+    {
+      "name": "marginalized_groups_in_recalcitrant_states",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Bear the costs of state-level discrimination and protective-labor denial if the federal civil rights and labor enforcement apparatus loses Commerce Clause constitutional footing. Their exit options are severely constrained by identity and geography; leaving the state is not a practical alternative, and within-state political remedies are structurally blocked if the recalcitrant state majority rejects federal norms."
+    },
+    {
+      "name": "interstate_commerce_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefit from uniform federal rules for genuinely interstate transactions (shipping, telecommunications, financial services crossing state lines), which reduces compliance cost. They also benefit from state-level regulatory variation on intrastate components, which allows them to minimize total cost by locating activities in favorable regulatory jurisdictions. They bear indirect costs if state fragmentation creates arbitrary barriers to interstate commerce (which the reading's enforcement function is designed to prevent)."
+    },
+    {
+      "name": "decentralized_experimentation_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Support the reading as a principled protection for regulatory federalism and interstate policy competition (the 'laboratories of democracy' framing). They benefit ideologically and institutionally from legal frameworks that preserve state autonomy. They articulate the constraint as coordinating beneficial competition in governance rather than as extracting from federal enforcement capacity."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the reading through constitutional interpretation doctrine. The Court draws the line between interstate commerce (regulable under the narrow reading) and intrastate economic activity (beyond federal reach). The constraint persists because the Court authoritatively declares what the Commerce Clause means; the interpretation is the constraint's enforcement machinery."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Occupies an ambiguous position: it legislates within the constraint's boundaries, but the constraint is enforced by courts striking down legislation Congress passes. Congress observes the constraint; the Court administers it. Congress bears the cost of legislative creativity needed to re-frame statutes to stay within the narrow Commerce Clause (e.g., attaching a jurisdictional element to civil rights law to connect it to interstate commerce channels)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform legal framework for transactions that cross state borders, removing state-imposed barriers to interstate trade and ensuring predictable rules for commerce-crossing-lines. Solves the coordination problem of states imposing discriminatory or burdensome regulations on goods, services, and persons moving across state boundaries.",
+    "transfer_function": "Transfers regulatory authority from federal government to state governments for all economic activity occurring wholly within state borders, including labor, environment, consumer protection, civil rights, and health. The constraint moves autonomy from the federal center to the states and removes federal enforcement power over intrastate arrangements.",
+    "absent_voices": "Federal administrative agencies (EPA, OSHA, EEOC, etc.) that would argue for expansive federal reach to achieve national uniformity on environmental, labor, and civil rights standards are absent from the framing courts use when applying the narrow reading. National advocacy organizations representing marginalized groups and uniform-standard constituencies lack formal standing in the constitutional adjudication that enforces this constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint—understood as a judicial interpretation limiting Commerce Clause reach—were overturned and replaced with a broad-effects reading, federal regulatory authority would expand dramatically: labor standards, environmental rules, and civil rights protections would be enforceable nationwide via the Commerce Clause rather than confined to their narrower constitutional foundations. States would lose regulatory autonomy over intrastate activity; the federal system would shift toward centralization. Congress's legislative options would expand; state governments' regulatory space would contract.",
+    "founding_problem": "The Articles of Confederation failed because states imposed tariffs and protectionist barriers on each other's goods, fragmenting the national market and weakening commercial incentives to unite. The Commerce Clause was drafted to remove state-imposed barriers to interstate trade and ensure that commerce crossing state lines operates under uniform federal rules, not state-by-state fragmentation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historians and originalist scholars (Randy Barnett, Keith Whittington) attest the founding problem was interstate trade barriers and state economic warfare. Broad-effects scholars and civil rights advocates attest the founding problem is solved but the constraint persists as a barrier to federal enforcement of national standards. Economic historians confirm the tariff war problem was real; they also note that intrastate labor and environmental externalities were not contemplated at the founding and represent new problems the founders did not address. No external, disinterested source fully corroborates one reading over the other; the disagreement is constitutive of the kernel contest."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 100
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.18
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.22
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 16,
-      "value": 0.25
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.27
+      "time_point": 33,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
-      "value": 0.28
+      "time_point": 50,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.28
+      "time_point": 67,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.11
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 16,
-      "value": 0.15
+      "value": 0.11,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.19
+      "time_point": 33,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.21
+      "time_point": 50,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.22
+      "time_point": 67,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.08
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.1
+      "value": 0.1,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 16,
-      "value": 0.12
+      "value": 0.11,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.14
+      "time_point": 33,
+      "value": 0.13,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.15
+      "time_point": 50,
+      "value": 0.14,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.15
-    }
-  ],
-  "omegas": [
-    {
-      "id": "kernel_reading_contest",
-      "question": "Is the Commerce Clause's core function to remove state barriers to interstate trade ('negative commerce'), or to grant Congress affirmative power to regulate all economic activity with national effects ('positive commerce')?",
-      "resolution_mechanism": "Originalist historical analysis (Convention records, Founding-era debates, ratification documents) versus consequentialist policy assessment (does national coordination require broader federal reach than barrier-removal alone?). The dispute is conceptual and partly empirical — what problems did the Framers intend to solve, and do modern economic structures present problems the Framers did not anticipate?",
-      "impact": "This reading asserts the narrow barrier-removal function. If historical evidence strongly favored broad effects, this reading forecloses itself. If historical evidence supports the narrow reading but modern coordination requires broader reach, the reading becomes a true-to-origins but obsolete constraint — a Piton candidate.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The interpretive contest between narrow originalism and broad-effects readings of the Commerce Clause"
+      "time_point": 67,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
-      "id": "originalism_vs_modern_coordination",
-      "question": "Should constitutional interpretation be bound to the original public meaning of 1787–1789, or should it evolve to address coordination problems the Framers did not anticipate (pollution spillovers, national labor standards, civil rights enforcement)?",
-      "resolution_mechanism": "Meta-constitutional: resolving this requires a theory of constitutional legitimacy (fidelity to text vs. pragmatic evolution) that is not itself answerable by empirical evidence. Different jurisprudential schools give different answers. This is a preference question, not an empirical one.",
-      "impact": "If original meaning is normatively privileged, the narrow reading stands. If constitutional evolution is legitimate, modern problems may warrant reading the Commerce Clause more broadly despite its historical meaning. This omega brackets the constraint's entire legitimacy frame.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether constitutional interpretation should be fixed by original meaning or evolve with modern circumstances"
-    },
-    {
-      "id": "interstate_vs_intrastate_boundary",
-      "question": "Can the boundary between interstate and intrastate commerce be sustainably maintained? Or does modern economic integration mean all economic activity has some interstate effect, collapsing the distinction?",
-      "resolution_mechanism": "Empirical: examine whether truly localized economic activity (small family business, local services, intrastate production) exists as a meaningfully distinct category in a nationally integrated economy. If virtually all activity has measurable interstate effects, the boundary becomes a arbitrary line, and the narrow reading's limiting principle breaks down.",
-      "impact": "A collapsed boundary would force this reading either to accept that nearly all activity falls within federal reach (functionally equivalent to the broad reading), or to adopt an explicit exclusion (e.g., 'non-commercial activity is always intrastate') that abandons the effects test entirely.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the interstate/intrastate distinction remains coherent in a nationally integrated economy"
-    },
-    {
-      "id": "suppression_of_competing_readings",
-      "question": "Does this reading's enforcement require active suppression of the broad-effects reading (judicial strike-downs, limiting language), or does it coexist with broad-effects doctrine through reading-selection over time?",
-      "resolution_mechanism": "Historical analysis of case law and doctrinal evolution. Does the Supreme Court actively reject broad-effects language, or does it simply choose the narrow reading for particular cases? The measurement series shows modest suppression growth (0.08 → 0.15), suggesting enforcement tension rather than doctrinal domination.",
-      "impact": "If active suppression is required, the reading is a Snare (enforcement-dependent, actively suppresses alternatives). If coexistence is maintained through selective application, it is a Rope (coordination without forcible exclusion). Current suppression levels suggest weak enforcement — the reading may be losing structural hold.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether this reading's persistence requires active judicial suppression of competing doctrines or coexists with them"
-    },
-    {
-      "id": "civil_rights_enforcement_tradeoff",
-      "question": "What is the normative weight of civil rights enforcement (preventing discrimination in recalcitrant states) relative to federalism autonomy (state authority over local commerce)?",
-      "resolution_mechanism": "This is a value tradeoff, not an empirical or conceptual question. Historical evidence on the Fourteenth Amendment's relationship to the Commerce Clause may inform it, but cannot resolve it. Different constitutional traditions (originalist vs. living-constitutionalist) weight these differently.",
-      "impact": "For originalists committed to the narrow reading, civil rights enforcement must work through explicit constitutional provisions (Fourteenth Amendment) rather than the Commerce Clause. For pragmatists, the narrow reading's loss of civil-rights leverage is a severe cost that may override originalist fidelity.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "The normative tradeoff between federalism and national civil rights enforcement"
-    },
-    {
-      "id": "originalism_adoption_dynamics",
-      "question": "Is the recent adoption of originalism by a majority of the Supreme Court (2020s) the result of superior interpretive method, political realignment, or institutional path-dependence?",
-      "resolution_mechanism": "Intellectual history and political history: examine whether originalism's rise correlates with evidence of better interpretive accuracy or with changing political coalitions on the Court. This informs whether the reading's recent enforcement strength is principled or contingent.",
-      "impact": "If originalism's rise is principled, expect sustained enforcement of the narrow reading. If contingent on Court composition, the reading's dominance may reverse if the Court changes. This omega frames the reading's stability as contingent on meta-constitutional politics.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether originalism's current Court dominance reflects methodological superiority or political contingency"
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.15,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates the narrow originalist reading of the Commerce Clause, one of three competing readings of a contested constitutional kernel. The narrow reading holds that 'commerce among the states' means trade crossing state lines, 'regulate' means 'make regular' (facilitate), and federal power is limited to removing state barriers and ensuring uniform rules for interstate commerce. The reading benefits state governments and local business by preserving regulatory autonomy over intrastate activity. It harms national regulatory uniformity advocates and civil rights enforcement regimes by denying federal reach via the Commerce Clause into non-commercial or purely local activity. The constraint CLAIMS rope status (coordination of interstate commerce). The authored metrics describe low extractiveness (0.28) and suppression (0.15) — the reading operates with modest enforcement cost because it commands significant institutional support (five current Supreme Court justices) and no party actively fights it on the ground; resistance is doctrinal and political, not structural. Theater is low (0.22) because the interpretive framework is transparent and not performative — originalists openly state their method. The constraint is one member of a constraint family (commerce_clause_scope kernel with three readings). The other readings (broad_effects_test, intermediate_channels) are separate constraint stories.",
+    "narrative_context": "The narrow originalist reading of the Commerce Clause interprets 'commerce among the several states' as trade crossing state lines and 'regulate' as removing barriers and establishing uniformity for that cross-border trade. Under this reading, federal regulatory power is limited to preventing state discrimination or burdensome regulation of interstate commerce and ensuring uniform rules for genuinely interstate transactions. Federal statutes that regulate intrastate economic activity, or that use commerce power to enforce non-commercial goals (environmental protection, labor rights, civil rights) in purely local contexts, are beyond the enumerated power. This reading constrains federal authority and preserves state sovereignty over intrastate affairs. The constraint is enforced by judicial invalidation of federal statutes courts determine fall outside the narrow scope.",
     "key_agents": [
-      "State governments — benefit from retained autonomy, role: beneficiary",
-      "Federal courts — enforce the reading, role: agenda_setter",
-      "Civil rights enforcement coalitions — excluded from federal commerce power, role: victim",
-      "Interstate commerce participants — benefit from barrier-removal, role: beneficiary/payer",
-      "Congress — constrained by the reading, role: observer/payer",
-      "Environmental protection coalitions — excluded from commerce-clause reach, role: victim"
+      "State governments: primary beneficiaries, retain regulatory autonomy over intrastate economic activity",
+      "Federal government / Supreme Court: agenda-setter, enforces the boundary through constitutional interpretation",
+      "Interstate commerce operators: benefit from uniform federal rules for cross-border trade; also benefit from state regulatory variation on intrastate components",
+      "Marginalized groups in recalcitrant states: primary victims, lose federal civil rights and labor enforcement reach",
+      "Congress: observer with constrained options; must re-frame statutes to survive constitutional scrutiny",
+      "National regulatory uniformity (non-agent): doctrine/goal that is the structural victim of the constraint"
     ],
-    "logic_rationale": "Extractiveness is low (0.28) because the reading's primary function is to PREVENT federal extraction of state regulatory authority, not to extract anything itself. Federal courts extract modest authority to police the line between interstate and intrastate commerce, but that extraction cost is dwarfed by the reading's benefit to states (retained autonomy). Suppression is very low (0.15) because enforcement faces minimal active resistance — federal courts simply apply the reading and strike down statutes exceeding it; states do not fight being told they retain power. Theater is low (0.22) and stable — the interpretive method is stated transparently, not performed. Accessibility collapse is moderate (0.62) because the reading creates a clear doctrinal boundary (interstate vs. intrastate), but that boundary is increasingly contested as modern economies blur the distinction — the boundary itself is becoming less accessible/stable. Resistance is moderate (0.71) because doctrinal and political opposition exists (the broad-effects reading has adherents) even though current Court majority supports the narrow reading. The measurement series shows gentle upward creep in all three metrics (extractiveness 0.18 → 0.28, suppression 0.08 → 0.15, theater 0.08 → 0.22) from year 0 to year 40, reflecting the increased enforcement energy required as the economic integration problem deepens and makes the interstate/intrastate boundary harder to maintain. Measurements are shared on a single time grid.",
-    "perspectival_gap": "Federal courts and state governments should compute as beneficiaries (courts retain interpretive authority, states retain regulatory autonomy); Congress, civil rights coalitions, and environmental coalitions should compute as targets/victims (Congress is constrained, civil rights and environmental objectives face exclusion). Interstate commerce participants sit near symmetric — they benefit from barrier-removal but pay the cost of navigating fragmented intrastate rules. The engine computes this divergence from power, exit, and beneficiary/victim declarations. From the narrow originalist's seat, the reading is faithful to the Constitution's text and history. From the civil-rights seat, the reading is an obstacle to uniform national protection. Both perspectives arise from the same constraint structure — it is genuinely a different thing depending where you stand.",
-    "directionality_logic": "State governments are beneficiaries (d low, near 0.15) — they collect retained autonomy at zero enforcement cost. Civil rights coalitions are victims (d high, near 0.85) — they bear the cost of excluded federal reach. Congress is observer/payer (d moderate, near 0.5–0.6) — constrained but not harmed; Congress always retains the power to legislate through other constitutional hooks or to amend the Constitution. Federal courts are agenda-setters (d low, near 0.2) — they extract modest authority to police the line. No directionality overrides are required; the derivation chain (beneficiary/victim + power + exit) produces accurate d values.",
-    "mandatrophy_analysis": "The founding problem is live and contested. The narrow reading frames the founding problem as removing state tariff barriers to create a national market. That problem is solved and stable — the federal courts enforce barrier-removal so effectively that modern state protectionism is rare. However, the reading's scope has become increasingly questioned as new coordination problems (environmental spillovers, civil rights protection, labor standards) have emerged. The civil-rights and environmental victims ask: if the founding problem (state barriers to commerce) is solved, why does the reading continue to prevent federal reach on new problems? The reading's answer is that these new problems are outside the commerce power's enumerated scope. The classification (Rope vs. Snare vs. Piton) hinges on whether the narrow reading is genuinely coordinating interstate commerce (Rope) or merely defending state sovereignty as an end in itself (Piton). The measurement series shows stable but modest theater growth — originalist courts are not performing the reading theatrically; they state the doctrine openly. The extraction is stable, not rising. This suggests the reading is a Rope that coordinates (removes barriers) without pretense. However, the rising suppression and theater ratios hint that as the boundary becomes harder to maintain empirically, enforcement effort increases — the reading may be transitioning toward Piton (inertial persistence) as its founding function becomes obsolete and its operation becomes more performative.",
-    "kernel_context": "This constraint instantiates the narrow_originalist reading of the commerce_clause_scope kernel. The kernel is the contested text and historical understanding of 'commerce among the states' and federal power to 'regulate' it. The narrow originalist reading holds that commerce means trade crossing state lines and regulate means facilitate/make regular. Sibling readings are broad_effects_test (any economic activity with cumulative national effect is regulable) and intermediate_channels (Commerce Clause reaches channels, instrumentalities, and substantially affecting activities, but with limiting principles). The readings are generated as separate constraints linked by the network.affects_constraints field. The key structural delta: narrow reading yields low federal extractiveness, high state autonomy, narrow victim set (national uniformity advocates); broad reading yields high federal extractiveness, low state autonomy, narrow victim set (state governments). The dispute is rooted in original meaning interpretation (narrow originalists cite Founding-era commerce disputes and barrier-removal framing; broad readers cite New Deal and Civil Rights era precedent and empirical economic integration). The narrow reading is currently dominant in the Supreme Court (2020s) but faces strong doctrinal opposition and rising empirical strain from the interstate/intrastate boundary collapse."
+    "logic_rationale": "Extractiveness is low (0.28) because the constraint operates by limiting federal power rather than by coercively transferring resources from one party to another in the ordinary sense. The beneficiaries (state governments, local businesses) gain autonomy and regulatory flexibility; the victims (national uniformity, federal civil rights enforcement, marginalized groups) lose enforcement reach and coordination power. Suppression is very low (0.15) because the constraint is not enforced through coercive suppression of alternatives—it is enforced through judicial interpretation of constitutional text. Theater ratio is moderate (0.22) and rising slightly over the interval: the constraint's enforcement requires repeated judicial doctrinal articulation and re-affirmation; as congressional pressure builds for federal environmental and civil rights enforcement, the Court must increasingly perform doctrinal work (via jurisdictional elements, aggregation limitations) to maintain the constraint's boundaries. The measurement series track a slow increase in both extractiveness and theater over the 100-year interval, reflecting gradual accumulation of unmet regulatory demands (environmental externalities, labor exploitation, civil rights denial) that the narrow reading prevents federal government from addressing, and the Court's increasing doctrinal elaboration to defend the boundary.",
+    "perspectival_gap": "The core perspectival gap is between institutional seats operating at different levels of federalism: state governments and the federal government perceive the constraint fundamentally differently. From the state seat, federalism is a structural protection and coordination benefit. From the federal seat, it is a barrier to uniform protection. Neither perception is false; they reflect structural positions in a federal system. The Court, as the agenda-setter, enforces one reading; but the enforceability of judicial interpretation depends on political support from state governments and public acceptance. If federal enforcement pressure from Congress and civil rights advocates reaches critical mass, the constraint's theater ratio would spike (doctrinal labor increases) and the constraint might tip toward mandatrophy (the founding problem—state trade barriers—is solved; the constraint persists for reasons other than solving the founding problem).",
+    "directionality_logic": "State governments occupy the beneficiary end of the directionality spectrum (d near 0.0) because the constraint allocates regulatory authority to them and removes federal preemption. Federal civil rights enforcement and national uniformity occupy the victim end (d near 1.0) because the constraint removes their reach. Marginalized groups in recalcitrant states occupy the strongest victim position (d = 1.0): they are identity_locked (cannot exit the state as a practical matter), face direct harm from state discrimination without federal remedy, and have no political power within the state to change the situation. Interstate commerce operators sit in a dual position: they benefit from uniform federal rules for the transactions they engage in (low d on the interstate component) but also benefit from state regulatory variation on intrastate components (d near 0.5 on the full system). The directionality derivation should reflect this structure: beneficiaries get lower effective extraction, victims get higher.",
+    "mandatrophy_analysis": "The founding problem—state-imposed tariffs and trade barriers fragmenting the national market—was substantially solved by the late 19th century. Modern state taxation and regulation is, for the most part, facially neutral and non-discriminatory on interstate commerce. Yet the narrow originalist constraint persists and is applied to strike down federal statutes regulating intrastate activity (environmental regulation, labor law, civil rights enforcement) that have nothing to do with preventing state trade discrimination. This is mandatrophy: the constraint's original function has atrophied. The narrow originalist reading justifies continued enforcement by appeal to text and original meaning (the formalist defense), not by appeal to the founding coordination problem. The rising theater ratio reflects this: the Court must increasingly deploy doctrinal techniques (jurisdictional elements, aggregation limits, instrumentalities tests) to maintain the boundary, adding performative work to the enforcement of a function that no longer solves the founding problem.",
+    "kernel_context": "This constraint instantiates the narrow_originalist reading of the commerce_clause_scope kernel. The kernel is the Commerce Clause text and its scope. The narrow_originalist reading interprets 'commerce among the several states' as trade crossing state lines and confines federal power to removing state barriers and ensuring uniform rules for that commerce. Sibling readings (broad_effects_test and intermediate_channels) interpret the same kernel text differently: broad_effects extends federal power to any economic activity substantially affecting interstate commerce; intermediate_channels occupies a middle ground, allowing federal regulation of channels, instrumentalities, and substantially-affecting activities but with limiting principles. Each reading is live in contemporary constitutional practice; they coexist in different judicial coalitions and different scholarly traditions. The constraint instantiated here is structurally independent of the siblings: this reading produces its own ε, its own beneficiary/victim structure, its own type. The other readings are other constraint stories with their own structural data."
   },
+  "omegas": [
+    {
+      "id": "original_public_meaning_determination",
+      "question": "What was the original public meaning of 'commerce' and 'regulate' in 1787–1789? Was it limited to trade crossing state lines, or did it include intrastate economic activity with interstate effects?",
+      "resolution_mechanism": "Historical linguistic analysis, founding-era dictionaries, Framers' correspondence, ratification debates—but also recognition that 'original public meaning' is itself contested (Framers' intent vs. ratifiers' understanding vs. ordinary English usage). No single archive resolves the question definitively; historians and originalists genuinely disagree.",
+      "impact": "If the narrow reading is what the text originally meant, the constraint is a defense of fidelity to the Constitution. If the text's original meaning was broader (including intrastate activity with interstate effects), the narrow reading is a modern doctrinal restriction unsupported by the original meaning it claims to serve, and the constraint should be reclassified as extractive (a judicial power grab defending state autonomy against the Constitution's actual grant).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Original meaning of 'commerce' and 'regulate' in 1787"
+    },
+    {
+      "id": "federalism_coordination_vs_extraction",
+      "question": "Is the preservation of state regulatory autonomy a genuine coordination benefit (solving the problem of federal overreach and regulatory homogenization) or a constraint that extracts from national uniformity and federal civil rights enforcement capacity to benefit state governments?",
+      "resolution_mechanism": "No empirical resolution: this is a preference question about federalism values. Some polities value experimentation and diversity; others value uniformity and national standards. The disagreement is structural, not empirical.",
+      "impact": "If federalism is a coordination benefit, the constraint is a rope and the victims are accepting costs for genuine gains. If federalism is extraction from national capacity, the constraint should be classified as snare and the beneficiaries are structural victims (they benefit from the constraint, but the constraint persists because federal enforcement is blocked, not because states chose the arrangement). This is a conceptual question about what federalism IS.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether federalism is coordination or extraction of federal enforcement capacity"
+    },
+    {
+      "id": "state_recalcitrance_feedback",
+      "question": "When a state uses its regulatory autonomy to deny civil rights or labor protections to marginalized groups within its borders, and the narrow Commerce Clause interpretation prevents federal remedy, what is the structural relationship between the constraint and the harm? Does the constraint cause the harm, permit it, or neither?",
+      "resolution_mechanism": "Causal analysis: trace the harm (e.g., wage discrimination, racial exclusion) to its immediate institutional causes (state law, state enforcement) and then to the constraint (which removes federal override). The causal chain is real, but its force is contestable: one seat argues the constraint is necessary to preserve federalism; another argues the constraint actively protects discrimination by blocking federal remedy.",
+      "impact": "If the constraint actively protects discrimination (by design or foreseeable consequence), the classification should emphasize suppression and extraction from the marginalized group. If the constraint merely fails to prevent discrimination (by leaving it to state discretion), the classification emphasizes under-enforcement rather than active harm. The measurement of suppression (currently low at 0.15) might be understated if the constraint's function is understood as actively protecting state-level suppression from federal override.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constraint actively protects state discrimination or merely declines to override it"
+    },
+    {
+      "id": "one_reading_of_contested_kernel",
+      "question": "This constraint is one reading of the commerce_clause_scope kernel. Are the three readings (narrow_originalist, broad_effects_test, intermediate_channels) truly coexisting in contemporary constitutional practice, or is one reading in the process of foreclosing the others?",
+      "resolution_mechanism": "Monitoring the Supreme Court's actual decisions, scholarly consensus, and lower-court application over the next 10–20 years. If one reading produces consistent majorities and the others fade from judicial practice, one reading has foreclosed the alternatives. If all three remain live in different decisions and doctrinal contexts, they genuinely coexist.",
+      "impact": "If this narrow reading is foreclosing the broad_effects reading (as has occurred episodically in recent decades), the constraint's classification as rope becomes harder to sustain—it is more like a doctrinal victory in an ongoing contest, less like a principled coordination device. If all three remain genuinely live (competing judges, competing schools of thought), the coexistence claim holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the three commerce readings genuinely coexist or one is foreclosing the others"
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
       "commerce_clause_scope__broad_effects_test",
-      "commerce_clause_scope__intermediate_channels"
+      "commerce_clause_scope__intermediate_channels",
+      "federal_environmental_authority",
+      "federal_labor_law_authority",
+      "federal_civil_rights_enforcement"
     ],
-    "dual_formulation_note": "This story is one reading of the commerce_clause_scope kernel. The three readings (narrow_originalist, broad_effects_test, intermediate_channels) decompose a single contested constitutional concept into three structurally distinct constraints with different ε values, beneficiary/victim sets, and classifications. All three readings are linked via network.affects_constraints to show the family relationship. The narrow reading's low extractiveness and stable metrics contrast with the broad reading's high extractiveness and rising enforcement costs — the ε-invariance principle requires separate constraint stories because the two readings describe different structural problems (state barriers vs. federal reach) and yield different empirical predictions about enforcement and resistance."
+    "dual_formulation_note": "This constraint is one reading of the commerce_clause_scope kernel (narrow_originalist). The kernel is contested across three live readings. Each reading produces a distinct constraint story with its own ε, beneficiary/victim structure, and classification. The three stories are linked as constraint family members via network.affects_constraints. See commentary.kernel_context for the reading relations and foundational axioms that distinguish this reading from its siblings."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.18
+      "power_atom": "powerless",
+      "d_value": 1.0
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "low",
-    "hypothesis": "rope",
-    "downstream_of": [
-      "commerce_clause_scope__broad_effects_test"
-    ]
-  },
+  "gain_flow": "state_governments",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "commerce_clause_scope__broad_effects_test",
+        "sibling_id": "broad_effects_test",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "commerce_clause_scope__intermediate_channels",
-        "relation": "influences"
+        "sibling_id": "intermediate_channels",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "commerce_means_trade_crossing_borders",
+        "atom": "commerce_means_trade_crossing_lines",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "regulate_means_facilitate_not_restrict",
+        "atom": "regulate_means_remove_barriers_not_restrict",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "intrastate_commerce_outside_federal_reach",
+        "atom": "enumerated_powers_strictly_construed",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "founding_barrier_removal_framework",
+    "reference_frame": "interstate_trade_barrier_prevention",
     "drift_state": {
-      "moment": "contemporary_integrated_economy",
+      "moment": "contemporary_environmental_civil_rights_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -2,27 +2,94 @@
   "header": {
     "constraint_id": "income_support_commitment__dependency_trap_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "511303ee-67e6-4648-b31a-7ceda7a84375"
+    "story_uid": "638dcc1c-322f-4106-8c29-47c858f26ea6"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.52,
-    "theater_ratio": 0.41,
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.31,
     "accessibility_collapse": 0.48,
-    "resistance": 0.71,
+    "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "Unconditional Income Support as Work-Disincentive and Dependency Mechanism",
-    "topic_domain": "political_economy/welfare_state",
+    "human_readable": "Unconditional Income Support as Work-Disincentive and Dependency Trap",
+    "topic_domain": "political_economy/social_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "income_support_recipients_exiting_labor_market"
+      "unconditional_support_recipients_exiting_labor"
     ],
     "victims": [
       "working_taxpayers",
-      "poor_individuals_with_atrophying_skills"
+      "poor_individuals_skill_atrophying"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "unconditional_support_recipients_exiting_labor",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional cash transfers sufficient to meet subsistence needs without engaging in labor. The constraint transfers income in their direction without requiring participation in the tax base's productive cycle. Over time, as labor market participation declines and skills atrophy from non-use, their structural position solidifies: leaving the program means re-entering a labor market they have been absent from, which their atrophied skills make difficult. They are locked into the recipient role not by force but by the identity fusion (non-participant) and the opportunity cost of rebuilding skills."
+    },
+    {
+      "name": "working_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the unconditional transfers through taxation. They bear the extraction directly as diverted income; they also bear it indirectly through wage pressure (if unconditional income changes labor supply, wages in non-tradeable sectors may fall as labor supply expands into lower-wage work, or remain flat while prices rise). Their exit option is constrained by the geographic scope of the tax regime and their immobility; exit via tax arbitrage (relocation) is possible but costly. They experience the constraint as a forced transfer from productive to non-productive population."
+    },
+    {
+      "name": "poor_individuals_skill_atrophying",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "May initially enter the unconditional support system by choice (to escape grinding poverty or unstable employment), but as they remain outside the labor market and their skills deteriorate, they become trapped in a low-skill, low-wage category even when (or if) they seek to re-enter labor. The constraint extracts from them by degrading their human capital and market position, even though the immediate transfer addresses their subsistence need. They are identity-locked by the erosion of marketable skills and the self-concept of 'non-worker' that unconditional income permits to crystallize."
+    },
+    {
+      "name": "policy_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design, implement, and administer the unconditional income program. They set the transfer level, determine eligibility (often universal or near-universal by design), and manage the cash flow. They justify the program as reducing poverty and supporting human dignity. From this seat, the constraint is presented as a coordination solution: solve the problem of subsistence income universally rather than through means-tested bureaucracy. Their exit is to restructure or terminate the program, which they can do unilaterally if political conditions permit."
+    },
+    {
+      "name": "labor_market_participants_competing",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Workers and employers in sectors with elastic labor supply (service industries, low-wage employment) would have a strong voice in whether unconditional income is high enough to depress labor participation and wages in their sectors. They are excluded from the design decision because the program is typically framed as individual-centered (rights/dignity) rather than as a labor-market intervention. If consulted, they would argue for conditionality (work-requirement tie-ins) or lower transfer levels."
+    },
+    {
+      "name": "human_capital_development_constituency",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Economists, labor-policy advocates, and workforce-development specialists who measure skill formation, earnings trajectories, and labor-force participation. They observe the constraint from the seat of technical measurement: is the program delivering the claimed benefit of autonomy without the cost of skill erosion, or is erosion happening? They take data from the other seats' experiences and analyze trajectories."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Unconditional income support solves the coordination problem of subsistence provision by centralizing redistribution: one universal program in place of fragmented means-tested bureaucracy, reducing stigma and transaction costs. Under this reading, the coordination is real but subordinate; the primary function that drives the constraint's persistence is extraction from the productive to the non-productive.",
+    "transfer_function": "Transfers cash income from the tax base (working population) to unconditional-support recipients, with side effects of skill atrophy and labor-market exit. The magnitude and structure of the transfer is not calibrated to the cost of the coordination function itself; the transfer magnitude reflects political choice and ideological commitment to universality, not service cost.",
+    "absent_voices": "Labor-market participants in elastic-demand sectors (service, agriculture, light manufacturing) are structurally excluded from the design conversation. They would argue that unconditional income at a level high enough to address poverty disincentivizes their sector's labor supply and compresses wages. Employers in those sectors likewise would demand conditionality or lower benefit levels. Individual recipients whose skills are atrophying may not fully perceive or articulate the long-term opportunity cost until they attempt re-entry, so their voice at the design stage is not an informed dissent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support at current levels vanished overnight, labor-force participation would rise within months as non-workers returned to the labor market out of necessity; wage structure would adjust (upward pressure in labor-scarce sectors, downward in elastic sectors); individuals who had exited would face re-entry costs (retraining, certification, network rebuilding). The constraint's disappearance would reorganize the entire labor market and income distribution.",
+    "founding_problem": "Persistent poverty in advanced economies, and the inadequacy and stigma of means-tested welfare systems that trap recipients in low-benefit traps and require invasive eligibility verification.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Policy advocates and some labor economists attest that inadequate welfare and poverty remain live problems; critics and conservative economists attest that the founding problem has been substantially addressed by existing targeted programs and that unconditional income is an over-broad response that creates new problems (dependency, skill atrophy, work disincentive) rather than solving the original one. The contest is carried in peer-reviewed labor economics literature and policy institutes outside the administration itself."
   },
   "interval": {
     "start": 0,
@@ -32,157 +99,175 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.42,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.54
+      "time_point": 3,
+      "value": 0.47,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.61
+      "time_point": 6,
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.66
+      "time_point": 12,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.67
+      "time_point": 18,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.68
+      "value": 0.58,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.18,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.32
+      "time_point": 3,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.38
+      "time_point": 6,
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.4
+      "time_point": 12,
+      "value": 0.29,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.41
+      "time_point": 18,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.41
+      "value": 0.31,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.35,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.43
+      "time_point": 3,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 6,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.51
+      "time_point": 12,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.52
+      "time_point": 18,
+      "value": 0.43,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.52
-    }
-  ],
-  "omegas": [
-    {
-      "id": "skill_atrophy_causality",
-      "question": "Is the observed decline in labor-force participation and earnings trajectories caused by the income support structure's work disincentive, or by confounding factors (recession timing, regional deindustrialization, education levels, family obligations) that existed prior to program enrollment?",
-      "resolution_mechanism": "Quasi-experimental design comparing similar demographic cohorts in jurisdictions with and without unconditional support, controlling for pre-program labor market conditions and measuring trajectory divergence post-program. Randomized controlled trials of program expansion.",
-      "impact": "High causal attribution to the program would support the dependency-trap reading and justify policy restructuring toward conditional or time-limited support. Low attribution would undermine the reading's empirical foundation and suggest support functions as intended (enabling survival while other factors shape re-entry).",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether observed skill loss is caused by support structure or prior disadvantage."
-    },
-    {
-      "id": "identity_locking_mechanism",
-      "question": "Does the atrophy of labor-market participation and skills arise from the income support structure itself (economic disincentive), or from identity fusion and stigma internalization where recipients view themselves as incompatible with work after extended non-participation, independent of the economic incentive structure?",
-      "resolution_mechanism": "Qualitative research on re-entry trajectories, stigma narratives, and self-concept changes; measurement of 'why' non-participation persists (financial calculation vs. identity/capability belief); post-program exit suppression trajectories (does stigma persist after the economic constraint is removed?).",
-      "impact": "If primarily identity-locked: the constraint's effective suppression is higher than the measured structural metric (the target carries the lock after exit), and remedies require identity reconstruction support, not just economic incentive restructuring. If primarily economic: targeted transition support and skill-building pathways could enable efficient re-entry.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is structural (economic disincentive) or internalized (identity fusion)."
-    },
-    {
-      "id": "kernel_reading_contest",
-      "question": "Is unconditional income support fundamentally enabling autonomy and dignity (freedom-floor reading), or fundamentally creating work disincentive and dependency (dependency-trap reading)? Or does the same policy instantiate BOTH structures simultaneously for different populations?",
-      "resolution_mechanism": "Decomposition by recipient subpopulation: identify which cohorts experience genuine autonomy expansion (caring for dependents, pursuing education, exiting abusive work situations) vs. which cohorts experience skill atrophy and identity loss. The policy may be a tangled rope for some seats and a rope for others.",
-      "impact": "If the readings truly foreclose each other (only one can be structurally true), the policy cannot be simultaneously valid. If they coexist (both describe real dynamics for different populations), the constraint is better modeled as multiple constraint stories, not one. If one reading describes the policy's intent and the other describes its effects, the mandate-drift analysis becomes central.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the dependency-trap and freedom-floor readings are mutually exclusive or coexist for different populations."
-    },
-    {
-      "id": "fiscal_sustainability_horizon",
-      "question": "As the program matures and the proportion of long-term recipients grows (second- and third-generation dependence on support), does the fiscal cost become unsustainable, forcing either program restructuring, tax increases that deepen the extraction on working taxpayers, or benefit cuts that harm existing recipients?",
-      "resolution_mechanism": "Long-term fiscal projections modeling recipient cohort aging, earnings trajectories, tax base changes, and program expansion. Historical analysis of similar programs (Scandinavian welfare states, permanent income guarantees in pilot programs) and their fiscal trajectories.",
-      "impact": "If unsustainability is imminent, the constraint exhibits mandate drift: founded to solve temporary unemployment, it persists as a permanent structure with changing incentive effects. This triggers the mandatrophy analysis: the founding problem (cyclical unemployment) may be solved, but the constraint persists and has generated new dependency structures not present at founding.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the program's fiscal structure enables indefinite sustainability or requires eventual restructuring."
-    },
-    {
-      "id": "counterfactual_labor_supply",
-      "question": "What is the actual price elasticity of labor supply with respect to income support levels? For each dollar of unconditional support increase, how many hours of work are forgone across the population?",
-      "resolution_mechanism": "Econometric analysis of labor-supply responses to support level changes, geographic variation in support generosity, and natural experiments from program design changes (phase-out rate changes, payment frequency changes, eligibility threshold shifts).",
-      "impact": "High elasticity (large work reduction per dollar of support) validates the dependency-trap reading's causal mechanism. Low elasticity (work remains despite support) suggests the reading exaggerates the disincentive effect and that other factors (skill maintenance, social connection, identity) are more important than income in shaping participation.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Magnitude of labor-supply response to income support levels."
+      "value": 0.42,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates ONE READING of the contested 'income_support_commitment' kernel. Under the dependency-trap reading, unconditional income support solves the immediate problem of survival in unemployment but simultaneously creates persistent non-participation through work disincentive, skill atrophy, and identity fusion with non-work status. The constraint is CLAIMED as a tangled rope: genuine coordination function (income floor preventing destitution), but with asymmetric extraction (productive workers fund non-productive recipients, and poor individuals fund their own future wage suppression through reduced labor-force competition). The three readings of this kernel — dependency-trap, freedom-floor, and targeting-efficiency — are structurally distinct constraints that share the same institutional kernel (the income support program) but instantiate different ε values, beneficiary/victim structures, and policy implications. This story authors ONLY the dependency-trap reading; the other two are separate constraint stories linked via network.affects_constraints.",
+    "narrative_context": "This constraint story instantiates ONE reading of the contested income-support commitment kernel: the dependency-trap reading. Under this reading, unconditional income support is presented as solving a subsistence problem while operating as a mechanism that transfers extraction from working taxpayers to income-support recipients and, simultaneously, extracts from poor individuals by atrophying their human capital and locking them into non-participant identity. The reading is NOT neutral—it takes a structural position that extraction and skill-atrophy are the actual effects, even when the program is nominally framed as coordination and dignity. This story does not debate whether that reading is true; it models what the world looks like if the reading is adopted.",
     "key_agents": [
-      "income_support_recipients_exiting_labor_market: Structural beneficiaries, receiving unconditional transfers; power limited but identity-locked exit prevents high mobility.",
-      "working_taxpayers: Primary victims, funding the program through mandatory taxation; constrained exit (cannot easily leave the tax system without relocation).",
-      "poor_individuals_with_atrophying_skills: Secondary victims, harmed by skill loss during extended non-participation; trapped between survival via support and re-entry into lower-wage work.",
-      "program_administrators: Agenda-setters, designing and defending the unconditional structure; institutional power, constrained exit.",
-      "labor_market_employers: Dual-positioned (payers of taxes, beneficiaries of suppressed wage floors); organized power, mobile exit if support is removed.",
-      "political opposition_targeting_efficiency and autonomy_advocates_freedom_floor: Excluded from the dependency-trap reading frame; their presence would restructure the story entirely."
+      "unconditional_support_recipients_exiting_labor: Receive transfers; over time, identity-locked into non-participation as skills erode",
+      "working_taxpayers: Fund transfers through taxation; experience direct and indirect wage/price pressure from labor-supply shifts",
+      "poor_individuals_skill_atrophying: Initial beneficiaries of subsistence income; victims of skill erosion and human-capital degradation over time",
+      "policy_administrators: Set and defend the program; frame it as coordination and dignity",
+      "labor_market_participants_competing: Excluded; would demand conditionality or lower benefit levels if heard",
+      "human_capital_development_constituency: Observer seat; measures outcomes and trajectories"
     ],
-    "logic_rationale": "Extractiveness (0.68) is measured as the net transfer from productive to non-productive populations, weighted by the skill atrophy and labor-force exit dynamics specific to this reading. The trajectory shows rising extractiveness over the interval (0.48 → 0.68), capturing the empirical pattern where program maturity increases the proportion of long-term recipients with accumulated skill loss and identity lock-in, deepening the extraction from remaining workers. Suppression (0.52) reflects the moderately strong work disincentive built into the structure: the income support itself is not coercive in the traditional sense (no one is forced to stay on it), but the phase-out structure creates implicit penalties for work, and once recipients are identity-locked, the suppression persists internally. Theater ratio (0.41) indicates that while the program operates as intended (distributing income), increasingly large shares of administrative discourse center on defending the program against accusations of promoting idleness — performative justification grows as the constraint's actual coordination function (solving unemployment) becomes less salient for long-term recipients. Accessibility collapse (0.48) is moderate: the constraint does not fully eliminate alternatives (recipients can still attempt re-entry, employers can still hire), but re-entry is increasingly difficult due to skill loss and hiring discrimination based on long gaps. Resistance (0.71) is high because workers and some poor individuals actively resist the structure through political mobilization, taxpayer resentment, and re-entry attempts, even though the resistance often fails to change the program.",
-    "perspectival_gap": "The program_administrators seat (agenda-setter) should compute a different classification than the working_taxpayers seat (payer). From the administrator's position, the arrangement is genuine coordination it built to solve a real problem (unemployment) and operates as intended (distributing income to those in need); the work disincentive is exaggerated by opponents. From the taxpayer's position, the same structure operates as enforced extraction: they bear the costs without consultation on design, and the program persists despite evidence that it generates long-term dependency rather than transitional support. The engine computes each seat's directionality from the structural data: administrators have low d (beneficiary position, controlling the rules), while taxpayers have high d (target position, paying without control). The classified types should diverge accordingly — the dependency-trap reading's own internal structure instantiates seat divergence.",
-    "directionality_logic": "Income_support_recipients_exiting_labor_market have directionality near 0.0 (full beneficiary): they receive the transfer and their exit is partially enabled by it, even though the reading frames exit as dependency. Working_taxpayers have directionality near 1.0 (full target): they fund the arrangement without participation in its design or benefits. Poor_individuals_with_atrophying_skills have initially moderate d (receive support at first), but as skill atrophy accumulates, their realized extraction increases (they are harmed by the same structure that initially helped them). Program_administrators have low d (they control the arrangement and defend its legitimacy, even if they do not directly collect the extraction). Labor_market_employers have moderate d that drifts toward 0.0 as the program suppresses wage competition — they appear as payers but benefit from wage suppression. The identity-locking of recipients at low power prevents easy exit optimization; constrained taxpayers face real exit barriers (relocation, tax evasion, or political pressure).",
-    "mandatrophy_analysis": "The founding problem was cyclical unemployment and poverty traps created by means-tested benefits (workers losing more in benefits than they gain in wages). The unconditional structure solved the immediate poverty trap by decoupling support from earnings. However, the mandate — temporary income support for cyclical unemployment — has outlived its functional application for many long-term recipients who are no longer primarily experiencing cyclical joblessness but structural non-participation driven by skill loss, identity fusion, and generational transmission of welfare dependence. The program persists not because it solves the founding problem for long-term recipients (the evidence is contested), but because (a) it has created a dependent constituency with political voice, (b) administrators have institutional interest in its continuation, (c) employers benefit from suppressed wages. Mandatrophy is evident in the rising theater ratio: more of the program's active infrastructure is now devoted to defending its legitimacy than to transitioning recipients into work. The program exhibits the classic zombie signature: the founding problem is substantially resolved for most participants, but the arrangement persists and has generated secondary dependency dynamics not present at founding.",
-    "kernel_context": "This constraint is the DEPENDENCY-TRAP READING of the kernel 'income_support_commitment.' The kernel itself is an institutionalized commitment to provide unconditional cash income to all or substantially all citizens below a threshold. Two sibling readings instantiate different constraints from the same kernel: (1) FREEDOM-FLOOR READING: income support as enabler of autonomy, dignity, and genuine labor-market exit capacity (negates the work-disincentive reading; argues support expands rather than restricts capability); (2) TARGETING-EFFICIENCY READING: income support should be concentrated on demonstrated need with conditions/work requirements rather than universally distributed (addresses a different coordination problem — fiscal efficiency vs. the poverty trap). The dependency-trap reading (this story) holds that unconditional support creates work disincentive and locks recipients into non-participation; the freedom-floor reading holds that the same policy enables genuine freedom from forced labor. These readings may coexist for different populations (some recipients experience autonomy expansion, others experience dependency), but as normalized claims about the program's primary effect, they are in direct structural competition."
+    "logic_rationale": "Extractiveness rises from 0.42 (initial design phase, program framed as anti-poverty) to 0.58 (mature implementation, labor-supply and skill effects accumulated). The measurement trajectory captures the diagnosis inherent in this reading: extractiveness is LOW at launch because the program is new and framed as redistribution, but RISES as non-participation accumulates and skill atrophy becomes measurable. Theater_ratio starts low (0.18) because genuine poverty-reduction coordination is present, but rises to 0.31 as administrative focus shifts toward managing non-workers and defending the transfer against labor-supply criticism. Suppression_requirement is MODERATE and stable (0.35-0.43) because the constraint does not depend on violent coercion—it operates through identity-locking and opportunity-cost structures. The rise in suppression from t0 to t18 reflects the increasing need to suppress both labor-market pressure (workers and employers demanding conditionality) and the internal contradiction (recipients' atrophied skills making re-entry impossible). The slight decline from t18 to t25 reflects projection uncertainty (if the program reaches policy crisis, suppression might modulate downward as the system enters contestation).",
+    "perspectival_gap": "The policy administrator seat experiences the constraint as coordination (universal provision, administrative simplicity, dignity). The working-taxpayer seat experiences it as extraction (income transfer, labor-supply compression). The skill-atrophying poor experience it as initial relief shifting into human-capital trap. The engine computes these divergences from the structural data (power, exit_options, role) and the directional atoms (beneficiary/payer declarations). The claim/metric independence rule applies: we claim tangled_rope (the expected type for coordination + extraction + enforcement) and we author metrics that describe the actual extractiveness trajectory; the engine measures their alignment or divergence.",
+    "directionality_logic": "Recipients exiting labor are structural beneficiaries (receive income transfer, low power, identity-locked—directionality near full-benefit end, d ≈ 0.1-0.2). Working taxpayers are structural payers (fund the transfer, constrained exit but organized power—directionality toward target end, d ≈ 0.7-0.8). Poor individuals whose skills atrophy are BOTH beneficiaries initially (income transfer) and payers over the interval (human-capital loss, labor-market disadvantage accumulates—directionality complex, starting near symmetric ~0.5 and drifting toward target ~0.7-0.8 as atrophy crystallizes). The constraint's active enforcement (suppression_requirement rises from 0.35 to 0.43) reflects the administrative burden of managing labor-supply exit and defending against labor-market pressure—the administration must actively suppress both external criticism (labor-market participants) and internal contradictions (recipients whose atrophied skills make program exit harder).",
+    "mandatrophy_analysis": "This reading avoids conflating coordination with pure extraction by explicitly naming the dual structure: YES, unconditional income provides real coordination (universal provision, reduced stigma, simpler administration vs. means-tested alternatives). AND YES, the same mechanism operates as extraction (transfer from productive to non-productive, skill erosion, identity-locking). The tangled-rope classification holds both in tension—the rope part is genuine, the extraction part is also genuine, and they are sustained by the same enforcement structure (administration prevents splitting them, suppresses labor-market feedback, maintains the universality claim even as outcomes diverge). If mandatrophy were to occur, it would manifest as the founding problem (poverty, inadequate welfare) either disappearing (in which case the constraint persists without its original justification, becoming piton) or being transparently displaced by the new problem (skill atrophy, work disincentive), in which case the claim of tangled_rope fails and the constraint reclassifies as snare.",
+    "kernel_context": "This constraint instantiates the DEPENDENCY_TRAP reading of the income_support_commitment kernel. The kernel is the standing commitment to unconditional cash transfer as a policy instrument; the reading positions that commitment as work-disincentive and skill-atrophying. Two sibling readings (freedom_floor_reading and targeting_efficiency_reading) offer alternative framings: freedom_floor treats the same commitment as enabling autonomy and dignity; targeting_efficiency treats it as over-broad and advocates calibration to demonstrated need. This story does not argue that dependency-trap is the true reading; it models what the constraint looks like under that interpretation. The reading_relations and axioms below locate this reading's position relative to its siblings."
   },
+  "omegas": [
+    {
+      "id": "skill_atrophy_mechanism_ambiguity",
+      "question": "Is the measured skill atrophy a direct causal effect of unconditional income (individuals rationally exit labor market, skills decay from disuse), or an artifact of selection (those who exit are already lower-skill or have lower preference for work, so observed skill decline reflects composition change rather than degradation)?",
+      "resolution_mechanism": "Longitudinal wage-trajectory analysis comparing individuals who received unconditional income with matched control group; measurement of skill-specific decline (language, technical, interpersonal) vs. composition shift. Randomized controlled trials with skill measurement at baseline and follow-up.",
+      "impact": "If atrophy is direct causal effect, the constraint's extraction from individual human capital is real. If atrophy is selection effect, the extraction is from tax base to recipients, but the recipients' skill loss reflects their pre-existing position, not the program's mechanism—the classification shifts toward pure rope (coordination with transfer, no extraction from individuals' capabilities).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skill decline is causal effect of non-participation or selection effect of who exits."
+    },
+    {
+      "id": "labor_supply_elasticity_to_unconditional_income",
+      "question": "How elastic is labor supply to unconditional income? What percentage of recipients exit the labor force as a direct result of the transfer, vs. what percentage would have exited anyway (compositional effect) or remain in marginal attachment?",
+      "resolution_mechanism": "Comparative analysis of labor-force participation before and after program introduction; quasi-experimental designs exploiting differential eligibility or benefit levels; survey and administrative data on work hours conditional on receipt.",
+      "impact": "High elasticity (many people exit in direct response) makes extraction from the tax base large and the work-disincentive reading strong; low elasticity makes the extraction modest and the program closer to pure redistribution without substantial labor-market distortion. The measured extractiveness (0.58 at maturity) assumes moderate-to-high elasticity; lower elasticity would lower the ε value materially.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Strength of work-disincentive effect in response to unconditional income level."
+    },
+    {
+      "id": "beneficiary_class_homogeneity_assumption",
+      "question": "Are unconditional-income recipients a homogeneous group (idle non-workers subsidized by taxpayers), or a heterogeneous population including caregivers, disabled individuals, students, and those in between jobs, whose exit from formal labor is not irrational given their constraints?",
+      "resolution_mechanism": "Demographic analysis of recipient population by age, ability, caregiving responsibilities, prior employment history, and stated reasons for non-participation. Qualitative research on recipients' own framing of their relationship to the program.",
+      "impact": "If recipients are heterogeneous, the victim/beneficiary structure becomes more ambiguous: caregivers and disabled individuals are solving real coordination problems (their care work is socially valuable but unpaid; unconditional income enables it) rather than extracting. The classification might shift toward rope with multiple coordination functions rather than tangled_rope. If recipients are predominantly able-bodied and work-capable, the extraction frame holds stronger.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether beneficiary population is homogeneous 'idle non-workers' or heterogeneous mix with diverse participation constraints."
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Is the income-support commitment fundamentally about anti-poverty (the founding_problem in this reading), or about labor-market decommodification and enabling choice (the freedom_floor reading's premise), or about optimal targeting of limited resources (the targeting_efficiency reading)? These map to different kernels: poverty-as-problem vs. commodification-as-problem vs. resource-scarcity-as-problem.",
+      "resolution_mechanism": "Historical analysis of the commitment's origin texts, policy debates, and administrative framing at establishment. Examination of which problem statement dominated the founding discourse and which has persisted across administrations.",
+      "impact": "If anti-poverty is the true founding problem and poverty remains live, the dependency-trap reading's claim that the founding problem is addressed is falsified, and the constraint looks closer to piton (persistent mechanism divorced from function). If decommodification is the true founding commitment, the dependency-trap reading misframes the constraint entirely—skill atrophy might be side effect, not the primary extraction mechanism; the classification could shift to rope (the extraction is a side effect, not the purpose). If resource-scarcity is the frame, the constraint might be tangled_rope from a different angle (transfer + rationing, not transfer + work-disincentive).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which problem (poverty, commodification, resource-scarcity) does the income-support commitment actually address? Reading-choice determines constraint boundaries."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the measured suppression (0.35-0.43) structural suppression (government actively defending the program against labor-market pressure and policy alternatives), or internalized suppression (recipients' self-concept as non-workers, identity fusion with the status, internalized belief that re-entry is impossible)?",
+      "resolution_mechanism": "Post-program-exit trajectory studies: if individuals who leave the program maintain suppression patterns (continued non-work, low labor-market engagement), suppression is substantially internalized. Policy debate and media framing analysis: is the program defended on principle (autonomy, dignity) or on pragmatics (too costly to shut down)? Both would indicate different suppression types.",
+      "impact": "If structural, the suppression fades if the program ends and labor demand returns. If internalized, the suppression persists—individuals remain trapped in non-participant identity even after the program's structural support is gone. Internalized suppression indicates the constraint's extraction is deeper than immediate income transfer; the damage to human capital and self-conception is durable. This would support a higher effective_extraction valuation (χ scaling) over longer time horizons.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Is suppression of labor-market participation structural or internalized in recipients' identity?"
+    }
+  ],
   "boltzmann": {
     "coordination_type": "resource_allocation",
     "boltzmann_floor_override": 0.18
@@ -190,70 +275,72 @@
   "network": {
     "affects_constraints": [
       "income_support_commitment__freedom_floor_reading",
-      "income_support_commitment__targeting_efficiency_reading",
-      "labor_market_wage_suppression_through_reserve_army",
-      "intergenerational_welfare_transmission"
+      "income_support_commitment__targeting_efficiency_reading"
     ],
-    "dual_formulation_note": "The 'income_support_commitment' kernel instantiates three structurally distinct constraints depending on which reading is adopted. The dependency-trap reading (this story) posits ε ≈ 0.68 (moderate-high extraction from productive to non-productive) with long-term skill loss and identity lock-in as harm mechanisms. The freedom-floor reading posits ε ≈ 0.15 (low extraction, high coordination benefit) with autonomy expansion and capability unfurling. The targeting-efficiency reading posits ε ≈ 0.45 (moderate extraction due to inefficient distribution, but reducible through means-testing). These three readings decompose the single institutional kernel into three ε-distinct constraint stories. The dependency-trap reading is downstream of the freedom-floor reading (critics of the freedom-floor claim invoke the dependency-trap mechanism), but causally independent in observables: both readings account for the same observable institution. Decomposition is necessary because the three readings would produce incoherent joint claims if merged into one story."
-  },
-  "directionality_overrides": [
-    {
-      "power_atom": "organized",
-      "d_value": 0.55
-    }
-  ],
-  "uke_scope": {
-    "epsilon_bin": "moderate",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "income_support_commitment__freedom_floor_reading"
-    ]
+    "dual_formulation_note": "This constraint is part of the income_support_commitment kernel family (three readings: dependency_trap_reading, freedom_floor_reading, targeting_efficiency_reading). All three share the same standing arrangement (unconditional cash transfers) but frame it differently, instantiating different ε values and victim/beneficiary structures. The dependency_trap reading positions the same arrangement as extractive (ε = 0.58, beneficiary-payer asymmetry); the freedom_floor reading would position it as coordination with dignity benefits (lower ε, symmetric or inverted directionality); the targeting_efficiency reading would reframe the kernel as over-broad and advocate calibration. Each story is a distinct constraint with distinct metrics and stakeholders; they are linked via this network field and related in cs_structure.reading_relations."
   },
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "poverty_reduction_through_universal_transfer",
+    "drift_state": {
+      "moment": "mature_implementation_phase",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "income_support_commitment__freedom_floor_reading",
+        "sibling_id": "freedom_floor_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "income_support_commitment__targeting_efficiency_reading",
+        "sibling_id": "targeting_efficiency_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "unconditional_structure_creates_work_disincentive",
+        "atom": "unconditional_income_work_disincentive_necessary",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "extended_non_participation_atrophies_skill_and_identity",
+        "atom": "skill_atrophy_locks_recipients_into_dependence",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "temporary_income_support_for_cyclical_unemployment",
-    "drift_state": {
-      "moment": "contemporary_long_term_welfare_dependence_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
     }
+  ],
+  "gain_flow": "policy_administrators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

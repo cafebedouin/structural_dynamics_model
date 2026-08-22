@@ -2,225 +2,395 @@
   "header": {
     "constraint_id": "market_naturalization__beneficiary_maintained_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-08-03",
     "status": "ACTIVE",
-    "story_uid": "c3c26bf6-3a31-441d-84ee-edf6e67bb8d0"
+    "module_name_override": "constraint_market_naturalization__beneficiary_maintained_reading",
+    "measurement_id_prefix": "mkt_nat_bm",
+    "story_uid": "47048e61-537e-459c-ab74-4dd12188ff80"
   },
   "base_properties": {
     "extractiveness": 0.78,
     "suppression": 0.81,
     "theater_ratio": 0.42,
-    "accessibility_collapse": 0.48,
+    "accessibility_collapse": 0.68,
     "resistance": 0.72,
-    "claimed_type": "snare",
-    "human_readable": "Market Dominance Actively Defended by Incumbent Capital",
-    "topic_domain": "political_economy",
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Dominance as Actively Maintained Incumbent Protection",
+    "topic_domain": "political_economy/institutional_analysis",
     "requires_active_enforcement": true,
+    "emerges_naturally": false,
     "beneficiaries": [
-      "incumbent_capital_holders"
+      "incumbent_capital_holders",
+      "rent_collection_apparatus"
     ],
     "victims": [
       "potential_market_entrants",
-      "labor_suppliers",
-      "smaller_competitors"
+      "displaced_labor_cohorts",
+      "subordinated_capital_holders"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "incumbent_capital_holders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Own and control established market positions. They benefit from market structure that prevents or slows new entrants and suppresses wage/price competition. Their capital is defended by regulatory capture, intellectual property enforcement, supply-chain lock-in, and network effects they control. They invest substantially in maintaining these defenses through litigation, lobbying, and institutional capture. Exit is effectively impossible — their wealth IS their market position."
+    },
+    {
+      "name": "rent_collection_apparatus",
+      "role": "agenda_setter",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The institutional infrastructure that enforces incumbency protection: intellectual property courts, regulatory agencies staffed by former incumbents, licensing systems, patent prosecution offices, trade negotiators bound to incumbent interests. Not an agent itself but the machinery through which incumbent preferences become enforceable rules."
+    },
+    {
+      "name": "potential_market_entrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face barriers to entry engineered to appear natural: patent thickets that block technological development paths, regulatory approval processes weighted toward incumbents, network effects that make entry capital-prohibitive, predatory pricing that incumbent players can sustain but entrants cannot. Many potential entrants never attempt entry because they correctly perceive the defensibility of incumbent positions. Those who try face litigation and exclusion."
+    },
+    {
+      "name": "displaced_labor_cohorts",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear costs through suppressed wage growth and employment precarity. Labor that would have moved into dynamic new entrant firms instead faces barriers (labor market power concentrated in incumbents, skill-mismatch from blocked sector transitions). They experience the constraint as naturalized scarcity rather than active closure — they blame themselves for 'lack of fit' rather than recognizing the organized defense that prevents alternative employment paths from opening."
+    },
+    {
+      "name": "subordinated_capital_holders",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Own capital but operate in markets where incumbents have set the competitive parameters. They pay through suppressed returns on their invested capital — below what would obtain in a contestable market — because they operate subject to incumbent price-setting power and entry barriers that truncate their growth. They may recognize the extraction but lack the political power to challenge it; they may also mistake it for natural competitive disadvantage."
+    },
+    {
+      "name": "consumer_coalitions",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Pay through higher prices, reduced product quality/innovation, and service lock-in. Entry barriers mean fewer competitors and less price pressure. Their identity as consumers is often identity-locked to specific branded incumbents ('I am an iPhone user,' 'I use this social network') in ways that make exit costly even when alternatives exist. They are excluded from policy conversations about market structure; their preferences are solicited only as market data, never as political voice."
+    },
+    {
+      "name": "regulatory_capture_agents",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Government officials, judges, and agency staff who administer intellectual property, antitrust, and regulatory systems. Many are identity-locked to the incumbent-serving interpretation of these systems through professional training, career incentives, and ideological capture. They experience defending incumbent positions as 'applying the law correctly' rather than as active suppression. Their exit from this frame requires abandoning professional identity and institutional belonging."
+    },
+    {
+      "name": "alternative_market_theorists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Economists, business theorists, and technologists who propose genuinely different market structures (cooperative models, distributed ownership, platform commons, degrowth allocation). They are excluded from policy-setting conversations; their work is marginalized as ideological rather than scientific. Academic and publishing gatekeeping favors incumbent-friendly theory. They can publish and teach but cannot influence market structure itself."
+    },
+    {
+      "name": "incumbent_ideological_defenders",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Intellectuals, economists, and commentators who defend incumbent market positions as natural, efficient, or inevitable. They benefit through professional standing, publication platforms, consulting contracts, and identity alignment with the defender role. Their worldview makes incumbent defense a moral and intellectual duty. Exit would require abandoning career identity and professional community."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes stable expectations around property rights, investment security, and return on capital. Capital holders can invest confidently if they believe their advantages will be defended by institutions. The arrangement coordinates on 'how markets work' and 'what security looks like' — a genuine coordination problem in a world of competing property claims.",
+    "transfer_function": "Moves rents and restricted opportunities from potential entrants, displaced workers, and subordinated capital to incumbent holders and the regulatory apparatus that defends them. The transfer is executed through patent enforcement, licensing barriers, regulatory approval, litigation costs, and labor-market suppression. Capital surplus that would be competed away in a contestable market is instead captured as rent.",
+    "absent_voices": "Potential entrants who never attempt entry because they perceive barriers as unchallengeable; workers in sectors foreclosed by incumbent control; theorists and practitioners of alternative market structures whose proposals are kept outside policy discourse; future generations whose technological and organizational possibilities are constrained by locked-in incumbency.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If active incumbent defense ceased — if patents expired without renewal, if regulatory capture dissolved, if litigation threats against entrants were withdrawn — capital would face genuine competition within months. New entrants would occupy competitive niches, wages would rise as labor-market power dispersed, and prices would compress toward marginal cost. The entire capital structure would undergo revaluation. The incumbents depend on this constraint continuing; its disappearance is their existential threat.",
+    "founding_problem": "Early industrial and digital eras faced genuine uncertainty about whether capital would take the risks required to build infrastructure if investment could be expropriated or easily competed away. Patent systems and regulatory protection were established to guarantee returns on innovation and infrastructure investment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Incumbent capital holders and mainstream business economists attest the founding problem remains live: without patent protection and regulatory stability, venture capital would not fund innovation and infrastructure. Alternative development economists and technology theorists (outside the benefiting parties) attest the founding problem is substantially solved for core sectors but the apparatus persists as rent protection — historical evidence shows innovation continues in patent-weak sectors, and technological diffusion accelerates when barriers fall. Empirical studies of patent efficacy from outside incumbent-funded research generally find patents protect rents rather than innovation in mature sectors."
+  },
   "interval": {
-    "start": 1980,
-    "end": 2024
+    "start": 0,
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.42
+      "time_point": 0,
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
-      "value": 0.58
+      "time_point": 5,
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.68
+      "time_point": 10,
+      "value": 0.7
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
+      "time_point": 15,
       "value": 0.74
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
       "value": 0.78
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.52
+      "time_point": 0,
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1995,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2005,
+      "time_point": 5,
       "value": 0.71
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
+      "time_point": 10,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
       "value": 0.77
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
+      "time_point": 20,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
       "value": 0.81
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.18
+      "time_point": 0,
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
-      "value": 0.25
+      "time_point": 5,
+      "value": 0.31
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.32
+      "time_point": 10,
+      "value": 0.34
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.38
+      "time_point": 15,
+      "value": 0.37
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
       "value": 0.42
     }
   ],
   "omegas": [
     {
-      "id": "reading_contest_beneficiary_vs_lapsed",
-      "question": "Is market dominance actively maintained by incumbent capital holders' ongoing investment and enforcement (this reading), or is it a lapsed closure persisting mostly through inertia and historical accident (lapsed_alternative_reading)?",
-      "resolution_mechanism": "Empirical measurement of incumbent defensive expenditure: capital spend on IP litigation, predatory pricing instances, acquisition of rivals, regulatory lobbying, and innovation redirected to barrier-building vs. consumer-value. Comparison to counterfactual: what would market structure be if these expenditures ceased? If structure remains stable without active defense, the reading is lapsed; if rapid reorganization follows, this reading is correct.",
-      "impact": "If lapsed, the constraint might be amenable to simple regulatory withdrawal (no active defense to overcome). If actively maintained, fixing requires either destroying the accumulated capital advantages or constantly constraining incumbent defensive action. This reading assumes active maintenance; the corpus measures the boundary.",
+      "id": "active_vs_structural_maintenance",
+      "question": "Is market dominance actively maintained by intentional incumbent defense, or is it structurally reproduced once established — i.e., does it require ongoing incumbent agency or does it persist through institutional inertia alone?",
+      "resolution_mechanism": "Comparative analysis of markets where incumbent defense investment changed (reduced legal/regulatory spending, or increased): if dominance decays when defense spending falls, active maintenance is primary; if dominance persists unchanged, structural reproduction is primary.",
+      "impact": "If active maintenance is primary, the reading stands as authored — incumbent agency is the causal mechanism. If structural reproduction dominates, the constraint shifts toward piton (inertial, theatrical defense of a decaying function). The 'beneficiary-maintained' reading assumes agency is primary.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether incumbent dominance is actively maintained or merely lapsed."
+      "description": "Causal determination: Does incumbent agency actively maintain dominance, or do institutions reproduce it without agency?"
     },
     {
-      "id": "reading_contest_beneficiary_vs_hybrid",
-      "question": "Does incumbent dominance arise purely from active defense by capital holders (this reading), or is it a hybrid of lapsed structural elements inherited from earlier regulation plus ongoing maintenance by incumbents (hybrid_reading)?",
-      "resolution_mechanism": "Historical decomposition: identify which features of incumbent dominance come from formal legal structures (IP law, patent terms, regulatory carve-outs, licensing requirements) that persist regardless of incumbent action, vs. which features require incumbent capital to maintain (litigation, pricing strategy, acquisition, innovation direction). If legal structures alone would sustain dominance, the reading is hybrid; if dominance requires ongoing active defense, this reading is correct.",
-      "impact": "This reading asserts capital holders are the primary active agents defending dominance. The hybrid reading claims the legal and structural framework does most of the work. The policy implication differs: this reading suggests antitrust enforcement can disrupt dominance by preventing active defense; the hybrid reading suggests legal/structural reform is necessary regardless of incumbent action.",
+      "id": "kernel_framing_naturalization",
+      "question": "Is market dominance read as 'natural' (emerging inevitably from efficiency or competition) or as 'constructed' (sustained by deliberate institutional design benefiting identifiable classes)?",
+      "resolution_mechanism": "The committer frame: this reading (beneficiary_maintained) asserts the constructed reading; the sibling lapsed_alternative_reading asserts naturalization under inertia; the hybrid_reading asserts mixed mechanisms. The kernel itself (market_naturalization) hosts the contest — no external resolution available. What resolves is WHICH reading the engine computes from the authored metrics and structural data.",
+      "impact": "This omega documents the reading-level irreducibility: the beneficiary_maintained_reading INSTANTIATES a specific ε-invariant constraint (high extraction, active enforcement, identifiable beneficiaries) under the CONSTRUCTED framing. A different reading would author different ε, different beneficiaries, different stakeholder situations. The engine's per-seat classification output is the apparatus's verdict — which reading's structure better fits the observed constraint dynamics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading frame: Is dominance natural or constructed? This reading instantiates the constructed interpretation."
+    },
+    {
+      "id": "beneficiary_identification_ambiguity",
+      "question": "Are incumbent capital holders the primary beneficiary, or is the beneficiary distributed across multiple classes (capital holders, rent-collection apparatus, ideological defenders, regulatory agencies)?",
+      "resolution_mechanism": "Trace the actual flow of rents and enforcement resources: where do resources extracted from entrants, workers, and subordinated capital actually accumulate? If rent flows concentrate in incumbent hands, beneficiary identification holds. If rents disperse or are captured by the apparatus itself, the beneficiary structure shifts.",
+      "impact": "If rents concentrate in incumbent hands, the reading's Tangled Rope classification (coordination + asymmetric extraction to a named class) stands. If rents disperse, the constraint might be Scaffold (transitory apparatus) or Piton (diffuse theater). The beneficiary-maintained reading depends on identifiable, concentrated beneficiaries.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether active incumbent defense or hybrid structural + active elements sustain dominance."
+      "description": "Where do extracted rents actually accumulate? Are beneficiaries identifiable and concentrated?"
     },
     {
-      "id": "moral_status_of_rent_defense",
-      "question": "Is incumbent capital's defense of market dominance morally justified as a rightful protection of investment returns, or is it morally unjustified rent-seeking that exploits legal structures to extract above-competitive returns?",
-      "resolution_mechanism": "Normative philosophical analysis (not empirical resolution): does the right to enjoy returns on invested capital extend to preventing new competition through barriers, or does it terminate at maintaining competitive advantages through superior service? Different philosophical frameworks (property-rights liberalism vs. competitive-equality republicanism) resolve this differently. No empirical fact settles it.",
-      "impact": "If justified, enforcement against incumbent defense is seen as illegitimate expropriation; if unjustified, enforcement is seen as correcting a structural illegitimacy. This reading presents defense as unjustified rent-seeking; sibling readings frame it as rightful capital protection. The corpus does not decide moral status but records the reading.",
+      "id": "reading_kinship_bifurcation",
+      "question": "Is this reading separable from the lapsed_alternative_reading and hybrid_reading, or do they represent points on a single continuum?",
+      "resolution_mechanism": "Structural difference test: Do the three readings author genuinely different ε values, different beneficiary structures, or different suppression mechanisms — or do they differ only in narrative frame? If ε and structure are identical and only the causal story changes, they are the same constraint read differently (a framing variance). If ε and structure genuinely differ, they are three distinct constraints inhabiting one kernel.",
+      "impact": "If distinct constraints: three separate JSON files, three separate compilations, three separate engine classifications. The network linking them reveals how beneficiary-maintained structure can coexist with lapsed structure in different sectors or regions. If framing variance: one constraint, one JSON, one engine output, but the omega documents how seat-level perception differs (payer seats read 'actively maintained' because they experience defense; beneficiary seats read 'natural' because they inherit advantage).",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Moral justification of incumbent capital's dominance defense."
+      "type_class": "conceptual",
+      "description": "Are the sibling readings structurally distinct constraints or narrative variants of one constraint?"
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the suppression of market alternatives structural (external barriers: capital requirements, legal obstacles, infrastructure control) or partially internalized (potential entrants believe dominance is natural/inevitable and so don't attempt entry, or believe they cannot win)?",
-      "resolution_mechanism": "Post-barrier empirical tests: after removing capital requirements through state funding, providing patent licensing, or reducing legal barriers, do new entrants emerge? If yes, suppression was substantially structural; if no, suppression is partially internalized (entrants continue to believe competition is futile even with barriers removed). Observation of actual entry attempts when barriers are reduced is the diagnostic.",
-      "impact": "Structural suppression is addressed by removing barriers; internalized suppression persists after barrier removal and requires consciousness-raising or cultural shift. This reading measures 0.81 suppression at interval end; the mechanism affects what remedies work.",
-      "confidence": "medium",
+      "id": "regulatory_capture_internalization",
+      "question": "To what degree is the suppression of alternatives internalized in regulatory agents and professionals (identity-locked to incumbent-serving interpretation) versus externally enforced through litigation and market barriers?",
+      "resolution_mechanism": "Comparative study of regulatory regime change: when regulators with incumbent-serving professional identity exit (retirement, political transition), does suppression of alternatives persist at the same intensity, weaken, or shift mechanism? Post-exit trajectory reveals the balance between internalized commitment and external enforcement.",
+      "impact": "High internalization means suppression persists even when external mechanisms weaken — the reading's high suppression metric (0.81) would remain robust to external institutional change. Low internalization means weakening external enforcement quickly erodes suppression. This determines whether the constraint's persistence depends primarily on incumbent maintenance (requires high internalization) or institutional structures (could persist under competing management).",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether suppression of alternatives is structural or partially internalized."
+      "description": "What fraction of suppression is internalized in professional identity versus externally enforced?"
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates ONE READING of the contested kernel 'market_naturalization': the reading that market dominance is actively defended by incumbent capital holders who have invested in maintaining barriers, suppressing alternatives, and capturing regulatory processes. It assumes capital holders are the primary active agents sustaining dominance structure. Sibling readings (lapsed_alternative_reading, hybrid_reading) locate agency and causation differently: lapsed reads dominance as persisting mostly through inertia absent active defense; hybrid reads dominance as a combination of inherited structural advantages plus ongoing maintenance. This reading treats dominance as a sustained snare—high extractiveness, high suppression, identifiable beneficiary class—in contrast to lapsed (which would be a piton with diminishing theater) and hybrid (which would be tangled_rope mixing structural coordination with active extraction). The claim/metric alignment is intentional here: this reading CLAIMS snare and the metrics DESCRIBE snare; the reading is that the beneficiary class is actively defending the structure, not passively collecting from it.",
+    "narrative_context": "This constraint story instantiates ONE READING of the contested kernel 'market_naturalization': the reading that market dominance is actively defended by incumbent capital holders. The kernel admits multiple readings because 'market dominance' can be interpreted as (1) the result of ongoing incumbent defense (this reading), (2) the result of lapsed structural closure now merely inherited (lapsed_alternative_reading), or (3) a mixture of active and passive mechanisms (hybrid_reading). This story generates the constraint as structured under the beneficiary-maintained reading: high extractiveness, active suppression of alternatives, identifiable beneficiary class (incumbent capital holders and the apparatus that serves them), and victims (potential entrants, displaced workers, subordinated capital). The author commits to this reading as structurally true while acknowledging omegas that document the sibling readings and the irreducible framing variance. The kernel itself is a site of genuine contestation in political economy, institutional theory, and business analysis — no reading is marginal or fringe.",
     "key_agents": [
-      "incumbent_capital_holders: Institutional power, long time horizon, arbitrage-level exit; they set the agenda on dominance maintenance and collect rents. Structurally beneficiary and agenda-setter.",
-      "potential_market_entrants: Powerless, trapped by capital requirements and IP barriers; they would object if visible but are structurally excluded by the barrier machinery. Primary victims.",
-      "labor_suppliers: Moderate power but constrained by monopsony; they lose through suppressed wage competition. Secondary victims.",
-      "smaller_competitors: Moderate power but constrained by acquisition threat; they lose through predatory pricing and exclusive dealing. Secondary victims.",
-      "consumers: Organized, mobile, but constrained to incumbent-curated options; they benefit from coordination (one trusted brand, integrated services) and pay through higher prices than genuine competition would support.",
-      "antitrust_authorities: Observers who see the structure but lack political mandate or doctrinal framework to dismantle it. They enforce at margins but don't restructure dominance.",
-      "economic_theorists: Excluded from enforcement discourse; they would argue for treating dominance as a policy choice rather than market outcome."
+      "incumbent_capital_holders: institutional power; beneficiary/agenda-setter; arbitrage-level exit because their wealth IS their market position",
+      "potential_market_entrants: powerless; payer/victim; trapped by patent thickets, regulatory barriers, capital requirements, and incumbent litigation",
+      "displaced_labor_cohorts: organized but moderate; payer/victim; constrained exit because alternative sectors are occupied or foreclosed",
+      "regulatory_capture_agents: institutional power; agenda-setter; identity-locked to incumbent-serving interpretation of law and regulation",
+      "subordinated_capital_holders: moderate power; payer/victim; their capital returns are suppressed by incumbent price-setting",
+      "consumer_coalitions: powerless; payer/excluded; identity-locked to branded incumbents (switching costs are often cognitive/identity costs, not just economic)"
     ],
-    "logic_rationale": "Extractiveness is high (0.78 at interval end) and rising over the 44-year measurement interval (0.42 in 1980 to 0.78 in 2024) because rents increase as dominance consolidates and competitive pressure declines. Suppression is even higher (0.81) because the constraint's persistence depends on actively blocking alternatives through legal action, acquisition, pricing strategy, and regulatory capture—not on participant preference. Theater is moderate (0.42) because the constraint is partly justified by genuine coordination benefits (brand trust, scale economies) but increasingly defended through mechanisms disconnected from consumer value (patent thicketing, exclusive dealing). The upward trajectory of all three metrics over 44 years indicates a constraint whose extraction and suppression intensify as capital consolidates—the constraint is not stabilizing but strengthening. The measurement grid is shared across all three metrics at each time point, so comparison is directly valid. Accessibility_collapse is moderate (0.48) because alternatives to incumbent-dominated markets DO exist in principle (open entry is logically possible) but become increasingly difficult in practice; resistance is high (0.72) because firms and workers and potential competitors are constantly pushing back against dominance, even if they lack the power to restructure it unilaterally. This reading treats the constraint as a snare: extraction requires active enforcement, beneficiary is identifiable, and persistence depends on suppressing real alternatives, not on participant rational preference.",
-    "directionality_logic": "The incumbent_capital_holders seat should compute high d (target-ish, despite being the beneficiary, because their dominance is actively defended by their own capital investment—they are the ones enforcing the constraint, making them the structural agenda_setter). Potential entrants should compute very high d (full targets; they are structurally excluded and pay in opportunity cost). Labor suppliers should compute moderately high d (targets of wage suppression through monopsony). Consumers should compute near-symmetric d because they benefit from coordination but pay through reduced choice and higher prices—the benefit and cost are both real. The directionality derivation flow: beneficiary+victim declarations feed into the beneficiary/target computation; powerless agents with trapped exit and victim declaration → high d; institutional agents with arbitrage exit and beneficiary+agenda_setter roles → lower d but still elevated because they are actively defending the constraint (the agenda-setter role drives up d; beneficiary status only partially offsets it). No overrides are used here; the structural declarations are sufficient.",
-    "perspectival_gap": "The incumbent_capital_holders seat (institutional, arbitrage exit, agenda-setter) should perceive this constraint as rope—genuine coordination they've built and maintained, rightly rewarded through dominance. The potential_market_entrants seat (powerless, trapped) should perceive snare—a closed door maintained for others' benefit. The antitrust_authorities seat (observer, analytical) should perceive the constraint's actual structure: coordination function is real but increasingly secondary to rent defense; the dominance structure is maintained by incumbent action but justified through coordination rhetoric. The engine computes these seat-specific perceptions from the structural data. This story does not reconcile them—the gap IS the measurement the constraint story exists to produce.",
-    "mandatrophy_analysis": "The founding_problem (how to incentivize risky capital investment through protection from imitation) is ALIVE in the beneficiary-maintained reading because incumbents claim that continuous innovation requires continuous dominance defense. However, the corroboration comes exclusively from incumbent firms—economic historians and competition scholars attest the founding problem is substantially SOLVED by existing IP law, first-mover advantages, and patent/copyright systems; the measured persistence of dominance is rent maintenance, not incentive for innovation. This is a mandatrophy signal: the constraint persists but the founding problem it claims to solve is dead for outside corroborators. The hybrid_reading would treat this differently (lapsed structural elements still solving something), and the lapsed_alternative_reading would treat mandatrophy as the core insight (dominance persists despite its founding problem being dead). This reading acknowledges mandatrophy but interprets it as evidence that incumbent capital has successfully converted an incentive structure into a permanent rent stream. Antitrust intervention would need to sever that conversion, which explains the high suppression score—defending against intervention is part of incumbent dominance maintenance.",
-    "kernel_context": "This constraint is the 'beneficiary_maintained_reading' of the contested kernel 'market_naturalization.' The kernel is the persistent claim that market dominance by incumbent firms is either a natural outcome of competition (inevitable, uncontested, requires no active defense) or a constructed distribution actively maintained by incumbent capital. Three readings compete: (1) beneficiary_maintained_reading: dominance is actively defended by incumbent capital holders who invest in barriers, litigation, acquisition, and regulatory capture; (2) lapsed_alternative_reading: dominance is a lapsed structural outcome that persists by inertia and historical accident, not by active incumbent defense; (3) hybrid_reading: dominance is a combination of inherited structural advantages (legal frameworks, network effects, economies of scale) and ongoing active maintenance by incumbents. The readings differ on whether the PRIMARY AGENT maintaining dominance is (1) incumbent capital holders' active choices, (2) the absence of any active force (inertia), or (3) a combination. This story instantiates reading (1) in full ε-invariance: it treats market dominance as a snare (high extraction, high suppression, identifiable beneficiary) whose persistence depends on incumbent capital's investment in barrier defense. Sibling readings are separate constraint stories with different ε values, different stakeholder analyses, and different omegas resolving their specific uncertainties."
+    "logic_rationale": "The constraint exhibits rising extractiveness (0.62→0.78 over the interval) because rents accumulate as incumbents invest in defense mechanisms — each successful litigation, each regulatory victory, each patent extension increases the cost-to-entry and therefore the spread between incumbent returns and competitive returns. Suppression rises and plateaus (0.68→0.81) because active defense requires sustained enforcement: litigation threats, regulatory lobbying, intellectual property prosecution, and denial of access to distribution networks. Theater ratio rises early (0.28→0.42 by t=15) then stabilizes because the apparatus develops elaborate justifications (innovation incentives, consumer safety, investment security) that displace from public view the naked extraction logic — stabilization at 0.42 indicates the theater has reached equilibrium (elaborate enough to be credible, spare enough to be operationally efficient). Accessibility collapse is moderate-high (0.68) because alternatives ARE technically and organizationally conceivable (cooperative ownership, platform commons, degrowth allocation) but appear economically impossible within the framework that incumbent institutions control — the alternatives are collapsed not by physical law but by institutional redefinition of what is 'rational' or 'viable'. Resistance is high (0.72) because potential entrants constantly probe the barriers, workers organize around wages and conditions, and alternative theorists publish and teach — resistance persists because the constraint is not natural, so it meets continuous friction.",
+    "perspectival_gap": "The seat-level divergence is acute and structural. From the incumbent_capital_holders and regulatory_capture_agents seats, the constraint appears as (at minimum) rope-class coordination — it stabilizes expectations, enables long-term investment, and solves a real collective-action problem around property rights. From their perspective the metrics should compute as moderate extraction with genuine coordination function. From the potential_entrants and displaced_labor_cohorts seats, the constraint appears as pure snare — they experience active exclusion, concentrated costs, and no coordination benefit. The engine should compute higher extraction and lower beneficiary payoff for these seats. The authored structural data (beneficiaries identified as incumbent holders; victims identified as entrants and workers; requires_active_enforcement: true) should drive the per-seat divergence in computed classification without requiring me to state it explicitly.",
+    "directionality_logic": "Incumbent capital holders derive d near 0.0 (full beneficiary) because: (1) they benefit from the constraint (rents), (2) they control the terms (agenda-setter role), (3) their exit is only arbitrage (they can move capital between markets but cannot leave the market-dominance dynamic itself). Potential entrants derive d near 1.0 (full target) because: (1) they bear the cost (blocked entry), (2) they have no structural control (trapped), (3) their exit is structural (they can only abandon the attempt). Displaced workers derive intermediate d (0.6-0.8 toward target) because: (1) they bear diffuse costs (wage suppression, employment precarity), (2) they have organized-but-limited power, (3) their exit is constrained (retraining takes time and capital). The directionality derivation follows from beneficiary/victim declarations + power atom + exit options without requiring overrides.",
+    "mandatrophy_analysis": "The founding_problem was genuine: early capital formation required institutions that guaranteed returns and prevented expropriation. The founding_problem_status is contested because: incumbent capital holders attest the problem remains live (venture capital still requires patent/regulatory protection), while alternative development economists attest the problem is substantially solved in most sectors (empirical evidence shows innovation in patent-weak sectors, and technological diffusion accelerates when barriers fall). The mandatrophy dynamic emerges because the apparatus persists while its justification has decayed — the warrant that initially motivated patent and regulatory systems (solving the under-investment problem) no longer applies uniformly. Some sectors remain under-invested absent protection; most sectors are over-protected relative to the original warrant. The constraint exhibits mandatrophy in two ways: (1) the founding coordination problem (securing capital investment) is mostly solved but the apparatus persists and expands, and (2) the apparatus develops an independent beneficiary class (incumbent capital holders, rent-collection bureaucracies, ideological defenders) that benefits from perpetuating the founding problem's framing even as the problem decays. This is the structural marker of mandatrophy: a problem-solving apparatus that now primarily solves the problem of how to maintain the apparatus itself.",
+    "kernel_context": "This constraint instantiates the beneficiary_maintained_reading of the market_naturalization kernel. The kernel itself admits three structured readings: (1) beneficiary_maintained (this reading) — market dominance is actively defended by incumbent capital holders through sustained investment in legal, regulatory, and institutional mechanisms; (2) lapsed_alternative_reading — market dominance is a structural closure that persists through institutional inertia without requiring active incumbent maintenance; (3) hybrid_reading — market dominance combines elements of active defense and structural inertia, with the balance shifting across sectors and time. The three readings share the same referent (market dominance, high barriers to entry) but instantiate different ε-invariant constraints because they author different beneficiary structures, different suppression mechanisms, and different assumptions about whether incumbent agency is required for persistence. The beneficiary_maintained reading commits to (1) high extractiveness justified by active incumbent defense, (2) identifiable beneficiary class (incumbent holders and their apparatus), (3) victims who bear costs of closure, (4) resistance that persists because closure is not natural. The engine's per-seat classification will compute whether this reading's structural data better fits observed dynamics than the sibling readings."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "market_naturalization__lapsed_alternative_reading",
       "market_naturalization__hybrid_reading",
-      "labor_monopsony_enforcement",
-      "patent_thicket_defense",
-      "regulatory_capture_institutional"
+      "innovation_patent_efficacy",
+      "regulatory_capture_institutional_dynamics"
     ],
-    "dual_formulation_note": "This story is one of three decomposed readings of the kernel 'market_naturalization.' The sibling readings (lapsed_alternative_reading, hybrid_reading) model alternative explanations for persistent incumbent dominance. This reading (beneficiary_maintained_reading) asserts incumbent capital is the primary active agent. The network edges indicate structural influence: all three kernel readings affect institutional constraints like labor monopsony and patent defense, which are downstream mechanisms through which dominance is enforced. The three kernel readings should be cross-read to understand the contested boundary between active incumbent defense and structural inertia."
+    "dual_formulation_note": "This constraint is one reading (beneficiary_maintained) of a contested kernel (market_naturalization). Two sibling readings exist as separate constraint stories: lapsed_alternative_reading (dominance persists through inertia, not active defense) and hybrid_reading (mixed mechanisms). The network links all three readings; the kernel_id/reading_id in cs_structure documents kinship. The three readings are NOT alternative measurements of a single constraint — they are structurally distinct constraints instantiated from different interpretations of the same kernel."
   },
-  "directionality_overrides": [],
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "formalized",
     "authority_grounding": "extraction",
-    "interpretation_layer_present": false,
+    "interpretation_layer_present": true,
+    "reference_frame": "incumbent_protected_market_order",
+    "drift_state": {
+      "moment": "contemporary_antitrust_and_platform_contestation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "market_naturalization__lapsed_alternative_reading",
+        "sibling_id": "lapsed_alternative_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "market_naturalization__hybrid_reading",
+        "sibling_id": "hybrid_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "incumbent_capital_actively_defends_dominance",
+        "atom": "incumbent_maintenance_primary_causal_mechanism",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "dominance_extraction_exceeds_coordination_cost",
+        "atom": "identifiable_beneficiary_concentration",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "competitive_markets_absent_active_defense",
-    "drift_state": {
-      "moment": "contemporary_consolidated_markets",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
+  "directionality_overrides": [],
+  "gain_flow": "incumbent_capital_holders",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

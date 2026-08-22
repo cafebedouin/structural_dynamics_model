@@ -44,6 +44,10 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,33 +72,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: honor_satisfaction_substrate__composite_overdetermined_reading
- *   human_readable: Honor Satisfaction Substrate (Composite Overdetermined Reading)
- *   domain: social/legal/cultural
+ *   human_readable: Honor Satisfaction Constraint (Composite Overdetermined Reading)
+ *   domain: social/cultural/legal
  *
  * SUMMARY:
- *   This reading examines the decline of European dueling (roughly 1650–1850)
- *   as the product of TWO causally entangled mechanisms operating
- *   simultaneously: exogenous legal suppression (criminalization,
- *   institutional barriers, enforcement intensity) and endogenous
- *   delegitimation of the honor substrate itself (Enlightenment reframing of
- *   status, transformation from honor-based to dignity-based ethics,
- *   internalization of new masculinity norms). The reading claims that
- *   neither mechanism alone explains the constraint's collapse, and that the
- *   mechanisms are not independent — legal pressure delegitimized the code
- *   partly by making its enforcement costly, while cultural transformation
- *   made suppression increasingly effective because fewer people believed in
- *   the code's normative force. This is the composite_overdetermined_reading
- *   of the honor_satisfaction_substrate kernel. Sibling readings attribute
- *   the decline to EITHER exogenous suppression alone
- *   (practice_decline_reading) OR endogenous cultural transformation alone
- *   (cultural_contraction_reading).
+ *   This reading instantiates the honor-satisfaction constraint as a
+ *   tangled_rope subject to DUAL, causally-entangled decline mechanisms. The
+ *   constraint operated to coordinate masculine status hierarchy (genuine
+ *   coordination function) while extracting participation costs (death, legal
+ *   jeopardy, psychological burden) from gentlemen obligated to defend honor
+ *   through combat. Its decline exhibits BOTH rope-breaking (legal
+ *   suppression, state enforcement) AND mountain erosion (delegitimation of
+ *   the honor substrate itself via Enlightenment rationalism). Critically,
+ *   these mechanisms are not independent: legal suppression worked BECAUSE
+ *   the honor code itself was being delegitimated; delegitimation accelerated
+ *   BECAUSE legal enforcement had begun; neither mechanism suffices alone to
+ *   explain the historical trajectory. The composite reading asserts the
+ *   interdependence; the sibling readings attribute causal primacy to one
+ *   mechanism or the other.
  *
  * KEY AGENTS:
- *   - aristocratic_honor_culture: maintains the coordination apparatus (reputation networks, masculine identity norms, public challenge-response mechanisms) that makes dueling obligatory
- *   - duelists_trapped_by_honor_code: identity-locked into participation; death/prosecution risk is the cost of maintaining elite status in the eyes of peers
- *   - legal_authorities_enforcing_suppression: criminalize dueling and invest enforcement resources; bear the cost of sustained institutional pressure against cultural norms
- *   - enlightenment_intellectuals: provide the alternative cultural frame (dignity ethics, rationalism, domestic virtue) that makes the honor code appear constructed rather than natural
- *   - women_and_non_elite_men: excluded from the dueling apparatus but bear economic/social costs; their absence from the conversation is structural
+ *   - Honor code custodians: social authorities (gentry, military, clergy) who define and police the constraint.
+ *   - Gentlemen under obligation: moderate-power, identity-locked participants bearing extraction cost and identity benefit simultaneously.
+ *   - Families bearing costs: secondary victims with constrained exit.
+ *   - State enforcement apparatus: institutional actor imposing exogenous suppression (legal prohibition, criminal prosecution).
+ *   - Enlightenment cultural authorities: organized beneficiaries of delegitimation who reshape the cultural frame.
+ *   - Excluded commoners: structurally barred from participation, would benefit from constraint erosion but have no voice.
  */
 
 /* ==========================================================================
@@ -101,58 +105,112 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(honor_satisfaction_substrate__composite_overdetermined_reading, 0.62).
-domain_priors:suppression_score(honor_satisfaction_substrate__composite_overdetermined_reading, 0.78).
-domain_priors:theater_ratio(honor_satisfaction_substrate__composite_overdetermined_reading, 0.41).
+domain_priors:base_extractiveness(honor_satisfaction_substrate__composite_overdetermined_reading, 0.68).
+domain_priors:suppression_score(honor_satisfaction_substrate__composite_overdetermined_reading, 0.71).
+domain_priors:theater_ratio(honor_satisfaction_substrate__composite_overdetermined_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 0.78).
-narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse, 0.64).
+narrative_ontology:constraint_metric(honor_satisfaction_substrate__composite_overdetermined_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(honor_satisfaction_substrate__composite_overdetermined_reading, tangled_rope).
-narrative_ontology:human_readable(honor_satisfaction_substrate__composite_overdetermined_reading, "Honor Satisfaction Substrate (Composite Overdetermined Reading)").
-narrative_ontology:topic_domain(honor_satisfaction_substrate__composite_overdetermined_reading, "social/legal/cultural").
+narrative_ontology:human_readable(honor_satisfaction_substrate__composite_overdetermined_reading, "Honor Satisfaction Constraint (Composite Overdetermined Reading)").
+narrative_ontology:topic_domain(honor_satisfaction_substrate__composite_overdetermined_reading, "social/cultural/legal").
 
 domain_priors:requires_active_enforcement(honor_satisfaction_substrate__composite_overdetermined_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(honor_satisfaction_substrate__composite_overdetermined_reading, '35acaa15-c4a2-4ff6-ad6b-a9898540c9b1').
-narrative_ontology:cs_kernel_codification('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', distributed).
-narrative_ontology:cs_authority_grounding('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', practice).
-narrative_ontology:cs_interpretation_layer_present('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1').
-narrative_ontology:cs_reading_relation('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', honor_satisfaction_substrate__practice_decline_reading, coexists_with).
-narrative_ontology:cs_reading_relation('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', honor_satisfaction_substrate__cultural_contraction_reading, coexists_with).
-narrative_ontology:cs_axiom('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', foundational, suppression_and_delegitimation_entangled).
-narrative_ontology:cs_axiom_status(suppression_and_delegitimation_entangled, holdable).
-narrative_ontology:cs_axiom_grounding('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', suppression_and_delegitimation_entangled, empirically_contingent).
-narrative_ontology:cs_axiom('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', foundational, honor_code_transformation_simultaneous_with_suppression).
-narrative_ontology:cs_axiom_status(honor_code_transformation_simultaneous_with_suppression, holdable).
-narrative_ontology:cs_axiom_grounding('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', honor_code_transformation_simultaneous_with_suppression, empirically_contingent).
-narrative_ontology:cs_reference_frame('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', honor_as_coordinate_and_natural).
-narrative_ontology:cs_drift_state('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', post_enlightenment_delegitimation, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('35acaa15-c4a2-4ff6-ad6b-a9898540c9b1', '').
+narrative_ontology:cs_story_uid(honor_satisfaction_substrate__composite_overdetermined_reading, '976d0e8c-c96a-4b98-9366-81bf0d169564').
+narrative_ontology:cs_kernel_codification('976d0e8c-c96a-4b98-9366-81bf0d169564', fixed_text).
+narrative_ontology:cs_authority_grounding('976d0e8c-c96a-4b98-9366-81bf0d169564', lineage).
+narrative_ontology:cs_interpretation_layer_present('976d0e8c-c96a-4b98-9366-81bf0d169564').
+narrative_ontology:cs_reading_relation('976d0e8c-c96a-4b98-9366-81bf0d169564', honor_satisfaction_substrate__practice_decline_reading, coexists_with).
+narrative_ontology:cs_reading_relation('976d0e8c-c96a-4b98-9366-81bf0d169564', honor_satisfaction_substrate__cultural_contraction_reading, influences).
+narrative_ontology:cs_axiom('976d0e8c-c96a-4b98-9366-81bf0d169564', foundational, dual_causal_entanglement_mechanism).
+narrative_ontology:cs_axiom_status(dual_causal_entanglement_mechanism, holdable).
+narrative_ontology:cs_axiom_grounding('976d0e8c-c96a-4b98-9366-81bf0d169564', dual_causal_entanglement_mechanism, empirically_contingent).
+narrative_ontology:cs_axiom('976d0e8c-c96a-4b98-9366-81bf0d169564', foundational, honor_substrate_partially_reversible_under_enforcement).
+narrative_ontology:cs_axiom_status(honor_substrate_partially_reversible_under_enforcement, holdable).
+narrative_ontology:cs_axiom_grounding('976d0e8c-c96a-4b98-9366-81bf0d169564', honor_substrate_partially_reversible_under_enforcement, empirically_contingent).
+narrative_ontology:cs_reference_frame('976d0e8c-c96a-4b98-9366-81bf0d169564', dual_rope_and_mountain_codification).
+narrative_ontology:cs_drift_state('976d0e8c-c96a-4b98-9366-81bf0d169564', enlightenment_legal_modernization_era, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_created_at('976d0e8c-c96a-4b98-9366-81bf0d169564', '').
 narrative_ontology:cs_kernel_id(honor_satisfaction_substrate__composite_overdetermined_reading, honor_satisfaction_substrate).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(honor_satisfaction_substrate__composite_overdetermined_reading, aristocratic_honor_culture).
-narrative_ontology:constraint_victim(honor_satisfaction_substrate__composite_overdetermined_reading, duelists_trapped_by_honor_code).
-narrative_ontology:constraint_victim(honor_satisfaction_substrate__composite_overdetermined_reading, legal_authorities_enforcing_suppression).
+narrative_ontology:constraint_beneficiary(honor_satisfaction_substrate__composite_overdetermined_reading, honor_code_custodians).
+narrative_ontology:constraint_beneficiary(honor_satisfaction_substrate__composite_overdetermined_reading, status_hierarchy_maintainers).
+narrative_ontology:constraint_victim(honor_satisfaction_substrate__composite_overdetermined_reading, gentlemen_under_dueling_obligation).
+narrative_ontology:constraint_victim(honor_satisfaction_substrate__composite_overdetermined_reading, families_bearing_dueling_costs).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(honor_satisfaction_substrate__composite_overdetermined_reading, gentlemen_under_dueling_obligation).
+narrative_ontology:constraint_beneficiary(honor_satisfaction_substrate__composite_overdetermined_reading, enlightenment_cultural_authorities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Social authorities (upper gentry, military officers, clergy, cultural arbiters) who define and police the honor code. They maintain the framework that makes dueling intelligible as a satisfaction mechanism. They benefit from the deference dueling extracts — it enforces status hierarchy and validates their authority to judge masculine worth.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, honor_code_custodians, agenda_setter,
+    organized, generational, identity_locked, national).
+
+% Men of gentle birth and military/civil standing who face the obligation to defend honor through challenge and combat. They bear the direct extraction: risk of death, injury, legal jeopardy, and the psychological cost of participation. Yet they also benefit from the honor-code's legitimacy — accepting the dueling obligation is how they confirm their status as gentlemen rather than commoners. Exit is identity-locked: refusing a challenge means social death, loss of credibility, and exclusion from elite circles.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, gentlemen_under_dueling_obligation, payer,
+    moderate, biographical, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(honor_satisfaction_substrate__composite_overdetermined_reading, gentlemen_under_dueling_obligation, beneficiary).
+
+% Wives, children, parents of dueling men. They bear secondary extraction: grief, economic disruption (loss of income or inheritance), social stigma if a family member is killed or imprisoned. They have constrained exit — they cannot leave the family or control the obligation, though they may pressure for desistance or attempt to mediate reconciliations.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, families_bearing_dueling_costs, payer,
+    moderate, generational, constrained, national).
+
+% Legal systems, police, prosecutors, courts imposing prohibitions on dueling, prosecuting violators, and enforcing sentences. They represent the exogenous suppression vector: legal barriers, criminal liability, imprisonment. They do not benefit from dueling itself but benefit from the state's monopoly on violence and rule of law authority.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, state_enforcement_apparatus, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Philosophers, clergy, publicists, and reform-minded elites who delegitimate the honor code on rational and moral grounds. They benefit from the constraint's decline because its erosion validates their worldview (rationality over honor, dignity over status, written law over custom). They actively shape the endogenous delegitimation by reframing honor itself.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, enlightenment_cultural_authorities, beneficiary,
+    organized, generational, mobile, national).
+
+% The vast majority, structurally barred from dueling by birth. They would benefit from the constraint's erosion (it reinforces the social boundary that keeps them subordinate), but they are not in the conversation. Their interests are voiced, if at all, by reform advocates who take up the equality argument.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, commoners_excluded_from_dueling, excluded,
+    powerless, biographical, trapped, national).
+
+% The historical sociologist or legal historian examining the constraint's operation and decline. Positioned outside the active mechanisms to trace the causal pathways.
+narrative_ontology:constraint_stakeholder(honor_satisfaction_substrate__composite_overdetermined_reading, analytical_observer, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates masculine status hierarchy among gentlemen through a shared framework in which honor insults demand armed satisfaction. The dueling constraint solves the problem of enforcing deference to social rank without formal law: a gentleman who accepts an insult without challenge loses standing; a gentleman who receives satisfaction through combat retains it. The coordination function is the agreement on what honor means and what challenges require.
+% TRANSFER_FUNCTION: Transfers authority to adjudicate masculine worth from formal institutions (courts, clergy) to peer-mediated combat. Transfers the psychological and physical burdens of status maintenance from the honor-code custodians to the gentlemen obligated to defend their standing through violence.
+% ABSENT_VOICES: Commoners are structurally excluded from the dueling conversation — they cannot issue or receive challenges and have no seat at the table. Women's voices are absent despite bearing substantial secondary extraction (widowhood, economic disruption, social stigma). Enlightenment critics exist as minority voices in early periods; their presence grows louder as decline accelerates, but they enter the conversation as external critics, not as parties initially.
+% DISAPPEARANCE_RATIONALE: If dueling and its obligation disappeared overnight, the status hierarchy it enforced would require alternative legitimating mechanisms. Immediate rearrangement: no challenge protocols, no satisfaction through combat, legal jeopardy removed. Deeper rearrangement: whether honor codes themselves could persist without dueling as their enforcement mechanism — the contested question between this reading and the cultural_contraction_reading. The composite reading expects both: the coordination function (status hierarchy maintenance) would find new forms, AND the honor substrate would undergo further delegitimation.
+% FOUNDING_PROBLEM: How to adjudicate and enforce honor among peers when formal law and institutions are distant or powerless. The dueling constraint emerged as a solution: honor satisfaction through combat, mediated by codes of conduct that gentlemen agree bind them.
+% FOUNDING_PROBLEM_CORROBORATION: Military and gentry sources attest the founding problem was live during the rise of dueling (15th–16th century): distant courts, limited police capacity, honor insults that law could not remedy. By the 18th century, legal enforcement improves and state capacity rises, yet dueling persists — this divergence is precisely what invites contention. Reform advocates attest the founding problem is solved (courts are now proximate, law is effective, rational systems can adjudicate honor); traditionalists attest it persists (some insults remain beyond law's reach, peer judgment remains superior to magistrates). Historical scholars documenting the interval agree both readings were held simultaneously by different stakeholder seats.
+narrative_ontology:disappearance_verdict(honor_satisfaction_substrate__composite_overdetermined_reading, world_rearranges).
+narrative_ontology:founding_problem_status(honor_satisfaction_substrate__composite_overdetermined_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(honor_satisfaction_substrate__composite_overdetermined_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(honor_satisfaction_substrate__composite_overdetermined_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(honor_satisfaction_substrate__composite_overdetermined_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(honor_satisfaction_substrate__composite_overdetermined_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,16 +230,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness starts low (0.45 at 1650) because dueling is coordinating genuine elite status disputes — participants genuinely believe the mechanism is legitimate and necessary. It rises to 0.62 by 1800 as legal suppression accelerates and cultural alternatives emerge; the constraint now persists partly through coercion and partly through cultural inertia, with fewer genuine believers in the code's necessity. It drops slightly by 1850 (0.62 → 0.62) because enforcement intensity has essentially destroyed the coordination mechanism entirely — the code persists theatrically among some elites but the material constraint (the binding obligation to duel) is broken. Suppression_requirement rises from 0.15 to 0.78 — at 1650, enforcement is minimal because the code is self-enforcing through peer pressure; by 1800, the state must actively criminalize and prosecute to maintain suppression; by 1850, enforcement remains high even as dueling rates fall (police, courts, reputation damage are all deployed). Theater_ratio rises from 0.08 to 0.41 — early on, dueling is functionally necessary to the status system; by 1850, dueling persists mainly as theatrical maintenance of an anachronistic code. The measurements track the entanglement: suppression_requirement rises BECAUSE cultural delegitimation makes the code optional; theater_ratio rises BECAUSE legal pressure makes functional coordination impossible; neither metric moves monotonically, because the two causal pathways interfere with each other.
+ *   Base extractiveness is measured at 0.68 (interval endpoint, t=1850). Early in the interval (t=1500), extraction is low (0.35) because dueling was emergent and not yet mandatory — alternatives existed and honor could be maintained through other means. Extraction peaks at t=1750 (0.71) when legal enforcement and participation expectation are both maximal. It then plateaus and declines slightly (0.68 at t=1850) as cultural practice fragmented — participation fell but those still honoring the code faced the same obligation. Suppression follows a steeper rise from 0.15 (t=1500, minimal state intervention) to 0.71 (t=1850, comprehensive legal prohibition and enforcement). Theater ratio rises more gradually (0.05 to 0.42): early dueling was functional; later dueling became increasingly ritualized and performative as the real status-maintenance function was overtaken by legal consequences. Accessibility collapse shows a divergent pattern: the structural and organizational barriers to exit remain high even at t=1850 (0.42–0.44), but individual-level exit options expanded (0.31) as legal alternatives (courts, written vindication, public apology) became available. This non-uniform pattern indicates the composite mechanism: legal alternatives reduced individual accessibility collapse, but identity lock and organizational status hierarchy kept the obligation live at higher levels. The shared time grid ensures every metric is authored at every interval point — no misalignment.
  *
  * PERSPECTIVAL GAP:
- *   The duelist seat should compute as a complex mixed type: from inside the honor code, the constraint is genuinely coordinative (rope-ish) — a binding solution to the status problem. From the legal authority seat, it is a snare that must be suppressed — extractive and coercive. From the intellectual observer seat, it is a mountain being eroded — a natural law of honor yielding to a new natural law of dignity. The engine computes per-seat directionality from the structural data (beneficiary/victim + exit options); this story's claim is that the constraint's type CHANGES as you move seats, and the measurements track the intermediate period when both mechanisms (suppression and delegitimation) are active simultaneously.
+ *   The honor-code custodians (agenda-setter) compute the constraint as coordination: a shared frame enabling status maintenance without formal courts. Gentlemen under obligation compute it as extraction with identity lock: they must participate to maintain status, yet face legal jeopardy and death risk. The state enforcement apparatus computes it as violation of rule-of-law authority: private violence to be suppressed. Enlightenment critics compute it as irrational and immoral: the honor substrate itself is the problem to be dismantled. The engine computes per-seat directionality from the structural data: agenda-setters near d=0.2 (beneficiaries), obligated gentlemen near d=0.75 (targets), state apparatus at analytical d, critics at d=0.1 (beneficiaries of delegitimation). This divergence is constitutive of the composite reading.
  *
  * DIRECTIONALITY LOGIC:
- *   Duelists are identity-locked (exit_options: identity_locked) — refusal to duel means social annihilation, loss of elite masculine identity. They are declared both victims (bear death/prosecution risk) and beneficiaries (gain status from honor system). This dual positioning is central to the reading: the same mechanism that extracts from them (forces them to duel at risk of death) also benefits them (allocates status). Extractiveness is high (0.62 end-state) because the constraint persists through coercion and cultural inertia, not through freely-given participation. Suppression is higher (0.78) because exit is not merely expensive but psychologically/socially unthinkable — the identity-lock is deep. Legal authorities are declared as agenda_setters + payers because they must actively maintain suppression while bearing the cost of enforcement. The honor culture is the beneficiary — it collects rents in the form of continued elite status allocation and maintains the apparatus that makes the code appear natural.
+ *   Honor code custodians benefit from the constraint's operation (it validates their authority, enforces deference) and have mobile exit (they can shift the code's interpretation or enforcement). Directionality: low (beneficiary end, d≈0.15). Gentlemen under obligation bear substantial extraction costs (death, injury, legal liability) but also benefit from status confirmation that only participation provides. Their exit is identity-locked: refusing a challenge means social death. Directionality: high (target end, d≈0.72). Families bearing costs have constrained exit (cannot leave the family, limited ability to prevent dueling) and bear secondary extraction. Directionality: high (d≈0.68). State enforcement apparatus is the institutional imposer of exogenous suppression; its directionality is analytical (d=0.5, neither beneficiary nor target — it enforces monopoly on violence). Enlightenment critics have mobile exit and benefit from the constraint's delegitimation. Directionality: low (d≈0.12). Commoners are excluded and would benefit from erosion but have no structured relationship. Directionality: not applicable (excluded stakeholders do not feed metric derivation). The composite reading's key structural claim: the interdependence of exogenous suppression and endogenous delegitimation means the constraint cannot be classified solely from the agenda-setter's or a single payer's perspective — the classification must account for how state action AND cultural delegitimation reinforce each other at different levels (individual, organizational, class, structural).
  *
  * MANDATROPHY ANALYSIS:
- *   This reading explicitly embraces mandatrophy: the founding problem (elite status coordination without institutional arbiters) is dead by 1800 — modern states provide institutional arbitration and do not tolerate private violence. Yet the constraint persists until ~1850, and faintly beyond. The persistence is mandatropic — the code is maintained by institutional inertia, cultural pride among conservative elites, and the self-reinforcing nature of reputation networks, not by the solving of any live problem. Theater_ratio documents this: as the founding problem dies, the ratio of performative to functional activity rises from 0.08 to 0.41. The composite_overdetermined_reading claims that mandatrophy was ENABLED by the simultaneous operation of suppression and delegitimation — legal pressure made the code costly to maintain, cultural transformation made it feel optional, and together they produced the era (1800–1850) when dueling is mostly theater.
+ *   This reading does NOT trigger mandatrophy resolution. The founding problem (how to adjudicate honor among peers when formal law is distant) remains CONTESTED, not dead. The composite reading acknowledges that the founding problem status diverges across the interval and across stakeholder seats. At t=1500–1600, the problem is live (courts are distant, honor satisfaction through combat is functional). By t=1750–1850, reformers declare it dead (courts are proximate, law is effective) while traditionalists insist it persists (some insults remain beyond law's reach, peer judgment is superior). This contestation is structural to the composite reading's claim: the constraint's decline is overdetermined BECAUSE the founding problem's status is disputed. No single seat unanimously recognizes the founding problem as dead, so no mandatrophy declaration is warranted. The theater ratio rising (0.05 to 0.42) indicates ritual maintenance increasing relative to functional maintenance, but theater alone does not establish mandatrophy — it establishes that enforcement is becoming more theatrical, not that the underlying problem has vanished.
  */
 
 /* ==========================================================================
@@ -189,98 +247,132 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    causal_entanglement_vs_independence,
-    'Are the two decline mechanisms (exogenous suppression and endogenous delegitimation) causally independent, or do they constitute a single over-determined system where suppression and cultural transformation reinforce each other?',
-    'Counterfactual historical analysis: Did jurisdictions that suppressed dueling WITHOUT cultural delegitimation (e.g., Islamic law, Napoleonic code early adoption without Enlightenment frame) see sustained cultural persistence of the honor code despite enforcement? Did cultures that underwent dignity-transformation WITHOUT legal suppression (late 19th-century intellectual circles, bohemia) experience spontaneous abandonment of dueling or continued performance?',
-    'If mechanisms are independent, the constraint is additively composite (rope + mountain = complex mixed type, no single classification). If entangled, the constraint is a single unified system exhibiting phase-transition properties — the composite type emerges from the interaction, not the sum.',
+    suppression_internalization_mechanism,
+    'Is the measured suppression structural (legal enforcement, external barriers) or internalized (the honor code''s own authority, peer judgment, psychological internalization of obligation)?',
+    'Historical evidence from diaries, letters, legal proceedings: do declining duelers cite legal fear or loss of honor conviction? Do courts record self-enforced desistance or forced compliance? Do reformed ex-duelers testify to legal coercion or to changed values?',
+    'If structural: the constraint could theoretically be restored by eliminating legal suppression. If internalized: the constraint''s erosion reflects genuine delegitimation and would persist even if legal barriers were removed. If both: the composite mechanism holds — legal suppression accelerated delegitimation because it made honor-satisfaction legally untenable, while delegitimation reduced individual resistance to legal enforcement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_mechanism, empirical, 'Whether suppression is external or internally driven.').
+
+omega_variable(
+    causal_independence_assumption,
+    'Are exogenous suppression and endogenous delegitimation truly causally entangled (each accelerates the other) or merely concurrent (independently causing decline at different sites)?',
+    'Counterfactual analysis: would pure legal suppression (without Enlightenment philosophical challenge) have broken the constraint? Would pure delegitimation (without legal enforcement) have eroded dueling? Historical comparison with jurisdictions that suppressed earlier or delegitimated earlier without the other mechanism.',
+    'If independent: the constraint''s decline can be modeled as two additive pressures; classification could treat suppression and delegitimation separately. If entangled: the constraint exhibits composite dynamics (tangled_rope with dual decline mechanisms) and cannot be reduced to either mechanism alone. If entangled, the composite_overdetermined_reading is correct; if independent, the sibling readings'' single-mechanism focus may be more accurate.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(causal_entanglement_vs_independence, empirical, 'Whether suppression and cultural delegitimation are independent causal pathways or a single coupled system.').
+narrative_ontology:omega_variable(causal_independence_assumption, conceptual, 'Whether the two decline mechanisms are causally independent or mutually reinforcing.').
 
 omega_variable(
-    identity_lock_internalization_vs_structural,
-    'Is the duelist''s identity-lock to the honor code primarily structural (external barriers make exit costly) or internalized (the code has become constitutive of self-concept such that exit feels psychologically impossible)?',
-    'Post-suppression behavior: Among duelists who abandoned the code under legal pressure, did they experience persistent shame, identity confusion, or psychological distress suggesting internalized lock? Or did they straightforwardly adopt new status mechanisms, suggesting the lock was primarily structural and dissolved when barriers were removed?',
-    'If internalized, the suppression metrics understate the true constraint — the target carries suppression with them after exit. If structural, the measured suppression captures the true constraining force and exit becomes easier once legal pressure removes external barriers.',
+    honor_substrate_transformation_irreversibility,
+    'Did the honor code itself undergo foundational, irreversible transformation, or did it merely lose institutional enforcement while remaining viable as an alternative frame?',
+    'Post-decline dueling events (19th century sporadic challenges, honor-code persistence among military and diplomatic elites): did participants invoke the original honor frame or a modified/nostalgic version? Can the honor code be reconstructed from first principles by contemporary actors, or has it become historically embedded and unrepeatable?',
+    'If irreversible: the cultural_contraction_reading is vindicated (the honor substrate is gone, not just suppressed). If reversible: the constraint could theoretically be restored if legal suppression were lifted. If partially reversible: the composite reading is supported (the substrate is transformed but not erased, making the constraint''s decline path-dependent on both suppression and delegitimation).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(honor_substrate_transformation_irreversibility, conceptual, 'Whether honor-code transformation is structural or contingent on enforcement.').
+
+omega_variable(
+    kernel_reading_contest_framing,
+    'Does this composite reading (''decline is overdetermined by dual, entangled mechanisms'') correctly capture the structural contest between the three kernel readings, or does it misframe the sibling readings'' claims?',
+    'Textual analysis of historical source materials (dueling treatises, legal statutes, Enlightenment critiques, military codes, courtroom testimony): which mechanism do primary sources emphasize? Do contemporaries describe decline as enforcement-driven or as value-driven? Do they recognize the entanglement or attribute causality unilaterally?',
+    'If this reading misframes the siblings: the cs_structure.reading_relations and axioms need recalibration. If this reading correctly captures the contest: the structural divergence between readings is genuine and the engine''s per-seat classification should diverge significantly across seats.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_internalization_vs_structural, empirical, 'Internalized vs. structural suppression in the duelist seat.').
-
-omega_variable(
-    honor_substrate_transformation_scope,
-    'Did the honor code undergo transformation only in legal/intellectual elites, or did the transformation penetrate to the broader population that the constraint governed?',
-    'Cultural analysis of 19th-century popular literature, correspondence, memoirs: did non-elite duelists (military officers, provincial gentry) internalize the dignity-ethics frame, or did they experience suppression as imposed external coercion from an elite that was itself abandoning the code''s legitimacy?',
-    'If transformation penetrated broadly, delegitimation was an endogenous cultural shift affecting the entire governed population. If transformation was elite-only, the broad population experienced suppression without accompanying delegitimation, and the two mechanisms operated on different populations (non-independent in mechanism, but differentiated in scope).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(honor_substrate_transformation_scope, empirical, 'Whether cultural transformation of honor code was population-wide or elite-restricted.').
-
-omega_variable(
-    alternative_status_mechanisms_availability,
-    'Did modern institutional status mechanisms (credentialing, professional licensing, legal authority) become available BEFORE or AFTER legal suppression of dueling began?',
-    'Historical timeline: when did universities, professional guilds, civil service exams, and courts begin allocating status and reputation in ways that competed with dueling as a status mechanism?',
-    'If alternatives emerged before suppression, duelists had a coordination exit option (redirect status-seeking to new channels) and suppression would be more effective. If alternatives emerged after suppression, legal pressure forced a transition to mechanisms that had no prior legitimacy, making the post-suppression period one of institutional improvisation rather than rational switching.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(alternative_status_mechanisms_availability, empirical, 'Temporal availability of alternative status-allocation mechanisms relative to legal suppression.').
+narrative_ontology:omega_variable(kernel_reading_contest_framing, conceptual, 'Whether the three readings genuinely instantiate different constraint structures or represent interpretive disagreement about a single constraint.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(honor_satisfaction_substrate__composite_overdetermined_reading, 1650, 1850).
+narrative_ontology:interval(honor_satisfaction_substrate__composite_overdetermined_reading, 1500, 1850).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(hono_tr_t1650, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1650, 0.08).
-narrative_ontology:measurement(hono_tr_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1700, 0.12).
-narrative_ontology:measurement(hono_tr_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1750, 0.18).
-narrative_ontology:measurement(hono_tr_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1800, 0.32).
-narrative_ontology:measurement(hono_tr_t1825, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1825, 0.39).
-narrative_ontology:measurement(hono_tr_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1850, 0.41).
+narrative_ontology:measurement(hono_tr_t1500, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1500, 0.05).
+narrative_ontology:measurement(hono_tr_t1600, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1600, 0.12).
+narrative_ontology:measurement(hono_tr_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1700, 0.28).
+narrative_ontology:measurement(hono_tr_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1750, 0.38).
+narrative_ontology:measurement(hono_tr_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1800, 0.42).
+narrative_ontology:measurement(hono_tr_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, theater_ratio, 1850, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(hono_be_t1650, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1650, 0.45).
-narrative_ontology:measurement(hono_be_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1700, 0.48).
-narrative_ontology:measurement(hono_be_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1750, 0.55).
-narrative_ontology:measurement(hono_be_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1800, 0.62).
-narrative_ontology:measurement(hono_be_t1825, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1825, 0.67).
-narrative_ontology:measurement(hono_be_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1850, 0.62).
+narrative_ontology:measurement(hono_be_t1500, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1500, 0.35).
+narrative_ontology:measurement(hono_be_t1600, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1600, 0.52).
+narrative_ontology:measurement(hono_be_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1700, 0.64).
+narrative_ontology:measurement(hono_be_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1750, 0.71).
+narrative_ontology:measurement(hono_be_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1800, 0.68).
+narrative_ontology:measurement(hono_be_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, base_extractiveness, 1850, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(hono_su_t1650, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1650, 0.15).
-narrative_ontology:measurement(hono_su_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1700, 0.22).
-narrative_ontology:measurement(hono_su_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1750, 0.38).
-narrative_ontology:measurement(hono_su_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1800, 0.68).
-narrative_ontology:measurement(hono_su_t1825, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1825, 0.77).
-narrative_ontology:measurement(hono_su_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1850, 0.78).
+narrative_ontology:measurement(hono_su_t1500, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1500, 0.15).
+narrative_ontology:measurement(hono_su_t1600, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1600, 0.28).
+narrative_ontology:measurement(hono_su_t1700, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1700, 0.52).
+narrative_ontology:measurement(hono_su_t1750, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1750, 0.68).
+narrative_ontology:measurement(hono_su_t1800, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1800, 0.71).
+narrative_ontology:measurement(hono_su_t1850, honor_satisfaction_substrate__composite_overdetermined_reading, suppression_requirement, 1850, 0.71).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1500, tn=1850
+narrative_ontology:measurement(hono_grid_01, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(class), 1500, 0.71).
+narrative_ontology:measurement(hono_grid_02, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(class), 1850, 0.44).
+narrative_ontology:measurement(hono_grid_03, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(individual), 1500, 0.65).
+narrative_ontology:measurement(hono_grid_04, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(individual), 1850, 0.31).
+narrative_ontology:measurement(hono_grid_05, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(organizational), 1500, 0.68).
+narrative_ontology:measurement(hono_grid_06, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(organizational), 1850, 0.38).
+narrative_ontology:measurement(hono_grid_07, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(structural), 1500, 0.72).
+narrative_ontology:measurement(hono_grid_08, honor_satisfaction_substrate__composite_overdetermined_reading, accessibility_collapse(structural), 1850, 0.42).
+narrative_ontology:measurement(hono_grid_09, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(class), 1500, 0.25).
+narrative_ontology:measurement(hono_grid_10, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(class), 1850, 0.64).
+narrative_ontology:measurement(hono_grid_11, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(individual), 1500, 0.28).
+narrative_ontology:measurement(hono_grid_12, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(individual), 1850, 0.48).
+narrative_ontology:measurement(hono_grid_13, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(organizational), 1500, 0.18).
+narrative_ontology:measurement(hono_grid_14, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(organizational), 1850, 0.62).
+narrative_ontology:measurement(hono_grid_15, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(structural), 1500, 0.22).
+narrative_ontology:measurement(hono_grid_16, honor_satisfaction_substrate__composite_overdetermined_reading, resistance(structural), 1850, 0.58).
+narrative_ontology:measurement(hono_grid_17, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(class), 1500, 0.35).
+narrative_ontology:measurement(hono_grid_18, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(class), 1850, 0.71).
+narrative_ontology:measurement(hono_grid_19, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(individual), 1500, 0.42).
+narrative_ontology:measurement(hono_grid_20, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(individual), 1850, 0.78).
+narrative_ontology:measurement(hono_grid_21, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(organizational), 1500, 0.38).
+narrative_ontology:measurement(hono_grid_22, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(organizational), 1850, 0.74).
+narrative_ontology:measurement(hono_grid_23, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(structural), 1500, 0.32).
+narrative_ontology:measurement(hono_grid_24, honor_satisfaction_substrate__composite_overdetermined_reading, stakes_inflation(structural), 1850, 0.68).
+narrative_ontology:measurement(hono_grid_25, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(class), 1500, 0.11).
+narrative_ontology:measurement(hono_grid_26, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(class), 1850, 0.72).
+narrative_ontology:measurement(hono_grid_27, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(individual), 1500, 0.18).
+narrative_ontology:measurement(hono_grid_28, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(individual), 1850, 0.74).
+narrative_ontology:measurement(hono_grid_29, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(organizational), 1500, 0.12).
+narrative_ontology:measurement(hono_grid_30, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(organizational), 1850, 0.68).
+narrative_ontology:measurement(hono_grid_31, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(structural), 1500, 0.08).
+narrative_ontology:measurement(hono_grid_32, honor_satisfaction_substrate__composite_overdetermined_reading, suppression(structural), 1850, 0.71).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(honor_satisfaction_substrate__composite_overdetermined_reading, attachment_coordination).
+narrative_ontology:coordination_type(honor_satisfaction_substrate__composite_overdetermined_reading, identity_coordination).
 narrative_ontology:boltzmann_floor_override(honor_satisfaction_substrate__composite_overdetermined_reading, 0.12).
 narrative_ontology:affects_constraint(honor_satisfaction_substrate__composite_overdetermined_reading, honor_satisfaction_substrate__practice_decline_reading).
 narrative_ontology:affects_constraint(honor_satisfaction_substrate__composite_overdetermined_reading, honor_satisfaction_substrate__cultural_contraction_reading).
 
 % DUAL FORMULATION NOTE:
-% The honor_satisfaction_substrate kernel decomposes into three constraint stories, each instantiating a different causal reading of dueling's historical decline. The composite_overdetermined_reading (this story) claims both exogenous suppression and endogenous cultural transformation operated simultaneously with non-independent causal pathways. The practice_decline_reading attributes decline to suppression alone, with the honor code persisting as normative substrate. The cultural_contraction_reading attributes decline to cultural transformation alone, with the code undergoing foundational change from honor-based to dignity-based ethics. All three readings are ε-invariant: they differ in causal structure (which mechanism drove the constraint's collapse), not in measurement basis. Each produces a different ε and a different type classification. The network links document mutual structural influence: suppression delegitimizes the code (composite affects practice_decline), cultural transformation makes suppression more effective (composite affects practice_decline), and the availability of alternative status mechanisms determines whether either mechanism works (all three inherit from cultural_contraction's outcome).
+% The honor_satisfaction_substrate kernel decomposes into three constraint stories (readings) with structurally distinct ε values and causal claims. This reading (composite_overdetermined) claims ε ≈ 0.68 (extraction from dual mechanisms) and attributes decline to entangled suppression and delegitimation. The practice_decline reading claims exogenous suppression is primary and attributes decline to enforcement. The cultural_contraction reading claims endogenous delegitimation (honor substrate transformation) is primary. All three readings share the same referent (the honor-satisfaction mechanism in European dueling societies ~1500–1850) but interpret its decline differently. They are linked by network.affects_constraints to enable comparative analysis of how different framings produce different constraint classifications from the same historical situation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(honor_satisfaction_substrate__composite_overdetermined_reading, powerful, 0.72).
+constraint_indexing:directionality_override(honor_satisfaction_substrate__composite_overdetermined_reading, moderate, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

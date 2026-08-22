@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,42 +74,30 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: reading_acquisition_legitimacy__structured_literacy_remediation
- *   human_readable: Structured Literacy Remediation as Legitimate Reading Instruction Model
- *   domain: educational_policy/cognitive_science
+ *   human_readable: Structured Literacy Remediation as Legitimate Reading Instruction Design
+ *   domain: education_policy/cognitive_science
  *
  * SUMMARY:
- *   Structured literacy remediation operates as a reading instruction
- *   constraint grounded in cognitive science claims about how reading
- *   acquisition works: explicit phonics, cumulative sequencing, multisensory
- *   engagement, and continuous diagnostic assessment. This reading of the
- *   reading-acquisition legitimacy kernel asserts that instruction MUST be
- *   designed for the most vulnerable learners first, that all students should
- *   receive intervention-grade, structured literacy support preventatively,
- *   and that legitimate instruction follows the
- *   explicit-cumulative-diagnostic principles of frameworks like
- *   Orton-Gillingham and Structured Literacy Alliance standards. The
- *   constraint benefits practitioners, vendors, and special education
- *   administrators while imposing costs on early-failing readers (through
- *   segregation and drill-focused curricula) and classroom teachers (through
- *   loss of autonomy and mandatory scripted implementation). The claim/metric
- *   gap is structural: this reading CLAIMS the constraint is genuine
- *   coordination solving an urgent problem (preventing dyslexia through early
- *   detection and evidence-based intervention), while the authored metrics
- *   show substantial extraction (0.62), suppression (0.71 at interval end),
- *   and rising theatrical performance (theater_ratio climbing from 0.32 to
- *   0.48 as district compliance becomes performative). This divergence is the
- *   measurement—the engine computes whether this constraint, from different
- *   seats, appears as coordination or extraction.
+ *   The constraint names one reading of how reading instruction legitimacy
+ *   should be defined. This reading — structured literacy remediation — holds
+ *   that reading instruction must be explicitly designed for the most
+ *   vulnerable learners first, using cumulative, diagnostic, multisensory
+ *   approaches grounded in alphabetic principle and phonological processing
+ *   science. The constraint makes this reading the standard against which
+ *   other approaches are measured and deemed adequate or inadequate. The
+ *   reading instantiates a tangled rope: a genuine coordination function
+ *   (preventing early literacy failure through evidence-grounded systematic
+ *   instruction) exists alongside asymmetric extraction (professional
+ *   authority transfers to structured-literacy specialists, whole-language
+ *   practitioners face delegitimization, assessment infrastructure expands
+ *   and captures institutional budget). The claim and metrics are authored
+ *   independently: this reading is CLAIMED as tangled rope (it coordinates
+ *   literacy prevention AND extracts professional rents), and the authored
+ *   extractiveness and suppression metrics describe the actual operation
+ *   observed as the constraint matured (rising extractiveness early,
+ *   plateauing as adoption stabilized; persistent suppression of alternative
+ *   pedagogies).
  *
- * KEY AGENTS:
- *   - Structured Literacy Practitioners (Institutional, Arbitrage exit): Agenda-setters who define legitimate instruction; control professional development, assessment design, training certification; benefit from mandate-driven adoption.
- *   - Special Education Administrators (Institutional, Constrained exit): Beneficiaries who align with science narrative, reduce dyslexia litigation liability, access compliance-linked funding; constrained by state standards and litigation risk.
- *   - Remedial Education Vendors (Institutional, Arbitrage exit): Beneficiaries capturing revenue from curriculum licensing, assessment tools, professional development contracts; direct beneficiaries of market expansion.
- *   - Early Failing Readers (Powerless, Trapped exit): Mandated into explicit instruction (benefit), but also segregated, labeled, and withdrawn from authentic literature (cost); exit blocked by compulsory attendance.
- *   - Classroom Teachers Under Mandate (Moderate power, Constrained exit): Required to implement scripted protocols, undergo re-training, lose instructional autonomy; exit constrained by employment and licensure.
- *   - Balanced Literacy Practitioners (Powerful, Constrained exit): Excluded from agenda-setting; their research framed as discredited despite ongoing scholarly support; constrained by institutional delegitimation.
- *   - Cognitive Neuroscience Research Community (Institutional, Analytical exit): Provides the empirical warrant; analyzes rather than administers; their work is interpreted by beneficiaries and may be contested by excluded parties.
- *   - Parents of Struggling Readers (Moderate power, Constrained exit): Beneficiaries (early diagnosis), also cost-bearers (intensive remediation, medicalization); constrained by school choice and expert authority.
  */
 
 /* ==========================================================================
@@ -110,61 +105,138 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(reading_acquisition_legitimacy__structured_literacy_remediation, 0.62).
-domain_priors:suppression_score(reading_acquisition_legitimacy__structured_literacy_remediation, 0.71).
-domain_priors:theater_ratio(reading_acquisition_legitimacy__structured_literacy_remediation, 0.48).
+domain_priors:base_extractiveness(reading_acquisition_legitimacy__structured_literacy_remediation, 0.58).
+domain_priors:suppression_score(reading_acquisition_legitimacy__structured_literacy_remediation, 0.72).
+domain_priors:theater_ratio(reading_acquisition_legitimacy__structured_literacy_remediation, 0.31).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, extractiveness, 0.62).
-narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0.48).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, extractiveness, 0.58).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0.31).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, resistance, 0.72).
+narrative_ontology:constraint_metric(reading_acquisition_legitimacy__structured_literacy_remediation, resistance, 0.54).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(reading_acquisition_legitimacy__structured_literacy_remediation, tangled_rope).
-narrative_ontology:human_readable(reading_acquisition_legitimacy__structured_literacy_remediation, "Structured Literacy Remediation as Legitimate Reading Instruction Model").
-narrative_ontology:topic_domain(reading_acquisition_legitimacy__structured_literacy_remediation, "educational_policy/cognitive_science").
+narrative_ontology:human_readable(reading_acquisition_legitimacy__structured_literacy_remediation, "Structured Literacy Remediation as Legitimate Reading Instruction Design").
+narrative_ontology:topic_domain(reading_acquisition_legitimacy__structured_literacy_remediation, "education_policy/cognitive_science").
 
 domain_priors:requires_active_enforcement(reading_acquisition_legitimacy__structured_literacy_remediation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(reading_acquisition_legitimacy__structured_literacy_remediation, '68000534-c0e9-4935-988a-f5ecf5f96805').
-narrative_ontology:cs_kernel_codification('68000534-c0e9-4935-988a-f5ecf5f96805', distributed).
-narrative_ontology:cs_authority_grounding('68000534-c0e9-4935-988a-f5ecf5f96805', expertise).
-narrative_ontology:cs_interpretation_layer_present('68000534-c0e9-4935-988a-f5ecf5f96805').
-narrative_ontology:cs_reading_relation('68000534-c0e9-4935-988a-f5ecf5f96805', reading_acquisition_legitimacy__phonics_decoding_primacy, influences).
-narrative_ontology:cs_reading_relation('68000534-c0e9-4935-988a-f5ecf5f96805', reading_acquisition_legitimacy__whole_language_meaning_primacy, forecloses).
-narrative_ontology:cs_reading_relation('68000534-c0e9-4935-988a-f5ecf5f96805', reading_acquisition_legitimacy__balanced_literacy_integration, coexists_with).
-narrative_ontology:cs_axiom('68000534-c0e9-4935-988a-f5ecf5f96805', foundational, vulnerable_learners_first_design_imperative).
-narrative_ontology:cs_axiom_status(vulnerable_learners_first_design_imperative, holdable).
-narrative_ontology:cs_axiom_grounding('68000534-c0e9-4935-988a-f5ecf5f96805', vulnerable_learners_first_design_imperative, empirically_contingent).
-narrative_ontology:cs_axiom('68000534-c0e9-4935-988a-f5ecf5f96805', foundational, explicit_cumulative_instruction_universally_necessary).
-narrative_ontology:cs_axiom_status(explicit_cumulative_instruction_universally_necessary, holdable).
-narrative_ontology:cs_axiom_grounding('68000534-c0e9-4935-988a-f5ecf5f96805', explicit_cumulative_instruction_universally_necessary, empirically_contingent).
-narrative_ontology:cs_reference_frame('68000534-c0e9-4935-988a-f5ecf5f96805', cognitive_science_reading_universalism).
-narrative_ontology:cs_drift_state('68000534-c0e9-4935-988a-f5ecf5f96805', contemporary_mandated_expansion, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('68000534-c0e9-4935-988a-f5ecf5f96805', '').
+narrative_ontology:cs_story_uid(reading_acquisition_legitimacy__structured_literacy_remediation, '312fbdba-845f-43ac-81e6-3c0375491255').
+narrative_ontology:cs_kernel_codification('312fbdba-845f-43ac-81e6-3c0375491255', distributed).
+narrative_ontology:cs_authority_grounding('312fbdba-845f-43ac-81e6-3c0375491255', extraction).
+narrative_ontology:cs_interpretation_layer_present('312fbdba-845f-43ac-81e6-3c0375491255').
+narrative_ontology:cs_reading_relation('312fbdba-845f-43ac-81e6-3c0375491255', reading_acquisition_legitimacy__phonics_decoding_primacy, forecloses).
+narrative_ontology:cs_reading_relation('312fbdba-845f-43ac-81e6-3c0375491255', reading_acquisition_legitimacy__whole_language_meaning_primacy, forecloses).
+narrative_ontology:cs_reading_relation('312fbdba-845f-43ac-81e6-3c0375491255', reading_acquisition_legitimacy__balanced_literacy_integration, influences).
+narrative_ontology:cs_axiom('312fbdba-845f-43ac-81e6-3c0375491255', foundational, vulnerable_learners_require_explicit_systematic_instruction).
+narrative_ontology:cs_axiom_status(vulnerable_learners_require_explicit_systematic_instruction, holdable).
+narrative_ontology:cs_axiom_grounding('312fbdba-845f-43ac-81e6-3c0375491255', vulnerable_learners_require_explicit_systematic_instruction, empirically_contingent).
+narrative_ontology:cs_axiom('312fbdba-845f-43ac-81e6-3c0375491255', foundational, cumulative_alphabetic_principle_foundational_to_decoding).
+narrative_ontology:cs_axiom_status(cumulative_alphabetic_principle_foundational_to_decoding, holdable).
+narrative_ontology:cs_axiom_grounding('312fbdba-845f-43ac-81e6-3c0375491255', cumulative_alphabetic_principle_foundational_to_decoding, empirically_contingent).
+narrative_ontology:cs_axiom('312fbdba-845f-43ac-81e6-3c0375491255', secondary, continuous_diagnostic_assessment_prevents_reading_failure).
+narrative_ontology:cs_axiom_status(continuous_diagnostic_assessment_prevents_reading_failure, holdable).
+narrative_ontology:cs_axiom_grounding('312fbdba-845f-43ac-81e6-3c0375491255', continuous_diagnostic_assessment_prevents_reading_failure, empirically_contingent).
+narrative_ontology:cs_reference_frame('312fbdba-845f-43ac-81e6-3c0375491255', evidence_based_reading_science_prioritizing_vulnerable_learners).
+narrative_ontology:cs_drift_state('312fbdba-845f-43ac-81e6-3c0375491255', contemporary_policy_adoption_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('312fbdba-845f-43ac-81e6-3c0375491255', '2026-06-12T14:23:47Z').
 narrative_ontology:cs_kernel_id(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_practitioners).
-narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, remedial_education_vendors).
-narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, special_education_administrators).
-narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, early_failing_readers).
-narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, classroom_teachers_under_mandate).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, diagnostic_assessment_infrastructure).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, intervention_specialists).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, whole_language_programs).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, teachers_trained_in_alternatives).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, schools_invested_in_non_diagnostic_models).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, vulnerable_early_readers).
+narrative_ontology:constraint_beneficiary(reading_acquisition_legitimacy__structured_literacy_remediation, elementary_classroom_teachers).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, whole_language_practitioners).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, balanced_literacy_advocates).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, school_districts_invested_in_alternatives).
+narrative_ontology:constraint_victim(reading_acquisition_legitimacy__structured_literacy_remediation, elementary_classroom_teachers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Literacy specialists and remedial-reading instructors trained in structured literacy frameworks (Orton-Gillingham, Fountas & Pinnell, Science of Reading alignment). They argue that explicit, cumulative, multisensory instruction with continuous diagnostic assessment is the empirically grounded standard. Their professional authority and certification depend on this framework remaining the legitimate standard; adoption of the constraint expands their scope and validates their expertise.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_practitioners, beneficiary,
+    organized, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_practitioners, agenda_setter).
+
+% Children with dyslexia, language processing deficits, or late-starting literacy exposure. Structured literacy's explicit, diagnostic approach catches their gaps early and provides targeted intervention before failure accumulates. Their exit option is the school environment they are assigned to; they cannot choose an instructional model.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, vulnerable_early_readers, beneficiary,
+    powerless, biographical, trapped, local).
+
+% Reading specialists and teachers trained in whole-language, meaning-centered, literature-immersion models. They argue that decoding emerges naturally from authentic reading exposure and that explicit phonics is stilted and demotivating. Adoption of the structured literacy standard delegitimizes their professional expertise, threatens their job security in districts adopting the constraint, and requires retraining or professional displacement.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, whole_language_practitioners, payer,
+    organized, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(reading_acquisition_legitimacy__structured_literacy_remediation, whole_language_practitioners, excluded).
+
+% Teachers and instructional leaders committed to balancing explicit phonics with literature exposure, arguing that reading requires both decoding and meaning-making. They see the structured literacy constraint as overweighting decoding mechanics and undervaluing comprehension and engagement. Adoption forces them to either conform or defend their approach in hostile policy environments.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, balanced_literacy_advocates, payer,
+    organized, biographical, constrained, national).
+
+% Standardized testing vendors, assessment platforms, and data-management systems that sell diagnostic reading batteries, progress-monitoring tools, and outcomes tracking. Structured literacy's continuous diagnostic mandate creates an institutional demand for their products and services; the constraint entrenches their role in the instructional system.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, diagnostic_assessment_infrastructure, beneficiary,
+    institutional, generational, mobile, national).
+
+% Districts that have invested in whole-language or balanced-literacy curricula, training, and materials. Adoption of the structured literacy constraint requires capital-intensive curriculum replacement, teacher retraining, and acknowledgment that prior investments were misdirected. The constraint imposes substantial switching costs and institutional humbling.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, school_districts_invested_in_alternatives, payer,
+    institutional, biographical, constrained, regional).
+
+% Teachers in grades K–3 who implement reading instruction daily. Those aligned with structured literacy gain clarity and professional authority; those trained in other approaches face retraining requirements, performance pressure from new standards, and potential judgment that prior practice was inadequate. Their compliance is required by administrative mandate and curriculum adoption.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, elementary_classroom_teachers, payer,
+    moderate, biographical, constrained, local).
+narrative_ontology:stakeholder_secondary_role(reading_acquisition_legitimacy__structured_literacy_remediation, elementary_classroom_teachers, beneficiary).
+
+% Cognitive neuroscientists, educational researchers, and evidence synthesis bodies (National Reading Panel, National Academies reports) that study reading acquisition and effectiveness of instructional approaches. They examine which models best predict reading success, particularly for struggling learners. Their findings anchor the empirical claims the constraint rides on.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, reading_science_researchers, observer,
+    institutional, generational, analytical, global).
+
+% State education departments, federal reading policy offices, and legislative bodies that adopt reading standards, mandate curriculum, and fund instructional interventions. They declare which pedagogical approaches count as legitimate, which teacher certifications are valid, and which instruction models receive funding priority. Their enforcement power makes the constraint stick.
+narrative_ontology:constraint_stakeholder(reading_acquisition_legitimacy__structured_literacy_remediation, policy_authorities, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(reading_acquisition_legitimacy__structured_literacy_remediation, structured_literacy_practitioners).
+narrative_ontology:fixing_cost_class(reading_acquisition_legitimacy__structured_literacy_remediation, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the early literacy crisis by establishing a shared, evidence-grounded framework that prevents reading failure before it becomes entrenched: explicit phonemic awareness, systematic alphabetic principle instruction, cumulative skill progression, and continuous diagnostic data allow all students (especially vulnerable learners) to decode reliably and build reading stamina before meaning-making demands accelerate.
+% TRANSFER_FUNCTION: Transfers instructional legitimacy and professional authority from whole-language and balanced-literacy practitioners to structured-literacy specialists; transfers operational control over reading curricula from individual teacher discretion to diagnostic-protocol-driven systems; transfers budget allocation from literature-purchase programs to assessment infrastructure and specialist-teacher positions.
+% ABSENT_VOICES: Bilingual and multilingual learners whose reading development spans two or more language systems; teachers in under-resourced schools who lack capacity for continuous diagnostic assessment infrastructure; families whose home literacy practices do not align with phonics-first sequencing; children whose reading struggles stem from oral-language processing or attention disorders rather than decoding deficits (the constraint may misdiagnose and over-treat). These voices would argue the constraint assumes monolingual, neurotypical, well-resourced learner populations and risks iatrogenic harm to populations its core theory misidentifies.
+% DISAPPEARANCE_RATIONALE: If the structured literacy constraint disappeared overnight, reading instruction would revert to competing frameworks: whole-language immersion, balanced literacy, or teacher-discretion models. Reading outcomes for struggling learners would likely decline in the short term (evidence-base suggests structured literacy prevents some reading failure); early intervention capacity would atrophy; professional status and hiring in remedial reading would shift; assessment vendors would lose a major market; teacher certification standards would ease; alternative pedagogies would regain institutional legitimacy. The constraint's removal would reorganize instructional legitimacy, resource flows, professional hierarchies, and diagnostic infrastructure throughout K–3 literacy systems.
+% FOUNDING_PROBLEM: Early reading failure, particularly among children with language-processing vulnerabilities, dyslexia, and disadvantaged backgrounds: traditional whole-language and balanced-literacy approaches failed to catch these students early, allowed them to fall behind, and rarely caught them up with intensive, explicit intervention. The founding problem is the cascade of reading failure that becomes self-reinforcing by grade 3 and leaves 35–40% of children reading below grade level by high school, with disproportionate impact on children from low-income and multilingual households.
+% FOUNDING_PROBLEM_CORROBORATION: National Assessment of Educational Progress (NAEP) data documenting persistent reading achievement gaps; longitudinal studies of reading failure trajectories (National Reading Panel, Kilpatrick); cognitive neuroscience research on dyslexia and alphabetic processing (Shaywitz, Dehaene); analyses of whole-language instructional outcomes in low-income districts. Corroboration comes from independent researchers and federal measurement systems outside the benefiting literacy-specialist community, though the benefiting community also attests the problem. However, the sibling readings dispute whether structured literacy is the answer: whole-language advocates argue whole-language prevents reading failure through engagement; balanced literacy advocates argue both decoding and meaning prevent failure.
+narrative_ontology:disappearance_verdict(reading_acquisition_legitimacy__structured_literacy_remediation, world_rearranges).
+narrative_ontology:founding_problem_status(reading_acquisition_legitimacy__structured_literacy_remediation, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(reading_acquisition_legitimacy__structured_literacy_remediation, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(reading_acquisition_legitimacy__structured_literacy_remediation, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(reading_acquisition_legitimacy__structured_literacy_remediation, 'none', 1).
+narrative_ontology:epsilon_provenance(reading_acquisition_legitimacy__structured_literacy_remediation, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -184,16 +256,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   EXTRACTIVENESS at 0.62 reflects the gap between the constraint's stated function (early detection and evidence-based intervention) and the actual transfer: the constraint moves instructional authority from teachers to practitioners, classroom time from literature to drills, and revenue from districts to vendors. The metric rises from 0.48 to 0.62 over the interval as adoption becomes universal and alternatives (balanced literacy, meaning-first instruction) become harder to defend publicly; the plateau at 0.62 reflects the ceiling of extraction under this reading—further gains would require explicit rate increases or new fees, which would make the extraction visible. SUPPRESSION at 0.71 reflects the active work needed to maintain the constraint: delegitimating balanced literacy research despite its evidence base, enforcing fidelity monitoring and accountability measures that penalize deviation, and excluding practitioner voices that question the universality of structured literacy. THEATER_RATIO climbing from 0.32 to 0.48 indicates that assessment activity (continuous diagnostic monitoring) has shifted: initially functional (identifying genuine reading failure), increasingly performative (documenting compliance with structured literacy protocol fidelity, justifying continued intensive instruction and vendor services). ACCESSIBILITY_COLLAPSE at 0.68 reflects that teachers and districts cannot easily opt out once the constraint is embedded in standards, accountability systems, and professional development infrastructure. RESISTANCE at 0.72 indicates substantial pushback from teachers (autonomy loss), balanced literacy researchers (delegitimation), and parents (medicalization of reading difficulty), which persists despite the constraint's expansion.
+ *   Extractiveness rises from 0.38 (early constraint adoption) to 0.58 (mature state) because the benefits of literacy prevention are real but diffuse, while the costs to displaced practitioners and schools are concentrated and visible. Suppression is sustained at 0.72 throughout the interval: the constraint's persistence requires active enforcement against competing pedagogies — whole-language and balanced-literacy models do not voluntarily cede ground; state-level policy pressure (curriculum mandates, assessment requirements, teacher-certification changes, funding prioritization) is the mechanism maintaining the constraint. Theater ratio rises initially (0.18→0.26) as compliance expands and diagnostic-assessment rituals become performative (schools adopt the language and surface structures without deep implementation), then plateaus (0.26→0.31) as adoption becomes routine and theater becomes a stable minority of activity. Accessibility collapse is 0.68: alternative pedagogies remain intellectually available (books, articles, professional organizations defending whole-language and balanced literacy exist), but institutional pathways to practicing them have narrowed substantially. Resistance is 0.54: moderate but real; whole-language and balanced-literacy communities continue arguing for their approaches in professional journals, state policy debates, and individual schools, even as the constraint expands.
  *
  * PERSPECTIVAL GAP:
- *   The seat divergence between practitioners and payers is the core structural asymmetry. From the PRACTITIONER seat (agenda-setter, institutional power, arbitrage exit): the constraint is legitimate coordination solving an urgent, evidence-based problem; children who were previously unidentified and unsupported now receive early detection and explicit, research-supported instruction. From the CLASSROOM TEACHER seat (moderate power, constrained exit): the same structure is enforced extraction of autonomy and time; professional judgment is replaced by fidelity checklists, student-centered meaning-making is eliminated in favor of scripted drills, and re-training is mandatory and ideologically one-directional. From the EARLY FAILING READER seat (powerless, trapped exit): the constraint is a genuine benefit (explicit instruction designed for their needs) layered with a substantial cost (segregation, stigma, loss of enjoyable reading, psychosocial burden of early identification). The engine computes per-seat classifications reflecting these structural asymmetries from the authored beneficiary/victim/exit data; the authored claim (tangled_rope) represents the structural reality that the constraint simultaneously coordinates (solves a real problem: undetected dyslexia) and extracts (shifts authority and revenue). A snare reading would erase the coordination function; a rope reading would erase the extraction. Neither fits the data.
+ *   From the structured-literacy agenda-setter seat: this is evidence-grounded coordination that corrects a failed system and rescues struggling readers from preventable failure. From the whole-language practitioner seat: this is professional displacement disguised as science, silencing pedagogies that honor student agency and meaning-making, and imposing a mechanistic decoding-first model that stifles comprehension and engagement. From the policy-authority seat: this is legitimate standard-setting for a public good (literacy). From the district administrator seat investing in alternatives: this is capital-destroying policy churn. From the parent of a child with dyslexia: this is rescue via explicit diagnosis and targeted help. From the parent of a child thriving in a whole-language program: this is unnecessary medicalization and overtreatment. Each seat experiences structurally different extraction/coordination ratios because their institutional position, exit options, and stake in the constraint's persistence diverge.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derives from beneficiary/victim + exit_options + power for each seat. STRUCTURED_LITERACY_PRACTITIONERS: beneficiary (collect revenue, set agenda, control professional development), institutional power, arbitrage exit → d ≈ 0.1 (full beneficiary, can leave if threatened). SPECIAL_EDUCATION_ADMINISTRATORS: beneficiary (reduce liability, access funding, align with consensus narrative), institutional power, constrained exit (standards and litigation risk force compliance) → d ≈ 0.25 (beneficiary with some institutional constraint). REMEDIAL_EDUCATION_VENDORS: beneficiary (direct revenue from adoption, market expansion), institutional power, arbitrage exit → d ≈ 0.05 (pure beneficiary). EARLY_FAILING_READERS: victim (segregation, loss of literature, drill-focused instruction, psychosocial burden), powerless, trapped exit (compulsory attendance) → d ≈ 0.85 (near full target, cannot exit). But also secondary_role beneficiary (genuine benefit of explicit instruction) → d modulates to ≈ 0.65 (mixed: substantial target, partial beneficiary). CLASSROOM_TEACHERS_UNDER_MANDATE: victim (autonomy loss, forced re-training, fidelity monitoring), moderate power, constrained exit (employment, licensure) → d ≈ 0.72 (strong target, cannot easily exit). BALANCED_LITERACY_PRACTITIONERS: excluded, powerful, constrained exit (institutional delegitimation blocks their work even if they stay) → d ≈ 0.68 (functionally targeted through exclusion despite power). The directionality divergence is substantial: beneficiaries sit near 0.1–0.25, victims/excluded sit near 0.65–0.85, mixing at 0.48–0.62. This divergence is NOT an error—it is the structural fact the engine measures.
+ *   Structured-literacy practitioners (agenda-setter + beneficiary) sit near the d=0.0 end: their professional authority, scope, and institutional standing rise as the constraint expands; they set the standards and enforce them. Vulnerable learners (beneficiary but powerless and trapped) sit near d=0.5 with asymmetry: they benefit from the explicit, preventative approach, but they cannot exit the constraint or choose alternatives — their benefit is real but non-negotiable. Whole-language and balanced-literacy practitioners (payers, constrained) sit near d=1.0: their professional credentials are questioned, their curriculum choices are overridden, their job security in adoption districts is threatened. Assessment infrastructure vendors (beneficiary, institutional, mobile exit) sit near d=0.3: they benefit substantially from the diagnostic mandate but retain market arbitrage — they can supply to any instructional model; their exit option is real. School districts invested in alternatives (payer, institutional, constrained) sit near d=0.9: high switching costs, institutional humbling, budget displacement. Classroom teachers (mixed payer/beneficiary) split: those aligned with structured literacy gain professional clarity and authority (d≈0.2), those retraining under mandate face pressure and compliance costs (d≈0.7). The constraint's persistence depends on policy enforcement that keeps alternative pathways sufficiently closed for payers while maintaining genuine benefit for vulnerable learners and practitioners.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint avoids mandatrophy misclassification because it carries genuine coordination: early reading failure IS a real problem, undetected dyslexia IS a serious outcome, and explicit, cumulative instruction IS evidence-supported for struggling readers. This distinguishes it from a snare (pure extraction), where the cover story (coordination) is transparent fabrication. However, the rising extraction (0.62 at interval end) and climbing theater_ratio (0.48) suggest that the coordination function is being layered with extraction: the problem the constraint solves is real and live (founding_problem_status = live), but the constraint's persistence is increasingly due to beneficiary capture (practitioners' interest in market dominance, vendors' revenue, administrators' liability protection) rather than pure problem-solving. A piton reading would emerge if the founding problem died (if early reading failure became negligible) while the constraint persisted through institutional inertia—that is NOT the current state. This is tangled_rope with asymmetric but genuine coordination: the constraint solves a real problem AND extracts rents from solving it.
+ *   Mandatrophy is not present. The founding problem (early reading failure, especially for vulnerable learners) remains LIVE and the constraint addresses it with a coordination function that measurably improves outcomes for the target population (struggling readers who need explicit, systematic intervention). The constraint's persistence is not inertial — policy systems actively enforce it, schools continuously adopt it, and the underlying empirical claim (structured literacy prevents reading failure) remains valid and contested (not dead; competing readings remain live). However, the measurement trajectory shows warning signs: theater ratio is rising and suppression is elevated and stable, indicating that compliance pressure (institutional enforcement) and performative adoption are growing. If theater continues rising toward 0.50+ while suppression remains high, the constraint risks drifting toward piton status — maintained by enforcement momentum rather than by solved coordination problem. The early-stage observation is tangled rope with healthy coordination and extractive rent-seeking; long-term monitoring should track whether the coordination function (preventing early reading failure) continues delivering measurable outcomes or becomes decoupled from the enforcement infrastructure (diagnostic rituals continue, but reading outcomes plateau despite intensifying compliance).
  */
 
 /* ==========================================================================
@@ -201,119 +273,117 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    cognitive_science_warrant_sufficiency,
-    'Do the empirical findings in cognitive neuroscience about reading acquisition (role of explicit phonics, cumulative sequencing, multisensory engagement) constitute sufficient warrant to mandate structured literacy across all instruction, or do they warrant structured literacy as ONE effective evidence-based approach among multiple legitimate alternatives?',
-    'Meta-analysis and systematic review of reading intervention efficacy studies, including long-term outcome data comparing structured literacy, balanced literacy, and hybrid approaches across diverse learner populations and contexts. Replication of foundational cognitive neuroscience studies (e.g., fMRI activation patterns in dyslexia) across international populations.',
-    'If the empirical evidence supports structured literacy as a necessary universal baseline, the constraint''s coordination function is strengthened and extraction justified as coordination cost. If the evidence supports structured literacy as one effective option among alternatives, the constraint''s extraction component is exposed—the mandate is enforced by beneficiary preference, not empirical necessity, and the suppression of balanced literacy research represents unjustified exclusion.',
+    kernel_reading_coexistence,
+    'Are the four readings of the reading_acquisition_legitimacy kernel genuinely coexisting competing readings, or does one (structured literacy) logically foreclose the others?',
+    'Examine whether holding structured literacy''s core premise (reading requires explicit alphabetic-principle instruction for vulnerable learners; decoding is foundational) logically entails rejecting whole-language''s core premise (decoding emerges naturally from immersion in authentic literature) or whether both premises can coexist as domain-specific applications (e.g., structured literacy for struggling readers; whole-language for advanced/engaged readers). If the premises do not directly contradict, the readings coexist; if one entails the falsity of the other, foreclosure applies.',
+    'If coexistence is the true relationship, the constraint is one live reading among several, and misclassifying it as foreclosing would overstate its legitimacy claim. If foreclosure is the true relationship, the constraint''s persistence depends on suppressing a logically incoherent alternative, not merely a pedagogically different one — a stronger closure claim.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(cognitive_science_warrant_sufficiency, empirical, 'Whether cognitive neuroscience evidence warrants mandatory universal implementation or supports structured literacy as one legitimate alternative.').
+narrative_ontology:omega_variable(kernel_reading_coexistence, conceptual, 'Whether structured literacy and whole-language readings are logically incompatible or merely pedagogically competing.').
 
 omega_variable(
-    naturalization_of_expert_authority,
-    'Is the constraint''s suppression (exclusion of balanced literacy practitioners, delegitimation of alternative research) a necessary component of coherent coordination, or is it a cover story that naturalizes beneficiary preference as scientific necessity?',
-    'Comparative analysis: does a dual-model instructional environment (schools teaching both structured literacy AND balanced literacy, with parents/teachers choosing) produce worse outcomes than mandatory structured literacy? Do alternative models produce differential outcomes by learner profile (e.g., dyslexic vs. non-dyslexic readers, high-poverty vs. affluent contexts)? Survey of classroom teachers about their instructional autonomy, training costs, and measured reading outcomes under mandate vs. choice conditions.',
-    'If dual-model environments produce equivalent or superior outcomes, the suppression reveals the constraint''s extraction component: the mandate protects vendor market share and practitioner authority rather than optimizing for all learners. If mandatory structured literacy produces substantially better outcomes, the suppression is justified as necessary to prevent malpractice.',
+    empirical_closure_vs_policy_closure,
+    'Is the suppression of alternative pedagogies driven by empirical evidence that structured literacy outperforms alternatives for most populations, or by policy enforcement that privileges structured literacy independent of comparative effectiveness evidence?',
+    'Meta-analysis comparing reading outcomes under structured-literacy-designed instruction, whole-language instruction, and balanced literacy in comparable student populations (controlling for implementation quality, teacher training, student demographics). If structured literacy shows measurable superiority across populations, the suppression is empirically grounded; if outcomes are comparable or population-specific, the suppression is policy-driven enforcement.',
+    'Empirically grounded suppression of inferior approaches is legitimate constraint-setting; policy-driven suppression of comparable alternatives is extractive constraint that happens to benefit practitioners whose pedagogy was chosen by policy fiat rather than evidence. This distinction determines whether the constraint is tangled rope (coordination + extraction) or snare (extraction with coordination as cover).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(empirical_closure_vs_policy_closure, empirical, 'Whether the constraint''s enforcement reflects evidence-based superiority or policy momentum.').
+
+omega_variable(
+    identity_lock_in_teacher_retraining,
+    'How much of the suppression of whole-language and balanced-literacy practitioners is structural (policy barriers, job loss, credential devaluation) versus internalized (teachers have fused their professional identity with a pedagogical approach and cannot psychologically exit the framework even after its institutional closure)?',
+    'Post-adoption trajectory analysis: if whole-language-trained teachers successfully retrain and adopt structured literacy without reported identity crisis, internalization is low and suppression is structural. If retraining is reported as identity-threatening, role-destabilizing, or cognitively dissonant, internalization is significant; the practitioners carry suppression with them across retraining.',
+    'Structural suppression (job loss, credential barriers, policy pressure) is reversible with policy change; internalized suppression (identity fusion with a delegitimized pedagogy) persists after policy reversal. If internalization is high, the constraint''s effective suppression is higher than the structural enforcement suggests, and the lasting cost to displaced practitioners extends beyond institutional switching costs.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(naturalization_of_expert_authority, empirical, 'Whether mandatory suppression of alternative models is necessary for effective coordination or whether it serves primarily to consolidate beneficiary power.').
+narrative_ontology:omega_variable(identity_lock_in_teacher_retraining, empirical, 'Structural vs. internalized identity lock-in for displaced whole-language practitioners.').
 
 omega_variable(
-    identity_lock_mechanism_in_dyslexia_diagnosis,
-    'Does early diagnosis of dyslexia using structured literacy screening and mandatory intensive intervention constitute helpful early identification and support, or does it constitute identity-locking that fuses the child''s self-concept to a medical/remedial category and reduces their exit options from intensive instruction?',
-    'Longitudinal studies tracking children identified as dyslexic under the constraint: self-concept measures, reading identity, engagement with reading for pleasure, trajectory of independence from intensive instruction, and long-term reading outcomes. Comparison to cohorts identified later or via less intensive screening. Post-intervention follow-up: what proportion of children identified as dyslexic continue to define themselves as ''struggling readers'' even after reading skills improve? What proportion report reduced reading for pleasure due to intervention focus on decoding drills?',
-    'If early diagnosis + intensive intervention improves both skills AND reading identity and engagement, the secondary_role beneficiary assignment for early_failing_readers is valid. If early diagnosis triggers identity-fusion to a remedial category that persists even after skill improvement, or if it drives children away from reading for pleasure, the cost to the reader is higher than currently authored (d for early_failing_readers may shift from 0.65 toward 0.75+), and the constraint''s asymmetry becomes more extractive.',
+    vulnerable_learner_overtreatment_risk,
+    'For children whose reading struggles are not decoding-based (e.g., oral language processing deficits, attention disorders, limited exposure), does the structured-literacy constraint risk misdiagnosis and overtreatment as decoding-disordered, delaying or preventing appropriate alternative interventions?',
+    'Differential diagnosis studies examining how many struggling readers identified as needing structured-literacy intervention actually have decoding deficits (true diagnosis) versus language processing, attention, or exposure problems (alternative diagnosis requiring different intervention). If misdiagnosis rates are non-trivial, the constraint''s application to all vulnerable learners extracts a hidden cost from subpopulations who would benefit from different approaches.',
+    'If diagnostic accuracy is high, the constraint''s targeting to vulnerable learners is legitimate coordination. If misdiagnosis is common, the constraint''s claim to solve the founding problem is partially false for some populations — it solves early reading failure for some vulnerable learners while creating iatrogenic delay for others. This undermines the constraint''s empirical foundation and introduces asymmetric extraction (correct-diagnosis populations benefit; misdiagnosed populations bear costs).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(vulnerable_learner_overtreatment_risk, empirical, 'Risk of misdiagnosis and overtreatment under the structured-literacy framework for non-decoding reading struggles.').
+
+omega_variable(
+    assessment_infrastructure_capture,
+    'Does the structured-literacy constraint''s mandate for continuous diagnostic assessment create institutional lock-in where assessment vendors become indispensable to compliance, and the infrastructure''s commercial interests shape the constraint''s evolution independent of literacy outcomes?',
+    'Historical analysis of assessment-vendor influence on state reading standards, diagnostic-tool requirements, and funding allocations. If assessment vendors actively lobby for expanded diagnostic mandates, sell tools that create data-dependency, and capture policy conversations, assessment infrastructure is a captured institution feeding the constraint. If the constraint''s evolution reflects literacy-outcome improvement, assessment is a legitimate tool.',
+    'If captured, the constraint extracts from districts and schools in the form of assessment-software licensing, forcing resource allocation away from direct instruction toward infrastructure. The beneficiary structure shifts: assessment vendors become primary beneficiaries; vulnerable learners'' actual reading benefit depends on whether assessment mandates correlate with instructional improvement (contestable). This would move the constraint toward snare territory (extraction with coordination as cover).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(identity_lock_mechanism_in_dyslexia_diagnosis, empirical, 'Whether early dyslexia diagnosis and intensive intervention support healthy reading identity or constitute identity-locking that restricts exit options and reduces reading engagement.').
-
-omega_variable(
-    structured_literacy_knowledge_vs_pedagogy_sibling_readings,
-    'What is the structural relationship between this reading (structured_literacy_remediation: instruction DESIGNED FOR most vulnerable first, with continuous diagnostics, multisensory, cumulative) and its sibling readings (phonics_decoding_primacy, whole_language_meaning_primacy, balanced_literacy_integration)? Do these readings COEXIST as live alternatives, or does adopting one reading functionally FORECLOSE the others?',
-    'Doctrinal analysis: do the foundational axioms of each reading logically forbid the sibling''s core claim in a single coherent framework? Interview and survey of reading specialists holding different readings: do practitioners in one reading acknowledge the validity of sibling reading cores (e.g., do structured literacy practitioners concede that meaning-making is important, or do they deny its importance entirely)? Analysis of district policies: do mandatory structured literacy mandates explicitly prohibit balanced literacy instruction, or do they merely prioritize structured literacy while allowing supplementary balanced approaches?',
-    'If readings COEXIST (all are live, no single framework rules out all others), the constraint''s authority structure is more properly described as ''distributed'' and the suppression is extractive (unnecessary to coordination). If readings FORECLOSE (the core premises contradict in ways that no framework could hold both), the suppression may be necessary to coherent instruction.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(structured_literacy_knowledge_vs_pedagogy_sibling_readings, conceptual, 'Structural relationship between this reading and its sibling readings: whether they coexist as live alternatives or whether adoption of this reading forecloses others.').
-
-omega_variable(
-    cost_asymmetry_distribution_across_seats,
-    'The constraint imposes costs on classroom teachers (autonomy loss, forced re-training) and early failing readers (segregation, drill-focus). Are these costs structurally necessary to the coordination function (early detection + explicit instruction), or are they byproducts of the extraction mechanism (beneficiary preference for scalable, standardized, vendor-supplied curricula)?',
-    'Counterfactual design: could early reading detection and explicit instruction for struggling readers be implemented with (a) teacher autonomy preserved (e.g., structured literacy as a toolkit teachers apply according to professional judgment), (b) less intensive segregation (e.g., Tier 1/Tier 2 intervention in regular classrooms with specialist support, rather than pull-out remedial tracks), (c) maintained access to authentic literature alongside decoding practice? Compare outcomes and costs of this counterfactual model to current mandatory structured literacy implementation.',
-    'If the counterfactual model produces equivalent or better outcomes with lower costs to teachers and readers, the current cost distribution reveals the constraint''s extraction: costs are imposed on powerless parties (readers) and constrained parties (teachers) to benefit arbitrage parties (practitioners, vendors). If the current cost distribution is necessary to the coordination function, the constraint''s asymmetry is justified.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(cost_asymmetry_distribution_across_seats, empirical, 'Whether cost distribution (teacher autonomy loss, reader segregation) is necessary to coordination or whether it serves primarily to enable extraction.').
-
-omega_variable(
-    committer_reading_contest_sibling_coexistence,
-    'This constraint is one of four readings of the contested kernel READING_ACQUISITION_LEGITIMACY. The other three readings (phonics_decoding_primacy, whole_language_meaning_primacy, balanced_literacy_integration) are not foreclosed by the logic of THIS reading—they could coexist in a framework that treats instruction as locally adaptive rather than universally mandated. Is the constraint''s suppression of alternative readings a structural necessity (because coherent reading instruction cannot mix mechanisms), or is it an extractive strategy (consolidating beneficiary market by delegitimating alternatives)?',
-    'Comparative case study: jurisdictions with strong balanced literacy traditions that have NOT adopted mandatory structured literacy (e.g., some New Zealand, Australian, or UK contexts). Do these contexts show worse reading outcomes, or merely different reading-outcome profiles? Analysis of international reading-instruction policies: how many reading systems mandate a single approach, vs. how many support multiple legitimate approaches within a coherence framework? Historical analysis: did the shift from balanced literacy dominance to structured literacy dominance occur due to new empirical evidence (science warrant), or due to practitioner/vendor market consolidation?',
-    'If jurisdictions with non-mandatory, balanced literacy or mixed-model approaches show equivalent or better reading outcomes, the suppression of alternative readings is extractive (not necessary to outcomes). If mandated structured literacy produces demonstrably superior outcomes, the suppression is coordination-necessary.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(committer_reading_contest_sibling_coexistence, empirical, 'Whether suppression of sibling readings (balanced literacy, meaning-first) is necessary to coherent instruction or serves primarily to consolidate beneficiary market dominance.').
+narrative_ontology:omega_variable(assessment_infrastructure_capture, empirical, 'Degree of assessment-infrastructure capture in shaping the structured-literacy constraint''s institutional evolution.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(reading_acquisition_legitimacy__structured_literacy_remediation, 0, 25).
+narrative_ontology:interval(reading_acquisition_legitimacy__structured_literacy_remediation, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(read_tr_t0, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0, 0.32).
-narrative_ontology:measurement(read_tr_t5, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 5, 0.38).
-narrative_ontology:measurement(read_tr_t10, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 10, 0.43).
-narrative_ontology:measurement(read_tr_t15, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 15, 0.47).
-narrative_ontology:measurement(read_tr_t20, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 20, 0.48).
-narrative_ontology:measurement(read_tr_t25, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 25, 0.48).
+narrative_ontology:measurement(read_tr_t0, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 0, 0.18).
+narrative_ontology:measurement(read_tr_t5, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 5, 0.2).
+narrative_ontology:measurement(read_tr_t10, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 10, 0.23).
+narrative_ontology:measurement(read_tr_t15, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 15, 0.26).
+narrative_ontology:measurement(read_tr_t20, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 20, 0.28).
+narrative_ontology:measurement(read_tr_t25, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 25, 0.3).
+narrative_ontology:measurement(read_tr_t30, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 30, 0.31).
+narrative_ontology:measurement(read_tr_t35, reading_acquisition_legitimacy__structured_literacy_remediation, theater_ratio, 35, 0.31).
 
 % Extraction over time
-narrative_ontology:measurement(read_be_t0, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(read_be_t5, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(read_be_t10, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 10, 0.57).
-narrative_ontology:measurement(read_be_t15, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 15, 0.6).
-narrative_ontology:measurement(read_be_t20, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 20, 0.62).
-narrative_ontology:measurement(read_be_t25, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 25, 0.62).
+narrative_ontology:measurement(read_be_t0, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(read_be_t5, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(read_be_t10, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 10, 0.5).
+narrative_ontology:measurement(read_be_t15, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 15, 0.54).
+narrative_ontology:measurement(read_be_t20, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 20, 0.57).
+narrative_ontology:measurement(read_be_t25, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 25, 0.58).
+narrative_ontology:measurement(read_be_t30, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 30, 0.59).
+narrative_ontology:measurement(read_be_t35, reading_acquisition_legitimacy__structured_literacy_remediation, base_extractiveness, 35, 0.58).
 
 % Suppression requirement over time
-narrative_ontology:measurement(read_su_t0, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(read_su_t5, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 5, 0.62).
-narrative_ontology:measurement(read_su_t10, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 10, 0.67).
-narrative_ontology:measurement(read_su_t15, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 15, 0.7).
-narrative_ontology:measurement(read_su_t20, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 20, 0.71).
-narrative_ontology:measurement(read_su_t25, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement(read_su_t0, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 0, 0.64).
+narrative_ontology:measurement(read_su_t5, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 5, 0.67).
+narrative_ontology:measurement(read_su_t10, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 10, 0.7).
+narrative_ontology:measurement(read_su_t15, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 15, 0.71).
+narrative_ontology:measurement(read_su_t20, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 20, 0.72).
+narrative_ontology:measurement(read_su_t25, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 25, 0.72).
+narrative_ontology:measurement(read_su_t30, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement(read_su_t35, reading_acquisition_legitimacy__structured_literacy_remediation, suppression_requirement, 35, 0.72).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(reading_acquisition_legitimacy__structured_literacy_remediation, resource_allocation).
-narrative_ontology:boltzmann_floor_override(reading_acquisition_legitimacy__structured_literacy_remediation, 0.18).
+narrative_ontology:coordination_type(reading_acquisition_legitimacy__structured_literacy_remediation, identity_coordination).
+narrative_ontology:boltzmann_floor_override(reading_acquisition_legitimacy__structured_literacy_remediation, 0.12).
 narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__phonics_decoding_primacy).
 narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__whole_language_meaning_primacy).
 narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, reading_acquisition_legitimacy__balanced_literacy_integration).
+narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, teacher_certification_reading_standards).
+narrative_ontology:affects_constraint(reading_acquisition_legitimacy__structured_literacy_remediation, state_reading_curricula_mandates).
 
 % DUAL FORMULATION NOTE:
-% READING_ACQUISITION_LEGITIMACY is a contested kernel with four distinct readings, each representing a different answer to the question: 'What counts as legitimate reading instruction?' This constraint (structured_literacy_remediation) is one reading. The other three readings (phonics_decoding_primacy, whole_language_meaning_primacy, balanced_literacy_integration) are structurally distinct constraints with different beneficiary structures, extracted values, and stakeholder configurations. Each reading has a different ε because each constrains a different set of instructional choices and produces different distributions of authority, revenue, and burden. The four constraints form a family linked by network.affects_constraints: the dominance of one reading (e.g., structured_literacy_remediation mandate) constrains the viability of others (e.g., suppression reduces balanced_literacy_integration's market share and practitioner authority). Each constraint story must be authored independently per the ε-invariance principle: never fold the alternatives into one story or hedge ε across readings. The contest is captured through omega variables documenting the sibling-reading relationships and through cs_structure.reading_relations declaring how each reading relates to its siblings.
+% This constraint is one reading of the reading_acquisition_legitimacy kernel. The kernel comprises four structurally distinct readings that instantiate different constraints with different ε values, beneficiary/victim structures, and enforcement mechanisms: (1) structured_literacy_remediation (THIS story) — highest structure, explicit cumulative instruction, continuous diagnosis; (2) phonics_decoding_primacy — decoding focus, systematic phonics, moderate explicit instruction; (3) whole_language_meaning_primacy — immersion in authentic literature, decoding emerges naturally, minimal explicit phonics; (4) balanced_literacy_integration — both decoding and meaning-making, balanced approaches, teacher discretion. Each reading emerges from different assumptions about what reading IS, what constitutes legitimate instruction, and which learners are primary. Structured literacy places vulnerable learners first and makes preventative intervention-grade instruction the baseline; phonics emphasizes systematic decoding for all; whole language emphasizes engagement and meaning for all; balanced literacy refuses to prioritize between decoding and meaning. The four constraints form a family linked by network.affects_constraints in all directions — each reading's institutional success constrains or amplifies the others. Structured literacy's rise (2010s forward) correlates with decline of whole-language and balanced-literacy policy adoption and professional legitimacy, not because empirical evidence became conclusive (it remained contested), but because policy authorities adopted the reading and state adoption cascaded. This is an institutional dominance story, not an epistemic settlement story — the kernel remains contested even as one reading's policy instantiation dominates schooling.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(reading_acquisition_legitimacy__structured_literacy_remediation, powerful, 0.68).
+constraint_indexing:directionality_override(reading_acquisition_legitimacy__structured_literacy_remediation, organized, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

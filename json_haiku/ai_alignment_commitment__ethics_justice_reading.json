@@ -4,59 +4,195 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_ai_alignment_ethics_justice",
-    "story_uid": "ffce4e40-c655-40e8-8e4d-3d4201cad3e1"
+    "story_uid": "055def23-d390-4893-bd4c-01b04079450c"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.71,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.64,
-    "resistance": 0.78,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.73,
     "claimed_type": "tangled_rope",
-    "human_readable": "AI Alignment as Justice and Bias Prevention (Ethics Reading)",
-    "topic_domain": "ai_governance/technology_ethics/social_justice",
+    "human_readable": "AI Alignment as Prevention of Bias Reproduction and Present-Day Harm",
+    "topic_domain": "technology/ethics/AI governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "marginalized_communities_experiencing_current_bias",
-      "ai_ethics_research_institutions",
-      "affected_populations_with_enforcement_capacity"
+      "marginalized_communities_subject_to_bias",
+      "ai_ethics_researchers",
+      "civil_rights_advocacy_groups"
     ],
     "victims": [
-      "long_term_safety_research_programs",
-      "agi_control_resource_allocation",
-      "technical_safety_researchers_deprioritized"
+      "long_term_ai_safety_research_agenda",
+      "compute_resource_allocation",
+      "capability_research_institutions"
     ]
   },
-  "interval": {
-    "start": 0,
-    "end": 20
+  "stakeholders": [
+    {
+      "name": "marginalized_communities_subject_to_bias",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face documented immediate harms from deployed AI systems in employment screening, credit decisions, criminal justice algorithms, and social benefits allocation. Their protection from algorithmic discrimination is the stated goal of this constraint. They have no practical exit: these systems govern consequential access regardless of their preferences. This reading frames their protection as the urgent alignment problem."
+    },
+    {
+      "name": "ai_ethics_researchers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Control the research agenda by defining what 'alignment' means, what counts as an alignment problem, and what success looks like. Conduct fairness audits and bias impact evaluations. Set metrics focused on disparate impact and community protection. Secure research funding and publication venues that validate bias-prevention framings. Can shift to different institutions or funding models if their framing becomes untenable in one setting, but face real pressure to maintain the bias-prevention priority."
+    },
+    {
+      "name": "civil_rights_advocacy_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for regulatory and technical intervention to prevent AI discrimination. Benefit from having their concerns elevated to the status of alignment problems and embedded in technical requirements. Their influence is constrained: they can shape discourse and demand accountability, but cannot directly control AI development or institutional research priorities. Often work in coalition with ethics researchers to amplify their voice."
+    },
+    {
+      "name": "long_term_ai_safety_research_agenda",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "A research program studying existential and catastrophic risks from advanced AI systems — control failures, specification gaming, deceptive alignment in superhuman systems. Pays the cost of this constraint through redirected attention, compute resources, and institutional priority. Researchers in this agenda find their work characterized as less urgent or less central to 'real' alignment, even when control research would prevent failures in long-term advanced systems."
+    },
+    {
+      "name": "capability_research_institutions",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Develop AI systems under capability and performance pressures. Face requirements to conduct fairness audits, bias impact assessments, and community engagement processes. These requirements impose development friction, slow capability milestones, and redirect engineering resources toward bias evaluation. Exit options are limited: regulatory pressure, customer demand, and reputational risk make ignoring bias requirements costly."
+    },
+    {
+      "name": "compute_resource_allocation_committee",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Controls allocation of finite compute resources between safety research, bias evaluation, and capability development. This reading shifts compute budgets toward fairness evaluation and bias auditing, away from long-term safety research infrastructure. Makes relative-priority decisions that affect which research programs can scale."
+    },
+    {
+      "name": "futures_research_communities",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Conduct research on long-term AI development, advanced capability risks, deceptive alignment, and specification gaming in superintelligent systems. Are systematically excluded from alignment priority-setting: their concern set (control problems in advanced AI) is treated as speculative or orthogonal to 'real' alignment. Their voice in defining what alignment means is suppressed in discourse and funding allocation."
+    },
+    {
+      "name": "affected_communities_themselves",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Communities experiencing AI bias are nominally protected but excluded from decision-making about what counts as harm, what success looks like, and how to prioritize solutions. Their own definitions of harm and protection are mediated through ethics researchers and advocacy institutions rather than being heard directly. Structural power asymmetries and technical expertise barriers limit their voice in technical problem-definition."
+    },
+    {
+      "name": "integration_research_programs",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek to investigate whether bias prevention and long-term safety can be addressed as complementary rather than competitive alignment problems. Observe the resource allocation disputes and institutional competition between ethics-justice and safety-control framings. Currently marginal in institutional authority; positioned to detect whether the two readings can be integrated or whether they are fundamentally in tension."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a collective understanding that preventing reproduction of historical discrimination in AI systems and protecting marginalized communities from algorithmic bias is the central alignment problem. Coordinates ethics researchers, capability developers, civil rights advocates, and (in principle) affected communities around a shared definition of what alignment requires. Creates common standards for fairness evaluation and bias auditing.",
+    "transfer_function": "Transfers research agenda authority, institutional credibility, and compute resources from long-term AI safety research toward bias-prevention research. Transfers regulatory and public attention from capability development toward fairness concerns. Transfers the burden of bias mitigation from society-at-large onto AI developers and ethics review processes. Moves institutional power to define 'alignment' from safety researchers toward ethics researchers and advocacy groups.",
+    "absent_voices": "Futures research communities studying long-term control problems are structurally excluded from alignment priority-setting despite their direct stake in how the term is defined. Affected communities themselves — who would articulate their own harm definitions and preferred solutions — are often nominally included but actually absent from technical decision-making. AI researchers in developing nations whose systems face different bias patterns are typically not in the room when global alignment standards are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint and its enforcement mechanisms disappeared, institutional pressure on bias-prevention research would collapse, compute budgets would reflow toward capability and long-term safety research, fairness audit requirements would become optional, and the authority to define 'alignment' would revert to different framings. The protection infrastructure around marginalized communities would dissolve. Research communities studying long-term control problems would see resource and attention reallocation in their favor. But the very real problem of present-day AI bias harms would persist and accelerate in systems no longer subject to fairness scrutiny.",
+    "founding_problem": "AI systems trained on historical data or optimized against biased proxies reproduce and amplify discrimination patterns that already disadvantage marginalized populations. These harms manifest in real consequential decisions: employment screening, credit allocation, criminal justice risk assessment, social benefits allocation. Marginalized communities face compounded disadvantage when algorithmic systems layer discrimination on top of existing structural inequalities.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Extensive empirical evidence from academic research (Buolamwini & Buolamwini on facial recognition accuracy disparities across race and gender, ProPublica's COMPAS recidivism analysis showing racial disparity in false positive rates, Obermeyer et al. on racial bias in healthcare algorithm, Jackson et al. on employment discrimination in algorithmic screening). Documented harms reported by civil rights organizations including NAACP, Algorithmic Justice League, AI Now Institute, and grassroots communities. Long-term safety researchers do not dispute the existence of present-day bias — they dispute whether it should dominate alignment definitions."
   },
+  "omegas": [
+    {
+      "id": "bias_vs_control_constraint_independence",
+      "question": "Are bias prevention in current systems and control safety in advanced systems structurally separable alignment problems, or is one fundamentally prerequisite or entangled with the other?",
+      "resolution_mechanism": "Empirical investigation of whether systems that are robustly aligned against bias are meaningfully more or less aligned against control failures. Theoretical analysis of whether bias-prevention constraints interact with or corrupt control mechanisms. Natural experiments from jurisdictions with different bias-regulation intensity comparing control alignment outcomes.",
+      "impact": "If the problems are independent, this reading's autonomy claim is sound and both can be treated as legitimate alignment targets without necessary trade-off. If they are entangled (e.g., bias in training data corrupts learned goals in ways that amplify control risks, or control mechanisms worsen bias problems), then the separation premise breaks and the integrated reading becomes structurally more sound.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether bias prevention and long-term control safety are independent alignment problems or entangled."
+    },
+    {
+      "id": "marginalized_community_voice_capture",
+      "question": "Are the voices and preferences of marginalized communities genuinely centered in this constraint's definition and enforcement, or has their protection been reinterpreted by proxy-holders (ethics researchers, advocates, institutions)?",
+      "resolution_mechanism": "Direct deliberation with affected communities on alignment priorities. Participatory design in which communities author their own harm definitions and preferred solutions. Longitudinal tracking of whether community-identified harms match the harms addressed by ethics-driven alignment research. Community audits of whether fairness metrics actually reduce the harms communities experience.",
+      "impact": "If communities' own articulations diverge significantly from the constraint's framing, the constraint risks becoming an extractive apparatus that benefits ethics institutions while marginalizing communities (victim-role capture). The theoretical beneficiary set would require revision from 'marginalized communities' to 'ethics researchers' and the constraint would reclassify toward snare. If alignment is achieved through community voice, the coordination function is genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether marginalized communities genuinely drive alignment priorities or are subordinated within the constraint's structure."
+    },
+    {
+      "id": "reading_kernel_distinction",
+      "question": "Is 'AI alignment' a single contested kernel admitting multiple coherent readings of what the term means, or are the ethics-justice and safety-control framings incommensurable uses of the same word that should be disaggregated into separate concepts?",
+      "resolution_mechanism": "Linguistic and conceptual analysis of whether ethics-justice and safety-control readings share sufficient common reference to count as readings of one kernel. Examination of whether advocates of each reading accept that the others are offering legitimate alternative framings of alignment or whether they treat alternatives as confusion/misdefinition.",
+      "impact": "If readings are incommensurable, this constraint should be retitled 'present_day_bias_prevention' rather than claiming 'alignment', and the constraint family logic would disaggregate. If they are genuinely readings of a shared kernel, the competition is a legitimate kernel contest and the reading structure is sound. The kernel verdict affects whether the three stories form a constraint family or are independent concepts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether ethics-justice and safety-control framings are readings of one contested kernel or incommensurable uses of 'alignment'."
+    },
+    {
+      "id": "research_agenda_extraction_vs_capability_effect",
+      "question": "Does this reading extract from long-term safety research by redirecting attention and resources, or does bias-prevention requirement actually slow risky capability deployment and thereby reduce long-term risks?",
+      "resolution_mechanism": "Track institutional attention allocation and resource flow over time. Model the causal pathways: does bias prevention slow capability timelines in ways that reduce advanced-AI deployment risk? Does it constrain which capability research is pursued, filtering for less dangerous directions? Or does it operate independently and purely redirect resources?",
+      "impact": "If pure extraction, the victim designation for long-term safety research is accurate and this is snare-like. If the relationship is complex (bias prevention slows risky capability deployment, thereby serving long-term safety), then the constraint's function is complementary and extractiveness estimate should decrease. The effective victim set might shrink or the extraction might become net-positive for long-term safety interests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint extracts from long-term safety research or has complex downstream safety effects."
+    },
+    {
+      "id": "reading_instantiation_ambiguity",
+      "question": "What is the minimal commitment required to instantiate this ethics-justice reading of alignment, and what is separable elaboration or reinterpretation?",
+      "resolution_mechanism": "Specification of the core axioms (present harms take priority; marginalized communities are alignment stakeholders) and determination of which institutional and technical practices are entailed by those axioms versus which are contingent elaborations. This grounds the reading's identity separately from institutional implementations.",
+      "impact": "If the core reading is thin and the elaborate practices that extract resources are contingent, the reading could be implemented differently (by communities themselves, with less institutional gatekeeping) and the extraction would be an artifact of current institutional configurations rather than inherent to the reading. If the reading is thick and entails the current extraction structures, then the reading itself is extractive-by-design.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the ethics-justice reading is inherently extractive or whether extraction is contingent to current institutional implementations."
+    }
+  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 4,
-      "value": 0.58
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
       "time_point": 8,
-      "value": 0.63
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 12,
-      "value": 0.66
+      "value": 0.63
     },
     {
       "metric": "base_extractiveness",
       "time_point": 16,
-      "value": 0.67
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
@@ -66,52 +202,52 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 4,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 8,
       "value": 0.32
     },
     {
       "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 12,
-      "value": 0.38
+      "value": 0.41
     },
     {
       "metric": "theater_ratio",
       "time_point": 16,
-      "value": 0.4
+      "value": 0.43
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.42
+      "value": 0.44
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.58
+      "value": 0.54
     },
     {
       "metric": "suppression_requirement",
       "time_point": 4,
-      "value": 0.63
+      "value": 0.61
     },
     {
       "metric": "suppression_requirement",
       "time_point": 8,
-      "value": 0.67
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
       "time_point": 12,
-      "value": 0.7
+      "value": 0.68
     },
     {
       "metric": "suppression_requirement",
@@ -124,60 +260,27 @@
       "value": 0.71
     }
   ],
-  "commentary": {
-    "narrative_context": "This constraint story instantiates the ethics-and-justice reading of AI alignment: alignment is fundamentally about preventing present-day reproduction of social bias and harm to marginalized populations. This reading emerged from documented failures of AI systems in criminal justice, lending, healthcare, and hiring — failures with immediate, verifiable consequences for specific people. The reading reframes 'alignment' from a control problem (keeping advanced AI systems' future actions within human intent) to a justice problem (ensuring AI systems do not perpetuate or amplify existing inequalities). This is ONE reading of a contested kernel. The sibling readings — safety-control-reading and integrated-reading — offer structurally different definitions of alignment's primary success criterion, different victim sets, and different resource allocation implications. The claim and metrics are intentionally independent: the constraint is CLAIMED as tangled_rope (genuine coordination function + asymmetric extraction) while the metrics describe high extractiveness and suppression from the perspective of deprioritized technical-safety communities. The divergence is diagnostic.",
-    "key_agents": [
-      "Marginalized communities experiencing algorithmic bias (powerless, trapped, primary beneficiaries under this reading)",
-      "AI ethics research institutions (organized, agenda-setters, benefit from justice-reading framing)",
-      "Technical AI safety researchers (powerful, high exit options, experience the reading as extractive resource redirection)",
-      "AGI control resource allocation institutions (institutional, constrained exit, forced to rebalance budgets under political pressure from justice framing)",
-      "Policy and regulatory bodies (institutional, pulled by both justice and control framings, but justice has higher political salience)",
-      "AI systems developers (excluded from coalition, their objections reframed as bad faith)"
-    ],
-    "logic_rationale": "Extractiveness is substantial (0.68 at interval end) because the reading functions as a resource-transfer mechanism: every research dollar directed to bias mitigation is unavailable for existential-risk research, every policy focus on present-harm remediation is a competing priority against control-focused governance. Suppression is high (0.71) because the reading's political legitimacy makes it difficult for technical-safety researchers to contest the priority without being publicly characterized as indifferent to present suffering. Theater is moderate (0.42) and rising: as the reading becomes institutionalized, an increasing fraction of activity is performative affirmation of justice commitments rather than substantive bias remediation (conference statements, corporate diversity initiatives, policy documents) rather than material change in affected populations' outcomes. The measurement series show extractiveness plateauing around interval-end while theater continues rising — diagnostic of a constraint whose coordination function (unifying bias research) is stabilized while performative activity expands. Accessibility of alternatives collapses moderately (0.64): technical-safety researchers cannot easily abandon the justice-reading coalition without career cost, affected communities cannot exit the systems causing them harm. Resistance is high (0.78): technical-safety communities actively contest the reading, some affected populations dispute whether the justice reading adequately addresses their needs, and AI developers resist the implicit accusation of bad faith.",
-    "perspectival_gap": "The reading creates asymmetric perception: from the ethics-institution and affected-population seats, the arrangement is genuine coordination addressing real harms that were previously ignored. From the technical-safety seat, the same arrangement is extractive resource redirection driven by political salience rather than rational risk prioritization. The gap is structural and intentional — the justice reading's legitimacy depends on marginalizing the control-risk perspective. This is not a flaw in the reading; it is the reading's core mechanism.",
-    "directionality_logic": "Marginalized communities: low d (beneficiaries, though trapped, no exit), near beneficiary end. Ethics institutions: low d (agenda-setters, high exit to other fields, beneficiaries from the constraint). Technical-safety researchers: high d (payers, high exit but reputationally constrained, victims of resource redirection). AGI institutions: moderate-high d (payers, constrained exit because political pressure makes ignoring justice concerns untenable). Developers: moderate d (excluded, mobile exit, but strategic exclusion creates structural pressure). Policy bodies: symmetric to slightly high d (pulled in both directions, constrained exit, but justice reading has political advantage). The directionality overrides are unnecessary: the structural declarations (beneficiary/victim + exit + power) produce accurate d values.",
-    "mandatrophy_analysis": "The founding problem (present-day algorithmic bias causing documented harm) is demonstrably live. The founding function (unifying bias research and policy under a shared legitimacy frame) is active and functioning. However, the question of whether the justice reading structurally precludes simultaneous attention to control problems (the integrated-reading sibling) is unresolved. If it does preclude, then the justice reading extracts from future safety research not as an intended side effect but as a structural consequence. If it does not preclude, then the high extractiveness reflects resource competition rather than mutual exclusivity. This ambiguity is captured in omegas.",
-    "kernel_context": "This constraint instantiates the ethics-and-justice reading of the contested kernel 'ai_alignment_commitment'. The kernel is contested because multiple communities propose structurally different definitions of what alignment *is*: (1) This reading: alignment = preventing reproduction of social bias and present-day harm in AI systems. Victim set = marginalized populations experiencing current algorithmic discrimination. (2) Safety-control-reading: alignment = preventing catastrophic loss of control over advanced AI systems. Victim set = future humanity facing existential risk. (3) Integrated-reading: alignment = simultaneous attention to control problems and justice problems as non-exclusive. The readings differ structurally in how they define the primary failure case, which populations are centered as victims, and which resource allocation follows. They do not differ in empirical dispute; they differ in axiom — what counts as 'alignment' and whose harm is primary."
+  "interval": {
+    "start": 0,
+    "end": 20
   },
-  "omegas": [
-    {
-      "id": "justice_control_structural_exclusivity",
-      "question": "Are present-bias remediation and long-term control research structurally exclusive in resource allocation and institutional legitimacy, or can they coexist?",
-      "resolution_mechanism": "Empirical: track whether funding increase in one domain requires funding decrease in the other, or whether increased total research investment accommodates both. Institutional: assess whether policy frameworks can center both justice and control concerns without reframing one as secondary.",
-      "impact": "If exclusive, the justice reading extracts from control research by necessity and the reading's extractiveness is higher than measured (a structural feature, not a competition effect). If coexistent, the high extractiveness may reflect institutional capture rather than inherent conflict.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the justice and control readings require mutually exclusive resource allocation or can coexist."
-    },
-    {
-      "id": "marginalized_population_actual_benefit",
-      "question": "Do the policy and research changes driven by the justice reading actually improve outcomes for marginalized populations experiencing algorithmic bias, or does the constraint primarily benefit ethics institutions and policy discourse?",
-      "resolution_mechanism": "Comparative outcome tracking: measure bias reduction, access improvements, and harm reduction in systems deployed under justice-reading frameworks vs. baseline systems. Survey affected populations on whether the reading's governance changes materially affect their situation.",
-      "impact": "If actual benefit is high, the constraint is genuine coordination despite asymmetric extraction elsewhere. If benefit is low or diffuse, the constraint may be primarily theatrical and the beneficiary designation misplaced.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether the justice reading produces material improvements in outcomes for its named beneficiaries."
-    },
-    {
-      "id": "reading_axiom_coherence",
-      "question": "Does the justice reading's axiom that present-harm prevention is the primary alignment criterion remain coherent if control problems manifest at timescales shorter than the justice reading assumes (e.g., if capability gains accelerate)?",
-      "resolution_mechanism": "Conceptual: develop formal models of timescale interaction between bias-harm accumulation and control-problem emergence. Empirical: monitor AGI capability trajectories against projections; if timescales compress, re-evaluate whether the axiom holds.",
-      "impact": "If timescales compress, the foundational axiom becomes foreclosed and the justice reading loses its structural grounding. If timescales remain as assumed, the axiom remains holdable.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether the justice reading's axioms remain coherent under different timescale assumptions."
-    },
-    {
-      "id": "excluded_developer_voice_suppression",
-      "question": "Is the structural exclusion of AI systems developers from the justice-reading coalition itself a form of extractive suppression, or a legitimate refusal to amplify conflicted interests?",
-      "resolution_mechanism": "Examine whether developers' technical objections to bias-remediation approaches (feasibility, tradeoff analysis, cost-effectiveness) are substantively engaged or dismissed as bad faith. Compare to comparable-domain cases where excluded stakeholders' objections are taken seriously despite conflicts of interest.",
-      "impact": "If suppression, the constraint's suppression metric understates the true coercive mechanism; if legitimate exclusion, suppression reflects enforcement against resistant powerholders rather than marginalized silencing.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether developer exclusion is principled boundary-maintenance or extractive suppression of dissent."
-    }
-  ],
+  "commentary": {
+    "narrative_context": "The ethics-justice reading of AI alignment defines the central alignment problem as preventing AI systems from reproducing social bias and causing present-day harms to marginalized communities. This reading prioritizes documented current failures (facial recognition bias, algorithmic discrimination in employment and credit, disparate impact in criminal justice) over speculative future control problems. It positions bias prevention as the urgent alignment task and redirects research attention, compute resources, and institutional authority toward ethics researchers and civil rights advocates. The constraint extracts from long-term AI safety research by reframing what counts as an alignment problem and reallocating limited institutional attention. Marginalized communities are named as beneficiaries, though their own voice in defining alignment priorities is often constrained. This is ONE READING of a contested kernel — the AI alignment commitment — distinguished from the safety-control reading (which prioritizes catastrophic risk prevention) and the integrated reading (which treats both as non-exclusive). The claim and metrics are independent by design: this reading is CLAIMED as tangled_rope (both coordination and extraction present), and the metrics reflect high suppression and rising theater ratio, indicating increasing performance of bias-prevention narratives while actual community voice may be constrained.",
+    "key_agents": [
+      "marginalized_communities_subject_to_bias: primary beneficiary in principle, structurally trapped (cannot exit AI systems governing their opportunities)",
+      "ai_ethics_researchers: agenda-setter controlling research priorities and definitions of alignment",
+      "civil_rights_advocacy_groups: organized voice for beneficiaries, influence is constrained",
+      "long_term_ai_safety_research_agenda: payer (non-agent entity whose priority is redirected)",
+      "capability_research_institutions: payer (face bias-mitigation burden and resource reallocation)",
+      "futures_research_communities: excluded (long-term safety concerns marginalized from alignment discourse)",
+      "affected_communities_themselves: excluded (structurally absent from decision-making despite nominal protection)"
+    ],
+    "logic_rationale": "Extractiveness is measured at 0.68 because this reading achieves coordination around bias prevention (real problem, genuine research function) while simultaneously extracting research attention and institutional priority from long-term safety research. The extraction mechanism is not coercive in the crude sense — it operates through framing and priority-setting. Theater ratio rises from 0.28 to 0.44 over the interval because the proportion of alignment activity devoted to public bias audits, fairness narratives, and community engagement (performative relative to core functionality) increases even as the core bias-prevention function persists. Suppression is high (0.71) because the constraint requires active enforcement to exclude competing framings: futures researchers must be deprioritized, long-term safety research must be recharacterized as less urgent, and alternative definitions of alignment must be suppressed in discourse and funding allocation. The measurement series traces a 2015–2025 window (t=0 to t=20 as rough year-markers) showing extractiveness and theater both rising, indicating the reading is becoming institutionalized while simultaneously becoming more performative.",
+    "directionality_logic": "Marginalized communities (powerless, trapped, biographical horizon) face directionality near d=1.0 (full targets of bias in current systems) but would benefit from protection, making their effective extraction negative if the constraint functioned without suppression. However, the suppression vector (their voices excluded from technical definition-making, their needs mediated through proxy institutions) inverts this: they are beneficiaries in name but targets in structure. Ethics researchers (institutional, mobile) are near d=0.0 beneficiary end: they control the constraint's framing and benefit from institutional authority and research attention. Long-term safety research (analytical, civilizational) is the victim: its priority is extracted regardless of its merits by the reframing of alignment. Capability institutions (institutional, constrained) face d=0.7 or higher: they must invest in bias mitigation and fairness auditing, reducing their autonomy and speed.",
+    "perspectival_gap": "From the ethics-justice researcher seat, the constraint is genuine coordination: preventing demonstrated harms to real communities. From the long-term safety research seat, the same constraint is extractive: finite attention redirected toward present-day problems away from future control risks. From the marginalized-community seat, the constraint is both protective (in principle) and extractive (in practice — their own voice is mediated). The engine computes these divergent types from the structural data: the agenda-setter (ethics researchers) will compute rope or tangled_rope from their seat, while the long-term safety community will compute snare. The beneficiary set (marginalized communities, ethics researchers) and victim set (long-term safety research, capability institutions) are explicitly named, enabling per-seat directionality derivation.",
+    "mandatrophy_analysis": "The founding problem (AI bias harms to marginalized communities) has an UNAMBIGUOUSLY live status — empirical evidence from deployed systems is extensive. The disappearance verdict is world_rearranges: if this constraint's enforcement (bias audit requirements, fairness metrics, resource allocation) disappeared, institutional pressure on capability research would relax and long-term safety research would see resource reallocation. However, the real coordination function (preventing documented AI discrimination) would also vanish. This is not a mandatrophy case (where founding problems are dead but constraints persist), but rather a live-function case where both coordination and extraction are active. The theater rising (0.28 → 0.44) while extractiveness also rises suggests increasing performativity around bias prevention as the constraint becomes institutionalized, but the performativity is layered ON TOP of real coordination, not replacing it (unlike piton degradation). This remains tangled_rope: genuine coordination for bias prevention + genuine extraction from long-term safety research agenda.",
+    "kernel_context": "This constraint is the ethics-justice READING of the contested kernel 'ai_alignment_commitment'. The kernel is what the term 'AI alignment' means — a question that different parties answer differently. This reading instantiates one answer: alignment means preventing reproduction of social bias and present-day harms. The sibling readings are (1) safety-control reading: alignment means preventing catastrophic loss of control over advanced systems, and (2) integrated reading: alignment requires simultaneous attention to both control and justice problems as non-exclusive. The three readings disagree fundamentally on what the central alignment problem is, what counts as success, and how to prioritize research. The ethics-justice reading competes for institutional authority with the safety-control reading and is distinguished from the integrated reading by its prioritization and resource-allocation implications."
+  },
   "boltzmann": {
     "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
@@ -187,53 +290,66 @@
       "ai_alignment_commitment__safety_control_reading",
       "ai_alignment_commitment__integrated_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the contested kernel 'ai_alignment_commitment'. The ethics-justice reading defines alignment as preventing present-day social bias and harm; the safety-control reading defines alignment as preventing catastrophic loss of control; the integrated reading claims both are necessary and non-exclusive. These are structurally distinct constraints with different ε values, beneficiary sets, and extraction mechanisms. They share the same institutional domain (AI governance) and influence each other through resource competition and legitimacy allocation. This story links to both siblings via network.affects_constraints; the siblings link back to this one."
+    "dual_formulation_note": "This constraint is part of a kernel family decomposing the contested term 'AI alignment' into three structurally distinct readings of what alignment requires. The ethics-justice reading prioritizes present-day bias harms to marginalized communities. The safety-control reading prioritizes catastrophic risk from advanced systems. The integrated reading denies the priority trade-off and seeks both simultaneously. Each reading has different ε values, beneficiary/victim structures, and institutional implications. The three readings compete for research agenda authority and resource allocation; all three remain live positions in the AI governance discourse despite their tensions."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "distributed",
-    "interpretation_layer_present": false,
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_alignment_commitment__safety_control_reading",
+        "sibling_id": "safety_control_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "ai_alignment_commitment__integrated_reading",
-        "relation": "coexists_with"
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "present_harm_priority_over_speculative_risk",
+        "atom": "present_harms_take_priority_over_speculative_risks",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "marginalized_population_centering",
+        "atom": "marginalized_communities_are_alignment_stakeholders",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "prior_alignment_neglect_of_bias",
+    "reference_frame": "historical_discrimination_continuity",
     "drift_state": {
-      "moment": "contemporary_mainstreaming",
-      "direction": "practice_drift",
+      "moment": "contemporary_algorithmic_deployment",
+      "direction": "axiom_overriding",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "ai_ethics_researchers",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

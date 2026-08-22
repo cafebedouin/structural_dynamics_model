@@ -4,160 +4,328 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "f7dc7d91-5b5f-4f7f-b71a-74250c1b1bed"
+    "story_uid": "950fe568-a06b-42bc-addc-29c63f00c63a"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.62,
     "theater_ratio": 0.28,
     "accessibility_collapse": 0.51,
-    "resistance": 0.68,
+    "resistance": 0.67,
     "claimed_type": "rope",
     "human_readable": "Orthographic Reform via Literacy Maximization (Instrumentalist Reading)",
-    "topic_domain": "political_linguistics/state_formation",
+    "topic_domain": "political/linguistic/commitment-system",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "newly_literate_population",
       "state_administrative_apparatus"
     ],
     "victims": [
-      "arabic_literate_elite"
+      "arabic_literate_elite",
+      "traditional_clergy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "orthographic_necessity_vs_policy_choice",
-      "question": "Was orthographic reform structurally necessary to achieve literacy expansion and administrative efficiency, or was it a policy choice that conflated script change with modernization?",
-      "resolution_mechanism": "Counterfactual historical analysis: comparative literacy trajectories in contexts where administrative efficiency was pursued without orthographic rupture (e.g., script simplification without replacement, pedagogical innovation within existing scripts). Contemporary literacy research on phonetic transparency vs. pedagogical familiarity.",
-      "impact": "If necessity: the constraint is genuine coordination cost — efficiency gains justify the elite's devaluation. If choice: the constraint is partially extractive — the elite's losses subsidize a policy preference, not a technical requirement. The computed type hinges on whether the coordination function (literacy expansion) could have been achieved without the extraction component (script devaluation).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether orthographic reform was technically necessary or a policy choice framed as necessity."
+      "name": "newly_literate_population",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gains access to written language, primary education, and state administrative positions through script reform. The new orthography is designed to be phonetically transparent and pedagogically efficient, reducing time to basic literacy. Receives direct benefit from expanded educational opportunity and labor market access in the state bureaucracy."
     },
     {
-      "id": "committer_kernel_ambiguity",
-      "question": "Which reading of the orthographic legitimacy kernel is institutionally dominant at the time of evaluation? Does the state's actual justification rest on instrumentalist (efficiency/literacy), modernist (Western alignment/rupture), or continuity (access-to-tradition) framing?",
-      "resolution_mechanism": "Analysis of state policy documents, educational curricula, official histories, and public addresses justifying the reform. Cross-check with scholars' retrospective interpretations and how the constraint is actually taught/legitimized in schools.",
-      "impact": "If instrumentalist framing dominates: the constraint operates as described (rope-like coordination via literacy gains). If modernist framing dominates: the constraint shifts toward snare-like operation (the literacy gain is rhetorical cover for cultural rupture and Western alignment, with extractive cost to continuity). If continuity framing dominates: the constraint is legitimized as non-coercive (the reform is framed as expanding, not destroying, access — victims' framing differs from agenda-setter's).",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Kernel reading ambiguity: which normative framing is institutionally primary?"
+      "name": "state_administrative_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs, enforces, and standardizes the new orthography through education policy, official correspondence, and legal documents. Justifies the reform by citing literacy statistics, administrative efficiency gains, and reduced record-keeping complexity. Benefits from faster training of clerks and reduced encoding/decoding errors in bureaucratic communication."
     },
     {
-      "id": "elite_deskilling_vs_voluntary_transition",
-      "question": "To what extent did the Arabic-literate elite voluntarily adopt and teach the new script (demonstrating adaptive capacity) versus resist and suffer displacement (demonstrating coercion)?",
-      "resolution_mechanism": "Historical record of whether elite scribes, teachers, and administrators transitioned to new-script training or faced pressure, replacement, or marginalization. Whether continuity of elite social position depended on learning the new script (tight coupling = coercion) or remained independent (loose coupling = voluntary adaptation).",
-      "impact": "If voluntary: the elite's devaluation is market-driven (their skills simply became less valuable), not coercive — extraction measure should be lower. If coercive: the state deliberately displaced the elite to break their monopoly — extraction measure should reflect enforced skill obsolescence.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether elite displacement was coerced or market-driven."
+      "name": "arabic_literate_elite",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Possesses specialized training in the previous orthography (often Arabic script or classical forms) that becomes devalued under the reform. Their accumulated cultural and economic capital—based on linguistic expertise—loses market value as the state transitions education systems. They must either retrain (expensive, identity-threatening) or watch their professional privilege erode."
+    },
+    {
+      "name": "traditional_clergy",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Historically maintained legitimacy through custody of sacred texts in the previous orthography. Script reform threatens access to religious authority: a new generation trained only in the reformed script cannot read classical religious texts without additional specialized training. Their identity is fused with the previous orthography; exit means doctrinal apostasy in their own self-understanding."
+    },
+    {
+      "name": "rival_script_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Propose alternative orthographies (different romanization systems, phonetic variants, or preservation of classical forms) that would serve literacy and efficiency equally well but are blocked by the state's standardization mandate. Would participate in the design process if admitted; their exclusion is enforced through education policy and official documentation monopoly."
+    },
+    {
+      "name": "literacy_researchers",
+      "role": "beneficiary",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Produce the empirical data—literacy statistics, reading-speed comparisons, cognitive load studies—that justify the reform. Benefit professionally from the reform's status as state policy and from continued funding for literacy measurement. Are positioned as objective observers but are embedded in the legitimacy apparatus."
+    },
+    {
+      "name": "international_development_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide technical assistance, funding, and international validation for the reform. Frame orthographic standardization as a best practice in developmental literacy policy. Benefit from the state adopting their frameworks and from the state's reported literacy gains, which validate the development model."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Solves the genuine collective-action problem of script standardization: a shared orthography reduces transaction costs in education, administration, and commerce. Without standardization, mixed writing systems impose encoding/decoding overhead on every bureaucratic transaction. The reform achieves genuine coordination by solving this cost problem.",
+    "transfer_function": "Transfers cultural authority and professional privilege from Arabic-literate elites and traditional clergy to newly literate populations and state administrators. Moves social status from classical-text expertise to literacy-statistics-validated competence. Moves educational resources from elite religious schools to state primary education systems.",
+    "absent_voices": "Rival orthography designers, continuity advocates who would preserve classical forms alongside new ones, and cultural traditionalists are excluded from the design process. They would argue for polyglotism, gradual transition, or preservation of classical access, but are kept out of official deliberation by the state's monopoly on education policy and the instrumental efficiency frame that treats alternatives as inherently inferior.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the instrumentalist reform vanished overnight, the state would face immediate administrative friction: mixed writing systems would return, education would fragment into competing pedagogies, and literacy gains would plateau. The coordination function is real—without a shared standard, bureaucratic systems degrade. The world would reorganize around some competing standard (perhaps the restored classical form, perhaps a rival romanization system), not remain unchanged.",
+    "founding_problem": "The state inherited a patchwork of scripts—classical Arabic, local variants, early romanization experiments—that prevented unified education and created efficiency losses in administration. Training different cohorts in different systems was slow, error-prone, and expensive.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International literacy researchers, state planners, and independent educational economists attest the founding efficiency problem is real and persistent. The orchestration of the reform was documented by state ministries and reported by outside development agencies. Testimony from populations newly literate under the system and from administrative analysts confirms the coordination gains in practice."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.42
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.48
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.54
+      "value": 0.53,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.58
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.58
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.59,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.59,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.15
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.2
+      "value": 0.19,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.25
+      "value": 0.23,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.28
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.28
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.3,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.48
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.57,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.6
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.62
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.62
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.61,
+      "basis": "projected"
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 25
-  },
   "commentary": {
-    "narrative_context": "An orthographic reform justified as maximizing literacy rates and administrative efficiency: a state apparatus adopts a new script, allocates educational resources toward it, and gradually phases out or marginalizes an older orthography from institutional use. The newly literate population gains access and social mobility through the new script. The Arabic-literate elite suffers skill devaluation and institutional marginalization. This is ONE READING of a contested kernel about orthographic legitimacy. The instrumentalist reading frames script choice as a pragmatic tool for solving measurable coordination problems (literacy, efficiency, administrative throughput); competing readings (continuity, modernist) dispute whether efficiency really justifies the cost or whether other motives (cultural continuity, Western alignment) are the true drivers. This constraint story generates ONLY the instrumentalist reading, treating it as a clean epistemic claim with its own ε, beneficiary/victim structure, and temporal trajectory.",
-    "kernel_context": "This constraint is the instrumentalist_reading of the orthographic_legitimacy_kernel. Sibling readings: continuity_reading (legitimacy derives from preserving access to historical, religious, and literary tradition in original scripts) and modernist_reading (legitimacy derives from alignment with Western/European modernity and rupture from Ottoman/Islamic past). The instrumentalist reading treats orthographic reform as a neutral technical solution to coordination problems — literacy accessibility and administrative speed — with script choice justified by measurable outcomes (enrollment, processing efficiency) rather than by identity or civilizational narrative. The reading is distinguished from modernist by its claim to lack identity/rupture framing, and from continuity by its assertion that efficiency gains override access-preservation costs. The sibling readings' different framing changes what counts as benefit and what counts as acceptable cost; this reading's axioms are the empirical claims about efficiency and the normative claim that efficiency-maximization justifies devaluing traditional elite skills.",
-    "logic_rationale": "Extractiveness rises moderately (0.35→0.58 over the interval) as the reform beds in: initially, literacy gains are genuine and broadly welcomed, suppression is low. By mid-interval, resistance from the elite hardens and enforcement machinery (examination systems, resource reallocation, prestige withdrawal) must intensify to maintain the reform. At interval end (~generation mark), extractiveness plateaus: the constraint has become normalized, the new script is entrenched, and the elite has either adapted or withdrawn from administrative competition. Theater ratio stays low-moderate (0.10→0.28): the literacy-improvement justification remains real throughout, but a growing share of late-stage enforcement activity defends orthographic exclusivity rather than furthering literacy (e.g., examination gatekeeping that could be neutral becomes script-policing). Suppression rises parallel to enforcement intensity — the constraint requires active effort to prevent the old script's re-emergence in informal communication, religious practice, and nostalgic pedagogy. The temporal pattern reflects a coordinate-then-enforce dynamic: early years are genuine coordination (both elite and masses benefit from clarity), middle years are enforcement (elite resistance to skill devaluation requires suppression), late years are maintenance (normalized suppression, diminishing new literacy gains, constraint becomes inertial if foundational problem is solved). Measurements author the same time grid (t∈{0,5,10,15,20,25}) for all three metrics so temporal alignment is explicit.",
-    "directionality_logic": "State administrative apparatus: agenda_setter, institutional power, high d (benefits from control, devalues alternatives, sets the rules) — computed as near-beneficiary end, ~d=0.15. Newly literate population: genuinely coordinate (gain access without having to master complex script), mobile exit (can choose whether to learn), organized power (though operationally dependent on the reform's continuation) — computed ~d=0.50, symmetric, beneficiary role without high extraction. Arabic-literate elite: powerful, initially trapped (administrative exit is costly but available through emigration or withdrawal), constrained by resource reallocation and prestige loss — computed high d (victims), ~d=0.75, even though not powerless, because the constraint structurally targets them. Religious scholars: excluded from agenda-setting but not compelled to adopt new script immediately; constrained exit (can continue practice but lose institutional support). International advisors: benefit from symbolic alignment with their own standards, arbitrage exit — low d, beneficiary framing though not primary to the constraint's operation.",
-    "mandatrophy_analysis": "The constraint's founding problem (low literacy, administrative inefficiency due to complex orthography) is LIVE at t=0 and plausibly LIVE at t=25 if the reform is incomplete or if international comparisons show persistent efficiency gaps. However, the omega documents the committer ambiguity: is the state's actual justification instrumentalist (efficiency) or is it modernist (Western alignment/rupture), and is that justification post-hoc? If the foundational problem (efficiency) is genuinely solved by the reform, but the state's justification shifts toward identity/rupture framing (modernist reading), then the constraint's mandate has partially atrophied — the reform persists not because literacy is still expanding but because the identity narrative (we are modern, we are not Ottoman) is now the legitimacy hook. That would be a mandatrophy signal, though the constraint's type (rope, not piton) reflects that genuine coordination persists even if the foundational problem is solved. Mandatrophy in this case would not be certification-changing but would be a drift-warning: the constraint's original justification has softened."
+    "narrative_context": "A state undertakes orthographic reform justified through literacy statistics and administrative efficiency metrics. The instrumentalist reading frames script choice as a pragmatic tool: the new orthography is phonetically transparent, pedagogically efficient, and measurable by literacy rates. This reading claims the reform solves a genuine coordination problem (unified script standardization) and benefits newly literate populations and state administrators. The structural asymmetry: Arabic-literate elites and traditional clergy lose professional authority as their previous skills are devalued; they are victims not because of explicit coercion but because their human capital becomes structurally obsolete. The reading's legitimacy rests on efficiency metrics and literacy statistics, not on civilizational narrative or identity claims—distinguishing it sharply from the continuity reading (which emphasizes preserving access to tradition) and the modernist reading (which emphasizes Western rupture). This is ONE READING of the orthographic legitimacy kernel; sibling readings would produce different ε values, different beneficiary/victim maps, and different type classifications.",
+    "kernel_context": "This constraint instantiates the instrumentalist reading of the orthographic_legitimacy_kernel. The kernel is the standing claim that orthography derives its political legitimacy from [CONTESTED BASIS]. The instrumentalist reading asserts: legitimacy derives from maximizing literacy rates and administrative efficiency. Sibling readings— continuity_reading (legitimacy from preserving historical/religious tradition access) and modernist_reading (legitimacy from alignment with Western modernity and rupture from Ottoman past)—each instantiate different constraints with different ε, different beneficiary/victim structures, and different type classifications. The contest is not observable-dependent; it is a genuine disagreement about what grounds legitimacy in orthography. This reading generates a moderate-ε rope-type constraint where coordination is real but extraction is substantial and asymmetric. The modernist reading would likely produce higher ε (more extractive rupture rhetoric masking elite capture) and snare classification. The continuity reading would produce lower ε (less extraction, more symmetric negotiation over access) or possibly piton classification (preserved form maintained theatrically). All three are linked via network.affects_constraints.",
+    "logic_rationale": "The instrumentalist reading measures extractiveness at 0.58 (end of interval) because the reform does solve a genuine coordination problem (high beneficiary function) but imposes asymmetric costs on Arabic-literate elites and clergy whose skills are devalued—a real extraction, but not purely predatory. Suppression (0.62) is moderate-high: the state must actively suppress rival orthographies and limit alternative education pathways to enforce the standard, but this suppression serves the coordination function, not pure rent-collection. Theater (0.28) is low-moderate: the efficiency justification is substantive (literacy statistics are real data), but the intensity of enforcement rises over time as the elite resistance hardens, suggesting increasing proportion of suppression is devoted to defending the extraction itself rather than maintaining coordination. The measurement series trace this drift: extractiveness rises early (t=0 to t=20) as the elite losses compound, then plateaus (t=20 onward) as new cohorts are fully trained and the reform is normalized. Suppression peaks around t=15–20 (maximum resistance from clergy and elites seeking to preserve classical access), then declines slightly as normalized education structures reduce active resistance. Theater rises steadily (t=0 to t=25) as efficiency rhetoric increasingly covers the extraction of elite authority, then stabilizes. This pattern is consistent with a rope-type constraint whose coordination function is real but whose extraction of elite privilege is substantial and sustained by active suppression—not a pure snare (coordination is genuine), not a mountain (suppression is high and extractiveness is substantial), but a rope that carries significant asymmetry.",
+    "perspectival_gap": "The state administrative apparatus and newly literate beneficiaries perceive this as coordination (genuine efficiency gain, expanded opportunity). From their seats, the constraint solves a real problem and benefits are widely shared. The Arabic-literate elite and clergy perceive extraction: their previous authority is dismantled, their skills are devalued, and they have constrained exit options (traditional clergy are identity-locked; elites can retrain but at substantial cost). The engine computes per-seat classification from this structural asymmetry: the beneficiary seats should classify the constraint as rope (coordination), while the payer seats should classify it as snare or tangled_rope (extraction). The divergence is the measurement the system exists to take—it emerges from the authored beneficiary/victim data and exit option differentials, not from tuning either the claim or the metrics.",
+    "directionality_logic": "State administrators are near the beneficiary end (d ≈ 0.25): they set the rules, benefit from efficiency gains, and have arbitrage-grade exit (they could reverse the reform if costs exceeded benefits). Newly literate populations are beneficiaries with moderate d (≈ 0.35): they benefit substantially from expanded literacy access but have less direct control over the rules and constrained exit (the reform is already embedded in the education system). Arabic-literate elites are targets with high d (≈ 0.75): their skills are devalued, they have powerful institutional resources but constrained exit (retraining is expensive, maintaining the old orthography is increasingly illegal), and they cannot credibly threaten system collapse. Traditional clergy are near-full targets (d ≈ 0.85): their identity is fused with the previous orthography (identity_locked exit), they bear real costs to religious authority, and they have organized power but trapped ability to exit without doctrinal apostasy. International development agencies sit near beneficiary (d ≈ 0.20): they benefit from the reform being adopted as best practice, but their exit is arbitrage (they can fund other reforms elsewhere). These directionality values are derived from the authored beneficiary/victim declarations and exit options; they feed the engine's effective extraction computation. No overrides are needed; the structural data produces accurate d values.",
+    "mandatrophy_analysis": "The instrumentalist reading declares founding_problem_status = live: the state and international observers attest the coordination problem (mixed scripts, administrative friction) remains live and is solved by the reform. This classification prevents false mandatrophy labeling—the constraint is not a zombie preserving a dead founding function. However, there is a secondary mandatrophy risk: the constraint may accumulate into a snare over time if the extraction of elite authority becomes the actual function (theater ratio rising, orthography used increasingly as a marker of state-approved identity rather than administrative efficiency). The measurement series show this risk is real: theater rises from 0.12 to 0.30, and extraction plateaus at high levels (0.58–0.59) despite literacy gains already saturating. This suggests the constraint's function may be shifting from coordination to control. A mandatrophy verdict would be premature at the current interval (t=40), but the trajectory warrants an omega variable addressing the long-term function drift."
   },
+  "omegas": [
+    {
+      "id": "elite_devaluation_vs_genuine_coordination",
+      "question": "Is the devaluation of Arabic literacy genuine coordination cost (the new script is objectively more efficient), or does the reform extract elite authority under cover of efficiency metrics?",
+      "resolution_mechanism": "Comparative study: measure literacy gains and administrative efficiency under the new script against a counterfactual where classical and new scripts coexist (if such a jurisdiction exists). If gains are equivalent under polyglotism, the extraction is not coordination cost. If gains require exclusion of the classical form, the extraction is necessary coordination cost.",
+      "impact": "If devaluation is genuine coordination cost, the constraint remains rope (moderate asymmetry justified by real function). If devaluation is extractive cover, the constraint is snare (classical script could coexist; its suppression is pure rent-collection).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elite devaluation is coordination cost or elite capture."
+    },
+    {
+      "id": "theater_ratio_drift_and_function_shift",
+      "question": "Does the rising theater ratio (0.12 to 0.30 over the interval) indicate the constraint's function is shifting from coordination (efficient administration) to control (state identity enforcement)?",
+      "resolution_mechanism": "Temporal analysis of enforcement focus: track what proportion of suppression activity is devoted to blocking rival orthographies (coordination function) vs. suppressing classical-text access and alternative pedagogies (control function). If control proportion rises above 0.5 by t=35, function shift is underway.",
+      "impact": "Function shift would reclassify the constraint from rope (coordination with asymmetry) toward tangled_rope (coordination + control) or snare (control masquerading as coordination). It would trigger mandatrophy detection: a founding problem (efficiency coordination) that becomes obsolete as the real function shifts to identity enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's coordination function is atrophying and control function is ascending."
+    },
+    {
+      "id": "reading_boundary_ambiguity",
+      "question": "Is the instrumentalist reading distinct from the modernist reading, or does the instrumentalist justification (efficiency, literacy statistics) collapse into modernist legitimacy (Western alignment, rupture from Ottoman past) in practice?",
+      "resolution_mechanism": "Textual analysis of reform justifications: does the state's official narrative emphasize efficiency and measurable literacy gains (instrumentalist) or emphasize alignment with Western orthographic standards and rupture from Islamic tradition (modernist)? If modernist framing dominates, the two readings are conflating in policy reality.",
+      "impact": "If readings conflate in practice, the instrumentalist constraint story underestimates the constraint's extraction (modernist reading carries higher ε from the explicit rupture narrative). If readings remain distinct, the ε value (0.58) is accurate for the instrumentalist reading in isolation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the instrumentalist and modernist readings are empirically separable or conflated in state practice."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) structural (state blocking rival scripts, limiting classical education) or internalized (newly literate cohorts actively reject classical literacy, assimilate rejection as self-understanding)?",
+      "resolution_mechanism": "Post-reform intergenerational study: after state enforcement relaxes (or in jurisdictions where state suppression was lighter), do newly literate cohorts spontaneously maintain the reformed orthography, or do they seek classical literacy access? If they maintain the new script spontaneously, suppression has become internalized identity; if they seek classical access, suppression was primarily structural.",
+      "impact": "If suppression is internalized, effective suppression is higher than the 0.62 measurement suggests—the constraint carries psychological lock-in. If structural, the 0.62 reflects active state enforcement and would decline if suppression apparatus weakens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether suppression of classical literacy is structural or internalized."
+    },
+    {
+      "id": "kernel_reading_contest_status",
+      "question": "Are the three sibling readings (instrumentalist, continuity, modernist) genuinely live positions held by different parties, or does one reading dominate state policy, pushing others into purely oppositional stances?",
+      "resolution_mechanism": "Survey of state policy-makers, traditional clergy, and international advisors: what legitimacy basis does each group explicitly endorse? If all three readings find adherents within different institutional seats, the contest is live. If one reading dominates and others are pure opposition, the contest has collapsed into binary.",
+      "impact": "If the contest is live (coexists_with relations are accurate), the three constraints are modeling a genuine three-way dispute. If the contest has collapsed, one reading has foreclosed or suppressed the others, and the network topology (affects_constraints relationships) needs revision.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the orthographic legitimacy kernel remains actively contested across readings or has collapsed into binary opposition."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "information_standard",
+    "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
   },
   "network": {
@@ -165,53 +333,57 @@
       "orthographic_legitimacy_kernel__continuity_reading",
       "orthographic_legitimacy_kernel__modernist_reading"
     ],
-    "dual_formulation_note": "The orthographic_legitimacy_kernel is composed of three structurally distinct readings, each with its own ε and beneficiary/victim structure. The instrumentalist reading (this story) claims ε~0.58 (rope-like coordination with moderate extraction cost to the elite). The continuity reading claims that script abandonment destroys access to tradition (likely snare-like, with religious scholars and continuity authorities as victims). The modernist reading claims that alignment with Western scripts is a civilizational imperative (likely snare-like or tangled-rope, with indigenous identity and continuity as victims, but Western institutions and domestic modernizers as beneficiaries). The three stories share the same kernel (orthographic legitimacy) but diverge on what legitimates it and who benefits/pays. They are linked by affects_constraints to show that success of one reading constrains the others: if instrumentalist framing dominates institutional discourse, modernist framing is deflated (becomes unnecessary — we can justify reform by efficiency alone), and continuity framing is suppressed (becomes nostalgic rather than normative)."
+    "dual_formulation_note": "The orthographic_legitimacy_kernel is decomposed into three structurally distinct constraint stories, one per reading: instrumentalist_reading (this story, ε=0.58, rope-type, coordination with asymmetric extraction), continuity_reading (ε≈0.35–0.45, rope-type or piton, symmetric negotiation over access), and modernist_reading (ε≈0.65–0.75, snare-type, explicit rupture narrative masking elite capture). The readings coexist as live positions held by different institutional seats (state administrators favor instrumentalist, traditional clergy favor continuity, Western-aligned modernizers favor modernist). Each reading instantiates a different constraint because their ε values differ substantially and their beneficiary/victim maps are structurally distinct. The kernel contest is the three-way dispute over what grounds orthographic legitimacy; the three constraints model the structural reality of that dispute. All three stories link bidirectionally via affects_constraints to enable contamination analysis: if one reading's legitimacy erodes, the others become more salient."
   },
+  "directionality_overrides": [],
+  "gain_flow": "state_administrative_apparatus",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "pre_reform_orthographic_tradition",
+    "reference_frame": "efficiency_based_script_standardization",
     "drift_state": {
-      "moment": "post_reform_administrative_consolidation",
+      "moment": "contemporary_post_implementation",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "orthographic_legitimacy_kernel__continuity_reading",
-        "relation": "influences"
+        "sibling_id": "continuity_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "orthographic_legitimacy_kernel__modernist_reading",
-        "relation": "coexists_with"
+        "sibling_id": "modernist_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "orthographic_choice_is_technical_solution",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "instrumental"
-      },
-      {
-        "atom": "efficiency_gains_justify_elite_skill_devaluation",
+        "atom": "script_choice_is_instrumental_tool",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "legitimacy_derives_from_literacy_maximization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
       }
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

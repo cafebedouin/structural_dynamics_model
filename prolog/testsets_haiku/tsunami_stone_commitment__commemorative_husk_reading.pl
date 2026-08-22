@@ -43,6 +43,10 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,39 +71,40 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: tsunami_stone_commitment__commemorative_husk_reading
- *   human_readable: Tsunami Warning Stone as Commemorative Theater (Husk Reading)
- *   domain: disaster_anthropology/institutional_memory
+ *   human_readable: Tsunami Stone Commitment as Commemorative Husk (Symbolic Artifact Reading)
+ *   domain: disaster_anthropology/institutional_memory/commitment_systems
  *
  * SUMMARY:
- *   In coastal Japan, tsunami warning stones inscribed centuries ago with
- *   messages like 'Do not build below this point' marked safe elevation
- *   zones. As modernity arrived (seawalls, engineering, official warning
- *   systems), these stones were reframed from operational safety devices to
- *   commemorative cultural artifacts. Communities increasingly treated the
- *   stones as historical curiosities rather than binding guidance. The 2011
- *   Tōhoku tsunami devastated areas that had built below the stone markers,
- *   killing thousands. Under the commemorative-husk reading, the constraint
- *   instantiated by the stones had decayed from a coordination function
- *   (intergenerational transmission of hazard memory) into a theater of
- *   safety that actively suppressed modern protective preparation—future
- *   generations inherited a false sense of ancestral protection via the
- *   aesthetic presence of the stones while their actual behavioral force
- *   atrophied. Development interests benefited from the narrative
- *   reinterpretation: zoning restrictions tied to the stones could be relaxed
- *   in favor of economically valuable coastal property, justified by 'modern
- *   engineering replacing old superstitions.' The constraint's extraction
- *   rides on the husk status: the commemorative apparatus (museums, heritage
- *   programming, narrative modernism) suppresses the recognition that the
- *   stones' original function remained unmetabolized by modernity, so future
- *   generations inherit vulnerability masked by symbolic continuity.
+ *   This constraint instantiates the commemorative_husk_reading of a
+ *   contested kernel: the meaning and force of tsunami stone inscriptions
+ *   (石碑) erected in Edo-period and Meiji-era Japan as warnings against
+ *   catastrophic coastal flooding. Under this reading, the stones decay from
+ *   live behavioral constraints—actively interpreted and transmitted across
+ *   generations as guides for evacuation and settlement patterns—into
+ *   symbolic artifacts whose primary function becomes ceremonial
+ *   commemoration and historical tourism rather than protection. The
+ *   inscription persists but its normative force erodes: future generations
+ *   inherit the stone as monument to past disasters rather than as actionable
+ *   warning. Compliance with the warning (avoidance of hazard zones for
+ *   settlement) becomes coincidental to economic logic rather than enforced
+ *   through intergenerational norm transmission. Development interests
+ *   benefit from this decay because it allows coastal land to be
+ *   commercialized without the friction of active safety constraints. Future
+ *   generations face extraction: they inherit the theatrical marker of hazard
+ *   awareness (the stone itself) while occupying newly built structures in
+ *   precisely the zones the stone was meant to protect against. The 2011
+ *   Tōhoku tsunami provided empirical test for the readings: communities
+ *   where stone-based norms remained behaviorally live showed markedly lower
+ *   mortality in the inundation zones; communities where the stone had
+ *   decayed to symbol showed casualties consistent with development-driven
+ *   displacement of residents into hazard zones.
  *
  * KEY AGENTS:
- *   - coastal_development_interests: Commercial, governmental, and residential development actors who benefit from relaxed zoning restrictions and narrative permission to build below the stone markers
- *   - municipal_governments: Administrators tasked with heritage conservation and economic development, often finding these goals in tension
- *   - future_coastal_residents: Communities inhabiting areas the stones warned against, lacking the intergenerational knowledge that enabled prior populations to interpret the markers
- *   - scholars_and_heritage_professionals: Institutions that mediated the reinterpretation from operational device to cultural monument
- *   - pre-modern coastal populations: The original enforcing agents (now deceased) whose intergenerational transmission of the stone's meaning broke
- *   - seawall_and_engineering_advocates: Technical specialists whose modernizing discourse displaced the stone's authority
+ *   - coastal_development_interests: Investors, planners, and municipal governments seeking to commercialize hazard-zone land; benefit from the stone's transformation into monument rather than enforcer
+ *   - pre-1900_stone_erecting_communities: Descendants of those who encoded the warning; potential knowledge-holders for transmitted norms, though intergenerational transmission often interrupted
+ *   - post-1950_coastal_residents: Populations resettled or built into former hazard zones by economic development; bear extraction via non-protection
+ *   - scholars_and_preservation_advocates: Claim the behavioral_competence_reading; interpret stone decay as loss rather than transformation
+ *   - anthropological_observer: Sits outside both framings; measures which reading the community instantiates via ethnographic observation
  */
 
 /* ==========================================================================
@@ -106,54 +112,105 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(tsunami_stone_commitment__commemorative_husk_reading, 0.81).
-domain_priors:suppression_score(tsunami_stone_commitment__commemorative_husk_reading, 0.67).
-domain_priors:theater_ratio(tsunami_stone_commitment__commemorative_husk_reading, 0.72).
+domain_priors:base_extractiveness(tsunami_stone_commitment__commemorative_husk_reading, 0.82).
+domain_priors:suppression_score(tsunami_stone_commitment__commemorative_husk_reading, 0.71).
+domain_priors:theater_ratio(tsunami_stone_commitment__commemorative_husk_reading, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, extractiveness, 0.81).
-narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 0.67).
-narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 0.72).
+narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, extractiveness, 0.82).
+narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 0.68).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, accessibility_collapse, 0.42).
+narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, accessibility_collapse, 0.45).
 narrative_ontology:constraint_metric(tsunami_stone_commitment__commemorative_husk_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(tsunami_stone_commitment__commemorative_husk_reading, piton).
-narrative_ontology:human_readable(tsunami_stone_commitment__commemorative_husk_reading, "Tsunami Warning Stone as Commemorative Theater (Husk Reading)").
-narrative_ontology:topic_domain(tsunami_stone_commitment__commemorative_husk_reading, "disaster_anthropology/institutional_memory").
+narrative_ontology:human_readable(tsunami_stone_commitment__commemorative_husk_reading, "Tsunami Stone Commitment as Commemorative Husk (Symbolic Artifact Reading)").
+narrative_ontology:topic_domain(tsunami_stone_commitment__commemorative_husk_reading, "disaster_anthropology/institutional_memory/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(tsunami_stone_commitment__commemorative_husk_reading, '77ead02b-af13-40ce-bc81-590b18ee0424').
-narrative_ontology:cs_kernel_codification('77ead02b-af13-40ce-bc81-590b18ee0424', fixed_text).
-narrative_ontology:cs_authority_grounding('77ead02b-af13-40ce-bc81-590b18ee0424', lineage).
-narrative_ontology:cs_interpretation_layer_present('77ead02b-af13-40ce-bc81-590b18ee0424').
-narrative_ontology:cs_reading_relation('77ead02b-af13-40ce-bc81-590b18ee0424', tsunami_stone_commitment__behavioral_competence_reading, coexists_with).
-narrative_ontology:cs_axiom('77ead02b-af13-40ce-bc81-590b18ee0424', foundational, stone_inscription_epistemically_displaced_by_modernity).
-narrative_ontology:cs_axiom_status(stone_inscription_epistemically_displaced_by_modernity, holdable).
-narrative_ontology:cs_axiom_grounding('77ead02b-af13-40ce-bc81-590b18ee0424', stone_inscription_epistemically_displaced_by_modernity, conventional).
-narrative_ontology:cs_axiom('77ead02b-af13-40ce-bc81-590b18ee0424', secondary, monument_framing_replaces_operational_force).
-narrative_ontology:cs_axiom_status(monument_framing_replaces_operational_force, holdable).
-narrative_ontology:cs_axiom_grounding('77ead02b-af13-40ce-bc81-590b18ee0424', monument_framing_replaces_operational_force, empirically_contingent).
-narrative_ontology:cs_reference_frame('77ead02b-af13-40ce-bc81-590b18ee0424', intergenerational_hazard_transmission_via_stone_inscription).
-narrative_ontology:cs_drift_state('77ead02b-af13-40ce-bc81-590b18ee0424', contemporary_post_modernization_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('77ead02b-af13-40ce-bc81-590b18ee0424', '2026-06-12T14:32:00Z').
+narrative_ontology:cs_story_uid(tsunami_stone_commitment__commemorative_husk_reading, '24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081').
+narrative_ontology:cs_kernel_codification('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', fixed_text).
+narrative_ontology:cs_authority_grounding('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', lineage).
+narrative_ontology:cs_interpretation_layer_present('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081').
+narrative_ontology:cs_reading_relation('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', tsunami_stone_commitment__behavioral_competence_reading, coexists_with).
+narrative_ontology:cs_axiom('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', foundational, stone_as_historical_artifact).
+narrative_ontology:cs_axiom_status(stone_as_historical_artifact, holdable).
+narrative_ontology:cs_axiom_grounding('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', stone_as_historical_artifact, conventional).
+narrative_ontology:cs_axiom('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', foundational, behavioral_norm_transmission_attenuated).
+narrative_ontology:cs_axiom_status(behavioral_norm_transmission_attenuated, holdable).
+narrative_ontology:cs_axiom_grounding('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', behavioral_norm_transmission_attenuated, empirically_contingent).
+narrative_ontology:cs_reference_frame('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', memorial_commemoration_framework).
+narrative_ontology:cs_drift_state('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', contemporary_post_1950_development_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('24e1a7ac-fceb-41e6-bb7b-8f00c1d8a081', '2026-06-12T14:23:47Z').
 narrative_ontology:cs_kernel_id(tsunami_stone_commitment__commemorative_husk_reading, tsunami_stone_commitment).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(tsunami_stone_commitment__commemorative_husk_reading, coastal_development_interests).
-narrative_ontology:constraint_victim(tsunami_stone_commitment__commemorative_husk_reading, future_coastal_residents).
+narrative_ontology:constraint_victim(tsunami_stone_commitment__commemorative_husk_reading, future_coastal_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(tsunami_stone_commitment__commemorative_husk_reading, pre_1900_stone_erecting_communities).
+narrative_ontology:constraint_beneficiary(tsunami_stone_commitment__commemorative_husk_reading, knowledge_holder_descendants).
+narrative_ontology:constraint_victim(tsunami_stone_commitment__commemorative_husk_reading, pre_1900_stone_erecting_communities).
+narrative_ontology:constraint_victim(tsunami_stone_commitment__commemorative_husk_reading, post_resettlement_coastal_residents).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Municipal governments, real-estate investors, and infrastructure planners who control or influence coastal land-use decisions. They benefit from reframing the stone as historical monument rather than active safety constraint, as it allows commercialization of hazard-zone land without friction from enforced settlement restrictions. They set the framing narrative and control which interpretation of the stone gains institutional legitimacy—steering toward commemoration and away from behavioral transmission. They could enforce the stone-based norm if they chose; instead they engineer its transformation into symbol.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, coastal_development_interests, agenda_setter,
+    institutional, biographical, arbitrage, national).
+
+% Descendants of the fishing and farming communities that erected the stones as warnings based on lived experience of prior tsunamis. They hold cultural authority to interpret the stones and maintain the tradition; they are beneficiaries of the commemorative framing insofar as it elevates the stone to historical importance and attracts scholarly attention. They also bear extraction in that their authority is ceremonial without enforcement power—the stone is kept alive as symbol but the lived norm (settlement pattern guidance) has been displaced.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, pre_1900_stone_erecting_communities, beneficiary,
+    moderate, generational, identity_locked, regional).
+narrative_ontology:stakeholder_secondary_role(tsunami_stone_commitment__commemorative_husk_reading, pre_1900_stone_erecting_communities, payer).
+
+% Populations resettled or newly built into the very hazard zones the stones were meant to restrict. They inhabit land marketed as safe or desirable precisely because the stone's behavioral force has eroded—they experience the extraction directly as hazard exposure. They cannot exit (sunk costs in housing, local employment, kinship ties). They inherit both the stone as marker that hazard was known and the hazard itself because enforcement of the restriction has atrophied. The 2011 tsunami disproportionately killed residents in these zones.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, post_resettlement_coastal_residents, payer,
+    powerless, immediate, trapped, local).
+
+% Family and community lineages that maintain specialized knowledge of stone placement, original meaning, and the behavioral norms encoded in the inscriptions. They benefit from the scholarly revaluation of the stones as historical artifacts (recognition, cultural authority). They also bear extraction through the loss of enforceability—their knowledge is treated as folklore rather than actionable guidance.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, knowledge_holder_descendants, beneficiary,
+    moderate, generational, identity_locked, local).
+
+% Academics, preservation societies, and advocacy groups that study and promote the behavioral_competence_reading. They frame stone decay as loss and advocate for transmission of the original safety-norm interpretation. They have no direct stake in settlement or development but hold epistemic authority to interpret the stones' meaning. They remain external to the extraction structure but generate pressure to reframe the constraint.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, scholars_preservation_advocates, observer,
+    organized, generational, mobile, national).
+
+% Analytical seat to measure which reading is instantiated in practice through ethnographic observation and historical analysis. Not a party to the constraint; measures how it operates.
+narrative_ontology:constraint_stakeholder(tsunami_stone_commitment__commemorative_husk_reading, anthropological_observer, observer,
+    analytical, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The stone was built to solve a coordination problem among coastal communities: how to encode and transmit knowledge of hazard patterns and safe settlement zones across generations without centralized authority or written records. The stone inscribed the knowledge in durable form and tied it to burial ground + village ceremony, creating a feedback loop: mourning ritual reinforced memory; memory reinforced settlement pattern; settlement pattern reinforced the collective understanding that the zone was dangerous. Under this reading, that coordination function has atrophied.
+% TRANSFER_FUNCTION: The husk reading describes a transfer from future coastal residents to coastal development interests: future residents inherit commitment-to-memorial (the obligation to treat the stone as historical artifact, to preserve it, to revere it) while losing protection-from-development (the benefit of the norm-based settlement restriction). Coastal developers gain land-use freedom and monetizable historical narrative. The transfer is not monetary; it is authority-to-interpret and risk-displacement.
+% ABSENT_VOICES: The primary excluded voice is the future residents who will face hazard in the zones the stone marks. They would object to the commemorative reading (if they could object in advance, they would argue for behavioral re-transmission and settlement-pattern enforcement), but they are not present in the institutional deliberation about how to interpret the stone. The behavioral_competence_reading also remains partially excluded—scholars advocate for it, but institutional power settles on the husk reading.
+% DISAPPEARANCE_RATIONALE: If the stone and its interpretive framing disappeared overnight, coastal development would accelerate (the last cultural marker cautioning against settlement would be gone), but real protection would remain unaffected (it derives from building codes, emergency response, and other independent mechanisms, not from the stone). The hazard itself would not change; the coordination mechanism that once guided settlement away from it would be entirely displaced by economic logic. The arrangement structures who bears the hazard and who benefits from treating it as a solved historical problem rather than a live management challenge.
+% FOUNDING_PROBLEM: Coastal communities in Edo-period Japan (1600s–1800s) experienced catastrophic tsunamis at intervals of 100–200 years. The founding problem was: how do you transmit warning across a gap longer than individual lifespans, such that descendants 150 years later know to evacuate when the earth shakes? The stone inscription encoded the warning durably and tied it to ceremony, creating a mnemonic and behavioral loop.
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem's persistence is corroborated by the 2011 Tōhoku tsunami, which killed ~20,000 people concentrated precisely in zones marked by older stones. Tsunami scientists and disaster anthropologists (outside the benefiting parties) confirm that the hazard is not solved—it is only managed by post-event response. Some communities where the behavioral norm remained live (e.g., Aneyoshi, Iwate) showed dramatically lower casualty rates, providing empirical evidence that the norm was protective when enforced. However, institutional memory holders and government planners largely attest that the founding problem is 'solved' via modern building codes and warning systems—attesting that the stone itself is no longer necessary. This dispute is structurally the contestation between the two readings.
+narrative_ontology:disappearance_verdict(tsunami_stone_commitment__commemorative_husk_reading, world_rearranges).
+narrative_ontology:founding_problem_status(tsunami_stone_commitment__commemorative_husk_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(tsunami_stone_commitment__commemorative_husk_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(tsunami_stone_commitment__commemorative_husk_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(tsunami_stone_commitment__commemorative_husk_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(tsunami_stone_commitment__commemorative_husk_reading, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +230,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises over the 30-year interval (0.45 → 0.81) as coastal development accelerated and building below the stones became normalized, increasing the future risk exposure—the constraint's extractive mechanism operates on future generations who inherit the monument without the behavioral competence to interpret it. Theater ratio is high and rises (0.35 → 0.72) because the stone serves primarily as a heritage artifact and a narrative reassurance ('our ancestors protected us') while its actual protective function decayed. Suppression (0.42 → 0.67) measures the constraint's passive, internalized force: the stones do not actively enforce restrictions (no legal consequences), but they suppress modern recognition that the old warning structure remains relevant because it has been reframed as 'old culture' and is thus epistemically neutered by modernity's authority claim. Accessibility_collapse is low (0.42) because modern alternatives exist—seawalls, official warnings, engineering studies—so residents have routes to safety that bypass the stones. Resistance is moderate (0.58) because some scholars and survivors challenge the husk narrative and argue for the stones' reactivation, but development interests and narrative modernism create countervailing pressure. The measurements track the constraint's intensification: as decades pass, the population that carried oral knowledge of the stones dies, the stones become more purely commemorative, and the extractive suppression of their behavioral force deepens.
+ *   Extractiveness is high (0.82) under this reading because the constraint operates asymmetrically: the stone transfers commitment-to-commemoration (a symbolic good, costless to produce in volume) while displacing real protection to uncoordinated market decisions. Suppression is high (0.71) because maintaining the husk reading requires actively suppressing intergenerational transmission of the behavioral norm—ceremonial performances, tourism narratives, and academic reinterpretation all work to keep the stone as symbol and forestall its reactivation as guide. Theater is the highest metric (0.68) because the constraint's primary function becomes performative: annual rituals, monument plaques, academic papers about the stone all reinforce its role as historical artifact while economic decisions proceed independently. Accessibility_collapse is low (0.45) because the decay is not inevitable—alternative paths (maintaining the norm, building enforcement mechanisms, designing settlements outside hazard zones) remain technically and socially accessible; the husk outcome reflects choice, not structural inevitability. Resistance is moderate (0.58): descendants of stone-erecting communities sometimes reassert the norm, scholars advocate for behavioral re-interpretation, but coastal development interests have sufficient institutional power and economic incentive to maintain the symbolic reading. The measurement series tracks the constraint's evolution over 30 years: extractiveness increases as development accelerates in protected zones; theater increases as the stone becomes tourist destination; suppression increases as economic interests successfully reframe the constraint from warning-system to historical-artifact.
  *
  * PERSPECTIVAL GAP:
- *   From the development seat, the stone's reinterpretation from safety device to cultural monument is a rational modernization—old knowledge replaced by engineering science, with the stones preserved for their historical value. From the target seat (future residents), the same reinterpretation is the theft of protective knowledge: the stones' authority was deliberately downgraded so development could proceed. The engine computes these seats differently: beneficiary seats show the constraint as a net subsidy (freedom to build, access to valuable coastal land); target seats show it as extraction (inherited risk, suppressed warnings). The narratives told by each seat about the stones' meaning—monument vs. suppressed warning—reflect their structural positions; no neutral frame resolves the contest. This is precisely where the kernel dispute lives: the behavioral-competence reading asserts the stones retain force; the husk reading asserts they have been emptied. The engine measures which is true by the metrics: if the stones still functioned, we would expect strong intergenerational behavioral compliance (accessibility_collapse near 1.0, low resistance). Instead, we measure high theater (the stones persist as symbols) and moderate resistance (survivors and scholars contest the husk narrative), consistent with the husk reading's claim.
+ *   The coastal_development_interests seat and the post-resettlement-residents seat compute dramatically differently. From the developer/planner seat, the stone's decay to symbol is not extraction but liberation—it removes a friction on rational economic use of land; they experience the constraint as weakening coordination (good coordination would be one clear ownership/use rule; the decayed stone leaves ambiguity). From the residents' seat, the same decay is pure extraction: they inherit both the stone (symbolic marker that the hazard was known) and the hazard (because the norm-based settlement restriction eroded). The engine computes this divergence from power (developers are institutional, residents are moderate), exit_options (developers have mobile/arbitrage routes, residents are trapped), and directionality (d rises toward 1.0 for residents, falls toward 0.0 for developers).
  *
  * DIRECTIONALITY LOGIC:
- *   Coastal development interests are the structural beneficiary (d → low χ): they benefit from the narrative permission to build in areas the stones warned against, and they have arbitrage-grade exit (they can invest elsewhere if development restrictions were reimposed). Future coastal residents are the structural target (d → high χ): they lack the intergenerational knowledge to interpret the stones, inherit a false sense of ancestral protection, and have trapped exit (they are born into developed areas, and relocation is not feasible). The directionality divergence is stark: beneficiaries receive regulatory freedom; targets receive suppressed knowledge and amplified risk exposure. Municipal governments sit asymmetrically: constrained exit (they administer both heritage and development) and moderate power, yielding moderate d. Scholars and heritage professionals hold observer positions with respect to the constraint itself, though they function as the mechanism of the stones' reinterpretation.
+ *   Coastal_development_interests hold d ≈ 0.15–0.20 (beneficiary end): they benefit from the constraint's decay, have exit options (other development markets, capital flight), and hold institutional power. Post_coastal_residents hold d ≈ 0.85–0.90 (target end): they bear extraction via settlement in hazard zones, have no exit (trapped by property ownership, kinship, employment), and lack institutional countervailing power. Stone-erecting-descendants sit near d ≈ 0.55–0.65 (moderate, contested): they hold cultural authority over the norm's interpretation but lack economic power to enforce it against development interests. The directionality_overrides array is empty—the structural derivation captures the true relationship.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is clear: early modern coastal populations needed a durable, low-tech mechanism to transmit hazard knowledge across generations without institutional infrastructure. The stones solved this. The founding problem status is dead in the technical sense—modern warning systems, seismic science, and engineering now provide superior hazard information. BUT the founding problem remains live in a deeper sense: how does hazard knowledge persist when populations turnover faster than institutional memory? The constraint persists via inertia and theater because: (1) the stones are physically present and publicly visible (sunk cost of heritage), (2) their reinterpretation as monuments creates positive identity value (community pride in ancestors), and (3) no single actor has sufficient incentive to reactivate them as operational safety devices (the administrative costs fall on municipalities, the benefits are diffuse and future-oriented). The extractive mechanism persists because the husk status actively suppresses the recognition that the old knowledge structure remains unmetabolized—if the stones' original message ('do not build here') were reactivated as policy, coastal development would face massive economic constraint. So the constraint persists as piton: it costs the administrator (municipal governments) little to maintain the monument framing and much to dismantle it and return to the stone-based zoning. The payers (future residents) do not yet bear the full cost, so they lack concentrated power to change it. Mandatrophy is emerging: the constraint's founding function (hazard transmission) has been superseded, but the arrangement persists because its maintenance (ceremonial commemoration, heritage funding) is easier than its dissolution (property re-designation, development reversals).
+ *   The founding problem (provide warning and enforce settlement restriction for known tsunami hazard zones) was live and well-understood at the time of stone-erection (1600s–1800s). Under this reading, the founding problem remains demonstrably live: the 2011 Tōhoku tsunami killed ~20,000 people, concentrated in precisely the zones marked by older stones. The founding_problem_status is 'live' (the hazard persists). BUT the constraint that instantiated the solution (the stone as behavioral warning, enforced through norm transmission) has atrophied: mandatrophy is resolved. The stone persists as monument, but the protection function it was built to serve operates outside the constraint now—protection is displaced onto uncoordinated private choices, building codes that bear no reference to the stone, and post-event emergency response. This is the diagnostic signature of piton: the founding problem is unsolved, the constraint persists, but the primary function has atrophied into performance.
  */
 
 /* ==========================================================================
@@ -190,44 +247,34 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    husk_vs_competence_boundary,
-    'Is the stone inscription truly a decayed symbolic husk, or does it retain behavioral force through intergenerational norm transmission that escaped the observer''s measurement?',
-    'Post-tsunami survey: did residents in communities with stones evacuate faster or more completely than those without? Did the stone''s presence correlate with improved outcomes, or did outcome variance reflect only construction resilience and official warning systems independent of the stone?',
-    'If the stone retained hidden behavioral force, the constraint is tangled_rope (coordination function masked by husk appearance). If outcomes show zero stone-correlated protection and only the husk remained operational, the piton classification holds and the extractive mechanism (narrative continuity substituting for material preparation) is confirmed.',
+    kernel_reading_boundary,
+    'Is the stone inscription a live behavioral constraint that communities actively interpret and enforce, or a decayed symbolic artifact that performs memory theater while real protection derives from other sources?',
+    'Post-event ethnographic survey of survivor communities: behavioral coding of stone-referential discourse, decision-making in evacuation/rebuilding phases, intergenerational transmission of warning-transmission practices. If survivors cite the stone as decision-relevant in real-time crisis, it is behaviorally live; if invoked only in retrospect or public ceremony, it is commemorative husk.',
+    'If the constraint is behaviorally live (sibling behavioral_competence_reading correct), ε drops sharply (~0.15–0.25) because extraction on future generations is minimal — the norm is self-enforcing through transmission. If the husk reading holds, ε stays high (0.82+) because the decayed constraint extracts commitment to a non-protective artifact while real protection is displaced onto uncoordinated private decisions.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(husk_vs_competence_boundary, empirical, 'Whether the stone''s behavioral competence persists beneath commemorative framing or has genuinely atrophied.').
+narrative_ontology:omega_variable(kernel_reading_boundary, empirical, 'Whether the stone operates as live norm or symbolic artifact.').
 
 omega_variable(
-    intergenerational_suppression_mechanism,
-    'Is the weak enforcement of the stone''s warning a structural property (the stone''s symbolic form cannot compel modern behavior; oral transmission decayed naturally) or an internalized property (communities internalized the narrative that stones are ''old culture'' and modern science has superseded them, so they stopped trusting the stone even as its empirical premise held)?',
-    'Pre-tsunami ethnographic interview pairs: communities that trusted the stone vs. those that dismissed it. Post-tsunami: did dismissal correlate with poorer outcomes, and did residents report the stone as credible only after the 2011 wave validated it retroactively?',
-    'If structural (natural decay of orality), the suppression is environmental and the stone''s husk status is a natural consequence. If internalized (communities learned to dismiss ''old knowledge''), the constraint is extractive because narrative modernism actively suppressed protective behavior, and development interests benefited from that suppression.',
+    extraction_mechanism_specificity,
+    'Who specifically benefits from the stone''s transformation into symbolic artifact rather than live warning? Is the extraction intentional institutional capture, passive diffusion of authority into ceremony, or emergent outcome of urbanization displacing oral transmission?',
+    'Documentary history of land-use decisions in the two decades after the 1700s–1800s tsunamis: permits issued for development in preserved hazard zones; government statements defending preservation vs. promoting development; interviews with descendants of original stone-erecting communities and modern planners.',
+    'Intentional capture (developers and planners choosing theater over enforcement) establishes the beneficiary set as agenda_setter. Passive diffusion suggests no concentrated beneficiary — the constraint becomes tangled_rope with weak enforcement leakage. Emergent urban displacement makes this a scaffold with failed sunset (the original function abandoned without formal replacement).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(intergenerational_suppression_mechanism, empirical, 'Whether suppression of the stone''s message is structural or ideologically imposed.').
+narrative_ontology:omega_variable(extraction_mechanism_specificity, empirical, 'Whether non-protection is structural advantage or unintended consequence.').
 
 omega_variable(
-    commemorative_apparatus_beneficiary,
-    'Who materially benefits from the stone being framed as a commemorative artifact rather than an operational safety device?',
-    'Trace the institutional and financial flows: who funded restoration of the stones post-tsunami? Who controls the narrative (museums, government heritage programs, tourism boards)? Do development interests gain regulatory relief or narrative cover from the ''cultural monument'' framing that would be denied if the stones remained operational safety devices?',
-    'If development interests or government agencies materially benefit from the monument framing (regulatory flexibility, tourism value, reduced liability), the constraint is a snare—extraction rides on the husk appearance. If no identifiable beneficiary exists and the apparatus is mere inertia, the classification remains piton.',
+    competing_interpretation_traditions,
+    'Does the behavioral_competence reading represent a live tradition within descendant communities, or is it a scholarly retrospective attribution imposing a coherent norm onto fragmentary, contested intergenerational record?',
+    'Genealogical tracing of stone-interpretation discourse in village records, oral histories, and transmitted practices. Direct testimony from knowledge-holders in the original stone-erecting communities; comparison with parallel tsunami-warning stone sites across Japan to assess consistency of norm transmission.',
+    'If behavioral competence is a live tradition held by descendants, the readings coexist_with each other (different parties in different communities hold different framings). If it is scholarly interpretation imposed onto fragmentary record, this reading (husk) is the reading the community actually instantiates, and the behavioral reading is a counterfactual scholarly hypothesis rather than a sibling constraint.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(commemorative_apparatus_beneficiary, empirical, 'Whether the commemorative framing serves identifiable extractive interests or is purely institutional inertia.').
-
-omega_variable(
-    kernel_reading_distinction,
-    'Does the commemorative husk reading genuinely instantiate a different constraint from the behavioral-competence reading, or are both descriptions of the same object at different epistemic positions?',
-    'The ε-invariance test: if measuring the stone one way (as operational safety device) yields low ε and measuring it another way (as symbolic artifact that suppresses modern protective action) yields high ε, then two constraints are present. The behavioral-competence reading measures one; the husk reading measures another. If the same measurement framework applies to both readings and only the interpretation differs, they are not separate constraints but are the same constraint viewed from different seats.',
-    'If two distinct constraints exist (different ε), both stories remain valid and linked. If one framework applies to both readings, the distinction is epistemic, not structural, and one JSON file modeling the constraint with different stakeholder perspectives would be more accurate than two separate files.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Whether the kernel contest represents two structurally distinct constraints or interpretive alternatives of one.').
+narrative_ontology:omega_variable(competing_interpretation_traditions, conceptual, 'Whether the behavioral-competence reading is live tradition or retrospective scholarly attribution.').
 
 
 /* ==========================================================================
@@ -241,34 +288,31 @@ narrative_ontology:interval(tsunami_stone_commitment__commemorative_husk_reading
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tsun_tr_t0, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 0, 0.35).
-narrative_ontology:measurement(tsun_tr_t10, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 10, 0.48).
-narrative_ontology:measurement(tsun_tr_t20, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 20, 0.65).
-narrative_ontology:measurement(tsun_tr_t30, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 30, 0.72).
+narrative_ontology:measurement(tsun_tr_t0, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(tsun_tr_t15, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 15, 0.58).
+narrative_ontology:measurement(tsun_tr_t30, tsunami_stone_commitment__commemorative_husk_reading, theater_ratio, 30, 0.68).
 
 % Extraction over time
-narrative_ontology:measurement(tsun_be_t0, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(tsun_be_t10, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(tsun_be_t20, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 20, 0.72).
-narrative_ontology:measurement(tsun_be_t30, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 30, 0.81).
+narrative_ontology:measurement(tsun_be_t0, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 0, 0.58).
+narrative_ontology:measurement(tsun_be_t15, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 15, 0.72).
+narrative_ontology:measurement(tsun_be_t30, tsunami_stone_commitment__commemorative_husk_reading, base_extractiveness, 30, 0.82).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tsun_su_t0, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 0, 0.42).
-narrative_ontology:measurement(tsun_su_t10, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 10, 0.51).
-narrative_ontology:measurement(tsun_su_t20, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 20, 0.61).
-narrative_ontology:measurement(tsun_su_t30, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 30, 0.67).
+narrative_ontology:measurement(tsun_su_t0, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 0, 0.38).
+narrative_ontology:measurement(tsun_su_t15, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 15, 0.56).
+narrative_ontology:measurement(tsun_su_t30, tsunami_stone_commitment__commemorative_husk_reading, suppression_requirement, 30, 0.71).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(tsunami_stone_commitment__commemorative_husk_reading, global_infrastructure).
-narrative_ontology:boltzmann_floor_override(tsunami_stone_commitment__commemorative_husk_reading, 0.25).
+narrative_ontology:coordination_type(tsunami_stone_commitment__commemorative_husk_reading, attachment_coordination).
+narrative_ontology:boltzmann_floor_override(tsunami_stone_commitment__commemorative_husk_reading, 0.12).
 narrative_ontology:affects_constraint(tsunami_stone_commitment__commemorative_husk_reading, tsunami_stone_commitment__behavioral_competence_reading).
 
 % DUAL FORMULATION NOTE:
-% Two structurally distinct constraints instantiate the contested kernel 'tsunami_stone_commitment'. The behavioral_competence_reading measures the constraint's protective function and finds low extractiveness; the commemorative_husk_reading measures the constraint's symbolic decay and finds high extractiveness on future generations. The two readings are linked because they model the same object (the stones) under different empirical hypotheses about whether behavioral competence persists. The husk reading influences the competence reading: if the husk framing has suppressed modern recognition of the stones' relevance, the competence reading's claim that behavioral force persists becomes harder to operationalize (the force would have to be invisible to the modern eye, validated only retrospectively by the 2011 tsunami). The competence reading forecloses the husk reading in some sense: if the stones demonstrably retained behavioral competence, calling them a 'husk' is empirically false. But coexistence is also defensible: a stone could be simultaneously a dead symbol in the urban communities that built high-value property near them AND a living safety device in rural communities that maintained the oral tradition. The network edge models this: the husk reading's empirical status depends partly on the competence reading being falsified.
+% The tsunami_stone_commitment kernel decomposes into two structurally distinct constraints: (1) behavioral_competence_reading instantiates the stone as live norm with low extraction (~0.15–0.25 ε) via active intergenerational transmission; (2) commemorative_husk_reading instantiates the stone as symbolic artifact with high extraction (~0.82 ε) via displacement of protection to uncoordinated market decisions. The readings coexist under different institutional framings and in different communities. The 2011 Tōhoku tsunami provided empirical test: communities maintaining behavioral transmission showed substantially lower mortality in marked hazard zones. The readings are linked by the same fixed kernel text (the inscriptions) but diverge in authority_grounding (behavioral_competence grounds in lineage + practice; husk grounds in institutional + development authority). Each story carries its own ε, beneficiary set, and classification; they are related via network.affects_constraints, not folded into a single constraint.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

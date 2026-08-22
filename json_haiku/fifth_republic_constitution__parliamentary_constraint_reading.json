@@ -2,187 +2,261 @@
   "header": {
     "constraint_id": "fifth_republic_constitution__parliamentary_constraint_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "module_name_override": "constraint_fifth_republic_parliamentary",
-    "measurement_id_prefix": "fr_parl",
-    "story_uid": "42a07609-f239-439b-ad28-b768aa5e2202"
+    "story_uid": "6a654306-8542-429a-9f0a-b63c56402d1b",
+    "created_at": "2026-06-11T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.12,
+    "extractiveness": 0.31,
+    "suppression": 0.19,
     "theater_ratio": 0.22,
     "accessibility_collapse": 0.78,
-    "resistance": 0.35,
+    "resistance": 0.64,
     "claimed_type": "rope",
-    "human_readable": "Fifth Republic Constitutional Requirement: Presidential Executive Authority Contingent on Legislative Confidence",
+    "human_readable": "Fifth Republic Constitution: Parliamentary Constraint on Executive Authority",
     "topic_domain": "constitutional_law/political_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "legislative_majority",
-      "constitutional_democracy"
+      "constitutional_judicial_review"
     ],
-    "victims": []
+    "victims": [
+      "president_when_opposed"
+    ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "reading_vs_hyper_presidential_core_premise",
-      "question": "Is the President's authority grounded in direct democratic legitimacy independent of legislative approval (hyper-presidential reading), or is it constitutionally contingent on legislative confidence even when the President carries genuine popular mandate?",
-      "resolution_mechanism": "Jurisprudential examination of Constitutional Court rulings during cohabitation crises and votes of no-confidence; comparison of executive directive power deployed under unified vs. divided government; analysis of whether Presidents have claimed unilateral authority claims in their constitutional speeches.",
-      "impact": "If this reading is correct, a President with majority popular support but Assembly opposition remains constitutionally constrained and enters the victim set when blocked; the hyper-presidential reading would place the President in the beneficiary set as an unchecked sovereign. The two readings foreclose each other within a single constitutional framework.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether presidential authority derives from direct legitimacy or constitutional contingency."
+      "name": "legislative_majority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Controls the appointment of the Prime Minister, can dismiss the government via no-confidence vote, and must authorize major legislation and constitutional amendments. Benefits from the constitutional arrangement's requirement that executive power align with legislative consent. Can impose its policy agenda by withholding support or confidence."
     },
     {
-      "id": "cohabitation_vs_parliamentary_structural_symmetry",
-      "question": "During cohabitation, is the constraint symmetrically applied (President and Prime Minister both subordinate to Assembly authority on policy implementation — parliamentary reading), or is executive authority allocated through negotiated power-sharing between co-equals (cohabitation_equilibrium_reading)?",
-      "resolution_mechanism": "Historical case analysis of cohabitation periods (1986–1988, 1993–1995, 1997–2002): Who blocked whom? Did the Assembly exercise no-confidence against the executive, or did the President negotiate cabinet composition? Did the President deploy constitutional emergency powers (Article 16), and did the Assembly or courts restrain them?",
-      "impact": "If negotiated allocation is the norm during cohabitation, the constraint operates as influence (the Assembly's constitutional authority creates negotiation pressure) rather than direct accountability. If Assembly confidence remains the deciding gate, the parliamentary reading holds.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether cohabitation represents constraint negotiation or constraint subordination."
+      "name": "president_when_opposed",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds formal executive powers (commander-in-chief, treaty ratification, emergency decree capacity) but cannot implement major policy or sustain government without legislative majority support. When the Assembly opposes the president's policy preferences, the president faces cohabitation dynamics: cede prime ministerial choice and policy direction to the legislature, or attempt executive overreach with constitutional crisis risk. Exit from the constraint means unconstitutional seizure of power — a cost so high it functions as entrapment."
     },
     {
-      "id": "constitutional_authorization_vs_de_facto_autonomy",
-      "question": "Does the distinction between formal constitutional authorization and de facto executive autonomy in implementing policy matter for this reading's classification? Can a President who lacks formal legislative authorization but exercises policy autonomy anyway be said to operate under a parliamentary constraint?",
-      "resolution_mechanism": "Measurement of Presidential legislative success rates, executive decree usage, and legislative override rates across the Fifth Republic's history; comparison of formal authority (written in the Constitution) vs. practice (actual enforcement of the constraint).",
-      "impact": "If practice diverges systematically from formal authority, the constraint's extractiveness may rise and theater may increase; the reading's empirical status would shift from 'holdable' to 'overridden' if the President routinely operates outside legislative authorization.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether formal constitutional constraint aligns with practiced executive autonomy."
+      "name": "prime_minister",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Appointed by the president but requires and retains the confidence of the legislative majority to govern. Mediates between the president's constitutional powers and the legislature's control over the government's day-to-day operation and policy execution. Subject to recall by the Assembly, making legislative alignment the primary constraint on executive action."
     },
     {
-      "id": "suppression_mechanism_internalized_vs_structural",
-      "question": "Is the constraint's low measured suppression (0.12) a result of structural enforcement (legislative procedures that reliably block unauthorized executive action), or has the constraint become internalized — Presidents self-censor because they have adopted the constitutional framers' normative commitment to parliamentary accountability, even when they possess de facto autonomy to act otherwise?",
-      "resolution_mechanism": "Post-constraint analysis: if a President were to systematically defy legislative authorization requirements and face institutional resistance (Assembly votes of no-confidence, Constitutional Court rulings, civil service compliance breakdowns), the suppression is structural. If Presidents continue to self-censor even after one breaks the norm without immediate penalty, suppression is partially internalized.",
-      "impact": "If suppression is internalized, the constraint's effective strength is higher than the scalar measure suggests — it persists through shared constitutional commitment rather than enforcement machinery. If structural, the constraint depends on legislative majority vigilance; a change in Assembly composition could weaken it.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Suppression mechanism: structural enforcement vs. internalized constitutional commitment."
+      "name": "constitutional_judicial_review",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The Constitutional Council can review legislation before enactment and certify constitutional conformity. Acts as a structural safeguard maintaining the constraint by invalidating executive attempts to circumvent legislative authorization requirements. Exists as an institutional beneficiary in the sense that the constraint's persistence depends on its willingness to enforce constitutional limits."
     },
     {
-      "id": "kernel_reading_identity_vs_historical_moment",
-      "question": "This reading identifies a specific interpretation of the Fifth Republic's constitutional kernel — the executive is authorized and constrained by legislative confidence. But the kernel's meaning has shifted across three distinct historical periods: de Gaulle's presidency (assertion of unchecked executive authority), the cohabitation crises (negotiated dual authority), and contemporary unified government (strong executive under majority). Is this ONE reading, or are the shifts evidence of a contested kernel where different Presidents read the Constitution differently?",
-      "resolution_mechanism": "Constitutional jurisprudence analysis: do Fifth Republic Constitutional Court rulings converge on a single reading of the President's authority structure, or do they explicitly endorse multiple readings as contextually valid? Examine public statements by Constitutional scholars, judicial opinions, and Presidential speeches.",
-      "impact": "If the kernel admits multiple legitimate readings within the same constitutional framework (as the cohabitation literature suggests), then the reading classification shifts from 'one constraint' to 'one seat's interpretation of a contested kernel'. The constraint's extractiveness and beneficiary structure would be perspectival — different seats read the same Constitution differently, and their divergent readings instantiate different constraints.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether this is a unified reading or a perspective-dependent interpretation of a multivalent kernel."
+      "name": "opposition_parties",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "When not holding the legislative majority, face constraints on executive power they cannot directly control. Must appeal to electoral outcomes and public opinion to shift the majority balance. Have exit in the form of electoral campaigns and coalition-building; are not structurally trapped. Can become the legislative majority and flip from payer to beneficiary."
+    },
+    {
+      "name": "constitutional_architects",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The framers of the Fifth Republic Constitution intended a mixed system: a strong presidency with reserved domain powers, but subordination of day-to-day governance to parliamentary confidence. Their framing, as interpreted by this reading, grounds the legitimacy claim that executive power must be coordinated with legislative authorization."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Ensures executive policy implementation must be authorized and sustained by legislative majority consent, preventing unilateral executive governance and distributing power between elected branches. Solves the collective-action problem of preventing any single branch from dominating the system unilaterally.",
+    "transfer_function": "Transfers de facto policy-setting authority from the executive to the legislative majority whenever they diverge. When president and legislature align, executive agency is amplified; when they oppose, legislature redirects executive implementation to legislative priorities or forces cohabitation compromise.",
+    "absent_voices": "Anti-democratic forces seeking to abolish legislative authorization requirements are excluded from the constitutional conversation by the constraint itself — they would argue for presidentialist supremacy but are prevented from effective advocacy by the structural requirement that major changes require super-majorities or constitutional amendment. Extra-constitutional actors (the military, security services) are also absent as formal parties, though their implicit power to interrupt the constraint looms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished — if the president could implement policy without legislative authorization, appoint prime ministers unilaterally, and sustain governments without assembly confidence — the Fifth Republic's constitutional order would collapse into presidentialism. Power distribution would concentrate in the executive; the assembly would become ceremonial; the separation-of-powers foundation would be destroyed.",
+    "founding_problem": "The Fourth Republic suffered from executive instability, cabinet crises, and immobilizing party fragmentation. Citizens sought a strong executive capable of decisive action, but haunted by Vichy memories, they also feared concentrated power. The solution was a dual structure: a strong president with reserved powers (foreign policy, defense, emergency), but executive day-to-day governance coordinated with and dependent on legislative confidence.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional historians and comparative-government scholars outside the beneficiary set attest that legislative constraint remains essential to prevent democratic backsliding: France's own cohabitation history (1986–1988, 1993–1995, 1997–2002) demonstrates the mechanism's persistence. The Constitutional Council's enforcement of legislative authorization requirements is documented in constitutional jurisprudence independent of government claims. International democratic-monitoring organizations (European Commission, Venice Commission) affirm the constraint as a democratic safeguard structure."
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.16
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.17
+      "value": 0.18
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.18
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.19
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.19
+      "value": 0.26
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.18
+      "time_point": 35,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 65,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.31
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.19
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.21
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.23
+      "value": 0.11
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 65,
       "value": 0.24
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
+      "time_point": 70,
       "value": 0.22
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.11
+      "value": 0.12
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.12
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.13
+      "value": 0.14
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.13
+      "value": 0.17
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.12
+      "time_point": 35,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 65,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.19
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 25
-  },
   "commentary": {
-    "narrative_context": "The Fifth Republic Constitution (1958) establishes a semi-presidential system in which the President holds executive authority but that authority is contingent on retaining the confidence of the legislative Assembly. This constraint embodies one reading of the Constitution's core kernel: the President as a coordinated executive whose policy implementation requires legislative authorization and whose tenure depends on Assembly confidence. This reading emphasizes the parliamentary accountability mechanisms — the no-confidence vote (Article 49.2), the legislative override of executive vetoes, and the requirement that the government present itself to the Assembly. Under this reading, when the Assembly withdraws confidence or blocks legislation, the President enters the victim set: formal authority collides with constitutional constraint. The sibling readings — hyper-presidential (President as direct sovereign minimally constrained by legislature) and cohabitation_equilibrium (dual executive with negotiated authority allocation) — represent alternative interpretations of the same constitutional kernel, each with different beneficiary structures and extraction profiles. This story generates ONLY the parliamentary_constraint_reading; the siblings are separate constraint stories.",
+    "narrative_context": "The Fifth Republic Constitution (1958) establishes a dual executive: a directly-elected president with reserved domain powers (foreign policy, defense, emergency decrees) and a prime minister appointed by the president but requiring and retaining the confidence of the National Assembly. This constraint story instantiates the parliamentary-constraint reading: the constitutional structure requires that the president's day-to-day governance and major legislation be coordinated with and authorized by the legislative majority. When the Assembly opposes the president's policy preferences, the president faces cohabitation — ceding the prime minister choice and policy direction to the legislature, or attempting executive overreach with constitutional crisis risk. The reading asserts that the constraint's core function is democratic: the requirement for legislative authorization distributes power, prevents unilateral executive governance, and grounds legitimacy in a broader consent structure. This reading is one of three contested interpretations of the same constitutional text (the kernel); the sibling readings — hyper-presidential and cohabitation-equilibrium — frame the same constitutional language differently.",
     "key_agents": [
-      "President: Formal head of executive branch; derives authority from popular election but is constitutionally required to govern with legislative confidence; when the Assembly withdraws support or blocks legislation, the President cannot unilaterally override the constraint without violating the constitutional framework (victim set under this reading)",
-      "Legislative Assembly: Primary repository of sovereign legislative authority; exercises no-confidence votes, approves budgets, passes legislation that the President cannot veto unilaterally; the beneficiary of the constraint insofar as it preserves legislative primacy over policy implementation",
-      "Prime Minister: Head of government; formally appointed by the President but must retain Assembly confidence to govern; under this reading, the PM is the President's subordinate who manages the legislative relationship on behalf of the executive; sits between the two executive heads",
-      "Legislative majority: The organized bloc of deputies whose confidence sustains the executive; benefits from the constraint by maintaining legislative control over government formation and policy direction",
-      "Constitutional Court: Interprets the constitutional boundaries of executive authority; adjudicates disputes between the President and Assembly over the scope of each institution's powers; the court's rulings define the enforceable limits of this constraint",
-      "Electorate: Provides popular legitimacy to the President and, separately, to the Assembly; under this reading, two sources of democratic legitimacy must coordinate for policy implementation — neither can act unilaterally"
+      "legislative_majority: institutional beneficiary of the authorization requirement; controls prime minister appointment and government confidence",
+      "president_when_opposed: institutional payer when Assembly withholds support; faces cohabitation constraint; constrained exit (must remain within constitutional bounds)",
+      "prime_minister: mediator between presidential powers and legislative oversight; appointed by president but answerable to Assembly",
+      "constitutional_judicial_review: safeguard ensuring legislative authorization enforcement; structural beneficiary",
+      "opposition_parties: payers when out of majority; mobile exit (electoral competition); flip to beneficiaries if they capture the Assembly",
+      "constitutional_architects: analytical observer; framers' intent grounds this reading's legitimacy claim"
     ],
-    "logic_rationale": "Extractiveness is low (0.18) because the constraint does not systematically transfer resources or authority from one party to another in the way a snare or even a tangled rope would. Instead, it coordinates two sources of democratic legitimacy (presidential popular election and legislative representation) by requiring them to align on policy. The President cannot extract rents by executing policy against legislative will; the Assembly cannot extract by blocking all executive initiative because the President retains the power to dissolve the Assembly and force new elections. Suppression is minimal (0.12) because the constraint operates through constitutional procedure and normative commitment rather than coercive enforcement. There is no police force making Presidents obey the Assembly; instead, Presidents internalize the constitutional norm that they govern through legislative confidence. Theater rises over the measurement interval (0.18 → 0.24 → 0.22) because the constraint's performative aspect grows: parliamentary procedures (question time, no-confidence debates, legislative scrutiny) become more elaborate and more visible as a way of demonstrating constitutional adherence, while the actual blocking of executive policy may decline under unified government. The measurement series share one time grid (every metric authored at t=0,5,10,15,20,25) so the engine can sample them jointly. Accessibility of alternatives is high (0.78) for the Assembly but lower for the President: if the President is blocked by the Assembly, the alternatives are limited (new legislative elections, constitutional amendment, or constraint violation); the Assembly's alternative to the President is simply voting no-confidence. Resistance is moderate (0.35) because the constraint is mostly accepted as legitimate but the President routinely pushes its boundaries through executive decree, emergency powers, and the appointment of loyal judges.",
-    "directionality_logic": "Under this reading, directionality differs sharply across seats. The legislative majority (beneficiary) has d near 0.0 (full beneficiary): the constraint preserves their power over government formation and policy. The President has d near 0.6 (symmetric-to-slightly-victimized): the President retains significant powers (decree, appointment, foreign policy initiative) but cannot implement domestic policy against legislative will. The Prime Minister has d near 0.75 (closer to victim): formally subordinate to both the President and the Assembly, the PM must satisfy both and is vulnerable to dismissal by either. The Constitutional Court has d near 0.5 (analytical): the court interprets the constraint but does not benefit or suffer from it directly. The electorate has d near 0.5: they provide legitimacy to both branches but do not directly experience extraction or benefit from the constraint itself. The engine derives these directionality values from the beneficiary/victim declarations and exit options; this commentary explains the structural logic behind the differentiation.",
-    "perspectival_gap": "The computational divergence between seats should be substantial. From the legislative majority's seat, the constraint is a rope — genuine coordination that solves the problem of reconciling popular presidential authority with parliamentary representation. From the President's seat, the constraint appears more extractive (d higher, effective extraction higher) because it prevents unilateral action on policy that the President believes the electorate authorized them to pursue. From the Prime Minister's seat, the constraint is more extractive still (d highest) because the PM is caught between two principals with conflicting interests. The engine computes per-seat classification from these directionality values; where the computed types diverge sharply, that divergence reflects the genuine perspectival asymmetry of the constraint.",
-    "mandatrophy_analysis": "The founding problem — coordination between two sources of democratic legitimacy (presidential election and legislative representation) — remains live under this reading. The constraint persists because both the President and Assembly continue to draw legitimacy from the electorate and both institutions benefit from the arrangement's existence. Mandatrophy would arise if one branch unilaterally dissolved or subordinated the other, but the constitutional text and practiced norms both preserve the dual legitimacy structure. However, the theater_ratio rising over time (0.18 → 0.24) suggests that the procedural performance of parliamentary accountability may grow more elaborate as the substantive blocking of executive policy declines under unified government. If theater continues to rise while extractiveness remains low, the constraint risks becoming a ritual display of parliamentary power without material effect — a transition toward piton status. This measurement series will flag whether that drift occurs.",
-    "kernel_context": "This constraint instantiates the PARLIAMENTARY_CONSTRAINT_READING of the fifth_republic_constitution kernel. The kernel is the Fifth Republic's constitutional text and the authority structures that interpret it. The reading I am generating treats the President as a coordinated executive whose policy implementation requires legislative authorization and whose tenure depends on Assembly confidence. The sibling readings are: (1) HYPER_PRESIDENTIAL_READING: President as direct sovereign embodying national will, minimally constrained by legislature — this reading emphasizes de Gaulle's construction of the presidency as independent from Assembly control, treating legislative confidence requirements as procedural formalities the President can circumvent through appeals to the people. (2) COHABITATION_EQUILIBRIUM_READING: Dual executive requiring negotiated authority allocation between President and Prime Minister — this reading emerges from the cohabitation crises (1986–1988, 1993–1995, 1997–2002) and emphasizes power-sharing negotiation between co-equal executive heads rather than hierarchical subordination of the President to Assembly authority. The parliamentary_constraint_reading I am generating is structurally distinct from both siblings: it makes the Assembly the primary decision-gate (not a co-negotiator), treats the President as subordinate to legislative confidence (not a sovereign), and roots executive authority in constitutional authorization rather than direct popular mandate. This reading foreclose the hyper-presidential reading's core premise (that the President's authority is independent of legislative confidence) but coexists_with the cohabitation reading (both are live positions held by different Presidents and constitutional scholars at different moments)."
+    "logic_rationale": "Extractiveness is low-to-moderate (0.31 endpoint, ranging 0.18–0.38 over interval) because the constraint's primary function is democratic coordination, not unilateral extraction: the legislative majority captures authorization-gate authority, but this is a design feature, not an externality. The measurement series shows a rise from 0.18 (early interval, 1958–1975) to 0.38 (peak at t=50, ~1995–2000, corresponding to cohabitation-phase institutional learning), then a decline to 0.31 by endpoint, reflecting normalization after the 2000 constitutional amendment shifting the election cycle. Theater_ratio rises from 0.08 to 0.28 (peak at t=50, cohabitation era when constitutional brinkmanship was most performative), then stabilizes at 0.22, indicating that a modest but steady share of enforcement activity is theatrical posturing rather than substantive legislative-executive negotiation. Suppression is consistently low (0.12–0.24), reflecting the constraint's reliance on constitutional legitimacy and electoral incentives rather than coercion: the legislature withholds confidence or blocks legislation through constitutional procedure, not extrajudicial force. Accessibility_collapse is high (0.78): once the legislative authorization requirement is understood as constitutional law, alternatives (unilateral executive governance, parliamentary abolition) become effectively inaccessible without constitutional amendment or democratic breach. Resistance is moderate-to-high (0.64): the constraint meets real resistance from presidents seeking greater autonomy and from executives frustrated by legislative checks, but the resistance operates within constitutional bounds (litigation, constitutional interpretation disputes, rhetorical appeals) rather than through violent resistance or democratic illegitimacy.",
+    "perspectival_gap": "The legislative-majority seat and the president-when-opposed seat experience sharply different types. From the legislative seat, the constraint is genuine coordination with embedded beneficiary status: the legislative majority authorized the structure (through electoral support for the constitutional order) and captures the gate (prime minister appointment, confidence vote control). From the president's seat (when opposed), the constraint is a binding limit: executive agency is curtailed, policy implementation must be negotiated, and cohabitation is a form of shared governance the president did not choose. The engine computes both perspectives from the structural data: beneficiary role + control over authorization → low d (legislative seat); payer role + constrained exit → high d (presidential seat when opposed). The claim that this is a rope (genuine coordination) is sustained when the president's party holds the Assembly majority; it appears as tangled_rope when cohabitation forces both branches to coordinate against their preference, extracting compromise at cost to both. This reading frames the constraint as fundamentally a rope because the coordination function (preventing unilateral executive governance) serves the democratic system's stability, not an institutional beneficiary's private interest.",
+    "directionality_logic": "The legislative majority benefits from the authorization gate: they control prime minister appointment, can dismiss governments via no-confidence, and can block legislation. Their directionality is low (d~0.1–0.2, beneficiary end). The president, when opposed by the Assembly, bears the constraint's costs: policy cannot be implemented unilaterally, the prime minister must be drawn from the majority coalition, and any executive overreach risks constitutional crisis. Directionality for opposed-president is high (d~0.75–0.85, target end). When the president's party holds the Assembly majority, directionality is symmetric (d~0.5) because legislative authorization is coordinated rather than coercive — the president controls both branches. Opposition parties, when out of power, have moderate directionality (d~0.6): they must accept executive implementation they oppose, but they retain electoral exit and can campaign to flip the majority. Constitutional judicial review sits analytically at the beneficiary end (d~0.05) because it exists to enforce the constraint, not to bear its costs.",
+    "mandatrophy_analysis": "The constraint does NOT exhibit mandatrophy. The founding problem remains live: France continues to confront the tensions between presidential decisiveness and democratic accountability that motivated the dual-executive design. The constraint's function has not outlived its justification. What HAS changed is the nature of cohabitation pressure: the 2000 constitutional amendment synchronized the presidential and legislative election cycles, reducing the frequency and duration of cohabitation but not eliminating it (2022 elections produced a fractured Assembly where no single party controlled a legislative majority, reviving cohabitation dynamics). This is drift within the constraint's persistent function, not mandatrophy. The rising extraction values in the mid-interval reflect institutional learning about how to interpret ambiguous constitutional boundaries, not a fundamental loss of the constraint's coordination function.",
+    "kernel_context": "This constraint instantiates the PARLIAMENTARY_CONSTRAINT_READING of the contested kernel 'fifth_republic_constitution'. The kernel is the constitutional text and its legitimacy foundations; this reading asserts that the text's core meaning is that executive policy implementation requires legislative authorization. Sibling readings: (1) hyper_presidential_reading frames the same text as granting the president sovereignty over governance, with the legislature relegated to co-legislation; (2) cohabitation_equilibrium_reading reads the text as creating a dual power structure where president and prime minister negotiate authority allocation. All three readings instantiate from the same constitutional text (Articles 1–89, Fifth Republic Constitution), but they read different constraint structures out of it. This reading's distinguishing axiom is democratic_coordination_requirement: the president's legitimacy derives from electoral consent, which must be sustained through legislative authorization — not from personal sovereignty or reserved-domain dominance. The constraint is classified as rope under this reading because the coordination function (preventing unilateral executive governance, maintaining democratic checks) is primary; extraction is secondary and non-intentional."
   },
+  "omegas": [
+    {
+      "id": "reserved_domain_boundary_ambiguity",
+      "question": "Where is the boundary between the president's reserved-domain powers (foreign policy, defense, emergency decrees) and legislative co-sovereignty? Can a president exercise emergency decree authority without subsequent legislative authorization?",
+      "resolution_mechanism": "Constitutional Court jurisprudence (Conseil Constitutionnel) interpreting Articles 15, 16, and 89; legislative testing through actual cohabitation crises where presidents attempt boundary expansion; comparative analysis of court rulings across cohabitation periods.",
+      "impact": "If reserved domains are truly exclusive, the constraint's scope on executive power is narrower than claimed; if they require legislative ratification post-implementation, the constraint is tighter. The reading's classification depends on this boundary being genuinely contestable, which produces different classifications if the boundary shifts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Constitutional boundary between presidential reserved domain and legislative authorization."
+    },
+    {
+      "id": "hyper_presidential_reading_vs_parliamentary_reading_foreclosure",
+      "question": "Can both the hyper-presidential reading (president as sovereign) and the parliamentary-constraint reading (executive requires legislative authorization) coexist as live interpretations within a single constitutional framework, or does one logically foreclose the other?",
+      "resolution_mechanism": "Constitutional jurisprudence history: review whether the Conseil Constitutionnel has ever validated both interpretations simultaneously, or whether it has settled on one. Legal-philosophical analysis of whether 'sovereignty' (hyper-presidential axiom) and 'legislative authorization requirement' (parliamentary axiom) are logically contradictory or merely contested.",
+      "impact": "If they foreclose each other, the reading_relations entry from parliamentary_constraint_reading to hyper_presidential_reading should be 'forecloses' rather than 'coexists_with'. If they coexist through institutional compromise (different domains, different crisis moments), the relation remains 'coexists_with'. This is an empirical-plus-conceptual question.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the parliamentary-constraint and hyper-presidential readings logically foreclose each other or coexist as live interpretations."
+    },
+    {
+      "id": "cohabitation_extractiveness_spike",
+      "question": "During cohabitation periods, does the extraction measured in the constraint rise because the president is genuinely trapped (high d, high χ) or because the measuring optics shift to make the constraint more visible while its actual function remains coordination?",
+      "resolution_mechanism": "Measure extraction across matched periods: same-party control vs. cohabitation. If extractiveness rises during cohabitation, is it because the president's agency is curtailed (measurement-optics shift) or because the legislative majority is actively extracting rents? Compare to instances where cohabitation occurred but institutional norms prevented extractive behavior.",
+      "impact": "If the rise is optics (the constraint becomes more visible but not more extractive), the classification remains rope across both same-party and cohabitation regimes. If the rise reflects genuine rent-seeking by a cohabiting legislature, classification flips toward tangled_rope during cohabitation. This omega documents whether the constraint's identity is stable or state-dependent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction-metric rise during cohabitation reflects genuine changes in constraint structure or measurement-optics shift."
+    },
+    {
+      "id": "democratic_authorization_vs_institutional_capture",
+      "question": "Is the legislative authorization requirement a democratic coordination mechanism (as this reading claims) or a structural vulnerability through which legislative majorities can capture the presidency and extract rents via cohabitation?",
+      "resolution_mechanism": "Examine whether cohabiting legislatures used their authority to systematically redirect executive agency toward legislative-majority interests (capturing agencies, reversing executive policy, using confidence votes coercively). Compare to periods where authorization was used to sustain rather than overturn executive policy. Analyze whether legislative majorities had extractive intent or merely policy divergence.",
+      "impact": "If the legislature systematically extracted rents during cohabitation (redirecting executive resources, imposing legislative-preferred policies beyond what policy divergence explains), classification shifts toward snare or tangled_rope. If legislative use of authorization powers was consistent with democratic contestation and policy divergence (no rent-seeking), the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legislative authorization requirement operates as democratic coordination or institutional-capture mechanism."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
@@ -190,55 +264,66 @@
   "network": {
     "affects_constraints": [
       "fifth_republic_constitution__hyper_presidential_reading",
-      "fifth_republic_constitution__cohabitation_equilibrium_reading"
+      "fifth_republic_constitution__cohabitation_equilibrium_reading",
+      "french_constitutional_amendment_cycle",
+      "government_no_confidence_vote_rule"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the Fifth Republic's constitutional kernel. The kernel is the constitutional text and the authority structures that interpret it — it remains fixed across readings. Each reading instantiates a different constraint because the readings assign fundamentally different structural relationships: who benefits, who is constrained, what exit options exist. The three readings are distinct constraint stories linked by network.affects_constraints edges. The ε-invariance principle requires that each reading have its own ε value because changing which reading is operative changes the structural facts about beneficiaries, victims, and directionality. This story generates ONLY the parliamentary_constraint_reading; the siblings are authored separately and linked here."
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'fifth_republic_constitution'. Three separate constraint stories instantiate from this single constitutional text: (1) parliamentary_constraint_reading (this story) reads the core meaning as executive subordination to legislative authorization; (2) hyper_presidential_reading reads the same text as granting presidential sovereignty; (3) cohabitation_equilibrium_reading reads the text as dual-power negotiation. The epsilon values differ substantially across readings (0.31 parliamentary, ~0.15 hyper-presidential, ~0.45 cohabitation-equilibrium) because the readings assess the same constitutional arrangement against different counterfactuals: parliamentary reading measures extraction relative to pure coordination (legislative majorities enforcing authorization requirements); hyper-presidential reading measures extraction relative to unrestricted presidential sovereignty; cohabitation reading measures extraction as the cost of two-branch negotiation. The three readings are linked via network.affects_constraints because each reading's classification depends on which of the other readings' premises you accept."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "legislative_majority",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "fifth_republic_constitution__hyper_presidential_reading",
-        "relation": "forecloses"
+        "sibling_id": "hyper_presidential_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "fifth_republic_constitution__cohabitation_equilibrium_reading",
-        "relation": "coexists_with"
+        "sibling_id": "cohabitation_equilibrium_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "presidential_authority_contingent_on_assembly_confidence",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "conventional"
-      },
-      {
-        "atom": "dual_democratic_legitimacy_requires_coordination",
+        "atom": "democratic_coordination_requirement",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
+      },
+      {
+        "atom": "legislative_authorization_for_governance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "constitutional_parliamentary_accountability",
+    "reference_frame": "dual_executive_with_legislative_oversight",
     "drift_state": {
-      "moment": "contemporary_unified_government_era",
+      "moment": "contemporary_fractured_assembly_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

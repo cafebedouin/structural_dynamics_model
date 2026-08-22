@@ -2,27 +2,97 @@
   "header": {
     "constraint_id": "marriage_authority__communal_autonomy_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "463848a4-aee3-4dc3-b823-59d6a29c1ad0"
+    "story_uid": "a8978e13-dc00-4c51-aec5-e2278197f685"
   },
   "base_properties": {
-    "extractiveness": 0.62,
+    "extractiveness": 0.58,
     "suppression": 0.71,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.58,
-    "resistance": 0.73,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
     "claimed_type": "rope",
-    "human_readable": "Marriage Authority Grounded in Communal Religious Tradition (Autonomy Reading)",
+    "human_readable": "Marriage Authority via Communal Religious Tradition",
     "topic_domain": "legal_pluralism/constitutional_law",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "religious_community_leadership"
+      "religious_leadership",
+      "community_majoritarian_faction"
     ],
     "victims": [
       "intra_community_dissenters",
-      "gender_equality_advocates"
+      "cross_community_marriage_seekers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "religious_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Interprets and administers marriage law within the tradition, setting norms for validity, dissolution, and succession. Justified as preserving communal religious integrity and theological coherence. Authority derives from lineage (scriptural interpretation, jurisprudential tradition, recognized hierarchy). Collects no direct rents but accumulates institutional legitimacy and control over life-cycle events; amendments to personal law traditionally require their explicit consent or active participation in legislative process."
+    },
+    {
+      "name": "intra_community_dissenters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Born into the religious community but dissent from its marriage norms (on grounds of gender equality, LGBTQ inclusion, secular values, or contested doctrinal interpretation). Exit options are costly: leaving the community means social rupture, loss of kinship recognition, severed economic ties, and identity displacement. Attempting to marry within the tradition on dissident terms courts invalidity or community exclusion. The constraint forces conformity or exit; the identity-lock means exit carries the cost of cultural death."
+    },
+    {
+      "name": "state_legislature",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Avoids the political cost of imposing a Uniform Civil Code by deferring marriage authority to communal traditions. Enforces personal law codes through courts and registries but does not author them. This delegation dissolves majoritarian conflict: religious minorities retain self-governance; the secular majority avoids appearing to impose uniformity; the state retains ultimate enforcement capacity without authorship of norms. In exchange, state courts occasionally harmonize via constitutional interpretation (gender equality, due process), creating pressure on the religious interpretive hierarchy but stopping short of legislative override."
+    },
+    {
+      "name": "community_majoritarian_faction",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The faction within the religious community whose interpretation of tradition aligns with the established legal doctrine and institutional hierarchy. Their marriages are presumptively valid; their family arrangements receive legal recognition without doctrinal contestation. They benefit from the stability of shared norms and the institutional machinery that enforces them."
+    },
+    {
+      "name": "cross_community_marriage_seekers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who seek to marry across communal or religious boundaries. Personal law fragmentation creates legal friction: a marriage valid in one community's code may be unrecognized in another's; divorce or succession rights diverge; children's status becomes unclear. They must navigate multiple legal regimes or migrate to secular marriage (where available), at cost to identity or community standing."
+    },
+    {
+      "name": "dissenting_scholars_and_reformers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Intellectuals within the tradition who advocate for reform (gender equality, inclusivity, doctrinal reinterpretation) but lack formal authority in the legal hierarchy. They publish, petition, litigate, and mobilize community opinion, but the authorization structure gives them no seat at the legislative-amendment table. Legislative reform requires the religious leadership's participation or state legislative override—both of which are politically costly and rare."
+    },
+    {
+      "name": "constitutional_court",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Reviews personal law codes against constitutional guarantees (equality, due process, freedom of conscience). Can strike down norms it deems unconstitutional but typically does so narrowly, preserving the personal law system itself. Acts as a pressure valve: individual injustices are occasionally remedied; systemic reform is deflected back to the legislative-amendment process."
+    }
+  ],
+  "six_questions": {
+    "absent_voices": "Intra-community dissenters (reformists, LGBTQ members, gender-equality advocates) would object that the constraint suppresses internal diversity and locks them into conformity. Secular citizens and cross-community marriage seekers would object to the friction and limitation of choice. Democratic majoritarian advocates would argue marriage law belongs to the legislature, not to religious hierarchies. These voices are excluded from the formal legislative-amendment process—they can litigate and petition, but amendments to personal law traditionally require religious leadership participation or consent, keeping them at the margin of the law-making process."
   },
   "interval": {
     "start": 0,
@@ -32,82 +102,82 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
       "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 10,
       "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
       "value": 0.56
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.59
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.62
+      "value": 0.57
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.62
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.62
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.12
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.15
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.18
+      "value": 0.36
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.22
+      "value": 0.39
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.26
+      "value": 0.41
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.27
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.28
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.28
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
@@ -117,12 +187,12 @@
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.62
+      "value": 0.63
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.65
+      "value": 0.66
     },
     {
       "metric": "suppression_requirement",
@@ -151,70 +221,54 @@
     }
   ],
   "commentary": {
-    "narrative_context": "A constitutionally pluralist state recognizes that minority religious communities have authority to govern family law (marriage, divorce, succession, guardianship) according to their own legal traditions. The state enforces these community norms through its courts but does not author them — it delegates the substantive rule-making to religious leadership. This constraint instantiates the communal autonomy reading of the contested marriage authority kernel: the reading that prioritizes community self-governance and religious freedom, and frames personal law pluralism as a consociational mechanism preventing majoritarian cultural domination. The sibling readings (secularist, gender-rights, federalist-millet, judicial-harmonization) contest whether this delegation is legitimate, whether it protects minorities or entrenches community elites, and whether the state's enforcement power neutrally supplements community autonomy or actively amplifies hierarchy within it.",
-    "key_agents": [
-      "Religious community leadership: sets and administers family law norms; collects institutional legitimacy and enforcement power from state recognition",
-      "State judiciary: enforces community norms without authoring them; frames this as respecting pluralism and community autonomy",
-      "Intra-community dissenters: contest religious authority's interpretation; bound by identity fusion and social costs of exit",
-      "Gender equality advocates: push for norm reform through legislative amendment or judicial review; constrained by community consent requirements",
-      "Constitutional courts: review whether state deference violates constitutional rights; operate under pressure from competing readings"
-    ],
-    "logic_rationale": "Extractiveness is moderate-high (0.62 by t=40) because community leadership benefits from state enforcement and community members bear the cost of norm compliance through identity-locked exit options. Suppression is high (0.71) because the constraint's persistence depends on enforcement of community norms against internal dissent, and dissent must be suppressed (through social/religious mechanisms backed by state law enforcement) for the autonomy to function. Theater is low-moderate (0.28): the 'community autonomy' rationale is genuine — there is real coordination value in allowing communities to govern intimate life — but that coordination function is increasingly used to justify resisting gender-equality reforms and maintaining hierarchical authority structures. The measurement series tracks a slow rise in extractiveness (t0=0.48 to t40=0.62) as judicial review intensifies and the constraint must work harder to suppress intra-community challenges, with theater rising as well (defensive framing about 'tradition' and 'community autonomy' becomes more prominent). The trajectory plateaus around t=25, suggesting the constraint has settled into a stable high-extraction equilibrium: leadership has adapted to resist reform pressure, and dissenters have adapted to constrained options.",
-    "perspectival_gap": "The community leadership and the state judiciary would compute this as a rope or even mountain (natural coordination) from their seats; intra-community dissenters and gender-equality advocates would compute it as a snare (pure extraction using autonomy framing as cover). The gap is structural, not empirical: the same constraint looks coordinative from the agenda-setter's position and extractive from the target's position because the beneficiary/victim asymmetry is the constraint itself.",
-    "directionality_logic": "Community leadership collects authority and legitimacy without bearing the cost of norm enforcement against dissenters — that cost is borne by dissenters and the state apparatus. The leadership's exit option (arbitrage: threatening to withdraw cooperation if the state doesn't grant autonomy) is strong relative to their power level. Intra-community dissenters are trapped by identity fusion: their religious identity, family structure, social standing, and economic livelihoods are constituted through community membership; exit means losing all of these simultaneously. This is the deepest form of suppression — not external barriers but the dissenter's own identity forbidding exit. Gender-equality advocates are constrained but more mobile: they can litigate, organize, seek legislative remedy; the constraint's persistence requires their advocacy to be suppressed (through appeals to community autonomy and religious freedom that legitimize non-engagement). The asymmetry in power and exit is the source of the extraction — leadership benefits from a structure that dissenters cannot leave.",
-    "mandatrophy_analysis": "The constraint avoids misclassification as pure extraction by carrying a genuine coordination function: multireligious democracies do have a real problem (majoritarian cultural domination of minorities), and personal law pluralism is one structural solution to it. What mandatrophy resolution reveals is that this function has become attenuated — the constraint is now used primarily to resist intra-community reform (gender equality, religious freedom for dissenters) and to entrench leadership authority. The founding problem (majoritarian domination) is increasingly contested: gender-equality advocates and secular constitutionalists argue that the problem is already solved by constitutional equal-protection guarantees, and that personal law autonomy now functions as an obstacle to those guarantees, not as their protector. This reading instantiates communal autonomy as the authoritative framing, but mandatrophy analysis clarifies that the constraint is being converted from a solution to majoritarian overreach into a mechanism for protecting community elites from equality review.",
-    "kernel_context": "This constraint is one reading of the contested marriage_authority kernel. The reading instantiated here is communal_autonomy_reading: marriage authority is grounded in community religious tradition, the state enforces but does not author family law norms, and personal law pluralism is justified as protecting minorities from majoritarian domination and preserving community identity. The sibling readings contest this framing: secularist_reading argues personal law should be eliminated in favor of a unified democratic civil code; gender_rights_reading argues that constitutional equality guarantees should override community autonomy where intra-community women and LGBTQ+ members are disadvantaged; federalist_millet_reading argues personal law pluralism is justified not by community autonomy but by a deliberate consociational mechanism preventing any group from dominating family law; judicial_harmonization_reading argues courts should impose a constitutional floor across personal law codes without formal UCC legislation, allowing incremental harmonization. Each reading shares the same kernel (the place of religious and communal traditions in family law governance) but instantiates it differently, with different beneficiaries, victims, and type classifications."
+    "narrative_context": "In legal pluralist constitutions, marriage authority is fragmented across religious and secular jurisdictions. This constraint embodies the communal autonomy reading: marriage law is authored by religious institutional hierarchies (grounded in scriptural tradition and jurisprudential lineage) and enforced by state courts. The state does not impose a uniform civil code but rather recognizes and enforces the diverse personal law codes of registered religious communities. The reading presents this as a solution to the pluralism problem—respecting doctrinal diversity and community self-governance. However, the constraint structurally privileges the religious establishment (via authority delegation), locks dissenters into conformity or exit, and creates friction for cross-community relationships. The measurement series tracks the tension: extractiveness rises modestly as constitutional pressure from equality doctrines accumulates (from 0.42 to 0.58 over 40 years), while theater_ratio plateaus mid-range (0.42 at endpoint), indicating that the legitimacy of the arrangement rests partly on performative appeals to autonomy and pluralism even as its coercive mechanisms strengthen.",
+    "kernel_context": "This constraint is the communal autonomy reading of the contested marriage_authority kernel. It instantiates a vision where religious communities retain primary authority over marriage norms, with the state in an enforcement-only role. Sibling readings include: the secularist_reading (marriage law should revert to democratic legislature and uniform civil code), the gender_rights_reading (personal law must yield to constitutional equality guarantees), the federalist_millet_reading (legal pluralism is a deliberate anti-tyranny mechanism), and the judicial_harmonization_reading (constitutional review gradually imposes a common floor across personal law codes without formal legislative override). This reading coexists with all siblings in contemporary jurisprudence—different parties and judges invoke different readings in different cases. The core premise of the communal autonomy reading is that religious institutional hierarchies are the legitimate authors of family law norms for their adherents; the sibling readings contest who should author (democratic legislature, constitutional courts, or negotiated federalism) and on what grounds.",
+    "logic_rationale": "Extractiveness is moderate-high (0.58 endpoint) because the constraint privileges institutional religious leadership in defining norms while binding dissenters through identity-lock and creating friction for those who dissent or cross boundaries. However, it is not pure extraction because genuine coordination functions are present: communities do solve collective-action problems around marriage validity, succession, and doctrinal coherence. The tension between real coordination and structural privilege produces a rope that looks increasingly extractive to those locked in. Suppression is high (0.71) because the constraint's persistence depends on actively maintaining the authority hierarchy and resisting constitutional encroachment—dissenters must conform, exit, or litigate in courts that rarely grant relief. Theater is moderate (0.42): the legitimacy story emphasizes pluralism and autonomy, but the enforcement machinery increasingly defends institutional prerogatives against constitutional challenge rather than serving the pluralist function. The measurement series shows extractiveness and suppression rising slowly and flattening after year 25, suggesting institutional hardening—the constraint settles into a stable but contested equilibrium as constitutional pressure accumulates without translating into formal reform.",
+    "directionality_logic": "Religious leadership has near-zero directionality on this constraint (full beneficiary): they author the rules and enforce them against resistance, with no material exit cost. Intra-community dissenters have near-maximal directionality (full target): they are identity-locked (exit means cultural death), so even modest suppression translates to high effective extraction. Cross-community marriage seekers sit in the middle-high range (0.65–0.75): they face friction but are not identity-locked—they can marry outside the system at some social cost. The state legislature sits near zero on the beneficiary side (negative directionality) from a formal standpoint: it avoids the political cost of imposing uniformity; but this framing obscures that it retains ultimate enforcement capacity and benefits from the delegation (avoids conflict). The constitutional court has analytical directionality (0.5) by role: it reviews but does not revise systematically. The measured directional asymmetry drives the computed type at each seat: from the religious leadership's seat this may appear as protective coordination; from the dissenter's seat the same structure appears as coercive confinement.",
+    "perspectival_gap": "The gap between seats is substantial. From the religious leadership's perspective, the constraint solves a genuine coordination problem (how to maintain doctrinal integrity and community autonomy in a pluralist state) and is sustained by shared commitment to tradition. From the dissenter's perspective, the same constraint is a mechanism for suppressing internal dissent and enforcing conformity under the guise of autonomy. From the state's perspective, it is a politically convenient delegation that avoids majoritarian conflict while retaining ultimate enforcement power. From the constitutional court's perspective, it is an evolving boundary—personal law autonomy is legitimate up to the point of violating fundamental rights, but that boundary is itself contested. These divergences are not measurement errors but structural facts: the constraint genuinely has different meaning and force depending on one's position within it.",
+    "mandatrophy_analysis": "The constraint does not satisfy mandatrophy (founding problem status = contested, disappearance verdict = world_rearranges). However, there is an emerging mandatrophy signal: the founding problem (how to respect communal autonomy without majoritarian imposition) was live at the constitution's founding but has become partially dead. Constitutional guarantees now provide individual protections; gender-equality doctrine is entrenched; LGBTQ inclusion is advancing in secular jurisdictions. These developments mean the founding coordination problem (protecting minorities from majoritarian law) has been partially solved by constitutional individual rights—the personal law system now functions primarily to defend institutional prerogatives against those guarantees, not to solve the original pluralism problem. However, the constraint persists because the legislature lacks political will to impose a uniform code (majority fatigue with conflict; religious groups mobilized against change) and the state benefits from avoided authorship. The constraint has shifted from coordination (plurality of valid traditions) to extraction (institutional hierarchy + individual suppression) without formally acknowledging the shift. This is not yet full mandatrophy, but it is the trajectory."
   },
   "omegas": [
     {
-      "id": "exit_mechanism_internalization",
-      "question": "Is the measured suppression of intra-community dissenters structural (legal barriers to exit, economic dependence) or substantially internalized (dissenters believe they deserve the treatment, have fused their identity with compliance, cannot imagine exit)?",
-      "resolution_mechanism": "Post-exit trajectory analysis: if dissenters who physically leave the community report persistent suppression (continuing sense of shame, obligation, family rupture) years after exit, suppression is partially internalized. If exit eliminates suppression quickly, suppression is primarily structural. Interview studies with community leavers and longitudinal anthropological data.",
-      "impact": "If substantially internalized, the constraint's effective suppression is higher than the structural measure — the dissenter carries the suppression with them after exit, limiting the effectiveness of emigration as an exit option. This would raise the true target-ness of the dissenter's position and raise the classification's extraction score.",
+      "id": "autonomy_vs_coercion_boundary",
+      "question": "Does the constraint respect genuine communal autonomy, or does it enforce institutional hierarchy under the guise of autonomy?",
+      "resolution_mechanism": "Empirical test: survey intra-community dissenters on whether they experience the constraint as protective autonomy or coercive conformity. If majority report coercion despite affirming community membership, the autonomy framing is contested. Compare with cross-community groups (LGBTQ, reformists, women) who have exited the system: do they report coercion-driven exit or ideological choice? Post-exit trajectory analysis: if dissenters' agency expands after exit, suppression was structural; if it contracts (internalized), suppression was partially internalized.",
+      "impact": "If autonomy is genuine, the constraint is coordination-heavy and dissenters' exit is ideological choice (lower d for dissenters, lower χ). If autonomy is rhetorical cover, the constraint is extraction-heavy and dissenters' exit is coercion-driven (higher d, higher χ, reclassify toward snare).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression of dissenters is structural or internalized (identity-fusion mechanism)"
+      "description": "Whether the communal autonomy framing accurately describes the constraint or masks institutional hierarchy."
     },
     {
-      "id": "community_monolith_assumption",
-      "question": "Does the state treat 'the community' as a monolithic entity with a single authentic voice (religious leadership), or does it recognize internal pluralism within the community (divergent theological schools, reformist movements, lay dissent)?",
-      "resolution_mechanism": "Examination of state court judgments: do courts treat religious leaders as sole representatives of community interests, or do they permit intra-community litigation and recognize that communities contain competing voices? Comparison with jurisdictions (some Indian states) that have moved toward more pluralistic recognition of community diversity.",
-      "impact": "If the state locks in the monolith assumption, it actively amplifies community leadership authority by denying judicial recognition to internal dissent. If the state treats communities as internally plural, dissenters gain some exit route (judicial appeal to state courts on grounds of intra-community cultural-rights violation). The constraint's extractiveness and suppression would be lower under pluralistic recognition.",
+      "id": "identity_lock_mechanism",
+      "question": "Is the identity-lock binding dissenters structural (social ostracism, economic dependence, legal invalidity of non-conforming marriages) or internalized (dissenters believe they deserve treatment, have internalized the norm)?",
+      "resolution_mechanism": "Longitudinal study of exit trajectories: if dissenters report persistent identity-shame or norm-internalization after exit from the community, suppression is partly internalized; if they report relief and agency restoration, suppression was primarily structural. Interview dissenter-advocates on whether their mobilization is possible within the community or requires formal exit.",
+      "impact": "If structural: the constraint's suppression is a property of the institutional machinery (law, property, kinship). If internalized: the suppression persists after exit, making the constraint more extractive than the structural measure alone suggests (effective suppression rises because it is carried by the target).",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether 'community autonomy' presupposes a monolithic community or recognizes internal pluralism"
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in identity-locked dissenters."
     },
     {
-      "id": "founding_problem_obsolescence",
-      "question": "Is the founding problem (majoritarian cultural domination of minorities) still live and urgent, or has it been substantially solved by constitutional equal-protection guarantees and can now be treated as resolved?",
-      "resolution_mechanism": "Historical analysis of legislative majoritarian overreach targeting minority communities' family law; contemporary assessment of majoritarian threat vs. constitutional protection. Comparative study of jurisdictions with and without personal law pluralism to assess whether pluralism prevents majoritarian erasure or enables elite entrenchment.",
-      "impact": "If the founding problem is dead, personal law pluralism shifts from a protective mechanism to a mechanism for leadership to resist equality review. The constraint would reclassify from rope (solving a real coordination problem) toward snare (using a defunct coordination rationale to justify extraction). If the founding problem is live, the coordination function remains central to the classification.",
+      "id": "constitutional_pressure_foreclosure_vector",
+      "question": "Are constitutional equality and rights guarantees gradually foreclosing the communal autonomy reading (making it logically incoherent with the rights framework), or are they merely creating pressure that can be managed through doctrinal harmonization?",
+      "resolution_mechanism": "Jurisprudential analysis: track whether constitutional courts are claiming that personal law pluralism is compatible with rights guarantees (harmonization trajectory) or incompatible in principle (foreclosure trajectory). Examine whether recent cases are expanding or narrowing the scope of personal law exception to constitutional review.",
+      "impact": "If foreclosure is occurring, the communal autonomy reading faces structural delegitimation over time—the axiom that communities author family law becomes untenable once rights guarantees are constitutionalized. This would shift the constraint toward snare (coercion masquerading as tradition) or piton (ritual maintenance of a form whose function has died). If harmonization is sustainable, the reading can persist as a live alternative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether constitutional rights guarantees are foreclosing or merely pressuring the communal autonomy reading."
+    },
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Which sibling reading of the marriage_authority kernel is actually dominant in practice—does communal autonomy, secularist uniformity, gender rights, federalist pluralism, or judicial harmonization guide actual marital legitimacy determinations?",
+      "resolution_mechanism": "Case-law audit: analyze recent appellate decisions on marriage validity, dissolution, and succession across religious communities. Classify each decision by which reading it instantiates (e.g., 'gender rights reading applied when court struck down unequal divorce rules'). Aggregate: which reading governs the largest fraction of marital arrangements?",
+      "impact": "If communal autonomy dominates practice, the constraint's structural delta is accurately authored. If another reading dominates (e.g., gender rights via incremental constitutional review), the practical constraint may be a different reading (judicial harmonization or gender rights), and this story should be reframed or supplemented with a second story capturing the dominant actual pattern.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the founding problem (majoritarian cultural domination) is still live or has been superseded by constitutional guarantees"
-    },
-    {
-      "id": "reading_identity_fusion_variant",
-      "question": "This reading (communal autonomy) depends on framing 'community' as a locus of identity and belonging. But does the communal autonomy reading itself become a mechanism for fusing individual identity with community compliance, thereby internationalizing suppression?",
-      "resolution_mechanism": "Discourse analysis of autonomy-framing rhetoric in state courts and community leadership. Interviews with dissenters about whether they experience their dissent as incompatible with their identity to the community. Comparison with the federalist-millet reading, which justifies pluralism on structural anti-tyranny grounds rather than identity grounds — does that reading produce less identity-internalized suppression?",
-      "impact": "If the autonomy reading itself (by emphasizing identity and belonging) amplifies the internalization of suppression, then the reading is not merely describing a constraint but constitutively changing it — embedding the extraction more deeply in the dissenter's self-concept. The constraint would have higher effective suppression under the autonomy reading than under alternative readings of the same kernel.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the autonomy reading itself amplifies identity-fusion suppression mechanisms"
-    },
-    {
-      "id": "sibling_reading_presence",
-      "question": "This constraint instantiates one reading of the marriage_authority kernel. What observable differences in ε, suppression, and type would appear if another reading (secularist, gender-rights, federalist-millet, or judicial-harmonization) were instantiated instead in this same constitutional context?",
-      "resolution_mechanism": "Jurisdictional comparison: study cases where different readings dominate (India for autonomy reading, Tunisia or Turkey for secularist, Israel for judicial-harmonization, Bosnia for federalist-millet) and measure the constraint's extractiveness and suppression under each. Not resolvable within one reading but observable via cross-reading comparison.",
-      "impact": "Each sibling reading would show different ε values: secularist reading would eliminate personal law autonomy (eliminating this constraint entirely); gender-rights reading would maintain personal law but subject it to judicial review of equality compliance (lowering extractiveness and suppression); federalist-millet reading would maintain pluralism but legitimize it on anti-tyranny grounds rather than autonomy grounds (potentially lowering identity-fusion suppression). This omega documents the under-determination of this constraint by the kernel alone — the sibling readings exist to disambiguate.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Sibling readings of the marriage_authority kernel and their structural implications (reading under-determination)"
+      "description": "Which sibling reading of marriage_authority actually governs family law practice."
     }
   ],
   "boltzmann": {
     "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.14
   },
   "network": {
     "affects_constraints": [
@@ -223,75 +277,77 @@
       "marriage_authority__federalist_millet_reading",
       "marriage_authority__judicial_harmonization_reading"
     ],
-    "dual_formulation_note": "The marriage_authority kernel is contested across five readings, each instantiating a different constraint with different ε values, beneficiary structures, and type classifications. All five readings are linked in a kernel family: communal_autonomy_reading (this file) affects all sibling readings because it frames the kernel in terms of community autonomy and identity protection, which creates structural pressure on how sibling readings must position themselves (as either defending or reforming autonomy). The secularist_reading eliminates this constraint entirely (personal law abolished). The gender_rights_reading maintains personal law but subjects it to judicial equality review. The federalist_millet_reading maintains pluralism but justifies it on consociational anti-tyranny grounds rather than community autonomy. The judicial_harmonization_reading maintains plural authority but subjects it to incremental constitutional review. All five are one constraint family decomposed by the ε-invariance principle: each reading has different empirical consequences (different victim sets, different enforcement mechanisms, different founding-problem assumptions) and thus different ε values."
+    "dual_formulation_note": "The marriage_authority kernel decomposes into five structurally distinct constraints, each instantiating a different reading: communal_autonomy_reading (this story), secularist_reading (state-monopoly reading), gender_rights_reading (rights-based reform reading), federalist_millet_reading (deliberate pluralism-as-anti-tyranny reading), and judicial_harmonization_reading (incremental constitutional floors reading). Each reading has a distinct ε (communal autonomy: 0.58; secularist: higher, more extractive if interpreted as majoritarian imposition; gender rights: higher, exposing institutional hierarchy as coercive). The readings coexist in contemporary jurisprudence—different parties, judges, and jurisdictions invoke different readings in different cases. Do NOT merge readings into one story or average their ε values. Each is a separate constraint with its own beneficiary/victim structure and classification. This story (communal autonomy reading) presents marriage authority as legitimate communal self-governance; the gender rights reading presents the same institutional structure as patriarchal suppression; the secularist reading presents it as irrational exception to democratic law. These are not observational variations on one constraint—they are genuinely different constraints with different ε values, grounded in different premises about who should author family law and on what grounds."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerless",
-      "d_value": 0.85
-    }
-  ],
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "communal_religious_authority_over_marriage",
+    "drift_state": {
+      "moment": "contemporary_constitutional_pluralism_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "marriage_authority__secularist_reading",
-        "relation": "forecloses"
-      },
-      {
-        "sibling_id": "marriage_authority__gender_rights_reading",
+        "sibling_id": "secularist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "marriage_authority__federalist_millet_reading",
+        "sibling_id": "gender_rights_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "federalist_millet_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "marriage_authority__judicial_harmonization_reading",
+        "sibling_id": "judicial_harmonization_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "religious_community_primary_authority",
+        "atom": "religious_communities_author_marriage_norms",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "identity_constitutive_autonomy",
+        "atom": "state_enforces_but_does_not_impose_family_law",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "doctrinal_integrity_requires_institutional_hierarchy",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "community_religious_authority_intact",
-    "drift_state": {
-      "moment": "contemporary_constitutional_equality_era",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
+  "gain_flow": "religious_leadership",
+  "fixing_cost": "prohibitive",
   "uke_scope": {
-    "epsilon_bin": "moderate_high",
-    "hypothesis": "rope_with_intra_community_extraction",
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
     "downstream_of": [
-      "marriage_authority__secularist_reading",
-      "marriage_authority__gender_rights_reading"
+      "marriage_authority__secularist_reading"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

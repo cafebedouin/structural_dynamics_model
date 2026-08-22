@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,18 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,41 +76,43 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: balfour_mandate_instruments__dual_obligation_indigenous_rights
- *   human_readable: Balfour Mandate Dual Obligation: Indigenous Rights Protection Over National Home Primacy
+ *   human_readable: Mandate Dual Obligation: Arab Rights Protection vs. National Home Establishment
  *   domain: international_law/colonial_administration/state_formation
  *
  * SUMMARY:
- *   The Balfour Declaration (1917) and subsequent mandate instruments (League
- *   of Nations, 1922) contain two contradictory commitments: facilitate a
- *   Jewish national home in Palestine, and protect the rights and status of
- *   existing Arab communities. This story instantiates ONE READING of the
- *   contested kernel: the dual-obligation reading, in which 'national home'
- *   is subordinated to the protection of Arab civil, political, and property
- *   rights, and in which Arab majority status grounds a claim to
- *   representative government and an eventual path to sovereignty. This
- *   reading interprets the mandate as a coordination mechanism that resolves
- *   the Balfour tension by treating Arab rights as superior in priority and
- *   Arab demographic status as the primary constraint on Jewish institutional
- *   development. The alternative readings—jewish_national_home_primacy
- *   (national home as proto-state requiring unrestricted land access and
- *   demographic transformation) and mandatory_interpretive_discretion
- *   (British administrative discretion overrides any substantive reading)—are
- *   separate constraints in separate stories, linked via
- *   network.affects_constraints. This story's ε is deliberately independent
- *   of those readings: the dual-obligation reading instantiates a high
- *   tangled_rope constraint (coordination function + asymmetric extraction
- *   from zionist_organizations and british_mandatory_administrators)
- *   regardless of whether alternative readings were operationally dominant or
- *   historically marginalized. The measurement series tracks the constraint's
- *   extractiveness and theater as the dual-obligation reading was nominally
- *   in force under the mandate system (1922–1948).
+ *   The Balfour Declaration (1917) and subsequent League of Nations Mandate
+ *   for Palestine (1920) established a dual obligation: Britain was to
+ *   facilitate the establishment of a Jewish national home while protecting
+ *   the civil and political rights of the existing Arab population. This
+ *   constraint story instantiates ONE reading of the contested kernel — the
+ *   dual-obligation reading, which interprets the mandate instruments as
+ *   imposing EQUAL OR SUPERIOR obligation to protect existing Arab rights,
+ *   subordinating the national-home project to self-determination norms and
+ *   minority-protection principles under international law. This reading
+ *   contests the Zionist claim that the national home was the mandate's
+ *   primary object. The structured extractiveness (0.72) reflects how the
+ *   constraint, under this reading, operates as a tangled rope: it
+ *   coordinates transition governance while imposing asymmetric costs on the
+ *   Zionist project (blocked land access, capped immigration) and on the
+ *   British administrator (pressed between contradictory demands). The
+ *   measurement series documents the intensifying suppression requirement
+ *   (0.65→0.81) as the constraint's enforcement machinery was tested and
+ *   hardened against both Arab nationalist mobilization and Zionist
+ *   institutional expansion. Theater rises (0.35→0.50) as performative
+ *   compliance — equal-rights language without demographic protection —
+ *   became the mode of British administration, especially after the
+ *   mid-1930s. This reading is NOT the Zionist reading (which would invert
+ *   the beneficiary/victim positions) nor the discretionary-administrator
+ *   reading (which would treat the dual obligation as advisory). It is one
+ *   specific interpretation, grounded in international legal precedent,
+ *   covenant text, and the class-A mandate framework.
  *
  * KEY AGENTS:
- *   - palestinian_arab_elites — Organized actors claiming representative authority and benefit from dual-obligation protection of Arab rights, land tenure, and majority status; constrained exit (cannot abandon the territory); generational time horizon; regional scope.
- *   - arab_communities — Powerless, trapped stakeholders holding property and place under existing tenure; benefit from land-transfer restrictions and immigration quotas; biographical horizon; regional scope.
- *   - zionist_organizations — Powerful, globally-connected; pay through constrained land acquisition and immigration limits; seek unrestricted access to establish Jewish dominance; generational horizon; global scope.
- *   - british_mandatory_administrators — Institutional payer and agenda-setter; constrained by the dual-obligation reading from satisfying Zionist demands or extracting maximum surplus; sit between incompatible benefit paths; generational horizon.
- *   - league_of_nations_oversight_body — Analytical observer; tasked with ensuring mandate compliance with the dual-obligation principle; external verification point for whether the constraint is actually enforced or performatively invoked.
+ *   - palestinian_arab_communities: Trapped majority population whose tenure rights and self-determination claim structure the constraint
+ *   - palestinian_arab_elites: Organized political leadership interpreting the dual obligation as ground for future sovereignty
+ *   - zionist_organizations: Constrained by land-transfer restrictions and immigration quotas; bear the direct cost of the dual-obligation reading
+ *   - british_mandatory_administration: Institutional bearer of the dual obligation; caught between enforcing Arab rights protection and satisfying Zionist pressure
+ *   - league_of_nations_covenant: Non-agent kernel through which rights claims are adjudicated
  */
 
 /* ==========================================================================
@@ -108,59 +120,119 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.68).
-domain_priors:suppression_score(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.72).
-domain_priors:theater_ratio(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.41).
+domain_priors:base_extractiveness(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.72).
+domain_priors:suppression_score(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.81).
+domain_priors:theater_ratio(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, extractiveness, 0.68).
-narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, extractiveness, 0.72).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 0.81).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 0.48).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, resistance, 0.76).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(balfour_mandate_instruments__dual_obligation_indigenous_rights, resistance, 0.74).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(balfour_mandate_instruments__dual_obligation_indigenous_rights, tangled_rope).
-narrative_ontology:human_readable(balfour_mandate_instruments__dual_obligation_indigenous_rights, "Balfour Mandate Dual Obligation: Indigenous Rights Protection Over National Home Primacy").
+narrative_ontology:human_readable(balfour_mandate_instruments__dual_obligation_indigenous_rights, "Mandate Dual Obligation: Arab Rights Protection vs. National Home Establishment").
 narrative_ontology:topic_domain(balfour_mandate_instruments__dual_obligation_indigenous_rights, "international_law/colonial_administration/state_formation").
 
 domain_priors:requires_active_enforcement(balfour_mandate_instruments__dual_obligation_indigenous_rights).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(balfour_mandate_instruments__dual_obligation_indigenous_rights, 'c76500a0-0e27-4a27-9c6e-d6ce961e4666').
-narrative_ontology:cs_kernel_codification('c76500a0-0e27-4a27-9c6e-d6ce961e4666', fixed_text).
-narrative_ontology:cs_authority_grounding('c76500a0-0e27-4a27-9c6e-d6ce961e4666', lineage).
-narrative_ontology:cs_interpretation_layer_present('c76500a0-0e27-4a27-9c6e-d6ce961e4666').
-narrative_ontology:cs_reading_relation('c76500a0-0e27-4a27-9c6e-d6ce961e4666', balfour_mandate_instruments__jewish_national_home_primacy, forecloses).
-narrative_ontology:cs_reading_relation('c76500a0-0e27-4a27-9c6e-d6ce961e4666', balfour_mandate_instruments__mandatory_interpretive_discretion, influences).
-narrative_ontology:cs_axiom('c76500a0-0e27-4a27-9c6e-d6ce961e4666', foundational, arab_rights_superior_to_national_home).
-narrative_ontology:cs_axiom_status(arab_rights_superior_to_national_home, holdable).
-narrative_ontology:cs_axiom_grounding('c76500a0-0e27-4a27-9c6e-d6ce961e4666', arab_rights_superior_to_national_home, deontological).
-narrative_ontology:cs_axiom('c76500a0-0e27-4a27-9c6e-d6ce961e4666', foundational, arab_majority_grounds_self_determination).
-narrative_ontology:cs_axiom_status(arab_majority_grounds_self_determination, holdable).
-narrative_ontology:cs_axiom_grounding('c76500a0-0e27-4a27-9c6e-d6ce961e4666', arab_majority_grounds_self_determination, deontological).
-narrative_ontology:cs_reference_frame('c76500a0-0e27-4a27-9c6e-d6ce961e4666', mandate_dual_obligation_regime).
-narrative_ontology:cs_drift_state('c76500a0-0e27-4a27-9c6e-d6ce961e4666', id_1948_mandate_end, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('c76500a0-0e27-4a27-9c6e-d6ce961e4666', '').
+narrative_ontology:cs_story_uid(balfour_mandate_instruments__dual_obligation_indigenous_rights, 'b4f0c855-f700-4aac-8887-80ce1dc0728e').
+narrative_ontology:cs_kernel_codification('b4f0c855-f700-4aac-8887-80ce1dc0728e', fixed_text).
+narrative_ontology:cs_authority_grounding('b4f0c855-f700-4aac-8887-80ce1dc0728e', extraction).
+narrative_ontology:cs_interpretation_layer_present('b4f0c855-f700-4aac-8887-80ce1dc0728e').
+narrative_ontology:cs_reading_relation('b4f0c855-f700-4aac-8887-80ce1dc0728e', balfour_mandate_instruments__jewish_national_home_primacy, forecloses).
+narrative_ontology:cs_reading_relation('b4f0c855-f700-4aac-8887-80ce1dc0728e', balfour_mandate_instruments__mandatory_interpretive_discretion, coexists_with).
+narrative_ontology:cs_axiom('b4f0c855-f700-4aac-8887-80ce1dc0728e', foundational, equal_protection_arab_rights_mandatory).
+narrative_ontology:cs_axiom_status(equal_protection_arab_rights_mandatory, holdable).
+narrative_ontology:cs_axiom_grounding('b4f0c855-f700-4aac-8887-80ce1dc0728e', equal_protection_arab_rights_mandatory, deontological).
+narrative_ontology:cs_axiom('b4f0c855-f700-4aac-8887-80ce1dc0728e', foundational, arab_majority_self_determination_precedent).
+narrative_ontology:cs_axiom_status(arab_majority_self_determination_precedent, holdable).
+narrative_ontology:cs_axiom_grounding('b4f0c855-f700-4aac-8887-80ce1dc0728e', arab_majority_self_determination_precedent, conventional).
+narrative_ontology:cs_axiom('b4f0c855-f700-4aac-8887-80ce1dc0728e', secondary, national_home_subordinate_to_existing_rights).
+narrative_ontology:cs_axiom_status(national_home_subordinate_to_existing_rights, holdable).
+narrative_ontology:cs_axiom_grounding('b4f0c855-f700-4aac-8887-80ce1dc0728e', national_home_subordinate_to_existing_rights, deontological).
+narrative_ontology:cs_reference_frame('b4f0c855-f700-4aac-8887-80ce1dc0728e', dual_obligation_covenant_mandate).
+narrative_ontology:cs_drift_state('b4f0c855-f700-4aac-8887-80ce1dc0728e', british_administrative_relaxation_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('b4f0c855-f700-4aac-8887-80ce1dc0728e', '').
 narrative_ontology:cs_kernel_id(balfour_mandate_instruments__dual_obligation_indigenous_rights, balfour_mandate_instruments).
 
 % --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_communities).
 narrative_ontology:constraint_beneficiary(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_elites).
-narrative_ontology:constraint_beneficiary(balfour_mandate_instruments__dual_obligation_indigenous_rights, arab_communities).
 narrative_ontology:constraint_victim(balfour_mandate_instruments__dual_obligation_indigenous_rights, zionist_organizations).
-narrative_ontology:constraint_victim(balfour_mandate_instruments__dual_obligation_indigenous_rights, british_mandatory_administrators).
+narrative_ontology:constraint_victim(balfour_mandate_instruments__dual_obligation_indigenous_rights, british_mandatory_administration).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Existing Arab population whose civil, political, and property rights the mandate instruments nominally protect through equality clauses and land-transfer restrictions. They inhabit and work the territory; the constraint's language secures their majority status and grounds their claim to representative governance and self-determination. They cannot exit the territory; their voice in governance is structured by the constraint's terms.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_communities, beneficiary,
+    powerless, generational, trapped, national).
+
+% Arab political, landowning, and intellectual leadership claiming interpretive authority over the mandate's terms. They argue that equal protection of existing rights, demographic majority, and self-determination principles make them the natural future sovereign authority. They can organize politically and litigate; they cannot unilaterally rewrite the mandate.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_elites, beneficiary,
+    organized, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_elites, agenda_setter).
+
+% Organizations seeking to establish a Jewish national home through land acquisition, immigration, and institutional development. The constraint (as read in this story) restricts their access to Arab-held land, caps immigration to preserve Arab majority status, and subordinates the national-home project to indigenous rights protection. They argue the mandate authorizes their project; this reading blocks that claim by judicial and textual precedent.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, zionist_organizations, payer,
+    organized, generational, constrained, global).
+
+% The League of Nations-mandated administrative authority tasked with holding and executing the mandate's terms. Under this reading, they are bound to enforce equal protection of Arab rights and prevent demographic displacement through controlled immigration and land-transfer restrictions. They are constrained by the dual obligation; they bear the cost of refusing Zionist pressure and managing Arab political mobilization.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, british_mandatory_administration, payer,
+    institutional, biographical, mobile, national).
+narrative_ontology:stakeholder_secondary_role(balfour_mandate_instruments__dual_obligation_indigenous_rights, british_mandatory_administration, agenda_setter).
+
+% The foundational instrument establishing the mandate system and the dual-obligation framework. Not a living actor; included as the normative kernel through which rights claims are adjudicated. The covenant's Article 22 and its class-A mandate provisions ground the equality principle this reading instantiates.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, league_of_nations_covenant, observer,
+    analytical, generational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(balfour_mandate_instruments__dual_obligation_indigenous_rights, league_of_nations_covenant).
+
+% Diaspora and international constituencies pressing for open immigration to enable demographic transformation. They are excluded from formal voice in the mandate administration; their presence outside the governed territory means they cannot participate in Arab majority governance structures. Their interests directly contradict the cap-immigration requirement this reading enforces.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, jewish_immigration_advocates, excluded,
+    organized, generational, trapped, global).
+
+% Judicial and quasi-judicial international forums that would interpret mandate obligations and adjudicate disputes. They observe the constraint as a matter of international law; their rulings would validate or invalidate readings of the mandate's dual obligation.
+narrative_ontology:constraint_stakeholder(balfour_mandate_instruments__dual_obligation_indigenous_rights, international_arbitral_bodies, observer,
+    analytical, generational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(balfour_mandate_instruments__dual_obligation_indigenous_rights, palestinian_arab_communities).
+narrative_ontology:fixing_cost_class(balfour_mandate_instruments__dual_obligation_indigenous_rights, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The mandate instruments establish a coordinated transition from Ottoman to post-war international governance, protecting existing inhabitants' rights while enabling a degree of Jewish institutional development — solving the coordination problem of overlapping claims to the same territory by subordinating the national-home project to indigenous rights and majority self-determination principles.
+% TRANSFER_FUNCTION: The constraint restricts land acquisition from Arabs to Zionist settlers, caps immigration to preserve Arab demographic majority, and grants Arabs claim to representative governance and eventual sovereignty — transferring governance authority and property security from Zionist immigration-driven transformation to Arab majority and existing tenure holders.
+% ABSENT_VOICES: Diaspora Jewish organizations and international Zionist leadership press for unconstrained immigration and land access but lack formal voice in the mandate administration. Arab minorities and tribal/clan leaders within Arab communities may dispute the elite Arab negotiating positions but are structurally excluded from international covenant adjudication.
+% DISAPPEARANCE_RATIONALE: If the dual-obligation constraint and its enforcement vanished, Zionist land acquisition would accelerate beyond the constrained pace, immigration quotas would lift, and demographic composition would shift toward Jewish majority in the settled areas — reorganizing territorial control, governance authority, and property tenure within a generation. Arab political claims to future sovereignty would be substantially weakened.
+% FOUNDING_PROBLEM: Post-WWI territorial reorganization required reconciling British commitments to establish a Jewish national home with existing Arab population rights and Ottoman property arrangements. The mandate system was structured to protect minority (Jewish immigrant) development while respecting the pre-existing majority (Arab) community and its claim to self-determination under international law.
+% FOUNDING_PROBLEM_CORROBORATION: Arab political representatives, international legal scholars citing League of Nations precedent (class-A mandate obligations), and post-war diplomatic records from neutral powers and international law commentators attest the founding problem required dual protection. Zionist organizations and British administrators sympathetic to the national-home project argue the founding problem was primarily enabling the national home; international legal authorities outside the benefiting parties (including non-aligned international law institutes and later decolonization jurisprudence) support the dual-obligation reading as the textually and precedentially grounded interpretation.
+narrative_ontology:disappearance_verdict(balfour_mandate_instruments__dual_obligation_indigenous_rights, world_rearranges).
+narrative_ontology:founding_problem_status(balfour_mandate_instruments__dual_obligation_indigenous_rights, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(balfour_mandate_instruments__dual_obligation_indigenous_rights, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(balfour_mandate_instruments__dual_obligation_indigenous_rights, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(balfour_mandate_instruments__dual_obligation_indigenous_rights, 'none', 1).
+narrative_ontology:epsilon_provenance(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.72, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -180,16 +252,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate-high (0.68) because the dual-obligation reading constrains two major parties (zionist_organizations and british_mandatory_administrators) in ways that impose substantive costs: Zionist land acquisition is restricted, immigration is capped, and demographic transformation is slowed; British administrators face constraints on extracting maximum value and satisfying Zionist demands. The beneficiaries (arab_communities and palestinian_arab_elites) receive protection that is real but not extraction-free—the constraint itself requires enforcement overhead and the protection depends on external (League) oversight. Suppression is higher than extractiveness (0.72) because the constraint's persistence depends on actively suppressing alternative readings (jewish_national_home_primacy would reverse the priority entirely) and suppressing Zionist efforts to acquire land and accelerate immigration outside quota. Theater-ratio is moderate (0.41) because the dual-obligation reading is genuinely codified in the mandate text and has real enforcement mechanisms (land-transfer law, immigration quotas, League review), but the measurement trajectory shows rising theater over the interval—as the constraint became harder to maintain in practice, more enforcement energy went to performative compliance (public statements of adherence to the dual-obligation principle) while administrative practice subtly shifted toward the jewish_national_home_primacy reading (discretionary waivers, land transfers tolerated, immigration loosened). The rising theater ratio over the 26-year interval is the key signal: the constraint is drifting from enforced coordination toward Piton (maintained mainly by performative commitment while the actual reading operationally dominant shifts). The accessibility_collapse (0.58) reflects that alternatives to the dual-obligation reading exist (the sibling readings are intellectually available and advocated by organized parties) and are not fully suppressed; resistance is high (0.76) because the Zionist organizational establishment and some British officials actively resist the reading and seek to overthrow it in favor of jewish_national_home_primacy.
+ *   Extractiveness is high (0.72) because the constraint asymmetrically restricts the Zionist project and forces the British to actively suppress Zionist expansion — the measured value reflects the cost imposed on the payer seats (Zionist organizations, sympathetic British administrators). Suppression is higher (0.81) than extractiveness because enforcement requires British administrative machinery to block land sales, control immigration, and prevent organized Zionist bypass. The constraint persists by active enforcement, not participant preference. Theater rises from 0.35 to 0.50 over the interval as the British increasingly resort to performative equal-rights language while de facto tolerating Zionist institutional expansion — the theater tracks the growing gap between proclaimed dual obligation and operational British policy drift. The measurement grid spans 1920–1948, capturing the mandate period from covenant entry to termination. All three metrics are authored at the same five time points (one shared grid), following the alignment rule: 1920 (projected start state), 1927 (post-Shaw Report, rising suppression), 1935 (post-Peel Commission, peak extractiveness), 1942 (WWII era, enforced stasis), 1948 (mandate end, decoupling). The rising trajectory of suppression_requirement documents the constraint's active enforcement machinery hardening as Zionist organizations pressed harder and Arab nationalism mobilized. The rising then plateauing extractiveness reflects increasing Zionist costs offset by British administrative relaxation after mid-interval.
  *
  * PERSPECTIVAL GAP:
- *   From the Palestinian Arab elites and communities' seats, the dual-obligation reading is the structural backbone protecting their land tenure and majority status; from their perspective, the constraint is a real protective regime that must be actively enforced and defended. From the British mandatory administrators' seat, the reading is a binding legal framework they are charged with implementing, but it conflicts with Zionist expectations and British imperial interests in maintaining Jewish-Arab cooperation; they experience the constraint as simultaneously binding and uncomfortable. From the zionist_organizations' seat, the dual-obligation reading is an obstacle that must be circumvented through discretionary waivers, negotiation, and shifting the operational reading toward jewish_national_home_primacy; they experience it as a constraint on their expansionist project. From the League of Nations' seat, the reading is a mandate obligation they must verify is being honored, but they lack enforcement power and depend on British truthful reporting. The engine computes per-seat classifications from this structural asymmetry: Arab elites compute as beneficiaries (low directionality, low/negative extraction); Zionist organizations as targets (high directionality, high extraction); British administrators as caught between (symmetric or slightly-toward-target); League as analytical observer (no extraction). The claimed_type is tangled_rope because the reading genuinely coordinates (resolves the Balfour tension through a priority structure) AND extracts asymmetrically (constrains two parties to benefit two others) AND requires active enforcement (suppression to block alternative readings and alternative land transfers).
+ *   The Palestinian Arab beneficiary seats and the Zionist payer seats experience structurally opposite types from the same constraint. The Palestinian Arab reading (this one) computes the constraint as tangled_rope: genuine coordination of post-war transition, plus asymmetric cost-bearing by the national-home project. The Zionist reading (sibling constraint) would compute the same mandate texts as snare: restrictions framed as equal-rights language but operationally blocking the national-home project, no real coordination function, pure extraction toward Arab status quo. The British administrator seat sits between: they authentically coordinate transition governance (tangled_rope view) while also bearing costs from satisfying neither side fully (partial-snare experience). The engine computes per-seat divergence from the stakeholder power atoms, exit options, and beneficiary/victim declarations — the divergence is the measurement the corpus takes; it is NOT an error to be reconciled.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality of each stakeholder toward this constraint is derived from whether they benefit or bear costs: Palestinian Arab communities (beneficiaries, majority-protected) have low d (near 0.1–0.2); palestinian_arab_elites (beneficiaries, governance-claim-protected) have low-to-moderate d (near 0.2–0.3); zionist_organizations (victims, expansion-constrained) have high d (near 0.75–0.85); british_mandatory_administrators (constrained from satisfying Zionist demands, but empowered to implement the dual-obligation reading) have moderate d (near 0.45–0.55, symmetric). The exit-options modulate these base directionalities: Arab communities are identity_locked and trapped (cannot exit the territory; exit options are theoretically 'mobile' within the region but practically 'trapped' because they are defending their existing place). Zionist organizations are constrained (cannot acquire land outside quota, cannot immigrate above limit) but have arbitrage-grade exits available (alternative territories, secondary markets, negotiation). British administrators are institutional with generational time horizons (they can be replaced, but the institution persists; exit is constrained by the mandate system itself). The derived directionality feeds the engine's effective-extraction computation, which amplifies extraction for trapped high-d agents and dampens it for beneficiaries with exit.
+ *   Palestinian Arab communities and elites are the structural beneficiaries (d ≈ 0.1–0.2): the constraint protects their tenure rights, guarantees their demographic majority, and grounds their self-determination claim. Zionist organizations are the structural victims (d ≈ 0.85–0.95): the constraint blocks land acquisition, caps immigration, and subordinates the national-home project to Arab majority governance. British administrators occupy an intermediate position (d ≈ 0.55–0.65): they benefit from the constraint's legitimacy as international law, but bear costs from enforcing it against Zionist pressure and managing Arab political mobilization. The directionality derivation flows from these beneficiary/victim declarations plus the stakeholder exit options: Palestinian Arabs have identity_locked and trapped exit (cannot leave the territory); Zionist organizations have constrained exit (can organize internationally but cannot unilaterally rewrite mandate terms); British administrators have mobile exit (can withdraw the mandate enforcement, though at international-law cost).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is genuine: the Balfour Declaration and mandate are structurally contradictory, and the dual-obligation reading offers a coherent resolution (subordinate 'national home' to Arab rights). However, the measurement trajectory shows rising theater_ratio and rising suppression_requirement over the interval—signals that the constraint's functional mandate may be decaying. By year 18–26, the dual-obligation reading is maintained more by performative commitment (League reports, British public statements) than by actual enforcement (land transfers are increasingly tolerated, immigration restrictions are loosened via discretionary waivers, Arab majority status is demographically eroding). The constraint is not yet a Piton (it still carries some functional force), but it is drifting toward Piton if the theater-ratio continued to rise and the actual operational reading shifted decisively to jewish_national_home_primacy. The mandatrophy question: does the dual-obligation reading remain a live constraint, or has it become a theatrical cover story for the jewish_national_home_primacy reading operating de facto? The measurement trajectory suggests the latter is occurring by 1940s (interval end), which would support a reclassification to Piton if this story were extended to later periods.
+ *   This constraint resists mandatrophy classification because the founding problem — reconciling Jewish national-home development with Arab rights protection — remains live throughout the interval. The constraint does NOT show the piton signature (atrophied function maintained theatrically). Instead, it shows rising suppression and theater as the British systematically failed to enforce the dual obligation. The theater ratio rises to 0.50 not because the constraint is functionless but because the British increasingly performed compliance (equal-rights language, consultative bodies) while operationally tolerating Zionist expansion — the performative gap widened, not the functional gap. The constraint's mandate persists because the international-law obligation remains formally alive; the British administration's de facto drift toward Zionist accommodation does not erase the constraint's existence, only the sincerity of its enforcement. The disappearance verdict (world_rearranges) confirms that the constraint is not theater: if it vanished, territorial reorganization and governance authority would shift substantively within a generation.
  */
 
 /* ==========================================================================
@@ -197,96 +269,110 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    reading_kernel_contest,
-    'Is this constraint one reading of the Balfour mandate kernel, or is the kernel itself multiple irreducible obligations without a coherent reading?',
-    'Comparative study of mandate-text interpretation across League of Nations jurisprudence, parallel mandate documents (Class A mandates), and the principle of self-determination as applied elsewhere in the post-WWI settlement. If the dual-obligation structure is consistent with League precedent, the reading is one stable interpretation; if the kernel itself is genuinely irreconcilable, the constraint is mislabeled and two separate constraint stories (one per incompatible obligation) would be more accurate.',
-    'If this reading is coherent and precedent-grounded, the engine computes it as a tangled_rope with substantive enforcement requirements. If the kernel is irreconcilable, the constraint might be better modeled as a Piton (contradictory obligations maintained performatively) or split into two snare stories (one for each subordinated party).',
+    covenant_text_vs_intention_gap,
+    'What was the League of Nations framers'' actual intention regarding the relative priority of national-home development vs. Arab rights protection? Does the mandate text itself settle this, or does the gap between text and drafting history permit both readings?',
+    'Archive research on League of Nations drafting discussions, diplomatic correspondence from mandate framers (British, French, Italian, Japanese officials), and contemporaneous legal opinions. Comparison with parallel class-A mandate texts to establish precedent for how dual obligations were understood.',
+    'If the historical record shows framers intended equal protection or Arab primacy, the dual-obligation reading gains foundational authority. If the record shows primacy for national-home development, the sibling jewish_national_home_primacy reading gains grounding. If the record is ambiguous or contested, the discretionary reading (mandatory_interpretive_discretion) gains strength — the constraint becomes the administrator''s power to adjudicate, not the text itself.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(covenant_text_vs_intention_gap, empirical, 'Historical intention regarding mandate text hierarchy').
+
+omega_variable(
+    demographic_protection_mechanism_viability,
+    'Can the mandate''s immigration and land-transfer restrictions actually be enforced to maintain Arab demographic majority without becoming so restrictive they collapse the national-home project entirely, or do the two goals contain an irreducible tension that makes implementation mathematically impossible?',
+    'Demographic modeling of immigration patterns, land-transfer rates, and population growth under various restriction schedules (1920s baseline). Comparison with actual British enforcement: how close did the constraint''s terms track its enforcement in practice? Analysis of the 1935–1948 period when the divergence widened.',
+    'If maintenance of Arab majority is mathematically compatible with meaningful national-home development under the stated terms, the dual obligation is operationally viable and the mandate''s design is coherent. If the goals are incompatible, the constraint is structurally unsustainable and the interpretive reading that permits the administrator discretion becomes more plausible (the mandatory_interpretive_discretion reading gains ground).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_kernel_contest, conceptual, 'Whether the mandate kernel admits coherent dual-obligation readings or is fundamentally over-constrained.').
+narrative_ontology:omega_variable(demographic_protection_mechanism_viability, empirical, 'Viability of dual-obligation enforcement under stated mechanisms').
 
 omega_variable(
-    enforcement_discretion_collapse,
-    'Did the British mandatory power treat the dual-obligation reading as binding, or did it invoke mandatory administrative discretion to privilege jewish_national_home_primacy in practice while maintaining verbal commitment to dual obligation?',
-    'Archival analysis of British administrative practice: land-transfer enforcement records, immigration quotas actually implemented, Arab petition responses, internal policy memos. If the dual-obligation reading was structurally enforced (land transfers blocked, immigration capped to prevent demographic displacement), the constraint''s extraction is moderate. If British officials systematized exceptions and discretionary waivers that de facto implemented the jewish_national_home_primacy reading while performatively honoring dual obligation, the constraint''s theater_ratio and suppression_requirement were higher than measured—the enforcement was theatrical.',
-    'High enforcement fidelity = tangled_rope (genuine coordination with real cost to zionist_organizations); systematic discretionary waiver = Piton or snare (mandate as rhetorical cover for de facto privilege to one party). The direction of this finding determines whether the constraint extracted from zionist organizations or from palestinian_arab_communities.',
+    british_administrative_capture_ambiguity,
+    'To what degree did the rising theater ratio (performative compliance) reflect the constraint''s inherent unenforcibility vs. deliberate British capture by Zionist interests? Did the British honestly try to enforce dual obligation and fail due to structural tension, or did they deliberately underenforce to favor the national-home project?',
+    'Analysis of British administrative records, memoranda, and enforcement decisions over 1920–1948. Comparison of stated policy (equal protection, immigration controls) with actual enforcement (land-transfer approvals, immigration permits, settlement approvals). Expert testimony from historians and administrators about decision-making rationale.',
+    'If British underenforcement was deliberate and captured, the constraint is more accurately modeled as snare-with-theater (pure extraction under legitimating language) from the Palestinian Arab perspective. If underenforcement was due to structural/operational impossibility, the constraint remains tangled_rope but the suppression_requirement measurement may understate the effort cost. The distinction affects whether the rising theater_ratio reflects constraint degradation or constrained-but-genuine enforcement.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(enforcement_discretion_collapse, empirical, 'Whether the dual-obligation reading was actually enforced or performatively invoked while discretion privileged the alternative reading.').
+narrative_ontology:omega_variable(british_administrative_capture_ambiguity, empirical, 'Intentionality and cause of British administrative drift from dual-obligation enforcement').
 
 omega_variable(
-    sibling_reading_logical_structure,
-    'Do the sibling readings (jewish_national_home_primacy and mandatory_interpretive_discretion) logically foreclose this reading, coexist with it, or influence it?',
-    'Formal analysis of the mandate text''s logical structure: can one party hold jewish_national_home_primacy (national home as proto-state requiring demographic/territorial dominance) while another party holds dual_obligation_indigenous_rights (national home subordinated to Arab rights) within the SAME mandate framework? If no—if adopting one reading logically entails rejecting the other—they foreclose each other. If yes—if the text is elastic enough to support both readings held by different parties simultaneously—they coexist. If mandatory_interpretive_discretion (British power chooses freely) is adopted, does it eliminate the possibility of either substantive reading being binding, or does it create structural pressure on how substantive readings must accommodate discretion?',
-    'Forecloses = this reading is mutually exclusive with siblings; one reading wins and the others are false. Coexists_with = all readings remain live, held by different parties in an unresolved contest (the historical record). Influences = the discretion reading creates pressure on how substantive readings are formalized, but does not eliminate them. This structural classification feeds the engine''s contamination analysis: if readings foreclose, a corpus documenting all three readings would be internally contradictory; if they coexist, the corpus documents a genuine historical contest.',
-    confidence_without_resolution(medium)
+    kernel_reading_forecast_foreclosure,
+    'If one sibling reading (jewish_national_home_primacy) were formally adopted by an authoritative international tribunal, would that reading logically foreclose the dual-obligation reading, or can both readings coexist within different jurisdictional or temporal frameworks?',
+    'Comparative jurisprudence from international courts and quasi-judicial bodies (Permanent Court of International Justice, later International Court of Justice) on how competing mandate readings were adjudicated. Analysis of whether multiple readings were treated as coexisting positions or as mutually exclusive options requiring authoritative selection.',
+    'If a court formally adopted primacy reading and declared it the binding interpretation of the kernel, the dual-obligation reading would shift to foreclosed status (overridden by higher authority). If courts treated readings as coexisting jurisdictional or temporal positions, the dual-obligation reading remains holdable (current status). The relationship between sibling readings (coexists_with vs. forecloses) depends on this resolution.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_logical_structure, conceptual, 'The logical structure of the sibling readings'' relationship to this reading within the mandate kernel.').
-
-omega_variable(
-    arab_agency_and_resistance,
-    'To what extent did Palestinian Arab elites and communities actively enforce or demand enforcement of the dual-obligation reading, versus passively benefiting from British administrative constraints on zionist_organizations?',
-    'Archive of Arab organizational statements, petitions to the League, negotiation records, and armed/political resistance. If Arab actors systematically demanded dual-obligation enforcement as a substantive principle (not merely accepting it as a brake on Zionist expansion), the reading is an active constraint they maintained. If Arab resistance emerged only when Zionist pressure mounted and Arab organizations were reactive, the constraint may be better characterized as a byproduct of British administrative preference or League oversight rather than a coordinated dual-obligation regime.',
-    'High Arab agency in maintaining the reading strengthens the tangled_rope classification (the reading is actively enforced, not merely administratively convenient). Low agency suggests the constraint may be more accurately modeled as a Piton (the dual-obligation language persists but Arab power to enforce it is limited, and British administrators hold the actual discretion).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(arab_agency_and_resistance, empirical, 'Whether Arab communities actively maintained the dual-obligation reading or benefited passively from constraints imposed by British administrative structure or League oversight.').
+narrative_ontology:omega_variable(kernel_reading_forecast_foreclosure, conceptual, 'Whether rival mandate readings are mutually exclusive or coexisting positions').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0, 26).
+narrative_ontology:interval(balfour_mandate_instruments__dual_obligation_indigenous_rights, 1920, 1948).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(balf_tr_t0, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 0, 0.18).
-narrative_ontology:measurement(balf_tr_t4, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 4, 0.24).
-narrative_ontology:measurement(balf_tr_t8, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 8, 0.3).
-narrative_ontology:measurement(balf_tr_t12, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 12, 0.35).
-narrative_ontology:measurement(balf_tr_t18, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 18, 0.39).
-narrative_ontology:measurement(balf_tr_t26, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 26, 0.41).
+narrative_ontology:measurement(balf_tr_t1920, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 1920, 0.35).
+narrative_ontology:measurement_basis(balf_tr_t1920, projected).
+narrative_ontology:measurement(balf_tr_t1927, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 1927, 0.42).
+narrative_ontology:measurement_basis(balf_tr_t1927, observed).
+narrative_ontology:measurement(balf_tr_t1935, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 1935, 0.48).
+narrative_ontology:measurement_basis(balf_tr_t1935, observed).
+narrative_ontology:measurement(balf_tr_t1942, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 1942, 0.5).
+narrative_ontology:measurement_basis(balf_tr_t1942, observed).
+narrative_ontology:measurement(balf_tr_t1948, balfour_mandate_instruments__dual_obligation_indigenous_rights, theater_ratio, 1948, 0.48).
+narrative_ontology:measurement_basis(balf_tr_t1948, observed).
 
 % Extraction over time
-narrative_ontology:measurement(balf_be_t0, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(balf_be_t4, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 4, 0.51).
-narrative_ontology:measurement(balf_be_t8, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 8, 0.58).
-narrative_ontology:measurement(balf_be_t12, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 12, 0.63).
-narrative_ontology:measurement(balf_be_t18, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 18, 0.66).
-narrative_ontology:measurement(balf_be_t26, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 26, 0.68).
+narrative_ontology:measurement(balf_be_t1920, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 1920, 0.55).
+narrative_ontology:measurement_basis(balf_be_t1920, projected).
+narrative_ontology:measurement(balf_be_t1927, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 1927, 0.68).
+narrative_ontology:measurement_basis(balf_be_t1927, observed).
+narrative_ontology:measurement(balf_be_t1935, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 1935, 0.72).
+narrative_ontology:measurement_basis(balf_be_t1935, observed).
+narrative_ontology:measurement(balf_be_t1942, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 1942, 0.75).
+narrative_ontology:measurement_basis(balf_be_t1942, observed).
+narrative_ontology:measurement(balf_be_t1948, balfour_mandate_instruments__dual_obligation_indigenous_rights, base_extractiveness, 1948, 0.72).
+narrative_ontology:measurement_basis(balf_be_t1948, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(balf_su_t0, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 0, 0.54).
-narrative_ontology:measurement(balf_su_t4, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 4, 0.6).
-narrative_ontology:measurement(balf_su_t8, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 8, 0.64).
-narrative_ontology:measurement(balf_su_t12, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 12, 0.68).
-narrative_ontology:measurement(balf_su_t18, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 18, 0.71).
-narrative_ontology:measurement(balf_su_t26, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 26, 0.72).
+narrative_ontology:measurement(balf_su_t1920, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 1920, 0.65).
+narrative_ontology:measurement_basis(balf_su_t1920, projected).
+narrative_ontology:measurement(balf_su_t1927, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 1927, 0.74).
+narrative_ontology:measurement_basis(balf_su_t1927, observed).
+narrative_ontology:measurement(balf_su_t1935, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 1935, 0.79).
+narrative_ontology:measurement_basis(balf_su_t1935, observed).
+narrative_ontology:measurement(balf_su_t1942, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 1942, 0.82).
+narrative_ontology:measurement_basis(balf_su_t1942, observed).
+narrative_ontology:measurement(balf_su_t1948, balfour_mandate_instruments__dual_obligation_indigenous_rights, suppression_requirement, 1948, 0.81).
+narrative_ontology:measurement_basis(balf_su_t1948, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(balfour_mandate_instruments__dual_obligation_indigenous_rights, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.12).
+narrative_ontology:coordination_type(balfour_mandate_instruments__dual_obligation_indigenous_rights, resource_allocation).
+narrative_ontology:boltzmann_floor_override(balfour_mandate_instruments__dual_obligation_indigenous_rights, 0.18).
 narrative_ontology:affects_constraint(balfour_mandate_instruments__dual_obligation_indigenous_rights, balfour_mandate_instruments__jewish_national_home_primacy).
 narrative_ontology:affects_constraint(balfour_mandate_instruments__dual_obligation_indigenous_rights, balfour_mandate_instruments__mandatory_interpretive_discretion).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested balfour_mandate_instruments kernel. The kernel—the Balfour Declaration and League mandate instruments—contains two logically incompatible commitments: facilitate a Jewish national home AND protect existing Arab rights. Three structurally distinct constraints instantiate the three competing readings. dual_obligation_indigenous_rights (this story) treats Arab rights as superior and Arab majority status as grounding sovereignty claims. jewish_national_home_primacy reverses the priority, subordinating Arab rights to Jewish demographic and territorial transformation. mandatory_interpretive_discretion denies that any substantive reading is binding—only British administrative discretion is the operational constraint. Each reading has its own ε-invariant structure, stakeholder asymmetries, and classification. They are linked via network.affects_constraints because a shift in any one reading's operational dominance structurally affects the others (as mandatory_interpretive_discretion gains operational ground, substantive readings lose binding force). All three stories carry omegas documenting the kernel contest and the reading-specificity of their ε values.
+% The balfour_mandate_instruments kernel decomposes into three constraint stories, each instantiating one reading of the contested mandate text. The dual_obligation_indigenous_rights reading (this story) interprets mandate instruments as imposing equal or superior obligation to protect Arab rights and self-determination. The jewish_national_home_primacy reading interprets the same text as directing demographic and territorial transformation toward Jewish sovereignty. The mandatory_interpretive_discretion reading frames British administrative authority to adjudicate between readings as the operative constraint, treating the mandate text itself as discretionary. Each reading has a distinct epsilon, beneficiary/victim structure, and operative mechanism. All three readings are linked via network.affects_constraints to model their shared kernel. The sibling readings are separate constraint stories (separate JSON files with their own constraint_ids), not alternative perspectives within this single story.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(balfour_mandate_instruments__dual_obligation_indigenous_rights, organized, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

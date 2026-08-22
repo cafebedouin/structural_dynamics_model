@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,31 +73,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: feudal_oath_reciprocity__lord_extraction_reading
- *   human_readable: Feudal Oath as Maximum Extraction Authorization (Lord Reading)
- *   domain: medieval_political_economy/legal_history
+ *   human_readable: Feudal Oath as Maximal Extraction Vehicle (Lord's Reading)
+ *   domain: political/legal/economic
  *
  * SUMMARY:
- *   The feudal oath, sworn between lord and vassal, is a contested kernel
- *   that instantiates three distinct constraints depending on which party's
- *   interpretation framework is adopted. THIS story instantiates the LORDS'
- *   READING: the oath authorizes the lord to extract from the vassal up to
- *   the point the vassal cannot render military service or maintain the
- *   estate — there is no fixed extraction ceiling in the oath's terms, only a
- *   practical capacity limit. The extraction is bounded only by what rebels
- *   against, not by what the oath itself says. This reading vindicates
- *   absolute lordship doctrine and personalized sovereign authority. The
- *   feudal oath under the lord's reading is a snare: vassals are trapped in
- *   identity and location, suppression is high (rebellion courts as treason),
- *   and the constraint persists because its enforcement cost to lords is
- *   lower than the benefit of extraction and because exit costs for vassals
- *   are catastrophic.
+ *   The feudal oath is a contested kernel in medieval political economy. This
+ *   constraint instantiates the lord's reading: the oath as a legal framework
+ *   authorizing maximal extraction bounded only by the vassal's capacity to
+ *   deliver service and the rebellion threshold. Vassals swear personal
+ *   loyalty; lords interpret that loyalty as a license to demand whatever
+ *   surplus extraction the feudal hierarchy will bear. Ecclesiastical
+ *   authorities and vassal solidarity movements contest this reading,
+ *   claiming the oath carries reciprocal obligation and moral restraint. This
+ *   story models extraction as increasing over the medieval period (0.55 →
+ *   0.81 across 500 years) as lords systematize demands and ecclesiastical
+ *   restraint weakens. The claim/metric independence rule applies: the
+ *   constraint is CLAIMED as snare (pure extraction) and the authored metrics
+ *   describe high, rising extraction with active enforcement — they align
+ *   here because this reading's own structural logic produces that outcome.
+ *   The sibling readings (vassal_coordination_reading,
+ *   ecclesiastical_mediation_reading) are separate constraint files with
+ *   their own ε values and claim/metric pairs; the network links them.
  *
  * KEY AGENTS:
- *   - feudal_lords (institutional): set and enforce extraction demands; claim interpretation authority over the oath's terms; use expulsion and military force to suppress resistance
- *   - vassals (moderate power, identity-locked): swear the oath expecting bounded, reciprocal obligations; experience escalating demands over time; resistance is suppressed by treason law and collective punishment threats
- *   - peasantry (powerless): cascade extraction from intensified vassal demands; have no appeal to the lord; trapped by serfdom law and subsistence dependency
- *   - king/sovereign (institutional): authorize feudal oaths as decentralized extraction mechanism; benefit from lords' service upward; call back the oath selectively when rebellion risk emerges
- *   - ecclesiastical authority (institutional, observer with partial exclusion): perform oath's sacramental dimension; claim jurisdiction over oath-breaking; structurally barred from enforcing extraction limits
+ *   - nobility_with_vassals: institutional, extraction beneficiary — sets oath terms and enforces maximal demand
+ *   - bound_vassals: moderate power, biographical horizon, identity-locked exit — core victims of extraction, constrained by oath oath itself and dependence on land tenure
+ *   - serf_populations: powerless, trapped exit — secondary victims, bear labor and harvest obligations with no reciprocal claim
+ *   - ecclesiastical_authority: institutional observer, excluded from feudal court enforcement — claims moral standing to restrain extraction but lacks coercive power
+ *   - vassal_coalitions: organized, constrained exit — set the rebellion threshold by threatening collective withdrawal, but lack formal seat in oath negotiation
+ *   - royal_overlord: institutional observer — theoretically above feudal extraction but often complicit or indifferent
  */
 
 /* ==========================================================================
@@ -99,12 +110,12 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(feudal_oath_reciprocity__lord_extraction_reading, 0.81).
-domain_priors:suppression_score(feudal_oath_reciprocity__lord_extraction_reading, 0.77).
+domain_priors:suppression_score(feudal_oath_reciprocity__lord_extraction_reading, 0.79).
 domain_priors:theater_ratio(feudal_oath_reciprocity__lord_extraction_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(feudal_oath_reciprocity__lord_extraction_reading, extractiveness, 0.81).
-narrative_ontology:constraint_metric(feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 0.77).
+narrative_ontology:constraint_metric(feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 0.79).
 narrative_ontology:constraint_metric(feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
@@ -113,43 +124,93 @@ narrative_ontology:constraint_metric(feudal_oath_reciprocity__lord_extraction_re
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(feudal_oath_reciprocity__lord_extraction_reading, snare).
-narrative_ontology:human_readable(feudal_oath_reciprocity__lord_extraction_reading, "Feudal Oath as Maximum Extraction Authorization (Lord Reading)").
-narrative_ontology:topic_domain(feudal_oath_reciprocity__lord_extraction_reading, "medieval_political_economy/legal_history").
+narrative_ontology:human_readable(feudal_oath_reciprocity__lord_extraction_reading, "Feudal Oath as Maximal Extraction Vehicle (Lord's Reading)").
+narrative_ontology:topic_domain(feudal_oath_reciprocity__lord_extraction_reading, "political/legal/economic").
 
 domain_priors:requires_active_enforcement(feudal_oath_reciprocity__lord_extraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(feudal_oath_reciprocity__lord_extraction_reading, '90c5b0ff-c066-45c3-91d8-026eadf2c41e').
-narrative_ontology:cs_kernel_codification('90c5b0ff-c066-45c3-91d8-026eadf2c41e', fixed_text).
-narrative_ontology:cs_authority_grounding('90c5b0ff-c066-45c3-91d8-026eadf2c41e', extraction).
-narrative_ontology:cs_interpretation_layer_present('90c5b0ff-c066-45c3-91d8-026eadf2c41e').
-narrative_ontology:cs_reading_relation('90c5b0ff-c066-45c3-91d8-026eadf2c41e', feudal_oath_reciprocity__vassal_coordination_reading, forecloses).
-narrative_ontology:cs_reading_relation('90c5b0ff-c066-45c3-91d8-026eadf2c41e', feudal_oath_reciprocity__ecclesiastical_mediation_reading, coexists_with).
-narrative_ontology:cs_axiom('90c5b0ff-c066-45c3-91d8-026eadf2c41e', foundational, lord_holds_oath_interpretation_authority).
-narrative_ontology:cs_axiom_status(lord_holds_oath_interpretation_authority, holdable).
-narrative_ontology:cs_axiom_grounding('90c5b0ff-c066-45c3-91d8-026eadf2c41e', lord_holds_oath_interpretation_authority, instrumental).
-narrative_ontology:cs_axiom('90c5b0ff-c066-45c3-91d8-026eadf2c41e', foundational, extraction_bounded_by_vassal_capacity_not_text).
-narrative_ontology:cs_axiom_status(extraction_bounded_by_vassal_capacity_not_text, holdable).
-narrative_ontology:cs_axiom_grounding('90c5b0ff-c066-45c3-91d8-026eadf2c41e', extraction_bounded_by_vassal_capacity_not_text, empirically_contingent).
-narrative_ontology:cs_reference_frame('90c5b0ff-c066-45c3-91d8-026eadf2c41e', lord_unilateral_interpretation_authority).
-narrative_ontology:cs_drift_state('90c5b0ff-c066-45c3-91d8-026eadf2c41e', charter_emergence_moment, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('90c5b0ff-c066-45c3-91d8-026eadf2c41e', '').
+narrative_ontology:cs_story_uid(feudal_oath_reciprocity__lord_extraction_reading, '424a505d-8098-4531-b0a8-e97e8b24770a').
+narrative_ontology:cs_kernel_codification('424a505d-8098-4531-b0a8-e97e8b24770a', fixed_text).
+narrative_ontology:cs_authority_grounding('424a505d-8098-4531-b0a8-e97e8b24770a', extraction).
+narrative_ontology:cs_interpretation_layer_present('424a505d-8098-4531-b0a8-e97e8b24770a').
+narrative_ontology:cs_reading_relation('424a505d-8098-4531-b0a8-e97e8b24770a', feudal_oath_reciprocity__vassal_coordination_reading, coexists_with).
+narrative_ontology:cs_reading_relation('424a505d-8098-4531-b0a8-e97e8b24770a', feudal_oath_reciprocity__ecclesiastical_mediation_reading, coexists_with).
+narrative_ontology:cs_axiom('424a505d-8098-4531-b0a8-e97e8b24770a', foundational, lord_extraction_authority_maximal).
+narrative_ontology:cs_axiom_status(lord_extraction_authority_maximal, holdable).
+narrative_ontology:cs_axiom_grounding('424a505d-8098-4531-b0a8-e97e8b24770a', lord_extraction_authority_maximal, instrumental).
+narrative_ontology:cs_axiom('424a505d-8098-4531-b0a8-e97e8b24770a', foundational, vassal_obligation_bounded_by_capacity_and_rebellion_only).
+narrative_ontology:cs_axiom_status(vassal_obligation_bounded_by_capacity_and_rebellion_only, holdable).
+narrative_ontology:cs_axiom_grounding('424a505d-8098-4531-b0a8-e97e8b24770a', vassal_obligation_bounded_by_capacity_and_rebellion_only, empirically_contingent).
+narrative_ontology:cs_reference_frame('424a505d-8098-4531-b0a8-e97e8b24770a', oath_as_extraction_license).
+narrative_ontology:cs_drift_state('424a505d-8098-4531-b0a8-e97e8b24770a', late_medieval_systematization, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('424a505d-8098-4531-b0a8-e97e8b24770a', '').
 narrative_ontology:cs_kernel_id(feudal_oath_reciprocity__lord_extraction_reading, feudal_oath_reciprocity).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(feudal_oath_reciprocity__lord_extraction_reading, feudal_lords).
-narrative_ontology:constraint_victim(feudal_oath_reciprocity__lord_extraction_reading, vassals).
-narrative_ontology:constraint_victim(feudal_oath_reciprocity__lord_extraction_reading, peasantry_under_vassal_jurisdiction).
+narrative_ontology:constraint_beneficiary(feudal_oath_reciprocity__lord_extraction_reading, nobility_with_vassals).
+narrative_ontology:constraint_victim(feudal_oath_reciprocity__lord_extraction_reading, bound_vassals).
+narrative_ontology:constraint_victim(feudal_oath_reciprocity__lord_extraction_reading, serf_populations).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Sets the terms of oath, interprets obligations, enforces compliance through military power and land seizure. The oath gives them a framework to extract whatever surplus the vassal can produce without triggering open rebellion. They justify extraction as the price of protection and governance, though enforcement capacity — not service delivery — determines actual obligation boundaries.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, nobility_with_vassals, agenda_setter,
+    institutional, generational, arbitrage, regional).
+
+% Swear personal oath to the lord in exchange for land tenure and theoretical protection. In practice, they bear the core extraction burden: military service on demand, annual payments in cash and kind, hospitality obligations for the lord's retinue, labor duties on lord's demesne. Exit means breach of oath (damnation + forfeiture of land + death); their identity as knights, gentry, or established landholders IS the oath. Extraction rises to whatever the lord demands short of triggering vassal coalition rebellion.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, bound_vassals, payer,
+    moderate, biographical, identity_locked, regional).
+
+% Legally bound to the land under the oath framework; they bear labor obligations, harvest tithes, and mill fees without contractual reciprocity claim. The lord's oath binds vassals; the lord's oath does NOT bind the lord to the serfs. Serfs experience the constraint as pure domination with no countervailing obligation.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, serf_populations, payer,
+    powerless, biographical, trapped, local).
+
+% Church claims oaths are binding before God and carry moral obligations of restraint and charity. They are excluded from enforcing these claims in secular law (kings and lords control feudal courts); they can excommunicate or refuse sacraments but lack coercive power to reduce extraction. Their moral framing is not seated at the table where actual obligation is adjudicated.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, ecclesiastical_authority, excluded,
+    institutional, generational, constrained, regional).
+
+% Multiple vassals coordinating to withhold service or threaten rebellion. They are excluded from the formal oath structure (oaths are individual, lord-to-vassal); their only leverage is collective withdrawal of service and threat of open revolt. They set the rebellion threshold beyond which extraction becomes unsustainable, but they have no seat in setting the rules that define extraction within the threshold.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, vassal_coalitions, excluded,
+    organized, biographical, constrained, regional).
+
+% Crown stands above feudal vassals; can strip lands and titles for violations of royal oath. Crown's authority limits lord extraction only when the crown itself chooses to reduce it (rare, and usually self-interested — the crown wants tax revenue, not vassal welfare). Most extraction passes unchecked as a matter of delegated authority.
+narrative_ontology:constraint_stakeholder(feudal_oath_reciprocity__lord_extraction_reading, royal_overlord, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(feudal_oath_reciprocity__lord_extraction_reading, nobility_with_vassals).
+narrative_ontology:fixing_cost_class(feudal_oath_reciprocity__lord_extraction_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Feudal oath structures land tenure, military obligation, and governance hierarchy: a decentralized security system where local military power is bundled with land control and reciprocal loyalty. The oath coordinates who owes what to whom and provides a framework for dispute resolution within the vassalic hierarchy.
+% TRANSFER_FUNCTION: Moves wealth (labor, harvests, cash, military service, hospitality) from vassals and serfs to lords; the flow is asymmetric and contingent only on the lord's demand remaining below the rebellion threshold. Unlike the coordination reading (where reciprocal obligations bound extraction), this reading treats the oath as a license to extract whatever the market for rebellion tolerance allows.
+% ABSENT_VOICES: Serfs have no voice in the oath structure at all — they are subjects of the land, not parties to it. Ecclesiastical authorities claim moral standing to restrain extraction but are excluded from feudal courts and cannot enforce their claims. Vassal coalitions are structurally prevented from negotiating collectively; the oath is individual and hierarchical, forcing each vassal to face the lord alone.
+% DISAPPEARANCE_RATIONALE: If the feudal oath and its enforcement vanished overnight, land tenure would lack a legitimating framework; vassals would renegotiate from roughly equal footing; extraction would collapse to what military coercion alone could sustain without consent. The entire medieval security and allocation system depends on the oath's continued operation.
+% FOUNDING_PROBLEM: Post-Roman Europe faced a collapse of centralized military and administrative capacity. Local strongmen offered protection in exchange for land and service; the oath formalized this into a hereditary, transferable system where protection and obligation became recursive up a hierarchy.
+% FOUNDING_PROBLEM_CORROBORATION: Historians specializing in collapse and early medieval recovery (outside the benefiting nobility) attest the founding protection-function was real and necessary in the 5th–7th centuries. By the 12th–13th centuries, independent economic historians and ecclesiastical critics attest the protection justification has eroded: extraction persists because the oath now privileges lord power, not because protection remains scarce or necessary. The founding problem is dead; the arrangement persists as institutional inertia and enforced hierarchy.
+narrative_ontology:disappearance_verdict(feudal_oath_reciprocity__lord_extraction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(feudal_oath_reciprocity__lord_extraction_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(feudal_oath_reciprocity__lord_extraction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(feudal_oath_reciprocity__lord_extraction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(feudal_oath_reciprocity__lord_extraction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(feudal_oath_reciprocity__lord_extraction_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,16 +230,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness at 0.81 reflects that the lord interprets the oath to authorize escalating demands bounded only by practical capacity — this is the highest ε reading of the oath. Suppression at 0.77 is high because vassal rebellion is criminalized (treason) and collective (village) punishment is the consequence; the constraint requires active threat of force to maintain. Theater_ratio at 0.42 reflects that the original coordination function (military organization and justice without bureaucracy) is genuine at the interval's start but declines over the 280-year span as written law and charters emerge (stage 0–120) and then stabilizes (120–280) because the constraint's form does not change even though its legitimacy erodes. The measurement series show base_extractiveness rising from 0.62 to 0.81 (lords escalate demands over time as their territorial consolidation allows), suppression rising from 0.58 to 0.77 (enforcement machinery hardens as resistance grows), and theater_ratio rising from 0.25 to 0.42 then plateauing (the constraint performs the coordination story even as extraction becomes its primary function). The shared time grid allows the engine to detect that extraction accelerates (early period) while suppression follows (later period) — a signature of extraction layered onto weakening coordination.
+ *   Extractiveness rises from 0.55 (early medieval, extractive baseline but protection genuinely scarce) to 0.81 (late medieval, extraction optimized but protection no longer justifies the cost). Suppression is high (0.79) and stable because enforcement depends on military hierarchy, oath formality, and identity-lock — the constraint is maintained by active suppression, not by participant preference. Theater_ratio (0.42) reflects that a meaningful share of enforcement activity goes to maintaining the oath's legitimacy (lord's claim to justice, vassal's honor claim) rather than to the actual extraction mechanics; once the oath is sworn, extraction largely follows automatically. The measurement series show accumulating extraction over centuries — lords discovered they could demand more as the system became formalized and ecclesiastical restraint weakened. Accessibility_collapse (0.72) reflects that vassal identity-lock and oath binding make alternatives hard to access, but not impossible (rebellion, flight to cities, religious orders, or waiting for crown intervention). Resistance (0.68) reflects consistent pushback from vassal coalitions, ecclesiastical critics, and (later) peasant revolts — the constraint is actively resisted but survives because the lord's military capacity exceeds any coalition resistance.
  *
  * PERSPECTIVAL GAP:
- *   From the LORD'S seat, the oath is a legitimate authority to extract up to vassal capacity; the sworn reciprocity is satisfied by the lord's provision of protection and justice. From the VASSAL'S seat, the oath specifies bounded obligations and the lord's escalation breaches reciprocity. The engine computes these as different classifications because the structural relationships differ: the lord has directionality ~1.0 (full target becomes beneficiary via extraction authority), the vassal has directionality ~0.9 (full target with identity_locked exit), and the sovereign has directionality ~0.3 (benefits from decentralized extraction without bearing enforcement cost). The same constraint structure — the oath — produces different seat-level types because d is not symmetric.
+ *   The lord and the vassal compute different types from the same constraint. From the lord's seat, the oath is genuine coordination: they set clear rules, enforce them consistently, and deliver security in return for service. From the vassal's seat, it is snare: the rules are unilaterally interpreted, enforcement extracts whatever the market for rebellion tolerance allows, and security justification erodes over time. The engine computes per-seat types from power, exit_options, and beneficiary/victim declarations; the wide divergence reflects real structural asymmetry, not analytical error.
  *
  * DIRECTIONALITY LOGIC:
- *   Feudal lords: beneficiaries who set the constraint and extract from it without running the military apparatus (they organize locally but extract upward). Vassals: victims who are trapped by identity (hereditary status), spatial immobility (tied to the fief), and legal disability (oath breach is treason). Their exit options are: rebellion (d stays high, costs catastrophic), abandonment (identity and property loss), or renegotiation (only credible when rebellion threat emerges, then temporary). Ecclesiastical authority: structurally excluded from enforcing extraction limits despite claiming jurisdiction over oath-breaking — they are observed in the constraint's operation but not decision-makers. The directionality derivation: lords as beneficiaries get low d (benefit from it, set it) unless their power is undermined; vassals as victims with identity_locked + trapped exit get d near 1.0; the peasantry with zero formal voice and powerless status also get d near 1.0. No directionality overrides are needed; the derivation chain produces accurate values.
+ *   Directionality increases monotonically for vassals and serfs as the system matures (early medieval: oath is genuinely reciprocal, d ≈ 0.5; late medieval: extraction dominates, d ≈ 0.8+). For the lord, d stays near zero throughout (extraction beneficiary). For ecclesiastical and coalition seats, d stays high (they bear the cost of restraint they cannot enforce; they are targets of the lord's suppression if they try to reduce extraction, making them structurally vulnerable despite their nominal power).
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint shows classic mandatrophy dynamics: the founding problem (post-Carolingian military organization) is substantially solved by the 12th-13th century (feudal system is stable, states are consolidating, alternative mechanisms emerge), but the constraint persists because its extraction function now outweighs its coordination function. The theater_ratio rise from 0.25 to 0.42 shows the military-justice coordination story is invoked to justify extraction even as its functional necessity wanes. The founding_problem_status is 'contested' because the extraction readings (lord, vassal) disagree about whether the founding problem's resolution justifies ongoing extraction — lords say military necessity is eternal; vassals say necessity was temporary and extraction has become institutionalized rent. The mismatch (founding_problem_status=contested + disappearance_verdict=world_rearranges) correctly fires the mandatrophy flag: the constraint persists despite disputed necessity.
+ *   The founding problem (post-Roman military collapse) was genuinely alive in the 5th–7th centuries. By the 12th century, the founding problem was substantially solved — professional knights, fortified settlements, and written law provided security beyond what the feudal oath offered. Yet the oath persisted and extraction rose. This is mandatrophy: the constraint's original function has atrophied, but the extraction machinery remains and amplifies. Ecclesiastical critics and vassal charters attest the shifted function. The constraint persists because lords profit from it and enforcement capacity remains high; it is a zombie function, extraction masked as reciprocal obligation.
  */
 
 /* ==========================================================================
@@ -186,61 +247,51 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    oath_interpretation_authority,
-    'Does the sacramental oath itself constrain the lord''s extraction to a fixed scope, or does it authorize the lord to interpret the oath''s terms and adjust extraction demands within the vassal''s practical capacity?',
-    'Historical analysis of oath formulas, Charter evidence on reciprocal obligations, and judicial records showing how disputes over oath-scope were adjudicated. Examination of whether lords or vassals (or ecclesiastical arbiters) held interpretation authority in practice.',
-    'If the oath is self-limiting (constrains extraction to fixed terms), the constraint reclassifies toward tangled_rope with bounded extraction; if the oath authorizes the lord to interpret, it remains snare with capacity-limited extraction. This is the central contested premise of the kernel.',
+    obligation_ceiling_mechanism,
+    'What structural property sets the upper bound on extraction under the oath framework? Is it the vassal''s actual service capacity, the rebellion threshold, or something else?',
+    'Comparative study of oath-breaking events and subsequent lord behavior: if lords who pushed extraction past some threshold faced consistent coalition rebellion and were forced to back down, that threshold is the mechanism; if extraction simply continued without regard to vassal capacity, the ceiling is institutional memory and cultural lag, not structural.',
+    'If rebellion threshold is the mechanism, extraction is bounded and predictable — the constraint is more stable snare with a known ceiling. If extraction can rise above service capacity (via serf intensification or debt-shift), the snare lacks a structural bound and approaches absolute predation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(oath_interpretation_authority, conceptual, 'Whether feudal oath is interpretation-resistant (vassal_coordination reading) or lord-interpreted (lord_extraction reading).').
+narrative_ontology:omega_variable(obligation_ceiling_mechanism, empirical, 'Whether extraction has a structural upper bound beyond lord will.').
 
 omega_variable(
-    ecclesiastical_constraint_on_extraction,
-    'Do the sacramental and Christian dimensions of the oath (oath-swearing as a sacred act, Christian charity obligations) constrain the lord''s extraction, or are those dimensions ceremonial without effect on permissible extraction levels?',
-    'Ecclesiastical records (penitential literature, pastoral guidance, canon law rulings), disputes where the Church attempted to limit extraction on charitable grounds, and instances where lords were excommunicated or denounced for extraction deemed unchristian.',
-    'If ecclesiastical constraint is real and enforced, the extraction measured here (0.81) would be overstated; the actual ceiling would be lower, and the ecclesiastical_mediation_reading would apply. If ecclesiastical constraint is performative without effect, suppression at 0.77 is accurate and this reading holds.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(ecclesiastical_constraint_on_extraction, empirical, 'Whether Church authority imposed effective constraint on feudal extraction (ecclesiastical reading) or provided only ceremonial framing.').
-
-omega_variable(
-    vassal_capacity_measurement,
-    'What constitutes the practical capacity ceiling that bounds extraction in this reading — the upper limit of what a vassal can render without losing ability to maintain household, render military service, or sustain the next generation''s claim to the fief?',
-    'Economic reconstruction of vassal household budgets, military service capacity under various extraction regimes, and historical analysis of when vassals actually rebelled or broke oath — what extraction level triggered the threshold?',
-    'If capacity ceiling is firm and historically observable, suppression is properly measured at 0.77 (lords rarely pushed past it because rebellion cost exceeded benefit); if capacity ceiling is flexible and often overshot (with rebellions followed by retrenchment), suppression should be higher and extraction claims less bounded than measured.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(vassal_capacity_measurement, empirical, 'The actual binding limit on extraction under the lord-reading interpretation of the oath.').
-
-omega_variable(
-    charter_vs_custom_reading,
-    'Over the interval, does the emergence of Charter evidence and written reciprocal-obligation texts (Magna Carta, vassal charters) create a competing reading that forecloses the lord''s unfettered interpretation authority, or does it merely influence the terms of extraction without resolving the interpretation contest?',
-    'Historical textual analysis of Charter adoption and enforcement, disputes where vassals cited Charter text against lords'' expansion attempts, and whether Charter evidence is accepted by courts or ignored as non-binding custom.',
-    'If Charter evidence forecloses the lord_extraction_reading, the constraint should be reclassified toward vassal_coordination_reading by the end of the interval; if Charter evidence influences but does not foreclose, theater_ratio rise to 0.42 (Charter-reading performance without changed extraction substance) is correct.',
+    kernel_contest__coordination_vs_extraction,
+    'Is the feudal oath fundamentally a coordinated reciprocal arrangement (the vassal_coordination_reading) that lords can exceed and abuse, or is it fundamentally an extraction device dressed in reciprocal language (this reading)?',
+    'Framing via the alternative readings: coordination_reading claims fixed, bounded obligations sustained by charter text and custom enforcement; lord_extraction_reading claims the oath is a legal pretext for maximal predation bounded only by rebellion cost. The contest is not empirical — both readings match the same medieval records — it is interpretive. Resolution comes from: (1) which reading best explains structural drift in extraction over centuries, (2) which reading best explains why ecclesiastical criticism focuses on excess (implying a norm to exceed), and (3) which reading survives hypothetical renegotiation (if vassals could renegotiate from equal standing, would they accept obligations as written, or would they narrow them).',
+    'If coordination_reading is the true structure, the constraint is Tangled Rope (genuine coordination + extractive excess) and can be reformed via charter enforcement. If lord_extraction_reading is true, the constraint is Snare and can only be escaped via collective rebellion or external rule change (crown or peasant revolt). Classification divergence is fundamental — measurement cannot resolve it alone.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(charter_vs_custom_reading, conceptual, 'Whether written Charter text forecloses or merely influences the lord-reading of the oath.').
+narrative_ontology:omega_variable(kernel_contest__coordination_vs_extraction, conceptual, 'Whether the oath is fundamentally reciprocal coordination or fundamentally extraction cover.').
 
 omega_variable(
-    resistance_mechanisms_development,
-    'Does recorded vassal resistance (petitions, passive noncompliance, subtle defection, charter demands) increase over the interval in response to escalating extraction, or remain constant? If increasing, is it coordinated resistance or isolated incidents?',
-    'Archive records of vassal petitions, Charter-making moments, documented disputes, and rebellions. Pattern analysis of whether resistance becomes more organized and textually-grounded over time.',
-    'Rising organized resistance would indicate suppression is increasing (0.77 is an underestimate) and that the constraint approaches its instability point; constant or fragmented resistance would suggest the measured suppression and capacity-bounded extraction are accurate. This feeds both the accuracy of measured suppression and whether the constraint is trending toward reclassification.',
+    identity_lock_mechanism,
+    'Is vassal identity-lock (exit_options: identity_locked) structural — constituted by oath-taking itself, birth into vassal status, and hereditary tie to the office — or internalized through education and cultural narrative?',
+    'Vassal behavior in crisis (peasant revolts, jurisdictional collapses, dynastic succession disputes): do vassals exit when external barriers fall (structural lock), or do they remain bound even when the institutional framework dissolves (internalized identity)? Post-feudalism, do descendants of vassals actively resist the identity or actively reconstruct it?',
+    'If structural, the constraint''s suppression is institutional (external barriers enforce it); removal of barriers (crown authority collapse) permits exit. If internalized, suppression persists after barriers fall — the target carries the constraint with them. Internalized identity-lock increases effective suppression beyond the authored 0.79 figure, because the target remains constrained even if the external mechanism fails.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(resistance_mechanisms_development, empirical, 'Pattern of vassal resistance to extraction over the interval.').
+narrative_ontology:omega_variable(identity_lock_mechanism, empirical, 'Whether vassal identity-lock is structural or internalized.').
+
+omega_variable(
+    sibling_reading_framing_choice,
+    'Why does this reading (lord_extraction_reading) center the lord''s authority to demand maximal extraction, while the vassal_coordination_reading centers the vassal''s reciprocal right to fixed obligation, and the ecclesiastical_mediation_reading centers the oath''s moral boundaries? Are these three readings incommensurable, or do they identify different layers of the same medieval system?',
+    'Historical source analysis: if the three readings emerge from different textual sources (lord''s manuals, vassal charters, ecclesiastical homilies), they represent different authored framings of a contested kernel, incommensurable only because the parties wrote from different seats. If all three readings can be drawn from the same source (e.g., a single oath formulary), the contest is interpretive framing of an ambiguous text, not different foundational claims.',
+    'If incommensurable (different sources), each reading is a valid instantiation of distinct constraints and the sibling relationships are coexists_with (different parties hold different readings). If drawn from the same source, the relationships might include forecloses (one reading''s logic rules out another''s) or influences (one reading''s adoption changes the authority structure available to the others).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(sibling_reading_framing_choice, conceptual, 'Whether sibling readings are different sources or different framings of the same source.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(feudal_oath_reciprocity__lord_extraction_reading, 0, 280).
+narrative_ontology:interval(feudal_oath_reciprocity__lord_extraction_reading, 0, 500).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -248,33 +299,45 @@ narrative_ontology:interval(feudal_oath_reciprocity__lord_extraction_reading, 0,
 
 % Theater ratio over time
 narrative_ontology:measurement(feud_tr_t0, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(feud_tr_t40, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 40, 0.28).
-narrative_ontology:measurement(feud_tr_t80, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 80, 0.33).
-narrative_ontology:measurement(feud_tr_t120, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 120, 0.38).
-narrative_ontology:measurement(feud_tr_t160, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 160, 0.4).
-narrative_ontology:measurement(feud_tr_t200, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 200, 0.41).
-narrative_ontology:measurement(feud_tr_t240, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 240, 0.42).
-narrative_ontology:measurement(feud_tr_t280, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 280, 0.42).
+narrative_ontology:measurement_basis(feud_tr_t0, projected).
+narrative_ontology:measurement(feud_tr_t50, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 50, 0.28).
+narrative_ontology:measurement_basis(feud_tr_t50, observed).
+narrative_ontology:measurement(feud_tr_t150, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 150, 0.35).
+narrative_ontology:measurement_basis(feud_tr_t150, observed).
+narrative_ontology:measurement(feud_tr_t250, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 250, 0.4).
+narrative_ontology:measurement_basis(feud_tr_t250, observed).
+narrative_ontology:measurement(feud_tr_t400, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 400, 0.42).
+narrative_ontology:measurement_basis(feud_tr_t400, observed).
+narrative_ontology:measurement(feud_tr_t500, feudal_oath_reciprocity__lord_extraction_reading, theater_ratio, 500, 0.42).
+narrative_ontology:measurement_basis(feud_tr_t500, observed).
 
 % Extraction over time
-narrative_ontology:measurement(feud_be_t0, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 0, 0.62).
-narrative_ontology:measurement(feud_be_t40, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 40, 0.68).
-narrative_ontology:measurement(feud_be_t80, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 80, 0.74).
-narrative_ontology:measurement(feud_be_t120, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 120, 0.78).
-narrative_ontology:measurement(feud_be_t160, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 160, 0.79).
-narrative_ontology:measurement(feud_be_t200, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 200, 0.8).
-narrative_ontology:measurement(feud_be_t240, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 240, 0.81).
-narrative_ontology:measurement(feud_be_t280, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 280, 0.81).
+narrative_ontology:measurement(feud_be_t0, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement_basis(feud_be_t0, projected).
+narrative_ontology:measurement(feud_be_t50, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 50, 0.62).
+narrative_ontology:measurement_basis(feud_be_t50, observed).
+narrative_ontology:measurement(feud_be_t150, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 150, 0.71).
+narrative_ontology:measurement_basis(feud_be_t150, observed).
+narrative_ontology:measurement(feud_be_t250, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 250, 0.78).
+narrative_ontology:measurement_basis(feud_be_t250, observed).
+narrative_ontology:measurement(feud_be_t400, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 400, 0.81).
+narrative_ontology:measurement_basis(feud_be_t400, observed).
+narrative_ontology:measurement(feud_be_t500, feudal_oath_reciprocity__lord_extraction_reading, base_extractiveness, 500, 0.81).
+narrative_ontology:measurement_basis(feud_be_t500, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(feud_su_t0, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(feud_su_t40, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 40, 0.62).
-narrative_ontology:measurement(feud_su_t80, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 80, 0.68).
-narrative_ontology:measurement(feud_su_t120, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 120, 0.73).
-narrative_ontology:measurement(feud_su_t160, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 160, 0.75).
-narrative_ontology:measurement(feud_su_t200, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 200, 0.76).
-narrative_ontology:measurement(feud_su_t240, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 240, 0.77).
-narrative_ontology:measurement(feud_su_t280, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 280, 0.77).
+narrative_ontology:measurement(feud_su_t0, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 0, 0.6).
+narrative_ontology:measurement_basis(feud_su_t0, projected).
+narrative_ontology:measurement(feud_su_t50, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 50, 0.65).
+narrative_ontology:measurement_basis(feud_su_t50, observed).
+narrative_ontology:measurement(feud_su_t150, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 150, 0.72).
+narrative_ontology:measurement_basis(feud_su_t150, observed).
+narrative_ontology:measurement(feud_su_t250, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 250, 0.76).
+narrative_ontology:measurement_basis(feud_su_t250, observed).
+narrative_ontology:measurement(feud_su_t400, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 400, 0.79).
+narrative_ontology:measurement_basis(feud_su_t400, observed).
+narrative_ontology:measurement(feud_su_t500, feudal_oath_reciprocity__lord_extraction_reading, suppression_requirement, 500, 0.79).
+narrative_ontology:measurement_basis(feud_su_t500, observed).
 
 
 /* ==========================================================================
@@ -285,11 +348,9 @@ narrative_ontology:coordination_type(feudal_oath_reciprocity__lord_extraction_re
 narrative_ontology:boltzmann_floor_override(feudal_oath_reciprocity__lord_extraction_reading, 0.12).
 narrative_ontology:affects_constraint(feudal_oath_reciprocity__lord_extraction_reading, feudal_oath_reciprocity__vassal_coordination_reading).
 narrative_ontology:affects_constraint(feudal_oath_reciprocity__lord_extraction_reading, feudal_oath_reciprocity__ecclesiastical_mediation_reading).
-narrative_ontology:affects_constraint(feudal_oath_reciprocity__lord_extraction_reading, noble_rebellion_suppression).
-narrative_ontology:affects_constraint(feudal_oath_reciprocity__lord_extraction_reading, medieval_charter_limitation_authority).
 
 % DUAL FORMULATION NOTE:
-% The feudal_oath_reciprocity kernel instantiates three distinct constraints depending on interpretation frame: lord_extraction_reading (this file, ε=0.81, snare), vassal_coordination_reading (ε estimated 0.48, tangled_rope), ecclesiastical_mediation_reading (ε estimated 0.55, rope). Each reading has its own constraint_id and independent classification because their ε values are structurally determined by who holds interpretation authority (lord, vassal/charter, Church). The three stories are linked via network.affects_constraints to indicate the kernel contest — each reading influences the others' conditions but does not logically foreclose them (coexists_with relation holds across the family). The kernel itself — the feudal oath as a commitment structure — is preserved in cs_structure.kernel_codification as 'fixed_text' with authority_grounding as 'extraction' (lord authority derives from extraction benefit).
+% The feudal_oath_reciprocity kernel decomposes into three structurally distinct constraints instantiating three readings of the oath's meaning and binding force. This file models the lord's extraction reading (high ε snare). The vassal_coordination_reading models reciprocal obligation as constraining extraction (lower ε, tangled rope or rope). The ecclesiastical_mediation_reading models sacramental and moral restraint (lower ε, tangled rope). All three share the same kernel (the feudal oath text and practice) but differ fundamentally in who is authorized to set obligations and what bounds apply to extraction. The three constraints are linked bidirectionally in network.affects_constraints to show their sibling relationship — adoption of one reading affects the legitimacy conditions of the others.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

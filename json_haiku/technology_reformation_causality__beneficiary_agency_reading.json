@@ -2,244 +2,318 @@
   "header": {
     "constraint_id": "technology_reformation_causality__beneficiary_agency_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-15",
     "status": "ACTIVE",
     "module_name_override": "constraint_technology_reformation_causality__beneficiary_agency_reading",
-    "story_uid": "255689c4-f839-4b3f-8952-f65a76c6005b",
-    "created_at": "2026-06-12T15:42:00Z"
+    "story_uid": "0ed394a0-b417-4e0d-a937-612f8e0a1afb"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.48,
-    "resistance": 0.61,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Reformer-Printer Coalition Authority Bypass (Beneficiary Agency Reading)",
-    "topic_domain": "history_of_technology/religious_history/media_studies",
+    "human_readable": "Reformer-Printer Strategic Coalition Bypassing Church Authority",
+    "topic_domain": "history/technology/religious_authority",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "reform_theologians",
+      "reformer_movement",
       "printing_entrepreneurs"
     ],
     "victims": [
-      "ecclesiastical_hierarchy",
-      "manuscript_scribes"
-    ]
+      "church_monopoly_holders",
+      "latin_clergy_gatekeepers"
+    ],
+    "has_sunset_clause": false
+  },
+  "interval": {
+    "start": 1440,
+    "end": 1560
+  },
+  "stakeholders": [
+    {
+      "name": "reformer_movement",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Sought to bypass Church gatekeepers who controlled manuscript distribution and theological interpretation. Reformers (Luther, Zwingli, Calvin and their networks) deliberately identified printing as the strategic tool to reach vernacular audiences and circumvent Rome's authority over text. They authored content, negotiated with printers, and directed distribution toward high-impact audiences. They benefited from expanded reach but depended on printer compliance with reformist ideology—a mutual extraction bond."
+    },
+    {
+      "name": "printing_entrepreneurs",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Printers (Gutenberg's successors, Strasbourg and Basel workshops, Wittenberg operators) captured enormous profit from reformist demand. They negotiated with reformers for exclusive or priority access to ideologically charged texts, built business models around Protestant supply, and extracted rents from the coalition—controlling paper sourcing, press capacity, and distribution networks. They had exit options (printing for Church, nobility, or commercial customers) but the reformist market was the highest-margin opportunity."
+    },
+    {
+      "name": "church_monopoly_holders",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Rome and local bishops had controlled theology and religious education through manuscript monopoly and clerical gatekeeping. Reformist printing stripped their authority to regulate doctrine—vernacular Bibles and polemical treatises circulated past their censorship. They bore the cost of losing interpretive monopoly but could not exit the field; their institutional survival depended on recovering control or adapting teaching authority to the new information environment."
+    },
+    {
+      "name": "latin_clergy_gatekeepers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Local clergy and monastic scriptoria lost economic and intellectual status. Printing destroyed the scarcity rent on hand-copied manuscript work; their identity as exclusive knowledge-holders eroded as vernacular readers could access texts directly. Their exit was theoretically possible (secular work, migration) but their entire formation was clerical identity—the constraint extracted their professional monopoly and cognitive authority."
+    },
+    {
+      "name": "print_readers_vernacular",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Ordinary readers—merchants, craft workers, literate women—gained access to religious texts and reformist arguments they could understand. They did not negotiate with printers or reformers; access to print was a collateral benefit of the coalition's extraction from Church authority. They benefited from the architectural outcome (open access) without bearing direct costs or exercising agency in the coalition."
+    },
+    {
+      "name": "rome_papal_authority",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The papal hierarchy lost continental interpretive authority and faced existential organizational challenge. They could not prevent reformist printing through censorship or legal prohibition alone (printers existed in multiple jurisdictions); their exit options were strategically absent. They tried counter-reformation, censorship lists, and doctrinal response—all defenses against the already-bypassed authority structure. The constraint extracted their historical monopoly on Christian doctrine."
+    },
+    {
+      "name": "analytical_historian",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Examines the causal structure: whether the printing press *made* the Reformation inevitable (technological determinism), whether reformers and press co-evolved, or whether the reformer-printer coalition *strategically deployed* print to bypass Church authority. This reading centers agency: the technology was the tool; the beneficiary agents (reformers and printers) directed its use toward extracting Church monopoly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Reformers and printers aligned on vernacular scripture and polemical distribution—both needed the other's competence. Reformers needed printing capacity and logistical reach; printers needed ideologically committed authors and guaranteed markets. This coordination solved the problem of circumventing Church gatekeeping at scale; without printer cooperation, reformist writings would have remained local and ephemeral.",
+    "transfer_function": "Extracted Church's monopoly on theological interpretation and religious education. The constraint moved authority over doctrine from Rome and bishops to vernacular readers and local Protestant communities. It also moved profit from scribal/monastic work to printing entrepreneurs, and it moved labor (compositors, pressmen, binders) from manuscript workshops to print houses. The transfer was asymmetric: reformers and printers both gained; Church and clergy lost.",
+    "absent_voices": "Rome's perspective is structurally excluded—it describes the outcome as heretical dissemination, not strategic coalition. Indigenous readers of manuscripts (monks, scribes, elite Latin readers) are not in the negotiating room; they experience the constraint as the dissolution of their epistemic authority. The perspective of small-scale printers or those who printed for Church rather than reformers is also absent—the constraint centers on the profitable reformist coalition.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reformer-printer coalition had not formed and remained separate agents, the Reformation would have proceeded more slowly and been far more geographically limited—a theological reform movement without the information-distribution architecture. Church authority would have recovered faster. The religious map of Europe would have been dramatically different: Spain, Italy, and large parts of France might have remained more uniformly Catholic. The emergence of print as a profit center for vernacular publishing depended on reformist demand.",
+    "founding_problem": "Reformers faced institutional gatekeeping: Rome and local bishops controlled education, theology, and script circulation. Printing technology existed (Gutenberg c. 1440) but was not yet deployed for religious dissemination. The founding problem was how to bypass this gatekeeping at continental scale without armies or legal authority.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Luther's deployment of printing, the strategic printing of the 95 Theses, reformers' explicit partnerships with Basel and Strasbourg printers, and contemporary Church accounts of reformist 'propaganda' all document the coalition's intentional strategic use of print. Independent historians of the Reformation (including those skeptical of technological determinism) corroborate that reformers *deliberately chose* printing as an instrument—it was not an accident of technology. Printers' business records show they prioritized reformist contracts for profit, not ideology. The corroboration comes from primary source evidence outside the reformer movement itself: printer contracts, Church responses, and circulation records."
   },
   "omegas": [
     {
-      "id": "kernel_reading_separation",
-      "question": "Is this constraint structurally distinct from the technological_determinism and co_constitution readings, or do all three instantiate the same underlying causality relationship with different interpretive framings?",
-      "resolution_mechanism": "Structural audit: compare ε values (authority-bypass extraction), beneficiary/victim sets, and suppression mechanisms across readings. If ε diverges significantly (±0.15+), the readings describe genuinely different constraints; if ε is stable across readings, the distinction is interpretive rather than structural.",
-      "impact": "If distinct constraints: each reading's classification (tangled_rope vs. scaffold vs. co-constitution pattern) stands independently. If interpretive variance only: the three readings are perspectives on one constraint, and the kernel classification oscillates based on which reading's framing dominates at a given moment (higher institutional instability).",
+      "id": "technological_determinism_counterfactual",
+      "question": "Would the Reformation have happened without the printing press, or would it have remained a localized theological reform movement?",
+      "resolution_mechanism": "Comparative historical analysis: examining reformist movements before printing (Wycliffe, Hus) and their reach/durability vs. the Reformation after printing. The beneficiary-agency reading asserts the press was instrumental, not determining; its absence would have crippled the scale and speed, not the movement itself.",
+      "impact": "If the Reformation would have proceeded substantially unchanged without printing, this reading's claim that technology was 'tool not cause' is supported. If printing was genuinely indispensable to the movement's existence at continental scale, the reading slides toward technological co-constitution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the Reformation's existence and scale was determined by printing or merely amplified by it."
+    },
+    {
+      "id": "reformer_printer_asymmetry",
+      "question": "Did the reformer-printer coalition extract mutual benefit or did one party exploit the other's dependence?",
+      "resolution_mechanism": "Granular analysis of printer-reformer contracts, profit distribution, and exit options. If printers could have exited to other profitable markets (law, medicine, commercial almanacs) without significant loss, they had structural leverage over reformers. If reformers had alternatives to print (manuscript, oral teaching, other technologies), the asymmetry reverses.",
+      "impact": "If asymmetric extraction exists (one party coercing the other), the constraint reclassifies from tangled_rope toward snare for the exploited party. If mutual benefit was genuine and exit options were symmetrically constrained, the rope framing holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reformer-printer bond was mutual coordination or asymmetric exploitation."
+    },
+    {
+      "id": "church_defeat_inevitability",
+      "question": "Could Rome have adapted to or co-opted the printing press to defend its authority, or was Church defeat inevitable once printing was deployed?",
+      "resolution_mechanism": "Historical examination of Church responses (Gutenberg himself, early indulgence printing, later Counter-Reformation printing): could Rome have captured the printing market first, or was its institutional structure incompatible with rapid adoption?",
+      "impact": "If Rome could have deployed print as effectively as reformers (but chose not to or moved too slowly), Church defeat was a failure of institutional agility, not technological inevitability. If Rome's bureaucratic and doctrinal structure made it incapable of deploying print strategically, the constraint's extractiveness came from the alignment of beneficiary agency (reformer-printer coalition) with Church institutional weakness.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether readings are distinct constraints or interpretations of one constraint."
+      "description": "Whether Church institutional structure foreclosed effective response to printing technology."
     },
     {
-      "id": "strategic_intent_evidence",
-      "question": "What constitutes evidence that reformers and printers deployed printing STRATEGICALLY (deliberate, coordinated, targeted to bypass authority) versus merely OPPORTUNISTICALLY (using an available tool without prior plan)?",
-      "resolution_mechanism": "Historical record audit: correspondence between reformers and printers pre-printing; explicit statements about bypassing Rome; coordination of content selection and distribution timing; contrast with scribal-manuscript distribution patterns. Absence of written strategy is not absence of strategy (oral coordination, tacit understanding).",
-      "impact": "If strategic intent is established, the coalition's mutual extraction (each party using the other to achieve goals prohibited by the authority) becomes the defining structure — tangled_rope holds. If only opportunistic use is documented, the reading weakens toward scaffold (technology as transition) or co_constitution (mutual shaping without pre-formulated plan).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether reformer-printer deployment was coordinated strategic action or emergent opportunism."
-    },
-    {
-      "id": "extraction_asymmetry_within_coalition",
-      "question": "Within the reformer-printer coalition, who extracted more from whom? Did printers use reformers to bypass guild restrictions, or did reformers use printers to bypass ecclesial authority, or was the extraction genuinely mutual?",
-      "resolution_mechanism": "Economic and institutional analysis: profit flows to printers; doctrinal authority and theological legitimacy accumulates to reformers. Suppression mechanisms differ (economic pressure on printers, heresy prosecution on reformers). Trace whether either party could have achieved their goals without the other.",
-      "impact": "Mutual extraction supports tangled_rope (both coordinated and both paid). Asymmetric extraction (one party used the other instrumentally) would reframe as snare or scaffold depending on whether the tool party was trapped or transitional. The measured tangled_rope claim depends on this asymmetry holding at moderate rather than extreme levels.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether reformer-printer extraction was mutual or asymmetric."
-    },
-    {
-      "id": "printing_as_scaffold_vs_infrastructure",
-      "question": "Is printing a temporary scaffold (transitional technology enabling authority bypass, meant to be replaced by something else) or a durable infrastructure that became the constraint's permanent substrate?",
-      "resolution_mechanism": "Periodization: does the reformer-printer constraint dissolve or transform after print stabilizes? If printers and reformers separate (printers become conventional commercial publishers, reformers become established churches with different authority), the technology was transitional. If the constraint persists and mutates (modern printing politics, digital platform authority bypass), printing was infrastructure, not scaffold.",
-      "impact": "If scaffold: the constraint's primary function was transition, and both tangled_rope and extraction metrics are time-bounded phenomena of the transition. If infrastructure: tangled_rope persists as a permanent institutional pattern, and extraction continues as long as the technology remains the substrate.",
+      "id": "kernel_reading_boundary",
+      "question": "Is this reading (beneficiary agency directing technology strategically) fundamentally distinct from the co-constitution reading, or are they two framings of the same structural phenomenon?",
+      "resolution_mechanism": "Clarifying the referent: this reading centers *intentional coalition* and *strategic direction*; co-constitution centers *mutual shaping* and *structural co-evolution*. The readings diverge on whether reformers and printers acted *through* or *with* the technology. Testing the distinction requires examining contemporaneous statements of intent, strategic planning, and contingency in deployment.",
+      "impact": "If the readings are genuinely distinct (agency vs. co-evolution), they are separate constraint stories with different ε and type classifications. If they describe the same phenomenon at different levels of aggregation, they might be better unified.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether printing was a transitional scaffold or durable constraint infrastructure."
+      "description": "Whether the beneficiary-agency reading is structurally distinct from the co-constitution reading of the same kernel."
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.42
+      "time_point": 1440,
+      "value": 0.12
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.54
+      "time_point": 1460,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 1480,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1530,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1560,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1440,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1460,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1480,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
       "value": 0.62
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "metric": "suppression_requirement",
+      "time_point": 1530,
       "value": 0.68
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.68
+      "metric": "suppression_requirement",
+      "time_point": 1560,
+      "value": 0.72
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
+      "time_point": 1440,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1460,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1480,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.25
+      "time_point": 1500,
+      "value": 0.26
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.32
+      "time_point": 1530,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 1560,
       "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.41
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.63
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.68
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.72
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 50
-  },
   "commentary": {
-    "narrative_context": "Between roughly 1440 and 1550, reformers and printing entrepreneurs deployed the printing press strategically to bypass ecclesiastical authority's monopoly on textual authority. This reading holds that the constraint's persistence derives not from printing technology's inherent affordances (the determinism reading) or from mutual shaping between actors and technology (the co-constitution reading), but from deliberate, coordinated agency by two groups with aligned short-term interests and divergent long-term ones: reformers seeking doctrinal authority outside Rome, printers seeking profitable markets outside guild monopolies. The extraction is mutual — reformers use printers to broadcast heterodox theology, printers use reformers' controversial content to build customer bases and profit margins — and both face suppression from ecclesiastical and mercantile authorities working to maintain their respective monopolies. The constraint is claimed as tangled_rope because both groups benefit from the arrangement and both pay through active enforcement pressure.",
+    "narrative_context": "This reading centers on the deliberate strategic agency of the reformer-printer coalition in deploying printing technology to bypass Church authority. Reformers (Luther, Zwingli, Calvin) and printing entrepreneurs formed a mutual extraction arrangement: reformers needed printer capacity and logistical networks; printers needed ideologically committed authors and guaranteed markets. Together, they extracted the Church's monopoly on theological interpretation and clerical gatekeeping. The constraint is NOT that printing *caused* the Reformation (technological determinism) or that technology and social movements *co-evolved* (co-constitution reading). Rather, it is that beneficiary agents—reformers seeking authority-bypass and printers seeking profit—*strategically deployed* printing technology as the instrument. The technology was crucial but was never independent: its deployment was directed, selective, and contingent on reformer-printer alignment. This reading instantiates a tangled_rope: genuine coordination function (both parties benefited from alignment) combined with asymmetric extraction (Church, clergy, and Church-aligned printers bore the cost). The measurement series track the constraint's intensification: as reformist printing accelerated and geographic reach expanded (1440–1560), the extractiveness and suppression both rose. The theater ratio remained moderate, indicating that the constraint's function remained substantially real (bypassing gatekeeping) even as performative elements increased (Counter-Reformation propagandistic printing by Church, polemical exaggeration by both sides).",
     "key_agents": [
-      "reform_theologians: Agents (Luther, Zwingli, later Calvin) seeking doctrinal authority independent from papal Rome; coordinate with printers to distribute vernacular scripture and polemic. Extract legitimacy and audience reach. Bear prosecution and excommunication.",
-      "printing_entrepreneurs: Agents (printing-house owners, compositors with market power) seeking profitable markets; coordinate with reformers to build customer base around controversial theology. Extract capital and market share. Bear pressure from scribal guilds and mercantile authorities.",
-      "ecclesiastical_hierarchy: Primary victim of the constraint (papal authority, bishops, inquisitorial apparatus). Authority over textual interpretation erodes as reformers distribute competing texts. Bear extraction as doctrinal authority fragments.",
-      "manuscript_scribes_and_guild_monopolies: Secondary victim. Scribal livelihoods erode as printing competes on speed and cost. Guild protections become unenforceable as print proliferates. Bear extraction as economic disruption.",
-      "lay_readership: Beneficiary but not agenda-setter. Gain access to theology in vernacular and at lower cost. Do not coordinate the constraint; their demand is exploited by the coalition but not orchestrated by it."
+      "Reformer Movement (Luther, Zwingli, Calvin networks): organized beneficiary/agenda-setter; strong power but constrained by Church opposition; generational time horizon; continental scope; sought strategic control of information distribution and theological authority",
+      "Printing Entrepreneurs (Gutenberg, Basel/Strasbourg workshops, Wittenberg operators): powerful beneficiary/agenda-setter; high exit options (could print for other markets); biographical time horizon; captured profit from reformist demand; negotiated exclusivity and pricing leverage over reformist content",
+      "Church Monopoly Holders (Rome, bishops, papal authority): institutional payer; trapped exit (gatekeeping was their structural function); generational time horizon; lost interpretive authority and education monopoly to vernacular readers and reformist communities",
+      "Latin Clergy & Scribes (monastic and cathedral clergy): moderate-power payer; identity-locked exit (clerical identity was their entire formation); biographical time horizon; lost status rent on manuscript scarcity and gatekeeping knowledge",
+      "Analytical Historian: observer seat; examines the causal structure and whether agency or technological inevitability determines outcomes"
     ],
-    "logic_rationale": "Extractiveness is moderate-to-high (0.68 at interval end) because the constraint's function is to transfer authority and capital FROM the ecclesiastical and scribal monopolies TO the reformer-printer coalition, and this transfer persists against active suppression. The extraction is not zero-sum market competition (which would be high-extraction snare dynamics) but rather institutional authority capture — the constraint restructures who gets to adjudicate truth and profit from textual distribution. Suppression is correspondingly high (0.72) because both ecclesiastical and mercantile authorities invest in enforcement: heresy prosecution, book burning, printing privilege restriction, guild enforcement against competing technologies. Theater ratio is moderate (0.41) because the constraint's function is genuine (reformers do distribute theology, printers do build capital) but the distribution of benefit becomes increasingly asymmetric over the interval — by the plateau at time 40+, reformed theology becomes institutionalized (new orthodox monopolies replace old ones in some regions), and the extractive edge becomes theatrical (defending privileges now rather than enabling dissent). The shared measurement grid shows all three metrics rising during the ramp (0-30), then stabilizing once the constraint settles into equilibrium.",
-    "perspectival_gap": "Reformers and printers both experience the constraint as empowering (gaining what was previously monopolized), but from opposite directions: reformers gain doctrinal freedom, printers gain capital. The church experiences it as pure extraction (losing authority without compensation). Lay readers experience it as beneficiary (access to texts, cheaper books) but have zero enforcement power—they are not in the coalition and do not set the constraint. The engine computes this divergence: beneficiary seats compute as rope-flavored (low extraction, coordination benefit), victim seat computes as snare-flavored (high extraction, trapped exit, no coordination function for the church). The per-seat type divergence is the point—the constraint is tangled_rope from the coalition perspective, snare from the victim perspective.",
-    "directionality_logic": "The constraint's directedness toward extraction derives from the authority-bypass value, not from the printing technology itself. Reformers strategically deploy printing to bypass Rome; Rome loses control. Printers strategically deploy controversial theology to build market share; guild monopolies lose protection. The extraction is the transfer of authority and capital—printing is the instrument, not the cause. This reading's ε (0.68) is driven by the magnitude of authority loss Rome bears and the degree to which that loss is structured into the constraint's operation (Rome cannot maintain authority-over-texts AND permit printing; the constraint forces the choice). The suppression is correspondingly high because maintaining the constraint requires active prevention of book burning, censorship, guild enforcement—the church and guilds invest heavily in suppression, and the coalition invests in counter-suppression (underground presses, smuggling networks, doctrinal justifications for printing as divine tool).",
-    "mandatrophy_analysis": "This reading avoids the false dichotomy between 'technology caused the Reformation' and 'the Reformation would have happened anyway.' Instead it grounds the constraint in strategic agency: specific people made deliberate choices to deploy a specific technology toward a specific end (bypass authority), and the constraint persists because both the reformer and printer seats benefit from the arrangement while both face suppression. Mandatrophy is not present at interval end (time 50) because the constraint's founding purpose—enabling doctrinal dissent against monopoly authority—remains live in most Protestant regions and continues to generate doctrinal innovation and publishing competition. However, a secondary mandatrophy signal appears: by time 40–50, reformed theology itself becomes orthodox in some regions (Lutheran princes, Reformed magistrates), and printing becomes their tool for enforcing new orthodoxies. The constraint's original function (enabling dissent) becomes theatrical in those regions while remaining live elsewhere. This is not mandatrophy-of-the-constraint but rather constraint-mutation: the same technology and coalition structure now enforces new orthodoxies instead of opposing old ones. The theater_ratio plateau at 0.41 captures this shift—printing's function is increasingly maintenance of reformed orthodoxy rather than enabling radical dissent.",
-    "kernel_context": "This constraint is the BENEFICIARY_AGENCY_READING of the kernel 'technology_reformation_causality.' The kernel dispute is whether printing was the CAUSE of the Reformation (technological determinism reading: printing made doctrinal competition inevitable), a CO-CONSTITUTIVE FACTOR (co_constitution reading: technology and actors shaped each other; neither determined the other), or a DEPLOYED TOOL (this reading: reformers and printers strategically used printing to bypass authority; technology was instrumental, not causal). The three readings generate different ε values and different classifications because they identify different constraints: the determinism reading's constraint is the printing press's structural affordances and their necessary causal consequences (if it is natural law or pure rope); the co_constitution reading's constraint is the mutual feedback between technological capabilities and actor strategies; this reading's constraint is the strategic coalition's extraction of authority and capital through deliberate deployment of a chosen technology. The three are not perspectives on one constraint but rather three distinct constraints derived from the same historical episode by different interpretive frames. This reading brackets the technological determinism and co-constitution readings and instantiates only the beneficiary-agency structure."
+    "logic_rationale": "EXTRACTIVENESS (0.68 at interval end): The constraint extracts Church's authority monopoly—a high-value extraction because interpretive control was foundational to Church power and revenue (tithe justification, penance economics, education fees). The extraction was not small and dispersed but concentrated: the coalition directly diverted theology from Rome to local vernacular readers. However, the extraction was not *total* (Church retained significant authority, especially where reform was suppressed)—hence 0.68 rather than 0.85+. The measurement series shows rising trajectory (0.12 → 0.68) because early printing (1440–1460) was limited to wealthy markets and elite readers; by 1500, vernacular printing was mass-distributed; by 1560, two generations had learned theology outside Church channels. SUPPRESSION (0.72 at interval end): The constraint required active enforcement by the reformer-printer coalition to survive: they had to resist Church censorship, protect printing locations, negotiate with local rulers, and maintain supply chains despite papal prohibition. Suppression was bidirectional—the coalition suppressed Church counter-reformation printing, and Rome suppressed reformist printing where it could. By 1560, suppression was high because the system was defended by force (religious wars, territorial Protestant states), not by participant choice. THEATER_RATIO (0.41 at interval end): Moderate—the constraint's core function (bypassing authority) remained real, but performative elements increased over time. Early reformist printing (1440s–1480s) focused on theological content; by 1530–1560, polemical and propagandistic exaggeration increased. Counter-Reformation printing added more theater (the Index, anti-heretical propaganda). Yet the underlying extraction of gatekeeping authority remained functional: readers continued to bypass Church channels, and clergy continued to lose epistemic authority. Theater did not approach piton-level (0.5+) because the constraint's primary function persisted. ACCESSIBILITY_COLLAPSE (0.52): Alternatives did not collapse completely. Oral preaching, manuscript networks, and institutional teaching remained available to Church authorities and those who rejected print. But vernacular print dramatically raised the cost of maintaining Church monopoly—alternatives existed but were increasingly expensive and labor-intensive. Readers could *theoretically* ignore printed Bibles and listen to priests, but the psychological/economic cost of rejecting free, accessible text was high. RESISTANCE (0.58): Substantial—both Church and ruling authorities mounted real resistance: censorship, book burning, imprisonment of heretics, legal prohibition of printing heretical works. This was not performative: people died for printing and reading reformist materials. However, resistance was not *overwhelming*—reformist printing persisted and proliferated despite suppression, indicating the coalition had structural advantages (multiple printing centers, ruler support in some jurisdictions, profit motive driving innovation) that overcame resistance.",
+    "perspectival_gap": "REFORMER PERSPECTIVE: Strategic agents deliberately deploying technology to achieve authority-bypass. Printing is a tool they commanded and directed; success depended on their theological clarity, political networking, and will. PRINTER PERSPECTIVE: Profit-maximizing entrepreneurs identifying a high-margin market (reformist demand); technology is neutral and deployable to any demand; reformist content is lucrative but not ideologically binding. CHURCH PERSPECTIVE: This constraint appears as *heretical dissemination enabled by technology*—Rome does not see strategic agency but sees the technology as the causal driver (printing made heresy inevitable and uncontrollable). CLERGY PERSPECTIVE: The constraint extracts their authority and labor; they experience it as institutional collapse driven by external force (the printing press). ANALYTICAL PERSPECTIVE: The constraint is a structured coalition (tangled rope) with mixed motivation—some reformers were ideologically pure, some printers were purely mercenary, and the coalition was never perfectly aligned (some reformers resented printer pricing; some printers feared religious controversy). The engine computes per-seat classification from the structural data. The reformer-as-agenda-setter will compute the constraint differently from the printer-as-agenda-setter because their exit options, power, and beneficiary status differ. This is the expected divergence—it is precisely what the classification system exists to measure.",
+    "directionality_logic": "REFORMERS: d ≈ 0.25–0.35 (mild beneficiary lean). They benefit significantly from printer cooperation and from Church authority extraction, but they remain constrained by Church opposition and dependent on printer compliance. They cannot unilaterally dictate terms to printers; they face organizational costs (networking, manuscript preparation, ideological alignment) that are nontrivial. They have constrained exit—they *could* retreat to local oral preaching, but that abandons the scale-and-speed advantage that justified the coalition in the first place. PRINTERS: d ≈ 0.15–0.25 (stronger beneficiary lean). They capture the most concentrated profit from the coalition and have high exit options (alternative markets: law, medicine, commercial printing, Church work). Their structural position is strongest; they can negotiate from strength with reformers and are least threatened by Church suppression (multiple jurisdictions, no religious commitment binding them). CHURCH & CLERGY: d ≈ 0.80–0.95 (strong targets). They lose authority, revenue, status, and labor rent. They have trapped or identity-locked exit—their institutional function IS gatekeeping; abandoning it means institutional suicide. They bear the full extraction. VERNACULAR READERS: d ≈ 0.40–0.50 (mild targets). They gain access but do not participate in the coalition; they bear no direct enforcement cost. Their benefits are real (readable scripture, reduced dependence on clergy) but they do not benefit from the *extraction* mechanism itself—they benefit from the outcome. NO OVERRIDES NEEDED because the structural data (beneficiary/victim declarations + exit options + power atoms) derive reasonable d values. Reformers and printers are listed as beneficiaries; Church and clergy as victims. This maps correctly to the structural relationships.",
+    "mandatrophy_analysis": "FOUNDING PROBLEM: Church gatekeeping on theology and education was a persistent institutional arrangement, not a transient problem. FOUNDING_PROBLEM_STATUS: Live until at least 1530, contested by 1560 (Counter-Reformation reformers claimed they *also* were restoring authentic authority; Church argued it never lost legitimate teaching office). DISAPPEARANCE_VERDICT: world_rearranges (if the reformer-printer coalition dissolved, religious Europe reorganizes—slower reform, more regional variation, Church authority recovers in many areas). MANDATROPHY CHECK: The constraint's founding problem was live through the interval; its function (bypassing gatekeeping) remained real; its structure (active enforcement, asymmetric extraction) remained necessary. There is no mandatrophy: the constraint has not outlived its function. The rising extractiveness and suppression measurements indicate the constraint was *intensifying*, not decaying into theater. A piton would show rising theater_ratio with stable or declining extractiveness (the core function atrophying while enforcement became ritualistic). This constraint shows rising theater but *also* rising core function—the bypass was *becoming more effective*, not less. Therefore: no mandatrophy. The constraint is a tangled rope in active operation, not a degraded piton.",
+    "kernel_context": "This constraint instantiates the BENEFICIARY AGENCY reading of the kernel 'technology_reformation_causality.' The kernel is contested: three readings exist. (1) BENEFICIARY AGENCY reading (this one): Reformers and printers strategically deployed printing to bypass Church authority. Technology was the tool; agency was the cause. (2) CO-CONSTITUTION reading: Technology and social movements co-evolved; printing enabled reformation but did not determine it; social actors shaped what the press produced. (3) TECHNOLOGICAL DETERMINISM reading: Printing press made the Reformation inevitable by enabling mass vernacular scripture distribution; technology was the independent variable. These three readings describe different causal structures for the same historical event. This reading centers *intentional coalition* and *strategic direction of resources* as the primary mechanism. It rejects the determinism claim (printing had alternatives; Rome could have deployed it; reformist movements existed pre-printing) and distinguishes itself from co-constitution by emphasizing the *directed asymmetry*: reformers and printers aligned to extract Church authority, not because the press automatically reshaped their interests, but because both groups benefited from and negotiated the specific outcome."
   },
   "boltzmann": {
-    "coordination_type": "attachment_coordination",
-    "boltzmann_floor_override": 0.09
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "technology_reformation_causality__technological_determinism_reading",
-      "technology_reformation_causality__co_constitution_reading"
+      "technology_reformation_causality__co_constitution_reading",
+      "technology_reformation_causality__technological_determinism_reading"
     ],
-    "dual_formulation_note": "This constraint family comprises three readings of the 'technology_reformation_causality' kernel. The beneficiary_agency_reading isolates strategic coalition action (ε ≈ 0.68, tangled_rope). The technological_determinism_reading isolates printing's structural affordances (expected ε lower, mountain or rope). The co_constitution_reading isolates feedback dynamics between technology and actors (expected ε moderate, likely rope or scaffold). All three are linked; none can be understood in isolation from the kernel dispute they instantiate. The 'affects' direction runs FROM beneficiary_agency (the most institutionally active reading, with the highest suppression and enforcement investment) TO the other readings, because defending the beneficiary-agency reading requires suppressing both the technological determinism reading (which would absolve reformers of strategic responsibility) and the co_constitution reading (which would blur the distinction between deliberate coordination and emergent complexity)."
-  },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "technology_reformation_causality__technological_determinism_reading",
-      "technology_reformation_causality__co_constitution_reading"
-    ]
+    "dual_formulation_note": "This constraint is one reading of a three-way kernel contest. The beneficiary_agency reading centers on directed strategic coalitional action (reformer-printer alignment as tangled_rope, technology as deployed tool). The co-constitution reading centers on mutual shaping (technology and social movement co-evolving, neither determining). The technological_determinism reading centers on printing as independent causal force. All three describe the same historical phenomenon—the Reformation and printing press relationship—but with structurally different ε and type classifications. The three stories are linked via network.affects_constraints; each one's commentary.kernel_context names the kernel and sibling readings."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "lineage",
-    "interpretation_layer_present": true,
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "technology_reformation_causality__technological_determinism_reading",
+        "sibling_id": "co_constitution_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "technology_reformation_causality__co_constitution_reading",
-        "relation": "influences"
+        "sibling_id": "technological_determinism_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "reformer_strategic_agency_over_technology",
+        "atom": "reformer_printer_strategic_agency",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "mutual_extraction_coalition_structure",
+        "atom": "technology_as_deployed_tool_not_autonomous_force",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "monopoly_doctrinal_authority_and_scribal_textual_distribution",
+    "reference_frame": "church_theological_gatekeeping_authority",
     "drift_state": {
-      "moment": "post_reformation_stabilization_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
+      "moment": "post_reformation_consolidation",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
       "acknowledged": false
     }
   },
+  "directionality_overrides": [],
+  "gain_flow": "printing_entrepreneurs",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

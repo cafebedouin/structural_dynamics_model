@@ -4,41 +4,118 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_war_powers_allocation__functional_accommodation_reading",
-    "story_uid": "c4b9be55-eaf1-4686-837e-2874ef91459a"
+    "story_uid": "5915ddde-1b91-43ff-b4bd-c7f6283ce962"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.71,
-    "theater_ratio": 0.44,
-    "accessibility_collapse": 0.58,
-    "resistance": 0.73,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Functional Accommodation War Powers Allocation (Context-Dependent Authority)",
+    "human_readable": "War Powers Allocation: Functional Accommodation Reading",
     "topic_domain": "constitutional_law/separation_of_powers",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "executive_operational_flexibility"
+      "executive_branch",
+      "congress"
     ],
     "victims": [
-      "congressional_war_declaration_authority",
-      "deliberative_constraint_on_force"
+      "excluded_parties"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "executive_branch",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Holds the power to initiate military action in imminent-threat contexts without prior authorization; gains operational flexibility in response to sudden crises. Must seek congressional authorization for campaigns beyond the narrow imminent-defense window, but the boundary is contestable and enforcement of that boundary depends on congressional willingness to enforce. The executive administers the rule by interpreting what counts as imminent and what requires authorization."
+    },
+    {
+      "name": "congress",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Retains the power of the purse and the formal power to authorize military force. In the functional accommodation reading, Congress gains the benefit of rapid executive response in genuine emergencies (without needing emergency session or overnight debate) while preserving its authority over sustained campaigns. The constraint's persistence depends on Congress maintaining institutional will to enforce the boundary; that will has periodically atrophied, allowing executive expansion into the gray area."
+    },
+    {
+      "name": "international_partners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from predictable U.S. commitment to constitutional process and from the mutual-deterrence value of slow, deliberative war authorization (it signals that military response is not impulsive). The functional accommodation reading permits swift response to immediate threats while preserving the signal of deliberation for sustained operations. Their exit is constrained by the relational nature of alliance."
+    },
+    {
+      "name": "domestic_opposition_movements",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of military operations initiated unilaterally in imminent-threat contexts, without the deliberation and public-debate period that a full authorization process would afford. Their exit is identity-locked to the nation-state; they cannot leave without abandoning citizenship. They depend on Congress to enforce the functional boundary, but Congress has variable institutional capacity to do so."
+    },
+    {
+      "name": "affected_foreign_populations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are not parties to the U.S. constitutional arrangement and have no voice in the debate over where the imminent-threat boundary sits. They experience the consequences of military action taken under either the executive's or Congress's framing of what is authorized. Their only recourse is international legal and diplomatic pressure, which is structurally weak against a major power."
+    },
+    {
+      "name": "courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Have repeatedly declared war powers questions non-justiciable (political questions doctrine), treating the executive-congressional boundary as outside judicial review. They sit outside the constraint's enforcement structure and have not enforced it, despite being nominally co-equal. Their analytical position allows them to observe but not adjudicate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Permits rapid military response to imminent threats (where deliberation would mean vulnerability) while preserving congressional authorization for sustained campaigns (where democratic legitimacy through legislative process matters most). Solves the coordination problem of balancing security responsiveness with constitutional process.",
+    "transfer_function": "Transfers power to initiate force from exclusive congressional prerogative to a context-dependent allocation: the executive gains unilateral power in imminent-threat contexts; Congress retains it for sustained operations. The domestic opposition movement and affected foreign populations bear the costs of unilateral executive action in the gray zones where threat imminence is contested.",
+    "absent_voices": "Affected foreign populations are structurally excluded. Domestic opposition movements are nominally included (they are U.S. citizens) but have no direct seat at the executive-congressional negotiation table. The constraint's persistence depends on Congress maintaining will to enforce it; when Congress is itself fractured or distracted, the executive's interpretation expands into the gray area unchecked.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint disappeared and were replaced with pure executive war-making power, the U.S. constitutional separation of powers would collapse; if replaced with pure congressional primacy, rapid emergency response capacity would require restructuring (emergency sessions, standing authorizations, or constitutional amendment). Either alternative world requires major institutional reorganization.",
+    "founding_problem": "The Constitution allocates war power ambiguously between branches: Congress declares war; the President is commander-in-chief. Early practice generated conflict. The functional accommodation emerged from recognition that imminent threats (invasion, sudden attack) require executive response speed, while prolonged wars require political legitimacy only Congress can confer.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The executive branch attests the founding problem is still live, citing cyber threats and terrorism that move at speeds Congress cannot match. Scholars of constitutional law (outside both branches) and some congressional voices attest the founding problem persists but the functional accommodation has been eroded by executive overreach into the gray area. Congressional testimony and historical analysis from neutral analysts support the contested reading."
   },
   "interval": {
     "start": 0,
-    "end": 80
+    "end": 30
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.54
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
@@ -47,78 +124,48 @@
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.63
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 60,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 70,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 80,
-      "value": 0.62
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.34
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.39
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.47
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.43
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 70,
-      "value": 0.44
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 80,
-      "value": 0.44
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
@@ -127,161 +174,153 @@
     },
     {
       "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.66
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.74
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.69
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.71
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
       "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 60,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 70,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 80,
-      "value": 0.71
     }
   ],
   "omegas": [
     {
-      "id": "imminent_threat_definition_boundary",
-      "question": "What constitutes an 'imminent threat' that permits unilateral executive action under the functional accommodation reading, and who determines the boundary?",
-      "resolution_mechanism": "Case law establishing binding thresholds; legislative definition of 'imminent threat' in authorization statutes; executive branch legal opinions establishing precedent. Examine whether courts review imminence determinations or defer to executive judgment.",
-      "impact": "A narrow, judicially-reviewable definition of imminence constrains executive unilateralism; a broad, executive-determined definition effectively grants unlimited discretion. The boundary's location determines whether the functional accommodation is genuine coordination or de facto executive primacy with theater of congressional consultation.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the imminent threat boundary is justiciable and where it is drawn."
-    },
-    {
-      "id": "gray_zone_suppression_mechanism",
-      "question": "Is the gray zone between imminent defense and prolonged campaigns a genuine structural ambiguity, or is it suppressed knowledge that both branches exploit strategically?",
-      "resolution_mechanism": "Examine legislative and executive framing in classified and unclassified contexts: if both branches privately acknowledge the boundary as arbitrary but publicly frame it as settled law, suppression is internalized consensus; if they genuinely dispute where the line falls, suppression is externalized (the reading itself suppresses categorical clarity). Interview legislative counsel and executive branch lawyers on off-record framing.",
-      "impact": "If suppression is internalized consensus, the functional accommodation reading is a shared cover story for a de facto executive war power, and the constraint is snare-like (both branches know the boundary is rhetorical but maintain it theatrically). If suppression is externalized structural ambiguity, the constraint is genuinely tangled rope (both branches claim authority within honest uncertainty).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether gray-zone ambiguity is genuine or strategically maintained."
-    },
-    {
-      "id": "reading_versus_alternative_kernel_framings",
-      "question": "Is the functional accommodation reading a legitimate constitutional interpretation, or is it a constructed reading that legitimizes practices that would be clearly prohibited under the congressional_primacy_reading?",
-      "resolution_mechanism": "Examine constitutional text, founding-era framing, and 19th-century practice to establish which reading aligns with original understanding; examine 20th-century statutory law (War Powers Resolution, AUMF mechanisms) to establish whether Congress has intentionally endorsed the functional accommodation framing or rejected it.",
-      "impact": "If the reading aligns with original understanding, it is a legitimate constitutional accommodation; if it deviates, it is a constructed justification for executive aggrandizement. The impact is on whether the constraint should be classified as tangled rope (both readings legitimate) or snare (one reading falsely presented as natural law).",
+      "id": "imminent_threat_boundary_contestability",
+      "question": "What constitutes an imminent threat sufficiently proximate to permit unilateral executive action without prior authorization? Where is the boundary between imminent and merely foreseeable?",
+      "resolution_mechanism": "Case-by-case congressional assertion (passing resolutions challenging executive interpretations) or Supreme Court injunction. Historical pattern analysis: which executive actions sparked immediate congressional challenge vs. which went uncontested? Accumulation of precedent may narrow the ambiguity, or political conditions may widen it.",
+      "impact": "If the boundary shifts toward the executive's expansive reading, the constraint becomes increasingly extractive (executive gains more unilateral power) and approaches the inherent_executive_reading. If Congress successfully reasserts narrow imminence standards, extractiveness compresses toward the functional accommodation framing. The current measurement assumes moderate contestation with moderate executive advantage in boundary definition.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the functional accommodation reading is a legitimate constitutional interpretation or a constructed post-hoc rationalization."
+      "description": "The structural ambiguity of what counts as imminent threat."
     },
     {
-      "id": "context_dependency_versus_categorical_authority",
-      "question": "Does the functional accommodation reading's context-dependency (imminent vs. prolonged) represent a genuine structural necessity, or does it create regulatory capture opportunity for whichever branch can define contexts?",
-      "resolution_mechanism": "Examine historical and contemporary cases: (1) How often does an initiated conflict get classified as imminent defense versus prolonged campaign? (2) Which branch controls the classification? (3) Do courts review the classification? (4) Has the classification ever shifted mid-conflict? Track whether context definitions track actual operational features or political convenience.",
-      "impact": "If context definitions track real operational features and are subject to review, the accommodation is genuine coordination. If context definitions are strategically chosen by the executive and reviewed only by the executive, the context-dependency becomes a mechanism for suppressing the categorical rule. High extraction and high theater both point toward the latter.",
+      "id": "congressional_enforcement_will_variability",
+      "question": "Does Congress maintain consistent institutional will to enforce the functional boundary, or does that will fluctuate with partisan alignment, threat perception, and legislative capacity?",
+      "resolution_mechanism": "Longitudinal study of congressional responses to unilateral military actions: vote counts on authorization resolutions, floor debate intensity, committee investigations. Periods of alignment between branches show lower enforcement; periods of opposition show higher enforcement.",
+      "impact": "High congressional enforcement will compresses extractiveness (Congress enforces the boundary, executive compliance improves). Low enforcement will expands extractiveness (executive interprets broadly unchecked, approaches inherent reading). The measurements show a modest peak at t=15 (point of maximum executive expansion into gray area) and compression toward interval end (partial congressional re-assertion). If enforcement will drops below current levels, this constraint could tip toward snare; if congressional will strengthens, it could approach rope.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether context-dependent allocation genuinely reflects structural necessity or enables regulatory capture."
+      "description": "Congress's actual institutional capacity and will to enforce the authorization boundary."
+    },
+    {
+      "id": "suppression_mechanism_source",
+      "question": "Is the measured suppression structural (the executive's control of military machinery and intelligence makes congressional oversight materially difficult) or internalized (Congress has come to accept executive dominance as normal and doesn't assert its authority even when it could)?",
+      "resolution_mechanism": "Comparative analysis: when Congress does assert authority (successful challenge, sustained investigation, denied appropriations), does executive compliance follow? If compliance is swift, suppression is more structural-legal; if compliance is slow/contested, suppression has internalized-norm components. Also: post-administration congressional investigations into prior actions show whether Congress's own sense of legitimacy was suppressed by the time or whether it recovered it in hindsight.",
+      "impact": "If suppression is largely structural, the functional accommodation reading is defensible — it allocates power rationally given institutional constraints. If suppression is largely internalized (Congress has absorbed the logic of executive dominance and stopped asserting its own authority), the constraint is partly snare-like (extraction masked by internalized acceptance). High structural component supports tangled_rope classification; high internalized component raises snare risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural (institutional asymmetry) or internalized (normalized acceptance)."
+    },
+    {
+      "id": "kernel_reading_contest_ambiguity",
+      "question": "Is this reading (functional accommodation) a genuinely stable third position, or is it a rhetorical cover for the underlying executive dominance (inherent reading) that Congress has internalized as normal?",
+      "resolution_mechanism": "Critical textual analysis: do executive officials invoke functional accommodation language when defending unilateral actions, or do they invoke inherent authority? Do congressional voices defend functional accommodation as a positive constitutional principle, or do they invoke it only defensively (accepting it because congressional assertion costs more than non-assertion)? A stable reading should generate positive endorsement from both branches; a cover story generates endorsement only from beneficiaries.",
+      "impact": "If functional accommodation is a stable equilibrium, the constraint is a defensible tangled_rope with genuine coordination (rapid response to genuine threats) and asymmetry (executive gain in the gray zone). If it is a rhetorical cover for executive dominance, the constraint is closer to snare — the appearance of a negotiated boundary masks actual executive control. This omega documents the reading-level contestation between the functional accommodation reading and the inherent_executive_reading (which would classify the same arrangement as snare from the inherent perspective).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether functional accommodation is a stable constitutional reading or a rhetorical cover for executive dominance."
     }
   ],
   "commentary": {
-    "narrative_context": "The functional accommodation reading of the war powers kernel asserts that executive unilateral force deployment is constitutional when directed at imminent threats but requires congressional authorization for prolonged campaigns. This reading is the live boundary dispute in contemporary US constitutional practice. It is claimed as tangled rope (genuine coordination between branches, each with legitimate authority within its domain) while authored metrics describe substantial extraction (executive gains practical force-initiation authority), suppression (the reading suppresses categorical rules and creates ambiguity where text appears clear), and theater (the deliberative constraint supposed to limit war-initiation is retroactively applied, after troops are deployed). The measurement series shows extractiveness rising from 0.48 to a plateau at 0.62, theater rising from 0.28 to 0.44 and stabilizing, and suppression rising from 0.62 to a plateau at 0.71, consistent with a constraint maturing from nascent practice to normalized institutional operation.",
+    "narrative_context": "The U.S. Constitution vests Congress with the power to declare war and the President with commander-in-chief authority—a bifurcated allocation that has generated sustained constitutional conflict. The functional accommodation reading holds that the allocation is properly context-dependent: imminent threats (invasion, sudden attack) permit executive unilateral action because deliberation would be suicidal; prolonged campaigns require congressional authorization because democratic legitimacy through legislative process is constitutionally required for sustained military commitments. This reading treats the constraint as a negotiated power-sharing arrangement, not a hierarchical rule. The extractiveness is moderate (0.58) because both branches benefit (executive gains speed in emergencies, Congress retains authority over sustained action) but the gray zone between imminent and merely foreseeable threat permits executive expansion. Suppression is high (0.72) because the boundary depends on executive interpretation, and Congress's ability to enforce the boundary is structurally asymmetric. Theater is moderate-high (0.48) because the functional accommodation language masks a de facto executive dominance of the gray zone—enforcement rhetoric about boundaries is high, but actual enforcement is weak.",
     "key_agents": [
-      "Executive Commander: Interprets imminent threat broadly; deploys force first; seeks authorization after; controls escalation/de-escalation",
-      "Congress: Retains war declaration and appropriations powers; operates within fait accompli constraint; ratifies executive action or withdraws support at political cost",
-      "Courts: Treat war powers disputes as non-justiciable; decline to enforce constitutional boundary; defer to whichever branch acts first",
-      "Deliberative Democratic Process: Supposed beneficiary of constitutional deliberation requirement; converted to post-hoc ratification mechanism by functional accommodation reading",
-      "Military Personnel & Families: Trapped beneficiaries; gain command clarity but bear cost of contested authorization",
-      "Affected Foreign Populations: Excluded from deliberation; bear cost of force deployment; have no seat in constitutional apparatus"
+      "executive_branch: Sets and interprets the imminent-threat boundary; controls military apparatus and intelligence; administers the rule by determining what is imminent and what requires authorization",
+      "congress: Retains formal authorization power for sustained campaigns; enforcement of the boundary depends on Congress maintaining will to assert authority; institutional capacity to enforce is variable",
+      "domestic_opposition_movements: Bear costs of unilateral executive action in gray zones where imminence is contested; identity-locked to nation-state and cannot exit; depend on Congress to enforce the boundary",
+      "international_partners: Benefit from predictable U.S. commitment to constitutional process; gain signaling value of deliberation in sustained operations; access to the U.S. commitment is constrained by relational factors",
+      "affected_foreign_populations: Excluded from the constitutional arrangement; bear costs of military action initiated unilaterally; have no voice in the boundary-setting process"
     ],
-    "logic_rationale": "Extractiveness is high (0.62) because the reading transfers practical war-initiation authority from Congress to the Executive by permitting unilateral action in the gray zone between imminent and prolonged conflicts. Suppression is higher (0.71) because the reading's persistence depends on maintaining ambiguity about where the imminent/prolonged boundary falls—categorical clarity would either permit or prohibit unilateral action, resolving the dispute. Theater is moderate (0.44) because the functional accommodation reading retains genuine deliberative elements (Congress still votes on extended campaigns, still holds appropriations power) alongside the extractive elements (executive deploys first, establishes facts on the ground, reverses the constitutional default from authorization-first to authorization-last). The measurements show extractiveness rising early (0.48 to 0.63 over 40 time units) as the reading becomes normalized institutional practice, then stabilizing, consistent with a constraint maturing into predictable operation. Theater rises from deliberation-heavy (0.28) to performance-heavy (0.44), consistent with the constraint's function shifting from genuine coordination between branches to executive fait accompli followed by legislative ratification.",
-    "perspectival_gap": "The executive institutional actor and the congressional institutional actor compute different types from the same structural data. From the executive perspective: the functional accommodation reading is genuine coordination that acknowledges the impossibility of legislative deliberation under modern threat conditions—a rope solving a real collective-action problem (speed vs. legitimacy). From the congressional perspective: the reading is tangled rope (asymmetric extraction of war-initiation authority from Congress) or snare (the imminent/prolonged distinction is rhetorical cover for de facto executive primacy). Courts, observing, compute neither type because they decline jurisdiction. Deliberative democracy and military personnel compute the constraint as extractive and suppressive—they lose decision rights and bear consequences. The engine's per-seat computation will surface these divergences from the structural data (executive benefits, Congress pays, courts observe, democracy is both beneficiary and victim). The perspectival gap is not an error; it is the measurement the corpus exists to take.",
-    "directionality_logic": "Executive branch institutional actors have d near 0.2 (beneficiary end): they gain practical force-initiation authority, control operational decisions, face low exit cost for unilateral action. Congressional institutional actors have d near 0.7 (target end): they retain nominal authority but lose effective control, must respond to executive fait accompli, face high political cost for withdrawing appropriations. Courts have d = 0.5 (observational, symmetric position). Deliberative democracy has d near 1.0 (full target): loses the decision rights the constraint is supposed to protect. Military personnel have d near 0.8 (target, trapped): deployed into conflicts whose authorization is contested, unable to refuse, unable to influence the constitutional reading. The functional accommodation reading produces this directionality distribution by creating executive discretion and congressional reactive authority—the executive moves first, Congress responds.",
-    "mandatrophy_analysis": "The functional accommodation reading's mandate is to solve the coordination problem between legislative deliberation speed and executive operational speed under modern threat conditions. The reading has not reached mandatrophy: the founding problem (constitutional ambiguity exposed by modern conditions) remains live and contested. The measurement series shows the reading maturing into stable institutional operation (theater and suppression plateau), not degrading into performance maintenance. However, the reading exhibits a mandatrophy risk: as the imminent/prolonged boundary becomes normalized practice, the mandate (genuine context-dependent allocation) risks becoming theater while the function (executive primacy) becomes the operative constraint. The omega variable on gray-zone suppression addresses this risk: if suppression is internalized consensus (both branches know the boundary is rhetorical), the constraint is transitioning toward piton (attenuated mandate, inertial persistence). The current classification as tangled rope assumes the boundary is genuinely ambiguous and contested; if evidence shows it is strategically maintained theater, reclassification to snare would be warranted.",
-    "kernel_context": "This constraint is the FUNCTIONAL_ACCOMMODATION_READING of the contested war_powers_allocation kernel. The functional accommodation framing asserts that war powers allocation varies by operational context: imminent threats permit unilateral executive action; prolonged campaigns require congressional authorization. This reading is one of three live interpretations of the kernel. The congressional_primacy_reading asserts that military force beyond immediate defense requires explicit congressional authorization as constitutional necessity—it forecloses the functional accommodation reading by denying any executive authority to initiate prolonged conflict. The inherent_executive_reading asserts that commander-in-chief power grants the president inherent authority to deploy force without prior authorization—it forecloses the functional accommodation reading by denying that prolonged campaigns require authorization. The functional accommodation reading coexists with both siblings because it is held by a coalition of executive branch lawyers and war-supporting congressional majorities, while the other readings are held by constitutional scholars, opposition coalitions, and foreign policy analysts. The relationship is coexists_with for both siblings: each reading remains a live position held by different institutional and intellectual actors; none logically rules out the others within a single coherent framework, though the readings would entail different outcomes if fully instantiated as law."
+    "logic_rationale": "Extractiveness is authored at 0.58 (moderate-to-substantial) because the functional accommodation reading is itself a partial accommodation of executive advantage. The executive branch defines what counts as imminent without binding review; the gray zone between imminent and merely foreseeable is where most contested military actions live. Suppression at 0.72 (high) reflects structural asymmetry: the executive controls the military apparatus and intelligence that informs threat assessment; Congress's recourse is to withhold funding or pass resolutions after the fact. Theater at 0.48 (moderate-high) reflects that much of the enforcement activity consists of rhetorical assertion of boundaries rather than functional enforcement—Congress passes resolutions, holds hearings, and debates authorization long after operations are underway. The measurement series shows a peak in extractiveness at t=15 (point of maximum executive expansion into gray areas) and suppression at t=15, followed by modest compression as congressional re-assertion increases (perhaps following an election that shifted control or a particularly egregious unilateral action that unified opposition). The constraint is claimed as tangled_rope because it genuinely coordinates emergency response (both branches benefit) while asymmetrically extracting unilateral authority for the executive in the contestable gray zone. The interpretation-layer measurement peak at t=15 reflects maximum executive interpretation dominance; the subsequent compression reflects congressional re-assertion of interpretive authority through the mechanism that actually matters (the power of the purse).",
+    "directionality_logic": "The executive branch sits at high directionality (d near 0.7–0.8): it gains unilateral power in imminent-threat contexts, controls the interpretation of imminence, and benefits from the functional accommodation because it permits speed. Congress sits at lower directionality (d near 0.3–0.4): it retains formal authority but enforcement depends on its own will, which is variable. Domestic opposition movements sit at high directionality (d near 0.8): they bear costs of unilateral action without the deliberation period. The asymmetry is structural: the executive's institutional position (control of military and intelligence) gives it advantage in interpreting boundaries, while Congress's institutional position (need for quorum, floor time, political alignment) makes enforcement costly.",
+    "perspectival_gap": "From the executive's institutional seat, the functional accommodation is a pragmatic allocation that permits necessary speed while preserving congressional oversight for sustained operations—a genuine coordination. From the domestic opposition seat, the same structure is asymmetrically extraction: the boundaries are interpreted by the agent being bounded, and enforcement is optional. From the congressional seat, the arrangement is theoretically balanced but operationally weighted toward the executive (through interpretation advantage and suppression of congressional action). The engine computes these divergences from the structural data: the executive's institutional power, the opposition's identity-lock, Congress's variable enforcement will. The measured types should diverge by seat.",
+    "mandatrophy_analysis": "The founding problem (need for rapid emergency response balanced against democratic legitimacy) is contested, not dead. The functional accommodation reading defends the current arrangement as a solution to that problem. However, if Congress's enforcement will atrophies and the executive's interpretation of imminent threat expands unchecked, the founding coordination problem (emergency speed + democratic legitimacy) becomes zombie—the arrangement persists under the name of functional accommodation but actually instantiates pure executive dominance (inherent reading). Conversely, if Congress reasserts enforcement and narrows the imminence boundary, the founding problem compresses (emergency response is secured through pre-authorized pathways, democratic legitimacy is secured through actual authorization). The measurement series shows this dynamic: the peak at t=15 represents maximum executive interpretation dominance (mandatrophy risk—the founding coordination problem is shadowed by executive extraction). The subsequent compression suggests congressional re-assertion and restoration of the functional balance. The constraint is vulnerable to mandatrophy if the executive's interpretation gains becomes permanent.",
+    "kernel_context": "This constraint instantiates the functional_accommodation_reading of the war_powers_allocation kernel. The kernel is the bifurcated constitutional text: Congress declares war; President is commander-in-chief. The functional accommodation reading holds that this bifurcation is properly context-dependent: imminent threats permit unilateral executive action; sustained campaigns require authorization. Sibling readings are the congressional_primacy_reading (military force beyond immediate defense requires explicit authorization as constitutional necessity) and the inherent_executive_reading (commander-in-chief power grants inherent authority without prior authorization). The functional accommodation reading coexists with both siblings in contemporary political discourse: the executive invokes it when defending rapid responses, Congress invokes congressional primacy when asserting authority, and legal scholars debate which reading captures the Constitution's true allocation. The distinction between the readings is located in what counts as the foundation of war power: the functional reading anchors in institutional capacity (what institutions can actually do quickly), the primacy reading anchors in explicit text (Congress declares), and the inherent reading anchors in executive authority (commander-in-chief is inherent)."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "war_powers_allocation__congressional_primacy_reading",
       "war_powers_allocation__inherent_executive_reading"
     ],
-    "dual_formulation_note": "The three readings of the war_powers_allocation kernel form a constraint family representing the spectrum of executive authority interpretation. The functional_accommodation_reading represents the middle position: narrower than inherent_executive (which grants broad unilateral authority) and broader than congressional_primacy (which requires authorization for all wars). The ε-invariance principle applies: each reading instantiates a different constraint with a different structural ε because the reading determines which branch controls war initiation, making the constraints' fundamental structures different. The functional_accommodation_reading's ε (0.62) reflects moderate executive extraction of war authority; the congressional_primacy_reading would have lower ε (executive more constrained); the inherent_executive_reading would have higher ε (executive less constrained). The network edges propagate this structural coupling: changes to congressional primacy or inherent executive authority interpretations create downstream pressure on the functional accommodation reading's legitimacy and operation."
+    "dual_formulation_note": "This constraint is one reading of the war_powers_allocation kernel. The congressional_primacy_reading and inherent_executive_reading are sibling readings instantiated as separate constraints. All three share the same underlying constitutional text (Congress declares war; President is commander-in-chief) but interpret it differently. The functional_accommodation_reading coexists with both siblings in contemporary political discourse. See kernel_context in commentary for the structural relationships between readings."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.75
+      "d_value": 0.35
     }
   ],
+  "gain_flow": "executive_branch",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "war_powers_allocation__congressional_primacy_reading",
+        "sibling_id": "congressional_primacy_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "war_powers_allocation__inherent_executive_reading",
+        "sibling_id": "inherent_executive_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "context_dependent_war_authority_allocation",
+        "atom": "context_dependent_authority_allocation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "modern_threat_speed_requires_executive_flexibility",
-        "role": "secondary",
+        "atom": "emergency_speed_legitimacy_balance",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "constitutional_text_war_declaration_supremacy",
+    "reference_frame": "negotiated_executive_congressional_balance",
     "drift_state": {
-      "moment": "post_cold_war_normalization",
+      "moment": "contemporary_terrorism_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

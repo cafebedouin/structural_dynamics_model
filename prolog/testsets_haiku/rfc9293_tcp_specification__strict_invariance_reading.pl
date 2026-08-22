@@ -7,7 +7,7 @@
 % Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_rfc9293_tcp_strict_invariance, []).
+:- module(constraint_rfc9293_tcp_specification__strict_invariance_reading, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,9 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:suppression_profile/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,35 +73,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: rfc9293_tcp_specification__strict_invariance_reading
- *   human_readable: RFC 9293 Strict TCP State Machine Invariance
- *   domain: network/protocol/standards
+ *   human_readable: RFC 9293 TCP State Machine Strict Invariance Coordination
+ *   domain: network_protocol_engineering/internet_standards
  *
  * SUMMARY:
- *   RFC 9293 (STD 7) specifies the Transmission Control Protocol — a global
- *   interoperability mechanism that allows any TCP implementation to exchange
- *   data reliably with any other, anywhere in the world. The STRICT
- *   INVARIANCE READING interprets RFC 9293 as mandating that implementations
- *   replicate a specific state machine exactly: same flag transitions, same
- *   timeout handling, same sequence-number semantics. Deviations — whether
- *   for performance optimization or to accommodate middleboxes — are
- *   specification violations. This reading is one of three live
- *   interpretations of the same RFC. The OPTIMIZATION LATITUDE READING argues
- *   RFC 9293 specifies the byte-stream behavior, not the internal state
- *   machine, and permits implementations to optimize internally while
- *   preserving semantics. The MIDDLEBOX REALISM READING argues the
- *   specification describes endpoint ideals, but real TCP is path-dependent
- *   and shaped by deployed middleboxes, so specification authority must
- *   accommodate network reality. This JSON instantiates ONLY the strict
- *   invariance reading as a clean, ε-invariant constraint with its own
- *   beneficiary structure, extracted cost, and foundational commitments.
+ *   RFC 9293 is the IETF's definitive specification of TCP state machine
+ *   behavior. This constraint story instantiates the STRICT INVARIANCE
+ *   READING: the specification is an invariant that all implementations MUST
+ *   replicate exactly to preserve global interoperability. Under this
+ *   reading, any implementation deviation or middlebox reinterpretation is a
+ *   specification violation that threatens the coordination. The constraint's
+ *   type is pure Rope: genuine coordination problem (interoperability without
+ *   negotiation), no extractiveness (beneficiaries and payers are the same
+ *   global set — implementers forgo latitude, the network gains certainty).
+ *   The measurement series and metrics reflect this pure coordination: very
+ *   low extractiveness (0.08 at interval end, rising only as middleboxes
+ *   accumulate deployed modifications that the strict reading treats as
+ *   external pressure, not as a function of the constraint itself), low
+ *   theater (conformance testing is genuinely measuring state-machine
+ *   compliance), low suppression (implementation choice to conform, not
+ *   coerced). This is NOT the optimization_latitude_reading (which would show
+ *   higher extractiveness by framing the latitude forfeiture as a cost) or
+ *   the middlebox_realism_reading (which would show middlebox deviation as
+ *   central to the constraint's operation, not extraneous pressure). This
+ *   reading treats RFC 9293 as the definition of the coordinate system;
+ *   sibling readings treat it as one interpretation among others.
  *
  * KEY AGENTS:
- *   - Internet endpoint implementations (TCP stacks in OS kernels, language runtimes, embedded systems): benefit from a canonical specification they can implement once and achieve global interoperability
- *   - Protocol verification community (formal methods researchers, RFC editors, compliance testing): benefit from a fixed, unambiguous specification they can model and test exhaustively
- *   - Middlebox operators (stateful firewalls, load balancers, proxies, NAT boxes): EXCLUDED by strict invariance — their deployed systems modify TCP flags and state in ways the specification forbids
- *   - Performance-optimization implementers (high-performance TCP stacks using semantic-preserving shortcuts): EXCLUDED by strict invariance — their optimizations are classified as specification violations even if they preserve the byte-stream guarantee
- *   - IETF standards community (TCPM working group, RFC authors, steering committee): AGENDA SETTER — interprets and enforces what RFC 9293 means; under strict invariance reading, they have chosen exact replication as the standard
- *   - Applications and protocols layered on TCP (HTTP, SSH, DNS, QUIC, others): BENEFICIARY — depend on TCP's predictability and invariance globally
+ *   - endpoint_implementers_strict_reading: Benefit from and replicate the invariant state machine; zero modification path
+ *   - network_operators_path_dependent: Constrained by invariance reading to not modify state behavior; their deployed modifications violate the coordinate frame
+ *   - application_developers_assume_invariance: Benefit when they can assume identical RFC 9293 behavior globally
+ *   - standards_authority_ietf: Sets and maintains the specification as the canonical coordinate frame
+ *   - protocol_testers_certification: Measure conformance to state machine; analytical seat
+ *   - legacy_middlebox_deployments: Excluded from this reading's coordination frame; would dispute the strict interpretation
  */
 
 /* ==========================================================================
@@ -102,55 +113,109 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(rfc9293_tcp_specification__strict_invariance_reading, 0.12).
-domain_priors:suppression_score(rfc9293_tcp_specification__strict_invariance_reading, 0.08).
-domain_priors:theater_ratio(rfc9293_tcp_specification__strict_invariance_reading, 0.18).
+domain_priors:base_extractiveness(rfc9293_tcp_specification__strict_invariance_reading, 0.08).
+domain_priors:suppression_score(rfc9293_tcp_specification__strict_invariance_reading, 0.12).
+domain_priors:theater_ratio(rfc9293_tcp_specification__strict_invariance_reading, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, extractiveness, 0.12).
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 0.08).
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 0.18).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, extractiveness, 0.08).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 0.12).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, accessibility_collapse, 0.92).
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, resistance, 0.35).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__strict_invariance_reading, resistance, 0.34).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(rfc9293_tcp_specification__strict_invariance_reading, rope).
-narrative_ontology:human_readable(rfc9293_tcp_specification__strict_invariance_reading, "RFC 9293 Strict TCP State Machine Invariance").
-narrative_ontology:topic_domain(rfc9293_tcp_specification__strict_invariance_reading, "network/protocol/standards").
+narrative_ontology:human_readable(rfc9293_tcp_specification__strict_invariance_reading, "RFC 9293 TCP State Machine Strict Invariance Coordination").
+narrative_ontology:topic_domain(rfc9293_tcp_specification__strict_invariance_reading, "network_protocol_engineering/internet_standards").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(rfc9293_tcp_specification__strict_invariance_reading, '6b42b603-ab1e-46a2-94da-a84945a86634').
-narrative_ontology:cs_kernel_codification('6b42b603-ab1e-46a2-94da-a84945a86634', fixed_text).
-narrative_ontology:cs_authority_grounding('6b42b603-ab1e-46a2-94da-a84945a86634', lineage).
-narrative_ontology:cs_interpretation_layer_present('6b42b603-ab1e-46a2-94da-a84945a86634').
-narrative_ontology:cs_reading_relation('6b42b603-ab1e-46a2-94da-a84945a86634', rfc9293_tcp_specification__optimization_latitude_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6b42b603-ab1e-46a2-94da-a84945a86634', rfc9293_tcp_specification__middlebox_realism_reading, coexists_with).
-narrative_ontology:cs_axiom('6b42b603-ab1e-46a2-94da-a84945a86634', foundational, specification_as_invariant_state_machine).
-narrative_ontology:cs_axiom_status(specification_as_invariant_state_machine, holdable).
-narrative_ontology:cs_axiom_grounding('6b42b603-ab1e-46a2-94da-a84945a86634', specification_as_invariant_state_machine, conventional).
-narrative_ontology:cs_axiom('6b42b603-ab1e-46a2-94da-a84945a86634', foundational, global_interoperability_requires_perfect_specification_adherence).
-narrative_ontology:cs_axiom_status(global_interoperability_requires_perfect_specification_adherence, holdable).
-narrative_ontology:cs_axiom_grounding('6b42b603-ab1e-46a2-94da-a84945a86634', global_interoperability_requires_perfect_specification_adherence, empirically_contingent).
-narrative_ontology:cs_reference_frame('6b42b603-ab1e-46a2-94da-a84945a86634', tcp_endpoint_equivalence_via_invariant_state_machine).
-narrative_ontology:cs_drift_state('6b42b603-ab1e-46a2-94da-a84945a86634', contemporary_quic_era_2020s, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('6b42b603-ab1e-46a2-94da-a84945a86634', '').
+narrative_ontology:cs_story_uid(rfc9293_tcp_specification__strict_invariance_reading, '370e06aa-3f6d-41c1-909e-42151d8139a5').
+narrative_ontology:cs_kernel_codification('370e06aa-3f6d-41c1-909e-42151d8139a5', fixed_text).
+narrative_ontology:cs_authority_grounding('370e06aa-3f6d-41c1-909e-42151d8139a5', expertise).
+narrative_ontology:cs_interpretation_layer_present('370e06aa-3f6d-41c1-909e-42151d8139a5').
+narrative_ontology:cs_reading_relation('370e06aa-3f6d-41c1-909e-42151d8139a5', rfc9293_tcp_specification__optimization_latitude_reading, forecloses).
+narrative_ontology:cs_reading_relation('370e06aa-3f6d-41c1-909e-42151d8139a5', rfc9293_tcp_specification__middlebox_realism_reading, coexists_with).
+narrative_ontology:cs_axiom('370e06aa-3f6d-41c1-909e-42151d8139a5', foundational, specification_state_machine_identity_necessary).
+narrative_ontology:cs_axiom_status(specification_state_machine_identity_necessary, holdable).
+narrative_ontology:cs_axiom_grounding('370e06aa-3f6d-41c1-909e-42151d8139a5', specification_state_machine_identity_necessary, empirically_contingent).
+narrative_ontology:cs_axiom('370e06aa-3f6d-41c1-909e-42151d8139a5', foundational, endpoint_conformance_is_primary_over_deployed_practice).
+narrative_ontology:cs_axiom_status(endpoint_conformance_is_primary_over_deployed_practice, holdable).
+narrative_ontology:cs_axiom_grounding('370e06aa-3f6d-41c1-909e-42151d8139a5', endpoint_conformance_is_primary_over_deployed_practice, conventional).
+narrative_ontology:cs_reference_frame('370e06aa-3f6d-41c1-909e-42151d8139a5', rfc9293_canonical_state_machine).
+narrative_ontology:cs_drift_state('370e06aa-3f6d-41c1-909e-42151d8139a5', contemporary_middlebox_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('370e06aa-3f6d-41c1-909e-42151d8139a5', '').
 narrative_ontology:cs_kernel_id(rfc9293_tcp_specification__strict_invariance_reading, rfc9293_tcp_specification).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__strict_invariance_reading, internet_endpoint_implementations).
-narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__strict_invariance_reading, protocol_verification_community).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__strict_invariance_reading, global_tcp_interoperability).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__strict_invariance_reading, endpoint_implementers_strict_reading).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__strict_invariance_reading, application_developers_assume_invariance).
+narrative_ontology:constraint_victim(rfc9293_tcp_specification__strict_invariance_reading, network_operators_path_dependent).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Implement RFC 9293 state machine as specified. They benefit from predictable, deterministic behavior across all TCP stacks: packets sent from a peer in a known state will be handled by a known algorithm. When all implementers replicate the same invariant, end-to-end interoperability is guaranteed without negotiation or middleware translation.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, endpoint_implementers_strict_reading, beneficiary,
+    organized, generational, constrained, global).
+
+% Operate deployed middleboxes (firewalls, proxies, NAT gateways, load balancers) that modify or reinterpret TCP state transitions to handle non-ideal path conditions (asymmetry, congestion, DDoS, NAT). Under strict invariance reading, every such modification is a specification violation and a potential interoperability hazard. Their practical network operation often requires deviations; strict reading treats those as constraints on their freedom.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, network_operators_path_dependent, payer,
+    institutional, biographical, constrained, global).
+
+% Build applications that rely on RFC 9293 behavior being identical on all endpoints. They benefit when they can assume a packet received in state X will invoke exactly the handling specified for state X, without variation. Strict invariance means they can reason about protocol guarantees once, globally, rather than per-OS or per-implementation.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, application_developers_assume_invariance, beneficiary,
+    organized, biographical, mobile, global).
+
+% Maintains RFC 9293 as the authoritative specification. Under strict reading, the authority asserts that the state machine specified IS the constraint — implementations must conform, not reinterpret. The IETF does not enforce this directly but sets the standard against which conformance is measured.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, standards_authority_ietf, agenda_setter,
+    institutional, generational, analytical, global).
+
+% Run conformance test suites verifying implementations replicate the state machine. Under strict reading, test failures indicate specification violation; under optimization reading, the same behavior might pass a functional test (correct output) despite taking a different state path. Testers are analytical observers: they measure conformance but do not set it.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, protocol_testers_certification, observer,
+    powerful, biographical, analytical, global).
+
+% Have been deployed for years with state-machine modifications that work in practice but violate strict RFC 9293 reading. They operate outside the conversation the strict reading frames (interoperability via specification identity); if they were brought into the conversation, they would argue for optimization latitude or path-dependent readings instead.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__strict_invariance_reading, legacy_middlebox_deployments, excluded,
+    institutional, biographical, trapped, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(rfc9293_tcp_specification__strict_invariance_reading, diffuse).
+narrative_ontology:fixing_cost_class(rfc9293_tcp_specification__strict_invariance_reading, cheap).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a shared, deterministic algorithm for endpoint TCP behavior so implementations across vendors, operating systems, and networks can interoperate without middleware translation or per-peer negotiation: when both endpoints replicate the RFC 9293 state machine identically, any packet from state X invokes the same handling on both sides.
+% TRANSFER_FUNCTION: The constraint transfers implementation latitude (dropped by implementers) to interoperability certainty (collected by the global TCP ecosystem). Implementers forgo performance optimizations that would deviate from the state machine; the entire network benefits from eliminable ambiguity.
+% ABSENT_VOICES: Network operators with deployed path-dependent middleboxes are structurally excluded from the coordination frame of strict invariance reading — they would argue for freedom to modify state transitions for load balancing, congestion handling, or security. Standards-compliance practitioners who believe optimization latitude is compatible with interoperability are also excluded.
+% DISAPPEARANCE_RATIONALE: If RFC 9293 strict invariance disappeared (implementations were permitted arbitrary state-machine variations), TCP interoperability would fracture into per-vendor dialects. Applications could not assume behavior; middleboxes would need per-implementation translation; the global end-to-end model would collapse into negotiated, path-dependent protocols. The internet's reliable transport would shift from identity-based coordination to capability-based (what does THIS implementation do?) discovery.
+% FOUNDING_PROBLEM: In the 1980s-1990s, TCP implementations varied widely in non-critical details; networks suffered interoperability failures. RFC 9293 was standardized to specify a canonical state machine so implementers would converge on identical behavior, eliminating the need for per-peer negotiation or middleware translation.
+% FOUNDING_PROBLEM_CORROBORATION: Internet architecture literature (RFC 1958, Clark et al. on end-to-end principle) attests the founding problem remains critical: specification identity is the foundation of global interoperability. Network operators and middleware vendors (outside the beneficiary set) attest the founding problem has been partially solved by deployed implementations but also constrain the evolution of the protocol via their path-dependent modifications — the problem is contested at the margins (what about network variation?) but not dead at the core.
+narrative_ontology:disappearance_verdict(rfc9293_tcp_specification__strict_invariance_reading, world_rearranges).
+narrative_ontology:founding_problem_status(rfc9293_tcp_specification__strict_invariance_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(rfc9293_tcp_specification__strict_invariance_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(rfc9293_tcp_specification__strict_invariance_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(rfc9293_tcp_specification__strict_invariance_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(rfc9293_tcp_specification__strict_invariance_reading, 0.08, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,16 +230,16 @@ narrative_ontology:story_seed(rfc9293_tcp_specification__strict_invariance_readi
 
 /**
  * LOGIC RATIONALE:
- *   The strict invariance reading is CLAIMED as pure Rope: the coordination benefit of a single, canonical state machine far exceeds the extraction cost. Extractiveness is low (0.12) because the cost imposed on implementers is not rent collection — it is the cost of maintaining specification fidelity, which is necessary for the coordination benefit itself. Suppression is minimal (0.08) because the constraint is sustained by voluntary adoption and specification authority, not by coercion. Implementations choose to comply because the interoperability benefit is worth more than the optimization cost. Accessibility_collapse is high (0.92) because once you understand RFC 9293, the alternative (a fragmented, non-interoperable TCP landscape) is clearly worse, so the constraint feels inevitable. Resistance is moderate (0.35) because performance-optimization implementers and middlebox operators do push back — they argue for latitude and sometimes deviate — but the IETF's specification authority is strong enough to enforce compliance in most of the deployed base. Theater_ratio is modest (0.18) because specification maintenance is mostly real work (RFC errata processing, clarification RFCs, compliance test suites), though some of the enforcement activity is performative (asserting authority when compliance is already high). The measurement series tracks a slight increase in extractiveness and theater_ratio over 40 years: as QUIC and other alternatives emerge, the strict invariance reading faces more pressure to justify itself, so some of the specification work becomes rhetorical defense rather than pure coordination maintenance. But the constraint remains Rope because the core coordination function — global interoperability — is still the dominant force.
+ *   Extractiveness is very low (0.08) because the constraint is pure coordination: implementers choose to conform, and they benefit from the global interoperability that conformance produces. The cost (forgoing optimization latitude) is borne by the same agents who collect the benefit (deterministic behavior). No party systematically extracts from another — the constraint lives at the Rope ideal point. Suppression is low (0.12) because conformance is enforced by certification testing and market expectation, not by coercive means; an implementer CAN deviate if they choose (constrained exit, not trapped exit). Theater is minimal (0.05) because conformance testing genuinely measures state machine identity, and the specification's function IS conformance measurement. The measurement series show slight rise over the interval: suppression rises as deployed middlebox modifications accumulate and the ecosystem has to decide whether to treat them as specification violations (strict reading) or as acceptable network evolution (middlebox realism reading). The constraint type should NOT waver — it remains Rope throughout — but the pressure on the coordinate frame from deployed path-dependent behavior does increase over time. This is modeled as rising suppression_requirement (the effort needed to maintain strict invariance in the face of accumulated middleware pressure) and slight extractiveness rise (as operators face choices about which reading to adopt). The divergence between rising external pressure and stable constraint classification is exactly what temporal measurement is for.
  *
  * PERSPECTIVAL GAP:
- *   From the perspective of IETF standards authors and endpoint implementations, RFC 9293 is a stable, canonical foundation they have built three decades of internet reliability on. Deviations are spec violations. From the perspective of middlebox operators and performance optimizers, RFC 9293 is a strait-jacket that forces them to choose between compliance and efficiency — they see themselves as improving the internet's real performance while paying a compliance cost for doing so. The engine computes per-seat classification: the IETF and core endpoint implementers should see this as Rope (pure coordination); middlebox operators and optimization implementers should see the SAME CONSTRAINT as Snare (enforced extraction of compliance cost with no offsetting benefit for them). The structural divergence comes from the excluded set's different exit options and directionality: they are trapped or constrained (middleboxes cannot simply stop operating; optimizers cannot avoid TCP); the constraint imposes costs on them without compensating benefit; the constraint's persistence depends on active suppression of their alternative readings. The engine derives this from the authored structure and computes the divergence automatically.
+ *   All seats should compute the same type: Rope. The IETF sees a specification they set; implementers see a target to conform to; developers see a guarantee they rely on; network operators see a constraint they live within (but benefit from). Under the strict invariance reading, there is no divergence because the reading itself asserts that invariance IS the constraint, period. The tension appears when shifting to sibling readings: the middlebox_realism_reading would show network operators computing Snare (they are constrained by a coordinate frame they did not set and cannot modify for path-dependent reasons). The optimization_latitude_reading would show implementers computing Rope with freedom (same coordination, but with latitude to vary the internal path). This reading explicitly forecloses those reframings — it asserts the state machine IS invariant, and all seats must compute from that fixed anchor.
  *
  * DIRECTIONALITY LOGIC:
- *   IETF/endpoint implementers: Beneficiary role, directionality ~0.1–0.2 (near beneficiary end). They collect the coordination benefit; the cost of specification fidelity is the price they pay, but it is proportional to the benefit. Exit is constrained but not trapped — if they left TCP, they would need another protocol, but alternatives exist (QUIC for some use cases). Middlebox operators: Excluded role, directionality ~0.75–0.85 (near target end). They are trapped (physical infrastructure, contracts require TCP modification for network policies). The constraint imposes costs (compliance audits, spec violations when they optimize, pressure from endpoint implementations that refuse to negotiate). They receive no offsetting benefit — the interoperability works fine without their participation, and they are explicitly told their modifications are unwanted. Performance optimizers: Excluded role, similar to middleboxes — directionality ~0.75–0.8. The strict invariance reading targets them: it denies the argument that semantic preservation is sufficient; it requires exact state-machine replication. The cost is engineer-hours spent on specification compliance instead of optimization. The benefit is... the same interoperability that they could claim if they optimized anyway. No directionality override is needed; the derived d from the structural data (trapped/constrained exit, excluded role, no offsetting benefit) lands them at the target end naturally. Applications: Beneficiary role, directionality ~0.3–0.4. They benefit from TCP's stability (low cost to integration testing when TCP semantics are guaranteed stable globally). They also pay a small cost (they cannot use TCP optimization tricks that the specification forbids, even if those tricks would speed up their application). Net: modest beneficiary.
+ *   This reading has no target/payer in the extractive sense. All stakeholders are beneficiaries of the invariance: endpoint implementers benefit from knowing other endpoints will follow the same state machine, application developers benefit from being able to assume identical behavior, network operators benefit from interoperable transport (even as the strict reading constrains their middleware freedom). The only structural asymmetry is agenda-setter vs. beneficiary: the IETF (or whoever maintains the specification) is the agenda-setter — they set what the invariant IS — but they do not extract anything. They are not powerless (institutional power), but their structural role is to define the coordinate frame, not to collect rents. This is a key diagnostic for Rope: beneficiaries and payers align; no extractive asymmetry. In the middlebox_realism_reading, network operators would shift from beneficiary to payer (they would bear a cost: constraint on their freedom to modify). In this reading, they remain beneficiaries of global TCP interoperability, even as their specific technologies (middleboxes) are excluded from the strict invariance frame.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is implementation divergence in the 1980s–1990s. The problem status is CONTESTED: IETF attests it is still live (implementations still try to deviate, middleboxes still create surprises), but deployment evidence suggests the problem is substantially solved at least for endpoints that follow the specification — the core deployed TCP implementations (Linux, macOS, Windows, BSD) are remarkably aligned. The disappearance verdict is WORLD_REARRANGES: if strict invariance disappeared, implementations would optimize and the interoperability guarantee would erode. But the measurement data and the founding_problem_corroboration show a subtle mandatrophy: the constraint is maintained (RFC 9293 is read and cited), but the enforcement force is declining because the alternative reading (optimization latitude) is gaining credibility, and QUIC is fragmenting the coordination problem into two sub-problems (TCP for legacy interop, QUIC for new protocols). The theater_ratio rising from 0.12 to 0.18 over the interval reflects this: the IETF still asserts strict invariance, but increasingly the assertion is defended in reasoning about why QUIC is separate, why optimization proposals are rejected, why middleboxes are bad — that is rhetorical work, not coordination work. The constraint is not yet dead (it is still enforced, still widely complied with), but it is aging. It is not a Piton (the cost-to-fix is cheap — just issue a new RFC expanding the definition of compliant — but the payer set is diffuse; no single beneficiary would bear the cost of maintaining it if it crumbled). It remains Rope because the founding problem (global interoperability) is live, and strict invariance is still the solution that actually works. But the mandatrophy signal is present: an omega documents the question of whether strict invariance can survive QUIC's emergence.
+ *   Mandatrophy does not apply to this constraint. The founding problem (interoperability via specification identity) remains live. Implementations have continued to replicate RFC 9293; the constraint's function has not atrophied. What has happened is that deployed middleboxes have accumulated path-dependent modifications that the strict reading treats as external pressure (not as the constraint evolving). The strict reading holds: the coordinate frame is invariant, and deviations are deviations. A mandatrophy reading would arise if implementations stopped following RFC 9293 while administrators maintained it theatrically — that has not occurred. The accumulated pressure from middlebox realism is instead a signal that the kernel (RFC 9293's authority and interpretation) is contested — a structural fact about the reading, not a mandatrophy claim.
  */
 
 /* ==========================================================================
@@ -182,54 +247,44 @@ narrative_ontology:story_seed(rfc9293_tcp_specification__strict_invariance_readi
    ========================================================================== */
 
 omega_variable(
-    strict_invariance_vs_behavioral_semantics,
-    'Does RFC 9293 mandate exact state-machine replication (strict invariance reading), or does it permit implementation latitude so long as the observable behavior (reliable ordered byte stream) is preserved (optimization latitude reading)?',
-    'Formal comparison of RFC 9293 text against actual deployed TCP implementations (Linux, Windows, macOS, BSD stacks); measurement of whether implementations that achieve identical byte-stream semantics but use different internal state-transition orders comply or violate the specification.',
-    'If strict invariance is the true reading, optimization-based deviations are specification violations and should be corrected. If semantic preservation is the true reading, the constraint''s extractiveness and the cost of compliance are lower than authored — implementations can optimize and remain compliant. The classification would remain Rope either way (coordination benefit dominates), but the extraction cost to implementers shifts.',
+    specification_identity_necessity,
+    'Is exact state machine identity logically necessary for TCP interoperability, or is functional equivalence (same observable behavior) sufficient?',
+    'Empirical testing: deploy two TCP implementations that differ in internal state paths but produce identical packet behavior; run a full interoperability suite. If the suite passes, state identity is not necessary. If subtle failures occur, state identity is necessary.',
+    'If functional equivalence is sufficient, this reading recedes toward optimization_latitude and extractiveness rises (implementers are constrained more than necessary). If state identity is necessary, the constraint remains Rope (coordination requires specification identity).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(strict_invariance_vs_behavioral_semantics, conceptual, 'Whether compliance means exact state-machine replication or semantic behavioral equivalence.').
+narrative_ontology:omega_variable(specification_identity_necessity, empirical, 'Whether RFC 9293 state identity is a logical requirement or a useful convention.').
 
 omega_variable(
-    middlebox_specification_authority,
-    'Is RFC 9293 a specification of endpoint behavior (which middleboxes are free to violate), or is it a global interoperability mandate that middleboxes must respect by staying out of TCP''s internal state machine?',
-    'Network telemetry measuring the prevalence and impact of middlebox TCP modification on deployed systems; comparison with RFC 3234 (Middleboxes: Taxonomy and Implications for the Use of End-to-End Security) and RFC 9293''s explicit directives about middlebox constraints; study of whether a strict-interpretation Internet (middleboxes forbidden from modifying TCP state) produces better interoperability than a realist interpretation (middleboxes are inescapable, specification accommodates them).',
-    'If middlebox prohibition is the true interpretation, the constraint includes an enforcement obligation against a powerful excluded set (middlebox operators), which raises suppression requirements and may shift the type toward Tangled Rope (coordination + active suppression of alternatives). If middleboxes are permitted with guidance, the constraint is purely descriptive (endpoint guidance) and extractiveness is even lower.',
+    middlebox_modification_violates_or_adapts,
+    'Do deployed middlebox modifications that deviate from RFC 9293 state machine constitute specification violations that threaten interoperability, or are they legitimate adaptations that preserve end-to-end correctness under path variation?',
+    'Internet topology measurement: trace middlebox modifications in deployed networks and measure interoperability correlation. If networks with fewer middlebox deviations have fewer interoperability incidents, modifications violate the guarantee. If correlation is weak, modifications adapt without breaking guarantees.',
+    'If modifications violate: strict reading holds, suppression requirement rises, and the constraint becomes contested (middleboxes push against it). If modifications adapt: middlebox_realism_reading gains coherence, and this reading''s treatment of them as violations is a false positive.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(middlebox_modification_violates_or_adapts, empirical, 'Whether middlebox deviation from RFC 9293 is pathological or functional.').
+
+omega_variable(
+    authority_of_specification_under_contest,
+    'When RFC 9293 (an IETF specification) and deployed network practice (middlebox modifications) diverge, which has authority over what the constraint IS?',
+    'Institutional analysis: trace how standards bodies, vendors, and operators adjudicate conflicts between specification and deployment practice. If the IETF or vendors prioritize specification, authority is formal. If deployed practice drives vendor behavior, authority is empirical.',
+    'If specification authority is formal and enduring, this strict reading correctly centers RFC 9293 as the coordinate frame. If deployed practice has become authoritative, the middlebox_realism_reading is the operational ground truth, and this reading is aspirational but not effective.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(middlebox_specification_authority, empirical, 'Whether RFC 9293 is an endpoint-only specification or a system-wide mandate that binds middleboxes.').
+narrative_ontology:omega_variable(authority_of_specification_under_contest, conceptual, 'Whether RFC 9293 or deployed practice grounds the authority structure for TCP conformance.').
 
 omega_variable(
-    strict_reading_viability,
-    'Can the strict invariance reading be maintained as the authoritative interpretation when empirical practice (middleboxes, optimization implementations, TCP Fast Open, TCP Hybla, and other variants) has diverged so far that strict compliance would require global network restructuring?',
-    'Historical analysis of RFC errata, TCP working group discussions, and compliance testing frameworks over the interval 1993–2026; measurement of whether the IETF has consistently enforced strict invariance or has quietly accommodated deviation by issuing new RFCs that expand the definition of ''compliant behavior'' to include deployed variants.',
-    'If the strict reading is not being maintained in practice, the actual specification (as read by the deployment community) is closer to the optimization-latitude reading. The constraint''s claimed type would be correct, but the extracted cost would be lower — the ''enforcement'' would be mostly theatrical (specification authority is asserted but not enforced). Theater_ratio would rise toward 0.5–0.6, and the constraint might reclassify as Piton (performance of authority with minimal functional enforcement).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(strict_reading_viability, empirical, 'Whether strict invariance is maintained as the living standard or has been softened by practice and successive RFCs.').
-
-omega_variable(
-    specification_authority_grounding,
-    'Does the IETF''s authority to enforce RFC 9293 ground itself in the specification being a discovered natural law (the only way to achieve reliable communication), or does it ground itself in the specification''s role as a coordination device that could be replaced if a better coordination device emerged?',
-    'Comparison with QUIC (RFC 9000), which abandons TCP''s strict invariance in favor of a more flexible, encrypted state machine while achieving the same coordination goal. Study of whether IETF considers QUIC a replacement (suggesting the strict invariance is not natural law, just one solution) or a complementary protocol (suggesting TCP''s strict invariance persists as the authoritative form for certain use cases).',
-    'If the specification''s authority is grounded in natural law (only way to achieve reliable communication), the constraint should be reclassified as Mountain and extractiveness should approach 0. If it is grounded in coordination device role (one solution among possible alternatives), the Rope classification holds and extractiveness correctly reflects the cost of coordinating on this particular solution instead of another.',
+    kernel_reading_contestation_signal,
+    'Does the existence of three competing readings (strict_invariance, optimization_latitude, middlebox_realism) indicate that RFC 9293 kernel is genuinely ambiguous, or that one reading is correct and the others are motivated misreadings?',
+    'Hermeneutic analysis: close-read RFC 9293 for language that supports or undermines each reading. Cross-check against historical IETF working group discussions and implementation behavior. If the text supports multiple readings with equal textual warrant, the kernel is ambiguous. If only one reading is supported, others are motivated deviations.',
+    'If ambiguous: all three readings are live; strict_invariance is defensible but not uniquely true; the constraint is contested. If the text supports one reading uniquely: strict_invariance (or another) is correct; others are errors or opportunistic reinterpretations.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(specification_authority_grounding, conceptual, 'Whether RFC 9293 is a discovered necessity or a constructed coordination device.').
-
-omega_variable(
-    reading_contention_site,
-    'Where exactly does the strict invariance reading diverge from the optimization-latitude and middlebox-realism readings in RFC 9293''s text? Is there a passage in the RFC that unambiguously settles this, or do all three readings claim the same source text supports their interpretation?',
-    'Line-by-line comparison of RFC 9293 (Section 3.2, state transitions; Section 3.10, implementation notes) against the three reading positions. Identification of passages that are read differently by each interpretation; examination of whether the divergence is in the RFC''s content or in the reading community''s choice of emphasis.',
-    'If a single passage clearly mandates strict invariance, the strict reading is grounded in the text, and the contention is about whether to follow the text or deviate in practice. If all three readings claim equal textual support, the contention is fundamentally interpretive — the kernel (RFC 9293) is ambiguous, and the three readings are incommensurable. In the latter case, the authority grounding shifts from ''lineage of text interpretation'' to ''power struggle between reading communities.''',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(reading_contention_site, conceptual, 'Whether the strict invariance reading is grounded in unambiguous text or in contested interpretation.').
+narrative_ontology:omega_variable(kernel_reading_contestation_signal, conceptual, 'Whether the RFC 9293 kernel is genuinely multiply interpretable or whether one reading has superior textual warrant.').
 
 
 /* ==========================================================================
@@ -243,39 +298,59 @@ narrative_ontology:interval(rfc9293_tcp_specification__strict_invariance_reading
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(rfc9_tr_t0, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 0, 0.12).
-narrative_ontology:measurement(rfc9_tr_t5, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 5, 0.13).
-narrative_ontology:measurement(rfc9_tr_t10, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 10, 0.145).
-narrative_ontology:measurement(rfc9_tr_t15, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 15, 0.16).
-narrative_ontology:measurement(rfc9_tr_t20, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 20, 0.17).
-narrative_ontology:measurement(rfc9_tr_t25, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 25, 0.18).
-narrative_ontology:measurement(rfc9_tr_t30, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 30, 0.18).
-narrative_ontology:measurement(rfc9_tr_t40, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 40, 0.18).
+narrative_ontology:measurement(rfc9_tr_t0, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 0, 0.02).
+narrative_ontology:measurement_basis(rfc9_tr_t0, observed).
+narrative_ontology:measurement(rfc9_tr_t8, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 8, 0.03).
+narrative_ontology:measurement_basis(rfc9_tr_t8, observed).
+narrative_ontology:measurement(rfc9_tr_t16, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 16, 0.04).
+narrative_ontology:measurement_basis(rfc9_tr_t16, observed).
+narrative_ontology:measurement(rfc9_tr_t24, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 24, 0.05).
+narrative_ontology:measurement_basis(rfc9_tr_t24, observed).
+narrative_ontology:measurement(rfc9_tr_t32, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 32, 0.05).
+narrative_ontology:measurement_basis(rfc9_tr_t32, observed).
+narrative_ontology:measurement(rfc9_tr_t40, rfc9293_tcp_specification__strict_invariance_reading, theater_ratio, 40, 0.05).
+narrative_ontology:measurement_basis(rfc9_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(rfc9_be_t0, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(rfc9_be_t5, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 5, 0.09).
-narrative_ontology:measurement(rfc9_be_t10, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 10, 0.1).
-narrative_ontology:measurement(rfc9_be_t15, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 15, 0.11).
-narrative_ontology:measurement(rfc9_be_t20, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 20, 0.115).
-narrative_ontology:measurement(rfc9_be_t25, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 25, 0.12).
-narrative_ontology:measurement(rfc9_be_t30, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 30, 0.12).
-narrative_ontology:measurement(rfc9_be_t40, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 40, 0.12).
+narrative_ontology:measurement(rfc9_be_t0, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 0, 0.05).
+narrative_ontology:measurement_basis(rfc9_be_t0, observed).
+narrative_ontology:measurement(rfc9_be_t8, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 8, 0.07).
+narrative_ontology:measurement_basis(rfc9_be_t8, observed).
+narrative_ontology:measurement(rfc9_be_t16, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 16, 0.08).
+narrative_ontology:measurement_basis(rfc9_be_t16, observed).
+narrative_ontology:measurement(rfc9_be_t24, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 24, 0.08).
+narrative_ontology:measurement_basis(rfc9_be_t24, observed).
+narrative_ontology:measurement(rfc9_be_t32, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 32, 0.08).
+narrative_ontology:measurement_basis(rfc9_be_t32, observed).
+narrative_ontology:measurement(rfc9_be_t40, rfc9293_tcp_specification__strict_invariance_reading, base_extractiveness, 40, 0.08).
+narrative_ontology:measurement_basis(rfc9_be_t40, observed).
 
-% Suppression authored static: scalar-only by design, no temporal series
-narrative_ontology:suppression_profile(rfc9293_tcp_specification__strict_invariance_reading, static).
+% Suppression requirement over time
+narrative_ontology:measurement(rfc9_su_t0, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 0, 0.08).
+narrative_ontology:measurement_basis(rfc9_su_t0, observed).
+narrative_ontology:measurement(rfc9_su_t8, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 8, 0.1).
+narrative_ontology:measurement_basis(rfc9_su_t8, observed).
+narrative_ontology:measurement(rfc9_su_t16, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 16, 0.11).
+narrative_ontology:measurement_basis(rfc9_su_t16, observed).
+narrative_ontology:measurement(rfc9_su_t24, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 24, 0.12).
+narrative_ontology:measurement_basis(rfc9_su_t24, observed).
+narrative_ontology:measurement(rfc9_su_t32, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 32, 0.12).
+narrative_ontology:measurement_basis(rfc9_su_t32, observed).
+narrative_ontology:measurement(rfc9_su_t40, rfc9293_tcp_specification__strict_invariance_reading, suppression_requirement, 40, 0.12).
+narrative_ontology:measurement_basis(rfc9_su_t40, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(rfc9293_tcp_specification__strict_invariance_reading, global_infrastructure).
+narrative_ontology:coordination_type(rfc9293_tcp_specification__strict_invariance_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(rfc9293_tcp_specification__strict_invariance_reading, 0.08).
 narrative_ontology:affects_constraint(rfc9293_tcp_specification__strict_invariance_reading, rfc9293_tcp_specification__optimization_latitude_reading).
 narrative_ontology:affects_constraint(rfc9293_tcp_specification__strict_invariance_reading, rfc9293_tcp_specification__middlebox_realism_reading).
 
 % DUAL FORMULATION NOTE:
-% RFC 9293 is a contested kernel instantiated in three structurally distinct constraint stories. The strict_invariance_reading (this file) authorizes exact state-machine replication and classifies deviations as violations. The optimization_latitude_reading authorizes semantic-preserving deviation and classifies optimization shortcuts as compliant. The middlebox_realism_reading subordinates specification authority to empirical network behavior. All three stories have the same epsilon value range but different founding authority grounds and different victim/excluded sets. Strict invariance has the lowest extractiveness (0.12) because the coordination benefit dominates; optimization latitude has low-to-moderate extractiveness (0.15–0.22) because the extraction is the cost of negotiating semantic equivalence; middlebox realism has moderate extractiveness (0.25–0.35) because the constraint becomes a description of actual deployed behavior, which includes extractive middlebox activity. Links run both directions: strict invariance influences (constrains) the latitude reading by asserting a stricter standard; middlebox realism influences strict invariance by presenting deployed alternatives; optimization latitude influences both by claiming equivalence without replication.
+% RFC 9293 TCP specification is a contested kernel. This story (strict_invariance_reading) treats the state machine as an invariant coordinate frame. Sibling stories (optimization_latitude_reading, middlebox_realism_reading) interpret the same kernel differently. All three are linked via network.affects_constraints. Each story authors its own ε, beneficiary/victim structure, and omega variables around the reading-specific structural claims.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

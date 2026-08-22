@@ -2,43 +2,128 @@
   "header": {
     "constraint_id": "correct_latin_kernel__hybrid_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "bad8ddf9-5ce3-4340-b4fd-9ded8e340b2d"
+    "story_uid": "c7df4a08-d1dc-40e3-b5cc-f843da46f156"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.58,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.71,
-    "resistance": 0.48,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Medieval Latin Reconstruction via Hybrid Continuity-Discontinuity Thesis",
-    "topic_domain": "intellectual/philological",
+    "human_readable": "Medieval-Classical Latin Continuity (Hybrid Reading)",
+    "topic_domain": "intellectual_history/philology",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_philology",
-      "latin_grammar_canon"
+      "philological_consensus_gatekeepers"
     ],
     "victims": [
-      "manuscript_scribes",
-      "medieval_latin_practitioners"
+      "textual_anomaly_investigators",
+      "medieval_latin_specialists"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "philological_consensus_gatekeepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "University departments, editorial boards, and learned societies that establish which reconstructions are accepted. They administer the hybrid reading by identifying morphological continuity as structurally legitimate while treating syntax and lexicon as corruption sites requiring recovery from Classical texts or reconstruction from internal evidence. They benefit from the constraint's maintenance because it preserves their authority to adjudicate what counts as 'correct' Latin and which texts require emendation versus acceptance."
+    },
+    {
+      "name": "medieval_latin_specialists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars studying medieval texts in their own terms. They bear the cost of the constraint because their textual materials are routinely treated as corrupt aberrations rather than evidence of a legitimate linguistic system. Their research requires constant reframing of medieval forms as degradation rather than development, and their discoveries about medieval syntax and lexicon are subordinated to the recovery-of-classical-forms narrative. Exit would mean abandoning the scholarly apparatus and institutional recognition."
+    },
+    {
+      "name": "textual_anomaly_investigators",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Scholars (particularly those using computational methods, genetic criticism, or comparative Romance linguistics) who encounter medieval Latin forms that deviate from Classical patterns but exhibit systematic internal coherence. The constraint forces them to treat these patterns as errors requiring emendation rather than as evidence of linguistic change. They can exit by adopting discontinuity or other frameworks, but doing so costs them access to conventional editorial networks and citation authority."
+    },
+    {
+      "name": "classical_recovery_tradition",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The interpretive tradition grounded in the premise that medieval texts are primarily vehicles for recovering lost or corrupted Classical texts. This tradition is vindicated by the constraint's operation: it provides intellectual cover for treating medieval variants as noise rather than signal, which confirms the tradition's foundational assumption that Classical Latin is the true object and medieval forms are secondary."
+    },
+    {
+      "name": "discontinuity_reading_proponents",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars advocating for the discontinuity reading (Medieval Latin as a distinct system) are systematically under-resourced and face institutional friction. They are excluded from editorial consensus and their frameworks are treated as eccentric rather than viable. Their presence would reframe the entire constraint by challenging the hybrid reading's partitioning logic."
+    },
+    {
+      "name": "continuity_reading_proponents",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars who argue for smooth linguistic evolution from Classical to Medieval Latin (continuity reading) are also marginalized, though differently: the hybrid reading absorbs part of their claim (morphological continuity) while rejecting the inference that medieval syntax and lexicon are equally evolutionary. This partial absorption makes the full continuity position harder to defend without appearing redundant."
+    },
+    {
+      "name": "textual_reconstruction_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The editorial and critical apparatus (apparatus criticus, emendation conventions, diplomatic editions versus critical editions) that operationalizes the hybrid reading. It is simultaneously the vehicle through which the reading is enforced and a beneficiary of its persistence, because editing medieval Latin requires constant judgment calls about what is corruption and what is legitimate variation—judgment calls the hybrid framework authorizes."
+    },
+    {
+      "name": "medieval_authors_and_scribes",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The historical agents (medieval authors, scribes, copyists) whose actual language use produced the texts. They are excluded from the conversation about what their language meant; their forms are evaluated against a Classical standard they never intended to meet, and their intentions are systematically subordinated to the recovery of Classical forms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a coherent framework for adjudicating which medieval Latin forms are evidence of legitimate linguistic change (morphology) and which are copyist error or unauthorized innovation (syntax, lexicon). This enables editors, scholars, and institutions to work with a consistent standard for reconstruction and emendation, making medieval texts analyzable within a unified interpretive apparatus.",
+    "transfer_function": "Transfers intellectual authority from medieval specialists and anomaly investigators to classical recovery gatekeepers and the broader consensus tradition. The constraint moves interpretive power away from those reading medieval texts as autonomous systems toward those reading them as degraded Classical texts requiring recovery. It also moves from empirical discovery (what medieval syntax actually exhibits) toward canonical authority (what Classical texts permit).",
+    "absent_voices": "Medieval authors and scribes have no voice—their actual language choices are evaluated posthumously against a standard they never claimed to follow. Discontinuity-reading proponents are excluded from editorial consensus. Scholars whose computational methods reveal systematic patterns in medieval syntax are treated as anomaly-hunters rather than theorists. The voices of Romance linguists (who see medieval Latin through the lens of Romance language development) are marginalized in favor of classical philologists.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the hybrid reading vanished, editorial practice would fragment: some editors would treat medieval texts as monuments to be read in their own terms (discontinuity direction); others would intensify classical recovery efforts with different reconstructive methods (continuity direction). The constraint holds editorial consensus together; without it, medieval scholarship would reorganize around competing frameworks, and the institutional authority of classical recovery gatekeepers would weaken. Some scholars argue nothing substantive would change because the empirical facts of medieval texts would reassert themselves; others argue the disappearance would require a wholesale reconceptualization of what medieval Latin texts are evidence of.",
+    "founding_problem": "From the 15th century onward (Renaissance recovery of Classical texts), scholars faced a problem: medieval manuscripts contained forms that deviated from Classical Latin in ways that seemed systematic but incoherent by Classical standards. Were these degradations (and thus targets for emendation), or were they evidence of linguistic change worth understanding in their own right? The hybrid reading emerged as a compromise: accept that morphological systems persisted (continuity within constraints) but treat syntactic and lexical innovations as corruption requiring recovery toward the Classical ideal.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Classical philologists and editorial consensus gatekeepers attest the founding problem persists: modern editors still encounter medieval anomalies that require adjudication. Medieval specialists and computational linguists attest the founding problem has been reframed: what was a problem of understanding medieval syntax as corruption is now understood as a problem of understanding medieval language as a system—a shift that undermines the founding problem's original stakes. The discontinuity reading proponents argue the founding problem itself arose from a false premise (that Classical Latin is the measure of correctness) and has been superseded by empirical linguistic analysis."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.51
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
@@ -48,196 +133,196 @@
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.57
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.62
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.31
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.34
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.37
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
       "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
       "value": 0.41
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.54
+      "value": 0.53
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.57
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.58
+      "value": 0.62
     }
   ],
   "commentary": {
-    "narrative_context": "Medieval Latin presents a puzzle: some forms look like Classical Latin corrupted by ignorance or carelessness; others look like systematic choices responding to medieval needs. The hybrid reading splits the difference: morphology (the internal structure of words) is treated as continuous with Classical norms—medieval scribes preserved and transmitted the inherited forms—but syntax (sentence structure) and lexicon (word choice) are treated as corrupted and requiring reconstruction back to Classical standards. This reading occupies a middle ground between full continuity (Medieval is just evolved Classical) and full discontinuity (Medieval is a separate language). The hybrid frame is institutionally powerful because it permits selective legitimacy: morphology gets to be correct (preserving continuity), while syntax and lexicon get to be wrong (justifying expert correction). This combination serves institutional philology's interests by validating both continuity claims and expert authority simultaneously.",
+    "narrative_context": "The hybrid reading of the correct-Latin kernel maintains that Medieval Latin exhibits genuine morphological continuity with Classical Latin (legitimating medieval forms in inflectional systems, declensions, and core derivational morphology), but that syntax and lexicon underwent sufficient change to warrant recovery-oriented reconstruction toward Classical norms. This reading emerged from Renaissance philology as a middle ground between pure continuity (Medieval = natural evolution of Classical) and pure discontinuity (Medieval = distinct system). The hybrid framework splits the constraint: it grants medieval morphology structural legitimacy while treating medieval syntax and lexicon as corruption sites. This partition has become the dominant editorial consensus, enforced through academic gatekeeping, editorial conventions, and the apparatus criticus. The claim/metric gap is deliberate: the reading is CLAIMED as a coordination framework (enabling coherent editorial practice) while the metrics describe substantially extractive, actively-enforced operation that privileges classical recovery and subordinates medieval specialists.",
+    "kernel_context": "This constraint instantiates the hybrid_reading of the contested kernel correct_latin_kernel. The kernel itself is the question: what is the correct relationship between Medieval and Classical Latin? Three live readings compete: (1) continuity_reading argues Medieval is natural evolution (legitimate, no recovery needed); (2) discontinuity_reading argues Medieval is a distinct system (reconstruction must engage it on its own terms); (3) hybrid_reading (this one) argues morphology is continuous but syntax/lexicon require recovery toward Classical norms. The readings differ on what counts as 'correct' and therefore what reconstruction should aim for. They coexist across different scholarly communities rather than logically foreclosing each other, though the hybrid reading's partial absorption of continuity creates institutional pressure on the full continuity position.",
     "key_agents": [
-      "Institutional philology (universities, academies, textual-critical canons): Sets standards for correctness, controls who pronounces judgment on Latin fidelity, benefits from maintaining a framework that justifies expert reconstruction.",
-      "Latin grammar canon (Donatus, Priscian, modern grammars): The codified standard against which all Latin is measured; benefits from selective legitimacy that protects canonical authority.",
-      "Medieval scribes (powerless, trapped): Copied texts and made choices; retroactively judged by hybrid frame as either preserving (morphology) or corrupting (syntax/lexicon); could not defend choices; erasure of agency.",
-      "Medieval Latin practitioners (powerless, identity-locked): Monks, clergy, scholars using Latin as living language; treated as having failed to speak correctly; identity-locked because Latin legitimacy is central to their entire intellectual inheritance.",
-      "Continuity-reading scholars (excluded, constrained): Argue Medieval Latin is natural evolution; would undermine the correction enterprise if heard.",
-      "Discontinuity-reading scholars (excluded, constrained): Argue Medieval Latin is a separate system; would dissolve the hybrid frame if taken seriously.",
-      "Textual-criticism tradition (observer, institutional): Provides the technical apparatus (emendation protocols, apparatus criticus) that makes the constraint operational."
+      "Philological consensus gatekeepers: institutional actors who control editorial standards and determine what counts as legitimate medieval form versus corruption",
+      "Medieval specialists: scholars studying medieval texts who pay the cost of having their materials subordinated to classical recovery",
+      "Textual anomaly investigators: those using computational or comparative methods who encounter systematic medieval patterns and bear the cost of treating them as error",
+      "Classical recovery tradition: the interpretive tradition vindicated by treating medieval forms as noise in the signal of Classical texts"
     ],
-    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the constraint redistributes authority over interpretation from medieval agents to institutional arbiters, while keeping some morphological forms legitimate (avoiding the complete delegitimation that would make the system unstable). Suppression is moderate (0.58) because the constraint must actively exclude sibling readings from canonical authority—without suppressing continuity and discontinuity advocates, the hybrid frame collapses. Theater ratio (0.41) reflects that some genuine philological work happens (identifying real medieval variants, analyzing morphological patterns) but an increasing share of the effort is devoted to defending the hybrid frame itself against empirical challenge. The measurement series shows slow drift upward in extractiveness and theater ratio over the interval (t=0 to t=40), consistent with institutional gatekeeping hardening as the readings encounter more empirical evidence of systematic medieval linguistic coherence.",
-    "perspectival_gap": "From the institutional-philology seat, the constraint is a reasonable classification framework: morphology IS continuous, syntax and lexicon DO require correction, and expert reconstruction IS justified. From the medieval-practitioners seat, the same constraint erases their agency and misrepresents their coherent choices as errors. From a continuity-reading seat, the hybrid frame is a compromise that fails empirically and serves only to protect institutional authority. From a discontinuity-reading seat, the entire hybrid frame is misconceived—the whole apparatus of 'correction' should be abandoned. The engine computes these divergences from the structural data: the hybrid reading treats institutional philology and the canon as beneficiaries (they control judgment and collect authority) while treating scribes and practitioners as victims (they bear retroactive judgment and lose agency). Continuity and discontinuity advocates are excluded because their readings threaten the institutional frame.",
-    "directionality_logic": "Institutional philology is the agenda-setter with high power and high beneficiary position (d near 0.1-0.2: collects authority, sets standards, controls canon). Medieval practitioners are identity-locked victims: they cannot exit (Latin is central to their identity and legitimacy) and cannot defend (they are dead or their choices are reframed as errors before they can speak). Scribes are trapped victims: they bore the labor, could not exit, and are now judged retroactively. Continuity and discontinuity advocates have moderate power but are systematically excluded from canonical pronouncements—their directionality is asymmetrically disadvantaged by the same enforcement that protects the hybrid frame. The canon itself is not an agent but is the beneficiary (its authority is reinforced by selective legitimacy). Textual-criticism tradition is an observer seat: it executes the constraint's implications but does not decide the reading.",
-    "mandatrophy_analysis": "The founding problem—preserving Classical tradition while accommodating medieval practice—is contested. Institutional philology claims it is still live (Medieval texts still need correction to preserve Classical standards). Continuity advocates claim it is dead (natural evolution is not a problem, it is evidence). Discontinuity advocates claim it is misconceived (treating Medieval as corrupted Classical was never the right frame). The hybrid reading resolves this by selective legitimacy: 'the founding problem is half-live—morphology is solved (continuity) but syntax and lexicon require work (discontinuity).' This construction is attractive because it justifies both the existence of the institutional framework AND the continued need for expert intervention. But the measurement series shows rising theater_ratio and rising extractiveness, consistent with the frame becoming increasingly performative—more energy devoted to defending the reading against sibling readings than to solving the actual empirical puzzle.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel 'correct_latin_kernel.' The kernel is the stabilized commitment to Latin textual transmission and correctness that binds Classical, Medieval, and modern practice together. THREE readings compete: (1) continuity_reading — Medieval Latin is natural evolution of Classical, no sharp break, no special correction needed; (2) discontinuity_reading — Medieval Latin is a separate coherent system, reconstruction as reoccupation is misguided; (3) hybrid_reading [THIS ONE] — morphology continuous and legitimate, syntax/lexicon discontinuous and requiring correction, reconstruction is layered and selective. The sibling readings make different structural claims about what survived and what requires recovery. The hybrid reading occupies the middle ground that maximizes institutional authority by validating continuity (preserving the canon's legitimacy) while mandating correction (justifying expert gatekeeping)."
+    "logic_rationale": "Extractiveness measures 0.58 at interval end because the constraint concentrates authority to classify (what is continuous, what is corrupt) in the hands of classical philologists, away from medieval specialists. The classification power itself is the extraction: medieval scholars must constantly defend their materials as legitimate rather than having them accepted as autonomous evidence. Suppression measures 0.62 because the constraint's enforcement requires active work: editors must examine every medieval deviation, apply the hybrid partition (morphology passes, syntax/lexicon gets scrutinized), and justify emendations or acceptances. Theater rises from 0.25 to 0.41 because an increasing share of editorial effort goes toward justifying the partition (when does a syntactic form cross into illegitimacy?) rather than simply recording what medieval texts contain. The time series reflects historical drift: early Renaissance hybrid readings were more permissive of medieval forms; modern computational analysis has tightened the partition, raising extractiveness and theater as more medieval innovations are reclassified as error requiring recovery. Measurements plateau after t=15 because the framework has stabilized at its current operational intensity.",
+    "directionality_logic": "Philological consensus gatekeepers experience this constraint as beneficiary (d near 0.1): they control the classification apparatus and benefit from its maintenance through preserved authority. Medieval specialists and anomaly investigators experience it as target (d near 0.85): they must constantly defend their materials, justify medieval forms, and defer to classical recovery authority. The partition itself creates asymmetry: medieval morphology (accepted) benefits the consensus narrative; medieval syntax/lexicon (scrutinized) feeds the extraction. A medieval specialist studying medieval syntax experiences high directionality toward the constraint (trapped by needing to frame their work within recovery logic) while a classical philologist using the same texts experiences low directionality (the constraint creates opportunity, not burden).",
+    "perspectival_gap": "From the agenda-setter (consensus gatekeepers) seat, the constraint is coordination: a coherent framework for editorial decision-making that enables collaborative practice. From the payer seats (medieval specialists), it is asymmetric extraction: the framework is the mechanism through which their expertise is devalued and their materials are subordinated. The engine should compute these as substantially different types from their respective positions. The computational split occurs because power (institutional vs. moderate), exit options (arbitrage vs. constrained), and beneficiary/victim declarations all differ. A medieval specialist with institutional power or arbitrage exit would compute differently; the constraint's asymmetry depends on the interaction of the framework (the partition rule) with the structural positions of those subject to it.",
+    "mandatrophy_analysis": "The founding problem (how to adjudicate medieval deviations from Classical norms) was live when the hybrid reading emerged in the Renaissance—editors genuinely faced texts that required judgment. By the 20th century, that founding problem had shifted: the problem was no longer how to decide whether medieval syntax was error or evidence, but whether the entire framework of treating medieval as corrupted Classical was the right object. Computational linguistics and Romance historical linguistics have substantially reframed the question. The hybrid reading persists not because it solves the founding problem but because it provides institutional cover for classical recovery gatekeepers and anchors editorial consensus. The theater_ratio rise from 0.25 to 0.41 indicates increasing performative maintenance: more editorial apparatus is devoted to justifying the partition rather than discovering new medieval forms. This signals mandatrophy—the original coordination function (adjudicating ambiguous cases) has atrophied, replaced by maintenance of the partition itself. The constraint persists through inertia and institutional investment rather than because the founding problem remains live."
   },
   "omegas": [
     {
-      "id": "morphology_syntax_lexicon_boundary",
-      "question": "Is the boundary between morphology (continuous, legitimate) and syntax/lexicon (discontinuous, corrupt) empirically stable, or does it shift depending on the analyst's commitments?",
-      "resolution_mechanism": "Systematic corpus analysis of medieval texts: classify all variants (morphological, syntactic, lexical) and measure their distributions. If medieval texts show systematic syntactic and lexical patterns that are NOT random corruption but follow coherent medieval rules, the boundary collapses.",
-      "impact": "If the boundary is unstable, the hybrid reading is indefensible—either all of medieval Latin is continuous (full continuity) or all of it requires reclassification as a separate system (full discontinuity). The institutional claim to selective legitimacy fails.",
+      "id": "morphology_syntax_partition_stability",
+      "question": "Is the boundary between legitimate morphological continuity and corrupted syntax/lexicon stable, or does it shift with scholarly attention and computational evidence?",
+      "resolution_mechanism": "Longitudinal analysis of editorial decisions: track which medieval forms have migrated from 'corruption' to 'accepted' categories as scholarly understanding deepens, and whether this migration follows morphology/syntax lines or reveals the partition to be historically contingent.",
+      "impact": "If the partition is stable and principled, it validates the hybrid reading's core logic. If it is shifting and contingent, the extraction mechanism is the partition itself rather than adjudication of a pre-existing structural fact—making the constraint more extractive than authored metrics suggest.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether morphology/syntax/lexicon distinction is linguistically real or analytically imposed."
+      "description": "Whether the morphology-syntax distinction maps to a real linguistic boundary or is an artifact of editorial convention."
     },
     {
-      "id": "reconstruction_agency_attribution",
-      "question": "When the hybrid reading prescribes 'reconstruction' of medieval syntax and lexicon to Classical standards, is it recovering what medieval scribes intended but failed to execute, or is it imposing modern norms on medieval texts that were coherent in their own terms?",
-      "resolution_mechanism": "Close reading of medieval texts with attention to whether variants appear random (suggesting error) or systematic (suggesting intentional medieval grammar). Evidence from colloquia, letters, and technical writing (where medieval Latin is most conservative) vs. narrative works (where innovation is most visible). Testimony from scholars with long exposure to medieval texts on whether corruption feels random or patterned.",
-      "impact": "If reconstruction is recovery of failed intention, the hybrid frame holds. If medieval variants are systematic, the frame is inverted: reconstruction is imposition of modern preferences onto coherent medieval choices. This would shift classification toward discontinuity reading.",
+      "id": "continuity_versus_discontinuity_foreclosure",
+      "question": "Does the hybrid reading logically foreclose the full continuity reading, or do they coexist as live competing frameworks?",
+      "resolution_mechanism": "Examine whether scholars can consistently hold the continuity reading (Medieval = natural evolution, all forms legitimate) without logical contradiction to the hybrid reading's partition. The test: a continuity proponent can defend medieval syntax as evolutionary innovation; a hybrid proponent must then either accept it as evolutionary (reverting to continuity) or deny it is syntax (the hybrid partition reasserts itself). If the partition can always reassert, foreclosure may be pragmatic rather than logical.",
+      "impact": "If the hybrid reading forecloses continuity logically, the reading_relations should specify 'forecloses'. If both remain live (one can hold continuity by rejecting the partition), they coexist, and the relation is 'coexists_with'. This affects how the engine treats the constraint's legitimacy in the kernel contest.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether medieval texts are failed copies or evidence of a separate linguistic system."
+      "description": "The logical relationship between the hybrid partition and the continuity alternative."
     },
     {
-      "id": "institutional_capture_of_philology",
-      "question": "To what extent does the hybrid reading's institutional success depend on its empirical coherence versus its utility to institutional gatekeeping?",
-      "resolution_mechanism": "Historical analysis of when and where the hybrid reading gained dominance. Did it spread because scholars found it empirically superior, or because institutional gatekeeping rewarded it (funding, positions, publication venues)? Evidence from scholars who argued for sibling readings: were they excluded due to empirical refutation or due to institutional power?",
-      "impact": "If institutional capture is the primary driver, the constraint is closer to a snare than a tangled rope—the coordination function (defining a unified Latin standard) is secondary to the extraction function (centralizing authority). This would shift classification toward snare and raise mandatrophy questions.",
+      "id": "reconstruction_versus_discovery_asymmetry",
+      "question": "Is 'reconstruction' of Classical norms structurally different from 'discovery' of medieval linguistic systems, or are both valid modes of textual inquiry that the constraint artificially privileges?",
+      "resolution_mechanism": "Examine reconstructive practice: do editors reconstruct the same way across all medieval deviations (applying a consistent rule), or do they reconstruct selectively (stronger effort for syntactic forms that would yield Classical-like results)? Selective reconstruction would indicate the asymmetry is enforced rather than following from the texts.",
+      "impact": "If reconstruction is selective and asymmetric, the constraint extracts authority by privileging one mode of inquiry over another. This would increase effective extraction and might reclassify the constraint from tangled_rope (real coordination + asymmetric extraction) toward snare (asymmetric extraction with coordination cover).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the hybrid reading's persistence is empirically grounded or institutionally sustained."
+      "description": "Whether the privileging of reconstruction over discovery is a logical consequence of the hybrid partition or an additional extraction mechanism."
     },
     {
-      "id": "committer_reading_stability",
-      "question": "The hybrid reading splits medieval Latin into continuous morphology and discontinuous syntax/lexicon. Is this split a natural linguistic discovery, or is it a strategic division chosen to satisfy competing constituencies (preserve continuity claims while justify expert correction)?",
-      "resolution_mechanism": "Comparison with how other language transitions are analyzed (Old English to Middle English, Latin to Romance languages). If the morphology/syntax/lexicon distinction is applied consistently across language-change studies, it is likely a linguistic discovery. If applied selectively to Latin to satisfy institutional needs, it is a strategic reading.",
-      "impact": "If strategic, the reading is a false compromise—neither continuity nor discontinuity, but a construction serving institutional interests. The omega itself is the committer-axis question: which reading (hybrid, continuity, discontinuity) best fits the actual evidence, regardless of institutional preference?",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the hybrid reading reflects natural language dynamics or strategic institutional framing."
+      "id": "medieval_author_intentionality",
+      "question": "Should medieval authors' actual language choices (as distinct from scribal corruption and manuscript variation) be treated as evidence of a legitimate medieval system, or as deviations from Classical norms requiring correction?",
+      "resolution_mechanism": "Historical and philological analysis: identify medieval authors' deliberate linguistic innovations (documented through composition processes, scribal notes, deliberate archaisms or neologisms). Examine whether the hybrid framework treats author-deliberate forms differently from scribal error. If author deliberation does not change the classification (still treated as corruption), the framework is insensitive to intentionality—suggesting extraction rather than coordination.",
+      "impact": "If the hybrid framework ignores author intentionality, it loses a key distinction between genuine linguistic change and error. This would support reclassification toward snare (the coordination function is illusory; the extraction is authority denial regardless of evidence).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's operation respects or ignores medieval authorial agency and intentionality."
     }
   ],
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "correct_latin_kernel__continuity_reading",
       "correct_latin_kernel__discontinuity_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'correct_latin_kernel' — the stabilized commitment to Latin textual transmission and correctness. The three readings decompose the kernel into distinct structural claims: continuity_reading treats all Medieval Latin as natural evolution (single constraint); discontinuity_reading treats Medieval Latin as a separate system (single constraint); hybrid_reading [THIS ONE] treats morphology as continuous and syntax/lexicon as discontinuous, requiring layered reconstruction (single constraint). Each reading has its own ε, its own beneficiary/victim structure, its own classification. They are NOT perspectives on one constraint; they are three distinct constraints instantiating three distinct readings of the same kernel. The network links record their interdependence: the hybrid reading influences both sibling readings by occupying the middle ground and excluding both from canonical authority. The three form a constraint family; the kernel is their shared reference point."
+    "dual_formulation_note": "The correct_latin_kernel constraint family decomposes into three structurally distinct readings with different ε values and stakeholder sets. This hybrid_reading (0.58 base extractiveness) differs from continuity_reading (lower extraction, more permissive of medieval forms) and discontinuity_reading (higher extraction, treats medieval as fully autonomous system requiring its own recovery). All three are readings of the same kernel (the relationship between Medieval and Classical Latin) but instantiate different constraints with different beneficiary/victim structures. The hybrid reading's partial absorption of continuity creates institutional pressure on the full continuity position; the discontinuity reading remains marginal. See network edges for downstream constraints (editorial standards, manuscript evaluation, philological training)."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerless",
-      "d_value": 0.92
+      "power_atom": "moderate",
+      "d_value": 0.82
     }
   ],
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "classical_latin_textual_purity",
     "reading_relations": [
       {
-        "sibling_id": "correct_latin_kernel__continuity_reading",
+        "sibling_id": "continuity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "correct_latin_kernel__discontinuity_reading",
+        "sibling_id": "discontinuity_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "morphology_continuity_legitimacy",
+        "atom": "morphological_continuity_binding",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "syntax_lexicon_reconstruction_necessity",
+        "atom": "syntactic_lexical_recovery_legitimacy",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
+    "reference_frame": "morphologically_continuous_recovery_target",
     "drift_state": {
-      "moment": "contemporary_linguistic_corpus_analysis",
+      "moment": "computational_analysis_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "gain_flow": "philological_consensus_gatekeepers",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

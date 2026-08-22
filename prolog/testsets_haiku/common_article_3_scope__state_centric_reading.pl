@@ -39,11 +39,18 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,41 +75,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: common_article_3_scope__state_centric_reading
- *   human_readable: CA3 Application Thresholds (State-Centric Reading)
- *   domain: international_humanitarian_law
+ *   human_readable: Common Article 3 Scope Threshold (State-Centric Reading)
+ *   domain: legal/humanitarian
  *
  * SUMMARY:
- *   Common Article 3 (CA3) of the 1949 Geneva Conventions establishes minimum
- *   humanitarian protections for victims of 'armed conflict not of an
- *   international character.' This constraint story instantiates the
- *   STATE-CENTRIC READING: CA3 applies only when armed violence meets
- *   demonstrable intensity (sustained combat, sophisticated weaponry,
- *   duration) AND organization thresholds (command structure, insignia,
- *   territorial control). Under this reading, low-level violence, criminal
- *   armed groups, law-enforcement operations, and internal unrest remain
- *   outside CA3's scope. States retain classification authority; threshold
- *   determination is a sovereign function, not a humanitarian one. The
- *   constraint benefits states by preserving discretion to classify
- *   situations as 'law enforcement' rather than 'armed conflict,' thereby
- *   excluding humanitarian bodies from access and oversight. It extracts from
- *   irregular combatants and civilians in contested zones who fall below the
- *   threshold and thus lack humanitarian protections. This reading COEXISTS
- *   WITH two sibling readings: the expansive_human_rights_reading (CA3
- *   applies as a floor to any organized armed violence) and the
- *   icrc_customary_reading (CA3 scope flows from evolving state practice and
- *   customary international law). These are not perspectives on one
- *   constraint — they are three distinct constraints with different ε values,
- *   different beneficiary structures, and different classification outcomes.
- *   This file documents ONLY the state-centric reading as a structurally
- *   clean constraint.
+ *   The state-centric reading of Common Article 3 scope anchors humanitarian
+ *   protection to intensity and organization thresholds applied by the state
+ *   itself. Under this reading, CA3 protections apply only to armed conflicts
+ *   serious enough and organized enough to justify a separate legal regime;
+ *   low-intensity violence, gang activity, and sporadic armed clashes are
+ *   governed by domestic law enforcement standards instead. This reading
+ *   preserves state sovereignty over conflict classification and maximizes
+ *   governmental operational discretion. The ICRC and human rights bodies
+ *   increasingly contest this interpretation, advocating for lower or
+ *   eliminated thresholds, but the state-centric reading remains
+ *   institutionalized in many national military doctrines and state practice.
  *
  * KEY AGENTS:
- *   - state_parties: institutional beneficiary, sets the threshold, controls classification authority
- *   - regular_armed_forces: institutional beneficiary, gain operational discretion below threshold
- *   - irregular_combatants: powerless payer, identity-locked, excluded from protections
- *   - civilians_in_contested_zones: powerless payers, constrained exit, dual legal status
- *   - icrc_and_humanitarian_bodies: excluded from binding decision-making, face access barriers
- *   - icj_and_courts: observer/adjudicator, determine scope retroactively in litigated cases
+ *   - State military apparatus: interprets and applies the threshold; retains classification authority
+ *   - Irregular combatants below threshold: excluded from CA3 protections; treated as law enforcement targets
+ *   - Civilian victims in excluded conflicts: receive no humanitarian protection guarantees under this reading
+ *   - Non-state armed groups: cannot claim CA3 status independent of state classification
+ *   - ICRC monitors: observe and advise but lack binding authority over threshold determinations
+ *   - International humanitarian law community: advocates for broader application but excluded from legal authority
  */
 
 /* ==========================================================================
@@ -111,58 +107,115 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(common_article_3_scope__state_centric_reading, 0.68).
 domain_priors:suppression_score(common_article_3_scope__state_centric_reading, 0.79).
-domain_priors:theater_ratio(common_article_3_scope__state_centric_reading, 0.42).
+domain_priors:theater_ratio(common_article_3_scope__state_centric_reading, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, extractiveness, 0.68).
 narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, suppression_requirement, 0.79).
-narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, accessibility_collapse, 0.72).
 narrative_ontology:constraint_metric(common_article_3_scope__state_centric_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(common_article_3_scope__state_centric_reading, tangled_rope).
-narrative_ontology:human_readable(common_article_3_scope__state_centric_reading, "CA3 Application Thresholds (State-Centric Reading)").
-narrative_ontology:topic_domain(common_article_3_scope__state_centric_reading, "international_humanitarian_law").
+narrative_ontology:human_readable(common_article_3_scope__state_centric_reading, "Common Article 3 Scope Threshold (State-Centric Reading)").
+narrative_ontology:topic_domain(common_article_3_scope__state_centric_reading, "legal/humanitarian").
 
 domain_priors:requires_active_enforcement(common_article_3_scope__state_centric_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(common_article_3_scope__state_centric_reading, '461d10db-9db8-4e2d-a93f-289ef908d59b').
-narrative_ontology:cs_kernel_codification('461d10db-9db8-4e2d-a93f-289ef908d59b', fixed_text).
-narrative_ontology:cs_authority_grounding('461d10db-9db8-4e2d-a93f-289ef908d59b', extraction).
-narrative_ontology:cs_interpretation_layer_present('461d10db-9db8-4e2d-a93f-289ef908d59b').
-narrative_ontology:cs_reading_relation('461d10db-9db8-4e2d-a93f-289ef908d59b', common_article_3_scope__expansive_human_rights_reading, coexists_with).
-narrative_ontology:cs_reading_relation('461d10db-9db8-4e2d-a93f-289ef908d59b', common_article_3_scope__icrc_customary_reading, influences).
-narrative_ontology:cs_axiom('461d10db-9db8-4e2d-a93f-289ef908d59b', foundational, state_classification_authority_over_thresholds).
-narrative_ontology:cs_axiom_status(state_classification_authority_over_thresholds, holdable).
-narrative_ontology:cs_axiom_grounding('461d10db-9db8-4e2d-a93f-289ef908d59b', state_classification_authority_over_thresholds, deontological).
-narrative_ontology:cs_axiom('461d10db-9db8-4e2d-a93f-289ef908d59b', foundational, intensity_organization_criteria_discretionary).
-narrative_ontology:cs_axiom_status(intensity_organization_criteria_discretionary, overridden).
-narrative_ontology:cs_axiom_grounding('461d10db-9db8-4e2d-a93f-289ef908d59b', intensity_organization_criteria_discretionary, empirically_contingent).
-narrative_ontology:cs_reference_frame('461d10db-9db8-4e2d-a93f-289ef908d59b', state_sovereign_classification_authority).
-narrative_ontology:cs_drift_state('461d10db-9db8-4e2d-a93f-289ef908d59b', contemporary_court_and_customary_practice, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('461d10db-9db8-4e2d-a93f-289ef908d59b', '').
+narrative_ontology:cs_story_uid(common_article_3_scope__state_centric_reading, 'ad23da6d-fa1a-4bb6-a001-7d459335e3a1').
+narrative_ontology:cs_kernel_codification('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', fixed_text).
+narrative_ontology:cs_authority_grounding('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', extraction).
+narrative_ontology:cs_interpretation_layer_present('ad23da6d-fa1a-4bb6-a001-7d459335e3a1').
+narrative_ontology:cs_reading_relation('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', common_article_3_scope__expansive_human_rights_reading, forecloses).
+narrative_ontology:cs_reading_relation('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', common_article_3_scope__icrc_customary_reading, influences).
+narrative_ontology:cs_axiom('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', foundational, state_unilateral_threshold_authority).
+narrative_ontology:cs_axiom_status(state_unilateral_threshold_authority, holdable).
+narrative_ontology:cs_axiom_grounding('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', state_unilateral_threshold_authority, instrumental).
+narrative_ontology:cs_axiom('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', secondary, intensity_organization_boundary_necessity).
+narrative_ontology:cs_axiom_status(intensity_organization_boundary_necessity, holdable).
+narrative_ontology:cs_axiom_grounding('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', intensity_organization_boundary_necessity, deontological).
+narrative_ontology:cs_reference_frame('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', state_sovereign_conflict_classification).
+narrative_ontology:cs_drift_state('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', contemporary_human_rights_advocacy, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('ad23da6d-fa1a-4bb6-a001-7d459335e3a1', '').
 narrative_ontology:cs_kernel_id(common_article_3_scope__state_centric_reading, common_article_3_scope).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(common_article_3_scope__state_centric_reading, state_parties).
-narrative_ontology:constraint_beneficiary(common_article_3_scope__state_centric_reading, regular_armed_forces).
-narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, irregular_combatants).
-narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, civilians_in_contested_zones).
-narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, minority_armed_groups).
+narrative_ontology:constraint_beneficiary(common_article_3_scope__state_centric_reading, state_military_apparatus).
+narrative_ontology:constraint_beneficiary(common_article_3_scope__state_centric_reading, governmental_actors).
+narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, irregular_combatants_below_threshold).
+narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, civilian_victims_in_excluded_conflicts).
+narrative_ontology:constraint_victim(common_article_3_scope__state_centric_reading, non_state_armed_groups).
+narrative_ontology:constraint_vindicates(common_article_3_scope__state_centric_reading, state_sovereignty_doctrine).
+narrative_ontology:constraint_vindicates(common_article_3_scope__state_centric_reading, armed_conflict_vs_law_enforcement_distinction).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Operates under CA3 constraints only when conflict intensity and organization meet the threshold. Below the threshold, state military personnel treat operations as law enforcement without humanitarian law protections. The state interprets and applies the threshold itself, determining which conflicts qualify. Retains full discretion to classify encounters as law enforcement rather than armed conflict.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, state_military_apparatus, agenda_setter,
+    institutional, generational, trapped, national).
+
+% Benefit from the threshold mechanism by maintaining operational flexibility in counterinsurgency, counter-terrorism, and policing. Governments can apply different rules and scrutiny levels to the same population depending on how the conflict is classified. The threshold preserves governmental authority over conflict classification without external verification.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, governmental_actors, beneficiary,
+    institutional, generational, trapped, national).
+
+% Engage in armed resistance or organized violence that states classify as below the intensity/organization threshold. Receive no CA3 protections; they are treated as law enforcement targets rather than combatants. No claim to prisoner-of-war status, medical care minimums, or distinction protections. Their exclusion from the victim set is the mechanism through which suppression operates.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, irregular_combatants_below_threshold, payer,
+    powerless, immediate, trapped, local).
+
+% Located in conflicts classified as below the threshold and receive no humanitarian protection guarantees. Civilian-military distinction, proportionality, and precaution obligations that CA3 mandates do not apply in these classified contexts. Their exclusion depends on the state's threshold determination.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, civilian_victims_in_excluded_conflicts, payer,
+    powerless, immediate, trapped, local).
+
+% Operate in conflicts the state may classify as below threshold. Some groups are militarily organized but excluded from CA3 because the state determines the conflict does not meet intensity criteria. Groups cannot independently claim CA3 status; the state's classification is determinative. Their identity as armed organizations provides no automatic legal standing.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, non_state_armed_groups, payer,
+    moderate, biographical, identity_locked, regional).
+narrative_ontology:stakeholder_secondary_role(common_article_3_scope__state_centric_reading, non_state_armed_groups, excluded).
+
+% Monitors humanitarian compliance and advises on CA3 applicability. Under the state-centric reading, the ICRC's view on threshold application is advisory; states retain authority to determine scope. The monitoring function is included as theater: ICRC presence is cited to show humanitarian attention while states make final classification decisions.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, icrc_monitors, observer,
+    organized, generational, mobile, national).
+
+% International legal scholars, human rights organizations, and treaty bodies advocate for lower or eliminated thresholds. Their arguments are heard in treaty body reviews and academic forums but carry no binding authority in state practice. The state-centric reading excludes their threshold determinations from legal effect.
+narrative_ontology:constraint_stakeholder(common_article_3_scope__state_centric_reading, international_humanitarian_law_community, excluded,
+    organized, generational, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(common_article_3_scope__state_centric_reading, state_military_apparatus).
+narrative_ontology:fixing_cost_class(common_article_3_scope__state_centric_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a recognized boundary between armed conflict and law enforcement, enabling states to apply distinct legal regimes to different situations. The threshold attempts to identify conflicts serious enough to warrant international humanitarian law's more elaborate protections while preserving law enforcement authority over low-intensity situations.
+% TRANSFER_FUNCTION: Transfers decision-making authority over humanitarian protection standards from international bodies and humanitarian doctrine to individual states. States gain operational discretion to exclude populations from CA3 protections by classifying their situations as below threshold. Irregular combatants and civilians in excluded conflicts bear the cost of reduced protections.
+% ABSENT_VOICES: International humanitarian law advocates, ICRC legal positions arguing for broader CA3 application, human rights monitoring bodies that contest threshold determinations, and the irregular combatants and civilians themselves — whose status depends entirely on the state's classification and who have no formal voice in making that determination.
+% DISAPPEARANCE_RATIONALE: If this threshold constraint vanished, CA3 would either apply to all organized armed violence (expansive reading) or be determined by customary international law evolution (ICRC reading). States would lose the authority to unilaterally exclude conflicts from humanitarian protections. Military operations would require justification under humanitarian standards in situations now classified as law enforcement.
+% FOUNDING_PROBLEM: Distinguish armed conflict from law enforcement so that the international humanitarian law regime applies to the appropriate situations and does not over-regulate police or counter-terrorism operations that do not rise to armed conflict intensity.
+% FOUNDING_PROBLEM_CORROBORATION: States attest the problem remains live: low-intensity insurgencies, gang violence, and localized armed clashes require legal clarity on applicability. Human rights organizations and the ICRC attest the founding problem is partly addressed but the state-centric solution overstates law enforcement and understates humanitarian obligations; international humanitarian law scholars document the doctrinal contestation across the three readings.
+narrative_ontology:disappearance_verdict(common_article_3_scope__state_centric_reading, world_rearranges).
+narrative_ontology:founding_problem_status(common_article_3_scope__state_centric_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(common_article_3_scope__state_centric_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(common_article_3_scope__state_centric_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(common_article_3_scope__state_centric_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(common_article_3_scope__state_centric_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -182,13 +235,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.68 at interval end) because the threshold directly gates humanitarian protections — crossing it transfers obligations FROM states TO humanitarian oversight. Below threshold, states retain law-enforcement discretion and can operate without humanitarian constraints. The measurement series shows gradual rise from 0.52 to 0.68 over the interval, reflecting accumulating case law and state practice that expand the practical threshold even as states formally defend the narrow reading. Suppression is highest among the metrics (0.79) because the constraint's persistence depends on actively defending threshold discretion against humanitarian expansion. States must continually reassert classification authority, resist humanitarian access claims, and reinterpret intensity/organization language to maintain the state-centric boundary. Theater ratio rises modestly (0.25 to 0.42) as states increasingly conduct humanitarian-style operations (medical care, judicial processes) while maintaining the legal fiction that they are law enforcement, not armed conflict. The time grid is shared: every metric is authored at every time point on the interval [0, 35]. The initial metrics (t=0) represent the state-centric reading at its formal establishment (post-1949). The final metrics (t=35) represent contemporary state practice, where courts and humanitarian bodies have incrementally expanded threshold scope despite state resistance.
+ *   Extractiveness is moderately high (0.68 at interval end) because the threshold mechanism systematically excludes populations from humanitarian protections in contexts states classify as law enforcement. Suppression is high (0.79) because maintaining the threshold requires active exclusion of irregular combatants and their advocates from the victim set and from threshold-determination authority. The constraint's suppression does not diminish over the interval because state practice and military doctrine embed the state-centric classification mechanism institutionally. Theater ratio is moderate (0.41) because the ICRC's advisory presence and humanitarian monitoring create appearance of international oversight while states retain unilateral classification authority; humanitarian legitimacy is preserved through institutional theater while operational discretion expands. The measurement grid captures the initial period of threshold contestation (years 0-12) and the subsequent plateau (years 18-26) where the state-centric reading becomes consolidated in doctrine despite ICRC and scholarly criticism.
+ *
+ * PERSPECTIVAL GAP:
+ *   State military and governmental seats perceive the threshold as a legitimate coordination mechanism that preserves law-enforcement authority and avoids over-applying humanitarian constraints. Irregular combatants and civilians in excluded conflicts perceive the same mechanism as a suppressive filter that denies them protections based on unilateral state determination. The engine computes these divergent classifications from the same structural data: high suppression on the payer side, beneficiary extraction on the state side. The perspectival gap is not a measurement error—it reflects the asymmetric power to define what the constraint applies to.
  *
  * DIRECTIONALITY LOGIC:
- *   State parties are the structural beneficiary: they set the threshold, control classification authority, and retain discretion to classify situations as law enforcement. Their directionality is low (d near 0.0, full beneficiary): the constraint subsidizes their operational freedom. Regular armed forces are also beneficiaries (d low): threshold-exclusion of irregular combatants permits asymmetric operations without triggering humanitarian protections. Irregular combatants and civilians in contested zones are the payers (d high, near 1.0): they fall below the threshold, lack prisoner-of-war status, have no guaranteed medical care, and face potential summary execution or degrading treatment. Their identity is fused to their location/allegiance and their exit options are constrained or trapped. Humanitarian bodies and human rights advocates are excluded (not authored as payer or beneficiary) — they have no structural role in the threshold function under the state-centric reading, though they actively contest it. The ICJ and courts are analytical observers: they determine scope through litigation but do not set it.
+ *   State military and governmental actors are beneficiaries (d near 0.0): they gain operational discretion and avoid constraint application. Their power is institutional and their exit is trapped (they cannot leave the constraint system they define). Irregular combatants and civilians in excluded conflicts are targets (d near 1.0): they bear the cost of reduced protections and have no say in threshold determination. Their power is powerless and their exit is trapped (they cannot change the state's classification). The ICRC and international humanitarian law community are partially excluded (their arguments are heard but overridden). The directionality derivation reflects structural asymmetry: the state defines the constraint's scope for others while exempting itself from broader humanitarian obligations.
  *
  * MANDATROPHY ANALYSIS:
- *   The state-centric reading exhibits contested mandatrophy: the founding problem (clarifying the law-enforcement/armed-conflict boundary) is partly solved but partly obsolete. Modern asymmetric warfare, drone strikes, cyber operations, and gang violence all blur the intensity/organization threshold, making the CA3 boundary less functionally clear than intended. States formally defend the narrow threshold (claiming fidelity to the founding mandate) while operationally expanding it (accepting humanitarian access, conducting documented trials, observing medical neutrality — all practical CA3 behaviors). The theater_ratio rise (0.25 to 0.42) captures this drift: states increasingly perform humanitarian compliance without crossing the threshold-classification boundary. Courts and the ICRC have incrementally lowered the practical threshold through case law and opinio juris, reducing state discretion even as states formally resist. The constraint's persistence is sustained not by continued necessity (the boundary still clarifies situations) but by state inertia and institutional identity (states are accustomed to classification authority). A genuine resolution would require either: (1) states openly accepting a lower, more expansive threshold; (2) humanitarian bodies accepting state sovereignty and narrowing their access claims; or (3) a new treaty explicitly settable thresholds. The current state is unresolved mandatrophy — the founding problem is not dead (low-level violence still exists and states still need to classify it) but the original solution (state-centric threshold) is increasingly inadequate.
+ *   The state-centric reading exhibits mandatrophy trajectory. The founding problem—distinguishing armed conflict from law enforcement—remains live at the policy level, but the constraint's function has drifted toward preserving state operational discretion rather than solving the coordination problem. The ICRC's customary-law tracking and the expansive human rights reading both propose alternative threshold mechanisms, yet the state-centric reading persists because states collectively benefit from retaining classification authority. This is tangled rope (genuine coordination function + asymmetric extraction + active enforcement), not snare (the coordination problem is real), but the extraction component grows over time as military doctrine increasingly relies on threshold classification to conduct operations that would be restricted under humanitarian law. The classification mechanism is enforced not through explicit coercion but through institutional authority and the exclusion of non-state voices from determination.
  */
 
 /* ==========================================================================
@@ -196,95 +252,79 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    intensity_threshold_empirical_boundary,
-    'What operational metrics (duration, casualty count, weapons sophistication, territorial extent) constitute the ''intensity'' threshold, and does state practice converge on them or remain contested?',
-    'Systematic analysis of state characterizations in 30+ recent conflicts (Rwanda, Syria, Myanmar, Yemen, etc.): extract the stated or implied thresholds each state used to classify situations, map the criteria, and test for convergence. ICJ case law provides formalized versions; ICRC incident reports provide operational descriptions.',
-    'If convergence exists, the threshold is stabilizing and the state-centric reading gains predictability. If divergence persists, states are gaming the classification and the threshold provides discretion, not clarity — the constraint becomes purely extractive rather than coordinative.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(intensity_threshold_empirical_boundary, empirical, 'Empirical convergence or divergence in state threshold definitions.').
-
-omega_variable(
-    humanitarian_access_outcome_causality,
-    'Does the state-centric reading''s high suppression and threshold discretion actually prevent humanitarian bodies from providing protection, or do humanitarian actors find workarounds that bypass threshold classification?',
-    'Documentary analysis of ICRC operations, NGO access agreements, and UN fact-finding missions in situations states classified as ''law enforcement'': measure how much humanitarian coverage actually occurs despite below-threshold classification. Track when humanitarian bodies invoke alternative legal frameworks (human rights law, customary IHL, domestic law) to provide protections that CA3 would grant.',
-    'If humanitarian bodies routinely find functional workarounds, the suppression is theatrical and the constraint is mostly piton (inertial, theatrically maintained, functionally bypassed). If suppression actually blocks access, the constraint''s extractiveness is real and the reading''s protection denial is structural.',
+    threshold_determinability,
+    'Can the intensity and organization thresholds be applied objectively, or do they inevitably embed discretionary judgment that states exploit?',
+    'Comparative case analysis of threshold application in reported state practice and international court decisions. Track whether states apply consistent standards across similar conflicts or whether classification tracks strategic interest.',
+    'If thresholds are objectively determinable, the state-centric reading preserves legitimate state authority. If application is systematically discretionary, the constraint functions as pure suppression (reclassifies toward snare). If mixed, the constraint is a hybrid where legitimate coordination rides on extractive classification authority.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(humanitarian_access_outcome_causality, empirical, 'Whether state threshold enforcement actually suppresses humanitarian access or merely displaces it.').
+narrative_ontology:omega_variable(threshold_determinability, empirical, 'Whether threshold application is objective or discretionary.').
 
 omega_variable(
-    axiom_overriding_via_customary_evolution,
-    'Does state practice on CA3 application in recent conflicts (post-2000) indicate that states are accepting a lower, de facto threshold even while defending the formal narrow reading?',
-    'Opinio juris analysis: map state statements on CA3 application across the 2000–2025 period, identifying when states ACCEPTED (rather than resisted) humanitarian protections in situations they classified as law enforcement. Track whether acceptance has accumulated to establish customary modification of the CA3 kernel.',
-    'If customary practice has lowered the threshold, the state-centric reading''s axiom (state classification authority over a high threshold) is being overridden through state action itself, and the icrc_customary_reading better describes current practice. This would suggest the state-centric reading is foreclosed by evolving state commitment, not by the expansive_human_rights reading, but by the ICRC reading (a sibling, not a rival).',
+    reading_foreclosure_possibility,
+    'Can the state-centric reading and the expansive_human_rights_reading both be held within a single legal framework, or does the state-centric reading''s core claim (unilateral state determination) logically foreclose the expansive reading''s core claim (universal floor of protections)?',
+    'Doctrinal analysis of treaty law and customary international law. Can a state simultaneously assert unilateral threshold authority AND accept binding humanitarian floors set externally? Or are these mutually exclusive commitments?',
+    'If mutually exclusive (forecloses), the reading relations should change from coexists_with to forecloses. If compatible (coexists), the readings are truly held by different parties as live positions. The engine computes foreclosure from axiom contradiction; this omega clarifies whether the logical structure supports that computation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(axiom_overriding_via_customary_evolution, empirical, 'Whether customary international law evolution has superseded the state-centric axiom.').
+narrative_ontology:omega_variable(reading_foreclosure_possibility, conceptual, 'Whether state-centric and expansive readings logically foreclose each other or coexist as live positions.').
 
 omega_variable(
-    suppress_vs_internalize_mechanism,
-    'Is the measured suppression (0.79) structural (states actively resist humanitarian access and court jurisdiction) or internalized (irregular combatants and below-threshold groups have incorporated state authority and do not expect protections)?',
-    'Post-threshold-recognition data: track what happens when a conflict crosses into unambiguous CA3 scope — do protected groups immediately demand and receive humanitarian access (suppression was structural), or do they continue to expect law-enforcement treatment (suppression is internalized)? Compare across groups that had long periods below-threshold vs. sudden threshold crossing.',
-    'If structural, the suppression is a real mechanism requiring state enforcement and vulnerable to humanitarian pressure. If internalized, the apparent suppression persists even when formal barriers fall — the constraint carries forward through target psychology, not state machinery. This determines whether humanitarian remedies (access, documentation, courts) would actually increase protections or merely surface pre-existing acceptance of exclusion.',
+    suppression_internalization,
+    'Is the high measured suppression (0.79) structural (external barriers—states exclude populations from determining threshold) or internalized (irregular combatants accept that states have the authority to classify)?',
+    'Post-threshold-change analysis: if a state adopts a lower threshold or international court imposes one, do populations previously excluded resume engagement in legal processes, or does acceptance of state authority persist despite the formal change?',
+    'If structural, removing the threshold constraint would immediately restore suppressed voices. If internalized, suppression persists even after structural removal because populations have adopted the state''s authority frame. If both, the effective suppression is higher than the structural measure suggests.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(suppress_vs_internalize_mechanism, empirical, 'Suppression mechanism: structural enforcement vs. internalized acceptance.').
+narrative_ontology:omega_variable(suppression_internalization, empirical, 'Whether measured suppression is structural or internalized in irregular combatants'' authority acceptance.').
 
 omega_variable(
-    kernel_reading_committer_ambiguity,
-    'Is the state-centric reading a coherent interpretation of the CA3 kernel, or is it a constructed reading designed to preserve state discretion despite the kernel''s humanitarian intent?',
-    'Hermeneutic analysis of the 1949 Geneva Conventions travaux préparatoires (preparatory documents) and the ICRC''s founding commentary on CA3. Compare what negotiators intended (did they intend intensity/organization thresholds as state tools or humanitarian floors?) vs. what state practice has made of the text. If travaux show humanitarian intent but state practice has inverted it, the reading is committer-constructed, not kernel-discovered.',
-    'If the state-centric reading is merely constructed (committer-created, not kernel-discovered), it is on weaker ground than the humanitarian readings which align with stated travaux intent. This would support reclassification toward the expansive reading. If travaux actually support threshold discretion, the state-centric reading is a legitimate kernel instantiation and the humanitarian reading is an expansive reinterpretation.',
-    confidence_without_resolution(medium)
+    kernel_codification_status,
+    'Is the Common Article 3 kernel formalized (the text of CA3 itself) or does the kernel include the unwritten intensity/organization boundary that the three readings dispute?',
+    'Determine the scope of the kernel: does it include only the published text of CA3, or does it include the customary international law surrounding scope? The answer affects whether the three readings are interpretations of a single fixed text or readings of a partially implicit kernel.',
+    'If the kernel is text-only, the readings are interpretive disputes about unstated boundaries and the codification is formalized but incomplete. If the kernel is text + customary scope, the codification is distributed (no single authoritative source) and the readings are competing customary determinations.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_committer_ambiguity, conceptual, 'Whether the state-centric reading is discovered in the kernel text or constructed to protect state interests.').
+narrative_ontology:omega_variable(kernel_codification_status, conceptual, 'Scope of the Common Article 3 kernel: text-only or text+customary.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(common_article_3_scope__state_centric_reading, 0, 35).
+narrative_ontology:interval(common_article_3_scope__state_centric_reading, 0, 26).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comm_tr_t0, common_article_3_scope__state_centric_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(comm_tr_t5, common_article_3_scope__state_centric_reading, theater_ratio, 5, 0.28).
-narrative_ontology:measurement(comm_tr_t10, common_article_3_scope__state_centric_reading, theater_ratio, 10, 0.32).
-narrative_ontology:measurement(comm_tr_t15, common_article_3_scope__state_centric_reading, theater_ratio, 15, 0.36).
-narrative_ontology:measurement(comm_tr_t20, common_article_3_scope__state_centric_reading, theater_ratio, 20, 0.39).
-narrative_ontology:measurement(comm_tr_t25, common_article_3_scope__state_centric_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(comm_tr_t30, common_article_3_scope__state_centric_reading, theater_ratio, 30, 0.42).
-narrative_ontology:measurement(comm_tr_t35, common_article_3_scope__state_centric_reading, theater_ratio, 35, 0.42).
+narrative_ontology:measurement(comm_tr_t0, common_article_3_scope__state_centric_reading, theater_ratio, 0, 0.32).
+narrative_ontology:measurement(comm_tr_t4, common_article_3_scope__state_centric_reading, theater_ratio, 4, 0.35).
+narrative_ontology:measurement(comm_tr_t8, common_article_3_scope__state_centric_reading, theater_ratio, 8, 0.38).
+narrative_ontology:measurement(comm_tr_t12, common_article_3_scope__state_centric_reading, theater_ratio, 12, 0.4).
+narrative_ontology:measurement(comm_tr_t18, common_article_3_scope__state_centric_reading, theater_ratio, 18, 0.41).
+narrative_ontology:measurement(comm_tr_t26, common_article_3_scope__state_centric_reading, theater_ratio, 26, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(comm_be_t0, common_article_3_scope__state_centric_reading, base_extractiveness, 0, 0.52).
-narrative_ontology:measurement(comm_be_t5, common_article_3_scope__state_centric_reading, base_extractiveness, 5, 0.56).
-narrative_ontology:measurement(comm_be_t10, common_article_3_scope__state_centric_reading, base_extractiveness, 10, 0.61).
-narrative_ontology:measurement(comm_be_t15, common_article_3_scope__state_centric_reading, base_extractiveness, 15, 0.64).
-narrative_ontology:measurement(comm_be_t20, common_article_3_scope__state_centric_reading, base_extractiveness, 20, 0.66).
-narrative_ontology:measurement(comm_be_t25, common_article_3_scope__state_centric_reading, base_extractiveness, 25, 0.67).
-narrative_ontology:measurement(comm_be_t30, common_article_3_scope__state_centric_reading, base_extractiveness, 30, 0.68).
-narrative_ontology:measurement(comm_be_t35, common_article_3_scope__state_centric_reading, base_extractiveness, 35, 0.68).
+narrative_ontology:measurement(comm_be_t0, common_article_3_scope__state_centric_reading, base_extractiveness, 0, 0.58).
+narrative_ontology:measurement(comm_be_t4, common_article_3_scope__state_centric_reading, base_extractiveness, 4, 0.62).
+narrative_ontology:measurement(comm_be_t8, common_article_3_scope__state_centric_reading, base_extractiveness, 8, 0.65).
+narrative_ontology:measurement(comm_be_t12, common_article_3_scope__state_centric_reading, base_extractiveness, 12, 0.67).
+narrative_ontology:measurement(comm_be_t18, common_article_3_scope__state_centric_reading, base_extractiveness, 18, 0.69).
+narrative_ontology:measurement(comm_be_t26, common_article_3_scope__state_centric_reading, base_extractiveness, 26, 0.68).
 
 % Suppression requirement over time
 narrative_ontology:measurement(comm_su_t0, common_article_3_scope__state_centric_reading, suppression_requirement, 0, 0.71).
-narrative_ontology:measurement(comm_su_t5, common_article_3_scope__state_centric_reading, suppression_requirement, 5, 0.73).
-narrative_ontology:measurement(comm_su_t10, common_article_3_scope__state_centric_reading, suppression_requirement, 10, 0.75).
-narrative_ontology:measurement(comm_su_t15, common_article_3_scope__state_centric_reading, suppression_requirement, 15, 0.76).
-narrative_ontology:measurement(comm_su_t20, common_article_3_scope__state_centric_reading, suppression_requirement, 20, 0.77).
-narrative_ontology:measurement(comm_su_t25, common_article_3_scope__state_centric_reading, suppression_requirement, 25, 0.78).
-narrative_ontology:measurement(comm_su_t30, common_article_3_scope__state_centric_reading, suppression_requirement, 30, 0.79).
-narrative_ontology:measurement(comm_su_t35, common_article_3_scope__state_centric_reading, suppression_requirement, 35, 0.79).
+narrative_ontology:measurement(comm_su_t4, common_article_3_scope__state_centric_reading, suppression_requirement, 4, 0.74).
+narrative_ontology:measurement(comm_su_t8, common_article_3_scope__state_centric_reading, suppression_requirement, 8, 0.76).
+narrative_ontology:measurement(comm_su_t12, common_article_3_scope__state_centric_reading, suppression_requirement, 12, 0.78).
+narrative_ontology:measurement(comm_su_t18, common_article_3_scope__state_centric_reading, suppression_requirement, 18, 0.79).
+narrative_ontology:measurement(comm_su_t26, common_article_3_scope__state_centric_reading, suppression_requirement, 26, 0.79).
 
 
 /* ==========================================================================
@@ -297,13 +337,13 @@ narrative_ontology:affects_constraint(common_article_3_scope__state_centric_read
 narrative_ontology:affects_constraint(common_article_3_scope__state_centric_reading, common_article_3_scope__icrc_customary_reading).
 
 % DUAL FORMULATION NOTE:
-% The common_article_3_scope kernel admits three structurally distinct readings with different ε values and beneficiary/victim structures. This story (state_centric_reading) claims rope (coordination framing) but metrics describe tangled_rope (coordination + extraction + enforcement). The expansive_human_rights_reading applies CA3 as a humanitarian floor to all organized violence, removing threshold discretion (high extraction from states, low extraction from irregular combatants, different type). The icrc_customary_reading anchors CA3 scope in evolving state practice and opinio juris, making the boundary dynamic rather than fixed (different ε). Each reading is a separate constraint story linked by network.affects_constraints. The state-centric reading INFLUENCES both siblings by asserting state classification authority (upstream), which conditions what counts as state practice (customary reading) and what states can resist (human rights reading).
+% The Common Article 3 scope kernel decomposes into three readings with structurally distinct ε values and victim sets. The state-centric reading excludes irregular combatants below the intensity/organization threshold from protection, yielding high extractiveness (0.68). The expansive reading applies CA3 to all organized armed violence, yielding lower extractiveness and broader victim coverage. The ICRC reading delegates scope determination to customary international law evolution, yielding intermediate extractiveness depending on opinio juris trajectory. Each reading shares the CA3 text but instantiates different constraints by disagreeing on the scope-determining boundary.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(common_article_3_scope__state_centric_reading, institutional, 0.08).
+constraint_indexing:directionality_override(common_article_3_scope__state_centric_reading, organized, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

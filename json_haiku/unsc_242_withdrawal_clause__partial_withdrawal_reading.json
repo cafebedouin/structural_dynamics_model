@@ -4,265 +4,378 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "cb5e2002-255a-45c2-ba4a-e1ec4dab4c87"
+    "module_name_override": "constraint_unsc_242_partial_withdrawal",
+    "story_uid": "1110c2bd-3628-49dd-ac62-f4cd5f964d6c"
   },
   "base_properties": {
     "extractiveness": 0.62,
-    "suppression": 0.58,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.48,
-    "resistance": 0.72,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "UNSC 242 Withdrawal Clause — Partial Withdrawal Reading",
-    "topic_domain": "international_law/diplomatic_history",
+    "human_readable": "UNSC Resolution 242 Withdrawal Clause (Partial Withdrawal Reading)",
+    "topic_domain": "international_law/diplomatic_negotiation",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "occupying_military_power",
-      "mediating_permanent_members"
+      "mediation_gatekeepers"
     ],
     "victims": [
-      "dispossessed_claimants",
-      "regional_alignment_pressured_states"
+      "territorial_claimants",
+      "displaced_populations"
+    ],
+    "vindicated_propositions": [
+      "indefinite_article_ambiguity_doctrine",
+      "secure_boundaries_principle"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "occupying_military_power",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Controls the territories in question and interprets Resolution 242's indefinite English phrasing ('from territories') as permitting phased, conditional withdrawal. Maintains that the 'secure boundaries' principle justifies retention of strategically important areas. Uses the textual ambiguity to negotiate the terms and scope of withdrawal, trading territorial concessions for security arrangements. The constraint's persistence depends on this power's ability to enforce its reading and defend against alternative interpretations."
+    },
+    {
+      "name": "mediation_gatekeepers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "International mediators, guarantor powers, and the UN apparatus collect influence and structural relevance by managing the ambiguity. The more indefinite the withdrawal obligation, the more mediation is required to negotiate the 'terms' of compliance. They benefit from the constraint's indefiniteness by positioning themselves as necessary intermediaries between the occupying power and territorial claimants. Their authority and fee-collection depend on the ambiguity remaining live."
+    },
+    {
+      "name": "territorial_claimants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "States and populations claiming the occupied territories. Under this reading, they cannot point to a fixed, unambiguous withdrawal obligation; instead they must negotiate with the occupying power and mediators over what 'withdrawal from territories' actually requires. They bear the cost of continued occupation, fragmented governance, and the erosion of territorial claims while waiting for 'implementation' of an ambiguous mandate. Exit would mean abandoning the claim entirely or pursuing non-legal remedies."
+    },
+    {
+      "name": "displaced_populations",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Residents of the occupied territories and those displaced by occupation. They bear the tangible costs of continued occupation (military control, settlement restrictions, fragmented services, loss of property). They are excluded from the textual interpretation debate — which reading controls is decided by states and international lawyers, not by those living under the constraint. Their exit is flight or permanent displacement; they have no seat in the negotiation."
+    },
+    {
+      "name": "icj_interpretive_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Court of Justice claims authority to resolve textual ambiguities in the Charter and resolutions through judicial interpretation. Under this reading, the ICJ's role is advisory: the court can issue opinions on what the text 'means,' but the occupying power retains practical discretion over compliance scope. The tension between judicial authority and practical enforcement is the structural gap this reading leaves open."
+    },
+    {
+      "name": "charter_drafting_states",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The UN member states that drafted Resolution 242, especially the permanent members who negotiated the compromise text. This reading claims to honor their intent: the English phrasing ('from territories') was deliberately chosen to avoid the French definite article ('from the territories'), encoding flexibility into the withdrawal obligation. Drafting-state intent is invoked as the authoritative frame, yet that intent is itself contested and unwritten."
+    },
+    {
+      "name": "maximal_withdrawal_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "International law scholars, states, and advocacy groups that read Resolution 242 through the maximal-withdrawal lens: that indefiniteness is an accident of translation, the true mandate (especially in the French version) is complete withdrawal, and the occupying power has no discretion to retain territories. They are excluded from this reading's framework — their core premise is foreclosed by the partial-withdrawal reading's adoption of the indefinite article as authoritative."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolution 242 coordinates a framework for conflict termination post-1967: cessation of hostilities, withdrawal from occupied territories, mutual recognition, and refugee solutions are bundled into a single mandate requiring international mediation and negotiation to implement. The indefiniteness of 'withdrawal from territories' (rather than 'the territories') permits phased negotiation of what 'implementation' requires, allowing the occupying power and claimants to reach settlement terms without either side pre-committing to fixed boundaries.",
+    "transfer_function": "Moves interpretive authority and negotiating leverage from the textual mandate to the occupying power and mediators: the more ambiguous the withdrawal obligation, the more the occupying power can condition withdrawal on security guarantees, boundary adjustments, or phased implementation. Mediators extract relevance and structural necessity by managing the gap between textual obligation and practical implementation. Claimants lose the ability to invoke a fixed, unambiguous right and must instead negotiate from a weaker position.",
+    "absent_voices": "Displaced populations and residents of occupied territories have no seat in the interpretation of Resolution 242; their situation is decided by state diplomacy and international legal doctrine. Maximal-withdrawal advocates and states aligned with territorial claimants are also excluded from this reading's authoritative framework — their arguments are treated as alternative readings rather than legitimate contestation within the same legal system.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the indefinite-article reading of Resolution 242 disappeared and maximal-withdrawal mandates took its place, the occupying power would lose its negotiating discretion, territorial claimants would gain a fixed, unambiguous legal claim, mediation gatekeepers would lose their necessity, and the conflict's terms would shift from open-ended negotiation to implementation of a closed mandate. Phased negotiations would be replaced by compliance demands; the occupying power would face either full withdrawal or direct breach of binding obligation.",
+    "founding_problem": "The 1967 war created occupation and territorial disputes that required a UN mandate capable of being accepted by all permanent members. The Charter's territorial integrity principle (Article 2(4)) and the doctrine of non-acquisition by force (uti possidetis) created pressure for withdrawal, yet the occupying power and its allies sought discretion over scope and timing. Resolution 242's indefinite phrasing ('from territories' rather than 'the territories') was a compromise encoding that flexibility into the legally binding text.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The occupying power and its allies attest that the founding problem required a negotiable, phased mandate. Maximal-withdrawal advocates and the territorial claimants attest the founding problem required an unambiguous withdrawal obligation; they cite the French text and Charter Article 2(4) as evidence that the indefiniteness was a drafting error, not intent. Independent international law scholarship is divided; major commentators (Schwebel, Rostow on one side; Crawford, Brownlie on the other) contest whether the drafters deliberately encoded ambiguity or whether translation variants obscured a single intended meaning."
   },
   "interval": {
     "start": 0,
-    "end": 56
+    "end": 55
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 7,
-      "value": 0.52
+      "time_point": 8,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 14,
-      "value": 0.57
+      "time_point": 16,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 21,
-      "value": 0.6
+      "time_point": 24,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 28,
-      "value": 0.61
+      "time_point": 32,
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.62
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 42,
-      "value": 0.62
+      "time_point": 48,
+      "value": 0.61,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 56,
-      "value": 0.62
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 7,
-      "value": 0.28
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 14,
-      "value": 0.32
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 21,
-      "value": 0.36
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 28,
-      "value": 0.39
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 42,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 56,
-      "value": 0.41
+      "time_point": 55,
+      "value": 0.62,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.44
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 7,
-      "value": 0.47
+      "time_point": 8,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 14,
-      "value": 0.51
+      "time_point": 16,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 21,
-      "value": 0.54
+      "time_point": 24,
+      "value": 0.72,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 28,
-      "value": 0.57
+      "time_point": 32,
+      "value": 0.74,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.58
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 42,
-      "value": 0.58
+      "time_point": 48,
+      "value": 0.7,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 56,
-      "value": 0.58
+      "time_point": 55,
+      "value": 0.71,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.48,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "United Nations Security Council Resolution 242 (1967) instructs 'withdrawal of Israeli armed forces from territories occupied in the recent conflict.' The English text uses the indefinite article ('from territories') while the French working text uses the definite article ('des territoires' — all territories). This linguistic difference has generated three structurally distinct constraint stories: (1) interpretive_authority_structure — who may authoritatively resolve the ambiguity; (2) maximal_withdrawal_reading — withdrawal must be unconditional and complete per Charter Article 2(4); (3) this story — partial_withdrawal_reading, instantiating the occupying power's position that the indefinite article permits discretionary, phased withdrawal conditioned on 'secure boundaries' negotiations. The partial reading benefits the occupying power and mediating permanent members by converting textual ambiguity into sustained leverage. It extracts from dispossessed claimants by denying them a fixed withdrawal timeline. ε is moderate because the constraint is conditional (phased) and depends on active suppression of the maximal reading.",
+    "narrative_context": "UN Security Council Resolution 242 (1967) mandates 'withdrawal of Israeli armed forces from territories occupied in the recent conflict.' The textual ambiguity — specifically the indefinite article in the English version ('from territories' rather than 'the territories') — has anchored decades of diplomatic negotiation over the scope and pace of Israeli withdrawal. The partial-withdrawal reading interprets this indefiniteness as deliberate: the drafters intended to preserve the occupying state's discretion to negotiate which territories, under what conditions, and on what timeline. The 'secure boundaries' principle is invoked to justify the retention of strategically significant areas. This reading instantiates a constraint that benefits the occupying military power and international mediators while extracting from territorial claimants who lack a fixed enforcement line. The constraint is not purely extractive (it coordinates the termination framework and permits negotiation), but it asymmetrically distributes the benefits of ambiguity to the occupying power and the costs to claimants.",
     "key_agents": [
-      "occupying_military_power: Institutional power with arbitrage exit — holds the territory and interprets the clause in its favor; benefits from indefiniteness",
-      "dispossessed_claimants: Moderate power with constrained exit — seek unconditional return; victims of the reading's indefiniteness",
-      "mediating_permanent_members: Institutional power, analytical exit — drafted the ambiguity deliberately; benefit from control over interpretation",
-      "icj_as_potential_interpreter: Institutional analytical seat — possesses authority but lacks enforcement power to override Security Council",
-      "non_aligned_third_states: Organized power, constrained exit — excluded from binding interpretation; advocate for maximal reading but carry no enforcement weight"
+      "occupying_military_power: Controls territory; interprets indefiniteness as permitting phased/conditional withdrawal; sets the agenda for implementation terms",
+      "mediation_gatekeepers: International mediators, guarantor states, UN bureaucracy; collect influence and relevance by managing the implementation ambiguity",
+      "territorial_claimants: States and populations claiming the occupied territories; must negotiate over what 'withdrawal' requires rather than invoking fixed obligation",
+      "displaced_populations: Powerless; bear costs of continued occupation; excluded from interpretation authority",
+      "maximal_withdrawal_advocates: Excluded from this reading's framework; their core premise (definite article controls, full withdrawal mandatory) is foreclosed by the partial-withdrawal reading"
     ],
-    "logic_rationale": "Extractiveness reaches 0.62 because the indefinite scope is the distributed resource: claimants cannot claim breach unless scope is fixed, so the constraint's persistence depends on keeping scope ambiguous. The occupying power collects negotiating leverage from that ambiguity. Suppression is moderate (0.58) because the reading requires active diplomatic suppression of the maximal-reading interpretation — this is not a constraint that persists passively. Theater ratio rises from 0.25 to 0.41 because over the 56-year interval, the 'secure boundaries' justification has become increasingly performative: security rationale cited initially for buffer zones has evolved into permanent settlement-building, suggesting the functional purpose (security) has been subordinated to the extraction purpose (territorial retention). The measurement series tracks one shared temporal grid: as extractiveness plateaus at 0.62 (the asymptote of what indefiniteness can deliver), theater rises (performance substituting for function) and suppression stabilizes (the enforcement effort needed to sustain the reading remains constant). The plateau in extractiveness after year 35 indicates the constraint has reached its maximum leverage — further gains would require either moving to a snare (declaring the clause unilaterally interpreted) or moving to a rope (converting temporary occupation into formal annexation), both of which would trigger explicit breach allegations.",
-    "perspectival_gap": "From the occupying power's seat, the reading is genuine coordination: the indefinite article permits flexibility, 'secure boundaries' is a real doctrine in international law (Waldock, ICJ opinions), and phased withdrawal with security guarantees is a reasonable resolution path. From the claimants' seat, the same structure operates as enforced extraction: the indefinite article was drafting accident or deliberate trap, 'secure boundaries' is cover for territorial appropriation, and phased withdrawal is indefinite delay of return. From the mediating permanent members' seat, the reading is pure leverage — they drafted the ambiguity, benefit from controlling interpretation, and have an interest in neither full enforcement (which would remove occupation) nor explicit violation (which would trigger crisis). The engine computes these divergences from the structural data: occupying power gets low d (benefits without running the full constraint); claimants get high d (targeted by the indefiniteness); mediators get moderate-to-low d (benefit from leverage without bearing extraction cost). The committer frame (Rules 3–4) routes the reading contest itself into the CS structure and omega variables rather than into the claim/metric relationship.",
-    "directionality_logic": "Occupying power: Declared beneficiary (collects indefinite scope as negotiating leverage), institutional power, arbitrage exit (can reinterpret or move to annexation claim). Derives d near 0.1–0.2 (full beneficiary, though not passive collector — maintains the reading through diplomatic suppression). Dispossessed claimants: Declared victims (denied fixed withdrawal timeline), moderate power, constrained exit (cannot unilaterally terminate occupation, must negotiate). Derives d near 0.75–0.85 (targeted by the indefiniteness, constrained exit, power insufficient to force maximal reading). Mediating permanent members: Declared beneficiaries (control the interpretation authority, benefit from leverage preservation), institutional power, analytical exit (no direct costs, can shift positions). Derive d near 0.15–0.25. Non-aligned third states: Excluded from binding interpretation, organized power, constrained exit. Would have high d if targeted directly, but exclusion means the constraint operates without reference to them — they experience it as suppression of their preferred reading but not as direct extraction. No directionality override needed; the structural data produce the seat divergence directly.",
-    "mandatrophy_analysis": "The founding problem (1967 stalemate: occupying power's security needs vs. claimants' territorial integrity claims) remains contested in status. The occupying power attests it is still live; claimants and third states attest it is dead. The partial-withdrawal reading depends on this contestation: if the founding problem is declared dead, the reading becomes a snare (pure extraction with no coordination function). If declared live, it remains tangled_rope (security coordination + extraction). The divergence between founding_problem_status=contested and disappearance_verdict=world_rearranges is the mandatrophy signal: the constraint's disappearance WOULD rearrange the world (occupying power would face breach allegations, claimants could invoke Article 2(4) directly, mediators would lose leverage), but the founding problem that justified the constraint is no longer credibly live — the security threat has mutated into settlement expansion. This is a classic mandatrophy candidate: a coordinate structure whose mandate has shifted from solving a real coordination problem to protecting extraction. The reading's persistence depends on the permanent members and occupying power continuously suppressing the maximal reading and the ICJ's authority to rule — active suppression is the extraction mechanism.",
-    "kernel_context": "This constraint instantiates ONE reading of the contested UNSC 242 withdrawal clause kernel. The kernel is the text of 242 itself — specifically the phrase about withdrawal of 'armed forces from territories occupied.' The English text uses the indefinite article ('from territories'), while the French working text uses the definite article ('des territoires' — all territories). The partial_withdrawal_reading interprets this indefiniteness as intentionally discretionary per drafters' intent and permits the occupying power to retain strategically necessary zones under the 'secure boundaries' principle. Sibling readings are: (1) maximal_withdrawal_reading — withdrawal is mandatory from ALL territories per Charter Article 2(4) as the controlling default, with the definite article reading controlling; (2) interpretive_authority_structure — the authority to resolve this textual contest is itself the constraint, not the text. This story focuses on the substantive partial-withdrawal reading; the other two are separate constraints with different ε values and beneficiary structures."
+    "logic_rationale": "Extractiveness is moderate (0.62 at interval end) because the constraint provides genuine coordination (cessation framework, phased negotiation, mediation structure) while systematically advantaging the occupying power in scope determination. Suppression is high (0.71) because maintaining the constraint requires the occupying power to defend the indefinite-article reading against maximal-withdrawal challenges and to suppress the direct application of Charter Article 2(4)'s territorial integrity default. Theater is moderate (0.48): some portion of the enforcement activity consists of diplomatic theatre — rhetorical invocation of 'secure boundaries' and 'phased implementation' — while a substantial portion is structural (military control, gated access to negotiation, control over what counts as 'implementation'). The measurement series trace the constraint's operation over 55 years: extractiveness and suppression rise through the 1970s–1990s (the period of most intensive negotiation and competing interpretive claims), stabilize in the 2000s–2010s, and show slight decay in the projected period as the founding problem's political salience shifts. Theater peaks mid-interval (time 32–40) when the constraint's rhetorical maintenance required maximum diplomatic effort.",
+    "directionality_logic": "The occupying power sits at the beneficiary end of directionality (d ≈ 0.1–0.2): the constraint's entire function is to preserve its discretion, and its exit options are arbitrage-grade (it can comply fully, comply partially with negotiated exceptions, or withdraw selectively and claim compliance with a new interpretation). Mediation gatekeepers sit near symmetric (d ≈ 0.4–0.5): they benefit from the constraint's necessity but must defend it against collapse, so their position is genuinely dual. Territorial claimants sit at the target end (d ≈ 0.75–0.85): they bear the extraction (continued occupation without a fixed withdrawal date) and have severely constrained exit (they can abandon the claim, accept subordinate status, or pursue military challenge outside the legal framework). Displaced populations sit at maximum extraction (d ≈ 0.9): they have trapped exit and bear the full cost of the constraint's operation with no benefit or voice. These directionality differences should produce per-seat type variation: from the occupying power's seat, this is genuine coordination (Rope or Tangled Rope on the beneficiary side); from the claimant seat, this is enforced extraction (Snare on the victim side). The engine computes this divergence from the structural data.",
+    "perspectival_gap": "The occupying power experiences the constraint as coordination with discretionary scope — a framework that permits both implementation and strategic retention. The mediation gatekeepers experience it as necessary intermediary function — the constraint generates demand for their services. Territorial claimants experience it as a fixed obligation rendered unenforceable by textual ambiguity — a constraint that blocks their primary claim while permitting negotiation of secondary terms. Displaced populations experience it as military occupation with indefinite duration — they have no seat in the interpretation and no path to exit except flight. These perceptual divergences arise from the structural asymmetry: the constraint's indefiniteness is an asset for some (occupying power, mediators) and a liability for others (claimants, displaced). The engine's per-seat classification should surface this divergence as Type variation across seats.",
+    "mandatrophy_analysis": "The founding problem (post-1967 conflict termination requiring negotiated withdrawal) was live at Resolution 242's adoption and remains live in some form (the occupying power retains territories that claimants dispute; no final status agreement has closed the question). However, the mechanism for solving that problem has substantially atrophied: the indefinite-article reading was credible as a transitional framework in the 1970s–1980s when active, time-bound negotiations were ongoing; today the same indefiniteness functions primarily as a cover for indefinite retention rather than as a time-limited negotiating tool. The constraint has shifted from Scaffold (a transitional coordination framework with an implicit sunset contingent on settlement) to Piton (a mechanism maintained theatrically long after its functional purpose has atrophied). The theater_ratio's plateau at ~0.48 reflects this: diplomatic rhetoric about 'final status negotiations' and 'secure boundaries' persists, but the underlying coordination function has not produced a settlement in 55 years. The constraint is mandatrophic: it solved its founding problem (termination of active fighting, establishment of a negotiation framework) but persists as a barrier to solving the next problem (final territorial settlement, refugee return). Declaring mandatrophy_resolved would be premature — the constraint's function has atrophied but its enforcement structure (military occupation, mediation gatekeeping, textual authority disputes) remains active. The constraint is in the Piton-failure trajectory.",
+    "kernel_context": "This constraint instantiates the partial-withdrawal reading of UN Security Council Resolution 242's withdrawal clause — a contested kernel about what 'withdrawal of Israeli armed forces from territories occupied in the recent conflict' requires. The partial-withdrawal reading holds that the indefinite English article ('from territories' rather than 'the territories') encodes deliberate drafting intent to preserve the occupying power's discretion over scope and pace of withdrawal. The maximal-withdrawal reading holds that the indefiniteness is an artifact of translation; the true mandate (especially in the French 'des territoires' / 'the territories') is complete withdrawal. The interpretive-authority-structure reading holds that the authority to resolve this textual ambiguity is itself contested: the International Court of Justice claims judicial interpretation rights, the drafting states claim authorial-intent authority, and the occupying state claims customary-practice authority over its own compliance. This constraint (partial-withdrawal) coexists with the maximal-withdrawal reading — both readings remain live among different state parties and interpretive communities; neither foreclosed the other, but both influence (and constrain) the other's policy space."
   },
   "omegas": [
     {
-      "id": "deliberate_vs_accidental_indefiniteness",
-      "question": "Was the indefinite article in the English text a deliberate drafting choice to preserve both readings, or an accidental mismatch with the French definite article?",
-      "resolution_mechanism": "Historical analysis of UNSC drafting records (UN archives, declassified diplomatic cables); testimony from living drafters or their documented intent statements; comparison of drafting timelines and who controlled English vs. French versions.",
-      "impact": "If deliberate, the partial reading is the authorial intent and the constraint's persistence is the intended outcome. If accidental, the partial reading is a false-summit beneficiary trap — a misreading of the drafters' intent that extracts from claimants. If contested (evidence points both ways), the reading contest itself becomes the constraint.",
+      "id": "indefinite_article_authorial_intent",
+      "question": "Did the drafters of Resolution 242 deliberately choose the indefinite English article ('from territories') to encode occupying-power discretion, or is the indefiniteness an accident of translation — a side effect of rendering the French 'des territoires' (which some read as plural-definite) into English indefinite form?",
+      "resolution_mechanism": "Declassification of drafting-state position papers, negotiation records, and UN Secretariat drafting notes from the 1967 period. Comparative analysis of French and English originals alongside drafting-state communications at the time.",
+      "impact": "If deliberate: the partial-withdrawal reading's core premise is vindicated, and the constraint is structurally legitimate as a phased negotiation framework. If accidental: the indefiniteness is a drafting error, and maximal-withdrawal readings gain authority. If ambiguous (genuinely contested intent): the constraint's persistence depends on the occupying power's ability to defend its interpretation against challenges.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether textual indefiniteness was strategic or accidental in 242's drafting."
+      "description": "Whether the indefinite article represents deliberate drafting intent or translation artifact"
     },
     {
-      "id": "secure_boundaries_doctrine_scope",
-      "question": "Does 'secure boundaries' under international law permit indefinite retention of occupied territory, or only temporary occupation pending agreement on boundary terms?",
-      "resolution_mechanism": "ICJ jurisprudence on occupation and security (e.g., Legality of Threat or Use of Force, Wall opinion); customary international law analysis; state practice in comparable occupations (Kuwait, Crimea, post-WWII cases).",
-      "impact": "If indefinite retention is permitted, the partial reading is doctrinally sound and the constraint is a genuine coordination mechanism (occupying power's security vs. claimants' return), making it tangled_rope rather than snare. If only temporary pending agreement, the reading becomes snare (extraction under cover of security doctrine).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether 'secure boundaries' doctrine constrains or permits indefinite retention."
-    },
-    {
-      "id": "reading_contest_vs_textual_ambiguity",
-      "question": "Is the constraint the textual ambiguity itself (indefinite article permits discretion) or the contest over which reading controls interpretation?",
-      "resolution_mechanism": "If ICJ rules definitively on scope, textual ambiguity becomes resolved and the partial reading either wins or loses — the constraint shifts from 'indefiniteness as leverage' to 'reading as fixed legal claim.' If no ruling, the contest persists and the constraint remains the ambiguity.",
-      "impact": "If the contest itself is the constraint (reading_relations: coexists_with between maximal and partial readings), then all three sibling stories are necessary to capture the full constraint family. If textual scope is the constraint, the partial reading stands alone as binding interpretation once certified. The committer structure (Rule 2) routes this into omega rather than modifying the claim or metrics.",
+      "id": "secure_boundaries_principle_scope",
+      "question": "What does the 'secure boundaries' principle permissibly justify in terms of territorial retention? Does 'secure' mean military-strategic necessity (the occupying power's reading), or defensive sufficiency without territorial expansion (the maximal-withdrawal reading)?",
+      "resolution_mechanism": "Comparative jurisprudence of territorial law: how other international bodies and courts have interpreted 'secure boundaries' in analogous border disputes; ICJ advisory opinions on Charter Article 2(4) and customary law principles; security assessments from neutral sources establishing what territorial holdings are necessary vs. strategic.",
+      "impact": "If 'secure' permits substantial retention based on strategic military judgment: the partial-withdrawal reading gains authority and the constraint remains highly extractive. If 'secure' is limited to demonstrable defensive necessity: the constraint's extractiveness is reduced and phased withdrawal becomes more obligatory. If the principle is unresolved: the constraint remains indefinite and extraction persists.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the constraint is the ambiguous text or the reading contest over its interpretation."
+      "description": "Whether 'secure boundaries' justifies strategic territorial retention or only defensive minimum holdings"
     },
     {
-      "id": "mediating_states_authority_vs_occupying_state_practice",
-      "question": "Do mediating permanent members (who drafted 242 with deliberate ambiguity) retain binding interpretive authority, or does occupying power's actual practice over decades constitute customary interpretation?",
-      "resolution_mechanism": "ICJ analysis of subsequent state practice (VCLT Article 31(3)(b)) — if occupying power has retained territory for 50+ years and other states have acquiesced or treated it as customary, practice may bind the interpretation. Alternatively, Security Council explicit statement reaffirming the interpretation.",
-      "impact": "If practice binds, the partial reading becomes customary law and no longer depends on active suppression — it shifts from tangled_rope (requires enforcement) toward rope (coordination settled by accepted practice). If mediating authority remains primary, the reading depends on their continued suppression of maximal interpretation.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether customary practice has settled the reading or mediating authority still controls."
+      "id": "interpretive_authority_hierarchy",
+      "question": "Which interpretive authority is legitimate for resolving textual ambiguities in Resolution 242: the International Court of Justice (judicial interpretation), the drafting states (authorial intent), customary international law (practice-based interpretation), or the occupying state (de facto compliance authority)?",
+      "resolution_mechanism": "Meta-legal analysis of the UN Charter's dispute-resolution provisions (Chapter VI judicial role, General Assembly authority, Security Council primacy); comparative review of how disputes over other Security Council resolutions have been adjudicated; examination of whether the interpretive authority dispute is itself resolvable or structurally inherent.",
+      "impact": "If ICJ authority is decisive: judicial interpretation could settle the question via advisory opinion (though enforcement would still depend on state compliance). If drafting-state intent is decisive: declassified records become controlling. If occupying-state practice is decisive: the constraint's current extraction maintains until a counterforce challenges it. If the question is structurally unresolvable: the interpretive dispute is permanent, and the constraint persists through perpetual contestation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which authority has the right to resolve ambiguity in the withdrawal clause — judicial, authorial, customary, or de facto"
     },
     {
-      "id": "identity_locked_suppression_in_occupying_power",
-      "question": "Is the occupying power's continued interpretation as indefinite scope locked into its institutional identity (security-state logic, permanent occupation as normalized state identity) such that exit from the partial reading would require identity transformation?",
-      "resolution_mechanism": "Post-reading-shift analysis: if a court ruling or diplomatic settlement forced maximal interpretation, would the occupying power accept it as legitimate or would its institutions resist as identity-threatening? Does security doctrine reject return-to-pre-1967 borders as existentially incompatible with state identity?",
-      "impact": "If identity-locked, the occupying power's exit options are lower than 'arbitrage' suggests — true exit would require institutional reconstitution. This would raise d and suppress alternatives more deeply than structural analysis captures. If merely institutional preference (arbitrage-grade exit preserved), the original d remains accurate.",
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.71) primarily structural — enforced by military control, gated access to mediation, and institutional barriers to maximal-withdrawal interpretation — or internalized — territorial claimants have culturally or politically accepted indefinite retention as inevitable, and would resist re-engagement even if barriers were removed?",
+      "resolution_mechanism": "Post-barrier counterfactual: if mediation gatekeepers withdrew or neutral arbitration was offered, would claimants re-engage with enforcement vigor, or would they treat the constraint as permanent? Comparative analysis of suppression trajectories in analogous territorial disputes that experienced barrier removal (e.g., decolonization processes, Cold War territorial settlements). Ethnographic and discourse analysis of claimant-state and population attitude shifts.",
+      "impact": "If primarily structural: the constraint's suppression is contingent on the occupying power's enforcement capacity; removal of gatekeepers could shift the balance. If internalized: the suppression persists even after structural barriers are lifted; claimants have absorbed the indefiniteness as legitimate or unchangeable. If mixed: identifying the ratio of structural to internalized suppression would clarify where intervention could be most effective.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether occupying power's institutional identity is locked into the partial reading."
+      "description": "Whether suppression is enforced by external barriers or internalized by claimants as inevitable"
+    },
+    {
+      "id": "partial_vs_maximal_reading_foreclosure",
+      "question": "Do the partial-withdrawal and maximal-withdrawal readings logically foreclose each other (only one can be true within any single legal framework), or do they coexist as live interpretive options held by different parties with genuinely opposed material interests?",
+      "resolution_mechanism": "Structural logic test: can a single legal interpreter (e.g., the ICJ or a treaty body) hold both readings simultaneously without internal contradiction? If yes, they coexist; if no, one forecloses the other. Examine whether the readings differ in premises (one says the article is indefinite, one says it's definite) — if so, foreclosure applies — or whether they differ in implications (both agree on the text but disagree on what it justifies) — if so, coexistence applies.",
+      "impact": "If partial forecloses maximal: adoption of the partial reading rules out the maximal reading as legally incoherent, and the maximal-withdrawal constraint becomes unsustainable. If they coexist: both readings remain live options, and the dispute is managed through negotiation rather than resolution. Determining this is essential for understanding whether the two readings describe one constraint viewed from two seats, or two genuinely different constraints with incompatible structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether partial-withdrawal and maximal-withdrawal readings logically foreclose each other or coexist as live options"
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.22
   },
   "network": {
     "affects_constraints": [
       "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
-      "unsc_242_withdrawal_clause__interpretive_authority_structure"
+      "unsc_242_withdrawal_clause__interpretive_authority_structure",
+      "icj_territorial_integrity_doctrine",
+      "customary_uti_possidetis_norm"
     ],
-    "dual_formulation_note": "The UNSC 242 withdrawal clause decomposes into three structurally distinct constraints per the ε-invariance principle (DP-001). All three share a kernel (the text of 242, specifically the indefinite vs. definite article tension) but instantiate different ε values and beneficiary structures: (1) partial_withdrawal_reading (this story, ε=0.62) — indefiniteness permits discretionary retention; (2) maximal_withdrawal_reading (sibling, ε lower due to default to Article 2(4)) — indefiniteness is overridden by mandatory-return default; (3) interpretive_authority_structure (sibling, ε varies by seat) — who may authoritatively resolve the scope. The three readings are causally linked: the partial reading influences (creates structural pressure on) the maximal reading by occupying the narrative space, and both influence the authority-structure reading by creating demand for interpretation. The network captures the ε-invariance decomposition: each reading is a separate, stable constraint; together they form a family modeling the contested kernel."
+    "dual_formulation_note": "The partial-withdrawal reading of UNSC 242 is one of three constraints decomposing the same kernel. The maximal-withdrawal reading interprets the same text with a different reference frame (definite article control, Charter 2(4) default). The interpretive-authority-structure reading addresses the meta-question of who has the authority to choose between readings. All three share the same referent (the 1967 withdrawal mandate) but instantiate different ε values and beneficiary structures due to reading-specific framing. Each is a complete, ε-invariant constraint story; they are linked via network.affects_constraints to show the family relationship."
   },
   "directionality_overrides": [
     {
-      "power_atom": "analytical",
-      "d_value": 0.5
+      "power_atom": "moderate",
+      "d_value": 0.82
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.91
     }
   ],
+  "gain_flow": "occupying_military_power",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "multilateral_consensus_ambiguity_preservation",
+    "reference_frame": "indefinite_discretionary_withdrawal",
     "drift_state": {
-      "moment": "contemporary_settlement_expansion_era",
+      "moment": "contemporary_post_2010",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
-        "relation": "coexists_with"
+        "sibling_id": "maximal_withdrawal_reading",
+        "relation": "forecloses"
       },
       {
-        "sibling_id": "unsc_242_withdrawal_clause__interpretive_authority_structure",
+        "sibling_id": "interpretive_authority_structure",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "indefinite_article_as_intentional_discretion",
+        "atom": "indefinite_article_encodes_occupying_discretion",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       },
       {
         "atom": "secure_boundaries_permits_strategic_retention",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       }
     ]
   },
@@ -271,18 +384,19 @@
     "hypothesis": "tangled_rope",
     "downstream_of": [
       "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
-      "unsc_242_withdrawal_clause__interpretive_authority_structure"
+      "icj_territorial_integrity_doctrine"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -2,234 +2,296 @@
   "header": {
     "constraint_id": "basic_law_interpretive_boundary__judicial_supremacy_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-08-03",
     "status": "ACTIVE",
-    "story_uid": "1d6c581a-5f73-484e-8d57-c9564e025ad7"
+    "story_uid": "c31a6432-6cdd-4181-ac71-9e7f520beda1"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.55,
-    "theater_ratio": 0.22,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.58,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.59,
     "claimed_type": "tangled_rope",
-    "human_readable": "Basic Law Judicial Supremacy: Court-Enforced Constitutional Hierarchy",
-    "topic_domain": "constitutional_law/judicial_review",
+    "human_readable": "Judicial Supremacy in Basic Law Interpretation and Enforcement",
+    "topic_domain": "constitutional_law",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "rights_claimants",
+      "individual_rights_claimants",
       "supreme_court_institutional_authority"
     ],
     "victims": [
       "knesset_legislative_majority"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Interprets the Basic Laws and has de facto authority to strike down Knesset legislation that contradicts them. Justifies this role as faithful interpretation of the constitutional framework and protection of fundamental rights. The court enforces the interpretive boundary by receiving petitions, adjudicating disputes over legislative scope, and issuing binding nullifications that the Knesset cannot unilaterally reverse without amending the Basic Laws themselves. This power is exercised through abstract review (before legislation takes effect) and concrete review (in post-enactment disputes)."
+    },
+    {
+      "name": "individual_rights_claimants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Citizens seeking to challenge legislation they claim violates Basic Law protections of rights. The constraint gives them a forum (Supreme Court petition) and a potential veto (judicial nullification) they would not have under pure parliamentary sovereignty. They bear no direct cost of court enforcement; their exit is constrained by political marginalization if the legislature dislikes their claims, but they gain access to a second arena for contesting laws."
+    },
+    {
+      "name": "knesset_legislative_majority",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacts legislation but faces the constraint that the Supreme Court may nullify statutes that a judicial majority reads as contradicting the Basic Laws. The majority must either accept the court's interpretation, amend the Basic Laws through super-majority procedures (a costly political operation), or accept the reputational and practical damage of attempting to override the court (which modern norms make costly). Their exit—ignoring judicial nullification—is constrained by international standing, domestic institutional legitimacy, and the court's ability to enforce contempt sanctions. The constraint is experienced as a binding limit on legislative sovereignty."
+    },
+    {
+      "name": "civil_society_advocacy_coalitions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations representing marginalized groups, religious minorities, or political opponents of the legislative majority. They benefit from the constraint by gaining litigation as a political channel—a way to challenge laws without electoral power. They coordinate litigation campaigns, file amicus briefs, and shape the discourse of rights claims that courts receive. The constraint amplifies their voice beyond their electoral weight."
+    },
+    {
+      "name": "academic_and_international_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Comparative constitutionalists, international law scholars, and NGOs monitoring the Israeli system from outside. They evaluate whether the constraint constitutes genuine constitutional supremacy or judicial overreach. Their observations feed back into legitimacy debates and can influence pressure on Israel through UN bodies and peer constitutional courts."
+    },
+    {
+      "name": "right_wing_legislative_actors",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Parliamentary actors who have attempted to enact legislation on settlement policy, Jewish nationality, or state-religion matters that the Supreme Court has struck down or constrained via this interpretive boundary. They experience the constraint as blocking their legislative agenda and perceive it as judicial activism rather than constitutional interpretation. Their option to simply override the court is theoretically available (via Basic Law amendment) but practically costly. They advocate loudly for limiting judicial review but remain organized within the parliamentary system rather than exiting it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a stable interpretive authority for the constitutional framework: one institutional seat (the Supreme Court) holds the power to settle disputes about what the Basic Laws permit and forbid. Without this authority, different actors (Knesset committees, executive agencies, lower courts, private parties) would interpret the Basic Laws inconsistently, leading to legal fragmentation and forum shopping. The constraint creates a single appellate resolver.",
+    "transfer_function": "Transfers veto power over legislation from a simple Knesset majority to a Supreme Court majority. Any coalition commanding 61 Knesset seats can enact statutes; any coalition commanding a Supreme Court majority can nullify them. This reallocation of who sets binding legal boundaries moves political power away from electoral coalitions and toward judicial appointment networks. It also transfers power from the legislative majority to rights-claimants and civil society actors who can litigate.",
+    "absent_voices": "Elected legislators who lose laws to judicial nullification are not absent—they are present and actively contest the court's authority (see right_wing_legislative_actors). The absent voices are: (1) the Knesset's own institutional voice as a coordinate branch (a Knesset speaker, if one existed with institutional standing, would have grounds to contest the constraint, but Israel's legislative branch is weak in comparative terms); (2) the conceptual voice of pure parliamentary sovereignty—the position that the Knesset as the repository of the people's will should have ultimate interpretive authority, even over constitutional law. That voice is present in political discourse but lacks an institutional seat in this constraint story.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If judicial review of Basic Laws vanished and the Knesset regained unilateral interpretive authority, the system would reorganize: legislation striking down rights protections could proceed without court invalidation; marginalized groups would lose the litigation channel; rights-claimants would shift to extra-legal mobilization or exit (immigration); international standing of the legal system would weaken; constitutional interpretation would become a purely parliamentary negotiation process. The system would not collapse but its character would shift fundamentally toward majoritarian legislative sovereignty.",
+    "founding_problem": "Post-1950, Israel had no written constitution and no clear hierarchy of legal norms. The Knesset could legislate on any topic including restrictions on citizenship, freedom of conscience, and property rights, with no procedural brake. By the 1990s, when the Basic Laws were assembled into an informal constitutional framework, the founding problem was: how do you protect fundamental rights in a purely parliamentary system without a codified constitution? The judicial supremacy reading answers: courts must be empowered to enforce the Basic Laws as constitutional limits on ordinary legislation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Supreme Court and civil rights organizations attest that the founding problem remains live: without judicial review, democratic majorities could erode rights protections. The Knesset and right-wing legislative coalitions attest that the founding problem has been addressed by the Basic Laws themselves—the legislative framework now exists, and courts should interpret it within bounds set by ordinary legislation and political norms, not override the legislature. International constitutional scholars and comparative law experts (e.g., from the United States and Canada, where constitutional courts have strong review powers) attest that the problem is indeed live—unreviewed legislatures regularly attempt rights erosions—and that judicial enforcement is a standard solution. However, the Israeli parliamentary majority disputes whether the court's particular reading of its own authority matches the Basic Laws as actually written."
+  },
   "interval": {
     "start": 1992,
-    "end": 2024
+    "end": 2025
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1992,
-      "value": 0.35
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.44
+      "value": 0.51
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2008,
-      "value": 0.54
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2016,
+      "time_point": 2010,
       "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 2018,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
       "value": 0.68
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1992,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.11
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2008,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.19
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.22
-    },
-    {
       "metric": "suppression_requirement",
       "time_point": 1992,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.42
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2008,
       "value": 0.48
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2016,
-      "value": 0.52
+      "time_point": 2000,
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.55
-    }
-  ],
-  "omegas": [
-    {
-      "id": "kernel_reading_contention",
-      "question": "Is the Basic Law framework a higher-order constitutional structure that legitimately constrains the Knesset (judicial supremacy), or does ultimate sovereign authority remain with elected majorities (parliamentary sovereignty), or is legitimate authority genuinely shared with courts holding bounded jurisdiction (balanced contestation)?",
-      "resolution_mechanism": "This omega documents the fundamental kernel contest itself. Sibling readings instantiate the alternative commitments (parliamentary_sovereignty_reading and balanced_contestation_reading). Resolution requires the Israeli political and constitutional system to settle which framing becomes institutionally dominant—a matter of constitutional amendment, Supreme Court doctrine shift, or regime change rather than empirical fact-finding.",
-      "impact": "If this reading is displaced by parliamentary sovereignty reading, the Supreme Court loses authority to invalidate legislation; if displaced by balanced contestation, courts gain bounded but not supremacist jurisdiction. The current reading (judicial_supremacy) produces the highest ε for Knesset legislative majorities.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Which framework the Israeli system instantiates: judicial supremacy, parliamentary sovereignty, or balanced contestation."
+      "time_point": 2010,
+      "value": 0.62
     },
     {
-      "id": "marginal_coordination_vs_extraction",
-      "question": "What proportion of the measured extractiveness (0.68) reflects the genuine coordination cost of having a stable, independent court-enforced constitutional framework, versus extractiveness from the court wielding interpretive authority beyond the scope needed for rights protection?",
-      "resolution_mechanism": "Comparative institutional analysis: jurisdictions with similar-strength judicial review but lower measured extractiveness (e.g., Germany, Canada) could illuminate what portion is structural necessity and what portion is Israeli-specific institutional design. Analysis of court decisions that broaden rights protection without being compelled by Basic Law text could separate genuine coordination cost from discretionary expansion.",
-      "impact": "A high-coordination-cost finding would support the judicial supremacy framing as necessary for constitutional stability. A high-discretionary-expansion finding would suggest the constraint carries substantial extractive rent-seeking by the court itself, shifting classification toward snare on the coordinated seats.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether extractiveness reflects coordination necessity or judicial expansion beyond textual warrant."
+      "metric": "suppression_requirement",
+      "time_point": 2018,
+      "value": 0.68
     },
     {
-      "id": "suppression_mechanism_internalization",
-      "question": "Is the Knesset's compliance with judicial invalidation structurally enforced (lacking institutional capacity to ignore court orders, bounded by international pressure and domestic legitimacy costs), or has it become internalized (the legislature now self-censors and pre-clears legislation, incorporating court preferences into drafting without awaiting invalidation)?",
-      "resolution_mechanism": "Post-decision data: instances where the Knesset has ignored, delayed implementing, or explicitly defied a Supreme Court invalidation decision would indicate the suppression is structurally maintained. Conversely, evidence that legislation is systematically pre-screened for court defensibility and draft rejection occurs in legislative committee rather than in court would indicate internalization.",
-      "impact": "If suppression is internalized, the constraint's effective suppression is higher than the authored 0.55 suggests, and the Knesset's perceived exit options are more constrained than structural analysis alone would show. The theater_ratio rising (from 0.08 to 0.22) may reflect internalization: fewer cases reach court because pre-screening catches conflicts earlier, reducing visible enforcement activity while expanding the court's effective reach.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether judicial suppression operates structurally or has become internalized in legislative behavior."
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.71
     },
     {
-      "id": "rights_claimant_arbitrage_inequality",
-      "question": "The rights_claimants stakeholder is authored with exit_options=arbitrage, reflecting that litigation access requires legal resources and institutional connectivity. Does this produce a systematic pattern where wealthy, organized interests and those with media platforms gain effective veto rights via litigation, while dispersed or marginalized constituencies lack the arbitrage resources to weaponize judicial review?",
-      "resolution_mechanism": "Empirical audit of successful constitutional litigation: classification of claimants by wealth, organizational backing, and media connectivity. High correlation between resources and successful challenges would indicate arbitrage is not equally distributed—the constraint protects some rights-claimants far more than others, concentrating the beneficiary function.",
-      "impact": "High arbitrage inequality would suggest rights_claimants is not a unified beneficiary group; it should split into resourced_rights_claimants and marginalized_constituencies. The constraint would show markedly different extraction profiles depending on which claimant seat is examined, complicating seat divergence analysis.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether arbitrage-access to judicial review distributes equally among rights-claimants or concentrates among resourced constituencies."
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates a specific reading of the contested kernel governing the Basic Laws' constitutional status and the Supreme Court's authority. The judicial supremacy reading holds that Basic Laws constitute a higher-order normative framework that the Supreme Court must interpret and enforce, with the power to invalidate ordinary legislation that conflicts with Basic Law principles. This reading emerged in the mid-1990s following the enactment of the first modern Basic Laws and the Court's landmark decisions asserting review authority. The reading is contested by parliamentary sovereignty advocates (who argue the Knesset retains ultimate authority to interpret Basic Laws via simple majority amendment) and by balanced contestation proponents (who argue both institutions hold legitimate but bounded authority). This JSON instantiates ONLY the judicial supremacy reading as a clean, ε-invariant constraint. The sibling readings are separate constraint stories with their own ε values and structural data.",
+    "narrative_context": "This constraint instantiates ONE READING of the Basic Law interpretive boundary—the judicial supremacy reading. The constraint story models the standing arrangement under contest: the Knesset's legislative authority is subject to Supreme Court review and nullification on Basic Law grounds. This reading holds that the Basic Laws constitute a binding constitutional framework that courts must interpret and enforce, with vertical judicial veto over ordinary legislation. Sibling readings (parliamentary_sovereignty_reading, balanced_contestation_reading) would author different ε values for different structural assumptions about who holds ultimate interpretive authority and what remedies are available when courts and legislatures clash. This story instantiates the judicial supremacy premises only.",
     "key_agents": [
-      "Supreme Court: institutional agenda-setter; interprets Basic Laws as constitutional hierarchy and enforces via invalidation",
-      "Knesset legislative majority: powerful payer; faces veto on legislation conflicting with judicially-interpreted Basic Law principles",
-      "Rights claimants: powerless but arbitrage-mobile beneficiaries; gain litigation access to invalidate legislation",
-      "Narrow coalitions: moderate-power payers; face heightened vulnerability to judicial invalidation of coalition-interest legislation",
-      "Political movements opposing judicial review: organized but excluded; actively contest the reading's legitimacy and seek institutional change"
+      "Supreme Court: institutional agenda-setter, holds de facto authority to nullify legislation deemed to contradict Basic Laws, enforces via binding adjudication",
+      "Individual rights-claimants: beneficiaries, gain litigation channel and potential judicial veto on rights-restrictive legislation",
+      "Knesset legislative majority: payer, faces constraint on legislative sovereignty—statutes may be nullified even if passed with simple majority",
+      "Civil society advocacy coalitions: beneficiaries, amplify their political voice through litigation and amicus participation",
+      "Right-wing legislative actors: secondary payers, have experienced nullification of settlement and nationality legislation, perceive judicial overreach"
     ],
-    "logic_rationale": "Extractiveness rises from 0.35 (1992, early judicial review claiming) to 0.68 (2024, established doctrine) because the Court's authority to veto legislation has hardened into institutional practice; Knesset majorities have internalized constitutional constraint and conduct pre-screening; and the range of legislation subject to potential challenge has broadened. Theater_ratio is low but rising (0.08→0.22), reflecting that while security/legitimacy review is genuine, enforcement increasingly defends the court's interpretive supremacy rather than purely protecting rights—performative constitutional rhetoric around 'protecting democracy' has grown. Suppression_requirement rises (0.38→0.55) because the institutional machinery maintaining judicial supremacy has had to strengthen as parliamentary sovereignty advocates gain electoral leverage; the constraint is no longer self-evident and requires active institutional defense. Accessibility_collapse is moderately high (0.72) because once the court asserts authority to invalidate legislation, Knesset majorities' alternatives collapse—they can amend Basic Laws (high friction, supermajority required), ignore court orders (legitimacy cost, international pressure), or accept the veto. Resistance is moderate (0.58) because parliamentary sovereignty movements mounted strong institutional and electoral challenges, especially post-2015.",
-    "perspectival_gap": "From the Court's seat: judicial review is a necessary institutional innovation protecting rights against majoritarian excess. The coordination problem is real—without an authoritative interpreter, each Knesset session could redefine foundational principles. Theater is minimal; enforcement is legitimate. From the Knesset majority's seat: judicial review is an institutional constraint that converts judicial preferences into veto power, narrows legislative autonomy, and requires the majority to negotiate with the court or pursue supermajority amendment. The extracted value is legislative authority; the coordination story is cover for institutional expansion. From rights claimants' seat: the constraint provides a real protection mechanism, but access is unequal—arbitrage concentrates benefits among resourced constituencies.",
-    "directionality_logic": "The Supreme Court benefits from this constraint (collects institutional authority, can shape policy via rights interpretation) and sets its terms; it is the primary beneficiary and agenda-setter. The Knesset legislative majority bears the cost: legislation can be invalidated, policy space is constrained, and supermajority processes (which it may not control) become necessary to override courts. Rights claimants benefit from litigation access and substantive rights protection, but face arbitrage costs (legal fees, institutional resources required to weaponize judicial review). The constraint is tangled rope because: (1) genuine coordination exists (stable constitutional framework, singular authoritative interpreter); (2) asymmetric extraction is clear (Knesset bears cost, court collects authority); (3) active enforcement is required (court must issue binding decisions, Knesset must comply despite preferring not to). The Knesset could theoretically exit by amending Basic Laws (trapped→constrained shift), but supermajority requirement and international pressure (legitimacy cost) keep exit option narrow.",
-    "mandatrophy_analysis": "The founding_problem (lack of enforceable constitutional framework protecting rights against majoritarian erosion) was live at the constraint's inception (1992). By 2024, the problem status is contested: the Court and rights advocates argue the problem remains live (recent coalition governments have attempted legislation conflicting with Basic Law principles, invalidated by courts); parliamentary sovereignty advocates argue the problem has shifted (constitutional norms and international pressure now constrain majorities more effectively than courts, and judicial review has become the primary problem, not its solution). The theater_ratio's rise (0.08→0.22) suggests performative constitutional protection is growing relative to functional rights-safeguarding. The measured extraction (0.68) exceeding the coordination cost suggests the constraint is carrying rent-seeking by the Court beyond what the founding problem requires. This does NOT trigger automatic mandatrophy classification—the coordination function is real—but it indicates the constraint is drifting toward snare characteristics on the Knesset's seat. The divergent founding_problem_status assessment (live vs. dead) between the Court and parliamentary sovereignty advocates is itself evidence of institutional contest: the constraint's legitimacy depends on whether you believe the problem it was built to solve persists, and that question is now politically live.",
-    "kernel_context": "This constraint instantiates the judicial_supremacy_reading of the kernel basic_law_interpretive_boundary. The kernel is the contested question of how the Basic Laws should be interpreted and enforced within the Israeli constitutional system. The judicial_supremacy_reading holds that the Supreme Court must interpret Basic Laws as a higher-order constitutional framework superior to ordinary legislation, with authority to invalidate conflicting laws. The sibling readings are: (1) parliamentary_sovereignty_reading: the Knesset as elected sovereign retains ultimate authority to interpret and amend Basic Laws, including power to override judicial review via supermajority; (2) balanced_contestation_reading: both institutions hold legitimate bounded authority—courts interpret within their jurisdictional domain, legislature retains ultimate power constrained by norms and international obligations. Each reading produces structurally distinct constraints with different ε values and stakeholder structures. The readings differ on WHO holds ultimate authority (Court, Knesset, or both), WHAT constrains that authority (constitutional principle, electoral legitimacy, or mutual accountability), and HOW disputes are resolved (court invalidation, legislative override, or negotiation). This reading (judicial_supremacy) produces the highest extraction on Knesset legislative majorities; it is the most favorable to rights-claimants and the most constraining on elected majorities."
+    "logic_rationale": "Extractiveness rises from 0.42 (1992, when the Basic Laws were first informally constitutionalized but court power was still being negotiated) to 0.68 (2025, after three decades of court-nullified legislation and accumulating precedent establishing judicial supremacy). The rise reflects: (1) an increase in the frequency and scope of court nullifications of Knesset legislation; (2) the court's expansion of which legislation counts as constitutionally reviewable (originally only explicitly Basic Law amendments; now all ordinary statutes); (3) the court's broadening of which rights are protected (from explicit text to penumbral inferences). Suppression rises from 0.48 to 0.71 because the Knesset's options narrow: initially, legislators could claim uncertainty about what the court would do; by 2025, they face a clear precedent that controversial legislation will be challenged and reviewed. Theater rises from 0.22 to 0.42 because judicial rhetoric increasingly frames nullifications in terms of 'constitutional interpretation' and 'judicial duty,' even as the practical effect is to veto legislation the court dislikes on policy grounds—the performative legitimacy work intensifies. The accessibility_collapse (0.78) reflects that once a party understands judicial review exists, the alternative of 'legislation without court oversight' is structurally unavailable without Basic Law amendment (a super-majority operation). Resistance (0.59) is moderate-high because right-wing and religious parties actively contest the court's authority through political campaigns, proposed Basic Law reforms, and rhetorical challenges to judicial legitimacy.",
+    "perspectival_gap": "The Supreme Court and rights-claimants experience this constraint as coordination (courts settle constitutional disputes; rights are protected). The Knesset legislative majority experiences it as extraction (the court takes away laws they passed). These are not reconcilable within a single reading—they reflect genuinely different structural positions. The judicial supremacy reading builds in this asymmetry: from the court's vantage, it is interpreting a higher law; from the Knesset's vantage, the court is rewriting the law. The engine should compute different types from different seats: the court experiences coordination or even beneficiary status (its institutional power expands); the Knesset experiences constraint and extraction. The authored metrics describe the constraint as experienced from the Knesset's structural position (legislative majority bearing the cost of nullification).",
+    "directionality_logic": "The Supreme Court is the beneficiary: its institutional authority expands, its rulings bind the coordinate branches, and it collects legitimacy and influence. Derivation: institutional power, long time horizon, exit is trap (court cannot exit the constitutional system without dissolution), low d (benefits from the constraint). Individual rights-claimants are beneficiaries: they gain access to a court forum and potential veto. Derivation: powerless agents, but beneficiary role, low d (benefits despite powerlessness). Civil society coalitions are beneficiaries: their litigation amplifies their voice. The Knesset legislative majority is a payer: it bears the cost of legislation being nullified. Derivation: organized power, biographical time horizon, constrained exit (can amend the Basic Laws but at high political cost), high d (fully target of the constraint). Right-wing legislative actors are secondary payers because they have specifically had legislation nullified; their exit options (organized power, mobile) are somewhat better than the generic Knesset majority, but they remain targets of judicial nullification. No directionality overrides are needed: the structural data produces accurate d values through the derivation chain.",
+    "mandatrophy_analysis": "The founding problem (protecting rights without a codified constitution) remains contested, not dead. However, there is a case that the constraint has drifted from a genuine coordination function (settling constitutional interpretation) toward pure extraction (using constitutional review as a veto on policies the court dislikes). The theater_ratio rise from 0.22 to 0.42 suggests that performative justification is growing relative to functional settlement. The resistance of 0.59 and the political mobilization against the court (attempts to appoint justices who will constrain review, proposed Basic Law reforms to limit court power) indicate that the constraint is not stable—there is active pressure to reduce or reframe it. The constraint is neither a piton (it is still functionally enforced and carries real costs) nor a pure rope (it asymmetrically benefits the court and rights-claimants at the Knesset's expense). It is best classified as tangled_rope: genuine coordination function (constitutional interpretation) laced with extraction (court power over legislative agenda).",
+    "kernel_context": "This constraint instantiates the judicial_supremacy_reading of the basic_law_interpretive_boundary kernel. The kernel is the question: Who holds ultimate interpretive authority over the Basic Laws? The judicial_supremacy_reading answers: the Supreme Court, whose interpretations bind the Knesset. Sibling readings answer differently: the parliamentary_sovereignty_reading holds the Knesset is ultimate interpreter; the balanced_contestation_reading holds both have bounded but coordinate authority. This reading does not engage with the parliamentary_sovereignty_reading's premises—it assumes the court's authority is constitutionally grounded and binding. The balanced_contestation_reading is the sibling most likely to influence this reading's future: if institutional pressure (from the Knesset, or from international pressure) succeeds in reframing the constraint as coordinate rather than hierarchical, the reading would need to shift to acknowledge shared authority and limits on court review scope."
   },
+  "omegas": [
+    {
+      "id": "basic_law_text_vs_judicial_gloss",
+      "question": "Do the written Basic Laws actually authorize the judicial supremacy that the Supreme Court has claimed, or has the Court read this authority into the text?",
+      "resolution_mechanism": "Comparative textual analysis of the Basic Law language against judicial opinions claiming authority; review of legislative history and parliamentary debate on the Basic Laws; analysis of whether the Court's reading is faithful to the text or a creative constitutional interpretation.",
+      "impact": "If the Basic Laws do not actually grant the Court supremacy, the constraint is an instance of judicial overreach (snare on the Knesset side, piton on the Court side—institutional inertia masquerading as constitutional authority). If they do grant it, the constraint is a genuine constitutional hierarchy (tangled rope at worst, coordination at best).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the Basic Law text supports the judicial supremacy doctrine or whether the Court has read authority into silence."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the Knesset's constraint on legislative freedom structural (the Court simply invalidates laws) or internalized (the Knesset preemptively self-censors, avoiding laws it predicts the Court will strike down)?",
+      "resolution_mechanism": "Historical analysis of proposed legislation: what bills were drafted but not introduced due to anticipated court opposition, vs. bills introduced and subsequently nullified? Interviews with legislative drafters and committees about their perception of the court's scope. Analysis of whether suppression decreased in periods when the Court was less activist or different justices held office.",
+      "impact": "If largely structural, the suppression is a raw property of the constraint (external coercion). If internalized, the suppression persists even if the Court's actual nullification rate dropped—the Knesset would carry the constraint inside itself. Internalized suppression suggests the constraint operates through ideology or institutional identity rather than pure coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of legislative alternatives is external (court nullification) or internal (preemptive self-censorship)."
+    },
+    {
+      "id": "reading_foreclosure_via_legitimacy",
+      "question": "Does the judicial supremacy reading logically foreclose the parliamentary sovereignty reading, or do they remain live positions for different institutional actors?",
+      "resolution_mechanism": "Doctrinal analysis: can a single constitutional framework coherently hold that both the Court has supremacy AND the Knesset retains ultimate authority? Or are these mutually exclusive premises? Empirical check: do Israeli constitutional scholars and jurists treat these as rival readings (coexist_with) or as logically incompatible (forecloses)?",
+      "impact": "If foreclosed, then the basic_law_interpretive_boundary kernel has a forced answer—only one reading is logically sustainable. If coexist, then the kernel remains truly contested; different institutional coalitions can hold different readings, and the constraint persists through institutional contest rather than doctrinal resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether judicial supremacy and parliamentary sovereignty are logically exclusive or merely institutionally rival."
+    },
+    {
+      "id": "international_pressure_coupling",
+      "question": "To what extent does international human rights pressure (UN bodies, international courts, peer democracies) amplify or sustain the Supreme Court's judicial supremacy claim?",
+      "resolution_mechanism": "Analysis of Court opinions citing international law and human rights standards; documentation of international pressure on Israel to maintain judicial review; comparison with Israeli court decisions pre- and post-international human rights framework adoption (1990s onwards). Examine whether the Court's authority would persist without international legitimacy backing.",
+      "impact": "If international pressure is substantial, the constraint's persistence depends partly on external enforcement (international reputation costs for the Knesset overriding the Court). If minimal, the constraint is sustained by domestic institutional configuration alone. High international coupling makes the constraint globally interdependent and more vulnerable to changes in international human rights discourse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which judicial supremacy is sustained by international human rights pressure vs. domestic institutional balance."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.18
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
       "basic_law_interpretive_boundary__balanced_contestation_reading",
-      "knesset_legislative_process",
-      "israeli_constitutional_amendment_process"
+      "knesset_legislative_majority_power",
+      "israeli_human_rights_protection_framework"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the kernel basic_law_interpretive_boundary. Each reading instantiates a different constitutional framing with distinct ε values and stakeholder structures. The judicial_supremacy reading (this constraint) holds that the Court is the authoritative interpreter of Basic Laws and can invalidate conflicting legislation; the parliamentary_sovereignty reading holds that the Knesset retains ultimate authority; the balanced_contestation reading holds that both institutions have legitimate bounded authority. The three readings are linked via network.affects_constraints to enable analysis of how the kernel contest shapes institutional behavior. They are NOT alternative measurements of a single constraint; they are distinct constraints grounded in different foundational commitments. Sibling readings will be authored separately with their own ε values, stakeholders, and measurements."
+    "dual_formulation_note": "This constraint is part of the basic_law_interpretive_boundary constraint family, which decomposes the single phrase 'Basic Laws bind the Knesset' into three structurally distinct readings. Each reading produces different ε values, different beneficiary/victim sets, and different type classifications because each reading embodies different answers to the fundamental question: who ultimately interprets the Basic Laws? The judicial_supremacy_reading presented here models the Supreme Court's institutional position and the structural consequences of its claimed authority. The parliamentary_sovereignty_reading models the Knesset's retained authority and the structural consequences of rejecting judicial supremacy. The balanced_contestation_reading models an intermediate position where both institutions have bounded authority. These are not the same constraint viewed from different angles—they are genuinely different arrangements with different ε referents and different extraction profiles."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerful",
-      "d_value": 0.72
-    }
-  ],
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+        "sibling_id": "parliamentary_sovereignty_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "basic_law_interpretive_boundary__balanced_contestation_reading",
+        "sibling_id": "balanced_contestation_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "basic_laws_constitutional_supremacy",
+        "atom": "basic_laws_constitute_higher_order_framework",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "judicial_interpretation_binds_all_branches",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
-      },
-      {
-        "atom": "judicial_review_necessary_enforcement",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "constitutional_hierarchy_with_judicial_guardianship",
+    "reference_frame": "constitutional_hierarchy_with_judicial_apex",
     "drift_state": {
-      "moment": "contemporary_institutional_contestation",
-      "direction": "repudiation_pressure",
+      "moment": "contemporary_2025",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
-  "uke_scope": {
-    "epsilon_bin": "medium_high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
-      "basic_law_interpretive_boundary__balanced_contestation_reading"
-    ]
-  },
+  "gain_flow": "supreme_court",
+  "fixing_cost": "prohibitive",
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -2,81 +2,141 @@
   "header": {
     "constraint_id": "hebrew_continuity__liturgical_preservation",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-20",
     "status": "ACTIVE",
-    "story_uid": "75cc8c25-64ae-4efa-ba90-185e8f40fb40"
+    "module_name_override": "constraint_hebrew_continuity__liturgical_preservation",
+    "story_uid": "82b53945-0ab0-4599-bf3e-9574f45fe020"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.58,
-    "accessibility_collapse": 0.79,
-    "resistance": 0.61,
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.67,
     "claimed_type": "tangled_rope",
     "human_readable": "Hebrew Continuity Through Liturgical Preservation and Textual Transmission",
-    "topic_domain": "sociolinguistics/commitment_systems/religious_authority",
+    "topic_domain": "sociolinguistics/language_revitalization/commitment_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "religious_authority_structures",
-      "textual_tradition_stewards"
+      "religious_institutional_authority",
+      "textual_tradition_keepers"
     ],
     "victims": [
       "secular_hebrew_speakers",
-      "generative_language_users"
+      "diaspora_communities_without_liturgical_practice"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "religious_institutional_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Controls the textual canons, liturgical protocols, and educational institutions that define normative Hebrew use. Sets the boundary between correct (liturgically sanctioned) and incorrect usage. Maintains yeshivas, rabbinic courts, and ritual standards that enforce continuity through prescribed recitation. Collects institutional authority and legitimacy from the role of custodian."
+    },
+    {
+      "name": "textual_tradition_keepers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Scholars, cantors, scribes, and educators who specialize in precise transmission of textual tradition. Their professional identity, status, and sometimes material support depend on the continuation of liturgical recitation and textual preservation. They transmit the constraint by embodying and teaching it; their expertise is validated by the constraint's operation."
+    },
+    {
+      "name": "observant_jewish_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Participate in daily liturgical recitation, study of sacred texts, and ritual practice that reproduce the Hebrew constraint. They experience the constraint as access to tradition, spiritual continuity, and communal identity. Exiting means severing connection to a constitutive element of religious self-understanding. The constraint is lived as non-negotiable identity, not as imposed rule."
+    },
+    {
+      "name": "secular_hebrew_speakers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "In Israel and diaspora communities, use Hebrew for daily communication, literature, and secular purposes. The liturgical preservation standard treats their generative innovations and spoken usage as degradation or corruption of the language. Their Hebrew usage is constrained by institutional dismissal of non-liturgical innovation. They bear the cost of being told their living language is inauthentic."
+    },
+    {
+      "name": "diaspora_communities_without_liturgical_practice",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Communities with declining or absent liturgical knowledge and practice (progressive congregations, secular enclaves, assimilated populations). For them, Hebrew is not available through daily ritual recitation. The constraint renders their Hebrew learning costly (requires formal education, textual study, ritual apprenticeship) and their usage unstable (no daily reinforcement mechanism). They are unable to access Hebrew through the constraint's primary transmission vehicle."
+    },
+    {
+      "name": "linguists_and_language_planners",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Study Hebrew revitalization and language change. They would advocate for recognizing generative native-speaker innovation as legitimate continuity, and for decoupling language transmission from liturgical practice. Excluded from the textual authority structure; their evidence about how languages naturally persist and evolve is dismissed by institutional authorities as irrelevant to the sacred-text framework."
+    },
+    {
+      "name": "secular_israel_state",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Has established Hebrew as the official national language of Israel and promoted it as a shared secular identity marker. The liturgical preservation constraint provides historical depth and cultural continuity that legitimizes the state's reclamation of Hebrew as a revitalized national language. Benefits from both religious and secular narratives of Hebrew continuity; occupies a dual position of enforcing secular Hebrew education while depending on religious institutional authority for cultural-historical legitimacy."
+    },
+    {
+      "name": "secularizing_social_forces",
+      "role": "excluded",
+      "agent": false,
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Structural pressure toward assimilation, declining religious practice, and preference for dominant national languages in diaspora. Not an actor but a force the constraint names as its primary threat. The constraint's persistence depends on suppressing the conditions that would make liturgical recitation a declining or optional practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves Hebrew through a standardized, non-generative mechanism: precise repetition of authorized texts in prescribed ritual contexts. Solves the problem of language continuity when native-speaker communities are absent or fragmented by anchoring the language in textual fixity and institutional guardianship. Coordinates diaspora Jewish communities across geography and time by ensuring mutual intelligibility through shared liturgical protocol.",
+    "transfer_function": "Moves authority over language definition from speakers (who innovate and generate) to institutional custodians (who preserve and enforce textual fidelity). Transfers the burden of language maintenance from the speaker community to specialists (rabbis, scholars, cantors) whose status and livelihood depend on the constraint's continuation. Transfers cultural legitimacy from generative innovation to historical fidelity.",
+    "absent_voices": "Secular linguists, modern Hebrew speakers in Israel, diaspora communities without active ritual practice, and generative native speakers of revitalized Hebrew would argue that language lives through speaker intuition and innovation, not textual preservation alone. They are structurally excluded from defining what counts as legitimate Hebrew continuity; rabbinic authority, not linguistic evidence, adjudicates the matter.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the liturgical preservation constraint and its institutional enforcement disappeared overnight, Hebrew transmission would shift rapidly to generative daily use (as it has in Israel) and to bridge linguistic practices in diaspora (as happens in communities where ritual practice declines). The language would continue but would be reorganized around native-speaker intuition rather than textual fidelity. Institutional authority structures centered on textual guardianship would lose their primary legitimating function.",
+    "founding_problem": "After the Roman exile and dispersal of the Jewish people, Hebrew ceased being a primary spoken language but had to persist as a vehicle for religious practice, textual study, and collective identity across geographically separated communities with no shared native-speaker intuition to maintain it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Rabbinic tradition and textual scholarship attest the founding problem is still live: without institutional preservation of textual accuracy and liturgical protocol, the language would fragment into unintelligible dialects or disappear entirely. Secular linguists and revitalization scholars attest the founding problem was substantially solved by the 20th-century emergence of native Hebrew speakers in Israel, whose generative use has proven sufficient for full language continuity without dependence on textual preservation; they document that the constraint now persists as institutional authority maintenance, not as necessity."
   },
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 25
   },
-  "omegas": [
-    {
-      "id": "liturgical_vs_generative_kernel",
-      "question": "Does Hebrew persist THROUGH liturgical preservation, or does liturgical preservation RIDE ON native speaker revival that occurred independently?",
-      "resolution_mechanism": "Counterfactual historical analysis: would Hebrew have survived to 1880 (pre-native-revival) without liturgical transmission? Did native-speaker revival require religious authority permission or did it reorganize Hebrew outside religious control? Did religious authorities initially resist or welcome the shift to generative use?",
-      "impact": "If liturgical preservation was the primary carrier, the constraint is structurally foundational (necessary for survival). If revival occurred despite religious authority resistance, the constraint becomes a secondary control mechanism protecting institutional authority AFTER the language had already been secured — classification shifts from rope to snare or tangled_rope.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether liturgical preservation enabled language survival or merely rode upon it."
-    },
-    {
-      "id": "sacred_vs_instrumental_closure",
-      "question": "Is the closure of Hebrew to generative innovation a necessary feature of preserving sacredness, or a means by which religious institutions maintain interpretive monopoly?",
-      "resolution_mechanism": "Comparative analysis of other sacred languages (Latin, Classical Arabic, Sanskrit): do all require linguistic fixity, or do some permit innovation within sacred contexts? Do secular speakers using Hebrew report that the constraint strengthens or weakens their connection to tradition?",
-      "impact": "If fixity is intrinsic to sacredness, the constraint is a genuine coordination mechanism for religious continuity. If fixity is instrumental (a tool for maintaining institutional control), the extraction component becomes separable and the constraint reclassifies toward pure snare.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether linguistic fixity is necessary for sacred meaning or a choice that serves institutional power."
-    },
-    {
-      "id": "suppression_internalization",
-      "question": "Is the measured suppression (0.72) structural (external institutional barriers to generative use) or internalized (Hebrew speakers have internalized the shame/illegitimacy of deviation)?",
-      "resolution_mechanism": "Post-constraint scenarios: if Hebrew speakers in secular contexts stop policing their own generative innovation, does the suppression persist or dissolve? Do speakers' own resistance to innovation come from internalized authority or external institutional enforcement?",
-      "impact": "If internalized, the constraint carries its suppression with it even after institutional enforcement relaxes — speakers would still perceive generative use as illegitimate. If structural, enforcement decay would release the suppression quickly. This determines the true cost of exit and the post-exit trajectory.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression of generative language use."
-    },
-    {
-      "id": "kernel_reading_divergence",
-      "question": "Can Hebrew be understood as ONLY a liturgically-preserved language, or must any complete account acknowledge the native-speaker revival as a sibling reading that competes for the same substrate?",
-      "resolution_mechanism": "This reading (liturgical_preservation) claims ε as the constraint that carries Hebrew through institutional recitation. The native_generative reading claims ε as the constraint of native speaker intuition and daily use. Both cannot be the full constraint if they apply to the same language simultaneously — the question is whether this reading's ε-value is robust when native speakers actively exist and innovate.",
-      "impact": "If native speakers are already present and generative, this reading's extraction (0.68) may be artificially low — the constraint is NOT carrying Hebrew alone; it is fighting native speaker innovation to suppress it. The 'victim' set would need to include more of the generative speaker base. The constraint may reclassify to higher extractiveness or shift toward pure snare.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the liturgical-preservation reading is complete or partially obscured by the coexistence of native-speaker generativity."
-    }
-  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
@@ -85,160 +145,189 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.72
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.75
+      "time_point": 25,
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.46
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.39
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.52
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.63
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.67
-    },
-    {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.58
+      "time_point": 5,
+      "value": 0.54
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.64
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.57
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.7
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.75
+      "time_point": 25,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Does Hebrew persist through liturgical-textual preservation (this reading), through native-speaker generative use (native_generative), or through both as a hybrid bridge language (bridge_pidginized)?",
+      "resolution_mechanism": "Empirical test: observe which transmission mechanism is actually sufficient in communities where others fail. In secular Israel, generative native speakers maintain Hebrew without liturgical practice. In diaspora without strong secular community, liturgical preservation persists even as generative capacity declines. Bridge communities show both mechanisms operating simultaneously.",
+      "impact": "If generative native-speaker use is sufficient, the liturgical preservation constraint is revealed as institutional authority maintenance rather than necessity — reclassifies as snare under the native_generative reading. If both mechanisms coexist as equally necessary, the bridge_pidginized reading dominates. If liturgical preservation alone suffices (vanishingly rare in observed communities), this reading's necessity claim stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which transmission mechanism for Hebrew is structurally necessary vs. contingent institutional authority."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.8
+      "id": "suppression_mechanism_source",
+      "question": "Is the measured suppression of secular Hebrew innovation structural (textual authority truly required for mutual intelligibility) or internalized (speakers defer to authority out of cultural reverence even when innovation would be mutually intelligible)?",
+      "resolution_mechanism": "Observe whether innovation and generative deviation persist in communities with weakened institutional authority (progressive diaspora congregations, secular Israeli Hebrew writers). If speakers innovate freely once authority is weakened, suppression was internalized. If intelligibility actually breaks down, suppression is structural.",
+      "impact": "If internalized, the constraint is capturing agents' linguistic intuition and choice, not maintaining a functional necessity — reframes effective suppression as higher than authored. If structural, the preservation function is more genuine. Evidence suggests majority internalized (secular Israeli speakers generate freely; diaspora speakers defer even where authority is weak).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of innovation is structural necessity or internalized deference."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.83
+      "id": "beneficiary_identity_fusion",
+      "question": "Are observant communities benefiting from the constraint, or are they identity-locked subjects unable to exit? Is their participation a chosen benefit or a constitutive identity obligation?",
+      "resolution_mechanism": "Survey self-reported experience: do observant community members experience liturgical Hebrew as empowering coordination and identity continuity, or as a non-negotiable expectation they could not violate without shattering their self-concept? Observe switching behavior: do individuals who leave observance report experiencing linguistic autonomy, or linguistic loss?",
+      "impact": "If beneficiary (experienced as benefit), the constraint's coordination function is real from their seat. If identity-locked (experienced as obligation), their role may more accurately be payer-with-benefits — they bear suppression of alternative linguistic paths as the price of belonging. This affects directionality calculation and seat divergence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observant communities are beneficiaries or identity-locked subjects."
+    },
+    {
+      "id": "native_generative_threat_authenticity",
+      "question": "Is the institutional framing of native Hebrew speakers in Israel as a 'threat' to tradition genuine (native speech actually corrupts textual fidelity), or is it a cover story for institutional authority displacement (native speakers make textual gatekeeping obsolete)?",
+      "resolution_mechanism": "Compare textual accuracy and intelligibility rates in communities organized around liturgical preservation vs. those organized around native-generative use. If accuracy and intelligibility are comparable, the threat framing is institutional-maintenance rhetoric, not linguistic necessity.",
+      "impact": "If threat is genuine, validates the constraint's enforcement. If threat is cover story, reveals the constraint as pure institutional protection against displacement — reframes extraction upward, theater higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether native Hebrew speakers represent a genuine linguistic threat or institutional authority displacement."
     }
   ],
   "commentary": {
-    "narrative_context": "Hebrew persists as a living language through two competing mechanisms: (1) liturgical preservation by religious institutions through fixed textual recitation and canonical interpretation, and (2) native speaker revival and generative use, primarily in Israel and diaspora communities. This constraint story instantiates the LITURGICAL_PRESERVATION reading — the claim that Hebrew lives through institutional control of textual transmission, not through native speaker intuition. This reading coexists with the NATIVE_GENERATIVE reading (a sibling constraint in the same kernel family) which claims Hebrew lives through daily generative use by native speakers. The two readings occupy different institutional seats and compete for explanatory authority over the same language substrate. The liturgical-preservation reading frames religious authority as the keeper and carrier; the native-generative reading frames speakers as the bearers. Both are structurally true of contemporary Hebrew, but they attribute different causal primacy and different extraction mechanisms.",
+    "narrative_context": "Hebrew persists as a living language through two mechanistically distinct pathways: liturgical recitation and textual study (controlled by religious institutional authority, reinforced daily in observant practice) and native-speaker generative use (arising in Israel, now the dominant transmission mechanism for most speakers). This constraint story instantiates the LITURGICAL PRESERVATION reading: the commitment to understanding Hebrew as a language whose continuity depends on textual fidelity and institutional guardianship of ritual correctness. This reading constrains what counts as legitimate Hebrew (texts, prescribed recitations, rabbinic interpretation) and deems non-liturgical innovation as corruption or degradation. The constraint extracts from secular Hebrew speakers and diaspora communities without active liturgical practice by rendering their usage inauthentic and their linguistic agency secondary to institutional authority. It benefits religious institutions and tradition-keeper specialists whose status depends on the continuation of textual gatekeeping. The sibling readings — native_generative and bridge_pidginized — instantiate a different understanding of Hebrew continuity, one that centers speaker intuition and innovation. This story tells the institutional-preservation account, not because it is true universally (empirically, native speakers have proven sufficient), but because this is the reading the historical religious establishment has enforced and continues to defend.",
     "key_agents": [
-      "religious_authority_structures: agenda_setter, controls textual canon and interpretive authority",
-      "textual_tradition_stewards: beneficiary, scholars and rabbinical commentators preserving fixed texts",
-      "secular_hebrew_speakers: payer (moderate power), experience diglossia between spoken innovation and enforced standard",
-      "generative_language_users: payer (powerless, identity_locked), native speakers whose intuitions conflict with fixed standard",
-      "secular_jewish_intellectuals: excluded (would advocate for living, evolving Hebrew)",
-      "linguistic_reform_movements: excluded (periodically challenge the liturgical mandate)"
+      "religious_institutional_authority: Agenda-setter, institutional power — defines correct Hebrew, controls educational institutions, enforces liturgical standards",
+      "textual_tradition_keepers: Beneficiary + agenda-setter, organized power — professional class whose expertise and status depend on continuation of textual authority",
+      "observant_jewish_communities: Beneficiary with identity-lock, moderate power — participate in daily liturgical recitation, experience constraint as constitutive identity",
+      "secular_hebrew_speakers: Payer, moderate power — use Hebrew generatively, face institutional dismissal of non-liturgical innovation",
+      "diaspora_communities_without_liturgical_practice: Payer, powerless — unable to access Hebrew through constraint's primary transmission vehicle (daily ritual)",
+      "secular_israel_state: Beneficiary + observer, institutional power — benefits from both religious and secular legitimation narratives; dual position creates complex directionality"
     ],
-    "logic_rationale": "Base extractiveness is high (0.68 at interval end) because the constraint enforces a linguistic standard decoupled from speaker intuition: speakers must maintain the written standard even as their spoken language diverges, and they are penalized for deviating. Suppression is similarly high (0.72-0.75) because the enforcement machinery is substantial: schools police the standard, media institutions reinforce it, formal language councils are influenced by religious authorities, and speakers internalize shame around non-standard usage. Theater ratio is high and rising (0.42 → 0.67), signaling mandatrophy: as the founding problem (language transmission) has been solved by native revival, the constraint's primary function is increasingly performative — maintaining institutional authority and textual interpretive monopoly, not solving a coordination problem. The measurement series show rising extractiveness and suppression requirement over the 50-year interval, with theater ratio rising faster, consistent with a constraint whose original justification has atrophied while its enforcement infrastructure hardened. All metrics are authored on a single shared time grid (every metric at every time point) to enable coherent lifecycle analysis.",
-    "perspectival_gap": "Religious authorities and textual stewards (beneficiary seats) experience the constraint as necessary coordination and legitimate cultural preservation. Secular speakers and generative users (payer seats) experience it as enforced conformity to an outdated standard that does not match their linguistic reality. The analytical observer seat sees the divergence: the constraint solved a real problem (transmission across exile) but its continuation serves institutional control, not coordination. The engine should compute these as fundamentally different types from different seats — the beneficiary seat may compute as rope (genuine coordination), while the payer seats compute as snare (enforced conformity with no real alternative). This perspectival gap is precisely the diagnostic signature of a tangled_rope: same structure, opposite experiences.",
-    "directionality_logic": "Religious authorities derive d ≈ 0.1–0.2 (low extraction, high benefit from the arrangement they control). Secular speakers and generative users derive d ≈ 0.75–0.85 (high extraction, conformity costs, constrained exit because Hebrew identity is bound to national/ethnic identity in Israel, and identity_locked elsewhere in diaspora). The beneficiary seat has arbitrage-grade exit (they control the arrangement and can modify it unilaterally). The payer seats have constrained or identity-locked exit: abandoning Hebrew means abandoning Jewish identity or national belonging; staying means accepting the linguistic standard. Directionality overrides are not needed here — the structural derivation (beneficiary/victim + exit → d) captures the true asymmetry.",
-    "mandatrophy_analysis": "The constraint shows clear mandatrophy: the founding problem (how Hebrew survives across exile) was solved by native speaker revival in the 20th century. The constraint should have dissolved or transformed into coordination among native speakers. Instead, it persists and intensifies (theater_ratio rising, suppression_requirement rising) because the institutional actors benefit from maintaining textual control. The constraint no longer exists to solve the founding problem; it exists to preserve the institutional authority structures that claim to be its stewards. The rising theater_ratio (0.42 → 0.67) is the smoking gun: enforcement activity is increasingly devoted to defending the standard against generative innovation, not to solving a coordination problem. The base_extractiveness rise (0.45 → 0.75) shows the constraint transforming from a coordination solution into an extraction mechanism. This is mandatrophy in real time — a constraint whose mandate has outlived its function and whose persistence serves power, not coordination.",
-    "kernel_context": "This constraint is one reading of the contested kernel 'hebrew_continuity.' The kernel is the substrate: Hebrew as a language that has persisted across 2,000+ years of exile, text-based preservation, and periodic native speaker revival. The three readings are: (1) LITURGICAL_PRESERVATION (this reading): Hebrew lives through religious institutional control of fixed textual transmission; (2) NATIVE_GENERATIVE (sibling): Hebrew lives through native speaker intuition and daily generative use; (3) BRIDGE_PIDGINIZED (sibling): Hebrew lives as a contact language for diaspora interaction, neither purely liturgical nor fully native. This reading claims that the ε-invariant constraint is the institutional enforcement of textual fixity — the machinery that prevents Hebrew from changing too rapidly. The sibling native_generative reading claims the ε-invariant constraint is the generative competence of native speakers — the machinery by which Hebrew evolves and regenerates daily. Both cannot fully explain Hebrew simultaneously; they split the explanatory load. This reading forecloses the claim that Hebrew is ONLY a living, generative language independent of religious authority — our reading asserts that religious authority HAS maintained linguistic control and HAS extracted conformity costs. But this reading coexists_with the native_generative reading in the sense that both are empirically instantiated: native speakers exist and innovate, AND religious authorities enforce textual standards. The bridge_pidginized reading influences this reading: if Hebrew is increasingly used as a contact language by diaspora communities with weak Hebrew competence, the pressure to maintain the fixed standard increases (as a marker of authentic Jewish identity) — the bridge reading's structural conditions amplify the liturgical-preservation constraint's enforcement burden."
+    "logic_rationale": "Extractiveness is moderate-high (0.62 at interval end) because the constraint moves authority over language definition from speakers to specialists, and because secular speakers and non-practicing diaspora communities bear real costs (delegitimation, constrained linguistic agency, inability to access transmission). Suppression is substantial (0.58) because the constraint depends on active enforcement: institutional dismissal of non-liturgical innovation, gatekeeping of educational authority, framing of generative speakers as linguistic incompetents or cultural threats. The measurement series shows steady but modest increase over 25 time units — this reflects gradual rise in institutional defensiveness as secular Israeli Hebrew and diaspora bridge languages challenge the textual-preservation monopoly. Theater is moderate (0.41): the constraint has a real coordination function (diaspora communities did depend on liturgical transmission when generative use was impossible), but a growing share of enforcement activity defends institutional authority rather than serving that coordination function. The trajectory shows theater ratio rising faster than extractiveness, indicating institutionalization of performative defense.",
+    "directionality_logic": "Religious institutional authority occupies the agenda-setter seat with high institutional power and arbitrage-grade exit options (they define the rules and can reframe them; they are not trapped by their own constraint). Their directionality approaches the beneficiary end. Textual tradition keepers are organized beneficiaries with arbitrage exit, also beneficiary-end directionality. Observant communities present a complex case: they occupy the beneficiary role (coordination of identity, community, tradition), but their exit is identity-locked (leaving observance means severing a constitutive element of self-concept). The identity-lock increases effective extraction from their position even though they report the constraint as beneficial. Their directionality sits near symmetric or slightly toward target because the identity fusion constrains their ability to exit. Secular Hebrew speakers have moderate power but constrained exit (Hebrew literacy still carries value and status; linguistic innovation is possible but carries institutional dismissal cost). Their directionality approaches the target end. Diaspora communities without liturgical practice are powerless and trapped (Hebrew is inaccessible to them through the constraint's primary mechanism; they must bear the cost of alternative acquisition or linguistic loss). Their directionality is clearly target. The secular Israel state occupies a dual position: it benefits from the legitimacy the constraint confers (historical depth, cultural continuity), but it also enforces secular Hebrew education that undermines the constraint. This creates a beneficiary-observer split.",
+    "perspectival_gap": "From the institutional-authority seat, the constraint appears as necessary coordination: diaspora communities needed a mechanism to preserve Hebrew when living native-speaker communities did not exist. From the observant-community seat, it appears as identity continuity: participating in textual transmission is intrinsically valuable, not extractive. From the secular-speaker seat, it appears as institutional suppression: linguistic innovation is treated as error, and generative competence is delegitimated. From the diaspora-without-practice seat, it appears as exclusion: the constraint's primary transmission mechanism is unavailable to them, and alternative access is costly and unstable. The engine should compute these as distinct classifications: the institutional authority seat sees coordination (rope-like); the observant seat sees beneficial coordination; the secular-speaker seat sees extraction; the excluded diaspora seat sees structural closure. The authored metrics describe the constraint from a position that recognizes both its historic coordination function and its current extractive operation — this is deliberately a third-party analytical seat, not one of the inside positions.",
+    "mandatrophy_analysis": "The constraint's founding problem (maintaining Hebrew across exile and diaspora without native speakers) is contested as to current status. Religious authorities attest it is still live: without textual preservation and institutional gatekeeping, Hebrew would degrade or fragment. Secular linguists and revitalization scholars attest it is dead: the existence of native Hebrew speakers in Israel has proven that language continuity does not require textual gatekeeping, and diaspora bridge languages demonstrate that intelligibility persists through speaker innovation even without institutional authority. If the founding problem is dead and the constraint persists anyway, mandatrophy has occurred: the institutional preservation apparatus persists because it benefits institutional actors, not because it solves a live coordination problem. The theater_ratio trajectory (rising from 0.28 to 0.41) and the suppression_requirement trajectory (rising from 0.52 to 0.58, flat after year 15) suggest that institutional energy is increasingly devoted to defending authority rather than solving the founding problem — a pattern consistent with mandatrophic persistence. However, the measured extractiveness is not extreme (0.62, moderate-high rather than near-pure), which suggests the constraint retains some real coordination function in diaspora communities still organized around liturgical practice.",
+    "kernel_context": "This constraint instantiates the LITURGICAL PRESERVATION reading of the hebrew_continuity kernel. The kernel is a contested commitment: what does it mean for Hebrew to 'live' or 'persist' as a language? Three readings compete: (1) LITURGICAL PRESERVATION (this story): Hebrew lives through textual fixity, prescribed recitation, and institutional guardianship. Zero native speakers required; kernel occupied through symbolic preservation; victim set = secularizing forces and generative innovation. (2) NATIVE GENERATIVE: Hebrew lives through native-speaker intuition and daily generative use. Institutional authority is contingent and displaceable; victim set = institutional authorities displaced by native speakers. (3) BRIDGE PIDGINIZED: Hebrew lives as a contact language for diaspora interaction, blending liturgical input with generative innovation — neither purely liturgical nor fully native. The three readings are held by different communities and traditions. Religious institutional authority defends the liturgical reading; secular Israeli society embodies the native-generative reading; diaspora bridge communities operate under the pidginized reading. The readings coexist rather than logically foreclosing each other — each occupies a different structural position and is defended from that position's perspective."
   },
   "boltzmann": {
     "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.14
   },
   "network": {
     "affects_constraints": [
       "hebrew_continuity__native_generative",
-      "hebrew_continuity__bridge_pidginized",
-      "jewish_diaspora_cohesion__linguistic_markers",
-      "yiddish_language_subordination"
+      "hebrew_continuity__bridge_pidginized"
     ],
-    "dual_formulation_note": "Hebrew continuity decomposes into three constraint stories instantiating different readings of the same kernel: liturgical_preservation (this story, institutional preservation through textual control), native_generative (language lives through native speaker intuition), and bridge_pidginized (language lives as diaspora contact medium). Each has distinct ε, distinct beneficiary/victim structure, and distinct type. The three stories are linked via network.affects_constraints as a constraint family. ε-invariance principle applied: measuring Hebrew's persistence through liturgical mechanics yields different structural analysis than measuring through native speaker birth and childhood acquisition. Rather than force both mechanisms into one constraint (which would require inventing a measurement parameter), the family decomposes them. Each story models a distinct mechanism and a distinct extraction profile."
+    "dual_formulation_note": "The hebrew_continuity kernel decomposes into three structurally distinct constraints instantiated by different readings. The liturgical_preservation reading (this story) centers institutional textual authority and prescriptive recitation. The native_generative reading centers speaker intuition and innovative use. The bridge_pidginized reading centers hybridity and diaspora contact dynamics. Each reading carries a different epsilon (institutional-authority reading: higher extraction from speakers who innovate; generative reading: lower extraction, coordinated around natural language use; bridge reading: mixed). Each instantiates different beneficiary/victim structures. All three readings contest the same kernel (what does Hebrew continuity mean?), but each answers the question differently. The engine's cross-reading contamination analysis should track: (1) how institutional authority in the liturgical reading is displaced by native speakers in the generative reading; (2) how diaspora bridge languages influence both readings by demonstrating practical alternatives; (3) how the foundational problem (exile diaspora continuity) is solved differently under each reading — validating one reading does not invalidate others, it only shifts which communities are organized by which reading."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerless",
-      "d_value": 0.82
+      "power_atom": "moderate",
+      "d_value": 0.62
     }
   ],
+  "gain_flow": "religious_institutional_authority",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "textual_fixity_as_sacred_preservation",
     "reading_relations": [
       {
-        "sibling_id": "hebrew_continuity__native_generative",
+        "sibling_id": "native_generative",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "hebrew_continuity__bridge_pidginized",
-        "relation": "influences"
+        "sibling_id": "bridge_pidginized",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "hebrew_lives_through_unchanging_text",
+        "atom": "textual_fidelity_necessary_for_continuity",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "religious_authority_preserves_meaning_fidelity",
+        "atom": "institutional_authority_required_for_linguistic_stability",
         "role": "foundational",
-        "status": "overridden",
+        "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
+    "reference_frame": "institutional_textual_authority_framework",
     "drift_state": {
-      "moment": "contemporary_israel_and_diaspora",
+      "moment": "contemporary_post_israeli_statehood",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

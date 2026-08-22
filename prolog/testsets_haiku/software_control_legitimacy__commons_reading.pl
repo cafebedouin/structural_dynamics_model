@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +75,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: software_control_legitimacy__commons_reading
- *   human_readable: Software Control as Commons Governance (Negotiated Collective Management Reading)
- *   domain: technological/political-economy
+ *   human_readable: Software Control as Negotiated Commons Governance
+ *   domain: political_economy/intellectual_property/technology_governance
  *
  * SUMMARY:
- *   The commons reading of software control legitimacy asserts that neither
- *   absolute property rights nor absolute freedom provides legitimate
- *   governance of shared digital infrastructure. Instead, control should be
- *   negotiated collectively among stakeholders — developers, users,
- *   maintainers, and communities — through transparent, revisable governance
- *   processes. This reading emerged from open-source practice (GPL-style
- *   licensing, foundation governance, contributor agreements) and is now
- *   formalized in organizational structures like the Linux Foundation, Apache
- *   Foundation, and countless project communities. The constraint is CLAIMED
- *   as tangled_rope because it genuinely solves a coordination problem
- *   (distributed contribution with maintained coherence) AND creates
- *   asymmetric extraction (restricts freedom absolutists and property
- *   absolutists from unilateral control, requires governance participation
- *   from ecosystem participants). The reading coexists with three sibling
- *   readings: the freedom-imperative reading (which denies property
- *   legitimacy entirely), the property-rights reading (which denies freedom
- *   to modify), and the pragmatic-openness reading (which sees commons
- *   governance as one legitimate choice among others but not the only one).
+ *   Software control under the commons reading is neither absolute freedom
+ *   (which would eliminate all governance ability) nor absolute property
+ *   (which would foreclose distributed participation). It is a negotiated
+ *   arrangement through which developer communities, users, and institutions
+ *   collectively govern shared digital infrastructure. Licensing requirements
+ *   (GPL, MIT, Apache, BSD, etc.) encode governance rules: rights granted,
+ *   conditions for use, attribution obligations, patent covenants. The
+ *   constraint extracts from those who want unilateral control (proprietary
+ *   firms, governments seeking digital sovereignty through enclosed systems)
+ *   and from freedom absolutists who reject any negotiated restriction. It
+ *   coordinates stakeholder communities around shared stewardship. The
+ *   reading instantiates one specific constraint with one stable epsilon
+ *   (0.58): the measured extractiveness of commons governance rules AS
+ *   GOVERNANCE MECHANISM (not as libertarian ideal, not as property claim,
+ *   but as practiced collective management). Sibling readings of the same
+ *   kernel instantiate different ε values with different beneficiaries and
+ *   victims.
  *
  * KEY AGENTS:
- *   - Infrastructure maintainers (Linux Foundation, Apache Foundation, core teams): Set governance agendas, define contribution rules, enforce collective decisions
- *   - Ecosystem participants (developers, users, contributors): Participate in governance, benefit from coordination, bear costs of compliance with collective rules
- *   - Freedom absolutists (GPL ideologues, free software advocates): Denied unilateral control, must negotiate with property-claim holders
- *   - Property-rights absolutists (commercial software creators, IP-maximalist organizations): Denied unilateral control, must negotiate with freedom advocates and communities
- *   - Excluded voices (resource-poor developers, regions without digital infrastructure, future users): Structurally absent from governance tables due to participation barriers
+ *   - Developer communities (Agenda setter / Beneficiary) — write and maintain code, establish norms and licensing; power: organized; exit: mobile (can fork, start new projects); spatially global; they set the operational agenda
+ *   - User collectives (Beneficiary) — depend on software, participate in governance through contributions and voice; power: organized; exit: constrained (vendor lock-in on many systems); spatial scope: global; they benefit from shared stewardship and retain inspection/modification rights
+ *   - Public commons stakeholders (Beneficiary) — governments, institutions, non-profits that depend on shared infrastructure; power: moderate; exit: constrained (capacity limitations); spatial scope: global; they benefit from reduced cost and participation rights
+ *   - Commercial open-source firms (Payer / Beneficiary) — build business models on commons software; power: powerful; exit: constrained (compete on licensing terms they did not unilaterally set); spatial scope: global; they pay compliance costs and governance participation they cannot fully control
+ *   - Proprietary software advocates (Excluded) — claim exclusive property rights; power: powerful; exit: arbitrage (abandon commons, compete separately); spatial scope: global; excluded because property rights cannot coexist with commons governance
+ *   - Freedom absolutists (Excluded) — insist all software must be completely free; power: moderate; exit: mobile (operate parallel communities); spatial scope: global; excluded because commons permits negotiated restrictions
+ *   - Infrastructure maintainers (Agenda setter) — operate repositories, version control, licensing verification, CI/CD platforms; power: organized; exit: constrained (critical infrastructure); spatial scope: global; they enforce governance rules technically
  */
 
 /* ==========================================================================
@@ -103,61 +112,125 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(software_control_legitimacy__commons_reading, 0.48).
-domain_priors:suppression_score(software_control_legitimacy__commons_reading, 0.38).
-domain_priors:theater_ratio(software_control_legitimacy__commons_reading, 0.22).
+domain_priors:base_extractiveness(software_control_legitimacy__commons_reading, 0.58).
+domain_priors:suppression_score(software_control_legitimacy__commons_reading, 0.42).
+domain_priors:theater_ratio(software_control_legitimacy__commons_reading, 0.31).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, extractiveness, 0.48).
-narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, suppression_requirement, 0.38).
-narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, theater_ratio, 0.22).
+narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, theater_ratio, 0.31).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, accessibility_collapse, 0.48).
 narrative_ontology:constraint_metric(software_control_legitimacy__commons_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(software_control_legitimacy__commons_reading, tangled_rope).
-narrative_ontology:human_readable(software_control_legitimacy__commons_reading, "Software Control as Commons Governance (Negotiated Collective Management Reading)").
-narrative_ontology:topic_domain(software_control_legitimacy__commons_reading, "technological/political-economy").
+narrative_ontology:human_readable(software_control_legitimacy__commons_reading, "Software Control as Negotiated Commons Governance").
+narrative_ontology:topic_domain(software_control_legitimacy__commons_reading, "political_economy/intellectual_property/technology_governance").
 
 domain_priors:requires_active_enforcement(software_control_legitimacy__commons_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(software_control_legitimacy__commons_reading, '5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018').
-narrative_ontology:cs_kernel_codification('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', distributed).
-narrative_ontology:cs_authority_grounding('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', practice).
-narrative_ontology:cs_interpretation_layer_present('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018').
-narrative_ontology:cs_reading_relation('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', software_control_legitimacy__freedom_imperative_reading, coexists_with).
-narrative_ontology:cs_reading_relation('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', software_control_legitimacy__property_rights_reading, coexists_with).
-narrative_ontology:cs_reading_relation('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', software_control_legitimacy__pragmatic_openness_reading, influences).
-narrative_ontology:cs_axiom('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', foundational, multi_stakeholder_legitimacy_principle).
-narrative_ontology:cs_axiom_status(multi_stakeholder_legitimacy_principle, holdable).
-narrative_ontology:cs_axiom_grounding('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', multi_stakeholder_legitimacy_principle, deontological).
-narrative_ontology:cs_axiom('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', foundational, negotiated_governance_necessity).
-narrative_ontology:cs_axiom_status(negotiated_governance_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', negotiated_governance_necessity, instrumental).
-narrative_ontology:cs_reference_frame('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', distributed_contribution_coordination).
-narrative_ontology:cs_drift_state('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', contemporary_institutionalization, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('5cf4dfbe-438e-41a9-89d2-eb2d1a5dc018', '').
+narrative_ontology:cs_story_uid(software_control_legitimacy__commons_reading, '0f18c660-cda5-43e5-9094-f04138330dff').
+narrative_ontology:cs_kernel_codification('0f18c660-cda5-43e5-9094-f04138330dff', distributed).
+narrative_ontology:cs_authority_grounding('0f18c660-cda5-43e5-9094-f04138330dff', practice).
+narrative_ontology:cs_interpretation_layer_present('0f18c660-cda5-43e5-9094-f04138330dff').
+narrative_ontology:cs_reading_relation('0f18c660-cda5-43e5-9094-f04138330dff', software_control_legitimacy__freedom_imperative_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0f18c660-cda5-43e5-9094-f04138330dff', software_control_legitimacy__pragmatic_openness_reading, influences).
+narrative_ontology:cs_reading_relation('0f18c660-cda5-43e5-9094-f04138330dff', software_control_legitimacy__property_rights_reading, coexists_with).
+narrative_ontology:cs_axiom('0f18c660-cda5-43e5-9094-f04138330dff', foundational, legitimate_control_is_negotiated_not_absolute).
+narrative_ontology:cs_axiom_status(legitimate_control_is_negotiated_not_absolute, holdable).
+narrative_ontology:cs_axiom_grounding('0f18c660-cda5-43e5-9094-f04138330dff', legitimate_control_is_negotiated_not_absolute, conventional).
+narrative_ontology:cs_axiom('0f18c660-cda5-43e5-9094-f04138330dff', secondary, distributed_governance_enables_stewardship).
+narrative_ontology:cs_axiom_status(distributed_governance_enables_stewardship, holdable).
+narrative_ontology:cs_axiom_grounding('0f18c660-cda5-43e5-9094-f04138330dff', distributed_governance_enables_stewardship, instrumental).
+narrative_ontology:cs_reference_frame('0f18c660-cda5-43e5-9094-f04138330dff', collaborative_governance_framework).
+narrative_ontology:cs_drift_state('0f18c660-cda5-43e5-9094-f04138330dff', contemporary_platform_consolidation_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('0f18c660-cda5-43e5-9094-f04138330dff', '').
 narrative_ontology:cs_kernel_id(software_control_legitimacy__commons_reading, software_control_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, stakeholder_communities).
-narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, ecosystem_participants).
-narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, freedom_absolutists).
-narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, property_rights_absolutists).
-narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, excluded_development_voices).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, developer_communities).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, user_collectives).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, public_commons_stakeholders).
+narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, excluded_absolutist_voices).
+narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, marginalized_development_models).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__commons_reading, commercial_open_source_firms).
+narrative_ontology:constraint_victim(software_control_legitimacy__commons_reading, commercial_open_source_firms).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Write and maintain code, establish norms and licensing regimes, enforce community standards through code review and social sanction. They set the operational agenda for what software can do and what rights users have. They participate in deliberative processes that decide licensing, patent covenants, forking rules, and governance structure. They benefit from distributed contribution, peer review, and shared stewardship responsibility. They move within the commons (can start new projects, fork, adopt different licenses) but are bound by the governance framework they collectively maintain.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, developer_communities, agenda_setter,
+    organized, generational, mobile, global).
+narrative_ontology:stakeholder_secondary_role(software_control_legitimacy__commons_reading, developer_communities, beneficiary).
+
+% Depend on commons software for critical infrastructure, personal computing, and development environments. They participate in governance through bug reports, feature requests, community discussions, and voting in projects with democratic governance. They retain rights to inspect source code, modify it for their needs, and distribute modified versions (subject to licensing terms). They cannot unilaterally change governance rules they find objectionable but can exit to forked projects or proprietary alternatives at significant cost.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, user_collectives, beneficiary,
+    organized, biographical, constrained, global).
+
+% Public institutions (government agencies, public universities, public utilities), non-profits, and civil society organizations that depend on commons software for digital infrastructure they could not afford to build proprietary. They benefit from reduced licensing costs, reduced lock-in risk, ability to inspect and modify software for security and accessibility, and reduced dependence on commercial vendors. They are constrained by the governance choices made in commons communities and by capacity limitations that prevent meaningful participation in governance deliberation.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, public_commons_stakeholders, beneficiary,
+    moderate, generational, constrained, global).
+
+% Build business models on commons software (support services, proprietary extensions, hosting, managed services, consulting). They benefit from access to shared infrastructure, developer talent, and user communities they did not have to build. They pay through licensing restrictions that prevent pure proprietary relicensing, through community veto over attempts to re-enclose commons code, through governance participation costs (must justify business practices to communities), and through inability to unilaterally set terms. They cannot exit costlessly because their entire business model depends on commons legitimacy.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, commercial_open_source_firms, payer,
+    powerful, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(software_control_legitimacy__commons_reading, commercial_open_source_firms, beneficiary).
+
+% Argue that exclusive property rights in software are the legitimate ground for control and sustainable business models. They are excluded from commons governance because acceptance of collective decision-making would dissolve the property claim they depend on. They operate in separate markets (proprietary software, cloud platforms, software-as-a-service) and have built substantial value in those markets. They compete with commons software but do not participate in commons governance.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, proprietary_software_advocates, excluded,
+    powerful, biographical, arbitrage, global).
+
+% Insist that all software must be free in the sense of user freedom and control, rejecting any proprietary or restricted-use arrangement as categorically illegitimate. They are excluded from commons governance because the commons permits negotiated licensing restrictions (copyleft requirements, attribution obligations, non-commercial-use clauses in some projects) that do not guarantee complete freedom for all downstream users. They operate parallel communities with stricter freedom requirements (Free Software Foundation, GPL-only projects, Copyleft Alliance) and view the broader commons as insufficiently committed to absolute freedom.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, freedom_absolutist_advocates, excluded,
+    moderate, biographical, mobile, global).
+
+% Maintain critical shared digital infrastructure that enables commons governance: package repositories (npm, PyPI, Cargo), version control platforms (GitHub, GitLab), CI/CD systems, security scanners, and licensing verification tools. They set rules about what code can be hosted, how licensing is verified, what repositories can fork or mirror, and how dependencies are resolved. They operate the technical substrate through which governance rules are enforced. They are constrained by the need to maintain legitimacy with the communities that depend on their infrastructure and by potential government regulation of critical digital infrastructure.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, infrastructure_maintainers, agenda_setter,
+    organized, generational, constrained, global).
+
+% Evaluate commons governance in software for alignment with public interests: digital sovereignty, supply-chain security, strategic autonomy, data protection, and equitable access to digital infrastructure. They have capacity to mandate commons participation (open source requirements for public procurement, open data initiatives), restrict or regulate commons development (export controls on cryptography, sanctions on developer communities), or enforce alternative models (national software champions, state-controlled infrastructure, bans on certain licenses). They can observe and influence but do not directly participate in commons governance.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__commons_reading, national_governments, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(software_control_legitimacy__commons_reading, developer_communities).
+narrative_ontology:fixing_cost_class(software_control_legitimacy__commons_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes shared rules for software stewardship that prevent total enclosure, permit distributed contribution, enable inspection and modification, and distribute governance authority among developer communities, users, and institutions. Solves the collective-action problem of maintaining and evolving digital infrastructure that multiple parties depend on without centralizing control in a single entity.
+% TRANSFER_FUNCTION: Moves development labor, infrastructure maintenance work, and governance authority from proprietary holders to distributed communities. Moves rights to inspect, modify, and redistribute code from exclusive licensors to licensed communities. Moves decision-making power from markets and individual property claims to collective deliberation and commons rules.
+% ABSENT_VOICES: Proprietary software advocates (excluded because property rights cannot coexist with commons governance) and freedom absolutists (excluded because commons permits negotiated restrictions). Users in developing nations who lack technical capacity to participate meaningfully in governance. Downstream software consumers who depend on commons choices made without their voice (transitive dependencies, supply-chain depth).
+% DISAPPEARANCE_RATIONALE: If commons governance of software vanished, digital infrastructure would reorganize rapidly: critical systems currently maintained by volunteer communities would either be commercialized, nationalized, abandoned, or forked into proprietary variants. Interoperability standards negotiated through commons processes would fragment into competing proprietary platforms. The distributed stewardship model would collapse into centralized control by well-capitalized firms or governments.
+% FOUNDING_PROBLEM: Early computing locked users and downstream developers out of control over software that affected them; monopolistic pricing, lock-in, security failures hidden from users, and inability to adapt software to local needs. The problem was formulated as: how can digital infrastructure be governed so that no single entity can unilaterally exclude others from participation, inspection, modification, and continued stewardship?
+% FOUNDING_PROBLEM_CORROBORATION: Software supply-chain vulnerabilities (Log4Shell, xz-utils backdoor attempt, SolarWinds) demonstrate that centralized proprietary control fails to guarantee security. Cloud provider lock-in continues to constrain user autonomy. Digital colonialism (dominant firms extracting value from developing-nation data and labor with no local governance participation) is documented by development economists and technology justice advocates outside the commons movement. Government digital sovereignty policies cite these problems in mandating open-source requirements.
+narrative_ontology:disappearance_verdict(software_control_legitimacy__commons_reading, world_rearranges).
+narrative_ontology:founding_problem_status(software_control_legitimacy__commons_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(software_control_legitimacy__commons_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(software_control_legitimacy__commons_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(software_control_legitimacy__commons_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(software_control_legitimacy__commons_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,16 +250,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness sits at 0.48 (moderate) because the commons reading genuinely solves a coordination problem (shared infrastructure, distributed modification) but also restricts both freedom absolutists and property absolutists from unilateral control. The measurement series show modest growth from 0.38 to 0.48 over 25 time units, reflecting increasing formalization of governance structures (foundations, conflict-resolution bodies, license standardization) — as commons governance becomes institutionalized, it develops more rules restricting freedom/property absolutism. Theater ratio (0.22) is low because the constraint's functioning governance bodies are genuinely active in resolving disputes and setting policy, not primarily performative; the ratio increases modestly as governance becomes more established but plateaus when the institutional form stabilizes. Suppression (0.38) reflects the active enforcement required to keep freedom and property absolutists within negotiated governance rather than allowing them to split off into pure open or pure proprietary ecosystems. Suppression increases as commons-governance legitimacy grows because more actors must be constrained to maintain the reading's coherence. Accessibility collapse (0.62) is moderate-high: once a developer or organization enters a commons-governed project, the alternatives (pure open or pure proprietary) are accessible in principle but carry switching costs in terms of community relationships, reputation, and infrastructure; the commons reading narrows viable exit paths but does not eliminate them. Resistance (0.71) is substantial: both freedom and property absolutists actively resist commons-governance claims; intellectual property advocates argue it violates property rights; free software advocates argue it compromises freedom; pragmatists argue it is unnecessary. This resistance reflects the reading's contested status — it is not a settled natural law but an actively defended position.
+ *   Extractiveness is moderate-high (0.58) because commons governance DOES extract from certain positions: it denies property-rights absolutists unilateral control, it requires freedom absolutists to accept negotiated terms, it obligates commercial firms to accept community veto over certain business practices. But it is NOT as extractive as a pure snare because the beneficiaries (developer communities, user collectives, public institutions) genuinely participate in setting and enforcing the rules; they are not merely coerced. Suppression is moderate (0.42) because the constraint's persistence depends on active enforcement (licensing compliance verification, fork-capability maintenance, exclusion of proprietary lock-in mechanisms) but NOT on coercing participation — developers and users voluntarily choose commons projects in many contexts. The suppression measures enforcement of boundaries AGAINST enclosure, not enforcement of compliance WITHIN the system. Theater is low-moderate (0.31): most commons governance is genuinely functional (licensing serves real coordination and rights purposes), but some performative activity exists (sustainability theater when volunteer communities are exhausted, equity theater when governance remains actually dominated by large firms, meritocracy theater in communities with hidden power hierarchies). The measurement series tracks the interval from early open-source (lower enforcement burden, less theater) through maturity (stable extraction and suppression as governance institutions harden) — extractiveness and suppression rise slightly early (governance infrastructure develops), then plateau as the system reaches stability. Theater begins low and rises as the constraint matures: initially, software freedom was a functional political project; later, governance theater emerges as institutional maintenance becomes routinized and equity rhetoric increases relative to real participation.
  *
  * PERSPECTIVAL GAP:
- *   The stakeholder-community and ecosystem-participant seats experience commons governance as beneficial coordination with manageable constraints. The infrastructure-maintainer seat experiences it as legitimate authority over collective resources. The freedom-absolutist seat experiences it as constraints on non-negotiable rights. The property-rights-absolutist seat experiences it as restrictions on legitimate ownership. The excluded-voices seat experiences it as inaccessible governance claiming to represent them without their input. The engine should compute different types per seat because the structural relationship to the constraint differs fundamentally: beneficiaries experience coordination; absolutists experience suppression; maintainers experience authority; excluded voices experience powerlessness. The commons reading claims all these experiences are legitimate simultaneously — none can be dismissed as mere ideology — and governance must navigate among them. This claim distinguishes the commons reading from the sibling readings, each of which dismisses some experiences as illegitimate.
+ *   Developer communities (organized, mobile, global) will perceive this as rope: negotiated governance that enables their work and distributes stewardship. User collectives (organized but spatially and vendor-constrained) will perceive this as near-symmetric: real benefits from participation but real constraints from governance they cannot unilaterally alter. Commercial firms (powerful but exit-constrained by license compliance obligations) will perceive this as tangled_rope: genuine infrastructure benefits but significant extraction through licensing restrictions and community veto. Proprietary advocates (excluded) will perceive this as snare: their preferred model is forbidden and they are excluded from the decision-making. Freedom absolutists (excluded) will perceive this as snare: negotiated restrictions are imposed on them and they cannot achieve absolute freedom within the commons framework. These divergences are structural, not perspectival error — the same constraint generates different effective extractions for different seats because the constraint is ABOUT the allocation of control authority, which inherently affects seats differently based on what authority they wanted and whether they got it.
  *
  * DIRECTIONALITY LOGIC:
- *   Stakeholder communities and ecosystem participants are the structural beneficiaries: they gain voice in governance and access to maintained infrastructure without surrendering all property or freedom claims. Their directionality is low (d ~0.3–0.4: they pay compliance costs but collect genuine benefits). Freedom absolutists are structurally targeted by the requirement to negotiate property claims; their directionality is high (d ~0.7–0.8: they bear costs of constrained freedom in service of collective governance). Property-rights absolutists are also targeted, required to negotiate with freedom advocates and communities; their directionality is similarly high (d ~0.7–0.8). Infrastructure maintainers sit at symmetric-to-high directionality (d ~0.5–0.6): they have legitimate authority but bear significant maintenance burden; the constraint enables their role but also locks them into identity-fused commitment. Excluded voices cannot be modeled in the standard directionality framework because they are not seated — their absence is structural. No directionality override is needed; the asymmetry emerges naturally from beneficiary/victim declarations and exit-option analysis.
+ *   Developer communities are near the beneficiary end of directionality (d ≈ 0.2–0.3): they set the rules, control the infrastructure, benefit from distributed contribution and shared stewardship. They experience relatively low effective extraction. User collectives sit near-symmetric (d ≈ 0.45–0.55): they benefit from the coordination (shared infrastructure, modification rights) but are constrained by the governance rules they participate in setting. Commercial open-source firms sit nearer the target end (d ≈ 0.6–0.7): they benefit from commons infrastructure but must accept licensing terms and community veto they cannot unilaterally override — the constraint's enforcement directly limits their business model freedom. Proprietary advocates and freedom absolutists sit at the far target end (d ≈ 0.85–0.95): the constraint directly denies them unilateral control and excludes them from participation. These directionality differences MUST produce per-seat type divergence: from a developer-community seat, commons governance is genuine rope (coordination benefiting all). From a proprietary-advocate or commercial-firm seat, the same structure reads as tangled_rope or snare (extraction enforced through licensing and community veto). The engine computes these divergences from the structural data; the authored claim (tangled_rope) reflects the overall structure from a relatively power-balanced analytical perspective that sees BOTH the genuine coordination AND the real extraction.
  *
  * MANDATROPHY ANALYSIS:
- *   The commons reading avoids the false-satisfaction problem by requiring active conflict resolution and governance participation, not by claiming the underlying disputes have dissolved. Unlike a mountain (which claims the constraint is natural and universal), or a rope (which claims participants prefer it), the commons reading is explicitly a working compromise. The founding problem (coordination without chaos or isolation) remains live because it is re-encountered in every new project and every new stakeholder admission. The claim and metrics align: extractiveness is moderate because the constraint both solves and imposes; suppression is needed because absolutists of both kinds would exit; theater is low because governance bodies are actively functioning, not ceremonial. The measurement trajectory shows stabilization rather than drift, indicating the constraint has matured into a stable institutional form. Mandatrophy would occur if the founding problem — distributed modification with maintained coherence — were solved by some other mechanism (e.g., AI-assisted code reconciliation, automated testing, or a breakthrough in property-law flexibility), rendering commons governance redundant. Current evidence shows no such displacement; the founding problem remains live. The constraint should remain classified as tangled_rope.
+ *   The founding problem (users locked out of software control, monopolistic pricing, lock-in, security failure) is live: supply-chain vulnerabilities continue, cloud lock-in persists, digital colonialism remains active. The commons governance reading addresses this problem by distributing control authority and enabling inspection/modification rights. The constraint's disappearance verdict (world_rearranges) aligns with founding_problem_status=live: if commons governance vanished, digital infrastructure would reorganize toward re-enclosure (proprietary platforms, national champions, fragmented interoperability), and the founding problem would re-materialize immediately. No mandatrophy signal: the constraint's function has not outlived its problem. However, theater_ratio elevation (0.18 → 0.31) over the interval suggests governance performativity is increasing: equity rhetoric without real power-sharing, sustainability theater masking volunteer exhaustion, meritocracy claims in communities with hidden hierarchies. This is a signal of potential future drift: if the genuine governance function decays while the theatrical maintenance increases, the constraint could transition from tangled_rope toward piton (governance machinery persists out of institutional inertia while actual collective stewardship atrophies). The constraint is currently live; the trajectory suggests vigilance.
  */
 
 /* ==========================================================================
@@ -194,89 +267,119 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_boundary_commons_vs_pragmatism,
-    'Is the commons reading a structurally distinct legitimacy claim (shared authority grounded in stakeholder participation) or is it a pragmatic choice-point within a larger property-flexible framework?',
-    'Close reading of founding documents, governance-body decision minutes, and dispute-resolution rationales. If commons bodies consistently appeal to stakeholder participation AS THE GROUND of legitimacy (not as a means to efficient code), it is distinct. If they appeal to pragmatic benefits (better code, faster iteration), it collapses toward the pragmatic-openness reading.',
-    'If the commons reading is distinct, it has independent ε and can be modeled as a tangled rope (coordination + restricted absolutism). If it collapses into pragmatism, it becomes a rope with much lower extractiveness and should reclassify. The distinction matters for how conflict-resolution bodies defend their authority.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_boundary_commons_vs_pragmatism, conceptual, 'Whether commons governance is a distinct legitimacy claim or a pragmatic choice.').
-
-omega_variable(
-    power_asymmetry_in_commons_governance,
-    'Do commons-governance bodies genuinely distribute authority among stakeholders, or do they concentrate power in maintainer hands under the cover of collective participation?',
-    'Comparative study of decision authority in governance bodies (Linux kernel, Python, Apache projects): who has veto power, who can override community decisions, who controls agenda-setting. Measurement of stakeholder influence on actual policy changes over a decade-long period.',
-    'If authority is genuinely distributed, the extractiveness (0.48) is accurate and the constraint is tangled rope. If maintainers hold veto despite ''community governance,'' extractiveness is understated and the constraint approaches snare; suppression would be understated as well. The commons reading would then be a legitimacy narrative covering concentration, not a description of actual governance structure.',
+    commons_function_decay,
+    'Can commons governance of software remain genuinely participatory as infrastructure scales, or does governance inevitably concentrate in the hands of well-capitalized maintainers and infrastructure operators?',
+    'Long-term observation of governance participation patterns in scaling commons projects (Linux, Apache, Node.js ecosystem); comparison of voting rights distribution, decision-making frequency, and participation rates at project inception versus maturity; case studies of governance collapse or power reconcentration.',
+    'If governance genuinely decays into concentration, the constraint transitions from tangled_rope (asymmetric but participatory) toward piton (inertial theater) — the beneficiary/victim alignment shifts as developers become de facto agenda-setters rather than coordinators, and public commons stakeholders become passive dependents.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(power_asymmetry_in_commons_governance, empirical, 'Whether commons governance actually distributes authority or concentrates it in maintainer hands.').
+narrative_ontology:omega_variable(commons_function_decay, empirical, 'Whether participatory governance can scale without reconcentrating power.').
 
 omega_variable(
-    structural_exclusion_persistence,
-    'Is the exclusion of resource-poor developers and regional communities from governance tables a resolvable participation barrier or a structural feature of commons governance?',
-    'Track whether excluded voices gain access as governance infrastructure matures (documentation translation, time-zone accommodations, funding for participation). If access grows, exclusion is resolvable. If access remains stable despite infrastructure investment, it is structural.',
-    'If structural, the commons reading victimizes excluded voices as a persistent feature, not an accidental side effect. The victim group in base_properties should grow to include structural-exclusion targets, and suppression should be higher to maintain the exclusion. The constraint would show signs of piton-hood (maintained for other reasons but not genuinely beneficial) at the excluded-voice seat.',
+    commons_vs_individual_freedom_boundary,
+    'Is there a logically coherent middle ground between ''all software must be free'' and ''all software can be proprietary,'' or do the two absolutist readings foreclose the commons reading within any single coherent framework?',
+    'Formal analysis of the logical structure of freedom claims: can a commons governance framework acknowledge negotiated licensing restrictions AND user freedom simultaneously, or are these contradictory demands? Empirical: do practitioners experience the commons as coherent or constantly embattled between internal freedom-absolutist and property-rights factions?',
+    'If the commons reading is logically foreclosed (forced to choose between absolutisms), then the constraint is not sustainable as a middle position — it collapses into one of the sibling readings. If coherent, the commons reading stands as a stable alternative. This is the core kernel question: does the commons reading instantiate genuine governance, or is it a temporary compromise destined to collapse?',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(structural_exclusion_persistence, empirical, 'Whether structural exclusion from governance is a resolvable barrier or a persistent feature.').
+narrative_ontology:omega_variable(commons_vs_individual_freedom_boundary, conceptual, 'Whether commons governance is logically coherent or foreclosed by absolutist boundary conditions.').
 
 omega_variable(
-    freedom_absolutism_foreclosure_test,
-    'Does the commons reading logically foreclose the freedom-imperative reading, or do both readings coexist without either ruling out the other?',
-    'Test the logical structure: a freedom absolutist claims ''all proprietary software is ethically illegitimate.'' A commons advocate claims ''property claims require negotiation with users and community.'' Can both claims be held simultaneously without contradiction? If a single actor can hold ''I believe freedom is a right AND I accept negotiated limits on that right for this project,'' they coexist. If no coherent actor can hold both, the commons reading forecloses the freedom reading.',
-    'If coexists_with: the readings are genuinely distinct positions held by different parties; the commons reading does not claim to have resolved the underlying dispute about freedom, only to have created a forum for negotiation. If forecloses: the commons reading asserts that freedom-absolutism is logically indefensible in the presence of community and property stakeholders; the constraint is more deeply exclusionary than the metrics suggest.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(freedom_absolutism_foreclosure_test, conceptual, 'Logical relationship between commons and freedom-absolutist readings.').
-
-omega_variable(
-    maintenance_identity_lock_mechanism,
-    'Why is the infrastructure-maintainer exit classified as identity_locked rather than mobile or arbitrage? What specific identity-fusion mechanism binds maintainers?',
-    'Ethnographic study of maintainer interviews, documented burn-out, and attempted exits. Identify whether exit barrier is professional identity (career path built on the role), relational identity (community recognizes them through this role), ideological identity (worldview constituted through commitment to the project), or institutional identity (the project has become ''who they are'').',
-    'If identity-lock is strong (high relational + ideological components), maintainers are partially coerced into continued governance participation and the constraint''s suppression is understated. If exit is merely constrained (career costs, but psychologically exitable), the constraint is less extractive than the identity-lock framing suggests. Identity-lock mechanism matters for whether the commons reading is sustainable long-term.',
+    extraction_from_excluded_positions,
+    'Who exactly is extracted from by commons governance, and is this extraction structural (necessary to the commons function) or contingent (a side effect of particular governance choices)?',
+    'Detailed stakeholder analysis: proprietary firms can opt out entirely and build separate proprietary markets — are they extracted from or simply excluded? Freedom absolutists operate parallel communities (Free Software Foundation, Copyleft projects) — are they extracted from or excluded? If all extracted parties CAN exit, is it suppression-backed extraction or simply unfavorable terms they reject?',
+    'If extraction is structural and unavoidable, commons governance is genuinely tangled_rope. If extraction is contingent and extractees can exit costlessly, it may be closer to rope with coordination benefits that some reject. The distinction determines whether suppression (enforcement against alternatives) is necessary or merely present.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(maintenance_identity_lock_mechanism, empirical, 'Mechanism of identity-lock in maintainer participation.').
+narrative_ontology:omega_variable(extraction_from_excluded_positions, empirical, 'Whether commons-governance extraction is structural or an artifact of current institutional choices.').
+
+omega_variable(
+    sibling_reading_foreclosure_status,
+    'Does the commons reading logically foreclose the property_rights and freedom_imperative readings (making them impossible to hold within the commons framework), or do they merely coexist as competing positions held by different parties?',
+    'Formal logical analysis: if one accepts commons governance as THE legitimate framework for software control, must one reject property rights as a POSSIBLE legitimate framework? Or can one accept commons governance for public infrastructure while accepting property rights for commercial software? Empirically: do practitioners frame this as ''one framework is right'' or ''multiple frameworks are appropriate for different contexts''?',
+    'If foreclosure is genuine (commons logic rules out property-rights logic in any single framework), the reading relations should include forecloses edges. If the readings merely coexist as contextual choices, they should be coexists_with. This determines the stability of the commons reading: does it compete or exclude?',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(sibling_reading_foreclosure_status, conceptual, 'Whether commons governance logically forecloses or merely competes with absolutist readings.').
+
+omega_variable(
+    suppression_mechanism_structural_vs_internalized,
+    'Is the measured suppression (0.42) structural and external (licensing enforcement, fork barriers, patent covenants that require active policing) or internalized (developers internalize the norms of commons governance, no longer needing external enforcement)?',
+    'Historical tracking of enforcement effort: if enforcement costs (legal action, licensing disputes, fork disputes, governance-rule violations) decline over time while suppression remains stable, suppression is increasingly internalized. Counterfactual: if enforcement infrastructure suddenly disappeared, how quickly would commons governance norms re-establish themselves?',
+    'If suppression is structural, the constraint requires active enforcement to persist — it is contingent on the infrastructure maintainers and legal systems that police licensing. If internalized, the constraint persists through culture and norm-adoption even if external enforcement decays — it is more stable but also potentially more coercive (norms can be harder to resist than explicit rules). This affects piton risk: internalized suppression can mask theater and inertia.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether commons-governance suppression is enforced externally or internalized as developer/user norms.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(software_control_legitimacy__commons_reading, 0, 25).
+narrative_ontology:interval(software_control_legitimacy__commons_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(soft_tr_t0, software_control_legitimacy__commons_reading, theater_ratio, 0, 0.12).
-narrative_ontology:measurement(soft_tr_t5, software_control_legitimacy__commons_reading, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(soft_tr_t10, software_control_legitimacy__commons_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(soft_tr_t15, software_control_legitimacy__commons_reading, theater_ratio, 15, 0.21).
-narrative_ontology:measurement(soft_tr_t20, software_control_legitimacy__commons_reading, theater_ratio, 20, 0.22).
-narrative_ontology:measurement(soft_tr_t25, software_control_legitimacy__commons_reading, theater_ratio, 25, 0.22).
+narrative_ontology:measurement(soft_tr_t0, software_control_legitimacy__commons_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement_basis(soft_tr_t0, observed).
+narrative_ontology:measurement(soft_tr_t5, software_control_legitimacy__commons_reading, theater_ratio, 5, 0.22).
+narrative_ontology:measurement_basis(soft_tr_t5, observed).
+narrative_ontology:measurement(soft_tr_t10, software_control_legitimacy__commons_reading, theater_ratio, 10, 0.26).
+narrative_ontology:measurement_basis(soft_tr_t10, observed).
+narrative_ontology:measurement(soft_tr_t15, software_control_legitimacy__commons_reading, theater_ratio, 15, 0.29).
+narrative_ontology:measurement_basis(soft_tr_t15, observed).
+narrative_ontology:measurement(soft_tr_t20, software_control_legitimacy__commons_reading, theater_ratio, 20, 0.31).
+narrative_ontology:measurement_basis(soft_tr_t20, observed).
+narrative_ontology:measurement(soft_tr_t25, software_control_legitimacy__commons_reading, theater_ratio, 25, 0.31).
+narrative_ontology:measurement_basis(soft_tr_t25, observed).
+narrative_ontology:measurement(soft_tr_t30, software_control_legitimacy__commons_reading, theater_ratio, 30, 0.3).
+narrative_ontology:measurement_basis(soft_tr_t30, observed).
+narrative_ontology:measurement(soft_tr_t40, software_control_legitimacy__commons_reading, theater_ratio, 40, 0.31).
+narrative_ontology:measurement_basis(soft_tr_t40, observed).
 
 % Extraction over time
 narrative_ontology:measurement(soft_be_t0, software_control_legitimacy__commons_reading, base_extractiveness, 0, 0.38).
-narrative_ontology:measurement(soft_be_t5, software_control_legitimacy__commons_reading, base_extractiveness, 5, 0.41).
-narrative_ontology:measurement(soft_be_t10, software_control_legitimacy__commons_reading, base_extractiveness, 10, 0.45).
-narrative_ontology:measurement(soft_be_t15, software_control_legitimacy__commons_reading, base_extractiveness, 15, 0.47).
-narrative_ontology:measurement(soft_be_t20, software_control_legitimacy__commons_reading, base_extractiveness, 20, 0.48).
-narrative_ontology:measurement(soft_be_t25, software_control_legitimacy__commons_reading, base_extractiveness, 25, 0.48).
+narrative_ontology:measurement_basis(soft_be_t0, observed).
+narrative_ontology:measurement(soft_be_t5, software_control_legitimacy__commons_reading, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement_basis(soft_be_t5, observed).
+narrative_ontology:measurement(soft_be_t10, software_control_legitimacy__commons_reading, base_extractiveness, 10, 0.48).
+narrative_ontology:measurement_basis(soft_be_t10, observed).
+narrative_ontology:measurement(soft_be_t15, software_control_legitimacy__commons_reading, base_extractiveness, 15, 0.52).
+narrative_ontology:measurement_basis(soft_be_t15, observed).
+narrative_ontology:measurement(soft_be_t20, software_control_legitimacy__commons_reading, base_extractiveness, 20, 0.56).
+narrative_ontology:measurement_basis(soft_be_t20, observed).
+narrative_ontology:measurement(soft_be_t25, software_control_legitimacy__commons_reading, base_extractiveness, 25, 0.58).
+narrative_ontology:measurement_basis(soft_be_t25, observed).
+narrative_ontology:measurement(soft_be_t30, software_control_legitimacy__commons_reading, base_extractiveness, 30, 0.57).
+narrative_ontology:measurement_basis(soft_be_t30, observed).
+narrative_ontology:measurement(soft_be_t40, software_control_legitimacy__commons_reading, base_extractiveness, 40, 0.58).
+narrative_ontology:measurement_basis(soft_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(soft_su_t0, software_control_legitimacy__commons_reading, suppression_requirement, 0, 0.28).
-narrative_ontology:measurement(soft_su_t5, software_control_legitimacy__commons_reading, suppression_requirement, 5, 0.31).
-narrative_ontology:measurement(soft_su_t10, software_control_legitimacy__commons_reading, suppression_requirement, 10, 0.34).
-narrative_ontology:measurement(soft_su_t15, software_control_legitimacy__commons_reading, suppression_requirement, 15, 0.37).
-narrative_ontology:measurement(soft_su_t20, software_control_legitimacy__commons_reading, suppression_requirement, 20, 0.38).
-narrative_ontology:measurement(soft_su_t25, software_control_legitimacy__commons_reading, suppression_requirement, 25, 0.38).
+narrative_ontology:measurement(soft_su_t0, software_control_legitimacy__commons_reading, suppression_requirement, 0, 0.25).
+narrative_ontology:measurement_basis(soft_su_t0, observed).
+narrative_ontology:measurement(soft_su_t5, software_control_legitimacy__commons_reading, suppression_requirement, 5, 0.3).
+narrative_ontology:measurement_basis(soft_su_t5, observed).
+narrative_ontology:measurement(soft_su_t10, software_control_legitimacy__commons_reading, suppression_requirement, 10, 0.35).
+narrative_ontology:measurement_basis(soft_su_t10, observed).
+narrative_ontology:measurement(soft_su_t15, software_control_legitimacy__commons_reading, suppression_requirement, 15, 0.4).
+narrative_ontology:measurement_basis(soft_su_t15, observed).
+narrative_ontology:measurement(soft_su_t20, software_control_legitimacy__commons_reading, suppression_requirement, 20, 0.42).
+narrative_ontology:measurement_basis(soft_su_t20, observed).
+narrative_ontology:measurement(soft_su_t25, software_control_legitimacy__commons_reading, suppression_requirement, 25, 0.41).
+narrative_ontology:measurement_basis(soft_su_t25, observed).
+narrative_ontology:measurement(soft_su_t30, software_control_legitimacy__commons_reading, suppression_requirement, 30, 0.42).
+narrative_ontology:measurement_basis(soft_su_t30, observed).
+narrative_ontology:measurement(soft_su_t40, software_control_legitimacy__commons_reading, suppression_requirement, 40, 0.42).
+narrative_ontology:measurement_basis(soft_su_t40, observed).
 
 
 /* ==========================================================================
@@ -284,22 +387,20 @@ narrative_ontology:measurement(soft_su_t25, software_control_legitimacy__commons
    ========================================================================== */
 
 narrative_ontology:coordination_type(software_control_legitimacy__commons_reading, resource_allocation).
-narrative_ontology:boltzmann_floor_override(software_control_legitimacy__commons_reading, 0.18).
+narrative_ontology:boltzmann_floor_override(software_control_legitimacy__commons_reading, 0.2).
 narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, software_control_legitimacy__freedom_imperative_reading).
 narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, software_control_legitimacy__property_rights_reading).
 narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, software_control_legitimacy__pragmatic_openness_reading).
-narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, open_source_license_enforcement).
-narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, software_contribution_attribution).
-narrative_ontology:affects_constraint(software_control_legitimacy__commons_reading, fork_governance_rights).
 
 % DUAL FORMULATION NOTE:
-% This story is one of four readings of the software_control_legitimacy kernel. The commons reading instantiates a specific structural claim: that legitimate authority over software control is neither unilateral property ownership nor unilateral user freedom, but negotiated governance among stakeholders. This differs fundamentally from the freedom-imperative reading (which denies property legitimacy entirely), the property-rights reading (which denies unilateral user modification rights), and the pragmatic-openness reading (which treats all three governance models as equally legitimate alternatives). Each reading has different ε, different beneficiary/victim structures, and different classification. The ε-invariance principle requires separate stories for each reading because the structural form of legitimacy differs: what counts as extraction, coordination, and suppression depends on which authority framework is being instantiated. All four readings should be modeled in the corpus to enable comparison of how different legitimacy claims reshape stakeholder relationships.
+% The software_control_legitimacy kernel decomposes into four distinct constraints, one per reading. Each reading instantiates a different ε, different beneficiary/victim sets, and different type classifications because each reading defines 'legitimate control' differently. The commons reading (this file) argues control should be negotiated through collective governance (ε=0.58, tangled_rope). The freedom_imperative reading argues all software must be free in the liberty sense (makes proprietary arrangements the referent, ε high for property restrictions). The property_rights reading argues exclusive creator control is legitimate (makes commons restrictions the referent, ε high for governance mandates). The pragmatic_openness reading argues open source is methodologically superior but does not make legitimacy claims (ε lower, focuses on development outcomes). These are NOT the same constraint viewed from different angles — the ε referent and beneficiary structure differ fundamentally. Each reading forms a family member linked through network.affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(software_control_legitimacy__commons_reading, organized, 0.35).
+constraint_indexing:directionality_override(software_control_legitimacy__commons_reading, organized, 0.25).
+constraint_indexing:directionality_override(software_control_legitimacy__commons_reading, powerful, 0.68).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

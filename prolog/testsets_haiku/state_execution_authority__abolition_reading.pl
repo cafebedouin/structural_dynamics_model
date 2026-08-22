@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,36 +73,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: state_execution_authority__abolition_reading
- *   human_readable: State Execution Authority: Abolition Reading
- *   domain: criminal_justice/constitutional_law
+ *   human_readable: State Execution Authority (Abolition Reading)
+ *   domain: constitutional_law/political_philosophy/criminal_justice
  *
  * SUMMARY:
- *   The abolition reading claims that state execution is categorically
- *   impermissible regardless of crime severity, procedural safeguards, or the
- *   certainty of guilt. Under this reading, all executed persons — guilty and
- *   innocent alike — are victims of the state's illegitimate exercise of
- *   ultimate power. The reading rejects retributive and deterrence
- *   justifications as inadequate to ground such authority and treats
- *   execution as extractive (the state claims the exclusive right to kill in
- *   the name of justice and collects the coercive benefit). This is one
- *   reading of the contested kernel state_execution_authority; the
- *   retributive and deterrence readings are alternatives, held by different
- *   institutional and intellectual actors. The claim/metric divergence is
- *   deliberate: the abolition reading is CLAIMED as a snare (pure extraction
- *   using justice as cover), and the metrics describe a highly extractive,
- *   actively enforced operation with substantial suppression and moderate
- *   theater. The engine computes whether the claimed snare classification
- *   holds; divergence flags the measurement.
+ *   The abolition reading treats state execution as categorically
+ *   impermissible—a claim that the state has no legitimate authority to
+ *   execute any person, regardless of crime severity, procedural safeguards,
+ *   guilt certainty, or deterrent effect. This reading is one of three live
+ *   interpretations of the same constitutional/moral kernel (state execution
+ *   authority). The abolition reading instantiates a distinct constraint
+ *   story with very high extractiveness (0.95): from this reading's
+ *   perspective, execution is an irreversible taking of life that cannot be
+ *   legitimated by retributive or deterrent justification. All executed
+ *   persons, including those convicted of terrible crimes, enter the victim
+ *   set. No institutional actor derives legitimate benefit. The measurement
+ *   series show extractiveness stable across the interval—the core claim does
+ *   not waver—while theater_ratio rises slightly (expanding procedural
+ *   safeguards create appearance of legitimacy without changing the
+ *   categorical prohibition) and suppression_requirement stays elevated (the
+ *   constraint persists by active enforcement, not by consent or
+ *   inevitability).
  *
  * KEY AGENTS:
- *   - State execution apparatus: administers capital punishment, maintains infrastructure, enforces the authority to execute
- *   - Executed persons: victims of the constraint regardless of guilt; exit is impossible
- *   - Families of executed persons: bear permanent loss through state action; constrained exit
- *   - Wrongfully convicted persons: paradigm victims; their existence proves system illegitimacy
- *   - Victims of capital crimes: seated as beneficiaries in the retributive/deterrence frame; the abolition reading rejects this
- *   - Abolition movement: pays costs of organizing against entrenched institutional practice
- *   - International human rights regime: benefits from abolition (vindicated norms) without directly profiting
- *   - Executing states: agenda-setters that maintain the apparatus and claim exclusive authority to kill
+ *   - executed_persons: powerless individuals subject to state killing; the ultimate extraction target
+ *   - families_of_executed: moderate power; bear loss, stigma, and finality
+ *   - state_execution_apparatus: institutional agenda-setter; administers the constraint
+ *   - retributive_and_deterrence_proponents: institutional beneficiaries under their own frames; rejected as legitimate by this reading
+ *   - wrongfully_convicted_and_exonerated: proof of systemic fallibility; structurally absent once executed
+ *   - international_human_rights_bodies: analytical observers; assess the constraint as violation
+ *   - abolitionist_movements: organized observers; reshape discourse around the constraint's illegitimacy
  */
 
 /* ==========================================================================
@@ -104,58 +110,111 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(state_execution_authority__abolition_reading, 0.91).
-domain_priors:suppression_score(state_execution_authority__abolition_reading, 0.88).
-domain_priors:theater_ratio(state_execution_authority__abolition_reading, 0.42).
+domain_priors:base_extractiveness(state_execution_authority__abolition_reading, 0.95).
+domain_priors:suppression_score(state_execution_authority__abolition_reading, 0.72).
+domain_priors:theater_ratio(state_execution_authority__abolition_reading, 0.18).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, extractiveness, 0.91).
-narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, suppression_requirement, 0.88).
-narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, extractiveness, 0.95).
+narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, theater_ratio, 0.18).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, accessibility_collapse, 0.78).
-narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, accessibility_collapse, 0.88).
+narrative_ontology:constraint_metric(state_execution_authority__abolition_reading, resistance, 0.61).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(state_execution_authority__abolition_reading, snare).
-narrative_ontology:human_readable(state_execution_authority__abolition_reading, "State Execution Authority: Abolition Reading").
-narrative_ontology:topic_domain(state_execution_authority__abolition_reading, "criminal_justice/constitutional_law").
+narrative_ontology:human_readable(state_execution_authority__abolition_reading, "State Execution Authority (Abolition Reading)").
+narrative_ontology:topic_domain(state_execution_authority__abolition_reading, "constitutional_law/political_philosophy/criminal_justice").
 
 domain_priors:requires_active_enforcement(state_execution_authority__abolition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(state_execution_authority__abolition_reading, '77960c5a-9119-48af-b695-429a621e1fee').
-narrative_ontology:cs_kernel_codification('77960c5a-9119-48af-b695-429a621e1fee', fixed_text).
-narrative_ontology:cs_authority_grounding('77960c5a-9119-48af-b695-429a621e1fee', extraction).
-narrative_ontology:cs_interpretation_layer_present('77960c5a-9119-48af-b695-429a621e1fee').
-narrative_ontology:cs_reading_relation('77960c5a-9119-48af-b695-429a621e1fee', state_execution_authority__retributive_reading, forecloses).
-narrative_ontology:cs_reading_relation('77960c5a-9119-48af-b695-429a621e1fee', state_execution_authority__deterrence_reading, forecloses).
-narrative_ontology:cs_axiom('77960c5a-9119-48af-b695-429a621e1fee', foundational, execution_categorically_impermissible).
-narrative_ontology:cs_axiom_status(execution_categorically_impermissible, holdable).
-narrative_ontology:cs_axiom_grounding('77960c5a-9119-48af-b695-429a621e1fee', execution_categorically_impermissible, deontological).
-narrative_ontology:cs_axiom('77960c5a-9119-48af-b695-429a621e1fee', foundational, state_lacks_moral_authority_to_kill).
-narrative_ontology:cs_axiom_status(state_lacks_moral_authority_to_kill, holdable).
-narrative_ontology:cs_axiom_grounding('77960c5a-9119-48af-b695-429a621e1fee', state_lacks_moral_authority_to_kill, deontological).
-narrative_ontology:cs_reference_frame('77960c5a-9119-48af-b695-429a621e1fee', human_dignity_and_state_authority_limits).
-narrative_ontology:cs_drift_state('77960c5a-9119-48af-b695-429a621e1fee', contemporary_post_dna_exoneration_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('77960c5a-9119-48af-b695-429a621e1fee', '').
+narrative_ontology:cs_story_uid(state_execution_authority__abolition_reading, '36afac69-8dfc-428e-bd4b-57260757b741').
+narrative_ontology:cs_kernel_codification('36afac69-8dfc-428e-bd4b-57260757b741', formalized).
+narrative_ontology:cs_authority_grounding('36afac69-8dfc-428e-bd4b-57260757b741', extraction).
+narrative_ontology:cs_interpretation_layer_present('36afac69-8dfc-428e-bd4b-57260757b741').
+narrative_ontology:cs_reading_relation('36afac69-8dfc-428e-bd4b-57260757b741', state_execution_authority__retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation('36afac69-8dfc-428e-bd4b-57260757b741', state_execution_authority__deterrence_reading, coexists_with).
+narrative_ontology:cs_axiom('36afac69-8dfc-428e-bd4b-57260757b741', foundational, state_execution_categorically_impermissible).
+narrative_ontology:cs_axiom_status(state_execution_categorically_impermissible, holdable).
+narrative_ontology:cs_axiom_grounding('36afac69-8dfc-428e-bd4b-57260757b741', state_execution_categorically_impermissible, deontological).
+narrative_ontology:cs_reference_frame('36afac69-8dfc-428e-bd4b-57260757b741', human_dignity_and_state_authority_limits).
+narrative_ontology:cs_drift_state('36afac69-8dfc-428e-bd4b-57260757b741', contemporary_global_abolitionist_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('36afac69-8dfc-428e-bd4b-57260757b741', '').
 narrative_ontology:cs_kernel_id(state_execution_authority__abolition_reading, state_execution_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(state_execution_authority__abolition_reading, executed_persons).
-narrative_ontology:constraint_victim(state_execution_authority__abolition_reading, families_of_executed_persons).
-narrative_ontology:constraint_victim(state_execution_authority__abolition_reading, wrongfully_convicted_persons).
+narrative_ontology:constraint_victim(state_execution_authority__abolition_reading, families_of_executed).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(state_execution_authority__abolition_reading, retributive_and_deterrence_proponents).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Individuals subject to execution sentences. Under the abolition reading, they are victims of the state regardless of guilt or innocence because state execution is categorically impermissible. No procedural safeguard, no crime severity, no judicial review can legitimate the arrangement from this seat. Death is the irreversible extraction.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, executed_persons, payer,
+    powerless, immediate, trapped, national).
+
+% Families bear the loss of the executed person, social stigma from association with capital crime, and institutional inability to contest the sentence once carried out. They have constrained exit (jurisdiction matters, petition processes exist but are narrow) and carry intergenerational trauma from the state's action.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, families_of_executed, payer,
+    moderate, generational, constrained, national).
+
+% The institutional machinery—legislatures, courts, executive officials, prison personnel—that administers capital sentences. From the abolition reading's perspective, the apparatus enforces an illegitimate constraint and is complicit in systematic victimization. Its decisions cannot legitimate the arrangement; legitimacy cannot flow from the mechanism itself under a categorical prohibition.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, state_execution_apparatus, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Political actors, academic theorists, and judicial officers who justify execution as retribution for heinous crimes or as a deterrent. From the abolition reading, they benefit from a system that claims moral legitimacy for state killing; their institutional authority to render such judgments is the arrangement's central extraction mechanism. The abolition reading rejects their justificatory frame entirely.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, retributive_and_deterrence_proponents, beneficiary,
+    institutional, generational, analytical, national).
+
+% Persons exonerated after execution or released from death row prove the system's fallibility. Under the abolition reading, every exoneration is proof that the state extraction mechanism is illegitimate: if any innocent can be executed, the categorical prohibition is justified. They would voice the strongest objection to the arrangement if present in deliberation, but the system's finality means they are structurally absent when already executed.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, wrongfully_convicted_and_exonerated, excluded,
+    powerless, biographical, trapped, national).
+
+% Organizations like the UN Human Rights Committee, regional courts, and treaty bodies assess capital punishment against human rights law. They take testimony, conduct investigations, and issue findings that reframe the constraint as a violation. Their analytical seat sits outside the executing state's jurisdiction.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, international_human_rights_bodies, observer,
+    institutional, generational, analytical, global).
+
+% Civil society organizations advocating for the abolition of capital punishment. They document wrongful executions, organize resistance, and reshape public discourse. From the abolition reading's perspective, they represent the true position of those who would object if systematically consulted; their analytical work makes the constraint's illegitimacy visible.
+narrative_ontology:constraint_stakeholder(state_execution_authority__abolition_reading, abolitionist_movements, observer,
+    organized, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(state_execution_authority__abolition_reading, state_execution_apparatus).
+narrative_ontology:fixing_cost_class(state_execution_authority__abolition_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: None. The abolition reading rejects any coordination framing for state execution. Retributive and deterrence readings claim coordination around shared values (justice, public safety); the abolition reading treats those claims as cover stories. There is no authentic coordination function to identify from this seat.
+% TRANSFER_FUNCTION: Moves the ultimate extraction—the life of the executed person—from the convicted individual to state authority. Simultaneously transfers moral authority to the state apparatus (courts, legislatures, executioners) to define who deserves death and to carry out that judgment without reversibility.
+% ABSENT_VOICES: Executed persons and the wrongfully convicted cannot testify after the sentence is carried out. Their structural absence from the deliberative process (finality of execution) is itself evidence of the constraint's illegitimacy from the abolition reading. Families and exonerated survivors who do voice objection are systematically discounted as emotionally invested parties rather than credible witnesses. International human rights bodies and abolition movements are excluded from the enforcing state's law-making process.
+% DISAPPEARANCE_RATIONALE: If execution authority disappeared overnight, states would substitute life imprisonment without parole (or other long-term incapacitation). This is not a restoration to a prior state but a fundamental reconfiguration: the irreversibility vanishes, the finality pressure on courts disappears, the state's killing apparatus is dismantled. The social world reorganizes around the principle that the state may not kill. Crime rates, family structures, institutional legitimacy, and international relations would all shift.
+% FOUNDING_PROBLEM: Retributive reading: proportionate punishment for heinous crimes requires a penalty equal to the crime's moral gravity. Deterrence reading: capital crimes require the highest deterrent force to prevent repetition. Abolition reading rejects both as justifications and identifies the founding problem differently: historical societies lacked alternatives to execution for permanent incapacitation; they built execution into criminal justice as the only means to prevent escape and recurrence. Conditions have changed.
+% FOUNDING_PROBLEM_CORROBORATION: Abolitionists and international human rights bodies attest the founding problem is solved: modern incapacitation through imprisonment is technically feasible and legally available in nearly all abolitionist jurisdictions. Retributive and deterrence proponents attest the problem is live: heinous crimes still demand the highest response and maximum deterrence. Independent empirical research from criminology and penology shows no causal relationship between execution and murder rates (corroborating the abolition reading's claim that deterrence justification is spurious). Historical legal scholarship documents the contingency of execution as a necessity—other methods were always available but chosen for reasons of theology, tradition, and power rather than technical necessity.
+narrative_ontology:disappearance_verdict(state_execution_authority__abolition_reading, world_rearranges).
+narrative_ontology:founding_problem_status(state_execution_authority__abolition_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(state_execution_authority__abolition_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(state_execution_authority__abolition_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(state_execution_authority__abolition_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(state_execution_authority__abolition_reading, 0.95, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +234,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is very high (0.91) because the abolition reading asserts that state execution is categorically impermissible — no degree of severity or procedural refinement can justify it. This means the constraint extracts an irreversible, irreplaceable value (human life) from those it governs, with no legitimate exchange. Suppression is high (0.88) because the constraint's persistence depends on actively preventing alternatives: abolition movements are suppressed through resistance to legislative change, wrongful conviction cases are framed as exceptional rather than systemic, and the retributive/deterrence justifications are maintained despite contestation. Theater is moderate (0.42) because while the procedural safeguards and justice rhetoric are real, they increasingly function as performance as the abolition critique gains ground — the system expends energy on error-correction theater while the underlying extraction persists. The measurements show slight upward drift in extractiveness and suppression over the 50-year interval, consistent with the abolition movement's growing empirical and normative challenge making the system's self-justifications more difficult to maintain (theater compensates). All metrics are authored on a single shared time grid so the engine has consistent data across the interval.
+ *   Extractiveness is very high (0.95) because execution is the ultimate extraction—the irreversible taking of life—and from the abolition reading's perspective there is no legitimate justification that can convert this taking into coordination. Retributive justification (this death is owed by moral balance) and deterrence justification (this death will prevent future murders) are both rejected as illegitimate under the categorical principle. Suppression is substantial (0.72) because the constraint persists through active enforcement: courts must rule on execution, legislatures must defend it, executioners must carry it out, and families/movements that resist it are overridden. Theater_ratio is low-to-moderate (0.18) because the apparatus invests real resources in procedural legitimacy—appellate review, stays for investigation—but from the abolition reading, these procedures are ornamental; they do not address the categorical claim that execution is impermissible. The series tracks a steady state: extractiveness does not rise over time (the claim is fixed), theater gradually increases (more procedural show), and suppression settles at a stable level (the constraint requires continuous institutional labor to maintain against growing resistance).
  *
  * PERSPECTIVAL GAP:
- *   The state execution apparatus (agenda-setter seat) experiences the constraint as a necessary expression of state authority, proportionate to crime, and justified by deterrence and retribution. From this seat, the constraint solves a genuine coordination problem (how to punish heinous crime) and should compute as Rope or even a natural principle of proportionality. The executed persons and their families (payer seats) experience the constraint as state killing — the exercise of ultimate coercive power with no legitimate justification. From these seats, it should compute as Snare. The abolition movement (payer seat with mobile exit) experiences it as an entrenched institutional practice maintained by inertia and self-justifying narratives. The wrongfully convicted persons (powerless, trapped payer) are the canonical victims whose existence undermines all justifications. The engine derives each seat's experienced type from the structural data (power, exit, beneficiary/victim declarations); the authored claim reflects the abolition reading's perspective that the constraint is snare-like from every seat that is not the state apparatus itself.
+ *   The seat divergence is the entire analytical point of generating this reading as a separate constraint. From the state execution apparatus's institutional seat (or the retributive/deterrence proponent seat), the constraint might compute as justified, proportionate, and necessary—a rope coordinating around shared values of justice and public safety. From the executed person's powerless seat, it computes as pure extraction with no alternative: trapped, identity_locked (the death sentence defines all their remaining options), no exit. From the abolitionist observer seat, it computes as snare—a constructed killing mechanism maintained by institutional power and justified by cover stories that empirical evidence rejects. The engine will compute these divergences from the structural data (power atoms, exit options, beneficiary/victim declarations, spatial scope); the abolition reading's authoring establishes one such seat's full structural situation.
  *
  * DIRECTIONALITY LOGIC:
- *   The state execution apparatus has high directionality toward beneficiary (d near 0.0) because it sets and administers the constraint, extracts legitimacy from it, and has arbitrage-grade exit (it could, if it chose, abolish capital punishment). Executed persons have maximum directionality toward target (d near 1.0) because they are trapped (no exit) and bear the ultimate cost (death) that the constraint imposes. Families of executed persons are targets (d ~0.8–0.9) because they are constrained in exit and bear permanent loss. Wrongfully convicted persons are paradigm targets (d = 1.0) because their trapping is involuntary (wrongful conviction) and their loss is irreversible. Abolition activists are moderate payers (d ~0.6–0.7) because they bear organizational costs but retain mobile exit (they can cease activism). Victims of capital crimes are positioned as beneficiaries (d ~0.2–0.3) in the retributive apparatus's logic, but the abolition reading rejects this positioning: they do not actually benefit from execution, and the role is a mischaracterization imposed by the constraint's self-justifying rhetoric. The international human rights regime has low directionality (d ~0.1–0.2) because it benefits from abolition (vindicated norms) without running the apparatus or bearing direct costs.
+ *   Executed persons have powerless power, immediate time horizon, trapped exit, and are explicitly listed as victims. Directionality for this seat is maximum (d = 1.0): they are the pure extraction target. Families of executed have moderate power, generational horizon, constrained exit, and are listed as victims; their d is high (~0.85). Retributive/deterrence proponents are institutional power, generational horizon, and listed as beneficiaries (they collect institutional authority and legitimacy from the arrangement); their d is low (~0.1). The state execution apparatus is institutional power, generational horizon, analytical exit (they could change the law); they are the agenda_setter, not a beneficiary, because they do not collect private gain—they execute public authority. Their d is moderate (~0.5). Wrongfully convicted and exonerated persons would have powerless power, biographical horizon, and should be victimized; they are excluded from the deliberative process, which itself is proof of illegitimacy from the abolition reading.
  *
  * MANDATROPHY ANALYSIS:
- *   The abolition reading reveals a severe mandatrophy: the constraint's founding mandate (from the retributive and deterrence perspectives) asserts that execution serves justice and prevents crime. But the empirical case for deterrence has been substantially challenged (no robust evidence that execution deters more than life imprisonment), wrongful convictions demonstrate the retributive claim cannot be reliably executed, and jurisdictions without capital punishment do not show inferior justice outcomes. The mandate is dead in the empirical sense, but the constraint persists through institutional inertia, budget appropriations, and the state's claim to exclusive authority. This is the classic zombie constraint: the founding problem (proportionate punishment for heinous crime) can be and is solved through other means (life without parole, lengthy sentences), yet the execution apparatus persists. The abolition reading's Snare classification captures this: the extraction (execution authority) is maintained despite the solving of the founding problem, using justice language as cover. The mandatrophy is not resolved — it is the core of the abolition claim.
+ *   Mandatrophy does not apply to this constraint. The founding problem (historical necessity of execution for permanent incapacitation) is genuinely dead—modern imprisonment provides incapacitation without death—and the disappearance verdict is world_rearranges (the constraint's removal reorganizes criminal justice). There is no gap between founding justification and current function that would trigger a mandatrophy declaration. The constraint persists not because the founding problem lives on but because institutional actors (retributive, deterrence, and sovereignty proponents) maintain it despite its founding justification being obsolete. This is a different pathology: the constraint is live and extractive, not atrophied.
  */
 
 /* ==========================================================================
@@ -192,89 +251,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    naturality_of_state_killing,
-    'Is the prohibition on state execution a natural law / mathematical truth about permissible state action, or is it a constructed norm that benefits certain advocates and institutions?',
-    'Genealogical analysis of the abolition movement''s emergence and institutional backing; examination of whether non-executing jurisdictions arose from principled abolitionist conviction or pragmatic drift; investigation of whether international human rights institutions have material incentives to promote abolition.',
-    'If the prohibition is natural/logical (like the illegality of forcing someone to be in two places at once), it would be reclassified as a Mountain. If it is constructed, it remains a Snare with potential beneficiaries (human rights institutions, certain political movements). The reading''s strength depends on this.',
+    categorical_vs_empirical_boundaries,
+    'Is the abolition reading''s categorical prohibition on execution a formal principle (no execution under any circumstances) or contingent on empirical facts (wrong if execution causes innocent deaths)?',
+    'Textual analysis of abolition arguments (constitutional and philosophical): do they ground the prohibition in deontological principle (human dignity, state authority limits) or in empirical outcomes (wrongful execution rates, deterrence failure)?',
+    'If grounded in deontology, the reading is not subject to empirical override; wrongful execution proves the principle correct, not incorrect. If grounded in empirical claims, a system with zero wrongful executions and proven deterrence would logically defeat the reading from within its own premises. The abolition movement''s strategic discourse suggests both grounds coexist.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(naturality_of_state_killing, conceptual, 'Whether the categorical prohibition on execution is a discovered natural principle or a constructed normative claim.').
+narrative_ontology:omega_variable(categorical_vs_empirical_boundaries, conceptual, 'Whether the abolition principle is deontological or empirically contingent.').
 
 omega_variable(
-    procedural_sufficiency_debate,
-    'Can any procedural safeguard (evidence standards, appellate review, DNA testing, error-correction mechanisms) make execution categorically permissible, or is execution intrinsically impermissible regardless of procedure?',
-    'Philosophical analysis of whether the objection to execution is grounded in epistemic limits (we can never be certain enough) or in principle (the state lacks moral authority to kill). Empirical observation of whether error rates converge to zero with perfect procedure.',
-    'If safeguards could suffice in principle, the constraint is not categorical — it becomes context-dependent. If execution is intrinsically impermissible, the procedural approach is a false hope and feeds the theater ratio.',
+    forced_labor_vs_execution_equivalence,
+    'If lifetime imprisonment (forced labor, loss of freedom, isolation) is acceptable and not categorically prohibited, what makes execution categorically prohibited while lifetime imprisonment is not?',
+    'Philosophical analysis: what property does execution have that lifetime imprisonment lacks? Irreversibility, finality, dignity loss, state role in death vs. state role in confinement. If irreversibility is the criterion, then a hypothetical technology for reversible execution would shift the boundary.',
+    'A satisfactory answer that distinguishes execution from lifetime imprisonment on principled grounds (not merely intensity or taboo) would strengthen the abolition reading''s foundation. An unsatisfactory answer would suggest the categorical prohibition rests on cultural contingency rather than deep principle, opening the reading to internal challenge from siblings who accept imprisonment but not execution.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(procedural_sufficiency_debate, conceptual, 'Whether procedural improvements can validate execution or whether the prohibition is intrinsic.').
+narrative_ontology:omega_variable(forced_labor_vs_execution_equivalence, conceptual, 'The principled boundary between categorically prohibited execution and permitted lifetime imprisonment.').
 
 omega_variable(
-    wrongful_execution_frequency_and_epistemic_status,
-    'How many executions of innocent persons does a system contain? Is the rate empirically measurable, or is it irreducibly uncertain?',
-    'DNA exoneration data, statistical estimates of false-conviction rates in capital cases, post-conviction innocence investigation. Compare estimate of innocents-executed against execution volume.',
-    'High certainty of wrongful executions (>0.5% of executions estimated innocent) would strengthen the abolition reading as a snare driven by state illegitimacy. Low or zero wrongful executions would undermine the ''system illegitimacy'' claim and move the debate to pure retributive/deterrence grounds.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(wrongful_execution_frequency_and_epistemic_status, empirical, 'The empirical rate of executing innocent persons and its epistemic status.').
-
-omega_variable(
-    beneficiary_identification_ambiguity,
-    'Who benefits from the execution system''s persistence? Is there an identifiable beneficiary, or is the system maintained by institutional inertia despite diffuse costs?',
-    'Analysis of state budget allocations to capital litigation and execution infrastructure; examination of constituencies who actively defend capital punishment; investigation of whether abolition would reduce state power or merely transfer resources.',
-    'If a clear beneficiary exists (state power apparatus, certain politicians, retributive-theory advocates), the snare classification is solid. If execution persists mainly through institutional inertia with no concentrated benefit, it might be a Piton rather than a Snare.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(beneficiary_identification_ambiguity, empirical, 'Identification of concentrated beneficiaries versus diffuse inertial persistence.').
-
-omega_variable(
-    kernel_reading_under_determination,
-    'This constraint instantiates the abolition_reading of the state_execution_authority kernel. The other readings (retributive, deterrence) claim the same kernel admits different legitimate ε-values and beneficiary structures. How is the choice of reading itself justified?',
-    'Analysis of the epistemic authority grounding each reading: Do retributive and deterrence readings rest on empirical claims that could be falsified? Do they rest on normative premises that the abolition reading rejects as illegitimate? What would convince an adopter of one reading to switch to another?',
-    'If the reading choice is empirical (deterrence works/doesn''t work), evidence could shift the boundary. If it is deontological (execution is intrinsically impermissible), evidence cannot settle it, and the readings remain in genuine contest. The classification assumes the abolition reading is the correct one; if the retributive reading is correct instead, the constraint type would be Rope or even Mountain (natural proportionality).',
+    sibling_axiom_foreclosure,
+    'Does the abolition reading''s foundational axiom (no state execution is ever legitimate) logically foreclose the retributive and deterrence readings, or do the readings coexist as live but incompatible positions held by different institutional actors?',
+    'Logical analysis: can a framework simultaneously hold ''no execution is ever legitimate'' and ''execution is legitimate punishment for heinous crimes''? No framework can. Yet multiple states, factions, and judges hold these positions simultaneously. Are the readings coexisting across different frameworks, or is one logically dominant and the other illusory/false?',
+    'If the readings foreclose each other, one is true and the others false—the constraint''s classification as snare reflects factual illegitimacy. If they coexist across different parties'' frameworks, they are live but incompatible—the constraint''s classification as snare reflects structural asymmetry but not factual falsity. The reading_relations declaration (forecloses vs. coexists_with) hinges on this resolution.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_under_determination, conceptual, 'The kernel-reading selection problem: on what basis is the abolition reading chosen over sibling readings?').
+narrative_ontology:omega_variable(sibling_axiom_foreclosure, conceptual, 'Logical relationship between abolition, retributive, and deterrence axioms: foreclosure or coexistence.').
+
+omega_variable(
+    identity_locked_exit_and_innocence,
+    'Why does wrongful execution of innocent persons prove the abolition reading''s point more forcefully than retributive/deterrence readings acknowledge?',
+    'Empirical data on wrongful executions, DNA exonerations, and system error rates; interviews with retributive and deterrence proponents about how they accommodate wrongful execution within their frameworks.',
+    'If retributive and deterrence proponents treat wrongful execution as a tragic system failure but still maintain execution is legitimate in principle, the abolition reading can point to the persistent gap between theory and practice—no safeguard has eliminated wrongful execution. If they treat wrongful execution as foreclosing the principle (no execution if any risk of wrongfulness), they concede ground to the abolition reading. The measurement of how theories accommodate this asymmetry reveals whether the abolition reading''s point about categorical impermissibility is integrated into sibling framings or remains external.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(identity_locked_exit_and_innocence, empirical, 'Whether wrongful execution proves abolition axioms or merely reveals system failures within retributive/deterrence frameworks.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(state_execution_authority__abolition_reading, 0, 50).
+narrative_ontology:interval(state_execution_authority__abolition_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(stat_tr_t0, state_execution_authority__abolition_reading, theater_ratio, 0, 0.38).
-narrative_ontology:measurement(stat_tr_t6, state_execution_authority__abolition_reading, theater_ratio, 6, 0.39).
-narrative_ontology:measurement(stat_tr_t12, state_execution_authority__abolition_reading, theater_ratio, 12, 0.4).
-narrative_ontology:measurement(stat_tr_t25, state_execution_authority__abolition_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(stat_tr_t37, state_execution_authority__abolition_reading, theater_ratio, 37, 0.42).
-narrative_ontology:measurement(stat_tr_t50, state_execution_authority__abolition_reading, theater_ratio, 50, 0.42).
+narrative_ontology:measurement(stat_tr_t0, state_execution_authority__abolition_reading, theater_ratio, 0, 0.12).
+narrative_ontology:measurement_basis(stat_tr_t0, observed).
+narrative_ontology:measurement(stat_tr_t5, state_execution_authority__abolition_reading, theater_ratio, 5, 0.14).
+narrative_ontology:measurement_basis(stat_tr_t5, observed).
+narrative_ontology:measurement(stat_tr_t10, state_execution_authority__abolition_reading, theater_ratio, 10, 0.15).
+narrative_ontology:measurement_basis(stat_tr_t10, observed).
+narrative_ontology:measurement(stat_tr_t20, state_execution_authority__abolition_reading, theater_ratio, 20, 0.18).
+narrative_ontology:measurement_basis(stat_tr_t20, observed).
+narrative_ontology:measurement(stat_tr_t30, state_execution_authority__abolition_reading, theater_ratio, 30, 0.19).
+narrative_ontology:measurement_basis(stat_tr_t30, observed).
+narrative_ontology:measurement(stat_tr_t40, state_execution_authority__abolition_reading, theater_ratio, 40, 0.18).
+narrative_ontology:measurement_basis(stat_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(stat_be_t0, state_execution_authority__abolition_reading, base_extractiveness, 0, 0.87).
-narrative_ontology:measurement(stat_be_t6, state_execution_authority__abolition_reading, base_extractiveness, 6, 0.88).
-narrative_ontology:measurement(stat_be_t12, state_execution_authority__abolition_reading, base_extractiveness, 12, 0.89).
-narrative_ontology:measurement(stat_be_t25, state_execution_authority__abolition_reading, base_extractiveness, 25, 0.9).
-narrative_ontology:measurement(stat_be_t37, state_execution_authority__abolition_reading, base_extractiveness, 37, 0.91).
-narrative_ontology:measurement(stat_be_t50, state_execution_authority__abolition_reading, base_extractiveness, 50, 0.91).
+narrative_ontology:measurement(stat_be_t0, state_execution_authority__abolition_reading, base_extractiveness, 0, 0.92).
+narrative_ontology:measurement_basis(stat_be_t0, observed).
+narrative_ontology:measurement(stat_be_t5, state_execution_authority__abolition_reading, base_extractiveness, 5, 0.93).
+narrative_ontology:measurement_basis(stat_be_t5, observed).
+narrative_ontology:measurement(stat_be_t10, state_execution_authority__abolition_reading, base_extractiveness, 10, 0.94).
+narrative_ontology:measurement_basis(stat_be_t10, observed).
+narrative_ontology:measurement(stat_be_t20, state_execution_authority__abolition_reading, base_extractiveness, 20, 0.95).
+narrative_ontology:measurement_basis(stat_be_t20, observed).
+narrative_ontology:measurement(stat_be_t30, state_execution_authority__abolition_reading, base_extractiveness, 30, 0.95).
+narrative_ontology:measurement_basis(stat_be_t30, observed).
+narrative_ontology:measurement(stat_be_t40, state_execution_authority__abolition_reading, base_extractiveness, 40, 0.95).
+narrative_ontology:measurement_basis(stat_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(stat_su_t0, state_execution_authority__abolition_reading, suppression_requirement, 0, 0.82).
-narrative_ontology:measurement(stat_su_t6, state_execution_authority__abolition_reading, suppression_requirement, 6, 0.83).
-narrative_ontology:measurement(stat_su_t12, state_execution_authority__abolition_reading, suppression_requirement, 12, 0.84).
-narrative_ontology:measurement(stat_su_t25, state_execution_authority__abolition_reading, suppression_requirement, 25, 0.86).
-narrative_ontology:measurement(stat_su_t37, state_execution_authority__abolition_reading, suppression_requirement, 37, 0.88).
-narrative_ontology:measurement(stat_su_t50, state_execution_authority__abolition_reading, suppression_requirement, 50, 0.88).
+narrative_ontology:measurement(stat_su_t0, state_execution_authority__abolition_reading, suppression_requirement, 0, 0.68).
+narrative_ontology:measurement_basis(stat_su_t0, observed).
+narrative_ontology:measurement(stat_su_t5, state_execution_authority__abolition_reading, suppression_requirement, 5, 0.7).
+narrative_ontology:measurement_basis(stat_su_t5, observed).
+narrative_ontology:measurement(stat_su_t10, state_execution_authority__abolition_reading, suppression_requirement, 10, 0.71).
+narrative_ontology:measurement_basis(stat_su_t10, observed).
+narrative_ontology:measurement(stat_su_t20, state_execution_authority__abolition_reading, suppression_requirement, 20, 0.72).
+narrative_ontology:measurement_basis(stat_su_t20, observed).
+narrative_ontology:measurement(stat_su_t30, state_execution_authority__abolition_reading, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement_basis(stat_su_t30, observed).
+narrative_ontology:measurement(stat_su_t40, state_execution_authority__abolition_reading, suppression_requirement, 40, 0.72).
+narrative_ontology:measurement_basis(stat_su_t40, observed).
 
 
 /* ==========================================================================
@@ -282,20 +349,16 @@ narrative_ontology:measurement(stat_su_t50, state_execution_authority__abolition
    ========================================================================== */
 
 narrative_ontology:coordination_type(state_execution_authority__abolition_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(state_execution_authority__abolition_reading, 0.05).
+narrative_ontology:boltzmann_floor_override(state_execution_authority__abolition_reading, 0.0).
 narrative_ontology:affects_constraint(state_execution_authority__abolition_reading, state_execution_authority__retributive_reading).
 narrative_ontology:affects_constraint(state_execution_authority__abolition_reading, state_execution_authority__deterrence_reading).
-narrative_ontology:affects_constraint(state_execution_authority__abolition_reading, life_imprisonment_as_alternative_sanction).
-narrative_ontology:affects_constraint(state_execution_authority__abolition_reading, wrongful_conviction_and_dna_exoneration).
 
 % DUAL FORMULATION NOTE:
-% The state_execution_authority kernel is contested across three readings (abolition, retributive, deterrence), each representing a different legitimate interpretation of Constitutional authority and a different constraint structure. This file (abolition_reading) generates the constraint from the perspective that execution is categorically impermissible and purely extractive. The retributive and deterrence readings (separate files) instantiate the kernel from perspectives that execution can be legitimate coordination. All three readings are linked via network.affects_constraints; they share a kernel but have divergent ε, beneficiary/victim structure, and type. The choice of reading is not determined by evidence alone — it depends on foundational normative premises (deontological vs. empirical). The false-summit candidate here is the retributive and deterrence readings, which may appear as natural-law constraints (proportionate punishment, crime prevention) but actually rest on contestable normative premises that the abolition reading rejects as illegitimate. The abolition reading assumes execution is never legitimate; that assumption is not falsifiable by evidence about crime rates or proportionality, which is why the readings are in genuine contest.
+% The state_execution_authority kernel decomposes into three distinct constraint stories: abolition_reading (this), retributive_reading, and deterrence_reading. Each instantiates a different ε, different beneficiary/victim structure, and different type classification. They share a single kernel text (Constitutional death-penalty clauses) but interpret it in incompatible ways. The abolition reading claims categorical prohibition (ε=0.95, snare); retributive reading claims legitimate punishment (lower ε); deterrence reading claims empirical deterrent necessity (ε contingent on deterrence evidence). Sibling links track which readings foreclose or influence each other.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(state_execution_authority__abolition_reading, organized, 0.75).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

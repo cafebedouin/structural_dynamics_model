@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,34 +75,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: dollar_gold_convertibility__strict_convertibility_reading
- *   human_readable: Article IV Gold Convertibility as Binding Legal Obligation
- *   domain: international_political_economy
+ *   human_readable: Article IV Gold Convertibility as Binding Legal Obligation (Strict Reading)
+ *   domain: international_political_economy/monetary_law
  *
  * SUMMARY:
- *   Article IV of the Bretton Woods agreement (1944) bound the U.S. to
- *   maintain convertibility of dollars to gold at $35 per troy ounce. This
- *   reading interprets that commitment as a strict, binding legal obligation
- *   that constrains U.S. monetary policy and benefits foreign creditor
- *   nations with enforceable claims on U.S. gold reserves. Under this
- *   reading, the U.S. became a victim of its own currency's status as the
- *   international numeraire—losing autonomy over money supply, inflation, and
- *   countercyclical policy. Creditor nations (France, Germany, Belgium, and
- *   others) became beneficiaries, holding conversion rights that forced U.S.
- *   orthodoxy. This reading contrasts with two sibling interpretations:
- *   policy_flexible_reading (which treats convertibility as a conditional
- *   obligation subordinate to domestic stability) and
- *   triffin_structural_reading (which locates the problem not in the reading
- *   of the obligation but in its fundamental unsustainability). This story
- *   instantiates ONLY the strict_convertibility_reading, modeling the
- *   constraint as the strict reading implies: binding, extractive from the
- *   U.S., and benefiting foreign reserve holders.
+ *   Article IV of the IMF Articles of Agreement (1944) establishes
+ *   convertibility of the U.S. dollar into gold at a fixed parity ($35 per
+ *   ounce) on demand by foreign central banks and governments. Under the
+ *   strict reading instantiated here, this is a binding legal obligation that
+ *   constrains U.S. monetary policy to the quantity of gold reserves
+ *   available for redemption. As the U.S. balance-of-payments deficit widened
+ *   through the 1950s and 1960s (driven by Cold War military spending,
+ *   foreign aid, and domestic welfare expansion), the gap between dollar
+ *   liabilities held abroad and gold reserves narrowed, creating an
+ *   increasingly untenable position. The strict reading treats convertibility
+ *   not as a policy flexibility to be adjusted to domestic conditions, but as
+ *   an ironclad commitment that the U.S. cannot honorably abandon. This
+ *   reading dominated official policy discourse until Nixon's suspension of
+ *   convertibility on August 15, 1971. The measurement series captures the
+ *   accumulating tension: as dollar-gold ratio worsened, extractiveness rose
+ *   (the constraint increasingly forced the U.S. to subordinate domestic
+ *   policy to reserve preservation), suppression intensified (diplomatic and
+ *   institutional pressure to maintain the commitment grew more forceful),
+ *   and theater increased (the commitment became increasingly performative as
+ *   structural reality made it unsustainable).
  *
  * KEY AGENTS:
- *   - U.S. monetary policy authority (Federal Reserve, Treasury) — victim of binding obligation; constrained issuer
- *   - Creditor nations (France, Germany, Belgium, Netherlands, and others) — beneficiaries with enforceable conversion rights
- *   - U.S. domestic creditors (corporations, labor, Keynesian economists) — payers bearing the cost of constrained monetary policy
- *   - U.S. Congress — agenda-setter that codified convertibility but loses policy autonomy
- *   - International monetary order — beneficiary of the anchor mechanism, though distributed asymmetrically
+ *   - U.S. Treasury and Federal Reserve: institutional victim, trapped by the convertibility obligation, unable to expand money supply
+ *   - Creditor nations (France, United Kingdom, other surplus nations): institutional beneficiaries with enforceable gold redemption rights
+ *   - Gold-standard maintainers (IMF, central bankers, orthodox economists): agenda-setters enforcing the strict interpretation
+ *   - U.S. domestic constituencies (workers, unemployed, growth-focused policymakers): excluded payers bearing the cost of monetary constraint
+ *   - Heterodox economists and structural critics (Triffin, Kindleberger): observers questioning the sustainability of the reading
  */
 
 /* ==========================================================================
@@ -102,59 +113,115 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(dollar_gold_convertibility__strict_convertibility_reading, 0.68).
-domain_priors:suppression_score(dollar_gold_convertibility__strict_convertibility_reading, 0.52).
-domain_priors:theater_ratio(dollar_gold_convertibility__strict_convertibility_reading, 0.29).
+domain_priors:base_extractiveness(dollar_gold_convertibility__strict_convertibility_reading, 0.82).
+domain_priors:suppression_score(dollar_gold_convertibility__strict_convertibility_reading, 0.71).
+domain_priors:theater_ratio(dollar_gold_convertibility__strict_convertibility_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 0.52).
-narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 0.29).
+narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, extractiveness, 0.82).
+narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(dollar_gold_convertibility__strict_convertibility_reading, resistance, 0.76).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(dollar_gold_convertibility__strict_convertibility_reading, tangled_rope).
-narrative_ontology:human_readable(dollar_gold_convertibility__strict_convertibility_reading, "Article IV Gold Convertibility as Binding Legal Obligation").
-narrative_ontology:topic_domain(dollar_gold_convertibility__strict_convertibility_reading, "international_political_economy").
+narrative_ontology:human_readable(dollar_gold_convertibility__strict_convertibility_reading, "Article IV Gold Convertibility as Binding Legal Obligation (Strict Reading)").
+narrative_ontology:topic_domain(dollar_gold_convertibility__strict_convertibility_reading, "international_political_economy/monetary_law").
 
 domain_priors:requires_active_enforcement(dollar_gold_convertibility__strict_convertibility_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(dollar_gold_convertibility__strict_convertibility_reading, '1e419efc-2810-426d-82b2-06dc6ef87477').
-narrative_ontology:cs_kernel_codification('1e419efc-2810-426d-82b2-06dc6ef87477', fixed_text).
-narrative_ontology:cs_authority_grounding('1e419efc-2810-426d-82b2-06dc6ef87477', extraction).
-narrative_ontology:cs_interpretation_layer_present('1e419efc-2810-426d-82b2-06dc6ef87477').
-narrative_ontology:cs_reading_relation('1e419efc-2810-426d-82b2-06dc6ef87477', dollar_gold_convertibility__policy_flexible_reading, forecloses).
-narrative_ontology:cs_reading_relation('1e419efc-2810-426d-82b2-06dc6ef87477', dollar_gold_convertibility__triffin_structural_reading, coexists_with).
-narrative_ontology:cs_axiom('1e419efc-2810-426d-82b2-06dc6ef87477', foundational, convertibility_is_legally_binding).
-narrative_ontology:cs_axiom_status(convertibility_is_legally_binding, holdable).
-narrative_ontology:cs_axiom_grounding('1e419efc-2810-426d-82b2-06dc6ef87477', convertibility_is_legally_binding, conventional).
-narrative_ontology:cs_axiom('1e419efc-2810-426d-82b2-06dc6ef87477', foundational, us_domestic_policy_subordinate_to_gold_discipline).
-narrative_ontology:cs_axiom_status(us_domestic_policy_subordinate_to_gold_discipline, holdable).
-narrative_ontology:cs_axiom_grounding('1e419efc-2810-426d-82b2-06dc6ef87477', us_domestic_policy_subordinate_to_gold_discipline, deontological).
-narrative_ontology:cs_reference_frame('1e419efc-2810-426d-82b2-06dc6ef87477', monetary_convertibility_discipline).
-narrative_ontology:cs_drift_state('1e419efc-2810-426d-82b2-06dc6ef87477', gold_reserve_depletion_and_redemption_crisis, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('1e419efc-2810-426d-82b2-06dc6ef87477', '').
+narrative_ontology:cs_story_uid(dollar_gold_convertibility__strict_convertibility_reading, '04ca9a7a-eba8-4823-aaec-6c19d638da4d').
+narrative_ontology:cs_kernel_codification('04ca9a7a-eba8-4823-aaec-6c19d638da4d', formalized).
+narrative_ontology:cs_authority_grounding('04ca9a7a-eba8-4823-aaec-6c19d638da4d', extraction).
+narrative_ontology:cs_interpretation_layer_present('04ca9a7a-eba8-4823-aaec-6c19d638da4d').
+narrative_ontology:cs_reading_relation('04ca9a7a-eba8-4823-aaec-6c19d638da4d', dollar_gold_convertibility__policy_flexible_reading, coexists_with).
+narrative_ontology:cs_reading_relation('04ca9a7a-eba8-4823-aaec-6c19d638da4d', dollar_gold_convertibility__triffin_structural_reading, influences).
+narrative_ontology:cs_axiom('04ca9a7a-eba8-4823-aaec-6c19d638da4d', foundational, article_iv_legally_binding).
+narrative_ontology:cs_axiom_status(article_iv_legally_binding, holdable).
+narrative_ontology:cs_axiom_grounding('04ca9a7a-eba8-4823-aaec-6c19d638da4d', article_iv_legally_binding, conventional).
+narrative_ontology:cs_axiom('04ca9a7a-eba8-4823-aaec-6c19d638da4d', foundational, convertibility_non_subordinate).
+narrative_ontology:cs_axiom_status(convertibility_non_subordinate, overridden).
+narrative_ontology:cs_axiom_grounding('04ca9a7a-eba8-4823-aaec-6c19d638da4d', convertibility_non_subordinate, deontological).
+narrative_ontology:cs_reference_frame('04ca9a7a-eba8-4823-aaec-6c19d638da4d', postwar_monetary_discipline).
+narrative_ontology:cs_drift_state('04ca9a7a-eba8-4823-aaec-6c19d638da4d', nineteen_seventy_one, gap(codification_collapse, severe, false)).
+narrative_ontology:cs_created_at('04ca9a7a-eba8-4823-aaec-6c19d638da4d', '').
 narrative_ontology:cs_kernel_id(dollar_gold_convertibility__strict_convertibility_reading, dollar_gold_convertibility).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dollar_gold_convertibility__strict_convertibility_reading, creditor_nations).
-narrative_ontology:constraint_beneficiary(dollar_gold_convertibility__strict_convertibility_reading, gold_reserve_holders).
-narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_monetary_policy_authority).
-narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_domestic_economy).
+narrative_ontology:constraint_beneficiary(dollar_gold_convertibility__strict_convertibility_reading, gold_standard_maintainers).
+narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_treasury_issuer).
+narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_domestic_monetary_policy).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_domestic_constituencies).
+narrative_ontology:constraint_victim(dollar_gold_convertibility__strict_convertibility_reading, us_president_and_congress).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Obligated under Article IV of the IMF Articles of Agreement to maintain convertibility of the dollar into gold at a fixed parity ($35/oz) on demand by foreign central banks and governments. Bears the cost of maintaining gold reserves sufficient to honor unlimited redemption requests. Constrained from expanding the monetary base beyond what gold reserves can support, preventing expansionary monetary policy to address domestic unemployment or growth.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, us_treasury_issuer, payer,
+    institutional, generational, trapped, global).
+
+% Hold dollar reserves backed by the legal guarantee of gold convertibility. Can redeem dollars for gold at the fixed rate, providing insurance against inflation or dollar devaluation. Benefit from the dollar's stability and reserve-currency status while retaining the option to claim physical gold. France, the United Kingdom, and other surplus nations use convertibility as leverage to enforce discipline on U.S. fiscal and monetary policy.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, creditor_nations, beneficiary,
+    powerful, generational, arbitrage, global).
+
+% International institutions (IMF, Bank for International Settlements) and the gold-standard-committed financial establishment (central bankers, orthodox economists) adjudicate and enforce the strict interpretation of Article IV. They defend convertibility as the cornerstone of monetary discipline and international stability, opposing any deviation as inflationary and irresponsible. Maintain the rule through institutional consensus and diplomatic pressure.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, gold_standard_maintainers, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% American workers, businesses, and unemployed populations bear the costs of monetary constraint without representation in the international negotiation that binds U.S. policy. The constraint prevents the Federal Reserve from expanding money supply to lower unemployment below what gold reserves constrain, sacrificing domestic welfare to foreign creditor demands.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, us_domestic_constituencies, payer,
+    moderate, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(dollar_gold_convertibility__strict_convertibility_reading, us_domestic_constituencies, excluded).
+
+% Critiques and publishes analysis challenging the strict reading: argue that the legal obligation is unsustainable given structural payments imbalances, that it subordinates domestic policy autonomy to foreign creditor demands, and that it will eventually force either devaluation or abandonment. Observe from outside the policy consensus but lack institutional power to shift the dominant reading.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, heterodox_economists, observer,
+    moderate, biographical, analytical, global).
+
+% Hold de jure power to suspend convertibility, but are politically and institutionally identity-locked into the gold standard consensus. Breaking the commitment would require repudiating a foundational postwar agreement, inviting accusations of economic irresponsibility and undermining U.S. credibility. Can change the rule only by explicit treaty revision, which requires negotiating with creditors who benefit from the status quo.
+narrative_ontology:constraint_stakeholder(dollar_gold_convertibility__strict_convertibility_reading, us_president_and_congress, agenda_setter,
+    institutional, biographical, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(dollar_gold_convertibility__strict_convertibility_reading, us_president_and_congress, payer).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(dollar_gold_convertibility__strict_convertibility_reading, creditor_nations).
+narrative_ontology:fixing_cost_class(dollar_gold_convertibility__strict_convertibility_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Article IV convertibility coordinates international monetary expectations by fixing the dollar's value in gold, providing exchange-rate stability for international trade and capital flows. Establishes the U.S. dollar as the numeraire for global commerce, anchoring creditor confidence in the dollar reserve-system.
+% TRANSFER_FUNCTION: Transfers monetary policy autonomy from the U.S. domestic sphere to the international convertibility obligation. Creditor nations gain the right to redeem dollars for gold, constraining U.S. money supply to match the gold stock. Redistributes the benefits of seigniorage (the privilege of note issuance) away from the U.S. Treasury toward foreign central banks and gold-holding nations.
+% ABSENT_VOICES: U.S. workers and domestic economic stakeholders are excluded from the international bargaining that constrains their monetary policy. Labor unions, unemployed workers, and growth-focused fiscal authorities would argue for domestic policy flexibility but lack standing in the IMF governance structure. Triffin's structural critique is muted within official channels.
+% DISAPPEARANCE_RATIONALE: If the strict convertibility obligation disappeared, the U.S. could expand its money supply to address domestic unemployment, alter the incentive structure for creditor nations' exchange-rate policies, and allow the dollar to depreciate against gold and other currencies. The entire post-war monetary order — fixed exchange rates, dollar hegemony, gold-backed stability — would reorganize into a new equilibrium.
+% FOUNDING_PROBLEM: Post-war international monetary chaos, rampant devaluation, and the absence of a stable international medium of exchange. The Bretton Woods system (of which Article IV is the legal anchor) was designed to restore predictability, facilitate trade, and rebuild war-torn economies by fixing currencies to gold through the dollar.
+% FOUNDING_PROBLEM_CORROBORATION: Architects of Bretton Woods (White, Keynes, Morgenthau) attested to the need for stability. But by the late 1960s, creditor nations (especially France) and heterodox economists (Triffin, Kindleberger) attest that the problem has shifted: the founding problem (chaos) is solved, but the solution (Article IV constraint) now generates a different problem (U.S. policy subordination and structural imbalance). The strict reading's framing of foundational problem-status is contested by those observing the emerging Triffin dilemma.
+narrative_ontology:disappearance_verdict(dollar_gold_convertibility__strict_convertibility_reading, world_rearranges).
+narrative_ontology:founding_problem_status(dollar_gold_convertibility__strict_convertibility_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(dollar_gold_convertibility__strict_convertibility_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(dollar_gold_convertibility__strict_convertibility_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(dollar_gold_convertibility__strict_convertibility_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(dollar_gold_convertibility__strict_convertibility_reading, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +241,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.35 (1944, honeymoon period) to 0.68 (1971, breakdown imminent) as gold reserves decline and redemption pressure mounts. In 1944, the U.S. held 70% of world gold and convertibility felt costless. By 1960, the London Gold Pool crisis and the Triffin problem show that convertibility is now binding—foreign creditors are demanding gold, the U.S. cannot expand money supply without triggering redemptions, and domestic policy is subordinated to external discipline. Theater ratio rises from near-zero (the constraint is functionally real) to 0.29 by 1971 (growing rhetorical emphasis on 'defending the dollar' masks the underlying loss of control). Suppression rises from 0.25 to 0.52 as the Fed and Treasury must actively defend convertibility—quarterly gold losses, monetary tightening in downturns, coordination with foreign banks to manage redemption demand. All measurements share one time grid (interval start and end = 1944 and 1971) so every metric is authored at every examined time point.
+ *   Extractiveness climbs from 0.35 (1944) to 0.82 (1971) because the structural deficit between liabilities and reserves widens exponentially, making the constraint increasingly extractive from U.S. domestic policy autonomy. The U.S. must choose between defending convertibility (by deflating the economy, raising unemployment) or abandoning the commitment (admitting the constraint was unsustainable). Suppression increases from 0.42 to 0.71 as international pressure to maintain convertibility intensifies — creditor nations demand the U.S. honor the obligation while simultaneously pursuing policies that widen the deficit. Theater rises from 0.12 to 0.42 as the maintenance of convertibility becomes increasingly performative: the U.S. implements gold-pool arrangements (1961-1968), restricts gold sales, and imposes capital controls while publicly insisting on the sustainability of the parity — observable performance divorced from structural reality. The coercion grid captures level-differentiated dynamics: structural-level accessibility to alternatives remains high (the U.S. technically could suspend convertibility), but as constraints cascade downward to organizational (Federal Reserve operating constraints), class (workers experiencing unemployment to preserve the parity), and individual level, alternatives compress. Stakes inflation is highest at the structural level (geopolitical credibility, systemic stability) and falls as it reaches individuals who bear costs but lack voice.
  *
  * PERSPECTIVAL GAP:
- *   The fundamental divergence is between the issuer seat (U.S.) and the creditor seat (France, Germany, etc.). From the U.S. perspective, the constraint begins as a reasonable coordination mechanism (1944) but becomes progressively extractive as gold depletes and redemptions mount—by 1968, the London Gold Pool is dissolving and the U.S. is losing control. From the creditor perspective, the constraint is precisely what was negotiated: a discipline mechanism that forces the U.S. to run surpluses and maintain reserves, which benefits creditors who can redeem at will. Congress experiences the constraint as binding (domestically, labor and business lobby for expansion; internationally, allies enforce convertibility). The divergence is not about facts but about the structure of obligation: the strict reading DEFINES the constraint as binding precisely because it denies the issuer an exit from unilateral policy change. If the U.S. breaks the obligation, it breaches a treaty; if it honors it, it loses policy autonomy. This is the structural asymmetry the engine should detect.
+ *   From the beneficiary (creditor nation) and agenda-setter (gold-standard maintainer) perspective, the strict reading is a reasonable and honorable commitment — it disciplines U.S. fiscal excess and provides legitimate security for reserve holdings. From the payer (U.S. Treasury and domestic constituencies) perspective, the same reading is a structural trap: it forces the subordination of domestic employment and growth to a commitment that has become arithmetically unsustainable. The U.S. Treasury computed a different directionality (d closer to 1.0 — full target) than the beneficiary seats, which computed d closer to 0.2 (modest collector, stable coordination function). The engine should compute this divergence from the stakeholder structural data.
  *
  * DIRECTIONALITY LOGIC:
- *   The U.S. is structurally the victim: it authored the constraint (as agenda-setter in 1944), but by the strict reading, that authorship created a binding obligation from which exit is costly. U.S. monetary authorities lose directionality as the constraint operates—d moves toward the target end (1.0) as gold depletes and redemptions mount. Creditor nations are structurally beneficiaries: they hold conversion rights (d near 0.0), pay nothing, and arbitrage at the margin. U.S. domestic constituencies (workers, businesses) are secondary victims—they bear the cost of constrained monetary policy. The international monetary order itself is a beneficiary of the anchor, but that benefit is mediated through the discipline mechanism that harms the U.S. This structure produces seat divergence: from the U.S. policy authority's seat, the constraint is increasingly extractive and binding; from the creditor nations' seat, it is a coordination mechanism that also happens to subsidize them. The analytical observer seat sees both—the strict reading transforms a coordination problem into an asymmetric extraction mechanism as the U.S. gold stock declines.
+ *   Creditor nations have high exit options (arbitrage: they can redeem dollars for gold, diversify into other currencies, or adjust their reserve strategies) and low cost of exit (it strengthens their position). They benefit from the constraint without depending on it — they can leave at will. U.S. Treasury has trapped exit: it cannot abandon convertibility without repudiating the IMF agreement and inviting international condemnation and financial instability. U.S. domestic constituencies are excluded from the negotiation and cannot exit at all (they are bound by national monetary policy they did not choose). The directionality hierarchy: beneficiary nations near d=0.2 (modest benefit, high exit); U.S. institutional layer near d=0.85 (acute victimhood, trapped); U.S. domestic constituencies near d=0.95 (victimized, no exit).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint does NOT resolve into mandatrophy—the founding problem (preventing 1930s-style competitive devaluation) remains substantively live throughout 1944–1971, which is why the constraint persists in force. The issue is not that the mandate has atrophied, but that the structural conditions that make the constraint binding have changed. In 1944, the U.S. holds sufficient gold that convertibility is costless theater. By 1968, the gold stock has halved, foreign demands for redemption are rising, and the constraint is actively binding. The claim/metric gap is deliberate: the CLAIM is tangled_rope (the constraint does coordinate the international system AND extract from the U.S. domestic policy space—it is both), while the METRICS show progressively higher extractiveness and suppression as the gold stock depletes. The engine should recognize this as a genuine tangled_rope undergoing metric drift toward snare-like conditions (by 1971, the U.S. is contemplating unilateral break). The constraint has not resolved into pure theater—it remains actively enforced by the threat of gold redemptions.
+ *   The strict reading prevents misclassifying this as pure rope (coordination without extraction). The constraint has genuine coordination function (exchange-rate stability, trade facilitation), but it is asymmetrically enforced — creditors can redeem dollars for gold; the U.S. cannot demand gold redemption from creditors. The extraction arises not from a failure of coordination but from the fact that coordination benefits are distributed unequally and enforced unidirectionally. Tangled rope captures this: coordination (exchange-rate stability) rides on extraction (creditors' enforceable claims, U.S. policy constraint). The 'mandatrophy' element emerges by 1968: the founding problem (post-war chaos, lack of a stable numeraire) is solved, but the solution (Article IV) now generates a new problem (Triffin dilemma — the mechanism that provides liquidity also sows the seeds of the system's collapse). The constraint persists despite its obsolete founding rationale because the beneficiary seats have no incentive to revise it.
  */
 
 /* ==========================================================================
@@ -191,44 +258,44 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    strict_vs_flexible_reading_boundary,
-    'Is Article IV convertibility a strict binding obligation, or a conditional obligation subordinate to U.S. domestic economic stability?',
-    'Documentary analysis of Bretton Woods negotiating record, post-war policy statements from U.S. officials, and legal opinions from the State Department and Treasury. Comparison of actual policy decisions in crises (1957–58 recession, 1967 devaluation crisis, 1968 gold drain) against what each reading would permit.',
-    'If strict reading prevails, the constraint extracts from the U.S. domestic policy space and benefits creditors with enforceable claims. If flexible reading prevails, the constraint is a coordination mechanism the U.S. can modify unilaterally in extremis, and extraction is lower. The readings produce different terminal classifications: strict → tangled_rope/snare; flexible → rope/scaffold.',
+    binding_vs_flexible_interpretation,
+    'Is Article IV to be interpreted as a binding legal obligation that cannot be suspended except by formal treaty amendment, or as a policy commitment subordinate to compelling domestic economic necessity?',
+    'Historical analysis of the negotiating record (Bretton Woods delegates'' intent), comparative interpretation of treaty language by international law scholars, and examination of whether other countries'' monetary commitments were treated as similarly binding or subject to emergency suspension.',
+    'If binding-only, the constraint drives toward structural crisis (Triffin dilemma) and eventual rupture. If flexible, the constraint becomes a policy tool available to the U.S. when domestic conditions demand, reducing extractiveness to the U.S. and shifting the constraint type from tangled_rope toward rope.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(strict_vs_flexible_reading_boundary, conceptual, 'Whether the commitment is binding or conditional, determining the constraint''s classification.').
+narrative_ontology:omega_variable(binding_vs_flexible_interpretation, conceptual, 'Whether Article IV is a binding legal obligation or a subordinate policy commitment.').
 
 omega_variable(
-    implicit_vs_explicit_beneficiary_intent,
-    'Did the U.S. authoring of convertibility at Bretton Woods intend to benefit creditor nations with enforceable claims, or intend a symmetrical coordination mechanism?',
-    'Primary source analysis: private U.S. negotiating briefs, Henry Dexter White''s papers, Federal Reserve internal memoranda from 1944–1945 discussing the anticipated distribution of gains from convertibility. Comparison with creditor nations'' stated objectives (France''s preference for a gold standard, UK''s concern about sterling balances).',
-    'If the U.S. intended to benefit creditors (benign asymmetry from the U.S. perspective, a cost of leadership), the constraint is intentionally extractive and the high extractiveness score is appropriate. If the U.S. intended symmetry and creditors extracted unintended benefits, the false_summit_mountain signature might apply (apparent coordination, hidden extraction). This omega addresses whether beneficiary presence on a tangled_rope is intentional or emergent.',
+    triffin_dilemma_inevitability,
+    'Given the structural imbalance between dollar liabilities and gold reserves, is the eventual breakdown of convertibility arithmetically inevitable, or could policy adjustments have stabilized the system?',
+    'Counterfactual analysis: modeling whether alternative policies (Tobin tax, adjustment of parities, or acceleration of reserve diversification) could have extended convertibility beyond 1971. Economic historians have debated whether Nixon''s 1971 decision was forced by structural necessity or was a discretionary policy choice.',
+    'If breakdown is inevitable, the constraint is a Snare masquerading as Rope — the U.S. is entrapped in an unworkable system. If avoidable, the breakdown reflects policy failure rather than structural impossibility, and the strict reading''s interpretation of Article IV becomes a causative factor in the crisis.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(implicit_vs_explicit_beneficiary_intent, empirical, 'Whether creditor nations'' benefit from convertibility was intentional U.S. strategy or an unintended consequence of the coordination design.').
+narrative_ontology:omega_variable(triffin_dilemma_inevitability, empirical, 'Whether the Triffin dilemma makes convertibility mathematically unsustainable or whether policy alternatives could have extended the system.').
 
 omega_variable(
-    gold_reserve_sufficiency_boundary,
-    'What gold reserve level is required to maintain credible convertibility at $35/oz, and at what reserve level does the constraint become operationally unsustainable?',
-    'Economic calculation: foreign dollar holdings vs. U.S. gold stock over time. Analysis of the Triffin problem—the mathematical incompatibility of fixed rates, growth in dollar-denominated claims, and finite gold stock. Observation of when redemption demand begins to exceed supply (London Gold Pool crisis, 1968).',
-    'If a critical reserve level exists below which convertibility is unsustainable, then the constraint''s character changes from binding-legal to binding-empirical: it binds as long as gold lasts, then breaks by operation of physics, not by policy choice. This would suggest the constraint is better modeled as a finite-lived obligation (scaffold-like) rather than a permanent extraction mechanism.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(gold_reserve_sufficiency_boundary, empirical, 'The physical and mathematical limits of Bretton Woods convertibility.').
-
-omega_variable(
-    reading_foreclosure_by_1971_breakdown,
-    'Does the actual breakdown of convertibility in August 1971 (Nixon Shock) foreclose the strict_reading within its own commitment framework?',
-    'Post-hoc analysis: if the U.S. can unilaterally exit the obligation and survive the reputational cost, does that imply the strict reading was never as binding as claimed? Or does the cost of exit (currency devaluation, loss of U.S. credibility, inflation) vindicate the strict reading''s claim that exit is trapped?',
-    'If exit is easy and costless, the reading is not strict—the U.S. could have left anytime. If exit is costly but possible, the reading describes a snare, not a binding obligation. If exit is blocked (which history suggests it was not), the reading is correct and the constraint is binding. The omega addresses whether ''strict binding obligation'' is descriptively accurate or aspirational cover for a constraint the U.S. could break but chose not to, until it chose to.',
+    creditor_intent_and_enforcement,
+    'Did creditor nations (especially France) deliberately pursue policies to exhaust U.S. gold reserves, or did the reserve depletion result from structural imbalances despite their intentions to maintain the system?',
+    'Analysis of French and UK monetary policy decisions (currency reserves, capital flows, gold demand) in the 1960s. Historical testimony and archival records from central bank decision-making. Distinguish between deliberate enforcement (France''s gold purchases and reserve diversification as deliberate pressure) versus structural unraveling (deficit spending and inflation driving the reserve loss regardless of creditor intent).',
+    'If deliberate enforcement, the extraction by creditor nations is intentional and strategic — the beneficiary seats were actively enforcing the constraint''s extractiveness. If structural, the extractiveness emerges from the mathematical logic of the system rather than creditor agency, making the constraint more structurally determined and less interpersonally extractive.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_by_1971_breakdown, conceptual, 'Whether the strict reading''s characterization of bindingness survives the historical fact that the U.S. broke the obligation in 1971.').
+narrative_ontology:omega_variable(creditor_intent_and_enforcement, empirical, 'Whether creditor-nation enforcement of convertibility was deliberate or an emergent outcome of structural dynamics.').
+
+omega_variable(
+    readings_logical_compatibility,
+    'Do the three readings of the dollar-gold-convertibility kernel occupy genuinely distinct logical frameworks, or do they all derive from the same core commitment and merely disagree on application?',
+    'Formal analysis of the axioms each reading holds: does the strict reading''s ''binding legal obligation'' necessarily foreclose the policy-flexible reading''s ''subordinate commitment,'' or can both be held within a coherent framework? Does the Triffin reading''s ''structural impossibility'' foreclose both the strict and flexible readings, or is Triffin''s claim a contingent empirical claim about the system''s sustainability?',
+    'If the readings foreclose one another, they cannot coexist in a single framework — only one can be adopted. If they coexist (different parties hold different readings), the contest is inter-institutional rather than intra-logical. If Triffin forecloses the others, the strict and flexible readings are both ultimately unsustainable and the breakdown of the system is overdetermined.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(readings_logical_compatibility, conceptual, 'Whether the three kernel readings are logically incompatible or can coexist within a single framework.').
 
 
 /* ==========================================================================
@@ -242,47 +309,99 @@ narrative_ontology:interval(dollar_gold_convertibility__strict_convertibility_re
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(doll_tr_t1944, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1944, 0.05).
-narrative_ontology:measurement(doll_tr_t1952, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1952, 0.08).
-narrative_ontology:measurement(doll_tr_t1960, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1960, 0.15).
-narrative_ontology:measurement(doll_tr_t1965, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1965, 0.22).
-narrative_ontology:measurement(doll_tr_t1968, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1968, 0.27).
-narrative_ontology:measurement(doll_tr_t1971, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1971, 0.29).
+narrative_ontology:measurement(doll_tr_t1944, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1944, 0.12).
+narrative_ontology:measurement_basis(doll_tr_t1944, observed).
+narrative_ontology:measurement(doll_tr_t1951, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1951, 0.18).
+narrative_ontology:measurement_basis(doll_tr_t1951, observed).
+narrative_ontology:measurement(doll_tr_t1958, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1958, 0.28).
+narrative_ontology:measurement_basis(doll_tr_t1958, observed).
+narrative_ontology:measurement(doll_tr_t1965, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1965, 0.38).
+narrative_ontology:measurement_basis(doll_tr_t1965, observed).
+narrative_ontology:measurement(doll_tr_t1968, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1968, 0.4).
+narrative_ontology:measurement_basis(doll_tr_t1968, observed).
+narrative_ontology:measurement(doll_tr_t1971, dollar_gold_convertibility__strict_convertibility_reading, theater_ratio, 1971, 0.42).
+narrative_ontology:measurement_basis(doll_tr_t1971, observed).
 
 % Extraction over time
 narrative_ontology:measurement(doll_be_t1944, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1944, 0.35).
-narrative_ontology:measurement(doll_be_t1952, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1952, 0.45).
-narrative_ontology:measurement(doll_be_t1960, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1960, 0.58).
-narrative_ontology:measurement(doll_be_t1965, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1965, 0.64).
-narrative_ontology:measurement(doll_be_t1968, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1968, 0.67).
-narrative_ontology:measurement(doll_be_t1971, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1971, 0.68).
+narrative_ontology:measurement_basis(doll_be_t1944, observed).
+narrative_ontology:measurement(doll_be_t1951, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1951, 0.48).
+narrative_ontology:measurement_basis(doll_be_t1951, observed).
+narrative_ontology:measurement(doll_be_t1958, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1958, 0.62).
+narrative_ontology:measurement_basis(doll_be_t1958, observed).
+narrative_ontology:measurement(doll_be_t1965, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1965, 0.74).
+narrative_ontology:measurement_basis(doll_be_t1965, observed).
+narrative_ontology:measurement(doll_be_t1968, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1968, 0.78).
+narrative_ontology:measurement_basis(doll_be_t1968, observed).
+narrative_ontology:measurement(doll_be_t1971, dollar_gold_convertibility__strict_convertibility_reading, base_extractiveness, 1971, 0.82).
+narrative_ontology:measurement_basis(doll_be_t1971, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(doll_su_t1944, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1944, 0.25).
-narrative_ontology:measurement(doll_su_t1952, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1952, 0.35).
-narrative_ontology:measurement(doll_su_t1960, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1960, 0.45).
-narrative_ontology:measurement(doll_su_t1965, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1965, 0.48).
-narrative_ontology:measurement(doll_su_t1968, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1968, 0.51).
-narrative_ontology:measurement(doll_su_t1971, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1971, 0.52).
+narrative_ontology:measurement(doll_su_t1944, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1944, 0.42).
+narrative_ontology:measurement_basis(doll_su_t1944, observed).
+narrative_ontology:measurement(doll_su_t1951, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1951, 0.51).
+narrative_ontology:measurement_basis(doll_su_t1951, observed).
+narrative_ontology:measurement(doll_su_t1958, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1958, 0.62).
+narrative_ontology:measurement_basis(doll_su_t1958, observed).
+narrative_ontology:measurement(doll_su_t1965, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1965, 0.68).
+narrative_ontology:measurement_basis(doll_su_t1965, observed).
+narrative_ontology:measurement(doll_su_t1968, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1968, 0.7).
+narrative_ontology:measurement_basis(doll_su_t1968, observed).
+narrative_ontology:measurement(doll_su_t1971, dollar_gold_convertibility__strict_convertibility_reading, suppression_requirement, 1971, 0.71).
+narrative_ontology:measurement_basis(doll_su_t1971, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1944, tn=1971
+narrative_ontology:measurement(doll_grid_01, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(class), 1944, 0.38).
+narrative_ontology:measurement(doll_grid_02, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(class), 1971, 0.62).
+narrative_ontology:measurement(doll_grid_03, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(individual), 1944, 0.22).
+narrative_ontology:measurement(doll_grid_04, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(individual), 1971, 0.48).
+narrative_ontology:measurement(doll_grid_05, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(organizational), 1944, 0.42).
+narrative_ontology:measurement(doll_grid_06, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(organizational), 1971, 0.68).
+narrative_ontology:measurement(doll_grid_07, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(structural), 1944, 0.58).
+narrative_ontology:measurement(doll_grid_08, dollar_gold_convertibility__strict_convertibility_reading, accessibility_collapse(structural), 1971, 0.78).
+narrative_ontology:measurement(doll_grid_09, dollar_gold_convertibility__strict_convertibility_reading, resistance(class), 1944, 0.15).
+narrative_ontology:measurement(doll_grid_10, dollar_gold_convertibility__strict_convertibility_reading, resistance(class), 1971, 0.68).
+narrative_ontology:measurement(doll_grid_11, dollar_gold_convertibility__strict_convertibility_reading, resistance(individual), 1944, 0.08).
+narrative_ontology:measurement(doll_grid_12, dollar_gold_convertibility__strict_convertibility_reading, resistance(individual), 1971, 0.58).
+narrative_ontology:measurement(doll_grid_13, dollar_gold_convertibility__strict_convertibility_reading, resistance(organizational), 1944, 0.18).
+narrative_ontology:measurement(doll_grid_14, dollar_gold_convertibility__strict_convertibility_reading, resistance(organizational), 1971, 0.72).
+narrative_ontology:measurement(doll_grid_15, dollar_gold_convertibility__strict_convertibility_reading, resistance(structural), 1944, 0.22).
+narrative_ontology:measurement(doll_grid_16, dollar_gold_convertibility__strict_convertibility_reading, resistance(structural), 1971, 0.78).
+narrative_ontology:measurement(doll_grid_17, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(class), 1944, 0.28).
+narrative_ontology:measurement(doll_grid_18, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(class), 1971, 0.65).
+narrative_ontology:measurement(doll_grid_19, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(individual), 1944, 0.15).
+narrative_ontology:measurement(doll_grid_20, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(individual), 1971, 0.52).
+narrative_ontology:measurement(doll_grid_21, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(organizational), 1944, 0.35).
+narrative_ontology:measurement(doll_grid_22, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(organizational), 1971, 0.71).
+narrative_ontology:measurement(doll_grid_23, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(structural), 1944, 0.48).
+narrative_ontology:measurement(doll_grid_24, dollar_gold_convertibility__strict_convertibility_reading, stakes_inflation(structural), 1971, 0.82).
+narrative_ontology:measurement(doll_grid_25, dollar_gold_convertibility__strict_convertibility_reading, suppression(class), 1944, 0.25).
+narrative_ontology:measurement(doll_grid_26, dollar_gold_convertibility__strict_convertibility_reading, suppression(class), 1971, 0.62).
+narrative_ontology:measurement(doll_grid_27, dollar_gold_convertibility__strict_convertibility_reading, suppression(individual), 1944, 0.18).
+narrative_ontology:measurement(doll_grid_28, dollar_gold_convertibility__strict_convertibility_reading, suppression(individual), 1971, 0.48).
+narrative_ontology:measurement(doll_grid_29, dollar_gold_convertibility__strict_convertibility_reading, suppression(organizational), 1944, 0.32).
+narrative_ontology:measurement(doll_grid_30, dollar_gold_convertibility__strict_convertibility_reading, suppression(organizational), 1971, 0.68).
+narrative_ontology:measurement(doll_grid_31, dollar_gold_convertibility__strict_convertibility_reading, suppression(structural), 1944, 0.38).
+narrative_ontology:measurement(doll_grid_32, dollar_gold_convertibility__strict_convertibility_reading, suppression(structural), 1971, 0.72).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(dollar_gold_convertibility__strict_convertibility_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(dollar_gold_convertibility__strict_convertibility_reading, 0.12).
-narrative_ontology:affects_constraint(dollar_gold_convertibility__strict_convertibility_reading, dollar_gold_convertibility__policy_flexible_reading).
-narrative_ontology:affects_constraint(dollar_gold_convertibility__strict_convertibility_reading, dollar_gold_convertibility__triffin_structural_reading).
+narrative_ontology:coordination_type(dollar_gold_convertibility__strict_convertibility_reading, global_infrastructure).
+narrative_ontology:boltzmann_floor_override(dollar_gold_convertibility__strict_convertibility_reading, 0.18).
+narrative_ontology:affects_constraint(dollar_gold_convertibility__strict_convertibility_reading, policy_flexible_reading).
+narrative_ontology:affects_constraint(dollar_gold_convertibility__strict_convertibility_reading, triffin_structural_reading).
 
 % DUAL FORMULATION NOTE:
-% The 'dollar_gold_convertibility' kernel decomposes into three structurally distinct constraints: strict_convertibility_reading (this file) interprets the obligation as binding and extractive from the U.S.; policy_flexible_reading interprets it as conditional and renegotiable; triffin_structural_reading treats the constraint as inherently unstable. Each reading has a different ε, different beneficiary/victim structure, and different persistence logic. The three readings are linked via this field because they share the same legal kernel (Bretton Woods Article IV) but instantiate different constraints from it. Decomposition follows DP-001 (ε-invariance): a single text (Article IV) does not yield a single constraint—the reading determines the constraint.
+% The dollar-gold-convertibility kernel decomposes into three structurally distinct constraint stories, each representing a different reading of Article IV and the IMF Articles. This story (strict_convertibility_reading) treats convertibility as a binding legal obligation; the policy_flexible_reading treats it as subordinate to domestic stability; the triffin_structural_reading treats it as an inherently unsustainable design flaw. Each reading has its own epsilon, beneficiary/victim structure, and timeline. They are not alternative measurements of a single constraint — they are different constraints instantiated from the same contested kernel. All three are linked bidirectionally via this network field.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(dollar_gold_convertibility__strict_convertibility_reading, institutional, 0.82).
+constraint_indexing:directionality_override(dollar_gold_convertibility__strict_convertibility_reading, institutional, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "26a3b0db-e33f-45d7-80c0-ac663ad950fa"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Drill-Cycle Requirement for Competence Retention (Hybrid Reading)",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "operating_organization",
+      "regulatory_bodies",
+      "frontline_operators"
+    ],
+    "victims": [
+      "shift_crews_bearing_drill_load",
+      "budget_constrained_facilities"
+    ],
+    "vindicated_propositions": [
+      "competence_is_process_not_state",
+      "safety_record_validates_exercise_cadence_not_simulation_fidelity"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "operating_organization",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandates a recurring drill calendar (quarterly, annual, cross-shift) as the operative safety standard, justified by the claim that competence decays without repeated exercise regardless of any prior simulation score. Bears the cost of running the program and the liability exposure if it under-schedules drills, but also captures the reputational and insurance benefits of a documented continuous-training regime."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Write the cadence requirements into licensing conditions and audit against drill logs rather than one-time certification records. Benefit from being able to point to an ongoing compliance record as evidence of oversight, and from shifting the operational burden of proof onto operators rather than onto the regulator's own inspection capacity."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Retain procedural fluency through repeated exposure and are less likely to freeze or misapply steps during a real incident because the drill cycle keeps the sequence fresh. Also lose paid working hours, rest time, or overtime slots to the drill schedule, and face performance scrutiny during each cycle that a one-time-validated peer does not."
+    },
+    {
+      "name": "shift_crews_bearing_drill_load",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Absorb the recurring disruption of drills layered onto normal shift work, repeatedly, for the life of their employment. Cannot opt out without risking certification lapse or disciplinary action; the requirement is renewed every cycle rather than discharged once, so the cost is permanent rather than a single onboarding expense."
+    },
+    {
+      "name": "budget_constrained_facilities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Smaller or under-resourced operators must fund the same drill cadence as well-capitalized peers without economies of scale, diverting money from equipment maintenance or staffing to keep the recurring exercise program compliant. Cannot exit the requirement without losing licensure, and cannot negotiate a lighter cadence without appearing to argue for lower safety standards."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would prefer the kernel resolve toward one-time high-fidelity validation, which is their product's comparative advantage, but their preferred framing has no seat in the recurring-cadence standard-setting process; they can sell into the drill-cycle regime but cannot argue it out of existence from within it."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study incident records and drill-compliance histories to assess whether continuous cadence correlates with lower real-world failure rates, independent of any single simulation's fidelity score. Their findings feed back into cadence design but they neither run nor pay for the drills."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared, auditable standard by which an entire industry keeps procedural competence fresh over time, so that no single organization can claim compliance by pointing to a stale one-time credential while its workforce has actually drifted out of practice.",
+    "transfer_function": "Moves working hours, budget, and administrative attention from operating organizations and shift crews into a recurring exercise program; moves reputational and legal cover toward the operating organization and regulators who can point to an unbroken compliance log.",
+    "absent_voices": "Simulation vendors whose commercial interest favors one-time high-fidelity certification are not seated in the cadence-setting process. Workers who bear the recurring disruption have limited standing to negotiate cadence relative to management and regulators who set it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuous-cadence requirement vanished, organizations would revert to point-in-time certification; budget-constrained facilities would immediately redirect the freed funds elsewhere, licensing audits would lose their recurring evidentiary basis, and the felt time pressure on shift crews would disappear — a substantial and visible rearrangement, not a null change.",
+    "founding_problem": "Post-incident investigations repeatedly found that operators who had passed a one-time simulation years earlier had visibly decayed procedural competence by the time a real event occurred; the cadence requirement was built to close that decay gap.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent incident-investigation boards and academic human-factors researchers outside the regulatory and operator community corroborate that skill decay after single validation events is a real, measured phenomenon in high-hazard operations; this is not solely attested by the parties who administer or profit from the drill program."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This story instantiates the 'continuous_refresh_hybrid' reading of the competence_exercise_validity kernel: it holds that simulation is a necessary condition for validating procedure but not a sufficient one for retaining competence over time — retention is process-dependent (requires recurring exercise) rather than state-validated (a single passed simulation certifies indefinitely). This is distinct from the 'simulation_as_proxy' reading, which treats a well-designed simulation as itself a full proxy for catastrophe and would find repeated drilling largely redundant once fidelity is high enough, and from the 'real_catastrophe_only' reading, which holds that no simulation — however fidelitous or however often repeated — genuinely exercises competence because only a live catastrophe carries the stakes structure that produces the relevant learning. Each reading is authored as its own constraint with its own ε; this file does not average across them.",
+    "narrative_context": "A high-hazard operating domain (drawn from patterns common to nuclear, aviation, and process-safety regulation) requires organizations to run recurring competence drills on a fixed cadence rather than relying on a one-time simulation-based certification. The rule is presented as coordination — closing the empirically documented gap between certified-once and competent-now — but it also imposes recurring costs unevenly across better- and worse-resourced facilities and shifts real time and attention away from frontline workers on a permanent, renewing basis.",
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) because the recurring drill requirement does impose a real, renewing cost disproportionately on budget-constrained facilities and shift crews, but the coordination function is genuine and well-evidenced by post-incident investigation records, not merely asserted. Suppression is moderate (0.38): exit from the cadence requirement is blocked by licensing conditions, but this is closer to a genuine safety floor than to naked coercion. Theater ratio rises modestly over the interval (0.15 to 0.28) as some facilities shift toward documentation-optimized drills that satisfy the audit trail without necessarily improving retention — a mild Goodhart drift worth watching but not yet dominant.",
+    "directionality_logic": "Operating organizations and regulators sit near the beneficiary end: they capture compliance cover and oversight legibility from the cadence record. Frontline operators are genuinely dual-positioned — they gain real competence retention (a benefit to their own safety and job security) while paying in disrupted schedules and repeated scrutiny (a cost), which is why they carry both roles. Shift crews as a class and budget-constrained facilities sit nearer the target end because the recurring cost lands on them without a correspondingly recurring capture of the compliance benefit that accrues to the organization as a whole.",
+    "perspectival_gap": "From the operating organization's seat, the cadence requirement reads as functional coordination that closes a documented decay gap. From a budget-constrained facility's seat, the same requirement reads closer to an unfunded mandate renewed indefinitely with no sunset — the engine's per-seat computation should reflect that these are structurally different experiences of one arrangement, not a disagreement about facts.",
+    "mandatrophy_analysis": "The founding problem (documented skill decay after one-time certification) remains live and is corroborated by parties outside the regulatory and operator community, which is what keeps this from being classified as a captured or zombie mandate — the six_questions mismatch check (status=live, verdict=world_rearranges) shows no capture flag. This distinguishes the constraint from a piton: the cadence requirement still does real work, even though its administration shows early theater-ratio drift."
+  },
+  "omegas": [
+    {
+      "id": "cadence_sufficiency_vs_decay_curve",
+      "question": "Is the specific drill cadence mandated actually matched to the empirical skill-decay curve for the tasks in question, or is the cadence set by administrative convenience (quarterly/annual cycles) rather than by the measured decay rate?",
+      "resolution_mechanism": "Longitudinal skill-retention studies comparing drill interval against measured competence decay for the specific procedures being drilled, across multiple facilities and cadences.",
+      "impact": "If cadence is mismatched to actual decay rates, part of the measured extraction is unnecessary overhead rather than genuine coordination cost, and the tangled_rope classification would shift further toward extraction; if well-matched, more of the cost is defensible coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mandated drill cadence tracks actual measured skill decay or administrative convenience."
+    },
+    {
+      "id": "committer_kernel_disagreement_location",
+      "question": "This story reads the competence_exercise_validity kernel as process-dependent (continuous exercise required); sibling readings hold simulation alone suffices (simulation_as_proxy) or that only real catastrophe suffices (real_catastrophe_only). Where exactly does the disagreement sit — is it about the decay mechanism (do skills actually decay without repetition), the substitutability of simulated stakes for real stakes, or both?",
+      "resolution_mechanism": "Decompose the disagreement empirically: decay-curve studies would resolve the first axis; comparative outcome studies of drilled-but-never-incident-exposed personnel versus incident-exposed personnel would speak to the second, though ethically constrained.",
+      "impact": "If the disagreement is purely about decay (empirically resolvable), this reading and simulation_as_proxy could converge on cadence once decay curves are known. If it is about stakes-substitutability, the disagreement with real_catastrophe_only may be irreducible on current evidence — it touches what 'counts' as genuine exercise, a conceptual rather than empirical question.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Locating whether the kernel disagreement is empirical (decay rates) or conceptual (what counts as valid exercise)."
+    },
+    {
+      "id": "theater_drift_detection_threshold",
+      "question": "At what theater_ratio level does documentation-optimized drilling (satisfying the audit trail) begin to functionally replace competence-building drilling (actually retaining skill)?",
+      "resolution_mechanism": "Compare facilities' drill documentation quality against independent skill assessments (blind competency tests) to see where the two measures diverge.",
+      "impact": "If theater ratio continues rising past the current 0.28 without a corresponding independent competency check, the constraint risks drifting from tangled_rope toward piton — recurring cost with diminishing genuine function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising theater ratio signals early piton drift in the drill program."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy",
+      "real_catastrophe_only"
+    ],
+    "dual_formulation_note": "This story is one of three readings of the competence_exercise_validity kernel. simulation_as_proxy holds that a sufficiently fidelitous simulation is itself valid exercise, making recurring drilling largely redundant once fidelity is high; real_catastrophe_only holds that no simulation, however repeated, substitutes for the stakes structure of an actual event. This reading (continuous_refresh_hybrid) occupies the middle position: simulation is necessary infrastructure but retention is process-dependent, requiring the recurring cadence that the other two readings would treat as either unnecessary (simulation_as_proxy, once fidelity is achieved) or insufficient regardless of frequency (real_catastrophe_only). Each reading is authored as an independent ε-invariant constraint; do not average across the family."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_incident_decay_gap_recognition",
+    "drift_state": {
+      "moment": "contemporary_audit_regime",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_process_not_state",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "simulation_necessary_but_insufficient_for_retention",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

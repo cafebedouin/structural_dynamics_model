@@ -2,45 +2,159 @@
   "header": {
     "constraint_id": "us_constitution_interpretive__originalist_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "643ed4f6-1eea-4336-94d6-82d46d0e4ff4"
+    "module_name_override": "constraint_us_constitution_interpretive__originalist_reading",
+    "story_uid": "0ffb3eb8-e35a-4b50-a23f-ee718a1954c0"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.42,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.71,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.67,
     "resistance": 0.73,
     "claimed_type": "tangled_rope",
-    "human_readable": "Originalist Constitutional Interpretation: Fixed Meaning at Ratification",
+    "human_readable": "US Constitution: Originalist Interpretive Authority",
     "topic_domain": "constitutional_law/legal_interpretation/political_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "federalism_advocates",
       "original_understanding_religious_liberty_claimants",
-      "property_rights_defenders"
+      "property_rights_defenders",
+      "limited_government_constituency"
     ],
     "victims": [
       "unenumerated_rights_claimants",
       "federal_regulatory_expansion_advocates",
-      "civil_rights_movement_constituencies_relying_on_evolving_doctrine"
+      "contemporary_civil_rights_movements"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "originalist_judicial_coalition",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Justices and lower court judges who adopt originalist methodology. They interpret the Constitution by researching the text's original public meaning at ratification or the Framers' intent, applying that fixed meaning to contemporary cases. They argue this constrains judicial discretion and honors the rule of law. They enforce originalism through written opinions that bind lower courts and shape legal doctrine."
+    },
+    {
+      "name": "conservative_legal_movement",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Network of originalist scholars, think tanks, bar associations, and litigants organized around originalist constitutional theory. They benefit from originalist rulings that narrow federal power, protect property rights, and restore state authority. They fund legal challenges designed to shift jurisprudence originalist-ward, train judges in originalist methodology, and build intellectual legitimacy for the reading."
+    },
+    {
+      "name": "federalism_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Include state governments, limited-government advocates, and Tenth Amendment activists. Originalist rulings that constrain federal Commerce Clause and Spending Clause power return authority to states. They benefit from decisions invalidating federal mandates (e.g., Medicaid expansion conditions, environmental regulations read beyond enumerated powers) and win when originalism narrows the federal scope."
+    },
+    {
+      "name": "religious_liberty_constituency",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Religious organizations and believers who view originalism as protective of their liberty. Originalist interpretation of the Free Exercise Clause has shifted to prioritize religious accommodation over neutral laws of general applicability (e.g., Employment Division v. Smith overruled by subsequent originalist decisions). They are locked into the religious-identity frame and view originalist protection as non-negotiable."
+    },
+    {
+      "name": "property_rights_defenders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Corporate and individual property owners, business associations, and libertarian advocates. They benefit from originalist constraints on regulatory takings doctrine, environmental law, and labor regulation. Their exit option is arbitrage: they can structure holdings and operations across multiple jurisdictions or seek refuge in friendly regulatory environments. They actively litigate to advance originalist property theories."
+    },
+    {
+      "name": "unenumerated_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals and movements claiming rights not enumerated in the Constitution (privacy, dignity, bodily autonomy, intimate association). Under originalism, these claims fail unless the Framers intended to protect them. They bear the cost when originalist rulings reject unenumerated-rights theories (e.g., access to abortion, same-sex marriage, gender identity protection). They are trapped because they cannot exit the jurisdiction and have no recourse except constitutional amendment."
+    },
+    {
+      "name": "federal_regulatory_expansion_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Progressives, environmental advocates, labor advocates, and civil rights coalitions who rely on federal regulatory authority to address market failures, interstate externalities, and national disparities. Originalist constraints on the Commerce Clause, Necessary and Proper Clause, and delegation doctrine narrow the federal regulatory toolkit they depend on. They pay through reduced regulatory capacity and lose cases where originalism defeats federal statutes."
+    },
+    {
+      "name": "living_constitutionalist_judges",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Justices and lower court judges who adopt competing interpretive methodologies (purposivism, evolving standards, reasonable adaptation). They bear a structural cost: originalist dominance on the Supreme Court constrains their authority to develop doctrine through their own methodologies. Their status as 'observer' reflects their analytical capacity to describe the originating constraint; their 'payer' role reflects their de facto subordination in the judicial hierarchy."
+    },
+    {
+      "name": "contemporary_civil_rights_movements",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Movements for racial justice, LGBTQ+ rights, gender equality, and disability access. They are identity-locked to their cause and cannot exit. Under originalism, many contemporary civil rights claims must trace to Framers' intent (a nearly impossible historical archaeology), whereas competing methodologies permit reasoning from contemporary understanding of equal dignity. They pay through narrowed legal remedies and must engage in costly constitutional-amendment campaigns to expand protection."
+    },
+    {
+      "name": "historical_scholarship_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Academic historians and constitutional scholars who study the Framers' intent and the original public meaning. They provide the evidential base for originalist legal arguments but remain external to the legal system. They are observers who document what 'original meaning' was, aware that their scholarship is read by judges and shaped by the stakes courts attach to historical accuracy."
+    },
+    {
+      "name": "amendment_politics_constituency",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Citizens and movements that might pursue constitutional amendment to overcome originalist constraints (e.g., to enshrine privacy rights, expand federal authority, or lock in contemporary civil rights). They are structurally excluded because amendment requires super-majoritarian consensus (2/3 of both houses plus 3/4 of states), making their voice heard only after decades of political organizing. The originalist constraint makes amendment the only remedy, but amendment is deliberately hard."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Originalist methodology solves the problem of constraining judicial discretion by tethering interpretation to a fixed historical reference point. Rather than each judge applying their own contemporary values, originalism coordinates on a common interpretive reference (Framers' intent or original public meaning), reducing variance in how the Constitution is read and creating predictable boundaries for federal power and individual liberty.",
+    "transfer_function": "Shifts the legitimacy of certain constitutional claims from contemporary democratic consensus or evolving standards back to historical authorial intent. This movement transfers political authority from living legislatures and contemporary movements to the dead Framers and historical texts—those whose intent controls lose power to amend doctrine without formal amendment. Concretely: federal power is narrowed, state power is enlarged, property rights receive heightened protection, unenumerated rights claims are rejected unless historically grounded.",
+    "absent_voices": "Constitutional scholars outside the originalist tradition (purposivists, living-constitutionalists, critical scholars); contemporary civil rights movements not grounded in historical precedent; future generations who will live under the boundaries originalism fixes; citizens who believe the Constitution should evolve but lack a voice in judicial interpretation (excluded through the amendment supermajority gate).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If originalist interpretive authority disappeared overnight and judges reverted to competing methodologies (living constitutionalism, purposivism, evolving standards), vast swaths of federal regulatory authority would be restored, unenumerated-rights doctrine would expand, and state power would contract. This would permit federal climate regulation, voting-rights protection, and labor standards the originalist reading constrains. The institutional arrangement would reorganize radically around the judge's permitted reasoning methods.",
+    "founding_problem": "The constitutional text requires interpretation because changed circumstances and ambiguous language make meaning contestable. Without a shared interpretive method, judicial power appears unbounded—each judge's personal values would substitute for law, creating rule-of-law failure and political chaos. Originalism was revived (the constraint originates in constitutional theory circa 1980s–1990s) to anchor interpretation to a fixed external standard: what the Framers understood, not what judges prefer.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist judges and scholars attest the founding problem is live: judicial subjectivity remains a risk and originalism mitigates it. Living constitutionalists and progressive legal scholars attest the founding problem is misidentified—that originalism's constraint on interpretation doesn't prevent subjectivity but rather shifts discretion to the historical question 'what did they mean?', which is equally contestable. Independent constitutional law scholars document that historical research produces contested, not unanimous, conclusions about original meaning; the 'fixed anchor' claim is itself contested and not external to interpretation."
+  },
   "interval": {
-    "start": 1987,
+    "start": 1980,
     "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1987,
-      "value": 0.35
+      "time_point": 1980,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1995,
-      "value": 0.42
+      "value": 0.39
     },
     {
       "metric": "base_extractiveness",
@@ -54,8 +168,8 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.58
+      "time_point": 2022,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
@@ -64,37 +178,37 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1987,
+      "time_point": 1980,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 1995,
-      "value": 0.15
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 2005,
-      "value": 0.19
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
       "value": 0.24
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2020,
+      "time_point": 2015,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 2026,
-      "value": 0.28
+      "value": 0.31
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1987,
+      "time_point": 1980,
       "value": 0.25
     },
     {
@@ -114,8 +228,8 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.42
+      "time_point": 2022,
+      "value": 0.44
     },
     {
       "metric": "suppression_requirement",
@@ -123,64 +237,72 @@
       "value": 0.42
     }
   ],
+  "commentary": {
+    "narrative_context": "Originalism is one reading of the contested US Constitution kernel. This reading asserts that constitutional meaning is fixed at ratification (1787 or the date of ratification of each amendment) and that judges must interpret according to the Framers' intent or the text's original public meaning. This reading constrains federal power, elevates state authority, protects property rights, and blocks unenumerated-rights claims. The constraint's operation imposes costs on those seeking federal regulatory expansion and contemporary civil rights protection while benefiting federalism advocates, property rights defenders, and constituencies whose preferred liberties align with historical understanding. The extraction metrics reflect that originalism is enforced—it requires active judicial adherence and opposition to competing methodologies—and that it asymmetrically benefits some constituencies while imposing costs on others. Theater ratio suggests that originalist reasoning sometimes performs constraint-maintenance rhetorics ('fidelity to text,' 'rule of law,' 'judicial restraint') when the underlying operation is choosing which historical sources to credit and which to marginalize. The measurement series captures the rise of originalism from a marginal position in constitutional theory (1980s) to near-dominance of the Supreme Court (2020s), with a slight retreat in theater ratio by 2026 (reflecting increased academic and public scrutiny of originalist historical claims).",
+    "key_agents": [
+      "originalist_judicial_coalition: Institutional power, agenda-setter, enforces originalist methodology through written opinions binding lower courts.",
+      "conservative_legal_movement: Organized power, beneficiary, funds originalist litigation and intellectual infrastructure.",
+      "federalism_advocates: Organized power, beneficiary, win when originalism constrains federal authority.",
+      "religious_liberty_constituency: Moderate power, identity-locked beneficiary, fused to religious identity, benefits from originalist Free Exercise interpretation.",
+      "property_rights_defenders: Powerful, arbitrage exit, beneficiary, benefit from originalist property doctrine and arbitrage across jurisdictions.",
+      "unenumerated_rights_claimants: Powerless, trapped, payer, bear costs when privacy/dignity/bodily autonomy claims fail under originalism.",
+      "federal_regulatory_expansion_advocates: Organized, constrained exit, payer, lose regulatory authority when originalism narrows Commerce/Necessary and Proper clauses.",
+      "contemporary_civil_rights_movements: Moderate power, identity-locked, payer, trapped to their cause, pay in narrowed legal remedies.",
+      "amendment_politics_constituency: Powerless, trapped, excluded, structurally barred from amending the Constitution without supermajority consensus (the only remedy when originalism forecloses their claims)."
+    ],
+    "logic_rationale": "Extractiveness rises from 1980 to 2022 (0.28 → 0.61) as originalism accumulates judicial power and the costs of its constraints become visible: federal regulatory reach shrinks, unenumerated rights fail, property rights expand. The slight decline by 2026 (0.61 → 0.58) reflects growing academic and public backlash against originalist historical claims, erosion of its 'neutral constraint' framing, and strategic countermeasures (living constitutionalist writing, amendment campaigns). Suppression stays moderate (0.42) because originalist methodology is authored as constraint-by-reasoning, not crude coercion—judges police each other's originalist fidelity through footnotes and doctrinal criticism, not (explicitly) through punitive exclusion. However, suppression of living-constitutionalist reasoning from the Supreme Court majority is real (lower courts must follow precedent; dissenting judges are unheard in the majority opinion). Theater ratio rises from 0.12 to 0.35 over the interval, then declines slightly to 0.31—originalism's early framing as neutral 'textualism' performs well on theater metrics; as the empirical results (property-rights wins, unenumerated-rights losses, federal regulatory defeats) become visible, the performative value of 'fidelity to text' and 'judicial restraint' degrades. The highest theater ratio (2022) coincides with the Dobbs decision overruling Roe v. Wade—a major originalist victory that made the policy-choosing dimensions of originalism visible (if it were truly neutral constraint, why did it suddenly reverse 50 years of precedent?). Accessibility collapse is high (0.67) because once the originalist interpretive frame is adopted, alternatives (asking 'what would serve contemporary values?', 'what would contemporary equal protection permit?') become literally foreclosed as illegitimate—originalism collapses the semantic space in which competing methodologies can be heard. Resistance is high (0.73) because living constitutionalists, progressive legal movements, civil rights advocates, and those seeking federal regulatory authority mount sustained intellectual and political resistance to originalism. They argue for alternative methodologies, file briefs in originalist cases, engage in amendment campaigns, and organize against originalist judicial nominees.",
+    "perspectival_gap": "The originalist judicial coalition and conservative legal movement experience originalism as principled constraint that limits judicial discretion and honors the rule of law—they see the coordination function and believe suppression is minimal (just enforcing the methodology). Unenumerated-rights claimants, civil rights movements, and federal regulatory advocates experience originalism as coercive power that closes interpretive options and forecloses their claims—they see the extraction and feel the suppression of competing methodologies. Federalism advocates and property-rights defenders experience originalism as liberation (expanding their authority or protection) and see no extraction, only correction of prior judicial excess. The engine computes these divergences from directionality: agenda-setter + beneficiary seats get low d (beneficiary end); payer + trapped + identity-locked seats get high d (target end). The 'perspectival gap' IS the structural divergence in their relation to the constraint: the mechanism operates differently for each seat.",
+    "directionality_logic": "Originalist judicial coalition (institutional power, agenda-setter): d ≈ 0.1 (near beneficiary end). Sets the rules, enforces the methodology, operates within it without bearing its costs. Exit options are analytical (theoretical debate, not practical exit). Beneficiary organizations (conservative legal movement, federalism advocates): d ≈ 0.15–0.25. They organize around originalism, it serves their interests, and they have constrained exit (they could defect to living constitutionalism but are organizationally committed). Property-rights defenders (powerful, arbitrage): d ≈ 0.2. They benefit from originalist property doctrine and have arbitrage exit (can relocate assets/operations to friendly jurisdictions, reducing local regulatory burden). Religious liberty constituency (moderate, identity-locked): d ≈ 0.35. Benefits from originalist Free Exercise protection but is identity-locked to religious identity—cannot exit the religious frame itself. Exit options are severely constrained by self-definition. Unenumerated-rights claimants (powerless, trapped): d ≈ 0.85–0.95 (near full-target end). Bear the extraction of constrained interpretive options, cannot exit the jurisdiction, identity-locked to their dignity/privacy/bodily-autonomy claims. Federal regulatory advocates (organized, constrained): d ≈ 0.75–0.85. Lose regulatory authority when originalism constrains Commerce Clause, constrained to the regulatory-expansion frame by their organization's mission. Contemporary civil rights movements (moderate, identity-locked): d ≈ 0.80. Identity-locked to their movement, cannot exit, bear costs when civil rights claims fail under originalism. Amendment-politics constituency (powerless, trapped, excluded): d ≈ 0.88. The highest: structurally excluded from the interpretive process, must pursue costly constitutional amendment as sole remedy, no practical exit. Directionality overrides: None needed—the structural derivation from beneficiary/victim + exit + power produces accurate directionality.",
+    "mandatrophy_analysis": "Originalism's founding problem (constraining judicial discretion via fixed historical reference) is LIVE but increasingly contested. The constraint is NOT experiencing mandatrophy sensu stricto (function atrophied while structure persists through inertia). Instead, originalism's mandate—constraining interpretation—IS being executed, but the empirical claim that originalism actually constrains judges (rather than merely selecting which discretionary moves are cosmetically justified) is increasingly disputed. Originalism was presented as a neutral methodology that removes judicial choice; accumulated judicial practice shows originalism permits substantial discretion in selecting which historical sources to credit, which levels of generality to adopt when describing historical meaning, and how to resolve contradictions between historical sources. The theater ratio's rise to 0.35 reflects this: the constraint persists by performing fidelity when the underlying operation selects which history to believe. This is NOT yet mandatrophy (function-collapse), but it is 'the mandate is contested.' The engine will flag this: if the constraint's claimed purpose (constraining discretion) is empirically false while the constraint persists (because powerful agents benefit), the classification could shift from tangled_rope toward piton (atrophied function maintained through theater). The current classification (tangled_rope: genuine coordination function + asymmetric extraction) holds because originalism DOES coordinate on a common methodological framework—it does reduce variance relative to pure discretion. But the omega variables flag the empirical contestability of the founding problem.",
+    "kernel_context": "This constraint is the originalist reading of the contested US Constitution kernel. Sibling readings are living_constitution_reading (meaning evolves with societal values) and popular_constitutionalism_reading (meaning shaped by popular democratic contestation). The originalist reading asserts that constitutional meaning is FIXED at ratification and judges are CONSTRAINED by historical reference. This differs structurally from living constitutionalism (which permits judicial evolution of meaning) and popular constitutionalism (which permits democratic movements to reshape meaning via political contestation). The originalist reading's core premise—that historical meaning constrains judges—is in direct logical tension with living constitutionalism's core premise that meaning evolves with society. These premises cannot coexist in a single interpretive framework, though they coexist across different judges and political movements. The framework distinguishes: does fidelity to a fixed historical meaning constrain judges, or does each generation's understanding of equality, liberty, and due process justly evolve the Constitution's meaning?"
+  },
   "omegas": [
     {
-      "id": "framers_intent_determinacy",
-      "question": "Is Framers' intent a stable historical fact, or is it a construct inevitably shaped by the interpreter's own methodological choices and prior assumptions about what counts as authentic historical evidence?",
-      "resolution_mechanism": "Comparative historical analysis across originalist judges: if different originalists reach divergent conclusions about the same historical question despite claiming fidelity to intent, the instability of intent-based interpretation becomes empirically visible. Alternatively, direct engagement with the epistemology of historical reconstruction in constitutional law scholarship.",
-      "impact": "If intent is indeterminate or irreducibly constructed, originalism's claim to uniquely constrain judicial will collapses, and the constraint becomes a cover for one coalition's preferred historical narrative. The classification would shift from tangled_rope (real coordination function + asymmetric extraction) toward snare (extraction defended by false naturalness).",
+      "id": "original_meaning_discoverability",
+      "question": "Is the Framers' intent or the original public meaning empirically discoverable and uncontestable, or does historical reconstruction itself involve interpretive choices that undermine originalism's claim to external constraint?",
+      "resolution_mechanism": "Comparative historical analysis of originalist judges' and scholars' disagreements about original meaning on the same constitutional provisions. If experts disagree substantially about what the original meaning was, the constraint's grounding in 'fixed, discoverable meaning' is falsified.",
+      "impact": "If original meaning is not uniquely discoverable, originalism's core legitimating claim—that it constrains judicial discretion via reference to an external, fixed standard—fails. The constraint becomes less tangled_rope (genuine coordination on a methodology) and more piton (the apparent methodology is performative; judges select which history to credit, and fidelity language masks discretion).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether originalist methodology successfully recovers a determinate historical meaning or imports contemporary preferences into historical reconstruction."
+      "description": "Whether originalism's putative external constraint (historical meaning) is actually external or whether it requires interpretive choices within history itself."
     },
     {
-      "id": "original_public_meaning_vs_framers_intent_divergence",
-      "question": "When original public meaning and Framers' intent diverge—when what the public understood the Constitution to mean differs from what the Framers intended—which standard does the originalist constraint privilege, and does the choice reflect methodological commitment or political outcome preference?",
-      "resolution_mechanism": "Documented cases where originalists split on public meaning vs. intent and analysis of whether the choice correlates with outcomes favoring beneficiary or victim constituencies. The Dobbs decision's handling of the abortion question (what did the public understand the Fourteenth Amendment to protect?) versus Framers' likely intent (narrow) offers empirical data.",
-      "impact": "If originalists systematically choose the meaning-source that favors beneficiaries, the constraint is not fidelity-based but outcome-driven, and extraction rises. If the choices vary and reflect genuine methodological wrestling, the constraint preserves its coordination function and extraction remains moderate.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether originalist methodology contains internal mechanisms to resolve meaning-source conflicts, or whether choice-points systematically track political outcomes."
-    },
-    {
-      "id": "kernel_reading_contest_resolution",
-      "question": "Is the originalist reading a stable methodological framework, or is it locked in mutual foreclosure with living constitutionalism and popular constitutionalism such that the contest can only be resolved by political control of judicial appointments, not by methodological argument within a shared framework?",
-      "resolution_mechanism": "Analysis of cross-framework engagement in constitutional law scholarship and judiciary: do living constitutionalists and originalists genuinely argue each other's premises, or do they inhabit incommensurable interpretive worlds? Can a judge move from one reading to another through reasoned argument, or only through ideological conversion? The institutional stability of the contest (no resolution in sight after 40+ years) suggests structural rather than argumentative barriers.",
-      "impact": "If the readings coexist without rational resolution-paths, the contest is structural (political), and the constraint's extractiveness reflects the fact that originalism benefits from institutional control of appointment rather than from demonstrated interpretive superiority. The theater ratio might understate the performative maintenance of originalism against a never-resolved methodological opponent.",
+      "id": "competing_reading_logical_exclusion",
+      "question": "Does the originalist reading logically foreclose living constitutionalism and popular constitutionalism, or can different parties coherently hold each reading within their own frameworks?",
+      "resolution_mechanism": "Doctrinal analysis: Do the foundational premises of originalism (meaning is fixed at ratification) and living constitutionalism (meaning evolves) logically contradict such that no single judge or framework could endorse both? Or do they merely reflect different institutional choices (originalist judges apply fixed meaning, living-constitutionalist judges apply evolving meaning) that coexist across a divided judiciary?",
+      "impact": "If the readings logically foreclose one another, the relationship is forecloses; if they coexist across different judicial seats and political movements without internal contradiction within each seat's framework, the relationship is coexists_with. Classification determines whether originalism is a genuine alternative methodology or a foundational paradigm shift that displaces its competitors.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the originalist constraint can be argued to validity or must be imposed through institutional dominance."
+      "description": "Whether originalism and its sibling readings are logically incommensurable or coexisting alternatives."
     },
     {
-      "id": "civil_rights_expansion_causal_path",
-      "question": "Did civil rights victories (Voting Rights Act, Civil Rights Act, desegregation doctrine) depend specifically on rejecting originalist interpretation of the Fourteenth Amendment, or would originalists have reached similar results through their own methodology if the historical record were different or differently weighted?",
-      "resolution_mechanism": "Originalist scholars' own accounts of what the Fourteenth Amendment originally protected. If originalists argue the Amendment's original meaning does encompass voting rights, desegregation, and equal protection as broad guarantees, then originalism does not necessarily foreclose civil rights expansion—extraction from that constituency is lower. If originalists maintain that the Amendment's original meaning was narrower and contemporary protection requires evolution beyond originalism, then the victims' cost is genuinely structural to the reading.",
-      "impact": "If originalism can accommodate civil rights doctrine through its own methodology, the beneficiary/victim asymmetry softens. If originalism structurally forecloses the doctrinal basis for civil rights victories, the extraction from that constituency becomes a necessary feature of the constraint, not a choice-point within it.",
+      "id": "supermajority_amendment_gate_suppression",
+      "question": "Is the supermajority threshold for constitutional amendment (2/3 both houses, 3/4 states) a structural feature of the US system independent of originalism, or does originalism's constraint that meaning is FIXED intensify the suppression of amendment by making it the sole remedy for interpretive disagreement?",
+      "resolution_mechanism": "Comparative analysis: In periods when living constitutionalism dominated (ca. 1960s–1980s), did the amendment supermajority feel equally suppressive? Or does originalism's rigidity (can't evolve meaning via interpretation) make amendment the ONLY option and thus intensify its suppression? If originalism makes amendment salient and necessary, it has intensified suppression via framing.",
+      "impact": "If originalism intensifies amendment suppression, the measured suppression (0.42) understates the structural coercion: the constraint forces amendment (near-impossible) as the sole remedy, which is a form of suppression not captured by direct judicial coercion. The suppression metric would need revision upward, and the classification could shift from tangled_rope toward snare (suppression + extraction without genuine coordination benefit).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether originalism's rigidity amplifies the suppressive effect of the constitutional amendment threshold."
+    },
+    {
+      "id": "sibling_reading_extraction_asymmetry",
+      "question": "If living constitutionalism or popular constitutionalism were ascendant (rather than originalism), would the extraction metrics and beneficiary/victim structure be inverted, or would one reading reduce extraction while another increases it?",
+      "resolution_mechanism": "Author constraint stories for the living_constitution_reading and popular_constitutionalism_reading with their own extraction metrics and beneficiary/victim structures. Compare the three readings' extraction profiles to determine whether one reading genuinely reduces system-wide extraction or merely redistributes it.",
+      "impact": "If all three readings produce comparable extraction (just different beneficiary/victim sets), then no reading is objectively better; each constrains one group while liberating another. If one reading demonstrably reduces extraction (lower extractiveness, broader beneficiary base, fewer victims), that reading's ascendance would reduce system-level extraction. This determines whether orignal reading choice has constitutional significance beyond power redistribution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether sibling readings have asymmetric extraction profiles or merely redistribute extraction across constituencies."
+    },
+    {
+      "id": "identity_locked_exit_modulation",
+      "question": "For religious liberty claimants, is their identity-lock to originalism a result of genuine alignment between religious identity and originalist doctrine, or does it reflect institutional capture of religious identity-narratives by originalist legal movements?",
+      "resolution_mechanism": "Empirical: survey contemporary religious leaders and scholars on whether originalism is theologically necessary or merely strategically aligned with current originalist-movement power. Historical: examine whether religious-liberty protection was equally strong under living constitutionalism (e.g., RFRA era, 1993–present). If religious liberty flourished under non-originalist methodologies, the current identity-lock may be constructed alignment rather than intrinsic.",
+      "impact": "If identity-lock is constructed, the directionality for religious liberty claimants (d ≈ 0.35) understates their actual extraction: they believe they are beneficiaries of an ideologically aligned reading, but they are actually captured within an asymmetric constraint. Reclassification would increase their d toward 0.5–0.65 (symmetric-to-target), and the overall constraint could shift from tangled_rope toward snare (extraction disguised as ideological alignment).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether originalism necessarily narrows civil rights doctrine or whether different historical premises could support broad protection within originalist methodology."
+      "description": "Whether religious-liberty claimants' perceived alignment with originalism reflects genuine ideological coherence or institutional capture of religious narratives."
     }
   ],
-  "commentary": {
-    "narrative_context": "The originalist reading of the U.S. Constitution holds that constitutional meaning is fixed at the moment of ratification and that judges must interpret the document according to Framers' intent or original public meaning. This reading constrains federal power to enumerated authorities, limits unenumerated rights doctrine, and enforces structural federalism. It is one reading of the same constitutional text that living constitutionalists and popular constitutionalists read very differently. The originalist reading benefits federalism advocates, religious liberty claimants under narrow historical scope, and property rights defenders; it extracts costs from constituencies seeking to expand federal civil rights authority, assert unenumerated rights, and adapt constitutional doctrine to contemporary conditions. The constraint is CLAIMED as tangled_rope (real coordination function: fixing meaning to prevent interpretive chaos; real enforcement: judges must suppress alternative methodologies) and the metrics are authored to reflect substantial extraction, moderate suppression, and rising theater ratio—the engine will compute whether the claim and metrics cohere.",
-    "key_agents": [
-      "Originalist federal judiciary: agenda-setter, institutional power, sets the interpretive framework and enforces it through opinions constraining federal authority and unenumerated rights",
-      "Federalism advocates: beneficiary, powerful, win outcomes when originalism constrains federal enumerated powers and strengthens state reserved authority",
-      "Religious liberty claimants under original understanding: beneficiary, organized, benefit from narrow historical scope of free exercise and establishment clause limitations",
-      "Property rights defenders: beneficiary, powerful, benefit from constrained regulatory authority and narrow takings clause jurisprudence",
-      "Unenumerated rights claimants: victim, moderate power but identity-locked exit, lose judicial vindication when originalism forecloses privacy/autonomy rights",
-      "Federal regulatory and civil rights advocates: victim, organized, face constraints when originalism narrows federal enumerated powers and Section Five remedial scope",
-      "Civil rights movement constituencies: victim, powerless but identity-locked, structurally dependent on federal authority doctrine that originalism constrains",
-      "Living constitutionalist legal academy: excluded, organized, structurally excluded from the originalist framework's legitimacy though they argue against its premises",
-      "Federalist Society network: agenda-setter + beneficiary, institutional, architect of originalist doctrine and institutional beneficiary of its judicial dominance",
-      "Constitutional scholars: observer, organized, track the methodological contest and produce evidence about historical meaning and interpretive fidelity"
-    ],
-    "logic_rationale": "Extractiveness rises from 0.35 (1987, when originalism was ascendant but not yet dominant in appointments) to 0.58 (2026, after systematic originalist judicial appointments). The rise reflects the constraint's strengthening grip on doctrine—more federal statutes struck down for exceeding enumerated authority, more unenumerated rights claims foreclosed, more federalism victories. Theater ratio climbs from 0.12 to 0.28, reflecting increasing performative maintenance: originalist judges emphasize historical fidelity even where historical sources are ambiguous or where alternative historical readings would reach different conclusions (Dobbs decision on abortion is exemplary—claims originalism leads inescapably to state-level abortion bans, when historical evidence is substantially contested). Suppression requirement rises from 0.25 to 0.42, reflecting the increasing energy required to maintain originalism against a growing scholarly and political challenge. Living constitutionalism has strengthened its institutional positions (dissenting opinions, law review dominance in some schools, Democratic appointment strategy), so originalism must more actively police the boundary against competing methodologies. All measurements share the 1987-2026 interval grid, so temporal analysis can examine whether extractiveness-theater-suppression move together (they do, suggesting a single underlying dynamic: institutional dominance requiring more performative and suppressive maintenance as it grows more extractive).",
-    "perspectival_gap": "From the originalist judiciary and federalism-advocate seats, the constraint is genuine coordination: it prevents judges from rewriting the Constitution to match contemporary politics, it respects the Framers' allocation of powers, and it provides a stable interpretive rule. From the victim seats (unenumerated rights claimants, federal regulatory advocates, civil rights constituencies), the same structure is extractive imposition: it forecloses doctrinal paths that would protect their interests, it privileges one historical narrative over alternative reconstructions, and it requires them to win supermajority amendment support to undo what they see as interpretive infidelity. The engine should compute this divergence per-seat directionality: beneficiary seats get d near 0.0 (low effective extraction); victim seats get d near 1.0 (high effective extraction). Excluded seats (living constitutionalists) sit at an ambiguous position—they are excluded from the legitimacy framework but retain institutional voice, so d depends on whether we weight their theoretical resources or their actual decision-power in the constraint's operation.",
-    "directionality_logic": "Originalist federal judiciary: d ≈ 0.35–0.45 (institutional power, constrained exit, sets rules but is constrained by prior precedent and must maintain the appearance of historical fidelity—not purely beneficiary, partly administrator). Federalism advocates: d ≈ 0.1–0.2 (beneficiary, powerful power, arbitrage-grade exit to other coalition strategies; they benefit but are not trapped). Religious liberty claimants: d ≈ 0.15–0.25 (beneficiary, but identity-locked to the legal framework and religiously motivated exit from constitutional claim-making is not genuine exit). Property rights defenders: d ≈ 0.1–0.2 (beneficiary, powerful, mobile exit to alternative regulatory strategies if originalism fails). Unenumerated rights claimants: d ≈ 0.75–0.85 (victim, identity-locked, no real exit from constitutional claim-making). Federal regulatory advocates: d ≈ 0.65–0.75 (victim, organized, constrained by the constitutional system). Civil rights constituencies: d ≈ 0.80–0.90 (victim, powerless + identity-locked, fully dependent on federal doctrine). Living constitutionalist scholars: d ≈ 0.55–0.65 (excluded but influential, not trapped in the sense of victims, but excluded from the dominant interpretive authority, which generates extraction-type pressure on their intellectual work).",
-    "mandatrophy_analysis": "Originalism is classified as tangled_rope because it performs a genuine coordination function (fixing constitutional meaning to prevent interpretive chaos) while simultaneously extracting costs from constituencies that lose doctrinal pathways. The mandatrophy risk is whether the coordination function has atrophied relative to the extraction. If originalism is maintained primarily through political control of judicial appointments (which it is—appointment became central after the Reagan administration's systematic originalist vetting), then the coordination function weakens and the constraint approaches snare (pure extraction defended by a cover story). However, the coordination function is not yet dead: originalism does provide a publicly intelligible rule for interpretation, it does constrain judicial willfulness, and it does prevent the Constitution from meaning whatever a judicial majority prefers. The theater ratio rising suggests the coordination function is becoming increasingly performative relative to actual constraint, which is a mandatrophy signal. The comment's role is to flag this: originalism could degrade into Piton (atrophied coordination, maintained theatrically through appointment control, with no party actually benefiting enough to defend it and no party hurt enough to fix it) if the judicial and political investment required to maintain it grows beyond the actual benefits to beneficiary constituencies.",
-    "kernel_context": "This constraint is the ORIGINALIST READING of the contested kernel 'us_constitution_interpretive.' The sibling readings are living_constitution_reading (constitutional meaning evolves with societal values; authority derives from reasoned adaptation) and popular_constitutionalism_reading (constitutional meaning shaped by democratic contestation and popular movements, not solely judicial interpretation). The originalist reading asserts that meaning is FIXED at ratification; the living reading asserts it is EVOLVING; the popular reading asserts it is CONTESTED. These are incommensurable premises about what the Constitution IS, not just disagreements about how to interpret it. From the originalist perspective, living constitutionalism permits judges to rewrite the Constitution, and popular constitutionalism dissolves the rule of law into majoritarianism. From the living perspective, originalism freezes the Constitution in an increasingly anachronistic past. From the popular perspective, both originalism and living constitutionalism exclude the democratic people from constitutional meaning-making. Each reading foreclosing or coexisting with the others depends on whether we ask whether they can logically coexist in a single jurisprudential framework (no—they contradict on the fundamental question of what determines meaning) or whether they can be held as competing positions by different institutional actors (yes—they are currently held by different judicial coalitions and legal schools). The framework treats them as COEXISTING READINGS because they are empirically held simultaneously by different parties, even though each reading's own internal logic forecloses the others."
-  },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
@@ -189,33 +311,39 @@
     "affects_constraints": [
       "us_constitution_interpretive__living_constitution_reading",
       "us_constitution_interpretive__popular_constitutionalism_reading",
-      "federal_enumerated_powers_scope",
-      "unenumerated_rights_protection_doctrine",
-      "fourteenth_amendment_remedial_scope"
+      "federal_commerce_clause_power",
+      "unenumerated_rights_protection",
+      "state_sovereign_immunity",
+      "property_takings_doctrine"
     ],
-    "dual_formulation_note": "Originalism and living constitutionalism are readings of the same constitutional kernel ('us_constitution_interpretive'). They differ fundamentally on what determines constitutional meaning: fixed historical intention vs. evolving contemporary understanding. Each reading generates a distinct constraint story with distinct beneficiaries, victims, and extraction profiles. They coexist as empirical positions held by different institutional actors (originalist and progressive judicial coalitions) but foreclose each other logically—they cannot both be true as accounts of what the Constitution means, though they can both be held by different parties in the same system. The constraint family structure maps the dependencies: originalist victories constraining federal power affect downstream doctrinal constraints on enumerated authority, unenumerated rights, and Fourteenth Amendment scope. Living constitutionalist victories would reverse those effects."
+    "dual_formulation_note": "The US Constitution kernel decomposes into at least three structurally distinct constraint stories: originalist_reading (this file), living_constitution_reading, and popular_constitutionalism_reading. Each instantiates a different ε, beneficiary/victim structure, and measured extraction. They are not the same constraint viewed from different angles—they are different constraints generated by different readings of the same contested authority structure (the Constitution). The ε-invariance principle requires separate stories because the beneficiary/victim structure, enforcement mechanism, and empirical impacts diverge substantially across readings. Sibling readings are linked via network.affects_constraints (bidirectional or unidirectional depending on whether one reading logically forecloses or merely influences the other). This file represents the originalist reading; sibling files will author the living-constitutionalist and popular-constitutionalist readings with their own structural data and metrics."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.4
+      "power_atom": "analytical",
+      "d_value": 0.5
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "medium",
-    "hypothesis": "tangled_rope"
-  },
+  "gain_flow": "originalist_judicial_coalition",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "framers_intent_fixed_meaning",
+    "drift_state": {
+      "moment": "contemporary_originalist_ascendancy_2024",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "us_constitution_interpretive__living_constitution_reading",
+        "sibling_id": "living_constitution_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "us_constitution_interpretive__popular_constitutionalism_reading",
+        "sibling_id": "popular_constitutionalism_reading",
         "relation": "coexists_with"
       }
     ],
@@ -227,29 +355,29 @@
         "grounding_type": "deontological"
       },
       {
-        "atom": "framers_intent_or_original_public_meaning_determines_scope",
+        "atom": "judicial_fidelity_constrains_discretion",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "historical_intent_is_discoverable_and_determinative",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "framers_intent_authority_paradigm",
-    "drift_state": {
-      "moment": "contemporary_judicial_appointments_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -54,7 +60,10 @@
     narrative_ontology:cs_axiom/3,
     narrative_ontology:cs_axiom_status/2,
     narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,36 +74,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: naskh_principle__classical_abrogation
- *   human_readable: Classical Naskh (Quranic Abrogation) Principle
- *   domain: religious/jurisprudential/legal_theory
+ *   human_readable: Classical Naskh Principle: Chronological Quranic Abrogation
+ *   domain: theological/jurisprudential
  *
  * SUMMARY:
- *   The naskh principle—the doctrine that later Quranic verses abrogate
- *   earlier verses on the same legal or theological topic—is a cornerstone of
- *   classical Islamic jurisprudence. Orthodox schools (Hanafi, Maliki,
- *   Shafi'i, Hanbali, and Shi'i variants) use chronological revelation order
- *   to resolve apparent contradictions in Islamic law, granting them decisive
- *   authority in fatwa and legal determination. The principle is CLAIMED as
- *   tangled_rope (genuine coordination function—legal certainty—combined with
- *   asymmetric extraction—suppression of contextual readings and
- *   theological-coherence approaches). The authored metrics (extractiveness
- *   0.68, suppression 0.42, modest theater_ratio 0.19) describe a constraint
- *   that solves a real problem but through mechanisms that benefit
- *   institutional juridical schools and marginalize alternative readings. The
- *   claim/metric gap is intentional and reflects the kernel contest:
- *   classical-abrogation is ONE reading of a contested naskh principle.
- *   Sibling readings (contextual-harmonization, progressive-restriction)
- *   would produce different ε values and victim/beneficiary sets. This story
- *   instantiates only the classical-abrogation reading.
+ *   The classical naskh principle (abrogation) is a foundational doctrine in
+ *   Islamic jurisprudence asserting that later-revealed Quranic verses
+ *   supersede earlier verses on the same legal topic, based on chronological
+ *   order of revelation. This constraint instantiates ONE reading of the
+ *   contested kernel 'naskh_principle'—specifically, the classical_abrogation
+ *   reading that treats naskh as a clear, hierarchical,
+ *   chronologically-ordered supersession mechanism. The reading benefits the
+ *   classical Islamic legal tradition by providing interpretive certainty and
+ *   institutional stability, and victimizes interpretive flexibility and
+ *   theological coherence-seeking by marginalizing alternative readings. The
+ *   constraint is simultaneously claimed as Tangled Rope (coordination +
+ *   asymmetric extraction) and exhibits measurably high suppression (0.71),
+ *   indicating that the classical framework actively excludes competing
+ *   hermeneutic voices. This is one story in a three-story constraint family:
+ *   it coexists with contextual_harmonization (which reads all verses as
+ *   valid in their contexts) and influences progressive_restriction (which
+ *   reads the movement as pedagogical rather than supersessional). The
+ *   measurement interval spans 1400 years from the Prophet Muhammad's
+ *   ministry to present-day jurisprudential practice, capturing the
+ *   codification and institutionalization of naskh across the classical
+ *   schools.
  *
  * KEY AGENTS:
- *   - Orthodox juridical schools: institutional agenda-setters and primary beneficiaries; administer the principle, train successors, issue fatwas using naskh hierarchy; benefit from decision-reduction and institutional authority.
- *   - Certainty-privileging jurists: organized beneficiaries; collect from naskh's provision of clear, binary rulings; their epistemological preference for rule over relationality aligns with the principle's mechanism.
- *   - Contextual hermeneutics proponents: moderate-powered victims; suppressed from orthodox discourse; their readings are marginalized as non-rigorous or theologically confused; pay the cost of professional isolation.
- *   - Theological-coherence seekers: powerless victims; identity-locked (cannot exit Islamic tradition); experience naskh as forcing a choice between textual completeness and logical consistency; suppressed: coherence objections are treated as naive.
- *   - Chronological-revelation historians: institutional observers; their reconstruction of revelation order enables naskh application but is not controlled by jurists.
- *   - Reformation-leaning movements: moderate-powered excluded parties; would argue for progressive-restriction or contextual-harmonization if admitted to jurisprudential authority-setting.
- *   - Quran students and believers: powerless, identity-locked, dual-positioned (beneficiary of clarity + payer of lost-textual-completeness); receive stable rulings and lose the right to hold all verses simultaneously valid.
+ *   - Classical Islamic jurists (Hanafi, Maliki, Shafi'i, Hanbali schools): institutional agenda-setters who codified naskh as the authoritative interpretive method; hold institutional authority over the naskh canon; power = institutional; exit = identity-locked.
+ *   - Legal certainty framework (non-agent): the doctrinal commitment to fixed, knowable legal rules; benefits from naskh by providing a supersession algorithm; power = analytical.
+ *   - Contextual interpretation tradition: scholars emphasizing contextual, situational, or literary-unity readings; bear the cost of interpretive marginalization; power = moderate; exit = constrained.
+ *   - Theological coherence seekers: theologians and Quranic scholars seeking holistic meaning; constrained from interpretations that honor all verses equally; power = organized; exit = constrained.
+ *   - Contemporary reform schools: progressive Islamic scholars and modernist jurists; excluded from classical authority structure; power = moderate; exit = mobile.
+ *   - Islamic legal tradition (non-agent): institutional beneficiary; benefits from naskh's provision of meta-rule for handling textual conflict; power = institutional.
  */
 
 /* ==========================================================================
@@ -103,56 +115,115 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(naskh_principle__classical_abrogation, 0.68).
-domain_priors:suppression_score(naskh_principle__classical_abrogation, 0.42).
-domain_priors:theater_ratio(naskh_principle__classical_abrogation, 0.19).
+domain_priors:suppression_score(naskh_principle__classical_abrogation, 0.71).
+domain_priors:theater_ratio(naskh_principle__classical_abrogation, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, extractiveness, 0.68).
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, suppression_requirement, 0.42).
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, theater_ratio, 0.19).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, accessibility_collapse, 0.72).
 narrative_ontology:constraint_metric(naskh_principle__classical_abrogation, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(naskh_principle__classical_abrogation, tangled_rope).
-narrative_ontology:human_readable(naskh_principle__classical_abrogation, "Classical Naskh (Quranic Abrogation) Principle").
-narrative_ontology:topic_domain(naskh_principle__classical_abrogation, "religious/jurisprudential/legal_theory").
+narrative_ontology:human_readable(naskh_principle__classical_abrogation, "Classical Naskh Principle: Chronological Quranic Abrogation").
+narrative_ontology:topic_domain(naskh_principle__classical_abrogation, "theological/jurisprudential").
 
 domain_priors:requires_active_enforcement(naskh_principle__classical_abrogation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(naskh_principle__classical_abrogation, '0bc28638-f26f-455a-ab0e-1ce0f85def5f').
-narrative_ontology:cs_kernel_codification('0bc28638-f26f-455a-ab0e-1ce0f85def5f', fixed_text).
-narrative_ontology:cs_authority_grounding('0bc28638-f26f-455a-ab0e-1ce0f85def5f', extraction).
-narrative_ontology:cs_interpretation_layer_present('0bc28638-f26f-455a-ab0e-1ce0f85def5f').
-narrative_ontology:cs_reading_relation('0bc28638-f26f-455a-ab0e-1ce0f85def5f', naskh_principle__contextual_harmonization, coexists_with).
-narrative_ontology:cs_reading_relation('0bc28638-f26f-455a-ab0e-1ce0f85def5f', naskh_principle__progressive_restriction, coexists_with).
-narrative_ontology:cs_axiom('0bc28638-f26f-455a-ab0e-1ce0f85def5f', foundational, chronological_revelation_supersession).
-narrative_ontology:cs_axiom_status(chronological_revelation_supersession, holdable).
-narrative_ontology:cs_axiom_grounding('0bc28638-f26f-455a-ab0e-1ce0f85def5f', chronological_revelation_supersession, empirically_contingent).
-narrative_ontology:cs_axiom('0bc28638-f26f-455a-ab0e-1ce0f85def5f', foundational, abrogated_verse_legal_invalidity).
-narrative_ontology:cs_axiom_status(abrogated_verse_legal_invalidity, holdable).
-narrative_ontology:cs_axiom_grounding('0bc28638-f26f-455a-ab0e-1ce0f85def5f', abrogated_verse_legal_invalidity, deontological).
-narrative_ontology:cs_created_at('0bc28638-f26f-455a-ab0e-1ce0f85def5f', '').
+narrative_ontology:cs_story_uid(naskh_principle__classical_abrogation, '65b6f59d-c65a-4c32-9fbb-d984206952af').
+narrative_ontology:cs_kernel_codification('65b6f59d-c65a-4c32-9fbb-d984206952af', fixed_text).
+narrative_ontology:cs_authority_grounding('65b6f59d-c65a-4c32-9fbb-d984206952af', lineage).
+narrative_ontology:cs_interpretation_layer_present('65b6f59d-c65a-4c32-9fbb-d984206952af').
+narrative_ontology:cs_reading_relation('65b6f59d-c65a-4c32-9fbb-d984206952af', naskh_principle__contextual_harmonization, coexists_with).
+narrative_ontology:cs_reading_relation('65b6f59d-c65a-4c32-9fbb-d984206952af', naskh_principle__progressive_restriction, influences).
+narrative_ontology:cs_axiom('65b6f59d-c65a-4c32-9fbb-d984206952af', foundational, later_revelation_chronologically_supersedes_earlier).
+narrative_ontology:cs_axiom_status(later_revelation_chronologically_supersedes_earlier, holdable).
+narrative_ontology:cs_axiom_grounding('65b6f59d-c65a-4c32-9fbb-d984206952af', later_revelation_chronologically_supersedes_earlier, deontological).
+narrative_ontology:cs_axiom('65b6f59d-c65a-4c32-9fbb-d984206952af', foundational, abrogated_verses_lose_legal_bindingness).
+narrative_ontology:cs_axiom_status(abrogated_verses_lose_legal_bindingness, holdable).
+narrative_ontology:cs_axiom_grounding('65b6f59d-c65a-4c32-9fbb-d984206952af', abrogated_verses_lose_legal_bindingness, conventional).
+narrative_ontology:cs_reference_frame('65b6f59d-c65a-4c32-9fbb-d984206952af', chronological_supersession_hierarchy).
+narrative_ontology:cs_drift_state('65b6f59d-c65a-4c32-9fbb-d984206952af', contemporary_jurisprudential_contestation, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('65b6f59d-c65a-4c32-9fbb-d984206952af', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(naskh_principle__classical_abrogation, naskh_principle).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, orthodox_juridical_schools).
-narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, certainty_privileging_jurists).
-narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, contextual_hermeneutics_proponents).
+narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, classical_jurists).
+narrative_ontology:constraint_beneficiary(naskh_principle__classical_abrogation, legal_certainty_framework).
+narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, contextual_interpretation_tradition).
 narrative_ontology:constraint_victim(naskh_principle__classical_abrogation, theological_coherence_seekers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Classical Islamic legal schools (Hanafi, Maliki, Shafi'i, Hanbali) codified naskh as the authoritative interpretive method for resolving apparent Quranic contradictions. They set the canon of which verses abrogate which, establish the rules for identifying abrogation (later revelation chronology, clear textual markers, juristic consensus), and maintain the institutional authority to adjudicate abrogation claims. Their professional identity and scholarly reputation are invested in the stability and coherence of the classical interpretive taxonomy. They collect interpretive authority and institutional prestige from maintaining this system.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, classical_jurists, agenda_setter,
+    institutional, generational, identity_locked, universal).
+
+% A non-agent entity: the institutional commitment to fixed, knowable legal rules with a clear hierarchy of authority. The naskh principle serves this commitment by providing an algorithm for resolving textual conflict: later text supersedes earlier. This framework benefits from the constraint because it guarantees legal predictability and institutional stability.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, legal_certainty_framework, beneficiary,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(naskh_principle__classical_abrogation, legal_certainty_framework).
+
+% Scholars and schools emphasizing contextual reading (including contemporary Quranic hermeneutics and some classical juristic traditions like Maliki jurisprudence's local practice emphasis) pay the cost of the naskh constraint by losing interpretive space. Under classical naskh, verses they read as contextually valid in their original revelation setting are declared legally inoperative. Their interpretive frameworks are marginalized as less rigorous or less authoritative than the chronological supersession model. They bear the burden of demonstrating why contextual reading is not incoherent relativism.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, contextual_interpretation_tradition, payer,
+    moderate, generational, constrained, universal).
+
+% Theologians and Quranic scholars seeking to understand the Quran as a coherent whole face a cost: the naskh principle allows them to dismiss apparent contradictions as simply 'abrogated verses' rather than engaging the theological tension. This can foreclose deeper analysis of divine wisdom, progressive moral teaching, or textual unity. They are constrained from pursuing interpretations that honor all verses equally because the institutional framework has already declared some verses legally void.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, theological_coherence_seekers, payer,
+    organized, generational, constrained, universal).
+
+% Contemporary Islamic reform movements, modernist scholars, and progressive juristic voices are structurally excluded from the core interpretive authority that defines what counts as 'classical' and therefore authoritative. They can offer alternative readings (contextual harmonization, progressive restriction), but they do so outside the classical institutional framework and without the centuries-long institutional weight. Their exclusion is what the classical authority structure maintains—recognition of their hermeneutic legitimacy would require admitting that the classical naskh canon is contestable.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, contemporary_reform_schools, excluded,
+    moderate, biographical, mobile, national).
+
+% The Quranic text is the constraint's object and reference point, not an agent. It is included analytically because the interpretation system (naskh) is literally about what the text means and which parts of it remain legally operative. The text does not act but is acted upon by the interpretive system.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, revelation_text_itself, observer,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(naskh_principle__classical_abrogation, revelation_text_itself).
+
+% The broader Islamic legal tradition as an institutional form benefits from naskh by having a stable, systematized framework for jurisprudential operation. The tradition can grow, elaborate, and refine rules without internal collapse because naskh provides the meta-rule for handling textual conflict. The constraint is what makes the tradition coherent as an institution.
+narrative_ontology:constraint_stakeholder(naskh_principle__classical_abrogation, islamic_legal_tradition, beneficiary,
+    institutional, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(naskh_principle__classical_abrogation, islamic_legal_tradition).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(naskh_principle__classical_abrogation, classical_jurists).
+narrative_ontology:fixing_cost_class(naskh_principle__classical_abrogation, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Resolves apparent contradictions in the Quranic text by establishing a chronological supersession hierarchy: where two verses on the same legal topic appear to conflict, the verse revealed later in the Prophet Muhammad's ministry legally supersedes the earlier one. This provides a decision procedure for juristic reasoning that does not require dismissing parts of the text as inauthentic, corrupt, or metaphorical—instead, both are authentic but one is no longer legally operative. The coordination problem solved is: how can a divinely revealed text that contains apparent legal contradictions be a coherent source of law?
+% TRANSFER_FUNCTION: Transfers interpretive authority from contextual or holistic reading of the text toward chronological-historical reading. It moves the locus of meaning-making from 'what does this verse mean in its context?' toward 'when was this revealed relative to other verses on this topic?' Classical jurists who master the chronology of revelation and the established abrogation canon gain authority over scholars who emphasize contextual or theological coherence. It also transfers legal force: abrogated verses retain historical and spiritual significance but lose legal bindingness, which is transferred to their replacements.
+% ABSENT_VOICES: Scholars emphasizing the contextual, situational, or progressive-pedagogical reading of Quranic revelation are structurally excluded from the core definitional authority. Contemporary Quranic hermeneutics emphasizing literary unity, thematic coherence, or multi-dimensional meaning are marginalized as less rigorous than classical juristic methodology. Communities that practice Islamic law outside the classical school framework (folk Islam, local practice traditions, reformist movements) are not represented in the authority that sets the naskh canon. Women scholars and voices outside the male-dominated classical juristic circles were absent from the original codification and remain underrepresented in its authority structure.
+% DISAPPEARANCE_RATIONALE: If the classical naskh principle and its canonical taxonomy disappeared overnight, Islamic jurisprudence would undergo fundamental restructuring. Legal certainty would collapse temporarily: jurists would face every apparent Quranic contradiction fresh, without the ready algorithm 'later abrogates earlier.' The classical four schools would have to justify their jurisprudential positions without reference to the naskh canon—some positions would lose their textual anchor. Contemporary reform movements, contextual hermeneutics, and non-classical interpretive schools would immediately gain institutional space and authority. The Quranic text would need to be re-engaged holistically, which would either produce new synthetic jurisprudence or fragment into competing schools with different resolutions of apparent contradictions. The institutional stability the classical framework provides would be disrupted, and the Islamic legal tradition would reorganize around a different hermeneutic principle (contextual, progressive, or pluralistic).
+% FOUNDING_PROBLEM: In the first centuries of Islam, Islamic jurisprudence faced a foundational crisis: the Quranic text contained passages that appeared to contradict each other on matters of law and practice. Early jurists (7th–9th centuries) observed verses on war, dietary rules, marriage, inheritance, and other topics that seemed to conflict. The founding problem was: How can a revealed text that is believed to be divinely preserved be internally contradictory? The naskh principle (abrogation) solved this by proposing that later revelation superseded earlier on the same topic—preserving the integrity of the text by declaring that both revelations were authentic but temporally ordered. This allowed jurisprudence to proceed on the assumption of textual coherence without requiring emendation or rejection of any verse.
+% FOUNDING_PROBLEM_CORROBORATION: Classical Islamic scholars from the 9th century onward (al-Shafi'i, al-Tabari, al-Razi) attested that the founding problem was live and pressing, and that naskh was the solution they adopted. However, contemporary Quranic scholars and hermeneuticists—notably outside the classical juristic schools—attest that the founding problem is either resolved differently or overstated. They point to the Quranic text itself containing signals of context-dependency (verse 2:106 on abrogation, which classical scholars cite, is itself contested in meaning) and argue that the founding problem can be solved through contextual reading without requiring chronological supersession. Theologians like Fazlur Rahman and contemporary reform scholars attest that the classical naskh canon has been used to suppress interpretive voices and that it is not the only coherent solution. The founding problem's status is contested between the classical juristic establishment (which maintains it is live and naskh is necessary) and contemporary revisionist traditions (which argue it is either dead or misdiagnosed).
+narrative_ontology:disappearance_verdict(naskh_principle__classical_abrogation, world_rearranges).
+narrative_ontology:founding_problem_status(naskh_principle__classical_abrogation, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(naskh_principle__classical_abrogation, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(naskh_principle__classical_abrogation, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(naskh_principle__classical_abrogation, 'none', 1).
+narrative_ontology:epsilon_provenance(naskh_principle__classical_abrogation, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,16 +243,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.38 (early Islamic period, when abrogation was emerging) to 0.68 (contemporary orthodoxy, when the principle is fully institutionalized). This trajectory reflects progressive consolidation of naskh doctrine as institutional orthodoxy and progressive marginalization of contextual approaches. Theater_ratio remains low (0.19 at end) because the performative component is minimal—the suppression is mostly structural (institutional gatekeeping) rather than theatrical; the principle is genuinely used for fatwa issuance, not merely performed. Suppression_requirement rises from 0.25 to 0.42, reflecting increasing institutional effort to maintain naskh orthodoxy as contemporary challenges from reformists, modernists, and Quranic scholars mount. The one-shared-grid measurement strategy ensures every metric is authored at every time point, preventing OQ-105-style misalignment. Observations (basis=observed) cover periods when the doctrine was established; projections (basis=projected) extend into the contemporary competitive environment where reformist and contextual readings gain institutional foothold in some Islamic communities.
+ *   Extractiveness is moderate-high (0.68 at interval end) because the classical naskh principle consolidates interpretive authority in the hands of classical jurists and their institutional descendants, marginalizing other hermeneutic voices and imposing a specific reading strategy on all Quranic interpretation. Suppression is high (0.71) because the constraint actively enforces the exclusion of contextual and coherence-seeking readings: they are not merely disfavored but are defined as 'not rigorous' or 'not classical.' Theater ratio rises over time (0.25 at t=0 to 0.42 at t=1400), suggesting an increasing gap between the justification (resolving textual contradiction) and the function (maintaining institutional control). At early time points (t=0-200), naskh genuinely solves a coordination problem (jurisprudence had nowhere else to turn); by the classical period (t=400+), it becomes more a mechanism for institutional stability and less about solving textual problems (since the canon is now fixed and well-established). Accessibility collapse is moderate-high (0.72): once one learns chronological revelation order and the classical naskh taxonomy, alternatives (reading all verses as contextually valid) become harder to see—the framework colonizes interpretive possibility space. Resistance is moderate (0.58): contextual and progressive readings persist and find modern audiences, even if marginalized institutionally. The measurement series captures the transition from naskh as an emergent problem-solving principle to naskh as an institutionalized and enforced orthodoxy.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setting institutional schools and certainty-privileging jurists should compute as beneficiaries experiencing a rope or coordination function. From their structural position, naskh solves a genuine problem: how to operate unified jurisprudence when the text appears contradictory. Contextual hermeneutics proponents and theological-coherence seekers should compute as targets experiencing a snare: the principle suppresses their readings, forecloses their interpretive labor, and imposes a hierarchy they did not choose. The powerless believers experience a tangled constraint: genuine benefit (clear rulings) coupled with imposed cost (lost textual coherence). The engine computes these divergences from power, exit_options, and beneficiary/victim status. The classical-abrogation reading CLAIMS tangled_rope (both coordination and extraction present) but the victim's perspective would strengthen the snare classification.
+ *   The classical jurist seat and the contextual-tradition seat should compute vastly differently from this constraint. From the jurist's position, naskh is genuine coordination: it makes jurisprudence possible by resolving textual conflict and allowing stable law. From the contextual reader's position, the same structure operates as suppressive institutional control: their interpretive frameworks are defined as inferior before being examined. The jurist experiences low extraction (they benefit from institutional stability and interpretive authority) and high accessibility collapse (alternative readings seem incoherent from inside the classical framework). The contextual reader experiences high extraction (their interpretive space is foreclosed) and the same high accessibility collapse (the classical framework is so institutionally entrenched that questioning it seems naive). The engine should compute these divergences from the structural data: jurists get low directionality (beneficiary seat, high power, identity-locked exit, institutional scope) and contextual readers get high directionality (payer seat, moderate power, constrained exit, universal scope). This per-seat divergence is what Tangled Rope structures: genuine coordination and asymmetric extraction occurring through the same mechanism.
  *
  * DIRECTIONALITY LOGIC:
- *   Orthodox schools (institutional power, identity_locked exit, collective beneficiary role) have directionality near the full-beneficiary end (~0.15–0.25): they set the rules, collect interpretive authority, and cannot exit the principle without losing their jurisprudential monopoly (identity-locked). Contextual hermeneutics proponents (moderate power, constrained exit, victim role) sit nearer the target end (~0.65–0.75): they pay through professional marginalization and cannot easily exit Islamic discourse. Theological-coherence seekers (powerless, identity_locked, victim role) sit at the target extreme (~0.80–0.90): they bear suppression and cannot exit Islamic belief without abandoning their identity. Quran students (powerless, identity_locked, dual role) sit symmetric (~0.45–0.55): they benefit from clarity but pay through lost coherence. No directionality overrides are needed; structural derivation from the declared beneficiary/victim and exit axes captures the relationships.
+ *   Classical jurists benefit from naskh by holding institutional authority over its application. They are the canonical interpreters, their status derives from mastery of the revelation chronology and abrogation taxonomy, and their institutional power is premised on this framework remaining legitimate. Exit for classical jurists is identity-locked: to leave this framework means abandoning their professional identity, their centuries of institutional authority, and the legitimacy of their jurisprudential schools. Directionality for classical jurists approaches 0.0 (full beneficiary). Contextual interpretation traditions and theological coherence seekers are targets: their interpretive space is systematically foreclosed by the classical framework, and exit is constrained—they can develop alternative readings but do so in the margins of Islamic jurisprudence, without institutional weight. Directionality for these seats approaches 1.0 (full target). Legal certainty framework and the Islamic legal tradition are non-agents but benefit from the coordination function naskh provides. The constraint's spatial scope is universal: naskh operates across all Islamic traditions and geographic regions where the classical schools hold authority. The time horizon for jurists is generational: institutional authority passes through scholarly lineages and institutional inheritance. For theological coherence seekers it is also generational, but they lack institutional power to transmit their alternative framework.
  *
  * MANDATROPHY ANALYSIS:
- *   The naskh principle was founded to solve the real problem of legal determination when texts appeared contradictory. That founding problem remains formally live (orthodox scholars attest it), but is substantially contested (contemporary Islamic scholars argue most apparent contradictions are contextually resolvable, not abrogations). The constraint persists despite this contest because institutional orthodoxy has become self-perpetuating: the schools maintain naskh because it protects their jurisprudential role, not because the founding problem uniquely requires it. This is a classic mandatrophy situation: the mandate (legal certainty) has not disappeared, but the method (naskh) has become questionable while the institutional incentive to defend it has grown. The tangled_rope classification captures this: genuine coordination (legal certainty) fused with institutional extraction (monopoly authority). The measurement trajectory showing rising extractiveness (0.38→0.68) and rising suppression_requirement (0.25→0.42) indicates that as alternatives (contextual, progressive-restriction readings) gain scholarly traction, orthodoxy must exert more institutional effort to suppress them—the extraction is increasingly active enforcement rather than natural outcome.
+ *   The founding problem (resolving Quranic textual contradictions) was genuinely alive in the first two centuries of Islamic jurisprudence (t=0-200). Naskh solved a real coordination problem: jurisprudence had no other framework for handling apparent contradiction. By the classical period (t=400+), however, the founding problem's status shifts. The classical naskh canon is now fixed and well-established; jurisprudence no longer struggles to resolve contradictions because the classical schools have already done this work. The question is no longer 'How do we resolve contradiction?' but 'Who has the authority to interpret the naskh canon?' This represents a classic mandatrophy situation: the mandate (solve textual contradiction via chronological ordering) has outlived its primary function (the problem is solved and encoded), but the constraint persists because it now serves secondary functions (institutional authority, legal certainty framework maintenance, exclusion of alternative hermeneutics). The theater ratio rising from 0.25 to 0.42 captures this: early on, naskh is functional problem-solving; later, it becomes increasingly performative (scholars debate which verses abrogate which, not because textual contradiction is live but because the debate itself maintains institutional authority). The measurement interval shows the lifecycle: early functional phase (t=0-200, theater low), transition to institutional phase (t=200-700, theater rising), mature institutional phase (t=700-1400, theater flattens at ~0.41-0.42, indicating stable theatrical maintenance). The contradiction between high extraction (0.68) and the suppressed founding problem suggests that classical jurists and the legal tradition benefit from maintaining naskh's authority precisely because it is no longer functionally necessary—the extraction it provides is no longer justified by solving the original coordination problem. This is the mandatrophy verdict: the constraint has outlived its mandate and now persists through institutional inertia and exclusion of alternatives.
  */
 
 /* ==========================================================================
@@ -189,82 +260,89 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    reading_kernel_contest,
-    'Is the classical-abrogation reading of the naskh kernel the correct interpretation of Quranic practice, or is contextual-harmonization or progressive-restriction a better fit to the text and early jurisprudential practice?',
-    'Detailed historical-critical analysis of (1) how the earliest Muslims (Companions and Successors) actually handled apparent contradictions; (2) whether explicit abrogation language appears in the Quran itself or only in later hadith; (3) whether alternative frameworks (harmonization, progressive moral development) explain the text as coherently. Comparative study of how each reading performs on a corpus of challenging verse-pairs.',
-    'If contextual-harmonization or progressive-restriction better capture Quranic intent and early practice, the classical-abrogation reading is a later institutional imposition, reclassifying it from mountain-like ''natural jurisprudential necessity'' to snare-like ''imposed constraint benefiting orthodoxy.'' Conversely, if classical-abrogation best explains the text, it approaches mountain status and the contextual readings are the victims of a real coordination function.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(reading_kernel_contest, empirical, 'Which of the three naskh readings best fits Quranic text and early Islamic jurisprudential practice.').
-
-omega_variable(
-    suppression_mechanism_ambiguity,
-    'Is the measured suppression (0.42) of alternative readings structural (institutional control of jurisprudential credentials and publication) or internalized (believers and scholars self-censor because they have come to regard naskh as obviously correct)?',
-    'Post-exit trajectory analysis: if scholars who leave orthodox institutions continue to avoid contextual readings even after exiting, suppression is partly internalized. Comparative study of heterodox Muslim communities that operate outside institutional jurisprudence to see whether contextual reading emerges naturally or requires sustained effort. Survey of believer and scholar attitudes to understand whether contextual readings feel intellectually impermissible or institutionally risky.',
-    'If suppression is mostly structural, removing institutional orthodoxy would enable contextual reading to flourish; if internalized, the constraint travels with believers into new institutional contexts. Higher internalization means effective suppression exceeds the measured 0.42 by some unknown factor, strengthening the snare classification.',
+    chronology_of_revelation_certainty,
+    'Is the chronological ordering of Quranic revelation historically and textually certain enough to serve as the basis for a legal supersession hierarchy?',
+    'Historical-critical analysis of the Quranic text, hadith literature, and early Islamic sources; contemporary Quranic chronology scholarship (Nöldeke, Blachère, Watt, contemporary Islamic and Western scholars) examining the evidentiary basis for verse-by-verse dating.',
+    'If chronology is substantially uncertain (significant verses or passages cannot be reliably dated relative to others), then the entire naskh principle loses epistemic grounding. Legal rulings based on ''later revelation'' would rest on historically speculative grounds. This would support contextual_harmonization or progressive_restriction readings, which do not depend on precise chronology.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Whether suppression of contextual readings is structural or internalized.').
+narrative_ontology:omega_variable(chronology_of_revelation_certainty, empirical, 'Whether the chronological ordering of Quranic revelation is certain enough to ground a legal supersession principle.').
 
 omega_variable(
-    coordination_vs_extraction_decoupling,
-    'How much of the measured extractiveness (0.68) is the irreducible cost of providing legal certainty (coordination), and how much is monopolistic rent extraction by orthodox schools?',
-    'Test whether the coordination benefit (legal clarity) requires the suppression of alternatives. Could a system provide legal clarity while holding multiple readings simultaneously valid (e.g., marking them as orthodox-approved variants rather than abrogated)? Examine whether orthodox schools defend naskh for its decision-reduction value or for its protection of institutional authority.',
-    'If clarity requires suppression, extraction is coordination cost; if clarity is achievable without suppression, the extraction is rent seeking. The tangled-rope classification assumes both are true; if separation is possible, the reading shifts toward pure snare.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(coordination_vs_extraction_decoupling, conceptual, 'Whether legal certainty requires the suppression of contextual readings or whether suppression is an independent extraction mechanism.').
-
-omega_variable(
-    authority_grounding_oscillation,
-    'Does the naskh principle''s authority rest on fixed textual grounds (the Quran and hadith genuinely support classical-abrogation reading) or on institutional self-perpetuation (schools maintain naskh because it protects their jurisprudential monopoly)?',
-    'Genealogical analysis of naskh''s emergence in 2nd-3rd century Islamic jurisprudence: did it arise to solve a real textual problem or to consolidate school authority? Study whether the principle is applied consistently (symmetrically across all schools and all verse-pairs) or selectively (schools modify its application when it threatens their doctrinal positions). Examine whether schools would defend naskh in a counterfactual world where alternative readings had equal institutional power.',
-    'If textually grounded, naskh approaches mountain status and its beneficiaries are legitimate coordinators; if institutionally grounded, it is a snare-like capture mechanism. The classical-abrogation reading claims textual grounding; this omega probes whether that claim withstands scrutiny.',
+    separation_of_coordination_and_extraction,
+    'Are the coordination function (resolving textual contradiction) and the extraction function (consolidating interpretive authority) structurally separable in the naskh principle?',
+    'Conceptual analysis: could a jurisprudential system adopt the problem-solving aspects of naskh (a decision procedure for handling textual conflict) without adopting its institutional gate-keeping? Could contextual or progressive readings provide the same legal certainty without the same authority consolidation?',
+    'If separable, the constraint is better classified as Snare (pure extraction of interpretive authority with a coordination cover story) than Tangled Rope (genuine coordination plus extraction). If inseparable, then high suppression and extraction are intrinsic to solving the founding coordination problem—the trade-off between certainty and flexibility is unavoidable.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(authority_grounding_oscillation, empirical, 'Whether naskh''s authority is textual or institutional.').
+narrative_ontology:omega_variable(separation_of_coordination_and_extraction, conceptual, 'Whether naskh''s coordination and extraction functions are structurally inseparable.').
+
+omega_variable(
+    textual_incoherence_reality,
+    'Does the Quranic text genuinely contain legal contradictions that require resolution, or are apparent contradictions artifacts of reading-strategy and can be harmonized without chronological supersession?',
+    'Detailed Quranic hermeneutics: contextual analysis of allegedly contradictory verses (e.g., verses on warfare, alcohol, inheritance); examination of whether contextual, conditional, or situational readings can harmonize them; assessment by contemporary Quranic scholars using literary and theological methods.',
+    'If apparent contradictions are harmonizable through context, the founding problem is partially misdiagnosed and naskh is an over-solution. Contextual_harmonization would then be the more parsimonious reading. If contradictions are real and irreducible, naskh''s problem-solving function is more robustly justified.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(textual_incoherence_reality, conceptual, 'Whether apparent Quranic textual contradictions are real or artifacts of reading-strategy.').
+
+omega_variable(
+    kernel_definition_contestation,
+    'Does the Quranic text itself settle whether naskh (chronological supersession) is the intended interpretive method, or is the method itself a human juristic invention imposed onto the text?',
+    'Textual examination: analysis of Quranic verses discussing abrogation (notably 2:106, 16:101) and their own interpretation in classical and contemporary scholarship; assessment of whether these verses endorse chronological supersession or allow alternative readings.',
+    'If the text itself is ambiguous or does not clearly endorse naskh, then the principle is a human-authored reading choice, not a textual fact—which strengthens the contextual_harmonization and progressive_restriction readings as equally defensible. If the text clearly endorses chronological supersession, classical_abrogation is more firmly grounded.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_definition_contestation, conceptual, 'Whether the Quranic text itself settles the naskh question or leaves it interpretively open.').
+
+omega_variable(
+    institutional_identity_lock_mechanism,
+    'To what extent is the perpetuation of naskh driven by institutional path-dependence and scholarly identity-fusion, versus by genuine problem-solving necessity?',
+    'Institutional and sociological analysis: historical examination of how naskh became canonical (when exactly was it institutionalized across all four schools), how juristic careers became dependent on mastery of the naskh taxonomy, how alternative readings were marginalized over time, and what would happen to jurists'' authority if naskh were abandoned.',
+    'If naskh persists primarily through institutional identity-lock (scholars cannot leave without abandoning their status, schools cannot revise without institutional collapse), then it meets the Piton profile (degraded function maintained through institutional inertia and theater) more than Tangled Rope. High identity-lock supports the theater-ratio interpretation: the constraint is increasingly performative rather than functionally necessary.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(institutional_identity_lock_mechanism, empirical, 'Whether naskh persists through institutional identity-lock more than through genuine problem-solving necessity.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(naskh_principle__classical_abrogation, 0, 18).
+narrative_ontology:interval(naskh_principle__classical_abrogation, 0, 1400).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(nask_tr_t0, naskh_principle__classical_abrogation, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(nask_tr_t3, naskh_principle__classical_abrogation, theater_ratio, 3, 0.1).
-narrative_ontology:measurement(nask_tr_t6, naskh_principle__classical_abrogation, theater_ratio, 6, 0.12).
-narrative_ontology:measurement(nask_tr_t9, naskh_principle__classical_abrogation, theater_ratio, 9, 0.14).
-narrative_ontology:measurement(nask_tr_t12, naskh_principle__classical_abrogation, theater_ratio, 12, 0.16).
-narrative_ontology:measurement(nask_tr_t15, naskh_principle__classical_abrogation, theater_ratio, 15, 0.18).
-narrative_ontology:measurement(nask_tr_t18, naskh_principle__classical_abrogation, theater_ratio, 18, 0.19).
+narrative_ontology:measurement(nask_tr_t0, naskh_principle__classical_abrogation, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(nask_tr_t200, naskh_principle__classical_abrogation, theater_ratio, 200, 0.32).
+narrative_ontology:measurement(nask_tr_t400, naskh_principle__classical_abrogation, theater_ratio, 400, 0.38).
+narrative_ontology:measurement(nask_tr_t700, naskh_principle__classical_abrogation, theater_ratio, 700, 0.4).
+narrative_ontology:measurement(nask_tr_t1000, naskh_principle__classical_abrogation, theater_ratio, 1000, 0.41).
+narrative_ontology:measurement(nask_tr_t1400, naskh_principle__classical_abrogation, theater_ratio, 1400, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(nask_be_t0, naskh_principle__classical_abrogation, base_extractiveness, 0, 0.38).
-narrative_ontology:measurement(nask_be_t3, naskh_principle__classical_abrogation, base_extractiveness, 3, 0.45).
-narrative_ontology:measurement(nask_be_t6, naskh_principle__classical_abrogation, base_extractiveness, 6, 0.52).
-narrative_ontology:measurement(nask_be_t9, naskh_principle__classical_abrogation, base_extractiveness, 9, 0.58).
-narrative_ontology:measurement(nask_be_t12, naskh_principle__classical_abrogation, base_extractiveness, 12, 0.63).
-narrative_ontology:measurement(nask_be_t15, naskh_principle__classical_abrogation, base_extractiveness, 15, 0.66).
-narrative_ontology:measurement(nask_be_t18, naskh_principle__classical_abrogation, base_extractiveness, 18, 0.68).
+narrative_ontology:measurement(nask_be_t0, naskh_principle__classical_abrogation, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(nask_be_t200, naskh_principle__classical_abrogation, base_extractiveness, 200, 0.52).
+narrative_ontology:measurement(nask_be_t400, naskh_principle__classical_abrogation, base_extractiveness, 400, 0.61).
+narrative_ontology:measurement(nask_be_t700, naskh_principle__classical_abrogation, base_extractiveness, 700, 0.65).
+narrative_ontology:measurement(nask_be_t1000, naskh_principle__classical_abrogation, base_extractiveness, 1000, 0.67).
+narrative_ontology:measurement(nask_be_t1400, naskh_principle__classical_abrogation, base_extractiveness, 1400, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(nask_su_t0, naskh_principle__classical_abrogation, suppression_requirement, 0, 0.25).
-narrative_ontology:measurement(nask_su_t3, naskh_principle__classical_abrogation, suppression_requirement, 3, 0.29).
-narrative_ontology:measurement(nask_su_t6, naskh_principle__classical_abrogation, suppression_requirement, 6, 0.33).
-narrative_ontology:measurement(nask_su_t9, naskh_principle__classical_abrogation, suppression_requirement, 9, 0.36).
-narrative_ontology:measurement(nask_su_t12, naskh_principle__classical_abrogation, suppression_requirement, 12, 0.39).
-narrative_ontology:measurement(nask_su_t15, naskh_principle__classical_abrogation, suppression_requirement, 15, 0.41).
-narrative_ontology:measurement(nask_su_t18, naskh_principle__classical_abrogation, suppression_requirement, 18, 0.42).
+narrative_ontology:measurement(nask_su_t0, naskh_principle__classical_abrogation, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement(nask_su_t200, naskh_principle__classical_abrogation, suppression_requirement, 200, 0.58).
+narrative_ontology:measurement(nask_su_t400, naskh_principle__classical_abrogation, suppression_requirement, 400, 0.64).
+narrative_ontology:measurement(nask_su_t700, naskh_principle__classical_abrogation, suppression_requirement, 700, 0.68).
+narrative_ontology:measurement(nask_su_t1000, naskh_principle__classical_abrogation, suppression_requirement, 1000, 0.7).
+narrative_ontology:measurement(nask_su_t1400, naskh_principle__classical_abrogation, suppression_requirement, 1400, 0.71).
 
 
 /* ==========================================================================
@@ -273,18 +351,17 @@ narrative_ontology:measurement(nask_su_t18, naskh_principle__classical_abrogatio
 
 narrative_ontology:coordination_type(naskh_principle__classical_abrogation, enforcement_mechanism).
 narrative_ontology:boltzmann_floor_override(naskh_principle__classical_abrogation, 0.18).
-narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, quranic_interpretation_authority).
-narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, islamic_legal_school_gatekeeping).
-narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, theological_textual_coherence_expectation).
+narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, naskh_principle__contextual_harmonization).
+narrative_ontology:affects_constraint(naskh_principle__classical_abrogation, naskh_principle__progressive_restriction).
 
 % DUAL FORMULATION NOTE:
-% The naskh principle is a contested kernel with three structurally distinct readings. This file instantiates classical-abrogation (fixed legal rulings, chronological supersession, benefits legal certainty, suppresses contextual approaches). Sibling readings contextual-harmonization and progressive-restriction are separate constraint stories with different ε values and victim/beneficiary structures. All three readings coexist as live positions in contemporary Islamic scholarship; no single reading currently dominates all institutional contexts, though classical-abrogation remains orthodoxy-privileged. The three stories are linked via network.affects_constraints to form a constraint family documenting how one kernel (the need to resolve apparent contradictions) generates three competing institutional arrangements.
+% This constraint is part of the naskh_principle kernel family with three structurally distinct readings. The classical_abrogation reading (this story) treats naskh as chronological supersession and exhibits high extraction despite genuine coordination benefits. The contextual_harmonization reading (separate constraint story) asserts all verses remain valid within context and produces a lower-extraction structure. The progressive_restriction reading (separate constraint story) reads the movement as pedagogical rather than invalidating and produces yet different victim/beneficiary distribution. The three stories are linked by network.affects_constraints to enable comparative analysis of how different readings of the same kernel produce different constraint classifications. Each reading has its own ε (classical_abrogation=0.68, contextual_harmonization lower, progressive_restriction intermediate), its own beneficiary/victim structure, and its own stakeholder situational descriptions.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(naskh_principle__classical_abrogation, institutional, 0.2).
+constraint_indexing:directionality_override(naskh_principle__classical_abrogation, moderate, 0.78).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

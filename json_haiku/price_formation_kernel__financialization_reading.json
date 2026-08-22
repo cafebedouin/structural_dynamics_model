@@ -4,218 +4,461 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_price_formation_kernel__financialization_reading",
-    "measurement_id_prefix": "pfkfr",
-    "story_uid": "c699b5d5-82bb-4175-a19e-1ef34ad1523e"
+    "story_uid": "34470fb6-1feb-45e5-b5f2-29be1830e20a",
+    "created_at": "2026-06-12T14:33:22Z"
   },
   "base_properties": {
     "extractiveness": 0.78,
     "suppression": 0.71,
-    "theater_ratio": 0.38,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.59,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Housing Price Formation via Credit Expansion and Asset Financialization",
-    "topic_domain": "political_economy/housing_markets/finance",
+    "human_readable": "Financialized Price Formation in Housing Markets",
+    "topic_domain": "political_economy/housing/financial_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "mortgage_lenders",
-      "financial_intermediaries",
-      "property_speculators",
-      "existing_asset_holders"
+      "financial_sector",
+      "real_estate_investors"
     ],
     "victims": [
-      "first_time_homebuyers",
-      "renters_priced_out",
-      "debt_service_constrained_households",
-      "crash_loss_absorbers"
+      "primary_residence_households",
+      "non_landowner_wage_earners"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "financial_sector",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Originates mortgages, securitizes debt instruments, and profits from origination fees, servicing spreads, and asset-price appreciation. Sets lending standards that determine who can borrow and at what leverage. Controls the volume of credit extended into housing markets and thus the amount of money chasing assets. Benefits directly from rising prices (AUM expansion, securitization volume) and from volatility (refinancing, mark-to-market opportunities). Can exit to other asset classes or geographies instantly."
+    },
+    {
+      "name": "real_estate_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Purchase housing for appreciation and rental income, leveraging credit expansion to increase holdings. Benefit from rising asset prices and from credit availability that enables purchase at leverage. Can hold through downturns or exit to other markets. Compete directly with owner-occupants for inventory but have superior financing access and time-horizon flexibility."
+    },
+    {
+      "name": "primary_residence_households",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Need housing for shelter and family stability. Enter markets denominated in credit-expanded prices that decouple from their incomes. Forced to borrow at maximum leverage to participate; debt service consumes 40-50% of income for many. Carry crash risk: if credit contracts or employment falters, negative equity traps them. Their need for shelter (identity-locked exit) means they cannot simply leave the market. Incidental benefit from living in their home, but the extraction mechanism is the leverage required to enter."
+    },
+    {
+      "name": "non_landowner_wage_earners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cannot afford ownership at credit-expanded prices; pay rising rents as landlords leverage credit to acquire inventory and extract rental income. Exit is constrained by geography (jobs are location-specific) and income (cannot save down-payment while paying rising rents). Bear the full crash risk of housing-as-asset without any ownership claim: when speculation contracts, rents may fall, but they also lose housing security if landlords default or liquidate."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Set lending standards, capital requirements, and macroprudential policy that shape credit availability. Officially charged with financial stability and prudential oversight. Observe the constraint structure but are partially captured by financial-sector expertise dependency and by the belief that price stability equals financial stability (housing-price declines are treated as systemic risk, so policymakers suppress them even when they reflect unwinding of leverage). Their official mandate conflicts with the extraction structure."
+    },
+    {
+      "name": "construction_sector",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Builds housing in response to credit-driven demand signals. Benefits from high sales volumes and prices in strong credit environments. During expansions they enjoy capital inflows and high margins; during contractions they face demand collapse and margin compression. Trapped in the cycle: if they don't build during expansions they lose market share, but building into a credit-driven bubble means absorbing inventory losses when it contracts. Their supply-side position is intermediate: they profit from expansion but cannot steer credit availability."
+    },
+    {
+      "name": "political_coalitions",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Maintain political support by opposing policies that would lower housing prices (which homeowners perceive as personal wealth destruction). Captured by this constraint in the sense that any politician who proposes credit contraction or leverage reduction faces organized homeowner opposition and media framing as anti-growth. They have authority to change the arrangement but constrained exit from the political economy that sustains them."
+    },
+    {
+      "name": "households_excluded_from_credit",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Structural inability to access credit (poor credit history, insufficient income documentation, immigration status, or racial redlining legacy). Completely priced out and cannot participate in the coordination function (ownership) or benefit from leverage. If they could organize politically they would advocate for alternatives (public housing, strict affordability controls, or credit democratization), but are not in the conversation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allocates housing and capital across time: credit extension enables current consumption of future income, allowing households to occupy housing before fully accumulating its cost. Matches savers' desire to lend with borrowers' desire to consume. Solves the inter-temporal coordination problem of matching consumption timing to income timing.",
+    "transfer_function": "Moves purchasing power from future-income earners (households) to present-lenders (financial sector and investors) via interest payments, origination fees, and asset-price capture. Also moves shelter consumption from non-leveraged households to leveraged households and investors. The volume and leverage of the transfer is set by the financial sector's lending decisions, not by the underlying cost of shelter provision.",
+    "absent_voices": "Households excluded from credit markets, wage earners unable to participate in ownership, future generations bearing the debt service burden, construction workers whose wages are squeezed as developer margins compress in contraction phases. These parties would demand alternatives (strict lending limits, public housing, or land-value taxation) but are not at the table where credit policy is set. Regulatory authorities theoretically speak for financial stability but are structurally captured by the same credit-expansion logic they are meant to police.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If credit-driven price formation disappeared overnight, housing prices would fall toward incomes and rents, wiping out leveraged investor positions and unsecured gains. Financial institutions would face massive losses on mortgage portfolios. The construction sector would experience demand collapse. Homeowner political coalitions would mobilize against any policy that induced this outcome. The entire allocation of who lives where would reorganize around affordability relative to wages rather than debt-service capacity. The macroeconomic effects would be severe.",
+    "founding_problem": "Housing markets in the mid-20th century faced periodic supply constraints and allocation inefficiency; credit expansion was adopted as a mechanism to smooth demand, enable broader home ownership, and stimulate construction and employment. The founding problem was legitimate: how to allocate scarce housing and enable income-smoothing via borrowing.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Supply-side economists, construction economists, and housing-policy researchers outside the financial sector attest the founding problem (supply scarcity, allocation difficulty) is substantially solved in most developed markets — excess capacity exists, prices are decoupled from replacement costs, and credit availability (not scarcity) is now the binding constraint on prices. Financial-sector analysts continue to cite lending-enabled demand as growth stimulus, but this is defended as macroeconomic stimulus, not as a solution to the founding housing-allocation problem. Central banks' post-2008 adoption of asset-price stabilization as a financial-stability goal (preventing price declines) is corroborating evidence that the arrangement has shifted from supply-smoothing mechanism to leverage-amplification engine."
+  },
   "interval": {
-    "start": 0,
-    "end": 30
+    "start": 1980,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.55
+      "time_point": 1980,
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.62
+      "time_point": 1995,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.68
+      "time_point": 2005,
+      "value": 0.71
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.73
+      "time_point": 2008,
+      "value": 0.74
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 2015,
       "value": 0.76
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.77
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 2024,
       "value": 0.78
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.27
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.32
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
+      "metric": "suppression_requirement",
+      "time_point": 1980,
       "value": 0.35
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.37
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.38
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 2005,
       "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.64
+      "time_point": 2008,
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 2015,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
+      "time_point": 2024,
       "value": 0.71
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.71
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42
     }
   ],
+  "coercion_grid": {
+    "t0": 1980,
+    "tn": 2024,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.74
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.28
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.73
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1980,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1980,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1980,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1980,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.35
+      }
+    ]
+  },
   "commentary": {
-    "narrative_context": "Housing price formation under the financialization reading instantiates a causal chain in which credit availability, asset-price feedback loops, and speculative demand drive prices upward independently of shelter scarcity or household income. The financial sector—lenders, securitizers, derivatives traders—benefits from the volume and volatility enabled by leverage; households bear debt-service burden, crash risk, and equity loss. The founding coordination problem (enabling credit-constrained families to access shelter) is solved; persistence of the mechanism extracts wealth from future-debt-service payers and crash-loss absorbers toward financial intermediaries and existing asset holders. This reading coexists alongside three sibling readings (naturalist: price reflects preference+scarcity; georgist: price separates unearned land rent from earned improvement value; institutional: price is constructed by zoning, tax policy, and intermediary platforms). Each reading instantiates a different constraint; this story describes the financialization reading's specific ε-invariant structure.",
+    "narrative_context": "Housing-market price formation has progressively decoupled from shelter-provision costs and wage-income fundamentals. This reading frames that decoupling as driven by financial-sector credit expansion, leverage feedback loops, and the reframing of housing from shelter to financial asset. The financial sector originates mortgages, sets lending standards, and profits from origination fees, servicing spreads, and asset-price appreciation. Primary residence households enter markets at maximum leverage to participate; non-owner-occupant investors leverage credit to acquire inventory. The constraint's persistence depends on continued credit expansion to sustain prices that would otherwise collapse toward income-relative affordability. Rising prices are treated as evidence of market health (not extraction), and price declines are treated as systemic risk (triggering regulatory intervention to suppress them). The founding problem — supply scarcity and allocation inefficiency — is long solved, but the apparatus persists as a leverage-amplification engine extracting from future-income borrowers to present-lenders.",
     "key_agents": [
-      "mortgage_lenders: Institutional agenda-setter (powerful, arbitrage exit) — sets lending standards that expand credit",
-      "financial_intermediaries: Institutional beneficiary (powerful, arbitrage exit) — extract fees and spreads throughout credit cycle",
-      "property_speculators: Powerful beneficiary (mobile exit) — profit from leverage-amplified capital gains",
-      "existing_asset_holders: Organized beneficiary (mobile exit) — benefit passively from wealth effect",
-      "first_time_homebuyers: Moderate payer (constrained exit) — must borrow at lender-set rates to enter market",
-      "renters_priced_out: Powerless victim (trapped) — excluded from asset ownership, no equity accumulation",
-      "debt_service_constrained_households: Moderate victim (identity_locked) — trapped by mortgage commitment and location identity",
-      "crash_loss_absorbers: Powerless victim (trapped) — absorb losses when credit cycles reverse",
-      "central_banks_and_regulators: Institutional agenda-setter + observer (analytical exit) — set rates and standards but face political pressure and internal conflicts",
-      "policy_advocates_for_restraint: Moderate excluded (constrained exit) — argue for tighter standards but marginalized in policy discourse"
+      "financial_sector: originator, standard-setter, arbiter of leverage availability — institutional power, arbitrage exit",
+      "real_estate_investors: leverage-enabled asset accumulators — powerful, mobile exit",
+      "primary_residence_households: identity-locked shelter-need, maximum leverage to participate — powerless, trapped by housing necessity",
+      "non_landowner_wage_earners: completely priced out, rent-bearing, constrained exit by geography and income",
+      "regulatory_authorities: mandated financial stability oversight, structurally captured by leverage-stability equivalence belief",
+      "political coalitions: homeowner-majority opposition to any policy reducing prices — constrained by electoral dependence"
     ],
-    "logic_rationale": "Extractiveness is high (0.78 at interval end) and rising over the measurement series because: (1) each credit expansion cycle transfers wealth from debt-service payers to financial intermediaries and speculators; (2) the mechanism persists despite crashes because institutional incentives reward origination volume over risk management; (3) price decoupling from income/shelter-value is the signature that coordination has given way to extraction. Suppression is elevated (0.71) because: (1) tighter lending standards or rate increases face political resistance from beneficiaries; (2) policy advocates for restraint are structurally excluded from agenda-setting; (3) the beneficiary coalition (lenders + speculators + existing holders) is powerful enough to prevent regulation that would moderate extraction. Theater ratio rises from 0.18 to 0.38 because: (1) the coordination rhetoric ('expanding access', 'serving underserved borrowers') persists as the official justification even as credit expansion becomes pure asset-inflation; (2) post-crash periods see regulatory theater (stricter standards announced, then quietly loosened) without structural change; (3) lenders present debt-driven price growth as 'market fundamentals' and 'rational expectations' rather than their own extraction mechanism. Accessibility collapse is moderate (0.62) because alternatives exist in principle (public housing, cooperative ownership, rental markets) but are suppressed by policy (mortgage-interest deductions, capital-gains preferences, zoning) that sustains the financialized model. Resistance is moderate-low (0.59) because: (1) existing asset holders acquiesce in price growth (wealth effect); (2) first-time buyers are individually powerless to resist lender rates; (3) collective resistance emerges only after crashes, when the constraint's persistence becomes undeniable, and is then absorbed by regulatory theater.",
-    "perspectival_gap": "The beneficiary seats (lenders, speculators, existing holders) experience this as efficient price discovery and appropriate risk pricing—they see rising rates as market-driven compensation for leverage risk, not extraction. The payer seats experience the same structure as coercive: they cannot exit without losing housing or bearing massive transaction costs. Regulators are internally divided: their forecasting models acknowledge price-inflation risk from low rates, but their political constraints and pre-crash institutional incentives (Fed mandate for employment/growth) override tighter policy. The excluded voices (macroprudential advocates, housing researchers) see the constraint as extractive and unsustainable; the beneficiary seats dismiss them as ideological. The engine computes directionality from power + exit + beneficiary/victim facts: beneficiaries (institutional power, arbitrage exit) get low d; victims (powerless/moderate power, constrained/trapped/identity_locked exit) get high d. This per-seat computation reveals why the constraint persists despite periodic crashes: the beneficiary seats have political and economic power to reconstruct the mechanism after each crisis.",
-    "directionality_logic": "Mortgage_lenders are full beneficiaries (d near 0.0): they set the rules (agenda_setter role), have institutional power and arbitrage exit, and collect origination fees + servicing spreads without bearing default risk. Financial_intermediaries are beneficiaries (d ~0.1): they profit from every transaction, securitization, and derivative without direct asset exposure. Property_speculators are beneficiaries (d ~0.15): they deploy leverage to amplify gains and can exit at peak; their time horizon and mobile exit mean they bear minimal long-term cycle risk. Existing_asset_holders are beneficiaries (d ~0.2): they benefit passively from wealth effect and have options to downsize/relocate if needed. First_time_homebuyers are targets (d ~0.75): they must borrow at lender-determined rates, carry the full mortgage duration, and absorb downside risk. Renters_priced_out are targets (d ~0.85): they are excluded from the asset-appreciation mechanism entirely and have trapped exit (geographic immobility). Debt_service_constrained_households are targets (d ~0.8): they are identity_locked (homeowner self-concept, community ties) and cannot exit the debt commitment without accepting massive losses. Crash_loss_absorbers are targets (d ~0.9): they absorb asymmetric downside when credit cycles reverse. Central_banks_and_regulators are mixed (d ~0.5): they set policy (agenda_setter role) but face political constraints that prevent tighter enforcement; they are both administrators and partially captured by beneficiary-seat pressure. Policy_advocates_for_restraint are observers (d ~0.5, analytical): they lack institutional power to set the constraint directly.",
-    "mandatrophy_analysis": "The founding problem is dead (founding_problem_status = dead) but the constraint persists with high extractiveness. This indicates mandatrophy: the mechanism was justified as solving credit access for constrained households, but modern data show: (1) credit is abundant for qualified borrowers in most markets; (2) nominal prices have decoupled from real shelter scarcity (supply is less tight than price growth implies); (3) debt-service burdens have risen relative to income, compressing household consumption and savings. The classification as Tangled Rope (not pure Snare) is correct because genuine coordination functions remain at the mechanism's core: payment smoothing across time, collateral-based credit access, and market liquidity for property transactions. However, the coordination function is solved by the baseline lending mechanism (conforming mortgages, stable rates); extraction rides on top via credit expansion beyond that baseline. The mandatrophy dynamic explains policy persistence despite crashes: the beneficiary coalition (lenders, speculators, existing holders) is sufficiently powerful to reconstruct loose-lending conditions after every crash before the foundational problem could be re-examined. The theater_ratio rise (0.18 → 0.38) documents this: regulatory cycles oscillate between post-crash tightening (performative crackdown on standards) and pre-cycle loosening (return to 'normal' practices) without addressing the structural extraction mechanism.",
-    "kernel_context": "This constraint is the financialization_reading of the price_formation_kernel. The kernel is contested across four readings: (1) naturalist_reading: price reflects preference + scarcity in a market-clearing equilibrium (no constraint, or a mountain); (2) georgist_reading: price separates unearned land rent (location-based, location-specific, inelastic supply) from earned improvement value (labor/capital-intensive, movable factors); (3) institutional_reading: price is constructed by zoning, tax policy (mortgage deductions, capital-gains preferences), lending standards, and intermediary platforms; (4) financialization_reading (this constraint): price formation is driven by credit availability, asset-price feedback loops, and speculative demand. The financialization reading asserts that the primary causal driver of price growth is credit expansion, not scarcity, not institutional rules (though those interact), not pure asset preference. The core distinguishing premise of this reading is that leverage availability and credit cycles are the dominant mechanism; if credit tightened dramatically, prices would compress regardless of scarcity or zoning. The other readings locate the primary driver elsewhere: naturalist in preference+scarcity, georgist in land-rent dynamics, institutional in policy choices. This reading coexists alongside the others (each is held by different professional communities and policy coalitions) and influences them (loose credit changes the empirical leverage available to institutional and georgist analyses)."
+    "logic_rationale": "Extractiveness is high (0.78 at interval end) and rising over 44 years, from 0.32 at baseline. This rise reflects the increasing decoupling of price from shelter-provision cost and wage-income capacity. The constraint extracts from households forced to enter at maximum leverage (debt-service burden) and from non-landowners unable to participate. Suppression is high (0.71) because the constraint's persistence requires active enforcement: regulatory suppression of price-correction mechanisms (market discipline, foreclosure, debt forgiveness), political suppression of affordability-focused alternatives (public housing, leverage limits, land-value taxation), and cultural suppression of the idea that housing should be primarily shelter rather than financial asset. Theater is moderate-high (0.42), reflecting that 42% of the enforcement infrastructure is dedicated to legitimation rather than functional operation: macroprudential framing as 'systemic risk management,' housing-as-ownership as 'personal wealth-building,' and credit expansion as 'growth stimulus' rather than leverage amplification. The coercion grid shows systematic amplification at all four levels from 1980 to 2024: accessibility collapse (how far alternatives are closed), stakes inflation (how high the cost of noncompliance), and suppression (active pressure) all rose, while resistance (ability to mount effective opposition) fell. At the individual level, a household in 1980 had more neighborhood options, lower debt-to-income requirements, and more cultural permission to rent; by 2024 the opposite holds on all three.",
+    "perspectival_gap": "From the financial sector's position, the constraint is genuine coordination: they provide essential lending services, assume origination risk, and deserve compensation via fees and appreciation. From the household payer position, the same structure is asymmetric extraction: the financial sector sets leverage availability and thus price ceilings, collects fees and spreads that have no relationship to marginal provision cost, and can exit into other asset classes if housing crashes. From the regulatory authority position, the constraint is a necessary stability mechanism — price declines are treated as failures of the system. From the non-landowner wage-earner position (excluded from access), the constraint is pure extraction they bear through rising rents without any ownership benefit. The engine computes these divergences from the structural data: the financial sector's arbitrage exit vs. households' identity-locked exit produces different d values; the different power atoms (institutional vs. powerless) produce different directionality amplifications; the political capture of regulatory authorities (constrained by leverage-stability ideology) produces different seat readings.",
+    "directionality_logic": "Financial sector: d ≈ 0.05 (full beneficiary). Originates mortgages, sets standards, profits from leverage volume and asset-price increases. Can exit to other asset classes instantly. No identity lock, maximum power, arbitrage-grade exit options. Effective extraction into this agent is deeply damped (or inverted into subsidy). Real estate investors: d ≈ 0.15 (near beneficiary). Leverage-enabled buyers with appreciation-harvesting strategies. Powerful, mobile across geographies, exit via liquidation anytime. Extract from the rising-price differential; the constraint subsidizes them. Primary residence households: d ≈ 0.92 (nearly full target). Identity-locked shelter need drives them to maximum leverage. Constrained exit (geographic and income dependence). Power atom powerless. Debt service consumes 40-50% of income. The constraint extracts via interest payments, origination fees, and crash-risk bearing. Non-landowner wage earners: d ≈ 0.85 (high target). Priced out of ownership, rent-bearing, constrained exit by location-specificity and income ceiling. Share crash risk without ownership claim. Extraction via rising rents. Regulatory authorities: d ≈ 0.45 (near symmetric, toward target). Institutionally powerful and analytic-horizon-lengthy, but structurally captured by leverage-stability equivalence. Their mandate (financial stability) and the extraction structure (leverage amplification) are coupled: price declines destabilize the system, so they are incentivized to suppress correction mechanisms. This is not a full-target position but not symmetric either. The capture is structural, not intentional; they maintain the constraint because they define system health as leverage sustainability.",
+    "mandatrophy_analysis": "The constraint exhibits mandatrophy: the founding mandate (solve supply-scarce allocation via credit smoothing) is accomplished and obsolete. Housing supply exceeds demand in most developed markets; zoning and land scarcity are now the binding constraints, not credit availability. The apparatus persists not because it solves an ongoing problem but because financial institutions profit from leverage volume and price inflation, because political coalitions treat price decline as personal wealth loss, and because regulatory authorities have adopted asset-price stability as a financial-stability proxy. The dying mandate is obscured by constant rhetoric celebrating homeownership and mortgage availability — theater. The lived mandate is leverage amplification and extraction. The 2008 financial crisis temporarily exposed the mandatrophy (housing prices collapsed, leverage unraveled, the profit stream dried up), but post-2008 regulatory policy (quantitative easing, macroprudential floor-setting, institutional rescue packages) explicitly reconstructed the apparatus rather than allowing correction. This is mandatrophy denial and institutional inertia: the ruling apparatus accepts that the original problem is gone, but maintains the machinery because losing it would trigger political and financial destabilization. The measurement series (extractiveness rising from 0.32 to 0.78 over 44 years, theater rising from 0.12 to 0.42) captures this progression.",
+    "kernel_context": "This constraint is the financialization reading of the price_formation_kernel — a contested commitment about how housing prices are determined and what should determine them. The kernel itself is the claim that 'housing prices are formed by [mechanism].' Four readings instantiate different mechanisms: naturalist_reading treats prices as natural equilibrium reflecting scarcity and preference; georgist_reading separates land rent from improvement value; institutional_reading emphasizes zoning, lending standards, and platforms; financialization_reading (this one) centers credit expansion and leverage feedback. These readings coexist as live positions held by different institutional and intellectual coalitions. No reading forecloses the others logically — they are different framings of overlapping phenomena, each with partial warrant. The financialization reading is sustained by financial-sector research, by housing-finance scholars, and by post-2008 macroeconomic policy analysis showing credit-expansion effects. The naturalist reading is sustained by neoclassical economics traditions. The georgist reading is sustained by a smaller intellectual lineage and by certain policy communities. The institutional reading is sustained by planning, urban studies, and regulatory-economy scholars. They coexist because the phenomena (price determination) are sufficiently complex that each reading captures genuine mechanisms while leaving others unaddressed."
   },
   "omegas": [
     {
-      "id": "credit_causality_vs_correlation",
-      "question": "Is credit expansion the primary causal driver of housing price growth, or is credit expansion an endogenous response to rising demand (causality reversed)?",
-      "resolution_mechanism": "Natural experiments from credit-supply shocks (changes in banking regulation, mortgage securitization availability, central bank policy) that affected lending without corresponding demand shifts. Instrumental-variables econometrics isolating credit-supply changes from demand-driven credit growth. International cross-country comparisons of credit cycles vs. price cycles.",
-      "impact": "If credit causality is established (expansions cause price rises more than demand does), the financialization reading's extraction mechanism is confirmed. If credit is primarily demand-driven (lenders respond to rising demand), the constraint becomes more institutional/zoning-driven (scarcity drives demand, which drives credit). Strong credit causality supports regulatory interventions (tighter standards, higher rates); weak causality favors supply-side solutions (zoning reform, construction subsidy).",
-      "confidence": "medium",
+      "id": "credit_expansion_necessity",
+      "question": "Is rising credit availability structurally necessary to maintain price stability at current levels, or is it a historical contingency that policymakers have mistaken for necessity?",
+      "resolution_mechanism": "Counterfactual: what would price trajectories be under constant credit availability? Empirical: examine periods of credit contraction (2008-2012 Eurozone, 2020 China) to observe price behavior without stimulus replacement. Theoretical: compare replacement-cost pricing in competitive supply regimes vs. credit-driven pricing in constrained supply.",
+      "impact": "If credit expansion is contingent (not necessary), the constraint is an artifact of past policy choices that can be reversed; if necessary, the constraint is a structural feature of financialized housing and reversal would require systemic economic restructuring. The type classification depends on this: if contingent, more Snare-like (policy choice imposing extraction); if necessary, more complex (coordination problem shifted to leverage adequacy).",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether credit expansion is the primary causal driver or an endogenous response to demand."
+      "description": "Whether credit expansion is structurally necessary for price stability or a historical policy artifact."
     },
     {
-      "id": "feedback_loop_reversibility",
-      "question": "Once credit-driven prices inflate asset values and collateral bases, is the feedback loop reversible without major losses? Can policy tighten without triggering cascade defaults?",
-      "resolution_mechanism": "Stress-test modeling of rate increases and lending-standard tightening under current leverage conditions. Historical analysis of de-leveraging episodes (deleveraging from 2008-2012, comparison with other post-bubble periods). Household debt-service-to-income ratio tracking and household-balance-sheet fragility assessment.",
-      "impact": "If feedback loops are highly reversible (households and lenders can adjust smoothly to tighter credit), the constraint is classified as more rope-like (coordination with temporary extraction). If reversal is catastrophic (tightening triggers cascading defaults, systemic risk), the constraint is more snare-like (extraction sustained by systemic risk to the financial system if unwound). High irreversibility supports gradual policy adjustment (very slow rate increases, smooth glide path) and may indicate the constraint is locked in by systemic-risk concerns.",
+      "id": "beneficiary_vs_coordinator_collapse",
+      "question": "Do financial institutions benefit from credit expansion primarily as originators and servicers (paid for a real function) or primarily as speculators and leverage-profit-takers (extraction)?",
+      "resolution_mechanism": "Forensic comparison: origination fees + servicing spreads vs. proprietary trading profits and asset-appreciation gains in financial-institution portfolios. Separate the value they create (liquidity matching, credit underwriting) from the value they extract (leverage-amplification gains). Examine financial-sector business model evolution: did originate-to-distribute models isolate lenders from default risk, removing skin-in-the-game and incentivizing leverage over prudence?",
+      "impact": "If primarily coordinators being compensated, the Tangled Rope read is correct: coordination function + asymmetric extraction of compensation. If primarily speculators, the constraint is closer to Snare with a coordination cover story. The measurement hinges on counterfactual: what would financial-sector profits be under a non-leverage-amplifying lending regime?",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the credit-price feedback loop can be reversed without triggering cascading defaults."
+      "description": "Whether financial institutions extract primarily by performing coordination functions or by leveraging imbalances."
     },
     {
-      "id": "beneficiary_capture_of_regulatory_authority",
-      "question": "Is regulatory moderation of credit expansion prevented by direct capture (lenders lobby, fund candidates, staff regulators) or by ideological capture (regulators believe low rates and credit expansion are necessary for growth/employment)?",
-      "resolution_mechanism": "Revolving-door analysis: track career paths of regulatory staff before/after government service, employment at lenders. Campaign finance data: lending-sector donations to politicians overseeing lending policy. Rhetorical analysis: statements by Federal Reserve officials and banking regulators in public testimony and internal memos (Freedom of Information Act requests) about credit expansion and systemic risk.",
-      "impact": "If direct capture dominates, policy solutions focus on structural separation (independent agencies, term limits, conflicts-of-interest enforcement). If ideological capture dominates (regulators truly believe loose credit is necessary), solutions require changing the macroeconomic consensus (different employment targets, different inflation tolerance, different growth assumptions). Mixed capture suggests both institutional and epistemic reform is needed.",
+      "id": "internalized_vs_structural_suppression",
+      "question": "Is the measured suppression (0.71) primarily structural (legal, financial, zoning barriers to alternatives) or primarily internalized (households' identity fusion, cultural acceptance of leverage, psychological defense of their own choices)?",
+      "resolution_mechanism": "Post-exit trajectory: if households that sell at negative equity or leave homeownership rapidly adopt alternative housing narratives (renting is fine, housing-as-asset is toxic), suppression is predominantly structural. If they persist in defending homeownership and criticizing alternatives despite personal loss, suppression is internalized. Also: does access to credit-escape alternatives (migration to cheap countries, multigenerational housing, deliberate non-ownership) show adoption patterns consistent with suppression or preference?",
+      "impact": "Structural suppression can be removed by regulatory action; internalized suppression persists after external barriers fall, requiring consciousness work. The classification changes: if internalized, directionality for identity-locked households should amplify further; if structural, removing barriers should shift directionality downward and type leftward (more Rope-like once extraction access is equal).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulatory constraint on credit is blocked by direct lobbying-capture or ideological consensus."
+      "description": "Whether measured suppression is external barriers or internalized acceptance."
     },
     {
-      "id": "housing_supply_elasticity_and_financialization_interaction",
-      "question": "If housing supply were radically more elastic (permissive zoning, fast construction, low transaction costs), would credit expansion still drive prices upward, or would supply accommodation dissipate price pressure?",
-      "resolution_mechanism": "Natural experiments from zoning reform (Minneapolis 2021, Korea building deregulation, Japan supply elasticity). Comparative housing markets with very different supply elasticity but similar credit cycles (Australia vs. Canada). Agent-based modeling of credit dynamics under different supply regimes.",
-      "impact": "If prices still rise sharply under elastic supply, credit expansion is the dominant mechanism (financialization reading strongly supported). If elastic supply dissipates price growth despite credit expansion, scarcity/institutional constraints are more important (georgist and institutional readings gain support). Moderate elasticity sensitivity suggests the readings are interactive: credit expansion matters more when supply is constrained, less when supply is elastic.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether credit-driven price growth persists under elastic housing supply."
-    },
-    {
-      "id": "wealth_effect_vs_extraction_distribution",
-      "question": "Does the wealth effect from asset-price appreciation (existing holders spend more, consume more, save less) exceed the extraction burden on debt-service constrained households, so the economy gains net demand/growth? Or is extraction redistribution net-negative for growth?",
-      "resolution_mechanism": "Household consumption surveys (marginal propensity to consume out of wealth gains vs. debt-service constraints). Decomposition of GDP growth attributable to construction/real-estate services vs. household balance-sheet damage. Debt-service burden tracking across income deciles. Foreclosure and default cascades' impact on regional GDP.",
-      "impact": "If wealth effect dominates, the constraint may be presented (and partially justified) as growth-enhancing despite extraction. If extraction burden dominates, the constraint is a net-negative growth drag (wealth redistribution reduces aggregate consumption). This affects whether the constraint is classified as justified coordination or pure extraction in political economy discourse.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether wealth-effect gains exceed extraction burden for aggregate growth."
-    },
-    {
-      "id": "reading_contention_boundaries",
-      "question": "Which of the four readings (naturalist, georgist, institutional, financialization) can coexist in a single unified framework, and which readings truly foreclose each other?",
-      "resolution_mechanism": "Philosophical analysis of axiomatic commitment: can a single framework hold both 'prices reflect preference+scarcity' (naturalist) AND 'credit availability is the primary price driver' (financialization)? Can it hold both 'land rent is the unearned component' (georgist) AND 'credit drives all prices' (financialization)? Empirical decomposition of price variance: how much is explained by scarcity, by land-rent dynamics, by institutional rules, by credit cycles, by speculation? If all four contribute, they coexist; if one dominates, others are foreclosed.",
-      "impact": "If all four readings coexist as complementary mechanisms, the constraint family describes overlapping but separable causal processes. If some readings foreclose others, the kernel itself is contested at the foundational level and the readings should reflect that via forecloses relations in cs_structure. The contention boundary determines whether policy solutions are additive (regulate each mechanism separately) or substitutive (solve one mechanism and others fade).",
+      "id": "kernel_reading_contest",
+      "question": "Is price formation better described by this financialization reading, or by one of the sibling readings (naturalist, georgist, institutional)?",
+      "resolution_mechanism": "Ablation test: disable each mechanism (no credit expansion, no zoning constraint, no asset-class reframing) and observe which produces the observed price trajectory. Compare model fit: econometric models incorporating financialization effects vs. models omitting them. Examine time-series dynamics: periods of credit acceleration and deceleration should predict price changes if financialization reading is dominant.",
+      "impact": "Each reading implies different policy prescriptions: naturalist→supply expansion; georgist→land-tax; institutional→zoning/platform reform; financialization→credit regulation. If the financialization reading is correct, credit-focused policies (lending standards, leverage caps, macroprudential tools) should move prices more effectively than supply-side policies alone. If incorrect, credit regulation will be ineffective and other readings' prescriptions will dominate.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the four readings of price formation coexist or foreclose each other."
+      "type_class": "empirical",
+      "description": "Whether financialization reading correctly identifies the dominant price-formation mechanism relative to sibling readings."
     }
   ],
   "boltzmann": {
@@ -226,61 +469,57 @@
     "affects_constraints": [
       "price_formation_kernel__naturalist_reading",
       "price_formation_kernel__georgist_reading",
-      "price_formation_kernel__institutional_reading"
+      "price_formation_kernel__institutional_reading",
+      "household_debt_trap_constraint",
+      "regulatory_capture_financial_sector"
     ],
-    "dual_formulation_note": "The price_formation_kernel is instantiated by four structurally distinct readings: this constraint (financialization_reading) posits credit expansion and asset-price feedback loops as the primary price driver; the naturalist_reading models price as market-clearing equilibrium reflecting preference + scarcity; the georgist_reading separates unearned land rent from earned improvement value; the institutional_reading attributes price to zoning, tax policy, and intermediary platforms. Each reading instantiates a different ε value and different beneficiary/victim structure. The financialization reading documents the case where credit mechanisms are the dominant driver and derive high extraction through debt-service burden on households + gains to financial intermediaries. All four readings are linked via network.affects_constraints as a family; they are alternative framings of a contested kernel, not measurements of the same constraint under different observables."
+    "dual_formulation_note": "This constraint is one reading of the price_formation_kernel, coexisting with naturalist, georgist, and institutional readings. Each reading identifies a different mechanism determining housing prices. The financialization reading emphasizes credit expansion and leverage feedback, yielding Tangled Rope classification with high extractiveness. Decomposition rationale: the same kernel-level phenomenon (housing price determination) admits multiple ε values depending on framing — financialization reading assigns high ε (leverage is extraction), while naturalist reading assigns low ε (equilibrium process). These are not observables of one constraint but different constraints instantiating different readings."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.45
     }
   ],
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "credit_enabled_price_discovery",
+    "drift_state": {
+      "moment": "post_2008_zero_interest_rate_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "price_formation_kernel__naturalist_reading",
+        "sibling_id": "naturalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "institutional_reading",
         "relation": "influences"
-      },
-      {
-        "sibling_id": "price_formation_kernel__georgist_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "price_formation_kernel__institutional_reading",
-        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "credit_expansion_primary_price_driver",
+        "atom": "credit_availability_determines_price_ceiling",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "leverage_feedback_loop_amplification",
+        "atom": "housing_as_financial_asset_legitimizes_leverage",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "financial_extraction_from_debt_service",
-        "role": "secondary",
-        "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
-    ],
-    "reference_frame": "price_formation_from_earned_shelter_scarcity",
-    "drift_state": {
-      "moment": "contemporary_post_2008_credit_expansion",
-      "direction": "axiom_overriding",
-      "magnitude": "severe",
-      "acknowledged": false
-    }
+    ]
   },
   "uke_scope": {
     "epsilon_bin": "high",
@@ -291,14 +530,15 @@
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

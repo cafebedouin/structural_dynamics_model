@@ -2,172 +2,338 @@
   "header": {
     "constraint_id": "preparedness_transmission__husk_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "69da9d7c-6fcb-4ea3-932a-056d0045ff67"
+    "story_uid": "f6fb1292-a252-4f2d-93b5-b599419050ce"
   },
   "base_properties": {
     "extractiveness": 0.62,
-    "suppression": 0.71,
-    "theater_ratio": 0.68,
-    "accessibility_collapse": 0.45,
-    "resistance": 0.48,
+    "suppression": 0.48,
+    "theater_ratio": 0.71,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.55,
     "claimed_type": "piton",
-    "human_readable": "Preparedness Transmission as Hollow Ritual",
-    "topic_domain": "institutional/disaster_management",
+    "human_readable": "Preparedness Transmission as Memorial Ritual (Husk Reading)",
+    "topic_domain": "institutional/disaster_risk_management",
     "requires_active_enforcement": true,
+    "emerges_naturally": false,
     "beneficiaries": [
-      "institutional_continuity_administrators",
-      "disaster_management_career_cohort"
+      "institutional_continuity_apparatus",
+      "civil_defense_bureaucracy"
+    ],
+    "victims": [
+      "flood_exposed_communities",
+      "novel_scenario_responders"
+    ],
+    "vindicated_propositions": [
+      "institutional_memory_persistence_doctrine",
+      "ritual_performance_as_legitimacy_anchor"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "institutional_continuity_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Administers the civil defense preparedness system, conducts annual drills, certifies inspection compliance, and maintains the bureaucratic infrastructure. Justifies the system as continuity of essential knowledge and capability. Benefits from the continuation of the apparatus itself — budgets, personnel continuity, institutional authority — regardless of whether the knowledge remains operationally current. Could redesign the system but the cost of admission (acknowledgment that preparedness has decayed) exceeds the institution's tolerance."
+    },
+    {
+      "name": "trained_emergency_responders",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Execute drills and inspections per protocol, maintain certification status, and respond to actual incidents. They experience the gap between protocol form (which is routinely practiced and complied with) and novel scenario performance (where the system fails because the underlying knowledge has atrophied). Their professional identity and career advancement are invested in the institutional continuity apparatus; exiting means leaving the profession."
+    },
+    {
+      "name": "flood_exposed_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Depend on the civil defense system to function in a flood emergency. They are presented with an apparatus that claims readiness but is actually calibrated to detect only pre-specified failure modes. When a novel flood scenario occurs (magnitude deviation, timing shift, compound hydrology), the system's hidden brittleness is revealed. They cannot exit the constraint; they are its primary target."
+    },
+    {
+      "name": "audit_and_inspection_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Certify institutional compliance with protocol and inspect drill execution. The institutional continuity apparatus funds their work and accepts their certifications without independent validation of operational capability. They benefit from continued protocol-based inspection because it sustains their authority and funding; actual performance validation would require different expertise and would expose them to liability."
+    },
+    {
+      "name": "novel_scenario_responders",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Called upon during incidents that deviate from the pre-specified scenarios the system was trained to handle. They face a collision: the institutional memory system asserts readiness through protocol compliance, but the adaptive knowledge needed for novel scenarios was never transmitted or has decayed. Professional identity as 'part of the system' prevents exit; the constraint locks them into performing their role with degraded capability."
+    },
+    {
+      "name": "competing_knowledge_systems",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Independent hydrologists, climate scientists, and community-based disaster management practitioners who hold knowledge about emerging flood patterns and adaptation strategies. They are not integrated into the civil defense apparatus; their knowledge is treated as external or redundant. Their exclusion sustains the fiction that the formal system is sufficient."
+    },
+    {
+      "name": "successor_generation_trainees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Trained through the formal curriculum and certification pathway, learning the protocol form without exposure to the adaptive knowledge that would enable performance in novel scenarios. They inherit a system that performs membership in a competence community without access to the underlying competence. Their only exit path is abandoning the profession entirely, which represents both economic loss and severing identity-constitutive relationships."
+    },
+    {
+      "name": "analyst_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Assesses the constraint structure: a system that persists through ritual performance and institutional continuity while the underlying adaptive knowledge erodes. The observer sees the theatrical infrastructure and the actual brittleness it masks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains organizational continuity of emergency response roles and institutional authority; transmits role-based procedural knowledge through certification and drill performance; coordinates distributed response infrastructure against standardized protocol.",
+    "transfer_function": "Moves authority, legitimacy, and resource allocation from the adaptive knowledge system (which has decayed) to the ritual performance system (which persists). Extracts compliance and institutional deference from responders and flood-exposed communities in exchange for a preparedness apparatus that is opaque about its brittleness.",
+    "absent_voices": "Competing knowledge holders (independent hydrologists, climate scientists, community disaster practitioners) are structurally excluded from the apparatus; they would attest that pre-specified scenarios are no longer predictive of actual flood behavior. Successor-generation responders who experience the gap between protocol form and actual capability are kept within the institutional frame where that gap cannot be articulated without professional risk.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the formal civil defense apparatus and its ritual protocol disappeared, flood communities would organize disaster response through alternative knowledge networks, community-based early warning, and adaptive learning from actual incidents. Responders would re-credential through competence-based training rather than protocol certification. The institutional continuity apparatus would lose its administrative function and funding stream.",
+    "founding_problem": "After a major historical flood disaster, the institutional response was to codify the response protocols that had worked, establish certification standards, and mandate periodic drills to ensure knowledge transmission across generations. The founding problem was: how do we ensure the knowledge that saved us in crisis is not lost to organizational turnover?",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The institutional continuity apparatus attests the founding problem remains live, citing the ongoing necessity of preparedness. Independent emergency management researchers and post-incident after-action reviews attest that the founding problem—knowledge loss through generational turnover—was solved by early codification and drill practice, but that the constraint has persisted past its functional life as a legitimacy anchor rather than a competence mechanism. The gap between protocol compliance and actual performance in recent novel flood scenarios corroborates the status=dead reading."
+  },
   "interval": {
-    "start": 1975,
-    "end": 2025
+    "start": 0,
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1975,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.42
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.54
+      "time_point": 15,
+      "value": 0.53,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.59
+      "time_point": 20,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.62
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1975,
-      "value": 0.22
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.35
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.48
+      "time_point": 10,
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.58
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.65
+      "time_point": 20,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.68
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1975,
-      "value": 0.38
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.45
+      "time_point": 5,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.54
+      "time_point": 10,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.63
+      "time_point": 15,
+      "value": 0.44,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.68
+      "time_point": 20,
+      "value": 0.46,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2025,
-      "value": 0.71
+      "time_point": 25,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "After severe floods in the 1970s–1980s, disaster management agencies established standardized protocols and mandatory drills to ensure preparedness knowledge survived generational transitions. For decades, drills validated actual competence — engineers and coordinators exercised procedures that reflected current settlement patterns and infrastructure. By the 2000s, the founding problem (knowledge loss across transitions) had been solved by modern documentation, institutional structures, and communication tools. Yet the drilling regimen persisted unchanged, now as theater: ritual performance with low correspondence to actual operational capability. This is the HUSK READING — organizational memory persists in written form, but the knowledge embedded in practice has decayed. High compliance with protocol form masks low adaptive capacity under novel scenarios. The constraint persists because institutional legitimacy, career incentives, and the absence of a triggering failure event sustain it.",
+    "narrative_context": "A national civil defense system maintains annual drills, inspection protocols, and certification standards for emergency responders. The system's institutional authority rests on the claim that these rituals transmit and validate operational preparedness knowledge across generational turnover. In the husk reading, the system persists through protocol compliance but the underlying adaptive knowledge has decayed. Drills and inspections detect only pre-specified failure modes; when novel flood scenarios occur, the system's brittleness is revealed. The institutional apparatus benefits from continued ritual performance because admission of knowledge decay would threaten its authority and funding; responders and flood-exposed communities bear the cost of the mismatch between protocol form and actual capability. This reading claims the constraint is a Piton: a former coordination mechanism (genuine knowledge transmission) that now persists primarily through institutional inertia and theatrical maintenance, with minimal adaptive capability.",
     "key_agents": [
-      "Emergency management agency: agenda-setter; administers rituals; cannot exit without institutional legitimacy collapse",
-      "Disaster management career cohort: beneficiary; careers depend on preparedness infrastructure remaining salient",
-      "Community flood coordinators: payer, identity-locked; know protocols are obsolete but face career ruin if they say so",
-      "Civilian population: payer, trapped; participates in drills based on outdated knowledge",
-      "Disaster research community: observer; documents the gap but has no seat in agenda-setting"
+      "Institutional Continuity Apparatus: administers the formal system, sets protocol, certifies compliance (power=institutional, exit=mobile)",
+      "Trained Emergency Responders: execute drills and inspections, perform in actual incidents, experience protocol-capability gap (power=organized, exit=constrained)",
+      "Flood-Exposed Communities: depend on the system for protection, face hidden brittleness in novel scenarios (power=powerless, exit=trapped)",
+      "Audit/Inspection Bodies: certify protocol compliance without validating operational capability (power=institutional, exit=mobile)",
+      "Competing Knowledge Systems: excluded alternative expertise holders (hydrologists, climate scientists, community practitioners) (power=moderate, exit=constrained)"
     ],
-    "logic_rationale": "Extractiveness rises from 0.15 to 0.62 over the interval as the founding problem solved and protocols became increasingly decoupled from operational reality. The cost of ritual performance (budget, personnel time, opportunity cost) remains constant, but the benefit (actual preparedness) decays as demographics, infrastructure, and communication tools change. Theater ratio rises from 0.22 to 0.68: by 2025, the majority of drilling activity is performance for institutional continuity rather than functional knowledge validation. Suppression is high (0.71) because the constraint persists through active enforcement of compliance and through the career penalties on anyone who publicly declares the knowledge hollow. Community coordinators are suppressed via identity-lock and professional reputational risk; engineers are suppressed via organizational culture (the agency does not reward gap-raising); the civilian population is suppressed through information asymmetry (they do not know the protocols are obsolete). The metric series captures the trajectory of institutional decay: a constraint that began as genuine coordination (in 1975, when protocols reflected lived experience) has degraded into performative theater maintained by inertia. This is the defining Piton signature: the cost to fix the constraint (rebuild the knowledge base, update protocols, retrain personnel, admit public gap) exceeds what any single party bears from its persistence.",
-    "perspectival_gap": "The agency and career cohort compute the constraint as coordination (we maintain shared frameworks, we ensure institutional continuity) — from their seats, the drilling ritual is successful institutional memory. The community coordinators and engineers compute it as extraction (we perform labor validating procedures we know are inadequate; the cost is our credibility and the community's actual preparedness; the benefit accrues to the institutional regime). The civilian population computes it as structural inevitability (we are governed by procedures we cannot evaluate, trust the regime, hope it works). The engine should compute DIFFERENT types from these different seats, reflecting the structural asymmetry: the agenda-setter and beneficiary seats experience coordination or inertial rope; the payer seats experience snare (the procedures suppress their voice on obsolescence and trap them in participation). The husk reading asserts that this divergence reflects genuine structural differences in how each seat relates to the constraint's actual function.",
-    "directionality_logic": "The agency (agenda_setter) has low d — it benefits from the constraint's persistence (legitimacy, budget, career advancement for compliant staff). Community coordinators and civilian population have high d — they are trapped in participation and bear the cost (labor, opportunity, trust) without control. The constraint extracts from the low-power many (civic time, deferred adaptation) to maintain the mid-power few (careers, institutional budgets). Identity-lock on the community coordinators is the critical asymmetry: they have information (the protocols are obsolete) but cannot act on it without destroying their identity within the community leadership structure. Exit would mean abandonment of the role itself.",
-    "mandatrophy_analysis": "The founding problem (loss of preparedness across generational transitions) was live in 1975 and has been solved by 2025 through institutional structures and documentation. The constraint persists in terminal mandatrophy — the institutional regime that solved the problem now maintains it as theater because the cost of admitting the problem is solved exceeds the benefit of reorganizing. The piton classification captures this: the theater ratio rises as extraction dominates functional benefit. A Rope would show continuous re-validation of function and updates reflecting changing conditions — the measurement series shows decay, not renewal. A Tangled Rope would show asymmetric extraction WITH coordination — there is no coordination here, only the form of it. The Piton classification reflects the honest dynamics: inertial maintenance of a regime whose primary function has atrophied.",
-    "kernel_context": "This constraint is the HUSK_READING of the contested kernel preparedness_transmission. The kernel is the stabilized institutional commitment that disaster management agencies will preserve and transmit preparedness knowledge to each generation through drills and inspections. The HUSK READING instantiates this kernel by asserting: organizational memory persists in documented form, but the operational knowledge embedded in practice has decayed; high protocol compliance masks low adaptive capacity under novel scenarios. The sibling COMPETENCE_READING instantiates the kernel by asserting: drills re-validate capability each generation through exercise, and the regime includes adaptive mechanisms. The sibling HYBRID_READING instantiates the kernel by asserting: physical infrastructure competence is maintained (engineers keep levees and pumps current), but civilian coordination knowledge has decayed (evacuation and communication protocols are obsolete). These are three different instantiations of the same kernel (the commitment to transmit preparedness), with different structural claims about where competence and knowledge decay have occurred. The husk reading's distinguishing claim is that the institutional form persists but the knowledge substance has hollowed out — high form compliance, low function."
+    "logic_rationale": "The extractiveness trajectory shows initial rise (0.38→0.62 over 25 time points) as the gap between protocol form and actual capability widens, then plateau (0.62 constant t=25→40) once the system has stabilized at high theater-ratio performance. Theater ratio rises sharply (0.35→0.71 over 25 time points) as more of the system's activity becomes decoupled from adaptive knowledge transmission and serves primarily to maintain institutional legitimacy and authority. Suppression remains modest (0.48 endpoint) because the constraint persists largely through institutional inertia and lack of viable alternative organization rather than active coercive enforcement. Accessibility collapse is low (0.38) because responders and communities maintain potential exit paths (alternative disaster response networks, competence-based retaining) even though identity-lock and institutional capture make exits costly. Resistance is moderate (0.55) because the constraint faces real pressure from recent flood incidents that exposed its brittleness, yet the institutional apparatus successfully absorbs criticism by incrementally adjusting protocol without admitting underlying knowledge decay.",
+    "perspectival_gap": "The institutional continuity apparatus experiences the constraint as legitimate coordination — the system works as designed, drills are complied with, certifications are current — and sees no reason to change. Trained responders experience a professional gap: they know the protocol and can execute it flawlessly, but they also experience the constraint's hidden brittleness when actual incidents deviate from the pre-specified scenarios. Flood-exposed communities experience the constraint as pure extraction: they are presented with claims of preparedness that the system itself cannot substantiate, and they bear the costs when the constraint fails. The engine computes these seat-specific types from the structural data — the husk reading authorship makes the asymmetry explicit.",
+    "directionality_logic": "The institutional continuity apparatus is the structural beneficiary: it maintains authority, budgets, and legitimacy through continued protocol performance. Directionality d for this agent is low (~0.1-0.2), indicating subsidy/benefit. Trained responders sit near the payer end (d~0.65-0.75): they are constrained into certification and drill participation, they experience professional risk if they articulate the knowledge-capability gap, and they bear the cost of identity-lock that prevents exit. Flood-exposed communities sit at the target end (d~0.85-0.95): they are trapped geographically, they depend on the apparatus for protection, and they bear the cost of hidden brittleness when the system fails. Novel scenario responders are identity-locked (the constraint defines what it means to be 'competent' in the formal system) and sit near payer end (d~0.7-0.8). The audit/inspection bodies benefit from the system's continuation and sit near beneficiary end (d~0.15-0.25).",
+    "mandatrophy_analysis": "The husk reading resolves mandatrophy by documenting that the constraint's founding mandate (transmit knowledge across generational turnover) has been supplanted by institutional persistence and authority maintenance. The system was founded to solve a real coordination problem: how to preserve response capability when individuals retire. That problem was solved by early codification and drill practice. But the constraint persists past its functional life because admission that the underlying knowledge has decayed would threaten the institutional apparatus's authority and funding. The theater ratio trajectory (rising from 0.35 to 0.71 and then plateau) documents the point at which ritual performance came to dominate actual function transmission. The founding_problem_status=dead with disappearance_verdict=world_rearranges confirms that the constraint is a zombie coordination mechanism: it persists through inertia and institutional capture despite the founding mandate being satisfied.",
+    "kernel_context": "This constraint instantiates the husk_reading of the preparedness_transmission kernel. The kernel itself is the contested institutional commitment to 'how should emergency preparedness knowledge be transmitted across generational turnover?' The husk_reading answers: through ritual performance of protocol-based drills and inspections that maintain the appearance of knowledge transmission even as the underlying adaptive capability decays. Sibling readings (competence_reading and hybrid_reading) offer different answers to the same kernel question: the competence_reading asserts that drills and inspections do transmit and validate actual knowledge; the hybrid_reading asserts that knowledge decay is stratified (infrastructure competence high, civilian coordination competence low). The three readings coexist as live positions held by different institutional seats and authority structures: the institutional continuity apparatus holds the husk reading; independent emergency management researchers hold the competence_reading; regulatory bodies caught between institutional capture and incident evidence hold the hybrid_reading."
   },
   "omegas": [
     {
-      "id": "hollow_form_vs_functional_decay",
-      "question": "Is the constraint's persistence maintained primarily by the institutional form (career incentives, budget structures, organizational continuity), or by actual ongoing knowledge transmission and validation?",
-      "resolution_mechanism": "Detailed audit of drill scenario design compared to contemporary flood modeling; interviews with engineers and coordinators on the correspondence between protocol and actual operational capacity; post-disaster performance against novel scenarios.",
-      "impact": "If form dominates (the husk reading), the constraint is piton and extractive. If function dominates (the competence reading), the constraint is rope or tangled rope and primarily coordinating. The reading classification depends on this.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether institutional form masks functional decay or whether validation is genuine."
-    },
-    {
-      "id": "identity_lock_mechanism_in_coordinators",
-      "question": "Is the suppression experienced by community coordinators structural (they are legally prohibited from changing protocols) or internalized (they believe they lack authority and fear career consequences)?",
-      "resolution_mechanism": "Natural experiment: removal of career-reputational consequences (e.g., legislation protecting whistleblowers who identify obsolete protocols) and observation of whether coordinators begin advocating for updates.",
-      "impact": "If structural, the constraint's suppression could be reduced by legal reform. If internalized, the constraint's suppression persists even after barriers are removed because identity fusion is unbroken — the coordinator's self-concept remains bound to regime compliance.",
+      "id": "knowledge_decay_mechanism_ambiguity",
+      "question": "Is the measured knowledge decay a structural property of time and generational turnover (knowledge loss is inevitable, and the system is failing to transmit adequately), or is it a product of how knowledge is codified and transmitted (the constraint optimized for protocol form at the expense of adaptive reasoning)?",
+      "resolution_mechanism": "Comparative analysis across organizations with different knowledge transmission models (centralized protocol vs. apprenticeship-based adaptive training). Post-incident analysis of responder decision-making under novel conditions vs. protocol predictions.",
+      "impact": "If structural property: the constraint faces an irreducible knowledge-loss problem and any reorganization would face the same challenge. If product of codification: the constraint's method of transmission is the problem, not the constraint itself; alternative transmission methods could restore knowledge transmission without abandoning the institutional apparatus. The reading claims the latter (the system chose shallow codification over adaptive transmission).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether identity-lock is structural or internalized in the coordinator role."
+      "description": "Whether knowledge decay is inevitable or a product of the constraint's transmission method."
     },
     {
-      "id": "novel_flood_scenario_triggering",
-      "question": "If a novel-pattern flood (e.g., compound flooding with storm surge + inland runoff, or multi-day inundation outside historical ranges) occurred within the next 5 years, would the regime's protocols enable effective response or would improvisation during crisis succeed by accident?",
-      "resolution_mechanism": "Structured scenario analysis by disaster research community comparing protocol-based response to what actual novel flood dynamics would require; expert elicitation from engineers and coordinators on gap assessment.",
-      "impact": "A large gap would validate the husk reading and support reclassification from rope to piton or snare (if the gap is discovered post-failure). Success in a novel scenario despite protocol gaps would suggest resilience through improvisation rather than through protocol correctness — still extractive (the constraint's extraction is not earning its keep), but with an accidental backup.",
+      "id": "theater_detection_sensitivity",
+      "question": "Is the rising theater_ratio trajectory an accurate measurement of performative activity displacing functional knowledge transmission, or does it reflect increased administrative documentation (which may be theater-like in form but is still functionally integrated)?",
+      "resolution_mechanism": "Time-use analysis of responder activity in drills vs. novel incidents; content analysis of drill scenarios showing the proportion pre-specified vs. novel elements over time; interviews with responders about learning outcomes vs. protocol compliance.",
+      "impact": "If theater_ratio rise reflects genuine performativity: the Piton classification is correct. If it reflects administrative intensification with real functional integration: the constraint may be more competence-preserving than the husk reading claims. The husk reading assumes the former.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising theater_ratio reflects actual knowledge-capability gap or administrative intensification."
+    },
+    {
+      "id": "suppression_mechanism_in_responder_identity_lock",
+      "question": "The measured suppression (0.48) is modest; responders are not overtly coerced to comply with drills. Is the suppression structural (external barriers to exit) or primarily internalized (professional identity has fused with the constraint such that exit feels impossible despite low external barriers)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: when responders leave the system, does suppression persist? If post-exit suppression is high (they continue to internalize the constraint's legitimacy claims after leaving), the mechanism is partly internalized. If post-exit suppression collapses quickly, it is mostly structural.",
+      "impact": "If internalized: the constraint's effective suppression may be higher than the 0.48 metric suggests, and responders carry the suppression with them after exit. If structural: exit barriers are institutional (career, identity, social positioning) but not psychological, and alternative organization would be feasible with lower suppression cost.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether novel flood scenarios would expose the gap between protocol form and operational capacity."
+      "description": "Is suppression in preparedness constraint structural or internalized in responder identity?"
     },
     {
-      "id": "committer_axis_husk_vs_competence",
-      "question": "Does the kernel preparedness_transmission instantiate as hollow ritual (husk reading) or as living competence re-validated through exercise (competence reading)?",
-      "resolution_mechanism": "This omega captures the reading contest itself. The husk reading claims high form compliance + low adaptive capacity + pre-specified-failure-mode detection. The competence reading claims ongoing validation and adaptive mechanisms. Both instantiate the same kernel commitment (transmit preparedness). The structural evidence is the trajectory of theater_ratio, accessibility_collapse, resistance, and field data on protocol-scenario correspondence.",
-      "impact": "If the husk reading's structural claims are supported, the constraint's type should be piton (inertial, theatrical). If the competence reading's claims are supported, the type should be rope or tangled rope (coordinating, adaptive). The engine does not compute the reading itself — it computes the type from structural metrics. A high theater_ratio (0.68) supports the husk reading; a low theater_ratio would support the competence reading.",
-      "confidence": "medium",
+      "id": "kernel_reading_decomposition",
+      "question": "Is the husk_reading a genuine alternative reading of the preparedness_transmission kernel, or does it collapse back to the competence_reading when pressed on specific competencies (e.g., 'is the system adequate for pre-specified scenarios')? Where exactly is the reading boundary?",
+      "resolution_mechanism": "Specification of which competencies the husk reading claims are transmitted (e.g., 'protocol execution, role-based coordination'), which are not (e.g., 'adaptive reasoning in novel scenarios'), and which are contested between readings (e.g., 'magnitude-adjusted hydrology'). Detailed comparison of post-incident performance for pre-specified vs. novel scenarios across responder cohorts trained in husk vs. competence vs. hybrid frameworks.",
+      "impact": "If the readings are genuinely decomposable on competency dimension: the husk_reading is a coherent alternative with different ε, different victim sets, and different classification. If the husk_reading merely asserts 'some competencies are missing' without specifying which the constraint successfully transmits, the reading collapses into the competence_reading at higher resolution. The husk_reading authors assume genuine decomposition on the adaptive-reasoning axis.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Committer axis: the reading contest between husk and competence instantiations of the preparedness_transmission kernel."
+      "description": "Kernel reading decomposition: husk_reading vs. competence_reading boundary on competency transmission."
     }
   ],
   "boltzmann": {
@@ -179,59 +345,66 @@
       "preparedness_transmission__competence_reading",
       "preparedness_transmission__hybrid_reading"
     ],
-    "dual_formulation_note": "The preparedness_transmission kernel is instantiated by three structurally distinct constraint stories: competence_reading (drills re-validate capability), husk_reading (this constraint: ritual form without function), and hybrid_reading (infrastructure competence maintained, civilian coordination decayed). The readings coexist as live positions held by different parties (agency leadership claims competence; disaster researchers and coordinators document hollowing; engineers observe partial degradation). The three constraints form a family linked by their instantiation of the same kernel commitment. The husk reading argues for piton classification due to high theater_ratio, decoupling of form and function, and persistence through institutional inertia rather than functional validation. The competence reading would argue for rope classification based on ongoing validation mechanisms. The network edges enable contamination propagation: if the husk reading's structural claims are validated, the competence reading's classification comes under pressure."
+    "dual_formulation_note": "The preparedness_transmission kernel decomposes into three readings: husk_reading (this file) models the constraint as institutional theater persisting past its functional life; competence_reading models drills and inspections as live knowledge transmission; hybrid_reading models knowledge transmission as stratified (infrastructure competence high, coordination competence low). Each reading instantiates a different constraint with different ε, different victim sets, and different classification. The three readings are linked as coexisting positions held by different institutional seats. The ε-invariance principle requires separate stories because the referent (the standing arrangement under contest) is the same—the formal preparedness system—but the husk_reading evaluates it as a ritual performance with decayed underlying knowledge, yielding higher ε than the competence_reading would author. The three stories form a constraint family and should be analyzed together via network effects."
   },
   "directionality_overrides": [
     {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
       "power_atom": "moderate",
-      "d_value": 0.72
+      "d_value": 0.74
     }
   ],
+  "gain_flow": "institutional_continuity_apparatus",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "generational_preparedness_continuity",
-    "drift_state": {
-      "moment": "contemporary_post_2020_settlement_change",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "preparedness_transmission__competence_reading",
+        "sibling_id": "competence_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "preparedness_transmission__hybrid_reading",
+        "sibling_id": "hybrid_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "institutional_form_persists_without_knowledge_substance",
+        "atom": "protocol_form_decoupled_from_adaptive_capability",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "suppression_preserves_hollow_ritual_against_adaptation",
+        "atom": "ritual_performance_sustains_institutional_authority",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ]
+    ],
+    "reference_frame": "knowledge_transmission_through_codified_protocol",
+    "drift_state": {
+      "moment": "contemporary_flood_scenario_diversity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

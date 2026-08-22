@@ -4,22 +4,90 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "1ba936b5-3a40-4c16-987d-656d86f767b0"
+    "story_uid": "140c39f6-1fcd-43c7-8952-5873762436b5",
+    "created_at": "2026-06-12T14:32:18Z"
   },
   "base_properties": {
-    "extractiveness": 0.12,
-    "suppression": 0.05,
-    "theater_ratio": 0.08,
+    "extractiveness": 0.15,
+    "suppression": 0.08,
+    "theater_ratio": 0.02,
     "accessibility_collapse": 0.92,
-    "resistance": 0.02,
+    "resistance": 0.05,
     "claimed_type": "mountain",
-    "human_readable": "Printing Press Technological Determinism (Reformation Causation)",
-    "topic_domain": "history/technology/religion",
+    "human_readable": "Printing Press Material Constraint on Textual Reproducibility",
+    "topic_domain": "history_of_technology/religious_history",
     "emerges_naturally": true,
     "beneficiaries": [
-      "reformation_movement",
-      "vernacular_literacy_expansion"
+      "reformation_movements",
+      "vernacular_readers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "printing_press_technology",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Material substrate: the capacity to reproduce texts rapidly at scale without requiring hand-copying per copy. Not an agent but the technological condition the reading treats as causally upstream."
+    },
+    {
+      "name": "reformation_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Religious reformers whose core message — vernacular scripture, accessible theology, critique of ecclesiastical authority — became distributable at scale once the press made hand-copying obsolete. Benefited from a technological shift they did not initiate."
+    },
+    {
+      "name": "vernacular_readers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Readers of non-Latin languages could access scripture and theological argument in their own tongue once printing made large-scale vernacular production economically viable. Benefited from technological capacity, not from organized advocacy."
+    },
+    {
+      "name": "roman_church_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Ecclesiastical monopoly on authoritative textual production and interpretation was structurally undermined when copying costs collapsed. Suppression of vernacular texts became physically impossible to enforce at scale — the constraint is treated as exogenous to Church strategy, something that happened to the Church rather than something the Church chose."
+    },
+    {
+      "name": "printers_and_publishers",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Economic actors responding to market demand for texts. Under the technological_determinism reading, printers are channels for the technological imperative rather than strategic agents; demand follows from the press's capacity to meet it, not from printer foresight."
+    },
+    {
+      "name": "feudal_authorities",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Local and regional rulers who had depended on the Church for legitimacy and literate administration could not prevent vernacular literacy and religious challenge once texts were reproducible at scale. Were not party to decisions about printing adoption but faced downstream consequences."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None — this reading does not describe a coordination problem being solved. It describes a technological condition (reproducibility at scale) that makes prior arrangements (monopoly on text production) structurally impossible to maintain.",
+    "transfer_function": "No transfer in the coordination sense. The constraint is treated as a physical condition: once copying costs approach zero per unit, the economic logic that sustained hand-manuscript monopoly evaporates. The 'extraction' the Church bore was the loss of control, not a negotiated transfer.",
+    "absent_voices": "Scribal copyists, whose labor was rendered economically redundant by the press, are not visible in the founding-problem framing. They would attest that demand for copying services existed and was profitable before the press; the technological determinism reading erases them as agents by treating their displacement as inevitable rather than chosen.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the printing press had not been invented, the technological condition — that hand-copying is expensive and slow — would persist. The Reformation as a movement would face the same structural barriers: vernacular scriptures would remain scarce and costly; censorship would remain enforceable via copying-bottleneck control. The world does not rearrange because the technological capacity was exogenous; the world was shaped by it.",
+    "founding_problem": "The technological determinism reading does not pose a founding problem in the coordination sense. Instead, it asserts a technological fact: hand-copying is materially expensive and slow; printing technology (Gutenberg, moveable type, ink chemistry) reduced per-unit reproduction cost by orders of magnitude. This fact created new structural possibilities independent of any actor's intent.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The cost structure of pre-printing textual production is attested by manuscript studies historians and paleographers (outside the Reformation advocacy set): labor-hours per page, ink costs, vellum scarcity. The mechanical capability of the printing press is attested by engineering history and by surviving press equipment. These are empirical facts about material technology, corroborated by disciplinary work that predates Reformation historiography."
   },
   "interval": {
     "start": 1440,
@@ -29,204 +97,249 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1440,
-      "value": 0.02
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1470,
-      "value": 0.08
+      "time_point": 1460,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1480,
+      "value": 0.14,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1500,
-      "value": 0.12
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1517,
-      "value": 0.13
+      "time_point": 1520,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1530,
-      "value": 0.12
+      "time_point": 1540,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1550,
-      "value": 0.12
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1440,
-      "value": 0.01
+      "value": 0.0,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1470,
-      "value": 0.03
+      "time_point": 1460,
+      "value": 0.01,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1480,
+      "value": 0.015,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1500,
-      "value": 0.06
+      "value": 0.02,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1517,
-      "value": 0.08
+      "time_point": 1520,
+      "value": 0.02,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1530,
-      "value": 0.08
+      "time_point": 1540,
+      "value": 0.02,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1550,
-      "value": 0.08
+      "value": 0.02,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1440,
-      "value": 0.02
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1470,
-      "value": 0.03
+      "time_point": 1460,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1480,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1500,
-      "value": 0.04
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1517,
-      "value": 0.05
+      "time_point": 1520,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1530,
-      "value": 0.05
+      "time_point": 1540,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1550,
-      "value": 0.05
+      "value": 0.08,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reading_framing_determinism_vs_contingency",
+      "question": "Does the printing press constitute an exogenous technological constraint (upstream of human agency) or is it itself the product of strategic choices and material contingencies that could have unfolded differently?",
+      "resolution_mechanism": "Philosophical analysis of technological agency: is the press's development path a technological necessity (mathematics of reproducibility, physics of ink and metal) or a contingent social choice among feasible alternatives? Counterfactual history: what would have happened if screw-presses, woodblock printing, or other reproduction technologies had taken the economic lead instead?",
+      "impact": "If the press is truly exogenous (a natural-law-like fact about material efficiency), the technological_determinism reading holds and reformers are beneficiaries of exogenous capacity. If the press's development was itself strategically directed or could have been otherwise, then the strategic_deployment or mutual_shaping readings are structurally more accurate and this reading over-claims materiality.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the printing press is a technological mountain (exogenous material law) or a constructed artifact reflecting prior choices."
+    },
+    {
+      "id": "beneficiary_causation_conflation",
+      "question": "Does identifying beneficiaries (reformation_movements, vernacular_readers) on a mountain constraint violate the semantic distinction between 'who benefits from this fact' and 'who caused it to persist'?",
+      "resolution_mechanism": "Definitional: mountains are defined by no beneficiary collecting rents from their operation. But this story declares beneficiaries. Either (a) the beneficiaries are present because they represent future agents exploiting a technological capacity (not collecting from the constraint's operation but using it), or (b) the constraint is not actually a mountain because the beneficiaries' actions are selecting for the press's spread, making it partly constructed.",
+      "impact": "If interpretation (a) is correct, the mountain designation stands and beneficiaries are identified as downstream exploiters. If interpretation (b) is correct, the constraint should be reclassified as tangled_rope (beneficiaries benefit, Church pays via monopoly loss, the arrangement is actively enforced by printer supply chains and reformer distribution networks). The FSM (false_summit_mountain) mechanism flags this omega for engine review.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether declaring beneficiaries on a technological mountain is consistent with the mountain definition or indicates a false summit."
+    },
+    {
+      "id": "censorship_impossibility_empirical_claim",
+      "question": "Was censorship actually rendered impossible by printing, or did the constraint merely raise the cost of censorship and shift its form to mass-market policing rather than copy-level control?",
+      "resolution_mechanism": "Historical analysis of censorship post-1440: papal indexes, book burnings, printing licensing requirements, clandestine presses, underground distribution networks. If censorship persisted in effective forms (index systems, licensing, arrest of printers), then printing did not make censorship impossible — it changed censorship's form and cost. If underground networks proliferated faster than suppression could scale, then censorship was effectively impossible at the scale demanded by textual abundance.",
+      "impact": "If censorship remained effective (merely more expensive), then the accessibility_collapse metric (0.92, nearly complete barrier closure) is overstated and the mountain claim weakens — alternatives (underground copying, oral transmission, local manuscript production) remained live even post-printing. If censorship truly became impossible, the 0.92 accessibility_collapse stands as accurate and the technological_determinism reading is stronger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the printing press made censorship impossible or merely more difficult."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of the contested press_reformation_causation kernel. How does the technological_determinism reading's core premise (technology as exogenous upstream cause) relate structurally to the mutual_shaping and strategic_deployment readings?",
+      "resolution_mechanism": "Framework analysis: technological_determinism treats the press as a mountain (exogenous technological fact). mutual_shaping treats the press and Reformation movements as co-evolving — feedback loops between emerging printing capability and reformer demand shape both. strategic_deployment treats the press as neutral capacity; reformers are strategic agents who chose to exploit it. These readings contest the LOCATION of causation: in the technology itself, in the interaction, or in human agency deploying available tools.",
+      "impact": "The three readings coexist as live positions held by different historians. Technological_determinism forecloses mutual_shaping's feedback loops (if the press is exogenous, co-evolution is not possible — only downstream adaptation). It influences strategic_deployment by denying the neutrality of capacity (if the press made censorship impossible, strategic choices are constrained by a prior fact rather than freely creative). See cs_structure.reading_relations for formal relations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint instantiates one reading of a contested kernel; the others are separate constraint stories linked by network edges and reading relations."
     }
   ],
   "commentary": {
-    "narrative_context": "The technological determinism reading treats the printing press as the primary causal force that made the Reformation inevitable. In this framing, the press is an exogenous technological innovation (circa 1440) whose material capability to reproduce texts at scale and low cost directly undermines the Catholic Church's monopoly on scriptural interpretation (which depended on Latin manuscripts and clerical gatekeeping). Vernacular printing becomes structurally unavoidable once the technology is available; reformers are positioned as beneficiaries of this technological fact rather than as agents who caused it. The Church's resistance to printed scripture is treated as futile — resistance to a material technology that has already proliferated. The constraint is CLAIMED as a mountain (natural law of technological capability) while the authored metrics show near-zero extractiveness and suppression: this is consistent with the mountain claim, as a technological fact does not extract from participants — it simply alters the possibility space they inhabit.",
+    "narrative_context": "The technological_determinism reading of the press-Reformation causation kernel asserts that the printing press created a material condition — reproducibility at scale below hand-manuscript cost — that made censorship impossible and vernacular scripture inevitable. On this reading, reformers are beneficiaries of exogenous technological capacity, not strategic agents who shaped the technology or exploited neutral tools. The Church's authority over textual production was structurally undermined by a material fact, not by rhetorical force or political will. This reading claims the press as a mountain: a natural-law-like constraint on textual economics independent of any actor's agency.",
     "key_agents": [
-      "printing_press_technology: The exogenous material capability; treated as non-agent structural fact",
-      "catholic_church_authority: Loses monopoly on scriptural distribution; cannot censor what technology makes inevitable",
-      "reformation_movement: Benefits from technological abundance of distributed texts; agency is secondary to technological enablement",
-      "lay_literacy_expansion: Structural consequence of cost shift toward vernacular texts; no agent drives this",
-      "manuscript_scribes: Economically displaced by the technology; treated as passive victims of technological change"
+      "printing press technology: the exogenous technological condition (not an agent, modeled as observer)",
+      "reformation movements: beneficiaries of the press's capacity to distribute vernacular theology at scale",
+      "vernacular readers: beneficiaries of the collapse in reproduction costs; could access texts in their own language",
+      "roman church authority: target/victim; monopoly on textual production and interpretation was undermined by technological fact",
+      "printers and publishers: channels for the technological imperative rather than strategic agents (in this reading's frame)",
+      "feudal authorities: excluded from the decision to adopt printing but caught in its downstream effects"
     ],
-    "logic_rationale": "Extractiveness is very low (0.12 at interval end) because a technological capability does not extract from those it affects — it simply changes their constraint set. The technology is morally neutral in the determinism reading; it has no preference for Reformation or Counter-Reformation. Suppression is near-zero (0.05) because resistance to a technology that has already copied itself thousands of times is structurally ineffective — the Church's later efforts to control printing through the Index are reactive damage limitation, not preventive enforcement. Theater is minimal (0.08) because the printing press's function is straightforward material reproduction; there is no performative maintenance cost. Accessibility collapse is very high (0.92) because once printing technology exists and costs drop below manuscript production, alternative modes of textual scarcity become materially impossible — no actor can restore the scarcity without destroying the technology itself. Resistance is near-zero (0.02) because in this reading the press is not a choice anyone made — it is a fact of material history that accumulates inevitably once Gutenberg's innovation exists. The measurement series tracks the gradual proliferation of printed texts (extractiveness/theater rising slowly as printing diffuses) and the Church's ineffectual suppression efforts (suppression requirement staying low because the technology itself cannot be suppressed).",
-    "perspectival_gap": "From the Church's institutional seat, the printing press appears as an exogenous threat to a working monopoly — a technological force that removes their enforcement capacity. From the reformer's organized seat, it appears as a liberation technology that enables their message to reach scale. From the analytical seat, the printing press is neither threat nor liberation — it is a material fact whose effects follow from its technical properties. The technological determinism reading collapses all three perspectives into a single causal fact: the technology's capability determines the outcome. The engine's per-seat computation should reflect that institutional actors experience high extraction (the loss of their monopoly position) while beneficiary actors experience low extraction (they gain without paying for it), but the underlying constraint is the same material fact — the press exists. Directionality divergence follows from the technological reading's assumption that exogenous material facts have asymmetric effects on differently positioned actors.",
-    "directionality_logic": "In this reading, directionality is not derived from beneficiary/victim relationships in the usual sense because the constraint is not a human choice or coordination mechanism — it is a technological fact. The Church_authority seat experiences high effective extraction (d near 1.0) because the technology removes their monopoly position and they cannot exit (trapped to defending an increasingly untenable institution). The reformation_movement and lay_literacy seats experience low effective extraction or subsidy (d near 0.0 or negative) because the technology gifts them capability without cost. The analytical observer has d = 0.5 (symmetric, uninvolved). No directionality override is needed because the technological determinism reading treats directionality as a consequence of the technology's material properties, not as a strategic relationship.",
-    "mandatrophy_analysis": "The technological determinism reading avoids mandatrophy in the strict sense (a constraint whose original mandate has outlived its function) because the printing press has no mandate — it is not a constructed institution with a founding problem. However, the reading faces a related problem: if the press is treated as a natural/inevitable fact, why does it appear in human history as a contingent invention by Gutenberg rather than as a discovered physical law? The answer — that technological facts are historical contingencies that become inevitable in their consequences once they exist — is itself the reading's core claim. This reading is vulnerable to the charge that it conflates material capability with causal determinism; that vulnerability is captured in the omega variables.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel 'press_reformation_causation'. The kernel is the claim that 'the printing press caused the Reformation.' Three readings dispute what this causation means: (1) TECHNOLOGICAL_DETERMINISM (this reading): the press is an exogenous material technology whose properties made the Reformation inevitable; reformers are beneficiaries of technological fact, not causes. (2) STRATEGIC_DEPLOYMENT: reformers and printers strategically exploited the press as a neutral tool; the technology enabled but did not determine; agency was primary. (3) MUTUAL_SHAPING: technology and agency co-evolved; the press created new possibilities, reformers exploited them in ways that shaped how printing developed, and this co-evolution was the actual process (no unidirectional causation). This reading treats the TECHNOLOGY as upstream/exogenous and reformer AGENCY as downstream/responsive. The sibling readings dispute this structural ordering and the nature of the causation relation itself."
+    "logic_rationale": "The extractiveness metric (0.15, rising slightly to 0.15 by interval end) reflects the Church's loss of control over textual reproduction — a form of extraction in the sense that the prior monopoly rent is now unavailable to the Church. But the constraint is claimed as a mountain because the loss is treated as driven by material fact (reproducibility economics) rather than by active extraction on anyone's part. Suppression (0.08, stable) is low because the constraint is not enforced through coercive mechanisms — it emerges from the physical cost structure of copying. Theater (0.02, negligible) reflects genuine function with minimal performative overhead: printing genuinely reduces per-unit cost; no significant ritual maintains the arrangement. Accessibility_collapse (0.92) is high because once the press's capability became available, the alternative of hand-copying at pre-press costs became structurally unavailable — copying could not compete economically. Resistance (0.05) is very low because the technological_determinism reading frames the constraint as exogenous: the Church could not meaningfully resist a material fact about reproduction cost any more than one could resist gravity. The measurement series remains stable through the interval because the reading treats the technological condition as a standing fact — once the press became materially available (circa 1440), the constraint's structural properties did not change, though the social consequences unfolded gradually.",
+    "directionality_logic": "The technological_determinism reading assigns directionality based on who benefits from the technological condition and who loses the prior monopoly rent. Reformation movements and vernacular readers are beneficiaries (d near 0.0) — they gain access to distributed texts without cost or effort to acquire the printing capacity. The Roman Church is the target (d near 1.0) — it loses the monopoly premium on authorized textual production. This directionality divergence is structural: the same technological fact (low-cost reproducibility) benefits some and harms others depending on prior positional control. Printers under this reading are treated as neutral channels rather than strategic agents, so their directionality is ambiguous — they profit from the press's viability but do not control its existence or propagation.",
+    "perspectival_gap": "The Church's seat and the beneficiary seats experience radically different types from the same constraint. From the Church's position, the press is an external shock — a snare if one focuses on how quickly printing spread and suppressed theological alternatives; a mountain if one focuses on the material fact that copying costs had to collapse eventually. From the reformer and reader positions, the press is a coordinating force opening access — a rope if one focuses on how distribution networks formed; a mountain if one focuses on the technological fact that made their access possible. The engine should compute these differently because the structural relationship differs: the Church is a target of extraction (loses monopoly rents), beneficiaries are net positive (gain access), and the technology is exogenous to both. The claim (mountain) asserts the exogeneity; the metrics describe the asymmetry. If the engine computes a different type for different seats, that divergence is the measurement this reading is designed to enable.",
+    "mandatrophy_analysis": "The founding problem in the technological_determinism reading is not a social problem requiring coordination; it is a material fact: hand-copying is expensive. The problem is 'live' in the technical sense (hand-copying remains expensive in principle), but the solution is not achieved through institutional design or negotiated arrangement — it is achieved by the availability of a better material process. This reading faces a mandatrophy risk: if the founding problem is redefined as 'how do we democratize access to scripture and ideas' (a social problem rather than a technical constraint), then the printing press is one solution among many (oral preaching, catechism, public reading). The mandatrophy would resolve by refocusing the constraint on the social problem (demand for democratized access) and recognizing that the press was one strategy among others that reformers and printers deployed — moving the reading toward strategic_deployment or mutual_shaping. The technological_determinism reading avoids this trap by insisting the founding problem is the material fact (reproducibility cost), not the social demand. That focus is coherent but vulnerable to the omega question about whether beneficiary presence on a mountain indicates false summitry.",
+    "kernel_context": "This constraint instantiates the technological_determinism reading of the contested press_reformation_causation kernel. The kernel — 'the printing press caused the Reformation' — has three live readings: (1) technological_determinism (this constraint): the press as exogenous material fact making censorship impossible and vernacular scripture inevitable; (2) strategic_deployment (sibling constraint): the press as neutral tool that reformers and printers strategically exploited for advantage; (3) mutual_shaping (sibling constraint): the press and Reformation co-evolving through feedback loops, each shaping the other's development. The technological_determinism reading treats the press as upstream mountain; the others distribute agency differently across the actors and technology. The three readings coexist as live positions held by different historians and disciplines — they are not resolved by evidence alone but by framing choices about where to locate technological causation."
   },
-  "omegas": [
-    {
-      "id": "technological_determinism_vs_material_contingency",
-      "question": "If the printing press is a natural/inevitable fact, why is its invention a historical contingency attributable to Gutenberg? Does treating it as a natural law conflate material capability with historical causation?",
-      "resolution_mechanism": "Conceptual analysis of whether technological facts can be both historically contingent in their origin and inevitable in their consequences. Examine counterfactual scenarios: would the Reformation have occurred with different printing technology (e.g., earlier technology with lower fidelity)? Would a later inventor have produced the same capability?",
-      "impact": "If the printing press is a genuinely exogenous technological fact independent of human choice, the determinism reading holds. If its properties and deployment reflect human strategic choices from the moment of its invention, the reading collapses into strategic deployment and mutual shaping — causation becomes distributed rather than technological.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether treating the printing press as natural law is coherent given its historical contingency."
-    },
-    {
-      "id": "monopoly_restoration_possibility",
-      "question": "Given that the printing press exists and has diffused, is the Church's inability to suppress it a material fact (suppression is impossible because the technology is ubiquitous) or a contingent institutional failure (suppression could have worked if attempted earlier/more forcefully)?",
-      "resolution_mechanism": "Historical reconstruction of printing suppression efforts (Index Librorum Prohibitorum, licensing requirements, destruction of printed books). Counterfactual analysis: could earlier, more draconian suppression in 1450-1480 have prevented the technology's proliferation before it became economically entrenched?",
-      "impact": "If suppression was materially impossible once printing reached a critical mass of copies, the mountain claim holds. If institutional suppression could have worked with faster/harsher response, the Church's failure is strategic rather than technological — moving the causation from the press to institutional choices.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the Church's loss of censorship control was technologically inevitable or institutionally contingent."
-    },
-    {
-      "id": "reformer_agency_vs_technological_beneficiary",
-      "question": "Were the reformers (Luther, Calvin, their printers and networks) passive beneficiaries of technological abundance, or did they strategically exploit and shape how printing technology developed to serve their agenda?",
-      "resolution_mechanism": "Detailed historical reconstruction of reformer-printer collaboration: who commissioned editions, which texts were chosen for printing, how reformers marketed their works, what distribution networks they built. Compare against non-Reformation texts of the same era to see if printing favored Reformation content or merely enabled all content equally.",
-      "impact": "Passive beneficiary → technological determinism holds; the Reformation rode inevitable technological change. Strategic exploiter → strategic deployment reading; reformers shaped the technology's deployment. Mutual shaping → the technology and reformer strategy co-evolved. If reformers' choices significantly influenced which texts got printed and how printing technology was used, causation is not purely technological.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether reformers were passive beneficiaries of the printing press or active strategic agents in shaping its use."
-    },
-    {
-      "id": "beneficiary_beneficiary_vs_natural_law_beneficiary",
-      "question": "Is declaring reformers and lay literacy as 'beneficiaries' of a mountain constraint coherent? Natural laws do not have beneficiaries in the usual sense — they simply operate without preference. Does naming beneficiaries here conflate natural technological capability with constructed institutional arrangements?",
-      "resolution_mechanism": "Conceptual clarification: distinguish between (a) agents positioned to exploit a new possibility space created by technology (reformers), (b) agents who benefit from the institutional consequences of that exploitation (lay readers gaining access to scripture), and (c) agents who benefit from a constructed arrangement designed to extract value (the usual beneficiary sense). Does the printing press create beneficiaries or merely new possibilities?",
-      "impact": "If the press merely creates possibilities without designed extraction, the beneficiary declarations are misleading — they anthropomorphize the technology. If the technological fact creates predictable winners and losers in a way that resembles extraction, the beneficiary framing is apt. This omega addresses whether the false-summit-mountain signature is correctly triggered.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether 'beneficiary' language is coherent when applied to agents who exploit technological opportunity (as opposed to agents who benefit from constructed extraction)."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "global_infrastructure",
-    "boltzmann_floor_override": 0.05
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "press_reformation_causation__strategic_deployment",
       "press_reformation_causation__mutual_shaping"
     ],
-    "dual_formulation_note": "The printing press and Reformation constitute a contested kernel with three structurally distinct readings. This story instantiates the TECHNOLOGICAL_DETERMINISM reading: the technology is exogenous and determines the outcome. The STRATEGIC_DEPLOYMENT reading (sister constraint) treats technology as neutral enabler and reformer agency as primary. The MUTUAL_SHAPING reading treats technology and agency as co-evolving with no primary causation direction. Each reading has a distinct ε, beneficiary structure, and type classification. The three readings are linked by network edges because they dispute the same historical fact under different causal frameworks. The kernel itself — 'did the printing press cause the Reformation?' — is not authored as a constraint; instead, each reading of the kernel is authored as a separate constraint, and the reading_relations in cs_structure declare how they relate to each other."
+    "dual_formulation_note": "The press_reformation_causation kernel decomposes into three structurally distinct constraint stories: technological_determinism (this constraint, treating the press as exogenous mountain), strategic_deployment (treating the press as neutral tool exploited by agents), and mutual_shaping (treating the press and Reformation as co-evolving). The ε-invariance principle requires separate stories because the three readings instantiate different structural claims about causation and technology. Each has its own beneficiary/victim structure, directionality, and claimed type. They are linked via network.affects_constraints as family members. The technological_determinism reading treats the constraint as upstream mountain; the others treat it as downstream to human agency. This family structure allows corpus analysis to distinguish between technological-determinist, agency-centered, and co-evolutionary frames in historical claims about technology and social change."
   },
-  "directionality_overrides": [],
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.5
+    }
+  ],
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "expertise",
-    "interpretation_layer_present": true,
-    "reference_frame": "technological_determination_of_social_change",
-    "drift_state": {
-      "moment": "contemporary_historiography",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": true
-    },
+    "authority_grounding": "diffuse_epistemic",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "press_reformation_causation__strategic_deployment",
+        "sibling_id": "mutual_shaping",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "press_reformation_causation__mutual_shaping",
-        "relation": "forecloses"
+        "sibling_id": "strategic_deployment",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "technology_determines_social_possibility_space",
+        "atom": "technology_exogenous_to_agency",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "human_agency_responsive_to_technological_fact",
+        "atom": "material_cost_structure_determines_feasibility",
         "role": "foundational",
-        "status": "overridden",
+        "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
-    ]
+    ],
+    "reference_frame": "pre_printing_hand_manuscript_monopoly",
+    "drift_state": {
+      "moment": "post_gutenberg_press_ubiquity",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
-  }
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive"
 }

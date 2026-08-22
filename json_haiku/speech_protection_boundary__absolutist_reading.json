@@ -2,201 +2,314 @@
   "header": {
     "constraint_id": "speech_protection_boundary__absolutist_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "2ff78a75-a19a-4c25-b0fd-01b0dd774115"
+    "module_name_override": "constraint_speech_protection_boundary__absolutist_reading",
+    "story_uid": "6df9103c-8ed6-47d3-95a7-f3fd5670fcbd"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.41,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.78,
-    "resistance": 0.72,
-    "claimed_type": "tangled_rope",
+    "suppression": 0.24,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.78,
+    "claimed_type": "rope",
     "human_readable": "Absolutist Speech Protection (Brandenburg Standard)",
-    "topic_domain": "constitutional_law/political_philosophy",
-    "requires_active_enforcement": true,
+    "topic_domain": "constitutional/political",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
     "beneficiaries": [
-      "speech_maximalists",
-      "powerful_institutional_speakers"
+      "political_speakers",
+      "dissidents",
+      "mass_media"
     ],
     "victims": [
-      "marginalized_communities_target_of_hate_speech",
-      "harassed_individuals_excluded_from_public_discourse"
+      "marginalized_communities",
+      "harassment_targets"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "political_speakers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Can articulate political views, criticism of government, and controversial claims with near-absolute immunity from legal restraint. Risk of consequences is limited to counter-speech, social disapproval, and civil liability for specific harms (libel, contract breach). Their ability to shape public discourse is protected even when their speech is caustic, offensive, or factually contested."
+    },
+    {
+      "name": "dissidents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Can voice opposition to established institutions, authority, and dominant narratives without facing criminal prosecution for the expression itself. This protection is structurally essential to their capacity to mobilize, organize, and challenge power imbalances. The constraint shields their ability to speak despite having no institutional resources."
+    },
+    {
+      "name": "mass_media",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Publishes reporting, opinion, and investigative journalism with minimal prior restraint or post-publication legal jeopardy for editorial content. Can cover controversial topics, publish leaked information, and criticize powerful actors without requirement to pre-screen for harm. The near-absolute protection enables their market position and editorial independence."
+    },
+    {
+      "name": "marginalized_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Encounter hate speech, dehumanizing rhetoric, and coordinated harassment campaigns that the Brandenburg standard does not restrict unless the speech explicitly incites imminent lawless action. The constraint protects speakers who demonize, stereotype, or advocate exclusion of their group, leaving no legal recourse for dignitary harm or cumulative psychological injury. They cannot exit the speech environment."
+    },
+    {
+      "name": "harassment_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face coordinated harassment, doxing, slur campaigns, and threats that fall outside the imminent-lawless-action gate. Individual statements targeting them are protected speech; the aggregate effect is psychological coercion and exclusion from public participation. Their exit is constrained: leaving social media means ceding voice; engaging means absorbing harm."
+    },
+    {
+      "name": "judicial_system",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers the Brandenburg standard through First Amendment doctrine, applying imminent-lawless-action test to speech-restriction laws and rejecting most content-based regulation. Enforces the boundary through case law and constitutional interpretation. Decides when speech crosses from protected to unprotected, determining what counts as imminent, what counts as directed to lawless action."
+    },
+    {
+      "name": "legislators_proposing_harm_restrictions",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would enact broader restrictions on hate speech, harassment, and dignitary harm (as many democracies have done) but are blocked by the Brandenburg boundary. Their excluded position is structural: any speech restriction they propose is subject to judicial invalidation if it fails the imminent-lawless-action test. They see the boundary as leaving real harms unaddressed."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Recognize hate speech and harassment as human rights violations (ICCPR Article 20, European Convention on Human Rights Article 10(2)) but have no enforcement authority over U.S. speech law. Their position is that dignitary harm and community safety justify speech restrictions within proportionality limits; they are excluded from the U.S. constitutional conversation but would object if present."
+    },
+    {
+      "name": "originalist_judges",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interpret the Brandenburg standard as grounded in the original public meaning of the First Amendment's text and founding-era understanding. From their seat, the absolutist reading is the only coherent reading consistent with constitutional structure. Other readings, in their analysis, are judicial overreach."
+    },
+    {
+      "name": "progressive_jurists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the absolutist reading as allowing structural harm to continue and treating dignitary harm as an acceptable cost of individual liberty. They see alternative readings as better reconciling free expression with equal protection and freedom from harassment. Their analysis treats the Brandenburg boundary as a contested choice, not a natural law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform legal standard for what speech the state can restrict, preventing censorship through ad hoc harm judgments. Provides speakers with clear notice of legal boundaries, enabling speech planning without chilling legitimate expression. Coordinates judicial review across jurisdictions around a single high-burden test for speech restriction.",
+    "transfer_function": "Moves dignitary safety and harassment protection away from marginalized communities and harassment targets (who cannot restrict the speech that harms them) toward speakers and media institutions (who gain near-absolute freedom to publish). The constraint transfers from the powerless (who bear aggregate harm as externality) to the beneficiary seats (who accrue speech protection).",
+    "absent_voices": "Harassment targets and marginalized communities whose dignitary harm falls outside Brandenburg protection are structurally excluded from the legal calculus that shaped the boundary. Their objection — that the standard leaves them defenseless against coordinated hate — is not heard in constitutional doctrine. International human rights frameworks that recognize hate speech as a human rights violation are also excluded from U.S. discourse.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Absolutist reading: if the Brandenburg boundary disappeared and were replaced by a standard that restricted speech causing significant dignitary or equality harm, speakers and media would face heightened legal jeopardy; the beneficiaries would reorganize around risk mitigation. Harm-limited reading: if it disappeared, marginalized communities would gain legal recourse against harassment; the constraint itself would not be missed because the coordination value (notice to speakers about boundaries) is preserved under alternative standards. The parties dispute whether the world rearranges or whether better arrangements emerge.",
+    "founding_problem": "The First Amendment was designed to prevent government censorship and protect political dissent. The Brandenburg standard operationalizes this by barring the government from criminalizing speech merely because it is offensive, controversial, or wrong. The standard exists to protect speakers (especially dissidents and vulnerable minorities) from being silenced by those in power.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist jurists and First Amendment absolutists attest that the founding problem (censorship of dissent) remains live and that Brandenburg solves it. Progressive jurists and marginalized-community advocates attest that the founding problem is substantially solved (the U.S. does not systematically censor for political reasons) but that applying Brandenburg to hate speech and harassment creates a new problem the founders did not contemplate (concentrated harm on the powerless). International human rights experts attest that democracies can protect dissent AND restrict hate speech simultaneously. No corroboration exists from outside all three seats — the problem-status itself is the contested core."
   },
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.51
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.48
+      "time_point": 5,
+      "value": 0.54
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
+      "time_point": 15,
       "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
       "value": 0.67
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.71
+      "time_point": 30,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
+      "time_point": 40,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.26
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.29
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.28
+      "value": 0.12
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.18
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.37
+      "time_point": 5,
+      "value": 0.19
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 16,
-      "value": 0.39
+      "time_point": 10,
+      "value": 0.2
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.41
+      "time_point": 15,
+      "value": 0.21
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.42
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.24
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.41
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.41
+      "value": 0.24
     }
   ],
   "commentary": {
-    "narrative_context": "The Brandenburg standard (imminent-lawless-action test) instantiates one constitutional reading of speech protection: speech is nearly absolutely protected except for direct incitement to immediate violence. This reading maximizes the protected set and minimizes the unprotected set to an extremely narrow domain. The constraint coordinates a genuine public interest—preventing government censorship of dissent—but structurally externalizes the costs of unregulated hate speech onto marginalized communities. The beneficiary set is asymmetric: institutional speakers and civil liberties organizations defending the standard benefit; powerless communities bearing the psychological and social harms of hate speech pay. This is the ABSOLUTIST READING, not the balancing or harm-limitation alternatives. The constraint is CLAIMED as tangled_rope because it coordinates protection-from-censorship while simultaneously extracting through exclusion of harm-based remedies. The authored metrics describe substantially extractive, actively enforced operation with moderate theater (the language of protection masks the exclusion mechanism).",
+    "narrative_context": "The Brandenburg v. Ohio standard (1969) set the constitutional boundary for unprotected speech at direct incitement to imminent lawless action. This absolutist reading maximizes the protected set: nearly all speech, including hate speech, harassment, dehumanizing rhetoric, and false claims, receives First Amendment protection unless it explicitly incites immediate violence. The constraint is presented as a neutral legal boundary that protects dissent and prevents censorship. The reading instantiates one interpretation of the speech-protection kernel; sibling readings (harm-limited and balancing) interpret the same constitutional text differently, grounding protection in different values and drawing the boundary at different points. This story models the absolutist reading specifically — its beneficiaries, its victims, and the structural extraction from marginalized communities that the boundary produces.",
+    "kernel_context": "This constraint is the absolutist_reading of the speech_protection_boundary kernel, contested against harm_limited_reading and balancing_reading. The kernel is the First Amendment itself — a fixed constitutional text — interpreted through different lenses. The absolutist reading grounds protection in the text's plain language and the original public meaning of the founders' censorship fear. Sibling readings ground protection in contemporary equal protection doctrine (harm-limited) and in proportionality balancing (balancing). The disagreement is located in what counts as a legitimate restriction: imminent violence only (absolutist) vs. significant dignitary/equality harm (harm-limited) vs. case-by-case weighing (balancing). All three readings compete in contemporary U.S. constitutional discourse; absolutism dominates Supreme Court doctrine but is contested by academic and activist seats.",
     "key_agents": [
-      "constitutional_originalist_jurists: institutional agenda-setters (power=institutional, exit=analytical) — set and enforce the Brandenburg doctrine through judicial opinion",
-      "speech_maximalists: organized beneficiaries (power=organized, exit=arbitrage) — institutionally dependent on the standard, defend it in courts and media",
-      "marginalized_communities_target_of_hate_speech: powerless payers (power=powerless, exit=identity_locked) — bear aggregate harm of unremediable hate speech",
-      "hate_speech_speakers: moderate beneficiaries (power=moderate, exit=mobile) — directly benefit from legal immunity for dehumanizing expression",
-      "competing_constitutional_frameworks_advocates: excluded organizers (power=organized, exit=constrained) — propose alternative readings but lack judicial authority to implement them",
-      "courts_enforcing_brandenburg: institutional agenda-setters (power=institutional, exit=analytical) — enforce through adjudication, ruling against harm-based claims"
+      "political_speakers: beneficiary from near-absolute protection; moderate power, mobile exit",
+      "dissidents: powerless beneficiary; protection enables mobilization against power imbalances",
+      "mass_media: institutional beneficiary; editorial independence and market advantage ride on protection",
+      "marginalized_communities: powerless victim; bear coordinated harassment without legal recourse",
+      "harassment_targets: powerless victim; trapped between participating and absorbing cumulative harm",
+      "judicial_system: agenda-setter; administers Brandenburg through constitutional interpretation",
+      "legislators_proposing_harm_restrictions: excluded; any restriction they pass faces invalidation",
+      "international_human_rights_bodies: excluded; recognize hate speech as human rights violation but have no enforcement authority"
     ],
-    "logic_rationale": "Extractiveness is high (0.68) because the constraint systematically excludes legal remedies for a category of harm (dignity violations, harassment, dehumanization) that other constitutional democracies address through balancing or harm exceptions. The exclusion is not incidental—it is the core of the absolutist reading. Suppression is moderate (0.41) because the constraint does not suppress the speech itself (hate speech is legal) but suppresses legal recourse for those harmed by it; the suppression is structural (legal bars to remedy) rather than violent. Theater is moderate (0.28): the language emphasizes protection-from-government-censorship (the genuine coordination function) while the operational effect is immunity-for-hate-speech (the extraction mechanism). The measurement series show extractiveness rising from t0 through t40 as the standard became more firmly entrenched and more fully internalized by younger cohorts of judges, then stabilizing at t50. Theater rose through t40 (increasing rhetorical emphasis on anti-censorship virtues) but stabilizes as the rhetoric becomes normalized. Suppression requirement is flat—the constraint requires consistent legal exclusion of harm remedies, which does not intensify or decay over this interval.",
-    "perspectival_gap": "The originalist jurists' seat perceives the constraint as pure coordination (protecting robust discourse against government abuse). The marginalized communities' seat perceives it as pure extraction (immunity for hate speech at the cost of their own legal remedies and social participation). Institutional speakers' seat perceives it as beneficial coordination (legal clarity, protected speech). Harassed individuals' seat perceives it as coercive (silencing through legal immunity for harassers). The engine computes per-seat directionality from beneficiary/victim declarations and exit options: originalists and institutional speakers compute near-beneficiary d (low extraction perceived from their position); marginalized communities compute near-target d (high extraction experienced from their position). The claim/metric gap is deliberate and diagnostic: the constraint is CLAIMED as tangled_rope (hybrid) because it genuinely coordinates against censorship while genuinely extracting through harm exclusion. The metrics describe the operational extractiveness and enforcement. This divergence is the point—false summits and mandate drift are detected by claim/metric misalignment.",
-    "directionality_logic": "Beneficiaries: speech_maximalists and powerful_institutional_speakers. They benefit from the widest protected set and highest threshold for legal restriction. They derive d near the beneficiary end because they have arbitrage-grade exit (can move their speech infrastructure) and they collect from the standard (institutional prestige, legal certainty, speech amplification). Victims: marginalized_communities_target_of_hate_speech and harassed_individuals_excluded_from_public_discourse. They bear the costs of the excluded remedies and experience identity-lock exit (cannot exit their community membership, so cannot exit the exposure to hate speech). They derive d near the target end because the constraint extracts from their legal entitlements and social standing. Agenda-setters: originalist jurists and courts. They have institutional power (can reinterpret or hold the standard) and analytical exit (theory-dependent, not material-dependent). Their d is modulated by their position as enforcers—they benefit from the standard's clarity and from defending constitutional doctrine, so d leans toward moderate benefit, but they experience professional resistance (critical scholars, policy pressure) that raises it toward symmetric. No directionality override is needed; the structural derivation captures the asymmetry.",
-    "mandatrophy_analysis": "The constraint does not exhibit mandatrophy (atrophy of founding function). The founding problem was government censorship of political dissent; the founding function was to prevent that. That function remains live—courts do use Brandenburg to protect controversial speech from government prosecution. However, the constraint is exhibiting MANDATE DRIFT: the founding problem was narrow (protecting against state suppression of dissent) but the maintained scope is maximal (protecting against ANY legal restriction including harm-based civil remedies from non-state actors). The standard's proponents argue that maintaining the maximal scope is necessary to prevent government weaponization; critics argue the founding problem is solved and the maintained scope now functions primarily to shield institutional speakers and hate-speech producers from accountability. This is not mandatrophy (the function still exists and is still invoked) but rather FUNCTIONAL DRIFT (the primary beneficiary has shifted from dissidents-against-the-state to institutional-speakers-against-accountability). The tangled_rope classification captures this: the coordination function (protection from censorship) is real; the extraction function (exclusion of harm remedies) is also real and has become increasingly salient as the state suppression threat has receded and private hate speech has proliferated.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel 'speech_protection_boundary.' The kernel is the constitutional commitment to protected speech, instantiated in the First Amendment. This reading (absolutist_reading) interprets the protected set as maximal and the unprotected set (only imminent incitement) as minimal. Sibling readings: (1) balancing_reading — protected set determined case-by-case through weighing First Amendment interests against other constitutional values (dignity, equality, freedom from harassment); (2) harm_limited_reading — protected set conditional on absence of significant harm to dignity, equality, harassment. The absolutist reading forecloses neither sibling (both remain live in dissent and scholarship) but coexists with them in a multi-faction constitutional dispute. This reading influences both siblings by setting the current judicial standard they must work against."
+    "logic_rationale": "Extractiveness rises from 0.51 to 0.68 over the interval because the constraint's protective function (preventing government censorship) remains stable, but its extractive effect (enabling hate speech and harassment) compounds as social media scale amplifies coordinated harassment. The harm accumulates on the same targets over time; the legal boundary does not shift, but its distributional consequences intensify. Theater is very low (0.12 at end): the Brandenburg standard is primarily functional, not performative — judicial review genuinely applies the imminent-lawless-action test. Suppression is low (0.24) because the absolutist reading does not rely on coercion to persist; it relies on judicial doctrine, constitutional text interpretation, and the perception that it protects important values. Accessibility collapse is high (0.72) because once the Brandenburg boundary is accepted as law, marginalized communities cannot appeal to legal protection for dignitary harm — alternatives (civil rights law, tort law, legislative action) are foreclosed by the constitutional constraint. Resistance is high (0.78) because progressive jurists, marginalized-community advocates, and international human rights bodies actively contest the boundary and call for alternative readings.",
+    "directionality_logic": "Beneficiary seats (political_speakers, dissidents, mass_media) have low directionality: the constraint subsidizes their speech. Victim seats (marginalized_communities, harassment_targets) have high directionality: they pay the cost in unaddressed dignitary harm. The judicial_system sits as agenda-setter but has moderate directionality because they enforce a rule they did not author and cannot easily change — their position is structural administrator, not primary beneficiary or victim. The excluded seats (legislators, international bodies) have inverted directionality from their own perspective: they would benefit from a different boundary and are harmed by the absolutist standard, but they are outside the constraint's direct operation.",
+    "perspectival_gap": "From the beneficiary seats (especially judicial originalists and First Amendment scholars), the absolutist reading protects essential liberties and prevents tyranny. From the victim seats (marginalized communities, harassment targets), the same boundary is a mechanism that protects the powerful's right to harm the powerless. The judicial_system's perspective is procedural: they apply the rule as law. The excluded seats would see a fundamentally different constraint if they were heard — one that balances speech freedom against dignity and equality. The engine computes these different types from the structural data: a beneficiary seat will compute differently from a victim seat, even though they are governed by the same legal rule, because their directionality, exit options, and power differ.",
+    "mandatrophy_analysis": "The founding problem (preventing government censorship of dissent) is live for political speakers and dissidents but contested for marginalized communities and harassment targets. Their objection is that the founding problem was solved decades ago — the government does not systematically suppress political speech — and that maintaining Brandenburg protects speech that is not dissent but hate. The mandatrophy resolution depends on whether the audience reads the constraint as solving the founding problem or as outdated. For dissidents, the constraint is essential (mandatrophy = low). For marginalized communities, the constraint's function is obsolete but its structure persists (mandatrophy = high). The 'contested' disappearance verdict captures this: the parties dispute whether the world would rearrange or improve if the boundary changed, which is the core mandatrophy question."
   },
   "omegas": [
     {
-      "id": "founding_problem_persistence",
-      "question": "Is the founding problem (government suppression of political dissent) still a live threat, or has it been substantially solved by institutional checks and democratic norms?",
-      "resolution_mechanism": "Comparative historical analysis of government censorship attempts across decades; empirical study of whether Brandenburg actually prevents suppression vs. whether institutional and democratic norms do. Cross-national comparison with balancing frameworks to assess whether they increase or decrease actual government suppression of dissent.",
-      "impact": "If the founding problem is solved, the constraint's scope becomes difficult to justify—it would be a mountain whose top has been climbed, now maintained for institutional reasons. If the problem is live, the maximal scope is proportional to a real threat. Classification uncertainty: snare (extraction maintained after founding problem solved) vs. tangled_rope (real coordination, collateral harms accepted). Measurement would shift this ambiguity.",
+      "id": "imminent_lawless_action_definition",
+      "question": "What counts as 'imminent' in the Brandenburg standard, and how do algorithmic amplification and coordinated online campaigns change the structural imminence of violent action?",
+      "resolution_mechanism": "Cases testing Brandenburg application to online radicalization, coordinated harassment campaigns, and algorithmic amplification; empirical analysis of correlation between online speech and violent action timing.",
+      "impact": "If 'imminence' expands to include algorithmically accelerated or coordinated campaigns, the unprotected set grows and marginalized communities gain legal recourse. If it remains tied to direct temporal proximity, the boundary holds and extraction persists.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The temporal and technological definition of 'imminence' is contested and evolving."
+    },
+    {
+      "id": "dignitary_harm_cumulative_vs_singular",
+      "question": "Does dignitary harm from hate speech and harassment accumulate (such that sustained campaigns cause measurable harm even if no singular statement incites violence), or is it appropriately disaggregated to per-statement analysis under Brandenburg?",
+      "resolution_mechanism": "Psychological and sociological evidence on cumulative harm from harassment; comparative analysis of jurisdictions that recognize cumulative dignitary harm as legally relevant.",
+      "impact": "If accumulation is recognized, harm-limited and balancing readings gain structural ground; the absolutist boundary becomes more clearly extractive. If per-statement analysis is maintained, the boundary holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dignitary harm is properly analyzed as cumulative or singular per-statement."
+    },
+    {
+      "id": "reading_foreclosure_originalist_vs_progressive",
+      "question": "Does the absolutist reading logically foreclose the harm-limited and balancing readings, or do they coexist as different interpretive frameworks that different judicial and political communities can adopt?",
+      "resolution_mechanism": "Examination of whether accepting the absolutist grounding (original public meaning, text-only analysis) logically commits one to rejecting harm-limited axioms, or whether the readings are compatible within different constitutional theories.",
+      "impact": "If foreclosure exists, the engine classifies the relation as forecloses; if coexistence is structural, the relation is coexists_with. This affects how the constraint family is modeled and whether readings are alternatives or contradictions.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the Brandenburg standard's founding justification (preventing government censorship) remains applicable."
-    },
-    {
-      "id": "harm_externality_magnitude",
-      "question": "What is the aggregate psychological, social, and speech-chilling harm experienced by marginalized communities from legally unremediable hate speech?",
-      "resolution_mechanism": "Longitudinal studies of mental health outcomes, public-discourse participation, and educational/economic outcomes in cohorts exposed to coordinated hate speech. Comparative analysis with jurisdictions using balancing or harm-limited frameworks to measure whether inclusion of harm exceptions reduces documented harms. Testimony from harassed communities about lived experience of chilling effects.",
-      "impact": "A substantial aggregate harm (measured in documented depression, social withdrawal, educational attainment loss) would establish the externality as non-negligible and raise questions about whether the coordination benefit justifies the cost. If harm is minor, the current framework is more defensible. High aggregate harm + measured benefits of Brandenburg suggests the constraint should be classified as snare (extraction exceeds coordination). Moderate harm + measured benefits suggests tangled_rope (genuine coordination with collateral costs). Low harm suggests rope (coordination with acceptable incidental effects).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Quantification of the harm externalized onto marginalized communities by the Brandenburg standard's scope."
-    },
-    {
-      "id": "institutional_lock_in_mechanism",
-      "question": "Is the Brandenburg standard maintained by its genuine legal/constitutional defensibility, or is it locked in by institutional inertia and the professional interests of the legal establishment?",
-      "resolution_mechanism": "Historical analysis of how originalism became the dominant judicial philosophy; study of judicial turnover and nomination dynamics; comparative analysis of how other constitutional democracies arrived at different speech standards. Interview data from jurists about their reasoning for maintaining or challenging Brandenburg.",
-      "impact": "If lock-in is primarily institutional/professional (originalist judges maintain Brandenburg because their interpretive framework privileges formalism), then the constraint is partially piton-like—maintained by theater and career incentives rather than substance. If lock-in is by genuine constitutional reasoning, the classification remains tangled_rope with debate over whether harms justify the scope. A finding of strong institutional lock-in would upgrade piton evidence and suggest the constraint is more performative than substantive.",
-      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the Brandenburg standard persists because it is constitutionally correct or because it is institutionally entrenched."
+      "description": "Whether the absolutist reading logically forecloses sibling readings or merely disagrees with them."
     },
     {
-      "id": "identity_lock_vs_structural_suppression",
-      "question": "Is the measured suppression (0.41) experienced by harassed individuals primarily structural (legal bars to remedy) or internalized (they have internalized the view that hate speech is normal and remedies are illegitimate)?",
-      "resolution_mechanism": "Post-remedy thought experiment: if harm-exception provisions were enacted and harassed communities gained legal remedies, would their participation and psychological outcomes improve, or do they remain chilled because they have internalized suppression? Comparative study of communities in jurisdictions with harm exceptions—do they participate more robustly?",
-      "impact": "If suppression is purely structural, remedies (legal recourse, platform moderation) would relieve it. If internalized, structural remedies are necessary but insufficient—psychological/social intervention also needed. High internalization + high structural suppression = effective suppression near the target end. The measured 0.41 may understate actual suppression if measurement captures structural barriers only and misses internalization.",
+      "id": "beneficiary_identity_lock_vulnerability",
+      "question": "To what extent is the speech-protection benefit the absolutist reading provides dependent on the beneficiary's identity as a political speaker or dissident, versus universally available to any speaker?",
+      "resolution_mechanism": "Analysis of Brandenburg application across speaker types (marginalized vs. powerful speakers; dissidents vs. state actors) to determine whether the benefit distributes equally or concentrates.",
+      "impact": "If the benefit is identity-locked to certain speaker types (e.g., powerful speakers disproportionately benefit from the protection while marginalized speakers face coordinated harm), the constraint's extractiveness increases and the beneficiary designation becomes more precise.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression of harassed individuals' speech is externally structural or partially self-perpetuating."
-    },
-    {
-      "id": "kernel_reading_contest",
-      "question": "Which of the three constitutional readings (absolutist, balancing, harm-limited) is most defensible as an interpretation of the First Amendment text and original understanding?",
-      "resolution_mechanism": "Constitutional scholarship and jurisprudence; originalist exegesis of the text and Founding-era understanding; living-constitution scholarship on constitutional evolution; international human-rights analysis of comparative speech protections; empirical study of which framework best serves democratic flourishing and equality.",
-      "impact": "This is the kernel-level contestation. The absolutist reading claims it is the constitutionally correct interpretation; balancing and harm-limited readings claim to be more faithful. Resolution would not eliminate the other readings (they are held by different constituencies) but would clarify which has stronger constitutional grounding. This is CONCEPTUAL + PREFERENCE: the question is partly about what the text means (empirical) and partly about what constitutional values should be prioritized (normative).",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The foundational constitutional dispute: whether Brandenburg is the correct interpretation of the First Amendment."
+      "description": "Whether Brandenburg's protection benefits are equally available to all speakers or concentrated."
     }
   ],
   "boltzmann": {
@@ -205,59 +318,65 @@
   },
   "network": {
     "affects_constraints": [
-      "speech_protection_boundary__balancing_reading",
       "speech_protection_boundary__harm_limited_reading",
-      "hate_speech_legal_liability",
-      "platform_content_moderation_policy",
-      "government_censorship_boundary"
+      "speech_protection_boundary__balancing_reading"
     ],
-    "dual_formulation_note": "The speech_protection_boundary kernel has three distinct constraint readings: absolutist (this file), balancing, and harm-limited. Each instantiates a different ε and beneficiary/victim structure from the same constitutional commitment. They are linked as a constraint family because each reading cites the others as alternatives it rejects. The absolutist reading influences the balancing and harm-limited readings by setting the current judicial standard they must work against; in turn, those readings' growing scholarly and advocacy support creates pressure on the absolutist reading's institutional legitimacy."
+    "dual_formulation_note": "The speech_protection_boundary kernel constrains three structurally distinct constraint stories: absolutist_reading (this file), harm_limited_reading, and balancing_reading. Each instantiates a different interpretation of the First Amendment and produces a different ε-value, different beneficiary/victim structure, and different type. The readings coexist in contemporary U.S. constitutional discourse but differ in what counts as justified speech restriction. Absolutism (imminent violence only) maximizes protected speech and extraction from the powerless. Harm-limited (restriction for significant dignitary/equality harm) distributes protection more broadly. Balancing (case-by-case weight of interests) creates context-dependent protection. The three readings are NOT observational variants of one constraint; they are different constraints with different kernels and axioms, linked by network affects_constraints edges."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "gain_flow": "mass_media",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "speech_protection_boundary__balancing_reading",
+        "sibling_id": "harm_limited_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "speech_protection_boundary__harm_limited_reading",
+        "sibling_id": "balancing_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "speech_near_absolute_except_incitement",
+        "atom": "imminent_violence_only_gate",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "government_censorship_threat_primacy",
+        "atom": "text_original_meaning_primacy",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "first_amendment_absolutist_protection",
+    "reference_frame": "founders_censorship_prevention",
     "drift_state": {
-      "moment": "contemporary_pluralistic_democracy",
-      "direction": "authority_erosion",
+      "moment": "contemporary_digital_age",
+      "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

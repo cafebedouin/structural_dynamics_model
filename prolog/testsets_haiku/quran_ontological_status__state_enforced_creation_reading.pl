@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,14 +40,22 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,30 +75,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: quran_ontological_status__state_enforced_creation_reading
- *   human_readable: State-Enforced Mu'tazilite Creationism (Mihna Inquisition)
- *   domain: theological/political
+ *   human_readable: State-Enforced Mu'tazilite Doctrine: Qur'an as Created (mihna inquisition)
+ *   domain: Islamic theology / political authority / philosophy of language
  *
  * SUMMARY:
- *   During the Abbasid caliphate (9th century CE), al-Ma'mun and al-Mu'tasim
- *   institutionalized the Mu'tazilite doctrine that the Qur'an is created
- *   (makhlūq) as state orthodoxy. The constraint is the enforcement machinery
- *   (mihna inquisition) that transformed a theological claim into a
- *   suppression mechanism. Scholars like Ahmad ibn Hanbal were imprisoned and
- *   tortured until they publicly affirmed creationism or recanted their
- *   uncreated-Qur'an doctrine. This story captures ONE READING of a contested
- *   kernel: the theological dispute about Qur'an's ontological status. This
- *   reading emphasizes the state-enforcement apparatus and the snare
- *   structure it produced. Sibling readings (created_reading as pure
- *   theology, uncreated_reading as competing doctrine) are separate
- *   constraints with different ε values, linked via
- *   network.affects_constraints.
+ *   Early Abbasid caliphate (8th–9th centuries CE): A theological
+ *   metaphysical claim — the Qur'an is created divine speech (makhlūq), not
+ *   uncreated coeternal with God — becomes state doctrine under rationalist
+ *   (Mu'tazilite) patronage. The Caliph Ma'mun (r. 813–833) enforces this via
+ *   inquisition (mihna) tribunals that demand public affirmation of the
+ *   created-Qur'an doctrine and punish traditionalist scholars who refuse.
+ *   The constraint is not the theological dispute itself (coexisting
+ *   doctrines are not extraction mechanisms), but the STATE ENFORCEMENT of
+ *   one doctrine using inquisitorial suppression as the tool. This reading
+ *   instantiates the dispute as a snare: state power converts metaphysical
+ *   claim into a suppression mechanism; the created-Qur'an doctrine becomes
+ *   the justification for purging traditionalist scholarship; victims include
+ *   Ahmad ibn Hanbal (imprisoned, tortured) and literalist scholarly
+ *   communities. This is one reading of the kernel 'quran_ontological_status'
+ *   — the kernel is the contested claim about the Qur'an's ontic status; this
+ *   reading adds state enforcement as the defining structural feature,
+ *   transforming an intellectual disagreement into an extraction regime.
  *
  * KEY AGENTS:
- *   - Caliphal authority (al-Ma'mun, al-Mu'tasim): sets doctrine, enforces via mihna tribunals, benefits from doctrinal control as political consolidation tool
- *   - Traditionalist scholars (Ahmad ibn Hanbal, al-Shafi'i's circle): bear the cost through imprisonment, torture, forced recantation; identity-locked exit because the doctrine contradicts core theological identity
- *   - Rationalist theologians (Mu'tazilites, al-Jahiz): temporarily benefit from state patronage and intellectual authority, but become contingently dependent on caliphal preference
- *   - Literalist communities (the majority of the population): excluded from public discourse, stigmatized, constrained to silent conformity
- *   - Scholarly pluralism itself: the analytical fact of theological diversity ceases to be an option; institutional ecosystem collapses to single state-mandated orthodoxy
+ *   - caliphal_authority (Caliph Ma'mun, successor caliphs employing mihna): agenda-setter, institutional power — controls inquisition tribunals, defines orthodoxy, enforces public affirmation. Exit: none — state authority is the ultimate arbiter.
+ *   - rationalist_scholars (Mu'tazilite theologians): temporary beneficiaries (state backing, institutional patronage during mihna) — their doctrine is adopted as official; power: institutional (during state backing), moderate otherwise. Exit: constrained during mihna (publish under state approval or face tribunal).
+ *   - traditionalist_scholars (Ahmad ibn Hanbal, Hanbalite school): primary victims — refuse to affirm created-Qur'an doctrine, face imprisonment, torture, career destruction. Power: initially organized (scholarly schools with transmission chains), degraded to powerless under mihna suppression. Exit: identity-locked (scholarly identity tied to transmitted doctrine; apostasy from Tradition means loss of scholarly standing and lineage).
+ *   - literalist_communities (ordinary believers, traditional jurisprudents): victims — expected to affirm state doctrine, face legal penalties for refusal. Power: organized as communities, but subject to state enforcement. Exit: constrained (formal apostasy rare; practical exit is conforming to state doctrine or silent dissent).
+ *   - scholarly_pluralism (the institutional practice of coexisting madhhabs): victim entity (not an agent) — mihna suppresses the legitimacy of multiple competing theological schools, enforcing single doctrine. Recovery contingent on post-mihna political realignment.
+ *   - inquisition_tribunals (mihna magistrates, qadis instructed by caliph): mechanism enforcers — not independent agents but instruments of state power. Power: delegated institutional (acting on caliphal authority).
  */
 
 /* ==========================================================================
@@ -99,57 +113,119 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(quran_ontological_status__state_enforced_creation_reading, 0.82).
 domain_priors:suppression_score(quran_ontological_status__state_enforced_creation_reading, 0.91).
-domain_priors:theater_ratio(quran_ontological_status__state_enforced_creation_reading, 0.28).
+domain_priors:theater_ratio(quran_ontological_status__state_enforced_creation_reading, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, extractiveness, 0.82).
 narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 0.91).
-narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, theater_ratio, 0.58).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, resistance, 0.79).
+narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, accessibility_collapse, 0.78).
+narrative_ontology:constraint_metric(quran_ontological_status__state_enforced_creation_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(quran_ontological_status__state_enforced_creation_reading, snare).
-narrative_ontology:human_readable(quran_ontological_status__state_enforced_creation_reading, "State-Enforced Mu'tazilite Creationism (Mihna Inquisition)").
-narrative_ontology:topic_domain(quran_ontological_status__state_enforced_creation_reading, "theological/political").
+narrative_ontology:human_readable(quran_ontological_status__state_enforced_creation_reading, "State-Enforced Mu'tazilite Doctrine: Qur'an as Created (mihna inquisition)").
+narrative_ontology:topic_domain(quran_ontological_status__state_enforced_creation_reading, "Islamic theology / political authority / philosophy of language").
 
 domain_priors:requires_active_enforcement(quran_ontological_status__state_enforced_creation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(quran_ontological_status__state_enforced_creation_reading, '7dc7c67b-0ecf-4128-a383-92a82deaa918').
-narrative_ontology:cs_kernel_codification('7dc7c67b-0ecf-4128-a383-92a82deaa918', distributed).
-narrative_ontology:cs_authority_grounding('7dc7c67b-0ecf-4128-a383-92a82deaa918', extraction).
-narrative_ontology:cs_reading_relation('7dc7c67b-0ecf-4128-a383-92a82deaa918', quran_ontological_status__created_reading, influences).
-narrative_ontology:cs_reading_relation('7dc7c67b-0ecf-4128-a383-92a82deaa918', quran_ontological_status__uncreated_reading, forecloses).
-narrative_ontology:cs_axiom('7dc7c67b-0ecf-4128-a383-92a82deaa918', foundational, rational_theology_requires_created_qur_an).
-narrative_ontology:cs_axiom_status(rational_theology_requires_created_qur_an, overridden).
-narrative_ontology:cs_axiom_grounding('7dc7c67b-0ecf-4128-a383-92a82deaa918', rational_theology_requires_created_qur_an, empirically_contingent).
-narrative_ontology:cs_axiom('7dc7c67b-0ecf-4128-a383-92a82deaa918', foundational, caliphal_authority_grounds_theological_truth).
-narrative_ontology:cs_axiom_status(caliphal_authority_grounds_theological_truth, holdable).
-narrative_ontology:cs_axiom_grounding('7dc7c67b-0ecf-4128-a383-92a82deaa918', caliphal_authority_grounds_theological_truth, conventional).
-narrative_ontology:cs_reference_frame('7dc7c67b-0ecf-4128-a383-92a82deaa918', rationalist_unified_metaphysics).
-narrative_ontology:cs_drift_state('7dc7c67b-0ecf-4128-a383-92a82deaa918', post_al_mutawakkil_collapse, gap(repudiation_pressure, severe, true)).
-narrative_ontology:cs_created_at('7dc7c67b-0ecf-4128-a383-92a82deaa918', '').
+narrative_ontology:cs_story_uid(quran_ontological_status__state_enforced_creation_reading, '27c6968f-1632-4b05-8f0f-ac52dd6945bc').
+narrative_ontology:cs_kernel_codification('27c6968f-1632-4b05-8f0f-ac52dd6945bc', fixed_text).
+narrative_ontology:cs_authority_grounding('27c6968f-1632-4b05-8f0f-ac52dd6945bc', extraction).
+narrative_ontology:cs_interpretation_layer_present('27c6968f-1632-4b05-8f0f-ac52dd6945bc').
+narrative_ontology:cs_reading_relation('27c6968f-1632-4b05-8f0f-ac52dd6945bc', quran_ontological_status__uncreated_reading, forecloses).
+narrative_ontology:cs_reading_relation('27c6968f-1632-4b05-8f0f-ac52dd6945bc', quran_ontological_status__created_reading, influences).
+narrative_ontology:cs_axiom('27c6968f-1632-4b05-8f0f-ac52dd6945bc', foundational, qur_an_is_created_divine_speech).
+narrative_ontology:cs_axiom_status(qur_an_is_created_divine_speech, holdable).
+narrative_ontology:cs_axiom_grounding('27c6968f-1632-4b05-8f0f-ac52dd6945bc', qur_an_is_created_divine_speech, empirically_contingent).
+narrative_ontology:cs_axiom('27c6968f-1632-4b05-8f0f-ac52dd6945bc', foundational, state_enforces_single_theological_orthodoxy).
+narrative_ontology:cs_axiom_status(state_enforces_single_theological_orthodoxy, overridden).
+narrative_ontology:cs_axiom_grounding('27c6968f-1632-4b05-8f0f-ac52dd6945bc', state_enforces_single_theological_orthodoxy, instrumental).
+narrative_ontology:cs_reference_frame('27c6968f-1632-4b05-8f0f-ac52dd6945bc', unified_imperial_ideology_through_rationalist_doctrine).
+narrative_ontology:cs_drift_state('27c6968f-1632-4b05-8f0f-ac52dd6945bc', post_mutawakkil_pluralism_restoration, gap(repudiation_pressure, severe, true)).
+narrative_ontology:cs_created_at('27c6968f-1632-4b05-8f0f-ac52dd6945bc', '').
 narrative_ontology:cs_kernel_id(quran_ontological_status__state_enforced_creation_reading, quran_ontological_status).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(quran_ontological_status__state_enforced_creation_reading, caliphal_authority).
-narrative_ontology:constraint_beneficiary(quran_ontological_status__state_enforced_creation_reading, rationalist_theologians_temporarily).
+narrative_ontology:constraint_beneficiary(quran_ontological_status__state_enforced_creation_reading, rationalist_scholars_temporary).
 narrative_ontology:constraint_victim(quran_ontological_status__state_enforced_creation_reading, traditionalist_scholars).
 narrative_ontology:constraint_victim(quran_ontological_status__state_enforced_creation_reading, literalist_communities).
 narrative_ontology:constraint_victim(quran_ontological_status__state_enforced_creation_reading, scholarly_pluralism).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(quran_ontological_status__state_enforced_creation_reading, rationalist_scholars).
+narrative_ontology:constraint_victim(quran_ontological_status__state_enforced_creation_reading, rationalist_scholars).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The Caliph (Ma'mun and successor caliphs during mihna) sets inquisition policy, defines orthodoxy, appoints inquisition magistrates, and enforces public affirmation of created-Qur'an doctrine. Justifies the inquisition as protecting true faith and rational understanding. Collects the benefit of unified theological ideology and scholarly loyalty to caliphal authority. Could exit by abandoning mihna policy entirely, but chooses to maintain enforcement to consolidate ideological control.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, caliphal_authority, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Mu'tazilite theologians benefit from caliphal patronage and institutional backing during mihna — their doctrine becomes state orthodoxy, they gain scholarly prestige and access to caliphal resources. But they also pay a cost: they are dependent on state backing for legitimacy (if state switches support, they lose standing); they must publicly defend the created-Qur'an doctrine under inquisition scrutiny even if private doubts arise; their philosophical independence is compromised by institutional loyalty requirements. Exit options: constrained because leaving state-backed doctrine means losing institutional standing and patronage.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, rationalist_scholars, beneficiary,
+    institutional, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(quran_ontological_status__state_enforced_creation_reading, rationalist_scholars, payer).
+
+% Hanbalite and traditionalist scholars refuse to affirm created-Qur'an doctrine, citing transmitted precedent and literal revelation. Face inquisition tribunals, imprisonment (Ahmad ibn Hanbal), torture, career destruction, confiscation of writings. Identity-locked: their scholarly identity is constituted through transmitted tradition; affirming created-Qur'an doctrine means breaking with lineage and ceasing to be a Hanbalite scholar. Exit is apostasy-grade (loss of scholarly standing, community alienation). Resistance is substantial but futile against state coercion: Ahmad ibn Hanbal's public defiance was legendary and led to torture; many others chose silence or underground transmission.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, traditionalist_scholars, payer,
+    organized, biographical, identity_locked, national).
+
+% Ordinary believers and jurisprudents who understood the Qur'an as uncreated eternal divine speech, following traditional piety. Mihna enforces public affirmation of created-Qur'an doctrine. Cost: violation of conscience (forced to affirm doctrine they reject spiritually), legal penalties for non-compliance (fines, exile, career barriers for judges and officials). Exit: constrained but not identity-locked — unlike scholars, they can conform to state doctrine without losing non-scholarly roles, though spiritual cost is high. Organized resistance is possible but risky; most conform outwardly while maintaining private belief.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, literalist_communities, payer,
+    organized, biographical, constrained, national).
+
+% The institutional machinery of mihna tribunals, magistrates (qadis), and enforcement procedures — not an agent but a structural artifact maintained by caliphal authority to conduct inquisitions. Its existence and operation are entirely dependent on caliphal will. Listed for analytical completeness; the functional agent is caliphal_authority.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, inquisition_apparatus, agenda_setter,
+    institutional, generational, analytical, national).
+narrative_ontology:stakeholder_non_agent(quran_ontological_status__state_enforced_creation_reading, inquisition_apparatus).
+
+% The institutional practice of coexisting theological schools (madhhabs) and doctrinal pluralism. Mihna actively suppresses this by enforcing single-doctrine orthodoxy and delegitimizing competing schools. Listed as excluded (not in the conversation) because the mihna is defined by excluding pluralistic discourse; pluralism would have objected to forced uniformity but was structurally unable to voice objection (no seat at inquisition tribunal). Post-mihna, pluralism recovered as a valued principle of Islamic jurisprudence.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, scholarly_pluralism, excluded,
+    analytical, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(quran_ontological_status__state_enforced_creation_reading, scholarly_pluralism).
+
+% Traditionalist scholars who maintained Hanbalite transmission chains and scriptural scholarship in hidden circles during mihna, avoiding official tribunals. Operated under severe risk; discoveries meant inquisition referral. Analytical role: their persistence demonstrates that suppression is not total — some resistance survives, though suppressed. Post-mihna, these underground networks became the institutional basis for Hanbalite ascendancy.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__state_enforced_creation_reading, underground_transmission, observer,
+    moderate, generational, trapped, local).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(quran_ontological_status__state_enforced_creation_reading, caliphal_authority).
+narrative_ontology:fixing_cost_class(quran_ontological_status__state_enforced_creation_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The Abbasid caliphate sought unified theological ideology to consolidate imperial authority and prevent sectarian fragmentation. A single enforced doctrine (created-Qur'an) was intended to unify scholars under rational, coherent metaphysics. The coordination problem: how to achieve doctrinal unity across a vast, theologically diverse empire?
+% TRANSFER_FUNCTION: Transfers scholarly autonomy and doctrinal legitimacy from traditionalist schools to rationalist schools (Mu'tazilite), and transfers authority to define orthodoxy from decentralized scholarly consensus to centralized caliphal decree. Money moves from caliphal treasury to rationalist scholars (patronage, salaries). Punishment and coercion move from caliphs to traditionalist scholars (imprisonment, torture, career destruction).
+% ABSENT_VOICES: Scholars and believers committed to uncreated-Qur'an doctrine are excluded from mihna tribunals — their voice is only heard through suppression and forced testimony under threat. They would argue that theological diversity is a feature of Islamic tradition, not a disease; that forced orthodoxy corrupts spiritual authenticity; that the Qur'an's uncreated status is a foundation of piety and cannot be rationalized away. Also absent: ordinary believers whose spiritual conscience conflicts with state doctrine but who lack institutional voice to object formally.
+% DISAPPEARANCE_RATIONALE: If mihna enforcement vanished overnight, traditionalist scholarship would resurface immediately (many scholars only went silent, not ceased existing). Hanbalite and literalist doctrine would regain legitimacy. Multiple coexisting theological schools would return to normalcy. The scholarly ecosystem would reorganize around decentralized consensus instead of caliphal decree. In fact, this is what happened: Caliph al-Mutawakkil ended mihna enforcement (c. 847 CE), and traditionalist schools — especially Hanbalite — emerged as ascendant, eventually dominating Sunni orthodoxy.
+% FOUNDING_PROBLEM: Theological doctrinal unity: the Abbasid caliphate faced a fragmented scholarly landscape with competing schools of interpretation. Rationalist (Mu'tazilite) and traditionalist (literalist, Hanbalite) scholars disagreed fundamentally on the Qur'an's ontological status and the role of reason in theology. The caliphate interpreted this as a threat to imperial coherence: an empire needs unified ideology to prevent sectarian rebellion. The created-Qur'an doctrine was selected as the rational, universally defensible position that could unify the educated elite.
+% FOUNDING_PROBLEM_CORROBORATION: Mu'tazilite and caliphal authorities attest the problem is live: theological confusion threatens faith and imperial stability (attested in theological writings and court decrees). Traditionalist scholars attest the problem is dead or illusory: theological diversity is a healthy feature of Islamic jurisprudence; forced uniformity creates ossification and spiritual death. Independent corroboration from later Islamic history: post-mihna (after al-Mutawakkil ended enforcement), the Islamic scholarly tradition evolved to embrace BOTH created and uncreated positions through doctrinal pluralism in the four Sunni madhhabs, with the Hanbalite school (which championed uncreated doctrine) becoming ascendant and broadly respected. This suggests the founding problem (need for unified doctrine) was not inherent but was a temporary political choice; pluralism recovered and became institutionalized. The legacy: no Islamic school today enforces the created-Qur'an doctrine through state inquisition; pluralism is the norm.
+narrative_ontology:disappearance_verdict(quran_ontological_status__state_enforced_creation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(quran_ontological_status__state_enforced_creation_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(quran_ontological_status__state_enforced_creation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(quran_ontological_status__state_enforced_creation_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(quran_ontological_status__state_enforced_creation_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(quran_ontological_status__state_enforced_creation_reading, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,16 +245,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.82) because the constraint's persistence depends on the caliphate's coercive capacity, not on intellectual conviction or genuine coordination benefits. The trajectory rises (0.45→0.82) as enforcement intensifies under al-Mu'tasim (more imprisonment, more elaborate inquisition tribunals), then plateaus and slightly declines as the system becomes normalized (theater_ratio rises as performance of conformity replaces active suppression). Suppression is highest (0.91) because the constraint's enforcement is the constraint itself—the mihna is not a side effect of doctrine but the apparatus that manufactures compliance. Accessibility collapse is moderate-high (0.72) because exit from the theological position requires identity dissolution (for scholars) or institutional invisibility (for communities), but alternatives persist in underground networks. Resistance is high (0.79) because traditionalist scholars refuse recantation even under torture, and the populace largely continues literalist interpretation despite state stigma. Theater_ratio is low (0.28) because the inquisition tribunals are not theatrical—they are brutal enforcement—but over time the constraint does develop a performative layer (ritual affirmations of doctrine by scholars who privately maintained other views).
+ *   Extractiveness (0.82): The constraint extracts scholarly autonomy and doctrinal legitimacy from traditionalist scholars and transfers both to the rationalist school (temporarily) and caliphal authority (permanently — the ability to define orthodoxy). The extraction is not reciprocal: caliphs and rationalist scholars gain institutional standing; traditionalists lose career, freedom, and intellectual legacy (many works destroyed or suppressed). The constraint is structured extraction because alternatives (coexisting schools, decentralized theological authority) are actively suppressed, not naturally obsolete. Suppression (0.91): Very high because the constraint's persistence depends entirely on inquisition coercion — tribunals, torture, imprisonment, career expulsion. Without active enforcement, traditionalist scholarship would resurface immediately (as it did post-mihna). Theater ratio (0.58): Moderate-high because mihna rhetoric emphasizes doctrinal purity and rational correctness, but much of the actual activity serves political consolidation (eliminating rival authority claims, securing scholarly loyalty to caliphal ideology). The theological arguments are real, but they are deployed theatrically to justify institutional purge. Accessibility collapse (0.78): High because traditionalist scholars face near-total elimination of the alternative of non-compliance — public dissent means tribunal, imprisonment, torture; silent non-compliance means loss of scholarly voice; the only accessible exit is affirmation. Resistance (0.72): Substantial resistance from traditionalist scholars and communities (Ahmad ibn Hanbal's defiance was legendary; Hanbalite transmission chains persisted underground), but resistance is suppressed violently rather than accommodated. Leveled coercion grid: Individual-level suppression is highest at t20 (0.93) because inquisition hits individual scholars directly (Ahmad ibn Hanbal tortured); organizational-level suppression is also very high (rationalist schools gain state backing, traditionalist schools are purged). Structural-level coercion is sustained throughout (caliphal authority defines orthodoxy by law). Stakes inflation rises over the interval because the cost of non-compliance escalates from social shunning (t0) to imprisonment and torture (t10–15). Resistance peaks in the middle interval (t10–15) during the height of enforcement but then declines (t20) as traditionalists either convert, flee, or accept underground silence.
  *
  * PERSPECTIVAL GAP:
- *   From the caliphal seat: the constraint is a philosophical unification that consolidates authority (d near beneficiary). From the traditionalist scholar seat: the constraint is a torture apparatus that demands identity destruction (d at target end). From the rationalist seat: the constraint is state patronage and intellectual authority, but contingent on caliphal whim. The engine should compute these perspectives as strongly divergent classifications: agenda_setter and beneficiary seats should classify this as rope (coordination function, state-backed); victim seats should classify as snare (pure extraction, suppression, forced conformity). This divergence is exactly what the per-seat computation is designed to detect.
+ *   The caliphal authority and rationalist scholars would experience this constraint very differently. From the caliph's seat: the constraint is a necessary unification of theological doctrine to prevent societal fragmentation, justified as rational clarification of revealed truth (a coordination function). From the traditionalist scholar's seat: the constraint is pure extraction — state power applied to eliminate competing authority claims and force doctrinal loyalty. From the literalist community's seat: the constraint is suppression of spiritual autonomy and religious conscience (identity-locked victims forced to affirm a doctrine that contradicts their lived understanding of revelation). The engine should compute high effective extraction (χ) for the traditionalist seats and low/negative χ (subsidy) for the rationalist seats during mihna, reflecting the asymmetric structural relationship. The leveled coercion grid shows this: organizational suppression (0.93) targets the traditionalist scholarly hierarchy directly, while rationalist scholars face no organizational suppression (they are the organized arm of state authority).
  *
  * DIRECTIONALITY LOGIC:
- *   Caliphal authority: d near 0.0 (beneficiary, powerful, arbitrage exit—can shift doctrine at will). Rationalist theologians: d around 0.3-0.4 (benefit from state backing, but constrained exit because career is tied to caliphal preference; contingent beneficiary). Traditionalist scholars: d near 1.0 (victims, identity-locked, trapped). Literalist communities: d near 0.9 (victims, powerless, constrained). Scholarly pluralism: analytical seat, d = 0.5 by definition. No directionality overrides needed; the base structural data (beneficiary/victim + exit + power) derives the correct d values.
+ *   Beneficiaries (caliphal_authority, rationalist_scholars_temporary): Both have directionality near the beneficiary end (low d). Caliphal authority collects the benefit of doctrinal monopoly indefinitely (d near 0.1–0.2: powerful, stable, controlling the mechanism, no exit). Rationalist scholars benefit from state backing temporarily but face reversal risk if political winds shift — their d sits at 0.3–0.4 (institutional power under state patronage, but contingent). Victims (traditionalist_scholars, literalist_communities): Both have directionality near the target end (high d). Traditionalist scholars face identity-locked exit (their identity IS their scholarly tradition; leaving the tradition means ceasing to be a scholar in that lineage) — d near 0.85–0.95 (trapped, high stakes, powerful suppression, no acceptable exit). Literalist communities face constrained exit (conforming to state doctrine is enforced, but organized mass resistance is possible, especially post-mihna) — d near 0.75–0.85. The scholarly_pluralism victim (not an agent) does not have a directionality value; it is a structural loss rather than a seat-based extraction.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (rational theology, unified metaphysics) is DEAD by the time the mihna collapses. When al-Mutawakkil ended state enforcement (after al-Mu'tasim), the scholarly consensus immediately returned to pluralism and uncreated-Qur'an doctrine, demonstrating that the state enforcement had manufactured an artificial orthodoxy, not solved a genuine intellectual problem. The constraint exhibits classic mandatrophy: the founding mandate (produce rational theological consensus) has been superseded or invalidated by its own operation (coercion revealed that consensus was false). The constraint persists as pure extraction because the caliphate benefits from doctrinal control, even though the founding problem no longer justifies the mechanism.
+ *   Founding problem (R5): The founding problem is theological doctrinal clarity combined with political consolidation — the Abbasid caliphate sought unified ideology to stabilize a vast empire. Founding problem status: CONTESTED. Mu'tazilites attest it is live (doctrinal confusion threatens faith). Traditionalists attest it is dead — the problem of theological diversity is not a disease but a healthy feature of Islamic jurisprudence; forced uniformity creates the disease (intellectual ossification, spiritual deadness). Disappearance verdict: WORLD_REARRANGES. The constraint is not a natural law; it is an institutional choice. If mihna enforcement vanished (as it did under Caliph al-Mutawakkil ~847 CE), the scholarly ecosystem would immediately reorganize: traditionalist schools resurface, multiple theological positions coexist again, caliphal monopoly over doctrine dissolves. The Hanbalite school that Ahmad ibn Hanbal founded emerged stronger post-mihna, suggesting the constraint's disappearance triggered reorganization in favor of suppressed constituencies. Mandatrophy signal: High theater ratio (0.58) + divergence between founding problem (doctrinal clarity) and actual operation (career suppression) + post-mihna reversal (Hanbalite ascendancy) suggests the founding problem is dead and the constraint persists as institutional inertia and caliphal-rationalist alliance maintenance. The constraint should flag mandatrophy_resolved = true: the consolidation was achieved (empire unified under rationalist doctrine for ~30 years), but the remedy (mihna enforcement) outlived its purpose and eventually caused institutional breakdown (loss of scholarly legitimacy, sectarian alienation, caliphal authority erosion).
  */
 
 /* ==========================================================================
@@ -186,85 +262,125 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    theology_vs_coercion_boundary,
-    'Would the Mu''tazilite created-Qur''an doctrine have been adopted by the scholarly consensus without state enforcement, or did state coercion manufacture an artificial consensus?',
-    'Counterfactual analysis from post-mihna theological development: after the collapse of mihna enforcement (under al-Mutawakkil), the scholarly consensus rapidly rejected state-enforced creationism and returned to pluralism. This suggests the doctrine did not reflect genuine intellectual conviction but rather coerced conformity.',
-    'If the doctrine was purely enforced consensus (not genuine intellectual adoption), the entire extracted value appears as pure political rent-seeking with no coordination function. If some portion of rationalist scholars genuinely adopted it, a fraction of extraction might be attributed to intellectual competition rather than pure coercion.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(theology_vs_coercion_boundary, empirical, 'Whether the created-Qur''an doctrine commanded genuine intellectual authority or only coerced conformity.').
-
-omega_variable(
-    suppression_mechanism_internalization,
-    'After the mihna collapsed, did traditionalist scholars retain internalized suppression (self-censorship, hesitation to speak on metaphysical issues openly), or did they immediately resume unconstrained scholarly activity?',
-    'Post-mihna historical records of traditionalist scholarly output: if scholars like Ahmad ibn Hanbal''s immediate successors resumed vigorous public theological work without hesitation, suppression was structural only. If there was a lag period of self-imposed caution, suppression became partially internalized.',
-    'Structural suppression ends when coercion ends; internalized suppression persists after exit. If suppression became internalized, the constraint''s true cost exceeded the measured suppression_requirement, and the regime''s extractive impact extended beyond formal enforcement.',
+    creation_doctrine_vs_political_tool,
+    'Is the created-Qur''an doctrine genuinely motivated by theological metaphysics, or is state enforcement converting it into a pure political instrument for doctrinal purge?',
+    'Historical analysis of rational-school scholars'' writings before and after caliphal backing. If theological arguments appear before state power, the doctrine carries intrinsic motivation; if arguments intensify only under state enforcement, the doctrine is a post-hoc justification. Comparative analysis with competing theological systems that emerged under different state regimes.',
+    'If politically driven, the constraint''s classification remains snare and extraction rises further (the doctrine itself becomes a suppression cover). If theologically motivated, the classification might shift toward tangled_rope (genuine coordination of metaphysical understanding + asymmetric political enforcement), but the mihna mechanism keeps it snare-flavored regardless.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression was purely structural (external coercion) or partially internalized (lasting psychological effect).').
+narrative_ontology:omega_variable(creation_doctrine_vs_political_tool, empirical, 'Whether the created-Qur''an doctrine''s persistence depends on intrinsic theological coherence or on state coercion.').
 
 omega_variable(
-    rationalist_school_capture,
-    'Did the rationalist theologians become intellectual agents of the caliphate, or did they retain independent scholarly authority while benefiting from state backing?',
-    'Comparison of rationalist theological output before, during, and after the mihna: did their intellectual positions change to match caliphal preference, or did they maintain independent lines of argument despite state support?',
-    'If rationalists were fully captured (intellectually subordinated to caliphal preference), they are not true beneficiaries but forced collaborators; the snare structure extends to them as well. If they retained some intellectual autonomy, the beneficiary categorization is accurate and the snare is localized to traditionalists.',
+    kernel_reading_foreclosure_ambiguity,
+    'Does the state-enforced creation reading foreclose the uncreated reading, or do both remain live positions despite mihna suppression?',
+    'Post-mihna scholarly ecology: if uncreated-doctrine scholarship persists and is eventually rehabilitated (Ahmad ibn Hanbal vindicated posthumously), the readings coexist despite enforcement. If uncreated doctrine is permanently erased or driven underground without recovery, the enforced creation reading forecloses it in institutional memory even if not in logical necessity.',
+    'Forecloses → the engine''s cross-index_coupling protocol flags the enforcement as total doctrinal suppression, not disagreement management. Coexists_with → the mihna is a faction battle with recovery possible, not an irreversible kernel rewrite. The reading_relations declaration in cs_structure directly models this uncertainty.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_foreclosure_ambiguity, empirical, 'Whether state-enforced creation reading forecloses the uncreated reading or merely suppresses it temporarily.').
+
+omega_variable(
+    internalized_vs_structural_suppression,
+    'Is the measured suppression of traditionalist scholars structural (inquisition torture, career expulsion) or does it persist internalized in the post-mihna scholarly habitus?',
+    'Post-mihna trajectory: if traditionalist scholars resume writing freely once state enforcement relaxes (post-Ma''mun caliphate), suppression is primarily structural. If scholars remain silent or self-censor even after legal barriers drop, suppression is partially internalized. Documentary evidence from 9th–10th century manuscripts and biographical records.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — scholars carry the suppression with them after exit from direct state coercion. Classification stays snare either way, but internalization indicates deeper identity-fusion with doctrinal conformity.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(internalized_vs_structural_suppression, empirical, 'Suppression mechanism: structural enforcement vs. internalized doctrinal conformity.').
+
+omega_variable(
+    scholarly_pluralism_recovery,
+    'Is ''scholarly pluralism'' (listed as a victim) a recoverable institutional practice, or does state-enforced doctrine entrench itself permanently?',
+    'Post-mihna institutional evolution: if multiple theological schools eventually coexist in formal acceptance (Sunni madhhab pluralism, post-Abbasid decline), pluralism recovered. If one doctrine ossifies as institutional orthodoxy (creedal councils, madrasa curricula locked into single doctrine), it does not. Long-term institutional ecology over 2–3 centuries.',
+    'If pluralism recovers, the snare is temporary-institutional (scaffold-like, but enforced rather than consensual). If it stays locked, the victim status indicates permanent institutional capture. Either way, the constraint''s type remains snare; the recovery timeline affects mandatrophy analysis — is the founding problem (establishing orthodoxy) still live, or is it dead yet the enforcement persists?',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(rationalist_school_capture, conceptual, 'Whether the rationalist school was genuinely beneficiary or was itself intellectually captured.').
-
-omega_variable(
-    kernel_reading_distinction,
-    'Is this constraint (state-enforced creation doctrine via mihna) fundamentally different from a constraint describing the creation doctrine itself without enforcement, or are they variants of one constraint measured under different observable conditions?',
-    'The ε-invariance test: the creation doctrine (as a pure theological claim) has near-zero extraction and moderate theater (scholarly debate). The state-enforced version has high extraction and high suppression. These are different ε values, indicating two distinct constraints, not one constraint viewed two ways. This confirms the kernel decomposition: the theological claim is one constraint; the state-enforcement mechanism is another, linked via network.',
-    'If confirmed as two constraints, the network relationship (state_enforced_creation_reading affects theological_creation_doctrine) is structurally justified. If the constraints are the same, the decomposition was false and the reading should be re-authored as a single perspective-dependent story.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_distinction, conceptual, 'Whether state enforcement creates a distinct constraint or is merely a perspective on the theology constraint.').
+narrative_ontology:omega_variable(scholarly_pluralism_recovery, empirical, 'Whether state-enforced theological orthodoxy permits or prevents restoration of scholarly pluralism.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(quran_ontological_status__state_enforced_creation_reading, 0, 35).
+narrative_ontology:interval(quran_ontological_status__state_enforced_creation_reading, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(qura_tr_t0, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(qura_tr_t5, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 5, 0.14).
-narrative_ontology:measurement(qura_tr_t10, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 10, 0.19).
-narrative_ontology:measurement(qura_tr_t15, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 15, 0.23).
-narrative_ontology:measurement(qura_tr_t20, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 20, 0.27).
-narrative_ontology:measurement(qura_tr_t25, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 25, 0.31).
-narrative_ontology:measurement(qura_tr_t30, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 30, 0.28).
-narrative_ontology:measurement(qura_tr_t35, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 35, 0.28).
+narrative_ontology:measurement(qura_tr_t0, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 0, 0.35).
+narrative_ontology:measurement_basis(qura_tr_t0, projected).
+narrative_ontology:measurement(qura_tr_t5, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 5, 0.45).
+narrative_ontology:measurement_basis(qura_tr_t5, observed).
+narrative_ontology:measurement(qura_tr_t10, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 10, 0.58).
+narrative_ontology:measurement_basis(qura_tr_t10, observed).
+narrative_ontology:measurement(qura_tr_t15, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 15, 0.62).
+narrative_ontology:measurement_basis(qura_tr_t15, observed).
+narrative_ontology:measurement(qura_tr_t20, quran_ontological_status__state_enforced_creation_reading, theater_ratio, 20, 0.51).
+narrative_ontology:measurement_basis(qura_tr_t20, observed).
 
 % Extraction over time
-narrative_ontology:measurement(qura_be_t0, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(qura_be_t5, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 5, 0.58).
-narrative_ontology:measurement(qura_be_t10, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 10, 0.71).
-narrative_ontology:measurement(qura_be_t15, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 15, 0.79).
-narrative_ontology:measurement(qura_be_t20, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 20, 0.84).
-narrative_ontology:measurement(qura_be_t25, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 25, 0.82).
-narrative_ontology:measurement(qura_be_t30, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 30, 0.76).
-narrative_ontology:measurement(qura_be_t35, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 35, 0.82).
+narrative_ontology:measurement(qura_be_t0, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement_basis(qura_be_t0, projected).
+narrative_ontology:measurement(qura_be_t5, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 5, 0.75).
+narrative_ontology:measurement_basis(qura_be_t5, observed).
+narrative_ontology:measurement(qura_be_t10, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 10, 0.82).
+narrative_ontology:measurement_basis(qura_be_t10, observed).
+narrative_ontology:measurement(qura_be_t15, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 15, 0.81).
+narrative_ontology:measurement_basis(qura_be_t15, observed).
+narrative_ontology:measurement(qura_be_t20, quran_ontological_status__state_enforced_creation_reading, base_extractiveness, 20, 0.76).
+narrative_ontology:measurement_basis(qura_be_t20, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(qura_su_t0, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 0, 0.65).
-narrative_ontology:measurement(qura_su_t5, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 5, 0.74).
-narrative_ontology:measurement(qura_su_t10, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 10, 0.83).
+narrative_ontology:measurement(qura_su_t0, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 0, 0.72).
+narrative_ontology:measurement_basis(qura_su_t0, projected).
+narrative_ontology:measurement(qura_su_t5, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 5, 0.82).
+narrative_ontology:measurement_basis(qura_su_t5, observed).
+narrative_ontology:measurement(qura_su_t10, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 10, 0.91).
+narrative_ontology:measurement_basis(qura_su_t10, observed).
 narrative_ontology:measurement(qura_su_t15, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 15, 0.89).
-narrative_ontology:measurement(qura_su_t20, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 20, 0.91).
-narrative_ontology:measurement(qura_su_t25, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 25, 0.88).
-narrative_ontology:measurement(qura_su_t30, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 30, 0.79).
-narrative_ontology:measurement(qura_su_t35, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 35, 0.91).
+narrative_ontology:measurement_basis(qura_su_t15, observed).
+narrative_ontology:measurement(qura_su_t20, quran_ontological_status__state_enforced_creation_reading, suppression_requirement, 20, 0.68).
+narrative_ontology:measurement_basis(qura_su_t20, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=0, tn=20
+narrative_ontology:measurement(qura_grid_01, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(class), 0, 0.55).
+narrative_ontology:measurement(qura_grid_02, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(class), 20, 0.68).
+narrative_ontology:measurement(qura_grid_03, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(individual), 0, 0.62).
+narrative_ontology:measurement(qura_grid_04, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(individual), 20, 0.75).
+narrative_ontology:measurement(qura_grid_05, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(organizational), 0, 0.68).
+narrative_ontology:measurement(qura_grid_06, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(organizational), 20, 0.82).
+narrative_ontology:measurement(qura_grid_07, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(structural), 0, 0.78).
+narrative_ontology:measurement(qura_grid_08, quran_ontological_status__state_enforced_creation_reading, accessibility_collapse(structural), 20, 0.85).
+narrative_ontology:measurement(qura_grid_09, quran_ontological_status__state_enforced_creation_reading, resistance(class), 0, 0.68).
+narrative_ontology:measurement(qura_grid_10, quran_ontological_status__state_enforced_creation_reading, resistance(class), 20, 0.75).
+narrative_ontology:measurement(qura_grid_11, quran_ontological_status__state_enforced_creation_reading, resistance(individual), 0, 0.58).
+narrative_ontology:measurement(qura_grid_12, quran_ontological_status__state_enforced_creation_reading, resistance(individual), 20, 0.62).
+narrative_ontology:measurement(qura_grid_13, quran_ontological_status__state_enforced_creation_reading, resistance(organizational), 0, 0.72).
+narrative_ontology:measurement(qura_grid_14, quran_ontological_status__state_enforced_creation_reading, resistance(organizational), 20, 0.78).
+narrative_ontology:measurement(qura_grid_15, quran_ontological_status__state_enforced_creation_reading, resistance(structural), 0, 0.62).
+narrative_ontology:measurement(qura_grid_16, quran_ontological_status__state_enforced_creation_reading, resistance(structural), 20, 0.68).
+narrative_ontology:measurement(qura_grid_17, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(class), 0, 0.72).
+narrative_ontology:measurement(qura_grid_18, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(class), 20, 0.85).
+narrative_ontology:measurement(qura_grid_19, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(individual), 0, 0.58).
+narrative_ontology:measurement(qura_grid_20, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(individual), 20, 0.88).
+narrative_ontology:measurement(qura_grid_21, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(organizational), 0, 0.65).
+narrative_ontology:measurement(qura_grid_22, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(organizational), 20, 0.92).
+narrative_ontology:measurement(qura_grid_23, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(structural), 0, 0.68).
+narrative_ontology:measurement(qura_grid_24, quran_ontological_status__state_enforced_creation_reading, stakes_inflation(structural), 20, 0.78).
+narrative_ontology:measurement(qura_grid_25, quran_ontological_status__state_enforced_creation_reading, suppression(class), 0, 0.68).
+narrative_ontology:measurement(qura_grid_26, quran_ontological_status__state_enforced_creation_reading, suppression(class), 20, 0.82).
+narrative_ontology:measurement(qura_grid_27, quran_ontological_status__state_enforced_creation_reading, suppression(individual), 0, 0.62).
+narrative_ontology:measurement(qura_grid_28, quran_ontological_status__state_enforced_creation_reading, suppression(individual), 20, 0.85).
+narrative_ontology:measurement(qura_grid_29, quran_ontological_status__state_enforced_creation_reading, suppression(organizational), 0, 0.75).
+narrative_ontology:measurement(qura_grid_30, quran_ontological_status__state_enforced_creation_reading, suppression(organizational), 20, 0.93).
+narrative_ontology:measurement(qura_grid_31, quran_ontological_status__state_enforced_creation_reading, suppression(structural), 0, 0.81).
+narrative_ontology:measurement(qura_grid_32, quran_ontological_status__state_enforced_creation_reading, suppression(structural), 20, 0.89).
 
 
 /* ==========================================================================
@@ -272,18 +388,17 @@ narrative_ontology:measurement(qura_su_t35, quran_ontological_status__state_enfo
    ========================================================================== */
 
 narrative_ontology:coordination_type(quran_ontological_status__state_enforced_creation_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(quran_ontological_status__state_enforced_creation_reading, 0.12).
 narrative_ontology:affects_constraint(quran_ontological_status__state_enforced_creation_reading, quran_ontological_status__created_reading).
 narrative_ontology:affects_constraint(quran_ontological_status__state_enforced_creation_reading, quran_ontological_status__uncreated_reading).
 
 % DUAL FORMULATION NOTE:
-% The quran_ontological_status kernel decomposes into three separate constraints: (1) created_reading—pure theological claim that Qur'an is created, as intellectual doctrine; (2) state_enforced_creation_reading (THIS constraint)—the mihna inquisition apparatus enforcing the doctrine via coercion; (3) uncreated_reading—competing theological claim that Qur'an is uncreated eternal speech. Each reading has a distinct ε: created_reading has low extraction (intellectual claim only); state_enforced_creation_reading (THIS) has high extraction (coercion, suppression, torture); uncreated_reading has moderate extraction (theological competition, state suppression). The three constraints are linked via network.affects_constraints because each reading's institutional fate depends on the others' fate. The theological claim (created_reading) is logically independent; the state-enforcement reading forecloses the uncreated reading within the same caliphate framework.
+% The kernel 'quran_ontological_status' decomposes into THREE constraints, each instantiating a reading: (1) created_reading — Mu'tazilite theological assertion, primarily intellectual; (2) state_enforced_creation_reading — THIS constraint — the mihna inquisition converting the theological claim into a suppression regime; (3) uncreated_reading — traditionalist/Hanbalite assertion, also primarily intellectual until later periods when it becomes state-backed. ε-invariance disciplines: created_reading (theological claim only) has low ε because coexisting schools are not extraction mechanisms. state_enforced_creation_reading (THIS) has high ε because state power extracts doctrinal compliance and scholarly loyalty. uncreated_reading (post-mihna traditionalist ascendancy) has low ε when pluralistic, high ε if state-enforced. Each constraint is a separate story; links trace political/doctrinal influence. This reading is upstream to created_reading (state enforcement backs Mu'tazilite doctrine), and influences the later uncreated_reading (state enforcement of traditionalist doctrine was a reaction to and reversal of state-enforced creation doctrine).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(quran_ontological_status__state_enforced_creation_reading, organized, 0.35).
+constraint_indexing:directionality_override(quran_ontological_status__state_enforced_creation_reading, organized, 0.82).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

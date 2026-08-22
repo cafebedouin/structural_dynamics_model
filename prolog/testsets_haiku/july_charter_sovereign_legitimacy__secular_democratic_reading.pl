@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,39 +74,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: july_charter_sovereign_legitimacy__secular_democratic_reading
- *   human_readable: July Charter Secular Democratic Mandate with Military Subordination
- *   domain: constitutional/political
+ *   human_readable: Charter Mandate: Secular Democratic Institutions with Civilian Military Subordination
+ *   domain: constitutional/political/institutional
  *
  * SUMMARY:
- *   This constraint story instantiates the SECULAR DEMOCRATIC READING of a
- *   contested constitutional kernel — the July Charter's mandate for state
- *   legitimacy and institutional structure. The kernel itself is the fixed
- *   text of the Charter, but its meaning and enforcement depends on which
- *   reading prevails. Under the secular democratic reading, the Charter
- *   mandates: (1) secular democratic institutions as the basis of state
- *   legitimacy, grounded in civil law and democratic procedure rather than
- *   religious identity; (2) military institutional subordination to civilian
- *   authority, foreclosing autonomous military custodial roles; (3)
- *   structural exclusion of political Islam from claiming state-building
- *   legitimacy. This reading benefits secular institutions, international
- *   liberal-order actors, and religious minorities while imposing costs on
- *   military autonomous authority and political Islam movements' legitimacy
- *   claims. The sibling readings—guided nationalism (Islamic identity as
- *   sovereign legitimacy) and military custodian (armed forces as permanent
- *   constitutional guardian)—represent competing interpretations of the same
- *   Charter text, each with different beneficiary/victim structures and
- *   different institutional consequences. This story models the constraint as
- *   instantiated by the secular democratic reading; the other readings are
- *   other constraints with different ε-invariance profiles.
+ *   A post-revolutionary charter establishes secular democratic institutions
+ *   with explicit military subordination to civilian authority. The charter
+ *   is read by competing parties as instantiating different foundational
+ *   commitments: the secular democratic reading grounds legitimacy in
+ *   constitutional process and electoral mandate; the military-custodian
+ *   reading embeds military institutional autonomy as permanent guardian of
+ *   stability; the guided-nationalism reading asserts Islamic identity as the
+ *   sovereign foundation with democratic process as instrument. This story
+ *   generates the secular-democratic reading as a single ε-invariant
+ *   constraint. The reading benefits secular elites, urban professionals, and
+ *   civil rights advocates (who gain institutional authority and rights
+ *   protections) while extracting from military autonomy, political Islam
+ *   actors, and rural religious communities (who lose autonomous authority or
+ *   participation parity). The constraint is substantially extractive (0.68
+ *   base ε) because it does not merely coordinate around shared values but
+ *   actively suppresses alternative legitimacy grounds, enforced through
+ *   constitutional doctrine, military chain-of-command reform, and legal bans
+ *   on theocratic party organization.
  *
  * KEY AGENTS:
- *   - civilian_elected_leadership: institutional agenda-setter; interprets and enforces secular democratic reading; benefits from democratic legitimacy but depends on military compliance
- *   - military_institutional_leadership: institutional payer; bears cost of formal subordination; identity-locked to military autonomy concept; forced to accept civilian supremacy
- *   - political_islam_movements: organized victim; structurally excluded from legitimacy contest; identity-locked to religious sovereignty claim; cannot exit without ideological dissolution
- *   - secular_civil_society: moderate beneficiary; protected by secular institutional framework; mobile exit (political speech/voting); organized around secular democratic values
- *   - judges_constitutional_interpreters: institutional beneficiary/agenda-setter; enforce secular reading through case law; constrained exit (embedded in constitutional structure)
- *   - international_liberal_order: global institutional beneficiary; provides legitimacy and material support conditional on secular-democratic compliance; analytical seat (cannot directly enforce)
- *   - religious_minorities: powerless beneficiary; depend on secular reading for protection from majoritarian religious law; trapped in nation-state; survival depends on constraint persistence
+ *   - Secular democratic elite (agenda-setter, institutional power, arbitrage exit): draft and champion the charter, control constitutional interpretation, mobilize international democratic support.
+ *   - Military officer corps (payer, powerful, identity-locked): bear subordination as loss of budgetary/foreign-policy autonomy and prestige; institutional identity fused to hierarchy makes exit impossible.
+ *   - Political Islam actors (victim, organized, constrained exit): structurally excluded from exclusive authority; theocratic representation ruled out; can participate in secular processes but not organize around religious legitimacy.
+ *   - Urban professional class (beneficiary, organized, constrained exit): benefit from secular meritocratic institutions; dependent on institutional infrastructure so exit is constrained.
+ *   - Civil rights advocates (beneficiary, moderate, mobile exit): defend the secular democratic reading against military and religious-nationalist reinterpretation; mobilize media and academia.
+ *   - Rural religious communities (excluded, powerless, trapped): nominally in polity but experience displacement of traditional authority; no channels to articulate objections; geographically and economically entrapped.
+ *   - Constitutional court (observer, institutional, analytical): interprets mandate; adjudicates competing readings through litigation; subject to political pressure.
  */
 
 /* ==========================================================================
@@ -108,58 +113,119 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.68).
-domain_priors:suppression_score(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.76).
-domain_priors:theater_ratio(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.42).
+domain_priors:suppression_score(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.72).
+domain_priors:theater_ratio(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 0.76).
-narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, accessibility_collapse, 0.71).
-narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, resistance, 0.64).
+narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(july_charter_sovereign_legitimacy__secular_democratic_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(july_charter_sovereign_legitimacy__secular_democratic_reading, tangled_rope).
-narrative_ontology:human_readable(july_charter_sovereign_legitimacy__secular_democratic_reading, "July Charter Secular Democratic Mandate with Military Subordination").
-narrative_ontology:topic_domain(july_charter_sovereign_legitimacy__secular_democratic_reading, "constitutional/political").
+narrative_ontology:human_readable(july_charter_sovereign_legitimacy__secular_democratic_reading, "Charter Mandate: Secular Democratic Institutions with Civilian Military Subordination").
+narrative_ontology:topic_domain(july_charter_sovereign_legitimacy__secular_democratic_reading, "constitutional/political/institutional").
 
 domain_priors:requires_active_enforcement(july_charter_sovereign_legitimacy__secular_democratic_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(july_charter_sovereign_legitimacy__secular_democratic_reading, 'a9638b16-0ff4-460b-8931-353ba685866c').
-narrative_ontology:cs_kernel_codification('a9638b16-0ff4-460b-8931-353ba685866c', fixed_text).
-narrative_ontology:cs_authority_grounding('a9638b16-0ff4-460b-8931-353ba685866c', lineage).
-narrative_ontology:cs_interpretation_layer_present('a9638b16-0ff4-460b-8931-353ba685866c').
-narrative_ontology:cs_reading_relation('a9638b16-0ff4-460b-8931-353ba685866c', july_charter_sovereign_legitimacy__july_charter_guided_nationalism_reading, forecloses).
-narrative_ontology:cs_reading_relation('a9638b16-0ff4-460b-8931-353ba685866c', july_charter_sovereign_legitimacy__july_charter_military_custodian_reading, influences).
-narrative_ontology:cs_axiom('a9638b16-0ff4-460b-8931-353ba685866c', foundational, secular_democratic_legitimacy_ground).
-narrative_ontology:cs_axiom_status(secular_democratic_legitimacy_ground, holdable).
-narrative_ontology:cs_axiom_grounding('a9638b16-0ff4-460b-8931-353ba685866c', secular_democratic_legitimacy_ground, deontological).
-narrative_ontology:cs_axiom('a9638b16-0ff4-460b-8931-353ba685866c', foundational, military_institutional_subordination).
-narrative_ontology:cs_axiom_status(military_institutional_subordination, holdable).
-narrative_ontology:cs_axiom_grounding('a9638b16-0ff4-460b-8931-353ba685866c', military_institutional_subordination, conventional).
-narrative_ontology:cs_reference_frame('a9638b16-0ff4-460b-8931-353ba685866c', secular_democratic_constitutional_order).
-narrative_ontology:cs_drift_state('a9638b16-0ff4-460b-8931-353ba685866c', contemporary_hybrid_governance_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('a9638b16-0ff4-460b-8931-353ba685866c', '').
+narrative_ontology:cs_story_uid(july_charter_sovereign_legitimacy__secular_democratic_reading, 'efde8793-660a-43d5-9e9a-dd2db04699b2').
+narrative_ontology:cs_kernel_codification('efde8793-660a-43d5-9e9a-dd2db04699b2', formalized).
+narrative_ontology:cs_authority_grounding('efde8793-660a-43d5-9e9a-dd2db04699b2', lineage).
+narrative_ontology:cs_interpretation_layer_present('efde8793-660a-43d5-9e9a-dd2db04699b2').
+narrative_ontology:cs_reading_relation('efde8793-660a-43d5-9e9a-dd2db04699b2', july_charter_sovereign_legitimacy__guided_nationalism_reading, coexists_with).
+narrative_ontology:cs_reading_relation('efde8793-660a-43d5-9e9a-dd2db04699b2', july_charter_sovereign_legitimacy__military_custodian_reading, coexists_with).
+narrative_ontology:cs_axiom('efde8793-660a-43d5-9e9a-dd2db04699b2', foundational, secular_institutional_legitimacy).
+narrative_ontology:cs_axiom_status(secular_institutional_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('efde8793-660a-43d5-9e9a-dd2db04699b2', secular_institutional_legitimacy, conventional).
+narrative_ontology:cs_axiom('efde8793-660a-43d5-9e9a-dd2db04699b2', foundational, military_subordination_to_civilian_authority).
+narrative_ontology:cs_axiom_status(military_subordination_to_civilian_authority, holdable).
+narrative_ontology:cs_axiom_grounding('efde8793-660a-43d5-9e9a-dd2db04699b2', military_subordination_to_civilian_authority, deontological).
+narrative_ontology:cs_reference_frame('efde8793-660a-43d5-9e9a-dd2db04699b2', secular_democratic_institutional_authority).
+narrative_ontology:cs_drift_state('efde8793-660a-43d5-9e9a-dd2db04699b2', contemporary_constitutional_reinterpretation_pressure, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('efde8793-660a-43d5-9e9a-dd2db04699b2', '').
 narrative_ontology:cs_kernel_id(july_charter_sovereign_legitimacy__secular_democratic_reading, july_charter_sovereign_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(july_charter_sovereign_legitimacy__secular_democratic_reading, secular_democratic_institutions).
-narrative_ontology:constraint_beneficiary(july_charter_sovereign_legitimacy__secular_democratic_reading, civilian_authority_framework).
-narrative_ontology:constraint_victim(july_charter_sovereign_legitimacy__secular_democratic_reading, political_islam_movements).
-narrative_ontology:constraint_victim(july_charter_sovereign_legitimacy__secular_democratic_reading, military_autonomous_authority).
+narrative_ontology:constraint_beneficiary(july_charter_sovereign_legitimacy__secular_democratic_reading, secular_democratic_elite).
+narrative_ontology:constraint_beneficiary(july_charter_sovereign_legitimacy__secular_democratic_reading, urban_professional_class).
+narrative_ontology:constraint_beneficiary(july_charter_sovereign_legitimacy__secular_democratic_reading, civil_rights_advocates).
+narrative_ontology:constraint_victim(july_charter_sovereign_legitimacy__secular_democratic_reading, military_institutional_autonomy).
+narrative_ontology:constraint_victim(july_charter_sovereign_legitimacy__secular_democratic_reading, political_islam_actors).
+narrative_ontology:constraint_victim(july_charter_sovereign_legitimacy__secular_democratic_reading, military_officer_corps).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Drafted and champions the charter mandate establishing secular democratic institutions and civilian control of the military. They interpret the mandate as binding the military to executive and legislative authority, excluding religious-nationalist and military-custodian readings from legitimate constitutional standing. They author constitutional doctrine and control initial interpretation channels.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, secular_democratic_elite, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Bears the constraint as subordination to civilian authority structures they view as weaker or fragmented. Professional identity and institutional prestige are fused to autonomy and hierarchy; the mandate strips them of independent budgetary authority, foreign policy voice, and emergency-powers claims. Exit options are severely constrained by professional embedding; they cannot leave without ceasing to be officers. They contest the reading privately and through institutional resistance.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, military_officer_corps, payer,
+    powerful, biographical, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(july_charter_sovereign_legitimacy__secular_democratic_reading, military_officer_corps, excluded).
+
+% Included in the polity under the secular democratic mandate but structurally disadvantaged: theocratic representation is ruled out, religious law is subordinated to secular constitutional frameworks, and their core organizational logic (Islam as political legitimacy ground) is declared illegitimate. They can participate in secular democratic processes but cannot organize around their primary truth claim. Jamaat-e-Islami and allied movements face legal barriers to operating as religious parties.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, political_islam_actors, payer,
+    organized, biographical, constrained, national).
+
+% Benefits from secular institutional frameworks (rule of law, professional certification, technocratic meritocracy) that the mandate establishes. Career paths open under secular law and professional standards; they have incentive to defend the mandate's institutional architecture but lack direct enforcement power. Their constraint exit options are limited by economic dependence on institutional infrastructure.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, urban_professional_class, beneficiary,
+    organized, biographical, constrained, national).
+
+% Champion the secular democratic mandate as ground for individual rights protections, freedom of conscience, and gender equality. They mobilize public discourse to defend the reading against military and religious-nationalist reinterpretation. Their power is diffuse (civil society, media, academia) and their exit options are relatively mobile (organizational defection, relocation), but they depend on the mandate's institutional anchoring to maintain legitimacy.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, civil_rights_advocates, beneficiary,
+    moderate, biographical, mobile, national).
+
+% Are nominally included in the secular polity but experience the mandate as displacement of traditional religious authority structures that have governed local life. Their organizational capacity runs through mosques and religious networks declared suspect or constrained by the mandate. They cannot easily exit (geographic and economic entrenchment) and lack channels to articulate objections within the constitutional framework.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, rural_religious_communities, excluded,
+    powerless, biographical, trapped, local).
+
+% Interprets and applies the charter mandate. Functions as the seat where competing readings (secular-democratic, military-custodian, guided-nationalism) are adjudicated through litigation. Holds formal interpretive authority but is subject to political pressure from all parties. Decisions either reinforce the secular democratic reading or create space for reinterpretation.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, constitutional_court, observer,
+    institutional, generational, analytical, national).
+
+% Monitor the mandate's implementation and measure compliance with secular democratic norms. Provide external legitimacy for the reading through technical assistance, aid conditionality, and public recognition. Their authority is soft but reinforces the charter's democratic framing.
+narrative_ontology:constraint_stakeholder(july_charter_sovereign_legitimacy__secular_democratic_reading, international_democratic_institutions, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(july_charter_sovereign_legitimacy__secular_democratic_reading, secular_democratic_elite).
+narrative_ontology:fixing_cost_class(july_charter_sovereign_legitimacy__secular_democratic_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a unified democratic state in which military force serves civilian political authority, ensuring that governing legitimacy flows from secular constitutional process rather than military prerogative, religious revelation, or ethnic nationalism. The mandate solves the founding coordination problem: how to prevent military and religious actors from fragmenting state authority.
+% TRANSFER_FUNCTION: Transfers military budgetary and foreign-policy autonomy from the military institutional hierarchy to civilian executive and legislative control. Transfers theocratic representation claims from religious authorities to secular democratic processes open to religious-identity parties but not religious governance. Transfers authority to interpret the state's founding legitimacy from religious or military actors to constitutional courts and civil society.
+% ABSENT_VOICES: Military officers who would defend institutional autonomy are structurally weakened but not entirely excluded (they retain formal representation). Political Islam actors who would claim theocracy as legitimate are excluded from exclusive authority but retain minority participation rights. Rural religious authorities who would defend traditional local governance are entirely absent from the drafting and constitutional conversation.
+% DISAPPEARANCE_RATIONALE: If the charter mandate dissolved overnight, the military would reassert autonomous budgetary and foreign-policy authority, theocratic political parties would mobilize for religious-state frameworks, and competing territorial and identity claims would fragment the state apparatus. The entire institutional scaffolding—professional civil service, secular law schools, gender equality protections, individual rights case law—would lose its legitimacy anchor.
+% FOUNDING_PROBLEM: Post-revolutionary state required a unified framework preventing military rule, religious theocracy, and ethnic fragmentation; needed to establish where sovereign legitimacy derives (not from generals, not from revelation, but from democratic process).
+% FOUNDING_PROBLEM_CORROBORATION: Secular constitutional scholars and civil rights organizations attest the founding problem remains live and the mandate is essential. Military historians and nationalist intellectuals attest the founding problem is misframed—they argue the real problem was preventing chaos, which only military hierarchy or religious order can solve. Rural and religious-community leaders, absent from formal constitutional discourse, would likely attest the founding problem was not theirs and the mandate imposes an alien frame.
+narrative_ontology:disappearance_verdict(july_charter_sovereign_legitimacy__secular_democratic_reading, world_rearranges).
+narrative_ontology:founding_problem_status(july_charter_sovereign_legitimacy__secular_democratic_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(july_charter_sovereign_legitimacy__secular_democratic_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(july_charter_sovereign_legitimacy__secular_democratic_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(july_charter_sovereign_legitimacy__secular_democratic_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +245,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness measures how much the constraint redistributes institutional authority and legitimacy from one set of actors to another. At 0.68 endpoint, this reflects substantial asymmetric redistribution: military loses autonomous authority, political Islam loses legitimacy as a state-building framework, civilians gain governing power, and secular institutions become primary. Extraction rises from 0.58 to 0.68 over the interval because the civilian leadership gradually hardens institutional enforcement of the secular reading—regulatory barriers to political Islam organizations, constitutional court rulings against military autonomy claims, civil law supremacy over religious law. Suppression rises from 0.65 to 0.76 (and plateaus) because maintaining the secular democratic reading requires active suppression: preventing military coups, barring political Islam parties from elections, arresting or monitoring religious organizing, controlling textbooks to teach secular history. Theater rises from 0.28 to 0.42 and plateaus because civilian leadership increasingly performs secular democracy through elections and human rights rhetoric while the actual governing capacity remains concentrated in civilian-aligned military units and judges—the elections are held but the military vetoes outcomes they dislike; rights are announced but selectively enforced against political Islam. The plateau in later periods suggests the constraint has reached an equilibrium: suppression cost is stable because military and political Islam have learned compliance or exile patterns; extractiveness plateaus because the redistribution has been locked in; theater plateaus because the performance level has normalized into routine institutional practice. Measurement grid is shared: every metric is authored at every time point (0, 8, 16, 25, 35, 50) preventing misalignment.
+ *   The secular democratic reading is classified as tangled_rope because it solves a genuine coordination problem (unifying state authority and preventing fragmentation) WHILE extracting asymmetrically from military autonomy and theocratic legitimacy claims. The measurement series show extractiveness and suppression both rising from t=0 to t=15, then plateauing—indicating institutional consolidation phase followed by steady-state enforcement. Theater rises gradually (0.22 to 0.41), suggesting that as the reading becomes institutionalized, more energy is spent on ceremonial affirmation (constitutional celebrations, military loyalty rituals) relative to functional governance. The three readings are coexisting rather than foreclosing—the guided-nationalism reading persists in political rhetoric, the military-custodian reading lurks as latent military doctrine, and the secular-democratic reading holds formal constitutional authority. On a shared measurement grid, all metrics are authored at every time point: extractiveness at t={0,5,10,15,25,35,40}; suppression_requirement at the same points; theater_ratio at the same points. The bidirectional causal loop between civilian subordination and military suppression is modeled in the rising suppression_requirement curve: as the civilian mandate strengthens, military institutional resistance requires more active enforcement (expanded constitutional doctrine, military purges, expanded civilian control mechanisms).
  *
  * PERSPECTIVAL GAP:
- *   The civilian elected leadership seat and the military institutional leadership seat should compute radically different constraint types. From the civilian perspective, the constraint is genuine coordination (democratic procedure solves the post-revolutionary state-building problem; everyone benefits from stable secular institutions; military subordination is a rational institutional arrangement). From the military perspective, the constraint is pure extraction (they lose institutional autonomy they claim as constitutional right; they are forced into subordination by civilian decree; their institutional voice is excluded from the constitutional negotiation). From political Islam's perspective, the constraint is a snare (presented as neutral secular democracy but actually forecloses their legitimacy claim; they cannot participate in the state-building consensus because the consensus defines them as illegitimate). The engine's per-seat classification should diverge sharply: rope at the civilian seat, tangled_rope at judges, snare at political Islam, and forced-subordination-flavored extraction at military. These divergences are exactly the signal the framework exists to measure.
+ *   From the secular democratic elite and civil rights seat, the constraint is rational democratic governance and progress. From the military officer-corps seat, it is institutional degradation and loss of professional autonomy. From the political Islam seat, it is exclusion from legitimate representation. The engine computes per-seat classification from power + exit + beneficiary/victim: the secular elite and civil rights advocates derive low d (beneficiaries, institutional backing) so compute low χ and rope-flavored types; the military and political Islam seats derive high d (victims, suppressed autonomy) so compute high χ and snare-flavored types. The story-level claimed_type (tangled_rope) reflects the overall structure; individual seats will diverge in their computed types based on directionality.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality encodes each seat's structural relationship to THIS specific constraint. Civilian elected leadership: d near 0.0 (full beneficiary)—they gain governing legitimacy, institutional authority, and international support conditional on the secular reading. Military institutional leadership: d near 1.0 (full target)—they lose autonomous authority, face institutional subordination, must accept civilian command. Political Islam movements: d near 1.0 (full target)—they are excluded from legitimacy; their core identity claim (religious sovereignty) is foreclosed. Judges: d near 0.2 (beneficiary with modest cost)—they gain institutional power to interpret the Charter and rule on constitutional disputes, but must accept civilian-democratic legitimacy constraints on their authority. Secular civil society: d near 0.3 (beneficiary with minor cost)—they get their preferred institutional framework, face no substantial costs. International liberal order: d = 0.0 (pure beneficiary)—they gain a constitutional partner aligned with liberal-democratic values; no costs. Religious minorities: d near 0.2 (beneficiary with minor cost)—they gain protection through secular law, but depend on constraint persistence; trapped exit means any destabilization threatens them. These directionalities should be derived from the declared beneficiary/victim structure and exit options; no override needed here because the structural data correctly maps to the relationships.
+ *   Beneficiary/victim declarations feed the directionality chain as follows: secular_democratic_elite and urban_professional_class are beneficiaries (gain institutional authority and rights protections without running enforcement machinery) → d near 0.1–0.2 (full beneficiary end). military_officer_corps is a victim (loses autonomous authority) + identity_locked exit (cannot cease to be officer) → d near 0.85 (full target end). political_islam_actors are victims (excluded from theocratic representation) + constrained exit → d near 0.75. rural_religious_communities are excluded (outside the charter conversation entirely) + trapped + powerless → d would be near 1.0 if they were explicitly named in the constraint, but they are excluded stakeholders, not seated parties, so directionality does not apply to them. No overrides are needed; the structural derivation from beneficiary/victim + exit + power produces coherent d values.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy (mandate outliving function) is a real risk for this constraint. The founding problem was post-revolutionary state-building across religious/ideological divides. If the state achieves institutional stability and sectarian tensions decline, the mandate for military subordination and political Islam exclusion may outlive its functional purpose. The measurement series shows extractiveness and suppression both plateau in later periods (after t=25), which is consistent with either stable equilibrium (the constraint continues to be functional) or institutional inertia (the constraint persists despite declining functional need). A mandatrophy reading would say: the constraint achieved state consolidation; now it operates primarily to distribute power to civilian elites, maintain judicial independence, and exclude political Islam from the political process—functions that serve elite interests more than state stability. The civilian leadership would deny this (they frame continued suppression as necessary for preventing military coups and sectarian violence), while military and political Islam actors would affirm it (they see the constraint as purely extractive historical residue). The constraint is NOT YET mandatrophic by structural definition (the founding problem is contested as still live), but it is a candidate for mandatrophy if empirical conditions change: if military coups cease to be a threat, if political Islam becomes genuinely integrated into secular institutions, if sectarian tensions decline substantially, the suppression requirement could fall and the constraint would begin to look like pure inertial theater. The commentary should flag this as an empirical question rather than a current classification.
+ *   The founding_problem (preventing military rule, theocracy, and ethnic fragmentation) is declared 'contested' rather than 'live' or 'dead' because the three readings dispute whether the problem is still active. Secular democratic elites attest it is live and the mandate is essential. Military and nationalist actors dispute the framing: they argue the real problem was chaos, and only military or religious hierarchy solves it. The measurement series show extractiveness plateauing at 0.68 from t=25 onward, suggesting the constraint has become institutionalized and is no longer consolidating—it is maintained as steady-state enforcement rather than actively expanding. Theater_ratio plateaus at 0.41, indicating that the performance component is stable—neither degrading (sign of decay toward piton) nor rising (sign of deception amplification). The constraint shows no mandatrophy signal: it remains functionally extractive and actively enforced. However, the latency of competing readings (military-custodian and guided-nationalism) creates vulnerability to reinterpretation during crisis or leadership change—the secular reading is not immune from being displaced by a sibling reading via constitutional amendment or military intervention.
  */
 
 /* ==========================================================================
@@ -196,89 +262,52 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    secular_reading_vs_nationalist_naturalization,
-    'Is the secular democratic mandate in the Charter a foundational constitutional choice, or has it been naturalized post-hoc as an inevitable feature of state modernity by international liberal-order pressure?',
-    'Historical comparison: compare the Charter''s original drafting records (what the constituent assembly explicitly debated and chose) against post-Charter liberal-order interventions (structural adjustment conditions, aid conditionality, international human rights monitoring). If the secular framing appeared primarily in post-Charter documents, the reading has been naturalized rather than foundational.',
-    'If naturalized, the secular democratic reading is better understood as imposed from outside rather than as an internal constitutional commitment. This would suggest the constraint''s legitimacy depends on international power rather than domestic democratic choice, which reframes it from tangled_rope (with genuine domestic coordination function) toward snare (with external domination). If foundational, the reading''s legitimacy rests on the constituent assembly''s deliberate choice and domestic political alignment.',
+    suppression_internalization_interpersonal,
+    'Among the military officer corps (identity_locked exit), is the suppression they experience structurally imposed (by civilian chain of command, reduced budgets, constrained authority) or substantially internalized (they believe subordination is legitimate, have fused professional identity to civilian control)?',
+    'Post-exit trajectory: if retired officers continue to advocate military subordination and accept civilian authority, suppression is internalized; if they agitate for military autonomy and view subordination as illegitimate constraint, suppression is structural and not internalized.',
+    'If internalized, the military officer corps may not require sustained enforcement to maintain subordination—compliance becomes voluntary. If structural, the constraint must maintain active enforcement (constitutional doctrine, monitoring, reduced military budgets) to keep the military subordinated, and any enforcement relaxation will trigger reassertion.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(secular_reading_vs_nationalist_naturalization, empirical, 'Whether secular democratic framing is intrinsic to the Charter or externally naturalized').
-
-omega_variable(
-    military_subordination_institutional_viability,
-    'Can civilian institutions genuinely exercise control over military authority, or is military subordination a formal facade maintained by military choice to avoid coups?',
-    'Test cases where civilian authority and military interests directly conflict (budget cuts, investigations, policy orders): observe whether civilians can enforce compliance against military resistance. If military can systematically block civilian decisions through coup threats or non-compliance, formal subordination is theater; if civilians can enforce against military resistance, subordination is substantive.',
-    'If subordination is theater, the constraint is better classified as snare (military maintains autonomy under a democratic facade) or piton (inert formal subordination while military actual authority persists). If subordination is substantive, the tangled_rope classification holds because civilians genuinely pay coordination costs (delegation to military on security matters) while extracting power (control over military decisions). The suppression requirement would also be reinterpreted: either as genuine civilian enforcement of subordination, or as military tolerance of democratic forms.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(military_subordination_institutional_viability, empirical, 'Whether military subordination is substantive or formal facade').
-
-omega_variable(
-    political_islam_identity_lock_mechanism,
-    'Is the political Islam movements'' identity-lock to religious sovereignty claims genuine (they cannot exit because their foundational identity is religious), or is it a strategic position that could shift if institutional incentives changed?',
-    'Counterfactual: if political Islam movements were offered formal institutional power within secular-democratic frameworks (cabinet positions, legislative influence, judicial appointments conditional on secular governance acceptance), would some factions accept and exit the identity-lock, or would all factions reject such offers as incompatible with their core claims?',
-    'If identity-lock is genuine, political Islam movements are trapped victims of the constraint; exit is psychologically/ideologically impossible. If identity-lock is strategic, some movements could shift positions if incentives change, making them partially mobile targets rather than fully trapped victims. This affects the exit_options classification and the suppression requirement: genuine identity-lock requires more suppression (they will keep trying); strategic identity-lock allows for co-option and requires less active suppression.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(political_islam_identity_lock_mechanism, empirical, 'Whether political Islam identity-lock is intrinsic or strategic').
-
-omega_variable(
-    reading_contest_as_power_struggle,
-    'To what extent are the three Charter readings (secular democratic, guided nationalist, military custodian) genuinely distinct normative frameworks, versus surface rationalizations for institutional power contests between civilians, military, and religious movements?',
-    'Discourse analysis: examine the three readings'' intellectual coherence, citations of the Charter text, and internal consistency. If each reading can defend itself on textual grounds, they are genuine frameworks; if readings are invoked opportunistically (different governments cite different readings to justify whichever policies benefit them), the readings are post-hoc rationalizations for power struggles.',
-    'If readings are genuine normative frameworks, the constraint is a real constitutional dispute about state legitimacy with substantive content. If readings are power rationalizations, the constraint is fundamentally about military/civilian/religious power competition disguised in constitutional language—it would reframe as snare (power-holding elites controlling the terms of constitutional interpretation) rather than tangled_rope (genuine coordination with asymmetric extraction). Suppression would be understood as defending the chosen reading against challenge, not as enforcing a genuinely agreed-upon framework.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(reading_contest_as_power_struggle, conceptual, 'Whether the three readings are genuine normative frameworks or post-hoc rationalizations for power struggles').
-
-omega_variable(
-    international_liberal_order_conditionality,
-    'How much of the secular democratic reading''s persistence depends on international aid conditionality, sanctions threats, and investment conditions, versus internal domestic support?',
-    'Counterfactual: if international support (aid, investment, diplomatic recognition) were suddenly made unconditional on the secular reading, would domestic political forces continue enforcing it, or would military or nationalist readings gain traction as governments reduce compliance costs?',
-    'If persistence depends heavily on international conditionality, the constraint''s stability is fragile and dependent on external maintenance—it functions as a mechanism of neo-liberal control rather than as internally legitimate constitutional choice. This would shift classification from tangled_rope (with domestic coordination function) toward snare (with external coercion). If persistence is robust to removal of international incentives, it indicates genuine domestic alignment around the secular reading.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(international_liberal_order_conditionality, empirical, 'Whether the secular reading persists through domestic support or international conditionality').
+narrative_ontology:omega_variable(suppression_internalization_interpersonal, empirical, 'Military subordination: internalized belief vs. structural coercion.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(july_charter_sovereign_legitimacy__secular_democratic_reading, 0, 50).
+narrative_ontology:interval(july_charter_sovereign_legitimacy__secular_democratic_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(july_tr_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(july_tr_t8, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 8, 0.32).
-narrative_ontology:measurement(july_tr_t16, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 16, 0.38).
-narrative_ontology:measurement(july_tr_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 25, 0.42).
-narrative_ontology:measurement(july_tr_t35, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 35, 0.42).
-narrative_ontology:measurement(july_tr_t50, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 50, 0.42).
+narrative_ontology:measurement(july_tr_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 0, 0.22).
+narrative_ontology:measurement(july_tr_t5, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 5, 0.27).
+narrative_ontology:measurement(july_tr_t10, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 10, 0.32).
+narrative_ontology:measurement(july_tr_t15, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 15, 0.36).
+narrative_ontology:measurement(july_tr_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 25, 0.4).
+narrative_ontology:measurement(july_tr_t35, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 35, 0.41).
+narrative_ontology:measurement(july_tr_t40, july_charter_sovereign_legitimacy__secular_democratic_reading, theater_ratio, 40, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(july_be_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 0, 0.58).
-narrative_ontology:measurement(july_be_t8, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 8, 0.62).
-narrative_ontology:measurement(july_be_t16, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 16, 0.66).
-narrative_ontology:measurement(july_be_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 25, 0.68).
+narrative_ontology:measurement(july_be_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(july_be_t5, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement(july_be_t10, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 10, 0.58).
+narrative_ontology:measurement(july_be_t15, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 15, 0.63).
+narrative_ontology:measurement(july_be_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 25, 0.66).
 narrative_ontology:measurement(july_be_t35, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 35, 0.68).
-narrative_ontology:measurement(july_be_t50, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement(july_be_t40, july_charter_sovereign_legitimacy__secular_democratic_reading, base_extractiveness, 40, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(july_su_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 0, 0.65).
-narrative_ontology:measurement(july_su_t8, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 8, 0.7).
-narrative_ontology:measurement(july_su_t16, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 16, 0.74).
-narrative_ontology:measurement(july_su_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 25, 0.76).
-narrative_ontology:measurement(july_su_t35, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 35, 0.75).
-narrative_ontology:measurement(july_su_t50, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 50, 0.76).
+narrative_ontology:measurement(july_su_t0, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement(july_su_t5, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 5, 0.57).
+narrative_ontology:measurement(july_su_t10, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 10, 0.64).
+narrative_ontology:measurement(july_su_t15, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 15, 0.69).
+narrative_ontology:measurement(july_su_t25, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement(july_su_t35, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 35, 0.72).
+narrative_ontology:measurement(july_su_t40, july_charter_sovereign_legitimacy__secular_democratic_reading, suppression_requirement, 40, 0.72).
 
 
 /* ==========================================================================
@@ -287,17 +316,17 @@ narrative_ontology:measurement(july_su_t50, july_charter_sovereign_legitimacy__s
 
 narrative_ontology:coordination_type(july_charter_sovereign_legitimacy__secular_democratic_reading, enforcement_mechanism).
 narrative_ontology:boltzmann_floor_override(july_charter_sovereign_legitimacy__secular_democratic_reading, 0.12).
-narrative_ontology:affects_constraint(july_charter_sovereign_legitimacy__secular_democratic_reading, july_charter_guided_nationalism_reading).
-narrative_ontology:affects_constraint(july_charter_sovereign_legitimacy__secular_democratic_reading, july_charter_military_custodian_reading).
+narrative_ontology:affects_constraint(july_charter_sovereign_legitimacy__secular_democratic_reading, july_charter_sovereign_legitimacy__military_custodian_reading).
+narrative_ontology:affects_constraint(july_charter_sovereign_legitimacy__secular_democratic_reading, july_charter_sovereign_legitimacy__guided_nationalism_reading).
 
 % DUAL FORMULATION NOTE:
-% The July Charter sovereign legitimacy kernel decomposes into three constraint stories, each instantiating a different constitutional reading of the same text. The secular_democratic_reading claims secular institutions and democratic procedure ground state legitimacy, foreclosing religious-identity sovereignty and military autonomous authority. The guided_nationalism_reading claims Islamic identity and sharia-informed law constitute legitimate state grounds, coexisting with but structurally competing against the democratic reading. The military_custodian_reading claims military institutions serve as permanent constitutional guardians, influences both other readings by demanding military voice in constitutional interpretation. All three readings interpret the same Charter text but produce different beneficiary/victim structures, different suppression requirements, and different ε-values. They are not the same constraint viewed from different angles—they are three distinct constraints with distinct extraction profiles, bound together by the common kernel but diverging in structural implementation.
+% This constraint is one of three readings of the contested kernel 'july_charter_sovereign_legitimacy'. The secular-democratic reading establishes secular democratic institutions with military subordination and political Islam exclusion/constraint. Sibling readings (military-custodian and guided-nationalism) instantiate the same charter text under different interpretations, producing different constraints with different ε values, beneficiary/victim structures, and types. The three readings coexist as live positions held by different political parties; no reading forecloses another within a single framework. Family links: this reading influences both siblings by establishing secular institutional authority as the reference frame against which they mount challenges.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(july_charter_sovereign_legitimacy__secular_democratic_reading, institutional, 0.85).
+constraint_indexing:directionality_override(july_charter_sovereign_legitimacy__secular_democratic_reading, powerful, 0.82).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

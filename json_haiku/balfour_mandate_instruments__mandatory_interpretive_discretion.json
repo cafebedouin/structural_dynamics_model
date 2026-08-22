@@ -2,263 +2,518 @@
   "header": {
     "constraint_id": "balfour_mandate_instruments__mandatory_interpretive_discretion",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "2e804b7e-c7c9-43e2-9fb4-a5c509d303d5"
+    "story_uid": "96d8dcf6-2c1f-4e29-b302-abadc8634a15",
+    "created_at": "2026-06-12T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
-    "theater_ratio": 0.58,
-    "accessibility_collapse": 0.64,
-    "resistance": 0.71,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.74,
     "claimed_type": "snare",
-    "human_readable": "British Mandatory Power Interpretive Discretion Over Palestine Mandate",
-    "topic_domain": "international_law/colonial_administration",
+    "human_readable": "British Mandatory Interpretive Discretion in Palestine Mandate",
+    "topic_domain": "international/political/colonial",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "british_colonial_administrators"
+      "british_mandatory_administration"
     ],
     "victims": [
       "arab_palestinian_communities",
-      "zionist_jewish_communities"
+      "jewish_palestinian_communities"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "british_mandatory_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Holds the League of Nations mandate to govern Palestine and interpret the mandate instrument's terms. Exercises sole authority to adjudicate between competing readings of the 'national home' clause without external review mechanism or appellate process. Benefits from policy flexibility that allows accommodation of opposing interests through selective interpretation—can shift land policy (1920 vs 1940 regimes), immigration policy (restrictive in White Papers 1922/1930/1939), and institutional recognition based on metropolitan political shifts or security assessments, while claiming fidelity to mandate text. The discretion itself is the instrument of control."
+    },
+    {
+      "name": "arab_palestinian_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Face systematic land dispossession under Ottoman-era property transfers (1920s) and British licensing schemes that facilitate Jewish acquisition, justified by the mandatory power's reading of the mandate as permitting 'national home' development. Unable to appeal interpretations to external authority (League of Nations offers no adjudication mechanism for mandate disputes). Strategic uncertainty over future policy direction (will next White Paper restrict or expand Jewish immigration? will land-transfer regulations reverse?) creates inability to make long-term economic or political plans. Identity locked by ties to ancestral land and community networks; exit means displacement."
+    },
+    {
+      "name": "jewish_palestinian_communities",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Benefit from British discretionary choices that facilitate land acquisition and institutional development (Jewish Agency recognition, immigration facilitation in early 1920s periods), but face policy reversals (White Papers of 1930 and 1939 restrict immigration and land transfer). Cannot predict whether the mandatory power will read the mandate as requiring facilitation of 'national home' (pro-Zionist readings) or as subordinating it to protection of existing Arab rights (pro-Arab readings). The same interpretive discretion that sometimes favors Jewish institutional development can be turned toward restriction. Exit constrained by identity investment in the project and by international geography (Diaspora communities have limited nearby alternatives)."
+    },
+    {
+      "name": "league_of_nations",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Nominally oversees mandate administration but possesses no machinery for interpreting mandate instruments, no appellate body, and no enforcement mechanism short of mandate revocation (which has never been used). Functions as an absent authority whose absence is itself the operative constraint—both Palestinian communities appeal to League machinery but find no channel for dispute resolution."
+    },
+    {
+      "name": "excluded_international_arbitration",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "International legal mechanisms for dispute resolution, treaty interpretation, or minority-rights protection exist elsewhere (World Court, Permanent Court of International Justice) but are structurally barred from Palestine mandate disputes. The mandate instrument contains no arbitration clause, no dispute-resolution procedure, and no mechanism for external review of the mandatory power's interpretation. This exclusion is the structural feature that makes the constraint work—interpretive discretion persists only because no external check exists."
+    },
+    {
+      "name": "metropolitan_british_politics",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Shifts the Palestine administration's interpretive line through London-based policy changes (pro-Zionist orientation ~1920, pro-Arab reorientation after 1930 Arab violence and Arab League pressure, restrictionist stance 1939 White Paper in face of Nazi threat and refugee crisis). The mandatory power's administrators respond to metropolitan pressure, not to Palestinian appeals. Each metropolitan shift re-anchors the interpretation of the mandate instrument itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None. The constraint solves no coordination problem for the communities governed; it is a pure extraction regime.",
+    "transfer_function": "Transfers control over policy (land, immigration, institutional recognition) from Palestinian communities to the British mandatory administration. The transfer is effected through unilateral interpretive authority without external review or appellate constraint.",
+    "absent_voices": "International arbitration and law enforcement machinery (World Court, League dispute-resolution procedures) are structurally absent. Palestinian communities appeal to the League of Nations but find no adjudication mechanism; they are excluded from participating in interpretation of the mandate text they are governed by.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandatory power lost interpretive discretion (through League Court jurisdiction, external arbitration, or fixed textual constraint on policy), both Palestinian communities would reorganize around fixed terms rather than policy unpredictability. Land markets, immigration flows, and institutional development would follow explicit rules instead of White Paper reinterpretations. The strategic uncertainty that locks both communities in place would dissolve.",
+    "founding_problem": "Governance of a post-Ottoman Palestinian territory under a League of Nations mandate while honoring incompatible British wartime commitments: the Balfour Declaration (commitment to facilitate a Jewish national home in Palestine) and earlier commitments to Arab independence and protection of existing Arab populations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "British administrators and metropolitan politicians argue the founding problem remains live—the mandate's contradictions genuinely cannot be resolved without discretionary rebalancing based on circumstances. Palestinian communities (both Arab and Jewish) argue by the 1930s that the founding problem has been misdefined: the problem was not how to reconcile the commitments, but how to determine which commitment takes priority. The discretionary regime avoids that determination and thus perpetuates the problem. Independent scholars and League officials sympathetic to Arab Palestinian interests argue the mandate was solvable under a fixed reading that prioritized existing rights (supporting the dual_obligation reading) or Jewish institutional interests (supporting the jewish_national_home reading), but that discretion prevents resolution."
+  },
   "interval": {
-    "start": 0,
-    "end": 28
+    "start": 1920,
+    "end": 1948
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.48
+      "time_point": 1920,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 4,
-      "value": 0.54
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 8,
+      "time_point": 1925,
       "value": 0.61
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.66
+      "time_point": 1930,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.67
+      "time_point": 1936,
+      "value": 0.71
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.69
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 28,
+      "time_point": 1939,
       "value": 0.68
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.42
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.68
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 4,
+      "metric": "suppression_requirement",
+      "time_point": 1920,
       "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.54
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.59
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 28,
+      "metric": "suppression_requirement",
+      "time_point": 1925,
       "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.54
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 4,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.66
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 16,
+      "time_point": 1930,
       "value": 0.71
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.72
+      "time_point": 1936,
+      "value": 0.82
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 28,
+      "time_point": 1939,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
       "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1925,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.41
     }
   ],
-  "commentary": {
-    "narrative_context": "The British mandatory power over Palestine (1920-1948) operated under a League of Nations mandate that required balancing two incompatible obligations: facilitating a 'national home' for the Jewish people and protecting the rights of existing Arab communities. This constraint story models the operational mechanism that resolved this contradiction in practice: British interpretive discretion over the mandate text, exercised without external review or binding appeal. The mandate provided no hierarchy between its conflicting clauses and no mechanism for international arbitration of disputes about their meaning. Both Arab Palestinian and Zionist Jewish communities faced strategic uncertainty as British policy oscillated across successive reinterpretations (1920 land regime → 1922 Churchill White Paper limiting immigration → 1930 Passfield White Paper → 1939 White Paper sharply restricting Jewish land purchase and immigration). Each shift was presented as a legitimate reading of the same mandate text; neither community could anchor claims to fixed meaning or invoke external arbitration. This constraint is ONE reading of the contested kernel 'balfour_mandate_instruments': it models interpretive discretion itself as the system, not as a means to coordinate between readings. The sibling readings (jewish_national_home_primacy, dual_obligation_indigenous_rights) model the substantive outcomes each community expected; this reading models the mechanism that allowed Britain to deliver different outcomes at different times while maintaining legal authority.",
-    "key_agents": [
-      "British colonial administrators: institutional power, agenda-setter, beneficiary from policy flexibility and divide-and-rule strategy",
-      "Arab Palestinian communities: organized power, trapped exit, victims of policy shifts that progressively undermine self-governance expectations",
-      "Zionist Jewish communities: moderate-to-powerful, trapped exit, victims of policy restraint despite apparent mandate alignment (1939 White Paper)",
-      "League of Nations: institutional observer, analytically positioned but enforcement-capacity absent",
-      "Alternative interpretive authorities: excluded by design—cannot adjudicate their own claims about mandate meaning"
-    ],
-    "logic_rationale": "Extractiveness (0.68 at interval end) is moderate-high because the constraint's operation systematically disadvantages both victim communities: neither can root their claims in the mandate text itself; both depend on British discretion. The measurement series shows a rise from 0.48 to 0.61 over the first 12 time-points (corresponding to 1920–1930, the period of escalating White Papers and contradictory policy), then plateau at ~0.67–0.69. The plateau reflects a structural equilibrium: British discretion is now fully operationalized; no community can credibly appeal beyond it. Suppression (0.72) is high because maintaining this discretionary system requires active suppression of alternative interpretive authorities and appeals to external review. Both Arab and Jewish leadership petitioned the League; petitions were received and filed, but the League's advisory opinions had no enforcement power and British policy continued unreviewed. Theater (0.58) reflects the gap between the mandate's stated coordination purpose (balancing conflicting obligations) and its actual operation (British discretion resolving uncertainty in Britain's favor). The ratio rises to 0.58 by time-point 12 as the gap between written mandate and operational policy becomes obvious to both communities; it plateaus there because the performance of legitimate interpretation (publishing White Papers, citing mandate clauses, staging League consultations) becomes routinized rather than intensifying.",
-    "perspectival_gap": "From the British administrative seat, this is a rope: a coordination mechanism for managing an insoluble contradiction by granting expert discretion to a neutral arbiter (the framing Britain presented). From the Arab Palestinian seat and the Zionist Jewish seat, this is a snare: a mechanism that concentrates power to extract compliance and policy deference while precluding appeal. The engine's per-seat computation should differentiate: the beneficiary seat experiences low χ (favorable outcomes, policy flexibility, no accountability), while the victim seats experience high χ (strategic uncertainty, path-dependent lock-in, suppressed appeal mechanisms). The authored metrics (high suppression, moderate theater) reflect the victim-seat experience; the computed per-seat divergence is the measurement this story enables.",
-    "directionality_logic": "British administrators are the beneficiary (d near 0.0–0.2): they collect policy flexibility, divide-and-rule advantages, and freedom from external review. Arab Palestinian communities are targets (d near 0.8–1.0): they face escalating policy shifts that undermine initial expectations and cannot appeal. Zionist Jewish communities are also targets (d near 0.7–0.9) despite nominal mandate alignment: the 1939 White Paper demonstrates that even aligned communities remain trapped by dependence on British discretion. The League of Nations observers have analytical exit (d = 0.5 by default, no strategic exposure). Alternative interpretive authorities (excluded stakeholders) are trapped by design—they cannot exit the system because they have no voice in it; their exclusion is the mechanism.",
-    "mandatrophy_analysis": "This constraint exhibits no mandatrophy: the founding problem (irresolvable contradiction in the mandate text) remains live and structurally unresolved throughout the interval. The constraint does not become vestigial or performative; it is actively operationalized (suppression requirement rises and holds at 0.72). However, the constraint's persistence depends on a specific arrangement of power: British institutional dominance + League of Nations enforcement capacity absent + absence of alternative interpretive authorities. If external review mechanisms were activated (e.g., the League enforced advisory opinions) or if the communities jointly authored interpretations, this constraint's operational form would dissolve. It is NOT a piton (which persists by inertia); it is a live snare maintained by active suppression of alternatives.",
-    "kernel_context": "This story instantiates the 'mandatory_interpretive_discretion' reading of the contested kernel 'balfour_mandate_instruments'. The kernel itself is the Palestine Mandate text and its League of Nations authorization, which contains two incompatible directives: facilitate a 'national home' for Jewish people, and protect Arab civil/political rights and land tenure. The sibling readings are: (1) 'jewish_national_home_primacy'—interprets the mandate as directing demographic/territorial transformation toward Jewish sovereignty, subordinating Arab rights to 'national home' advancement; (2) 'dual_obligation_indigenous_rights'—interprets the mandate as imposing equal or superior obligation to protect Arab rights, treating 'national home' as subordinate to self-determination norms. This reading ('mandatory_interpretive_discretion') does NOT choose between those substantive interpretations. Instead, it models the MECHANISM that allowed Britain to sustain both readings operationally by granting itself unreviewed interpretive authority. The mechanism itself is the constraint: discretion without external review, exercised through successive policy statements each presented as legitimate reading of the same text. The sibling readings model what each community expected the mandate to require; this reading models how Britain managed the conflict between expectations through control of interpretation."
+  "coercion_grid": {
+    "t0": 1920,
+    "tn": 1948,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1948,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1948,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1948,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1948,
+        "value": 0.82
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1948,
+        "value": 0.81
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1948,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1948,
+        "value": 0.79
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1948,
+        "value": 0.88
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1948,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.52
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1948,
+        "value": 0.76
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1948,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1948,
+        "value": 0.82
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1948,
+        "value": 0.78
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1948,
+        "value": 0.82
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1948,
+        "value": 0.76
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1948,
+        "value": 0.62
+      }
+    ]
   },
-  "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.18
+  "commentary": {
+    "narrative_context": "The British mandatory power over Palestine (1920–1948) possessed sole interpretive authority over the Palestine Mandate instrument without external review mechanism or appellate process. This constraint is ONE READING of the contested kernel balfour_mandate_instruments: the reading that emphasizes the mandatory power's discretion itself as the operative extraction mechanism, independent of how that discretion is deployed. Both Arab and Jewish Palestinian communities faced path-dependent lock-in where each reinterpretation of the mandate (1920 pro-Zionist period; 1930 shift toward Arab accommodation; 1939 White Paper restricting immigration and land transfer) reset the baseline for subsequent negotiations. Neither community could appeal to fixed textual meaning—the text was re-read to fit metropolitan political interests. The British administration benefited from policy flexibility and divide-and-rule dynamics; both Palestinian communities bore the cost of strategic uncertainty and inability to plan long-term political or economic strategy.",
+    "key_agents": [
+      "british_mandatory_administration: Controls interpretation of mandate without external check; benefits from policy flexibility and the strategic uncertainty it imposes",
+      "arab_palestinian_communities: Face land dispossession and policy unpredictability; identity-locked by land ties; unable to appeal interpretations",
+      "jewish_palestinian_communities: Benefit from some interpretive shifts, constrained by others; also face strategic uncertainty and inability to predict future policy direction",
+      "league_of_nations: Nominally oversees but possesses no machinery for interpreting disputes or enforcing rulings",
+      "excluded_international_arbitration: World Court, PCIJ, and other legal mechanisms exist but are structurally barred from Palestine mandate disputes"
+    ],
+    "logic_rationale": "Extractiveness (0.68 at interval end) is high because the mandatory power's interpretive discretion produces path-dependent lock-in: each policy shift resets expectations and prevents communities from making long-term commitments or strategic plans. The discretion itself is the extraction mechanism—not a particular policy choice, but the fact that policy can be rewritten unilaterally. Suppression requirement rises from 0.48 (1920) to 0.82 (1936, during Arab Revolt) because both communities increasingly attempt to resist or appeal the interpretive regime; the mandatory power must intensify enforcement to maintain its discretionary authority as violence escalates and demands for fixed terms mount. Theater ratio (0.41 at end) reflects a significant performative component: the mandatory power publishes White Papers and consultation procedures (1922, 1930, 1939) that simulate deliberation while the interpretive authority remains wholly within the executive. The measurements share a single time grid across all three metrics to enable temporal drift detection; the grid runs 1920–1948 to capture the full mandate period, with points at key policy inflection moments (1925 pro-Zionist expansion, 1930 Arab accommodation, 1936 Arab Revolt, 1939 White Paper shift, 1948 mandate termination).",
+    "perspectival_gap": "From the British mandatory administration's seat, the arrangement is interpretive discretion justified by administrative complexity and metropolitan interest management. From the Arab Palestinian seat, it is systematic expropriation justified by legal formalism: the same mandate text is re-read to enable land transfer, immigration, and institutional dominance of the Jewish community. From the Jewish Palestinian seat, it is structural uncertainty about whether the next reading will facilitate or restrict the 'national home' development project. The engine computes these divergent classifications from the structural data—the authority asymmetry (only the mandatory power interprets), the exit constraints (both communities are geographically and identity-locked), and the beneficiary structure (the administration benefits from discretion; both communities bear its costs).",
+    "directionality_logic": "The british_mandatory_administration holds directionality near 0.0 (full beneficiary): it sets the interpretive rules, benefits from policy flexibility, and faces no external constraint or appellate process. Its exit options are arbitrage-level—it can choose to interpret the mandate differently based on metropolitan interests, military pressures, or strategic preference. Arab_palestinian_communities hold directionality near 1.0 (full target): they bear the costs of dispossession under discretionary land policy, face strategic uncertainty, and cannot appeal or reframe the interpretation. Their exit is identity_locked—tied to ancestral land and community networks; displacement is the only exit. Jewish_palestinian_communities hold intermediate directionality (~0.5–0.6): they benefit from some interpretive choices (1920s pro-Zionist readings facilitating land acquisition and immigration) but are constrained by others (1930 and 1939 shifts toward restriction). Their exit is constrained but not identity-locked at the individual level (institutional exit exists for organizations, though it comes at high cost). The beneficiary structure isolates the mandatory power; the victim structure encompasses both Palestinian communities despite their opposed interests.",
+    "mandatrophy_analysis": "The constraint exhibits mandatrophy—the founding problem (governance of a territory with incompatible claims) has not been solved by the discretionary system, but rather perpetuated by it. Both communities recognize by the 1930s that British discretion is the problem, not the solution. Arab Palestinian demands shift from requests for policy change to demands for self-determination and removal of the mandate. Jewish Palestinian demands shift from request for facilitation to demand for unilateral state-building. The White Papers (1930, 1939) are attempts by the mandatory power to reframe its interpretive authority as constraint on the Zionist project, but they do not resolve the mandate's core mandate—they simply reposition extraction: instead of extracting from the Arab community through land transfers, the administration extracts through restriction of immigration and Jewish institutional development, maintaining strategic uncertainty for both communities. The theater ratio rises from 0.22 to 0.48 across the interval, indicating growing performative component as the actual interpretive discretion shifts from administrative flexibility to divide-and-rule enforcement.",
+    "kernel_context": "This constraint instantiates the 'mandatory_interpretive_discretion' reading of the balfour_mandate_instruments kernel—the contested claim about what the Palestine Mandate instrument actually requires regarding interpretive authority. The kernel is the formalized text of the mandate instrument itself (1920, League of Nations). The reading is: the mandate grants the British mandatory power unilateral authority to adjudicate between competing interpretations of the 'national home' and 'existing non-Jewish communities' clauses, without external review or fixed constraint. Sibling readings (other constraints) offer alternative interpretations: (a) 'dual_obligation_indigenous_rights' reads the mandate as imposing equal or superior obligation to protect Arab civil/political rights and land tenure; (b) 'jewish_national_home_primacy' reads the mandate as directing demographic and territorial transformation to establish Jewish proto-state. This reading differs by focusing on the STRUCTURE OF INTERPRETIVE AUTHORITY rather than the content of the competing obligations. The key structural claim: because the mandate instrument contains no dispute-resolution mechanism, no definition of 'national home,' no explicit hierarchy between the Balfour commitment and Arab rights, the mandatory power must exercise interpretive discretion, and that discretion itself becomes the operative constraint system. The claim does not assert that one interpretation is correct; it asserts that the interpretive regime itself is structurally extractive."
   },
   "omegas": [
     {
-      "id": "mandate_text_genuine_ambiguity",
-      "question": "Is the mandate text genuinely ambiguous (two incompatible but textually supportable readings), or is one reading the correct interpretation and the other a cover for extractive policy?",
-      "resolution_mechanism": "Comparative analysis of mandate instruments for other League territories; historical documentation of drafters' intent; textual analysis of competing clause hierarchies. A genuine ambiguity would show up in contemporary legal scholarship divided across professional consensus lines; a cover story would show post-hoc rationalization of shifting policy.",
-      "impact": "If genuinely ambiguous, the constraint is more a rope-with-asymmetry (both readings textually viable, one party controls adjudication). If a cover story, the constraint is purely a snare (textual meaning is subordinated to institutional preference). The measured suppression and theater values suggest a cover story, but the ambiguity omega documents the alternative.",
+      "id": "discretion_vs_policy_extraction",
+      "question": "Is the constraint's extractiveness a function of the mandatory power's interpretive discretion itself, or of the specific policies chosen through that discretion?",
+      "resolution_mechanism": "Counterfactual: would a mandatory power with identical discretion authority but fixed (non-oscillating) policy produce the same extraction and resistance? Would fixed interpretations (even if favoring one community) produce lower theater_ratio than oscillating White Papers?",
+      "impact": "If discretion itself is the extraction mechanism, the constraint is a snare even under 'fair' interpretations. If the extraction is policy-specific, a mandatory power exercising discretion more neutrally might lower extractiveness. This distinction determines whether the sibling readings (jewish_national_home_primacy, dual_obligation_indigenous_rights) would be less extractive if one were institutionally privileged over the other—or whether the problem is the discretionary regime itself.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether mandate text ambiguity is structural or pretextual."
+      "type_class": "conceptual",
+      "description": "Whether extraction stems from discretion-as-such or from discretion's deployment."
     },
     {
-      "id": "british_discretion_scope_constraint",
-      "question": "How much of the measured extraction flows from British interpretive discretion itself, versus from the imbalance of power between Britain and the two communities? Could the same mandate text, adjudicated by a neutral third party, produce different outcomes?",
-      "resolution_mechanism": "Counterfactual analysis: construct what an international arbitration of the mandate's conflicting clauses would have produced, given the communities' respective negotiating positions and the text's structural ambiguities. Compare to actual British policy outcomes.",
-      "impact": "If the discretion is the primary mechanism, then granting interpretive authority to an alternative (neutral, joint, or external) body would substantially alter the outcome. If power imbalance dominates (whichever arbiter controls the discretion will favor the most powerful party), then substituting the arbiter does not solve the underlying asymmetry.",
+      "id": "identity_lock_mechanism_interpersonal",
+      "question": "Is the arab_palestinian_communities' exit-constraint (identity_locked) a function of geographic land ties, or of identity fusion with the Palestinian nationalist project itself?",
+      "resolution_mechanism": "Post-mandate trajectories: did Palestinian communities reconstitute political organization and economic strategy outside the mandate territory? To what degree did displacement narratives center land loss vs. nationalist project continuation?",
+      "impact": "If identity-lock is primarily geographic (tied to land), the constraint is territorial expropriation. If primarily nationalist (tied to the independence project), the constraint is structural uncertainty about the terms of that project. The distinction affects whether the suppression axis should track enforcement of land transfer or enforcement of political status determination.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether interpretive mechanism or power imbalance is the primary extraction driver."
+      "type_class": "empirical",
+      "description": "What binds the Arab community to Palestine—geographic ties, nationalist identity, or both inseparably?"
+    },
+    {
+      "id": "league_machinery_as_absent_authority",
+      "question": "Is the League of Nations' absence of interpretive machinery a design feature of the mandate system, or a contingent institutional gap that could have been filled?",
+      "resolution_mechanism": "Historical record: did mandate drafters intentionally avoid dispute-resolution mechanisms for Palestine, or did they omit them as generic procedure across all mandates? Were there contemporary proposals for League Court jurisdiction that were rejected?",
+      "impact": "If designed absence, the constraint is intentionally extractive at the structural level—the mandatory power wanted discretion and the League accepted it. If contingent gap, the constraint is structurally extractive through institutional drift. This affects whether sibling readings (jewish_national_home_primacy, dual_obligation_indigenous_rights) could have been institutionally anchored via League machinery (foreclosing mandatory_interpretive_discretion) or whether the discretionary regime was structural to the mandate from inception.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether absence of League dispute-resolution was intentional or contingent."
+    },
+    {
+      "id": "british_interest_alignment_with_discretion",
+      "question": "Did the British mandatory power benefit from discretion because it enabled genuine governance of an intractable conflict, or because it enabled extraction of imperial benefit (avoiding commitment, maintaining divide-and-rule, deferring political settlement)?",
+      "resolution_mechanism": "Metropolitan-level evidence: do British decision-making records frame discretion as administrative necessity, or as strategic tool? Do policy shifts correlate with metropolitan political interests (support for Zionism during WWI/immediate postwar, shift toward Arab accommodation after 1930 Arab violence, restrictionism after 1933 Nazi rise and refugee crisis)?",
+      "impact": "If discretion was genuinely necessary for governance, the snare classification might be contested by the mandatory power as a rope of complex coordination. If discretion correlated with metropolitan interest rather than Palestinian governance, the snare classification is reinforced. This affects the commentary on whether the founding problem was genuinely intractable or whether the mandatory power chose discretion to avoid difficult boundary-setting.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether British discretion served governance necessity or imperial interest management."
     },
     {
       "id": "sibling_reading_foreclosure",
-      "question": "Does this reading of interpretive discretion (mandatory_interpretive_discretion) foreclose the sibling readings (jewish_national_home_primacy, dual_obligation_indigenous_rights), or do all three readings coexist at different sites (Britain's institutional framing, Zionist expectation, Arab expectation) without logical contradiction?",
-      "resolution_mechanism": "Examination of the mandate text: does it logically permit all three readings simultaneously, or does one reading's core premise rule out another's? The reading_relations section of cs_structure carries the engine-facing declaration; this omega documents the textual basis for the choice.",
-      "impact": "If the readings coexist (different parties held different readings without logical contradiction), the kernel is structurally indeterminate—a site of genuine pluralism where discretion permitted by textual ambiguity. If one forecloses another, the textual basis for that foreclosure should be named; the mandatory power's discretion is then obscuring a settled reading.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Logical compatibility of the three kernel readings."
-    },
-    {
-      "id": "identity_lock_mechanism",
-      "question": "For both Arab Palestinian and Zionist Jewish communities, to what degree is their continued engagement with the mandate system an identity-locked exit (they cannot imagine withdrawing from the negotiation even when the terms disadvantage them), versus a genuinely constrained exit (material or legal barriers prevent withdrawal)?",
-      "resolution_mechanism": "Comparative analysis of how each community behaved when the mandate system faced existential crises (the 1929 Hebron riots, the 1936-1939 Arab Revolt, the 1948 war). Did either community attempt to exit negotiation entirely and pursue alternatives? What prevented or enabled such exit?",
-      "impact": "If the exit is primarily identity-locked (both communities claim historical rights to the territory that preclude exit even under adverse terms), the suppression is partially internalized—the communities carry it with them even if external structures were removed. If constrained (material vulnerability, isolation from allies), the suppression is structural and removal of the external constraint would enable exit. The measured suppression value (0.72) does not distinguish mechanism; the omega documents which operates.",
+      "question": "Would institutionalizing either the 'jewish_national_home_primacy' or 'dual_obligation_indigenous_rights' reading logically foreclose this reading of mandatory interpretive discretion, or merely shift the constraint to a different baseline?",
+      "resolution_mechanism": "Structural analysis: if one reading were fixed in the mandate instrument with external enforcement (e.g., League Court jurisdiction over interpretations), would discretion disappear? Or would it simply shift to interpretation of the fixed reading (secondary discretion)?",
+      "impact": "If either sibling reading, when institutionalized, would eliminate the interpretive regime entirely, then mandatory_interpretive_discretion genuinely forecloses the others in the same framework—the readings are logically incompatible at the structural level. If secondary discretion would persist, the readings coexist even when one is formally privileged. This is the critical test for relation type in cs_structure.reading_relations.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Identity-locked versus structurally constrained exit mechanisms."
-    },
-    {
-      "id": "committer_reading_contention",
-      "question": "This reading models interpretive discretion itself as the constraint. The sibling readings model what each community expected the mandate to require. Are these readings capturing a genuine disagreement about mandate meaning (each reading is a coherent interpretation, and the disagreement is which interpretation is correct), or is this reading modeling a different category of constraint entirely—not about interpretation but about power to control interpretation?",
-      "resolution_mechanism": "Textual analysis of mandate instruments and contemporaneous legal scholarship. If the sibling readings represent competing but structurally coherent legal interpretations, the readings are intra-kernel. If this reading models CONTROL OF INTERPRETATION rather than a substantive interpretation, it may be modeling a different constraint category (institutional power, not kernel reading).",
-      "impact": "If this is a true kernel reading, it should coexist-with or influence the siblings. If it is modeling institutional control rather than interpretation, the relationship to the siblings is parasitic—this reading explains how Britain sustained contradictory positions without losing authority, but does not itself interpret the kernel.",
-      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether this reading is a substantive interpretation of mandate meaning or a meta-level analysis of control of interpretation."
+      "description": "Whether the readings are logically foreclosed or merely demoted by institutionalizing a sibling."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
   "network": {
     "affects_constraints": [
       "balfour_mandate_instruments__jewish_national_home_primacy",
       "balfour_mandate_instruments__dual_obligation_indigenous_rights"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the 'balfour_mandate_instruments' kernel. The jewish_national_home_primacy reading models the outcome preferred by Zionist communities (demographic/territorial transformation, Jewish institutional supremacy). The dual_obligation_indigenous_rights reading models the outcome preferred by Arab Palestinian communities (equal or superior protection of existing rights and self-determination). This reading (mandatory_interpretive_discretion) models the MECHANISM that allowed Britain to deliver different outcomes at different times while maintaining legal authority: unreviewed interpretive discretion over the mandate text. The three readings instantiate different ε values: primacy and dual_obligation are moderate-snare (substantive extraction of land/resources/political control), while mandatory_interpretive_discretion is a moderate-snare of a different mechanism (extraction of interpretive authority itself, which enables the substantive extractions the sibling readings model). The family structure: mandatory_interpretive_discretion influences both siblings because the mechanism of discretion determines which substantive interpretation can be operationalized at any moment."
+    "dual_formulation_note": "This constraint is one of three readings of the balfour_mandate_instruments kernel. The sibling constraints instantiate alternative interpretations of the mandate's substantive obligations (jewish_national_home_primacy reads the mandate as directing proto-state development; dual_obligation_indigenous_rights reads it as imposing equal/superior protection of Arab rights). This reading focuses on the STRUCTURE of interpretive authority rather than its content: the constraint is mandatory_interpretive_discretion—the regime under which the mandatory power adjudicates between the siblings without external review. All three constraints share the kernel (the mandate text) but emit different constraint structures depending on which reading is instantiated. The three ε values differ substantially: jewish_national_home_primacy reads as snare with high extraction toward Arab communities (~0.72–0.75 estimated); dual_obligation_indigenous_rights reads as snare with asymmetric extraction toward Jewish communities or as tangled_rope if the dual obligation is read as genuine coordination (~0.60–0.68 estimated); mandatory_interpretive_discretion reads as snare with extraction toward both communities through strategic uncertainty (~0.68). The difference is not measurement perspective—it is structural: each reading instantiates a different constraint with a different beneficiary/victim structure."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "analytical",
-      "d_value": 0.5
-    }
-  ],
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "extraction",
-    "interpretation_layer_present": false,
+    "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "balfour_mandate_instruments__jewish_national_home_primacy",
-        "relation": "influences"
+        "sibling_id": "jewish_national_home_primacy",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "balfour_mandate_instruments__dual_obligation_indigenous_rights",
-        "relation": "influences"
+        "sibling_id": "dual_obligation_indigenous_rights",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "mandatory_power_unilateral_interpretation_authority",
+        "atom": "mandatory_interpretive_discretion_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "external_review_precluded",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
-      },
-      {
-        "atom": "mandate_text_internal_contradiction_allows_discretion",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "league_mandate_unilateral_authority_framework",
+    "reference_frame": "mandate_discretionary_governance_regime",
     "drift_state": {
-      "moment": "mandate_termination_1948",
+      "moment": "id_1948_mandate_termination",
       "direction": "authority_erosion",
       "magnitude": "severe",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "balfour_mandate_instruments__jewish_national_home_primacy",
+      "balfour_mandate_instruments__dual_obligation_indigenous_rights"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

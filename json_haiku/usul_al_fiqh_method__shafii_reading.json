@@ -2,191 +2,290 @@
   "header": {
     "constraint_id": "usul_al_fiqh_method__shafii_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "e091610b-7c05-465c-bd21-0c178eef0d15"
+    "story_uid": "39d59098-b535-4632-a446-c8a4094d916d",
+    "created_at": "2026-06-11T00:00:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.71,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.78,
-    "resistance": 0.54,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.82,
+    "resistance": 0.59,
     "claimed_type": "tangled_rope",
-    "human_readable": "Shafi'i Usul al-Fiqh Method: Hadith Authentication Prerequisite",
-    "topic_domain": "legal/theological/epistemological",
+    "human_readable": "Shafii Usul al-Fiqh Method: Hadith Authentication as Source Hierarchy Gate",
+    "topic_domain": "religious/jurisprudential/intellectual",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "hadith_transmission_specialists",
-      "orthodox_juridical_establishment"
+      "hadith_scholars_and_transmitters",
+      "shafii_school_institutional_authority"
     ],
     "victims": [
       "rationalist_jurists",
-      "minority_methodological_schools"
-    ]
+      "jurists_employing_extensive_qiyas",
+      "non_companion_ijma_claimants"
+    ],
+    "emerges_naturally": false
+  },
+  "stakeholders": [
+    {
+      "name": "hadith_scholars_and_transmitters",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Control the authentication criteria (isnad validation, reliability assessment of transmitters) by which hadith enter the legal canon. Their professional authority depends on demonstrating mastery of transmission chains and recognizing weak reports. The Shafii method elevates their gatekeeping function: no legal rule can derive from sources they reject. They benefit directly from the constraint's enforcement—it makes their authentication work prerequisite to all jurisprudential argument, not optional reference."
+    },
+    {
+      "name": "shafii_school_institutional_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Maintains and enforces the Shafii methodological framework across generations of schools, courts, and teaching institutions. Administers which hadith are accepted, which analogical inferences are valid, which consensus claims are recognized. The constraint is their institutional law: it defines what counts as legitimate jurisprudential reasoning within the school."
+    },
+    {
+      "name": "rationalist_jurists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Jurists (particularly Hanafi scholars and independent reasoners) who claim authority to derive law through unaided rational analogy (qiyas) and juristic preference (istihsan) when texts are silent. Under the Shafii method they are permanently subordinated: their analogies are only permissible after exhausting authenticated hadith, and their reasoned preferences have no independent standing. They bear professional subordination—their methods are not invalidated outright, but are reduced to a residual, lower-ranked tier of inference. Exit is identity-locked: leaving jurisprudence itself or renouncing the school are the only exits; staying within Shafii jurisprudence means accepting the hierarchy."
+    },
+    {
+      "name": "jurists_claiming_non_companion_ijma",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Jurists who attempt to ground legal rules in the consensus of later scholars (post-Companion generations). The Shafii method forecloses this: ijma is recognized only when it can be traced to the Companions themselves (the most authenticated generation). Later jurists claiming consensus find their consensus-based arguments rejected as lacking the required evidentiary weight. They experience professional cost: their consensus-building work is deemed methodologically inferior unless retrofitted to Companion-era sources."
+    },
+    {
+      "name": "non_shafii_schools",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Hanafi, Maliki, and Hanbali schools that recognize different hierarchies of sources (expanded qiyas, public interest, custom, broader ijma). Within Shafii institutional jurisdiction, their methods are present but excluded from authority-setting. They have parallel institutional structures and large constituencies, but where Shafii law governs (courts, schools, fatwa authorities), their methodologies cannot set binding precedent. Their exclusion is structural, not political: the constraint defines what counts as valid reasoning, so schools using different reasoning patterns are structurally out of bounds in Shafii contexts."
+    },
+    {
+      "name": "learned_hadith_community_collective",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "The broader network of hadith collectors, critics, and preservers who profit from the Shafii method's elevation of hadith authentication as the primary gateway to jurisprudential authority. Their work becomes indispensable—no jurist can bypass their authentication verdicts. They gain cultural prestige, institutional position, and influence over legal outcomes via their gatekeeping role, even when they hold no formal judicial office."
+    },
+    {
+      "name": "competing_usul_schools",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Scholars of other methodological frameworks (Hanafi usul scholars, Maliki usul theorists) who analyze, critique, or systematize alternative hierarchies of legal sources. They observe Shafii usul as one systematization among several, each with internal logic and institutional backing. Their analytical work measures whether Shafii systematization is structurally inevitable or one viable choice among others."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, explicit hierarchy of legal sources (authenticated hadith > qiyas > restricted ijma) so that jurists across generations can derive law using consistent methods. Systematizes jurisprudential reasoning to reduce arbitrary disagreement and produce coherent school-level doctrine. Enables transmission and authentication of hadith as a continuous disciplinary practice by making it essential to all legal reasoning.",
+    "transfer_function": "Transfers gatekeeping authority from individual rationalist jurists to organized hadith scholars—their authentication verdicts become prerequisite to all legal derivation. Jurists who previously could justify conclusions via reasoned analogy alone now must defer to hadith specialists' textual verdicts. Restricts the range of permissible ijma claims, concentrating consensus authority in a narrower (Companion-era) set.",
+    "absent_voices": "Jurists from other schools (Hanafi, Maliki, Hanbali) who practice within Shafii jurisdictions are structurally present but voice-excluded from setting the methodological frame. Rationalist jurists and analogical reasoners would argue for broader qiyas authority and juristic preference (istihsan) but are subordinated by the constraint's hierarchy. Pre-Companion generations would defend post-Companion ijma as legitimate, but are excluded by the constraint's restriction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Shafii method's source hierarchy vanished, the entire institutional basis for Shafii jurisprudence would collapse. Jurists would revert to competing methodologies; hadith scholars would lose their gatekeeping role; legal reasoning would fragment across the school into multiple sub-schools following different source hierarchies (as occurred historically when single-school dominance weakened). Courts and teaching institutions would reorganize around different usul principles.",
+    "founding_problem": "Early Islamic jurisprudence (8th-9th centuries) faced methodological chaos: jurists disagreed on how to derive law from sources, with some relying excessively on personal reasoning (ra'y) and analogical extension (qiyas) beyond the text, others preferring isolated hadith reports of uncertain authenticity, and consensus claims proliferating without clear authentication. Legal rulings diverged wildly even within the same geographic and temporal context.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Hadith scholars and Shafii institutional authorities attest that methodological systematization solved the chaos—it provided clear criteria for textual authentication and ranking, reducing arbitrary disagreement. Rationalist jurists and scholars of non-Shafii schools attest that the founding problem was over-diagnosed—divergence in jurisprudential conclusions reflected legitimate methodological pluralism, not chaos requiring suppression of qiyas and reasoned opinion. Historians of Islamic law outside the Shafii school document that methodological pluralism persisted and produced stable, coherent sub-traditions (Hanafi, Maliki, Hanbali schools all systematized their own usul), suggesting Shafii systematization solved a school-internal problem, not an Islamic-legal problem writ large."
   },
   "interval": {
     "start": 0,
-    "end": 120
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.48
+      "value": 0.67
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 60,
+      "time_point": 25,
       "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 80,
-      "value": 0.7
+      "time_point": 30,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 120,
+      "time_point": 40,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
       "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
       "value": 0.22
     },
     {
       "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 80,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 120,
-      "value": 0.42
+      "value": 0.28
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.58
+      "time_point": 5,
+      "value": 0.61
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 60,
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
       "value": 0.71
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 80,
-      "value": 0.72
+      "time_point": 30,
+      "value": 0.71
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 120,
+      "time_point": 40,
       "value": 0.71
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_distinction",
+      "question": "Is the Shafii usul method a discovered reflection of the logical requirements of Islamic law, or is it a methodological choice among structurally equivalent alternatives?",
+      "resolution_mechanism": "Comparative analysis of non-Shafii schools: if Hanafi, Maliki, and Hanbali usul produce equally coherent, internally consistent jurisprudential systems without resolving into the Shafii hierarchy, the Shafii method is a choice, not a necessity. If alternative schools ultimately converge toward Shafii principles under pressure to reduce internal contradiction, the Shafii method approaches necessity.",
+      "impact": "If necessary: the constraint is closer to a mountain (inevitable structure), and its beneficiaries are benefiting from coordination that had to occur. If a choice: the constraint is cleanly tangled_rope—real coordination coupled with benefit concentration, neither necessary nor natural.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Shafii usul is structurally inevitable or one valid methodological choice among others"
+    },
+    {
+      "id": "gatekeeping_authority_mechanism",
+      "question": "How much of the suppression (0.71) comes from explicit institutional enforcement by Shafii authorities versus from internalized acceptance of hadith scholars' methodological authority by rationalist jurists themselves?",
+      "resolution_mechanism": "Historical examination of disputes: were rationalist jurists and qiyas-proponents silenced by institutional pressure (courts rejecting their arguments, schools expelling them), or did they accept subordination via intellectual persuasion (coming to believe hadith authentication was methodologically superior)? Post-collapse evidence: where Shafii institutional enforcement weakened, did rationalist jurisprudence re-emerge, suggesting suppression was structural?",
+      "impact": "If structural suppression dominates: the constraint is maintained by institutional power, and removing enforcement would expose the underlying extraction. If internalized dominates: the constraint's persistence runs deeper—even absent enforcement, the intellectual frame persists, and this reading's methodological claims have genuine intellectual hold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural enforcement or internalized intellectual acceptance"
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Do the Shafii and Hanafi readings of usul al-fiqh logically foreclose each other, or do they coexist as live positions within Islamic jurisprudence?",
+      "resolution_mechanism": "Formal analysis of their core premises: Shafii asserts hadith authentication is prerequisite (qiyas only when hadith absent); Hanafi asserts qiyas is broadly applicable (ra'y and istihsan supplement where analogy reaches limits). Can both premises be true in a single framework? If no single legal system can hold both simultaneously, they foreclose; if different schools/communities can hold them in parallel, they coexist.",
+      "impact": "If foreclose: one reading's victory requires the other's intellectual defeat; classification approaches snare (one reading suppresses a logically coherent alternative). If coexist: both readings are live methodological choices; classification remains tangled_rope (coordination + extraction, neither ruled out by logical necessity).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Shafii and Hanafi usul readings logically foreclose each other or coexist as alternative methodologies"
+    },
+    {
+      "id": "methodological_pluralism_suppression",
+      "question": "Is the subordination of rationalist jurisprudence (qiyas, ra'y, istihsan) a necessary consequence of systematizing Islamic legal sources, or a contingent choice to privilege hadith scholars?",
+      "resolution_mechanism": "Thought experiment: a systematized usul that ranked sources as (1) Quran, (2) hadith, (3) qiyas, (4) ijma (without Companion restriction) would still provide explicit hierarchy and reduce arbitrariness. Does this alternative system solve the 'founding problem' equally well? If yes, the Shafii method's subordination of qiyas is not necessitated by systematization, but by a deliberate choice to privilege textual sources over reasoned analogy.",
+      "impact": "If rationalist methods could be integrated into systematization without subordination: the Shafii choice is revealed as extraction-laden—picking one viable method over others and gatekeeping authority via that choice. If Shafii hierarchy is the only coherent systematic approach: the extraction is more justified as coordination cost.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether hadith prioritization over qiyas is necessary to systematic jurisprudence or a contingent choice"
     }
   ],
   "commentary": {
-    "narrative_context": "The Shafi'i reading of usul al-fiqh (principles of jurisprudence) systematizes Islamic legal sources into a hierarchical framework where hadith authentication becomes a prerequisite to legal derivation. Analogical reasoning (qiyas) is permitted only when authenticated hadith is absent, and consensus (ijma') is restricted to the Companions of the Prophet. This reading instantiates ONE interpretation of the contested kernel of how Islamic law derives from its sources. The Shafi'i reading transferred gatekeeping authority from rationalist jurists to hadith transmission specialists, positioning hadith scholars as the arbiters of what material counts as valid source evidence. This is ONE of four major competing readings—Hanafi, Maliki, and Hanbali readings subordinate or bypass hadith authentication in different ways. The Shafi'i reading is claimed as a coordination framework (unifying methodology) but operates with substantial extraction: it benefits hadith specialists and orthodox establishments while subordinating rationalist schools and independent jurists.",
+    "narrative_context": "The Shafii school of Islamic jurisprudence institutionalizes a specific methodological hierarchy of legal sources: authenticated hadith stands as the prerequisite gateway to all legal derivation; analogical reasoning (qiyas) is permissible only in the absence of authenticated textual sources; consensus (ijma) is recognized only when traceable to the Companions of the Prophet. This constraint formalizes the Shafii reading of usul al-fiqh (principles of jurisprudence), one of four major readings that emerged in early Islamic legal history. The other readings (Hanafi, Maliki, Hanbali) recognize different hierarchies, where rationalist analogical reasoning (Hanafi), customary practice (Maliki), or textual minimalism (Hanbali) occupy different ranks. The Shafii method elevates hadith scholars and transmitters as the gatekeepers of legal authority—no jurist can bypass their authentication verdicts. Simultaneously, it subordinates jurists who practice extensive analogical reasoning without textual bases, reducing their methods to a residual tier. The constraint is simultaneously coordinative (it provides explicit source hierarchy, reducing arbitrary legal divergence) and extractive (it concentrates authority in one professional group and suppresses alternative methodologies). The Shafii institutional authorities enforce this constraint through teaching, transmission of the school's doctrine, and the organization of courts and fatwa councils that recognize only Shafii-authenticated sources. The measurement series shows extractiveness rising from 0.45 (early systematization period) to 0.68 (institutional consolidation), then stabilizing—the founding institutional burden of establishing the hierarchy requires high active enforcement; once the constraint is normalized across generations, maintenance costs decline relative to the extraction benefit retained.",
     "key_agents": [
-      "hadith_transmission_specialists: Institutional gatekeepers; authenticate and classify hadith reports; their authority is prerequisite to legal derivation under this reading",
-      "rationalist_jurists: Powerful but constrained; their qiyas and ra'y methods are subordinated; they bear the cost of reduced independent authority",
-      "orthodox_juridical_establishment: Institutional beneficiary and co-agenda-setter; administers the hierarchy; has arbitrage to modify or negotiate within the framework",
-      "minority_methodological_schools: Moderate power, constrained exit; their methods are marginalized; they incur costs of subordinate institutional status",
-      "lay_believers: Organized beneficiaries; gain predictability and unified standard; mobile exit (can follow competing schools)",
-      "political_authorities: Observers with arbitrage; rely on the framework for legitimacy but can negotiate with rival schools or appeal to necessity"
+      "hadith_scholars_and_transmitters: Specialists in authenticating hadith reports via isnad (transmission chain) verification; primary beneficiaries of the constraint's gatekeeping structure",
+      "shafii_school_institutional_authority: Organized schools, teaching centers, courts, and fatwa councils administering and enforcing the Shafii methodological frame",
+      "rationalist_jurists: Jurists (especially Hanafi-influenced) claiming authority through unaided qiyas and ra'y; primary victims of subordination",
+      "non_shafii_schools: Hanafi, Maliki, Hanbali institutional structures operating under alternative source hierarchies; excluded from Shafii jurisdictions but not eliminated",
+      "competing_usul_schools: Analytical observers of the methodological plurality; measure whether Shafii systematization is inevitable or contingent"
     ],
-    "logic_rationale": "Extractiveness rises from 0.35 (early systematization) to 0.68 (institutional entrenchment) over the interval, plateauing as the framework becomes canonical. This trajectory reflects the constraint's lifecycle: initially presented as coordination (unified source methodology), it accumulates extractive features as hadith specialists consolidate gatekeeping and rationalist alternatives are progressively marginalized. Suppression rises in parallel (0.42 → 0.71), indicating increasing enforcement machinery (institutional pressure on schools, social costs for rationalist methods, exclusion mechanisms for weak transmitters). Theater ratio rises from 0.15 to 0.42 and then stabilizes, suggesting that as the framework matures, an increasing share of enforcement activity is performative (maintaining the hierarchy theatrically) rather than functional (solving the original coordination problem). The shared time grid ensures all metrics are authored at every time point (0, 20, 40, 60, 80, 120); no metric is omitted from any row, preventing OQ-105-style misalignment.",
-    "perspectival_gap": "From the hadith specialist seat, this is genuine coordination: a unified method that prevents chaos and enforces rigor. From the rationalist jurist seat, it is enforced subordination: their independent methods are arbitrarily demoted, and they must justify departures from hadith authentication despite prior authority to offer reasoned conclusions. The orthodox establishment sits between: it benefits institutionally but must invest in suppression to prevent rationalist and minority schools from reasserting independence. The engine will compute divergent seat-level types: beneficiary seats may see rope (coordination with side benefit), payer seats will see tangled_rope or snare (coordination framed as necessary, extraction actual), observer seats will detect the asymmetry. This divergence is precisely what the framework measures.",
-    "directionality_logic": "Beneficiaries (hadith specialists, orthodox establishment): receive gatekeeping authority, institutional primacy, and resource flows (students, patronage, official positions). Victims (rationalist jurists, minority schools): lose independent authority, must justify departures from hadith prerequisites, incur social costs and institutional marginalization. The transfer is epistemic, not monetary, but no less extractive—authority over source material is authority over the legal derivation process itself. Beneficiary directionality (d near 0.0) reflects that the framework subsidizes their expertise; victim directionality (d near 1.0) reflects that the framework extracts from their authority. The orthodox establishment's directionality is modulated by arbitrage: it can negotiate with competing schools, adopt hybrid methods, or appeal to necessity, pushing d toward the middle (0.4–0.6). The lay Islamic community's directionality is slightly beneficiary (d near 0.1–0.2): they gain predictability and unified standard, though the cost is reduced diversity of legal reasoning.",
-    "mandatrophy_analysis": "The constraint is NOT mandatrophic at present: the founding problem (fabricated hadith, unsystematic rationalist derivation) remains contested, and the Shafi'i solution addresses a real coordination need even if it extracts substantially. However, the trajectory shows accumulating theater (rising from 0.15 to 0.42) and plateauing extractiveness (0.68, stable after time point 60). If theater continues rising above 0.50, the framework would approach piton status—functioning increasingly as institutional performance rather than as solution to the founding problem. The measurement series enables detection of this drift. If theater reaches 0.55+ and extractiveness remains high, the constraint would be reclassifiable as piton (atrophied coordination, pure inertia). Currently it is tangled_rope: genuine coordination function (unified source hierarchy solves real problem) PLUS asymmetric extraction (benefits hadith specialists, subordinates rationalists). The theater_ratio of 0.42 shows the coordination is still functional but increasingly theatrical.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel 'usul_al_fiqh_method'—how Islamic law derives from its sources (Quran, hadith, ijma, qiyas, ra'y, istihsan, maslaha, 'amal, etc.). The Shafi'i reading instantiates a specific commitment: hadith authentication is prerequisite; qiyas is subordinate; ijma' is restricted to Companions. This reading coexists with three others in the same kernel: the Hanafi reading (qiyas expansively applicable, ra'y and istihsan permitted), the Maliki reading (independent evidentiary weight for Medinan practice and unrestricted public interest), and the Hanbali reading (maximal textualism, weak hadith preferred to qiyas). These are not competing interpretations of the same text (they agree on the Quran's authority); they are competing readings of how to derive law when sources seem to conflict. Each reading generates a different constraint with a different ε, different beneficiary/victim structure, and different institutional consequences. The sibling readings are separate constraint stories in the corpus, each with its own stakeholders, measurements, and type classifications. This file documents ONLY the Shafi'i reading; the others are separate instantiations of the kernel."
+    "logic_rationale": "Extractiveness is high (0.68 at stabilization) because the constraint concentrates legal authority in hadith scholars' hands—jurists cannot override their authentication verdicts through reasoned analysis alone. Suppression is higher (0.71) because maintaining the hierarchy requires actively excluding or subordinating competing methodologies; this is not passive natural law but sustained institutional gatekeeping. Theater is relatively low (0.28) because the constraint's functional purpose (providing source hierarchy) is real and ongoing—it is not merely performative. Accessibility_collapse is high (0.82) because once the Shafii framework is established, alternatives (rationalist jurisprudence, post-Companion ijma, other usul schools) are closed off within Shafii-governed jurisdictions; jurists cannot simply choose a different methodology if they work within the school. Resistance is moderate (0.59) because rationalist and alternative-methodology jurists do mount continuous resistance (developing counter-arguments, maintaining parallel schools, invoking istihsan and maslaha where Shafii constraints allow), but this resistance is subordinated, not successful in overturning the hierarchy. The measurement series tracks institutional consolidation: extractiveness rises as the constraint is internalized into curricula and court systems (T=0-20), then plateaus once normalization is complete (T=25-40). This plateau with non-zero theater suggests the constraint is maintained not by continuous coercion but by institutional inertia and intellectual tradition—the rise in theater_ratio from 0.12 to 0.28 reflects growing emphasis on methodological purity and pedagogical transmission as enforcement mechanism, replacing earlier direct suppression. Suppression_requirement also rises and plateaus, indicating that early enforcement burden (convincing jurists to abandon qiyas authority) has given way to maintenance burden (ensuring schools transmit the hierarchy correctly).",
+    "perspectival_gap": "The Shafii institutional authority and hadith scholar seats compute this as pure rope: a coordinative solution to methodological chaos that naturally advantages those mastering textual authentication. From their position, the constraint is a discovered necessity—rationalist jurisprudence without textual grounding is incoherent, so textual gates are inevitable. Rationalist jurists and proponents of extensive qiyas compute this as snare: a system of gatekeeping that suppresses methodological pluralism and concentrates authority to benefit one professional class. From their position, the constraint is a deliberate institutional choice that could be relaxed or restructured without collapsing jurisprudential coherence. The engine computes per-seat classification from the structural data (beneficiary/victim declarations, exit_options, power atoms); this divergence—same constraint, different computed types—is the core signal the corpus exists to measure. The claim (tangled_rope) reflects the author's assessment that BOTH readings have structural merit: real coordination + real extraction. Alternative seat orderings would shift the balance.",
+    "directionality_logic": "Hadith scholars and the Shafii institutional authority are the primary beneficiaries—their directionality d values are near the beneficiary end (0.0-0.2). They collect concrete benefit (authority, status, institutional position, transmission of school). Their exit options (arbitrage for the institutional authority, identity_locked for individual scholars) determine whether they can be displaced; their high organizational power makes them hard to dislodge. Rationalist jurists and qiyas proponents are the primary targets—their directionality d values are near the target end (0.8-1.0). They bear subordination (their methods are ranked lower, their conclusions subject to hadith scholars' authentication verdicts) with high suppression and constrained exit (identity_locked: leaving jurisprudence or the school are the only escapes). Non-Shafii schools are excluded rather than extracted from—their directionality is not computed into the Shafii constraint because they operate in parallel institutional structures, not within Shafii jurisdiction. The constraint's asymmetry is captured in the beneficiary/victim declarations and reinforced by exit_options: hadith scholars can arbitrage (move between schools if needed) or remain identity-locked in the school with low cost; rationalist jurists are identity-locked with high cost (their professional identity is built on reasoning authority, which the constraint denies them).",
+    "mandatrophy_analysis": "Mandatrophy—when a constraint's founding purpose has died but the constraint persists—is contested here. The founding problem was 'methodological chaos: jurists disagreed wildly on source hierarchy.' Has this problem been solved or has it merely been suppressed? Shafii authorities attest the problem is solved: the systematized source hierarchy produces coherent jurisprudence within the school. Rationalist jurists and historians attest the problem was over-diagnosed: alternative schools (Hanafi, Maliki, Hanbali) also systematized their own usul and produced equally coherent, stable jurisprudence without subordinating qiyas as thoroughly. If the latter reading is correct, the founding problem (lack of systematization) was solvable without the Shafii hierarchy, making the constraint's persistence an artifact of institutional power rather than functional necessity—this is mandatrophy. The omega 'methodological_pluralism_suppression' directly addresses this: if systematization could coexist with broader qiyas recognition, the Shafii choice is not necessity but extraction. The measurement plateau (extractiveness flat from T=25-40) with rising theater suggests post-mandatrophy dynamics: the constraint is maintained through pedagogical transmission and institutional inertia, not because the founding problem requires it.",
+    "kernel_context": "This constraint instantiates the SHAFII READING of the usul al-fiqh kernel (the standing Islamic commitment to systematizing legal sources). The kernel's codification is 'formalized': the Shafii usul is explicitly written (in al-Shafii's al-Risala and later commentaries), formally taught, and recognized as binding doctrine within the school. The sibling readings are: (1) HANAFI READING: qiyas and ra'y are broadly applicable; istihsan (juristic preference) permits departure from analogy for public interest; (2) MALIKI READING: Medinan practice ('amal) carries independent weight; maslaha mursala (unrestricted public interest) is valid; 'urf (custom) integrates where not contradicting text; (3) HANBALI READING: textual sources are maximally restrictive; weak hadith preferred over qiyas; sadd al-dhara'i (blocking innovations) preserves textual fidelity. Each reading holds the same kernel (systematize Islamic legal sources) but delivers different source hierarchies. The Shafii reading forecloses the Hanafi and Maliki readings at the point where they claim qiyas and maslaha can operate independently of textual authentication—Shafii says no, hadith authentication is prerequisite. This is not mere disagreement about weights but incompatible core premises: Hanafi premises that reasoned juristic choice can justify legal conclusions without textual support; Shafii premises that such choice is illegitimate without textual grounding. Within a single legal framework, both premises cannot hold simultaneously."
   },
-  "omegas": [
-    {
-      "id": "authentication_necessity_vs_sufficiency",
-      "question": "Is hadith authentication truly prerequisite to legal derivation in the Shafi'i framework, or is it a systematized SUFFICIENCY test that can coexist with other independent derivation methods?",
-      "resolution_mechanism": "Comparative analysis of Shafi'i jurists who derived law when hadith sources were unavailable (pre-Shafi'i jurisprudential precedent, instances of necessity) versus Shafi'i jurists who explicitly rejected rationalist derivation as independent source. If Shafi'i jurisprudence contains functional qiyas and ra'y independent of hadith authentication, the framework is less prerequisite and more hierarchical preference.",
-      "impact": "If authentication is truly prerequisite (not coexisting method), the constraint's extraction is higher—it forecloses rationalist alternatives entirely. If it is sufficiency test (coexisting method), the constraint is less extractive—it subordinates but does not eliminate rationalist derivation. This affects the boundary between tangled_rope (coordination + extraction) and rope (coordination alone).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether hadith authentication is logically necessary or merely preferred in Shafi'i jurisprudence."
-    },
-    {
-      "id": "internal_vs_external_suppression",
-      "question": "What fraction of the measured suppression is structural (institutional exclusion of weak transmitters, official gatekeeping by hadith scholars) versus internalized (jurists' genuine belief in the framework's epistemic superiority)?",
-      "resolution_mechanism": "Historical analysis of jurist testimonies, philosophical defenses of usul al-fiqh, and counterfactual cases where jurists departed from the framework when external enforcement was absent (e.g., private correspondence, minority positions in diverse scholarly communities). Degree of principled adherence versus compliance under pressure indicates internalization ratio.",
-      "impact": "High internalization (e.g., 70%+) suggests the framework's legitimacy is well-grounded and suppression is self-reinforcing; low internalization (e.g., 30%) suggests institutional coercion is load-bearing and the framework would collapse if enforcement weakened. This affects the classification's sustainability: high internalization makes the constraint more stable and more likely to appear natural; low internalization reveals the constraint as constructed and contingent on enforcement.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Ratio of internalized belief to structural coercion in suppression mechanism."
-    },
-    {
-      "id": "competing_reading_foreclosure",
-      "question": "Does the Shafi'i reading logically foreclose (make impossible within any single framework) the Hanafi reading's core premise that qiyas can be applied expansively, or do the readings coexist as different parties' commitments without logical contradiction?",
-      "resolution_mechanism": "Formal logical analysis: if a Shafi'i scholar granted qiyas's applicability and validity (Hanafi premise), would they necessarily violate a Shafi'i committal axiom? Or can a single scholar hold both that hadith authentication is the preferred method AND that qiyas is valid when hadith is absent? If both are derivable within unified jurisprudential framework, readings coexist; if one premise directly contradicts the other, reading forecloses.",
-      "impact": "Foreclosure relation would make the readings mutually exclusive in any framework; coexistence relation suggests institutional rivalry without logical necessity. Foreclosure supports a stricter boundary between Shafi'i and competing schools; coexistence suggests more fluid scholarly migration and hybrid positions. The relation determines how the engine models the constraint's reach—does it exclude alternatives, or do alternatives persist alongside it?",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether Shafi'i and Hanafi readings are logically incompatible or institutionally competing."
-    },
-    {
-      "id": "beneficiary_solidarity_and_contestation",
-      "question": "Do hadith specialists and the orthodox juridical establishment benefit equally from the Shafi'i framework, or is there latent conflict between them (e.g., hadith scholars want to maximize gatekeeping authority, while the establishment wants controlled qiyas for flexibility)?",
-      "resolution_mechanism": "Historical analysis of disputes within Shafi'i jurisprudence between hadith masters and jurist innovators, instances where the establishment endorsed qiyas over hadith specialists' recommendations, and cases where hadith specialists' exclusions were overridden for social or political reasons.",
-      "impact": "Equal benefit: both are straightforward beneficiaries, and d values diverge from payers. Latent conflict: hadith specialists are beneficiaries (high authority), but the establishment is near-symmetric (benefits from hierarchy but needs flexibility to maintain institutional legitimacy). This affects the directionality override strategy—whether both beneficiaries can be treated identically or whether one requires override toward payer territory.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Degree of alignment between hadith specialists and orthodox establishment in benefiting from the framework."
-    },
-    {
-      "id": "kernel_reading_contest_closure",
-      "question": "Is the contest between Shafi'i and competing readings genuinely open in contemporary Islamic jurisprudence, or has one reading achieved hegemonic closure such that alternatives are only formally recognized but not actually practiced?",
-      "resolution_mechanism": "Institutional analysis of contemporary Islamic legal education, fatwa issuance, state-appointed qadi networks, and theological academy composition across Muslim-majority regions. If Shafi'i readings dominate institutional positions and resources while alternatives are geographically or socially marginalized, the reading contest is closed de facto even if formally open.",
-      "impact": "Open contest: multiple readings remain live alternatives with institutional resources and scholarly authority. Closed contest: the Shafi'i reading has achieved hegemonic gatekeeping, and alternatives are historical artifacts or minority positions. This affects the constraint's lifecycle classification—an open contest keeps alternatives visible and contestation active; closure moves the constraint toward inertial entrenchment (piton-adjacent).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the kernel reading contest remains institutionally open or has achieved de facto Shafi'i hegemony."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
@@ -194,63 +293,66 @@
       "usul_al_fiqh_method__maliki_reading",
       "usul_al_fiqh_method__hanbali_reading"
     ],
-    "dual_formulation_note": "The Shafi'i reading of usul al-fiqh is one of four coordinate instantiations of the contested kernel 'usul_al_fiqh_method'. Each sibling reading (Hanafi, Maliki, Hanbali) instantiates a different ε-invariant constraint with its own beneficiary/victim structure, suppression mechanism, and type classification. The readings share a common kernel (Islamic legal source hierarchy) but diverge in how they rank and constrain the sources. Network links connect all siblings; each story names the others in affects_constraints. The Shafi'i reading subordinates qiyas and elevates hadith authentication, creating institutional power for hadith specialists and constraints on rationalist jurists. The Hanafi reading expands qiyas and institutionalizes ra'y, creating power for rationalist jurists and constraints on strict textualists. These are structurally distinct constraint stories, not variations of one story. The readings influence each other (e.g., Hanafi dominance in Ottoman jurisprudence created institutional pressure on Shafi'i schools in those regions), but no single reading forecloses another within a unified Islamic jurisprudential framework—they coexist across different institutional, regional, and community contexts."
+    "dual_formulation_note": "The usul al-fiqh method is a contested kernel with four sibling readings, each instantiating a different constraint. All four share the kernel (systematize Islamic legal sources) but deliver different source hierarchies. Shafii reading prioritizes hadith authentication; Hanafi reading expands qiyas and ra'y; Maliki reading integrates practice and unrestricted public interest; Hanbali reading maximizes textual restriction. The readings coexist as live institutional positions held by different schools, each with independent epistemic justification within its own framework. Shafii reading influences (but does not foreclose) the others by establishing the model of explicit source hierarchy—even schools rejecting Shafii rankings learned systematization from the Shafii example. Omegas in all four readings track whether the readings foreclose or merely coexist."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.52
+      "power_atom": "moderate",
+      "d_value": 0.85
     }
   ],
+  "gain_flow": "hadith_scholars_and_transmitters",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "hadith_prerequisite_source_hierarchy",
+    "reference_frame": "textually_authenticated_source_hierarchy",
     "drift_state": {
-      "moment": "contemporary_rationalist_jurisprudence_revival",
-      "direction": "authority_erosion",
+      "moment": "contemporary_comparative_legal_analysis",
+      "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "usul_al_fiqh_method__hanafi_reading",
+        "sibling_id": "hanafi_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "usul_al_fiqh_method__maliki_reading",
+        "sibling_id": "maliki_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "usul_al_fiqh_method__hanbali_reading",
+        "sibling_id": "hanbali_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "hadith_authentication_prerequisite",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "qiyas_subordinate_to_hadith",
+        "atom": "hadith_authentication_prerequisite_to_legal_derivation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
+      },
+      {
+        "atom": "qiyas_authority_subordinate_to_textual_sources",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
       }
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

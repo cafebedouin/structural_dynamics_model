@@ -4,184 +4,261 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "db66f5c5-33de-4839-b779-98e6bcec2964"
+    "story_uid": "65fe8e66-c6bf-489d-b408-bf58be4ddbcc"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.64,
-    "resistance": 0.78,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.73,
     "claimed_type": "tangled_rope",
-    "human_readable": "GDPR Article 3 Territorial Sovereignty Reading: Extraterritorial Application as Regulatory Overreach",
-    "topic_domain": "legal/technological/political",
+    "human_readable": "GDPR Article 3 Scope: Territorial Sovereignty Reading",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "non_eu_state_regulators",
-      "non_eu_multinational_technology_companies"
+      "non_eu_state_regulators"
     ],
     "victims": [
-      "eu_residents_data_subjects",
-      "non_eu_companies_unable_to_comply"
+      "global_data_processors",
+      "non_eu_data_controllers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "non_eu_state_regulators",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Non-EU governments benefit from the territorial sovereignty reading insofar as it constrains EU regulatory authority beyond EU borders, preserving their own ability to set domestic data governance rules without EU interference. They advocate for jurisdictional limits as the legitimate boundary of regulatory power. Where they hold institutional power over data flows within their territory, they can implement countervailing data localization requirements."
+    },
+    {
+      "name": "eu_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "EU data protection authorities enforce Article 3 as written: jurisdiction extends to processing activities targeting EU residents, regardless of where the controller or processor is located. They view this as a coherent reading of the regulation's protective intent. Under the territorial sovereignty reading, their enforcement is characterized as extraterritorial assertion exceeding legitimate authority."
+    },
+    {
+      "name": "global_data_processors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of GDPR compliance globally, even when processing data outside EU borders and for non-EU residents. Under the territorial sovereignty reading, they are subject to enforcement for activities the reading classifies as outside EU regulatory jurisdiction. The cost is substantial: dual compliance regimes, localization infrastructure, legal exposure in multiple jurisdictions with conflicting rules."
+    },
+    {
+      "name": "non_eu_data_controllers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Non-EU entities processing data domestically without targeting EU residents find themselves subject to GDPR compliance burdens when data flows cross borders or when they offer services accessible to EU users incidentally. Under the territorial sovereignty reading, this is enforcement overreach; they face compliance costs for activities occurring entirely outside EU territory."
+    },
+    {
+      "name": "eu_residents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Benefit from EU data protection wherever their data is processed globally, under the protective logic of Article 3's extraterritorial reach. Under the territorial sovereignty reading, this benefit is framed as the EU imposing its rules beyond its borders rather than extending protection to its residents. Their exit is identity-locked: they cannot become non-EU residents without changing citizenship, and even then their historical data may remain subject to GDPR."
+    },
+    {
+      "name": "us_technology_companies",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Major US tech platforms process data globally and incidentally reach EU users; they face GDPR compliance burdens on all EU-resident data processing. Under the territorial sovereignty reading, this is illegitimate extraterritorial reach. Their exit is constrained by market size: abandoning EU market access is costly, but EU compliance globally requires substantial infrastructure changes."
+    },
+    {
+      "name": "international_trade_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "WTO, USMCA, and bilateral trade authorities examine GDPR Article 3's scope as a potential trade barrier or regulatory protectionism. They take positions on whether the territorial sovereignty reading aligns with trade law or whether the effects jurisdiction reading constitutes legitimate market-access protection."
+    },
+    {
+      "name": "competing_jurisdictions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Other regions (US, China, India) simultaneously benefit when their own regulatory reach is recognized as bounded by territorial limits (beneficiary), while paying when their companies must comply with EU rules on non-territorial grounds (payer). The tension is structural: supporting territorial limits benefits their regulators, but their tech companies bear compliance costs."
+    },
+    {
+      "name": "excluded_digital_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Civil society organizations focused on digital rights globally would argue for expanded extraterritorial protection (supporting the effects reading or market access reading) but are not seated in territorial sovereignty arguments. Their voice—that data protection should follow data flows, not territorial borders—is structurally absent from the sovereignty debate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a principle that regulatory jurisdiction is bounded by territorial authority: a state can govern conduct and data flows within its borders but cannot legitimately extend its rules to activities occurring entirely outside its territory, even if those activities incidentally affect its residents. This solves a coordination problem among sovereigns: mutual recognition that each state's regulatory power stops at its borders, preventing regulatory collision and escalation.",
+    "transfer_function": "Moves compliance burden and legal exposure from non-EU entities (controllers, processors, platforms) to EU regulators (who must defend the legitimacy of their extraterritorial reach) and to EU residents (who lose extraterritorial data protection coverage beyond what territorial sovereignty permits). It redistributes regulatory authority: more to non-EU states over their domestic data governance, less to EU authorities over global data flows affecting their residents.",
+    "absent_voices": "Digital rights advocates and EU residents in non-EU jurisdictions are structurally absent: they would argue that data protection should follow data and harm, not political borders, and that territorial limits leave people in non-EU countries with minimal protections. Tech companies' voices are present as payers, but voices arguing for human-centered protection across borders (rather than state-centered territorial rights) do not appear.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the territorial sovereignty reading disappeared and effects jurisdiction prevailed, global data governance would reorganize: EU regulatory reach would expand, non-EU states' domestic regulatory autonomy would compress, and global tech platforms would face integrated EU rules instead of dual compliance. If it instead prevailed absolutely (no extraterritorial reach at all), EU protection would shrink to EU borders, data flows would segregate, and compliance costs would shift from global platforms to data subjects in non-EU jurisdictions. Either shift is substantial enough that arrangements depend on which reading holds.",
+    "founding_problem": "Early internet governance lacked a coherent principle for jurisdictional reach when activities, actors, and harms crossed borders. The territorial sovereignty reading was founded to establish a limiting principle: states cannot make rules for conduct outside their borders, even indirectly. This prevents regulatory imperialism and establishes mutual respect among sovereigns.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "International law scholars and non-EU governments attest the founding problem remains live: without territorial limits, jurisdictional conflicts escalate and smaller states lose regulatory autonomy. EU regulators and digital rights organizations attest the founding problem has shifted: data flows are inherently global, and territorial limits leave individuals outside EU borders unprotected. Independent analysis (Hoeren, Pinello, Poullet) documents both positions as live jurisprudential contests; no external corroboration resolves the dispute."
   },
   "interval": {
     "start": 0,
-    "end": 25
+    "end": 20
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.51
+      "time_point": 4,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.59
+      "time_point": 8,
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 12,
       "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.68
+      "time_point": 16,
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
+      "time_point": 20,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.55
+      "value": 0.54
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.62
+      "time_point": 4,
+      "value": 0.59
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.71
+      "time_point": 16,
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.72
+      "value": 0.71
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.29
+      "time_point": 4,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.35
+      "time_point": 8,
+      "value": 0.36
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 12,
       "value": 0.39
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 16,
       "value": 0.41
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.41
+      "time_point": 20,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "GDPR Article 3 establishes extraterritorial reach: EU data protection law applies to any processing of EU residents' data, regardless of where the processor is located. This constraint instantiates the TERRITORIAL SOVEREIGNTY READING of Article 3's scope: the claim that extraterritorial application exceeds the EU's legitimate regulatory authority under international law principles of territorial jurisdiction. This reading contests the effects-jurisdiction and market-access readings by asserting that data law must respect Westphalian sovereignty—jurisdiction follows territory, not data flows or global market effects. The territorial-sovereignty reading is held by non-EU states (as leverage in data localization arguments), some multinational non-EU technology companies (as a defense against compliance scope), and international law scholars who defend classical jurisdictional boundaries. It is opposed by EU regulators, data-protection authorities, and scholars who argue human rights protection justifies extraterritorial reach.",
-    "key_agents": [
-      "EU regulators and data-protection authorities: enforce GDPR Article 3 extraterritorial scope; treat it as legitimate protection mechanism",
-      "Non-EU state regulators: benefit from territorial-sovereignty reading as a justification for data localization and regulatory independence; resist EU extraterritorial claims",
-      "Non-EU multinational technology companies: pay compliance costs but benefit rhetorically from territorial-sovereignty framing; lobby to contain GDPR's scope",
-      "EU residents (data subjects): nominally benefit from extraterritorial protection but lack agency; protection is byproduct of institutional assertion",
-      "Non-EU companies (esp. US tech): bear architectural compliance costs; support territorial-sovereignty reading to reduce enforcement threat",
-      "International law scholars: contest whether extraterritorial data regulation violates Westphalian sovereignty principles"
-    ],
-    "logic_rationale": "Extractiveness (0.68 at interval end) is high because the constraint imposes compliance costs (data architecture, consent infrastructure, breach notification) on non-EU actors without their consent or participation in rule-setting. Suppression (0.72) is high because non-EU states and companies have limited exit: they cannot opt out of GDPR compliance while serving EU residents without losing market access. Theater (0.41) rises over the interval as non-EU states adopt countervailing data localization rules (presentational response to EU assertion) and companies increasingly frame compliance as bureaucratic theater rather than meaningful protection (extractive overhead). Accessibility collapse (0.64) is moderate-high: alternatives to GDPR compliance exist (market abandonment, data localization, processing minimization) but are costly; the collapse is economic, not absolute. Resistance (0.78) is high: non-EU states actively resist the reading via data sovereignty arguments and countervailing legislation; companies lobby against enforcement expansion; scholars contest the principle. The measurement series show extractiveness plateauing at t=20, suppression and theater stabilizing—the constraint has reached an enforced equilibrium rather than escalating further, suggesting institutional adaptation rather than breakdown.",
-    "directionality_logic": "The narrative above covers the directionality logic.",
-    "perspectival_gap": "The constraint computes as Tangled Rope when measured from the EU's seat (genuine coordination: rule-of-law protection, clear standards; asymmetric extraction resisted actively by non-EU actors). From the non-EU state regulator's seat, it computes as Snare (pure extraction of regulatory authority, with the territorial-sovereignty reading serving as the resistance mechanism). From non-EU company seats, it computes as intermediate: rope-like for those with institutional capacity to engage EU regulators (Apple, Google negotiating compliance standards) and snare-like for smaller firms (trapped by compliance costs, no negotiating power). The engine will compute these divergences from the structural data; the territorial-sovereignty reading authors that divergence explicitly.",
-    "mandatrophy_analysis": "The founding problem (protecting EU resident data in global flows) is CONTESTED: EU regulators say it remains live; non-EU governments say it was solved by market mechanisms and GDPR compliance is now defensive rather than protective (extractive overhead, theater). The reading's core assertion—that extraterritorial jurisdiction exceeds legitimacy—does not depend on mandatrophy: even if the protection is still needed, a territorial-sovereignty reading holds that the EU is not the rightful authority to provide it. Mandatrophy would arise if extraction persisted without the founding problem (data protection fails despite GDPR enforcement), not from the jurisdictional contest itself. The constraint avoids mandatrophy classification by remaining contested—the founding problem status is live enough for some parties (EU) and dead enough for others (non-EU) that no consensus exists on whether the regulation serves its original purpose or has become institutional inertia.",
-    "kernel_context": "This constraint instantiates the TERRITORIAL SOVEREIGNTY READING of the contested kernel gdpr_article_3_scope. The kernel is the Article 3 scope clause: 'This Regulation applies to the processing of personal data of data subjects who are in the Union, by an organisation or person not established in the Union.' Two sibling readings coexist: (1) EFFECTS_JURISDICTION_READING: Article 3(2) extends protections based on targeting or monitoring EU residents (the data protection enforcement principle); (2) MARKET_ACCESS_READING: GDPR operates as a conditional market-access requirement (Brussels Effect) rather than a jurisdictional assertion. The territorial-sovereignty reading holds that legitimate jurisdiction follows territorial presence or effect on persons within the territory, and extraterritorial application by the EU exceeds that boundary. The contest is not about GDPR's content (all three readings accept the substantive rules) but about WHO may enforce them and on WHAT legitimacy grounds."
+    "narrative_context": "This constraint story instantiates the territorial sovereignty reading of GDPR Article 3's scope question: does the EU have legitimate regulatory authority to enforce data protection rules on entities and activities outside EU borders, when those activities affect EU residents? The territorial sovereignty reading answers: no—jurisdiction is bounded by territorial control, and extraterritorial application exceeds legitimate authority. This is one reading of a contested kernel (Article 3 itself, the text that all three readings interpret). The constraint is CLAIMED as tangled_rope because the reading asserts both a genuine coordination function (mutual recognition of jurisdictional boundaries among sovereigns) AND asymmetric extraction (global platforms and non-EU entities bear compliance costs to defend that boundary, while non-EU state regulators benefit from preserved autonomy). The reading is live in international law debates, state diplomatic positions, and WTO contests, but contested—other readings assign different beneficiaries, costs, and legitimacy to the same text.",
+    "kernel_context": "This story instantiates the territorial_sovereignty_reading of the kernel gdpr_article_3_scope. The kernel is Article 3 of the GDPR itself—the text that specifies when the regulation applies. Three readings compete: (1) effects_jurisdiction_reading—jurisdiction follows effects on EU residents, via Article 3(2)'s targeting/monitoring test, permitting extraterritorial reach; (2) market_access_reading—GDPR as conditional market access requirement, a standard-setting mechanism rather than a jurisdictional claim; (3) territorial_sovereignty_reading (this one)—jurisdiction bounded by territorial sovereignty, Article 3's extraterritorial application is overreach. The readings share the kernel text but instantiate different constraints because they assign different beneficiaries (EU residents' protection vs. non-EU regulators' autonomy vs. market participants' compliance efficiency), different extraction mechanisms (protective overreach vs. standard-setting power vs. jurisdictional assertion), and different causal chains (data flows vs. market effects vs. sovereign authority). The constraint here is the standing arrangement under the territorial sovereignty reading's own lights: the arrangement where EU regulators enforce Article 3 as written, and the reading's claim is that this arrangement exceeds legitimate authority.",
+    "logic_rationale": "Extractiveness is 0.68 because the territorial sovereignty reading asserts that global compliance burden is imposed without legitimate authority—the extraction is the cost of defending a boundary claim. Under this reading, EU regulators extract legitimacy benefit (their authority is recognized and expanded) and non-EU regulators extract autonomy benefit (their domestic regulatory space is preserved), while global platforms and non-EU data controllers bear costs for activities classified as outside EU jurisdiction. Suppression is higher (0.71) because the constraint requires active policing of the territorial boundary: EU regulators must continuously assert and enforce their extraterritorial reach (enforcement machinery), while non-EU states must resist (data localization requirements, trade complaints) to maintain their side of the boundary. Theater (0.42) is moderate: the protective narrative ('protecting EU residents') is real, but a growing share of enforcement defends the jurisdictional claim itself rather than data protection outcomes. Accessibility collapse (0.62) is moderate because alternatives (territorial localization, consent-based processing, market-based compliance) remain partly viable for data controllers, though expensive. Resistance (0.73) is high because non-EU states, tech platforms, and business associations actively resist the extraterritorial reach through diplomatic channels, trade suits, and data localization counter-regulations.",
+    "directionality_logic": "The non-EU state regulators sit at d near the beneficiary end (0.15–0.25) because the territorial sovereignty reading benefits them by preserving their regulatory autonomy—they are coordinated (recognizing mutual jurisdictional limits) and they gain (domestic rule-setting power). EU regulators sit at d near the middle-to-target (0.40–0.60) because they claim a coordination function but the reading asserts they extract authority beyond legitimate bounds. Global data processors and non-EU controllers sit at d near the full-target end (0.75–0.90) because they are extracted from (compliance costs imposed for out-of-territory activity) without meaningful exit—their constraint is principally extractive. EU residents sit near symmetric (d ≈ 0.50) in the territorial sovereignty reading: they lose extraterritorial protection (cost) but keep territorial protection (benefit), and their exit is identity-locked (they cannot change residence easily to escape GDPR).",
+    "perspectival_gap": "The reading instantiates a sharp perspectival gap: from non-EU state seats, the territorial sovereignty boundary is legitimate coordination—mutual recognition of jurisdiction. From global platform and non-EU controller seats, the same boundary is a facade for extraterritorial imposition. From EU regulator seats, the reading mischaracterizes extraterritorial reach as exceeding authority when the reading's own text (Article 3(2)) permits it. The engine computes per-seat types from the structural data; the gap is encoded in the shared metrics combined with different stakeholder positions. A platform analyst would compute this as a snare (pure extraction, no coordination); a non-EU regulator would compute it as rope (genuine coordination of sovereignty norms). The reading declares tangled rope because it asserts both coordination (the boundary principle) and extraction (the compliance burden imposed in its name).",
+    "mandatrophy_analysis": "The founding problem (establishing a limiting principle on jurisdictional reach) remains contested—international law scholarship has not converged, and diplomatic practice exhibits continued conflict. The territorial sovereignty reading claims the founding problem is live and Article 3 correctly solves it; the effects jurisdiction reading claims the problem has evolved and Article 3(2) correctly extends protection to global data flows. The mandatrophy risk is moderate: if the founding problem—preventing jurisdictional collision—has been solved by mutual acceptance of extraterritorial reach as legitimate (the effects reading wins), then enforcing territorial limits becomes nostalgia for a solved problem, and the constraint becomes piton-like (maintained by institutional inertia rather than real coordination need). Conversely, if territorial limits are indeed the correct principle and extraterritorial reach is escalating jurisdictional conflict (the territorial reading wins), then the constraint remains live coordination. The measurement series shows modest extraction growth (0.52 to 0.68 over the interval), consistent with either reading: it could track increasing EU enforcement (supporting the effects reading's mandatrophy claim—a dead limit persisting) or increasing global compliance pressure (supporting the territorial reading's claim—the limit is under siege). The contest is unresolved by the data alone."
   },
   "omegas": [
     {
-      "id": "kernel_legitimacy_grounding",
-      "question": "On what grounds can the EU legitimately claim regulatory authority over data processing outside its territory?",
-      "resolution_mechanism": "International law scholarship and diplomatic resolution: Does the EU's authority rest on effects doctrine (targeting EU residents), human rights extraterritorial obligations, de facto market power (Brussels Effect), or exceed all legitimate grounds? Different resolutions produce different readings.",
-      "impact": "If effects doctrine is accepted as legitimate, the territorial-sovereignty reading loses force and the effects-jurisdiction reading prevails. If human rights extraterritoriality is rejected, the reading gains force. If Brussels Effect is recognized, market-access reading dominates.",
-      "confidence": "low",
+      "id": "reading_kernel_identity",
+      "question": "Is the territorial sovereignty reading's core premise—that jurisdiction is legitimately bounded by territory—a fixed principle of international law, or a contestable doctrine competing with legitimate alternatives?",
+      "resolution_mechanism": "Survey of contemporary international law scholarship, state practice in jurisdictional disputes (cases at ICJ, arbitral tribunals, bilateral negotiations), and diplomatic consensus on extraterritorial regulatory reach.",
+      "impact": "If territorial limits are a fixed principle, the effects reading is foreclosed and this reading is correct. If extraterritorial reach is also legitimate under some conditions (effects, market access, human rights), then this and the effects reading coexist, and the classification shifts from tangled rope toward snare (extraction with weaker coordination justification).",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "The foundational legitimacy claim distinguishing this reading: territorial jurisdiction is the boundary of authority."
+      "description": "Whether territorial boundaries are fixed law or contestable principle."
     },
     {
-      "id": "westphalian_sovereignty_applicability",
-      "question": "Does Westphalian sovereignty doctrine apply to data regulation, or is data flows a domain where classical territorial jurisdiction is obsolete?",
-      "resolution_mechanism": "International law evolution and consensus: adoption of new multilateral frameworks (e.g., UN data governance principles) that either reinforce territorial sovereignty or establish alternative legitimacy grounds for extraterritorial reach.",
-      "impact": "If Westphalian principles are deemed obsolete for data, the reading's core premise (territorial bounded jurisdiction) is rejected and the effects-jurisdiction reading is vindicated. If territorial sovereignty is reaffirmed, the reading strengthens.",
+      "id": "sibling_reading_coexistence",
+      "question": "Can the territorial sovereignty reading and the effects jurisdiction reading both be true in the same international legal framework, or does one logically foreclose the other?",
+      "resolution_mechanism": "Interpretation of Article 3 in light of EU Charter, CJEU jurisprudence (especially Schrems cases), and state practice. If CJEU jurisprudence converges on effects as legitimate, the readings coexist (different courts enforce different readings). If one court forecloses the other, they compete for dominance.",
+      "impact": "Coexistence supports modeling both readings as live constraints in a constraint family; foreclosure (rare) would mean one reading has been displaced. Currently, the readings coexist—the EU enforces effects, the US and China resist with territorial arguments.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sibling readings are logically compatible."
+    },
+    {
+      "id": "extraction_vs_coordination_primacy",
+      "question": "Is the primary function of the territorial sovereignty boundary to coordinate mutual jurisdictional respect (tangled rope claim), or to extract regulatory authority from global data processors by claiming universal reach (snare claim)?",
+      "resolution_mechanism": "Trace the evolution of Article 3 enforcement: if early enforcement focused on cross-border data transfers (coordinating data flow governance), the coordination claim is stronger; if enforcement has expanded to cover incidental exposure to EU residents and targeting tests broaden, the extraction claim strengthens. Compare enforcement actions against EU and non-EU entities; asymmetric enforcement suggests extraction.",
+      "impact": "If coordination is primary, the constraint is tangled rope and mandatrophy risk is low—the coordination function is real. If extraction is primary, the constraint is snare and mandatrophy risk is high—the boundary principle is cover for expanding authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Article 3 enforcement prioritizes coordination or extraction."
+    },
+    {
+      "id": "reading_as_false_summit",
+      "question": "Is the territorial sovereignty reading a natural principle of international law, or a construct benefiting non-EU state regulators and tech companies that adopt data localization as competitive advantage?",
+      "resolution_mechanism": "Examine who benefits from and advocates for the territorial reading: non-EU governments, US tech firms, competitors seeking regulatory advantage. Compare with independent international law scholarship and civil society positions (which largely support effects jurisdiction for human rights protection). If the reading is primarily advocated by parties with material interest and opposed by rights-focused actors, it is a false-summit candidate.",
+      "impact": "If false summit, the reading's claimed type (rope) masks extraction benefiting specific institutional actors. FSM would reclassify to tangled rope or snare. If the reading is indeed principled international law doctrine independent of beneficiaries, the classification stands.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether territorial sovereignty doctrine applies to transnational data flows or is historically contingent."
-    },
-    {
-      "id": "compliance_cost_vs_protection_trade_off",
-      "question": "To what extent do non-EU companies' compliance costs reflect genuine protection of EU residents versus regulatory overreach beyond market-access requirements?",
-      "resolution_mechanism": "Cost-benefit analysis and comparative legal study: detailed assessment of compliance costs (consent infrastructure, data localization, breach notification) versus actual privacy harms prevented. If costs are decoupled from harm-reduction, they indicate extractive overhead.",
-      "impact": "If compliance costs are decoupled from protection outcomes, the constraint is more extractive and the territorial-sovereignty reading gains force (regulation without legitimacy). If costs track protection outcomes, the constraint is justified and the reading weakens.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether compliance costs are proportionate to protection benefits or reflect extractive regulatory reach."
-    },
-    {
-      "id": "data_localization_as_countermeasure",
-      "question": "Are non-EU data localization mandates (China, India, Russia) legitimate exercises of territorial sovereignty or extractive counter-regulations that harm data subjects?",
-      "resolution_mechanism": "Assessment of outcomes and intent: Do localization mandates improve data protection for residents of those countries, or serve primarily to extract regulatory authority and restrict flows for geopolitical reasons?",
-      "impact": "If localization mandates are extractive, the territorial-sovereignty reading is delegitimized by its own logic—non-EU states are making the same extraterritorial claims in reverse. If localization mandates improve protection, they validate the reading's principle. The reading does not require non-EU localization to be legitimate; it requires that the EU's extraterritorial claim be illegitimate on principle.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether countervailing data localization by non-EU states reflects genuine sovereignty or extractive regulation masked as protection."
-    },
-    {
-      "id": "reading_contest_institutional_drivers",
-      "question": "Is the territorial-sovereignty reading driven by genuine principle (respect for international law boundaries) or by institutional interest (non-EU states asserting sovereignty, companies reducing compliance scope)?",
-      "resolution_mechanism": "Analysis of who holds the reading, what constraints they face, and what changes when institutional incentives shift. Do scholars and government officials who benefit from rejecting the reading's principle nonetheless hold it? Do countries that benefit from EU's extraterritorial reach nevertheless support territorial-sovereignty doctrine?",
-      "impact": "If the reading is driven primarily by institutional interest (non-EU states against GDPR, companies against regulation), it is less grounded in principle and more grounded in extraction resistance. If principled scholars hold it independent of institutional interest, it has stronger conceptual grounds. The reading's epistemic status is ambiguous.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the territorial-sovereignty reading reflects genuine international-law principle or institutional position-taking."
+      "description": "Whether the territorial sovereignty reading is a natural principle or a constructed beneficiary doctrine."
     }
   ],
   "boltzmann": {
@@ -193,41 +270,28 @@
       "gdpr_article_3_scope__effects_jurisdiction_reading",
       "gdpr_article_3_scope__market_access_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the contested kernel gdpr_article_3_scope. All three readings accept GDPR's substantive rules and mechanism but dispute the legitimacy and scope of EU regulatory authority. Sibling stories: effects_jurisdiction_reading (authority follows effects on EU residents; Article 3(2) targeting/monitoring test); market_access_reading (GDPR as Brussels Effect conditional market access, not jurisdictional assertion). The constraint family exhibits ε-invariance: each reading instantiates different structural beneficiaries and authority legitimacy claims, producing different compliance structures and resistance mechanisms despite identical regulatory text."
+    "dual_formulation_note": "Article 3 of the GDPR is a contested kernel. Three structurally distinct constraints are authored as separate stories, each instantiating one reading. This story (territorial_sovereignty_reading) asserts jurisdiction is bounded by territory; effects_jurisdiction_reading asserts jurisdiction follows effects on protected persons; market_access_reading asserts GDPR is a conditional market-access requirement, not a jurisdictional claim. The three readings share the kernel text but instantiate different constraints because they assign different beneficiaries, extraction mechanisms, and regulatory legitimacy. Each has its own epsilon (extracted from, against whom), beneficiary set, and compliance cost distribution. The constraint family models the contest: all three readings are live in international law and policy; the engine measures which reading's structural claims hold empirically (per-seat computation reveals divergence)."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.72
+      "power_atom": "powerful",
+      "d_value": 0.78
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "gdpr_article_3_scope__effects_jurisdiction_reading",
-      "gdpr_article_3_scope__market_access_reading"
-    ]
-  },
+  "gain_flow": "non_eu_state_regulators",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "westphalian_territorial_sovereignty",
-    "drift_state": {
-      "moment": "contemporary_transnational_data_flows",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "gdpr_article_3_scope__effects_jurisdiction_reading",
+        "sibling_id": "effects_jurisdiction_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "gdpr_article_3_scope__market_access_reading",
-        "relation": "coexists_with"
+        "sibling_id": "market_access_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
@@ -235,25 +299,33 @@
         "atom": "jurisdiction_bounded_by_territory",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "extraterritorial_authority_exceeds_legitimacy",
+        "atom": "regulatory_authority_cannot_exceed_sovereignty",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ]
+    ],
+    "reference_frame": "westphalian_territorial_sovereignty",
+    "drift_state": {
+      "moment": "contemporary_globalized_data_flows",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

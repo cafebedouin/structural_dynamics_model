@@ -4,28 +4,104 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "113d6e04-1dc8-45ba-aee1-dd98fafd0cb2"
+    "story_uid": "353c0d6d-be56-49eb-9e49-18ebb1b3bb2d",
+    "created_at": "2026-06-12T14:32:15Z"
   },
   "base_properties": {
-    "extractiveness": 0.92,
-    "suppression": 0.88,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.79,
-    "resistance": 0.72,
-    "claimed_type": "tangled_rope",
-    "human_readable": "Fair Use Doctrine Under Market Licensing Reading",
+    "extractiveness": 0.89,
+    "suppression": 0.76,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.81,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Fair Use Statutory Exception — Market Licensing Reading",
     "topic_domain": "intellectual_property/legal_interpretation",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "copyright_owners",
-      "licensing_intermediaries"
+      "copyright_holder_licensors"
     ],
     "victims": [
-      "educational_institutions",
-      "non_commercial_creators",
-      "cultural_commons_users",
-      "researchers"
+      "transformative_users",
+      "research_institutions",
+      "nonprofit_educational_entities",
+      "independent_creators"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "copyright_holder_licensors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Entities that control copyright registrations and license works for compensation. They argue that fair use doctrine must not undermine licensing markets; any use that could generate licensing revenue should require a license. They set licensing rates, determine whom to license, and can withhold licenses entirely. They frame the market-licensing test as the proper boundary of fair use."
+    },
+    {
+      "name": "transformative_users",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Artists, scholars, filmmakers, and software developers who reuse copyrighted material in new works—parody, commentary, remix, derivative innovation. Under this reading, their use is fair use only if no licensing market exists for it. If a licensor could monetize the use, they must license or refrain. They bear the cost of obtaining licenses, renegotiating creative strategies to avoid triggering licensing requirements, or abandoning derivative works entirely."
+    },
+    {
+      "name": "research_institutions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Universities, think tanks, and non-profit research centers that rely on fair use to quote, analyze, and reproduce copyrighted material for scholarship and teaching. Under this reading, their fair use protection evaporates if the copyright holder has established (or could establish) a licensing market. They face institutional licensing costs, licensing denial for critical scholarship, and restrictions on academic freedom."
+    },
+    {
+      "name": "nonprofit_educational_entities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Schools, libraries, and educational nonprofits that use copyrighted works for teaching and preservation. This reading subjects them to licensing requirements even when the use is clearly educational and non-competing. They face budget pressures from licensing costs and face denial of fair use claims based on the existence of licensing schemes."
+    },
+    {
+      "name": "independent_creators",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual artists and creators (musicians sampling prior work, videographers using copyrighted footage, writers quoting existing narratives) whose creative identity is fused with the practice of transformation and reuse. This reading makes their practice legally precarious—licensing fees may be unaffordable, licenses may be denied, and fair use protection disappears once a licensor claims market harm. Identity-locked because their creative practice is defined by reuse and transformation; exit means abandoning the creative identity itself."
+    },
+    {
+      "name": "courts_applying_fair_use",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Judiciary interpreting and applying the fair use doctrine. Under this reading, courts are instructed to foreclose fair use whenever a licensing market could exist, transforming judicial discretion into a formulaic 'market harm = no fair use' rule that collapses the multi-factor test into a single determinant."
+    },
+    {
+      "name": "copyright_law_tradition",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The body of copyright jurisprudence and statutory interpretation recognizing that fair use is an affirmative defense that should preserve non-commercial, transformative, and criticism-based uses. This reading excludes the tradition's broader framing of fair use as a balancing doctrine; it forecloses competing interpretations that emphasize transformation, criticism, and cultural production."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The constraint appears to coordinate the licensing market by preventing fair use from fragmenting it into unlicensed reuse that bypasses revenue collection. But the coordination is asymmetric: licensors coordinate their collective interest in maximum licensing revenue; users are not coordinated—they are individually constrained. A pure coordination reading would require participants to jointly benefit; here, the benefit flows one direction only.",
+    "transfer_function": "Moves the right to reuse copyrighted material from users to copyright holders, requiring users who would formerly rely on fair use to instead pay licensing fees to the copyright holder. The transfer is enforced by collapsing fair use doctrine to apply only where licensing markets do not exist—rendering fair use inapplicable wherever a monetizable use can be imagined.",
+    "absent_voices": "The creative and scholarly communities most affected by this reading are excluded from the reading's authoritative circle. Copyright law is interpreted by a small set of institutional actors (major publishers, music labels, licensing administrators, a subset of judges). The millions of independent creators, educators, and researchers who depend on fair use to practice their disciplines are systematically absent from the adjudication process, despite bearing the full cost of this reading's application.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading disappeared and a competing reading took its place—one that preserved fair use as a genuine defense for transformative, educational, and critical uses—the entire infrastructure of licensed works would persist, but the licensing market would contract to those uses that genuinely benefit from it. Independent creators, researchers, and educators would regain the ability to reuse works without obtaining licenses for every transformation. The reading itself exists to maximize licensing revenue; removing it would reduce that revenue while leaving copyright protection intact for non-fair-use scenarios.",
+    "founding_problem": "The founding problem is the perceived threat that fair use doctrine, broadly interpreted, would erode the licensing market for copyrighted works. If users could freely claim fair use for any reuse that did not directly compete with the original, licensors would lose licensing revenue. The reading frames the founding problem as: 'Fair use must be constrained to protect the licensing market.'",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Copyright holders and licensing-dependent institutions attest that the founding problem is live: fair use doctrine does threaten licensing revenue. But independent economic analysis (Gervais, Netanel) and scholarly testimony from outside the benefiting parties challenge whether the threat is real or whether licensing markets are more resilient and nuanced than a simple market-harm test assumes. Courts themselves remain divided on whether 'potential market harm' should be the dominant fair use factor. The problem's status is actively disputed in appellate litigation and academic jurisprudence."
   },
   "interval": {
     "start": 0,
@@ -35,200 +111,161 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.68
+      "value": 0.72
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.74
+      "time_point": 8,
+      "value": 0.76
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.79
+      "time_point": 16,
+      "value": 0.81
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.84
+      "time_point": 24,
+      "value": 0.86
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 32,
       "value": 0.88
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.9
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.91
-    },
-    {
-      "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.92
+      "value": 0.89
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.22
+      "time_point": 8,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.26
+      "time_point": 16,
+      "value": 0.37
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 24,
       "value": 0.41
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.72
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
       "value": 0.76
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.79
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.82
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.84
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.86
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.87
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.88
+      "value": 0.76
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates ONE reading of the contested fair use kernel—the market-licensing reading. Fair use is codified in 17 U.S.C. § 107 as an affirmative defense to copyright infringement, listing four statutory factors for courts to weigh: purpose and character of the use, nature of the copyrighted work, amount used, and effect on the market for or value of the copyrighted work. This reading interprets the statute through a specific lens: any use that could be licensed—that is, any use where a licensing mechanism exists or could be established—harms the licensing market and therefore extinguishes fair use protection. Under this reading, fair use collapses to a de minimis exception covering only uses where no licensing market exists: incidental background uses, uses too small to monetize, uses where rights holders cannot be identified or located. All educational, research, non-commercial transformative, and preservation uses lose protection if licensing is theoretically possible. The reading is structurally extractive: it converts fair use from a structural right that calibrates copyright incentives into a gatekeeping mechanism that forces all valuable reuse into licensing transactions. This constraint story documents that reading ONLY; sibling readings (transformative-right and narrow-defense) are separate constraint stories linked via network relationships.",
-    "key_agents": [
-      "copyright_owners (powerful, beneficiary) — own copyrighted works and benefit from expanded licensing opportunities",
-      "licensing_intermediaries (institutional, beneficiary + agenda_setter) — administer rights management and collect intermediation fees; they enforce the reading by developing licensing platforms and interpreting the statute",
-      "courts (institutional, agenda_setter) — interpret the fair use statute and apply the licensing-market logic as the dispositive test",
-      "educational_institutions (organized, payer + victim) — face compressed fair use protection and rising licensing costs",
-      "non_commercial_creators (moderate, payer + victim) — lose ability to create transformative derivative works without licensing",
-      "researchers (moderate, payer + victim) — cannot conduct text mining, corpus analysis, or algorithmic auditing without licensing",
-      "cultural_commons_users (powerless, payer + victim) — cannot preserve, archive, or provide accessibility without licensing negotiation"
-    ],
-    "logic_rationale": "Extractiveness is extremely high (0.92 at interval end) because the reading systematically converts every use that generates value—every use a licensing mechanism could serve—into an obligatory licensing transaction. There is no residual fair use protection for valuable uses; the doctrine exists only at the margins where licensing is economically impossible. Suppression is also very high (0.88) because enforcement depends on aggressively narrowing fair use through judicial interpretation, legislative amendment, and technological control (DRM-backed licensing). The measurement series shows both metrics rising over time: extractiveness climbs as licensing platforms mature and can monetize increasingly granular uses; suppression rises as enforcement infrastructure hardens. Theater ratio is moderate-low (0.41) because the licensing-market logic presents itself as statutory interpretation (courts cite factor 4; copyright owners frame it as protecting incentives) but the functional effect is revenue extraction—the performative element is the framing as law rather than policy choice. Accessibility collapse is high (0.79) because once courts adopt the licensing-market logic, alternatives (robust fair use protection, open licensing norms, statutory licensing for certain categories) become legally unavailable or politically foreclosed; the reading's own judicial adoption narrows the perceived option space. Resistance is substantial (0.72) because educational institutions, researchers, non-commercial creators, and civil society organizations actively contest this reading; there is a live legal debate (some courts and jurisdictions still apply fair use more robustly) and legislative lobbying for alternative doctrines.",
-    "perspectival_gap": "The agenda-setter seats (copyright owners and licensing intermediaries) and the court seat experience this constraint radically differently from the payer and victim seats. From the copyright-owner and licensing-intermediary perspective, this is a coordination mechanism: fair use doctrine that protects their licensing markets. They frame it as necessary copyright incentive protection. From the payer and victim seats (educators, researchers, non-commercial creators, archivists), the same doctrine is pure extraction: it converts legitimate reuse into a gatekeeping and fee obligation, suppressing downstream creation and access. The engine's per-seat classification computation should capture this: the copyright owner seats should compute as beneficiaries with low directionality; the payer seats should compute as targets with high directionality. The constraint's claim (tangled_rope) reflects this asymmetry: there is a coordination story (protecting incentives to create original works) that licenses copyright owners' perspective, but the actual operation is asymmetric extraction (forcing payers to license uses that fair use once protected) with active enforcement (courts and licensing platforms). The asymmetry is the tangled_rope signature.",
-    "directionality_logic": "Copyright owners and licensing intermediaries are structural beneficiaries (d near 0.0): they collect from the licensing transactions the reading enables; they control the agenda through their lobbying and their role in copyright litigation; their exit options are arbitrage (they could abandon stricter licensing and return to lower-fee competition, but do not). Educational institutions, researchers, non-commercial creators, and cultural commons users are structural targets (d near 1.0): they bear the cost of licensing obligations or cease their activities; their exit is constrained (they cannot avoid copyright law) or identity-locked (their institutional or creative identity depends on access to cultural materials). Courts sit between beneficiary and symmetric (d moderately low): they are supposed to be neutral interpreters, but they have been consistently persuaded by copyright-owner framing of the licensing-market test. The copyright statute authority (legislature) is an observer (d analytical): the statute does not mandate the licensing-market logic; it empowers courts to weigh factors. No directionality override is needed; the derived d values should track the structural data accurately.",
-    "mandatrophy_analysis": "This reading avoids a mandatrophy problem by reinterpreting the statute rather than explicitly abandoning its purpose. The fair use statute was enacted to prevent copyright overreach and preserve space for follow-on creation, transformation, and access. This reading interprets the statute to achieve the opposite—maximizing copyright control and licensing extraction. Yet because the reinterpretation uses statutory language (factor 4, market harm), it appears to honor the statute rather than contradict it. The mandatrophy is latent: the founding problem (prevent copyright overreach) is contradicted by the reading's operation, but the contradiction is obscured by doctrinal framing. The constraint persists not because the founding problem is solved but because the framing inverts the statute's purpose without naming the inversion. This is the classic piton and mandatrophy signature: a former coordination mechanism (fair use as a right-calibration tool) whose function has atrophied (it no longer calibrates; it merely marks the margins) but whose appearance persists (courts still cite the four-factor test, legislature has not repealed fair use). The theater ratio (0.41) reflects this: there is still genuine function (fair use does protect genuinely un-monetizable uses), but an increasing share of enforcement effort is theater—the appearance of balancing when the outcome (licensing transaction requirement) is foreordained.",
-    "kernel_context": "This constraint instantiates the MARKET_LICENSING_READING of the contested FAIR_USE_STATUTORY_EXCEPTION kernel. The kernel is the fair use provision of the Copyright Act (17 U.S.C. § 107), a stabilized text that different interpretive communities read differently. This reading asserts that factor (4)—effect on the market for or value of the copyrighted work—should be interpreted to mean: any use that could be licensed harms the licensing market and therefore does not qualify as fair use. Sibling readings include the TRANSFORMATIVE_RIGHT_READING (fair use protects transformative reuse and cultural production; courts must weigh transformative value against market harm) and the NARROW_DEFENSE_READING (copyright is property; fair use is a narrow affirmative defense to prevent only the most egregious overreach, not a broad right). These are not perspectives on one fact; they are genuinely alternative readings of the statute with different structural consequences. The market-licensing reading forecloses the transformative-right reading within a single coherent copyright framework: if licensing markets exhaust fair use, there is no space for a transformative-use protection. The narrow-defense and market-licensing readings coexist: both treat fair use narrowly, but they differ on whether the narrowing principle is licensing-market priority (market-licensing) or copyright-as-property-defense-scope (narrow-defense). The market-licensing reading influences the transformative-right reading by creating institutional pressure: as courts adopt the licensing-market test, courts treating transformative value face an uphill burden; the reading shifts the default from 'fair use presumed unless harm shown' to 'licensing required unless unmoneizable.'"
+    "narrative_context": "This constraint instantiates ONE reading of the fair use statutory exception: the market-licensing reading. Under this reading, fair use exists only where no licensing market exists for the use. Any use that could be licensed—because someone would pay for it or because a copyright holder could establish a market for it—falls outside fair use protection. This reading was explicitly advocated in judicial opinions (Harper & Row v. Nation, Sony v. Universal) and remains influential in licensing-dependent industries. The reading treats fair use as a residual category, narrowed to uses where no revenue stream is possible. The constraint's expected structural delta is extremely high ε: fair use doctrine becomes null in practice for most transformative uses, because most transformative uses have potential licensing markets. This story instantiates the reading and measures its operational extractiveness under the assumption that the reading's legal premise is correct—the constraint's ε referent is the standing arrangement (this reading, as applied) assessed by the reading's own lights, not by a competing reading.",
+    "kernel_context": "This constraint is one reading of the contested kernel: fair use statutory exception (17 U.S.C. § 107). The kernel is a fixed text (statutory language) with open-ended interpretive ambiguity. Three readings are in active dispute: (1) market_licensing_reading (THIS constraint): fair use exists only where licensing markets do not; (2) transformative_right_reading: fair use exists to enable transformative culture; courts must facilitate innovation regardless of licensing market; (3) narrow_defense_reading: copyright is absolute property; fair use is a narrow affirmative defense to property rights, not a broad privilege. These readings coexist across institutional factions (copyright bar vs. digital rights advocates vs. judiciary) and no single framework currently adjudicates them. This story instantiates the market_licensing_reading alone.",
+    "logic_rationale": "Extractiveness is extremely high (0.89 at interval end) because the constraint applies a single test ('would a licensing market exist for this use?') to collapse four factors of the statutory fair use test into a near-determinant. Once a copyright holder can claim a market for licensing exists, fair use protection disappears entirely for that use. Suppression is high (0.76) because the constraint requires active enforcement: courts must be trained to apply the market-harm test; licensing administrators must claim markets exist and deny fair use to users claiming the markets don't; users must be constrained from claiming fair use absent proof that no licensing mechanism exists. Theater rises from 0.28 to 0.42 (and plateaus) because the initial rise reflects increasing rhetorical emphasis on 'protecting licensing markets' in judicial opinions, but the plateau suggests that once the interpretive frame is stable, performance and function align—the market-harm test is what courts actually do, not what they claim to do instead. Measurements are authored on a single shared time grid: every metric is valued at every time point. The trajectory models a reading that strengthened from approximate (early opinions with mixed reasoning) to institutionalized (recent opinions treating market harm as dispositive).",
+    "directionality_logic": "The copyright holder licensors are the structural beneficiary (d near 0.0, full beneficiary end): they collect licensing fees, can deny licenses to suppress competitive reuse, and set rates without constraint. Transformative users and independent creators are the structural targets (d near 1.0, full target end): they pay licensing fees, face denial of fair use claims, and are suppressed from derivative work. Research institutions and educational entities are also targets, though with slightly higher power and organizational backing. Courts are the analytical observer seat (d at analytical). The directionality derivation from beneficiary/victim declarations flows naturally: beneficiaries get low d, victims get high d. The suppression mechanism is both structural (legal doctrine that forecloses fair use as a defense) and internalized (users internalize the reading and self-censor, avoiding reuses that might trigger licensing claims even where fair use would defensibly apply). The suppression is not lifted by exit: even if a user leaves the copyright system (creates original work only), the identity-locked creators have left their creative practice itself.",
+    "perspectival_gap": "From the copyright holder's seat, the reading is correct: licensing markets exist for most uses, so fair use should be limited to uses where no market can be established. The doctrine preserves licensing revenue. From the transformative user's seat, the reading is a capture mechanism: it collapses fair use to near-nothing by declaring that any conceivable market for licensing means no fair use. The perspectival gap is extreme—the same constraint appears as either legitimate market protection or pure extraction depending on where you stand. The engine computes both seats' perceptions from the structural data; this story's role is to supply the structural facts, not to adjudicate the gap.",
+    "mandatrophy_analysis": "The fair use doctrine has undergone mandate drift. The statutory mandate (17 U.S.C. § 107) calls for courts to balance four factors and preserve fair use as a genuine exception to copyright exclusivity. The market-licensing reading narrows this mandate to a single test (potential market harm) that collapses the exception into near-nonexistence. This is mandatrophy: the doctrine persists, courts still recite the four factors, but the binding rule is the market-harm test, rendering the original statutory mandate functionally obsolete. The theater ratio climb from 0.28 to 0.42 marks the acceleration of this mandate drift—increasing rhetorical emphasis on licensing-market protection in judicial opinions, while the statutory multi-factor balance is displaced. The plateau suggests institutional stabilization: the mandate is now thoroughly inverted, and performance has caught up to the fact."
   },
   "omegas": [
     {
-      "id": "licensing_market_existence_and_hypothetical",
-      "question": "Does 'licensing market exists' include hypothetical licensing markets that do not actually exist but could be established? Can a rights holder create a licensing opportunity retroactively by declaring a willingness to license?",
-      "resolution_mechanism": "Case law clarification: do courts require an actual, extant licensing market, or do they infer market harm from theoretical licensing possibility? Empirical study of licensing platforms' creation of monetization for previously unmonetized uses.",
-      "impact": "If actual licensing markets are required, fair use survives where no real licensing infrastructure exists (research, archival, preservation, many non-commercial uses). If hypothetical markets suffice, fair use collapses entirely—any use a rights holder claims they could license loses protection. This reading assumes hypothetical markets suffice, which is the most extractive interpretation.",
+      "id": "licensing_market_existence_determination",
+      "question": "What constitutes 'a licensing market exists' for the purpose of fair use analysis? Is the threshold: (a) a licensor HAS established an actual licensing scheme for this use category, (b) a licensor COULD establish one if they chose to, or (c) any use for which someone might hypothetically pay?",
+      "resolution_mechanism": "Appellate decision clarifying what evidence suffices to establish market existence; empirical study of licensing scheme proliferation across content categories.",
+      "impact": "Interpretation (a) leaves fair use space for uses where no actual scheme exists. Interpretation (b) or (c) renders fair use nearly extinct, as most uses could theoretically be licensed. This omega locates the reading's operative hinge: the reading's extractiveness depends entirely on how broadly 'market' is defined.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "The boundary between actual and hypothetical licensing markets in the fair use analysis."
+      "description": "The threshold for establishing licensing market existence"
     },
     {
-      "id": "statutory_factor_hierarchy_and_discretion",
-      "question": "Does 17 U.S.C. § 107's requirement to weigh four factors permit courts to treat factor (4)—market harm to licensing—as dispositive, or must courts give genuine weight to factors (1) transformative purpose and (2) amount used?",
-      "resolution_mechanism": "Statutory interpretation by appellate courts and legislative clarity: does Congress intend factor (4) to dominate, or is it one of four equally weighted considerations? Comparative analysis of how courts balance factors in practice.",
-      "impact": "If factors are equally weighted, fair use depends on the full four-factor balance, and transformative educational/research/preservation uses can prevail despite licensing-market harm. If factor (4) is dispositive, the licensing-market reading follows structurally from statutory construction. This reading assumes (4) is dispositive.",
-      "confidence": "high",
+      "id": "licensing_market_vs_transformative_function",
+      "question": "Can a use be both licensing-marketable AND transformative in a way that fair use doctrine should protect? Or does transformativeness become irrelevant once licensing markets exist?",
+      "resolution_mechanism": "Comparative study of jurisdictions and statutory regimes (EU fair dealing vs. US fair use): do other systems preserve transformative use even when licensing markets exist?",
+      "impact": "If transformativeness can override market-harm analysis, fair use survives for certain uses despite licensing markets. If market existence is dispositive, transformativeness becomes a hollow factor. This omega locates whether the reading is truly logically necessary or just an institutional choice about weighting.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether factor (4) in the fair use statute is one of four equal considerations or the dispositive test."
+      "description": "Whether transformativeness survives once licensing markets are identified"
     },
     {
-      "id": "licensing_revenue_vs_copyright_incentive_purpose",
-      "question": "What is copyright law's primary purpose: maximizing licensing revenue for rights holders, or incentivizing original creation by granting limited monopolies? Does protecting licensing revenue serve original-creation incentives, or does it subordinate incentives to revenue extraction?",
-      "resolution_mechanism": "Statutory history and legislative purpose: examination of the Copyright Clause (U.S. Const. art. I, § 8) and the Preamble to the Copyright Act. Economic analysis of the relationship between fair use protection and original-work creation incentives. Empirical study of whether licensing-market pressure increases or decreases original creation.",
-      "impact": "If copyright's purpose is original-creation incentives, fair use should protect downstream creativity and cultural participation, even if that reduces licensing revenue. If copyright's purpose is licensing-revenue maximization, the market-licensing reading follows. The reading assumes the latter interpretation, which is contestable.",
-      "confidence": "medium",
+      "id": "internalized_suppression_post_exit",
+      "question": "For identity-locked creators who internalize this reading and self-censor their derivative work, how much suppression persists if the reading is reversed? Do they return to derivative creation, or does the internalized prohibition persist?",
+      "resolution_mechanism": "Post-reversal observation: if a different reading were adopted (transformative_right_reading), track whether identity-locked creators resume derivative work or remain suppressed.",
+      "impact": "If suppression persists post-reversal, the constraint has produced internalized identity-fusion that cannot be easily undone. The measured suppression (0.76) understates the constraint's true cost. If suppression reverses quickly, the constraint's power is purely structural enforcement, not internalized.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether maximizing licensing revenue serves the Copyright Clause's purpose of incentivizing original creation."
+      "description": "Persistence of internalized suppression among identity-locked creators after doctrine change"
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the suppression of fair use primarily structural (courts and licensing platforms enforce the licensing-market logic through institutional architecture) or internalized (educators, researchers, and creators internalize the reading and avoid fair use uses even where the legal argument is contestable)?",
-      "resolution_mechanism": "Post-reading-clarity suppression trajectory: if the reading is explicitly rejected and fair use is restored, do educators and researchers immediately resume fair use practices, or does the suppression persist through internalized caution and legal fear?",
-      "impact": "If suppression is primarily structural, restoring fair use doctrine would rapidly reactivate fair use practices. If suppression is internalized, institutional and individual behavior would persist even with doctrinal change; the constraint would function as a piton through internalized belief rather than active enforcement.",
+      "id": "reading_vs_sibling_foreclosure",
+      "question": "Does the market-licensing reading logically foreclose the transformative_right_reading, or do they merely compete across institutional seats?",
+      "resolution_mechanism": "Formal analysis of axioms: if market-harm is dispositive, then transformative value becomes irrelevant — this is logical foreclosure within a single framework. If market-harm is one factor among four, both readings can coexist in the same framework.",
+      "impact": "If foreclosure is real, the engine's signature_reading_foreclosure will detect it. If the readings merely compete, they coexist. This omega documents the committer-frame uncertainty: the reading's presentation suggests foreclosure, but statutory language (four-factor test) suggests coexistence.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether fair use suppression is structural (institutional enforcement) or internalized (psychological/behavioral internalization)."
+      "type_class": "conceptual",
+      "description": "Whether this reading logically forecloses competing fair-use readings"
     },
     {
-      "id": "reading_as_doctrine_vs_reading_as_interpretation",
-      "question": "Is this constraint a doctrine courts have adopted (an authoritative reading of the statute), or is it a contestable interpretation among several live options? How firm is the judicial consensus on the licensing-market test?",
-      "resolution_mechanism": "Appellate case law review: survey of how different federal and state courts apply the four-factor test. Legislative proposals to clarify fair use doctrine. International comparison with copyright systems that explicitly protect fair use independent of licensing-market analysis.",
-      "impact": "If the licensing-market reading is firmly established doctrine, it is entrenched and structural. If it is a contestable interpretation, it can be reversed by court opinion or statutory amendment. Different jurisdictions show different doctrinal maturity; the U.S. shows higher firmness, many international systems show greater protection for educational and research uses.",
+      "id": "copyright_holder_monopoly_assumption",
+      "question": "Does the reading assume that copyright holders can reliably determine and control what licensing markets exist? Or does it assume licensing markets are natural and objectively discoverable?",
+      "resolution_mechanism": "Study of actual licensing scheme behavior: do copyright holders establish schemes where demand exists, or only where they choose to, creating artificial gaps?",
+      "impact": "If markets are endogenously chosen by copyright holders, the reading creates a feedback loop: licensors suppress fair use by declaring markets exist, then establish schemes to monetize the suppressed uses. If markets are exogenous, the reading is merely tracking economic reality. This omega locates whether the reading is a descriptor or a value-maximizing strategy.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the market-licensing reading is firm doctrine or contestable interpretation."
+      "description": "Whether licensing markets are objectively determined or strategically chosen by copyright holders"
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.22
   },
   "network": {
     "affects_constraints": [
       "fair_use_statutory_exception__transformative_right_reading",
       "fair_use_statutory_exception__narrow_defense_reading",
-      "copyright_licensing_platform_economics",
-      "derivative_work_creation_constraint"
+      "licensing_market_efficiency_hypothesis",
+      "copyright_absolutism_doctrine"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the fair use statutory exception kernel. The sibling readings (transformative_right_reading and narrow_defense_reading) are separate constraint stories with different ε values, beneficiary/victim structures, and classifications. They share a common kernel (17 U.S.C. § 107) but instantiate different interpretations with different structural consequences. All three stories are linked via network.affects_constraints and together form the fair_use_kernel_family. The decomposition reflects ε-invariance principle DP-001: one reading, one constraint, one ε-value per story; alternative readings are alternative constraints."
+    "dual_formulation_note": "This constraint is one reading of the fair use statutory exception kernel. Three distinct constraints inhabit this kernel: market_licensing_reading (THIS), transformative_right_reading (fair use as cultural production right), and narrow_defense_reading (fair use as narrow affirmative defense to property). Each reading has structurally different ε, beneficiary/victim sets, and classifications. The readings coexist across institutional factions and no single framework currently adjudicates them. All three are linked in network.affects_constraints to signal the constraint family decomposition."
   },
   "directionality_overrides": [
     {
@@ -238,49 +275,57 @@
   ],
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "fair_use_statutory_exception__transformative_right_reading",
+        "sibling_id": "transformative_right_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "fair_use_statutory_exception__narrow_defense_reading",
+        "sibling_id": "narrow_defense_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "licensing_market_priority",
+        "atom": "licensing_market_harm_is_dispositive",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "fair_use_collapse_to_margins",
+        "atom": "fair_use_secondary_to_copyright_property_rights",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "copyright_as_licensing_revenue_system",
+    "reference_frame": "copyright_as_exclusive_economic_right",
     "drift_state": {
-      "moment": "contemporary_digital_platform_era",
-      "direction": "authority_erosion",
+      "moment": "contemporary_digital_creativity_era",
+      "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "very_high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "copyright_absolutism_doctrine"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

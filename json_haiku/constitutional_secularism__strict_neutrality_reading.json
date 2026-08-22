@@ -4,30 +4,97 @@
     "version": "1.0",
     "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "491a91d9-3af5-41e6-9c2d-496f78038732"
+    "story_uid": "7b8752a0-ba7e-4b5d-abf0-84c86fe3f41e"
   },
   "base_properties": {
     "extractiveness": 0.62,
     "suppression": 0.41,
     "theater_ratio": 0.28,
-    "accessibility_collapse": 0.71,
-    "resistance": 0.58,
-    "claimed_type": "rope",
+    "accessibility_collapse": 0.48,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
     "human_readable": "Constitutional Secularism: Strict Neutrality Reading",
-    "topic_domain": "constitutional_law/religious_governance",
+    "topic_domain": "constitutional_law/political_theory/religious_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "religious_minorities",
-      "constitutional_order_stability"
+      "secular_governance_institutions"
     ],
     "victims": [
-      "marginalized_groups_within_religious_communities",
-      "reform_oriented_segments"
+      "majority_religious_communities",
+      "internal_reformers_within_traditions"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "secular_governance_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State courts, legislatures, and executive enforcement agencies maintain the secularist reading by refusing to adjudicate internal religious disputes, rejecting pleas for state intervention against practices deemed oppressive, and treating all religious traditions identically under law regardless of their internal hierarchies or reform demands. They justify this as protecting religious autonomy and preventing majoritarian capture; they administer the boundary between religious and secular spheres."
+    },
+    {
+      "name": "religious_minorities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain protection from majoritarian state action — the state will not legislate against minority religious practices or attempt to 'reform' their traditions on majoritarian grounds. They retain internal institutional autonomy. But they also experience the constraint's refusal to intervene when majorities within their own communities (elders, male heads) oppress minorities within minorities (women, LGBTQ members, apostates, dissidents)."
+    },
+    {
+      "name": "majority_religious_communities",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the cost of state non-intervention in their internal affairs and equal legal treatment despite numerical dominance. They lose the ability to use state machinery to enforce their tradition's doctrines, convert populations, or establish preferential institutional arrangements. They argue the neutrality principle forces them to subsidize minority practices without receiving reciprocal state support for their own."
+    },
+    {
+      "name": "internal_reformers_within_traditions",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Activists and scholars within religious traditions seeking to reform oppressive internal practices (gender inequality, caste systems, conversion punishments, LGBTQ exclusion) lose the option of state alliance. The strict neutrality rule treats their internal reformist agenda as a majoritarian imposition rather than a liberation movement. They are caught between community loyalty (which enforces against dissent) and state indifference (which refuses to side with them against their own tradition's hierarchy)."
+    },
+    {
+      "name": "state_capacity_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State officials, legislators, and reformist bureaucrats who believe the state has both capacity and mandate to intervene in religious communities to protect vulnerable sub-groups are structurally barred from acting. Their reform agenda is treated as preferential treatment and sectarian overreach under the strict neutrality reading. They are kept out of the conversation about when community autonomy should yield to protection of the vulnerable."
+    },
+    {
+      "name": "religious_minorities_externally",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International human rights bodies and diaspora communities monitor whether the neutrality principle actually protects or abandons vulnerable sub-groups. They produce testimony about outcomes: whether strict neutrality shields minorities from majoritarian law or shields majorities from reform pressure, and at whose expense."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The state abstracts away from sectarian preference and theological disputes by treating all religious traditions identically under secular law: no tradition receives state validation, resources, or enforcement of doctrinal claims; conversely, none faces state opposition on theological grounds. This solves the founding problem of sectarian conflict by making state power unavailable as a prize in religious competition.",
+    "transfer_function": "The constraint transfers state capacity for social reform away from internal-minority liberation movements (particularly women, apostates, LGBTQ members, dissidents within traditions) and away from majoritarian communities' claims for preferential treatment, lodging both in community-internal self-governance. Majorities within traditions retain control over minorities within their own communities; state neutrality ratifies internal hierarchies as autonomous choices.",
+    "absent_voices": "Internal reformers and sub-group minorities within religious communities are excluded — not formally, but structurally, because state neutrality treats their reform agenda as preferential intervention rather than liberation. State capacity advocates and those who believe vulnerability within communities outweighs autonomy-of-tradition are also kept out of the authoritative conversation, though they testify in legislatures and courts.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If strict neutrality vanished and the state became available as an ally for both reformist movements within traditions and majoritarian communities seeking preferential treatment, the entire institutional ecology would restructure: state machinery would become a contested prize in religious competition, alliances would shift from within-community to state-community, and the constitutional settlement separating religious from secular law would dissolve.",
+    "founding_problem": "Late-18th and 19th-century European and colonial contexts: sectarian warfare, majoritarian establishment churches using state power to suppress or convert minorities, religious minorities seeking refuge in non-denominational secular law and state neutrality.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historical scholarship attests the founding problem (sectarian conflict, majoritarian oppression) was real and urgent in the contexts where constitutionalism emerged. Contemporary debate: majoritarian communities argue the founding problem is overcome and neutrality now protects minorities against reform; minority-protection advocates argue the founding problem persists in different form (intra-community oppression now shielded from state intervention) and strict neutrality enables it. No neutral outside corroboration; the disagreement is precisely over what counts as the problem the reading solves."
   },
   "interval": {
     "start": 0,
-    "end": 75
+    "end": 40
   },
   "measurements": [
     {
@@ -37,32 +104,27 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.52
+      "time_point": 8,
+      "value": 0.54
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
+      "time_point": 16,
       "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 38,
+      "time_point": 24,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
       "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.63
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 62,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 75,
+      "time_point": 40,
       "value": 0.62
     },
     {
@@ -72,136 +134,115 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.15
+      "time_point": 8,
+      "value": 0.16
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
+      "time_point": 16,
       "value": 0.21
     },
     {
       "metric": "theater_ratio",
-      "time_point": 38,
+      "time_point": 24,
       "value": 0.26
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.29
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 62,
+      "time_point": 32,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 75,
+      "time_point": 40,
       "value": 0.28
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.37
+      "time_point": 8,
+      "value": 0.31
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
       "value": 0.39
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 38,
+      "time_point": 32,
       "value": 0.41
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.41
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 62,
-      "value": 0.41
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 75,
+      "time_point": 40,
       "value": 0.41
     }
   ],
   "commentary": {
-    "narrative_context": "Constitutional secularism establishes that the state maintains equal distance from all religions—no preferential treatment, no state intervention in religious affairs. This is ONE reading of a contested kernel. The strict neutrality reading treats state silence toward internal religious practices as non-interference (even when those practices are hierarchical or oppressive), and state refusal to intervene in religious reform as equal distance (even when it leaves marginalized persons within communities without recourse). This reading is opposed by principled-intervention advocates (who argue for limited state intervention to protect basic rights) and reformist advocates (who argue the state has affirmative duty to eliminate oppressive religious practices). The constraint story models the strict neutrality reading as internally coherent but extractive toward powerless persons locked into community identity.",
+    "narrative_context": "Constitutional secularism — the principle that the state maintains equal distance from all religions — is a contested kernel instantiated through multiple readings. The STRICT NEUTRALITY READING claims the state must maintain complete non-interference: no preferential treatment, no intervention in internal religious affairs, no mobilization of state machinery for either majoritarian establishment or minority protection from internal oppression. This reading frames neutrality as the cure for sectarian conflict and a guardrail against state capture by religious actors. However, the structural impact is that state capacity to protect vulnerable sub-groups within traditions (women, LGBTQ members, apostates, internal reformers) is unavailable, and community internal hierarchies are ratified as autonomous. The strict neutrality reading competes with a PRINCIPLED INTERVENTION READING (state may ally with internal reformers and protect intra-community vulnerability) and a REFORMIST READING (state has affirmative duty to eliminate oppressive practices, superseding community autonomy). This JSON instantiates the strict neutrality reading only; the sibling readings are separate constraint stories in the family.",
     "key_agents": [
-      "State Judiciary: Guardian of the strict neutrality reading; interprets and enforces equal distance.",
-      "Religious Minorities: Beneficiaries of protection from majoritarian dominance; protected by the constraint's guarantee of non-preferential treatment.",
-      "Majority Religious Community: Payer; cannot use state machinery for religious amplification or establishment.",
-      "Marginalized Groups Within Communities: Victims; locked into identity within communities; cannot petition state for intervention against internal oppression.",
-      "Reform-Oriented Religious Segments: Victims; cannot invoke state support for internal reform agendas.",
-      "Constitutional Text Guardians: Beneficiaries of the reading's stability and rule-bound coherence.",
-      "Principled-Intervention Advocates: Excluded from the decision-making frame; their intervention-justifying claims are treated as outside constitutional bounds."
+      "Secular governance institutions (state courts, legislatures, enforcement agencies) — agenda setter; administers the boundary between religious and secular spheres",
+      "Religious minorities — beneficiary (protected from majoritarian state action) but also payer (lose state alliance for internal reform)",
+      "Majority religious communities — payer; lose preferential state treatment and control over state machinery",
+      "Internal reformers within traditions — payer/excluded; trapped between community loyalty and state indifference; identity-locked",
+      "State capacity advocates and reformist bureaucrats — excluded; barred from intervention agenda",
+      "External observers (human rights bodies, diaspora) — analytical; monitor outcomes"
     ],
-    "logic_rationale": "The constraint shows moderate-to-high extractiveness (0.62) because it imposes real costs on marginalized persons within religious communities and reform advocates (who cannot invoke state protection) in order to preserve the equal-distance framework. Suppression is moderate (0.41) because the reading is enforced through judicial interpretation and constitutional doctrine, not through coercive force on the majority religious community—the suppression is primarily cognitive/interpretive (constraining what counts as legitimate state action). Theater ratio is low-moderate (0.28) because the reading's core function (preventing majoritarian religious dominance through equal distance) is real and durable, but some enforcement activity goes into defending religious autonomy even when internal structures are oppressive (theater masking the extraction cost). Accessibility collapse is moderately high (0.71) because once the strict neutrality reading is accepted as constitutional law, alternatives (principled intervention, reformist intervention) are structurally foreclosed from the state's decision space—but the collapse is incomplete because courts can and do revisit the reading through dissents and neighboring constitutional rights (e.g., equal protection of marginalized persons). Resistance is moderate-to-high (0.58) because marginalized persons petition for intervention, reform advocates challenge the reading, and competing institutional actors (human-rights commissions, legislative bodies in some polities) propose alternatives. The measurement series shows extractiveness rising through t=38 as awareness of internal-community oppression increases, then plateauing—the constraint's cost becomes stable once the reading is entrenched.",
-    "perspectival_gap": "The state judiciary and religious minorities perceive the constraint as genuine coordination solving majoritarian dominance. Marginalized persons within communities and reform advocates perceive it as extraction—a constraint that treats religious autonomy as inviolable at the cost of their protection. The constraint achieves one kind of equality (equal distance from religions) by sacrificing another (equal protection of vulnerable persons within religions). This perspectival divergence is structural: the constraint cannot simultaneously maximize external religious equality and internal minority protection—the reading chosen prioritizes the former. The engine should compute institutional and moderate-power seats as perceiving rope/coordination, while powerless and identity-locked seats perceive snare/extraction.",
-    "directionality_logic": "Religious minorities are beneficiaries (d near 0.1-0.2): they receive protection from majoritarian dominance; the constraint subsidizes their structural position. Marginalized persons within communities are victims (d near 0.85-0.95): they bear the full cost of the constraint's neutrality—they cannot invoke state protection against internal oppression; they are identity-locked, with no exit except community abandonment. The majority religious community is a complex payer: they pay through inability to use state machinery for religious amplification (d near 0.65-0.75), but they also receive a stabilized constitutional order that prevents their own internal divisions from triggering state intervention (d modulation downward to 0.55-0.65). Reform-oriented segments within religions are victims (d near 0.70-0.80): they cannot invoke state support for their reform agendas; they bear the cost of the constraint's non-intervention stance. The state judiciary is the agenda-setter (d near 0.4-0.5, moderate): they maintain and enforce the reading but are themselves constrained by constitutional text and cannot simply change the rule.",
-    "mandatrophy_analysis": "The strict neutrality reading faces a potential mandatrophy condition: if the founding problem (sectarian violence from state-backed religious preference) is substantially solved, the constraint's core function is satisfied, but the extraction costs toward marginalized persons within communities remain. The measurement series shows extractiveness plateauing at t=38+, suggesting the reading has settled into an equilibrium where awareness of internal-community oppression has stabilized the tension but not resolved it. The theater ratio (rising through t=38, then stable) suggests that as awareness increases, enforcement activity must increasingly defend religious autonomy as a principle rather than as a practical necessity—the constraint is becoming more theatrical as its founding coordination problem recedes. The constraint is not yet mandatrophic (the reading remains live and contested, not purely performative), but the trajectory suggests that if the principled-intervention or reformist readings gain institutional purchase, the strict neutrality reading would be reclassified as inertial piton—a formerly useful doctrine now defended mostly through constitutional tradition rather than live functional need.",
-    "kernel_context": "This constraint instantiates the STRICT NEUTRALITY READING of the constitutional_secularism kernel. Sibling readings: principled_intervention_reading (state may intervene in religious affairs to advance basic rights and protect weaker sections), reformist_reading (state has affirmative duty to eliminate oppressive religious practices). The strict neutrality reading interprets the constitutional commitment to secularism as requiring the state to maintain equal distance from all religions and to abstain from intervention in internal religious affairs. This reading is held as the canonical position by most constitutional courts in secular democracies (India, France, Mexico). The principled-intervention reading is advanced by human-rights advocates and some legislatures (interventions protecting against forced marriage, caste discrimination, gender exclusion). The reformist reading is the most contested—it claims the state should actively reform internal religious practices deemed oppressive. The structural delta: strict neutrality achieves uniform constraint application across communities (majorities and minorities treated equally), but this limits state capacity for internal-community protection and leaves minority autonomy preserved but vulnerable to majority internal norms (hierarchies, discrimination). The three readings coexist across different parties and jurisdictions; they are not logically foreclosed from one another, but they produce radically different constraint structures and extraction patterns."
+    "logic_rationale": "The constraint is CLAIMED as tangled_rope (genuine coordination function + asymmetric extraction) and AUTHORED with metrics consistent with substantial extraction. Base extractiveness is moderate-high (0.62 at interval end) because the state's refusal to intervene protects majority internal hierarchies against reform pressure — that protection IS a form of state action that asymmetrically benefits majorities and harms reformers. Suppression is moderate (0.41) because the constraint is not enforced through overt coercion but through institutional design (courts refusing jurisdiction, legislatures forbidding sectarian lawmaking). Theater is rising modestly (0.12 → 0.28) because enforcing neutrality in practice requires performative demonstrations of equal distance even when material treatment diverges (courts stating they protect religious freedom while declining to intervene in oppressive practices). The measurement series shows extraction and theater both rising slowly over 40 time units as the constraint's operation matures and the gap between stated neutrality and structural preference for internal-majority control becomes more apparent. Suppression_requirement rises as more reformist pressure emerges and must be managed through institutional resistance. One shared time grid: all metrics are authored at all 6 time points.",
+    "perspectival_gap": "Secular institutions compute the constraint as low-extraction rope (coordination that benefits all parties equally by removing religion from state machinery). Internal reformers and vulnerable sub-group seats compute it as snare (extraction protecting majority hierarchies against reform). Religious minorities compute it as asymmetric rope (coordination that protects them from majorities but exposes them to internal oppression). The divergence is the measurement the corpus takes.",
+    "directionality_logic": "Secular governance institutions (institutional power, analytical exit) are the beneficiaries in the classification sense — they get the benefit of the boundary rule itself, which shields them from demands to adjudicate religious disputes and keeps state machinery formally uncontaminated by sectarian claims. Religious minorities (moderate power, mobile exit) are nominal beneficiaries (protected from majoritarian state action) but also partial payers (lose alliance option for internal reform). Majority religious communities (powerful, constrained exit) are clear payers — they lose state machinery. Internal reformers (moderate power, identity_locked exit) are the deepest targets — they are trapped between expelled from state (which will not ally with them) and expelled from community (which punishes dissent). The constraint's directionality is d ≈ 0.7 for internal reformers (high targets), d ≈ 0.3 for religious minorities (partial beneficiaries), d ≈ 0.6 for majorities (clear payers), d ≈ 0.15 for secular institutions (beneficiaries of the boundary). No directionality overrides are needed; the structural derivation from exit + power is accurate.",
+    "mandatrophy_analysis": "The founding problem (sectarian warfare, majoritarian oppression) was live when the constraint was established. In contemporary pluralist democracies with established rule-of-law institutions, the founding problem is substantially contained — sectarian violence is low, majoritarian religious establishments are weakened. However, a NEW problem emerged: intra-community oppression of sub-groups (women, LGBTQ members, apostates) formerly protected only by state intervention is now shielded from state intervention by the neutrality principle. Some observers argue the founding problem is DEAD (the constraint now protects hierarchies more than it liberates minorities from majoritarian capture). Others argue it is CONTESTED (it depends on whether you weigh inter-community equality against intra-community equality). The constraint shows signs of mandatrophy: it persists because no party has built the political power to overturn it in favor of one of the rival readings, NOT because the founding problem remains pressing. Theater rising to 0.28 (modest but steady) is consistent with mandatrophy's signature of performative maintenance — neutral-distance rhetoric masking asymmetric structural effect. The constraint is not a piton yet (institutions still defend it; theater is still moderate), but the trajectory toward mandatrophy is visible."
   },
   "omegas": [
     {
-      "id": "neutrality_as_protection_vs_abandonment",
-      "question": "Is state equal distance from religions a form of protection for minorities (negative liberty: freedom from majoritarian state power) or a form of abandonment (inability to invoke state remedies against internal oppression)?",
-      "resolution_mechanism": "Empirical: track outcomes for marginalized persons within religious communities in strict-neutrality vs. principled-intervention jurisdictions. If marginalized persons are more protected (education, safety, exit options) in intervention jurisdictions, the neutrality reading abandons them. If outcomes are identical, the reading succeeds as protection.",
-      "impact": "If neutrality is abandonment, the reading should be reclassified as tangled rope or snare (coordination for religious minorities, extraction for internal powerless). If neutrality is genuine protection, the classification holds as rope with distributed costs.",
+      "id": "neutrality_vs_protection_irreconcilability",
+      "question": "Is absolute state neutrality structurally compatible with protecting vulnerable sub-groups within religious communities from internal oppression?",
+      "resolution_mechanism": "Counterfactual policy analysis: design a state intervention regime that protects intra-community vulnerability without enabling majoritarian intervention, or prove that any such intervention logically invokes sectarian judgment.",
+      "impact": "If incompatible, the strict neutrality reading logically FORECLOSES the principled intervention and reformist readings. If compatible, the readings COEXIST as live alternatives reflecting different priorities (autonomy vs. protection). The resolution determines whether readings are incommensurable or merely rival.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether equal-distance neutrality protects or abandons marginalized persons within religions."
+      "type_class": "conceptual",
+      "description": "Whether strict neutrality and intra-community protection are logically compatible or mutually exclusive."
     },
     {
-      "id": "internal_hierarchy_compatibility",
-      "question": "Can a religious community maintain internal hierarchy (gender exclusion, caste discrimination, authority concentration) indefinitely while the constraint remains stable, or does internal pressure from marginalized segments eventually force legal change?",
-      "resolution_mechanism": "Historical and longitudinal: observe whether internal-hierarchy religions evolve toward egalitarianism under the constraint or whether entrenchment increases. If entrenchment increases, the neutrality reading may be inadvertently selecting for authoritarian religious structures.",
-      "impact": "If entrenchment increases, the constraint is extractive toward reform-minded believers and marginalized segments. If evolution toward egalitarianism occurs, the constraint is neutral in outcome even if neutral in intent.",
+      "id": "suppression_mechanism_internalized",
+      "question": "Is the measured suppression (0.41) structural (external barriers to reform access state machinery) or internalized (reformers accept the neutrality principle and do not demand state intervention)?",
+      "resolution_mechanism": "Post-constraint-revision trajectories: if suppression persists after state legal barriers to intervention are removed, reclassify as partially internalized (reformers have absorbed the principle as legitimate).",
+      "impact": "If primarily internalized, effective suppression is higher than the structural measure suggests — the constraint has colonized reformers' own self-concepts. If primarily structural, the suppression is external and would drop if barriers were removed.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether strict neutrality inadvertently selects for authoritarian internal religious structures."
+      "description": "Whether suppression of reform access is structural or internalized in reformers' acceptance of neutrality."
     },
     {
-      "id": "founder_problem_resolution_status",
-      "question": "Has the founding problem (sectarian violence from state-backed religious preference) been solved by constitutional secularism, or has it transformed into a different problem (internal oppression under the guise of religious autonomy)?",
-      "resolution_mechanism": "Comparative: measure sectarian violence in strict-neutrality jurisdictions vs. principled-intervention jurisdictions. Measure internal violence (oppression, forced exit, honor killings) in each regime type. If sectarian violence is down but internal violence is up, the problem has transformed rather than solved.",
-      "impact": "If the problem is solved, the constraint is successfully functional as rope. If the problem has transformed, the constraint may be mandatrophic (defending against a past threat while enabling a new one).",
-      "confidence": "medium",
+      "id": "founding_problem_persists_or_resolved",
+      "question": "Does the founding problem (sectarian conflict, majoritarian oppression) still require strict neutrality to solve, or has it been superseded by new problems (intra-community oppression) that neutrality exacerbates?",
+      "resolution_mechanism": "Comparative institutional analysis: measure sectarian conflict rates and intra-community protection outcomes in jurisdictions with strict neutrality vs. principled intervention approaches.",
+      "impact": "If founding problem persists: strict neutrality is still justified, and measured extraction (0.62) is acceptable coordination cost. If new problem dominates: strict neutrality is mandatrophic, and the constraint should transition to one of the rival readings to protect intra-community vulnerability.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether the founding problem (sectarian violence) is solved or transformed."
+      "description": "Whether the founding problem or its successor problem is the operative constraint on state action."
     },
     {
-      "id": "reading_contestation_and_institutional_instability",
-      "question": "Does the coexistence of the strict neutrality, principled-intervention, and reformist readings create institutional instability in constitutional interpretation, or can courts hold one reading stable across time?",
-      "resolution_mechanism": "Institutional analysis: track whether courts maintain consistent neutrality doctrine or whether dissents and neighboring rights claims erode the reading's boundaries. If doctrine is stable, the reading is institutionally robust. If boundaries blur, the reading is contested.",
-      "impact": "If institutional instability is high, the constraint itself becomes less predictable and more subject to reinterpretation—extractiveness may shift as the reading's hold weakens. This would suggest the constraint is moving toward piton (theatrically maintained but increasingly unstable).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the strict neutrality reading can be institutionally maintained against competing readings."
-    },
-    {
-      "id": "committer_alternative_framings",
-      "question": "Are there coherent framing alternatives to the strict neutrality reading that would classify the same constitutional commitment differently?",
-      "resolution_mechanism": "Conceptual: the principled-intervention and reformist readings instantiate alternative framings. If a court or constitutional tradition shifted from strict neutrality to principled intervention, would the same textual commitment be reread, or would it require constitutional amendment?",
-      "impact": "If rereading is possible without amendment, the constraint is subject to reading-drift and may be reclassified by the engine as unstable. If amendment is required, the reading is more deeply entrenched.",
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a reading OF THE SAME KERNEL as the principled intervention and reformist readings, or a fundamentally different constraint sharing a label?",
+      "resolution_mechanism": "Textual and genealogical analysis: do all three readings cite the same constitutional text or principle (the kernel) and offer competing interpretations, or do they cite different texts/principles entirely? If the latter, decompose into separate kernels.",
+      "impact": "If same kernel, the three readings are live alternatives and the network relationship is within-family (reading relations + axiom differences). If different kernels, they are separate constraints that happen to compete in the same domain, and network relationships should be affects_constraints rather than reading-family links.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether the strict neutrality reading is the only defensible reading of the secularism commitment or whether alternative readings are structurally coherent."
+      "description": "Whether the strict neutrality reading is a reading of a contested kernel or a distinct constraint."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
+    "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
   },
   "network": {
@@ -209,54 +250,62 @@
       "constitutional_secularism__principled_intervention_reading",
       "constitutional_secularism__reformist_reading"
     ],
-    "dual_formulation_note": "The strict neutrality reading is one of three structurally distinct constraints sharing the kernel: constitutional commitment to state secularism. The three readings produce different ε values, different beneficiary/victim structures, and different temporal trajectories. The strict neutrality reading (this file) emphasizes protection of religious minorities through equal-distance non-interference; the principled-intervention reading activates when state intervention is justified by basic-rights protection; the reformist reading treats state-backed elimination of oppressive religious practices as mandatory. All three readings are live in contemporary constitutional practice across different jurisdictions and within the same jurisdictions (through dissenting opinions). The three constraints are linked through network.affects_constraints because they are alternative instantiations of the same constitutional kernel, and a shift from one reading to another reshapes the entire constraint landscape. The upstream dependency runs from strict_neutrality → principled_intervention → reformist in terms of empirical contestation (the strict neutrality reading is the most established; the reformist reading is the most contested and newly emerging)."
+    "dual_formulation_note": "The constitutional secularism kernel (state relationship to religion) is instantiated through three structurally distinct readings: strict neutrality, principled intervention, and reformist. Each reading has different ε, different beneficiary/victim structures, and different classifications. They are linked as members of a constraint family, not as alternative observables of one constraint. The ε-invariance principle requires decomposition: the same text (constitution) instantiates different constraints depending on the reading's core premise about what state action is appropriate. Network edges point downstream from this strict neutrality reading to the two rival readings, because this reading's withdrawal of state capacity creates the vacuum the rival readings propose to fill."
   },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "secular_separation_doctrine",
+    "drift_state": {
+      "moment": "contemporary_pluralist_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "constitutional_secularism__principled_intervention_reading",
+        "sibling_id": "principled_intervention_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "constitutional_secularism__reformist_reading",
-        "relation": "coexists_with"
+        "sibling_id": "reformist_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "equal_distance_state_neutrality",
+        "atom": "state_neutrality_prerequisite_for_religious_freedom",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "religious_autonomy_inviolability",
+        "atom": "community_autonomy_supersedes_internal_vulnerability",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "secular_equal_distance_framework",
-    "drift_state": {
-      "moment": "contemporary_rights_advocacy_era",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "constitutional_secularism__principled_intervention_reading",
+      "constitutional_secularism__reformist_reading"
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

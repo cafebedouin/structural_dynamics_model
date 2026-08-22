@@ -43,6 +43,12 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,31 +73,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: latin_correctness__continuity_reading
- *   human_readable: Medieval Latin as Legitimate Continuity of Classical Latin
- *   domain: intellectual_history/linguistics
+ *   human_readable: Medieval Latin as Legitimate Linguistic Continuation
+ *   domain: intellectual_history/historical_linguistics
  *
  * SUMMARY:
- *   The continuity reading of Latin correctness asserts that Medieval Latin
- *   represents the legitimate evolution of Classical Latin through natural
- *   linguistic processes — phonological simplification, grammatical
- *   restructuring, vocabulary expansion — rather than corruption or rupture.
- *   The reading treats medieval scribes and clergy as rightful inheritors of
- *   the classical tradition, participating in a continuous chain of
- *   transmission and development. Under this reading, the constraint operates
- *   with minimal extractiveness because no party claims monopoly on what
- *   counts as legitimate Latin; instead, the reading authorizes multiple
- *   registers and contexts (classical for copying ancient authorities,
- *   medieval for practical communication) as coexisting legitimate forms. The
- *   constraint persists because it solves a genuine coordination problem —
- *   maintaining Latin literacy after the death of native speakers — not
- *   because it concentrates benefits on a victimizing beneficiary.
+ *   This constraint story instantiates the CONTINUITY READING of the
+ *   contested kernel 'latin_correctness'. The reading holds that Medieval
+ *   Latin is the legitimate continuation of classical Latin through organic
+ *   linguistic change — vernacular phonology, expanded vocabulary, and
+ *   modified syntax are natural developments of an inherited tradition, not
+ *   corruptions of a fixed standard. The constraint describes the legitimacy
+ *   claim: that medieval scribes, scholars, theologians, and ecclesiastical
+ *   institutions are authorized to use and evolve Latin according to their
+ *   communicative needs because they inherit the tradition. This reading is
+ *   one of three coherent positions on the kernel; the other two
+ *   (hybrid_reading, rupture_reading) are distinct constraint stories in the
+ *   constraint family, linked via network.affects_constraints. The
+ *   ε-invariance principle requires that each reading be authored as a
+ *   separate constraint with its own metrics and beneficiary structure,
+ *   because the readings assign different ε values to the standing
+ *   arrangement (the medieval textual practice). The continuity reading
+ *   treats medieval Latin as low-extractiveness coordination (legitimate
+ *   inheritance); the rupture reading treats it as high-extractiveness error
+ *   (corruption requiring correction). The metrics authored here (low
+ *   extractiveness, low suppression, low theater) describe the standing
+ *   medieval practice AS THE CONTINUITY READING UNDERSTANDS IT.
  *
- * KEY AGENTS:
- *   - Medieval scribes and clergy: moderate power, continental scope. Inherit and transmit the classical corpus while adapting Latin to living speech patterns. Benefit from the continuity reading's authorization of medieval forms as legitimate evolution.
- *   - Monastic intellectual community: institutional power, continental scope, generational time horizon. Agenda-setter role — defines the interpretive frame that legitimates medieval developments. Constrains new transmission through educational training and copying practices.
- *   - Vernacular speakers becoming literate: powerless, constrained exit, regional scope. Become literate in Latin through forms closer to their native speech. The continuity reading permits their education without treating them as degrading the language.
- *   - Classical purist grammarians: excluded from medieval intellectual authority. Would argue for a fixed standard. Represent the alternative rupture reading but lack institutional power during the medieval period to enforce it.
- *   - Humanist Renaissance scholars: future observers who will radically contest and displace the continuity reading by excavating classical Latin as a recovered, purified standard.
  */
 
 /* ==========================================================================
@@ -98,56 +106,106 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(latin_correctness__continuity_reading, 0.15).
-domain_priors:suppression_score(latin_correctness__continuity_reading, 0.22).
-domain_priors:theater_ratio(latin_correctness__continuity_reading, 0.18).
+domain_priors:base_extractiveness(latin_correctness__continuity_reading, 0.12).
+domain_priors:suppression_score(latin_correctness__continuity_reading, 0.08).
+domain_priors:theater_ratio(latin_correctness__continuity_reading, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(latin_correctness__continuity_reading, extractiveness, 0.15).
-narrative_ontology:constraint_metric(latin_correctness__continuity_reading, suppression_requirement, 0.22).
-narrative_ontology:constraint_metric(latin_correctness__continuity_reading, theater_ratio, 0.18).
+narrative_ontology:constraint_metric(latin_correctness__continuity_reading, extractiveness, 0.12).
+narrative_ontology:constraint_metric(latin_correctness__continuity_reading, suppression_requirement, 0.08).
+narrative_ontology:constraint_metric(latin_correctness__continuity_reading, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(latin_correctness__continuity_reading, accessibility_collapse, 0.65).
+narrative_ontology:constraint_metric(latin_correctness__continuity_reading, accessibility_collapse, 0.25).
 narrative_ontology:constraint_metric(latin_correctness__continuity_reading, resistance, 0.35).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(latin_correctness__continuity_reading, rope).
-narrative_ontology:human_readable(latin_correctness__continuity_reading, "Medieval Latin as Legitimate Continuity of Classical Latin").
-narrative_ontology:topic_domain(latin_correctness__continuity_reading, "intellectual_history/linguistics").
+narrative_ontology:human_readable(latin_correctness__continuity_reading, "Medieval Latin as Legitimate Linguistic Continuation").
+narrative_ontology:topic_domain(latin_correctness__continuity_reading, "intellectual_history/historical_linguistics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(latin_correctness__continuity_reading, '6c7919bb-6e8d-49c2-a8f1-3347ea074c72').
-narrative_ontology:cs_kernel_codification('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', fixed_text).
-narrative_ontology:cs_authority_grounding('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', lineage).
-narrative_ontology:cs_interpretation_layer_present('6c7919bb-6e8d-49c2-a8f1-3347ea074c72').
-narrative_ontology:cs_reading_relation('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', latin_correctness__rupture_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', latin_correctness__hybrid_reading, influences).
-narrative_ontology:cs_axiom('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', foundational, linguistic_change_as_natural_evolution).
-narrative_ontology:cs_axiom_status(linguistic_change_as_natural_evolution, holdable).
-narrative_ontology:cs_axiom_grounding('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', linguistic_change_as_natural_evolution, empirically_contingent).
-narrative_ontology:cs_axiom('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', foundational, transmission_authority_over_textual_authority).
-narrative_ontology:cs_axiom_status(transmission_authority_over_textual_authority, holdable).
-narrative_ontology:cs_axiom_grounding('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', transmission_authority_over_textual_authority, conventional).
-narrative_ontology:cs_reference_frame('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', living_transmission_framework).
-narrative_ontology:cs_drift_state('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', end_medieval_period_1400, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('6c7919bb-6e8d-49c2-a8f1-3347ea074c72', '').
+narrative_ontology:cs_story_uid(latin_correctness__continuity_reading, '88af7dbc-e86c-4aab-a3c0-b965e4297bcf').
+narrative_ontology:cs_kernel_codification('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', distributed).
+narrative_ontology:cs_authority_grounding('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', lineage).
+narrative_ontology:cs_interpretation_layer_present('88af7dbc-e86c-4aab-a3c0-b965e4297bcf').
+narrative_ontology:cs_reading_relation('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', latin_correctness__rupture_reading, forecloses).
+narrative_ontology:cs_reading_relation('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', latin_correctness__hybrid_reading, influences).
+narrative_ontology:cs_axiom('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', foundational, linguistic_legitimacy_through_inheritance).
+narrative_ontology:cs_axiom_status(linguistic_legitimacy_through_inheritance, holdable).
+narrative_ontology:cs_axiom_grounding('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', linguistic_legitimacy_through_inheritance, deontological).
+narrative_ontology:cs_axiom('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', foundational, organic_evolution_as_valid_development).
+narrative_ontology:cs_axiom_status(organic_evolution_as_valid_development, holdable).
+narrative_ontology:cs_axiom_grounding('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', organic_evolution_as_valid_development, empirically_contingent).
+narrative_ontology:cs_reference_frame('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', organic_linguistic_inheritance_framework).
+narrative_ontology:cs_drift_state('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', high_middle_ages_scholasticism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('88af7dbc-e86c-4aab-a3c0-b965e4297bcf', '').
 narrative_ontology:cs_kernel_id(latin_correctness__continuity_reading, latin_correctness).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, medieval_scribes_and_clergy).
-narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, vernacular_speakers_becoming_literate).
-narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, monastic_intellectual_community).
+narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, medieval_scribes_scholars).
+narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, ecclesiastical_writers).
+narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, vernacular_language_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(latin_correctness__continuity_reading, theological_glossators).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Medieval clerics and scholars write in a living, evolving Latin that incorporates vernacular phonology, extended vocabulary, and new syntactic patterns. Under the continuity reading, their work is legitimate linguistic practice, not corruption. They inherit a language and adapt it to new contexts (theology, administration, technical description). Their exit option is to write in vernacular, which they increasingly do; the choice to write in Latin is a positive commitment to the inherited tradition.
+narrative_ontology:constraint_stakeholder(latin_correctness__continuity_reading, medieval_scribes_scholars, beneficiary,
+    moderate, biographical, mobile, continental).
+
+% The Church maintains Latin as the official language of liturgy, canon law, and inter-diocesan communication. The continuity reading legitimizes the Church's practice of adapting Latin to new institutional needs (sophisticated theological vocabulary, legal terminology, administrative precision) without requiring reconstruction of classical purity. The Church's authority to define what counts as legitimate Latin rests on its role as the institutional custodian of the tradition.
+narrative_ontology:constraint_stakeholder(latin_correctness__continuity_reading, ecclesiastical_institution, agenda_setter,
+    institutional, civilizational, arbitrage, continental).
+
+% Romance-language speakers (proto-French, proto-Italian, proto-Spanish communities) experience medieval Latin as continuous with their own linguistic inheritance. The continuity reading validates that Latin and vernacular Latin-descended languages are branches of one living tradition, not that one is corrupt and one is pure. This reading makes space for the legitimacy of the emerging vernacular languages without requiring them to be seen as degradations of a fixed standard.
+narrative_ontology:constraint_stakeholder(latin_correctness__continuity_reading, vernacular_language_communities, beneficiary,
+    organized, generational, arbitrage, regional).
+
+% Scholastic theologians (Aquinas, Scotus, and their schools) use medieval Latin as their working language for sophisticated philosophical and theological disputation. Under the continuity reading, their neologisms, modified syntax, and technical vocabulary are legitimate adaptations of the tradition, not violations of it. They simultaneously benefit from and reinforce the continuity reading by treating their linguistic practice as authorized by inheritance.
+narrative_ontology:constraint_stakeholder(latin_correctness__continuity_reading, theological_glossators, beneficiary,
+    powerful, civilizational, mobile, continental).
+narrative_ontology:stakeholder_secondary_role(latin_correctness__continuity_reading, theological_glossators, agenda_setter).
+
+% Later Renaissance and early modern humanists (Petrarch forward) argue against the continuity reading, claiming that medieval Latin is corruption and that classical texts must be recovered and imitated as the true standard. They are excluded from the medieval period itself but retrospectively contest the legitimacy of the medieval reading from an analytical position. Their return to classical texts becomes a philological program.
+narrative_ontology:constraint_stakeholder(latin_correctness__continuity_reading, classical_purist_advocates, excluded,
+    analytical, generational, analytical, continental).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(latin_correctness__continuity_reading, diffuse).
+narrative_ontology:fixing_cost_class(latin_correctness__continuity_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Preserves a supra-regional, trans-vernacular communication medium that allows scholars, clerics, and administrators across linguistically fragmented medieval Europe to write, read, and exchange texts with shared reference points. Medieval Latin solves the coordination problem of maintaining intellectual continuity across the breakdown of unified empire and diversification into mutually unintelligible vernaculars.
+% TRANSFER_FUNCTION: The continuity reading transfers legitimacy and authority to medieval speakers: it affirms that they inherit the right to use and modify Latin according to their communicative needs. No wealth or status transfer occurs; the constraint operates as a permission structure, not an extraction mechanism.
+% ABSENT_VOICES: Classical purists (future Renaissance humanists) would object that the continuity reading surrenders the standard of classical purity and permits corruption. Strict prescriptivists (any era) who demand conformity to a fixed canon are structurally excluded from the medieval period itself but would contest the legitimacy of the reading from a backward-looking posture.
+% DISAPPEARANCE_RATIONALE: If the continuity reading vanished overnight and the rupture reading became canonical, medieval scholars would face a choice: either write 'incorrectly' (according to classical standards), or cease writing in Latin altogether and shift to vernacular. The intellectual continuity of the medieval Latin textual tradition would be reframed as a long period of error, not development. Institutional documentation, theological works, and administrative texts written in medieval Latin would become retroactively delegitimized as corrupted, not evolved.
+% FOUNDING_PROBLEM: After the collapse of unified empire and the diversification of spoken Romance languages, Latin as a living speech dies out at the mass level. But Latin as a written, liturgical, and intellectual medium persists. The founding problem: how can the Latin tradition remain legitimate and productive when it no longer matches how anyone speaks natively, and when its users must learn it as a second language from texts?
+% FOUNDING_PROBLEM_CORROBORATION: Medieval ecclesiastical and scholarly practice attests the problem is live: monasteries and cathedral schools maintain Latin instruction precisely to preserve the written tradition across the linguistic transition. Later humanists (14th–16th centuries) attest the founding problem differently, claiming medieval solutions were corruptions and that recovery of classical purity is the true solution. Modern historical linguists outside the normative tradition (Löfstedt, Banniard, Wright) corroborate that medieval Latin is the living continuation of Latin through vernacular phonological influence and lexical expansion — the tradition solves the founding problem through organic adaptation, not corruption.
+narrative_ontology:disappearance_verdict(latin_correctness__continuity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(latin_correctness__continuity_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(latin_correctness__continuity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(latin_correctness__continuity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(latin_correctness__continuity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(latin_correctness__continuity_reading, 0.12, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -162,16 +220,16 @@ narrative_ontology:story_seed(latin_correctness__continuity_reading, 'none', 1).
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.15 at interval end) because the constraint does not concentrate rents on an identified beneficiary — medieval clergy and scribes benefit from permission to use living forms, but they do not extract this permission from anyone; the constraint simply authorizes what people are already doing. Suppression rises modestly over the interval (0.1 to 0.22) as monastic institutions formalize schooling and copyist practices — the constraint requires some active defense against purist objections and against the temptation to revert to purely classical forms, but this is not coercive suppression of alternatives, rather institutional maintenance of a scholarly consensus. Theater ratio remains low (0.05 to 0.20 across the interval) because the core function — maintaining Latin as a working language — is genuine; any performative element (copying classical texts as if they were the only legitimate form) is secondary to practical communication. Accessibility collapse is moderate (0.65) because alternatives do exist: monks could choose to speak Romance dialects exclusively, or attempt to enforce Ciceronian standards on all writing. The constraint persists because it works, not because alternatives have been suppressed beyond recovery. Resistance is low (0.35) because the constraint aligns with natural language change and the interests of the literate community — the main resistance comes from later purists, not from medieval participants themselves.
+ *   Extractiveness is low (0.12) because the continuity reading treats medieval Latin use as a non-coercive permission structure: medieval speakers inherit the right to use Latin and adapt it to new contexts. No one is forced to write in medieval Latin (the vernacular alternative remains open); no central authority collecting rents from the practice; no victim set bearing costs for the beneficiaries' gain. The constraint is coordination, not extraction. Suppression is very low (0.08) because no significant coercive apparatus is required to maintain the continuity reading — it legitimates existing practice rather than defending it against attack. The medieval Church maintains Latin instruction and ensures the textual tradition survives, but this is custodianship, not suppression. Theater ratio is low-moderate (0.15) and rises slightly during the scholastic period (900–1200) when theological disputation becomes increasingly formalized and performance-like, but remains low because the core coordination function (supra-regional scholarly communication) is real and functional throughout. The measurement series shows extractiveness and theater ratio rising slightly during the high Middle Ages as the scholarly establishment becomes more institutionalized, then declining slightly toward 1200 as the constraints of Latin use become more apparent and the vernacular alternatives become more viable. Suppression remains stable and low: there is no enforcer working to keep the continuity reading in place — it simply describes how medieval users experience their own practice.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter (monastic community) experiences the constraint as coordinating literacy and transmission — a genuine solution to the problem of maintaining classical learning in a Romance-speaking world. The excluded purists would experience it as legitimating error and hastening corruption. The later humanists (observed from outside the interval) experience it as a naïve embrace of medieval degradation that obscures the true, recoverable form of classical Latin. The engine measures these divergences through power, exit_options, and beneficiary/victim structure: the institutional beneficiaries compute a low-extraction type (rope/coordination), while the excluded purists (if they had power and stake) would compute a higher-extraction type. The disjuncture itself is diagnostic — it shows the continuity reading working by consensus and institutional authority, not by coercive suppression of alternatives.
+ *   The beneficiary seats (medieval scribes, theologians, ecclesiastical authorities) experience the continuity reading as legitimate; it grants them authority and continuity. The excluded seat (classical purists, future humanists) experiences the same medieval practice very differently — as corruption requiring correction. The engine computes this divergence from the structural data: beneficiaries have low d (they benefit from the reading), excluded parties would have high d (they are targeted by the continuity framing as corruptors rather than legitimate practitioners). The perspectival gap is not a disagreement about facts (the medieval texts exist and have their features); it is a disagreement about the legitimacy framework — what counts as correct, what legitimates inheritance, what makes deviation acceptable.
  *
  * DIRECTIONALITY LOGIC:
- *   Medieval scribes and clergy are structural beneficiaries (d ≈ 0.2): they gain permission to use evolved forms without losing prestige, face low exit costs, and benefit from the monastic community's intellectual endorsement. Vernacular speakers have constrained exits (identity_locked in some cases — becoming a Latin-literate clergyman means adopting the monastic episteme) but benefit from access to literacy (d ≈ 0.3). The monastic intellectual community is the agenda-setter (d ≈ 0.15 as beneficiary, but power-atom institutional): they set the frame and constrain practice through education and copying standards. Classical purists are excluded (d ≈ 0.85): the constraint operates by denying the legitimacy of their fixed-standard interpretation. They remain alive as a minority position in the intellectual record but lack institutional power during the medieval period. Humanist observers (analytical seat, d = 0.5) will eventually displace this reading entirely by recovering classical texts and establishing the rupture reading as hegemonic. No directionality override is needed: the structural derivation from beneficiary/victim + exit produces accurate d values for all seats.
+ *   Medieval scribes and scholars are structural beneficiaries under the continuity reading: it grants them the right to use and adapt Latin, validates their practice, and positions them as legitimate inheritors rather than corruptors. They have moderate power and mobile exit options (they can write in vernacular if they choose); their directionality is toward beneficiary (low d, around 0.20). The ecclesiastical institution is the agenda setter: it maintains Latin instruction, preserves the textual tradition, and through its authority teaches the continuity reading to each generation of monks and clerics. It has institutional power and arbitrage-level exit options (it controls which reading is taught, which texts are copied, which authors are read). The vernacular-language communities benefit from the continuity reading because it validates the linguistic relationship between Latin and their own speech — they inherit the tradition not as alien, but as ancestral. Classical purists are excluded: they are not part of the medieval communicative world but would retrospectively contest the legitimacy of the medieval reading and claim corruption instead. No agent bears the cost of the continuity reading operating: the constraint is non-extractive.
  *
  * MANDATROPHY ANALYSIS:
- *   The continuity reading has no mandatrophy problem: the founding problem (maintaining Latin literacy after native speakers cease to exist) remains live throughout the medieval period and beyond. The constraint's function — coordinating literary transmission and scholarly work — persists because people keep writing in Latin, copying texts, and using it for communication across Romance-speaking regions. The constraint does not persist by inertia or by defending a dead mandate; it persists because the mandate is constantly renewed by use. The theater_ratio measurements show a modest rise (0.05 to 0.20) but remain well below the piton threshold (0.50+), indicating that functional activity (actual writing, copying, teaching) remains substantially above performative activity (ritualistic adherence to classical forms for their own sake). The measurement series would show a sharp collapse of this reading in the 15th–16th centuries when humanist scholarship excavates classical Latin as a recoverable standard and the rupture reading becomes institutionally dominant — but that shift is outside the interval. Within the medieval period (500–1400), mandatrophy is absent.
+ *   The continuity reading does NOT exhibit mandatrophy. The founding problem (how to maintain Latin tradition across linguistic transition from unity to diversity) remains live throughout the interval: medieval scribes and scholars continue to face the genuine coordination challenge of writing in a supra-regional medium while their spoken language diverges. The constraint persists because the problem persists, not because mandate has outlived function. The theorem that detects mandatrophy (founding_problem_status='dead' AND disappearance_verdict='world_rearranges') does not apply here. The founding problem does not become dead until the Renaissance, when humanist recovery of classical texts makes the rupture_reading (classical purity is the standard) compete successfully with the continuity_reading. Until that external shift, the continuity reading remains justified by the live problem it solves.
  */
 
 /* ==========================================================================
@@ -179,79 +237,89 @@ narrative_ontology:story_seed(latin_correctness__continuity_reading, 'none', 1).
    ========================================================================== */
 
 omega_variable(
-    natural_change_vs_corruption_framing,
-    'Is linguistic change from classical to medieval Latin the result of natural, inevitable linguistic processes (sound change, grammatical reanalysis), or the result of ignorance and corruption of a fixed standard by less-educated users?',
-    'Comparative study of documented language change in other documented language families with known ancestral forms (Romance languages'' evolution from Vulgar Latin, Germanic languages from Proto-Germanic, etc.). Application of Historical Linguistics principles to reconstruct the change mechanism.',
-    'If the changes are demonstrated to follow predictable natural patterns (deletion of unstressed vowels, grammatical reanalysis under contact stress), the continuity reading is strengthened and extractiveness remains low. If the changes are shown to be random corruption, the rupture reading gains traction and extractiveness would rise (someone would need to enforce classical standards against natural drift).',
+    reading_vs_rupture_boundary,
+    'At what point does accumulated linguistic change cross from ''legitimate evolution'' (continuity reading) to ''corruption requiring correction'' (rupture reading)?',
+    'No mathematical boundary exists; the reading determines the classification. Different frameworks place the boundary at different moments (6th century, 8th century, 12th century). Historical data cannot resolve which is correct because the reading and the data are entangled.',
+    'This is the irreducible ambiguity in the kernel contest: whether medieval Latin is a continuation or a corruption is not a fact about the texts, but a choice of framework. Both readings are internally coherent and both fit the medieval textual record.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_change_vs_corruption_framing, empirical, 'Whether medieval linguistic forms represent natural evolution or corruption of a fixed standard.').
+narrative_ontology:omega_variable(reading_vs_rupture_boundary, conceptual, 'The reading determines the classification, not external facts.').
 
 omega_variable(
-    epistemic_authority_locus,
-    'Who has the authority to define correctness in Latin — living speakers and writers who continue the tradition, or the recovered classical corpus as a reference standard?',
-    'Examination of how monastic scholars and later humanists justify their choices: do they appeal to living practice and transmission, or to textual authority and classical exemplars? Textual evidence from glossaries, grammar treatises, and manuscript variants showing which authority is invoked.',
-    'If authority is vested in living practice and transmission, the continuity reading holds and extractiveness remains low. If authority is vested in the classical corpus, the rupture reading gains traction — someone (classical scholars, later humanists) would need to enforce conformity to the textual standard, raising extractiveness.',
+    authority_grounding_shift,
+    'Is the authority to define ''correct Latin'' grounded in continuity of living practice and institutional custodianship (continuity reading) or in fidelity to classical texts reconstructed from ancient sources (rupture reading)?',
+    'The two readings rest on opposite authority grounding structures: continuity = practice/lineage (inherited teaching); rupture = expertise/textual authority (classical philology). No empirical test can decide between authority groundings — it is a choice about what legitimates a tradition.',
+    'The choice of authority grounding determines the entire evaluation. If medieval practice grounds authority, the continuity reading is valid; if classical texts ground it, the rupture reading is. This is the fundamental structural divergence between the readings.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(authority_grounding_shift, conceptual, 'The authority grounding choice entails the reading choice.').
+
+omega_variable(
+    beneficiary_set_boundary,
+    'Are the vernacular-language communities beneficiaries of the continuity reading, or are they victims of a constraint that delays the legitimation of their own languages?',
+    'The continuity reading treats Romance-speaking communities as beneficiaries (their inheritance is validated). An alternative analysis treats them as victims (the Latin tradition suppresses vernacular legitimacy). The measured suppression is very low in the continuity reading because it does not frame Latin as coercive — but a different reading would frame the same medieval practice as diglossia imposed by the Church.',
+    'If vernaculars are treated as victims, the constraint would reclassify from rope to tangled_rope or snare, depending on whether the ecclesiastical institution is read as coordinating genuine supra-regional needs or merely extracting clerical dominance. This omega documents the ambiguity in the beneficiary declaration.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(epistemic_authority_locus, conceptual, 'Where the authority to define linguistic correctness resides — in living continuation or in recovered textual standards.').
+narrative_ontology:omega_variable(beneficiary_set_boundary, conceptual, 'Whether the vernacular-speaking communities are beneficiaries or victims depends on the reading''s framing of diglossia.').
 
 omega_variable(
-    victim_set_emergence,
-    'Are there identifiable medieval speakers who are harmed by the continuity reading — forced to internalize a sense of linguistic inadequacy or excluded from literacy because their speech patterns do not match classical forms?',
-    'Examination of medieval educational texts, teaching practices, and the historical record of who was literate and how they were trained. Analysis of whether monastic schools accommodated living speech patterns or enforced classical conformity as a barrier to entry.',
-    'If significant harm or exclusion is documented (literacy training that shames native speech, deliberate suppression of evolved forms), the constraint rises in extractiveness and acquires a victim set — it becomes a snare. If monastic education accommodated evolved speech patterns and made literacy accessible, no victim set exists and extractiveness remains low.',
+    performance_vs_function_drift,
+    'As scholastic formalism increases (900–1200), does the constraint''s theater ratio rise because the coordination function is being replaced by scholastic ritual, or because the function is being elaborated through formal techniques?',
+    'Examine the productivity of scholastic disputation: does it solve new coordination problems (theological precision, institutional argumentation) or does it replace practical coordination with formal performance? The rise in theater_ratio during this period measures the shift, but the interpretation depends on whether elaboration counts as functional expansion or functional decay.',
+    'If theater rise signals functional decay, the constraint would trend toward piton classification; if it signals functional elaboration, the rope classification holds. The measurement data shows theater rising but not dominantly — the ambiguity remains.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(victim_set_emergence, empirical, 'Whether the continuity reading''s authorization of medieval forms masked or excluded harm to speakers of evolved Latin.').
+narrative_ontology:omega_variable(performance_vs_function_drift, empirical, 'Whether scholastic formalism elaborates or replaces the coordination function.').
 
 omega_variable(
-    committer_reading_ambiguity,
-    'Is the continuity reading a description of how medieval Latin actually evolved (a historical claim), or a normative framework medieval scholars used to justify their linguistic choices (a committer-level framing)?',
-    'Reconstruction of medieval metalinguistic discourse: what did medieval grammarians, glossators, and copyists CLAIM they were doing? Did they self-consciously frame their work as legitimate evolution, or did they claim to be preserving classical forms? Modern retrospective framing of medieval practice versus medieval self-understanding.',
-    'If medieval scholars self-consciously framed their work as legitimate evolution, the continuity reading is not merely modern retrospect but was instantiated in medieval epistemic practice. If medieval scholars claimed to be preserving classical forms while actually innovating, the continuity reading is a modern rescue narrative overlaid on medieval practice — still true as history, but not as the reading that medieval practitioners consciously held.',
-    confidence_without_resolution(low)
+    kernel_reading_contest_foundation,
+    'Is the kernel contest between continuity_reading and rupture_reading grounded in irreducible disagreement about authority (lineage/practice vs. text recovery), or will empirical evidence about medieval linguistic practice ultimately vindicate one reading?',
+    'Modern historical linguistics (Banniard, Wright, Löfstedt) treats medieval Latin as organic evolution from classical, which supports the continuity reading empirically. However, the rupture reading''s authority grounding (fidelity to classical texts) is not empirical — it is normative. No amount of historical evidence can refute a normative claim about what Latin ''should'' be.',
+    'If the contest is empirical, the continuity reading wins by modern linguistics. If it is normative/authority-grounded, both readings remain live, and the Humanist turn to classical recovery is a choice about authority grounding, not a discovery about correctness.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(committer_reading_ambiguity, conceptual, 'Whether the continuity reading represents medieval self-understanding or modern retrospective framing of medieval practice.').
+narrative_ontology:omega_variable(kernel_reading_contest_foundation, conceptual, 'Whether the kernel contest is empirical or authority-grounded.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(latin_correctness__continuity_reading, 500, 1400).
+narrative_ontology:interval(latin_correctness__continuity_reading, 400, 1200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(lati_tr_t500, latin_correctness__continuity_reading, theater_ratio, 500, 0.05).
-narrative_ontology:measurement(lati_tr_t700, latin_correctness__continuity_reading, theater_ratio, 700, 0.08).
-narrative_ontology:measurement(lati_tr_t900, latin_correctness__continuity_reading, theater_ratio, 900, 0.12).
-narrative_ontology:measurement(lati_tr_t1100, latin_correctness__continuity_reading, theater_ratio, 1100, 0.16).
-narrative_ontology:measurement(lati_tr_t1300, latin_correctness__continuity_reading, theater_ratio, 1300, 0.2).
-narrative_ontology:measurement(lati_tr_t1400, latin_correctness__continuity_reading, theater_ratio, 1400, 0.18).
+narrative_ontology:measurement(lati_tr_t400, latin_correctness__continuity_reading, theater_ratio, 400, 0.08).
+narrative_ontology:measurement(lati_tr_t550, latin_correctness__continuity_reading, theater_ratio, 550, 0.11).
+narrative_ontology:measurement(lati_tr_t750, latin_correctness__continuity_reading, theater_ratio, 750, 0.14).
+narrative_ontology:measurement(lati_tr_t900, latin_correctness__continuity_reading, theater_ratio, 900, 0.16).
+narrative_ontology:measurement(lati_tr_t1050, latin_correctness__continuity_reading, theater_ratio, 1050, 0.17).
+narrative_ontology:measurement(lati_tr_t1200, latin_correctness__continuity_reading, theater_ratio, 1200, 0.15).
 
 % Extraction over time
-narrative_ontology:measurement(lati_be_t500, latin_correctness__continuity_reading, base_extractiveness, 500, 0.08).
-narrative_ontology:measurement(lati_be_t700, latin_correctness__continuity_reading, base_extractiveness, 700, 0.12).
-narrative_ontology:measurement(lati_be_t900, latin_correctness__continuity_reading, base_extractiveness, 900, 0.14).
-narrative_ontology:measurement(lati_be_t1100, latin_correctness__continuity_reading, base_extractiveness, 1100, 0.16).
-narrative_ontology:measurement(lati_be_t1300, latin_correctness__continuity_reading, base_extractiveness, 1300, 0.17).
-narrative_ontology:measurement(lati_be_t1400, latin_correctness__continuity_reading, base_extractiveness, 1400, 0.15).
+narrative_ontology:measurement(lati_be_t400, latin_correctness__continuity_reading, base_extractiveness, 400, 0.08).
+narrative_ontology:measurement(lati_be_t550, latin_correctness__continuity_reading, base_extractiveness, 550, 0.1).
+narrative_ontology:measurement(lati_be_t750, latin_correctness__continuity_reading, base_extractiveness, 750, 0.12).
+narrative_ontology:measurement(lati_be_t900, latin_correctness__continuity_reading, base_extractiveness, 900, 0.11).
+narrative_ontology:measurement(lati_be_t1050, latin_correctness__continuity_reading, base_extractiveness, 1050, 0.13).
+narrative_ontology:measurement(lati_be_t1200, latin_correctness__continuity_reading, base_extractiveness, 1200, 0.12).
 
 % Suppression requirement over time
-narrative_ontology:measurement(lati_su_t500, latin_correctness__continuity_reading, suppression_requirement, 500, 0.1).
-narrative_ontology:measurement(lati_su_t700, latin_correctness__continuity_reading, suppression_requirement, 700, 0.15).
-narrative_ontology:measurement(lati_su_t900, latin_correctness__continuity_reading, suppression_requirement, 900, 0.18).
-narrative_ontology:measurement(lati_su_t1100, latin_correctness__continuity_reading, suppression_requirement, 1100, 0.22).
-narrative_ontology:measurement(lati_su_t1300, latin_correctness__continuity_reading, suppression_requirement, 1300, 0.26).
-narrative_ontology:measurement(lati_su_t1400, latin_correctness__continuity_reading, suppression_requirement, 1400, 0.22).
+narrative_ontology:measurement(lati_su_t400, latin_correctness__continuity_reading, suppression_requirement, 400, 0.05).
+narrative_ontology:measurement(lati_su_t550, latin_correctness__continuity_reading, suppression_requirement, 550, 0.06).
+narrative_ontology:measurement(lati_su_t750, latin_correctness__continuity_reading, suppression_requirement, 750, 0.08).
+narrative_ontology:measurement(lati_su_t900, latin_correctness__continuity_reading, suppression_requirement, 900, 0.09).
+narrative_ontology:measurement(lati_su_t1050, latin_correctness__continuity_reading, suppression_requirement, 1050, 0.09).
+narrative_ontology:measurement(lati_su_t1200, latin_correctness__continuity_reading, suppression_requirement, 1200, 0.08).
 
 
 /* ==========================================================================
@@ -259,12 +327,12 @@ narrative_ontology:measurement(lati_su_t1400, latin_correctness__continuity_read
    ========================================================================== */
 
 narrative_ontology:coordination_type(latin_correctness__continuity_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(latin_correctness__continuity_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(latin_correctness__continuity_reading, 0.06).
 narrative_ontology:affects_constraint(latin_correctness__continuity_reading, latin_correctness__rupture_reading).
 narrative_ontology:affects_constraint(latin_correctness__continuity_reading, latin_correctness__hybrid_reading).
 
 % DUAL FORMULATION NOTE:
-% The latin_correctness kernel decomposes into three structurally distinct constraint stories: continuity_reading (this file) treats medieval Latin as legitimate evolution; rupture_reading treats it as corruption of a fixed standard; hybrid_reading permits both in different domains. The three readings have substantially different ε values (low for continuity, moderate-high for rupture and hybrid's enforcement burden) and different victim sets (none for continuity, literacy-excluded speakers for rupture). They are linked by network.affects_constraints to enable contamination and family-level analysis. Each story instantiates one reading's ε-invariant frame; they do not describe 'different measurements of the same constraint.' The epsilon-invariance principle requires separate constraint stories because the readings make different claims about what counts as legitimate Latin, and those claims produce different extraction profiles.
+% The latin_correctness kernel decomposes into three structurally distinct constraint stories: continuity_reading (Medieval Latin is legitimate organic evolution), rupture_reading (Medieval Latin is corruption requiring classical recovery), and hybrid_reading (Classical norms apply to literary domains; medieval forms legitimate for technical/practical domains). Each reading assigns different ε values to the identical medieval textual practice because each reading instantiates a different legitimacy framework. The three stories are linked via network.affects_constraints: continuity → rupture/hybrid; rupture → hybrid. They share a kernel (the contested claim 'what is correct Latin?') but diverge in their assignment of authority grounding and their beneficiary/victim structures. A four-part constraint family examining the same kernel under different readings (continuity, rupture, hybrid, and potentially a quantitative-standard reading focusing on normalization via institutional measurement) would illuminate how authority grounding and definition of legitimate practice structure the contest.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

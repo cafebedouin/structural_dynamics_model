@@ -2,9 +2,9 @@
   "header": {
     "constraint_id": "unconditional_income_support__universality_paradox_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "e3c91c28-dc5e-491a-8fc3-6a8f90c0b542"
+    "story_uid": "0ac9ded8-ba2f-4482-88a6-3745f37943dd"
   },
   "base_properties": {
     "extractiveness": 0.42,
@@ -13,214 +13,272 @@
     "accessibility_collapse": 0.45,
     "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "Unconditional Income Support as Universality Paradox",
-    "topic_domain": "political_economy/welfare_state",
+    "human_readable": "Universal Basic Income as Political Ambiguity Vehicle",
+    "topic_domain": "political_economy/social_policy/welfare_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "political_entrepreneurs",
-      "policy_designers_with_taxback_mechanisms"
+      "policy_designers"
     ],
     "victims": [
-      "ideological_clarity_requirement",
+      "ideological_clarity",
       "targeted_program_recipients"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "political_entrepreneurs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Advocates from left and right deploy universal basic income rhetoric to build cross-ideological coalitions without committing to specific implementation. A left-reading entrepreneur uses UBI as a pathway to full redistribution while claiming universality; a right-reading entrepreneur uses it as a welfare-replacement mechanism while claiming neutrality. Both benefit from the ambiguity because it permits coalition-building that would fracture under implementation pressure. They set the agenda for pilot design and legislative framing, choosing design parameters (payment level, taxation method, pilot geography) that remain compatible with multiple interpretations."
+    },
+    {
+      "name": "policy_designers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design the constraint's operational form: which income sources are taxed back, what the payment level is, whether it phases out, what the administrative layer is. The ambiguity gives designers rhetorical flexibility—they can claim universality while implementing targeting through taxation, can claim neutrality while design choices embed distributional intent. They benefit from maintaining the ambiguity because clarity would expose the incompatibility between competing implementation visions and force designers to choose sides, narrowing their authority."
+    },
+    {
+      "name": "targeted_program_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Existing recipients of means-tested welfare programs (TANF, housing assistance, disability) lose benefits as UBI is implemented as a replacement mechanism. Universality rhetoric frames their losses as elimination of stigmatizing targeting—a framing that obscures that their actual income may decline under a universal payment insufficient to meet their prior benefit level. They cannot exit the constraint because welfare receipt is identity-defining; they cannot dispute the framing without accepting the stigma the universality rhetoric purports to eliminate."
+    },
+    {
+      "name": "ideological_clarity",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The constraint's operation prevents coherent evaluation of what unconditional income support actually redistributes and from whom to whom. Because the same policy vehicle admits multiple incompatible implementations that produce similar fiscal outcomes (through different tax-back mechanisms, as taxing-back research shows), observers cannot determine which reading is operationally true without detailed post-implementation auditing. The ambiguity itself becomes a feature that prevents public deliberation about the actual distributional consequences."
+    },
+    {
+      "name": "left_ideological_coalition",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocates for strong redistribution and labor-market decommodification read UBI as the opening to a universal basic services economy. The universality framing permits them to build coalitions with right-reading advocates; the ambiguity allows left advocates to claim the policy vehicle advances their full vision while accepting right-inflected design choices as merely transitional. They benefit from the constraint's ambiguity because it permits coalition-building with ideological opponents without requiring immediate clarification of their incompatible end-states."
+    },
+    {
+      "name": "right_ideological_coalition",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocates for welfare consolidation and reduced paternalism read UBI as replacing targeted benefits with a single cash transfer, with no new claims on redistribution. The universality framing permits them to build coalitions with left-reading advocates; the ambiguity allows right advocates to claim the policy vehicle is ideologically neutral while accepting left-inflected design choices. They benefit from the constraint's ambiguity because it permits coalition-building without requiring early commitment to specific implementation choices that would reveal the incompatibility with left readings."
+    },
+    {
+      "name": "fiscal_analysts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Measure the distributional consequences of different UBI designs post-implementation, discovering that taxation-back mechanisms (different on left and right readings) converge on similar fiscal outcomes—similar net redistribution, similar replacement of prior welfare spending. Their analysis creates pressure to acknowledge that the readings are incompatible in implementation while similar in effect, exposing the ambiguity as a mechanism for coalition-building that obscures rather than resolves fundamental disagreement about redistribution."
+    },
+    {
+      "name": "excluded_subsistence_workers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Informal-sector workers, undocumented immigrants, and others outside formal program eligibility are neither beneficiaries of UBI (administration requires formal identity) nor included in either ideological reading's actual commitment (left and right both claim universality but implement eligibility gates). Their exclusion from the conversation is what permits the universality rhetoric to persist—the constraint works because the ambiguity is internal to the coalition; acknowledging this excluded set would force clarity about what 'universal' actually means."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Consolidates multiple incompatible normative visions of income support (redistribution-maximizing, welfare-replacing, labor-market decommodifying) into a single policy vehicle that permits coalition-building across ideological divides by deferring implementation clarity. The coordination problem is: how to build a political majority large enough to enact income support reform when left and right hold incompatible visions of what it should do? The constraint solves this by making the ambiguity itself the coalition-building mechanism—both sides claim the vehicle advances their vision while accepting design compromises.",
+    "transfer_function": "Moves fiscal resources from tax bases to income support recipients under taxation schemes that admit multiple interpretations (progressive-redistributive or welfare-consolidating) that converge on similar net fiscal effects. Also moves political authority from program-specific welfare bureaucracies to a unified income-support administration, reducing the administrative surface where ideology is operationalized. Also transfers ideological authority from explicit redistributive or welfare-replacing commitments to the allegedly 'neutral' category of universality, which permits agents to claim the policy advances incompatible goals.",
+    "absent_voices": "Targeted program recipients whose benefits would be cut under replacement mechanisms are present in pilot design conversations but have no veto over whether universality is used as the rationale for their exclusion from the new system. Formal-economy workers bearing the tax base are largely absent from design conversations and cannot object to taxation schemes they do not yet understand. Informal-economy and undocumented workers are structurally absent—their exclusion is what permits the universality framing to persist without immediate challenge. Economists and policy analysts who could expose the ambiguity are present but their post-implementation analysis arrives after political commitments are locked in.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint (the ambiguity mechanism itself) disappeared and UBI had to be implemented with clear ideological commitment, the political coalition would fracture: left and right would advance incompatible versions that could not coexist in one policy vehicle, forcing a choice or gridlock. Existing welfare programs would persist or be replaced by whichever version won, with different distributional consequences. The ability to defer implementation clarity would vanish, and the constraint's primary function—enabling coalition-building across ideological incompatibility—would be gone.",
+    "founding_problem": "The founding problem is the political inability to build a majority coalition for income-support reform when left and right hold incompatible normative visions: left wants maximized redistribution and labor decommodification, right wants welfare consolidation and reduced paternalism. These visions are not easily reconciled because they rest on different empirical premises (about labor incentives, about the nature of deservingness) and different normative commitments (about the role of the state in redistribution). Prior policy attempts to build such coalitions either collapsed under implementation pressure or required one side to compromise in ways the other side experienced as defeat.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Left and right ideological coalitions both attest the founding problem remains live—both claim their vision for income support is politically blocked by the other's incompatible vision. Fiscal analysts and policy design practitioners attest that the ambiguity mechanism is actively maintained: whenever implementation details threaten to clarify incompatibility, both sides defend the universality framing and defer specification. Legislative testimony from pilot-site advocates shows both left and right reading advocates claiming victory in the same policy design, evidence that the ambiguity is operational."
+  },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.28
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.32
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.36
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.39
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.41
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.42
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.41
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.48
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.54
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.61
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.68
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.69
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.7
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.26
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.3
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.34
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.36
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.37
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.38
-    }
-  ],
-  "omegas": [
-    {
-      "id": "kernel_reading_contest",
-      "question": "Which reading of the UIS kernel is structurally correct: the universality paradox (this reading), the freedom floor, or the dependency trap? Or are all three live readings held simultaneously by different coalitions?",
-      "resolution_mechanism": "Resolution of the contested kernel is not empirical—it depends on which normative commitment (universality framing, unconditional dignity, or work-incentive discipline) one takes as foundational. A 'resolution' would require explicit choice among incompatible values, which is precisely what the constraint's ambiguity defers.",
-      "impact": "If the universality paradox reading is accepted as correct, the constraint's function is political ambiguity management, not welfare optimization. If either sibling reading displaces it, the constraint's classification changes from tangled_rope (ambiguity entangles incompatible paths) to either rope (freedom-floor reading: genuine coordination) or snare (dependency-trap reading: pure extraction).",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Fundamental contest over which reading of the UIS kernel is structurally correct and whether all three are simultaneously live."
-    },
-    {
-      "id": "taxback_mechanism_distributional_equivalence",
-      "question": "Are the distributional outcomes of UIS with aggressive taxing back actually equivalent to the targeted programs they replace, or does the measurement of equivalence obscure subtle shifts in who bears the marginal burden?",
-      "resolution_mechanism": "Detailed incidence analysis comparing marginal tax rates facing low-income households across old and new systems, disaggregated by household type and region. Comparison of actual labor supply responses, not predicted responses.",
-      "impact": "If equivalence is confirmed, the constraint operates as claimed: pure political ambiguity with fiscal outcomes independent of framing. If equivalence is illusory (low-income wage workers face higher effective marginal rates under UIS than under prior means-tested systems), extractiveness increases and the constraint shifts toward snare (wage workers become clear victims, not just ambiguous targets).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether fiscal equivalence research's claim that UIS and targeted programs produce identical outcomes withstands scrutiny at the household level."
-    },
-    {
-      "id": "ambiguity_maintenance_mechanism",
-      "question": "Is the constraint's ambiguity actively maintained by political entrepreneurs and policy designers, or does it arise passively from genuine conceptual incommensurability between left and right readings?",
-      "resolution_mechanism": "Qualitative analysis of policy design choices: when designers must choose a marginal tax rate, phase-out threshold, or eligibility criterion, do they choose to preserve ambiguity (avoid decisions that would force explicit ideological choice) or do they choose based on coherent principle (left reading or right reading)? Analysis of political rhetoric and coalition documents.",
-      "impact": "If ambiguity is actively maintained, the agenda-setter seats (political entrepreneurs, policy designers) gain more authority and are more clearly beneficiaries (they capture rents from the absence of resolution). If ambiguity is passive, the constraint is less of a tangled rope and more of a institutional accident—the incommensurability between traditions is real and neither reading can displace the other without destroying the coalition.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the constraint's political ambiguity is strategic or emergent from genuine value incommensurability."
-    },
-    {
-      "id": "targeted_program_vulnerability",
-      "question": "Are targeted program recipients and their advocacy communities actually disempowered by universality framing, or do they retain voice and veto power through side-payments, compromise designs, and coalition participation?",
-      "resolution_mechanism": "Analysis of policy design processes: did targeted program advocates successfully block consolidation or negotiate carve-outs (disability support maintained separately, child allowances preserved as supplements to UIS)? Or were they systematically overridden by universality framing?",
-      "impact": "If targeted advocates retained effective voice, the victimhood is less clear and the constraint is less tangled (the extraction is visible and contested). If they were overridden by universality framing that they opposed, the victimhood is confirmed and the tangled_rope classification is strengthened—the ambiguity specifically disabled their ability to defend their constituency.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether targeted program constituencies experienced actual disempowerment or retained effective voice in the constraint's operation."
-    },
-    {
-      "id": "ideological_reading_foreclosure",
-      "question": "Does the universality paradox reading foreclose either the freedom-floor reading or the dependency-trap reading, or are all three simultaneously holdable by different parties?",
-      "resolution_mechanism": "Logical analysis: if the universality paradox is correct (ambiguity entangles incompatible paths), can a single coherent party hold either the freedom-floor reading (unconditional floor is real and primary) or the dependency-trap reading (work incentives are primary)? Or does accepting the universality paradox force acknowledgment that both readings are appropriated fictions?",
-      "impact": "If the universality paradox forecloses either sibling, the reading_relations should be marked 'forecloses' rather than 'coexists_with'. If all three are simultaneously live, the relation is 'coexists_with' and the kernel remains contested at the deep level.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the universality paradox reading's core claim logically eliminates either sibling reading's core claim."
+      "value": 0.38,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "Unconditional income support (UIS) has become a politically ambiguous policy vehicle that attracts cross-ideological coalition support by deferring the fundamental normative choice between universality-as-dignity (left reading: decommodification, unconditional floor, protection against market shocks) and universality-as-efficiency (right reading: elimination of means-testing bureaucracy, work-incentive preservation through taxing-back, fiscal discipline). The CLAIM is tangled_rope: the constraint entangles incompatible normative commitments in a single policy vehicle, enabled by the taxing-back architecture's formal equivalence to multiple designs. The METRICS describe a constraint whose extractiveness is moderate but rising over time (theater_ratio climbs from 0.35 to 0.70 over 40 years), indicating increasing gap between the policy's rhetorical framing (unconditional, universal, dignity-affirming) and its actual operation (conditional on income, taxed back aggressively, implementing covert work requirements via benefit design). This is the universality_paradox_reading: one reading of the contested unconditional_income_support kernel, distinguished from the freedom_floor_reading and dependency_trap_reading by its focus on political ambiguity as the constraint's actual function, not as a communication problem to be solved.",
-    "kernel_context": "This constraint is one reading of the contested kernel unconditional_income_support. The reading instantiated here is universality_paradox_reading: UIS as politically ambiguous Trojan horse that masks incompatible implementation paths (freedom-floor design vs. dependency-constraint design) while preserving fiscal equivalence. The sibling readings are: (1) freedom_floor_reading—UIS as autonomy-enabling floor that removes coercion from the labor market and eliminates stigma; (2) dependency_trap_reading—UIS as incentive-distorting subsidy that crowds out targeted aid and redistributes upward. This reading's core premise is that the constraint's primary function is political: it allows left-wing and right-wing coalitions to claim simultaneous victory by deferring the implementation choice (marginal tax rates, phase-out thresholds, eligibility criteria) to administrative tuning. The structural delta from sibling readings is the focus on beneficiaries as political entrepreneurs and policy designers (who exploit the ambiguity to build coalitions and capture authority), and victims as ideological clarity (the constraint prevents coherent evaluation of which reading is correct) and targeted-program recipients (displaced by universality framing that justifies consolidation).",
-    "logic_rationale": "Extractiveness starts low (0.25 at t0) because fiscal outcomes are approximately equivalent across design choices—the taxing-back research literature establishes this equivalence, which is the constraint's structural foundation. However, extractiveness rises over time to 0.42 (by t30–t40) because the gap between framing and operation grows: as implementation hardens into specific marginal tax rates and eligibility criteria, the rhetorical claim of 'unconditional' becomes less tenable, yet the ambiguous universality framing persists. The constraint extracts from targeted-program recipients (their specificity and advocacy voice are absorbed into universality) and from low-income wage workers (high effective marginal rates remain but are obscured by unconditional framing). Theater_ratio rises sharply from 0.35 to 0.70, indicating that the proportion of policy activity devoted to rhetorical maintenance (defending the ambiguous framing, explaining why design differs from framing) grows over time—as the policy ages, more energy is spent explaining the ambiguity than solving welfare problems. Suppression is moderate (0.38 by t30) because the constraint's enforcement is primarily informational: the suppression of alternative framings (explicit left vs. right choice) is maintained by the ambiguous universality label and by the administrative apparatus's complex implementation (which deters scrutiny). The constraint does not require coercive enforcement of compliance; it requires suppression of clarity about what is being chosen. Accessibility_collapse is moderate (0.45) because while actors within the system recognize the ambiguity and choices available to them, actors outside (voters, targeted-program beneficiaries with no organized representation) cannot easily see that they have been displaced. Resistance is high (0.72) because the constraint meets substantial ideological resistance from both left (claiming the design is too conditional, insufficient unconditional floor) and right (claiming it provides insufficient work incentives, excessive marginal rates). The resistance is real but ineffective because it is distributed across incompatible critiques—each side blames the implementation for failing to match its reading, not recognizing that the ambiguity is structural.",
-    "directionality_logic": "Political entrepreneurs and policy designers sit at d near 0.0 (beneficiaries): they collect authority, professional advancement, and coalition-spanning capability from managing the constraint's ambiguity. Their directionality is beneficiary because the constraint subsidizes their position—without the ambiguous framing, they would have to choose, and either choice would alienate part of their coalition. Targeted-program recipients sit at d near 1.0 (full target): their programs are consolidated away and their specific advocacy voice is absorbed into universal framing. They cannot exit (they depend on income support) and their exit options are constrained (relocation, program switching are costly and limited). Low-income wage workers sit at d near 0.85 (target): they bear high effective marginal tax rates under UIS-with-taxback, which are obscured by the unconditional framing. Their exit options are constrained (labor market mobility is limited) and identity-locked (they are expected to work to maintain social respect, which makes exit via non-participation unavailable). Ideological traditions (left and right) sit at d near 0.8 (target): their voices are appropriated by the universality framing but neither controls the implementation. They are trapped because accepting UIS framing provides rhetorical legitimacy and coalition inclusion, but only if they accept the ambiguity that prevents their reading from determining policy. Administrative apparatus sits at d near 0.15 (beneficiary): the constraint subsidizes bureaucratic expansion because the ambiguity between readings requires continuous administrative tuning and interpretation. The apparatus gains resources and authority from managing the divergence between framing and operation. Cross-coalition veto players sit at d near 0.2 (beneficiary): the constraint allows them to maintain coalition cohesion without resolving internal incompatibility, which preserves their institutional position and prevents coalition dissolution.",
-    "perspectival_gap": "From the left reading's seat (freedom-floor agenda setter): the constraint should deliver decommodified security and unconditional dignity; the actual operation (high marginal tax rates, aggressive taxing-back) is a betrayal caused by right-wing capture of implementation details. The response is to demand higher UIS floors and lower marginal rates. From the right reading's seat (work-incentive agenda setter): the constraint should preserve work incentives and replace bureaucratic means-testing; the actual operation (high unconditional floor, apparent universality) is a betrayal caused by left-wing capture of framing. The response is to demand more aggressive taxing-back and stricter eligibility criteria. From the administrative apparatus seat: both are correct in observing the gap, but reconciling them requires continuous tuning that expands bureaucratic scope. From the victim seats (targeted-program recipients, low-income wage workers): the constraint operates as designed to extract from them—the gap between framing and operation is not a bug, it is the mechanism. Seat divergence should compute per-seat types from these structural differences: beneficiary seats should compute as rope or tangled_rope (coordination with side-benefits), payer seats should compute as snare or tangled_rope (extraction disguised as coordination), and observer seats should compute as mountain or neutral (the ambiguity is structural, not a perception problem to be solved). The engine computes this divergence from the directionality values and the structural data; the authored claim (tangled_rope) does not adjudicate it, but the per-seat computations should validate the claim's directional logic.",
-    "mandatrophy_analysis": "The mandate is the founding problem: welfare legitimacy crisis requiring escape from means-testing bureaucracy (left) and work-disincentive tradeoffs (right). The constraint's mandate would be satisfied if either the freedom-floor design (pure left) or the dependency-constraint design (pure right) had been coherently implemented. However, the universality_paradox reading claims the constraint's actual function is NOT mandate satisfaction—it is political ambiguity management. The mandate has therefore atrophied: the constraint persists not because it solves the welfare problem, but because it allows incompatible parties to coexist in the same coalition without resolving their incompatibility. The founding problem's status is 'contested' precisely because the ambiguity prevents its resolution. Mandatrophy is resolved by recognizing that the constraint is a tangled_rope, not a rope: it performs political coordination (coalition cohesion across ideological difference) by entangling incompatible normative commitments. The mandate-atrophy concern is answered by the observation that the new function (political coordination) is real and sustained, even though it differs from the founding intent (welfare optimization). The constraint persists because political entrepreneurs and policy designers benefit from the ambiguity; the founding problem remains unresolved because resolving it would destroy the coalition. This is tangled_rope, not piton: the extraction from targeted-program recipients and low-income wage workers is real and ongoing, but the coordination function (keeping the coalition together) is also real, even though it prevents mandate satisfaction."
+    "narrative_context": "Unconditional basic income appears on its surface as a unifying policy that appeals across ideological divides: left reads it as the foundation of a decommodified economy and maximized redistribution; right reads it as welfare consolidation with reduced paternalism; centrists read it as neutral, technocratic, ideologically uncontaminated. This narrative examines the universality-paradox reading: the appeal is not unifying but ambiguous, and the ambiguity itself is the mechanism that permits coalition-building across ideological incompatibility. Left and right do not actually agree on what UBI should do; they agree to defer implementation clarity and deploy universality rhetoric that permits each side to claim the policy advances its vision. The constraint extracts from ideological clarity (by obscuring incompatibility) and from targeted program recipients (by using universality to justify replacements). Extraction is moderate (0.42) because fiscal outcomes are similar across left-right implementations—the ambiguity is political, not financial; its cost is in ideology and transparency, not in redistribution magnitude. This reading instantiates one point on a contested kernel: it is NOT the freedom-floor reading (which emphasizes labor decommodification) nor the dependency-trap reading (which emphasizes incentive distortion), but the mechanism by which incompatible readings can coexist in a single policy vehicle.",
+    "key_agents": [
+      "Political entrepreneurs: deploy universality rhetoric to build coalitions without ideological commitment",
+      "Policy designers: use ambiguity to maintain rhetorical flexibility while implementing specific distributional choices",
+      "Targeted program recipients: lose prior benefits under replacement mechanisms justified by universality",
+      "Ideological clarity (non-agent): the abstract good suppressed by the constraint's operation",
+      "Left and right coalitions: both claim the vehicle advances their incompatible visions",
+      "Fiscal analysts: expose post-implementation that different taxation-back mechanisms converge on similar outcomes"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42, plateauing at 15) because the fiscal extraction is modest—taxation-back research shows different ideological implementations converge on similar net redistribution and welfare replacement, so no single party captures massive gains. However, extraction from ideological clarity is substantial: the constraint's operation actively suppresses acknowledgment that left and right visions are incompatible in implementation. Theater ratio is high (0.68 at interval end) and rising sharply (from 0.48 to 0.68 between t=0 and t=15), indicating that the constraint's primary function shifts from actual policy-making (t=0: diverse design choices, genuine uncertainty about direction) to maintenance of the ambiguity (t=15+: design choices converge but rhetoric claims universality remains). Suppression requirement rises (0.28 to 0.38) as implementation pressure increases—more active effort required to maintain the ambiguity as fiscal consequences become visible. Accessibility collapse is moderate (0.45): alternatives exist (left could choose explicit redistribution, right could choose explicit consolidation) but are politically suppressed because the coalition would fracture if either side committed to clarity.",
+    "perspectival_gap": "The agenda-setter seats (political entrepreneurs, policy designers) and the beneficiary seats (left and right coalitions) experience the constraint as genuine coordination; the victim seats (targeted program recipients, ideological clarity) experience it as extraction through ambiguity. The fiscal-analyst seat, entering post-implementation, computes it as a mechanism that obscured its own operation by maintaining ambiguity until analysis was too late to change course.",
+    "directionality_logic": "Political entrepreneurs and policy designers are beneficiaries of the ambiguity: they gain authority and coalition-building capacity by maintaining it. Left and right coalitions are complex: they benefit from the ambiguity (it permits coalition-building) but are also harmed by it (it suppresses clarity about the incompatibility of their visions and exposes them to the other side's implementation choices they did not endorse). Targeted program recipients are straightforward victims: they lose prior benefits justified by universality, and the universality rhetoric prevents them from objecting (to object would be to accept the stigma the universality framing purports to eliminate). Ideological clarity is a non-agent victim: it is suppressed by the constraint's operation. The constraint's extraction comes primarily from suppressing clarity and from using universality to justify targeted-program displacement; it is not massive fiscal extraction because left and right implementations converge.",
+    "mandatrophy_analysis": "The founding problem (political inability to build a coalition across ideological divides) remains live, which would normally support a coordination (rope) classification. However, the constraint's operation is tangled: it achieves coordination (coalition-building) through extraction (suppressing clarity about incompatibility and using universality to justify targeted-program replacement). A pure-rope classification would miss the suppression mechanism; a pure-snare would miss the genuine coordination function. Tangled rope captures both: the constraint coordinates political actors across ideological divides while extracting from transparency and from those whose benefits are displaced under universality-justified replacement.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'unconditional_income_support'. The kernel is contested because different parties read it through incompatible normative and empirical lenses. This reading instantiates the 'universality_paradox_reading': unconditional income support as politically ambiguous Trojan horse, where the appeal across ideological divides masks incompatible implementation visions that converge on similar fiscal outcomes. The sibling readings are: (1) freedom_floor_reading: UBI as autonomy-enabling floor, emphasizing labor decommodification and removal of coercion from the labor market; (2) dependency_trap_reading: UBI as incentive-distorting subsidy, emphasizing labor-supply reductions and upward redistribution. This reading occupies a distinct structural position: it does not adjudicate whether UBI is good for freedom or bad for work incentives (those are the sibling readings' claims), but rather examines how the kernel's ambiguity functions as a political device. The reading's core premise—that universality rhetoric permits coalition-building across ideological incompatibility—neither forecloses nor is foreclosed by the sibling readings' premises; instead, it coexists with them by operating at a different analytical level (political mechanism rather than normative evaluation)."
   },
+  "omegas": [
+    {
+      "id": "implementation_divergence_vs_convergence",
+      "question": "Do left-inflected and right-inflected UBI implementations actually converge on similar fiscal distributions (net redistribution, welfare replacement), or do design parameters that appear similar mask divergent outcomes?",
+      "resolution_mechanism": "Post-implementation audit of actual taxation-back mechanisms, benefit adequacy, and distributional incidence across left-inflected and right-inflected pilots. If taxation-back mechanisms produce similar marginal tax rates and similar poverty-line replacement across designs, convergence is confirmed; if divergent, the constraint's extractive function (suppressing clarity) yields to actual policy divergence.",
+      "impact": "If convergence confirmed: the constraint's political function (enabling coalition-building by deferring clarity) masks that ideological incompatibility has no fiscal consequence—the readings are merely rhetorical. If divergence: the constraint's ambiguity obscures real distributional stakes, and the extraction is greater than measured (clarity suppression has material consequence).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether UBI implementations converge or diverge in distributional consequences"
+    },
+    {
+      "id": "ideological_reading_stability",
+      "question": "Once UBI is implemented with specific design choices (payment level, taxation mechanism, eligibility gates), do left and right coalitions continue to claim the policy advances their incompatible visions, or does clarity force ideological repositioning?",
+      "resolution_mechanism": "Track coalition rhetoric before, during, and after implementation; measure whether both sides continue to claim victory, diverge in their claims, or reposition their visions. If both sides continue claiming victory despite divergent design, the constraint's ambiguity has survived implementation; if reposition occurs, clarity has forced ideological coherence.",
+      "impact": "If stability: the constraint's extraction from ideological clarity persists post-implementation (ambiguity becomes institutional feature). If repositioning: the constraint's function is defeated by implementation pressure, and post-hoc coalition-building requires new ambiguity mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ideological ambiguity persists through implementation"
+    },
+    {
+      "id": "targeted_program_adequacy_vs_replacement",
+      "question": "When UBI replaces targeted welfare under universality rhetoric, is the replacement dollar-for-dollar (similar total benefit adequacy), or does universality permit replacement at lower aggregate adequacy for the most vulnerable?",
+      "resolution_mechanism": "Compare aggregate benefit adequacy (prior targeted benefits + new UBI payment) for program recipients before and after implementation; stratify by vulnerability (disability, family size, regional cost-of-living). If adequacy is preserved, universality replacement is neutral; if reduced, targeted recipients are victims of the constraint's operation.",
+      "impact": "If adequacy is preserved: the constraint's extraction from targeted recipients is rhetorical (universality removes stigma, which may be valuable); if reduced, the constraint extracts material harm (lower benefit) justified by rhetorical universality. This determines whether the constraint's victim class is real or rhetorical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether UBI replacement preserves or reduces benefit adequacy for vulnerable groups"
+    },
+    {
+      "id": "ambiguity_as_negotiation_device_vs_deception",
+      "question": "Is the maintained ambiguity a genuinely negotiated feature of the policy (both sides knowingly accept universality as the compromise language to enable coalition-building), or a device by which one side deceives the other about what the policy will actually do?",
+      "resolution_mechanism": "Examine negotiation records, legislative testimony, and design-process interviews from implementation phase. If both sides' advocates acknowledge the incompatibility and deliberately choose universality as the compromise language, it is negotiated; if evidence shows one side believed the other's interpretation while agreeing to the policy, it is deceptive.",
+      "impact": "If negotiated: the constraint is primarily tangled rope (coordination + suppression, both parties complicit). If deceptive: the constraint is primarily snare for the deceived party (extraction disguised as coordination). This determines the moral character of the ambiguity and whether it should be sustained or clarified.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether ambiguity is a negotiated compromise or a device of deception"
+    }
+  ],
   "boltzmann": {
     "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
@@ -230,73 +288,62 @@
       "unconditional_income_support__freedom_floor_reading",
       "unconditional_income_support__dependency_trap_reading"
     ],
-    "dual_formulation_note": "The constraint family unconditional_income_support consists of three structurally distinct readings of a contested kernel: (1) universality_paradox_reading (this constraint)—UIS as politically ambiguous Trojan horse, tangled_rope, ε≈0.42; (2) freedom_floor_reading—UIS as autonomy-enabling, rope or mountain depending on empirical labor-supply response, ε low; (3) dependency_trap_reading—UIS as incentive-distorting subsidy, snare, ε high. Each reading decomposes from a single natural-language label ('unconditional income support') into a separate constraint with its own kernel reading, beneficiary/victim structure, and classification. The universality_paradox_reading affects both siblings by establishing that their core premises are appropriable by the same policy vehicle—the universality framing allows both left and right to claim victory simultaneously, which forecloses neither reading's core premise but influences both by creating ambiguity about which is actually being implemented. The freedom_floor_reading and dependency_trap_reading influence the universality_paradox_reading by providing the incompatible implementation paths that the paradox reading claims are entangled: the constraint's actual function is to make the choice between these readings deferrable."
+    "dual_formulation_note": "This constraint is one of three readings of the contested kernel 'unconditional_income_support'. The kernel is the persisting commitment (enacting UBI in a particular jurisdiction) that different parties read through incompatible normative and empirical lenses. The universality_paradox_reading examines how the kernel's ambiguity functions as a political device enabling coalition-building across incompatible visions. The freedom_floor_reading emphasizes labor decommodification and autonomy; the dependency_trap_reading emphasizes incentive distortion and upward redistribution. These are not alternative measurements of the same constraint but distinct readings of a contested commitment, each with its own normative premises and political stakes. The reading_relations and axioms below map the structural relationships between readings without privileging any one as the 'true' reading."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.15
+      "power_atom": "organized",
+      "d_value": 0.35
     }
   ],
+  "gain_flow": "political_entrepreneurs",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "distributed",
-    "authority_grounding": "extraction",
-    "interpretation_layer_present": true,
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "unconditional_income_support__freedom_floor_reading",
+        "sibling_id": "freedom_floor_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "unconditional_income_support__dependency_trap_reading",
+        "sibling_id": "dependency_trap_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "universality_as_ambiguity_management",
+        "atom": "universality_permits_coalition_across_incompatibility",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "taxback_equivalence_preserves_coalition_choice",
+        "atom": "ambiguity_suppresses_clarity_about_distributional_stakes",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "administrative_discretion_defers_ideology",
-        "role": "secondary",
-        "status": "holdable",
-        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "welfare_state_legitimacy_crisis",
+    "reference_frame": "ambiguity_as_coalition_device",
     "drift_state": {
-      "moment": "contemporary_implementation_maturation",
+      "moment": "post_implementation_phase",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
-  "uke_scope": {
-    "epsilon_bin": "medium",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "unconditional_income_support__freedom_floor_reading",
-      "unconditional_income_support__dependency_trap_reading"
-    ]
-  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

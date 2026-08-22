@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,15 +40,21 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,39 +74,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: orthographic_legitimacy_kernel__continuity_reading
- *   human_readable: Orthographic Legitimacy: Continuity Reading (Script Access to Historical Tradition)
- *   domain: political_linguistics/state_formation/commitment_systems
+ *   human_readable: Orthographic Continuity: Preserving Access to Pre-Reform Literary Canon
+ *   domain: political_linguistics/state_formation
  *
  * SUMMARY:
- *   The continuity reading holds that orthographic legitimacy derives from
- *   preserving access to historical, religious, and literary tradition. Under
- *   this reading, script reform—such as Turkey's 1928 transition from Arabic
- *   to Latin alphabet—severs post-reform generations from pre-reform textual
- *   archives (Quran, classical Islamic jurisprudence, Ottoman literature,
- *   medical treatises). The constraint is framed as a natural law: script
- *   incompatibility is a physical fact, not a policy choice. Victims are
- *   post-reform cohorts permanently estranged from their own cultural
- *   heritage unless they undertake expensive supplementary education in the
- *   pre-reform script. The reading does NOT frame this as extraction (no
- *   concentrated beneficiary) but as loss—an irreversible asymmetry between
- *   pre-reform and post-reform citizens' access to shared tradition. The
- *   constraint's low ε reflects the absence of a direct rent-collecting
- *   beneficiary; the measurement of suppression (growing from 0.05 to 0.28)
- *   reflects the state's active suppression of pre-reform script literacy to
- *   enforce the orthographic monopoly and prevent alternative transmission.
- *   Theater ratio rises over generations (0.15 → 0.42) as the reform's
- *   original efficiency justifications fade and the constraint's operation
- *   becomes increasingly performative—defending the script choice against
- *   competing historical narratives and challenges.
+ *   This constraint is one reading of a contested orthographic kernel: what
+ *   makes an orthographic system legitimate? The continuity reading asserts
+ *   that legitimacy derives from preserving access to historical, religious,
+ *   and literary tradition. When a state reforms its script—shifting from
+ *   Arabic to Latin alphabets, for instance—the reform creates a structural
+ *   incompatibility: the new generation learns the new script and gains
+ *   modern literacy, but simultaneously loses unmediated access to centuries
+ *   of texts written in the old script. This reading emphasizes that loss as
+ *   the constraint's core: the post-reform generation inherits a library it
+ *   cannot directly read without additional training. The constraint is
+ *   mountain-like because the incompatibility is a physical fact of script
+ *   systems, not a human choice per se. However, it is called a constraint
+ *   story (not simply a natural law) because the decision to preserve or
+ *   abandon continuity is political, and the legitimacy claim that continuity
+ *   *matters* is contested. The other readings (modernist and
+ *   instrumentalist) would author different ε values by refusing the
+ *   continuity claim as a metric of legitimacy.
  *
  * KEY AGENTS:
- *   - Religious scholars and tradition-bearers: maintain that script fidelity is non-negotiable for textual integrity.
- *   - Post-reform generations: inherit estrangement from pre-reform texts and classical tradition.
- *   - Political reformers (early republic): enact the script reform under efficiency and modernization rationales.
- *   - Modernist intellectuals: advocate the reform as rupture from Ottoman/Islamic past (excluded from this reading's framing).
- *   - Literacy administrators: implement campaigns under the assumption that script reform minimizes cost of mass education (excluded).
- *   - Ordinary citizens in reformed nation: benefit from higher literacy rates, also inherit the tradition-access barrier.
- *   - Comparative historians: analyze whether the constraint is irreversible mountain or policy-negotiable choice.
+ *   - post_reform_generations: the victims of the access barrier; born into the new script and identity-locked to it; cognitive burden of dual-script literacy falls on them
+ *   - arabic_script_custodians: the keepers of old-script fluency; they maintain the living possibility of access; their knowledge is the measured testimony to what continuity requires
+ *   - religious_continuity_advocates: organized to preserve tradition; they benefit from the legitimacy claim that continuity matters and resources flow to manuscript preservation
+ *   - political_reformers: the agenda-setters who chose the orthographic shift; they do not extract from continuity loss but they set the constraint that creates it
+ *   - colonial_observers: external analytical seat; they document the structure without claiming legitimacy
  */
 
 /* ==========================================================================
@@ -107,56 +109,104 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(orthographic_legitimacy_kernel__continuity_reading, 0.15).
-domain_priors:suppression_score(orthographic_legitimacy_kernel__continuity_reading, 0.28).
-domain_priors:theater_ratio(orthographic_legitimacy_kernel__continuity_reading, 0.42).
+domain_priors:base_extractiveness(orthographic_legitimacy_kernel__continuity_reading, 0.35).
+domain_priors:suppression_score(orthographic_legitimacy_kernel__continuity_reading, 0.62).
+domain_priors:theater_ratio(orthographic_legitimacy_kernel__continuity_reading, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, extractiveness, 0.15).
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 0.28).
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, extractiveness, 0.35).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 0.48).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, accessibility_collapse, 0.92).
-narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, resistance, 0.38).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, accessibility_collapse, 0.78).
+narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(orthographic_legitimacy_kernel__continuity_reading, mountain).
-narrative_ontology:human_readable(orthographic_legitimacy_kernel__continuity_reading, "Orthographic Legitimacy: Continuity Reading (Script Access to Historical Tradition)").
-narrative_ontology:topic_domain(orthographic_legitimacy_kernel__continuity_reading, "political_linguistics/state_formation/commitment_systems").
+narrative_ontology:human_readable(orthographic_legitimacy_kernel__continuity_reading, "Orthographic Continuity: Preserving Access to Pre-Reform Literary Canon").
+narrative_ontology:topic_domain(orthographic_legitimacy_kernel__continuity_reading, "political_linguistics/state_formation").
 
 domain_priors:emerges_naturally(orthographic_legitimacy_kernel__continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(orthographic_legitimacy_kernel__continuity_reading, 'e86db4af-f324-4814-9b76-f933d59468f8').
-narrative_ontology:cs_kernel_codification('e86db4af-f324-4814-9b76-f933d59468f8', fixed_text).
-narrative_ontology:cs_authority_grounding('e86db4af-f324-4814-9b76-f933d59468f8', extraction).
-narrative_ontology:cs_interpretation_layer_present('e86db4af-f324-4814-9b76-f933d59468f8').
-narrative_ontology:cs_reading_relation('e86db4af-f324-4814-9b76-f933d59468f8', orthographic_legitimacy_kernel__instrumentalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('e86db4af-f324-4814-9b76-f933d59468f8', orthographic_legitimacy_kernel__modernist_reading, coexists_with).
-narrative_ontology:cs_axiom('e86db4af-f324-4814-9b76-f933d59468f8', foundational, textual_continuity_binding).
-narrative_ontology:cs_axiom_status(textual_continuity_binding, holdable).
-narrative_ontology:cs_axiom_grounding('e86db4af-f324-4814-9b76-f933d59468f8', textual_continuity_binding, deontological).
-narrative_ontology:cs_axiom('e86db4af-f324-4814-9b76-f933d59468f8', foundational, script_incompatibility_irreversible).
-narrative_ontology:cs_axiom_status(script_incompatibility_irreversible, holdable).
-narrative_ontology:cs_axiom_grounding('e86db4af-f324-4814-9b76-f933d59468f8', script_incompatibility_irreversible, empirically_contingent).
-narrative_ontology:cs_reference_frame('e86db4af-f324-4814-9b76-f933d59468f8', orthographic_continuity_heritage_access).
-narrative_ontology:cs_drift_state('e86db4af-f324-4814-9b76-f933d59468f8', post_reform_institutional_stabilization, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('e86db4af-f324-4814-9b76-f933d59468f8', '').
+narrative_ontology:cs_story_uid(orthographic_legitimacy_kernel__continuity_reading, '825d3143-5876-4996-91eb-da06f82615d7').
+narrative_ontology:cs_kernel_codification('825d3143-5876-4996-91eb-da06f82615d7', distributed).
+narrative_ontology:cs_authority_grounding('825d3143-5876-4996-91eb-da06f82615d7', distributed).
+narrative_ontology:cs_reading_relation('825d3143-5876-4996-91eb-da06f82615d7', orthographic_legitimacy_kernel__instrumentalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('825d3143-5876-4996-91eb-da06f82615d7', orthographic_legitimacy_kernel__modernist_reading, coexists_with).
+narrative_ontology:cs_axiom('825d3143-5876-4996-91eb-da06f82615d7', foundational, continuity_with_pre_reform_canon_is_legitimacy_ground).
+narrative_ontology:cs_axiom_status(continuity_with_pre_reform_canon_is_legitimacy_ground, holdable).
+narrative_ontology:cs_axiom_grounding('825d3143-5876-4996-91eb-da06f82615d7', continuity_with_pre_reform_canon_is_legitimacy_ground, deontological).
+narrative_ontology:cs_axiom('825d3143-5876-4996-91eb-da06f82615d7', secondary, access_to_historical_texts_constitutes_cultural_identity).
+narrative_ontology:cs_axiom_status(access_to_historical_texts_constitutes_cultural_identity, holdable).
+narrative_ontology:cs_axiom_grounding('825d3143-5876-4996-91eb-da06f82615d7', access_to_historical_texts_constitutes_cultural_identity, deontological).
+narrative_ontology:cs_reference_frame('825d3143-5876-4996-91eb-da06f82615d7', biliteracy_maintained_continuity).
+narrative_ontology:cs_drift_state('825d3143-5876-4996-91eb-da06f82615d7', contemporary_monolingual_cohort, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('825d3143-5876-4996-91eb-da06f82615d7', '').
 narrative_ontology:cs_kernel_id(orthographic_legitimacy_kernel__continuity_reading, orthographic_legitimacy_kernel).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(orthographic_legitimacy_kernel__continuity_reading, post_reform_generations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(orthographic_legitimacy_kernel__continuity_reading, religious_continuity_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Religious scholars, manuscript librarians, and historians who maintain fluency in Ottoman and Islamic-era texts. They do not extract from the orthographic regime; they preserve access to it. Their voice is the authoritative testimony to what continuity with pre-1928 texts requires.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, arabic_script_custodians, observer,
+    moderate, generational, constrained, national).
+
+% Born after orthographic reform, schooled entirely in the new script. They inherit a rupture: fluency in contemporary literacy does not confer access to the library of pre-1928 texts, religious manuscripts, legal records, or poetry. Recovering that access requires learning a second script system as adults, at substantial cognitive and time cost. Their identity as nationals is constituted through the reformed script; exiting that identity is not a realistic option.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, post_reform_generations, payer,
+    powerless, biographical, identity_locked, national).
+
+% State actors who selected and enforced the script reform as modernization policy. They justify the reform by literacy gain, administrative efficiency, and alignment with European modernity. They do not directly extract from orthographic continuity loss, but they set and defend the constraint that creates it.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, political_reformers, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Communities and institutions committed to preserving access to pre-reform religious texts and interpretive traditions. They benefit from the constraint because it preserves the canonical status of texts written in the old script and honors the legitimacy claim that orthography must serve tradition continuity. They can organize resources to maintain manuscript preservation and dual-script literacy without depending on state enforcement.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, religious_continuity_advocates, beneficiary,
+    organized, civilizational, mobile, national).
+
+% External analysts examining whether the reform represents modernization or cultural rupture. They do not stake a claim inside the constraint; they observe how different stakeholders experience the orthographic reorganization and document the structural consequences.
+narrative_ontology:constraint_stakeholder(orthographic_legitimacy_kernel__continuity_reading, colonial_observers, observer,
+    analytical, biographical, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(orthographic_legitimacy_kernel__continuity_reading, diffuse).
+narrative_ontology:fixing_cost_class(orthographic_legitimacy_kernel__continuity_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Preserves organized access to the literary, religious, and historical canon accumulated before 1928: thousands of years of Islamic jurisprudence, Ottoman administrative texts, classical poetry, theological interpretation. The constraint is that if the script changes, that library becomes inaccessible to new learners unless they undergo additional training in the old script.
+% TRANSFER_FUNCTION: The constraint transfers cognitive burden: post-reform generations inherit full literacy in the new script (enabling contemporary communication and administration) but must pay a learning cost to access pre-reform tradition. The transfer is not economic; it is a reallocation of who bears the cost of script knowledge. The old-script custodian class carries knowledge maintenance; the new-script generation carries the access barrier.
+% ABSENT_VOICES: The pre-1928 population is absent by definition—they are dead. Their descendants might claim that the reform breaks lineage and cuts them off from their own ancestors' words, but that voice is only audible through the surviving manuscript tradition, not as a party to the reform decision.
+% DISAPPEARANCE_RATIONALE: If the constraint—the standard that orthographic legitimacy requires preserving access to pre-reform tradition—disappeared, the state could abandon dual-script literacy and allow the old script to fade from institutional knowledge. The manuscript libraries would remain, but their social significance would shift from 'living tradition' to 'historical artifact.' Different stakeholders contest whether the world would rearrange: reformers say no, literacy gains and modernity persist; continuity advocates say yes, because access to tradition constitutes religious and national identity.
+% FOUNDING_PROBLEM: The problem was state modernization and administrative consolidation: Ottoman script diversity (Arabic script variants, regional adaptations, administrative shorthand) created barriers to literacy standardization and national print communication. A single, phonetically efficient script was seen as necessary to build a modern state and integrate the population under one written standard.
+% FOUNDING_PROBLEM_CORROBORATION: The reformers and efficiency-focused administrators attest the founding problem is live: literacy rates were low, administration was fragmented, and Ottoman regional script variants persisted. Historians and continuity advocates attest the founding problem is a *framing*: the barriers to standardized literacy existed not because script diversity was inherently inefficient but because the empire had not invested in universal education, and the reform accelerated access for the new generation at the cost of severing the old. They cite UNESCO documentation and comparative literacy studies showing similar literacy gains through other means without orthographic rupture.
+narrative_ontology:disappearance_verdict(orthographic_legitimacy_kernel__continuity_reading, contested).
+narrative_ontology:founding_problem_status(orthographic_legitimacy_kernel__continuity_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(orthographic_legitimacy_kernel__continuity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(orthographic_legitimacy_kernel__continuity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(orthographic_legitimacy_kernel__continuity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(orthographic_legitimacy_kernel__continuity_reading, 0.35, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -164,6 +214,10 @@ narrative_ontology:story_seed(orthographic_legitimacy_kernel__continuity_reading
 
 :- begin_tests(orthographic_legitimacy_kernel__continuity_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(orthographic_legitimacy_kernel__continuity_reading, ExtMetricName, E),
@@ -186,16 +240,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.15 at interval end) because the constraint has no clear concentrated beneficiary. Post-reform citizens benefit from higher literacy rates, but their benefit is diffuse and not routed through the constraint's operation. The constraint operates as loss, not transfer. Suppression rises sharply (0.05 → 0.28) over the interval because the state must actively prevent alternative transmission—discouraging private instruction in the pre-reform script, controlling textbook production, restricting pre-reform script use in official contexts. This rising suppression is structural to maintaining orthographic monopoly: if pre-reform script education were freely available, post-reform generations could choose to learn both scripts, and the constraint would relax. Theater ratio rises as the reform's efficiency justification (T0–T10) is superseded by performative defense of the orthographic choice (T25–T100). At T25, the literacy benefit plateau is reached, yet enforcement continues—defensive theater emerges. By T100, the suppression machinery (script education bans, archive access restrictions, official-use controls) persists despite the founding efficiency problem being solved. Accessibility collapse is high (0.92) because once a generation is educated under the post-reform script, they have no functional alternative—re-learning the pre-reform script is prohibitively expensive for most, trapping them in the reformed literacy ecosystem. Resistance is moderate (0.38) because tradition-keepers and historians consistently resist and document the loss, but they lack institutional power to reverse the choice after it is entrenched in the education system.
+ *   Extractiveness is low (0.35 by interval end) because this reading does not identify a concentrated beneficiary extracting rent from the constraint. Instead, it identifies a diffuse cost imposed on the post-reform generation: the loss of direct access. The suppression value (0.62) reflects that enforcement is required: the state must actively defend the new script's primacy in education and administration, suppressing the transmission of old-script fluency to new generations. Suppressiveness does not vanish because the constraint persists only if new generations are prevented from treating the old script as 'normal' or co-equal. Theater ratio (0.48, stabilizing near 0.48) reflects that the state's justification for the reform (literacy gain, modernity, efficiency) is partly true but partly a cover story for the continuity loss imposed. The measurement series shows extractiveness rising in the first 50 time points as the full generational rupture becomes visible, then plateauing: by time 100, the new generations are the overwhelming demographic majority and the constraint is 'naturalized'—it no longer feels like an active policy choice but like the way writing 'simply is.' Resistance is high (0.71) because continuity advocates mount sustained institutional and cultural pushback, maintaining dual-script literacy and manuscript preservation as acts of defiance.
  *
  * PERSPECTIVAL GAP:
- *   From the continuity reading's seat, the constraint is a mountain—irreversible physical fact of script incompatibility. From the reformer's seat, it is a policy choice (reversible if future generations choose to re-learn pre-reform scripts). From the modernist seat, the constraint is a snare—institutional choice to break from Islamic past, defended as natural when it is actually coercive suppression of an alternative tradition. The engine computes per-seat types from the structural data: the continuity reading's authored facts (high accessibility_collapse, rising suppression, low extractiveness, natural emergence) should compute as mountain from the tradition-keeper seat and as snare or tangled_rope from the modernist seat (they would author different structural facts). The divergence between computed types and the continuity reading's claimed_type (mountain) is the divergence the corpus measures.
+ *   From the reformers' seat, the constraint is a foundation of modernity and national unity—a public good. From the post-reform generation's seat, it is a barrier to their own history. From the custodian's seat, it is a continuous struggle to keep tradition alive against institutional entropy. The engine should compute different type assignments per seat: the reformer may experience this as rope (genuine coordination for literacy), while the post-reform generation experiences it as snare (severed access, suppressed alternatives). The authored claimed_type (mountain) reflects the physical incompatibility fact itself; the computed types per seat will diverge from the claim.
  *
  * DIRECTIONALITY LOGIC:
- *   The continuity reading authors no beneficiaries because the constraint does not transfer wealth or power to a concentrated seat. The victims are post-reform generations (trapped in a literacy system that denies them pre-reform script fluency). Tradition-bearers are observers, not beneficiaries—they maintain access (through choice to retain pre-reform literacy) but do not collect rents. The reformers are the agenda-setters but they derive no direct extraction; their benefit is state efficiency (measurable in literacy rates, not in extraction). The directionality is asymmetric: post-reform generations are trapped targets (d ≈ 0.85), while tradition-keepers remain mobile or arbitrage-positioned (d ≈ 0.15) by choosing to retain the pre-reform script. This asymmetry should feed low χ for beneficiaries (none) and moderate χ for targets (post-reform generations: trapped + moderate extractiveness ≈ 0.12–0.15 effective extraction).
+ *   The post-reform generations are the targets (high d, near 1.0): they bear the access cost and are identity-locked to the new script—they cannot exit by learning the old script as a child because it is not taught to them as a native system. The religious continuity advocates are beneficiaries in a structural sense (low d, near beneficiary end): they benefit from the legitimacy claim that tradition matters and from resources devoted to preservation. But they are not extracting in the economic sense—they are defending something they hold to be valuable. The political reformers are agenda-setters but not extractors in the Snare sense: they imposed the constraint but did not capture it for private gain. The custodians (arabic_script_custodians) are observers with constrained exit: they keep the old script alive but do not control the state's policy. This reading's directionality structure is asymmetric but not economically extractive—it is a loss of access suffered by the powerless (post-reform generations) and a burden of maintenance borne by the organized (custodians and advocates).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint should NOT trigger mandatrophy verdicts because the founding problem (access to pre-reform texts) is permanently LIVE, not dead. The constraint persists because the founding problem persists—every post-reform generation that cannot read their own cultural patrimony is a fresh instance of the problem. Mandatrophy (constraint persists after founding problem dies) would apply if literacy rates were the founding problem and literacy was achieved; in that case, the constraint's persistence as purely performative defense would mark it as mandatrophic. The continuity reading does not claim literacy was the founding problem—it claims textual access was. That problem remains live. However, the theater_ratio rise (0.15 → 0.42) suggests growing performative element: the reformers' original efficiency case is exhausted, yet enforcement continues, increasingly as defense of the orthographic choice against rival narratives. This is NOT mandatrophy but increasing theater—the constraint performs its legitimacy rather than simply enforcing it. An omega variable addresses this boundary.
+ *   The founding problem (state modernization and literacy standardization) is contested. Reformers say it is live—administrative fragmentation still exists without a unified script. Continuity advocates and historians say the problem is a framing, and the actual founding problem was never script efficiency but rather the state's choice to abandon investment in biliteracy. The constraint does not appear to resolve a mandated function by 1928 standards, yet it persists. This suggests either that the constraint is capturing value (reformers continue to benefit from unified script dominance and symbolic control of national literacy) or that it is inertial (the constraint persists because reversing it is politically impossible, not because anyone actively maintains it). The measurement series shows theater_ratio stabilizing around 0.48—neither predominantly functional nor predominantly theatrical—which suggests the constraint is neither fully justified by its original mandate nor purely performative. The mandatrophy_resolved flag should be false: the constraint's mandate (script standardization) persists as an active state function, even if contestable.
  */
 
 /* ==========================================================================
@@ -203,54 +257,44 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    natural_law_vs_institutional_choice,
-    'Is orthographic incompatibility a natural law (physical fact of script incompatibility, mountain-hard) or an institutional choice defended as natural law (a snare or tangled_rope hiding behind false naturality)?',
-    'Evaluate whether alternative scripts could theoretically coexist in the education system and administration without catastrophic efficiency loss. Compare societies that maintain dual-script literacy (e.g., Israel with Hebrew/English, China with hanzi/pinyin) against those that impose script monopoly. If dual-script systems are sustainable, the constraint is policy-contingent, not natural law.',
-    'If natural law: the constraint is mountain, loss is irreversible, post-reform generations are victims of physics. If institutional choice: the constraint is snare (suppression of pre-reform script literacy), and the reformers are agenda-setters extracting cultural monopoly from citizens.',
+    mountain_vs_constructed_ambiguity,
+    'Is the access barrier to pre-reform texts a natural, inevitable consequence of script incompatibility (mountain), or a constructed constraint chosen by the reform planners who could have designed dual-script education instead?',
+    'Historical counterfactual analysis: compare societies that reformed script while maintaining dual-literacy education (Singapore, Norway post-Nynorsk adoption, Japan with kanji/hiragana) against those that abandoned old-script teaching entirely. If dual-literacy is feasible and is chosen against, the barrier is constructed, not natural.',
+    'If natural/mountain: the constraint is a cost of modernity that post-reform generations must bear; ε remains low and no agent is culpable. If constructed/tangled_rope: the reformers chose not to maintain dual-literacy; extraction is the diffuse cost imposed on those without choice; ε may rise to 0.45+. The classification hinges on this ambiguity.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_institutional_choice, empirical, 'Whether script incompatibility is irreversible physics or institutional suppression.').
+narrative_ontology:omega_variable(mountain_vs_constructed_ambiguity, empirical, 'Is script incompatibility inevitable or engineered?').
 
 omega_variable(
-    founding_problem_persistence,
-    'Is the founding problem (access to pre-reform texts) permanently live, or does it resolve once literacy rates reach saturation and the reform''s efficiency benefit stabilizes?',
-    'Measure access-to-text rates among post-reform generations over time. If access remains stable or improves through supplementary pre-reform script education programs, the founding problem is dead and the constraint''s persistence is mandatrophic. If access remains blocked and efforts to restore it are suppressed, the founding problem is live and the constraint''s persistence is justified.',
-    'Live problem → constraint persistence is justified, theater rise reflects increased defensive challenge (modernist and instrumentalist readings competing for legitimacy). Dead problem → constraint becomes mandatrophic (persists after founding problem is solved), piton-like (performative, inertial).',
+    victim_identity_lock_mechanism,
+    'Is the post-reform generation identity-locked to the new script because they are developmentally trapped (cannot relearn the old script as efficiently as a child), or because the state actively suppresses old-script literacy and constitutes national identity around the new script, making the lock internalized rather than structural?',
+    'Policy experiment: would lifting the state''s suppression of old-script education substantially increase its adoption among post-reform generations? If yes, the lock is partly internalized (state narrative + enforcement together). If adoption remains low even after lifting suppression (due to economic opportunity cost and network effects), the lock is structural (physical realities of adult language learning).',
+    'If internalized: suppression is the causal agent; the constraint is snare-like and requires enforcement to persist. If structural: the constraint is more mountain-like; reformers imposed it once, and it persists without active enforcement. This splits suppression mechanisms.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(founding_problem_persistence, empirical, 'Whether the constraint''s founding problem persists or has been resolved.').
+narrative_ontology:omega_variable(victim_identity_lock_mechanism, empirical, 'What is the mechanism by which post-reform generations are locked into the new script?').
 
 omega_variable(
-    suppression_mechanism_scope,
-    'Is the measured suppression (0.28 at interval end) structural (the script incompatibility itself prevents access without expensive re-learning) or enforced (the state actively suppresses pre-reform script literacy and alternatives)?',
-    'Measure the cost and availability of pre-reform script education at different intervals. If state policy and resource allocation actively prevent pre-reform script instruction (book bans, curriculum exclusions, teaching prohibition), suppression is enforced. If pre-reform script instruction is available but expensive and requires self-funded effort, suppression is structural.',
-    'If enforced: the constraint is snare-like (requires active coercion), and the state is the coercive agent. If structural: the constraint is mountain-like (coercion is incidental to the natural fact of script incompatibility). Most likely outcome: both mechanisms are present, and their proportion shifts over time (structural dominates early, enforced dominates once structural barriers relax).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_scope, empirical, 'Whether suppression is structural incompatibility or enforced state policy.').
-
-omega_variable(
-    beneficiary_identity_under_continuity,
-    'Does the continuity reading correctly identify NO concentrated beneficiary, or does it mask a beneficiary (e.g., the reformed nation-state that achieves homogenized literacy and eliminates competing textual authorities)?',
-    'Examine whether state administrative capacity, nationalist coherence, and cultural homogenization increase under the orthographic reform. If the state becomes more centralized, literacy governance more uniform, and competing pre-reform textual authorities (religious scholars, Ottoman administrators) displaced by reformed-script authorities, the beneficiary is the reformed nation-state itself—its institutional capacity is amplified by orthographic monopoly.',
-    'If beneficiary exists (nation-state): the constraint shifts from mountain (no beneficiary) to snare (state extracts cultural monopoly) or tangled_rope (state coordinates mass literacy and extracts cultural monopoly). If no beneficiary: the constraint remains mountain (loss without compensation).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(beneficiary_identity_under_continuity, conceptual, 'Whether the nation-state is a beneficiary masked by the continuity reading''s emphasis on loss.').
-
-omega_variable(
-    resistance_modulation_over_time,
-    'Why does resistance (Q5) stabilize at 0.38 (moderate) rather than rising or falling? Is this resistance thermal (passive lamentation without organized challenge) or structural (active organized counter-literacy in pre-reform script)?',
-    'Measure organized pre-reform script literacy movements, textual conservation efforts, and formal opposition to the reform across the interval. If resistance is organized and growing, the constraint should face rising organized challenge. If resistance is limited to scholarly documentation and private retention, it is passive and unlikely to reverse the monopoly.',
-    'Organized resistance could eventually reverse the constraint (if reformers lose political will or orthodoxy shifts). Passive resistance confirms the constraint''s persistence as institutional inertia—no active force maintains it, and no active force can dismantle it.',
+    legitimacy_grounding_contest,
+    'Does orthographic legitimacy derive from preserving access to tradition (continuity reading), from maximizing literacy rates and administrative efficiency (instrumentalist reading), or from alignment with Western/European modernity (modernist reading)? The three readings cannot coexist in a single framework—they make incompatible claims about what counts as legitimate.',
+    'This is a conceptual ambiguity. The resolution is not empirical discovery but committer choice: different political communities will endorse different readings. However, the empirical question ''which reading is actually guiding state policy and cultural institutions?'' can be assessed by examining what the state allocates resources to (if preservation of old-script access, the continuity reading is being followed; if only new-script standardization, the instrumentalist reading is active).',
+    'If the continuity reading is correct, the constraint preserves something of value and ε is correctly set low; the loss is tragic but not extractive. If the modernist reading is correct, the constraint is an intentional severance from Islamic/Ottoman tradition, and ε should rise (erasure becomes a feature, not a cost). If the instrumentalist reading is correct, ε should be near zero (efficiency gain outweighs any access loss).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(resistance_modulation_over_time, empirical, 'Whether resistance to the orthographic reform is organized or passive.').
+narrative_ontology:omega_variable(legitimacy_grounding_contest, conceptual, 'Which grounding of orthographic legitimacy is structurally true?').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'Is the measured suppression (0.62) structural—enforced by state policy, curriculum design, and lack of old-script literacy instruction—or is it internalized in post-reform generations'' belief that the old script is archaic, irrelevant, or foreign?',
+    'Post-exit trajectory: if access to old-script education were made freely available (e.g., religious schools offering dual-script teaching), would post-reform generations adopt it? If adoption rates remain low even when barriers are removed, suppression is partly internalized (the target carries the suppression with them).',
+    'If structural: the constraint''s effective suppression is accurate as measured; fixing it requires changing state policy. If internalized: the constraint''s effective suppression is higher than the structural measure; even after policy change, the internalized belief system persists, and the constraint''s hold is stronger.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Is suppression structural or internalized in the target generation?').
 
 
 /* ==========================================================================
@@ -264,45 +308,65 @@ narrative_ontology:interval(orthographic_legitimacy_kernel__continuity_reading, 
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(orth_tr_t0, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(orth_tr_t10, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 10, 0.22).
-narrative_ontology:measurement(orth_tr_t25, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 25, 0.35).
-narrative_ontology:measurement(orth_tr_t50, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 50, 0.45).
+narrative_ontology:measurement(orth_tr_t0, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 0, 0.52).
+narrative_ontology:measurement_basis(orth_tr_t0, observed).
+narrative_ontology:measurement(orth_tr_t10, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 10, 0.5).
+narrative_ontology:measurement_basis(orth_tr_t10, observed).
+narrative_ontology:measurement(orth_tr_t25, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 25, 0.48).
+narrative_ontology:measurement_basis(orth_tr_t25, observed).
+narrative_ontology:measurement(orth_tr_t50, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 50, 0.48).
+narrative_ontology:measurement_basis(orth_tr_t50, observed).
 narrative_ontology:measurement(orth_tr_t75, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 75, 0.48).
-narrative_ontology:measurement(orth_tr_t100, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 100, 0.42).
+narrative_ontology:measurement_basis(orth_tr_t75, observed).
+narrative_ontology:measurement(orth_tr_t100, orthographic_legitimacy_kernel__continuity_reading, theater_ratio, 100, 0.48).
+narrative_ontology:measurement_basis(orth_tr_t100, observed).
 
 % Extraction over time
-narrative_ontology:measurement(orth_be_t0, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(orth_be_t10, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 10, 0.12).
-narrative_ontology:measurement(orth_be_t25, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 25, 0.15).
-narrative_ontology:measurement(orth_be_t50, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 50, 0.15).
-narrative_ontology:measurement(orth_be_t75, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 75, 0.14).
-narrative_ontology:measurement(orth_be_t100, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 100, 0.15).
+narrative_ontology:measurement(orth_be_t0, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement_basis(orth_be_t0, observed).
+narrative_ontology:measurement(orth_be_t10, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 10, 0.25).
+narrative_ontology:measurement_basis(orth_be_t10, observed).
+narrative_ontology:measurement(orth_be_t25, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 25, 0.3).
+narrative_ontology:measurement_basis(orth_be_t25, observed).
+narrative_ontology:measurement(orth_be_t50, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 50, 0.35).
+narrative_ontology:measurement_basis(orth_be_t50, observed).
+narrative_ontology:measurement(orth_be_t75, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 75, 0.37).
+narrative_ontology:measurement_basis(orth_be_t75, observed).
+narrative_ontology:measurement(orth_be_t100, orthographic_legitimacy_kernel__continuity_reading, base_extractiveness, 100, 0.35).
+narrative_ontology:measurement_basis(orth_be_t100, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(orth_su_t0, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 0, 0.05).
-narrative_ontology:measurement(orth_su_t10, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 10, 0.08).
-narrative_ontology:measurement(orth_su_t25, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 25, 0.15).
-narrative_ontology:measurement(orth_su_t50, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 50, 0.28).
-narrative_ontology:measurement(orth_su_t75, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 75, 0.3).
-narrative_ontology:measurement(orth_su_t100, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 100, 0.28).
+narrative_ontology:measurement(orth_su_t0, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement_basis(orth_su_t0, observed).
+narrative_ontology:measurement(orth_su_t10, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 10, 0.58).
+narrative_ontology:measurement_basis(orth_su_t10, observed).
+narrative_ontology:measurement(orth_su_t25, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 25, 0.62).
+narrative_ontology:measurement_basis(orth_su_t25, observed).
+narrative_ontology:measurement(orth_su_t50, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 50, 0.62).
+narrative_ontology:measurement_basis(orth_su_t50, observed).
+narrative_ontology:measurement(orth_su_t75, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 75, 0.62).
+narrative_ontology:measurement_basis(orth_su_t75, observed).
+narrative_ontology:measurement(orth_su_t100, orthographic_legitimacy_kernel__continuity_reading, suppression_requirement, 100, 0.62).
+narrative_ontology:measurement_basis(orth_su_t100, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(orthographic_legitimacy_kernel__continuity_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(orthographic_legitimacy_kernel__continuity_reading, 0.05).
+narrative_ontology:coordination_type(orthographic_legitimacy_kernel__continuity_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(orthographic_legitimacy_kernel__continuity_reading, 0.12).
 narrative_ontology:affects_constraint(orthographic_legitimacy_kernel__continuity_reading, orthographic_legitimacy_kernel__instrumentalist_reading).
 narrative_ontology:affects_constraint(orthographic_legitimacy_kernel__continuity_reading, orthographic_legitimacy_kernel__modernist_reading).
 
 % DUAL FORMULATION NOTE:
-% The orthographic_legitimacy_kernel is instantiated via three structurally distinct constraint stories, each corresponding to a different reading of the contested kernel. All three share the same historical event (e.g., Turkey's 1928 script reform) but attribute different legitimacy grounds: continuity_reading emphasizes preservation of access to pre-reform textual tradition (mountain-like, low ε, irreversible loss); instrumentalist_reading emphasizes maximization of literacy rates and state administrative efficiency (scaffold-like, contingent, reversible if efficiency declines); modernist_reading emphasizes rupture from Ottoman/Islamic past and alignment with European modernity (snare-like or tangled_rope-like, coercive suppression of alternative traditions for nationalist goals). The three stories are linked via network.affects_constraints: continuity influences both sibling readings because arguments about textual access arise in all three readings' framings, and the empirical fact of post-reform generation script incompetency grounds the measured constraints. The ε-invariance principle requires separate stories because the three readings produce different extractiveness profiles (continuity: low, 0.15; instrumentalist: moderate, 0.4–0.6; modernist: high, 0.7+), different victim/beneficiary structures, and different type classifications. A single merged story would fabricate measurement precision by averaging across incommensurable readings.
+% This constraint is one of three readings of the orthographic_legitimacy_kernel. The kernel is the contested legitimacy claim: what makes an orthographic system legitimate? The continuity reading asserts legitimacy derives from preserving access to pre-reform tradition; the instrumentalist reading asserts it derives from literacy efficiency; the modernist reading asserts it derives from rupture with Ottoman/Islamic past. The three constraints have different ε values, beneficiary/victim structures, and classifications precisely because they answer the legitimacy question differently. They are linked by network.affects_constraints as a constraint family. The three readings cannot coexist in a single framework—they are genuinely incompatible answers to the same kernel question. Each constraint story models one reading as if it were the true grounding of legitimacy; the engine will classify each from the reading's own lights. The sibling readings are OTHER constraints, not alternate observations of this one.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(orthographic_legitimacy_kernel__continuity_reading, powerless, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

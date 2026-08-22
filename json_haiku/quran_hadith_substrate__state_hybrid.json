@@ -2,228 +2,359 @@
   "header": {
     "constraint_id": "quran_hadith_substrate__state_hybrid",
     "version": "1.0",
-    "generated_date": "2024-12-19",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "68850ab3-4007-49ff-9eae-3136c86bb507"
+    "story_uid": "ad4e39f9-b6a8-44d3-8fc4-e23db3ed6609"
   },
   "base_properties": {
     "extractiveness": 0.38,
-    "suppression": 0.52,
-    "theater_ratio": 0.61,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
     "accessibility_collapse": 0.48,
     "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "State Hybrid Islamic Law Application (Qur'an/Hadith Substrate)",
-    "topic_domain": "legal/political/religious",
+    "human_readable": "State Hybrid Islamic Law: Selective Classical/Reformist Application",
+    "topic_domain": "legal/religious/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "state_regime_elites",
-      "commercial_interests"
+      "state_political_elites",
+      "commercial_actors",
+      "secular_administrators"
     ],
     "victims": [
-      "traditionalist_scholars",
-      "reformist_scholars",
-      "populations_bound_by_classical_rulings"
+      "traditionalist_ulema",
+      "reformist_activists",
+      "conservative_constituencies"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_reading_contention",
-      "question": "Is this constraint one instantiation of the same kernel that traditionalist and reformist readings instantiate, or do the three readings infer different kernels entirely?",
-      "resolution_mechanism": "Textual and jurisprudential analysis: do the three readings claim to interpret the same Qur'an/Hadith substrate, or do they disagree on what the substrate IS? If traditionalists and reformists agree that ijtihad and taqlid are both responses to a single source but the state-hybrid reading reframes the source as 'whatever the state declares,' the readings are different kernels, not readings of one.",
-      "impact": "If different kernels, each constraint is standalone; if one kernel, the three stories form a constraint family linked by network.affects_constraints and the committer frame. Classification and coupling analysis differ accordingly.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether all three readings instantiate a common kernel or infer different foundational commitments."
+      "name": "state_political_elites",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and enforce the hybrid application: classical Islamic law in family (marriage, inheritance, custody) and criminal codes (hudud, qisas); reformist or secular frameworks in commercial, administrative, labor law. Justify the arrangement as respecting Islamic identity while enabling modern governance and economic function. Benefit from the legitimacy claim ('Islamic state') while preserving policy flexibility in domains that affect state revenue and development. Control the interpretation apparatus and can shift the boundary between classical and reformist domains."
     },
     {
-      "id": "suppression_source_ambiguity",
-      "question": "Is suppression of reformist and traditionalist scholars structural (state coercion, detention, travel restrictions) or internalized (scholars self-censor from fear of regime reaction, or from fusion of their scholarly identity with regime-approved domains)?",
-      "resolution_mechanism": "Post-exit trajectory analysis: if reformist and traditionalist scholars continue self-censoring after loss of regime access (e.g., in exile or after regime change), suppression was partially internalized. If suppression ceases when coercive mechanisms are removed, it was structural.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests. If structural only, the metric captures the full operative force. Internalization would indicate deeper identity-fusion with state authority among scholars.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether suppression of disfavored doctrinal readings is coercive or internalized."
+      "name": "traditionalist_ulema",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Advocate for comprehensive taqlid — following established madhhab rulings uniformly across all domains of law. See the hybrid arrangement as truncating sharia's scope and instrumentalizing Islamic law for state convenience. Their canonical vision of unified Islamic jurisprudence is displaced by selective application. Cannot easily exit because their professional and spiritual identity is bound to Islamic legal scholarship; opposition threatens institutional standing and access to state-controlled religious positions."
     },
     {
-      "id": "instrumental_versus_principled_partition",
-      "question": "Does the state's selection of which domains apply classical versus reformist law rest on a principled doctrinal position (e.g., 'family and criminal law require traditional sources; commerce requires maslaha-driven reasoning'), or is it pure instrumental partition (whichever framework serves regime interests in each domain)?",
-      "resolution_mechanism": "Compare the state's stated rationale for partition against the empirical pattern: does the pattern follow the stated principle consistently, or does it track regime political incentives (e.g., family law enforced classically when it shores up conservative support, relaxed when urban constituencies demand rights)? Regime statements about principled partition with evidence of instrumental drift indicates instrumental framing dressed as principle.",
-      "impact": "If principled, the constraint is a coherent doctrinal reading defensible within Islamic jurisprudence—it would be tangled_rope but with legitimate coordination content. If instrumental, the constraint is pure extraction using doctrinal language as cover—it migrates toward snare classification and mandatrophy analysis becomes relevant.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether domain-selectivity rests on defensible doctrinal criteria or pure regime interest."
+      "name": "reformist_activists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for contextual ijtihad across all domains: human rights norms, gender equality, and public interest should reshape classical rulings everywhere, not only in commercial law. The state's selective application blocks their critical project in family and criminal law, the most visible domains. Exit options are limited by state surveillance and legal constraints on political organizing; advocacy in these zones risks state repression."
     },
     {
-      "id": "axiom_holding_status_ambiguity",
-      "question": "Does the state-hybrid reading genuinely hold the axioms it claims (e.g., 'state sovereignty grounds doctrinal selection,' 'family law must rest on classical sources,' 'commerce requires flexibility'), or has the state abandoned these axioms in practice while maintaining them rhetorically?",
-      "resolution_mechanism": "Track instances of contradiction: does the state enforce classical family law even when doing so damages regime legitimacy or creates fiscal cost? Does it apply reformist commercial law consistently, or does it suspend it for regime-connected merchants? Evidence of systematic exception-making for regime insiders indicates abandoned axioms dressed in rhetorical commitment.",
-      "impact": "If axioms are held, the constraint is a live reading with internal consistency. If abandoned, the constraint is piton-grade theater—the axioms are purely performative and the actual rule is 'whatever stabilizes regime power.' Classification would shift from tangled_rope toward piton; theater_ratio would rise.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether state-hybrid axioms are genuinely held or maintained only rhetorically."
+      "name": "commercial_actors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Operate under reformist and secular commercial law, enabling conventional finance, corporate structure, labor contracts, and administrative procedure compatible with global commerce. Benefit from predictability and flexibility that classical Islamic commercial strictures would constrain. Have substantial exit options (capital flight, operating through offshore entities, moving operations to more accommodating jurisdictions)."
+    },
+    {
+      "name": "secular_administrators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate ministries, central banks, development agencies, and regulatory bodies under secular administrative frameworks. The hybrid arrangement permits them to govern modern economies and institutions without reformulating every regulation through classical Islamic law. They face no meaningful constraint from the classical-law domains they do not administer and benefit from operational autonomy in their own spheres."
+    },
+    {
+      "name": "conservative_constituencies",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Expect comprehensive Islamic law and identify with the state's claim to Islamic legitimacy. When they experience classical family law (which may constrain women's rights, permit practices they associate with tradition) alongside secular commercial law that permits practices they view as un-Islamic (interest, gambling-like financial instruments), they experience cognitive dissonance. Their objections (which reading is authentic?) are displaced by the state's claim to sovereignty. Cannot easily organize exit because their identity is embedded in the national Islamic framework."
+    },
+    {
+      "name": "women_affected_by_family_law",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subject to classical Islamic family law rulings (marriage, divorce, custody, inheritance) that may restrict guardianship autonomy, divorce access, or inheritance share. The state's claim that this is 'authentic' Islamic law forecloses appeals to international norms or ijtihadic reformulation. No meaningful exit from family-law jurisdiction; resistance is framed as apostasy or Western cultural imperialism by state and traditionalist alike."
+    },
+    {
+      "name": "international_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Include human rights bodies, international law scholars, comparative legal analysts. They observe the constraint from outside, noting the structural asymmetry: classical law applied where it affects family and bodily autonomy, reformist law applied where it affects state revenue and foreign investment. They document the pattern without being embedded in the legitimacy claim."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Enables the state to claim Islamic legitimacy and identity continuity while maintaining a governance apparatus (commercial, administrative, financial) compatible with modern state capacity and global economic participation. Solves the coordination problem of how a polity grounded in Islamic tradition can operate institutions requiring secular legal frameworks without appearing to abandon Islamic law altogether.",
+    "transfer_function": "Transfers interpretive authority from traditionalist ulema (who would enforce comprehensive taqlid) and reformist activists (who would mandate contemporary ethical reinterpretation) to state political elites. The state extracts the legitimacy benefit of 'Islamic law' in domains where it can afford to apply it (family, criminal) while retaining policy flexibility in domains that generate revenue and enable development (commercial, administrative). It moves authority downward in some domains and upward in others, concentrating interpretive power in the state's hands.",
+    "absent_voices": "Those who would hold the state to comprehensive sharia accountability (traditionalists arguing for uniform taqlid across all law), those who would systematically apply human rights critique to family and criminal law (reformists arguing contextualism everywhere), and citizens whose understanding of 'Islamic state' is incompatible with the selective application (conservative constituencies, women subject to classical family law). Their objections are structurally excluded because the arrangement's legitimacy depends on silencing the very question of which reading is authoritative.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the state hybrid vanished, the polity would face acute legitimacy negotiation: either return to comprehensive taqlid (reorganizing commercial, administrative, labor law around classical fiqh constraints), or adopt systematic ijtihad (and defend why women's rights and human rights norms now reshape family and criminal law). The arrangement's disappearance would force explicit resolution of the kernel contest currently managed by state authority.",
+    "founding_problem": "Post-colonial Islamic states inherited — or adopted — constitutional frameworks and modern state structures while claiming Islamic identity and seeking to incorporate Islamic law. The founding problem is: how to maintain Islamic legitimacy while operating institutions (bureaucracies, commercial systems, courts of first instance) that require non-Islamic legal frameworks to function?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "State authorities attest the founding problem is live and the hybrid solution is pragmatic Islamic governance. Traditionalist ulema argue the problem was falsely posed — comprehensive sharia was always viable and the hybrid reflects state capture by secular elites. Reformists argue the founding problem is misdiagnosed — Islamic law is adaptable to modern norms and the real problem is state refusal to permit ijtihadic reinterpretation everywhere, not just in commercial domains. International legal scholars observe the arrangement empirically and document its structure; comparative analysis from Egypt, Pakistan, Turkey, Saudi Arabia, Iran, Malaysia, and Indonesia confirms the pattern across different Islamic governance contexts."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 8,
-      "value": 0.32
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 16,
-      "value": 0.37
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.39
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
-      "value": 0.38
+      "time_point": 35,
+      "value": 0.39,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.54
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.59
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.62
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.61
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 8,
-      "value": 0.44
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 16,
-      "value": 0.5
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.54
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.52
+      "time_point": 35,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58,
+      "basis": "observed"
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 32
-  },
   "commentary": {
-    "narrative_context": "A religiously-identified state institutionalizes a dual-track legal system: classical Islamic jurisprudence (Qur'an, Hadith, established madhhab rulings) in family law and criminal codes; reformist, contextual, or secular frameworks in commercial, administrative, and economic law. Legitimacy is grounded in political sovereignty and instrumental efficacy rather than doctrinal fidelity to either comprehensive taqlid (traditionalist) or rights-centered ijtihad (reformist). The state benefits from satisfying multiple constituencies simultaneously—traditionalists gain authority recognition in culturally sensitive domains; commercial elites and modernizers gain operational flexibility; the regime gains legitimacy synthesis. Traditionalist and reformist scholars suffer symmetric costs: their comprehensive visions are truncated, and whichever reading the state excludes from a domain is effectively suppressed. Populations subject to classical family and criminal law bear the extraction cost as they cannot exit into reformed frameworks even where those would accord them greater autonomy or rights protection.",
+    "narrative_context": "This reading instantiates the state hybrid framing of Quranic and Hadithic jurisprudential authority. The state claims to apply classical Islamic law where it aligns with state interests and governance capacity (family, criminal) and reformist or secular frameworks where they enable state function (commercial, administrative, labor). The reading grounds legitimacy in political sovereignty — the state's right to determine which interpretive tradition applies in which domain — rather than pure doctrinal fidelity to either taqlid or ijtihad. This differs structurally from the traditionalist reading (comprehensive taqlid applied uniformly) and the reformist reading (contextual ijtihad applied everywhere). The kernel remains fixed: what is the authoritative relationship between Quranic ethics, Hadithic precedent, classical fiqh schools, and contemporary jurisprudence? This reading answers: the state decides, domain by domain, which framework serves legitimate governance needs.",
     "key_agents": [
-      "State regime elites — agenda_setter, institutional power, arbitrage exit; sets domain boundaries instrumentally and collects legitimacy rents from both poles",
-      "Traditionalist scholars — organized power, constrained exit, secondary beneficiary; gain amplification in family/criminal domains, suffer suppression of comprehensive vision",
-      "Reformist scholars — organized power, constrained exit, secondary beneficiary; gain policy influence in commerce/administration, suffer suppression in identity-sensitive domains",
-      "Commercial interests — powerful, mobile exit; benefit from secular/reformist frameworks that enable modern economic operations",
-      "Populations in family law domain — powerless, identity_locked exit; forced into classical frameworks without reformist option",
-      "Populations in criminal law domain — powerless, trapped exit; subject to classical law enforced without alternative",
-      "Constitutional oversight institutions — observer, analytical exit; can measure doctrinal coherence but may be captured by regime"
+      "state_political_elites: Institutional agenda-setter; decides which tradition applies where",
+      "traditionalist_ulema: Organized payer; advocates comprehensive taqlid; identity-locked into Islamic legal scholarship",
+      "reformist_activists: Moderate-power payer; demand contextual ijtihad everywhere; constrained by state surveillance",
+      "commercial_actors: Powerful beneficiary; enjoy secular commercial frameworks; mobile exit options",
+      "conservative_constituencies: Moderate-power payer; experience cognitive dissonance from selective application; identity-locked",
+      "women subject to family law: Powerless payer; trapped under classical rulings; no meaningful exit",
+      "international observers: Analytical seat; document structural asymmetry without embedded legitimacy stake"
     ],
-    "logic_rationale": "Extractiveness is moderate (0.38) because the constraint does solve a genuine coordination problem (multiple scholars producing incommensurable rulings would paralyze governance) while simultaneously extracting: the state instrumentalizes both doctrinal poles for legitimacy, neither scholars nor populations have meaningful exit, and the partition serves regime interests more than doctrinal logic. Suppression is moderate (0.52) because it is variable—suppression of disfavored readings is active and coercive, but not total (reformist scholars operate in permitted domains; traditionalist influence remains in permitted domains). Theater ratio is high and rising (0.48→0.61) because the justifications for domain-partition (classical law for identity, reformist law for modernity) increasingly function as cover for instrumental selectivity. As regime pressures shift, the boundary movements become visible and the rationales feel more performative. Rising theater with stable or slightly rising extraction is piton-grade signal: the regime is maintaining the legitimacy synthesis through increasingly theatrical appeals to principle. Accessibility collapse is moderate (0.48) because alternatives—exit to reformist regimes, traditionalist theocracies, or secular states—exist but are costly; populations cannot easily switch domains within the same state. Resistance is high (0.71) because traditionalist scholars, reformist scholars, and populations in restricted domains all mount active resistance to the partition, even under suppression.",
-    "perspectival_gap": "The state agenda-setter seat computes the constraint as coordination (solving real governance problems, maintaining legitimacy synthesis). The traditionalist and reformist scholar seats compute it as suppression (their comprehensive visions are truncated instrumentally). The victim populations compute it as pure extraction (their autonomy and legal options are removed without their consent). The commercial beneficiary seat computes it as pure benefit (they gain flexibility at no cost). The constitutional oversight seat, if independent, computes it as incoherent (the principled rationales do not explain the pattern). The engine derives these divergent types from the structural data: the beneficiary seat (state elites with arbitrage exit) sees coordination benefit; victim seats (constrained, trapped, or identity_locked exit) see extraction; observer seats see the pattern that triggered the analysis.",
-    "directionality_logic": "State regime elites hold arbitrage exit (they can switch ideological justifications and shift domain boundaries as regime interests change; they are not locked into either classical or reformist commitment). This derives d toward 0.0 (beneficiary). Traditionalist and reformist scholars hold constrained exit (they cannot exit the legal system or the regime; their voice is conditional on the state's decision about which domains their reading controls). This derives d toward 0.8–0.9 (partial target). Populations in family and criminal domains hold identity_locked or trapped exit (they cannot exit without apostasy or flight; they are bound to the frameworks the state selects). This derives d toward 1.0 (full target). Commercial interests hold mobile exit (they can relocate or pressure the regime; they benefit from the secular framework and face low cost to exit if it were removed). This derives d toward 0.2–0.3 (partial beneficiary). The directionality spread is wide because the constraint's effect is radically asymmetric across seats.",
-    "mandatrophy_analysis": "The founding problem (post-independence Islamic states need both Islamic legitimacy and modern governing capacity) is increasingly contested as live. Traditionalists argue taqlid includes maslaha reasoning that can accommodate contemporary challenges. Reformists argue ijtihad has always been the proper method and classical law is a historical contingency, not a requirement. Modern populations and international human rights bodies argue the founding problem was overstated—the partition now serves regime interests more than genuine necessity. As the founding problem status shifts from live to contested/dead while the constraint persists with rising theater ratio, the constraint enters mandatrophy territory. The regime maintains the partition not because it solves an essential problem but because it preserves regime flexibility and legitimacy synthesis. This is classical piton motion: a former coordination solution (managing the tension between Islamic authority and modern governance) has atrophied into pure theater. The state maintains classical family law not because taqlid consensus demands it but because abandoning it would face traditionalist backlash; it maintains secular commerce law not because reformist ijtihad demands it but because refusing it would paralyze economic policy. Neither is believed; both are performed.",
-    "kernel_context": "This constraint instantiates the STATE_HYBRID reading of the quran_hadith_substrate kernel—the claim that states may selectively deploy classical and reformist readings across different legal domains as political sovereignty permits, without commitment to comprehensive doctrinal fidelity. The kernel is a single contested commitment: the authority and method for applying Qur'anic and Hadith sources to contemporary law. Three readings contest how to deploy this kernel: (1) TRADITIONALIST_TAQLID asserts comprehensive obligation to established madhhab rulings (classical fiqh represents ijma consensus). (2) REFORMIST_IJTIHAD asserts contextual ijtihad is mandated when classical rulings conflict with contemporary ethics or maslaha. (3) STATE_HYBRID (this reading) asserts political sovereignty determines which readings apply where, grounding legitimacy in state capacity and pragmatism rather than doctrinal purity. The state-hybrid reading COEXISTS_WITH traditionalist and reformist readings (all three remain live in different constituencies) but INFLUENCES both: by selectively amplifying classical readings in identity-sensitive domains, it constrains reformist scholars; by refusing comprehensive taqlid, it constrains traditionalist ambitions. The reading's core axiom is 'state sovereignty grounds doctrinal selection'—the state may instrumentally choose frameworks as governance requires, without doctrinal obligation to consistency."
+    "logic_rationale": "Extractiveness measures at 0.38 (moderate, within the 0.25-0.45 bin of the kernel contest) because the state extracts interpretive authority and the legitimacy benefit of 'Islamic law' without surrendering policy flexibility in domains that generate state revenue or constrain economic function. The extraction is not purely coercive — state elites genuinely solve a coordination problem (how to claim Islamic identity while operating modern institutions) — but the solution concentrates power asymmetrically. Suppression rises from 0.48 to 0.68 over the interval and then moderates to 0.62, tracking the intensity of state enforcement against traditionalist and reformist challengers: early, the hybrid is pragmatic; as it matures, the state must suppress both traditionalists (who demand comprehensive taqlid) and reformists (whose critical reinterpretation threatens regime stability); later, suppression moderates as the arrangement becomes institutionalized and normalized. Theater ratio (0.58 endpoint) is elevated because the state's claim that it applies 'classical Islamic law' in family/criminal domains obscures the fact that it selects which classical rulings, applies them selectively, and disregards others — significant performative maintenance of the 'authentic Islamic law' story. The theater peaks around t=25 and remains substantial, indicating that preserving the legitimacy narrative requires ongoing effort even as the enforcement regime stabilizes.",
+    "directionality_logic": "State political elites: d ≈ 0.1 (full beneficiary). They extract interpretive authority, legitimacy, and policy flexibility; face no meaningful exit constraints; shape the rules. Traditionalist ulema: d ≈ 0.85 (nearly full target). Their comprehensive vision is displaced; they are identity-locked into Islamic law and cannot easily exit; they bear suppression when they organize resistance. Reformists: d ≈ 0.8 (high target). Their critical project is blocked in family/criminal domains; they face state repression; constrained exit. Commercial actors: d ≈ 0.15 (beneficiary-leaning). They enjoy reformist/secular frameworks; face no extraction; have mobile exit options. Secular administrators: d ≈ 0.05 (beneficiary). They operate autonomously in their domains; benefit from institutional flexibility. Conservative constituencies: d ≈ 0.7 (target). They experience suppression of their interpretation (no systematic ijtihad), trapped in cognitive dissonance, identity-locked. Women in family law: d ≈ 0.95 (nearly full target). They are subject to classical rulings they cannot exit; no alternatives available; trapped and identity-locked by the state's framing of 'Islamic law.'",
+    "perspectival_gap": "From the state's seat: the hybrid is pragmatic coordination, balancing Islamic identity with modern governance — a rope with genuine coordination value. From the traditionalist seat: the hybrid is pure extraction masquerading as Islamic law — a snare where state power displaces Islamic authority. From the reformist seat: the hybrid is selective application blocking human rights progress in critical domains — a tangled rope with asymmetric extraction in family/criminal law but coordination in commercial. From the conservative constituencies' seat: the hybrid is incoherent — claiming Islamic legitimacy while applying secular law where they see un-Islamic behavior. The engine computes all four classifications from the structural data; the authored claim (tangled_rope from the reading's own standpoint) sits between the state's benign frame and the traditionalist/target seats' adversarial frames. This divergence is exactly what the kernel contest is about.",
+    "mandatrophy_analysis": "The founding problem (how to claim Islamic identity while operating modern institutions) was live at state formation and remains contested. The hybrid arrangement does not resolve the underlying kernel contest — which reading of Quranic/Hadithic authority is correct? — but rather sidesteps it by claiming state sovereignty over interpretation. This is mandatrophy material: the founding coordination problem (we need both Islamic legitimacy and modern governance capacity) persists, but the solution mechanism (state selective application) actually prevents resolution by suppressing both traditionalist and reformist voices that might offer comprehensive alternatives. The suppression trajectory (rising to t=25, then moderating) tracks the regime's commitment to maintaining the mandatrophy: early enforcement against challengers, later institutionalization so the suppression becomes invisible. A genuine resolution would either adopt comprehensive taqlid or systematic ijtihad; the hybrid prevents both, making it a mandatrophy-vulnerable arrangement unless one treats political sovereignty over interpretation as itself a legitimate doctrinal solution.",
+    "kernel_context": "This constraint is the state_hybrid reading of the quran_hadith_substrate kernel. The kernel contest is: what is the authoritative relationship between Quranic ethics, Hadithic precedent, classical fiqh schools (taqlid), and contemporary jurisprudence (ijtihad)? The state_hybrid reading answers: political sovereignty determines domain-by-domain which tradition applies. The traditionalist_taqlid reading answers: classical fiqh schools represent ijma and taqlid is obligatory uniformly. The reformist_ijtihad reading answers: contextual ijtihad is mandated when classical rulings conflict with contemporary ethics or maslaha. This reading differs structurally from both siblings: it does not claim doctrinal authority (as traditionalism and reformism do) but rather instrumental pragmatism grounded in state necessity. The sibling readings are examined separately as distinct constraints with their own ε, beneficiary/victim structures, and type classifications."
   },
+  "omegas": [
+    {
+      "id": "sovereignty_vs_doctrinal_legitimacy",
+      "question": "Is political sovereignty a valid grounds for determining Islamic law application across domains, or does Islamic jurisprudence require doctrinal consistency across all governance spheres?",
+      "resolution_mechanism": "Analysis of whether other Islamic governance traditions (historical caliphates, modern religious authorities) have accepted sovereignty-based selective application, or whether they insist on doctrinal unity; examination of whether Islamic political theory (al-Mawardi, Ibn Taymiyyah, modern scholars) permits this arrangement.",
+      "impact": "If sovereignty IS accepted grounds for selective application, the state_hybrid reading becomes legitimate within Islamic jurisprudence itself; if it is NOT, the arrangement is extractive state power masked by Islamic framing, and the constraint reclassifies toward snare. This omega directly affects the claim/metric divergence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state political sovereignty can ground selective Islamic law application"
+    },
+    {
+      "id": "regime_instrumentalization_vs_pragmatic_necessity",
+      "question": "Does the state's selective application reflect genuine pragmatic necessity (you cannot operate a modern central bank under classical Islamic prohibitions on interest) or regime instrumentalization (the state chooses selective application to avoid constraints on political power)?",
+      "resolution_mechanism": "Comparative analysis across Islamic governance contexts: do different regimes apply the same rules, or does selective application correlate with state revenue sources and political threat vectors? Examination of whether states have attempted comprehensive taqlid or ijtihadic frameworks and what prevented adoption.",
+      "impact": "If pragmatic necessity: the coordination benefit is real and the tangled_rope typing is correct. If regime instrumentalization: the extraction is higher and the constraint trends toward snare. This omega addresses whether the beneficiary structure is describing genuine coordination or power asymmetry.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether selective application is pragmatically necessary or politically chosen"
+    },
+    {
+      "id": "suppression_mechanism_identity_vs_structural",
+      "question": "Is the measured suppression (0.62) primarily structural (state legal enforcement against traditionalist organizing, surveillance of reformist networks) or internalized (traditionalists and reformists self-censor because they have fused their identity with the framework)?",
+      "resolution_mechanism": "Post-state-change suppression trajectory: if traditionalists and reformists continue organizing against Islamic law after state enforcement ends, suppression is structural; if organizing ceases, suppression is internalized. Examination of exile communities and diaspora networks.",
+      "impact": "If structural: the state could reduce suppression via legal liberalization; if internalized: exit itself does not resolve the suppression because the agents carry the framework with them. This affects whether the constraint can be reformed through political change or requires deeper cultural shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Is suppression of traditionalists/reformists structural enforcement or internalized identity fusion?"
+    },
+    {
+      "id": "kernel_reading_boundary_clarity",
+      "question": "Is the boundary between state_hybrid (this reading), traditionalist_taqlid (sibling), and reformist_ijtihad (sibling) a genuine structural difference, or is the state_hybrid reading logically unstable — collapsing toward either taqlid (in family/criminal) or ijtihad (in commercial) under scrutiny?",
+      "resolution_mechanism": "Detailed examination of specific rulings: does the state apply classical taqlid rulings exactly as traditionalist schools define them, or does it modify them? Does it apply reformist ijtihad systematically in commercial law or apply secular law that happens to align with some reformist arguments? If neither pure taqlid nor pure ijtihad, the reading is distinct; if the state oscillates between them or blends them incoherently, the reading is unstable.",
+      "impact": "If the reading is logically unstable, the constraint may be better modeled as two separate constraints (one per domain) or as a piton (an incoherent arrangement maintained theatrically). This omega directly addresses whether the claimed_type (tangled_rope) is defensible or whether classification should shift.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether state_hybrid is a stable reading or collapses toward taqlid or ijtihad"
+    },
+    {
+      "id": "women_and_powerless_agents_consent",
+      "question": "Can the constraint be classified as coordination (tangled_rope implies both coordination and extraction; both are necessary features) when some agents (women in family law, powerless constituencies) have zero meaningful exit and cannot consent even in principle?",
+      "resolution_mechanism": "Theoretical: does coordination require at least the possibility of consent, or can a system coordinate some agents while suppressing others? Empirical: do women and conservative constituencies report the arrangement as coordination (however asymmetric) or as pure coercion? Do legal reform movements from these constituencies frame the issue as 'we want different law' (disagreement) or 'we want exit options' (coercion)? ",
+      "impact": "If zero-exit agents cannot participate in coordination, the arrangement may not qualify as tangled_rope at all but as snare (with a coordination shell for some agents and pure extraction for others). This omega addresses whether the constraint's heterogeneous directionality vector can coexist in one tangled_rope typing or requires decomposition into multiple constraints.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Can zero-exit agents participate in coordination, or does their powerlessness reclassify the constraint toward snare?"
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.18
+    "boltzmann_floor_override": 0.22
   },
   "network": {
     "affects_constraints": [
       "quran_hadith_substrate__traditionalist_taqlid",
       "quran_hadith_substrate__reformist_ijtihad"
     ],
-    "dual_formulation_note": "The quran_hadith_substrate kernel decomposes into three constraint stories, each a reading of how Islamic jurisprudence should be deployed in modern states. The state-hybrid reading differs from traditionalist (which claims comprehensive taqlid obligation) and reformist (which claims contextual ijtihad mandate) by grounding legitimacy in political sovereignty rather than doctrinal coherence. ε values differ by magnitude: traditionalist reading has low ε (natural law character—taqlid is claimed as inevitable consensus); reformist reading has moderate ε (genuine coordination of rights and contextual reasoning, but contested); state-hybrid reading has moderate ε (solves coordination problem but extracts through instrumental partition). All three share the kernel (Qur'an/Hadith substrate) but infer different constraints from it. Network edges connect all three; upstream is traditionalist (most established), downstream is state-hybrid (most instrumentally extractive)."
+    "dual_formulation_note": "Part of the quran_hadith_substrate kernel family (three constraint stories, one kernel, three readings). The state_hybrid reading competes with traditionalist_taqlid and reformist_ijtihad as competing answers to the same kernel question: what is the authoritative relationship between Quranic/Hadithic authority and contemporary Islamic law? The state_hybrid reading grounds authority in political sovereignty rather than doctrinal consensus or ethical reinterpretation. The three readings are structurally distinct constraints with different ε, beneficiary/victim structures, and type classifications. Shared referent: the standing arrangement of Islamic law authority in modern Islamic states. Different readings → different referents for what counts as the arrangement being evaluated (state discretion vs. taqlid consensus vs. ijtihadic ethics)."
   },
   "directionality_overrides": [
     {
       "power_atom": "organized",
-      "d_value": 0.75
+      "d_value": 0.82
     }
   ],
+  "gain_flow": "state_political_elites",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "state_legislative_sovereignty_framework",
+    "drift_state": {
+      "moment": "contemporary_transnational_pressure",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "quran_hadith_substrate__traditionalist_taqlid",
+        "sibling_id": "traditionalist_taqlid",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "quran_hadith_substrate__reformist_ijtihad",
+        "sibling_id": "reformist_ijtihad",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "state_sovereignty_grounds_selection",
+        "atom": "state_sovereignty_over_interpretation",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "domain_partition_coordinates_legitimacy",
+        "atom": "domain_specific_doctrine_permissible",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
-    ],
-    "reference_frame": "post_independence_dual_capacity_state",
-    "drift_state": {
-      "moment": "contemporary_rights_expansion",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

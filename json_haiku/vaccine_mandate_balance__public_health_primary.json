@@ -2,34 +2,137 @@
   "header": {
     "constraint_id": "vaccine_mandate_balance__public_health_primary",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "52d028b0-cb8e-4d8a-bb6e-a6e8784303ea"
+    "story_uid": "639028a1-98f3-4568-9b45-b8d40344eef6"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.71,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.76,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "Public Health Mandate Supersedes Individual Consent (Lethal Exposure Reading)",
-    "topic_domain": "public_health/constitutional_law",
+    "human_readable": "Vaccine Mandate Balance: Public Health Primacy Reading",
+    "topic_domain": "public_health/constitutional_law/political_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "immunocompromised_exposed_populations",
-      "infants_too_young_for_vaccination",
-      "medically_exempt_populations"
+      "immunocompromised_populations",
+      "newborn_infants",
+      "medically_fragile_dependents"
     ],
     "victims": [
-      "unvaccinated_coerced_individuals",
-      "vaccine_hesitant_population",
-      "religious_objector_groups"
+      "unvaccinated_coerced",
+      "vaccine_injured_denied_exemption"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "immunocompromised_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cannot mount immune response to vaccines themselves; depend entirely on community vaccination for protection. Face lethal exposure if vaccination rates fall below herd immunity threshold. Their survival is unconditional on behavior — they cannot consent or refuse their own protection, only receive it through others' compliance. No exit options."
+    },
+    {
+      "name": "newborn_infants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Too young for vaccination; depend on maternal antibodies and community protection during the critical window before their own immune systems mature. Represent the most vulnerable cohort: they cannot refuse protection, only receive it. Death from vaccine-preventable disease in this group is among the highest case-fatality rates."
+    },
+    {
+      "name": "medically_fragile_dependents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Children with severe allergies, chronic conditions, or immune dysregulation; vaccination poses direct medical risk. They depend on high community vaccination rates for protection while remaining unable to access the vaccine themselves. Their medical fragility is permanent; they cannot relocate or change their vulnerability."
+    },
+    {
+      "name": "unvaccinated_coerced",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face employment loss, school exclusion, or travel restriction if mandates are enforced. Their consent is overridden by collective protection logic. The mandate reading treats this overriding as justified necessity (not victims from the reading's own lights, but they bear the extraction cost). Exit options: comply, lose livelihood, or migrate to non-compliant jurisdictions — all costly."
+    },
+    {
+      "name": "vaccine_injured_denied_exemption",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Have documented serious adverse reaction to vaccine; medically contraindicated but denied exemption because aggregate compliance is prioritized over individual medical exception. Bear the extraction cost of mandatory vaccination despite medical unsuitability. Exit: seek alternative jurisdiction, accept adverse event risk, or litigate — constrained mobility and high cost."
+    },
+    {
+      "name": "public_health_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Sets the vaccination mandate policy, enforcement mechanisms, and exemption criteria. Justifies coercion as necessary to protect the vulnerable. Operates under epidemiological necessity doctrine: when voluntary compliance fails to reach herd immunity threshold, mandate is authorized. Enforces through regulatory authority, licensing boards, and school exclusion rules."
+    },
+    {
+      "name": "voluntary_unvaccinated",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Refuse vaccination on personal, religious, or philosophical grounds. Under this reading, their refusal is subordinated to collective necessity — they are not treated as inviolable agents but as carriers of externality risk. They may benefit from herd immunity itself (if unvaccinated but protected by others' vaccination) while being coerced to comply. Dual-role: bear enforcement cost while potentially receiving benefit."
+    },
+    {
+      "name": "medical_professionals_administering",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforced to participate in mandate implementation: administering vaccines, documenting compliance, and processing exemptions. They gain institutional legitimacy and reduced clinical risk from herd immunity but bear the ethical burden of enforcing coercion on reluctant patients. Constrained by licensure and employment; cannot refuse participation."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would object to subordination of individual consent; excluded from the core policy framing because their framework (bodily autonomy primacy) contradicts the public-health-primary reading's foundational axiom. Their voice is structurally silenced by the reading's adoption; litigants but not deliberators."
+    },
+    {
+      "name": "epidemiological_scientific_consensus",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Non-agent entity: the empirical findings that herd immunity thresholds exist and that vaccination rates below threshold leave vulnerable populations at lethal risk. This is the evidentiary anchor; it is not a seat or decision-maker but the referent claim the reading's authority grounds itself on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of vaccine-preventable disease transmission: voluntary vaccination is undersupplied because the individual benefit of vaccination (reduced personal disease risk) underweights the collective benefit (herd immunity protecting the vulnerable). The mandate forces coordination onto the herd-immunity equilibrium that voluntary choice cannot reach; it shifts the provision of a pure public good (population-level protection of immunocompromised and medically fragile cohorts) from undersupply to necessity-justified demand.",
+    "transfer_function": "Moves bodily autonomy and informed consent from the unvaccinated to the state authority enforcing the mandate, justified as necessary to transfer protection (freedom from lethal infection exposure) to immunocompromised and medically fragile populations. Also transfers moral status priority: vulnerable populations' protection claim supersedes reluctant agents' autonomy claim within the reading's framework. The mandate also transfers medical risk: vaccine-injured individuals denied exemptions bear both direct injury risk and the coercive cost of the mandate.",
+    "absent_voices": "Civil liberties advocates, bodily-autonomy-primary readers, and philosophical libertarians are structurally excluded by the reading's adoption. Vaccine-hesitant populations and their organized advocates are present but subordinated — their objections are heard but not integrated into the policy framework because the reading's foundational axiom (collective necessity can override consent) rejects their autonomy claim as overridable. Families of vaccine-injured individuals face barriers to exemption and are excluded from proportionality deliberation. Unvaccinated individuals are affected but have no deliberative standing in the reading's own framing (they are treated as externality sources, not stakeholders with standing).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the public-health-primary reading and its mandate enforcement vanished overnight, voluntary vaccination would drop below herd immunity thresholds in most jurisdictions within weeks. Disease transmission to immunocompromised populations would accelerate. Newborn infants would face increased pertussis and measles exposure. Medically fragile dependents would lose the high-vaccination-rate protection they depend on. Healthcare systems would face outbreaks in vulnerable cohorts. The mandate's disappearance would directly cause lethal exposure to populations it was built to protect, forcing reorganization of disease prevention strategy. The world would have to re-solve the herd immunity problem via alternative mechanisms (targeted vaccination of high-transmission contacts, isolated protection of the vulnerable, rapid treatment protocols, or acceptance of endemic disease burden in vulnerable populations).",
+    "founding_problem": "Measles, pertussis, COVID-19, and other vaccine-preventable diseases generate negative externalities: an unvaccinated person transmits disease to immunocompromised individuals who cannot be vaccinated themselves, to newborn infants too young for vaccination, and to medically fragile dependents contraindicated for vaccination. These vulnerable populations face lethal infection exposure — case-fatality rates for newborn pertussis and measles are among the highest in medicine. Voluntary vaccination undersupplies herd immunity because individual benefit (reduced personal disease risk) diverges from collective benefit (herd immunity protecting those who cannot vaccinate).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Epidemiological research from public health agencies (CDC, WHO, peer-reviewed surveillance studies) confirms that vaccine-preventable disease outbreaks occur in undervaccinated populations and are lethal for immunocompromised and medically fragile cohorts — corroboration from outside the mandate-enforcing beneficiary set. The reading's opponents (bodily-autonomy advocates) contest that the founding problem is as severe as claimed, that the mandate is the only solution, and that consent subordination is justified even if the problem is real. This contest is precisely why three readings exist: they dispute whether the founding problem justifies the reading's authority claim. The founding problem itself (that vulnerable populations exist and are at lethal risk without vaccination) is not deeply contested; the contest is whether that fact authorizes mandatory vaccination of others."
   },
   "interval": {
     "start": 0,
-    "end": 36
+    "end": 25
   },
   "measurements": [
     {
@@ -39,203 +142,362 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 4,
-      "value": 0.51
+      "time_point": 5,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.63
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 18,
+      "time_point": 15,
       "value": 0.66
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
+      "time_point": 20,
       "value": 0.67
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 36,
+      "time_point": 25,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 4,
-      "value": 0.56
+      "time_point": 5,
+      "value": 0.52
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.63
+      "time_point": 10,
+      "value": 0.64
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.68
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 18,
+      "time_point": 15,
       "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.71
+      "time_point": 20,
+      "value": 0.7
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 36,
+      "time_point": 25,
       "value": 0.71
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 4,
-      "value": 0.21
+      "time_point": 5,
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.24
+      "time_point": 10,
+      "value": 0.16
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.26
+      "time_point": 15,
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
-      "time_point": 18,
-      "value": 0.27
+      "time_point": 20,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.28
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.28
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 36,
-      "value": 0.28
+      "time_point": 25,
+      "value": 0.22
     }
   ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 25,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.81
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.76
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.8
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 25,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 25,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 25,
+        "value": 0.7
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 25,
+        "value": 0.48
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The vaccine mandate balance is a contested kernel instantiated here as the PUBLIC_HEALTH_PRIMARY reading: collective protection of vulnerable populations supersedes individual consent when voluntary vaccination fails to achieve herd immunity and immunocompromised, newborn, and medically fragile populations face lethal exposure risk. This reading prioritizes the consent-overriding necessity of protecting the immunologically powerless. The reading's core claim: when a public health emergency is defined by lethal externality risk to vulnerable populations, coerced vaccination of the general population is justified authority exercised in exigency, not extractive coercion. This is one of three contested readings of the vaccine mandate kernel; the other readings (bodily_autonomy_primary and proportionality_reading) reject or constrain this authority claim differently.",
+    "key_agents": [
+      "Immunocompromised populations: powerless, trapped, lethal exposure — no voluntary protection option available.",
+      "Public health authority: institutional agenda-setter, enforces herd immunity mandate via employment/school/travel restrictions.",
+      "Unvaccinated coerced: moderate power, constrained exit (comply, lose livelihood, or relocate), face employment loss and social exclusion.",
+      "Vaccine-injured denied exemption: moderate power, constrained exit, medically contraindicated but overridden by collective necessity.",
+      "Civil liberties advocates: excluded from policy framing by the reading's adoption; bodily autonomy claim structurally silenced.",
+      "Voluntary unvaccinated: dual-role payers (coerced to comply) who may simultaneously benefit from herd immunity protection."
+    ],
+    "logic_rationale": "Extractiveness is 0.68 at interval end: the mandate extracts consent and bodily autonomy from the unvaccinated, justified by lethal externality to vulnerable populations. The extraction is asymmetric — unvaccinated-coerced and vaccine-injured-denied-exemption bear costs without collecting benefits, while immunocompromised and newborn populations collect protection without having opted into or maintained vaccination. Suppression is 0.71 at interval end: enforcement is active and escalating (measured as suppression_requirement, rising from 0.38 to 0.71), enforced through employment loss, school exclusion, and travel restriction. Theater ratio is 0.22 at interval end: low-to-moderate theatricality means core function (herd immunity protection of the vulnerable) is real, not purely performative, though enforcement mechanisms accumulate some rhetorical padding. Accessibility_collapse is 0.78: alternatives to vaccination narrow sharply once the mandate is adopted — exit options compress to geographic relocation or medical exemption litigation. Resistance is 0.72 at interval end: substantial active resistance from unvaccinated-coerced and civil liberties advocates; resistance persists despite suppression, indicating the constraint is neither natural law nor overwhelmingly accepted. The measurement series models escalating enforcement (suppression_requirement rises 0.38→0.71) and extraction accumulation (base_extractiveness rises 0.42→0.68) over the interval, consistent with a mandate lifecycle from voluntary encouragement to active coercion. One shared time grid; all metrics authored at all six time points.",
+    "perspectival_gap": "From the public health authority's seat, the mandate is justified necessity: voluntary vaccination undersupplies herd immunity, leaving vulnerable populations (immunocompromised, newborn, medically fragile) at lethal risk. The constraint is read as pure coordination — solving a collective-action problem with a genuine public good (herd immunity). From the unvaccinated-coerced seat, the mandate is enforced extraction: bodily autonomy is taken without consent, justified by reference to others' needs. From the civil liberties seat, the reading embeds a false moral premise (consent can be overridden by externality risk), which should have been contestable but is structurally excluded by the reading's adoption. The engine computes these divergences from power/exit/beneficiary data: the authority has institutional power and analytical exit (can revise policy); unvaccinated-coerced have moderate power and constrained exit (exit costs employment/livelihood); immunocompromised have powerless status and trapped exit (no alternative protection exists). Different power atoms and exit options drive different computed types.",
+    "directionality_logic": "Beneficiaries: immunocompromised populations (d→0.0, full beneficiary: they receive protection, bear no consent cost, cannot exit), newborn infants (d→0.0, trapped powerless beneficiaries), medically fragile dependents (d→0.0, protection is their only survival option). Victims: unvaccinated-coerced (d→1.0, full target: consent overridden, employment/social cost, constrained exit), vaccine-injured-denied-exemption (d→0.95, near-full target: medical contraindication overridden by collective necessity, trapped by medical unsuitability). Public health authority (d→0.3, near-beneficiary: collects institutional authority legitimacy, administers without coercion on itself, analytical exit). Voluntary-unvaccinated dual-role agents (d→0.55, symmetric: bear coercion cost but may receive herd immunity benefit; this dual status is structurally the root of the contest — whether dual benefit-and-burden agents have standing to object). The directionality derivation chain: beneficiary/victim data fixes the raw d values; exit options modulate (trapped immunocompromised remain beneficiary even though they receive by compulsion, not choice; identity-locked agents would shift — none explicitly identity-locked in this reading). No directionality overrides needed; the structural derivation matches the reading's own claim.",
+    "mandatrophy_analysis": "Mandatrophy is prevented here by the presence of a live coordinate benefit (herd immunity protection of the vulnerable) that cannot be decoupled from the extraction cost (consent subordination). The founding problem (vaccine-preventable diseases pose lethal risk to immunocompromised and medically fragile) remains live and unsolved by voluntary vaccination alone — the mandate persists because its founding function (protecting the vulnerable) is still necessary. If the founding problem were dead (vaccine-preventable diseases eradicated or fully sequestered), the mandate would become extractive without coordination function, and mandatrophy declaration would be warranted. The constraint avoids mandatrophy death because the vulnerable populations remain vulnerable and herd immunity remains the only protection route they have. However, the reading is contestable precisely on this point: bodily-autonomy-primary and proportionality-reading deny that the founding problem justifies this magnitude of consent subordination, or they argue the problem has been substantially mitigated by risk reduction and alternative isolation strategies.",
+    "kernel_context": "This constraint instantiates the PUBLIC_HEALTH_PRIMARY reading of the vaccine mandate balance kernel. The kernel is the contested claim that mandatory vaccination can be justified by public health exigency. This reading prioritizes collective protection of vulnerable populations (immunocompromised, newborn, medically fragile) over individual bodily autonomy. Sibling readings: BODILY_AUTONOMY_PRIMARY (individual consent is inviolable regardless of collective benefit; mandates are prohibited) and PROPORTIONALITY_READING (mandates permissible only under strict proportionality: disease severity, transmission risk, vaccine safety, and availability of less-restrictive alternatives must meet calibrated thresholds). The public-health-primary reading subordinates individual consent to collective necessity; the bodily-autonomy reading treats consent as foundational and inviolable; the proportionality reading mediates by requiring threshold-based justification. The core structural divergence is the authority relation: does collective protection claim override individual consent, or is consent foundational? This reading answers YES; the sibling readings answer NO or ONLY CONDITIONALLY."
+  },
   "omegas": [
     {
-      "id": "voluntary_failure_threshold_ambiguity",
-      "question": "At what voluntary uptake rate can collective mandate authority claim that voluntary means have 'failed'? Is it threshold-driven (e.g., <70% uptake = failure) or conditions-driven (e.g., failure to reach threshold despite sufficient time and trust-building)?",
-      "resolution_mechanism": "Systematic analysis of uptake trajectories across jurisdictions with different campaign intensities, trust-building timelines, and incentive structures; comparison of actual vs. counterfactual uptake under different conditions; expert panel assessment of what constitutes 'sufficient' voluntary effort.",
-      "impact": "A lower threshold favors mandate authority (failure is claimed earlier, mandates activate sooner); a higher threshold favors autonomy-first readings (failure requires demonstrating genuine exhaustion of voluntary means). This ambiguity allows mandate authority to claim failure prematurely and subordinate autonomy before necessity is genuinely established.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "What constitutes sufficient failure of voluntary means before mandates are justified."
-    },
-    {
-      "id": "lethal_exposure_vs_manageable_risk",
-      "question": "Does the unvaccinated population's continued circulation constitute 'lethal exposure risk' to immunocompromised groups, or a manageable risk that can be mitigated through targeted shielding, treatment, and isolation protocols?",
-      "resolution_mechanism": "Epidemiological modeling comparing lethal outcome rates under mandate vs. non-mandate scenarios; real-world data from jurisdictions that did not implement mandates; treatment efficacy data for exposed immunocompromised populations; cost-effectiveness analysis of targeted protection vs. population-wide mandates.",
-      "impact": "If risk is demonstrably lethal without mandates, the necessity case for this reading strengthens; if risk is manageable through alternative protections, alternative readings become structurally viable. This omega gates the empirical claim underlying the necessity doctrine.",
+      "id": "herd_immunity_threshold_empirical_contest",
+      "question": "What is the precise herd immunity threshold for COVID-19, measles, and other vaccine-preventable diseases in the actual epidemiological landscape, and what vaccination rate is necessary and sufficient to protect immunocompromised populations?",
+      "resolution_mechanism": "Controlled epidemiological studies in diverse populations; surveillance data from high-vaccination jurisdictions; modeling of breakthrough infection risk stratified by immunocompromised cohort and vaccine efficacy.",
+      "impact": "If the threshold is substantially lower than current mandate targets (e.g., 60% vs. 90%), lower extraction is needed to achieve the founding problem's solution, and the reading's justification for coercion weakens. If the threshold is confirmed at current mandates or higher, the extraction level is justified by the founding necessity.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether circulatory pathogen exposure to immunocompromised is lethal or manageable without mandates."
+      "description": "Empirical uncertainty about the herd immunity threshold that actually protects vulnerable populations."
     },
     {
-      "id": "consent_subordination_scope_boundary",
-      "question": "Does subordination of consent to necessity apply narrowly (only to those in direct contact with protected populations) or broadly (to everyone in the population, regardless of individual risk or exposure likelihood)?",
-      "resolution_mechanism": "Constitutional analysis of necessity doctrine limits; comparative jurisprudence on emergency powers scope; epidemiological risk stratification (who actually poses transmission risk to vulnerable populations); institutional practice in jurisdictions with bounded vs. universal mandates.",
-      "impact": "Narrow scope constrains mandate authority (only high-transmission-risk individuals forced into compliance); broad scope maximizes extraction (everyone compelled regardless of individual risk contribution). This ambiguity allows mandate scope to exceed epidemiological necessity.",
-      "confidence": "high",
+      "id": "alternative_protection_mechanisms",
+      "question": "Are there alternative mechanisms to achieve herd immunity protection of vulnerable populations without subordinating individual consent? (e.g., targeted vaccination of high-transmission contacts, isolated protection of the immunocompromised, rapid treatment protocols)",
+      "resolution_mechanism": "Implementation and comparative outcome analysis of alternative strategies in pilot jurisdictions; modeling of efficacy; cost-benefit and rights-impact analysis vs. universal mandate.",
+      "impact": "If alternatives exist and are comparably effective with lower extraction cost, the reading's justification for subordinating consent is weakened; the constraint would become a choice among multiple solutions, not a necessity-justified singular remedy. The reading claims necessity; the existence of effective alternatives would undermine that claim.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "How widely the necessity doctrine extends the subordination of consent beyond those directly responsible for vulnerable exposure."
+      "description": "Whether the mandate is the only effective solution or one among multiple possible protections for the vulnerable."
     },
     {
-      "id": "identity_locked_exemption_availability",
-      "question": "Are robust religious and conscience exemptions available in practice, or is 'conscience objection' nominally permitted but structurally foreclosed through administrative burden, bad-faith adjudication, or institutional hostility?",
-      "resolution_mechanism": "Audit of exemption grant rates by jurisdiction and demographic; documented cases of bad-faith denial; survey data on whether objectors perceive exemption pathways as genuinely available; analysis of institutional trust in exemption adjudication.",
-      "impact": "If exemptions are genuinely available, identity-locked classification for religious objectors may be incorrect (exit becomes 'constrained' rather than 'trapped'). If exemptions are procedurally available but administratively or institutionally foreclosed, suppression is higher than coded, and the constraint is more extractive than the metrics indicate.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether conscience and religious exemptions are structurally available or nominally available but practically foreclosed."
-    },
-    {
-      "id": "kernel_contest_foreclosure",
-      "question": "Does the public-health-primary reading logically foreclose the bodily-autonomy-primary reading within a single constitutional framework, or do both readings remain live policy options held by different jurisdictions and constitutional traditions?",
-      "resolution_mechanism": "Comparative constitutional jurisprudence; examination of whether any legal system holds both readings simultaneously (both entrenched in law); analysis of whether the necessity doctrine permits bodily autonomy exceptions even when public health gains are possible.",
-      "impact": "If foreclosure is genuine (necessity REQUIRES subordination of consent), the readings are in genuine contradiction. If both can be held simultaneously (some rights are inviolable even when public health gains are possible), the readings coexist and mandate-scope questions become political rather than logical. This omega determines the reading-relation classification in cs_structure.",
-      "confidence": "medium",
+      "id": "consent_subordination_framework_applicability",
+      "question": "Does the logic of consent subordination (collective necessity overrides individual autonomy) apply universally, or only under specific conditions? If specific, are those conditions met in this case?",
+      "resolution_mechanism": "Philosophical and constitutional analysis: is there a defensible boundary between justified emergency coercion and tyranny of the majority? Application to this case: is COVID-19 / measles emergence a constitutional emergency that meets that boundary, or a chronic public health problem that does not?",
+      "impact": "If consent subordination is defensible only in true emergencies (imminent mass death, minutes-to-hours timeframe), the public-health-primary reading applies only to a narrow class of diseases and periods. If it applies to chronic endemic disease with predictable yearly burden, the reading's scope expands, but the constraint approaches pure extraction (the founding necessity persists indefinitely, extraction becomes permanent and normalized). This shapes whether the reading claims exigency or restructuring.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the necessity doctrine logically forecloses bodily autonomy protections or merely overrides them in policy."
+      "description": "Philosophical boundary between justified emergency coercion and illegitimate authority overreach in the name of collective benefit."
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is suppression of mandate resistance primarily structural (coercive barriers: employment loss, institutional exclusion, social benefits denial) or internalized (belief in necessity, acceptance of subordination, internalized shame/obligation)?",
-      "resolution_mechanism": "Post-mandate analysis in jurisdictions where mandates were lifted: do resistance and hesitancy return to pre-mandate levels (suggesting suppression was structural) or persist (suggesting internalized acceptance)? Survey of mandate opponents on whether barriers prevent them or persuasion prevents them. Comparison of suppression in jurisdictions with different enforcement mechanisms.",
-      "impact": "If suppression is primarily structural, it decays when enforcement ends. If suppression is internalized, the constraint persists through belief even after coercion is removed. If internalized, effective suppression is higher than measured, and the constraint's hold is stronger than the base metric suggests.",
+      "id": "vaccine_injury_undercount_vs_overcount",
+      "question": "What is the true causal incidence of serious vaccine injury? Are serious adverse events underreported, overestimated, or approximately accurate in current surveillance?",
+      "resolution_mechanism": "Epidemiological passive/active surveillance comparison; independent database audits; causality assessment methodologies applied uniformly across vaccine injury and alternative disease harm.",
+      "impact": "If serious vaccine injury is substantially underestimated, the extraction cost on vaccine-injured-denied-exemption and the general population's informed risk assessment is higher than claimed; exemption refusal becomes less justified. If overestimated (injury rates lower than feared), the reading's extraction cost is lower and consent subordination is more justified. This directly affects the reading's empirical foundation and the legitimacy of denying medical exemptions.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether mandate resistance suppression is structural (external barriers) or internalized (changed beliefs/norms)."
+      "description": "True frequency of serious vaccine-attributable adverse events and accuracy of current surveillance systems."
     },
     {
-      "id": "reading_instantiation_scope",
-      "question": "This JSON instantiates the public-health-primary reading specifically. Does this reading apply to all vaccine-preventable diseases at all severity levels, or only to high-transmissibility pathogens causing demonstrable lethal outcomes in vulnerable populations?",
-      "resolution_mechanism": "Examine whether public health authorities invoke this reading equally for COVID-19, measles, seasonal influenza, and HPV. Check whether necessity doctrine is constrained by disease severity, transmission rate, or outcome severity in actual mandate decisions. Review historical mandate scope (which diseases triggered mandates under this reading).",
-      "impact": "A narrow reading (only demonstrable lethal pathogens) preserves some autonomy protection. A broad reading (any communicable disease) maximizes mandate authority and creates path dependency (mandates for low-severity diseases establish precedent for broader future mandates). This omega clarifies the scope of this specific reading instantiation.",
-      "confidence": "medium",
+      "id": "kernel_reading_forecast_attractor",
+      "question": "If the public-health-primary reading is adopted and the vaccine mandate persists indefinitely (founding problem remains live), what is the terminal attractor state? Will exemption criteria expand (mandate erodes) or extraction mechanisms harden (mandate becomes permanent coercion)?",
+      "resolution_mechanism": "Forecast from sibling reading adoption patterns in other policy domains (e.g., surveillance, conscription, taxation): do exigency-framed constraints typically ratchet toward permanent extraction or relax toward negotiated exemptions? Path-dependence analysis of past mandate lifecycles.",
+      "impact": "If the attractor is hardening (permanent extraction), the public-health-primary reading's adoption commits the system to indefinite consent subordination, making the long-term classification snare (pure extraction justified by eternally-live founding problem). If the attractor is exemption expansion (mandates eventually relax), the reading is sustainable as tangled_rope (coordination + extraction) only if exemptions are robust enough to reduce victim concentration. This shapes the long-term type and mandatrophy risk.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "The scope of pathogens and disease severities this reading covers in practice."
+      "description": "Institutional trajectory of the public-health-primary reading under indefinite founding problem persistence: ratcheting or relaxation."
+    },
+    {
+      "id": "committer_framing_alternative_premises",
+      "question": "The public-health-primary reading grounds authority in 'collective necessity overrides individual consent when vulnerable populations face lethal externality risk.' Is this foundational axiom itself contestable within a coherent constitutional framework, or does adoption of this reading logically foreclose bodily_autonomy_primary?",
+      "resolution_mechanism": "Constitutional and philosophical analysis: can a legal system hold both 'collective necessity can override consent' and 'individual bodily autonomy is inviolable' simultaneously, or does accepting one logically exclude the other? This determines whether the readings coexist_with or forecloses each other.",
+      "impact": "If they logically foreclose each other (a constitutional system cannot hold both without incoherence), the reading_relation should be 'forecloses' rather than 'coexists_with'. If they can coexist (different parties hold different readings within the same system without logical incoherence), the relation is 'coexists_with'. This affects how the readings are classified as institutional framings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the public-health-primary reading logically forecloses bodily autonomy primacy or whether both readings can coexist in a coherent framework."
     }
   ],
-  "commentary": {
-    "narrative_context": "In the public-health-primary reading of the vaccine-mandate-balance kernel, collective protection supersedes individual consent when voluntary compliance fails to achieve herd immunity and vulnerable populations face lethal exposure risk. The constraint is the necessity doctrine: when pathogen circulation threatens those who cannot self-protect through vaccination (immunocompromised, infants, medically exempt populations), public health authorities are justified in mandating vaccination for the broader population, subordinating autonomy to epidemiological necessity. This reading presents a genuine coordination problem (many individuals' autonomous choice leaves protected populations exposed) AND asymmetric extraction (coerced individuals bear autonomy costs; protected populations bear medical risk). The engine computes this per-seat: from the public health authority's seat, necessity justifies the mandate and the constraint is genuine coordination. From the coerced individual's seat, consent subordination is extractive enforcement. From the protected-but-powerless population's seat, the constraint is life-preserving. The CLAIM (tangled_rope) and the METRICS (extraction 0.68, suppression 0.71) are authored independently: the constraint's structure combines real coordination (protecting the coordinationally excluded) with real extraction (subordinating autonomy). No tuning reconciles them.",
-    "key_agents": [
-      "immunocompromised_exposed_populations: Cannot be vaccinated; depend entirely on population immunity; beneficiary but powerless.",
-      "unvaccinated_coerced_individuals: Forced to accept vaccination against stated preference; their autonomy is subordinated by necessity doctrine; victims.",
-      "religious_objector_groups: Conscientious objectors; identity-locked (exit requires abandoning religious community); victims.",
-      "public_health_authorities: Set mandate scope, adjudicate necessity, define vulnerable-population thresholds; agenda-setters; control necessity-doctrine invocation.",
-      "elected_legislators: Authorize emergency mandate authority; benefit politically from appearing protective while avoiding enforcement blame.",
-      "bodily_autonomy_advocacy_organizations: Excluded from emergency decision-making; would contest necessity doctrine; structurally absent from mandate deliberation."
-    ],
-    "logic_rationale": "Extraction measures 0.68 because mandates impose direct bodily intrusion (vaccination requirement) on non-consenting individuals to benefit protected populations. The coerced population cannot arbitrage or exit through refusal alone—they must accept vaccination, accept exclusion/sanctions, or relocate. This is high extraction with limited exit. Suppression measures 0.71 because mandate enforcement requires active suppression of resistance: employment-based coercion, institutional exclusion, benefits denial, and in some jurisdictions, legal penalties. Alternatives (treating the disease, accepting isolation, alternative vaccines) are available in principle but foreclosed or very costly in practice. Theater measures 0.28 (moderate-low) because the constraint has real coordination function (herd immunity genuinely protects the coordinationally excluded) but increasing share of enforcement activity defends subordination of autonomy rather than actual disease prevention (enforcement against philosophically opposed but compliant individuals, or enforcement against populations with low transmission risk). Accessibility_collapse measures 0.72 because alternatives are substantially foreclosed: consent refusal → employment loss or institutional exclusion is a significant collapse, though not complete (geographic exit remains possible, and legal challenges remain available post-hoc). The measurement series track uptake acceleration early (t0-t12), then plateau (t24-t36) as resistant populations self-identify and enforcement reaches steady state. Suppression requirement rises early as enforcement machinery is built, then plateaus as suppression becomes structural background. Theater ratio rises slowly as enforcement intensity becomes more performative relative to new-infection-prevention value (initial mandates drive uptake; later-stage mandates mainly discipline non-compliers). These are not cyclical dynamics—they reflect institutional escalation to steady state, not oscillating social equilibrium.",
-    "perspectival_gap": "From the public health authority seat: the constraint is genuine coordination solving a collective-action problem. Voluntary compliance failed; pathogen circulation threatens those who cannot self-protect; necessity doctrine justifies mandate. Classification should compute as tangled_rope-leaning-rope (coordination dominates, extraction is the price of solving the coordination problem). From the unvaccinated coerced seat: the constraint is enforced extraction subordinating autonomy to a collective benefit they did not agree to. Classification should compute as tangled_rope-leaning-snare (extraction dominates, coercion is the enforcement mechanism, consent is explicitly subordinated). From the immunocompromised seat: the constraint is protective—without herd immunity, they face lethal risk. They benefit from extraction imposed on others. Classification should compute as rope (pure coordination, no extraction from their perspective, though they may feel moral discomfort with the autonomy costs borne by the coerced). The engine computes these per-seat divergences from the structural data—beneficiary/victim designation, power level, exit options. The divergence is the point: this constraint looks different from every seat because it genuinely IS different for every seat. No single classification is 'correct'—the per-seat mapping is the structural finding.",
-    "directionality_logic": "Public health authorities are near the beneficiary end (d ≈ 0.2): they set the constraint, control necessity adjudication, and benefit from mandate authority. Their exit is analytical (they can choose not to invoke mandates, but institutional incentive structures favor invoking them once authority is granted). Immunocompromised populations are beneficiaries by necessity but their d should be computed as near-zero or negative (they benefit without running the constraint; they have no exit because their vulnerability is irreducible). Unvaccinated coerced individuals are near the target end (d ≈ 0.8-0.9): they bear the constraint, consent is subordinated, exit is highly constrained (accept vaccination, accept exclusion, or relocate at high cost). Religious objectors are identity-locked, which amplifies d (d ≈ 0.85): exit requires reconstructing identity (abandoning religious community or practice), which exceeds typical constrained exit. Vaccine-hesitant individuals have lower d (d ≈ 0.75) because they retain some choice (medical exemption pathways exist even if hard to access; geographic exit is possible). No directionality overrides are needed—the structural data produces accurate d values through the derivation chain: beneficiary/victim + power + exit → d → χ.",
-    "mandatrophy_analysis": "Mandatrophy is the process by which a constraint's original function (protect the vulnerable from lethal exposure) outlives the conditions that made it necessary, but the constraint persists anyway. This reading does NOT yet exhibit mandatrophy (founding_problem_status is 'contested,' not 'dead,' and disappearance_verdict is 'world_rearranges,' indicating arrangements still depend on the constraint). However, mandatrophy risk is high: as vaccine supply increases, as vulnerable populations access preventive treatments (monoclonal antibodies, early treatments), as population immunity accrues through vaccination+infection, the necessity doctrine becomes less empirically grounded. The constraint could persist through institutional inertia (mandates remain 'because we have mandate authority') or through regulatory capture (institutions benefit from mandate authority and continue invoking necessity). The theater ratio (currently 0.28) is the early warning: if it rises sharply toward 0.50+ while extraction remains high, mandatrophy is setting in. The measurement series should be extended: if theater_ratio rises above 0.40 while base_extractiveness plateaus, the constraint is becoming mostly performative, and mandatrophy classification should be considered. Currently, the constraint is not yet mandatrophy—the necessity doctrine is still contested, not obviously false, and the protected populations still face demonstrable (if declining) risk.",
-    "kernel_context": "This JSON instantiates ONE reading of the contested vaccine-mandate-balance kernel. The kernel contains three sibling readings: (1) bodily_autonomy_primary: individual consent is inviolable; state cannot compel medical intervention regardless of collective benefit; (2) proportionality_reading: mandates permissible only when disease severity, transmission risk, and vaccine safety meet strict proportionality thresholds; robust exemptions required; (3) public_health_primary (THIS reading): collective protection supersedes individual consent when voluntary failure and lethal exposure risk are demonstrated. The readings are authored as separate constraint files, each with its own ε, beneficiary/victim structure, stakeholder seats, and metrics. The decomposition is driven by ε-invariance (DP-001): measuring the constraint one way—public-health-frame (necessity doctrine applies) vs. autonomy-frame (consent is inviolable)—produces structurally different ε values. Rather than force one constraint to handle both measurements and tilt the metrics to produce a 'balanced' classification, the three readings are written as three separate constraints with three different ε values, linked through network.affects_constraints. This file instantiates the public-health-primary reading, which embeds the necessity doctrine as the structural justification and produces high extraction (χ ≈ 0.68) because autonomy subordination is extractive even when necessary. The bodily-autonomy-primary reading would produce very different metrics (extraction driven not by mandate enforcement but by the threat of disease itself, framed as autonomy violation). The proportionality reading would produce intermediate extraction (some mandates permitted, but scope and exemptions limit total coercion)."
-  },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
+    "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.18
   },
   "network": {
@@ -243,59 +505,70 @@
       "vaccine_mandate_balance__bodily_autonomy_primary",
       "vaccine_mandate_balance__proportionality_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the vaccine-mandate-balance kernel. The kernel contests whether collective protection or individual consent is primary. The public-health-primary reading (THIS file) subordinates consent to necessity; the bodily-autonomy-primary reading subordinates collective benefit to inviolable consent; the proportionality reading seeks middle ground through strict thresholds and exemptions. Each reading is authored as a separate constraint with its own ε, metrics, and stakeholder structure because the structural logic differs: public-health-primary measures extraction through autonomy subordination, bodily-autonomy-primary measures extraction through the threat of disease treated as autonomy violation, proportionality-reading measures extraction through scope limitations. The three constraints are linked via network.affects_constraints in both directions—each reading's classification influences the others (if bodily autonomy is reclassified as genuinely inviolable, it forecloses the public-health-primary reading's necessity doctrine). The decomposition follows DP-001 (ε-invariance): one constraint, one ε. Here, ε ≈ 0.68 because the public-health-primary reading measures extraction through mandate enforcement coercion. Other readings would produce different ε values reflecting their different structural premises."
+    "dual_formulation_note": "The vaccine mandate balance kernel constrains three readings: public_health_primary (this story, ε=0.68, tangled_rope, collective necessity supreme), bodily_autonomy_primary (ε estimated 0.35-0.42, mountain or rope, individual consent inviolable), and proportionality_reading (ε estimated 0.48-0.55, tangled_rope with robust exemptions). The readings share the same referent (whether mandatory vaccination can be justified by public health exigency) but author different ε values because they dispute whether collective protection of vulnerable populations justifies consent subordination. Each reading is a separate constraint story instantiating a different framing of the kernel. Public-health-primary affects both siblings: it establishes the legitimacy of the collective-necessity framing, which bodily-autonomy-primary rejects and proportionality-reading constrains."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.15
+      "power_atom": "organized",
+      "d_value": 0.62
     }
   ],
+  "gain_flow": "public_health_authority",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "distributed",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "vaccine_mandate_balance__bodily_autonomy_primary",
+        "sibling_id": "bodily_autonomy_primary",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "vaccine_mandate_balance__proportionality_reading",
+        "sibling_id": "proportionality_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "necessity_doctrine_supremacy",
+        "atom": "collective_necessity_overrides_consent",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "collective_protection_duty_over_individual_consent",
-        "role": "foundational",
+        "atom": "vulnerable_population_protection_supreme",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "voluntary_coordination_framework",
+    "reference_frame": "voluntary_vaccination_consensus",
     "drift_state": {
-      "moment": "emergency_mandate_invocation",
+      "moment": "endemic_disease_phase_with_undervaccination",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "vaccine_mandate_balance__bodily_autonomy_primary",
+      "vaccine_mandate_balance__proportionality_reading"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -40,9 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,36 +75,35 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: classical_latin_standard__hybrid_reading
  *   human_readable: Classical Latin Standard (Hybrid Reading)
- *   domain: historical_linguistics/philology/commitment_systems
+ *   domain: historical_linguistics/commitment_systems
  *
  * SUMMARY:
- *   The classical_latin_standard__hybrid_reading is one institutional
- *   response to the contested question of what correctness means in
- *   post-Classical Latin. The Renaissance humanists discovered a gap between
- *   Classical texts and medieval practice; they needed a method to recover
- *   Classical authority while remaining functional in domains (church,
- *   medicine, law, theology) where medieval vocabulary was necessary. The
- *   hybrid reading resolves this tension by accepting Classical grammar and
- *   orthography as the normative base while permitting domain-specific
- *   medieval and neoclassical vocabulary. This reading CLAIMS to be
- *   tangled_rope (coordination of multilingual institutional users +
- *   legitimate technical innovation) but the metrics show substantial
- *   suppression and moderate extractiveness, suggesting the coordination
- *   function increasingly rides on enforcement rather than participant
- *   agreement. The constraint exercises authority through adjudication:
- *   humanist philologists (the agenda-setters) continuously determine which
- *   post-Classical forms are 'legitimate developments' and which are
- *   'barbarisms', and this authority concentrates prestige and gatekeeping
- *   power in institutional hands.
+ *   The Classical Latin standard, under the hybrid reading, asserts that
+ *   correct Latin requires both fidelity to Classical Ciceronian and Augustan
+ *   norms AND explicit recognition of legitimate technical, ecclesiastical,
+ *   and scholastic post-Classical developments. This reading occupies the
+ *   middle ground between strict Humanist reconstruction (which rejects all
+ *   medieval drift as barbarism) and continuity theory (which treats all
+ *   inherited forms as naturally legitimate). The hybrid reading's structural
+ *   innovation is to legitimize SOME post-Classical forms (ecclesiastical
+ *   vocabulary, medieval technical terminology, liturgical usage) while
+ *   simultaneously maintaining that unauthorized departures from Classical
+ *   syntax and morphology are illegitimate. This creates a bifurcated
+ *   legitimacy system: a form is correct if either (a) it appears in
+ *   Classical texts or (b) it has been explicitly approved by ecclesiastical
+ *   or institutional authority as domain-appropriate. Unapproved medieval
+ *   innovations fall into the excluded set. The constraint operates as a
+ *   partial suppression of linguistic drift — not rejection of all medieval
+ *   forms (which would alienate the Church and technical practitioners), but
+ *   delegitimization of forms that lack either textual or institutional
+ *   warrant.
  *
  * KEY AGENTS:
- *   - humanist_philologists: institutional authority; agenda-setters determining legitimacy boundaries
- *   - institutional_users_hybrid_adoption: organized beneficiaries; adopt Classical norms while retaining domain vocabulary
- *   - medieval_vernacular_speakers: powerless payers; bear cost of delegitimization
- *   - technical_innovation_practitioners: moderate payers; constrained by surveillance of neologisms
- *   - reconstructionist_philologists: excluded; their purist reading is marginalized
- *   - continuity_practitioners: excluded; living tradition-bearers are subordinated
- *   - manuscript_authorities: analytical observers; provide evidence but do not adjudicate
+ *   - Institutional Classical educators: set standards via university faculties and philological societies; benefit by retaining gatekeeping authority while appearing accommodating
+ *   - Ecclesiastical Latin practitioners: benefit from legitimized medieval liturgical vocabulary while remaining subordinate to Classical norms in non-domain-specific writing
+ *   - Vernacular drift speakers: bear the cost of delegitimization; their forms are treated as barbarisms unless they can be defended institutionally
+ *   - Reconstruction advocates (excluded): would impose stricter standards; their voice is systematically marginalized
+ *   - Continuity advocates (excluded): would legitimize all inherited forms; their position is incompatible with the hybrid reading's bifurcated legitimacy
  */
 
 /* ==========================================================================
@@ -106,57 +113,104 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(classical_latin_standard__hybrid_reading, 0.48).
 domain_priors:suppression_score(classical_latin_standard__hybrid_reading, 0.52).
-domain_priors:theater_ratio(classical_latin_standard__hybrid_reading, 0.31).
+domain_priors:theater_ratio(classical_latin_standard__hybrid_reading, 0.38).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, extractiveness, 0.48).
 narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, suppression_requirement, 0.52).
-narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, theater_ratio, 0.31).
+narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, theater_ratio, 0.38).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, accessibility_collapse, 0.64).
-narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, accessibility_collapse, 0.61).
+narrative_ontology:constraint_metric(classical_latin_standard__hybrid_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(classical_latin_standard__hybrid_reading, tangled_rope).
 narrative_ontology:human_readable(classical_latin_standard__hybrid_reading, "Classical Latin Standard (Hybrid Reading)").
-narrative_ontology:topic_domain(classical_latin_standard__hybrid_reading, "historical_linguistics/philology/commitment_systems").
+narrative_ontology:topic_domain(classical_latin_standard__hybrid_reading, "historical_linguistics/commitment_systems").
 
 domain_priors:requires_active_enforcement(classical_latin_standard__hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(classical_latin_standard__hybrid_reading, '6f1d5916-8aa5-43bb-b90c-ccdf1d658a95').
-narrative_ontology:cs_kernel_codification('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', fixed_text).
-narrative_ontology:cs_authority_grounding('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', extraction).
-narrative_ontology:cs_interpretation_layer_present('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95').
-narrative_ontology:cs_reading_relation('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', classical_latin_standard__reconstruction_reading, forecloses).
-narrative_ontology:cs_reading_relation('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', classical_latin_standard__continuity_reading, coexists_with).
-narrative_ontology:cs_axiom('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', foundational, classical_structure_normative).
-narrative_ontology:cs_axiom_status(classical_structure_normative, holdable).
-narrative_ontology:cs_axiom_grounding('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', classical_structure_normative, deontological).
-narrative_ontology:cs_axiom('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', foundational, technical_vocabulary_necessity).
-narrative_ontology:cs_axiom_status(technical_vocabulary_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', technical_vocabulary_necessity, instrumental).
-narrative_ontology:cs_reference_frame('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', renaissance_humanist_recovery_project).
-narrative_ontology:cs_drift_state('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', late_17th_century_institutional_entrenchment, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('6f1d5916-8aa5-43bb-b90c-ccdf1d658a95', '').
+narrative_ontology:cs_story_uid(classical_latin_standard__hybrid_reading, '6272735f-2175-4c89-a8f8-1ee1419c8562').
+narrative_ontology:cs_kernel_codification('6272735f-2175-4c89-a8f8-1ee1419c8562', fixed_text).
+narrative_ontology:cs_authority_grounding('6272735f-2175-4c89-a8f8-1ee1419c8562', lineage).
+narrative_ontology:cs_interpretation_layer_present('6272735f-2175-4c89-a8f8-1ee1419c8562').
+narrative_ontology:cs_reading_relation('6272735f-2175-4c89-a8f8-1ee1419c8562', classical_latin_standard__continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6272735f-2175-4c89-a8f8-1ee1419c8562', classical_latin_standard__reconstruction_reading, coexists_with).
+narrative_ontology:cs_axiom('6272735f-2175-4c89-a8f8-1ee1419c8562', foundational, classical_texts_are_authoritative_baseline).
+narrative_ontology:cs_axiom_status(classical_texts_are_authoritative_baseline, holdable).
+narrative_ontology:cs_axiom_grounding('6272735f-2175-4c89-a8f8-1ee1419c8562', classical_texts_are_authoritative_baseline, conventional).
+narrative_ontology:cs_axiom('6272735f-2175-4c89-a8f8-1ee1419c8562', foundational, post_classical_institutional_legitimacy_is_admissible).
+narrative_ontology:cs_axiom_status(post_classical_institutional_legitimacy_is_admissible, holdable).
+narrative_ontology:cs_axiom_grounding('6272735f-2175-4c89-a8f8-1ee1419c8562', post_classical_institutional_legitimacy_is_admissible, conventional).
+narrative_ontology:cs_reference_frame('6272735f-2175-4c89-a8f8-1ee1419c8562', classical_textual_authority_with_institutional_accommodation).
+narrative_ontology:cs_drift_state('6272735f-2175-4c89-a8f8-1ee1419c8562', post_humanist_settlement, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('6272735f-2175-4c89-a8f8-1ee1419c8562', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(classical_latin_standard__hybrid_reading, classical_latin_standard).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(classical_latin_standard__hybrid_reading, institutional_users_hybrid_adoption).
-narrative_ontology:constraint_beneficiary(classical_latin_standard__hybrid_reading, ecclesiastical_communities).
-narrative_ontology:constraint_victim(classical_latin_standard__hybrid_reading, medieval_vernacular_speakers).
-narrative_ontology:constraint_victim(classical_latin_standard__hybrid_reading, technical_innovation_practitioners).
+narrative_ontology:constraint_beneficiary(classical_latin_standard__hybrid_reading, institutional_classical_educators).
+narrative_ontology:constraint_beneficiary(classical_latin_standard__hybrid_reading, ecclesiastical_latin_practitioners).
+narrative_ontology:constraint_victim(classical_latin_standard__hybrid_reading, vernacular_drift_speakers).
+narrative_ontology:constraint_victim(classical_latin_standard__hybrid_reading, excluded_medieval_forms).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Universities, seminaries, and philological societies that set and enforce standards for what counts as correct Latin in formal writing and instruction. They maintain textual authority by reference to Classical authors (Cicero, Virgil, Livy) while granting domain-specific legitimacy to ecclesiastical and technical vocabulary. They benefit by retaining gatekeeping power over standards while appearing accommodating to practical domains. Their exit is strong — they could adopt any standard — but they choose the hybrid reading because it preserves their authority.
+narrative_ontology:constraint_stakeholder(classical_latin_standard__hybrid_reading, institutional_classical_educators, agenda_setter,
+    institutional, generational, arbitrage, continental).
+narrative_ontology:stakeholder_secondary_role(classical_latin_standard__hybrid_reading, institutional_classical_educators, beneficiary).
+
+% The Catholic Church, theological institutions, and liturgical communities that need Latin for sacramental and doctrinal purposes. They receive legitimacy for medieval ecclesiastical vocabulary (Christi, gratia Dei, liturgical neologisms) within the hybrid standard while remaining subordinate to Classical norms for non-domain-specific prose. Their exit option is modest — they could adopt Classical orthography entirely or abandon Latin — but the hybrid reading lets them use their inherited liturgical forms without explicit rejection. They benefit from the accommodation but experience suppression on non-ecclesiastical forms.
+narrative_ontology:constraint_stakeholder(classical_latin_standard__hybrid_reading, ecclesiastical_latin_practitioners, beneficiary,
+    institutional, generational, mobile, continental).
+
+% Speakers and writers of Late Latin and post-Classical regional variants that developed organically from spoken Latin and local linguistic contact. Their forms are treated as 'barbarisms' or at best provincial variations by the hybrid standard, delegitimizing their speech as incorrect even when it represents coherent linguistic evolution. They can exit by adopting Classical norms or abandoning Latin entirely, but within Latin they are subordinate. They bear the cost of delegitimization without having voice in standards-setting.
+narrative_ontology:constraint_stakeholder(classical_latin_standard__hybrid_reading, vernacular_drift_speakers, payer,
+    moderate, biographical, constrained, regional).
+
+% Humanist and modern scholars who argue for strict recovery of Classical forms and explicit rejection of medieval drift as barbarism. They would participate in standards-setting but are marginalized by the hybrid reading's accommodation of ecclesiastical needs. Their position is systematically excluded from legitimacy decisions even though they have institutional bases (university chairs, philological societies). They view the hybrid reading as incoherent compromise that undermines the Classical standard.
+narrative_ontology:constraint_stakeholder(classical_latin_standard__hybrid_reading, philological_reconstruction_advocates, excluded,
+    institutional, generational, constrained, continental).
+
+% Modern communities and individuals who view Latin as a living language capable of organic development and who resist the fixation on Classical texts as authoritative. They are structurally excluded from the hybrid reading's standards-setting; their voice would legitimize broader medieval and post-Classical innovation but is not heard in formal institutional discourse. They experience the constraint as suppression of natural linguistic development.
+narrative_ontology:constraint_stakeholder(classical_latin_standard__hybrid_reading, living_language_continuity_advocates, excluded,
+    moderate, biographical, mobile, regional).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(classical_latin_standard__hybrid_reading, institutional_classical_educators).
+narrative_ontology:fixing_cost_class(classical_latin_standard__hybrid_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a shared standard for written Latin across institutional, educational, and ecclesiastical domains: a unified textual norm that allows communication across centuries and communities without fragmenting into mutually unintelligible dialects or requiring every domain to maintain its own authority structure.
+% TRANSFER_FUNCTION: Moves authority over linguistic legitimacy from organic speech communities and local traditions to centralized institutional gatekeepers (universities, ecclesiastical hierarchies, philological societies) who decide which forms are 'correct.' The hybrid reading transfers less authority than the reconstruction reading (which rejects all medieval drift) but more than the continuity reading (which treats all inherited forms as legitimate).
+% ABSENT_VOICES: Vernacular speakers of Late Latin and post-Classical regional variants are structurally excluded because they cannot defend their forms via reference to Classical texts or institutional authority. Living-language continuity advocates are excluded because the constraint's entire logic is backward-looking to written Classical sources. Speakers of Romance languages that evolved from Latin are excluded by the definition itself — they cannot participate in defending Latin-standard claims.
+% DISAPPEARANCE_RATIONALE: If the Classical standard constraint vanished, institutional Latin instruction would fragment into competing orthographic and morphological systems within decades. Ecclesiastical Latin would drift further from Classical forms; philosophical and scientific Latin would develop new technical vocabulary without reference to Classical precedent; texts written after the standard's collapse would be mutually difficult to parse across institutional communities.
+% FOUNDING_PROBLEM: After the decline of Rome, Latin literacy was preserved through written texts and unbroken ecclesiastical and monastic practice, but regional drift and post-Classical innovation created divergence between the inherited written Ciceronian form and the living usage of medieval speakers and writers. A standard was needed to ensure that scholars across Europe could communicate through a shared normative Latin and that the authority of Classical texts (Bible commentary, philosophical authority, legal precedent) remained accessible.
+% FOUNDING_PROBLEM_CORROBORATION: Modern philologists, ecclesiastical institutions, and educational bodies continue to maintain Classical standards and treat post-Classical forms as requiring special justification. Reconstruction-reading advocates (strict purists) attest that standardization is necessary and cite the fragmenting effect of unrestricted medieval drift on textual comprehension across regions. Continuity-reading advocates attest that the problem is *overstated* — living transmission never actually fragmented communication, and the founding concern was invented to justify authority centralization. The empirical consensus is mixed.
+narrative_ontology:disappearance_verdict(classical_latin_standard__hybrid_reading, world_rearranges).
+narrative_ontology:founding_problem_status(classical_latin_standard__hybrid_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(classical_latin_standard__hybrid_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(classical_latin_standard__hybrid_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(classical_latin_standard__hybrid_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(classical_latin_standard__hybrid_reading, 0.48, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,16 +230,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness rises from 0.32 to a plateau at 0.48 (1550–1700) as the standard becomes institutionalized. Early hybrid standards (1440) are flexible and negotiable — extractiveness is low. By 1550, humanist institutions have consolidated authority and the boundaries between 'legitimate' and 'barbaric' harden, raising extractiveness. It plateaus rather than continuing upward because the standard reaches an equilibrium: technical practitioners and ecclesiastical communities accept the partial accommodation rather than rebel entirely, and reconstructionist critics remain marginal. Suppression likewise rises (0.28 → 0.52) as enforcement machinery strengthens — philologists publish grammars, correct manuscripts, and exclude non-conforming texts from circulation. Theater ratio (0.18 → 0.31) rises steadily, indicating that an increasing share of enforcement activity is performative: defending the boundary between 'legitimate' and 'barbaric' becomes increasingly theatrical as the actual functional distinction erodes (medieval ecclesiastical Latin works fine; it is declared wrong on principle). Accessibility collapse is moderate-to-high (0.64 at endpoint) because alternatives (pure Classicism, continuity, or technical innovation without Classical anchoring) exist and are practiced, but are systematically delegitimized rather than made impossible. Resistance is high throughout (0.71 average) because medieval practitioners, continuity communities, and some technical innovators actively resist the standard's authority, even as they are marginalized. The measurement grid shows level-differentiated coercion: structural suppression (the prestige system, the manuscript canon) is strongest; individual scrbes face moderate cost; organized institutions (continuity communities, technical colleges) mount strong resistance. Stakes inflate fastest at the organizational level (0.42 → 0.62), where institutional actors realize their authority is at stake.
+ *   Extractiveness is moderate (0.48) because the hybrid reading partially accommodates post-Classical forms rather than wholesale rejecting them. This distinguishes it structurally from the reconstruction reading, which would show higher extraction (wholesale rejection) and the continuity reading (which would show lower extraction or negative values, subsidizing all inherited forms). Suppression is moderate-high (0.52) because enforcement requires active institutional machinery to police the boundary between approved and unapproved post-Classical forms — the ambiguity about what counts as 'legitimate development' necessitates constant adjudication. Theater ratio (0.38) reflects that while the constraint does real work (maintaining textual coherence across institutional communities), a growing share of enforcement energy goes into defending the boundary against both Humanist purists (who reject the ecclesiastical accommodations as incoherent) and continuity advocates (who reject the suppression of medieval forms as artificial). The measurement series shows extractiveness and suppression rising gradually from interval start (when the hybrid reading was newly institutionalized around the high Renaissance) and plateauing by the early modern period, suggesting the constraint settled into stable institutional practice rather than continuing to tighten. The rising trajectory in early periods reflects increasing enforcement investment as institutional authorities explicitly worked out which medieval forms would be admitted.
  *
  * PERSPECTIVAL GAP:
- *   The humanist philologists experience the constraint as genuine coordination (they built it, it serves their analytical needs, it unifies writing standards). Institutional users experience it as coordination with asymmetric authority (they benefit from the prestige but bear the cost of continuous conformity and external adjudication). Medieval vernacular speakers and continuity communities experience it as pure extraction (their legitimate practice is declared corrupt without their voice in the adjudication). Technical practitioners experience it as constrained accommodation (they gain permission to use necessary terms but must justify each one). The engine should compute these as distinct per-seat classifications: the agenda-setter seat as rope (they orchestrate a genuine coordination function); the beneficiary seats as tangled_rope (they benefit but submit to authority); the payer and excluded seats as snare (they bear costs and are denied voice). The authored metrics describe the constraint's operation globally, not the operator's experience of it.
+ *   From the institutional educator's seat, the hybrid reading is genuine coordination that preserves Classical authority while pragmatically accommodating institutional realities (Church needs, technical terminology) — the arrangement is seen as a workable compromise. From the vernacular drift speaker's seat, the same structure is enforcement of elite textual authority that delegitimizes their inherited speech while offering no real voice in standards-setting. From the reconstruction advocate's seat, the hybrid reading is incoherent accommodation that undermines the entire Classical standard by admitting medieval barbarisms. From the continuity advocate's seat, the constraint is invented suppression of natural linguistic development, justified by false authority claims. The engine computes divergent classifications at each seat from the structural data (beneficiary vs. victim assignment, power levels, exit options, scope) — the authoring claim of 'tangled rope' asserts that the parties do experience the same constraint differently, and that divergence is diagnostic of the constraint's true structure.
  *
  * DIRECTIONALITY LOGIC:
- *   Humanist philologists: d ≈ 0.1 (beneficiaries, high power, institutional authority, exits are abundant — they can shift standards, reinterpret texts, publish new editions). Medieval speakers and continuity practitioners: d ≈ 0.9 (targets of delegitimization, powerless, identity_locked to their tradition, trapped exit). Technical innovators: d ≈ 0.65 (partial victims — constrained innovation, surveillance of neologisms — but partial beneficiaries through the legitimacy that Classical anchoring provides; moderate power allows them to negotiate some acceptance). Institutional users who adopt the hybrid standard: d ≈ 0.35 (beneficiaries of the prestige and coordination, but bear cost of conformity; organized power gives them mobile exits). This directionality structure supports the tangled_rope classification: beneficiaries (humanists, prestige-seeking institutional users) coordinate the standard; targets (medieval speakers, continuity practitioners) pay in delegitimization; enforcement is active (manuscripts curated, grammars published, deviations annotated).
+ *   Institutional educators occupy the beneficiary/agenda-setter seat: they collect authority rents, set the standard, and maintain the enforcement machinery. Their exit option is strong (arbitrage: they could adopt any standard they choose) and their power is institutional. They derive low directionality (~0.2) — they benefit from the constraint. Ecclesiastical practitioners occupy a mixed seat: they benefit from the accommodation of ecclesiastical vocabulary (their role is beneficiary) but remain subordinate to Classical norms, so they also experience some suppression. Their exit is mobile (they could adopt pure Classical norms or abandon Latin) — they get moderate directionality (~0.45) reflecting the hybrid position. Vernacular drift speakers occupy the payer seat: their forms are delegitimized, their voice is excluded, their exit is constrained (speaking correct Latin is institutionally demanded for participation in educated discourse). They derive high directionality (~0.75). The overrides field is empty because the structural derivation from beneficiary/victim + exit options produces accurate directionality values without correction.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (how to be Classical and functional simultaneously) is CONTESTED: humanists say it is live (institutions still need prestige and technical vocabulary), reconstructionists say it is misconceived (pure Classicism is the only correct solution), and continuity practitioners say it was never a real problem (medieval practice was functional and legitimate without Classical reference). The disappearance verdict is WORLD_REARRANGES (the unified standard enables institutional coordination that would fragment if it vanished). This mismatch (contested founding status + world_rearranges verdict) signals a constraint at the boundary between rope and snare: the standard persists because multiple parties have invested in its institutions, but no single party benefits enough to maintain it purely for coordination, and no single target is harmed enough to successfully rebel. The theater ratio rising to 0.31 indicates performative maintenance: the standard's defenders increasingly emphasize prestige and cultural authority rather than functional necessity. This is the piton signature pattern emerging: the constraint persists by institutional inertia and theatrical authority-defense, not by active participant agreement or functional coordination.
+ *   The hybrid reading addresses a genuine mandatrophy question at the kernel level: does the Classical standard's founding problem (need for unified literacy across post-Imperial Christendom) remain live? The institutional reading is that it does — Latin literacy would fragment without the standard. The continuity reading is that the problem never existed in the form claimed — living practice never fragmented, and the standard was imposed to centralize authority. The reconstruction reading is that the founding problem is PARTIALLY dead (Classical textual transmission is now secure via modern printing and scholarship) but the archaeological recovery function is very much live and actually deepens the problem (because medieval forms now actively contaminate correct usage). The hybrid reading sidesteps the mandatrophy dispute by admitting that the founding problem is contested but arguing that the solution is ROBUST to this contest because it preserves Classical authority (satisfying reconstructionists) while accommodating ecclesiastical reality (satisfying pragmatists). This robustness is partly genuine — the standard does enable communication across institutional domains — and partly theatrical: the claim that the solution is robust sometimes masks that it imposes suppression on marginalized speakers to maintain an unstable compromise between incompatible readings.
  */
 
 /* ==========================================================================
@@ -193,102 +247,132 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    legitimacy_adjudication_mechanism,
-    'Who has the authority to determine which post-Classical forms are ''legitimate developments'' versus ''barbarisms'', and on what grounds? Is the distinction itself tenable or is it a cover for discretionary gatekeeping?',
-    'Comparative study of how different scholarly institutions (humanist academies, ecclesiastical councils, printing houses, universities) actually make legitimacy decisions; analysis of whether the stated criteria (functional necessity, textual attestation, domain relevance) are applied consistently or are post-hoc rationalizations for choices driven by institutional prestige.',
-    'If the distinction is applied consistently by neutral criteria, the constraint is genuine tangled_rope (coordination with regulated access to domain vocabulary). If the distinction is arbitrary and driven by institutional gatekeeping, the constraint is snare (extraction masked as standard-setting).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(legitimacy_adjudication_mechanism, empirical, 'Whether the boundary between legitimate and barbaric forms is principled or performative.').
-
-omega_variable(
-    reading_foreclosure_or_coexistence,
-    'Can the hybrid reading logically coexist with the reconstruction reading (pure Classicism) in a single scholarly framework, or does accepting any post-Classical form as legitimate logically foreclose the purist position?',
-    'Analysis of actual scholarly positions: do reconstructionists accept the hybrid framing or do they explicitly reject any post-Classical legitimacy? Are there scholars who hold both positions in different contexts (e.g., pure Classical for philosophy, hybrid for theology)?',
-    'If coexistence is actual (scholars genuinely hold both positions in different domains), the relation is coexists_with and the kernel has room for multiple institutional readings. If the positions are logically incompatible and scholars forced to choose, the relation is forecloses and the kernel contains a genuine bifurcation.',
+    domain_specificity_boundary_ambiguity,
+    'What linguistic forms count as legitimate ''domain-specific developments'' versus unauthorized ''barbarisms''? Where is the boundary between ecclesiastical/technical neologisms and drift that should be rejected?',
+    'Examination of standards manuals and pedagogical practice: which forms do institutional educators actually treat as acceptable, and by what principle? Creation of an explicit taxonomy of approved post-Classical domains.',
+    'If the boundary is principled and stable, the hybrid reading succeeds in its compromise. If the boundary is arbitrary or shifting (increasingly many forms claimed as ''technical'' to escape rejection), the hybrid reading collapses toward continuity. If the boundary is consistently enforced to exclude forms, the reading collapses toward reconstruction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_or_coexistence, conceptual, 'Whether this reading''s core claim logically forecloses the reconstruction reading or merely competes with it.').
+narrative_ontology:omega_variable(domain_specificity_boundary_ambiguity, conceptual, 'The ambiguity between legitimate domain-specific development and unauthorized drift.').
 
 omega_variable(
-    suppression_mechanism_structural_vs_internalized,
-    'Is the measured suppression of medieval and continuity-reading practitioners structural (external barriers: excluded from manuscript canonization, denied institutional positions, texts not printed) or internalized (they believe medieval forms are inferior and accept the delegitimization)?',
-    'Post-adoption trajectory analysis: if suppression persists after external barriers are removed (e.g., medieval Latin works widely published, positions opened), it is internalized. If suppression is maintained only by active exclusion from prestige institutions, it is structural.',
-    'Structural suppression is the engine of a snare: the constraint''s persistence depends on continuous enforcement of exclusion. Internalized suppression is more resilient: targets have accepted delegitimization and will police themselves and others. The hybrid reading''s viability depends on which dominates.',
+    ecclesiastical_cooptation_vs_genuine_accommodation,
+    'Do institutional educators genuinely accommodate ecclesiastical Latin as a co-equal domain, or does the admission of ecclesiastical forms serve primarily to neutralize ecclesiastical resistance to the Classical standard?',
+    'Historical analysis of how institutional decisions about ecclesiastical vocabulary changed when the Church''s institutional power was higher vs. lower. Survey of how ecclesiastical practitioners actually experience the constraint — do they feel legitimized or marginalized?',
+    'If accommodation is genuine (ecclesiastical vocabulary faces the same standards as Classical), the constraint is a true compromise and extraction is shared. If accommodation is cooptive (ecclesiastical forms are admitted strategically to neutralize resistance), the constraint is fundamentally extractive and the beneficiary is solely the Classical institutional educator, not the Church.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether medieval practitioners'' compliance with the standard reflects external barriers or internalized devaluation of their own practice.').
+narrative_ontology:omega_variable(ecclesiastical_cooptation_vs_genuine_accommodation, empirical, 'Whether ecclesiastical accommodation is genuine compromise or strategic cooptation.').
 
 omega_variable(
-    functional_necessity_of_accommodation,
-    'Is the hybrid reading''s accommodation of post-Classical vocabulary genuinely necessary (technical terms cannot be expressed in Classical Latin without losing meaning or comprehensibility) or is it a cover for extracting authority while appearing flexible?',
-    'Case analysis of specific ecclesiastical, medical, and scientific terms: can they be expressed in pure Classical vocabulary without loss of meaning or communication? Do hybrid-standard texts actually achieve better comprehensibility or utility than texts written in pure Classical? Do texts written in continuity-reading style (medieval forms without Classical anchoring) function as well?',
-    'If accommodation is functionally necessary, the constraint is tangled_rope with legitimate coordination function (specialized domains need terminology). If accommodation is theater (the terms could be Classical but are permitted post-Classical for prestige reasons), the constraint is snare (extraction masked as functional necessity).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(functional_necessity_of_accommodation, empirical, 'Whether the permitted post-Classical vocabulary is functionally necessary or theater.').
-
-omega_variable(
-    kernel_reading_definition_ambiguity,
-    'What exactly IS the kernel — the commitment to some notion of ''correct Latin'' — and how does this reading''s definition (Classical grammar + post-Classical vocabulary) differ from alternative readings in terms of what entities are bound by the kernel?',
-    'Historical and institutional analysis: does the kernel bind the same set of practitioners (humanists, clerics, scholars) across all readings, or do different readings define different constituencies as bound by the standard? Is the constraint a single institutional pressure experienced differently by different seats, or are the readings creating fundamentally different constraints?',
-    'If the kernel binds a fixed constituency (all learned Latin users must conform to SOME standard of correctness) experienced differently per seat, this is a single constraint with per-seat divergence. If different readings define different binding constituencies, they are distinct constraints, not readings of a shared kernel.',
+    reading_coexistence_vs_foreclosure,
+    'Can the hybrid reading and the reconstruction reading coexist as equally legitimate institutional practices, or does the hybrid reading''s implicit claim that Medieval forms can be ''legitimized'' foreclose the reconstruction reading''s core principle that Medieval drift is inherently barbaric?',
+    'Intellectual history: can a scholarly community simultaneously hold that some medieval forms are legitimate (hybrid) while maintaining that medieval linguistic change is inherently illegitimate (reconstruction)? Or must one reading ultimately dominate?',
+    'If readings can coexist, the kernel permits genuine pluralism within institutional practice. If the hybrid reading forecloses reconstruction (by delegitimizing its core claim that all medieval drift is barbaric), the constraint''s actual structure is more like reconstruction wearing a compromise mask — apparent accommodation masking fundamental suppression of one reading.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_definition_ambiguity, conceptual, 'Whether the hybrid reading and its siblings share the same binding kernel or constitute distinct constraints with distinct constituencies.').
+narrative_ontology:omega_variable(reading_coexistence_vs_foreclosure, conceptual, 'Whether the hybrid reading genuinely coexists with its siblings or forecloses them logically.').
+
+omega_variable(
+    suppression_mechanism_structural_vs_internalized,
+    'Is the suppression of unapproved medieval forms structural (external institutional machinery enforcing rejection) or internalized (speakers have come to view medieval forms as inherently barbaric and police their own speech)?',
+    'Observation of post-institutional contexts: when institutional enforcement machinery is absent (informal writing, speech among scholars without formal stakes), do speakers spontaneously avoid medieval forms or revert to them? Interviews with institutional practitioners about whether they experience rejection as external coercion or internalized standard.',
+    'If suppression is primarily structural, removal of institutional enforcement would likely shift the constraint toward continuity (reversion to inherited forms). If internalized, the constraint would persist even without institutional machinery — speakers would carry the delegitimization with them.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether suppression of medieval forms is externally enforced or internalized.').
+
+omega_variable(
+    kernel_reading_identity_fusion,
+    'For institutional Classical educators, is commitment to the Classical standard fused with their professional identity and institutional role, such that questioning the standard would constitute questioning their own authority and expertise?',
+    'Historical and ethnographic evidence: when institutional editors have been challenged to defend the Classical standard, do they appeal to independent criteria (textual authority, usage documentation) or to their own authority as experts to define correctness?',
+    'If identity fusion is strong, institutional educators are locked into defending the hybrid reading not because it is structurally sound but because their professional credibility depends on it. This would increase the constraint''s extractiveness (defense of hybrid reading becomes defense of institutional power, not genuine accommodation) and would weaken the resistance to both reconstruction and continuity readings.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_identity_fusion, conceptual, 'Identity lock-in of institutional educators to the Classical standard.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(classical_latin_standard__hybrid_reading, 1440, 1700).
+narrative_ontology:interval(classical_latin_standard__hybrid_reading, 0, 28).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(clas_tr_t1440, classical_latin_standard__hybrid_reading, theater_ratio, 1440, 0.18).
-narrative_ontology:measurement(clas_tr_t1490, classical_latin_standard__hybrid_reading, theater_ratio, 1490, 0.22).
-narrative_ontology:measurement(clas_tr_t1550, classical_latin_standard__hybrid_reading, theater_ratio, 1550, 0.26).
-narrative_ontology:measurement(clas_tr_t1600, classical_latin_standard__hybrid_reading, theater_ratio, 1600, 0.31).
-narrative_ontology:measurement(clas_tr_t1650, classical_latin_standard__hybrid_reading, theater_ratio, 1650, 0.32).
-narrative_ontology:measurement(clas_tr_t1700, classical_latin_standard__hybrid_reading, theater_ratio, 1700, 0.31).
+narrative_ontology:measurement(clas_tr_t0, classical_latin_standard__hybrid_reading, theater_ratio, 0, 0.28).
+narrative_ontology:measurement_basis(clas_tr_t0, observed).
+narrative_ontology:measurement(clas_tr_t4, classical_latin_standard__hybrid_reading, theater_ratio, 4, 0.3).
+narrative_ontology:measurement_basis(clas_tr_t4, observed).
+narrative_ontology:measurement(clas_tr_t8, classical_latin_standard__hybrid_reading, theater_ratio, 8, 0.33).
+narrative_ontology:measurement_basis(clas_tr_t8, observed).
+narrative_ontology:measurement(clas_tr_t12, classical_latin_standard__hybrid_reading, theater_ratio, 12, 0.35).
+narrative_ontology:measurement_basis(clas_tr_t12, observed).
+narrative_ontology:measurement(clas_tr_t16, classical_latin_standard__hybrid_reading, theater_ratio, 16, 0.37).
+narrative_ontology:measurement_basis(clas_tr_t16, observed).
+narrative_ontology:measurement(clas_tr_t20, classical_latin_standard__hybrid_reading, theater_ratio, 20, 0.38).
+narrative_ontology:measurement_basis(clas_tr_t20, observed).
+narrative_ontology:measurement(clas_tr_t24, classical_latin_standard__hybrid_reading, theater_ratio, 24, 0.38).
+narrative_ontology:measurement_basis(clas_tr_t24, observed).
+narrative_ontology:measurement(clas_tr_t28, classical_latin_standard__hybrid_reading, theater_ratio, 28, 0.38).
+narrative_ontology:measurement_basis(clas_tr_t28, observed).
 
 % Extraction over time
-narrative_ontology:measurement(clas_be_t1440, classical_latin_standard__hybrid_reading, base_extractiveness, 1440, 0.32).
-narrative_ontology:measurement(clas_be_t1490, classical_latin_standard__hybrid_reading, base_extractiveness, 1490, 0.41).
-narrative_ontology:measurement(clas_be_t1550, classical_latin_standard__hybrid_reading, base_extractiveness, 1550, 0.48).
-narrative_ontology:measurement(clas_be_t1600, classical_latin_standard__hybrid_reading, base_extractiveness, 1600, 0.52).
-narrative_ontology:measurement(clas_be_t1650, classical_latin_standard__hybrid_reading, base_extractiveness, 1650, 0.48).
-narrative_ontology:measurement(clas_be_t1700, classical_latin_standard__hybrid_reading, base_extractiveness, 1700, 0.48).
+narrative_ontology:measurement(clas_be_t0, classical_latin_standard__hybrid_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement_basis(clas_be_t0, observed).
+narrative_ontology:measurement(clas_be_t4, classical_latin_standard__hybrid_reading, base_extractiveness, 4, 0.41).
+narrative_ontology:measurement_basis(clas_be_t4, observed).
+narrative_ontology:measurement(clas_be_t8, classical_latin_standard__hybrid_reading, base_extractiveness, 8, 0.44).
+narrative_ontology:measurement_basis(clas_be_t8, observed).
+narrative_ontology:measurement(clas_be_t12, classical_latin_standard__hybrid_reading, base_extractiveness, 12, 0.46).
+narrative_ontology:measurement_basis(clas_be_t12, observed).
+narrative_ontology:measurement(clas_be_t16, classical_latin_standard__hybrid_reading, base_extractiveness, 16, 0.47).
+narrative_ontology:measurement_basis(clas_be_t16, observed).
+narrative_ontology:measurement(clas_be_t20, classical_latin_standard__hybrid_reading, base_extractiveness, 20, 0.48).
+narrative_ontology:measurement_basis(clas_be_t20, observed).
+narrative_ontology:measurement(clas_be_t24, classical_latin_standard__hybrid_reading, base_extractiveness, 24, 0.48).
+narrative_ontology:measurement_basis(clas_be_t24, observed).
+narrative_ontology:measurement(clas_be_t28, classical_latin_standard__hybrid_reading, base_extractiveness, 28, 0.48).
+narrative_ontology:measurement_basis(clas_be_t28, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(clas_su_t1440, classical_latin_standard__hybrid_reading, suppression_requirement, 1440, 0.28).
-narrative_ontology:measurement(clas_su_t1490, classical_latin_standard__hybrid_reading, suppression_requirement, 1490, 0.38).
-narrative_ontology:measurement(clas_su_t1550, classical_latin_standard__hybrid_reading, suppression_requirement, 1550, 0.46).
-narrative_ontology:measurement(clas_su_t1600, classical_latin_standard__hybrid_reading, suppression_requirement, 1600, 0.52).
-narrative_ontology:measurement(clas_su_t1650, classical_latin_standard__hybrid_reading, suppression_requirement, 1650, 0.54).
-narrative_ontology:measurement(clas_su_t1700, classical_latin_standard__hybrid_reading, suppression_requirement, 1700, 0.52).
+narrative_ontology:measurement(clas_su_t0, classical_latin_standard__hybrid_reading, suppression_requirement, 0, 0.38).
+narrative_ontology:measurement_basis(clas_su_t0, observed).
+narrative_ontology:measurement(clas_su_t4, classical_latin_standard__hybrid_reading, suppression_requirement, 4, 0.42).
+narrative_ontology:measurement_basis(clas_su_t4, observed).
+narrative_ontology:measurement(clas_su_t8, classical_latin_standard__hybrid_reading, suppression_requirement, 8, 0.46).
+narrative_ontology:measurement_basis(clas_su_t8, observed).
+narrative_ontology:measurement(clas_su_t12, classical_latin_standard__hybrid_reading, suppression_requirement, 12, 0.49).
+narrative_ontology:measurement_basis(clas_su_t12, observed).
+narrative_ontology:measurement(clas_su_t16, classical_latin_standard__hybrid_reading, suppression_requirement, 16, 0.51).
+narrative_ontology:measurement_basis(clas_su_t16, observed).
+narrative_ontology:measurement(clas_su_t20, classical_latin_standard__hybrid_reading, suppression_requirement, 20, 0.52).
+narrative_ontology:measurement_basis(clas_su_t20, observed).
+narrative_ontology:measurement(clas_su_t24, classical_latin_standard__hybrid_reading, suppression_requirement, 24, 0.52).
+narrative_ontology:measurement_basis(clas_su_t24, observed).
+narrative_ontology:measurement(clas_su_t28, classical_latin_standard__hybrid_reading, suppression_requirement, 28, 0.52).
+narrative_ontology:measurement_basis(clas_su_t28, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(classical_latin_standard__hybrid_reading, identity_coordination).
+narrative_ontology:coordination_type(classical_latin_standard__hybrid_reading, enforcement_mechanism).
 narrative_ontology:boltzmann_floor_override(classical_latin_standard__hybrid_reading, 0.12).
-narrative_ontology:affects_constraint(classical_latin_standard__hybrid_reading, classical_latin_standard__reconstruction_reading).
 narrative_ontology:affects_constraint(classical_latin_standard__hybrid_reading, classical_latin_standard__continuity_reading).
+narrative_ontology:affects_constraint(classical_latin_standard__hybrid_reading, classical_latin_standard__reconstruction_reading).
 
 % DUAL FORMULATION NOTE:
-% The classical_latin_standard kernel decomposes into three constraint stories: (1) reconstruction_reading — pure Classical recovery, high extraction, mountain-side (natural law claims); (2) continuity_reading — living medieval tradition, minimal extraction, rope-side (coordination); (3) hybrid_reading (this story) — Classical structure + post-Classical vocabulary, moderate extraction and suppression, tangled_rope. The three readings compete for institutional adoption. The hybrid reading INFLUENCES both siblings by establishing intermediate ground that marginalizes both pure reconstructionism and pure continuity. All three share the kernel (some notion of correct Latin) but define correctness differently and have different victim/beneficiary structures.
+% The classical_latin_standard kernel decomposes into three constraints instantiating different readings of the same foundational commitment to unified Latin standards. The hybrid_reading (this story) occupies the structural middle ground: it preserves Classical textual authority (satisfying reconstruction-reading logic) while accommodating post-Classical institutional realities (satisfying continuity-reading logic). The three constraints are linked by network edges; each reading produces different ε, different victim/beneficiary sets, and different type classifications from the same kernel. See kernel_context in commentary for the full three-reading family structure.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

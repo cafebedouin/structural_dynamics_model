@@ -2,216 +2,327 @@
   "header": {
     "constraint_id": "family_law_authority__parsi_zoroastrian_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "0e4b8f63-6dce-40b6-8b78-1aec9dafd7d7"
+    "story_uid": "d5c593d5-5035-4666-8af9-4e44254dcdd1"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.71,
-    "resistance": 0.58,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Marriage Community Preservation under Zoroastrian Religious Law (Parsi Reading)",
-    "topic_domain": "religious/political/social",
+    "human_readable": "Parsi Zoroastrian Marriage Law: Community Preservation via Religious Authority",
+    "topic_domain": "religious_law/family/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "parsi_priestly_authority",
-      "parsi_community_collective"
+      "zoroastrian_priesthood",
+      "parsi_community_cohesion"
     ],
     "victims": [
-      "parsi_individuals_seeking_intermarriage",
-      "non_parsi_spouses"
+      "individuals_choosing_intermarriage",
+      "converts_to_zoroastrianism"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "zoroastrian_priesthood",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Administers marriage ritual (yasna) and declares ritual validity; interprets Zoroastrian law through textual authority (Avesta, Pahlavi texts); controls who may marry within the faith community and enforces endogamy norms. Authority rests on claimed transmission of priestly knowledge and ritual competence. Collects legitimacy and social standing from gate-keeping role."
+    },
+    {
+      "name": "parsi_community_leadership",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Community councils and elder bodies that invoke the endogamy rule to preserve Parsi identity and institutional continuity. Frame the constraint as necessary to prevent cultural dissolution in diaspora contexts. Derive authority and community cohesion from the arrangement."
+    },
+    {
+      "name": "individuals_choosing_intermarriage",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Parsi individuals who wish to marry outside the faith face loss of religious status, community recognition, and family standing. The constraint operates through identity fusion: leaving the community or choosing a non-Parsi spouse means renunciation of Zoroastrian identity, which many experience as family dissolution rather than exit. Marriage outside the faith is technically permitted by civil law but religiously unrecognized."
+    },
+    {
+      "name": "non_parsi_spouses",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Non-Zoroastrians married to Parsis are excluded from priestly ritual participation and may be subject to community ostracism. They bear the costs of their partner's cultural affiliation without access to the community's institutional recognition or benefits. Their children may not be recognized as Parsis in traditional doctrine."
+    },
+    {
+      "name": "converts_to_zoroastrianism",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Formal conversion to Zoroastrianism is historically discouraged or prevented by priesthood gatekeeping. Converts face an institutional barrier: even those who undergo conversion rituals are often not accepted as fully Parsi within community structures, and their children remain outside the endogamous community. The constraint preserves the community by making entry functionally impossible."
+    },
+    {
+      "name": "parsi_women",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Historically bear differential costs: in some lineages, children of a Parsi woman and non-Parsi man are excluded from community standing, while the reverse may be tolerated. Modern reform movements contest this, but traditional doctrine enforces stricter endogamy rules for women, binding them to in-group marriage through both identity and institutional rules."
+    },
+    {
+      "name": "reform_clergy",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Progressive Zoroastrian clergy and theological movements that advocate relaxing or reinterpreting endogamy rules to allow conversion and intermarriage. Their voices are structurally marginalized in orthodox priesthood councils but carry weight in diaspora communities facing demographic decline. They are not at the table where the traditional endogamy rule is enforced."
+    },
+    {
+      "name": "demographic_continuity_logic",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The principle that small diaspora communities require boundary maintenance to avoid dissolution. This logic is vindicated by the constraint's operation but is not itself an actor with interests; it is a strategic doctrine invoked to justify the arrangement."
+    },
+    {
+      "name": "civil_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State legal systems in India (for Parsis under Parsi Marriage and Divorce Act 1936), UK, and elsewhere recognize some aspects of Zoroastrian family law but increasingly adjudicate disputes over endogamy rules, convert status, and women's succession rights. They occupy an analytical seat, investigating whether the constraint violates civil law guarantees."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains linguistic, ritual, and genealogical continuity within a diaspora community whose survival depends on in-group reproduction and marriage, preventing cultural dissolution through outmarriage. Operates a shared marriage ritual, inheritance doctrine, and kinship identity that bind community members.",
+    "transfer_function": "Transfers from individuals choosing intermarriage and would-be converts the privilege of full community membership, family standing, and recognized religious identity. Moves this privilege upward to the priesthood (who control ritual validity) and to community leadership (who maintain cohesion). In-group members benefit from the preserved community; out-group actors and those seeking entry bear the cost.",
+    "absent_voices": "Reform clergy who would argue for conversion rights and intermarriage recognition; younger diaspora Parsis whose demographic context differs from the founding era; non-Parsi spouses and their extended families who experience the constraint but have no seat at community councils where marriage law is interpreted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the endogamy requirement and priesthood gatekeeping disappeared, the Parsi community would face immediate demographic choice: openness to conversion and intermarriage would allow growth and integration but risk erosion of distinct identity; the constraint's removal would force explicit renegotiation of 'what it means to be Parsi' rather than settling it through ritual law. Community councils would lose their primary institution for boundary maintenance.",
+    "founding_problem": "Preservation of a small Zoroastrian diaspora (6,000–10,000 living Parsis globally) after the Islamic conquest of Persia and forced exile to India (8th–10th centuries). Endogamy and priesthood authority over marriage were survival mechanisms to prevent absorption into surrounding populations and preserve ritual knowledge across generations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Orthodox priesthood attests the founding problem is ongoing — demographic decline and assimilation pressure in diaspora justify continued endogamy enforcement. Reform theologians and secular Parsi scholars attest the original survival problem is solved (no current existential threat of forced religious conversion) and the rule now functions as pure boundary maintenance. Demographers and religious historians from outside the Parsi community note that smaller diaspora religions (e.g., Yazidis, Mandaeans) survive with more permissive marriage rules, suggesting the founding problem does not require the constraint in its current form."
   },
   "interval": {
     "start": 0,
-    "end": 35
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.58
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.61
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.64
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.66
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.67
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.68
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.68
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.68
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.65
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.68
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.7
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.71
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.72
+      "value": 0.69,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.72
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.72
+      "value": 0.72,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.72
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.37
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.39
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.41
+      "value": 0.34,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.42
+      "value": 0.37,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.42
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.42
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.42
+      "time_point": 40,
+      "value": 0.41,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint is ONE READING of a contested kernel: family_law_authority. The Parsi Zoroastrian reading frames marriage as a community-preserving institution governed by religious law, with endogamy as the primary mechanism and priestly authority as the enforcer. This reading competes with four sibling readings (Christian canonical, Hindu dharmashastra, Muslim shariat, and secular contractual) that ground the family-law authority kernel differently. The Parsi reading's distinctive structural delta is the explicit fusion of community preservation with marital constraint: the endogamy rule is justified not as personal salvation (Christian), not as dharmic duty (Hindu), not as contractual arrangement (secular), but as the survival mechanism for a small diaspora religion. The reading is historically grounded in the Parsi experience of numerical vulnerability and assimilative pressure after the Islamic conquest of Persia and subsequent diaspora to India.",
+    "narrative_context": "Marriage in the Parsi Zoroastrian tradition operates as a community-preserving institution governed by religious law and priestly authority. The constraint enforces endogamy (marriage within the faith) and gates conversion, historically justified as necessary to preserve a small diaspora against dissolution. This reading instantiates the Zoroastrian framework: marriage validity depends on priestly recognition, authority flows through a lineage of religious specialists, and the constraint's legitimacy rests on the premise that small communities require boundary maintenance to survive. The claim is tangled_rope (genuine coordination function — binding community members through shared ritual and kinship — AND asymmetric extraction from those seeking intermarriage or conversion). The metrics model the actual operation: extractiveness has risen modestly over the interval as demographic pressure increases and reform pressure mounts, forcing the priesthood to defend the rule more actively; suppression similarly increases as exit becomes more visible and resistance grows from reform movements and younger diaspora members; theater rises as the coordination justification becomes less salient relative to boundary-maintenance performance.",
     "key_agents": [
-      "Parsi priestly authority (Dastur and high priests): sets doctrine, controls ritual validity, enforces membership standards",
-      "Parsi community collective: framed as beneficiary of preservation, but also enforces through social sanction and participation exclusion",
-      "Parsi individuals seeking intermarriage: bear the constraint directly, face identity-locked suppression (religious identity fused with family identity)",
-      "Non-Parsi spouses: systematically excluded from ritual participation and governance; have no seat in the rule that excludes them",
-      "Reform-minded Parsis: challenge the rule as boundary-maintenance rather than preservation necessity, excluded from priestly governance but exert organized pressure",
-      "Diaspora Parsi individuals: experience the constraint differently due to weaker enforcement machinery in pluralistic host societies; higher exit optionality but internalized identity-lock"
+      "Zoroastrian priesthood: gate-keeper of ritual validity; derives authority and standing from endogamy enforcement",
+      "Parsi community leadership: invokes endogamy as preservation mechanism; frames boundary maintenance as survival necessity",
+      "Individuals choosing intermarriage: bear identity-lock suppression; exit means family and community dissolution",
+      "Non-Parsi spouses: excluded from ritual and community standing; bear costs of partner's affiliation",
+      "Converts and would-be converts: locked out by priesthood gatekeeping; institutionally prevented from entry",
+      "Reform clergy: excluded from orthodox authority structures; advocate relaxed conversion and intermarriage rules",
+      "Civil authorities: observe and adjudicate boundary cases; increasingly check religious law against civil rights guarantees"
     ],
-    "logic_rationale": "The constraint is classified as TANGLED ROPE, not pure snare or rope, because it combines genuine coordination (small-community preservation in diaspora conditions) with asymmetric extraction (authority consolidation in priesthood, autonomy transfer from individuals to collective, burden concentration on payers). Extractiveness is moderate-high (0.68 final) because the rule persistently transfers individual reproductive autonomy to collective gatekeepers, yet it is not pure extraction because the coordinated outcome (community continuity) is real and valued by many Parsis. Suppression is high (0.72) because enforcement depends heavily on exclusion machinery: excommunication, ritual participation bars, status demotion, and family pressure create structural barriers to exit that persist even when legal alternatives exist. Theater ratio is moderate (0.42): priestly justifications remain coded as theological necessity (preservation of Avestan knowledge, ritual purity), but the functional mechanism is increasingly recognizable as boundary maintenance and authority consolidation. The measurement series shows extractiveness plateauing around midpoint and suppression stabilizing, indicating the constraint has settled into a steady enforcement state rather than ratcheting upward. Theater remains below 0.5, indicating the functional preservation logic is not yet wholly displaced by performative maintenance, but the trajectory is upward. Time grid is shared and aligned: all three metrics are authored at all eight time points.",
-    "perspectival_gap": "The priestly seat and the constrained-payer seats experience this constraint radically differently. From the priestly perspective, the rule is governance necessary for community survival, and the authority it consolidates is legitimate by religious transmission. From the payer seats, particularly parsi_individuals_seeking_intermarriage and non_parsi_spouses, the rule appears as enforced extraction: loss of reproductive choice, identity-based exclusion, and suppression through gatekeeping machinery. The engine computes d separately for each power atom, so priestly-institutional d will be near 0.0 (beneficiary, arbitrage-exit-capable), while payer d will be near 1.0 (trapped or identity-locked, bearing extraction). This divergence IS the measurement: a constraint whose claim diverges from computed seat classifications reveals misalignment between the constraint's presented function and its actual operation.",
-    "directionality_logic": "Priestly authority (institutional, arbitrage-exit) derives d near 0.0 (full beneficiary): they set rules, collect authority, and face no meaningful suppression because the constraint's enforcement is their prerogative. Parsi community collective (organized, identity-locked) has dual positioning: they are framed as beneficiary (community is 'preserved'), but many individual members are payers. This ambiguity reflects the reading's structure itself: the collective benefit is real but purchased at individual cost. Parsi individuals seeking intermarriage (moderate power, identity-locked exit) derive d near 1.0 (full target): they face systematic suppression, constricted choice set, and cannot exit without identity cost. Non-Parsi spouses (moderate, trapped exit) also derive d near 1.0: they are excluded by rules they did not consent to and cannot change. Reform-minded Parsis (powerful, but excluded from governance) face constrained but not trapped exit: they can exit the traditional reading by joining reform movements or leaving the community, but at organizational and identity cost. The directionality derivation follows from beneficiary/victim declarations plus exit modulation: no overrides are needed because structural data drives the correct d values.",
-    "mandatrophy_analysis": "The founding problem is contested between traditional and reform readings. Orthodox priesthood maintains the founding problem is LIVE: diaspora conditions, assimilative pressure, declining Parsi demographics mean endogamy is still necessary for survival. Reform and secular Parsis argue the founding problem is DEAD: external persecution ceased, legal equality in host states is achieved, and the rule now functions as boundary-maintenance and authority consolidation rather than preservation necessity. The constraint's persistence despite the disputed founding problem suggests institutional inertia and theater: if the problem were universally recognized as live, we would expect lower theater_ratio; if universally recognized as dead, we would expect higher theater_ratio and lower extractiveness (pure snare). The moderate theater and moderate-high extraction suggest the reading is genuinely contested — some Parsis see it as necessary coordination, others as obsolete extraction. This is NOT mandatrophy resolved in the schema sense (the rule has not been formally declared obsolete), but the divergence between founding-problem-status and measured theater indicates the condition the mandatrophy warning would flag.",
-    "kernel_context": "This constraint instantiates the PARSI_ZOROASTRIAN_READING of the family_law_authority kernel. The kernel is the persisting commitment to govern marriage and family under religious authority; the reading question is: WHICH religious authority, grounded in WHAT justification, enforcing WHAT structure? The Parsi reading grounds authority in priestly lineage of Avestan interpretation and justifies enforcement through community-preservation logic specific to diaspora conditions. Sibling readings ground the same kernel differently: Christian canonical reading emphasizes sacramental authority of the church; Hindu dharmashastra reading emphasizes dharmic duty and customary practice; Muslim shariat reading emphasizes Quranic contract and hadith interpretation; secular contractual reading emphasizes state recognition of autonomous individual choice. Each reading has a stable ε and beneficiary/victim structure independent of the others. Each is a separate constraint file. This file instantiates only the Parsi reading."
+    "logic_rationale": "Extractiveness (0.68 at interval end) reflects the constraint's core operation: it transfers community membership status from individuals who choose exit-paths (intermarriage, conversion) to the priesthood and community leadership who control the gate. The constraint is functional (genuine coordination: shared ritual, kinship bonds, identity continuity) but substantially extractive (those who wish to intermarry or convert lose standing). Suppression (0.72) is high because exit from the community is effectively foreclosed for identity-locked individuals — renouncing Parsi identity is experienced as family dissolution, not merely a religious choice. The constraint persists through active enforcement: priesthood gatekeeping is continuous, community councils reinforce norms, and ritual validity is withheld from non-sanctioned marriages. Theater_ratio (0.41) captures rising performative maintenance: as reform pressure grows and demographic decline becomes acute, proportionally more priesthood and community authority is devoted to *performing* (through speeches, ritual emphasis, community gatherings) the necessity of endogamy, rather than its actual enforcement. The plateau at t30–t40 reflects stabilization: the constraint has reached a steady state where resistance and reform pressure are high but gatekeeping remains stable, suggesting the system is no longer extracting efficiently and is increasingly theatrical. The time grid is uniform across all three metrics: every metric is authored at every time point (0, 5, 10, 15, 20, 25, 30, 40) to avoid misalignment.",
+    "perspectival_gap": "The Parsi priesthood and community leadership see a constraint that solves a real coordination problem: maintaining shared identity, ritual knowledge, and community continuity in diaspora. From their seat, the constraint is Rope-like. But from the seat of an individual with identity-lock (Parsi identity is foundational to family, self-concept, community belonging), the same constraint is a Snare: it extracts (loss of chosen marriage) and suppresses (identity-fusion makes exit unthinkable even when the civil law permits it). The engine computes both readings from the structural data: d for the priesthood derives from beneficiary status + mobile exit (low d, beneficiary seat); d for the identity-locked individual derives from victim status + identity-lock exit (high d, target seat). This is exactly what tangled_rope is: one seat coordinated, one seat extracted from, by the same structure.",
+    "directionality_logic": "The priesthood (organized, mobile exit) benefits from the constraint without bearing its costs — they control ritual validity and derive authority from gatekeeping. They are beneficiaries. Parsi community leadership (organized, mobile exit) faces a mixed position: they benefit from the preserved community cohesion, but they also participate in the enforcement, giving them some responsibility for the extraction. I author them as beneficiary + secondary_role=agenda_setter to capture the dual position. Individuals choosing intermarriage (moderate power, identity_locked exit) are squarely the targets: they wish to marry outside the faith but face loss of family and community standing. Identity-lock is the suppression mechanism — they cannot exit the cultural identity even when the religious law constrains them; the constraint operates through internalized identity fusion. Non-Parsi spouses (moderate power, constrained exit) are collateral damage: they bear costs (exclusion from ritual, community ostracism) without having authored the constraint or benefited from it. Converts and would-be converts (powerless, trapped exit) face absolute gatekeeping: even those who wish to adopt Zoroastrianism are excluded by priesthood doctrine. Their trapped exit reflects the most severe suppression. Reform clergy (organized, mobile exit) are excluded stakeholders — they would argue for relaxed rules but are not in orthodox authority structures. Civil authorities (institutional, analytical exit) observe and can adjudicate, but currently the constraint persists because civil law in most jurisdictions treats religious family law as a matter of internal community governance. The directionality derivation from these positions should show high extraction for the identity-locked seats (d approaching 0.8), beneficiary positioning for the priesthood (d approaching 0.1–0.2), and excluded/observer status for reform clergy and civil authorities.",
+    "mandatrophy_analysis": "The founding problem (preservation of a small diaspora against assimilation) was real and live for centuries. Its status is now contested: some attest it remains critical (orthodox priesthood); others attest it is substantially solved (reform clergy, secular scholars). The constraint persists regardless. The measurement series show extractiveness and suppression plateauing after t30, suggesting that the constraint is no longer extracting efficiently (resistance has grown, reform pressure is high, demographic decline continues despite enforcement). The theater_ratio plateau suggests the constraint is maintained more by institutional inertia than by active extraction benefit — the priesthood performs endogamy maintenance for community solidarity, not for rent-seeking, but the performance has become decoupled from the founding problem. This is not yet Piton (the priesthood still actively enforces gatekeeping, and the constraint is still legitimized through appeal to community survival). But the trajectory points toward Piton: if resistance continues to rise and the founding problem remains contested, the constraint may eventually be maintained only through theatrical performance, with no beneficiary collecting sufficient rent to sustain enforcement. The omega 'founding_problem_decay' captures this ambiguity.",
+    "kernel_context": "This constraint instantiates the Parsi Zoroastrian reading of the family_law_authority kernel. The kernel is contested: it is the question 'What authority governs marriage and family legitimacy?' The sibling readings are: (1) Christian_canonical_reading — marriage as sacrament under ecclesiastical/denominational authority; (2) Hindu_dharmashastra_reading — marriage as samskara governed by sacred texts and customary practice; (3) Muslim_shariat_reading — marriage as civil contract (nikah) under Quranic injunctions; (4) Secular_contractual_reading — marriage as civil contract between autonomous individuals under state law. The Parsi Zoroastrian reading is structurally distinct: it emphasizes small-community preservation, priesthood authority over ritual validity, and endogamy as a boundary-maintenance strategy. Its core premise is that religious authority is legitimate because it preserves community continuity; this differs from Christian sacramental authority (rooted in Christ's blessing), Hindu samskara authority (rooted in Vedic revelation), and Muslim nikah authority (rooted in Quranic contract), and opposes the secular reading (which denies religious authority altogether and vests authority in individual consent and state law)."
   },
   "omegas": [
     {
-      "id": "founding_problem_live_or_dead",
-      "question": "Is the founding problem (small diaspora community facing assimilative pressure and extinction through intermarriage) still live, or has it been superseded by changed historical conditions (legal equality in host states, economic security, voluntary religious affiliation)?",
-      "resolution_mechanism": "Demographic analysis: compare Parsi community size, intermarriage rates, and intergenerational religious transmission in contexts with strong enforcement (traditional communities in India) vs. weak enforcement (diaspora in North America/Europe). If transmission rates are comparable, the problem is largely solved and rule persistence indicates inertia rather than necessity. If rates diverge sharply, the problem remains live.",
-      "impact": "If live, the rule approaches Tangled Rope with genuine coordination value; if dead, it drifts toward Snare (extraction masked by obsolete preservation narrative). The classification hinges on whether the measured suppression and extraction serve a real coordination function or only boundary maintenance.",
+      "id": "founding_problem_decay",
+      "question": "Is the constraint's persistence justified by the founding problem (diaspora preservation in the face of assimilation pressure), or has the founding problem decayed to the point where the constraint is now purely boundary-maintaining theater?",
+      "resolution_mechanism": "Longitudinal demographic analysis: does the Parsi population stabilize, decline, or grow under the endogamy regime versus reform-open scenarios in diaspora contexts? Comparative analysis with other small diaspora religions' marriage rules and demographic outcomes.",
+      "impact": "If the founding problem remains live, the constraint remains tangled_rope (justified extraction for a real coordination function). If the founding problem has decayed, the constraint should reclassify toward piton (maintained by inertia and institutional interest rather than genuine preservation benefit). A complete founding-problem dissolution + persistent enforcement = mandate-dead scenario.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Genealogy of the founding problem: has the historical condition it was built to address persisted, been solved, or been transformed into something else?"
+      "description": "Whether the founding problem (diaspora preservation against assimilation) remains live or has decayed while enforcement persists."
     },
     {
-      "id": "suppression_structural_vs_internalized",
-      "question": "Is the measured suppression (0.72) primarily structural (legal exclusion from ritual, institutional enforcement, family pressure within the community) or internalized (individuals have fused their identity with the religious boundary such that exit itself is psychologically experienced as apostasy or self-betrayal)?",
-      "resolution_mechanism": "Post-exit trajectories: track Parsi individuals who marry outside and their subsequent relationship to suppression. If suppression persists after structural enforcement is escaped (diaspora context), it indicates internalized mechanism. If suppression drops sharply, it is primarily structural.",
-      "impact": "Internalized suppression is more robust to legal challenges and creates stickier identity-lock; it suggests the constraint's persistence depends on identity fusion, not just gatekeeping machinery. Structural suppression is more amenable to legal remedy. The distinction affects remedial strategy and classification stability.",
+      "id": "identity_lock_mechanism",
+      "question": "Is the suppression of intermarriage primarily structural (priestly gatekeeping, community ostracism, ritual exclusion) or primarily internalized (Parsi identity is so fused with individual self-concept that exit is unthinkable even when civil law permits it)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: when Parsi individuals choose intermarriage and live outside the community for years, does the sense of cultural loss persist, or does it fade as they build new identity frames? Interviews with exogamists about whether they experienced suppression as external coercion or internal identity conflict.",
+      "impact": "If suppression is primarily structural, the constraint's effective extraction is what the direct gatekeeping measures (priestly denial of ritual, community councils' exclusion). If suppression is primarily internalized (identity-fused), the constraint's effective extraction is higher than the direct measures suggest, because the suppression persists after institutional mechanisms are removed. An internalized suppression scenario suggests the constraint has shaped identity itself, not merely institutional access.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression operates through external institutional machinery or through internalized identity fusion."
+      "description": "Structural vs. internalized suppression mechanism in endogamy enforcement."
     },
     {
-      "id": "priestly_authority_lineage_claim",
-      "question": "Is the priesthood's claim to authority grounded in received transmission of Avestan doctrine (as the reading asserts) or is it a constructed authority that developed through institutional practice and is now defended by appeals to ancient lineage?",
-      "resolution_mechanism": "Textual and historical analysis: examine Avestan sources for explicit endogamy commands (likely sparse or absent), compare with later priestly texts and community practice (increasingly elaborate), and assess whether authority developed incrementally through practice rather than from foundational text.",
-      "impact": "If authority is received-lineage-grounded, the reading's epistemic structure is secure (authority rooted in external source); if constructed-and-defended, the reading's legitimacy claim is weaker and the constraint drifts toward pure extraction (authority asserting its own necessity). This maps to the cs_structure authority_grounding field.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Is priestly authority grounded in received transmission or constructed through institutional practice?"
-    },
-    {
-      "id": "endogamy_necessity_vs_identity_boundary",
-      "question": "Does endogamy function as a mechanism that enables the coordination outcome (community preservation through ritual practice and doctrinal transmission), or is the coordination outcome achievable through other mechanisms and endogamy functions primarily as identity boundary maintenance?",
-      "resolution_mechanism": "Comparative case: examine mixed-descent Parsis (non-Zoroastrian mother or father) and their offspring's religious practice and community participation. If they show equivalent transmission and practice, endogamy is not functionally necessary for preservation. If they show sharply reduced transmission, endogamy is functionally tied to the coordination outcome.",
-      "impact": "If endogamy is necessary, the constraint is Tangled Rope (genuine coordination with extraction cost). If it is a proxy for boundary maintenance, the constraint is Snare (extraction defended by obsolete coordination story).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Is endogamy the mechanism enabling community preservation, or is it identity boundary maintenance defended through preservation rhetoric?"
-    },
-    {
-      "id": "reform_reading_foreclosure",
-      "question": "Does the Orthodox priestly reading functionally foreclose the Reform reading within a single framework, or do the two readings coexist as live alternatives held by different Parsi factions?",
-      "resolution_mechanism": "Organizational structure: the Zoroastrian Reform community operates separate institutions (fire temples, courts, priesthoods) in some jurisdictions. If both readings maintain separate institutional structures and neither can adjudicate claims against the other, they coexist; if Orthodox institutions can formally exclude Reform members and render Reform practice invalid, Orthodox forecloses Reform within the community framework.",
-      "impact": "If foreclosing, the reading has stronger authority legitimacy but faces greater internal conflict; if coexisting, the reading is contested but more stable institutionally. Affects the cs_structure reading_relations classification.",
-      "confidence": "medium",
+      "id": "conversion_gatekeeping_vs_demographic",
+      "question": "Is the priesthood's restriction on conversion a doctrinal position (grounded in Zoroastrian theology that racially/ethnically defines the faith community) or a strategic demographic choice (restricting conversion to preserve in-group marriage pools)?",
+      "resolution_mechanism": "Textual analysis of Avesta and Pahlavi sources on proselytization versus contemporary priesthood statements on conversion policy. Historical comparison with pre-diaspora Zoroastrian conversion practices.",
+      "impact": "If doctrinal, the conversion restriction is inseparable from Zoroastrian theology itself and is not a strategic extraction mechanism. If demographic-strategic, the restriction is a deliberate gatekeeping choice that amplifies the endogamy extraction by preventing even those who wish to enter the faith from doing so, and the constraint is more clearly extractive. A strategic-demographic verdict would strengthen the snare classification for this reading.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the Orthodox and Reform readings of Zoroastrian family law are logically incompatible or institutionally coexistent."
+      "description": "Whether conversion restriction is doctrinal or strategic in origin and intent."
+    },
+    {
+      "id": "reform_clergy_countertrend",
+      "question": "Will progressive reinterpretation of Zoroastrian family law by reform clergy eventually displace orthodox gatekeeping, or will orthodox priesthood gatekeeping persist as the institutional standard despite reform movements?",
+      "resolution_mechanism": "20-year longitudinal observation of Parsi community councils' marriage law positions; tracking of reform clergy's institutional influence and convert acceptance in different diaspora centers; demographic trends in communities that relax endogamy versus those that enforce it strictly.",
+      "impact": "If reform prevails, the constraint's extracted value decays rapidly, and the constraint may reclassify as piton (inertial, theatrical, maintained by a minority institutional position). If orthodox enforcement persists, the constraint remains tangled_rope with stable high extractiveness. A bifurcated outcome (reform in some diaspora centers, orthodox in others) would require decomposition into separate constraints per institutional context.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether reform reinterpretation of Zoroastrian law will displace orthodox gatekeeping."
     }
   ],
   "boltzmann": {
@@ -225,49 +336,52 @@
       "family_law_authority__muslim_shariat_reading",
       "family_law_authority__secular_contractual_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the family_law_authority kernel. It is structurally distinct from sibling readings because it grounds authority in Zoroastrian priestly lineage and justifies enforcement through diaspora-community-preservation logic. The ε value (0.68 extractiveness, 0.72 suppression) is specific to THIS reading and would differ substantially for sibling readings. The family_law_authority kernel is instantiated in five separate constraint files (this one plus four siblings). Each reading has independent beneficiary/victim structure and directionality derivation. The network links indicate which other readings share the kernel; they are not causal dependencies but structural siblings that compete for legitimacy in the same domain."
+    "dual_formulation_note": "This constraint is one reading of the family_law_authority kernel. All five readings (Christian, Hindu, Muslim, Parsi Zoroastrian, Secular) are separate constraint stories with their own ε, beneficiary/victim structures, and readings_relations. This Parsi Zoroastrian reading emphasizes small-community boundary preservation through endogamy and priesthood authority. It coexists with the other readings (different parties hold each simultaneously) and influences them (the existence of a strong religious-law reading creates pressure on secular readings to accommodate religious autonomy). Each reading has its own cs_structure with reading_relations to the siblings and foundational axioms unique to that reading."
   },
+  "directionality_overrides": [],
+  "gain_flow": "zoroastrian_priesthood",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "avestan_priestly_transmission",
+    "reference_frame": "priestly_authority_over_ritual_validity",
     "drift_state": {
-      "moment": "contemporary_diaspora_legal_pluralism",
+      "moment": "contemporary_diaspora_reform_pressure",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "family_law_authority__christian_canonical_reading",
+        "sibling_id": "christian_canonical_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__hindu_dharmashastra_reading",
+        "sibling_id": "hindu_dharmashastra_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__muslim_shariat_reading",
+        "sibling_id": "muslim_shariat_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__secular_contractual_reading",
+        "sibling_id": "secular_contractual_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "community_descent_determines_membership",
+        "atom": "endogamy_necessary_for_community_survival",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "priestly_authority_preserves_doctrinal_purity",
+        "atom": "priestly_ritual_authority_grounds_marriage_legitimacy",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "theological"
       }
     ]
   },
@@ -276,18 +390,21 @@
     "hypothesis": "tangled_rope",
     "downstream_of": [
       "family_law_authority__christian_canonical_reading",
+      "family_law_authority__hindu_dharmashastra_reading",
+      "family_law_authority__muslim_shariat_reading",
       "family_law_authority__secular_contractual_reading"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

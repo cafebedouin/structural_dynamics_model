@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +76,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gelassenheit_separation__artifact_reading
- *   human_readable: Artifact-Based Separation Constraint (Gelassenheit Artifact Reading)
- *   domain: religious_studies/technology_governance
+ *   human_readable: Gelassenheit Separation via Artifact Appearance (Artifact Reading)
+ *   domain: religious/cultural/technological
  *
  * SUMMARY:
- *   The artifact-reading of Gelassenheit separation defines separation as
- *   visible distinction from English society, enforced by prohibiting any
- *   technology whose physical form resembles English secular infrastructure,
- *   regardless of actual function or isolation. A solar panel is forbidden
- *   not because it uses worldly energy but because it looks like a worldly
- *   artifact; modern insulation is forbidden not because it connects to
- *   worldly systems but because synthetic materials resemble what English
- *   houses use; water pumping is forbidden not for functional entanglement
- *   but for form-resemblance. This reading prioritizes visible markers over
- *   practical consequence or functional isolation. The constraint operates as
- *   highly extractive and suppressive: it transfers interpretive authority to
- *   the church structure, imposes practical hardship on off-grid households
- *   and those with acute needs, and elevates enforcement (determining
- *   form-resemblance, monitoring for violations, disciplining members) above
- *   community consent. The measurement series show extraction and
- *   theater-ratio rising over the interval as the doctrine becomes more
- *   stringently applied, while suppression remains consistently high.
+ *   The artifact-reading of Gelassenheit separation is one of three competing
+ *   interpretations within North American Anabaptist communities about what
+ *   'separation from worldly society' demands. This reading holds that
+ *   separation is primarily a matter of visible distinction — the material
+ *   culture must not resemble English/non-Anabaptist equivalents, regardless
+ *   of function. Under this reading, a solar panel is forbidden not because
+ *   solar power is inherently worldly, but because solar panels look like
+ *   modern industrial artifacts; synthetic fabrics are forbidden not because
+ *   synthetic material is immoral, but because Dacron and polyester are
+ *   visually associated with worldly fashion. The constraint achieves high
+ *   extractiveness (0.82) because it suppresses practical technologies that
+ *   improve living conditions, and it achieves high suppression (0.91)
+ *   because enforcement relies on the threat of Bann (total community
+ *   expulsion). The temporal measurements show steady extraction accumulation
+ *   over the 1920–2025 interval: as surrounding technology advanced
+ *   (electricity, automobiles, industrial agriculture), the constraint's
+ *   suppressive force hardened to maintain the visual boundary. Theater has
+ *   also risen (0.15 to 0.44) as enforcement activity increasingly defends
+ *   the aesthetic boundary rather than addressing substantive theological
+ *   questions.
  *
  * KEY AGENTS:
- *   - Church authority structure: sets and enforces the artifact-form standard; derives power from monopolizing interpretation
- *   - Community members with practical needs: live under the constraint; identity-locked to the community; bear direct costs of artifact prohibition
- *   - Off-grid households: structurally most constrained; cannot access the practical technologies they depend on because those technologies' forms are prohibited
- *   - Principle-reading and consequence-reading adherents: contest the artifact-reading but are excluded from its frame; represent internal alternatives within Gelassenheit theology
- *   - Younger generation pragmatists: question whether form-distinction serves the actual founding commitment; suppressed by authority but growing in voice
- *   - English secular society: the reference contrast; separation is defined as visible distinction FROM English norms
+ *   - community_leadership: Bishops and church councils maintaining the artifact-reading interpretation and enforcing the prohibition on technologies that visually resemble worldly artifacts
+ *   - individuals_pursuing_practical_efficiency: Farmers and household heads who recognize the practical gains from solar power and synthetic materials but face expulsion if they adopt them
+ *   - off_grid_households: The most constrained group, combining practical need for efficiency with maximum visibility (permanent installations cannot be hidden) and maximum suppression (identity-locked exit)
+ *   - younger_generation: Born into the tradition, witnessing the irrationality of the rule as neighboring Mennonite and Amish communities adopt the same technologies, experiencing the constraint as oppressive
+ *   - consequence_reading_practitioners: Alternative Anabaptist communities that permit technologies based on their effect on community practices rather than artifact appearance
+ *   - principle_reading_practitioners: Alternative communities that permit functionally isolated technologies (like stand-alone solar arrays) as acceptable separation
  */
 
 /* ==========================================================================
@@ -105,56 +117,118 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(gelassenheit_separation__artifact_reading, 0.82).
 domain_priors:suppression_score(gelassenheit_separation__artifact_reading, 0.91).
-domain_priors:theater_ratio(gelassenheit_separation__artifact_reading, 0.58).
+domain_priors:theater_ratio(gelassenheit_separation__artifact_reading, 0.44).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, extractiveness, 0.82).
 narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, suppression_requirement, 0.91).
-narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, theater_ratio, 0.58).
+narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, theater_ratio, 0.44).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, accessibility_collapse, 0.88).
-narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, resistance, 0.74).
+narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, accessibility_collapse, 0.79).
+narrative_ontology:constraint_metric(gelassenheit_separation__artifact_reading, resistance, 0.68).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gelassenheit_separation__artifact_reading, tangled_rope).
-narrative_ontology:human_readable(gelassenheit_separation__artifact_reading, "Artifact-Based Separation Constraint (Gelassenheit Artifact Reading)").
-narrative_ontology:topic_domain(gelassenheit_separation__artifact_reading, "religious_studies/technology_governance").
+narrative_ontology:human_readable(gelassenheit_separation__artifact_reading, "Gelassenheit Separation via Artifact Appearance (Artifact Reading)").
+narrative_ontology:topic_domain(gelassenheit_separation__artifact_reading, "religious/cultural/technological").
 
 domain_priors:requires_active_enforcement(gelassenheit_separation__artifact_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gelassenheit_separation__artifact_reading, '444551b9-c431-4712-af5b-8a0c95eb8498').
-narrative_ontology:cs_kernel_codification('444551b9-c431-4712-af5b-8a0c95eb8498', distributed).
-narrative_ontology:cs_authority_grounding('444551b9-c431-4712-af5b-8a0c95eb8498', extraction).
-narrative_ontology:cs_interpretation_layer_present('444551b9-c431-4712-af5b-8a0c95eb8498').
-narrative_ontology:cs_reading_relation('444551b9-c431-4712-af5b-8a0c95eb8498', gelassenheit_separation__principle_reading, coexists_with).
-narrative_ontology:cs_reading_relation('444551b9-c431-4712-af5b-8a0c95eb8498', gelassenheit_separation__consequence_reading, coexists_with).
-narrative_ontology:cs_axiom('444551b9-c431-4712-af5b-8a0c95eb8498', foundational, form_as_moral_property).
-narrative_ontology:cs_axiom_status(form_as_moral_property, holdable).
-narrative_ontology:cs_axiom_grounding('444551b9-c431-4712-af5b-8a0c95eb8498', form_as_moral_property, deontological).
-narrative_ontology:cs_axiom('444551b9-c431-4712-af5b-8a0c95eb8498', secondary, artifact_resemblance_as_worldly_entanglement).
-narrative_ontology:cs_axiom_status(artifact_resemblance_as_worldly_entanglement, holdable).
-narrative_ontology:cs_axiom_grounding('444551b9-c431-4712-af5b-8a0c95eb8498', artifact_resemblance_as_worldly_entanglement, conventional).
-narrative_ontology:cs_reference_frame('444551b9-c431-4712-af5b-8a0c95eb8498', visible_aesthetic_separation_from_english_norms).
-narrative_ontology:cs_drift_state('444551b9-c431-4712-af5b-8a0c95eb8498', contemporary_pluralistic_context, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('444551b9-c431-4712-af5b-8a0c95eb8498', '').
+narrative_ontology:cs_story_uid(gelassenheit_separation__artifact_reading, 'e491ef12-a3c6-4cb4-8669-233e95d30aea').
+narrative_ontology:cs_kernel_codification('e491ef12-a3c6-4cb4-8669-233e95d30aea', distributed).
+narrative_ontology:cs_authority_grounding('e491ef12-a3c6-4cb4-8669-233e95d30aea', lineage).
+narrative_ontology:cs_interpretation_layer_present('e491ef12-a3c6-4cb4-8669-233e95d30aea').
+narrative_ontology:cs_reading_relation('e491ef12-a3c6-4cb4-8669-233e95d30aea', gelassenheit_separation__consequence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e491ef12-a3c6-4cb4-8669-233e95d30aea', gelassenheit_separation__principle_reading, coexists_with).
+narrative_ontology:cs_axiom('e491ef12-a3c6-4cb4-8669-233e95d30aea', foundational, visual_distinctiveness_is_separation).
+narrative_ontology:cs_axiom_status(visual_distinctiveness_is_separation, holdable).
+narrative_ontology:cs_axiom_grounding('e491ef12-a3c6-4cb4-8669-233e95d30aea', visual_distinctiveness_is_separation, conventional).
+narrative_ontology:cs_axiom('e491ef12-a3c6-4cb4-8669-233e95d30aea', foundational, artifact_resemblance_requires_prohibition).
+narrative_ontology:cs_axiom_status(artifact_resemblance_requires_prohibition, holdable).
+narrative_ontology:cs_axiom_grounding('e491ef12-a3c6-4cb4-8669-233e95d30aea', artifact_resemblance_requires_prohibition, empirically_contingent).
+narrative_ontology:cs_reference_frame('e491ef12-a3c6-4cb4-8669-233e95d30aea', visible_anabaptist_identity_through_artifact_distinctiveness).
+narrative_ontology:cs_drift_state('e491ef12-a3c6-4cb4-8669-233e95d30aea', contemporary_industrial_modernity, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('e491ef12-a3c6-4cb4-8669-233e95d30aea', '2026-06-12T14:30:00Z').
 narrative_ontology:cs_kernel_id(gelassenheit_separation__artifact_reading, gelassenheit_separation).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(gelassenheit_separation__artifact_reading, church_authority_structure).
-narrative_ontology:constraint_victim(gelassenheit_separation__artifact_reading, community_members_with_practical_needs).
+narrative_ontology:constraint_beneficiary(gelassenheit_separation__artifact_reading, community_leadership).
+narrative_ontology:constraint_beneficiary(gelassenheit_separation__artifact_reading, visible_separation_doctrine).
+narrative_ontology:constraint_victim(gelassenheit_separation__artifact_reading, individuals_pursuing_practical_efficiency).
 narrative_ontology:constraint_victim(gelassenheit_separation__artifact_reading, off_grid_households).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(gelassenheit_separation__artifact_reading, younger_generation_modernizers).
+narrative_ontology:constraint_vindicates(gelassenheit_separation__artifact_reading, visual_distinctiveness_as_separation_marker).
+narrative_ontology:constraint_vindicates(gelassenheit_separation__artifact_reading, artifact_resemblance_prohibition).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Church leaders and community bishops enforce the artifact-appearance rule: they review technology proposals, reject those that visually resemble worldly artifacts (solar panels, synthetic fabrics, electric motors), and maintain the visible distinctiveness boundary. They justify the rule as preserving separation from English society and defending Gelassenheit (yielding to divine will through non-resistance to tradition). They collect cultural authority and community cohesion from the rule's enforcement.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, community_leadership, agenda_setter,
+    organized, generational, mobile, regional).
+
+% Household heads and farmers who recognize practical efficiency gains from solar panels, synthetic work clothing, or efficient electric pumps. They bear the cost of the prohibition: continued manual labor, higher fuel costs, heating inefficiency, and reduced productivity. Exit means formal shunning (Bann) — expulsion from the community and severance of all social ties with family and neighbors, making exit prohibitively costly for most.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, individuals_pursuing_practical_efficiency, payer,
+    moderate, biographical, constrained, local).
+
+% Families committed to off-grid self-sufficiency who would benefit most from renewable energy and modern materials but face the strictest enforcement because they cannot hide the technology use. Off-grid status makes the visual prohibition especially binding: solar panels and efficient fabrics are not hidden infrastructure but permanent, visible installations. Their identity is constituted through community membership and religious tradition; exit is psychologically unthinkable even when technically possible.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, off_grid_households, payer,
+    powerless, biographical, identity_locked, local).
+
+% Young people born into the community who witness the efficiency gains from forbidden technologies in adjacent communities (hybrid Mennonite groups, secular rural populations) and experience the constraint as irrational. They face enforcement pressure from parents and bishops. Some leave; many stay but nurse resentment. Their voice is largely excluded from rule-setting because decision-making authority rests with married men of long standing.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, younger_generation_modernizers, payer,
+    powerless, biographical, identity_locked, local).
+narrative_ontology:stakeholder_secondary_role(gelassenheit_separation__artifact_reading, younger_generation_modernizers, observer).
+
+% Bishops and communities that interpret separation via the consequence-reading (technology acceptable if it preserves mutual aid and geographic rootedness) have allowed solar power and synthetic fabrics in off-grid settings. They would argue for technology evaluation on practical and social grounds rather than artifact appearance. They are excluded from this artifact-reading community's decision-making; where they coexist geographically, they model an alternative practice the artifact-reading community actively rejects.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, consequence_reading_practitioners, excluded,
+    organized, generational, constrained, regional).
+
+% Communities that interpret separation via the principle-reading (technology acceptable if functionally isolated from worldly systems) accept some modern artifacts if they are stand-alone installations. They would permit solar arrays and efficient fabrics because they represent functional isolation, not entanglement. They are excluded from artifact-reading rule-setting and model a competing constraint interpretation.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, principle_reading_practitioners, excluded,
+    organized, generational, constrained, regional).
+
+% Not a real actor: the abstract fact that efficient technologies improve work output and reduce human suffering. Carried as a beneficiary because the constraint's opponents vindicate this proposition, not the leadership. It collects nothing but helps frame what the rule suppresses.
+narrative_ontology:constraint_stakeholder(gelassenheit_separation__artifact_reading, biomechanical_efficiency_function, beneficiary,
+    analytical, civilizational, analytical, global).
+narrative_ontology:stakeholder_non_agent(gelassenheit_separation__artifact_reading, biomechanical_efficiency_function).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(gelassenheit_separation__artifact_reading, community_leadership).
+narrative_ontology:fixing_cost_class(gelassenheit_separation__artifact_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Maintains visible boundary markers that distinguish the community from surrounding English society: restricts technology adoption to methods that do not create visual resemblance to worldly artifacts, preserving a recognizable Anabaptist/Mennonite material culture that signals membership and identity.
+% TRANSFER_FUNCTION: Transfers the efficiency gains from solar power, synthetic fabrics, and modern equipment to the community as a whole (via the authority of a unified tradition) and redistributes burden of manual labor unequally — those with less political power bear the highest cost of the prohibition.
+% ABSENT_VOICES: Younger generation, off-grid households, and alternative-reading communities are structurally excluded from deciding what counts as 'resemblance.' Industrial-society engineers and efficiency advocates outside the community would object on grounds of rationality and harm reduction but are not in the conversation by design.
+% DISAPPEARANCE_RATIONALE: If the artifact-appearance prohibition vanished, solar installations would appear within months in off-grid communities; synthetic work clothing would displace cotton and wool; labor productivity would rise sharply. The constraint's disappearance would not eliminate Gelassenheit theology but would decouple visible distinctiveness from separation doctrine, forcing a theological reconstruction. The community would reorganize around the consequence- or principle-readings instead.
+% FOUNDING_PROBLEM: In the 16th century, Anabaptist separation from Catholic/Protestant Christendom required visible markers: plain dress, simple furnishings, rejection of oaths and worldly status symbols. In the 20th and 21st centuries, the artifact-reading interpretation extended this historical principle to technological form: 'worldly' artifacts — those that resemble English/non-Anabaptist versions — become forbidden not by function but by appearance.
+% FOUNDING_PROBLEM_CORROBORATION: The artifact-reading leadership attests the founding problem is live: technology visibility marks separation and must be defended. Historians of Anabaptism outside the community note that the founding problem (16th-century religious persecution and need for visible boundary) was structurally resolved by the 19th century in most North American communities; the constraint persists as reification of historical identity rather than active response to current threats. Consequence- and principle-reading communities attest the problem has been superseded by more nuanced theological frameworks. Younger community members, in interviews outside formal structures, express skepticism about the founding problem's continued relevance.
+narrative_ontology:disappearance_verdict(gelassenheit_separation__artifact_reading, world_rearranges).
+narrative_ontology:founding_problem_status(gelassenheit_separation__artifact_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gelassenheit_separation__artifact_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(gelassenheit_separation__artifact_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(gelassenheit_separation__artifact_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gelassenheit_separation__artifact_reading, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +248,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness score (0.82) reflects the high transfer of practical autonomy to the authority structure and the substantial cost borne by members (labor, energy access, agricultural efficiency, weather protection). Suppression is even higher (0.91) because the constraint depends on active enforcement: form-resemblance is not objectively verifiable (a modern fabric might resemble a worldly equivalent in degree; a solar panel's similarity to English infrastructure is interpretive); the authority must continuously adjudicate borderline cases, discipline violations, and suppress alternative readings. Theater-ratio rises to 0.58 over the interval because increasing amounts of enforcement activity defends the artifact-form distinction itself rather than the underlying separation goal (younger members would achieve separation via consequence or principle readings without the enforcement burden; the theater is the maintenance of the distinction doctrine, not the separation it claims to serve). Accessibility collapse is high (0.88) because once the artifact-reading is the official doctrine, alternatives (practical technology, functional-isolation reasoning, consequence-based evaluation) become cognitively and socially unavailable to members without breaking with the community. Resistance is moderate (0.74) because the younger generation and practitioners with technical knowledge mount real objections, but those objections are suppressed through authority rather than resolved. The suppression_requirement measurements track rising enforcement intensity: as pragmatic pressure increases, the authority must work harder to maintain the distinction.
+ *   The artifact-reading achieves structural high extractiveness through three mechanisms: (1) it suppresses technologies that are functionally beneficial but aesthetically modern, creating genuine opportunity cost; (2) it redistributes the burden of this suppression unequally — off-grid households bear the highest cost because they cannot hide installations and face the strongest enforcement pressure; (3) it transfers the cultural authority that comes from 'preserving distinctiveness' to the community leadership that administers the rule. Suppression is extremely high (0.91) because enforcement is backed by Bann — total expulsion from family and community — making exit prohibitively costly for most. Theater has risen over the interval because the founding problem (defensive separation from persecution) has become irrelevant; enforcement now primarily defends the aesthetic marker itself rather than addressing substantive religious doctrine. The measurement trajectory shows extraction accumulating as technology options expanded: in 1920, the constraint suppressed relatively crude technologies; by 2025, it suppresses high-efficiency solar, synthetic insulation, and modern farming equipment, making the opportunity cost of compliance much higher. The artifact-reading is vulnerable to the natural-law vs. constructed omega because the rule's specificity to industrial-age artifacts suggests historical elaboration rather than transmission — the 16th-century Anabaptist sources that justify the general principle of separation do not prescribe prohibition on solar panels.
  *
  * PERSPECTIVAL GAP:
- *   From the church authority's seat, the artifact-reading is a straightforward application of separation doctrine: visible distinctness is the proper form of separation, and form-based prohibition is a clear, enforceable standard. From the community members' seat (especially off-grid and practical-needs seats), the constraint is experienced as arbitrary extraction: a solar panel functions identically whether it's visible or hidden, whether off-grid or grid-connected, yet visibility is the only thing that matters under this reading. The principle-reading seat views this as overextension: functional isolation is the actual safeguard against worldly entanglement, and form-resemblance is a proxy that imports worldly concerns (what English society looks like) into a separation that should be about functional autonomy. The consequence-reading seat views this as category error: separation should be measured by community effect (visiting, mutual aid, rootedness), and artifact form is a performative marker that substitutes for actual community preservation. These perspectival gaps arise directly from the different axioms the readings hold (form-as-moral-property under artifact-reading vs. function-as-moral-property under principle-reading vs. consequence-as-moral-property under consequence-reading). The engine computes per-seat types from the structural data; the artifact-reading's claim-type and the computed types across seats will likely diverge, which is exactly the measurement the corpus exists to take.
+ *   The leadership and the payer seats should compute dramatically differently. From the leadership position, the constraint preserves Gelassenheit and community distinctiveness — a genuine coordination function protecting cultural identity. From the off-grid household position, the constraint is pure extraction: it forbids the technologies that would most improve their lives, backed by the threat of Bann. The younger generation sits in a complicated middle position: they see the constraint's irrationality (alternative communities prosper with the same technologies) but are identity-locked into compliance. The engine should compute the artifact-reading as tangled_rope from the leadership seat (coordination + active enforcement) and as snare or high-extraction piton from the payer seats (enforced suppression without genuine coordination benefit). This per-seat divergence is the structural evidence that the claim/metric gap is real.
  *
  * DIRECTIONALITY LOGIC:
- *   The church authority structure is the structural beneficiary (controls interpretation, monopolizes adjudication, derives authority from the doctrine): d near 0.0–0.2. Community members with practical needs are targets (bear costs, constrained by identity-lock): d near 0.75–0.85. Off-grid households are fully targeted (trapped exit, highest burden): d near 0.95–1.0. Principle-reading and consequence-reading adherents have mixed directionality: they are payers (lose authority, treated as doctrinal error) but partially beneficiaries (remain in community, maintain spiritual home): d near 0.5–0.65. Younger pragmatists are similar but with rising d as suppression intensifies. English secular society has zero directionality within the constraint (it is the reference frame, not a seat).
+ *   Community leadership benefits from the constraint (collects cultural authority, maintains governance role) — d near 0.0 (beneficiary). Individuals pursuing efficiency and off-grid households bear costs (lose technology options, face suppression for violation) — d near 1.0 (target). The younger generation and consequence/principle-reading practitioners are excluded from rule-making despite living the constraint's consequences — d somewhere between 0.5 and 1.0 depending on how much they internalize the rule. The constraint is enforced actively (Bann threat) and the exit options are severely constrained for most (identity_locked for off-grid households, constrained for efficiency-pursuers). No directionality overrides are needed; the structural derivation captures the true relationships.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is live and real (assimilation risk persists), but the artifact-reading increasingly appears to be solving a different problem (maintaining a visible aesthetic of separation) than the founding problem itself (resisting cultural absorption). This is the classic mandatrophy pattern: a constraint built to solve one problem persists in solving a proxy problem when the original problem changes or shifts. The consequence-reading and principle-reading both solve the founding problem (preserve separation) without the theater cost of artifact prohibition. The measurement of rising theater-ratio and stable-then-rising suppression_requirement is exactly where mandatrophy appears: the constraint must work harder to maintain the distinction itself, not because separation is harder to achieve, but because the real separation is being achieved through other means (consequence-preservation, principle-isolation) and the artifact-form distinction has become decorative. A mandatrophy declaration would state: the founding problem of assimilation resistance remains live, but the artifact-reading has become a theater of separation rather than its functional mechanism; the consequence-reading and principle-reading preserve separation at lower cost and higher consensus.
+ *   The founding problem was defensive separation from persecution and religious outsiders — a live coordination problem in the 16th and early 20th centuries. By the 21st century, the problem has been substantially solved: North American Anabaptist communities are legally protected, socially tolerated, and no longer subject to persecution. The constraint persists not because the problem is live but because enforcement machinery became institutionalized and aesthetic distinctiveness became an end in itself. This is a classic mandatrophy case: the mandate (preserve separation from persecution through visible distinctiveness) has outlived its function, but enforcement persists as theater and cultural control. The measurement trajectory shows this: suppression_requirement and theater_ratio both rise over the interval as the founding problem becomes more historical and less urgent. The constraint could be classified as tangled_rope (from leadership) or piton (from payer seats) depending on how much the coordination benefit of cultural distinctiveness is valued. The (founding_problem_status=dead x disappearance_verdict=world_rearranges) mismatch flags a capture/zombie scenario: the founding problem is gone, but the arrangement persists and would reorganize if removed, which suggests the constraint is maintained for leadership benefit, not community necessity.
  */
 
 /* ==========================================================================
@@ -191,95 +265,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    form_vs_function_boundary,
-    'Is form-resemblance a meaningful moral property, or is it a proxy for function and worldly entanglement that mistakes appearance for substance?',
-    'Examine cases where form and function diverge sharply (e.g., a solar panel in a cave where it is invisible, a synthetic fabric used in isolation). If the artifact-reading permits these in practice while prohibiting visible equivalents, the reading treats form as primary; if actual usage patterns show community members treating function as decisive when form is hidden, the reading''s moral purchase is weaker than claimed.',
-    'If form is a genuine moral property (as the artifact-reading claims), then the reading''s logic is sound and the constraint is a valid application of separation doctrine. If form is a proxy that breaks down under scrutiny, then the reading is performative theater: it maintains visible markers of separation without preserving actual separation from worldly systems. This shifts classification from tangled_rope (genuine coordination + asymmetric extraction) toward snare (pure extraction disguised as coordination).',
+    natural_law_vs_constructed_distinction,
+    'Is the artifact-appearance rule a genuine commitment to Gelassenheit (yielding), or a reification of 20th-century cultural aesthetics now treated as eternal theological principle?',
+    'Genealogical analysis: compare the rule as stated in 1960s enforcement documents with Anabaptist primary sources from the 16th–18th centuries. If the rule''s specificity to industrial-age artifacts (solar panels, synthetic fabrics) is documented as an elaboration rather than a transmission, the rule is constructed, not natural.',
+    'If constructed, the rule is a false summit — a human choice benefiting leadership, disguised as divine principle. If natural (genuinely transmitted), it is a legitimate cultural boundary. The engine''s classification and the FSM signature would detect the false summit.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(form_vs_function_boundary, empirical, 'Whether form-resemblance is a primary moral property or a performative proxy.').
+narrative_ontology:omega_variable(natural_law_vs_constructed_distinction, empirical, 'Whether the artifact-appearance rule is inherited theological principle or elaborated cultural reification.').
 
 omega_variable(
-    suppression_internalization,
-    'Is the measured suppression structural (enforced by authority discipline) or internalized (community members have adopted the form-based standard as intrinsically correct)?',
-    'Post-exit tracking: interview or observe members who have left the community. If suppression persists after external enforcement is removed (members continue to avoid artifact-forms even when geographically and socially isolated from the authority), the suppression is partially internalized. If suppression collapses immediately upon exit, it is primarily structural.',
-    'Internalized suppression increases effective suppression beyond the measured 0.91 because the target carries the constraint with them after leaving. Structural suppression alone (0.91) is already high, but internalization would suggest deeper identity fusion and a snare-like operation. Mixed internalization/structural would indicate the artifact-reading has created cognitive patterns that persist independent of enforcement.',
+    reading_kernel_identity_ambiguity,
+    'What is the kernel that the artifact-reading instantiates? Is it ''separation as visible distinctiveness'' (unique to this reading), or a more general principle about separation that the artifact-reading interprets maximally?',
+    'Compare foundational texts cited by all three readings. If all three cite the same passages and diverge only in interpretation, the kernel is general (separation) and three readings are three interpretations. If the artifact-reading cites distinct historical episodes or doctrinal sources, the kernel may be artifact-specific.',
+    'If the kernel is general, the three readings coexist as live alternatives; if the kernel is artifact-specific, the artifact-reading forecloses the others. The cs_structure.reading_relations assignment hinges on this distinction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_internalization, empirical, 'Whether suppression is externally enforced or internalized as identity.').
+narrative_ontology:omega_variable(reading_kernel_identity_ambiguity, conceptual, 'Whether the contested kernel is general separation or artifact-specific prohibition.').
 
 omega_variable(
-    founding_problem_shift,
-    'Has the founding problem (assimilation risk) genuinely declined, or has it merely transformed into different channels, making the artifact-reading less necessary but more costly?',
-    'Historical analysis of cultural assimilation pressures: compare the early period (when the artifact-reading was developed) to the contemporary period. Assess whether English secular culture''s social coercion toward assimilation remains as strong. If assimilation risk has declined (pluralism, reduced social pressure, increased institutional recognition of minority communities), then the artifact-reading persists as mandatrophy.',
-    'If the founding problem has substantially declined, the artifact-reading becomes a constraint whose original justification has evaporated; it persists through institutional inertia and authority structure interests. This would support a mandatrophy_resolved declaration and signal that the consequence-reading or principle-reading would solve actual contemporary separation needs at lower cost.',
+    suppression_structural_vs_internalized,
+    'Is the suppression of technology adoption structurally enforced (legal shunning, loss of participation rights) or internalized (community members enforce the rule on themselves through shame, identity fusion with the tradition)?',
+    'Post-exit trajectory study: track individuals who leave the community over technology disputes and measure whether suppression drops, stays constant, or inverts. If suppression persists after exit (individuals still avoid solar panels, feel shame about synthetic clothing), suppression is internalized. If suppression disappears after exit, it is structural.',
+    'If suppression is primarily internalized, the measured suppression score (0.91) understates the constraint''s binding force — individuals carry the suppression with them after exit. If structural, the score reflects enforcement machinery accurately. Internalized suppression would make the constraint more extractive than metrics show.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(founding_problem_shift, empirical, 'Whether the founding problem has declined or transformed.').
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether the constraint''s suppression is structurally enforced (shunning, exclusion) or internalized (identity fusion, shame).').
 
 omega_variable(
-    reading_gatekeeping,
-    'Is the artifact-reading enforced as the exclusive official interpretation, or do principle-reading and consequence-reading positions retain legitimate standing within the authority structure?',
-    'Review authority structure documents, sermons, disciplinary records. Count how many leadership positions are held by principle-reading and consequence-reading adherents vs. artifact-reading adherents. Assess whether dissenting readings are treated as legitimate theological alternatives or as doctrinal errors subject to discipline.',
-    'If the artifact-reading is gatekept as the exclusive interpretation (principle and consequence readings are treated as errors), the constraint operates with higher suppression and lower accessibility to alternatives than if the readings are genuinely pluralized within the authority structure. Exclusive gatekeeping increases the reading''s suppression profile and its snare-like characteristics; pluralized readings would lower effective suppression and reduce mandatrophy risk.',
-    confidence_without_resolution(high)
+    reading_divergence_mechanism,
+    'The three readings coexist within overlapping communities. What preserves their distinctness and prevents convergence toward a single dominant reading?',
+    'Institutional mapping: identify which geographic regions, bishops, and communities hold each reading. If readings cluster (artifact-reading in communities with high English contact, principle-reading in isolated areas), institutional separation explains the divergence. If readings are mixed (same bishop holds both readings), consensus mechanisms are preventing drift.',
+    'High institutional separation makes readings structurally robust and unlikely to collapse into one; mixed institutional context suggests readings are in active renegotiation and one may win out. The cs_structure.reading_relations assignment (coexists_with vs. influences) depends on this.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_gatekeeping, empirical, 'Whether the artifact-reading is enforced exclusively or coexists with principle and consequence readings.').
-
-omega_variable(
-    younger_generation_exit_risk,
-    'What proportion of the younger generation will exit the community due to the practical costs of artifact-form prohibition, and at what rate is that proportion growing?',
-    'Track demographic data on youth retention across 10-year intervals. Conduct exit interviews with members who leave, coding for mention of artifact-form prohibition vs. other reasons. Monitor rising resistance measurements (already climbing in the coercion grid from 0.68 to 0.74 at the class level).',
-    'High youth exit (>15% per generation) due to artifact costs would eventually erode community viability and force doctrine recalibration. This would be observable as rising resistance measurements and potential future type transitions (from tangled_rope toward snare as suppression becomes more coercive to hold younger members). It is also a sign that the authority structure is maintaining the artifact-reading against actual community preference, which is a snare indicator.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(younger_generation_exit_risk, empirical, 'Trajectory of youth retention under artifact-form prohibition costs.').
+narrative_ontology:omega_variable(reading_divergence_mechanism, empirical, 'What institutional mechanisms preserve reading distinctness.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gelassenheit_separation__artifact_reading, 0, 40).
+narrative_ontology:interval(gelassenheit_separation__artifact_reading, 1920, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gela_tr_t0, gelassenheit_separation__artifact_reading, theater_ratio, 0, 0.42).
-narrative_ontology:measurement(gela_tr_t5, gelassenheit_separation__artifact_reading, theater_ratio, 5, 0.45).
-narrative_ontology:measurement(gela_tr_t10, gelassenheit_separation__artifact_reading, theater_ratio, 10, 0.48).
-narrative_ontology:measurement(gela_tr_t15, gelassenheit_separation__artifact_reading, theater_ratio, 15, 0.51).
-narrative_ontology:measurement(gela_tr_t20, gelassenheit_separation__artifact_reading, theater_ratio, 20, 0.55).
-narrative_ontology:measurement(gela_tr_t25, gelassenheit_separation__artifact_reading, theater_ratio, 25, 0.57).
-narrative_ontology:measurement(gela_tr_t30, gelassenheit_separation__artifact_reading, theater_ratio, 30, 0.58).
-narrative_ontology:measurement(gela_tr_t40, gelassenheit_separation__artifact_reading, theater_ratio, 40, 0.58).
+narrative_ontology:measurement(gela_tr_t1920, gelassenheit_separation__artifact_reading, theater_ratio, 1920, 0.15).
+narrative_ontology:measurement_basis(gela_tr_t1920, projected).
+narrative_ontology:measurement(gela_tr_t1960, gelassenheit_separation__artifact_reading, theater_ratio, 1960, 0.24).
+narrative_ontology:measurement_basis(gela_tr_t1960, observed).
+narrative_ontology:measurement(gela_tr_t1985, gelassenheit_separation__artifact_reading, theater_ratio, 1985, 0.32).
+narrative_ontology:measurement_basis(gela_tr_t1985, observed).
+narrative_ontology:measurement(gela_tr_t2005, gelassenheit_separation__artifact_reading, theater_ratio, 2005, 0.38).
+narrative_ontology:measurement_basis(gela_tr_t2005, observed).
+narrative_ontology:measurement(gela_tr_t2020, gelassenheit_separation__artifact_reading, theater_ratio, 2020, 0.41).
+narrative_ontology:measurement_basis(gela_tr_t2020, observed).
+narrative_ontology:measurement(gela_tr_t2025, gelassenheit_separation__artifact_reading, theater_ratio, 2025, 0.44).
+narrative_ontology:measurement_basis(gela_tr_t2025, observed).
 
 % Extraction over time
-narrative_ontology:measurement(gela_be_t0, gelassenheit_separation__artifact_reading, base_extractiveness, 0, 0.68).
-narrative_ontology:measurement(gela_be_t5, gelassenheit_separation__artifact_reading, base_extractiveness, 5, 0.71).
-narrative_ontology:measurement(gela_be_t10, gelassenheit_separation__artifact_reading, base_extractiveness, 10, 0.75).
-narrative_ontology:measurement(gela_be_t15, gelassenheit_separation__artifact_reading, base_extractiveness, 15, 0.78).
-narrative_ontology:measurement(gela_be_t20, gelassenheit_separation__artifact_reading, base_extractiveness, 20, 0.8).
-narrative_ontology:measurement(gela_be_t25, gelassenheit_separation__artifact_reading, base_extractiveness, 25, 0.81).
-narrative_ontology:measurement(gela_be_t30, gelassenheit_separation__artifact_reading, base_extractiveness, 30, 0.82).
-narrative_ontology:measurement(gela_be_t40, gelassenheit_separation__artifact_reading, base_extractiveness, 40, 0.82).
+narrative_ontology:measurement(gela_be_t1920, gelassenheit_separation__artifact_reading, base_extractiveness, 1920, 0.55).
+narrative_ontology:measurement_basis(gela_be_t1920, projected).
+narrative_ontology:measurement(gela_be_t1960, gelassenheit_separation__artifact_reading, base_extractiveness, 1960, 0.68).
+narrative_ontology:measurement_basis(gela_be_t1960, observed).
+narrative_ontology:measurement(gela_be_t1985, gelassenheit_separation__artifact_reading, base_extractiveness, 1985, 0.76).
+narrative_ontology:measurement_basis(gela_be_t1985, observed).
+narrative_ontology:measurement(gela_be_t2005, gelassenheit_separation__artifact_reading, base_extractiveness, 2005, 0.79).
+narrative_ontology:measurement_basis(gela_be_t2005, observed).
+narrative_ontology:measurement(gela_be_t2020, gelassenheit_separation__artifact_reading, base_extractiveness, 2020, 0.81).
+narrative_ontology:measurement_basis(gela_be_t2020, observed).
+narrative_ontology:measurement(gela_be_t2025, gelassenheit_separation__artifact_reading, base_extractiveness, 2025, 0.82).
+narrative_ontology:measurement_basis(gela_be_t2025, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gela_su_t0, gelassenheit_separation__artifact_reading, suppression_requirement, 0, 0.85).
-narrative_ontology:measurement(gela_su_t5, gelassenheit_separation__artifact_reading, suppression_requirement, 5, 0.87).
-narrative_ontology:measurement(gela_su_t10, gelassenheit_separation__artifact_reading, suppression_requirement, 10, 0.88).
-narrative_ontology:measurement(gela_su_t15, gelassenheit_separation__artifact_reading, suppression_requirement, 15, 0.89).
-narrative_ontology:measurement(gela_su_t20, gelassenheit_separation__artifact_reading, suppression_requirement, 20, 0.9).
-narrative_ontology:measurement(gela_su_t25, gelassenheit_separation__artifact_reading, suppression_requirement, 25, 0.91).
-narrative_ontology:measurement(gela_su_t30, gelassenheit_separation__artifact_reading, suppression_requirement, 30, 0.91).
-narrative_ontology:measurement(gela_su_t40, gelassenheit_separation__artifact_reading, suppression_requirement, 40, 0.91).
+narrative_ontology:measurement(gela_su_t1920, gelassenheit_separation__artifact_reading, suppression_requirement, 1920, 0.68).
+narrative_ontology:measurement_basis(gela_su_t1920, projected).
+narrative_ontology:measurement(gela_su_t1960, gelassenheit_separation__artifact_reading, suppression_requirement, 1960, 0.78).
+narrative_ontology:measurement_basis(gela_su_t1960, observed).
+narrative_ontology:measurement(gela_su_t1985, gelassenheit_separation__artifact_reading, suppression_requirement, 1985, 0.84).
+narrative_ontology:measurement_basis(gela_su_t1985, observed).
+narrative_ontology:measurement(gela_su_t2005, gelassenheit_separation__artifact_reading, suppression_requirement, 2005, 0.88).
+narrative_ontology:measurement_basis(gela_su_t2005, observed).
+narrative_ontology:measurement(gela_su_t2020, gelassenheit_separation__artifact_reading, suppression_requirement, 2020, 0.9).
+narrative_ontology:measurement_basis(gela_su_t2020, observed).
+narrative_ontology:measurement(gela_su_t2025, gelassenheit_separation__artifact_reading, suppression_requirement, 2025, 0.91).
+narrative_ontology:measurement_basis(gela_su_t2025, observed).
 
 
 /* ==========================================================================
@@ -288,17 +364,15 @@ narrative_ontology:measurement(gela_su_t40, gelassenheit_separation__artifact_re
 
 narrative_ontology:coordination_type(gelassenheit_separation__artifact_reading, identity_coordination).
 narrative_ontology:boltzmann_floor_override(gelassenheit_separation__artifact_reading, 0.12).
-narrative_ontology:affects_constraint(gelassenheit_separation__artifact_reading, gelassenheit_separation__principle_reading).
 narrative_ontology:affects_constraint(gelassenheit_separation__artifact_reading, gelassenheit_separation__consequence_reading).
+narrative_ontology:affects_constraint(gelassenheit_separation__artifact_reading, gelassenheit_separation__principle_reading).
 
 % DUAL FORMULATION NOTE:
-% The gelassenheit_separation kernel has three distinct constraint readings: (1) artifact-reading (THIS CONSTRAINT) — separation as visible distinction from English society; technology forbidden if form resembles worldly equivalents; high ε ≈ 0.82 due to form-ambiguity and enforcement overhead; (2) principle-reading — separation as functional isolation from worldly systems; technology acceptable if operationally independent; lower ε due to objective verifiability of function; (3) consequence-reading — separation as preservation of community practices (visiting, mutual aid, rootedness); technology evaluated by effect on practices; lowest ε due to actual community function. All three readings share the founding problem (assimilation resistance) but differ in their core moral property claims (form vs. function vs. consequence) and produce divergent classification outcomes. The artifact-reading is the most suppressive and extractive; the consequence-reading and principle-reading preserve separation at lower cost and higher community consensus. The artifact-reading influences both sibling readings by gatekeeping the official doctrine and treating alternative readings as doctrinal error; the consequence-reading and principle-reading coexist within the community as internal alternatives, neither foreclosing the other.
+% The gelassenheit_separation kernel is instantiated by three structurally distinct constraint stories, one per reading. The artifact-reading prioritizes visible markers and forbids technologies by appearance; the consequence-reading permits technologies that preserve community practices; the principle-reading permits functionally isolated technologies. All three share the same founding problem (16th-century Anabaptist separation) but produce different ε values and victim sets. The three constraints are linked by network.affects_constraints because each reading's adoption or decline creates structural pressure on the others — adoption of consequence-reading in one community influences neighboring artifact-reading communities to justify their stricter rule or relax it. No reading logically forecloses another within a single party's framework, but they compete for institutional adoption across the community landscape.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(gelassenheit_separation__artifact_reading, moderate, 0.78).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

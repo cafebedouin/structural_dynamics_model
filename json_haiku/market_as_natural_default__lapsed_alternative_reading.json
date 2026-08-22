@@ -4,21 +4,32 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "86cc0c3f-f570-4ead-9c94-c345e573ec69"
+    "module_name_override": "constraint_market_as_natural_default__lapsed_alternative_reading",
+    "story_uid": "698dddf0-0b37-444c-b3b0-0b3c3cd72000",
+    "created_at": "2026-06-12T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.08,
     "suppression": 0.12,
-    "theater_ratio": 0.0,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.05,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.18,
     "claimed_type": "mountain",
     "human_readable": "Market as Natural Default (Lapsed Alternative Reading)",
-    "topic_domain": "political_economy/ideology_studies/economic_history",
+    "topic_domain": "political_economy/ideology_studies",
     "emerges_naturally": true,
-    "beneficiaries": [
-      "historical_research_community"
-    ]
+    "beneficiaries": []
+  },
+  "stakeholders": [],
+  "six_questions": {
+    "coordination_function": "Eliminates friction from decentralized bargaining by establishing price mechanism and voluntary exchange as the default institutional form for coordinating resource distribution. Solves the problem of how strangers allocate goods without kinship obligation or direct command.",
+    "transfer_function": "No systematic transfer: the reading posits that market mechanisms persist not because anyone collects from their operation, but because historical alternatives faded from cultural memory and contemporary imagination. Goods and labor move through price signals rather than through identifiable beneficiary capture.",
+    "absent_voices": "Historical actors who designed, maintained, and transmitted knowledge of non-market distribution mechanisms (guild stewards, commons administrators, socialist economists, cooperative pioneers, mutual-aid organizers). Their intellectual lineages are preserved only in specialist historical archives, not in mainstream economic pedagogy; their absence from contemporary policy discourse is structural, not rhetorical.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If market mechanisms disappeared overnight, actors would not reorganize around recovered historical alternatives — the historical knowledge is too attenuated and the machinery of living memory too degraded. The world would persist in market form by inertia of forgetting, not by active defense. A genuine organized beneficiary would mobilize to restore the arrangement; here, no such mobilization is visible because no concentrated actor profits enough from the amnesic state alone to defend it strategically.",
+    "founding_problem": "Economic coordination in large, anonymous societies requires mechanisms that do not depend on kinship, shared identity, or centralized command — strangers must exchange goods without knowing or trusting one another. Markets solve this problem; commons, guilds, and command economies solve it differently. All were live institutional options in the 18th-20th centuries.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical evidence from Braudel, Mokyr, McCloskey, and economic historians outside the neoclassical mainstream documents the deliberate design and operation of non-market distribution systems and the subsequent erasure of their alternatives from economic theory. Contemporary development economists (Sen, Ostrom, Bowles) attest that the founding problem (coordination without kinship) admits multiple institutional solutions; mainstream macro textbooks attest the problem's persistence by describing markets as the solution without mentioning alternatives were ever tried."
   },
   "interval": {
     "start": 0,
@@ -28,22 +39,22 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.08
+      "value": 0.02
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.08
+      "value": 0.04
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.08
+      "value": 0.06
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.08
+      "value": 0.07
     },
     {
       "metric": "base_extractiveness",
@@ -58,174 +69,164 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.0
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.0
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.0
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.0
+      "value": 0.14
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.0
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 50,
-      "value": 0.0
+      "value": 0.15
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.12
+      "value": 0.03
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.12
+      "value": 0.05
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.12
+      "value": 0.08
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.12
+      "value": 0.1
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.12
+      "value": 0.11
     },
     {
       "metric": "suppression_requirement",
       "time_point": 50,
       "value": 0.12
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_vs_forgotten_boundary",
+      "question": "Is market naturalization a genuine feature of economic reality (markets are the only stable coordination mechanism for large anonymous societies) or an artifact of institutional amnesia?",
+      "resolution_mechanism": "Ethnographic and historical recovery of non-market distribution mechanisms still functioning in living communities (commons regimes, mutual aid networks, gift economies, cooperative enterprises); demonstration that recovered alternatives can operate at scale without collapse. If alternatives prove functionally robust, naturalization was contingent; if they collapse under scrutiny, naturalization may be structurally grounded.",
+      "impact": "If naturalization is genuine (alternatives structurally inadequate), the constraint is a true mountain and extraction is illusory. If amnesia is the cause, the constraint is artificially mountain-shaped — classification would shift toward tangled_rope if beneficiaries begin defending amnesia, or remain as a lapsed-function piton if no one defends it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether market naturalization is intrinsic to economic coordination or contingent on historical forgetting."
+    },
+    {
+      "id": "lapsed_vs_active_defense_empirics",
+      "question": "Are markets naturalized because no one benefits enough from amnesia to defend it actively, or because amnesia has become so complete that no potential defender could rally opposition constituencies?",
+      "resolution_mechanism": "Track moments when market hegemony faces organized challenge (labor movements, degrowth advocates, commons restoration movements, institutional experiments) and measure whether incumbent actors mobilize defenses. If defenses are absent or weak despite challenges, lapsed defense is supported; if defenses are immediate and strategic, beneficiary maintenance may be latent.",
+      "impact": "If lapsed, the constraint remains a low-extraction mountain with diffuse inertia. If active defense is discovered, reclassification to tangled_rope (beneficiary defense via maintenance of amnesia) is warranted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether amnesia is defended strategically or merely persists by inertia."
+    },
+    {
+      "id": "reading_boundary_amnesia_beneficiary",
+      "question": "At what point does lapsed memory become active suppression? When does a constraint that persists through forgetting cross into a constraint that persists through the strategic maintenance of forgetting?",
+      "resolution_mechanism": "This is an omega under committer frame (not empirically resolvable a priori): it demarcates this reading from the beneficiary_maintained_reading and hybrid_amnesia_reading. The sibling readings author higher extractiveness specifically because they posit active beneficiary defense of the amnesia itself. This reading posits low extractiveness because no identifiable actor profits from amnesia alone. If evidence emerges that a beneficiary class strategically maintains amnesia (textbook curriculum capture, foundation funding for market-friendly research, suppression of heterodox economics), the constraint migrates to one of the sibling readings.",
+      "impact": "Bifurcation point for kernel readings: same observable constraint, different ε authorings based on whether beneficiary defense is presumed. This reading presumes no beneficiary — amnesia is an accident of institutional forgetting. Sibling readings presume beneficiary defense and auth higher ε accordingly.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The reading-boundary dividing lapsed from maintained amnesia; also the dividing boundary between this reading and its kernel siblings."
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint describes market organization appearing natural and inevitable through a reading that emphasizes historical amnesia rather than active closure or beneficiary maintenance. The kernel 'market_as_natural_default' is contested across three readings: (1) the beneficiary_maintained_reading frames market naturalization as actively defended post-hoc by incumbents who benefit from market organization; (2) the hybrid_amnesia_reading views initial lapsed memory as creating the conditions for subsequent beneficiary capture; (3) this lapsed_alternative_reading (instantiated here) treats the naturalization as a D3 artifact—an emergent property of ordinary processes of forgetting, not of deliberate suppression or beneficiary maintenance. Under this reading, market dominance persists not because anyone is actively defending it or because powerful actors suppress alternatives, but because the institutional memory of non-market alternatives has decayed through generational turnover, archival loss, language death, and educational canonization. The constraint has low extractiveness (ε=0.08) because there is no concentrated beneficiary class extracting rents; there is minimal active suppression because alternatives are forgotten rather than forbidden; there is no theater because no one is maintaining an elaborate performance—the forgetting is passive and structural.",
+    "narrative_context": "This reading instantiates one interpretation of the contested kernel 'market_as_natural_default': markets achieve hegemonic status not because beneficiaries actively defend their dominance, but because institutional knowledge of historical alternatives atrophied and was never recovered into living memory. Economic coordination through price mechanisms worked well enough to displace previous systems; but the knowledge of how those systems functioned, their internal design principles, and their adaptive capacity was preserved only in specialist historical archives, not in mainstream economic pedagogy or policy imagination. The constraint persists because alternatives are literally unthinkable — not because they are actively suppressed, but because the civilization forgot they existed. This reading authorizes low extractiveness (ε ≈ 0.08) because no identifiable beneficiary class profits from amnesia itself; if beneficiaries were active in maintaining amnesia, the constraint would cross into the beneficiary_maintained_reading (ε ≈ 0.55) or hybrid_amnesia_reading (ε ≈ 0.38). This reading posits amnesia as a D3 artifact — a structural feature of how knowledge is transmitted (and failed to be transmitted) across institutional boundaries and historical periods.",
     "key_agents": [
-      "contemporary_economic_actors: participate in market systems experienced as natural/inevitable; low consciousness of alternatives",
-      "economic_historians_and_archivists: maintain and recover records of non-market systems; their scholarship is the primary mechanism for undoing forgetting",
-      "institutional_memory_holders: carry fragmented knowledge of non-market practices; increasingly isolated and marginalized",
-      "educational_and_textual_systems: institutional agenda-setters that canonize market-centric history through curriculum emphasis",
-      "archive_and_library_institutions: control which historical documents are preserved and accessible; systematic loss accelerates amnesia",
-      "language and translation systems: structural phenomenon encoding market vocabulary disproportionately; non-market economic concepts untranslated or lost"
+      "Economic historians (Braudel, Mokyr, Ostrom, Sen) — preserve alternative institutional knowledge in specialist literature, outside mainstream pedagogy",
+      "Mainstream economics textbooks and pedagogy — the transmission mechanism that naturalizes markets by omission of alternatives",
+      "Non-market distribution systems (communes, guilds, cooperatives, mutual aid networks) — the actual historical alternatives, now mostly defunct or marginalized",
+      "Analytical observer — the reading itself, which reconstructs the amnesia narrative from historical record"
     ],
-    "logic_rationale": "Extractiveness is extremely low (0.08) because this reading denies any concentrated extraction mechanism. No actor deliberately closes off alternatives; no coalition maintains market naturalization for rent collection. The constraint persists through passive forgetting: generational turnover means knowledge is not passed on; archives are not explicitly destroyed but decay through neglect; minority languages carrying non-market concepts die as speakers shift to dominant languages; educational curricula emphasize market examples without active censorship of alternatives. Suppression (0.12) is minimal because it is not active exclusion but informational absence. Theater_ratio is zero because no performative maintenance is required—the constraint operates through the natural decay of institutional memory. Accessibility_collapse is very high (0.92) because once alternatives are forgotten, they are nearly inaccessible to those who have never encountered them; recovering them requires specialized historical scholarship. Resistance is minimal (0.05) because there is no focal point to resist—you cannot resist something you do not know exists. The measurement series are flat across all six time points because this reading claims the mechanism is structural and generational, not drifting. Extractiveness does not accumulate because no one is actively layering additional rents onto the constraint.",
-    "directionality_logic": "This reading produces no meaningful directionality computation in the traditional sense because there is no extraction mechanism and no consolidated beneficiary. The stakeholders listed include (a) contemporary economic actors who are observers/analysts rather than targets—they are shaped by the constraint but not deliberately harmed; (b) historians and archivists listed as 'beneficiary' in a technical sense because scholarship that recovers alternatives is the countermeasure to the constraint, so those who do that work benefit (in the sense that they have a role to play that exists because of the constraint's operation), but they do not capture rents from the constraint—they work against it; (c) educational and archival systems listed as agenda-setters because their choices (what to preserve, what to teach) shape the constraint's operation, but they are not modeled as deliberately maintaining it for extraction purposes—their agenda-setting happens through ordinary institutional operation, not through coordinated conspiracy. The directionality is near zero across most agents because the constraint is not extractive in the traditional sense. The 'beneficiary' label on historians is a technical anomaly arising from the requirement to label all constraint stakeholders; it is addressed in the omega variable on beneficiary ambiguity.",
-    "perspectival_gap": "From the perspective of contemporary economic actors, the market appears natural and inevitable—they do not consciously perceive the constraint as a constraint because it shapes what they take to be the bounds of reality. From the perspective of historians and archivists, the constraint is visible as a problem of loss and recovery; they see forgetting happening in real time (minority languages dying, archives being deaccessioned, institutional histories being forgotten). From the perspective of institutional memory holders in diaspora or indigenous communities, the constraint is directly experienced as pressure: their knowledge of non-market systems is devalued, not transmitted to children who are educated in market terms, and isolated from the broader intellectual community. Educational administrators experience their curriculum choices as neutral factual coverage ('we teach what economists agree on') rather than as choices that embed particular naturalizations. The engine should compute this divergence as a signature of a genuinely structural constraint that lacks a focal extractive beneficiary—the constraint persists not because any party is defending it, but because ordinary institutional processes embed it.",
-    "mandatrophy_analysis": "Mandatrophy (gap between founding problem and current function) is explicitly addressed in this reading but in a novel way. The founding problem identified by this reading is not 'the market solves coordination problems' but rather 'institutional memory of non-market alternatives is naturally lost.' This founding problem is live and persistent—every generation experiences information loss and must relearn or recover what was forgotten. There is no mandatrophy gap because the constraint's function (generating natural forgetting through ordinary processes) persists unchanged. This distinguishes the lapsed_alternative_reading from the beneficiary_maintained_reading (which would identify mandatrophy as the market solving its original coordination problem while persisting as extraction) and from the hybrid_amnesia_reading (which would identify a gap between initial forgetting and subsequent beneficiary capture).",
-    "kernel_context": "This constraint is the lapsed_alternative_reading of the contested kernel market_as_natural_default. The kernel is the claim that market organization appears natural and inevitable in contemporary consciousness. Three readings compete: (1) beneficiary_maintained_reading attributes naturalization to active post-hoc defense by incumbent beneficiaries; (2) hybrid_amnesia_reading treats initial forgetting as enabling subsequent beneficiary capture; (3) this lapsed_alternative_reading (instantiated here) attributes naturalization to D3 artifacts of generational memory loss without coordinated suppression. The three readings are not empirically equivalent—they predict different patterns of evidence about beneficiary organization, archival practices, and educational structures. This reading is distinguished by denial of identifiable extraction and explicit beneficiary maintenance; it attributes persistence to passive forgetting, not to active defense."
+    "logic_rationale": "Extractiveness is low (0.08 at interval end) because the constraint persists through forgetting, not through active extraction. No one collects rents from amnesia itself. Suppression is also low (0.12) because there is no coercive apparatus preventing market alternatives — they are simply unknown. Theater ratio is low but rising (0.15) because contemporary defenders of markets invoke naturalness, efficiency, and inevitability narratives that do some work to reinforce amnesia, but this is not the primary maintenance mechanism. Accessibility_collapse is high (0.72) because once the market form becomes naturalized, alternatives become nearly impossible to imagine or articulate within mainstream institutional discourse — the collapse is cognitive, not coercive. Resistance is low (0.18) because no systematic opposition to the constraint has formed; criticism exists but does not mobilize around the assertion of a viable alternative system. The measurement series shows extractiveness and suppression rising very slightly over the interval as market naturalization deepens and some performative defense emerges (rising theater), but the baseline remains that amnesia, not extraction, is the primary mechanism. The shared time grid ensures every metric is authored at all examined points; the interval represents roughly the last 50 years of market-dominant capitalism.",
+    "perspectival_gap": "This reading makes no claim about seat divergence because it authoritatively specifies that no concentrated beneficiary exists. Therefore, the payer/beneficiary structural distinction that generates perspectival gap in snare or tangled_rope constraints does not apply. The analytical divergence is historical, not contemporaneous: historians see alternatives that economists no longer know existed; policymakers see market mechanisms as natural, not as contingent on amnesia. This is not a structural divergence about what participants SEE from their positions; it is a temporal divergence about what is forgotten across historical generations.",
+    "directionality_logic": "Directionality computation is vacuous here because there are no stakeholder seats: no beneficiaries, no victims, no payers. The constraint is authored as a mountain-shaped institutional fact, not as an asymmetric distribution. The historical amnesic process has no agency — it emerges from the interaction of institutional boundary effects (economic history is archived separately from policy economics), generational knowledge loss (each new cohort of economists is trained in the contemporary canon without historical depth), and the legitimacy crisis of defeated alternatives (communism, guild structures, and commons collapsed politically, so their institutional designs fell into disrepute). The amnesia serves no identifiable actor as a conscious strategy.",
+    "mandatrophy_analysis": "The founding problem (coordination without kinship in large anonymous societies) remains live — the constraint must continue solving it. But the reading posits that the founding problem is solved by multiple institutional forms, all of which are viable: markets, commons with sophisticated monitoring, gift economies in high-trust contexts, and hybrid systems combining market and non-market mechanisms. The constraint's function (solving coordination in large societies) has NOT died, but the constraint's MANDATE (the claim that markets are the ONLY solution) has become detached from evidence. Mandatrophy is not complete, but the mechanism is clear: forgetting the alternatives naturalizes the constraint beyond its functional necessity. If alternatives were recovered into institutional memory, the mandate would weaken — the constraint would shift from a taken-for-granted mountain to a contested institutional choice (rope or tangled_rope, depending on whether beneficiaries emerge to defend it). The very low extractiveness (0.08) reflects that this reading does not claim extraction is happening — it claims naturalization is happening, and naturalization is not the same as extraction.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'market_as_natural_default'. The kernel is the standing arrangement: market mechanisms as the dominant institutional form for economic coordination. The reading instantiated here is 'lapsed_alternative_reading': the claim that market dominance results from historical forgetting of non-market alternatives, not from active closure, beneficiary capture, or structural necessity. Sibling readings are: (1) 'beneficiary_maintained_reading' — market naturalization is actively defended post-hoc by incumbent beneficiaries; (2) 'hybrid_amnesia_reading' — initial lapsed closure creates conditions for beneficiary capture, and amnesia enables extraction. These readings share the same referent (market mechanisms as the dominant form) but differ in the mechanism of persistence and the ε-value assigned. This reading authorizes the lowest ε (≈0.08) because it presumes no identifiable beneficiary actively defending the constraint; sibling readings authorize higher ε because they posit beneficiary defense via amnesia (hybrid_amnesia: ε ≈0.38) or explicit post-hoc naturalization narratives (beneficiary_maintained: ε ≈0.55). The kernel contest is unresolved: empirical investigation into whether amnesia is lapsed (this reading) or maintained (siblings) remains open."
   },
-  "omegas": [
-    {
-      "id": "beneficiary_status_of_historians",
-      "question": "Should historians and archivists who recover alternatives be classified as beneficiaries when their work counters the constraint rather than maintains it?",
-      "resolution_mechanism": "Clarify the beneficiary classification: a beneficiary typically means one who profits from or benefits incidentally from the constraint's operation. Historians benefit in the sense that their role exists because of the constraint's operation, but they work to undo it. This is a labeling ambiguity in the stakeholder surface, not a substantive disagreement about the constraint's mechanism.",
-      "impact": "If historians are removed from beneficiary classification, the constraint has zero declared beneficiaries, which flags (via FSM) the possibility that this is a false mountain—a constraint claimed as natural law but operating as an artifact of institutional choices about what to preserve. The FSM signature would be correct under the lapsed_alternative_reading: the constraint is not a natural law, but it is also not actively maintained by identifiable beneficiaries.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Ambiguity in the beneficiary label when the constraint's countermeasure is a stakeholder's primary function."
-    },
-    {
-      "id": "passive_vs_designed_forgetting",
-      "question": "Is the observed memory loss adequately explained as ordinary decay (passive forgetting) or does the evidence support deliberate erasure and active suppression by beneficiaries?",
-      "resolution_mechanism": "Historical investigation of archival practices, educational curriculum decisions, and language policies. If systematic evidence of deliberate suppression emerges (e.g., colonial authorities deliberately destroying records of indigenous non-market systems; educational boards explicitly excluding alternative models; publishing industries deprioritizing works on non-market history), the reading would shift toward beneficiary_maintained_reading or hybrid_amnesia_reading.",
-      "impact": "This omega is structural to the three-reading contest. If passive forgetting is the mechanism, this reading (lapsed_alternative) is correct and extractiveness remains ~0.08. If deliberate suppression is evidenced, extractiveness should be reclassified higher and beneficiary identification becomes possible, shifting to one of the sibling readings.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether observed memory loss is best explained as passive structural decay or as deliberate suppression."
-    },
-    {
-      "id": "recovery_reversibility",
-      "question": "Are forgotten alternatives in principle recoverable through archival research and historical scholarship, or have some alternatives been permanently erased?",
-      "resolution_mechanism": "Attempts to recover documented non-market systems from archival sources. Success at recovery indicates alternatives were forgotten but not destroyed; permanent gaps in the record indicate irreversible erasure.",
-      "impact": "If alternatives are largely recoverable, the constraint operates at the level of informational access, suggesting low barriers to reversal. If many alternatives have been permanently erased, the constraint has a destructive component and is less naturally reversible than the lapsed_alternative_reading suggests, making the constraint more robust and possibly shifting the type toward piton.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether forgotten alternatives are recoverable or permanently lost."
-    },
-    {
-      "id": "readings_as_kernel_contest",
-      "question": "Are the three readings (beneficiary_maintained, hybrid_amnesia, lapsed_alternative) genuinely three incompatible interpretations of the same kernel, or do they model different constraints altogether?",
-      "resolution_mechanism": "The three readings share a kernel claim: 'market organization appears natural and inevitable in contemporary consciousness.' They differ on mechanism: (1) active beneficiary maintenance, (2) initial forgetting enabling beneficiary capture, (3) passive forgetting without beneficiary maintenance. If evidence emerges that each reading is measuring a different constraint (different ε, different stakeholders, different causal paths), they should be decomposed as separate constraints rather than as readings of one kernel.",
-      "impact": "If the readings are genuinely alternative interpretations of one kernel, the presence of all three in the corpus enables calibration of the reading-selection machinery. If they are actually separate constraints, they should be issued as independent files with network links, not as readings.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the three readings are alternative framings of one kernel or distinct constraints requiring decomposition."
-    }
-  ],
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.08
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.04
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "beneficiary_maintained_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_amnesia_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "amnesia_unintentional_institutional",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "alternatives_functionally_viable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "market_dominance_as_contingent_historical_outcome",
+    "drift_state": {
+      "moment": "contemporary_neoclassical_hegemony",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "network": {
     "affects_constraints": [
       "market_as_natural_default__beneficiary_maintained_reading",
       "market_as_natural_default__hybrid_amnesia_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the kernel 'market_as_natural_default'. All three readings describe how market organization comes to appear natural and inevitable, but they differ on mechanism: (1) lapsed_alternative_reading (this file) attributes naturalization to passive forgetting of non-market alternatives through ordinary institutional processes; (2) beneficiary_maintained_reading attributes naturalization to active post-hoc defense by incumbent beneficiaries; (3) hybrid_amnesia_reading treats initial forgetting as creating conditions for beneficiary capture. The three readings have different ε values (this reading ≤0.15), different beneficiary structures (this reading has none or only historians as technical anomaly), and different persistence mechanisms. They are linked via affects_constraints to enable contrastive analysis of the evidence."
-  },
-  "cs_structure": {
-    "kernel_codification": "implicit",
-    "authority_grounding": "diffuse_epistemic",
-    "interpretation_layer_present": false,
-    "reading_relations": [
-      {
-        "sibling_id": "market_as_natural_default__beneficiary_maintained_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "market_as_natural_default__hybrid_amnesia_reading",
-        "relation": "influences"
-      }
-    ],
-    "axioms": [
-      {
-        "atom": "market_naturalization_via_passive_forgetting",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "alternatives_recoverable_through_scholarship",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      }
-    ],
-    "reference_frame": "pre_market_integration_institutional_diversity",
-    "drift_state": {
-      "moment": "contemporary_market_dominance",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    "dual_formulation_note": "This story is part of a three-reading constraint family decomposing the kernel 'market_as_natural_default'. Each reading instantiates a different causal mechanism for market hegemony and authorizes a different ε-value. The lapsed_alternative_reading (this file) posits unintentional amnesia with no beneficiary; beneficiary_maintained_reading posits active post-hoc defense; hybrid_amnesia_reading posits initial amnesia enabling later beneficiary capture. These are not the same constraint seen from different seats — they are structurally distinct claims about how market dominance persists. They remain live, coexisting readings held by different scholarly communities and policy factions. Link them: each reading's network.affects_constraints includes the other two siblings."
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

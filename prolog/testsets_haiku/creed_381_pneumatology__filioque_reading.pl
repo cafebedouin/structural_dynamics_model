@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,10 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,35 +76,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: creed_381_pneumatology__filioque_reading
- *   human_readable: Filioque Doctrine and Papal Magisterial Authority
- *   domain: ecclesiastical/theological
+ *   human_readable: Filioque: Papal Magisterium Authority over Trinitarian Pneumatology
+ *   domain: theology/ecclesiastical_authority/commitment_systems
  *
  * SUMMARY:
- *   The Second Ecumenical Council (381) affirmed that the Holy Spirit
- *   'proceeds from the Father' but left the relationship between Father and
- *   Son in pneumatology implicit. Western theology, particularly from
- *   Augustine onward, articulated the conviction that the Spirit proceeds
- *   from Father and Son (Filioque). By the 9th century, this formula was
- *   gradually incorporated into the Latin creed without ecumenical
- *   consultation. The constraint described here is the PAPAL MAGISTERIUM'S
- *   AUTHORITATIVE CLAIM that the Filioque is a legitimate DEVELOPMENT of 381
- *   — not an innovation — and that the papal/conciliar magisterium possesses
- *   binding authority to make this clarification. This reading asserts a
- *   specific distribution of ecclesiastical authority: Rome interprets 381;
- *   the East must assent. From the East's perspective, this is unilateral
- *   doctrinal imposition. From Rome's perspective, this is legitimate
- *   development grounded in apostolic tradition. The engine computes each
- *   seat's type from the structural data; the authored metrics describe an
- *   increasingly extractive, actively enforced arrangement.
+ *   The Filioque reading represents the papal magisterium's assertion of
+ *   authority to clarify the implicit pneumatology of the 381 Council of
+ *   Constantinople. The constraint is CLAIMED by its beneficiaries as
+ *   legitimate doctrinal development (coordination of Western theology under
+ *   unifying principle); it is READ by Eastern churches and conciliarists as
+ *   unilateral override of ecumenical consent and violation of canonical
+ *   procedure (extraction of interpretive authority). The kernel—the 381
+ *   creed and its pneumatological scope—is fixed (the text is unchangeable),
+ *   but the READING instantiated here interprets that kernel to authorize
+ *   papal amendment and magisterial clarification. This is one of three
+ *   structurally distinct readings of 381: the monoprocession reading treats
+ *   381 as already complete and reads papal modification as breach; the
+ *   ecumenical reunion reading treats both Filioque and monoprocession as
+ *   legitimate regional expressions within a conciliar framework; this
+ *   Filioque reading treats papal authority to clarify implicit doctrine as
+ *   legitimate, binding the Western church to monoprocession's rejection.
  *
  * KEY AGENTS:
- *   - Papal magisterium (agenda-setter, institutional power): sets the doctrinal frame, declares Filioque binding, enforces through discipline and exclusion.
- *   - Latin Western Church (beneficiary, organized power): gains doctrinal clarity and institutional backing for Western trinitarian theology.
- *   - Eastern Orthodox Churches (payer + excluded, organized power, identity-locked exit): maintain monoprocession as core doctrine, forced to choose between assenting to Filioque (which contradicts their theology) or remaining outside communion.
- *   - Oriental Orthodox traditions (payer, moderate power, trapped exit): similarly positioned outside the Roman framework.
- *   - Ecumenical Councils (powerful, constrained exit): lose interpretive authority to the papal magisterium's unilateral development doctrine.
- *   - Eastern theological tradition (payer, identity-locked exit): pneumatology and Christology bound to monoprocession; assent to Filioque requires theological identity reconstruction.
- *   - Modern ecumenical movement (observer, constrained exit): seeks bilateral recognition but cannot negotiate within the papal magisterium's framework without the magisterium's authorization.
+ *   - papal_magisterium — institutional beneficiary; sets agenda; claims authority to interpret 381 and its implicit pneumatology
+ *   - western_latinate_churches — organized beneficiary; accept Filioque as coherent development; benefit from unified systematic theology
+ *   - eastern_orthodox_churches — organized victim; identity-locked rejection of unilateral amendment; bear cost of schism and ecclesiastical rupture
+ *   - oriental_orthodox_churches — organized victim; similarly identity-bound to conciliar method and monoprocession; marginalised by papal authority claim
+ *   - conciliar_method_tradition — institutional excluded voice; would argue 381 is inviolable except by ecumenical consensus; silenced in Western deliberation
+ *   - second_ecumenical_council_authority — non-actor entity; the creed itself; the standing text the constraint modifies
  */
 
 /* ==========================================================================
@@ -102,59 +111,117 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(creed_381_pneumatology__filioque_reading, 0.71).
-domain_priors:suppression_score(creed_381_pneumatology__filioque_reading, 0.68).
-domain_priors:theater_ratio(creed_381_pneumatology__filioque_reading, 0.42).
+domain_priors:base_extractiveness(creed_381_pneumatology__filioque_reading, 0.81).
+domain_priors:suppression_score(creed_381_pneumatology__filioque_reading, 0.76).
+domain_priors:theater_ratio(creed_381_pneumatology__filioque_reading, 0.29).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, extractiveness, 0.71).
-narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, suppression_requirement, 0.68).
-narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, extractiveness, 0.81).
+narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, suppression_requirement, 0.76).
+narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, theater_ratio, 0.29).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, accessibility_collapse, 0.64).
-narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, resistance, 0.73).
+narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(creed_381_pneumatology__filioque_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(creed_381_pneumatology__filioque_reading, tangled_rope).
-narrative_ontology:human_readable(creed_381_pneumatology__filioque_reading, "Filioque Doctrine and Papal Magisterial Authority").
-narrative_ontology:topic_domain(creed_381_pneumatology__filioque_reading, "ecclesiastical/theological").
+narrative_ontology:human_readable(creed_381_pneumatology__filioque_reading, "Filioque: Papal Magisterium Authority over Trinitarian Pneumatology").
+narrative_ontology:topic_domain(creed_381_pneumatology__filioque_reading, "theology/ecclesiastical_authority/commitment_systems").
 
 domain_priors:requires_active_enforcement(creed_381_pneumatology__filioque_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(creed_381_pneumatology__filioque_reading, '270f0112-b6f7-4891-893f-ec2269f7cf4c').
-narrative_ontology:cs_kernel_codification('270f0112-b6f7-4891-893f-ec2269f7cf4c', formalized).
-narrative_ontology:cs_authority_grounding('270f0112-b6f7-4891-893f-ec2269f7cf4c', extraction).
-narrative_ontology:cs_interpretation_layer_present('270f0112-b6f7-4891-893f-ec2269f7cf4c').
-narrative_ontology:cs_reading_relation('270f0112-b6f7-4891-893f-ec2269f7cf4c', creed_381_pneumatology__monoprocession_reading, forecloses).
-narrative_ontology:cs_reading_relation('270f0112-b6f7-4891-893f-ec2269f7cf4c', creed_381_pneumatology__ecumenical_reunion_reading, influences).
-narrative_ontology:cs_axiom('270f0112-b6f7-4891-893f-ec2269f7cf4c', foundational, papal_magisterium_unilateral_clarification_authority).
-narrative_ontology:cs_axiom_status(papal_magisterium_unilateral_clarification_authority, holdable).
-narrative_ontology:cs_axiom_grounding('270f0112-b6f7-4891-893f-ec2269f7cf4c', papal_magisterium_unilateral_clarification_authority, deontological).
-narrative_ontology:cs_axiom('270f0112-b6f7-4891-893f-ec2269f7cf4c', foundational, filioque_implicit_in_creed_381).
-narrative_ontology:cs_axiom_status(filioque_implicit_in_creed_381, holdable).
-narrative_ontology:cs_axiom_grounding('270f0112-b6f7-4891-893f-ec2269f7cf4c', filioque_implicit_in_creed_381, empirically_contingent).
-narrative_ontology:cs_reference_frame('270f0112-b6f7-4891-893f-ec2269f7cf4c', papal_magisterial_supremacy).
-narrative_ontology:cs_drift_state('270f0112-b6f7-4891-893f-ec2269f7cf4c', post_vatican_ii_ecumenical_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('270f0112-b6f7-4891-893f-ec2269f7cf4c', '').
+narrative_ontology:cs_story_uid(creed_381_pneumatology__filioque_reading, '23660bff-dca1-4990-9633-a03d9dd99643').
+narrative_ontology:cs_kernel_codification('23660bff-dca1-4990-9633-a03d9dd99643', fixed_text).
+narrative_ontology:cs_authority_grounding('23660bff-dca1-4990-9633-a03d9dd99643', extraction).
+narrative_ontology:cs_interpretation_layer_present('23660bff-dca1-4990-9633-a03d9dd99643').
+narrative_ontology:cs_reading_relation('23660bff-dca1-4990-9633-a03d9dd99643', creed_381_pneumatology__monoprocession_reading, forecloses).
+narrative_ontology:cs_reading_relation('23660bff-dca1-4990-9633-a03d9dd99643', creed_381_pneumatology__ecumenical_reunion_reading, influences).
+narrative_ontology:cs_axiom('23660bff-dca1-4990-9633-a03d9dd99643', foundational, papal_magisterium_interprets_councils).
+narrative_ontology:cs_axiom_status(papal_magisterium_interprets_councils, holdable).
+narrative_ontology:cs_axiom_grounding('23660bff-dca1-4990-9633-a03d9dd99643', papal_magisterium_interprets_councils, deontological).
+narrative_ontology:cs_axiom('23660bff-dca1-4990-9633-a03d9dd99643', foundational, filioque_implicit_in_381).
+narrative_ontology:cs_axiom_status(filioque_implicit_in_381, holdable).
+narrative_ontology:cs_axiom_grounding('23660bff-dca1-4990-9633-a03d9dd99643', filioque_implicit_in_381, empirically_contingent).
+narrative_ontology:cs_reference_frame('23660bff-dca1-4990-9633-a03d9dd99643', conciliar_deposit_open_to_papal_clarification).
+narrative_ontology:cs_drift_state('23660bff-dca1-4990-9633-a03d9dd99643', post_reformation_hardening, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('23660bff-dca1-4990-9633-a03d9dd99643', '').
 narrative_ontology:cs_kernel_id(creed_381_pneumatology__filioque_reading, creed_381_pneumatology).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(creed_381_pneumatology__filioque_reading, papal_see).
-narrative_ontology:constraint_beneficiary(creed_381_pneumatology__filioque_reading, latin_western_church).
+narrative_ontology:constraint_beneficiary(creed_381_pneumatology__filioque_reading, papal_magisterium).
+narrative_ontology:constraint_beneficiary(creed_381_pneumatology__filioque_reading, western_latinate_churches).
 narrative_ontology:constraint_victim(creed_381_pneumatology__filioque_reading, eastern_orthodox_churches).
-narrative_ontology:constraint_victim(creed_381_pneumatology__filioque_reading, oriental_orthodox_traditions).
+narrative_ontology:constraint_victim(creed_381_pneumatology__filioque_reading, oriental_orthodox_churches).
+narrative_ontology:constraint_vindicates(creed_381_pneumatology__filioque_reading, papal_doctrinal_authority).
+narrative_ontology:constraint_vindicates(creed_381_pneumatology__filioque_reading, western_trinitarian_systematization).
+narrative_ontology:constraint_vindicates(creed_381_pneumatology__filioque_reading, magisterial_interpretive_power).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The Roman See claims authority to clarify implicit doctrines of the Council of 381 through papal pronouncement and conciliar affirmation. Asserts the Filioque as a legitimate development from scriptural and patristic foundations. Sets the binding theological boundary for Western communion and enforces doctrinal conformity. The papal seat benefits by consolidating interpretive authority over the ecumenical inheritance and securing Western theological centralization.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, papal_magisterium, agenda_setter,
+    institutional, civilizational, trapped, universal).
+
+% Adopt the Filioque and benefit from unified doctrinal expression within the Latin rite. The constraint enables systematic Western theology (Aquinas, Bonaventure, later scholasticism) by fixing pneumatological doctrine. They experience the constraint as legitimate development rather than imposition because the outcome aligns with their own theological inclinations and interpretive traditions. Exit would fragment Western coherence.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, western_latinate_churches, beneficiary,
+    organized, civilizational, constrained, continental).
+
+% Reject the unilateral papal modification of the 381 creed as a violation of ecumenical consent and their theological autonomy. Bear the cost of ecclesiastical rupture (the 1054 schism formalized). Their identity as custodians of apostolic tradition is fundamentally bound to the inviolability of the ecumenical councils and rejection of unilateral papal amendment. They cannot exit this positioning—their entire self-understanding rests on the claim that 381 is unchangeable except by council.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, eastern_orthodox_churches, payer,
+    organized, civilizational, identity_locked, continental).
+
+% Similarly bound by conciliar identity and resistance to unilateral doctrinal imposition. Carry the cost of separation from Western communion and institutional pressure to align with either Rome or Constantinople. Their theological autonomy is overridden by the papal claim to interpretive supremacy. Identity as councils-first churches makes exit structurally unthinkable.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, oriental_orthodox_churches, payer,
+    organized, civilizational, identity_locked, regional).
+
+% Would contest the unilateral papal amendment of conciliar creed. The first-ecumenical model—that major doctrinal clarifications require conciliar consensus, not papal declaration—is structurally excluded from Western decision-making by the constraint. The conciliar tradition (still represented in Eastern churches) would argue that 381 cannot be modified unilaterally and that Filioque acceptance without East–West consensus violates the constitutional structure of the church.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, conciliar_method_tradition, excluded,
+    institutional, civilizational, analytical, universal).
+
+% Eastern theological voices that argue monoprocession is biblically and patristically necessitated are silenced or driven into schism. They have no legitimate seat at the Western magisterial table. Their exclusion from authoritative debate is enforced by the boundary the constraint draws between orthodoxy and heresy.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, schismatic_theologians, excluded,
+    moderate, biographical, identity_locked, universal).
+
+% The authority of the 381 creed itself—the normative text the constraint modifies. Non-actor entity tracking the standing of the ecumenical inheritance.
+narrative_ontology:constraint_stakeholder(creed_381_pneumatology__filioque_reading, second_ecumenical_council_authority, observer,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(creed_381_pneumatology__filioque_reading, second_ecumenical_council_authority).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(creed_381_pneumatology__filioque_reading, papal_magisterium).
+narrative_ontology:fixing_cost_class(creed_381_pneumatology__filioque_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes unified doctrinal expression for the Western church by clarifying the implicit pneumatological claim of 381: the Spirit's procession follows a systematic Trinitarian framework. Enables systematic theology (Aquinas, scholasticism) by fixing a binding pneumatological boundary. Solves the internal Western problem: how does the Spirit relate to the economic Trinity in a coherent framework?
+% TRANSFER_FUNCTION: Transfers interpretive authority from the ecumenical councils to the papal magisterium. Moves doctrinal boundary-setting power from conciliar consensus to papal pronouncement. Extracts theological autonomy from Eastern churches: they no longer have a voice in defining universal creedal doctrine; the boundary is set unilaterally by Rome. The transfer consolidates Western authority and marginalizes Eastern ecclesiology.
+% ABSENT_VOICES: Eastern Orthodox and Oriental Orthodox theologians, who would argue the councils are inviolable without consensus, are excluded from Western magisterial deliberation. The conciliar-method tradition—still live in the East—is structurally shut out. Dissenting Western voices (conciliarists, later Gallicans) are driven into subordination or heterodoxy. No seat is offered to a monoprocessionist reading that claims patristic fidelity.
+% DISAPPEARANCE_RATIONALE: If the constraint disappeared—if the papal assertion of authority to clarify 381 and the Filioque insertion were repudiated—Western theology would reorganize around conciliar method and monoprocessionist pneumatology or at minimum around regional theological plurality. The 1054 schism would be reopened for negotiation. Papal magisterial authority over the ecumenical inheritance would be fundamentally weakened. The boundary between East and West would shift; Western systematic theology would rebuild without the Filioque as foundation.
+% FOUNDING_PROBLEM: How does the Spirit proceed in the economic Trinity? How is the Godhead coherently related to the manifest work of the Spirit in salvation? The 381 creed asserts the Spirit's divinity but does not specify the procession formula. Western theology felt this required clarification to build systematic trinitarian doctrine; Eastern theology treated it as settled by tradition (monoprocession) and saw clarification as illicit novelty.
+% FOUNDING_PROBLEM_CORROBORATION: Papal and Western ecclesiastical authority attest the founding problem is live and the Filioque a legitimate development. Eastern Orthodox ecumenical statements (notably 1965 and later) attest the founding problem was resolved at 381 and required no addition; they attest unilateral Western amendment violates the constitutional structure of the church. Historical-theological scholarship from outside both benefiting parties (e.g., Harnack, Pelikan, Lossky) documents the contested status and the asymmetry of the modification process (Rome alone, not ecumenical).
+narrative_ontology:disappearance_verdict(creed_381_pneumatology__filioque_reading, world_rearranges).
+narrative_ontology:founding_problem_status(creed_381_pneumatology__filioque_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(creed_381_pneumatology__filioque_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(creed_381_pneumatology__filioque_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(creed_381_pneumatology__filioque_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(creed_381_pneumatology__filioque_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +241,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.12 (near the Council of 381) to 0.71 by the modern era because the constraint's enforcement becomes more systematic and its reach more global. At 381, the doctrine is implicit; no extraction yet. By the 9th-11th centuries (Photios, East-West schism) extractiveness jumps as the papal magisterium asserts unilateral authority and the East resists, paying the cost of separation. By Florence (1438) and Trent (1546), extractiveness stabilizes at high levels: the Western Church is unified around Filioque, Eastern churches are disciplined into exclusion, and the magisterial authority to bind consciences on doctrine is institutionally entrenched. Theater ratio remains moderate (0.42 at interval end) because the substantive doctrinal defense of Filioque is real — scholastic theology, patristic citation, and liturgical integration are not pure performance. But the constraint's operative persistence increasingly depends on institutional discipline (excommunication, exclusion from ecumenical tables) rather than on the intrinsic persuasiveness of the Filioque argument itself. Suppression is high (0.68) because Eastern churches maintain resistance throughout the interval, and the papal magisterium must actively enforce the doctrine through excommunication, refusal of communion, and control of conciliar participation. The accessibility_collapse is high (0.64) because, once the papal magisterium declares Filioque binding, exit for Western churches is identity-locked: to reject Filioque is to exit Roman communion and to abandon Western theological tradition. The constraint PERSISTS because institutional discipline (suppression) holds it in place, not because alternatives have genuinely disappeared — hence theater_ratio remains at 0.42 (substantial performative maintenance).
+ *   Extractiveness rises from 0.35 at 381 (barely more than coordination) to 0.81 at 1965 (high structural extraction). The trajectory traces the hardening of papal interpretive authority and the calcification of the Eastern-Western divide. Early on (381–600), the constraint is inchoate: Filioque is not yet adopted, and papal authority over 381's interpretation is not yet consolidated. By 900 (Photian crisis), suppression rises sharply as the constraint becomes actively enforced against Eastern dissent. The 1054 schism marks the constraint's crystallization: the extraction reaches 0.76 as the cost falls entirely on the Eastern victim set and the Western beneficiary set locks in. Theater ratio stays low throughout (rising from 0.08 to 0.29) because the constraint's functional work—Western systematic theology—remains genuine even as the overlying extraction hardens. Suppression and extraction continue after the schism because the constraint continues to enforce doctrinal boundary and deny conciliar alternatives. By 1965 (Vatican II, Unitatis Redintegratio), suppression holds steady at 0.76 even as official ecumenism calls for reunion; the underlying extraction remains because the Filioque reading is not renounced and papal magisterial authority is reaffirmed. All metrics are authored on a single shared time grid (t=381, 600, 900, 1054, 1500, 1965) with consistent basis assignment (projected for the pre-1054 interval where schism had not yet occurred; observed from 1054 onward as the separation becomes historical fact).
  *
  * PERSPECTIVAL GAP:
- *   From the papal magisterium's seat: this is a Rope (genuine coordination of Western doctrine, legitimate development, necessary for unity). From the Eastern Orthodox seat: this is a Snare (unilateral imposition, masked as development, sustained by excommunication and exclusion). From the modern ecumenical observer's seat: this is a Piton (the original coordination function — settling pneumatology — is atrophied and replaced by institutional maintenance; the magisterium could authorize bilateral recognition but does not, so the constraint persists mostly by inertia and enforcement). The engine will compute these divergent classifications from the structural data: the papal magisterium holds power and agenda-setting authority (d near 0.0, low extraction from its perspective), while Eastern churches are organized, trapped, and identity-locked (d near 1.0, high extraction from their perspective). The asymmetry is the point: a Tangled Rope exhibits exactly this per-seat divergence.
+ *   From the papal and Western institutional seat: the constraint is rope-to-rope-plus — genuine coordination of Western doctrine, legitimate interpretive development, consolidation of magisterial authority as a service to unity. The papal seat experiences low directionality (beneficiary end) because it is setting and administering the arrangement; Western churches also see low d because they benefit from systematic theological clarity. From the Eastern Orthodox and Oriental Orthodox seats: the constraint is snare. The victim churches experience high d (target end) because they are forced to reject a unilateral modification they were never asked to consent to. Their identity-locked exit options mean they cannot escape the cost by accepting the Filioque—acceptance would require repudiating their own self-understanding as custodians of conciliar tradition. The engine should compute different per-seat types: rope or rope-plus from the Western institutional and beneficiary seats; snare from the Eastern victim seats. This divergence is the analytic payoff of the seat-differentiated computation.
  *
  * DIRECTIONALITY LOGIC:
- *   The papal magisterium is the agenda-setter and beneficiary: it gains doctrinal authority, institutional dominion, and the capacity to unify (or exclude) under its framework. Its d approaches 0.0 (full beneficiary, low effective extraction). The Latin Western Church is a secondary beneficiary: it gains theological clarity and institutional backing. Its d is low (~0.15–0.25: it participates in the benefit, not the extraction). Eastern Orthodox and Oriental Orthodox churches are the targets: they lose theological autonomy, are excluded from ecumenical tables, face identity-based pressure to assent to a doctrine that contradicts their tradition, and are disciplined for resistance. Their d approaches 1.0 (full targets, high extraction). The Eastern theological tradition, bound to monoprocession through identity-fusion, sits at high d (~0.85): it is precisely what the constraint targets (identity-locked exit amplifies the extraction). The ecumenical councils and modern ecumenical movement are observers with constrained exits: they cannot negotiate outside the papal magisterial frame. Their d is moderate-high (~0.55–0.70) because they bear the structural cost of the constraint (inability to broker reunion on equal terms) without collecting rents.
+ *   Papal magisterium: d near 0.0 (beneficiary end). Sets the agenda, collects the benefit of interpretive authority, experiences no suppression. Western churches: d near 0.2–0.3 (low beneficiary range). Coordinate around unified doctrine, benefit from systematic theology, but accept constraints on theological autonomy (must align with papal magisterium). Eastern Orthodox and Oriental Orthodox: d near 0.85–0.95 (target end). Forced to choose between communion and doctrinal integrity; identity-locked so exit is unthinkable; bear the cost of schism and permanent marginalization. The directionality asymmetry here is extreme: same constraint, six orders of magnitude difference in d because the power atoms, exit options, and benefit/victim declarations are radically asymmetric. Conciliar-method tradition: d analytical (excluded voice, not a party to the arrangement).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem was genuine: how to ground Western Filioque intuition in 381's authority without breaking communion? The papal magisterium's answer was: declare Filioque a development of 381's implicit doctrine and bind all churches to this reading. By the modern era (esp. post-Vatican II), the founding problem is contested: was it ever a real doctrinal problem, or was it a Western theological intuition that became institutionally enforced? The constraint persists at high extractiveness (0.71) not because the doctrinal development is intrinsically persuasive (many theologians now concede Filioque is a Western addition) but because papal magisterial authority is institutionalized and the alternative (bilateral recognition of monoprocession and Filioque as complementary readings) would require the magisterium to relinquish the unilateral interpretation authority itself. Theater_ratio at 0.42 (moderate) reflects this: substantial theological defense persists, but institutional enforcement is increasingly visible. If mandatrophy_resolved were true, the constraint would have vanished or transformed by now; instead, it persists largely through institutional inertia and the magisterium's interest in maintaining the authority structure (even as ecumenical sensitivity increases). The constraint is a textbook Tangled Rope — genuine coordination function (Western doctrinal unity) + asymmetric extraction (Eastern churches excluded and disciplined) + active enforcement (magisterial discipline, refusal of communion, control of conciliar tables).
+ *   The founding problem (pneumatological clarification of 381) was live at 381 and remains live in Western theology—the Filioque solved a genuine Western theological problem. But at the Eastern victim seats, the founding problem status is dead: monoprocession was settled in 381, and the Eastern churches never experienced a coordination problem needing Filioque resolution. The constraint persists past the founding problem because: (1) from the Western seat, the problem remains live and the solution is embedded; (2) from the Eastern seat, the constraint persists not because it solves a problem but because papal authority is enforced and the cost of exit (schism, identity repudiation) is prohibitive. The theater ratio (0.29 at 1965) suggests some genuine doctrinal work remains, but the suppression and extraction metrics indicate that much of the activity is now defensive—preventing alternative readings, enforcing doctrinal boundaries. A mandatrophy verdict would flag that the founding problem is dead for the victim set, yet the constraint hardens rather than relaxes. This is precisely the pattern that signals extraction independent of original coordination. The commentary notes this mismatch: the Western magisterium could unilaterally renounce the Filioque reading and return to conciliar method, but it does not, even as ecumenism calls for reunion. That inaction is itself the measurement: the constraint persists because papal authority benefits from it, not because the founding problem in its original form remains unresolved.
  */
 
 /* ==========================================================================
@@ -191,92 +258,107 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    doctrinal_development_vs_innovation,
-    'Is Filioque truly an implicit development of 381''s monoprocession formula, or is it an innovation — a Western theological intuition that was gradually inserted into the creed and then retrospectively legitimated as development through papal authority?',
-    'Patristic exegesis, historical analysis of the creed''s gradual textual transformation in the West (8th–11th centuries), and comparative pneumatology in Eastern and Western Fathers (Augustine, Gregory Nazianzus, Photios, Maximus). If Fathers intending monoprocession are cited with equal weight by both sides, the resolution remains contested; if one side''s exegetical reading is shown to misrepresent the sources, the claim of development can be challenged.',
-    'If Filioque is development (implicit in 381), the papal magisterium''s unilateral clarification is legitimate, and the constraint is a Tangled Rope with justified coordination + extraction. If Filioque is innovation (not implicit in 381), the magisterium''s claim rests on the authority to CHANGE doctrine unilaterally, making the constraint a Snare (pure imposition). The classification pivots on this factual/conceptual ambiguity.',
+    papal_authority_grounds,
+    'On what basis does the papal magisterium claim authority to clarify the implicit doctrines of an ecumenical council?',
+    'Examine papal theological justifications (apostolic succession, Petrine primacy, continuity of magisterium) against Eastern conciliar-constitutionalist objections. Test whether the justifications rest on empirical claims about apostolic transmission or on normative ecclesiological commitments.',
+    'If the grounds rest on empirically contested claims (e.g., about historical apostolic practice), the constraint''s legitimacy is weakened by historical challenge. If the grounds rest on normative commitments (magisterial authority is a good thing), then the constraint''s persistence reveals a structural disagreement about ecclesiology that cannot be resolved by historical evidence alone—it requires a choice about which ecclesiology to adopt.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(papal_authority_grounds, conceptual, 'The epistemic grounding of papal interpretive authority and its contestability across ecclesiologies.').
+
+omega_variable(
+    conciliar_finality_vs_magisterial_development,
+    'Can an ecumenical council''s doctrinal decisions be legitimately developed or clarified by non-conciliar authority (papal or otherwise), or does conciliar finality require conciliar amendment?',
+    'Examine historical precedent from 381 forward: have ecumenical councils ever explicitly recognized non-conciliar clarifications of their doctrines? Have later councils reaffirmed or modified decisions of earlier ones, and on what authority? Test whether development-of-doctrine logic can be squared with conciliar-only amendment logic within a single framework.',
+    'If conciliar finality is absolute, the Filioque amendment is a breach and the constraint is pure extraction. If development is legitimate, the constraint is a genuine doctrinal evolution and the disagreement is about whether Western churches have the authority to decide that evolution unilaterally. If the frameworks are incommensurable, the constraint''s legitimacy depends on which framework the observer adopts (preference/conceptual omega).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(conciliar_finality_vs_magisterial_development, conceptual, 'Whether conciliar decisions can be authoritatively developed without conciliar action, or whether that power is reserved to ecumenical assemblies.').
+
+omega_variable(
+    eastern_identity_lock_structure,
+    'Is the Eastern Orthodox rejection of the Filioque reading structurally dependent on identity-fusion with conciliar method, or could Eastern theology accept the Filioque if papal imposition were removed and adoption were genuinely voluntary?',
+    'Post-schism thought experiment: if the Western church formally renounced its claim to unilateral authority and submitted the Filioque to ecumenical council for re-examination, would Eastern churches engage that reconsideration, or is their rejection now independent of the imposition mechanism? Examine historical evidence from ecumenical dialogues (Unitatis Redintegratio 1965, Joint International Commission for Theological Dialogue 1984–present).',
+    'If Eastern rejection would persist even absent imposition (because Filioque is theologically false on Eastern premises), the constraint''s suppression is structural and the identity lock is genuine—the victim churches cannot exit without changing their theological framework. If Eastern rejection would soften under consensual discussion, the constraint''s extraction is amplified by the imposition mechanism itself, and suppression is partially artifactual (created by the asymmetry, not by the doctrine). This distinction matters for distinguishing structural extraction from imposed extraction.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(doctrinal_development_vs_innovation, empirical, 'The metaphysical status of Filioque as development versus innovation.').
+narrative_ontology:omega_variable(eastern_identity_lock_structure, empirical, 'Whether Eastern identity-lock to monoprocessionism is independent of the papal imposition mechanism, or whether it is partially a function of resistance to unilateral authority.').
 
 omega_variable(
-    authority_to_bind_ecumenical_doctrine,
-    'Does the papal magisterium possess the structural authority to bind all churches to a particular reading of ecumenical councils, or does such authority require ecumenical conciliar consensus (including Eastern participation)?',
-    'Ecclesiology and canon law: does magisterial authority derive from apostolic succession (papal) or from conciliar communion (ecumenical)? If magisterial authority is supreme, papal unilateralism is legitimate; if authority requires conciliar consensus, the papal assertion is usurpation. Historical test: have Eastern churches ever assented to Filioque, or has it remained imposed against their judgment?',
-    'If the magisterium''s authority is supreme, the constraint is a Tangled Rope operating as intended (legitimate authority + coordinated doctrine + enforced assent). If authority requires ecumenical consensus, the constraint is a Snare (unilateral imposition of a doctrine rejected by half of global Christendom). The classification hinges on which authority structure is true.',
+    western_theological_dependence,
+    'How deeply dependent is Western systematic theology (Aquinas onward) on the Filioque as a foundational commitment? Could Western theology be substantially rebuilt without the Filioque if conciliar reunion required it?',
+    'Examine the theological work the Filioque does in Western trinitarian, christological, and pneumatological doctrine. Assess whether alternatives (monoprocession + other doctrinal moves) could do the same work. Test the counterfactual: if the 1054 schism had not occurred and the West had adopted monoprocessionism by council consensus, would Western theology have developed differently?',
+    'If Western theology is deeply dependent on Filioque, conciliar reunion would require Western theological reconstruction at a foundational level—a cost that might keep the Western beneficiary set locked into the constraint even if papal authority were challenged. If Western theology could survive monoprocessionism with modest adjustment, Western commitment to Filioque is more extractive than foundational—the constraint persists because it benefits papal authority, not because it solves an unsolvable Western problem.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(authority_to_bind_ecumenical_doctrine, conceptual, 'Whether the papal magisterium''s authority is unilateral or requires ecumenical conciliar consent.').
+narrative_ontology:omega_variable(western_theological_dependence, empirical, 'The structural necessity of Filioque to Western systematic theology versus its contingency as a papal choice.').
 
 omega_variable(
-    identity_lock_mechanism_in_eastern_churches,
-    'Is the Eastern churches'' resistance to Filioque a matter of structural (institutional barriers to doctrinal change) or internalized (theological identity so fused with monoprocession that assent is felt as self-annihilation) suppression? Do Eastern theologians maintain monoprocession because the papal magisterium forbids Filioque, or because their theological tradition has made monoprocession non-negotiable?',
-    'Post-suppression trajectory: if Eastern churches that negotiated Filioque (e.g., some Uniate traditions) subsequently maintained Western discipline, suppression was structural; if they reverted to monoprocession when freed from papal pressure, suppression was internalized. Or: counterfactual analysis of what doctrinal positions Eastern churches would hold if the papal magisterium had never enforced Filioque — would they have developed a complementary (or Filioque) reading, or is monoprocession integral to Eastern theology independent of magisterial pressure?',
-    'If suppression is structural (external enforcement), then removing the papal constraint might permit Eastern churches to negotiate or even adopt Filioque; the high extraction is imposed from outside. If suppression is internalized (theological identity), then removing the constraint would not dissolve resistance; the extraction is amplified by the target''s own identity-commitments, and the effective extraction is higher than measured suppression suggests.',
-    confidence_without_resolution(medium)
+    kernel_reading_stability,
+    'Does the 381 creed''s text actually contain the implicit pneumatological commitment the Filioque reading claims? Or is the Filioque an extrapolation that goes beyond what 381 implicitly asserts?',
+    'Detailed philological and patristic analysis of 381''s pneumatological language (the Spirit proceeding from the Father, etc.). Examine patristic commentary on 381 from 381 onward to determine whether Eastern and Western fathers read 381 as implicitly filioquist or monoprocessionist. Test whether ''implicit'' can be an honest reference to the kernel or whether Filioque-reading is fundamentally a new doctrine assigned retroactively to the kernel.',
+    'If 381 genuinely contains the Filioque implicitly (as the reading claims), the constraint is legitimate doctrinal clarification. If 381 is silent or ambiguous and the Filioque is a later innovation, the constraint is a reconstitution of the kernel''s meaning rather than a clarification—it violates the integrity of the kernel and is pure extraction. This is the crux of the theological dispute and the anchor of the reading''s legitimacy.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(identity_lock_mechanism_in_eastern_churches, empirical, 'Whether Eastern church resistance to Filioque is structural or internalized suppression.').
-
-omega_variable(
-    ecumenical_legitimacy_of_unilateral_clarification,
-    'If the papal magisterium claims authority to clarify implicit doctrine unilaterally, is this authority legitimate in an ecumenical context, or does ecumenical legitimacy require that Eastern churches assent to the clarification as valid before it can be binding?',
-    'Ecumenical dialogue and bilateral recognition: if Eastern Orthodox theologians come to affirm Filioque as a legitimate theological development (not necessarily their primary formulation, but not false), then the magisterium''s clarification has become ecumenically legitimate ex post facto. If Eastern churches remain opposed despite centuries of dialogue, the unilateral authority claim lacks ecumenical legitimacy and operates as disciplinary enforcement, not doctrinal persuasion.',
-    'If ecumenical legitimacy requires Eastern assent, the constraint''s extractiveness would be reduced if the magisterium authorized bilateral recognition (Ecumenical_reunion_reading). The sibling reading (ecumenical_reunion_reading) would coexist or influence this one, reducing its extractive force. If the magisterium''s unilateral authority is legitimate independent of Eastern assent, the constraint persists at current extraction levels.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(ecumenical_legitimacy_of_unilateral_clarification, preference, 'Whether unilateral magisterial clarification is legitimate without ecumenical consensus.').
-
-omega_variable(
-    reading_contest_over_creed_381,
-    'Is the kernel ''creed_381_pneumatology'' such that only ONE of the three readings (filioque, monoprocession, ecumenical_reunion) can be true, or can multiple readings coexist as legitimate theological expressions within a single communion?',
-    'Doctrinal metaphysics and ecclesiology: Does pneumatology admit of multiple legitimate formulations (e.g., the Spirit proceeds from Father alone AND from Father and Son as complementary insights), or does the pneumatological fact admit only one true description? Can Eastern and Western Christologies both be right about the Spirit''s procession, or are they metaphysically incompatible?',
-    'If only one reading is metaphysically true, the constraint''s extractiveness is justified (the magisterium binds consciences to truth). If multiple readings are compatible, the constraint''s extractiveness is reduced by the ecumenical_reunion_reading (which permits bilateral recognition), and the filioque_reading becomes an instance of false certainty. The classification would shift from Tangled Rope toward Piton (extracting rents from enforced doctrinal uniformity rather than solving a real coordination problem).',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(reading_contest_over_creed_381, conceptual, 'The metaphysical and ecclesiological status of reading pluralism within a single communion.').
+narrative_ontology:omega_variable(kernel_reading_stability, empirical, 'Whether the Filioque is implicit in 381''s text and patristic tradition, or a doctrinal innovation imposed retrospectively.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(creed_381_pneumatology__filioque_reading, 381, 2024).
+narrative_ontology:interval(creed_381_pneumatology__filioque_reading, 381, 1965).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cree_tr_t381, creed_381_pneumatology__filioque_reading, theater_ratio, 381, 0.05).
-narrative_ontology:measurement(cree_tr_t589, creed_381_pneumatology__filioque_reading, theater_ratio, 589, 0.12).
-narrative_ontology:measurement(cree_tr_t867, creed_381_pneumatology__filioque_reading, theater_ratio, 867, 0.21).
-narrative_ontology:measurement(cree_tr_t1054, creed_381_pneumatology__filioque_reading, theater_ratio, 1054, 0.31).
-narrative_ontology:measurement(cree_tr_t1438, creed_381_pneumatology__filioque_reading, theater_ratio, 1438, 0.38).
-narrative_ontology:measurement(cree_tr_t1965, creed_381_pneumatology__filioque_reading, theater_ratio, 1965, 0.42).
-narrative_ontology:measurement(cree_tr_t2024, creed_381_pneumatology__filioque_reading, theater_ratio, 2024, 0.42).
+narrative_ontology:measurement(cree_tr_t381, creed_381_pneumatology__filioque_reading, theater_ratio, 381, 0.08).
+narrative_ontology:measurement_basis(cree_tr_t381, projected).
+narrative_ontology:measurement(cree_tr_t600, creed_381_pneumatology__filioque_reading, theater_ratio, 600, 0.14).
+narrative_ontology:measurement_basis(cree_tr_t600, projected).
+narrative_ontology:measurement(cree_tr_t900, creed_381_pneumatology__filioque_reading, theater_ratio, 900, 0.21).
+narrative_ontology:measurement_basis(cree_tr_t900, observed).
+narrative_ontology:measurement(cree_tr_t1054, creed_381_pneumatology__filioque_reading, theater_ratio, 1054, 0.25).
+narrative_ontology:measurement_basis(cree_tr_t1054, observed).
+narrative_ontology:measurement(cree_tr_t1500, creed_381_pneumatology__filioque_reading, theater_ratio, 1500, 0.28).
+narrative_ontology:measurement_basis(cree_tr_t1500, observed).
+narrative_ontology:measurement(cree_tr_t1965, creed_381_pneumatology__filioque_reading, theater_ratio, 1965, 0.29).
+narrative_ontology:measurement_basis(cree_tr_t1965, observed).
 
 % Extraction over time
-narrative_ontology:measurement(cree_be_t381, creed_381_pneumatology__filioque_reading, base_extractiveness, 381, 0.12).
-narrative_ontology:measurement(cree_be_t589, creed_381_pneumatology__filioque_reading, base_extractiveness, 589, 0.24).
-narrative_ontology:measurement(cree_be_t867, creed_381_pneumatology__filioque_reading, base_extractiveness, 867, 0.39).
-narrative_ontology:measurement(cree_be_t1054, creed_381_pneumatology__filioque_reading, base_extractiveness, 1054, 0.58).
-narrative_ontology:measurement(cree_be_t1438, creed_381_pneumatology__filioque_reading, base_extractiveness, 1438, 0.67).
-narrative_ontology:measurement(cree_be_t1965, creed_381_pneumatology__filioque_reading, base_extractiveness, 1965, 0.71).
-narrative_ontology:measurement(cree_be_t2024, creed_381_pneumatology__filioque_reading, base_extractiveness, 2024, 0.71).
+narrative_ontology:measurement(cree_be_t381, creed_381_pneumatology__filioque_reading, base_extractiveness, 381, 0.35).
+narrative_ontology:measurement_basis(cree_be_t381, projected).
+narrative_ontology:measurement(cree_be_t600, creed_381_pneumatology__filioque_reading, base_extractiveness, 600, 0.52).
+narrative_ontology:measurement_basis(cree_be_t600, projected).
+narrative_ontology:measurement(cree_be_t900, creed_381_pneumatology__filioque_reading, base_extractiveness, 900, 0.68).
+narrative_ontology:measurement_basis(cree_be_t900, observed).
+narrative_ontology:measurement(cree_be_t1054, creed_381_pneumatology__filioque_reading, base_extractiveness, 1054, 0.76).
+narrative_ontology:measurement_basis(cree_be_t1054, observed).
+narrative_ontology:measurement(cree_be_t1500, creed_381_pneumatology__filioque_reading, base_extractiveness, 1500, 0.79).
+narrative_ontology:measurement_basis(cree_be_t1500, observed).
+narrative_ontology:measurement(cree_be_t1965, creed_381_pneumatology__filioque_reading, base_extractiveness, 1965, 0.81).
+narrative_ontology:measurement_basis(cree_be_t1965, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cree_su_t381, creed_381_pneumatology__filioque_reading, suppression_requirement, 381, 0.08).
-narrative_ontology:measurement(cree_su_t589, creed_381_pneumatology__filioque_reading, suppression_requirement, 589, 0.18).
-narrative_ontology:measurement(cree_su_t867, creed_381_pneumatology__filioque_reading, suppression_requirement, 867, 0.35).
-narrative_ontology:measurement(cree_su_t1054, creed_381_pneumatology__filioque_reading, suppression_requirement, 1054, 0.56).
-narrative_ontology:measurement(cree_su_t1438, creed_381_pneumatology__filioque_reading, suppression_requirement, 1438, 0.62).
-narrative_ontology:measurement(cree_su_t1965, creed_381_pneumatology__filioque_reading, suppression_requirement, 1965, 0.68).
-narrative_ontology:measurement(cree_su_t2024, creed_381_pneumatology__filioque_reading, suppression_requirement, 2024, 0.68).
+narrative_ontology:measurement(cree_su_t381, creed_381_pneumatology__filioque_reading, suppression_requirement, 381, 0.42).
+narrative_ontology:measurement_basis(cree_su_t381, projected).
+narrative_ontology:measurement(cree_su_t600, creed_381_pneumatology__filioque_reading, suppression_requirement, 600, 0.58).
+narrative_ontology:measurement_basis(cree_su_t600, projected).
+narrative_ontology:measurement(cree_su_t900, creed_381_pneumatology__filioque_reading, suppression_requirement, 900, 0.68).
+narrative_ontology:measurement_basis(cree_su_t900, observed).
+narrative_ontology:measurement(cree_su_t1054, creed_381_pneumatology__filioque_reading, suppression_requirement, 1054, 0.76).
+narrative_ontology:measurement_basis(cree_su_t1054, observed).
+narrative_ontology:measurement(cree_su_t1500, creed_381_pneumatology__filioque_reading, suppression_requirement, 1500, 0.74).
+narrative_ontology:measurement_basis(cree_su_t1500, observed).
+narrative_ontology:measurement(cree_su_t1965, creed_381_pneumatology__filioque_reading, suppression_requirement, 1965, 0.76).
+narrative_ontology:measurement_basis(cree_su_t1965, observed).
 
 
 /* ==========================================================================
@@ -284,19 +366,18 @@ narrative_ontology:measurement(cree_su_t2024, creed_381_pneumatology__filioque_r
    ========================================================================== */
 
 narrative_ontology:coordination_type(creed_381_pneumatology__filioque_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(creed_381_pneumatology__filioque_reading, 0.25).
+narrative_ontology:boltzmann_floor_override(creed_381_pneumatology__filioque_reading, 0.18).
 narrative_ontology:affects_constraint(creed_381_pneumatology__filioque_reading, creed_381_pneumatology__monoprocession_reading).
 narrative_ontology:affects_constraint(creed_381_pneumatology__filioque_reading, creed_381_pneumatology__ecumenical_reunion_reading).
-narrative_ontology:affects_constraint(creed_381_pneumatology__filioque_reading, photios_schism_1054).
-narrative_ontology:affects_constraint(creed_381_pneumatology__filioque_reading, vatican_ii_ecumenical_openness).
-narrative_ontology:affects_constraint(creed_381_pneumatology__filioque_reading, papal_magisterial_supremacy).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the kernel 'creed_381_pneumatology'. The sibling readings are: (1) monoprocession_reading — the Spirit proceeds from Father alone; 381 is inviolable without ecumenical consent; unilateral amendment is breach; (2) ecumenical_reunion_reading — both Filioque and monoprocession are acceptable as regional theological expressions; bilateral recognition replaces unilateral imposition. The ε values differ significantly: filioque_reading is high-extraction (0.71) because it establishes unilateral papal authority to bind doctrine; monoprocession_reading is low-extraction (governance by ecumenical consensus, no unilateral override); ecumenical_reunion_reading is moderate-extraction (bilateral negotiation reduces asymmetry). The three readings have different beneficiaries (Rome, Ecumenical Councils, Bilateral Churches respectively), different victims (Eastern Churches, none, none), and different authority structures (papal unilateral, conciliar consensus, negotiated bilateral). They are NOT the same constraint observed from different angles — they are three fundamentally different distributions of ecclesiastical power grounded in the SAME disputed kernel (381's pneumatology).
+% This constraint is one reading of the contested kernel creed_381_pneumatology. The kernel is fixed (the 381 Council's text on pneumatology); the readings differ on INTERPRETATION. The Filioque reading asserts papal magisterial authority to clarify implicit doctrines and commits to the Filioque as legitimate. The monoprocession reading asserts 381 is already complete and unilateral amendment is breach. The ecumenical reunion reading asserts both can coexist as regional expressions under conciliar primacy restored. Each reading instantiates structurally different constraints with different beneficiary/victim sets and different ε values. The three are linked by network.affects_constraints; they do not reduce to one constraint viewed from different angles. Each has its own ε (Filioque: 0.81 at endpoint; monoprocession likely lower as genuine mountain if 381 is treated as inviolable natural law; reunion likely moderate tangled_rope if coordination + asymmetry both present). The kernel is the common text; the readings are competing interpretations with incompatible consequences.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(creed_381_pneumatology__filioque_reading, organized, 0.22).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

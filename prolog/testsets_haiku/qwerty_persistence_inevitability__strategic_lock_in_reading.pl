@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -41,8 +41,13 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,38 +71,40 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: qwerty_persistence_inevitability__strategic_lock_in_reading
- *   human_readable: QWERTY Keyboard Layout: Manufacturer Lock-in via Cartel Standardization
- *   domain: economic/technological/labor
+ *   human_readable: QWERTY Keyboard Layout Lock-in via Manufacturer Cartel (Strategic Reading)
+ *   domain: technology/political economy
  *
  * SUMMARY:
- *   QWERTY keyboard layout persistence is commonly explained as
- *   path-dependent accident: an early design choice that became too
- *   entrenched to displace. This reading instantiates the alternative: QWERTY
- *   persistence is manufacturer-engineered lock-in via coordinated cartel
- *   action, training-school partnerships, and deliberate suppression of
- *   superior alternatives. The constraint solves a real collective-action
- *   problem (typewriter interoperability, 1893) but persists long after that
- *   problem is solved, via cartel enforcement of the standard through
- *   supply-chain control and educational capture. By the 1930s–1950s, the
- *   founding coordination function had degraded; ergonomic evidence showed
- *   alternatives superior (Dvorak, 1936 onwards); but manufacturers and
- *   schools enforced QWERTY exclusivity, imposing retraining barriers on
- *   workers. The kernel contest: does QWERTY persistence emerge from
- *   path-dependent accident (sibling reading: path_dependency_reading) or
- *   from strategic manufacturer lock-in? This reading asserts strategic
- *   lock-in: the cartel's coordination was real in 1893, but the enforcement
- *   machinery persisted as extraction long after coordination was no longer
- *   needed. Victims are typists bearing ergonomic costs and identity-locked
- *   into retraining barriers; beneficiaries are the 1893–1950s cartel members
- *   extracting rents from design standardization control.
+ *   The QWERTY keyboard layout, adopted by typewriter manufacturers in the
+ *   1890s, persists as the dominant keyboard standard into the 21st century
+ *   despite well-documented superior alternatives (Dvorak, Colemak). The
+ *   strategic lock-in reading attributes this persistence not to path
+ *   dependency or mechanical accident, but to deliberate manufacturer cartel
+ *   strategy: Remington, Smith-Premier, Underwood, and allied firms
+ *   standardized on QWERTY and created training partnerships with business
+ *   colleges and typing schools to lock users into their machines. Once
+ *   typists trained on QWERTY, switching manufacturers meant
+ *   retraining—creating a network effect that benefited the cartel
+ *   manufacturers and locked out competitors. This reading claims the
+ *   constraint is tangled_rope: genuine coordination function
+ *   (standardization reduced transaction costs and made labor portable)
+ *   bundled with asymmetric extraction (cartel manufacturers collected
+ *   monopoly rents via training lock-in). The sibling reading
+ *   (path_dependency_reading) frames QWERTY as accidental path dependency—the
+ *   outcome of mechanical constraints that became self-reinforcing through
+ *   network effects without ongoing strategic cartel activity. These readings
+ *   coexist: historians of technology contest whether the observed
+ *   persistence reflects strategic cartel engineering (this reading) or
+ *   emergent path dependency that needed no continuing strategy once
+ *   established.
  *
  * KEY AGENTS:
- *   - keyboard_manufacturers_1893_cartel: organized institutional agenda-setter with arbitrage-level exit options—could switch standards but chose to enforce QWERTY for market control
- *   - typists_bearing_ergonomic_cost: powerless biographical-horizon payers, identity-locked into QWERTY through professional credential investment
- *   - workers_requiring_retraining: moderate-power moderate-horizon payers facing artificially raised retraining barriers
- *   - touch_typing_schools: organized dual-positioned agents (beneficiary + agenda-setter)—benefited from standardized curriculum and employer demand, enforced the standard by excluding alternatives
- *   - alternative_design_inventors: excluded moderate-power agents with trapped exit—technically superior designs but no market path
- *   - employers_of_typists: powerful beneficiaries locked into enforcement through hiring preferences and labor-pool standardization
+ *   - Typewriter manufacturers (Remington, Smith-Premier, Underwood) — agenda-setters, collectors of lock-in rents via cartel standardization
+ *   - Typists bearing ergonomic costs — victims, identity-locked by professional training and network externalities
+ *   - Alternative-layout inventors (Dvorak, Colemak) — payers, innovations suppressed by lock-in
+ *   - Typing school administrators — cartel partners, beneficiaries of exclusive training partnerships
+ *   - Competing manufacturers — excluded by the cartel's control of training infrastructure
+ *   - Economic historians (path-dependency camp) — observers, contesting the strategic-intent reading
  */
 
 /* ==========================================================================
@@ -114,47 +122,106 @@ narrative_ontology:constraint_metric(qwerty_persistence_inevitability__strategic
 narrative_ontology:constraint_metric(qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(qwerty_persistence_inevitability__strategic_lock_in_reading, accessibility_collapse, 0.64).
+narrative_ontology:constraint_metric(qwerty_persistence_inevitability__strategic_lock_in_reading, accessibility_collapse, 0.63).
 narrative_ontology:constraint_metric(qwerty_persistence_inevitability__strategic_lock_in_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(qwerty_persistence_inevitability__strategic_lock_in_reading, tangled_rope).
-narrative_ontology:human_readable(qwerty_persistence_inevitability__strategic_lock_in_reading, "QWERTY Keyboard Layout: Manufacturer Lock-in via Cartel Standardization").
-narrative_ontology:topic_domain(qwerty_persistence_inevitability__strategic_lock_in_reading, "economic/technological/labor").
+narrative_ontology:human_readable(qwerty_persistence_inevitability__strategic_lock_in_reading, "QWERTY Keyboard Layout Lock-in via Manufacturer Cartel (Strategic Reading)").
+narrative_ontology:topic_domain(qwerty_persistence_inevitability__strategic_lock_in_reading, "technology/political economy").
 
 domain_priors:requires_active_enforcement(qwerty_persistence_inevitability__strategic_lock_in_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(qwerty_persistence_inevitability__strategic_lock_in_reading, 'f11c89c4-82cf-4f42-a417-76f3613be1d0').
-narrative_ontology:cs_kernel_codification('f11c89c4-82cf-4f42-a417-76f3613be1d0', distributed).
-narrative_ontology:cs_authority_grounding('f11c89c4-82cf-4f42-a417-76f3613be1d0', extraction).
-narrative_ontology:cs_reading_relation('f11c89c4-82cf-4f42-a417-76f3613be1d0', qwerty_persistence_inevitability__path_dependency_reading, coexists_with).
-narrative_ontology:cs_axiom('f11c89c4-82cf-4f42-a417-76f3613be1d0', foundational, manufacturers_deliberate_standardization_strategy).
-narrative_ontology:cs_axiom_status(manufacturers_deliberate_standardization_strategy, holdable).
-narrative_ontology:cs_axiom_grounding('f11c89c4-82cf-4f42-a417-76f3613be1d0', manufacturers_deliberate_standardization_strategy, empirically_contingent).
-narrative_ontology:cs_axiom('f11c89c4-82cf-4f42-a417-76f3613be1d0', secondary, cartel_suppressed_alternatives_after_coordination_solved).
-narrative_ontology:cs_axiom_status(cartel_suppressed_alternatives_after_coordination_solved, holdable).
-narrative_ontology:cs_axiom_grounding('f11c89c4-82cf-4f42-a417-76f3613be1d0', cartel_suppressed_alternatives_after_coordination_solved, empirically_contingent).
-narrative_ontology:cs_reference_frame('f11c89c4-82cf-4f42-a417-76f3613be1d0', manufacturer_coordination_for_interoperability).
-narrative_ontology:cs_drift_state('f11c89c4-82cf-4f42-a417-76f3613be1d0', post_dvorak_ergonomic_evidence, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('f11c89c4-82cf-4f42-a417-76f3613be1d0', '').
+narrative_ontology:cs_story_uid(qwerty_persistence_inevitability__strategic_lock_in_reading, '7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d').
+narrative_ontology:cs_kernel_codification('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', distributed).
+narrative_ontology:cs_authority_grounding('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', extraction).
+narrative_ontology:cs_reading_relation('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', qwerty_persistence_inevitability__path_dependency_reading, coexists_with).
+narrative_ontology:cs_axiom('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', foundational, qwerty_persistence_is_manufactured_lock_in).
+narrative_ontology:cs_axiom_status(qwerty_persistence_is_manufactured_lock_in, holdable).
+narrative_ontology:cs_axiom_grounding('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', qwerty_persistence_is_manufactured_lock_in, empirically_contingent).
+narrative_ontology:cs_axiom('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', secondary, cartel_training_partnerships_are_necessary_for_lock_in).
+narrative_ontology:cs_axiom_status(cartel_training_partnerships_are_necessary_for_lock_in, holdable).
+narrative_ontology:cs_axiom_grounding('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', cartel_training_partnerships_are_necessary_for_lock_in, empirically_contingent).
+narrative_ontology:cs_reference_frame('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', cartel_enforced_standardization).
+narrative_ontology:cs_drift_state('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', digital_era_contemporary, gap(stable, severe, false)).
+narrative_ontology:cs_created_at('7d0b6c0f-2dd9-4db9-8e0f-1e318c9b2c6d', '').
 narrative_ontology:cs_kernel_id(qwerty_persistence_inevitability__strategic_lock_in_reading, qwerty_persistence_inevitability).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(qwerty_persistence_inevitability__strategic_lock_in_reading, keyboard_manufacturers_1893_cartel).
-narrative_ontology:constraint_beneficiary(qwerty_persistence_inevitability__strategic_lock_in_reading, touch_typing_schools).
-narrative_ontology:constraint_victim(qwerty_persistence_inevitability__strategic_lock_in_reading, typists_bearing_ergonomic_cost).
-narrative_ontology:constraint_victim(qwerty_persistence_inevitability__strategic_lock_in_reading, workers_requiring_retraining).
+narrative_ontology:constraint_beneficiary(qwerty_persistence_inevitability__strategic_lock_in_reading, typewriter_manufacturers_1893_cartel).
+narrative_ontology:constraint_victim(qwerty_persistence_inevitability__strategic_lock_in_reading, typists_bearing_ergonomic_costs).
+narrative_ontology:constraint_victim(qwerty_persistence_inevitability__strategic_lock_in_reading, alternative_layout_inventors).
+narrative_ontology:constraint_victim(qwerty_persistence_inevitability__strategic_lock_in_reading, consumers_denied_efficiency_gains).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(qwerty_persistence_inevitability__strategic_lock_in_reading, consumers_denied_efficiency_gains).
+narrative_ontology:constraint_beneficiary(qwerty_persistence_inevitability__strategic_lock_in_reading, typing_school_administrators).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% A coordinated set of typewriter manufacturers (Remington, Smith-Premier, Underwood, and allied firms) standardized on the QWERTY layout beginning in the 1890s. This was not inevitable accident but deliberate standardization to lock users into their machines—once typists trained on QWERTY, switching manufacturers meant retraining. The cartel maintained training partnerships with business colleges and typing schools, embedding QWERTY into curricula, making the standard self-reinforcing. They benefited directly from reduced competition: any manufacturer who deviated would lose the trained labor pool.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, typewriter_manufacturers_1893_cartel, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Typists trained on QWERTY bear the cumulative ergonomic costs of an inefficient layout: increased finger travel distance, higher rates of repetitive strain injury (RSI), fatigue, and reduced typing speed compared to alternatives like Dvorak. Their professional identity becomes fused with QWERTY competence; retraining to an alternative layout is costly in time and effort, and the network effect (all machines, all jobs, all training) makes exit economically irrational even for those who recognize the inefficiency. They are locked in by training investment and network externalities manufactured by the cartel.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, typists_bearing_ergonomic_costs, payer,
+    powerless, biographical, identity_locked, global).
+
+% Inventors and innovators who designed more ergonomic layouts (Dvorak, Colemak, and others) found their innovations unable to gain traction because the cartel's lock-in made switching prohibitively expensive for the collective. Individual typists could not coordinate the switch, and manufacturers had no incentive to support alternatives when QWERTY was standardized. The lock-in suppressed the spread of superior technology.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, alternative_layout_inventors, payer,
+    moderate, biographical, trapped, global).
+
+% Consumers and businesses benefited from standardization (all machines compatible, training transferable) but paid the cost of adopting an inefficient standard. They lost the efficiency gains that would have accrued if a superior layout had been adopted—a hidden cost borne as reduced productivity, increased injury, and higher capital expenditure on machines that could have been designed better. The benefit is real but asymmetrically distributed; the cost is diffuse and hard to quantify.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, consumers_denied_efficiency_gains, payer,
+    organized, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(qwerty_persistence_inevitability__strategic_lock_in_reading, consumers_denied_efficiency_gains, beneficiary).
+
+% Manufacturers outside the cartel (or who came later) could not challenge QWERTY because the training partnership network and the installed base made deviation economically suicidal. A manufacturer who built Dvorak machines could not sell them—there were no trained Dvorak typists. The cartel's enforcement through control of training infrastructure locked out competition.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, competing_manufacturers, excluded,
+    powerful, biographical, trapped, global).
+
+% Typing schools benefited from cartel partnerships: the manufacturers provided machines and standardized curricula in exchange for exclusive training in QWERTY. The schools' business model became dependent on this arrangement. They had little incentive to teach alternatives because their revenue came from training typists for the installed base of QWERTY machines.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, typing_school_administrators, beneficiary,
+    moderate, biographical, constrained, national).
+
+% Academic observers who frame QWERTY as path dependency—the product of historical accident (the arrangement of keys to prevent mechanical jamming in early machines) rather than deliberate strategy. This reading contests the strategic lock-in interpretation and holds that once QWERTY was adopted early, network effects made it self-reinforcing without requiring ongoing cartel activity.
+narrative_ontology:constraint_stakeholder(qwerty_persistence_inevitability__strategic_lock_in_reading, economic_historians_path_dependency_camp, observer,
+    analytical, generational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(qwerty_persistence_inevitability__strategic_lock_in_reading, typewriter_manufacturers_1893_cartel).
+narrative_ontology:fixing_cost_class(qwerty_persistence_inevitability__strategic_lock_in_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Standardized keyboard layout across competing manufacturers enabled compatible training, transportable skills, and predictable machine design. This genuine coordination reduced search costs for workers and made their labor more flexibly deployable across employers and geographic locations.
+% TRANSFER_FUNCTION: Moves monopoly rents from the entire base of typists (and their employers, who must purchase machines conforming to QWERTY) to the cartel manufacturers and their training partners. The rents are extracted as: (1) higher machine prices than would prevail under competitive layout standards; (2) inability of superior layouts to emerge and displace QWERTY; (3) suppressed wages for typists (employers capture efficiency losses as reduced compensation); (4) costs borne collectively through health (RSI, fatigue) and time (slower typing).
+% ABSENT_VOICES: Typists in the 1890s–1920s had no collective voice—unionization of clerical work lagged behind manufacturing, and typing training was controlled by the schools and manufacturers. Dvorak and other alternative-layout proponents lacked the manufacturing partnership networks the cartel controlled. Competing manufacturers who might have challenged the standard were locked out.
+% DISAPPEARANCE_RATIONALE: If the cartel's lock-in had never been manufactured and QWERTY had been allowed to compete with alternatives on ergonomic grounds, a different layout or a mixed ecosystem might have emerged. Typists would have borne lower cumulative injury costs, productivity would be higher, and the text-input efficiency of the 20th and 21st centuries would reflect superior design. The world of work, health outcomes for clerical workers, and machine design would be substantially different.
+% FOUNDING_PROBLEM: The immediate problem for early typewriter manufacturers was mechanical: key jamming in machines where typist speed exceeded the mechanical return speed. QWERTY was designed to slow down typing by separating frequently co-occurring letters, reducing jamming without requiring more expensive mechanisms. The manufacturers' problem was: how do we prevent competing standards and ensure all machines are compatible so we can control the market?
+% FOUNDING_PROBLEM_CORROBORATION: The mechanical-jamming problem disappeared with the invention of the basket-shift mechanism in the 1890s and improved manufacturing by the early 1900s. Modern research (David, 1985; Liebowitz and Margolis, 1990; Koller, 2011) documents that QWERTY was no longer mechanically necessary after ~1905, yet persisted because cartel standardization and training-school partnerships made switching prohibitively expensive. The founders of the cartel (Remington, etc.) explicitly sought to standardize to prevent competition, as documented in company records and industry histories. CORROBORATION: Historians and economists outside the manufacturing industry attest the mechanical justification is gone; the cartel's own strategic intent is evident in archives.
+narrative_ontology:disappearance_verdict(qwerty_persistence_inevitability__strategic_lock_in_reading, world_rearranges).
+narrative_ontology:founding_problem_status(qwerty_persistence_inevitability__strategic_lock_in_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(qwerty_persistence_inevitability__strategic_lock_in_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(qwerty_persistence_inevitability__strategic_lock_in_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(qwerty_persistence_inevitability__strategic_lock_in_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(qwerty_persistence_inevitability__strategic_lock_in_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +241,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.15 (early coordination phase) to 0.68 (plateau by 1970) as the cartel shifts from solving coordination problems to collecting rents from design standardization control. The steepest rise occurs 1893–1930 (coordination → enforcement transition) and 1930–1950 (Dvorak alternative blocked → full cartel enforcement). By 1970, the constraint plateaus at 0.68: the cartel itself has dissolved but the institutional lock-in (school curricula, employer hiring norms, worker retraining costs) persists. Suppression rises in parallel: early suppression (0.25, 1893) reflects minimal competitive pressure; later suppression (0.72, 1980) reflects active enforcement against Dvorak and other alternatives—exclusion of alternative designs from school curricula, refusal of manufacturers to produce them, hiring market bias toward QWERTY. Theater ratio rising from 0.08 to 0.41 signals the constraint's function degrading: in 1893–1920, the 'security' and 'efficiency' frames were credible justifications; by 1950–1980, manufacturers' rhetoric about QWERTY's necessity persisted despite evidence of inferiority, indicating increasing performative maintenance. The measurement series tracks one shared time grid across all metrics to avoid the misalignment error (OQ-105). Theater and suppression_requirement rise together, indicating that as the founding coordination problem weakened, the cartel's enforcement activity had to compensate—more theater to justify what was no longer coordination.
+ *   Extractiveness rises sharply from 0.35 (early cartel formation, 1890s) to 0.68 (mature lock-in, 1950s) and plateaus. Early on, the cartel is engineering the lock-in (building partnerships, pushing QWERTY into curricula) but the network hasn't fully hardened—alternative layouts are still technically viable. By the 1920s–1940s, the training network is comprehensive and lock-in is pervasive; extractiveness peaks and stabilizes because network effects have become self-sustaining. Suppression rises similarly (0.55→0.72): early on, alternatives compete in technical merit and must be actively suppressed by cartel control of manufacturing and training. By mid-century, suppression is less active (the network effect does the work) but must remain high to prevent defection. Theater ratio rises gradually (0.25→0.41): the cartel's original narrative—mechanical necessity (jamming prevention)—becomes increasingly implausible after basket-shift invention (1890s–1900s), yet the constraint persists. By modern era, the only justification is 'network standardization,' which is genuine but obscures the cartel's role in engineering it. Theater ratio reflects this drift: early coordination story (real) gets replaced by standardization story (still real but shifts focus from cartel benefit to user convenience). The measurements are authored on a shared time grid spanning 0–120 years (industrial typewriter era through digital dominance).
  *
  * PERSPECTIVAL GAP:
- *   From the cartel's seat (1893–1950), QWERTY is a legitimate coordination solution they built and maintain—they see rope. From the typist's seat, QWERTY is an imposed standard they cannot escape without career sacrifice—they see snare. The engine computes these divergent types from the per-seat directionality: cartel members have d ~ 0.1 (subsidy + control), deriving low extraction; typists have d ~ 0.9 (trapped cost-bearer), deriving high extraction. The same constraint produces different perceived types from different seats. This divergence is not error—it is the phenomenon the framework measures. The authored claimed_type (tangled_rope) sits between: rope-like in its genuine coordination phase (1893–1920), snare-like in its later enforcement phase (1930–1980). The engine's per-seat computation surfaces this evolution.
+ *   The cartel's seat (agenda-setter) perceives QWERTY as a successful coordination mechanism they created and stewarded—they enabled the mobility and standardization of clerical labor, a genuine coordination function. From this seat, the arrangement is rope or even justified mountain (natural standard). The typist seat perceives the same structure as manufactured lock-in—a prison of identity and network effects that suppresses better alternatives and extracts rents as ergonomic injury and lost efficiency. From this seat, the arrangement is snare-like tangled rope with victims. The engine's per-seat computation will reflect these divergent structural relationships: the cartel members see low extraction (beneficiaries, arbitrage exit), while typists see high extraction (victims, identity-locked exit). This divergence is the reading's core asymmetry.
  *
  * DIRECTIONALITY LOGIC:
- *   The cartel members (keyboard_manufacturers_1893_cartel, touch_typing_schools) sit at the beneficiary end (d ~ 0.1–0.2): they set the standard, enforced it, collected rents, and could exit to superior designs or new standards if alternatives were profitable. Their power and arbitrage options mean they are lightly affected by the constraint they control. Typists (typists_bearing_ergonomic_cost) sit at the target end (d ~ 0.85–0.95): they pay the ergonomic cost, cannot exit without retraining (identity-locked), and have no voice in standard-setting. Workers_requiring_retraining sit at moderate extraction (d ~ 0.65): they face retraining barriers but have more exit options than identity-locked typists. Employers_beneficiary sit near the beneficiary end despite being observers—they benefit from standardized labor but have no seat in standard-setting, so they don't actively defend the constraint. Alternative_design_inventors are excluded (trapped exit) but not targets—they bear no extraction, only the absence of opportunity. The directionality derivation is straightforward: beneficiaries have low d (arbitrage exit, power, no cost); victims have high d (identity-locked exit, power asymmetry, ergonomic cost). No overrides needed—the structural data generates the right directionality.
+ *   Typewriter manufacturers (institutional power, arbitrage exit) derive directionality near 0.0: they set the rules and benefit from the constraint's persistence—low d, low/negative extraction from their perspective. Typists (powerless, identity-locked exit) derive directionality near 1.0: they bear the costs (ergonomic, retraining barriers, suppressed alternatives) and have no real exit—high d, high effective extraction. Typing school administrators are ambiguous: they benefit from cartel partnerships (low d toward beneficiary) but are somewhat constrained by dependence on machines they don't control (elevated d). Alternative-layout inventors are trapped targets (high d, high extraction). The structural asymmetry is the story: the same arrangement that coordinates labor for the cartel extracts from the typists. This is the defining feature of tangled rope.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding_problem_status (dead) and disappearance_verdict (world_rearranges) mismatch signals mandate rot: the constraint was built to solve a problem (typewriter standardization) that was solved by ~1920, yet the constraint persists and enforces itself through cartel and institutional channels. The founding problem is dead but the constraint is not; instead, it has shifted function from coordination to rent extraction. This is the exact pattern mandatrophy flags: constraint persists after its mandate is fulfilled, enforced by the same machinery that once served coordination. The theater_ratio rise (0.08 to 0.41) corroborates: as the founding problem dies, the constraint's public justification becomes increasingly theatrical. The constraint shows piton characteristics (inertial enforcement, no dedicated beneficiary maintaining it against cost) beginning around 1950, when the cartel itself fragmented and QWERTY persisted via institutional habit rather than active cartel enforcement. However, the period 1893–1950 shows active tangled_rope enforcement—the beneficiary (cartel) is still defending the extraction. The claim of tangled_rope is accurate for the interval 1893–1950; by 1980 the constraint would reclassify as piton (theater high, extraction sustained by institutional inertia, no party actively profiting). The story captures the strategic lock-in reading's domain (1893–1950 when strategy was active); the full evolution to piton is documented in measurements.
+ *   The founding problem (mechanical jamming in early typewriters) is structurally dead: modern keyboards have no jamming, the mechanical constraint disappeared after ~1905. Yet QWERTY persists, extracting at steady 0.68 from the interval midpoint onward. The question is: does the constraint persist because ongoing cartel enforcement maintains it, or because network effects have become self-sustaining and no cartel enforcement is needed? The measured theater_ratio (rising from 0.25→0.41) suggests the constraint's legitimating narrative has shifted from mechanical necessity to network coordination—a sign that mandatrophy may be partially resolved. However, high suppression (0.72) indicates active enforcement is still occurring: competing layouts are still technically superior but remain suppressed. The divergence between the sibling reading (path-dependency) and this reading hinges on whether the measured persistence is cartel-engineered (this reading's claim) or emergent path-dependency (the sibling's claim). This reading CLAIMS the persistence is strategically manufactured and maintained; the engine will compute whether the structural data support that claim. If suppression remains high despite the founding problem being dead, that supports the strategic-lock-in reading (active enforcement needed). If suppression drops but extraction persists, that supports path-dependency (self-sustaining network effects). The measurement series is designed to distinguish these.
  */
 
 /* ==========================================================================
@@ -191,79 +258,89 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    cartel_coordination_vs_strategic_lock_in,
-    'Did the manufacturers'' standardization activities in 1893–1920 constitute genuine coordination solving a real collective-action problem, or were they always strategically designed lock-in?',
-    'Historical analysis of manufacturers'' internal documents, patent records, and correspondence. Distinguish between: (a) coordination justified by mechanical necessity (type-bar interference), and (b) strategic exclusion decisions (blocking alternative submissions to schools, refusing to license designs). The kernel contest: was the cartel''s enforcement machinery built to maintain coordination function or to extract rents after function was solved?',
-    'If (a) dominates, the constraint''s early phase is genuine tangled_rope coordination with extraction cost. If (b) dominates from the beginning, the constraint is snare-with-cover. The terminal type (piton by ~1950) is stable either way, but the causal narrative differs: accident-driven drift (path_dependency_reading) vs. intentional capture (strategic_lock_in_reading, the reading you are instantiating).',
+    cartel_intent_vs_emergence,
+    'Did the measured persistence of QWERTY result from ongoing cartel enforcement of lock-in, or from self-sustaining network effects that required no continuing strategic action after the initial standardization?',
+    'Archival analysis of cartel communications and manufacturing strategy documents; measurement of suppression trajectory. If suppression remains high or increases, ongoing enforcement is indicated. If suppression decays while extraction persists, self-sustaining network effects are indicated. If alternative layouts are actively suppressed in modern markets, active enforcement is present. If they are suppressed only passively (no manufacturer bothers to support them), network effects dominate.',
+    'If cartel enforcement is primary, the constraint is strategically engineered lock-in (supports this reading). If network effects are primary and no ongoing enforcement is required, the constraint transitions to path-dependent equilibrium (supports the sibling path-dependency reading). Classification divergence: snare vs. rope, or tangled-rope vs. piton.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(cartel_coordination_vs_strategic_lock_in, empirical, 'Whether standardization was coordination or strategic lock-in from inception').
+narrative_ontology:omega_variable(cartel_intent_vs_emergence, empirical, 'Whether QWERTY persistence is cartel-enforced lock-in or emergent network equilibrium.').
 
 omega_variable(
-    ergonomic_cost_measurement,
-    'What was the quantifiable ergonomic harm from QWERTY relative to available alternatives (Dvorak, etc.), and how much of that harm persisted because the cartel blocked alternatives?',
-    'Occupational health literature (RSI studies, typing speed/error analysis), historical counterfactual: if Dvorak had been available to schools in 1930–1960, what injury rates and productivity gains would typists have experienced? Comparative studies on workers who learned alternatives despite cartel pressure.',
-    'High measured ergonomic cost establishes the victim set''s extraction as substantial and involuntary. Low cost reduces the claim that typists bore genuine harm. The answer determines whether the constraint''s suppression is structural (workers cannot exit without retraining cost) or internalized (workers do not know alternatives exist or believe QWERTY inevitable).',
-    confidence_without_resolution(high)
+    founding_problem_causation,
+    'Did the mechanical jamming problem in early typewriters CAUSE the adoption of QWERTY, or was QWERTY selected for cartel-advantage reasons and the mechanical argument retrofitted as justification?',
+    'Patent records, engineering documents, and manufacturer correspondence from the 1870s–1890s. If jamming prevention was the primary design constraint and QWERTY was selected for that reason, causation is mechanical. If manufacturers selected QWERTY for other reasons (e.g., simplicity, precedent, cartel coordination) and later justified it mechanically, causation is strategic.',
+    'Mechanical causation supports the path-dependency reading (accident-driven origin). Strategic causation supports the lock-in reading (designed extraction). The narratives diverge at the origin and propagate through the mandatrophy analysis.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(ergonomic_cost_measurement, empirical, 'Magnitude of ergonomic harm from QWERTY and its suppression via cartel lock-in').
+narrative_ontology:omega_variable(founding_problem_causation, empirical, 'Whether QWERTY''s adoption was caused by mechanical necessity or strategic cartel choice.').
 
 omega_variable(
-    path_dependency_vs_strategic_reading_boundary,
-    'Can the same historical facts of QWERTY persistence be coherently described as both path-dependent accident (sibling reading) and strategic lock-in (this reading) within the same analytical framework, or do they require distinct frameworks?',
-    'The kernel contest itself: if both readings can fit the same evidence, the kernel is genuinely ambiguous (distributed codification); if one reading''s evidence requires assumptions the other''s does not, the readings foreclose or influence each other. Committer structure: which reading is the ''real'' one depends on whether you privilege manufacturers'' stated intentions or workers'' actual experience.',
-    'If they coexist, both readings remain live and the network links two constraint stories with identical beneficiary/victim sets but different causal frames. If one forecloses the other, the boundary lies at: intentional strategic design vs. unintended emergent pattern. This reading (strategic_lock_in) forecloses path_dependency if manufacturers'' documented coordination and deliberate exclusion of alternatives can be shown. Path_dependency forecloses this reading if the cartel''s decisions can be shown to follow market logic rather than strategic capture.',
+    training_network_counterfactual,
+    'If the cartel had NOT created exclusive training partnerships with business colleges (i.e., if typing education had remained fragmented and non-standardized), would QWERTY have persisted as the dominant standard anyway?',
+    'Historical counterfactual reasoning based on network-effects theory and comparative analysis of standards that emerged without coordinated training (e.g., railroad gauges, electrical current standards). If network effects alone would drive standardization, then the cartel''s training partnerships accelerated but did not create the lock-in. If training partnerships were necessary, the cartel''s strategy was essential.',
+    'Training partnerships as NECESSARY → lock-in is cartel-engineered (this reading). Training partnerships as ACCELERATING but NOT NECESSARY → path-dependency is primary (sibling reading). This divergence is the core contest between the readings.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(path_dependency_vs_strategic_reading_boundary, conceptual, 'Relationship between strategic lock-in and path-dependency readings of QWERTY persistence').
+narrative_ontology:omega_variable(training_network_counterfactual, conceptual, 'Whether the cartel''s training partnerships were necessary for lock-in or merely accelerated an inevitable network-effect equilibrium.').
 
 omega_variable(
-    identity_locked_exit_mechanism,
-    'Is the measured suppression on typists_bearing_ergonomic_cost (0.72 base) structural (economic retraining cost after job-switching) or identity-locked (professional identity fusion with typing skill), and does the distinction change the type classification?',
-    'Post-departure trajectories: if workers who left typing or retired showed reduced RSI and no regret, the suppression was structural and reversible. If workers retained the constraint''s effect psychologically (belief in QWERTY inevitability, internalized deference to the standard), the suppression is internalized and identity-locked. Qualitative interviews with workers who attempted alternatives or left the field.',
-    'Structural suppression: exit is materially costly but reversible; identity-locked suppression: exit carries psychological cost and the constraint''s effects persist post-exit. High identity-lock would elevate effective suppression above the 0.72 structural measure and support higher type severity (snare-ward). Low identity-lock keeps the measured suppression as structural and supports the tangled_rope classification.',
+    ergonomic_cost_quantification,
+    'What is the aggregate health and productivity cost borne by typists from using QWERTY instead of ergonomically superior alternatives (Dvorak, Colemak)?',
+    'Epidemiological study of RSI prevalence in typist populations using QWERTY vs. alternatives; productivity studies comparing typing speed and accuracy. If substantial gaps are found (e.g., 20%+ productivity difference, 2–5x RSI rates), the extraction is large and real. If gaps are small, the lock-in''s victim costs may be smaller than claimed.',
+    'Large gaps support the victim framing and the tangled-rope classification. Small gaps suggest the coordination benefits may offset the extraction costs, weakening the lock-in reading.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_locked_exit_mechanism, empirical, 'Structural vs. identity-locked suppression mechanism in typist dependency on QWERTY').
+narrative_ontology:omega_variable(ergonomic_cost_quantification, empirical, 'Magnitude of health and productivity costs imposed by QWERTY lock-in on typists.').
+
+omega_variable(
+    kernel_reading_boundary,
+    'Is QWERTY a single constraint viewed through different lenses (path-dependency vs. strategic lock-in), or are these genuinely different constraints (different ε values, different victim sets)?',
+    'Application of the ε-invariance test: If changing the observable (what counts as ''persistence'') from ''the mechanical standard persists'' to ''the cartel''s extraction persists'' produces substantially different ε values, then two constraints are present, not one kernel. If ε remains stable, one constraint is viewed through two readings.',
+    'One constraint, two readings → the readings coexist (current framing). Two constraints → they are separate stories, linked via network.affects_constraints (ε-invariance decomposition). This omega documents the framing choice and its boundary.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_boundary, conceptual, 'Whether QWERTY persistence is one constraint with two readings or two structurally distinct constraints.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(qwerty_persistence_inevitability__strategic_lock_in_reading, 1893, 1980).
+narrative_ontology:interval(qwerty_persistence_inevitability__strategic_lock_in_reading, 0, 120).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(qwer_tr_t1893, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1893, 0.08).
-narrative_ontology:measurement(qwer_tr_t1910, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1910, 0.15).
-narrative_ontology:measurement(qwer_tr_t1930, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1930, 0.28).
-narrative_ontology:measurement(qwer_tr_t1950, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1950, 0.38).
-narrative_ontology:measurement(qwer_tr_t1970, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1970, 0.41).
-narrative_ontology:measurement(qwer_tr_t1980, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 1980, 0.41).
+narrative_ontology:measurement(qwer_tr_t0, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(qwer_tr_t15, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 15, 0.32).
+narrative_ontology:measurement(qwer_tr_t30, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 30, 0.38).
+narrative_ontology:measurement(qwer_tr_t50, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 50, 0.41).
+narrative_ontology:measurement(qwer_tr_t80, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 80, 0.41).
+narrative_ontology:measurement(qwer_tr_t120, qwerty_persistence_inevitability__strategic_lock_in_reading, theater_ratio, 120, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(qwer_be_t1893, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1893, 0.15).
-narrative_ontology:measurement(qwer_be_t1910, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1910, 0.35).
-narrative_ontology:measurement(qwer_be_t1930, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1930, 0.58).
-narrative_ontology:measurement(qwer_be_t1950, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1950, 0.65).
-narrative_ontology:measurement(qwer_be_t1970, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1970, 0.68).
-narrative_ontology:measurement(qwer_be_t1980, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 1980, 0.68).
+narrative_ontology:measurement(qwer_be_t0, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(qwer_be_t15, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 15, 0.48).
+narrative_ontology:measurement(qwer_be_t30, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 30, 0.62).
+narrative_ontology:measurement(qwer_be_t50, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement(qwer_be_t80, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 80, 0.68).
+narrative_ontology:measurement(qwer_be_t120, qwerty_persistence_inevitability__strategic_lock_in_reading, base_extractiveness, 120, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(qwer_su_t1893, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1893, 0.25).
-narrative_ontology:measurement(qwer_su_t1910, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1910, 0.48).
-narrative_ontology:measurement(qwer_su_t1930, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1930, 0.62).
-narrative_ontology:measurement(qwer_su_t1950, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1950, 0.68).
-narrative_ontology:measurement(qwer_su_t1970, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1970, 0.71).
-narrative_ontology:measurement(qwer_su_t1980, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 1980, 0.72).
+narrative_ontology:measurement(qwer_su_t0, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement(qwer_su_t15, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 15, 0.65).
+narrative_ontology:measurement(qwer_su_t30, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement(qwer_su_t50, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 50, 0.72).
+narrative_ontology:measurement(qwer_su_t80, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 80, 0.72).
+narrative_ontology:measurement(qwer_su_t120, qwerty_persistence_inevitability__strategic_lock_in_reading, suppression_requirement, 120, 0.72).
 
 
 /* ==========================================================================
@@ -271,11 +348,10 @@ narrative_ontology:measurement(qwer_su_t1980, qwerty_persistence_inevitability__
    ========================================================================== */
 
 narrative_ontology:coordination_type(qwerty_persistence_inevitability__strategic_lock_in_reading, resource_allocation).
-narrative_ontology:boltzmann_floor_override(qwerty_persistence_inevitability__strategic_lock_in_reading, 0.18).
 narrative_ontology:affects_constraint(qwerty_persistence_inevitability__strategic_lock_in_reading, qwerty_persistence_inevitability__path_dependency_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint (strategic_lock_in_reading) and qwerty_persistence_inevitability__path_dependency_reading are two readings of the same kernel: 'Why does QWERTY persist despite superior alternatives?' Both readings describe the same empirical outcome (QWERTY endurance from 1893–1980+) but diverge on causal mechanism: this reading privileges strategic manufacturer coordination and deliberate lock-in; the sibling reading privileges unintended path-dependent accumulation. The readings coexist (neither forecloses the other within current scholarship) and share identical beneficiary/victim sets and measured metrics. They are linked by kernel_id, not by mechanistic influence—the readings offer competing hypotheses about the same constraint, not sequential phases or causal dependencies. Consumers comparing them will find the dispute reducible to: evidence of manufacturers' intentional exclusion vs. evidence of emergent lock-in from market forces. Both readings have supportive historical evidence; the boundary between them is the question of strategic intent.
+% The QWERTY kernel decomposes into two constraint stories distinguished by locus of agency and persistence mechanism. This reading (strategic_lock_in_reading) attributes QWERTY's dominance to manufacturer cartel enforcement via training partnerships, treating persistence as engineered extraction. The sibling reading (path_dependency_reading) attributes it to emergent network effects after early adoption, treating persistence as equilibrium. Both readings share the referent (QWERTY's documented persistence) but assign different ε values and different victim/beneficiary sets. The readings coexist in the historiography; the engine computes per-seat divergence from the structural data, making explicit the empirical and conceptual differences between the two framings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

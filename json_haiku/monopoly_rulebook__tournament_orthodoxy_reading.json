@@ -2,251 +2,306 @@
   "header": {
     "constraint_id": "monopoly_rulebook__tournament_orthodoxy_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "62d9a859-a263-4aa8-9df5-97af6bc1665c"
+    "story_uid": "c4a0f6c5-d2e7-41a9-8eeb-8f79364d1356"
   },
   "base_properties": {
-    "extractiveness": 0.06,
-    "suppression": 0.02,
-    "theater_ratio": 0.08,
-    "accessibility_collapse": 0.88,
-    "resistance": 0.12,
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
     "claimed_type": "rope",
     "human_readable": "Monopoly Rulebook as Tournament Standard (Orthodoxy Reading)",
     "topic_domain": "game_theory/social_coordination",
     "requires_active_enforcement": false,
+    "emerges_naturally": false,
     "beneficiaries": [
-      "competitive_gaming_community"
+      "competitive_community"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "competitive_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Players who adopt the rulebook standard as the legitimate framework for skill-based competition. They benefit from a shared, immutable text that enables ranking, comparison across games, and recognition of strategic excellence. The rulebook gives them a common language for adjudicating disputes and comparing their play against others' — the coordination function that grounds the constraint."
+    },
+    {
+      "name": "tournament_organizers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Institutions (chess federations, esports leagues, game clubs) that publish and enforce the rulebook as the standard for official play. They maintain text authority by treating the rulebook as immutable for ranking purposes and refusing to recognize modified variants in sanctioned tournaments. Their legitimacy rests on their commitment to the immutability principle."
+    },
+    {
+      "name": "casual_players",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Players who adopt house rules to reshape the game's social dynamics — to slow elimination, inject luck, or redistribute advantage toward newer players. From the orthodoxy reading's frame, they are not part of the competitive community and their rule modifications are invisible to official ranking; their absence from the constraint's legitimacy structure means they could object but are not counted."
+    },
+    {
+      "name": "pedagogical_reformers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Educators and game designers who argue the rulebook should be modified to teach specific lessons (cooperation, resource sharing, resilience against luck). From the orthodoxy reading, they are excluded because they treat the rulebook as a means to an educational end, not as a standard for competitive skill measurement. They would reject text immutability as a principle."
+    },
+    {
+      "name": "game_theorists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analysts who study whether the rulebook actually achieves what the orthodoxy reading claims (whether it truly isolates strategic skill, whether eliminations are deserved by the framework's own logic, whether the immutability principle is coherent). They observe the constraint from outside it and can measure whether the reading's core claims about skill and fairness hold."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a single, immutable text as the legitimate frame for competitive play, enabling players to rank themselves against others using a shared standard and to recognize skill-based excellence. Solves the collective-action problem of rules fragmentation: without a standard, every game would require separate rules negotiation, and comparative ranking across games would be impossible.",
+    "transfer_function": "Transfers the authority to define legitimate play from ad hoc group agreement to a published rulebook maintained by an institutional authority. This centralizes rule interpretation and makes it binding for official competitive recognition.",
+    "absent_voices": "Casual players and pedagogical reformers who adopt house rules are structurally excluded from the competitive-community frame — they are not consulted in setting the standard and their modifications are treated as noise, not innovations.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rulebook standard disappeared and tournament organizers stopped enforcing text authority, competitive ranking would collapse — there would be no basis for comparing players across different games or rule variants, and each community would fragment into house-rule clusters with incomparable skill measures.",
+    "founding_problem": "How to establish a fair, skill-based competitive framework where outcomes reflect player excellence rather than luck or rule variance, and where one player's rank can be meaningfully compared to another's across different games and regions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Tournament organizers and competitive players attest the problem is live and the rulebook solution works — ranking systems and world championship structures depend on text authority. Game theorists independently document that shared rule standards are empirically necessary for rank coherence. Pedagogical reformers attest the problem is partly solved but the immutability principle sacrifices social resilience; this attestation is from outside the beneficiary set (they reject the framework's core premise)."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 50
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.05
+      "value": 0.07,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.06
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.06
+      "value": 0.07,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.06
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.06
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.06
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.06
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.08
+      "value": 0.03,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.08
+      "value": 0.04,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.08
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.08
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.08
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.02
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.02
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.02
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.02
+      "value": 0.1,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.02
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.02
+      "value": 0.11,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.02
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.02
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.12,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The tournament orthodoxy reading frames the Monopoly rulebook as a genuine coordination mechanism: a shared standard that enables fair competitive play and reliable skill comparison. The rulebook imposes no extraction; participation is voluntary; the constraint's function is purely to solve the problem of rule ambiguity and local variation. The reading rejects pedagogical and social-correction interpretations as category errors—they treat the rulebook as if it were a teaching instrument or a social bond-preservation mechanism, when its actual function is competitive standardization. This is ONE reading of a contested kernel; the extraction_demo and social_scaffold readings instantiate different structural interpretations of the same rule text.",
+    "narrative_context": "The Monopoly rulebook, treated by competitive communities as an immutable standard for tournament play, instantiates a coordination mechanism: players rank themselves and compare skill against a common text that tournament organizers enforce as authoritative. This is the orthodoxy reading of the contested kernel. The rulebook is a rope constraint from the competitive community's perspective — it solves the collective-action problem of rules fragmentation and enables meaningful ranking. This reading rejects pedagogical and social-correction interpretations that treat house rules as legitimate improvements; from the orthodoxy frame, house rules are noise obscuring skill-based competitive depth. The claim and metrics are aligned here (both claim rope, metrics support low extraction and real coordination), because the reading's own epistemic frame treats the rulebook as genuinely solving a coordination problem without extractive layering.",
     "key_agents": [
-      "competitive_gaming_community: voluntary participants in tournament play; benefit from standardized rules enabling fair ranking",
-      "tournament_organizers: stewards of rule text; maintain authority and enforce consistency; do not extract rents",
-      "casual_social_players: use house rules for social play; not subject to tournament rules; outside the coordination scope",
-      "pedagogical_reformers: excluded from rule-setting; argue rules produce bad learning outcomes; excluded voice",
-      "social_cohesion_advocates: excluded from rule-setting; argue rules damage relationships; excluded voice",
-      "rules_scholars: analytical observers; document variation and competitive consequences; neutral on legitimacy"
+      "competitive_community: beneficiaries of the shared standard; voluntary participants whose coordination depends on text immutability",
+      "tournament_organizers: agenda-setters maintaining text authority; institutions enforcing the rulebook in official play",
+      "casual_players: excluded from the competitive frame; adopt house rules outside the standard",
+      "pedagogical_reformers: excluded from the competitive frame; treat the rulebook as a means to teach social lessons",
+      "game_theorists: analytical observers measuring whether the reading's skill-isolation claim holds"
     ],
-    "logic_rationale": "Extractiveness is minimal (0.06) because the rulebook does not systematically transfer resources from one group to another. Competitive players consent to the standard voluntarily; they benefit from text authority because it enables fair comparison. Theater is negligible (0.08) because the constraint's function is purely administrative coordination, not performance masking degraded function. Suppression is near-zero (0.02) because the constraint does not require coercive enforcement; tournament organizers manage rule disputes, but players generally accept authority as legitimate and necessary. The trajectory is flat across the interval because the tournament orthodoxy reading treats text authority as stable and functional—no accumulating extraction, no performative drift, no enforcement decay. The constraint operates as intended throughout.",
-    "perspectival_gap": "Tournament organizers and competitive players converge on a rope classification: shared standard, voluntary participation, mutual benefit. Pedagogical reformers diverge sharply, reading the constraint as extractive (capital demonstration) or scaffolding (temporally justified correction). This divergence is not a measurement error; it is a reading-specific delta. The tournament orthodoxy reading commits to the rope frame and structures the metrics accordingly. The other readings, in their own JSON files, will author different epsilon values and different stakeholder structures.",
-    "directionality_logic": "The competitive gaming community is the beneficiary (d near 0.0): they benefit from standardized rules without bearing extraction costs. Tournament organizers sit near symmetric (d ≈ 0.5): they administer the rules and bear the administrative burden, but they also benefit from the coordination—their authority and the community's trust are symbiotic. Casual social players and excluded reformers are not targets of the constraint (they operate outside it), so directionality is not applicable. The low extractiveness feeds low effective extraction even at institutional power levels because there is no asymmetry between beneficiaries and payers—all competitive participants are beneficiaries of the shared standard.",
-    "mandatrophy_analysis": "The founding problem (rule ambiguity and local variation) remains live under the tournament orthodoxy reading. Pedagogical reformers and social advocates dispute this, arguing the problem has been solved and the rulebook persists for reasons unrelated to its founding function. From the tournament orthodoxy seat, this disagreement is a category error: pedagogical and social concerns are orthogonal to competitive standardization. The constraint does not suffer mandatrophy because its founding function (enabling fair competitive ranking) remains primary and functional. A mandatrophy reading would argue that the rulebook now persists mostly as institutional theater (high theater_ratio), with the founding coordination problem either solved or displaced—the social_scaffold reading or extraction_demo reading may author that pattern, but the tournament orthodoxy reading does not.",
-    "kernel_context": "This story instantiates the tournament_orthodoxy_reading of the contested monopoly_rulebook kernel. The kernel is the rule text itself: a fixed, published, immutable specification of game mechanics. The reading declares that this text is legitimate precisely because it solves the competitive-standardization problem by being immutable. Sibling readings (extraction_demo and social_scaffold) reinterpret the same rule text as either a pedagogical device for demonstrating capitalism or a social constraint requiring correction. The tournament orthodoxy reading forecloses pedagogical and social framings as category errors—they mistake the constraint's actual function (competitive standardization) for other purposes (teaching or relationship preservation). The reading coexists with the sibling readings in public discourse but asserts they rest on logical confusion about what the constraint's function is. See omega_kernel_reading_ambiguity for the irreducible uncertainty about which framing captures the constraint's true social role."
+    "logic_rationale": "Extractiveness is very low (0.08) because the rulebook itself collects no rents and no party bears structural costs relative to benefits — participation is voluntary, and the shared standard is the public good all beneficiaries value. Suppression is minimal (0.12) because the constraint's persistence does not depend on coercing participation; competitive communities adopt it because it enables ranking and recognition they want. Theater is very low (0.05): the rulebook functions primarily as a coordination text, not as performative authority. Accessibility collapse is very high (0.92) because once a player understands the competitive frame, alternatives (playing by different rules, adopting house rules) become structurally invisible to official ranking — the collapse is epistemic, not coercive. The measurement series shows stability across the interval: this reading posits the rulebook as a genuine standard that has sustained the competitive community's coordination without need for intensifying enforcement or theatrical maintenance.",
+    "directionality_logic": "The competitive community sits at the beneficiary end of directionality (d ≈ 0.1): they benefit from the shared standard, have mobile exit options (they can play by other rules if they choose), and participate voluntarily. Tournament organizers sit near symmetric (d ≈ 0.5): they derive status and authority from enforcing the standard, but they also bear the cost of maintaining institutional commitment to immutability and resolving disputes. Casual players and pedagogical reformers are excluded rather than coordinated — their exclusion is not extracted from them, but it means they do not feed into the beneficiary directionality derivation. The lack of a victim set is structurally significant: the reading posits no party that is harmed by the rulebook — only parties that choose to participate and parties that opt out.",
+    "perspectival_gap": "From the competitive community's seat, the rulebook is a genuine coordination success — it enables ranking, recognition, and skill-based reputation. From the pedagogical reformer's seat, the same rulebook is an obstacle to teaching and social resilience. From the casual player's seat, it is a constraint on how they can modify the game for their social needs. The orthodoxy reading brackets these other perspectives as outside the competitive frame; they are not absent voices in the decision to maintain text authority, they are structurally excluded by the reading's own epistemic boundaries. The engine computes per-seat classifications from power and exit options; the reading's boundary-drawing is captured in the stakeholder roles (beneficiary vs. excluded) and the commentary's framing.",
+    "mandatrophy_analysis": "The founding problem (enabling fair, skill-based competitive ranking across games) remains live under the orthodoxy reading. The rulebook standard continues to solve it — competitive ranking depends on text authority, and no alternative standard has superseded it in the competitive community. There is no mandatrophy here; the founding problem has not died and the constraint has not become zombie machinery. However, the existence of the excluded voices (pedagogical reformers, casual players) and the sibling readings suggests the constraint is subject to contest. Mandatrophy resolution in the network comes through the competing readings: if the extraction_demo or social_scaffold readings gain institutional adoption, the orthodoxy reading's founding problem diagnosis would be called into question.",
+    "kernel_context": "This constraint is ONE READING of the monopoly_rulebook kernel. The reading instantiated here is the tournament_orthodoxy_reading: the rulebook is a legitimate competitive standard where strategic skill determines outcomes, house rules are noise obscuring depth, and text authority is immutable for ranking purposes. Sibling readings include the extraction_demo_reading (the rulebook instantiates wealth concentration and demonstrates monopoly capitalism's pedagogical truth) and the social_scaffold_reading (the rulebook requires community correction through house rules to be socially playable). These readings share the same kernel (the Monopoly rulebook) but author radically different epsilon values, beneficiary/victim structures, and constraint types. The orthodoxy reading posits very low extraction and voluntary participation; the extraction reading posits high extraction and mandatory participation; the social-scaffold reading posits a hybrid rope-scaffold with community correction as essential infrastructure. The divergence is not measurement error — it reflects irreconcilable framings of what the rulebook is and what it does."
   },
   "omegas": [
     {
-      "id": "omega_kernel_reading_ambiguity",
-      "question": "Is the Monopoly rulebook's primary function competitive standardization (tournament orthodoxy reading) or is it an implicit pedagogical device (extraction demo reading) or a constraint requiring social correction (social scaffold reading)? Can a single text bear all three functions simultaneously, or does adopting one frame necessarily exclude the others?",
-      "resolution_mechanism": "Genealogical investigation: track the rulebook's stated purpose (competitive fairness vs. teaching capital dynamics vs. preserving group play) through publisher documentation, designer intent statements, and community evolution. Compare how competitive players, pedagogical users, and social players actually deploy the rule text—does the text function differently in each context, or do different communities impose their reading onto the same functional mechanism?",
-      "impact": "If the rulebook's primary function is competitive standardization, the tournament orthodoxy reading is correct and epsilon remains minimal (~0.06). If the function is primarily pedagogical demonstration, the extraction_demo reading is correct and epsilon rises substantially. If the function is primarily social constraint, the social_scaffold reading is correct and beneficiaries shift to include social players. The three readings rest on different claims about what the rule text actually does in the world.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the Monopoly rulebook's function is competitive standardization, pedagogical demonstration, or social constraint—or whether all three functions coexist in an irreducibly ambiguous way."
-    },
-    {
-      "id": "omega_text_authority_legitimacy",
-      "question": "Is text authority (treating the published rulebook as immutable and authoritative) inherently legitimate, or does legitimacy depend on the rulebook's content? If the text were changed to include explicitly predatory mechanics (e.g., 'the richest player may seize properties from the poorest'), would text authority persist?",
-      "resolution_mechanism": "Counterfactual stress test: measure community response to proposed rule changes that would make the game more harsh or more corrupt. Track whether players resist the change because they value text authority intrinsically or because they judge the content unacceptable. If players accept a changed-text standard without loss of tournament legitimacy, text authority is intrinsically valued. If players resist the change to preserve content, legitimacy is content-dependent.",
-      "impact": "If text authority is intrinsically valued, the tournament orthodoxy reading's commitment to immutability is correct and the constraint's function is purely coordination. If legitimacy is content-dependent, the reading overstates text authority and smuggles in substantive claims about what rules are acceptable—which opens space for the other readings to contest the reading's claim to neutrality.",
+      "id": "skill_isolation_empirical_claim",
+      "question": "Does the rulebook actually isolate strategic skill from luck and rule-variance effects, or do skill and luck remain entangled in outcome variance?",
+      "resolution_mechanism": "Game-theoretic analysis and simulation of outcomes under the rulebook vs. alternative rule sets; empirical data from competitive play comparing ranking coherence across variants; statistical decomposition of outcome variance into skill, luck, and rule-interaction terms.",
+      "impact": "If skill isolation fails empirically, the orthodoxy reading's core claim (that text authority serves competitive fairness) is undermined, and the rulebook becomes an arbitrary standard whose immutability serves institutional authority rather than competitive depth. This would support the extraction reading's framing.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether text authority is intrinsically legitimate or legitimacy depends on rule content."
+      "description": "Whether the rulebook achieves its core epistemic claim that text authority isolates strategic skill."
     },
     {
-      "id": "omega_extraction_layering",
-      "question": "Does the tournament orthodoxy reading's claim of zero extraction depend on ignoring the ways text authority can be weaponized? If tournament organizers use rule authority to defend rule changes that benefit certain player types or venues (e.g., speed-play tournaments favor aggressive players), is that a form of structural extraction, or is it merely a side effect of standardization?",
-      "resolution_mechanism": "Audit tournament rule changes and clarifications over time: measure whether changes systematically favor certain player types, strategies, or venues. Compare the impact on competitive balance, demographic participation, and resource flows. If changes show systematic asymmetry, assess whether organizers are aware of the asymmetry and whether they justify it as a feature or defend themselves against the charge.",
-      "impact": "If systematic asymmetry is found and organizers do not acknowledge it, the tournament orthodoxy reading may understate extraction by treating rule authority as neutral and purely coordinative. This would support a hybrid classification (weakly tangled rope: real coordination plus incidental asymmetric effects), not a pure rope.",
+      "id": "immutability_vs_reform_boundary",
+      "question": "Is the principle of text immutability for ranking purposes separable from the rulebook's competitive coordination function, or are they structurally entangled?",
+      "resolution_mechanism": "Comparative analysis of rule-evolution practices in competitive communities (chess, esports, card games): do communities that allow rule amendment while maintaining ranking coherence experience coordination collapse, or do they sustain both? Do amended rules enable broader participation without degrading skill measurement?",
+      "impact": "If immutability is separable from coordination, then the competitive community could benefit from rule reform (house-rule innovations, accessibility amendments) without losing ranking validity — the orthodoxy reading's demand for absolute immutability would be revealed as a contingent institutional choice, not a structural necessity. This would undermine the reading's claim that alternatives are noise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether text immutability is structurally necessary or contingent to competitive coordination."
+    },
+    {
+      "id": "contested_kernel_boundary",
+      "question": "Is the reading's boundary between the competitive frame (beneficiary) and the social/pedagogical frame (excluded) a principled distinction or an arbitrary institutional gatekeeping choice?",
+      "resolution_mechanism": "Ethnographic and institutional analysis: do tournament organizers and competitive players articulate principled reasons for excluding pedagogical and social readings, or do they enforce exclusion for institutional convenience? Are there coherent hybrid communities that treat competitive and social goals as compatible within the rulebook?",
+      "impact": "If the boundary is arbitrary, the excluded stakeholders (casual players, pedagogical reformers) have a legitimate claim to be present in the constraint's authority structure, and the reading misrepresents them as outside rather than suppressed. This would shift the reading toward the social_scaffold framing (house rules as legitimate correction, not noise) or the extraction reading (institutional gatekeeping as rent-protection).",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether text authority's implementation introduces systematic asymmetric effects that constitute a form of structural extraction."
+      "type_class": "conceptual",
+      "description": "Whether the orthodoxy reading's boundary between competitive and social frames is principled or institutional gatekeeping."
+    },
+    {
+      "id": "reading_family_kernel_identity",
+      "question": "Do all three readings (orthodoxy, extraction, social-scaffold) address the same constraint, or has the reading divergence produced three structurally distinct constraints that merely share a name?",
+      "resolution_mechanism": "Apply the ε-invariance principle: if changing the reading changes epsilon by more than can be attributed to directionality scaling, the readings are authoring different constraints. Verify whether stakeholder structures, founding problems, and beneficiary/victim declarations remain coherent across readings when the same observables are used.",
+      "impact": "If readings produce structurally distinct constraints (different epsilon, different victim sets, different founding problems), then the network should decompose the kernel into separate stories per ε-invariance rule. If readings are coherent variations of one constraint authoring different d values per seat, the readings remain siblings in the kernel family. This distinction affects how the corpus treats reading families: decomposed stories get separate JSON files linked via affects_constraints; contested readings of one constraint share one kernel entry.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three readings represent different lenses on one constraint or fundamentally different constraints using a shared name."
     }
   ],
   "boltzmann": {
     "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.02
+    "boltzmann_floor_override": 0.03
   },
   "network": {
     "affects_constraints": [
       "monopoly_rulebook__extraction_demo_reading",
       "monopoly_rulebook__social_scaffold_reading"
     ],
-    "dual_formulation_note": "The Monopoly rulebook kernel is interpreted differently by three constraint readings. The tournament_orthodoxy_reading treats the text as a genuine coordination mechanism for competitive play, with minimal extraction. The extraction_demo_reading interprets the same text as an implicit pedagogical demonstration of capitalist accumulation, with substantial extraction. The social_scaffold_reading interprets the text as a constraint requiring community correction through house rules to preserve social cohesion. All three readings operate on the same rule text, but their epsilon values and structural interpretations differ substantially. The readings coexist in public discourse and community practice; competitive players adopt orthodoxy, pedagogical users adopt extraction framing, and social players adopt scaffolding. No single reading foreclosed the others in principle, but each reading's commitments constrain how the others can be coherently held within the same framework."
+    "dual_formulation_note": "This constraint is one of three readings of the monopoly_rulebook kernel. The extraction_demo_reading authors much higher epsilon (~0.65) and a snare classification; the social_scaffold_reading authors moderate epsilon (~0.38) and a scaffold-hybrid classification with house rules as essential correction. All three share the kernel (the Monopoly rulebook text) but author irreconcilable epistemic frames. The orthodoxy reading treats the rulebook as a genuine competitive standard; the extraction reading treats it as a demonstration of wealth concentration; the social-scaffold reading treats it as requiring community amendment to be socially playable. Each reading author their own stakeholder structures, founding problems, and epsilon values independently per ε-invariance rule. The readings do not converge or disagree on metrics — they instantiate different constraints."
   },
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "monopoly_rulebook__extraction_demo_reading",
+        "sibling_id": "extraction_demo_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "monopoly_rulebook__social_scaffold_reading",
+        "sibling_id": "social_scaffold_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "text_authority_enables_fair_competition",
+        "atom": "text_authority_enables_fair_ranking",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "rule_clarity_is_primary_function",
+        "atom": "skill_isolation_requires_immutable_standard",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "published_immutable_standard",
+    "reference_frame": "unified_competitive_standard",
     "drift_state": {
-      "moment": "contemporary_multiverse_play",
+      "moment": "contemporary_house_rule_adoption",
       "direction": "practice_drift",
       "magnitude": "minor",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

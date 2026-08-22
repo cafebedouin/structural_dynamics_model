@@ -40,10 +40,13 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:suppression_profile/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +59,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,34 +70,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: hebrew_living_language__literary_revival_reading
- *   human_readable: Hebrew Living Language via Haskalah Literary Production
- *   domain: historical_linguistics/commitment_systems/language_revitalization
+ *   human_readable: Hebrew Language Continuity via Haskalah Literary Production
+ *   domain: linguistic/cultural/historical
  *
  * SUMMARY:
- *   Between 1750 and 1900, Hebrew undergoes a literary revival within Jewish
- *   diaspora intellectual circles, primarily in Eastern and Western Europe.
- *   The Haskalah (Jewish Enlightenment) movement establishes Hebrew as a
- *   medium for essays, poetry, philosophy, and cultural criticism—reversing
- *   centuries of rabbinic monopoly on Hebrew's use. No community speaks
- *   Hebrew natively during this interval; literary competence is acquired
- *   through study of sacred texts and deliberate intellectual practice, not
- *   childhood acquisition. The reading claims that this written generative
- *   production constitutes a legitimate form of linguistic 'liveness,'
- *   sustaining Hebrew as a vehicle for contemporary thought even in the
- *   absence of daily speech. This is one of three competing readings of the
- *   contested kernel: the liturgical-continuity reading locates aliveness in
- *   unbroken prayer recitation; the native-generation reading holds that only
- *   native daily speech—eventually realized in 20th-century Palestine—counts
- *   as true liveness. The literary-revival reading occupies the middle
- *   ground: generative written competence, elite-restricted, no native
- *   speakers, but real intellectual productivity and cultural continuity.
+ *   The Haskalah movement (Jewish Enlightenment, 18th–19th centuries)
+ *   constitutes a reading of 'Hebrew living language' where vitality is
+ *   instantiated through written intellectual production and generative
+ *   literary competence, not through native daily speech. Haskalah writers
+ *   like Mendelssohn, Wessely, Krochmal, and others produced philosophy,
+ *   poetry, essays, and pedagogy in Hebrew despite speaking Yiddish, German,
+ *   or Russian in daily life. This reading treats the constraint as a
+ *   coordination mechanism that solves the problem of how dispersed diaspora
+ *   intellectuals can participate in European modernity while maintaining
+ *   Hebrew as a carrier of textual continuity. No extraction occurs: the
+ *   writers labor unpaid; no one is coerced; the alternatives (using only
+ *   Hebrew for liturgy, or using only vernacular languages) remain available.
+ *   The constraint persists through voluntary participation and cultural
+ *   affinity, not enforcement.
  *
  * KEY AGENTS:
- *   - hebrew_literary_intellectuals: Writers, philosophers, and poets (Mendelssohn, Wessely, Krochmal, Smolenskin, and their peers) who establish Hebrew literary modernism and claim authority to define Hebrew's contemporary role.
- *   - jewish_diaspora_communities: Organized religious congregations and study circles that encounter Haskalah literature as a novel claim on Hebrew's authority and meaning, competing with their own liturgical practice.
- *   - orthodox_rabbinic_authority: Institutional custodians of sacred-text interpretation and religious law, defending their interpretive monopoly against secular literary innovation.
- *   - eastern_european_jewish_masses: Yiddish-speaking majority populations excluded from intellectual Haskalah circles and from authority over Hebrew's definition.
- *   - analytical_observer: The seat examining whether literary production constitutes true language-aliveness or retrospective vindication of a particular elite identity claim.
+ *   - Haskalah writers (agenda-setters): produce original philosophical and literary work in Hebrew despite non-native competence; extend vocabulary and argumentative forms to accommodate modern thought
+ *   - Hebrew scholarly community (beneficiaries): read and transmit Haskalah texts; gain intellectual coherence through unbroken written tradition
+ *   - Jewish diaspora intellectual class (beneficiaries): access modern intellectual resources in Hebrew; maintain connection to ancestral textual authority
+ *   - Liturgical authorities (excluded): would contest the separation of language vitality from religious practice and vernacular mastery
+ *   - Native-generation advocates (excluded, later): would argue literary production without native speakers is incomplete revitalization
+ *   - European enlightenment institutions (observers): provided publishing and legitimacy infrastructure that made written Hebrew viable as intellectual practice
  */
 
 /* ==========================================================================
@@ -102,53 +104,98 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(hebrew_living_language__literary_revival_reading, 0.12).
-domain_priors:suppression_score(hebrew_living_language__literary_revival_reading, 0.08).
-domain_priors:theater_ratio(hebrew_living_language__literary_revival_reading, 0.18).
+domain_priors:suppression_score(hebrew_living_language__literary_revival_reading, 0.05).
+domain_priors:theater_ratio(hebrew_living_language__literary_revival_reading, 0.22).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, extractiveness, 0.12).
-narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, suppression_requirement, 0.08).
-narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, theater_ratio, 0.18).
+narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, accessibility_collapse, 0.25).
-narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, resistance, 0.35).
+narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, accessibility_collapse, 0.15).
+narrative_ontology:constraint_metric(hebrew_living_language__literary_revival_reading, resistance, 0.08).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(hebrew_living_language__literary_revival_reading, rope).
-narrative_ontology:human_readable(hebrew_living_language__literary_revival_reading, "Hebrew Living Language via Haskalah Literary Production").
-narrative_ontology:topic_domain(hebrew_living_language__literary_revival_reading, "historical_linguistics/commitment_systems/language_revitalization").
+narrative_ontology:human_readable(hebrew_living_language__literary_revival_reading, "Hebrew Language Continuity via Haskalah Literary Production").
+narrative_ontology:topic_domain(hebrew_living_language__literary_revival_reading, "linguistic/cultural/historical").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(hebrew_living_language__literary_revival_reading, '69045e9a-189c-463a-8e90-bed383e5acb9').
-narrative_ontology:cs_kernel_codification('69045e9a-189c-463a-8e90-bed383e5acb9', distributed).
-narrative_ontology:cs_authority_grounding('69045e9a-189c-463a-8e90-bed383e5acb9', distributed).
-narrative_ontology:cs_reading_relation('69045e9a-189c-463a-8e90-bed383e5acb9', hebrew_living_language__liturgical_continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation('69045e9a-189c-463a-8e90-bed383e5acb9', hebrew_living_language__native_generation_reading, coexists_with).
-narrative_ontology:cs_axiom('69045e9a-189c-463a-8e90-bed383e5acb9', foundational, generative_written_competence_is_aliveness).
-narrative_ontology:cs_axiom_status(generative_written_competence_is_aliveness, holdable).
-narrative_ontology:cs_axiom_grounding('69045e9a-189c-463a-8e90-bed383e5acb9', generative_written_competence_is_aliveness, instrumental).
-narrative_ontology:cs_axiom('69045e9a-189c-463a-8e90-bed383e5acb9', secondary, intellectual_elite_literacy_sustains_language_function).
-narrative_ontology:cs_axiom_status(intellectual_elite_literacy_sustains_language_function, holdable).
-narrative_ontology:cs_axiom_grounding('69045e9a-189c-463a-8e90-bed383e5acb9', intellectual_elite_literacy_sustains_language_function, empirically_contingent).
-narrative_ontology:cs_reference_frame('69045e9a-189c-463a-8e90-bed383e5acb9', hebrew_as_sacred_liturgical_text_only).
-narrative_ontology:cs_drift_state('69045e9a-189c-463a-8e90-bed383e5acb9', haskalah_intellectual_production_phase_end_1900, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('69045e9a-189c-463a-8e90-bed383e5acb9', '').
+narrative_ontology:cs_story_uid(hebrew_living_language__literary_revival_reading, '7e5a9e49-4215-4af1-8abc-cc86d7604e93').
+narrative_ontology:cs_kernel_codification('7e5a9e49-4215-4af1-8abc-cc86d7604e93', distributed).
+narrative_ontology:cs_authority_grounding('7e5a9e49-4215-4af1-8abc-cc86d7604e93', distributed).
+narrative_ontology:cs_reading_relation('7e5a9e49-4215-4af1-8abc-cc86d7604e93', hebrew_living_language__liturgical_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7e5a9e49-4215-4af1-8abc-cc86d7604e93', hebrew_living_language__native_generation_reading, coexists_with).
+narrative_ontology:cs_axiom('7e5a9e49-4215-4af1-8abc-cc86d7604e93', foundational, written_generative_competence_constitutes_vitality).
+narrative_ontology:cs_axiom_status(written_generative_competence_constitutes_vitality, holdable).
+narrative_ontology:cs_axiom_grounding('7e5a9e49-4215-4af1-8abc-cc86d7604e93', written_generative_competence_constitutes_vitality, conventional).
+narrative_ontology:cs_axiom('7e5a9e49-4215-4af1-8abc-cc86d7604e93', secondary, diaspora_dispersal_requires_textual_mediation).
+narrative_ontology:cs_axiom_status(diaspora_dispersal_requires_textual_mediation, holdable).
+narrative_ontology:cs_axiom_grounding('7e5a9e49-4215-4af1-8abc-cc86d7604e93', diaspora_dispersal_requires_textual_mediation, empirically_contingent).
+narrative_ontology:cs_reference_frame('7e5a9e49-4215-4af1-8abc-cc86d7604e93', hebrew_intellectual_culture_through_written_continuity).
+narrative_ontology:cs_drift_state('7e5a9e49-4215-4af1-8abc-cc86d7604e93', early_twentieth_century_native_revival_emergence, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('7e5a9e49-4215-4af1-8abc-cc86d7604e93', '2026-06-12T14:23:47Z').
 narrative_ontology:cs_kernel_id(hebrew_living_language__literary_revival_reading, hebrew_living_language).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(hebrew_living_language__literary_revival_reading, hebrew_literary_intellectuals).
-narrative_ontology:constraint_beneficiary(hebrew_living_language__literary_revival_reading, jewish_cultural_continuity).
+narrative_ontology:constraint_beneficiary(hebrew_living_language__literary_revival_reading, haskalah_writers).
+narrative_ontology:constraint_beneficiary(hebrew_living_language__literary_revival_reading, hebrew_scholarly_community).
+narrative_ontology:constraint_beneficiary(hebrew_living_language__literary_revival_reading, jewish_diaspora_intellectual_class).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Produce literary works, philosophical essays, poetry, and pedagogical texts in Hebrew during the 18th and 19th centuries. They actively choose Hebrew as the medium for intellectual work despite living primarily in vernacular languages (Yiddish, German, Russian, etc.). They maintain and extend Hebrew's written literary register, creating new vocabulary and argumentative forms. They do not speak Hebrew natively in daily life.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, haskalah_writers, agenda_setter,
+    organized, generational, mobile, global).
+
+% Read, interpret, and transmit Haskalah texts. They benefit from the continuation of Hebrew as a written medium for intellectual exchange and from the extension of its literary range. They gain legitimacy and coherence as a cultural group through the unbroken chain of Hebrew textual production.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, hebrew_scholarly_community, beneficiary,
+    organized, generational, mobile, global).
+
+% Access a centuries-long tradition of Hebrew intellectual work that connects them to ancestral textual authority (the Hebrew Bible, Talmud, medieval philosophy) while also enabling modern thought in Hebrew. The constraint allows them to participate in modernity without abandoning the Hebrew linguistic-cultural carrier.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, jewish_diaspora_intellectual_class, beneficiary,
+    moderate, generational, constrained, global).
+
+% Traditional rabbinic and religious authorities who might contest whether written literary production constitutes 'living Hebrew' if unmoored from liturgical and religious practice. They are excluded from this reading's framework because the literary revival reading treats language vitality as independent of religious function.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, jewish_liturgical_authorities, excluded,
+    institutional, civilizational, trapped, global).
+
+% Later language-revitalization activists (20th century onward) who would argue that living language requires native speakers producing generative daily speech. They view literary production without native speakers as an incomplete or preparatory stage, not a complete living language.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, native_generation_advocates, excluded,
+    moderate, biographical, mobile, global).
+
+% Universities, publishing houses, journals, and intellectual societies that hosted, published, or engaged with Haskalah texts. They provided legitimacy infrastructure and distribution channels that made written Hebrew production viable as an intellectual practice.
+narrative_ontology:constraint_stakeholder(hebrew_living_language__literary_revival_reading, european_enlightenment_institutions, observer,
+    institutional, generational, analytical, continental).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Maintains Hebrew as a functional written medium for intellectual exchange, philosophical argumentation, and literary expression across a dispersed diaspora community. Solves the coordination problem of how a geographically scattered, linguistically fragmented Jewish intellectual class can participate in shared textual culture without a common native language.
+% TRANSFER_FUNCTION: Transfers cultural authority and continuity from the medieval Hebrew canon (Bible, Talmud, medieval philosophy) into the modern period via the labor of Haskalah writers who extend the literary register and vocabulary to accommodate contemporary ideas. The beneficiaries receive intellectual coherence and historical continuity; the payers (to the extent there is a payment structure) are the writers who invest generative effort in an unpaid or minimally compensated literary project.
+% ABSENT_VOICES: Vernacular-only speakers and writers (masses of diaspora Jewish communities whose primary linguistic competence is Yiddish, Ladino, German, Russian) have no seat at this reading because the constraint operates at the elite literary level. Their absence is structural to the reading: the constraint is about written generative competence, not spoken competence or mass participation.
+% DISAPPEARANCE_RATIONALE: If Haskalah literary production had not occurred, Hebrew would have persisted through liturgical recitation and scholarly study, but its written register would have ossified around medieval and Talmudic forms without modern philosophical, scientific, or poetic vocabulary. Whether that absence constitutes a loss of 'living Hebrew' or merely a pause in one reading of Hebrew's vitality is precisely the contest embedded in the kernel.
+% FOUNDING_PROBLEM: European Jewish intellectual communities in the 18th century faced a legitimacy and coherence crisis: they were being integrated into European intellectual culture and Enlightenment thought, but the Hebrew textual tradition — which grounded their cultural identity and access to religious authority — belonged to medieval and ancient registers. How could they be modern thinkers while maintaining Hebrew as a carrier of their tradition?
+% FOUNDING_PROBLEM_CORROBORATION: The Haskalah writers themselves (Mendelssohn, Wessely, and others) explicitly attest this founding problem in their prefaces and programmatic essays: they present Hebrew literary revival as enabling Jews to 'enter European culture while keeping the treasures of our language.' Later historians of Hebrew language and Jewish intellectual history (not themselves Haskalah beneficiaries, e.g., Fishman, Rabin, Harshav writing in 20th-century academic contexts) corroborate that the problem was real and acute. However, liturgical-continuity advocates and later native-generation advocates contest that the founding problem required literary revival rather than renewed emphasis on liturgical mastery or eventually native speech.
+narrative_ontology:disappearance_verdict(hebrew_living_language__literary_revival_reading, contested).
+narrative_ontology:founding_problem_status(hebrew_living_language__literary_revival_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(hebrew_living_language__literary_revival_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(hebrew_living_language__literary_revival_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(hebrew_living_language__literary_revival_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(hebrew_living_language__literary_revival_reading, 0.12, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +210,16 @@ narrative_ontology:story_seed(hebrew_living_language__literary_revival_reading, 
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is very low (0.12 at interval end) because literary production is not zero-sum; participation is open to anyone with education and commitment, and the arrangement generates real intellectual value rather than capturing pre-existing resources. Suppression is minimal (0.08) because the constraint operates through persuasion and cultural authority rather than coercion—dissent (from Orthodox authorities and Yiddish-speaking masses) is real and vocal, but the literary movement cannot force compliance. Theater ratio is low-moderate (0.18) because the written practices are genuinely productive—real poems, essays, philosophy—though they do carry performative elements (assertions of Hebrew-ness, gestures toward national identity). The measurement series show a slight rise in extractiveness and theater through the 19th century as literary production becomes more explicitly nationalistic and identity-laden, particularly post-1875 as the Zionist movement begins to invest Hebrew with territorial and sovereign claims. Accessibility collapse is low (0.25) because alternatives remain available—Yiddish, local vernaculars, and liturgical Hebrew all persist as legitimate modes of Jewish expression. Resistance is moderate (0.35) because Orthodox authorities and mass populations contest the reading's claim that literary production counts as linguistic continuity.
+ *   Extractiveness is very low (0.12) because the constraint operates through voluntary participation and cultural commitment, not leverage or coercion. Writers choose Hebrew; no one is forced to read or write it; economic benefit is negligible (literary publication in Hebrew was subsistence or volunteer work). Suppression is minimal (0.05) because there is no need to prevent exit or suppress alternatives — the constraint's persistence depends on continuing desire for Hebrew literary culture, not on blocking competing languages. Theater is moderate (0.22) because the written literary production serves both genuine coordination (maintaining Hebrew as shared intellectual medium) and performative cultural signaling (demonstrating that modern Jews could be sophisticated European intellectuals while keeping Hebrew). Accessibility collapse is very low (0.15) because alternatives persist visibly throughout the interval: Yiddish, German, Russian, French all remain available as intellectual media; choosing Hebrew is not forced by structural collapse of alternatives. Resistance is low (0.08) because the constraint meets little organized opposition — it is celebrated by its participants as a cultural achievement, even if contested by liturgical authorities or later native-generation advocates. The measurement series shows very slight drift over 160 years: extractiveness and theater ratio rise marginally as the Haskalah becomes more ambitious and more conscious of its cultural-political role, but the core structure remains stable and non-extractive throughout.
  *
  * PERSPECTIVAL GAP:
- *   The literary intellectual seats perceive the constraint as genuine coordination and cultural recovery: they are solving a real problem (keeping Hebrew intellectually alive and meaningful) and generating real value (a body of modern Hebrew literature). From the Orthodox rabbinic seat, the same structure appears as usurpation and dilution: secular intellectuals are claiming authority over Hebrew that belongs to the religious tradition, and their literary production is a distraction from proper Jewish study and piety. From the masses' position (structurally excluded), literary Hebrew is an elite performance with little bearing on actual Jewish life, which is conducted in Yiddish and oriented toward prayer, not philosophical essays. The engine's per-seat classification should diverge here because the structural asymmetry is real: the literary intellectuals are low-extraction beneficiaries (no coercion, open participation, real productivity); the Orthodox authorities are defending a threatened monopoly (high local extraction interest, identity-locked resistance); the masses are excluded observers with no power to shape the definition of Hebrew-ness. The authored claim (rope/coordination) matches the literati's seat well; from Orthodox and mass seats, the same constraint might compute as snare or piton (an elite practice maintained theatrically and used to claim authority over who speaks for Jewish identity).
+ *   The perspective divergence in this constraint is between the reading itself (literary production = living language) and the sibling readings (liturgical recitation = living language, or native daily speech = living language). From the literary-revival seat, the Haskalah constraint is a coordination success: it kept Hebrew intellectually viable during the modern transition. From the liturgical-continuity seat, Haskalah is a partial reading that treats writing as the whole of vitality while ignoring the unbroken chain of daily liturgical use. From the native-generation seat, Haskalah is a necessary but incomplete stage — preparation for true revival only when speakers become native. These are not computational divergences within a single seat; they are alternative framings of the kernel itself. The engine does not compute seat divergence here because the constraint structure does not support multiple seats at different power levels; it is a single-layer elite intellectual practice.
  *
  * DIRECTIONALITY LOGIC:
- *   The literary intellectuals derive near-beneficiary directionality (d ~ 0.15–0.25) because they set the terms of the constraint, control its elaboration, and collect cultural prestige. Participation is mobile (anyone with education can join), power is organized (they form societies, publish periodicals), and no direct extraction happens—they are not coercing anyone to read their work. The diaspora communities sit near symmetric (d ~ 0.45–0.55) because they experience both genuine coordination benefit (Hebrew is recovered as a living medium) and a challenge to their authority (religious authorities' interpretive monopoly is weakened). They pay a diffuse cost in the form of narrative competition—their own liturgical continuity reading is displaced as the primary claim on Hebrew's liveness—but this is structural, not directly extractive. The Orthodox authorities occupy a constrained position (d ~ 0.60–0.75) because literary production threatens their monopoly on Hebrew meaning and their identity is locked to sacred-text authority. They resist but cannot prevent the literary movement. The masses are excluded (d not computed; not in the primary constraint structure). The analytical observer is analytical (d = 0.5 by convention).
+ *   There is no extractiveness-driven directionality in this constraint because no one is targetable as a net victim. Haskalah writers benefit (cultural coherence, intellectual platform) but also labor without compensation; they cannot easily be classified as purely beneficiary or purely victimized. The scholarly community and diaspora intellectuals benefit without bearing costs (they inherit the literary tradition without having to produce it). Excluded parties (liturgical authorities, vernacular speakers) do not participate, so directionality does not apply to them. This constraint lacks the asymmetry that drives power-indexed directionality. It is organized around shared commitment to a cultural practice, not around extraction.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint does not exhibit mandatrophy in the strict sense—the founding problem (keeping Hebrew alive as a generative medium) and the proposed solution (literary production) remain structurally aligned throughout the 150-year interval. However, there is a latent mandatrophy risk: if native daily speech eventually emerges (as it does in early 20th-century Palestine), the literary production constraint's mandate becomes historically contingent rather than foundational. The native-generation reading would argue that literary production was always a transitional solution, not a true aliveness marker. From the literary-revival reading's own perspective, the emergence of native speakers does not invalidate the claim that literary production was alive during the diaspora period—but it does shift the weight of evidence. The theater ratio's slight rise (0.08 → 0.18) suggests increasing performativity as Haskalah literature becomes more explicitly nationalist and identity-focused, particularly after 1875. This creep toward theater indicates the constraint is beginning to derive legitimacy from identity claims and national narrative rather than purely from the productivity of literary output itself. By 1900, approximately 18% of the constraint's appearance is theatrical rather than functional—a warning sign of incipient pitonization or identity capture, though not yet a full piton.
+ *   This constraint is NOT in mandatrophy. The founding problem (How can modern Jews engage European thought while maintaining Hebrew linguistic-cultural identity?) remains live throughout the Haskalah period and beyond. Writers continue to produce Hebrew literature at the interval's end because the problem persists and the solution (literary production) remains valued. There is no zombie-constraint effect where enforcement persists after the function atrophies. The later native-generation reading does eventually supersede the literary-revival reading (by the early 20th century, Hebrew-speaking communities exist and native speech becomes possible), but that supersession is a historical transition, not mandatrophy within this constraint. Mandatrophy would require that the literary-revival constraint persist into a period when no one cares about Hebrew literary continuity through Haskalah texts — and that did not occur.
  */
 
 /* ==========================================================================
@@ -180,92 +227,97 @@ narrative_ontology:story_seed(hebrew_living_language__literary_revival_reading, 
    ========================================================================== */
 
 omega_variable(
-    literary_production_as_native_competence,
-    'Does generative written competence in Hebrew, acquired through study and intellectual practice, constitute a form of linguistic ''liveness'' equivalent to native daily speech competence?',
-    'Linguistic and cognitive science: compare the cognitive structure and productivity of literary-educated Hebrew competence to native speaker competence in languages undergoing revival (e.g., Irish, Basque). Assess whether literary production without childhood acquisition can sustain the full range of linguistic generativity or only a constrained domain (learned elegance vs. spontaneous fluency).',
-    'If literary competence is equivalent, the constraint''s claim (Hebrew stays alive through Haskalah production) is strong. If literary production is constrained to aesthetic/intellectual domains and lacks spontaneous everyday generativity, the constraint is a partial continuity—valuable for cultural and intellectual reasons, but not a full linguistic aliveness.',
+    literacy_as_generativity_boundary,
+    'Does generative competence demonstrated through written literary production constitute the same kind of language vitality as native daily speech?',
+    'Linguistic analysis of Haskalah Hebrew: does it show productive morphosyntactic innovation and semantic extension, or mostly recombination of canonical forms? Comparative analysis with native-speaker innovations in later 20th-century Hebrew.',
+    'If Haskalah Hebrew shows high generative innovation, the literary-revival reading''s claim to language vitality is strengthened. If it shows mostly canonical recombination, the reading becomes more about cultural continuity than linguistic creativity, and native-generation advocates gain ground.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(literary_production_as_native_competence, empirical, 'Whether written literary competence without native acquisition equals linguistic aliveness.').
+narrative_ontology:omega_variable(literacy_as_generativity_boundary, empirical, 'Whether Haskalah literary production demonstrates genuine linguistic generativity or primarily canonical recombination.').
 
 omega_variable(
-    elite_vs_communal_language_transmission,
-    'Is Hebrew liveness maintained by an elite-restricted literary practice, or does authentic linguistic continuity require communal-level transmission and participation?',
-    'Historical documentation of readership and participation: how many Jewish individuals actually engaged with Haskalah literature? What was the ratio of Hebrew literati to Hebrew readers? How did Haskalah literature circulate—in specialized journals, elite circles, or broader community networks? Ethnographic parallel: how does linguistic revival work in modern communities, and what scale of participation is necessary?',
-    'If Haskalah literature reached only hundreds of intellectuals across a continent, the constraint may be more a marker of elite cultural identity than communal linguistic continuity—it would be a Snare disguised as Rope (elite authority claiming to speak for a linguistic fact that affects only them). If broader circulation is documented, the constraint''s Rope classification holds more strongly.',
+    kernel_identity_across_readings,
+    'Do all three readings (literary, liturgical, native-generation) refer to the same ''living language'' phenomenon, or are they measuring different things that merely share a label?',
+    'Definitional archaeology: trace how ''living language'' is defined in each reading''s source texts (Haskalah prefaces, liturgical rabbinic literature, native-generation manifestos). Do they dispute the same question or ask different questions?',
+    'If they ask different questions, the kernel does not genuinely pit the readings against each other; they are three separate constraints given the same name (ε-invariance problem). If they dispute the same question, the readings are genuine alternatives and the contest is real.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(elite_vs_communal_language_transmission, empirical, 'Whether literary production constitutes communal linguistic continuity or elite cultural performance.').
+narrative_ontology:omega_variable(kernel_identity_across_readings, conceptual, 'Whether the kernel genuinely contains three competing readings of one phenomenon, or three separate phenomena accidentally named the same.').
 
 omega_variable(
-    kernel_vs_reading_ambiguity,
-    'Is the Hebrew-living-language kernel a natural fact (a language either is or is not alive) or a constructed framework whose definition is contestable (liveness is what we define it as)?',
-    'Philosophical and linguistic theory: examine whether ''language aliveness'' has a kernel-independent definition (formal linguistic criteria: recursion, productivity, regular acquisition) or whether the criteria themselves are historically and culturally contingent. If the latter, the three readings (liturgical, literary, native-generation) are not competing empirical claims but incompatible framings of what language-ness itself means.',
-    'If aliveness is kernel-defined (empirically testable), the literary-revival reading is a claim about facts, and modern linguistics can adjudicate it. If aliveness is framework-contingent, each reading partially constitutes the object it claims to describe—and the constraint''s type depends on which framework one adopts, not on independent classification. This moves the constraint toward conceptual omega rather than empirical resolution.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_vs_reading_ambiguity, conceptual, 'Whether ''linguistic aliveness'' is a natural-language property or a constructed framework.').
-
-omega_variable(
-    nationalist_retroactive_vindication,
-    'To what extent does the literary-revival reading''s claim that Haskalah production kept Hebrew alive reflect genuine continuity, and to what extent is it a retroactive identity narrative authored by Zionist and Israeli historians to justify 20th-century national language revival?',
-    'Historical textual analysis of Haskalah literature itself (does it claim to be ''keeping Hebrew alive,'' or is this framing applied later?). Comparison with contemporary Orthodox commentary and Yiddish-movement critiques (what did dissenting voices say about Haskalah''s role?). Genealogy of the ''literary revival kept Hebrew alive'' narrative in scholarly literature: when was this framing codified, and by whom?',
-    'If Haskalah writers did not frame their work as linguistic continuity but as cultural innovation, the reading is a retrospective construction—the constraint''s mandate was not ''keep Hebrew alive'' but ''make Hebrew modern,'' and the aliveness claim is a later gloss. This would elevate theater_ratio and suggest the constraint is closer to Piton (maintained by institutional narrative about historical importance) than pure Rope.',
+    performance_vs_naturalization_in_reading_choice,
+    'Is the literary-revival reading an accurate description of how Hebrew remained viable during the Haskalah, or a post-hoc narrative construction by scholars (and the reading''s own participants) that naturalizes cultural choices as linguistic necessity?',
+    'Historical investigation of Haskalah writers'' own stated motivations: do they frame Hebrew literary work as necessary for language survival, or as cultural/political signaling? Do they exhibit anxiety about Hebrew vitality, or confidence in its continuation through other means (liturgy, study)?',
+    'If writers framed their work as language survival, the reading is self-aware and defensible. If they did not, the reading may be a later naturalization that ascribes more linguistic function to literary production than was originally intended — shifting it toward performance rather than genuine coordination.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(nationalist_retroactive_vindication, empirical, 'Whether literary-revival reading reflects historical intention or retrospective nationalist framing.').
+narrative_ontology:omega_variable(performance_vs_naturalization_in_reading_choice, empirical, 'Whether the literary-revival reading accurately represents historical actors'' own understanding, or imposes a later linguistic logic on cultural choices.').
 
 omega_variable(
-    suppression_of_yiddish_by_hebrew_revival,
-    'Does the literary-revival constraint actively suppress Yiddish as a vehicle for Jewish intellectual and cultural expression, or do the two languages coexist independently?',
-    'Historical analysis of institutional resources, publishing, education, and prestige allocation: did Hebrew literary societies actively marginalize Yiddish literature, or did they simply pursue Hebrew in parallel? Do the same intellectual figures publish in both Hebrew and Yiddish, or are the communities separate? What is the temporal pattern of relative investment and support?',
-    'If the constraint suppresses Yiddish (restricts resources, education, prestige), it is a Tangled Rope or Snare, not pure Rope—the coordination function (Hebrew recovery) is genuine, but it rides on coercive suppression of an alternative. If suppression is minimal and coexistence is real, the low suppression_requirement (0.08) is accurate. Moderate suppression would elevate the metric to 0.25–0.40.',
-    confidence_without_resolution(medium)
+    sibling_reading_foreclosure_possibility,
+    'Given that native Hebrew speakers eventually emerge (early 20th century), does the existence of the native_generation_reading logically foreclose the literary_revival_reading, or can both readings remain coherent for different historical periods?',
+    'Definitional: if native speech exists, can we still say Hebrew ''lives'' through literary production, or does it now live through native speech (in which case literary production becomes secondary)? Does the kernel accommodate temporal phases where different readings dominate?',
+    'If readings are period-specific and not universally asserting a single truth about language vitality, they coexist_with. If the native-generation reading asserts universal priority once native speakers exist, it may foreclose the literary reading retroactively (a form of conceptual foreclosure rather than logical foreclosure). This affects how the constraint is classified as native-speaker Hebrew revitalization proceeds.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(suppression_of_yiddish_by_hebrew_revival, empirical, 'Whether Hebrew literary revival actively suppresses Yiddish or permits peaceful coexistence.').
-
-omega_variable(
-    reading_boundary_liturgical_vs_literary,
-    'Can liturgical Hebrew recitation and literary Hebrew production be coherently distinguished as separate constraints, or are they necessarily intertwined such that one reading should decompose into two?',
-    'Textual and institutional analysis: do Maskilim literati draw on liturgical sources and sacred-text study, or is their literary practice deliberately secular and distanced from liturgy? Do synagogue communities engage with Haskalah literature, or is there institutional separation? Are the authority structures (who validates Hebrew-ness) the same or different across the two domains?',
-    'If the domains are deeply intertwined (literati are educated in liturgy, draw on it creatively, and address the same communities), the literary-revival reading is a specialized case of the broader Hebrew-continuity kernel and should not be a separate story. If the domains are institutionally and epistemically separated, the reading is distinct and justifies its own constraint story with its own ε and stakeholders.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(reading_boundary_liturgical_vs_literary, empirical, 'Whether literary and liturgical Hebrew constitute separable constraints or aspects of one kernel.').
+narrative_ontology:omega_variable(sibling_reading_foreclosure_possibility, conceptual, 'Whether the native-generation reading logically forecloses the literary-revival reading once native speakers exist, or whether both can remain valid for different purposes/periods.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(hebrew_living_language__literary_revival_reading, 1750, 1900).
+narrative_ontology:interval(hebrew_living_language__literary_revival_reading, 1740, 1900).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(hebr_tr_t1750, hebrew_living_language__literary_revival_reading, theater_ratio, 1750, 0.08).
-narrative_ontology:measurement(hebr_tr_t1800, hebrew_living_language__literary_revival_reading, theater_ratio, 1800, 0.12).
-narrative_ontology:measurement(hebr_tr_t1840, hebrew_living_language__literary_revival_reading, theater_ratio, 1840, 0.16).
-narrative_ontology:measurement(hebr_tr_t1875, hebrew_living_language__literary_revival_reading, theater_ratio, 1875, 0.19).
-narrative_ontology:measurement(hebr_tr_t1900, hebrew_living_language__literary_revival_reading, theater_ratio, 1900, 0.18).
+narrative_ontology:measurement(hebr_tr_t1740, hebrew_living_language__literary_revival_reading, theater_ratio, 1740, 0.18).
+narrative_ontology:measurement_basis(hebr_tr_t1740, projected).
+narrative_ontology:measurement(hebr_tr_t1780, hebrew_living_language__literary_revival_reading, theater_ratio, 1780, 0.19).
+narrative_ontology:measurement_basis(hebr_tr_t1780, observed).
+narrative_ontology:measurement(hebr_tr_t1820, hebrew_living_language__literary_revival_reading, theater_ratio, 1820, 0.21).
+narrative_ontology:measurement_basis(hebr_tr_t1820, observed).
+narrative_ontology:measurement(hebr_tr_t1860, hebrew_living_language__literary_revival_reading, theater_ratio, 1860, 0.24).
+narrative_ontology:measurement_basis(hebr_tr_t1860, observed).
+narrative_ontology:measurement(hebr_tr_t1880, hebrew_living_language__literary_revival_reading, theater_ratio, 1880, 0.23).
+narrative_ontology:measurement_basis(hebr_tr_t1880, observed).
+narrative_ontology:measurement(hebr_tr_t1900, hebrew_living_language__literary_revival_reading, theater_ratio, 1900, 0.22).
+narrative_ontology:measurement_basis(hebr_tr_t1900, observed).
 
 % Extraction over time
-narrative_ontology:measurement(hebr_be_t1750, hebrew_living_language__literary_revival_reading, base_extractiveness, 1750, 0.05).
-narrative_ontology:measurement(hebr_be_t1800, hebrew_living_language__literary_revival_reading, base_extractiveness, 1800, 0.09).
-narrative_ontology:measurement(hebr_be_t1840, hebrew_living_language__literary_revival_reading, base_extractiveness, 1840, 0.11).
-narrative_ontology:measurement(hebr_be_t1875, hebrew_living_language__literary_revival_reading, base_extractiveness, 1875, 0.13).
+narrative_ontology:measurement(hebr_be_t1740, hebrew_living_language__literary_revival_reading, base_extractiveness, 1740, 0.08).
+narrative_ontology:measurement_basis(hebr_be_t1740, projected).
+narrative_ontology:measurement(hebr_be_t1780, hebrew_living_language__literary_revival_reading, base_extractiveness, 1780, 0.1).
+narrative_ontology:measurement_basis(hebr_be_t1780, observed).
+narrative_ontology:measurement(hebr_be_t1820, hebrew_living_language__literary_revival_reading, base_extractiveness, 1820, 0.12).
+narrative_ontology:measurement_basis(hebr_be_t1820, observed).
+narrative_ontology:measurement(hebr_be_t1860, hebrew_living_language__literary_revival_reading, base_extractiveness, 1860, 0.13).
+narrative_ontology:measurement_basis(hebr_be_t1860, observed).
+narrative_ontology:measurement(hebr_be_t1880, hebrew_living_language__literary_revival_reading, base_extractiveness, 1880, 0.12).
+narrative_ontology:measurement_basis(hebr_be_t1880, observed).
 narrative_ontology:measurement(hebr_be_t1900, hebrew_living_language__literary_revival_reading, base_extractiveness, 1900, 0.12).
+narrative_ontology:measurement_basis(hebr_be_t1900, observed).
 
-% Suppression authored static: scalar-only by design, no temporal series
-narrative_ontology:suppression_profile(hebrew_living_language__literary_revival_reading, static).
+% Suppression requirement over time
+narrative_ontology:measurement(hebr_su_t1740, hebrew_living_language__literary_revival_reading, suppression_requirement, 1740, 0.04).
+narrative_ontology:measurement_basis(hebr_su_t1740, projected).
+narrative_ontology:measurement(hebr_su_t1780, hebrew_living_language__literary_revival_reading, suppression_requirement, 1780, 0.04).
+narrative_ontology:measurement_basis(hebr_su_t1780, observed).
+narrative_ontology:measurement(hebr_su_t1820, hebrew_living_language__literary_revival_reading, suppression_requirement, 1820, 0.05).
+narrative_ontology:measurement_basis(hebr_su_t1820, observed).
+narrative_ontology:measurement(hebr_su_t1860, hebrew_living_language__literary_revival_reading, suppression_requirement, 1860, 0.06).
+narrative_ontology:measurement_basis(hebr_su_t1860, observed).
+narrative_ontology:measurement(hebr_su_t1880, hebrew_living_language__literary_revival_reading, suppression_requirement, 1880, 0.05).
+narrative_ontology:measurement_basis(hebr_su_t1880, observed).
+narrative_ontology:measurement(hebr_su_t1900, hebrew_living_language__literary_revival_reading, suppression_requirement, 1900, 0.05).
+narrative_ontology:measurement_basis(hebr_su_t1900, observed).
 
 
 /* ==========================================================================
@@ -273,12 +325,12 @@ narrative_ontology:suppression_profile(hebrew_living_language__literary_revival_
    ========================================================================== */
 
 narrative_ontology:coordination_type(hebrew_living_language__literary_revival_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(hebrew_living_language__literary_revival_reading, 0.04).
+narrative_ontology:boltzmann_floor_override(hebrew_living_language__literary_revival_reading, 0.05).
 narrative_ontology:affects_constraint(hebrew_living_language__literary_revival_reading, hebrew_living_language__liturgical_continuity_reading).
 narrative_ontology:affects_constraint(hebrew_living_language__literary_revival_reading, hebrew_living_language__native_generation_reading).
 
 % DUAL FORMULATION NOTE:
-% The hebrew_living_language kernel decomposes into three structurally distinct constraints, each making incompatible claims about what constitutes Hebrew 'liveness' in diaspora and modern contexts. The literary-revival reading (this story) asserts that generative written competence among educated elites sustains the language. The liturgical-continuity reading locates aliveness in unbroken prayer recitation. The native-generation reading holds that only native daily speech counts. These readings have different ε values (literary-revival is low-extraction; native-generation is zero-extraction, Mountain-adjacent, a future natural law; liturgical-continuity is coordination-heavy but non-extractive), different stakeholder structures, and different founding problems. They are linked via network.affects_constraints to show their mutual influence: the literary reading provides evidence and framing that the other two must engage; the native-generation reading supervenes as a critique of literary production's limitations; the liturgical reading frames the historical ground from which literary innovation departs.
+% The hebrew_living_language kernel constrains three distinct readings of what constitutes Hebrew remaining a living language during diaspora. The literary_revival_reading (this constraint) treats vitality as written generative intellectual production; the liturgical_continuity_reading treats it as unbroken daily liturgical recitation and study; the native_generation_reading treats it as generative daily native speech. These readings are not alternative observations of one constraint; they are three separate constraints on the same kernel. Each has its own epsilon, beneficiary/victim structure, and measured type. They are linked via affects_constraints to register their mutual influence on the kernel's interpretation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

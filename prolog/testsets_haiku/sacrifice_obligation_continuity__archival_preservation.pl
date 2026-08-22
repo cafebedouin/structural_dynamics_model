@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-19
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,8 +40,12 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:suppression_profile/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -56,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,36 +71,27 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: sacrifice_obligation_continuity__archival_preservation
- *   human_readable: Sacrifice Law as Historical Archive: Study Preserves Textual Tradition Without Normative Obligation
- *   domain: religious_law/textual_tradition/ritual_studies
+ *   human_readable: Sacrifice Law as Historical-Textual Artifact (Archival Preservation Reading)
+ *   domain: religious/legal/textual
  *
  * SUMMARY:
- *   After the Second Temple's destruction (70 CE), Jewish communities faced
- *   the impossibility of performing sacrifice law. The archival-preservation
- *   reading holds that the law is no longer binding; study of sacrifice texts
- *   preserves textual tradition and cultural memory without normative force.
- *   This reading treats the law as a historical and cultural object, not as a
- *   current obligation. The constraint is claimed as a mountain (natural,
- *   non-extractive, zero suppression) because after physical sacrifice became
- *   impossible, study emerged as the natural mode of engagement with the
- *   texts. However, this reading is one of four contested interpretations of
- *   the same kernel: messianic suspension (obligation suspended pending
- *   restoration), performance-only (physical restoration is the true
- *   obligation, study is preparation), and study-as-performance (textual
- *   engagement itself fulfills the commandment, obligation persists). The
- *   archival reading claims the obligation has exited constraint space
- *   entirely; the sibling readings contest this by holding that obligation
- *   persists in different forms. The structural delta is therefore
- *   fundamental: zero extractiveness because there is no normative claim to
- *   enforce.
+ *   This story instantiates one reading of a contested kernel: sacrifice law
+ *   in post-Temple Judaism. The archival-preservation reading claims that
+ *   sacrifice obligation terminated when the Temple was destroyed and literal
+ *   performance became impossible. Study and textual transmission preserve
+ *   the knowledge and cultural memory without asserting ongoing normative
+ *   force. This reading produces a constraint with zero extractiveness — no
+ *   parties benefit or suffer because no obligation is claimed. The reading
+ *   is one among four: messianic-suspension (obligation is deferred, not
+ *   terminated); performance-only (study prepares for future restoration);
+ *   study-as-performance (textual engagement IS fulfillment). This story
+ *   treats the archival-preservation reading as the referent and measures its
+ *   structural properties from that reading's own framework.
  *
  * KEY AGENTS:
- *   - archival_scholars: Engage texts as historical/literary objects; extract cultural meaning through analysis; primary bearers of the textual tradition in the archival frame
- *   - religious_community_study_practitioners: Engage through study and remembrance; receive cultural continuity and meaning without obligation; mobile exit
- *   - messianic_obligation_holders: Excluded; hold suspension (not abrogation) of obligation; represent a fundamentally different reading
- *   - performance_restoration_advocates: Excluded; argue physical performance is the true obligation; represent foreclosure against archival reading
- *   - study_as_performance_interpreters: Excluded; hold that study fulfills obligation; coexist with archival reading in live theological debate
- *   - historical_textual_tradition: Non-agent; the body of texts and commentaries; is vindicated (as object of legitimate study) by the archival reading
+ *   - textual_scholars: preserve and transmit sacrifice law knowledge through study and commentary
+ *   - religious_communities: engage with the tradition through study rather than performance
+ *   - historical_witnesses: attest that the Temple's destruction is the foundational fact that prompted the reading shift
  */
 
 /* ==========================================================================
@@ -114,47 +110,71 @@ narrative_ontology:constraint_metric(sacrifice_obligation_continuity__archival_p
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(sacrifice_obligation_continuity__archival_preservation, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(sacrifice_obligation_continuity__archival_preservation, resistance, 0.1).
+narrative_ontology:constraint_metric(sacrifice_obligation_continuity__archival_preservation, resistance, 0.08).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(sacrifice_obligation_continuity__archival_preservation, mountain).
-narrative_ontology:human_readable(sacrifice_obligation_continuity__archival_preservation, "Sacrifice Law as Historical Archive: Study Preserves Textual Tradition Without Normative Obligation").
-narrative_ontology:topic_domain(sacrifice_obligation_continuity__archival_preservation, "religious_law/textual_tradition/ritual_studies").
+narrative_ontology:human_readable(sacrifice_obligation_continuity__archival_preservation, "Sacrifice Law as Historical-Textual Artifact (Archival Preservation Reading)").
+narrative_ontology:topic_domain(sacrifice_obligation_continuity__archival_preservation, "religious/legal/textual").
 
 domain_priors:emerges_naturally(sacrifice_obligation_continuity__archival_preservation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(sacrifice_obligation_continuity__archival_preservation, 'd32e691e-b7a9-4e56-8d6f-232b19ffab25').
-narrative_ontology:cs_kernel_codification('d32e691e-b7a9-4e56-8d6f-232b19ffab25', fixed_text).
-narrative_ontology:cs_authority_grounding('d32e691e-b7a9-4e56-8d6f-232b19ffab25', lineage).
-narrative_ontology:cs_interpretation_layer_present('d32e691e-b7a9-4e56-8d6f-232b19ffab25').
-narrative_ontology:cs_reading_relation('d32e691e-b7a9-4e56-8d6f-232b19ffab25', sacrifice_obligation_continuity__messianic_suspension, coexists_with).
-narrative_ontology:cs_reading_relation('d32e691e-b7a9-4e56-8d6f-232b19ffab25', sacrifice_obligation_continuity__performance_only, forecloses).
-narrative_ontology:cs_reading_relation('d32e691e-b7a9-4e56-8d6f-232b19ffab25', sacrifice_obligation_continuity__study_as_performance, coexists_with).
-narrative_ontology:cs_axiom('d32e691e-b7a9-4e56-8d6f-232b19ffab25', foundational, obligation_abrogated_not_suspended).
-narrative_ontology:cs_axiom_status(obligation_abrogated_not_suspended, holdable).
-narrative_ontology:cs_axiom_grounding('d32e691e-b7a9-4e56-8d6f-232b19ffab25', obligation_abrogated_not_suspended, deontological).
-narrative_ontology:cs_axiom('d32e691e-b7a9-4e56-8d6f-232b19ffab25', foundational, study_without_performative_equivalence).
-narrative_ontology:cs_axiom_status(study_without_performative_equivalence, holdable).
-narrative_ontology:cs_axiom_grounding('d32e691e-b7a9-4e56-8d6f-232b19ffab25', study_without_performative_equivalence, deontological).
-narrative_ontology:cs_reference_frame('d32e691e-b7a9-4e56-8d6f-232b19ffab25', textual_preservation_post_destruction).
-narrative_ontology:cs_drift_state('d32e691e-b7a9-4e56-8d6f-232b19ffab25', contemporary_institutional_embeddedness, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('d32e691e-b7a9-4e56-8d6f-232b19ffab25', '').
+narrative_ontology:cs_story_uid(sacrifice_obligation_continuity__archival_preservation, 'f63715ed-1c53-429b-bb19-39eefc0d33dd').
+narrative_ontology:cs_kernel_codification('f63715ed-1c53-429b-bb19-39eefc0d33dd', fixed_text).
+narrative_ontology:cs_authority_grounding('f63715ed-1c53-429b-bb19-39eefc0d33dd', lineage).
+narrative_ontology:cs_interpretation_layer_present('f63715ed-1c53-429b-bb19-39eefc0d33dd').
+narrative_ontology:cs_reading_relation('f63715ed-1c53-429b-bb19-39eefc0d33dd', sacrifice_obligation_continuity__messianic_suspension, coexists_with).
+narrative_ontology:cs_reading_relation('f63715ed-1c53-429b-bb19-39eefc0d33dd', sacrifice_obligation_continuity__performance_only, coexists_with).
+narrative_ontology:cs_reading_relation('f63715ed-1c53-429b-bb19-39eefc0d33dd', sacrifice_obligation_continuity__study_as_performance, coexists_with).
+narrative_ontology:cs_axiom('f63715ed-1c53-429b-bb19-39eefc0d33dd', foundational, temple_destruction_terminates_literal_obligation).
+narrative_ontology:cs_axiom_status(temple_destruction_terminates_literal_obligation, holdable).
+narrative_ontology:cs_axiom_grounding('f63715ed-1c53-429b-bb19-39eefc0d33dd', temple_destruction_terminates_literal_obligation, deontological).
+narrative_ontology:cs_axiom('f63715ed-1c53-429b-bb19-39eefc0d33dd', foundational, textual_preservation_is_voluntary_practice).
+narrative_ontology:cs_axiom_status(textual_preservation_is_voluntary_practice, holdable).
+narrative_ontology:cs_axiom_grounding('f63715ed-1c53-429b-bb19-39eefc0d33dd', textual_preservation_is_voluntary_practice, conventional).
+narrative_ontology:cs_reference_frame('f63715ed-1c53-429b-bb19-39eefc0d33dd', post_temple_discontinuation).
+narrative_ontology:cs_drift_state('f63715ed-1c53-429b-bb19-39eefc0d33dd', contemporary_scholarly_consensus, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('f63715ed-1c53-429b-bb19-39eefc0d33dd', '').
 narrative_ontology:cs_kernel_id(sacrifice_obligation_continuity__archival_preservation, sacrifice_obligation_continuity).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(sacrifice_obligation_continuity__archival_preservation, textual_tradition_bearers).
-narrative_ontology:constraint_beneficiary(sacrifice_obligation_continuity__archival_preservation, historical_memory_community).
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Stakeholders authored EMPTY (Pattern-5: an explicit assertion that no
+% entity's arrangements depend on this constraint — paired with the
+% world_unchanged verdict below, enforced by the schema).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Preserves textual and ritual knowledge across generations through study, commentary, and archival practice; maintains cultural memory of sacrifice law's historical function without claiming ongoing normative force.
+% TRANSFER_FUNCTION: No extraction. Knowledge and cultural memory move through educational institutions and textual communities; no party collects rent or benefit from the constraint's operation.
+% ABSENT_VOICES: This reading silences (or renders unnecessary) the voices of practitioners who believe sacrifice law remains binding in some form — whether through messianic suspension, study-as-performance, or future physical restoration. Those voices are excluded from the archival-preservation framing by the reading's core claim that obligation has terminated.
+% DISAPPEARANCE_RATIONALE: If archival preservation ceased — study and textual transmission stopped — the world would rearrange only among the small community of scholars and religious practitioners engaged with the tradition. The general population experiences no constraint from sacrifice law; its archival preservation is a self-contained cultural practice. The world outside the textual community would be indifferent to its disappearance.
+% FOUNDING_PROBLEM: After the destruction of the Jerusalem Temple, sacrifice law became impossible to perform in its literal scriptural form. The founding problem was: how to preserve the commandment's textual and conceptual heritage without claiming ongoing obligation to perform what cannot be performed.
+% FOUNDING_PROBLEM_CORROBORATION: Jewish textual scholars and historians (outside the communities that maintain this reading) attest that the founding problem is the historical fact of the Temple's destruction. However, they disagree about its consequence: this reading's claim that obligation has terminated is contested by the other readings listed in the kernel context. The problem is live; the solution is contested.
+narrative_ontology:disappearance_verdict(sacrifice_obligation_continuity__archival_preservation, world_unchanged).
+narrative_ontology:founding_problem_status(sacrifice_obligation_continuity__archival_preservation, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(sacrifice_obligation_continuity__archival_preservation, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(sacrifice_obligation_continuity__archival_preservation, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(sacrifice_obligation_continuity__archival_preservation, 'none', 1).
+narrative_ontology:epsilon_provenance(sacrifice_obligation_continuity__archival_preservation, 0.0, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -162,6 +182,10 @@ narrative_ontology:story_seed(sacrifice_obligation_continuity__archival_preserva
 
 :- begin_tests(sacrifice_obligation_continuity__archival_preservation_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(sacrifice_obligation_continuity__archival_preservation, ExtMetricName, E),
@@ -184,16 +208,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The archival-preservation reading authors zero extractiveness because it denies any normative claim. No party enforces obligation; no party extracts from refusal or non-compliance; no party pays for the constraint's maintenance. The law has exited obligation space entirely and become a cultural historical object. Accessibility collapse is very high (0.95) because once the archival interpretation is understood, alternatives to treating the texts as historical artifacts become cognitively difficult—the interpretive frame shapes what the texts can mean. Resistance is minimal (0.1) because the archival framing does not demand anything of practitioners (it is permissive, not prescriptive); those who study do so by choice, those who do not are not in violation. Theater ratio is zero because there is no performative gap—the constraint is what it claims to be (preservation of tradition without obligation). The measurements are flat across all 1956 years because the archival reading (once established post-Temple destruction) produces no dynamic drift: extraction does not accumulate, suppression does not intensify. The constraint is structurally stable. This stasis is not evidence of a mountain; it is a measurement fact. The omega variables address the only unstable elements: whether the reading is truly natural or disguises foreclosure, and whether suppression is genuinely absent or is applied to marginalize competing readings.
+ *   Extractiveness is 0.0 because the reading claims no normative obligation and no asymmetric distribution of benefits. No party collects rent from the constraint; no target bears extraction costs. Suppression is 0.0: there is no coercive machinery maintaining the constraint because there is no binding claim. Theater-ratio is 0.0: there is no performative or symbolic maintenance required because the constraint is not claimed to be operative. Accessibility-collapse is high (0.95): once the archival-preservation reading is understood, the alternatives (that obligation persists in some form) are recognized as live options chosen by other communities; the collapse reflects that the reading presents itself as factually inevitable (the Temple is gone, performance is impossible) but this factual inevitability does not eliminate the alternative readings' claims about meaning and obligation. Resistance is minimal (0.08): the reading meets little organized resistance because it is adopted by the scholarly consensus and does not assert a claim others must obey; those who believe obligation persists (the sibling readings' communities) maintain their own interpretations without direct conflict with archival preservation.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap because the archival reading has no internal seats with opposed directionalities. All stakeholders (scholars, practitioners) occupy beneficiary positions—they receive cultural inheritance without bearing costs. Messianics and performance advocates are excluded from the constraint entirely because their readings are incommensurable with the archival frame. The engine would compute each reading as a separate constraint with its own seats; here, only the archival reading is authored. Within that single reading, the gap that would emerge is between this constraint (zero extraction) and the sibling constraints (messianic, performance, study-as-performance), which would show extraction or obligation-bearing. That gap is the measurement the kernel framework exists to take.
+ *   All adopters of the archival-preservation reading sit in the same structural position: they accept that obligation has terminated and that study preserves memory without binding force. There is no perspectival gap within this reading because no seats have opposed interests. The gap exists between this reading and the sibling readings (messianic-suspension, performance-only, study-as-performance), but those are different constraints, not different seats in this constraint. Communities that adopt messianic-suspension or study-as-performance experience this constraint differently — they do not experience it at all, because they inhabit a different reading of the kernel. The engine computes per-seat types only when multiple seats exist within a single constraint; here, the constraint has at most one coherent seat (the reading's adopters) and therefore a single computed type.
  *
  * DIRECTIONALITY LOGIC:
- *   There is no directionality computation because there is no extraction. All named beneficiaries (textual-tradition-bearers, historical-memory-community) receive cultural goods without cost. Excluded stakeholders (messianic, performance, study-as-performance holders) are not seated in this constraint because their readings affirm obligation, which contradicts the archival frame's core claim. Their directionality would be computed from the constraints that represent their readings, not this one. The analytical observers (archival scholars) occupy an observer seat (d not computed, boundary condition). This pure beneficiary structure is itself a structural fact: the constraint coordinates without asymmetric extraction.
+ *   The absence of beneficiaries and victims is structural: the reading asserts that no normative force operates and therefore no asymmetric distribution of benefits or costs occurs. There are no stakeholders to position along the beneficiary-target axis because the constraint does not impose an obligation that some benefit from and others pay for. Directionality is undefined (no seats exist). The archival-preservation reading is self-contained: it describes a fact about the world (the Temple is destroyed, literal sacrifice is impossible) and draws a normative conclusion (obligation terminates) that applies equally to all members of the tradition who adopt this reading.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (preserve textual tradition after physical sacrifice became impossible) was live at t=70 and is classified as dead at t=2026. The archival-preservation reading asserts the problem was solved: the texts are preserved, tradition is maintained, study persists as the engagement mode. However, the excluded stakeholders contest this: messianic and performance readings assert the problem is not solved but suspended or deferred. The mismatch detector reads founding_problem_status=dead × disappearance_verdict=world_unchanged and would flag a zombie-constraint hypothesis (obligation persists despite being declared dead). However, this flag is inapplicable here: the archival reading's claim is that obligation is not persisting but has exited. The mismatch exists only if one compares the archival reading to the sibling readings. Within the archival reading alone, the mandatrophy state is resolved: the obligation genuinely exited; study genuinely replaced it; the constraint is not a piton but a mountain (natural state, not inertial performance).
+ *   The constraint's mandate is to preserve textual and cultural memory of sacrifice law. The constraint persists because the textual tradition remains alive (scholars study, commentaries circulate, the law is taught). The mandate is intact and the mechanism matches the mandate: archival preservation accomplishes exactly what it was built to accomplish, with no layer of rent-extraction or coercive enforcement masking a dead function. There is no mandatrophy because the constraint was not founded to extract or compel, only to preserve. If the constraint did persist without functional mandate — if scholars studied sacrifice law only because institutional inertia required it, not because the community valued the knowledge — then mandatrophy would be present. The archival-preservation reading does not describe that situation.
  */
 
 /* ==========================================================================
@@ -201,44 +225,44 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    natural_law_vs_interpretive_choice,
-    'Is the archival-preservation reading a feature of objective textual reality (after sacrifice became impossible, study naturally became the only option), or is it one interpretive choice among contested readings held by different communities?',
-    'Ethnographic and historical study of communities that reject the archival reading (messianic suspension, performance restoration, study-as-performance): do they treat their readings as equally natural, or as deliberately chosen against external pressure?',
-    'If archival preservation is one choice among live alternatives, the constraint''s classification as a mountain (zero extraction, natural emergence) may be false; the constraint may be a snare or tangled rope whose ''naturality'' is a cover story for foreclosing competing interpretations. If it is genuinely the only natural option (performance is impossible, suspension is internally incoherent, study-as-performance is a recent innovation), the mountain classification holds.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(natural_law_vs_interpretive_choice, conceptual, 'Whether archival preservation is an objective constraint or an interpretive choice disguised as natural law.').
-
-omega_variable(
-    beneficiary_identity_and_extraction,
-    'Do the named beneficiaries (textual tradition bearers, historical memory community) actually benefit from the archival framing, or does the framing extract from them by denying the law''s normative force?',
-    'Elicit testimony from practitioners about whether archival framing enhances or diminishes their engagement, meaning-making, and spiritual practice. Compare communities that embrace the archival frame to those that resist it.',
-    'If the archival framing is experienced as a loss or denial of obligation, the beneficiaries are actually targets, and the constraint is a snare (the archival frame is the cover story). If experienced as liberating and enabling, the zero-extraction reading holds and the constraint is a true mountain.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(beneficiary_identity_and_extraction, empirical, 'Whether the archival frame''s beneficiaries experience genuine benefit or concealed extraction.').
-
-omega_variable(
-    foreclosure_vs_coexistence_with_study_as_performance,
-    'Does the archival-preservation reading logically foreclose the study-as-performance reading (obligation persists through textual engagement), or do both remain coherent interpretations of the tradition?',
-    'Examine whether a community could consistently hold that (a) the law is no longer binding as normative obligation AND (b) engaged study fulfills the commandment. If both can be held without internal contradiction, the readings coexist; if (a) logically entails denial of (b)''s core claim, the readings foreclose each other.',
-    'If they coexist, the archival reading''s relation to study-as-performance is coexists_with. If the archival reading''s denial of normative force logically rules out study''s obligatory character, the relation is forecloses.',
+    binding_vs_archival_boundary,
+    'Does termination of obligation entail the constraint is no longer a constraint at all, or is archival preservation itself a constraint (on how the knowledge is transmitted and preserved)?',
+    'Structural analysis: if the claim is that no normative obligation exists, then the constraint is a fact about what is NOT binding (a purely negative claim). If the claim is that textual transmission is obligatory, then a normative constraint remains but shifts from performance to study.',
+    'If archival preservation itself is obligatory (study is commanded), the constraint re-enters the normative domain and cannot claim zero extractiveness. If the claim is purely negative (no obligation to perform, optional to study), the constraint exits the normative space entirely.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(foreclosure_vs_coexistence_with_study_as_performance, conceptual, 'Logical coherence of archival reading with study-as-performance reading.').
+narrative_ontology:omega_variable(binding_vs_archival_boundary, conceptual, 'Whether archival preservation is itself a binding obligation or merely a voluntary cultural practice.').
 
 omega_variable(
-    suppression_mechanism_in_textual_tradition,
-    'Is the zero measured suppression honest, or does the archival frame suppress competing readings (messianic, performance, study-as-performance) by naturalizing the archival interpretation?',
-    'Document the institutional and social mechanisms that establish archival preservation as the default reading in scholarly and communal contexts. Are competing readings actively marginalized, or do they freely coexist as equally legitimate alternatives?',
-    'If competing readings are marginalized or excluded (as the excluded stakeholder descriptions suggest), the measured suppression is artificially low; the constraint may be a snare disguised as a mountain. If competing readings are genuinely permitted to coexist, the zero suppression is honest.',
+    reading_vs_kernel_identity,
+    'Is this reading describing a single coherent constraint (the post-Temple archival arrangement), or is it one reading of a kernel (the sacrifice law itself) under multiple contradictory interpretations?',
+    'If this is a kernel reading: the sibling readings coexist with this one across different communities and traditions. If this is a standalone constraint: the other named readings are competing accounts, not coexisting frameworks. The epsilon-invariance test: if measuring the constraint (archival preservation as zero-obligation) produces a different type than measuring the kernel (sacrifice law as contested obligation), two constraints exist.',
+    'If this is a reading of a kernel, the engine computes constraint identity from the kernel_id and reading_id; per-seat classification follows the reading chosen. If standalone, the constraint sits at the intersection of all readings and may not be coherently classified.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_vs_kernel_identity, conceptual, 'The constraint identity and kernel-reading status of this story relative to the kernel and its siblings.').
+
+omega_variable(
+    messianic_deferral_vs_termination,
+    'Does the archival-preservation reading claim that obligation is permanently terminated, or that it is deferred pending messianic restoration?',
+    'Textual and theological analysis: does the reading assert obligation will never resume (termination), or that it is in abeyance awaiting a future condition (deferral)? The reading''s own authoritative sources provide the answer.',
+    'Termination => zero ongoing obligation => extractiveness remains 0. Deferral => obligation is temporarily suspended => extractiveness depends on whether study is preparation for future performance (obligation persists in readiness) or mere preservation (obligation is suspended). The reading''s characterization of its own reference point determines the epsilon value.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_in_textual_tradition, empirical, 'Whether measured zero suppression accurately reflects suppression of competing interpretations.').
+narrative_ontology:omega_variable(messianic_deferral_vs_termination, empirical, 'Whether this reading claims permanent termination or temporary deferral of sacrifice obligation.').
+
+omega_variable(
+    cultural_practice_vs_constraint,
+    'Is archival preservation of textual tradition a constraint in the Deferential Realism sense (an arrangement that structures agent behavior, defines beneficiaries and victims), or is it a cultural practice that exists outside the constraint framework?',
+    'If no agent is beneficiary or victim, no normative force operates, and the constraint vacates the space entirely. The test: does anyone benefit from or bear costs from the preservation arrangement? If yes, a constraint exists (and extractiveness would be non-zero if benefits are asymmetric). If no, it is a cultural practice without a constraint structure.',
+    'If it is purely a cultural practice (no benefits/costs to specific agents), the constraint dissolves and the story should be reframed as descriptive cultural history, not as a Deferential Realism constraint. If preservation generates asymmetric benefits (scholars are beneficiaries, lay people bear costs of supporting institutions), the constraint re-enters with non-zero extractiveness.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cultural_practice_vs_constraint, conceptual, 'Whether archival preservation is a constraint structure or a cultural practice outside the framework.').
 
 
 /* ==========================================================================
@@ -253,40 +277,43 @@ narrative_ontology:interval(sacrifice_obligation_continuity__archival_preservati
 
 % Theater ratio over time
 narrative_ontology:measurement(sacr_tr_t70, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 70, 0.0).
+narrative_ontology:measurement_basis(sacr_tr_t70, observed).
 narrative_ontology:measurement(sacr_tr_t500, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 500, 0.0).
-narrative_ontology:measurement(sacr_tr_t1000, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 1000, 0.0).
-narrative_ontology:measurement(sacr_tr_t1500, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 1500, 0.0).
-narrative_ontology:measurement(sacr_tr_t1900, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 1900, 0.0).
+narrative_ontology:measurement_basis(sacr_tr_t500, observed).
+narrative_ontology:measurement(sacr_tr_t1200, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 1200, 0.0).
+narrative_ontology:measurement_basis(sacr_tr_t1200, observed).
+narrative_ontology:measurement(sacr_tr_t1800, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 1800, 0.0).
+narrative_ontology:measurement_basis(sacr_tr_t1800, observed).
 narrative_ontology:measurement(sacr_tr_t2026, sacrifice_obligation_continuity__archival_preservation, theater_ratio, 2026, 0.0).
+narrative_ontology:measurement_basis(sacr_tr_t2026, observed).
 
 % Extraction over time
 narrative_ontology:measurement(sacr_be_t70, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 70, 0.0).
+narrative_ontology:measurement_basis(sacr_be_t70, observed).
 narrative_ontology:measurement(sacr_be_t500, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 500, 0.0).
-narrative_ontology:measurement(sacr_be_t1000, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 1000, 0.0).
-narrative_ontology:measurement(sacr_be_t1500, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 1500, 0.0).
-narrative_ontology:measurement(sacr_be_t1900, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 1900, 0.0).
+narrative_ontology:measurement_basis(sacr_be_t500, observed).
+narrative_ontology:measurement(sacr_be_t1200, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 1200, 0.0).
+narrative_ontology:measurement_basis(sacr_be_t1200, observed).
+narrative_ontology:measurement(sacr_be_t1800, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 1800, 0.0).
+narrative_ontology:measurement_basis(sacr_be_t1800, observed).
 narrative_ontology:measurement(sacr_be_t2026, sacrifice_obligation_continuity__archival_preservation, base_extractiveness, 2026, 0.0).
+narrative_ontology:measurement_basis(sacr_be_t2026, observed).
 
-% Suppression requirement over time
-narrative_ontology:measurement(sacr_su_t70, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 70, 0.0).
-narrative_ontology:measurement(sacr_su_t500, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 500, 0.0).
-narrative_ontology:measurement(sacr_su_t1000, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 1000, 0.0).
-narrative_ontology:measurement(sacr_su_t1500, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 1500, 0.0).
-narrative_ontology:measurement(sacr_su_t1900, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 1900, 0.0).
-narrative_ontology:measurement(sacr_su_t2026, sacrifice_obligation_continuity__archival_preservation, suppression_requirement, 2026, 0.0).
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(sacrifice_obligation_continuity__archival_preservation, static).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(sacrifice_obligation_continuity__archival_preservation, identity_coordination).
+narrative_ontology:coordination_type(sacrifice_obligation_continuity__archival_preservation, information_standard).
 narrative_ontology:affects_constraint(sacrifice_obligation_continuity__archival_preservation, sacrifice_obligation_continuity__messianic_suspension).
 narrative_ontology:affects_constraint(sacrifice_obligation_continuity__archival_preservation, sacrifice_obligation_continuity__performance_only).
 narrative_ontology:affects_constraint(sacrifice_obligation_continuity__archival_preservation, sacrifice_obligation_continuity__study_as_performance).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of a four-reading kernel family: sacrifice_obligation_continuity decomposed into archival_preservation, messianic_suspension, performance_only, and study_as_performance. Each reading is a structurally distinct constraint with its own ε, beneficiary/victim structure, and type classification. The family is linked by network.affects_constraints in all four directions because each reading's dominance or decline in a community affects the institutional viability of the others. The archival reading (this file) is the foundational reading historically—after 70 CE, it emerged as the only feasible mode; the other readings are secondary innovations that contest the archival frame. The archival reading influences all three siblings by establishing the default interpretive context against which they define themselves.
+% The sacrifice_obligation_continuity kernel decomposes into four constraint stories, each representing a different reading: archival_preservation (this story, zero extractiveness, cultural memory), messianic_suspension (obligation deferred, constraint persists), performance_only (study as preparation, obligation persists through future performance), and study_as_performance (textual engagement fulfills obligation, constraint persists through study). The four stories share a kernel (the standing question of sacrifice law's post-Temple status) but instantiate different epsilon values and constraint types. The network edges link all four as a constraint family.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

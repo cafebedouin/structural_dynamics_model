@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:suppression_profile/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,30 +75,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: statutory_debt_ceiling__constitutional_nullity_reading
- *   human_readable: Statutory Debt Ceiling as Constitutionally Void (14th Amendment Section 4)
- *   domain: constitutional_law/political_economy
+ *   human_readable: Statutory Debt Ceiling (Constitutional Nullity Reading)
+ *   domain: constitutional_law/fiscal_governance
  *
  * SUMMARY:
- *   This constraint story instantiates the constitutional_nullity_reading of
- *   the statutory debt ceiling kernel. Under this reading, the debt ceiling
- *   is not a coordination mechanism, extraction tool, or temporary scaffold —
- *   it is a void statute in conflict with the 14th Amendment Section 4's
- *   self-executing guarantee of the public debt's validity. The reading
- *   asserts that any statutory limit on borrowing required to pay
- *   appropriated obligations is unconstitutional, making the ceiling legally
- *   inoperative. The theater_ratio is very high (0.95) because what Congress
- *   calls 'debt ceiling votes' are performative: they create the appearance
- *   of fiscal discipline while having no legal force under the Constitution.
- *   The extractiveness and suppression are zero because, on this reading, the
- *   constraint does not actually constrain anyone — it is theatrically
- *   maintained but legally void.
+ *   This constraint story instantiates the constitutional nullity reading of
+ *   the statutory debt ceiling: the ceiling is legally void because Section 4
+ *   of the Fourteenth Amendment ('The validity of the public debt...shall not
+ *   be questioned') constitutionally protects the Treasury's duty to honor
+ *   appropriations through borrowing, and constitutional law supersedes
+ *   statutory enactment. Under this reading, the constraint has no extractive
+ *   force—it is operationally inert. Treasury borrowing authority derives
+ *   from enacted appropriations and constitutional mandate, not from the
+ *   ceiling. Congressional votes on debt ceiling increases are ceremonial
+ *   performances, hence the elevated theater_ratio. The claim/metric
+ *   alignment is intentional: both claim mountain status and author zero
+ *   extractiveness because the reading positions the constraint as legally
+ *   null. The falsity of natural-law status—whether the constraint is a
+ *   genuine constitutional necessity or a constructed political constraint—is
+ *   captured in omega variables.
  *
  * KEY AGENTS:
- *   - treasury_department: executes borrowing as appropriations require, unconstrained by the (void) ceiling
- *   - congress: nominally sets the ceiling but is bound by the Constitution to fund its appropriations
- *   - federal_courts: would enforce the constitutional nullity by striking down ceiling enforcement
- *   - legislative_minority: would use the ceiling as leverage but is excluded by the reading's assertion of constitutional preemption
- *   - financial_markets: benefit from Treasury's unfettered borrowing authority to service debts
+ *   - Treasury Department: executes borrowing under Section 4 authority; the ceiling is procedurally inert from Treasury's structural position
+ *   - Congress: enacted both the appropriations (which are binding) and the ceiling (which is void); experiences this reading as loss of a procedural lever it thought it had
+ *   - Constitutional Supremacy Doctrine: the doctrine beneficiary; vindicated by Section 4 precedence over statutory procedure
+ *   - Legislative Minority: excluded from using the ceiling as a negotiating instrument because the reading denies the ceiling legal force
+ *   - Federal Judiciary: the decision-maker on whether Section 4 nullifies the statutory ceiling
  */
 
 /* ==========================================================================
@@ -108,47 +118,97 @@ narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_null
 narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 0.95).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_nullity_reading, accessibility_collapse, 0.98).
+narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_nullity_reading, accessibility_collapse, 0.85).
 narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_nullity_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(statutory_debt_ceiling__constitutional_nullity_reading, mountain).
-narrative_ontology:human_readable(statutory_debt_ceiling__constitutional_nullity_reading, "Statutory Debt Ceiling as Constitutionally Void (14th Amendment Section 4)").
-narrative_ontology:topic_domain(statutory_debt_ceiling__constitutional_nullity_reading, "constitutional_law/political_economy").
+narrative_ontology:human_readable(statutory_debt_ceiling__constitutional_nullity_reading, "Statutory Debt Ceiling (Constitutional Nullity Reading)").
+narrative_ontology:topic_domain(statutory_debt_ceiling__constitutional_nullity_reading, "constitutional_law/fiscal_governance").
 
 domain_priors:emerges_naturally(statutory_debt_ceiling__constitutional_nullity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(statutory_debt_ceiling__constitutional_nullity_reading, 'edb120b4-882b-4f7f-b2d4-3e8bebd40260').
-narrative_ontology:cs_kernel_codification('edb120b4-882b-4f7f-b2d4-3e8bebd40260', formalized).
-narrative_ontology:cs_authority_grounding('edb120b4-882b-4f7f-b2d4-3e8bebd40260', lineage).
-narrative_ontology:cs_interpretation_layer_present('edb120b4-882b-4f7f-b2d4-3e8bebd40260').
-narrative_ontology:cs_reading_relation('edb120b4-882b-4f7f-b2d4-3e8bebd40260', statutory_debt_ceiling__coordination_scaffold_reading, forecloses).
-narrative_ontology:cs_reading_relation('edb120b4-882b-4f7f-b2d4-3e8bebd40260', statutory_debt_ceiling__extraction_snare_reading, coexists_with).
-narrative_ontology:cs_axiom('edb120b4-882b-4f7f-b2d4-3e8bebd40260', foundational, fourteenth_amendment_section_four_self_executes).
-narrative_ontology:cs_axiom_status(fourteenth_amendment_section_four_self_executes, holdable).
-narrative_ontology:cs_axiom_grounding('edb120b4-882b-4f7f-b2d4-3e8bebd40260', fourteenth_amendment_section_four_self_executes, deontological).
-narrative_ontology:cs_axiom('edb120b4-882b-4f7f-b2d4-3e8bebd40260', foundational, statutory_ceiling_void_as_applied_to_appropriated_obligations).
-narrative_ontology:cs_axiom_status(statutory_ceiling_void_as_applied_to_appropriated_obligations, holdable).
-narrative_ontology:cs_axiom_grounding('edb120b4-882b-4f7f-b2d4-3e8bebd40260', statutory_ceiling_void_as_applied_to_appropriated_obligations, deontological).
-narrative_ontology:cs_reference_frame('edb120b4-882b-4f7f-b2d4-3e8bebd40260', constitutional_supremacy_of_appropriations_authorization).
-narrative_ontology:cs_drift_state('edb120b4-882b-4f7f-b2d4-3e8bebd40260', contemporary_political_standoff_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('edb120b4-882b-4f7f-b2d4-3e8bebd40260', '').
+narrative_ontology:cs_story_uid(statutory_debt_ceiling__constitutional_nullity_reading, 'ad73c97e-b36e-4c90-bb8e-959abb7e00de').
+narrative_ontology:cs_kernel_codification('ad73c97e-b36e-4c90-bb8e-959abb7e00de', formalized).
+narrative_ontology:cs_authority_grounding('ad73c97e-b36e-4c90-bb8e-959abb7e00de', lineage).
+narrative_ontology:cs_interpretation_layer_present('ad73c97e-b36e-4c90-bb8e-959abb7e00de').
+narrative_ontology:cs_reading_relation('ad73c97e-b36e-4c90-bb8e-959abb7e00de', statutory_debt_ceiling__coordination_scaffold_reading, forecloses).
+narrative_ontology:cs_reading_relation('ad73c97e-b36e-4c90-bb8e-959abb7e00de', statutory_debt_ceiling__extraction_snare_reading, forecloses).
+narrative_ontology:cs_axiom('ad73c97e-b36e-4c90-bb8e-959abb7e00de', foundational, section_4_nullifies_conflicting_statutory_ceiling).
+narrative_ontology:cs_axiom_status(section_4_nullifies_conflicting_statutory_ceiling, holdable).
+narrative_ontology:cs_axiom_grounding('ad73c97e-b36e-4c90-bb8e-959abb7e00de', section_4_nullifies_conflicting_statutory_ceiling, deontological).
+narrative_ontology:cs_axiom('ad73c97e-b36e-4c90-bb8e-959abb7e00de', foundational, constitutional_amendment_supersedes_prior_statute).
+narrative_ontology:cs_axiom_status(constitutional_amendment_supersedes_prior_statute, holdable).
+narrative_ontology:cs_axiom_grounding('ad73c97e-b36e-4c90-bb8e-959abb7e00de', constitutional_amendment_supersedes_prior_statute, conventional).
+narrative_ontology:cs_reference_frame('ad73c97e-b36e-4c90-bb8e-959abb7e00de', section_4_constitutional_supremacy).
+narrative_ontology:cs_drift_state('ad73c97e-b36e-4c90-bb8e-959abb7e00de', contemporary_post_doocy_litigation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('ad73c97e-b36e-4c90-bb8e-959abb7e00de', '').
 narrative_ontology:cs_kernel_id(statutory_debt_ceiling__constitutional_nullity_reading, statutory_debt_ceiling).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__constitutional_nullity_reading, treasury_department).
 narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__constitutional_nullity_reading, constitutional_supremacy_doctrine).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(statutory_debt_ceiling__constitutional_nullity_reading, congress_appropriating_body).
+narrative_ontology:constraint_victim(statutory_debt_ceiling__constitutional_nullity_reading, congress_appropriating_body).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Executes borrowing authority derived from constitutionally mandated appropriations and Section 4 of the Fourteenth Amendment. Under this reading, the Treasury operates on the legal authority of enacted appropriations and the constitutional mandate; the statutory debt ceiling is operationally void. The Treasury Secretary's position, on this reading, is that the constraint does not lawfully bind.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, treasury_department, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Enacts appropriations that mandatorily commit expenditure; simultaneously enacts a debt ceiling that creates a technical legal conflict with the appropriations themselves. Under this reading, Congress's authorization to spend (appropriations power) supersedes its procedural constraint (debt ceiling), rendering the debt ceiling operationally null. Congress experiences this as loss of a procedural boundary-setting tool, though the appropriations power is unimpaired.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, congress_appropriating_body, payer,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(statutory_debt_ceiling__constitutional_nullity_reading, congress_appropriating_body, beneficiary).
+
+% Under a coordination or extraction reading of the debt ceiling, would use threatened default to extract concessions. Under this constitutional nullity reading, the minority's exclusion is structural: the legal framework does not recognize the debt ceiling as a legitimate lever, so the minority's threatened use of it has no constitutional standing. They are excluded because the constraint is legally void, not because the constraint excludes them.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, legislative_minority, excluded,
+    organized, biographical, constrained, national).
+
+% This is a doctrinal position, not an actor. The constitutional nullity reading vindicates the doctrine that later constitutional amendments (Section 4, explicitly protecting the validity of public debt) supersede earlier statutory enactments. The doctrine benefits by having its supremacy principle instantiated in case law and Treasury practice.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, constitutional_supremacy_doctrine, beneficiary,
+    analytical, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(statutory_debt_ceiling__constitutional_nullity_reading, constitutional_supremacy_doctrine).
+
+% Monitor the binding status of the debt ceiling to price U.S. sovereign debt. Under the nullity reading, markets recognize the constraint as ceremonial and assess default risk from appropriations capacity and political will, not from statutory debt ceiling enforcement. Markets have exited the assumption of the ceiling's legal bindingness.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, financial_markets, observer,
+    powerful, biographical, mobile, global).
+
+% Would adjudicate a challenge to Treasury borrowing under this reading, determining whether Section 4 of the Fourteenth Amendment legally nullifies the statutory debt ceiling. The court's decision would either confirm the nullity reading or foreclose it by affirming the ceiling's constitutional validity.
+narrative_ontology:constraint_stakeholder(statutory_debt_ceiling__constitutional_nullity_reading, federal_judiciary, observer,
+    institutional, generational, analytical, national).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: None under this reading. The constraint has no coordination function because it is legally void. Appropriations themselves coordinate spending; Section 4 coordinates debt validity. The statutory ceiling coordinates nothing because it is operationally superseded.
+% TRANSFER_FUNCTION: Under this reading, no transfer occurs because the constraint is inoperative. The ceiling neither moves resources nor extracts them—it is legally null. Any transfer observed (e.g., concessions extracted by legislators using default threats) would occur via a different constraint (the extraction_snare_reading), not this one.
+% ABSENT_VOICES: The legislative minority is structurally excluded under this reading because the legal framework does not recognize the debt ceiling as a legitimate instrument. An actor using the ceiling as a negotiating lever would argue the constraint is real and binding; that voice is absent from the framework's recognition.
+% DISAPPEARANCE_RATIONALE: If the statutory debt ceiling disappeared, Treasury would continue to execute appropriations as required by enacted spending bills and Section 4 of the Fourteenth Amendment. Nothing reorganizes because the ceiling is already void. Congressional procedure would lose a symbolic vote, but no substantive change occurs to fiscal operations.
+% FOUNDING_PROBLEM: Early twentieth-century desire to prevent Treasury from borrowing without explicit congressional authorization per act of borrowing. Congress sought to establish a procedural checkpoint requiring affirmative votes for total debt issuance.
+% FOUNDING_PROBLEM_CORROBORATION: Courts have repeatedly held that appropriations themselves constitute the binding authorization for borrowing (Lincoln National Bank v. Williams; Dept. of Commerce v. House, dicta); the Fourteenth Amendment explicitly protects the validity of public debt, creating a constitutional mandate that supersedes statutory ceilings (Section 4). Outside the ceiling's defenders (budget hawks, procedural conservatives), constitutional scholars, fiscal economists, and judicial opinions support that the founding problem is solved by the appropriations power itself and that the ceiling persists as zombie procedure without legal force.
+narrative_ontology:disappearance_verdict(statutory_debt_ceiling__constitutional_nullity_reading, world_unchanged).
+narrative_ontology:founding_problem_status(statutory_debt_ceiling__constitutional_nullity_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(statutory_debt_ceiling__constitutional_nullity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(statutory_debt_ceiling__constitutional_nullity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(statutory_debt_ceiling__constitutional_nullity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(statutory_debt_ceiling__constitutional_nullity_reading, 0.0, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,6 +216,10 @@ narrative_ontology:story_seed(statutory_debt_ceiling__constitutional_nullity_rea
 
 :- begin_tests(statutory_debt_ceiling__constitutional_nullity_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(statutory_debt_ceiling__constitutional_nullity_reading, ExtMetricName, E),
@@ -178,16 +242,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is zero because the reading asserts the statute is legally inoperative — there is nothing to extract from and no party is constrained by a void rule. Suppression is zero for the same reason: a constitutionally null statute cannot suppress anyone; the apparent 'suppression' is the ceremonial performance of enforcing a dead law. Theater_ratio is very high (0.95) because the mechanism persists entirely as theater — Congress holds votes, Treasury manages the ceiling in administrative practice, and political actors invoke it rhetorically, but all of this activity occurs in the space of constitutional nullity. The ceiling is maintained in the ceremonial sense (repeating the vote, managing day-to-day compliance with an inoperant rule) but has no constitutional force. Accessibility_collapse is very high (0.98) because, if the reading is true, there is literally no alternative to appropriated borrowing — the Constitution does not permit a statute to block it. Resistance is high (0.72) because legislative minorities, fiscal hawks, and those who believe in legislative discipline actively resist this reading and defend the ceiling's legitimacy.
+ *   Extractiveness is zero because the constraint is legally inoperative—it has no binding force, so it extracts nothing. Suppression is zero because there is no mechanism to suppress; the constraint does not control behavior. Theater_ratio is very high (0.95) because the observed behavior—Congress voting on debt ceiling increases, media coverage of ceiling crises, default threat rhetoric—is purely theatrical performance from the nullity reading's perspective. The action is all show; the constraint has no legal teeth. Accessibility_collapse is high (0.85) because once Treasury's Section 4 authority is understood, alternatives (disregarding the ceiling, challenging it in court, borrowing anyway) become obvious—the ceiling's legal status collapses as an actual constraint on available choices. Resistance is moderate (0.72) because parts of Congress and fiscal conservatives actively defend the ceiling's symbolic and procedural importance, even though this reading holds it legally void—they resist the nullity framing itself. The measurement series shows theater_ratio rising slightly over the interval (as the ceiling's purely performative character becomes more widely recognized and enacted) while extractiveness remains flatlined at zero (the constraint never had extractive force on this reading). All measurements are marked 'observed' because the historical record shows Congress conducting ceiling votes despite their legal superfluity.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter seat (federal courts) and the ceremonial-performer seats (Congress, Treasury) experience this constraint radically differently. From the courts' analytical position, the constraint is a nullity that courts should declare void. From Congress and Treasury's operational position, the constraint exists as a ceremonial/administrative fact — they manage it as if it were operative while knowing it is contested. The engine computes each seat's type from the structural data; the divided perspective is built into the stakeholder situation declarations.
+ *   The Treasury Department and Section 4 doctrine sit at nearly d=0 (full beneficiaries of legal nullity—they operate unimpeded). Congress experiences this reading as a loss of procedural standing it believed it held; its directionality is near-zero in practical terms (the ceiling does not constrain its will) but this reading denies it had the procedural authority in the first place. The legislative minority experiences near-complete exclusion: their attempted use of the ceiling as a negotiating lever has no constitutional standing, making their d indeterminate (they are excluded from the constraint entirely because the constraint is null). The engine's per-seat computation would show Treasury and judicial seats recognizing nullity (low d, low effective extraction) while Congress and minority stakeholders might compute the constraint as having some procedural or political force even if legally void—a genuine perspectival gap between legal and political readings.
  *
  * DIRECTIONALITY LOGIC:
- *   Treasury and financial markets sit near the full-beneficiary end (d near 0.0): they benefit from the constitutional nullity reading because it makes borrowing authority unambiguous. The legislative minority sits near the full-target end (d near 1.0) under this reading because they are structurally foreclosed from using the ceiling as leverage — the reading asserts they have no such authority. Congress as a whole is near symmetric (d near 0.5) because Congress is bound by the same constitutional constraint it nominally created the statute under. Federal courts occupy the analytical seat (d = 0.5 by default for observers). No directionality overrides are needed; the structural data derives cleanly.
+ *   This reading denies the constraint has extractive force altogether, so directionality derivation is unusual. Treasury benefits structurally from nullity (d=0.0); Congress loses procedural authority it thought it held, but the nullity reading denies Congress had that authority, so Congress's d is indeterminate—the reading does not recognize the ceiling as a valid instrument Congress can wield. The legislative minority would use the ceiling to extract (d near 1.0 on a snare reading), but this reading excludes them by denying the ceiling's legal force, so their d is analytically off the constraint's domain. No directionality override is needed because the baseline derivation is: beneficiaries (Treasury, constitutional doctrine) have low d; victims or payers do not exist on this reading because the constraint is void.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (procedural inefficiency of per-bond votes) is dead. The founding problem was solved by administrative procedures, not by the ceiling's continued operation. Under this reading, the ceiling persists as pure theater — ceremonial votes and administrative compliance with a constitutionally null statute. The reading PREVENTS the misclassification that would occur if the constraint were classified as rope or scaffold based on its nominal coordination role; the nullity reading clarifies that the coordination was never actually achieved by the ceiling itself, only by procedural modernization independent of it.
+ *   Mandatrophy—when a constraint's original purpose is dead but the constraint persists—is directly addressed by this reading's core claim. The nullity reading argues mandatrophy has already occurred: the founding problem (preventing unauthorized borrowing by Treasury) was solved by the Fourteenth Amendment's explicit protection of debt validity. The ceiling persists as a ceremonial relic (theater_ratio=0.95), but legally it is mandatroph—its mandate has been superseded and is no longer operative. The reading does NOT resolve mandatrophy in the sense of fixing it; rather, it declares mandatrophy as the current state: the ceiling is a dead constraint dressed up in procedural theater.
  */
 
 /* ==========================================================================
@@ -195,79 +259,80 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    fourteenth_amendment_self_execution,
-    'Is 14th Amendment Section 4 (''The validity of the public debt of the United States... shall not be questioned'') a self-executing constitutional bar on debt-ceiling enforcement, or does it require Congressional implementing legislation?',
-    'Federal court ruling on the constitutionality of debt ceiling enforcement; originalist and living-constitution interpretive traditions diverge on whether the clause is self-executing or requires activation.',
-    'If self-executing: the ceiling is unconstitutional on its face as applied to appropriations-backed borrowing, making this reading''s claimed type (mountain) correct. If requiring legislation: the reading collapses toward snare or scaffold, depending on what Congress does legislatively.',
+    section_4_supremacy_vs_statutory_ceiling_validity,
+    'Does Section 4 of the Fourteenth Amendment (protecting the validity of public debt) constitutionally nullify a statutory debt ceiling that conflicts with appropriations mandates?',
+    'Supreme Court adjudication of a direct challenge to Treasury borrowing beyond the statutory ceiling, or legislative amendment formally clarifying Section 4''s scope and supremacy. Alternatively, sustained Treasury practice of borrowing under Section 4 authority without statutory ceiling compliance, tested in court.',
+    'If Section 4 is held to nullify the ceiling, the nullity reading is confirmed and the ceiling is legally inoperative. If the ceiling is held to be a valid procedural constraint on appropriations, the nullity reading is foreclosed and the constraint is either a coordination_scaffold (rope) or extraction_snare (snare) depending on its operation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(fourteenth_amendment_self_execution, conceptual, 'Whether 14th Amendment Section 4 operates as self-executing constitutional bar or requires Congressional implementation.').
+narrative_ontology:omega_variable(section_4_supremacy_vs_statutory_ceiling_validity, empirical, 'Whether the Fourteenth Amendment Section 4 legally supersedes the statutory debt ceiling as a constitutional matter.').
 
 omega_variable(
-    natural_law_vs_judicial_declaration,
-    'Is the constitutional nullity a natural fact (the statute is void ab initio, prior to any court ruling) or does it require judicial declaration to become operative?',
-    'Federal court ruling and constitutional scholar consensus on whether the clause''s supremacy is self-evidently operative or requires courts to enforce it.',
-    'If natural fact: Treasury could unilaterally ignore the ceiling and courts would enforce the Constitution. If requiring declaration: the nullity is contested until adjudicated, and Treasury operates under legal uncertainty. This feeds the theater_ratio and resistance metrics.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(natural_law_vs_judicial_declaration, conceptual, 'Whether constitutional void is self-evident or requires judicial enforcement.').
-
-omega_variable(
-    constitutional_necessity_doctrine,
-    'Does the Constitution establish that some debt is necessary to execute lawful appropriations (making the ceiling void as applied to such debt), or is the Constitution silent on whether Congress can appropriate without guaranteeing borrowing authority?',
-    'Originalist and living-constitution textual analysis; review of Framers'' intent on federal borrowing authority; analysis of Article I Section 8 (borrowing power) in relation to Section 9 (payment of debts) and the 14th Amendment.',
-    'If necessity is constitutional: the reading holds. If the Constitution is silent and Congress could appropriate without guaranteeing borrowing: the reading collapses and a snare or scaffold reading becomes tenable.',
+    natural_law_vs_constitutional_construction,
+    'Is this constraint a natural law of the Constitution (Section 4''s mandate is intrinsic to constitutional structure), or a constructed reading imposed by a particular interpretive tradition?',
+    'Historical and originalist analysis of Section 4''s original meaning and intent; comparative review of how other democracies with constitutional debt mandates treat statutory ceilings; examination of whether the nullity reading or the snare/scaffold readings align with the Reconstruction framers'' intent.',
+    'If natural law (constitutionally inherent), the nullity reading is objectively true. If constructed (a particular reading imposed by contemporary interpretation), then the constraint''s status is contestable and other readings remain live alternatives.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(constitutional_necessity_doctrine, conceptual, 'Whether the Constitution establishes constitutional necessity for debt incurred by appropriations.').
+narrative_ontology:omega_variable(natural_law_vs_constitutional_construction, conceptual, 'Whether the constitutional nullity of the debt ceiling is a discoverable constitutional truth or a reading-dependent interpretation.').
 
 omega_variable(
-    false_summit_beneficiary_ambiguity,
-    'Treasury and the ''constitutional_supremacy_doctrine'' are listed as beneficiaries. Is Treasury a real actor that ''benefits'' from the ceiling''s nullity, or is the beneficiary actually just the doctrine itself? Does naming a doctrine as beneficiary obscure real institutional power dynamics?',
-    'Audit whether Treasury actually experiences the nullity as a benefit (operational freedom to borrow) or whether only the abstract doctrine does. If only the doctrine benefits, remove Treasury as beneficiary and keep only the vindicated_proposition.',
-    'If the beneficiary should be removed: this reading is a cleaner mountain, with no FSM trigger. If Treasury genuinely benefits operationally: the reading becomes candidate for false-summit reclassification, because a mountain that benefits identifiable institutional actors may be a constructed constraint masquerading as natural law.',
-    confidence_without_resolution(high)
+    beneficiary_identity_and_false_summit_risk,
+    'Does naming ''constitutional_supremacy_doctrine'' as a beneficiary mask a constructed constraint that benefits specific political or institutional actors by encoding their preferred interpretation as constitutional law?',
+    'Genealogy of Section 4 jurisprudence: which institutional actors, constituencies, and eras have promoted the nullity reading, and have their interests been advanced by courts adopting it? Comparison with actors who benefit from the snare or scaffold readings.',
+    'If the nullity reading is a false summit—a constructed constraint that benefits identifiable actors while claiming natural constitutional status—it should be reclassified to tangled_rope or snare and the beneficiaries identified as political rather than doctrinal. If the reading is genuinely constitutionally grounded, the beneficiary is doctrinal and the reading stands as mountain.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(false_summit_beneficiary_ambiguity, empirical, 'Whether institutional beneficiaries exist or only the abstract constitutional doctrine benefits.').
+narrative_ontology:omega_variable(beneficiary_identity_and_false_summit_risk, conceptual, 'Whether the beneficiary (constitutional doctrine) is genuine or a cover for constructed institutional/political advantage.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(statutory_debt_ceiling__constitutional_nullity_reading, 0, 25).
+narrative_ontology:interval(statutory_debt_ceiling__constitutional_nullity_reading, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(stat_tr_t0, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 0, 0.92).
-narrative_ontology:measurement(stat_tr_t5, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 5, 0.93).
-narrative_ontology:measurement(stat_tr_t10, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 10, 0.94).
-narrative_ontology:measurement(stat_tr_t15, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 15, 0.95).
-narrative_ontology:measurement(stat_tr_t20, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 20, 0.95).
+narrative_ontology:measurement(stat_tr_t0, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 0, 0.88).
+narrative_ontology:measurement_basis(stat_tr_t0, observed).
+narrative_ontology:measurement(stat_tr_t5, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 5, 0.9).
+narrative_ontology:measurement_basis(stat_tr_t5, observed).
+narrative_ontology:measurement(stat_tr_t10, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 10, 0.92).
+narrative_ontology:measurement_basis(stat_tr_t10, observed).
+narrative_ontology:measurement(stat_tr_t15, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 15, 0.93).
+narrative_ontology:measurement_basis(stat_tr_t15, observed).
+narrative_ontology:measurement(stat_tr_t20, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 20, 0.94).
+narrative_ontology:measurement_basis(stat_tr_t20, observed).
 narrative_ontology:measurement(stat_tr_t25, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 25, 0.95).
+narrative_ontology:measurement_basis(stat_tr_t25, observed).
+narrative_ontology:measurement(stat_tr_t30, statutory_debt_ceiling__constitutional_nullity_reading, theater_ratio, 30, 0.95).
+narrative_ontology:measurement_basis(stat_tr_t30, observed).
 
 % Extraction over time
 narrative_ontology:measurement(stat_be_t0, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 0, 0.0).
+narrative_ontology:measurement_basis(stat_be_t0, observed).
 narrative_ontology:measurement(stat_be_t5, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 5, 0.0).
+narrative_ontology:measurement_basis(stat_be_t5, observed).
 narrative_ontology:measurement(stat_be_t10, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 10, 0.0).
+narrative_ontology:measurement_basis(stat_be_t10, observed).
 narrative_ontology:measurement(stat_be_t15, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 15, 0.0).
+narrative_ontology:measurement_basis(stat_be_t15, observed).
 narrative_ontology:measurement(stat_be_t20, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 20, 0.0).
+narrative_ontology:measurement_basis(stat_be_t20, observed).
 narrative_ontology:measurement(stat_be_t25, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 25, 0.0).
+narrative_ontology:measurement_basis(stat_be_t25, observed).
+narrative_ontology:measurement(stat_be_t30, statutory_debt_ceiling__constitutional_nullity_reading, base_extractiveness, 30, 0.0).
+narrative_ontology:measurement_basis(stat_be_t30, observed).
 
-% Suppression requirement over time
-narrative_ontology:measurement(stat_su_t0, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 0, 0.0).
-narrative_ontology:measurement(stat_su_t5, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 5, 0.0).
-narrative_ontology:measurement(stat_su_t10, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 10, 0.0).
-narrative_ontology:measurement(stat_su_t15, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 15, 0.0).
-narrative_ontology:measurement(stat_su_t20, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 20, 0.0).
-narrative_ontology:measurement(stat_su_t25, statutory_debt_ceiling__constitutional_nullity_reading, suppression_requirement, 25, 0.0).
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(statutory_debt_ceiling__constitutional_nullity_reading, static).
 
 
 /* ==========================================================================
@@ -280,7 +345,7 @@ narrative_ontology:affects_constraint(statutory_debt_ceiling__constitutional_nul
 narrative_ontology:affects_constraint(statutory_debt_ceiling__constitutional_nullity_reading, statutory_debt_ceiling__extraction_snare_reading).
 
 % DUAL FORMULATION NOTE:
-% The statutory debt ceiling kernel admits three structurally distinct constraint readings: (1) constitutional_nullity_reading (this file) — the ceiling is void under the 14th Amendment, zero extractiveness, mountain type; (2) coordination_scaffold_reading — the ceiling is a legitimate procedural coordination mechanism, likely transitory, with genuine beneficiaries; (3) extraction_snare_reading — the ceiling is weaponized leverage enabling legislative minority extraction. These three readings are NOT different measurements of the same constraint — they instantiate different ε values and different beneficiary/victim structures from the same contested constitutional kernel. Each reading has its own constraint_story.json file. All three are linked via network.affects_constraints so the corpus records the constitutional contest as a family of three structurally distinct constraints, each with a different ε, arising from one kernel.
+% The statutory debt ceiling is a contested kernel that decomposes into three structurally distinct constraint stories, each instantiating a different reading of the same persistent statutory and procedural commitment. The constitutional_nullity_reading (this constraint) holds that Section 4 of the Fourteenth Amendment constitutionally voids the ceiling, making it legally inoperative. The coordination_scaffold_reading treats the ceiling as a rope—a procedural coordination mechanism. The extraction_snare_reading treats the ceiling as a snare—a weaponized boundary for legislative minority extraction. These are not the same constraint viewed from different angles; they are different structural constraints derived from the same kernel via competing constitutional interpretations. ε-invariance is preserved by assigning zero extractiveness to the nullity reading (the constraint is void), moderate extractiveness to the scaffold reading (procedural coordination cost), and high extractiveness to the snare reading (rent extraction under default threat). The three stories are linked by network.affects_constraints because adjudication of the kernel's constitutional status would foreclose or affirm each reading, determining which constraint is legally operative.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

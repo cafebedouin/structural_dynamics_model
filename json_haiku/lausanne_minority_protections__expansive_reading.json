@@ -2,27 +2,94 @@
   "header": {
     "constraint_id": "lausanne_minority_protections__expansive_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "module_name_override": "constraint_lausanne_minority_protections__expansive_reading",
-    "story_uid": "77912548-91a2-4129-9a37-12237572fb96"
+    "story_uid": "67b76fe1-838d-4ada-b57a-544148150a7f",
+    "created_at": "2026-06-11T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.52,
+    "extractiveness": 0.22,
+    "suppression": 0.58,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.47,
     "claimed_type": "rope",
     "human_readable": "Lausanne Treaty Minority Protections (Expansive Reading)",
-    "topic_domain": "international_law/religious_governance/minority_rights",
+    "topic_domain": "international_law/religious_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "orthodox_patriarchate_istanbul",
-      "evangelical_protestant_minorities",
-      "armenian_apostolic_minorities",
-      "jewish_minorities"
+      "recognized_minority_institutions"
+    ],
+    "vindicated_propositions": [
+      "treaty_based_minority_rights_doctrine",
+      "institutional_self_governance_principle"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "recognized_minority_institutions",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Christian minority religious institutions (Greek Orthodox, Armenian Apostolic, Jewish communities) retain formal rights under Lausanne to govern their internal affairs, maintain theological schools, and hold property. They depend entirely on treaty interpretation and state compliance for these protections to function. Their institutional continuity as autonomous bodies depends on this reading's acceptance by Turkish authorities."
+    },
+    {
+      "name": "turkish_state_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Holds primary authority to interpret and implement Lausanne obligations domestically. Can recognize minority institutions' self-governance claims or subordinate them to general Turkish law. Manages the balance between respecting treaty commitments and asserting state sovereignty over domestic governance structures."
+    },
+    {
+      "name": "european_guarantor_states",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Hold standing to invoke Lausanne guarantor roles, particularly through European Court of Human Rights proceedings and diplomatic channels. Their capacity to monitor and invoke remedies depends on which reading of Lausanne protections prevails. Observer seat: not directly governing Turkish implementation but potentially influential on interpretation contest."
+    },
+    {
+      "name": "minority_community_members",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individual members of minority faith communities gain substantive rights to congregate, worship, and access religious education only insofar as their institutions retain autonomous legal standing. Their ability to practice faith collectively, attend theological schools, or participate in institutional governance depends on institutional protections holding."
+    },
+    {
+      "name": "nationalist_constituencies",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Political movements that view broad minority institutional autonomy as inconsistent with Turkish nation-building and secular governance would advocate for the restrictive reading. They are excluded from the beneficiary set but would object if institutional self-governance expanded; their voice shapes the political pressure against this reading's implementation."
+    },
+    {
+      "name": "theological_education_apparatus",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Seminaries and theological schools operated by minority institutions depend on Lausanne protections to govern their curriculum, faculty hiring, and admission standards without state control. Their institutional identity fuses with religious authority — they cannot function under general state educational law without losing the religious formation function they exist to provide."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves a functional interface between international treaty law and domestic religious governance: minority institutions retain self-administration over theological education, property, and internal affairs as a traded arrangement that satisfied minority security concerns in 1923 and persists as the coordinating mechanism for minority-state coexistence.",
+    "transfer_function": "Transfers authority and autonomy to minority institutions (no extraction; rather, allocation of regulatory rights). The constraint moves decision-making power from state authorities to institutional bodies over internal governance, property disposition, and clergy formation.",
+    "absent_voices": "The restrictive reading (domestic-law supremacy advocates) is structurally excluded from the beneficiary set and would object vigorously; they would argue the constraint is obsolete and sovereignty-impairing. Guarantor state representatives do not directly govern but can intervene via European human rights enforcement, creating an implicit power over interpretation that minority institutions cannot match.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Lausanne protections for institutional autonomy vanished, minority religious institutions would immediately lose legal standing to govern themselves; theology schools would either dissolve or be absorbed into state control; property disputes would shift to state courts under general law; minority religious authority structures would collapse into individuals exercising only personal worship rights within state-regulated parameters.",
+    "founding_problem": "Post-WWI Ottoman successor state needed to guarantee minority security and cultural survival while establishing Turkish state authority: Lausanne Treaty's minority clauses traded international recognition and sovereignty for binding protections of minority institutional autonomy, property, and religious authority structures.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Turkish authorities now argue the founding problem is resolved (modern minorities enjoy general citizenship rights, separate protections are outdated). Minority institutions and European human rights bodies argue the founding problem persists — institutional autonomy remains the only reliable protection against majoritarian pressure to subordinate minority governance to state law. Historians external to both reading communities attest the 1923 founding problem was real and severe (documented persecution, forced assimilation pressure); contemporary contestation is whether that problem's conditions still obtain."
   },
   "interval": {
     "start": 0,
@@ -32,154 +99,173 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.12,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.28
+      "time_point": 15,
+      "value": 0.16,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.33
+      "time_point": 30,
+      "value": 0.19,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 60,
-      "value": 0.38
+      "time_point": 50,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 80,
-      "value": 0.38
+      "time_point": 75,
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 100,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.4
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.45
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 60,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 80,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 100,
-      "value": 0.52
+      "value": 0.22,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.28,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.25
+      "time_point": 15,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.32
+      "time_point": 30,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.4
+      "time_point": 50,
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 80,
-      "value": 0.41
+      "time_point": 75,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 100,
-      "value": 0.41
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.58,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "The Lausanne Treaty (1923) contains provisions protecting non-Muslim minorities' religious rights. The expansive reading interprets these protections as guaranteeing institutional continuity: minority religious institutions retain self-governance, property rights, and clergy formation via theological education, modeled on pre-1923 Ottoman millet structures. This reading is contested by a restrictive reading (protections extend only to individual worship) and a guarantor reading (protections are international obligations supervised by external guarantor powers). The expansive reading faces a structural vulnerability: it depends on interpretive contest remaining open. If the restrictive reading wins, the constraint's legal foundation erodes. This is not extraction from identified beneficiaries but institutional precariousness rooted in contested kernel interpretation.",
+    "narrative_context": "The Lausanne Treaty (1923) included minority protections clauses that the expansive reading interprets as guaranteeing minority religious institutions functional autonomy over governance, property, and theological education — not merely individual worship rights. This reading grounds minority institutional survival and cultural continuity in treaty obligations that Turkish state law cannot unilaterally override. The expansive reading competes with two sibling readings: the restrictive reading (protections apply only to individual worship, institutional matters are domestic) and the guarantor reading (protections are enforceable through international supervision, not merely Turkish interpretation). This constraint story models the expansive reading as a moderate coordination rope: it solves the post-1923 problem of minority-majority coexistence through institutional autonomy, depends on active treaty compliance, and carries vulnerability if the interpretation contest is lost.",
     "key_agents": [
-      "Orthodox Patriarchate (Istanbul): Institutional agenda-setter claiming self-governance under the expansive reading; operationally trapped because Turkish state approval is still required despite the reading's assertions of autonomy.",
-      "Turkish State: Institutional holder of sovereignty; applies general secular law that often conflicts with the expansive reading; leans toward restrictive interpretation in practice.",
-      "Minority religious communities (Armenian, Evangelical, Jewish): Beneficiaries of the expansive reading's assertion of institutional autonomy; materially vulnerable if the reading is displaced.",
-      "European human rights bodies (ECHR, Council of Europe): Observers reinforcing the expansive reading through case law, giving it continental-level legitimacy while Turkish domestic courts apply narrower readings.",
-      "Secular Turkish nationalism: Excluded from formal Lausanne negotiations but shapes political pressure against the expansive reading's assertion of separate institutional governance."
+      "Recognized minority institutions (Greek Orthodox, Armenian Apostolic, Jewish communities) — primary beneficiaries, depend on treaty reading for institutional continuity",
+      "Turkish state authority — agenda setter, balances treaty compliance against sovereignty assertions",
+      "European guarantor states — observers with potential enforcement capacity through human rights mechanisms",
+      "Minority community members — individual beneficiaries, gain collective religious practice rights through institutional protections",
+      "Theological education apparatus — identity-locked beneficiary, cannot function under state control without losing religious formation function",
+      "Nationalist constituencies — excluded voices that would advocate the restrictive reading"
     ],
-    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) because the constraint does not collect rents from the beneficiaries — it asserts their institutional autonomy. The asymmetry is not economic but structural: the expansive reading depends on treaty interpretation remaining contested in its favor. If the restrictive reading wins the interpretive contest, the beneficiaries lose institutional foundations. Suppression rises over the interval (0.35 → 0.52) as secular Turkish state pressure against institutional autonomy increases, particularly post-2000s (Kurdish conflict politicization, religious education restrictions, property disputes). Theater ratio rises (0.18 → 0.41) because an increasing share of 'protection' takes the form of diplomatic statements, European court cases, and international pressure, while domestic operational autonomy remains constrained. The measurement series tracks the constraint's gradual conversion from active coordination into performative protection.",
-    "perspectival_gap": "From the Patriarchate's seat, the expansive reading is functional continuity of pre-1923 self-governance; Turkish state compliance is treaty-bound. From the Turkish state's seat, the same reading is an international intrusion into domestic law-making; the state interprets Lausanne narrowly and applies general law. From minority community seats, the reading is existential — it is the legal foundation for institutional survival; if it loses, they face assimilation into secular law with no protected status. From the European observer's seat, the reading is human rights enforcement; the ECHR applies it to check Turkish state power. The engine computes these divergences from power atoms and exit options: the Patriarchate (moderate power, trapped exit, asserting institutional agenda-setting) diverges from the Turkish state (institutional power, constrained by international law but still sovereign), which diverges from powerless minority communities (trapped, dependent on treaty interpretation). These structural differences should produce divergent computed types.",
-    "directionality_logic": "The beneficiaries (Patriarchate, minority religious institutions) have low d values because they benefit from the expansive reading without extracting from others — the reading asserts their institutional autonomy, not their collection of rents. The Turkish state sits near d=0.5 (symmetric): it bears costs from international supervision and legal constraint but also benefits from the reading's legitimacy (proves minority protections are in place). Excluded agents (secular Turkish nationalists) have high d values because the constraint limits their preferred policy (uniform secular law applied to all institutions). The key directionality insight: this is a constraint whose asymmetry is interpretive (beneficiaries vulnerable to reading loss), not economic (no one is extracting rents), so d values should reflect interpretive dominance and institutional fragility, not collection of wealth.",
-    "mandatrophy_analysis": "The founding problem (continuity of minority institutional structures post-Ottoman transition) sits in a critical zone. The expansive reading asserts the problem remains live (institutions still need protection). The restrictive reading asserts it is solved (individual worship rights are protected; institutional status is secondary). If the restrictive reading wins the interpretive contest, the founding problem dissolves in the restrictive framework — but the expansive reading will have lost its mandate. This is not mandatrophy in the classical sense (function atrophied, constraint persists theatrically) but rather mandate death through interpretive loss. The measurements track this risk: rising suppression and theater ratio suggest the constraint is gradually losing functional autonomy and converting to diplomatic performance. A mandatrophy verdict would require the restrictive reading to win while the expansive reading persists in some contexts — a possible future state, not the current one.",
-    "kernel_context": "This constraint instantiates the expansive reading of the Lausanne minority protections kernel. The kernel is the Lausanne Treaty (1923) language on minority rights. Three readings exist: expansive (protections guarantee institutional continuity and self-governance), restrictive (protections extend only to individual worship), and guarantor (protections are international supervisory obligations). This story generates the expansive reading as a clean constraint with its own ε and beneficiary structure, distinct from the other readings. The sibling stories (not generated here) will instantiate the restrictive and guarantor readings separately, each with its own ε and stakeholder configuration. Divergences in ε across siblings will reflect the interpretive contest: if the expansive reading's ε is notably lower (more coordination, less extraction) than the restrictive reading's ε (more extraction, less coordination), that divergence is itself the signal the corpus measures — evidence that the readings instantiate genuinely different constraints, not one constraint viewed from multiple angles."
+    "logic_rationale": "Extractiveness is low to moderate (0.22 final) because this reading produces no systematic extraction — minority institutions gain autonomy without bearing costs asymmetric to benefited parties. Suppression is moderate (0.58) because the constraint's persistence depends on active Turkish state compliance with treaty interpretation and on active defense against the restrictive reading's pressure. Theater is moderate-high (0.41–0.42) because enforcement activity increasingly shifts away from genuine institutional governance toward performative compliance — state-minority institutions negotiations that follow formal protocols but where substantive autonomy erodes. The measurement series shows suppression intensifying over the interval (0.48→0.61 at midpoint) reflecting rising nationalist pressure against expansive institutional autonomy, then moderating slightly at the endpoint reflecting European diplomatic counter-pressure. Theater rises throughout (0.28→0.42), modeling increasing proportion of minority-state engagement becoming ritual compliance rather than substantive self-governance.",
+    "perspectival_gap": "The payer/beneficiary asymmetry is not monetary but interpretive: Turkish authorities bear the 'cost' of limiting sovereignty; minority institutions bear the cost of depending on external legal infrastructure (Lausanne treaty text, European courts) for protections they cannot self-enforce. The theater ratio rises because increasing minority-state negotiations follow Lausanne protocols while actual substantive autonomy contracts — enforcement becomes more performative, less functional.",
+    "directionality_logic": "Minority institutions are beneficiaries structurally (gain autonomy rights, bear no extraction cost). But directionality computation must account for exit asymmetry: if the expansive reading loses the interpretation contest, minority institutions have no exit — they cannot abandon the Lausanne framework and retain institutional standing. Their 'constrained' exit option (cannot leave without ceasing to exist as treaty-protected entities) drives effective directionality toward target status despite beneficiary role. Turkish state authority is the agenda-setter (controls interpretation, sets enforcement posture) with mobile exit (can shift to restrictive reading without organizational dissolution). This asymmetry — beneficiary with trapped identity vs. powerful agenda-setter with mobile exit — is the constraint's structural fragility.",
+    "mandatrophy_analysis": "This constraint is not mandatrophy-resolved, but it carries high mandatrophy risk. The founding problem (post-WWI minority security) was acute in 1923; contemporary Turkish and minority stakeholders contest whether it persists. If Turkish authorities were to argue 'the founding problem (persecution pressure, forced assimilation) is solved by modern citizenship law, so Lausanne institutional protections are obsolete,' that would trigger mandatrophy classification. The expansive reading's survival depends on maintaining that the founding problem's conditions still obtain or that institutional autonomy is a value beyond the original problem. The measurement series showing rising suppression (enforcement effort intensifying to defend against restrictive reading) and rising theater (ritual compliance replacing substantive governance) traces the pathway toward potential mandatrophy: the constraint persists as performance even as its functional justification weakens.",
+    "kernel_context": "This constraint is the expansive reading of the Lausanne minority protections kernel. The kernel is the 1923 Treaty's language on minority institutions; the reading contest concerns whether 'institutional self-administration' includes property ownership, theological school autonomy, and governance independence, or extends only to individual worship rights. The expansive reading (this constraint) interprets the language as guaranteeing functional institutional continuity of pre-1923 religious governance structures. The restrictive reading (sibling constraint: lausanne_minority_protections__restrictive_reading) interprets protections narrowly, as applying only to individual worship under state-supervised general law. The guarantor reading (sibling constraint: lausanne_minority_protections__guarantor_reading) accepts expansive institutional protections but grounds them in international supervisory mechanisms rather than Turkish interpretation alone. This constraint differs from the restricitive reading in its core premise (institutional autonomy is guaranteed, not domestic), and from the guarantor reading in its premise about who enforces the protections (Turkish law and interpretation, not external guarantor states)."
   },
   "omegas": [
     {
-      "id": "reading_contest_outcome",
-      "question": "Which reading of Lausanne minority protections will achieve stable interpretive dominance: expansive (institutional autonomy), restrictive (individual worship only), or guarantor (international supervision)?",
-      "resolution_mechanism": "Sequence of high-court decisions (Turkish Constitutional Court, ECHR, Council of Europe rulings) establishing consistent interpretation; or formal treaty amendment/clarification by signatory powers; or long-term observational record of which reading shapes actual institutional practice.",
-      "impact": "If expansive reading achieves dominance, minority institutions gain legal security and the constraint's classification remains rope (coordination with beneficiary protection). If restrictive reading dominates, the expansive reading loses its mandate; minority institutions lose treaty-based autonomy and the constraint dissolves. If guarantor reading dominates, supervisory mechanisms strengthen, converting the constraint toward snare-like extraction (minority institutions become subjects of international oversight). The outcome directly determines whether the expansive reading survives as a constraint at all.",
+      "id": "institutional_autonomy_scope_ambiguity",
+      "question": "Does 'institutional self-administration' under Lausanne include property ownership, theological school autonomy, and internal governance independence, or extend only to religious practice within state-supervised structures?",
+      "resolution_mechanism": "Comparative treaty-law analysis of Article 37-44 language and original drafting intent; precedent from European Court of Human Rights and Turkish Constitutional Court cases interpreting scope.",
+      "impact": "Narrow reading collapses into restrictive_reading constraint (property/schools subject to general law); broad reading sustains this expansive reading. Classification hinges on interpretation of a single contested article.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Textual ambiguity in Treaty language on institutional autonomy scope."
+    },
+    {
+      "id": "founding_problem_obsolescence",
+      "question": "Has the founding problem (minority security against majoritarian state pressure, forced assimilation) been structurally resolved by modern constitutional citizenship rights, or do minority institutions remain vulnerable to majoritarian restrictions without Lausanne-based institutional autonomy?",
+      "resolution_mechanism": "Historical analysis of minority institution pressures since 1923 (school closures, property expropriations, state restrictions on theological education); comparative analysis of minority status in democracies without treaty-based institutional protections.",
+      "impact": "If founding problem is dead (modern rights sufficient), the constraint slides toward Piton classification — persists as ritual but without functional justification. If founding problem is live, the rope classification holds.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the constraint's original justification conditions still obtain."
+    },
+    {
+      "id": "treaty_supremacy_vs_sovereignty",
+      "question": "Can Turkey legitimately interpret Lausanne protections as subject to evolutionary reading under modern Turkish law, or are minority institutions entitled to a frozen understanding of 1923 institutional autonomy?",
+      "resolution_mechanism": "Vienna Convention on Law of Treaties provisions on evolution vs. original intent; comparative precedent from other nations interpreting minority-protection treaties; European Court review of Turkish constitutional theory.",
+      "impact": "Treaty-evolution framing favors restrictive reading (modern law can reinterpret protections); original-intent framing favors expansive reading. The resolution mechanism determines which sibling reading gains legitimacy in interpretive contests.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Which interpretive reading of the Lausanne kernel will achieve stable dominance."
+      "description": "Whether treaty protections are fixed at 1923 meaning or subject to evolutionary interpretation."
     },
     {
-      "id": "ottoman_millet_continuity_assumption",
-      "question": "Is institutional religious governance continuity from the Ottoman millet system actually achievable under a modern secular nation-state, or is the expansive reading rooted in a nostalgia for institutional structures that are fundamentally incompatible with secular law?",
-      "resolution_mechanism": "Comparative analysis of other post-imperial secular states with minority religious institutions (India, Indonesia, Malaysia, Lebanon) to assess whether institutionalized religious governance is compatible with secular legal frameworks. Or long-term observational record of whether minority institutions actually achieve self-governance under the expansive reading's framework.",
-      "impact": "If continuity is achievable, the expansive reading is structurally sound and the beneficiaries can maintain institutional autonomy. If incompatible, the reading is aspirational but not functionally realizable; minority institutions are bound to gradually lose autonomy regardless of the reading's legal claims.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether pre-1923 Ottoman millet institutional continuity is achievable under secular nation-state law."
-    },
-    {
-      "id": "european_court_leverage",
-      "question": "How much structural leverage does European human rights jurisprudence actually exercise over Turkish state behavior regarding minority religious institutions? Is ECHR case law a meaningful constraint on the state, or a symbolic backing for a reading that the state disregards domestically?",
-      "resolution_mechanism": "Comparative analysis of ECHR rulings on Turkish minority religious cases and actual Turkish government compliance; assessment of whether ECHR decisions actually change institutional access, property rights, or clergy training practices; or diplomatic correspondence revealing the state's actual regard for European rulings.",
-      "impact": "If European leverage is substantial, the expansive reading gains material enforcement power beyond the treaty text itself. If purely symbolic, the reading's beneficiaries lack real protection and face gradual attrition despite the favorable European legal frame.",
+      "id": "identity_lock_persistence",
+      "question": "For theological education apparatus and minority community members, is the identity-lock (cannot exit without community dissolution) permanent, or can it be dissolved through secular alternative education paths?",
+      "resolution_mechanism": "Generational study of minority youth educational choices; sociological research on whether theological school closure leads to community identity dissolution or adaptation to secular education.",
+      "impact": "If identity-lock dissolves (minorities adapt to secular education), minority institutions' exit options improve from 'trapped' to 'constrained,' increasing their structural power relative to state authority. Would change directionality calculus and potentially shift classification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether European human rights mechanisms provide substantive constraint on Turkish state behavior toward minority religious institutions."
+      "description": "Whether minority community members' institutional identity is permanently fused with theological education."
     },
     {
-      "id": "suppression_mechanism_internalization",
-      "question": "Is the measured suppression (0.52) primarily structural (state legal barriers, property restrictions, education licensing) or internalized (minority institutions' self-censorship, identity fusion with Turkish citizenship, internalized expectations of limited autonomy)?",
-      "resolution_mechanism": "Post-institutional-shift observation: if minority institutions gain autonomy (through reading victory, state policy change, or EU accession pressure) and suppression persists, reclassify as substantially internalized. Or ethnographic study of minority leaders' self-perception of autonomy and constraints.",
-      "impact": "If structural, the constraint's suppression is removable through policy change or European pressure. If internalized, minority institutions carry the suppression with them even if formal barriers are removed; institutional recovery would require identity re-fusion, not just legal change.",
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the rising suppression requirement driven by structural barriers (legal restrictions, school closures, property disputes) or internalized (minority institutions voluntarily accept constraints to avoid majoritarian backlash)?",
+      "resolution_mechanism": "Post-constraint analysis: if minority institutions faced sudden removal of legal barriers, would suppression persist? Historical study of Turkish administrative pressure vs. minority strategic accommodation.",
+      "impact": "If suppression is structural, it indicates active enforcement machinery hardening over the interval (rope persists, may shift to snare). If internalized, minority institutions carry the constraint with them even if legal barriers fall — deeper suppression than measurement suggests.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether measured suppression is structural or internalized within minority institutional consciousness."
-    },
-    {
-      "id": "kernel_reading_as_distinct_constraint",
-      "question": "Is each reading (expansive, restrictive, guarantor) a distinct constraint with its own ε and structure, or are they all one constraint viewed through different interpretive lenses?",
-      "resolution_mechanism": "ε-invariance test: if the same observable (e.g., Turkish state enforcement of Halki Seminary closure) is measured one way under the expansive reading (treaty violation) and another way under the restrictive reading (valid secular law enforcement), and these produce clearly different ε values, then two distinct constraints exist. If the ε remains the same regardless of reading frame, then one constraint has multiple readings, not multiple constraints.",
-      "impact": "If distinct constraints, this story (expansive reading) and its sibling stories form a constraint family linked by network.affects_constraints — interpretive victory for one reading affects the others' viability. If one constraint, the framework has collapsed into rhetorical interpretation without structural consequence.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether contested kernel readings instantiate distinct constraints or are views of one constraint."
+      "description": "Whether measured suppression is structural legal barriers or internalized minority accommodation."
     }
   ],
   "boltzmann": {
@@ -191,44 +277,50 @@
       "lausanne_minority_protections__restrictive_reading",
       "lausanne_minority_protections__guarantor_reading"
     ],
-    "dual_formulation_note": "The Lausanne minority protections kernel is interpreted via three distinct constraint readings: expansive (institutional autonomy), restrictive (individual worship only), and guarantor (international supervision). Each reading instantiates a different constraint with different ε, beneficiary structure, and classification. The readings are not views of one constraint but three structurally distinct constraints rooted in contested kernel interpretation. Interpretive victory for any one reading affects the viability of the others: restrictive victory undermines the expansive reading's mandate; guarantor dominance converts both into supervisory mechanisms; expansive dominance legitimizes institutional autonomy. The three constraints form a family linked by interpretive dependency and mutual foreclosure risk."
+    "dual_formulation_note": "This constraint is part of a three-story Lausanne minority protections family. The expansive reading (this story) interprets institutional autonomy guarantees as functional and binding on Turkish law. The restrictive reading limits protections to individual worship. The guarantor reading accepts expansive protections but grounds them in international supervisory enforcement. The three readings share the same referent (Lausanne Treaty Article 37-44 protections) but produce different constraint structures due to different interpretations of institutional scope and enforcement mechanisms. The expansive and restricitive readings foreclose each other; each coexists with the guarantor reading as alternative enforcement framings."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.35
+      "power_atom": "powerless",
+      "d_value": 0.68
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.52
     }
   ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "ottoman_millet_institutional_continuity",
+    "reference_frame": "institutional_autonomy_guarantee_frame",
     "drift_state": {
-      "moment": "contemporary_secular_nation_state",
+      "moment": "contemporary_nationalist_pressure_era",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "lausanne_minority_protections__restrictive_reading",
+        "sibling_id": "restrictive_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "lausanne_minority_protections__guarantor_reading",
-        "relation": "influences"
+        "sibling_id": "guarantor_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "pre_1923_institutional_structures_are_continuous",
+        "atom": "institutional_autonomy_guaranteed_by_treaty",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "minority_religious_autonomy_is_legally_separable_from_citizenship",
+        "atom": "minority_institutions_self_governing_not_subordinate",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -236,14 +328,15 @@
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

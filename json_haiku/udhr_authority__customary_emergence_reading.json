@@ -2,245 +2,549 @@
   "header": {
     "constraint_id": "udhr_authority__customary_emergence_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "7160b606-3019-45f5-878f-92609f486b29"
+    "story_uid": "43608358-648a-43cc-bdc5-800fe60ab981"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.42,
-    "theater_ratio": 0.48,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.61,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.54,
     "claimed_type": "tangled_rope",
-    "human_readable": "UDHR Authority via Customary Emergence (Opinio Juris Reading)",
-    "topic_domain": "international_law/human_rights",
+    "human_readable": "UDHR Authority as Customary International Law Emergence",
+    "topic_domain": "international_law/human_rights/political_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "international_human_rights_institutions",
-      "transnational_advocacy_networks"
+      "human_rights_advocates",
+      "international_legal_institutions"
     ],
     "victims": [
-      "states_with_non_compliant_practices",
-      "individual_rights_claimants_in_non_ratifying_states"
+      "authoritarian_regimes",
+      "state_sovereignty_defenders"
+    ],
+    "vindicated_propositions": [
+      "customary_law_formation_doctrine",
+      "opinio_juris_theory"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "international_legal_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "International Court of Justice, International Criminal Court, regional human rights courts, and treaty-body monitoring mechanisms adjudicate whether UDHR norms qualify as binding customary international law. They curate evidence of state practice, interpret opinio juris doctrine, declare transition points from aspiration to obligation. They set the evidentiary threshold for what counts as 'state practice' and 'opinio juris,' determining when customary status is achieved. Their authority derives from professional legal legitimacy, institutional continuity, and the consent of states to their jurisdiction (though that consent itself is interpreted as evidence of opinio juris in favor of their authority)."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "NGOs, grassroots movements, and legal aid organizations interpret UDHR as binding law and use it to litigate, shame, and mobilize. The customary-emergence reading strengthens their position: they can invoke UDHR in court not as moral aspiration but as legal obligation. They coordinate international legal scholarship that produces opinio juris evidence (law review articles, academic consensus) and work with friendly states to participate in litigation that validates the customary-law reading."
+    },
+    {
+      "name": "authoritarian_regimes",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Governments with poor human rights records face extracted sovereignty under this reading. Their domestic practices become subject to a legal standard (UDHR norms as customary law) they did not explicitly consent to. They must either conform (expensive), face international litigation and sanction, or deny the customary-law status (costly to international legitimacy). Their identity-locked exit reflects the fact that rejecting UDHR as binding law means accepting pariah status internationally, which undermines their own legitimacy claims even domestically."
+    },
+    {
+      "name": "state_sovereignty_defenders",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Legal scholars, diplomats, and states that argue for strict constructionism: UDHR is aspirational; binding status requires explicit state consent or formal treaty ratification. The customary-emergence reading undermines their position by claiming consent is implicit in practice rather than explicit in formal acts. They bear the cost of retreating this position or accepting international marginalization as 'anti-human-rights' if they persist. Their exit is constrained: abandoning the sovereignty argument means accepting reduced state autonomy; maintaining the argument means isolation from institutional consensus."
+    },
+    {
+      "name": "liberal_democracies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States whose domestic law already aligns with UDHR norms benefit doubly: they gain leverage in international forums and litigation, and they extend their values into binding international obligation. They also influence institutional adjudication through their judges, legal scholars, and participation in courts. They have exit options: if the customary-emergence reading becomes untenable, they can shift to binding_universalism (universal rights) or aspirational_sovereignty (explicit consent) readings, though all favor their interests relative to full state sovereignty."
+    },
+    {
+      "name": "developing_states",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Countries with limited participation in international legal institutions find themselves subjected to customary-law adjudication in which they have limited voice. They would argue for intermediate positions—respect for human rights in principle, but meaningful participation in defining what counts as 'opinio juris' and 'state practice.' They are excluded because customary-law status is adjudicated by Western-dominated international courts; their legal traditions are rarely cited as evidence of opinio juris. Their exit is trapped: they cannot simultaneously participate in international law and reject its adjudicatory authority."
+    },
+    {
+      "name": "international_legal_scholarship",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Law professors, legal researchers, and scholarly consensus-producers generate the opinio juris evidence that courts rely on. They debate whether UDHR meets the criteria for customary law: some cite consistent treaty ratifications, judicial citations, and state statements as evidence; others note selective enforcement and persistent dissent from major powers. The scholarly debate creates strategic interpretive space—scholars friendly to human rights find evidence of universal customary status, while skeptics find evidence of contested obligation. Their mobility reflects the fact that they can frame the evidence differently depending on their commitments."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a framework for interpreting a universal human rights declaration as binding international law through evolutionary doctrine rather than explicit consent. Solves the coordination problem: without a mechanism to elevate UDHR from aspiration to obligation, individual states that comply gain no advantage (the first-mover problem); customary-law status regularizes compliance as obligatory for all, enabling collective enforcement and reducing free-riding.",
+    "transfer_function": "Moves sovereignty capacity from states (particularly authoritarian and non-aligned ones) to international institutions and liberal-democratic coalitions. The transfer is payment in the form of constraint: states lose the unilateral right to reject UDHR norms as non-binding, and they pay through compliance costs, litigation exposure, and loss of rhetorical high ground. The beneficiary is the institutional infrastructure that adjudicates customary status and the coalition of states already aligned with UDHR norms.",
+    "absent_voices": "Developing and non-aligned states that participated in UDHR adoption but were marginalized in its interpretation as binding custom; non-Western legal traditions (Islamic law, African customary law, Asian relational frameworks) that would contest the opinio juris standard as Western-biased; subaltern communities whose rights are asserted but who have no seat in institutional adjudication of customary status.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the customary-emergence reading disappeared (UDHR reverted to pure aspiration), states would regain unilateral veto over human rights obligation. International litigation would collapse for lack of a jus cogens foundation; compliance would revert to voluntary or treaty-based only. The institutional architecture of human rights adjudication would lose a crucial legitimacy premise. Liberal democracies would lose leverage in shaming campaigns. The world would not rearrange overnight, but the normative landscape would shift dramatically: human rights would become a foreign-policy tool rather than binding law.",
+    "founding_problem": "Post-WWII human rights consensus faced a credibility gap: UDHR was adopted as aspirational guidance, but without mechanism to bind states, compliance was voluntary and selective. The founding problem was: how do you make a universal declaration stick without explicit consent from every state, particularly those that resist it?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Human rights institutions and liberal-democratic legal scholars attest the founding problem is live and the customary-emergence reading solves it via practice accumulation. Authoritarian regimes and sovereignty-focused states attest the founding problem was never solved—only obscured by institutional overreach. Non-aligned scholars note the problem is incompletely solved because Western institutions dominate the adjudication. Independent sources (e.g., comparative constitutional law, anthropological accounts of legal pluralism) suggest the founding problem was real but that the customary-emergence reading privileges one cultural-legal tradition over others."
+  },
   "interval": {
-    "start": 1948,
-    "end": 2024
+    "start": 1945,
+    "end": 2025
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1948,
-      "value": 0.15
+      "time_point": 1945,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1966,
-      "value": 0.28
+      "time_point": 1965,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.42
+      "time_point": 1985,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.52
+      "time_point": 2005,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2012,
-      "value": 0.56
+      "time_point": 2015,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.58
+      "time_point": 2025,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1948,
-      "value": 0.85
+      "time_point": 1945,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1966,
-      "value": 0.72
+      "time_point": 1965,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.64
+      "time_point": 1985,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.55
+      "time_point": 2005,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2012,
-      "value": 0.51
+      "time_point": 2015,
+      "value": 0.29,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.48
+      "time_point": 2025,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1948,
-      "value": 0.2
+      "time_point": 1945,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1966,
-      "value": 0.28
+      "time_point": 1965,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.35
+      "time_point": 1985,
+      "value": 0.34,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.4
+      "time_point": 2005,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2012,
-      "value": 0.42
+      "time_point": 2015,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.42
+      "time_point": 2025,
+      "value": 0.42,
+      "basis": "observed"
     }
   ],
+  "coercion_grid": {
+    "t0": 1945,
+    "tn": 2025,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.25
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.18
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.64
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.12
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.61
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.31
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.58
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.14
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.08
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.44
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.15
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1945,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2025,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1945,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2025,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1945,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2025,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1945,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2025,
+        "value": 0.48
+      }
+    ]
+  },
   "commentary": {
-    "narrative_context": "The United Nations Human Rights Committee, regional human rights courts, and the international legal establishment have increasingly treated the Universal Declaration of Human Rights (1948) as binding customary international law. This reading asserts that through widespread state practice (ratification of ICCPR, protocol adoption, domestic incorporation, consistent voting patterns) and opinio juris (the belief that these norms are legally binding), UDHR protections have hardened into custom binding all states, regardless of formal consent. This instantiates one of three contested readings of UDHR authority: aspirational_sovereignty_reading treats UDHR as moral guidance requiring state consent; binding_universalism_reading asserts UDHR rights are inherent and enforceable without custom doctrine; customary_emergence_reading (this one) traces authority through state practice accumulation. The structural delta is extractiveness increasing over time (0.15 to 0.58) as institutional authority to declare customary status hardens, and theater_ratio decreasing (0.85 to 0.48) as the reading shifts from performative consensus-building to enforcement machinery.",
+    "narrative_context": "This constraint instantiates one reading of the contested UDHR authority kernel: the claim that UDHR evolved from moral aspiration to binding customary international law through accumulated state practice and opinio juris. The reading generates extractive coordination because it moves authority from explicit state consent (sovereignty) to implicit consent inferred from practice (institutional adjudication). International legal institutions and human rights advocates benefit from the authority this reading vests in them. Authoritarian regimes and sovereignty defenders bear the cost of having UDHR norms imposed as binding obligation without their explicit acceptance. The measurement series shows extractiveness accumulating over 80 years as the customary-law reading crystallizes in case law, treaty interpretation, and academic consensus. Theater increases modestly as institutional mechanisms elaborate elaborate evidentiary procedures for detecting 'opinio juris,' creating the appearance of objective proof where boundary construction is actually the operative mechanism.",
     "key_agents": [
-      "International Human Rights Institutions: UN treaty bodies, ICJ, regional courts — declare customary status and enforce consistency; gain institutional authority as custom hardens",
-      "States with Non-Compliant Practices: bear increasing cost of harmonization or isolation; cannot reject UDHR as aspiration but cannot escape custom-binding claim",
-      "Transnational Advocacy Networks: NGOs and scholar-activists benefit from customary-status framing without bearing state coordination costs; expand standing and legitimacy",
-      "Individual Rights Claimants in Non-Ratifying States: powerless, identity-locked; gain theoretical claims but lack enforcement pathways, bearing costs of non-compliance while international system claims to protect them",
-      "Sovereignty-Preserving Regimes: structurally excluded; their non-compliance reinterpreted as evidence of custom rather than as legitimate sovereignty reservation"
+      "international_legal_institutions: Adjudicate the transition from aspiration to binding custom; accumulate institutional power through this reading.",
+      "human_rights_advocates: Benefit from customary-law status; gain legal standing and enforcement leverage.",
+      "authoritarian_regimes: Target of the constraint; lose sovereignty claim to reject UDHR norms unilaterally.",
+      "state_sovereignty_defenders: Ideological opponents; forced to argue against the reading or accept binding obligation.",
+      "liberal_democracies: Primary beneficiaries and institutional influencers; their legal norms become international obligation.",
+      "developing_states: Excluded from meaningful participation in adjudication; subjected to the reading's effects despite historical marginalization in customary-law adjudication."
     ],
-    "logic_rationale": "Extractiveness rises over the interval because institutional authority hardens: early in the period (1948–1966), UDHR was acknowledged but its binding force was optional, negotiated per state. The International Covenants (1966) provided explicit treaty frameworks for those who wanted binding obligation. By 2000, the reading had gained sufficient institutional authority that states faced increasing legal pressure to harmonize domestic law with UDHR norms, even absent explicit ratification. Theater_ratio decreases because early framing emphasized aspirational consensus-building (high theater: declarations, ceremonies, moral appeals); by 2024, enforcement machinery (litigation, monitoring, periodic reviews, advisory opinions) predominates, reducing the performance-to-function ratio. Suppression stabilizes at 0.42 because institutional enforcement relies on reputational, not physical, coercion — the constraint persists through legal interpretation, not military or police power. Resistance remains elevated (0.61) because powerful states consistently contest the customary-status claim, and non-aligned states openly reject the universal human rights framework; the constraint does not command universal consent. Accessibility_collapse at 0.72: the reading eliminates the formal exit of non-ratification (custom binds all) but leaves partial alternatives (non-compliance with reputational cost, or legal challenge to the customary-status claim itself). This is a tangled_rope: genuine coordination function (binding solution to enforcement gaps), asymmetric extraction (institutions gain authority, states lose sovereignty), and active enforcement (continuous reinterpretation of state practice as evidence).",
-    "directionality_logic": "International human rights institutions are agenda-setters with near-beneficiary directionality (d ≈ 0.15): they gain institutional authority and interpretive power without bearing the cost of state coordination; they set the rules defining opinio juris. States with non-compliant practices are near-targets (d ≈ 0.85): they face extraction via obligation imposed without explicit consent, suppression via reputational cost and litigation risk, and constrained exit (cannot simply reject UDHR custom as optional). Transnational advocacy networks are beneficiaries (d ≈ 0.25): they gain standing and legitimacy from customary-status framing, have mobile exit options (can litigate or organize in multiple forums), and collect no direct cost. Individual rights claimants in non-ratifying states are mixed but structurally trapped (d ≈ 0.70): they face high extraction (they are the intended beneficiaries but lack enforcement pathways) and identity-locked exit (their identity as human rights subjects is constituted through the very claim the constraint makes binding). Sovereignty-preserving regimes are targets by exclusion (d ≈ 0.80): the mechanism itself reinterprets their objections as evidence of customary status, trapping them in a definitional loop where non-compliance proves consent.",
-    "perspectival_gap": "The agenda-setter (international institutions) experiences this reading as legitimate coordination: filling a gap in the treaty system, preventing powerful states from opting out of universal norms, and providing consistent interpretation. The payer-states experience it as extraction: obligation imposed without consent, enforced through institutional authority they do not control, and with no formal exit mechanism. The powerless individual in a non-ratifying state experiences it as a broken promise: the reading claims to protect them as a matter of custom, but without domestic enforcement, the claim is theatrical. The excluded sovereignty-preserving regime experiences the reading as foreclosure of their position: their rejection of universal human rights cannot be heard as a legitimate legal reservation because the reading has already reinterpreted their non-compliance as evidence of their own customary consent. The engine computes these divergences from the structural data: the same constraint displays as coordination from the setter's seat and extraction from the target seats.",
-    "mandatrophy_analysis": "The customary-emergence reading avoids the mandatrophy trap because its founding problem (how to bind non-consenting states to universal norms) remains contestable and its authority continues to harden rather than attenuate. However, a latent mandatrophy risk exists: if the empirical evidence for 'state practice consistent with opinio juris' becomes widely questioned (if legal historians document the reading as a post-Cold-War invention rather than a doctrine present at UDHR's creation), the reading could bifurcate into a dead founding problem (we no longer need customary doctrine because explicit treaties now cover all major states) with persistent institutional apparatus (courts and committees continue invoking custom). This would produce the mandatrophy signature: institutional inertia persisting after the coordinating function atrophies. The omega on founding_problem_status_contestation addresses this risk.",
-    "kernel_context": "This constraint is one reading of the kernel udhr_authority, which is contested across three interpretive positions: aspirational_sovereignty_reading (UDHR provides moral guidance, not binding obligation, unless states explicitly consent); binding_universalism_reading (UDHR establishes inherent individual rights enforceable against all states by force of universal human dignity, independent of custom doctrine); customary_emergence_reading (this one — authority emerges through state practice accumulation and opinio juris, making UDHR binding custom for all states). The kernel is a contested claim about authority-grounding: does UDHR's authority rest on explicit state consent (aspirational), on assertion of universal human status (universalism), or on demonstrated practice patterns (custom)? Each reading instantiates a different authority_grounding in the CS structure. The customary-emergence reading sits between the other two: it preserves the language of state practice and consent (avoiding pure assertion) while achieving binding force across non-consenting states (avoiding pure aspirationalism). The three readings coexist in contemporary international law practice; different institutional actors invoke different readings in different contexts, producing ongoing contestation about what UDHR actually requires."
-  },
-  "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
-  },
-  "network": {
-    "affects_constraints": [
-      "aspirational_sovereignty_reading",
-      "binding_universalism_reading",
-      "iccpr_treaty_ratification_extraction",
-      "international_litigation_standing"
-    ],
-    "dual_formulation_note": "The udhr_authority kernel instantiates three constraint stories corresponding to three readings of whether UDHR authority derives from explicit consent (aspirational), inherent universal status (universalism), or state practice patterns (custom emergence). Each reading has distinct beneficiary structures, institutional authority grounding, and extraction profiles. They are linked through network.affects_constraints because acceptance of one reading influences which sibling readings remain viable. The customary-emergence reading (this story) directly influences the aspirational reading (by making non-consent legally irrelevant) and coexists with the binding_universalism reading (both claim UDHR binds all states, but via different mechanisms)."
+    "logic_rationale": "Extractiveness starts low (0.15) when UDHR is pure aspiration with no enforcement mechanism. It accumulates to 0.58 by 2025 as the customary-law reading gains institutional validation through case law, treaty interpretation, and scholarly consensus. The rate of increase is non-linear: slow until ~1985 (when international human rights courts become active), then steeper as institutional machinery formalizes opinio juris doctrine. Theater is deliberately kept moderate (0.31): the institutional apparatus for detecting customary law is real and functional, but it systematically privileges Western legal tradition and liberal-democratic evidence while marginalizing non-Western legal frameworks and dissenting state practice. Suppression starts low (0.18) because enforcement relies on normative pressure rather than coercive capacity, but increases to 0.42 as courts develop jurisdiction and sanction mechanisms. Accessibility collapse increases from 0.25 to 0.72 at the structural level because the customary-law reading eliminates the exit option of unilateral rejection—once opinio juris is established, no state can credibly claim UDHR norms are non-binding without losing international legal legitimacy. The leveled coercion grid shows this collapse is steepest at the structural level (72% at 2025) and smallest at the individual level (58%), because states retain nominal sovereignty (individual agents can theoretically exit), but institutional architecture makes exit costly.",
+    "perspectival_gap": "From the institutional and human-rights-advocate seat, the customary-emergence reading is genuine coordination: it stabilizes human rights as binding law, enabling collective enforcement and reducing free-riding. From the authoritarian and sovereignty-defender seats, the same reading is extraction: they did not consent to having UDHR norms become binding, and they bear the cost of compliance or international sanction. From the developing-state seat, it is partial extraction with complicity: they benefit from the human-rights norms but lose autonomy in defining what counts as 'opinio juris' and 'state practice'—the concept is adjudicated by Western institutions. The engine computes these divergences per seat from the structural data: the institutional seat's directionality is low (beneficiary), the authoritarian seat's is high (target), the developing seat's is moderate-to-high (partially constrained, partially coordinated). The authored claim of tangled_rope (real coordination + asymmetric extraction) reflects these multiple perspectives.",
+    "directionality_logic": "International legal institutions: powerful, institutional power atom, organized exit options (can shape the doctrine), beneficiary role → d ≈ 0.15 (low, near beneficiary end). Human rights advocates: organized, moderate-to-powerful power, mobile exit → beneficiary role, some structural power from institutional alignment → d ≈ 0.20. Authoritarian regimes: powerful nominal power, but identity-locked exit (cannot exit international law without losing legitimacy) → payer role → d ≈ 0.82 (high, near target end). Sovereignty defenders: organized, moderate power, constrained exit (losing rhetorical high ground) → payer role → d ≈ 0.65. Liberal democracies: institutional power, beneficiary with agenda-setter secondary role, mobile exit → d ≈ 0.08. Developing states: moderate power, trapped exit (excluded from adjudication, cannot ignore the reading) → excluded role → d ≈ 0.71. The directionality spread reflects the constraint's extractive asymmetry: targets are trapped or identity-locked, beneficiaries have mobile or arbitrage-grade exit.",
+    "mandatrophy_analysis": "The customary-emergence reading resolves mandatrophy by distinguishing the founding problem (how to make UDHR binding across states with diverse sovereignty interests) from the current state (UDHR is institutionally validated as customary law, creating binding obligation). The reading answers the foundational question: does the founding problem persist or has it been solved? This reading claims: solved through practice accumulation, but the solution created a new problem—institutional adjudication now gates what counts as state practice and opinio juris, creating extractive power. A mandatrophy reading would flip this: UDHR was meant to be universal moral guidance; it became institutionalized extraction. This constraint avoids false mandatrophy by acknowledging both the coordination (universal human rights binding) and the extraction (institution-mediated adjudication that privileges Western legal framework). The theater_ratio increase (0.08 → 0.31) signals growing performativity: institutional mechanisms elaborate without the underlying proof (opinio juris) becoming more transparent.",
+    "kernel_context": "This constraint instantiates the customary_emergence_reading of the UDHR authority kernel. The kernel is the contested claim: what authority does UDHR hold over states? The reading asserts UDHR evolved from aspiration to binding custom through state practice + opinio juris (customary international law doctrine). Sibling readings occupy different institutional seats: the aspirational_sovereignty_reading holds UDHR is moral guidance requiring explicit state consent; the binding_universalism_reading holds UDHR establishes justiciable individual rights enforceable by courts regardless of consent or practice. The customary-emergence reading sits between these: it claims binding status but derives it from state practice rather than universal abstract rights (differing from binding_universalism) and it claims binding status emerges without explicit consent (differing from aspirational_sovereignty). The reading's strategic advantage is that it grounds obligation in observable institutional behavior (state practice, opinio juris utterances) rather than contested philosophical premises, making it sound objective even though the selection of what evidence counts as opinio juris is itself normative."
   },
   "omegas": [
     {
-      "id": "opinio_juris_measurement_ambiguity",
-      "question": "What counts as evidence of opinio juris (belief that a practice is legally binding) versus mere state practice or diplomatic courtesy? Where is the threshold for 'widespread and consistent' practice?",
-      "resolution_mechanism": "International Court of Justice or International Tribunal for the Law of the Sea issues formal ruling specifying opinio juris criteria; comparative analysis of customary-law doctrine across jurisdictions; examination of state legislative debates and institutional records contemporaneous with practice.",
-      "impact": "A strict opinio juris standard would narrow what counts as binding custom, weakening the customary-emergence reading and supporting the aspirational reading. A lenient standard (treating tacit acceptance as evidence) strengthens the customary reading. The ambiguity is the strategic space where institutional actors declare customary status — high ambiguity = high institutional authority.",
+      "id": "opinio_juris_circularity",
+      "question": "Does 'opinio juris' (belief that practice is legally required) exist independently of institutional assertion, or is it constituted retroactively by institutional adjudication?",
+      "resolution_mechanism": "Examine historical records of state deliberations and private archives during periods before institutional courts began adjudicating UDHR as customary law. If opinio juris was genuinely present in state reasoning, evidence will show internal legal justifications; if absent, evidence will show opportunistic compliance citing external institutional pressure rather than internal legal belief.",
+      "impact": "If opinio juris is independently observable, the customary-emergence reading is structurally sound and extractiveness is moderate (0.58). If opinio juris is constituted retroactively by institutional assertion, the reading is largely extractive theater and extractiveness should be higher (0.70+); the constraint becomes closer to snare than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opinio juris exists independently or is constituted by institutional adjudication."
+    },
+    {
+      "id": "western_legal_tradition_bias",
+      "question": "Does the customary-law doctrine (state practice + opinio juris) systematically privilege Western legal frameworks and exclude non-Western legal traditions (Islamic, African, Asian relational law)?",
+      "resolution_mechanism": "Comparative analysis of how Western-state practice is weighted in opinio juris adjudication vs. non-Western-state practice. Examine international court citations: do they cite Western legal scholarship disproportionately? Do they recognize non-Western legal tradition as evidence of opinio juris?",
+      "impact": "If systematic bias is confirmed, the customary-emergence reading functions as cultural imperialism layered over coordination—extractiveness increases and beneficiaries shift to include Western institutional dominance. The theater_ratio rises as institutional procedures obscure the cultural-selection mechanism. Some developing states reclassify from payers to victims.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The measurement problem for customary law: how to distinguish binding commitment from diplomatic performance."
+      "description": "Whether the customary-law doctrine systematically privileges Western legal tradition."
     },
     {
-      "id": "founding_problem_status_contestation",
-      "question": "Did UDHR binding through custom solve a live institutional problem at each stage (1948→1966→1980→2000→2024), or did the problem atrophy while institutional practice persisted?",
-      "resolution_mechanism": "Historical analysis of treaty-negotiation records and institutional practice at each interval to establish whether the founding problem (inability to bind non-consenting states) remained pressing or became less urgent as explicit ICCPR and regional treaty frameworks expanded coverage.",
-      "impact": "If the problem atrophied, the reading risks mandatrophy: institutional custom-doctrine persisting as theater (enforcement activity divorced from the problem it was built to solve). If the problem remained live, customary-emergence remains justified coordination.",
-      "confidence": "medium",
+      "id": "persistence_of_dissent",
+      "question": "Does the persistent dissent of major powers (China, Russia, some Gulf states) against UDHR norms undermine the claim that opinio juris is universal, or does the doctrine accommodate localized dissent?",
+      "resolution_mechanism": "International legal doctrine explicitly addresses 'persistent objector' doctrine: states that consistently and publicly object to a customary norm are not bound by it. Track how international courts apply this doctrine to contemporary objectors: are they recognized as persistent objectors, or is their objection dismissed as illegitimate?",
+      "impact": "If persistent objectors are recognized, the customary-emergence reading becomes pluralistic and extractiveness remains moderate. If persistent objectors are delegitimized, the reading becomes universalist (closer to binding_universalism) and more extractive; the separation from the sibling reading collapses.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether customary-emergence doctrine addresses a live problem or institutional inertia."
+      "description": "Whether persistent dissent undermines customary-law status or is accommodated by doctrine."
     },
     {
-      "id": "reading_versus_fabrication",
-      "question": "Is the customary-emergence reading a faithful interpretation of UDHR's actual evolution, or a retroactive doctrine invented post-Cold-War to strengthen enforcement without reopening the UDHR text?",
-      "resolution_mechanism": "Comparative philology: examine 1948 drafting records (Preparatory Committee documents, delegate speeches) for explicit reference to customary-law doctrine; trace first appearance of 'customary law' language in UN GA resolutions, ICJ dicta, and academic work; determine whether the doctrine emerged organically from state practice or was strategically introduced by international institutions.",
-      "impact": "If the reading is a retroactive invention, the founding_problem narrative is inaccurate (the problem it claims to solve was not visible to UDHR architects). This supports the mandatrophy diagnosis: institutional apparatus persisting for a problem that never actually existed. If the reading faithfully reflects UDHR's design, the constraint remains justified coordination.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether customary-emergence is an interpretation or an invention."
-    },
-    {
-      "id": "identity_locked_individual_extraction",
-      "question": "Do individual rights claimants in non-ratifying states who invoke UDHR custom experience genuine protection or a broken promise? Does the reading liberate or trap them?",
-      "resolution_mechanism": "Comparative litigation study: track outcomes for individuals invoking UDHR-as-custom in non-ratifying states (domestic courts) versus explicit treaty states; measure success rates, enforcement mechanisms, and actual access to remedy; interview claimants and legal advocates on whether customary-status framing changes their practical situation.",
-      "impact": "If customary-status framing fails to improve material outcomes for powerless claimants (they still lack enforcement pathways in non-ratifying states), the reading's extraction of these groups becomes visible: the system claims to bind their oppressors through custom while providing no mechanism for actual remedy. This reframes the constraint as pure snare (coordination broken, extraction transparent). If customary status measurably improves outcomes (through international litigation, precedent cascade, or NGO leverage), it remains tangled rope.",
+      "id": "institutional_authority_circularity",
+      "question": "Do international legal institutions have authority to adjudicate customary-law status, or does that authority itself depend on accepting the customary-emergence reading as legitimate?",
+      "resolution_mechanism": "Examine the founding documents and jurisprudence of International Court of Justice and human rights courts. Do they ground their authority to adjudicate customary law in pre-existing legal framework, or do they ground it in the same practice-based doctrine they use to validate UDHR customary status?",
+      "impact": "If circular: institutions validate themselves through the same reading they use to validate UDHR—a bootstrapping problem that increases extractiveness toward 0.68+ and reclassifies the constraint as snare. If grounded in prior framework: the reading sits within broader jurisprudence and extractiveness remains 0.58.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether customary UDHR doctrine improves material outcomes for the powerless or remains theoretical."
+      "type_class": "conceptual",
+      "description": "Whether institutional authority to adjudicate customary law is circular or grounded in prior framework."
     },
     {
-      "id": "sibling_reading_containment",
-      "question": "Can the three UDHR readings (aspirational, binding universalism, custom emergence) coexist in a single institutional practice, or does institutional authority-hardening for one reading foreclose the others?",
-      "resolution_mechanism": "Track institutional language and doctrinal evolution across UN bodies, ICJ, and regional courts over the interval: do they selectively invoke different readings for different claim types, or does one reading progressively displace the others? Examine whether a state can defend itself using aspirational-reading language while facing enforcement via custom-emergence reasoning.",
-      "impact": "If coexistence is stable, the readings genuinely coexist (institutional pluralism). If one reading progressively forecloses the others through authority-hardening, the constraint's extraction increases as alternative interpretive positions become legally unavailable. This would strengthen mandatrophy risk: the custom-emergence reading itself becomes inertial apparatus if its alternatives are eliminated.",
-      "confidence": "low",
+      "id": "consent_as_implicit_vs_explicit",
+      "question": "This reading is a kernel reading of contested UDHR authority. Does the customary-emergence reading logically foreclose the aspirational_sovereignty_reading (which claims UDHR requires explicit consent)?",
+      "resolution_mechanism": "Examine whether a state can simultaneously hold both readings: (a) accept customary-law status as derived from their past practice (customary_emergence), and (b) maintain that only explicit consent makes norms binding (aspirational_sovereignty). If no state can coherently hold both in a single legal framework, the readings foreclose. If different states hold different readings without contradiction to their own logic, they coexist.",
+      "impact": "If forecloses: the reading is stronger (one interpretation must lose); if coexists: both remain live positions for different parties, creating ongoing interpretive contestation that preserves strategic space. The constraint's extractiveness depends partly on whether interpretive space remains: if foreclosed, extractiveness may rise as one interpretation becomes hegemonic; if coexisting, extractiveness plateaus as the battlefield remains contested.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "The stability of the three-reading kernel or its progressive collapse into a single dominant reading."
+      "description": "Whether the customary-emergence reading logically forecloses the aspirational-sovereignty reading within a single legal framework."
     }
   ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "udhr_authority__aspirational_sovereignty_reading",
+      "udhr_authority__binding_universalism_reading"
+    ],
+    "dual_formulation_note": "The UDHR authority kernel decomposes into three constraint stories, one per reading. Customary_emergence_reading (this story) shares the referent (what authority does UDHR hold?) with its siblings but instantiates a different structural claim (authority emerges from practice, not universal rights or explicit consent). Each sibling has different ε, different beneficiary/victim structure, and different institutional implications. Linked via affects_constraints; the customary-emergence reading influences both siblings by occupying institutional middle ground and creating pressure on each to either reinforce or reject the practice-based framing."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "international_legal_institutions",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
         "sibling_id": "aspirational_sovereignty_reading",
-        "relation": "forecloses"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "binding_universalism_reading",
-        "relation": "coexists_with"
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "authority_emerges_through_practice",
+        "atom": "consent_inferred_from_practice",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "non_consent_does_not_exclude",
+        "atom": "opinio_juris_determinable_institutionally",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "treaty_consent_primacy",
+    "reference_frame": "udhr_as_moral_aspiration",
     "drift_state": {
-      "moment": "post_cold_war_institutionalization",
-      "direction": "axiom_overriding",
+      "moment": "contemporary_institutional_validation",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

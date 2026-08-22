@@ -2,207 +2,302 @@
   "header": {
     "constraint_id": "catastrophe_memory_kernel__symbol_continuity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "69e8df5d-27b1-4987-89b7-36c2e3f3a06b"
+    "story_uid": "25357d6a-b36b-4bb6-8d00-ec906c7a32ba"
   },
   "base_properties": {
-    "extractiveness": 0.28,
-    "suppression": 0.15,
+    "extractiveness": 0.32,
+    "suppression": 0.18,
     "theater_ratio": 0.62,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.38,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.45,
     "claimed_type": "rope",
-    "human_readable": "Ritual Symbolic Continuity and Collective Identity Preservation",
-    "topic_domain": "religious/cultural/anthropological",
+    "human_readable": "Symbolic Continuity in Catastrophe Memory Ritual",
+    "topic_domain": "religious/cultural/memorial",
     "requires_active_enforcement": false,
     "beneficiaries": [
-      "tradition_continuity",
-      "collective_identity_keepers"
-    ],
-    "victims": [
-      "adaptive_modification_agents",
-      "pragmatic_rationalists"
+      "tradition_continuity_agents"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "tradition_continuity_agents",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Religious authorities, elders, and cultural transmitters who maintain ritual practice across generations. They benefit from ritual's capacity to carry forward collective memory and symbolic meaning without requiring participants to understand or endorse its literal historical claims. Their interest is in coherence and identifiability of the tradition itself, not in the survival competence or trauma-management dimensions."
+    },
+    {
+      "name": "ritual_participants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Members of the tradition who participate in memorial rituals (mourning practices, commemoration ceremonies, symbolic reenactments). They receive identity affirmation and connection to historical lineage through participation; they also bear the time cost and the constraints on adaptive modification of the ritual form. Their exit options are constrained by identity fusion — leaving the tradition means abandoning a constitutive aspect of self-definition."
+    },
+    {
+      "name": "adaptive_modification_advocates",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals within the tradition who seek to modify ritual practice to reflect changed circumstances, new understandings, or diverse participant needs. They experience the ritual's symbolic rigidity as a constraint: the necessity to preserve exact symbolic forms over time prevents adaptation that would serve current survival or trauma-processing needs. They are not outside the tradition but rather contesting the specific form this constraint takes."
+    },
+    {
+      "name": "younger_generation_transmittees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Young people raised within the tradition who inherit the obligation to perform and transmit the ritual forms without necessarily understanding their original survival or trauma-encoding functions. They bear the cost of rote transmission and memorization; their agency is bounded by the requirement that symbolic forms remain recognizable across generations. They lack power to reshape the ritual but are fully identity-locked to its continuance."
+    },
+    {
+      "name": "non_tradition_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Anthropologists, historians, religious scholars who study the constraint from outside the tradition. They observe how the symbolic continuity function operates, document the costs to adaptation, and measure the theater ratio—the proportion of ritual activity devoted to symbolic coherence versus functional survival transmission."
+    },
+    {
+      "name": "originating_catastrophe_context",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The historical event (persecution, genocide, displacement, etc.) that the ritual was constructed to memorialize and transmit. The catastrophe itself generates no voice; it is excluded by its pastness. But the reading of it through THIS constraint (symbolic continuity) differs sharply from sibling readings (survival competence, trauma encoding, boundary maintenance), each of which emphasizes different aspects of what the catastrophe left behind."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves collective identity and historical continuity by encoding catastrophe memory in symbolic forms that remain recognizable and transmissible across generations without requiring participants to re-experience or even fully understand the original trauma or survival pressures.",
+    "transfer_function": "Moves the burden of memory-preservation from the surviving generation (who experienced the catastrophe) to subsequent generations (who did not), encoded as symbolic obligation rather than adaptive responsibility. Participants receive identity affiliation in exchange for carrying forward ritual forms that became increasingly detached from their original survival or trauma-processing functions.",
+    "absent_voices": "The perspectives of those who died in the catastrophe (by definition absent); those from outside the tradition who might question whether symbolic preservation is the optimal use of collective resources; younger generations who might propose ritual modifications to fit contemporary needs. Also absent: non-ritual alternatives for identity continuity and memory preservation that might require less performative overhead.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished—if ritual forms were no longer required to maintain symbolic continuity—the tradition would undergo visible restructuring. Participants would face either explicit dissolution of the tradition (world_rearranges via abandonment), or rapid evolution of memorial forms to fit contemporary contexts and participant needs (world_rearranges via adaptation). The constraint's persistence depends on participants accepting symbolic rigidity as a necessary price for tradition-identity.",
+    "founding_problem": "Catastrophe occurred; survivors needed means to transmit the event's significance to descendants who did not experience it directly, in forms that would remain stable and recognizable across time and geographic dispersal, so that the collective identity of 'people who survived/endured this' would persist across generations.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Tradition authorities attest the founding problem is live: without ritual continuity, the tradition would dissolve and identity would fragment. Adaptive-modification advocates attest the founding problem's survival-continuity and trauma-encoding aspects are solved or diminished (descendants are far from the catastrophe now; survival pressures change), but the symbolic continuity problem persists. Non-tradition observers document that the founding problem was empirically real for the surviving generation but note the current operation of the constraint shows high theater_ratio and low extractiveness, suggesting symbolic function now dominates the original survival/trauma functions."
   },
   "interval": {
     "start": 0,
-    "end": 70
+    "end": 100
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.22
+      "time_point": 12,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.26
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.29
+      "time_point": 37,
+      "value": 0.3,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 50,
-      "value": 0.28
+      "value": 0.33,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 60,
-      "value": 0.27
+      "time_point": 62,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 70,
-      "value": 0.28
+      "time_point": 75,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.52
+      "time_point": 12,
+      "value": 0.5,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.56
+      "time_point": 25,
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.63
+      "time_point": 37,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 50,
-      "value": 0.65
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.63
+      "time_point": 62,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 70,
-      "value": 0.62
+      "time_point": 75,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.08
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.1
+      "time_point": 12,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.12
+      "time_point": 25,
+      "value": 0.2,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.14
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.16
+      "time_point": 37,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 50,
-      "value": 0.17
+      "value": 0.16,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 60,
-      "value": 0.15
+      "time_point": 62,
+      "value": 0.17,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 70,
-      "value": 0.15
+      "time_point": 75,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.18,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "Among surviving groups that have endured catastrophe (genocide, persecution, exile), ritual crystallizes as a mechanism for preserving collective identity and symbolic continuity across generations. This reading frames ritual as a SYMBOLIC TRANSMISSION CONSTRAINT, not primarily a survival-encoding device or boundary-enforcement mechanism (those are sibling readings). The constraint coordinates on maintaining a fixed ritual form whose symbolic meaning — 'we are still this people, descended from the catastrophe-survivors' — is the point. Extractiveness is LOW because the constraint's primary function is meaning-preservation, not resource transfer; but a real cost accrues to those whose lived reality diverges from the ritual's embedded premises and who cannot modify it without identity expulsion.",
+    "narrative_context": "This constraint is ONE READING of the catastrophe_memory_kernel. The kernel is a stabilized commitment to ritual practice as the primary mechanism for transmitting catastrophe memory across generations. This reading emphasizes the symbolic continuity function: ritual preserves collective identity through recognizable, invariant symbolic forms that persist across time and dispersal. Other readings of the same kernel emphasize different functions the ritual serves—survival competence transmission (sibling: survival_competence_reading), intergenerational trauma encoding as warning system (sibling: trauma_encoding_reading), and group boundary maintenance through shared mourning practice (sibling: boundary_maintenance_reading). Each reading identifies different beneficiaries, different cost-bearers, and different structural dangers. This reading treats the symbolic continuity function as primary and measures its operation as low-extractiveness coordination with moderate theater ratio—suggesting the constraint operates increasingly as performance and identity-affirmation rather than as functional transmission of survival or trauma-processing wisdom.",
     "key_agents": [
-      "Tradition-continuity keepers: ritual specialists and authorities who maintain exact ritual forms, identity-locked to the practice",
-      "Collective identity keepers: community members for whom the ritual anchors group identity, also identity-locked",
-      "Adaptive modification agents: those who see ritual as functionally outdated but constrained from modifying it",
-      "Pragmatic rationalists: those who recognize the ritual's original survival function but argue its contemporary symbolic rigidity costs adaptive capacity",
-      "Younger generation: experiencing the ritual as both identity-anchor and lived-reality mismatch",
-      "External observers: anthropologists and scholars measuring symbolic function without participating"
+      "tradition_continuity_agents: Benefit from ritual's capacity to carry forward collective memory and symbolic identity without requiring functional survival yield; have power to set and enforce ritual standards.",
+      "ritual_participants: Identity-locked; receive affirmation from participation but bear time costs and adaptive-modification constraints.",
+      "adaptive_modification_advocates: Also identity-locked; experience the constraint as rigidity preventing responsive evolution of ritual forms.",
+      "younger_generation_transmittees: Powerless within the tradition; inherit obligation to perform forms without understanding their original survival or trauma functions.",
+      "non_tradition_observers: Analytical seat; measure how theater_ratio increases over time as distance from the catastrophe grows."
     ],
-    "logic_rationale": "Extractiveness is modest (0.28 endpoint) because the constraint's primary function is symbolic coordination, not wealth transfer or operational extraction. The low suppression (0.15) reflects that identity-fusion is the binding mechanism, not overt coercion — members are willing participants in most cases, even when experiencing cognitive dissonance. Theater ratio is high and rising (0.48→0.62 over the interval) because as the founding problem (post-catastrophe identity-dissolution) becomes historically distant, the ritual's function shifts from adaptive necessity to performance of continuity. The measurement series shows a classic pattern of a constraint whose original problem has substantially solved: extractiveness plateaus after generation-30 (roughly one lifetime), theater rises as the symbolic meaning increasingly becomes performative rather than operationally necessary, and suppression requirement gradually increases as younger members experience more mismatch between the ritual form and their lived reality. The rise and partial plateau of theater around time-40 reflects the point at which the constraint's original functional crisis is fully historical, and the ritual becomes primarily about meaning-transmission rather than group-survival. The slight decline in theater after time-50 reflects some community adaptation and ritualized revision (maintaining the form while reinterpreting embedded meanings), showing that the constraint is neither perfectly rigid nor completely dissolved.",
-    "perspectival_gap": "The tradition-continuity keepers experience this as ROPE — genuine coordination solving a real collective-action problem (meaning preservation requires shared form). The adaptive-modification agents experience it as TANGLED ROPE or low-grade SNARE — they recognize the coordination function but perceive the cost of rigidity as exceeding the benefit of continuity, and they lack exit options or modification authority. The younger generation sits between: they experience the symbolic benefit (identity anchor) and the cost (lived-reality mismatch) simultaneously, and the constraint's structure prevents them from resolving the tension through adaptation. The engine computes per-seat classification from the structural data: powerful organized tradition-keepers with arbitrage-grade exit (can move to stricter communities if reform threatens) compute as beneficiary-directed; moderate adaptive-modification agents with identity-locked exit compute as target-directed. The divergence is the core analytical finding — the same constraint reads entirely differently from different seated positions.",
-    "directionality_logic": "Tradition-continuity keepers: power=organized, exit=identity_locked but with arbitrage-grade escape (join stricter communities, become conservative leaders). They are agenda-setters and beneficiaries. Directionality should derive near beneficiary-end (0.1-0.3 range) — they control the constraint, they benefit from its symbolic function, and they have exit if it becomes too heterodox. Adaptive-modification agents: power=moderate, exit=identity_locked (no arbitrage — leaving the community means identity expulsion). They are payers. Directionality should derive near target-end (0.6-0.8 range) — they bear the cost of cognitive dissonance, they lack modification authority, and their only exit is abandonment. Collective identity keepers: power=organized but diffuse (many, not concentrated), exit=identity_locked (genuine, not arbitrage). They experience genuine benefit from the symbolic coordination (the ritual DOES anchor their identity). Directionality near symmetric (0.4-0.6) — they are neither targets nor pure beneficiaries; they are coordinated members who also pay the cost of rigidity. No overrides needed; the structural derivation captures the actual relationships.",
-    "mandatrophy_analysis": "The founding problem (post-catastrophe identity-dissolution) is DEAD or substantially solved. Seventy years on, the group's identity is stable, reproduced through family and education and diaspora networks, not dependent on the ritual's symbolic rigidity. The ritual persists because it is now PERFORMANCE of continuity rather than NECESSITY for survival. The constraint does not show full mandatrophy characteristics (it is not completely inert, theater ratio is high but not dominant, some functional residue remains) but it shows PARTIAL MANDATE OBSOLESCENCE — the problem it was built for is historical, and the cost of maintaining it (suppression of adaptive modification, identity costs for those whose reality diverges) is increasingly borne by those without power to revise it. The theater-ratio rise over time is the key signal: when performance becomes more of the constraint's activity than actual coordination, the mandate is atrophying. The slight plateau and minor decline in theater after time-50 suggests some degree of adaptive recalibration within the tradition-keeping community — reinterpretation of the ritual's meaning without changing its form, a kind of invisible modification that allows younger members to find contemporary resonance in the ancient practice.",
-    "kernel_context": "This constraint is ONE READING of the catastrophe_memory_kernel — a contested set of claims about what rituals DO in communities that have endured catastrophe. The kernel is the persisting commitment: 'ritual serves an essential function for communities surviving catastrophe and transmitting identity across generations.' The four readings decompose this kernel into structurally distinct claims: SYMBOL_CONTINUITY_READING (this one) frames the essential function as SYMBOLIC TRANSMISSION of identity ('we are still this people'). SURVIVAL_COMPETENCE_READING frames it as encoding adaptive survival tactics for persecution. TRAUMA_ENCODING_READING frames it as intergenerational warning system about catastrophe-patterns. BOUNDARY_MAINTENANCE_READING frames it as enforcement of group boundaries through shared mourning-practice. These readings have different ε values, different beneficiary/victim structures, different time horizons, and different classification paths. This reading's ε is LOW (0.28) because it foregrounds symbolic function without operational extraction; the survival-competence reading would have HIGHER ε because it foregrounds operational encoding with potential for coercion; the trauma-encoding reading would have DIFFERENT ε because trauma-warning extracts cost from denial-coping; the boundary-maintenance reading would have DIFFERENT ε because boundary enforcement extracts from those who don't conform. They are NOT the same constraint with different interpretations — they are different constraints that happen to ride on the same ritual practice."
+    "logic_rationale": "Extractiveness is low (0.32) because the constraint does not concentrate gains on a specific beneficiary seat; rather, it operates as identity-maintenance for the tradition itself. Beneficiary is the abstraction 'tradition_continuity_agents'—not a unified actor collecting rent, but a distributed function of preservation. Suppression is also low (0.18) because ritual participation is identity-locked (participants WANT to participate; they see it as constitutive of self) rather than coerced. Theater_ratio rises over time (0.45 → 0.62) as historical distance from the catastrophe increases: early generations needed to transmit functional trauma wisdom and survival strategy; later generations increasingly perform the ritual as symbolic affirmation with diminishing functional content. This trajectory is NOT a classification signal (the engine decides type); it is measurement of what is descriptively true: the constraint increasingly operates as theater rather than as transmission of adaptive capacity. The time grid is shared across all three metrics: each metric has a value at every time point examined (interval 0–100, measurements at 0, 12, 25, 37, 50, 62, 75, 100), preventing the OQ-105-style misalignment that dated transitions early.",
+    "perspectival_gap": "Tradition authorities and younger transmittees would compute differently from adaptive-modification advocates. For authorities and loyalists, the constraint is pure coordination—the shared commitment to recognizable symbolic form IS what holds the tradition together; they experience low extraction because the shared commitment is voluntary (identity-locked, not identity-violated). For adaptive advocates, the constraint is partially extractive: it forces them to choose between maintaining identity (by conforming to rigid forms) or modifying practice (by accepting exile from the tradition). The engine computes both seats from the structural data: beneficiary/victim declarations, power atoms, exit_options. The authored claim (rope) reflects the authority seat; the authored metrics (low extraction, high theater, rising over time) reflect the measurement of the constraint's actual operation across all seats.",
+    "directionality_logic": "Tradition-continuity itself is listed as beneficiary (not an agent, but the function that benefits). The actual agent-beneficiaries are the continuity authorities who maintain the tradition's coherence and identity-appeal. Ritual_participants are both beneficiaries (they receive identity affirmation) and payers (they bear time costs and modification-constraints); this dual position is captured by the secondary_role=payer in the stakeholder entry. Adaptive_modification_advocates and younger_generation_transmittees are pure payers: they bear costs (ritual rigidity, identity-lock, foreclosed alternatives) without collecting. The identity_locked exit option is key: it means participants cannot simply leave; exit would require abandoning a constitutive part of identity. This makes them structurally bound to the constraint even when they experience it as costly. Directionality derivation: tradition authorities sit near d=0.3 (moderate beneficiary, some collection); ritual_participants sit near d=0.5 (benefits offset costs); adaptive_advocates sit near d=0.65 (costs exceed benefits but identity-lock prevents exit); younger_generation sits near d=0.8 (pure cost, powerless, identity-locked). The constraint operates differently for each seat.",
+    "mandatrophy_analysis": "The founding problem (transmit catastrophe significance to descendants who did not experience it) was originally solved by ritual's dual function: (1) encode survival strategies and trauma lessons (functional) + (2) preserve symbolic continuity (identity). As generations accumulate distance from the catastrophe, the functional content attenuates—younger generations lack the survival pressures the ritual originally encoded, and they rely on it more for identity affirmation than for adaptive wisdom. The measurement series shows extractiveness rising modestly (0.18 → 0.33 peak → 0.32 stable) and theater_ratio rising sharply (0.45 → 0.62). This suggests the constraint's mandate (transmission of functional catastrophe knowledge) has partially died; the constraint persists as a theater of identity rather than as a transmission mechanism. However, the new mandate is stable and shared: symbolic continuity IS what the constraint now does, and it does it successfully. This is not classic mandatrophy (a constraint persisting for a dead reason with no new function) but rather mandate-shift: the original reason (functional transmission) has diminished, but a secondary reason (symbolic identity continuity) has become primary and is now the real justification. The constraint resolves as a rope—genuine coordination for that new mandate—not as a piton. The measurement trajectory is the key evidence: theater_ratio stabilizes at 0.62 (performance is the function, not a side effect), and extractiveness flatlines (no concentration of benefit, just identity-maintenance).",
+    "kernel_context": "This constraint instantiates the symbol_continuity_reading of the catastrophe_memory_kernel. The kernel is the commitment to ritual practice as the primary mechanism for transmitting catastrophe memory. Sibling readings instantiate different structural interpretations of what the ritual does: survival_competence_reading emphasizes the ritual's encoding of adaptive strategies for persecution-survival (high functional extractiveness when survival pressures persist); trauma_encoding_reading emphasizes the ritual's role as a warning system for intergenerational trauma (high stakes around preventing trauma-blindness); boundary_maintenance_reading emphasizes the ritual's enforcement of group identity through shared mourning practice (extractiveness from those who refuse to mourn or who mourn differently). This reading treats symbolic continuity as PRIMARY: the ritual's function is to preserve the fact of 'we are the people who endured this catastrophe' across generations, in forms that remain recognizable even as participants change and catastrophe recedes into history. The reading acknowledges that other functions (survival, trauma, boundary) exist BUT are secondary to the continuity function in this framing."
   },
   "omegas": [
     {
-      "id": "symbolic_necessity_vs_inertia",
-      "question": "Is the ritual's symbolic continuity function genuinely necessary for collective identity preservation, or is the identity now self-sustaining through other mechanisms and the ritual's symbolic claim is inertia?",
-      "resolution_mechanism": "Ethnographic study of communities that have substantially modified or abandoned the ritual: does their collective identity fragment or adapt? Do they develop new symbolic forms? Do younger members report weaker sense of group continuity or do they construct new anchors?",
-      "impact": "If symbolic continuity is genuinely necessary, the constraint is ROPE with real coordination function. If identity is self-sustaining and the ritual is theatrical residue, the constraint is PITON with performative maintenance covering mandate obsolescence.",
+      "id": "functional_content_preservation",
+      "question": "As generations accumulate distance from the catastrophe, do ritual forms retain and transmit the original survival-competence and trauma-wisdom they were built to encode, or do they increasingly operate as symbolic performance detached from functional content?",
+      "resolution_mechanism": "Comparative study of ritual participants' ability to explain the survival or trauma-management function of specific ritual elements: early generations should articulate specific adaptive strategies encoded; later generations should increasingly describe symbolic meaning divorced from functional purpose. Pre/post surveys on knowledge retention of original catastrophe context.",
+      "impact": "If functional content is retained: the constraint remains primarily functional coordination, and the rising theater_ratio reflects measurement opacity, not actual mandate drift. If functional content attenuates: the constraint transitions from functional transmission to symbolic continuity maintenance; the theater_ratio reflects real shift in what the constraint does. This bears on whether mandate has shifted or died.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the ritual's symbolic function is operationally necessary or primarily performative maintenance."
+      "description": "Whether rising theater ratio reflects real mandate shift or measurement artifact"
     },
     {
-      "id": "identity_lock_internalization_vs_structural",
-      "question": "Is the identity-lock binding agents to the ritual internalized (they have come to believe they SHOULD maintain it even when it costs them) or structurally coercive (they are afraid of expulsion if they don't)?",
-      "resolution_mechanism": "Longitudinal study of those who leave the community: do they maintain ritual practice in private? Do they express relief at abandonment or guilty conflict? Interview younger members about how they experience the permission/prohibition structure.",
-      "impact": "If internalized, suppression is higher than the raw structural measure suggests — the constraint has colonized its targets' own judgment. If structural, the constraint might be loosened by removing expulsion threats. The distinction determines whether de-enforcement of the constraint would feel like liberation or identity-loss to participants.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether identity-lock suppression is internalized or structurally coercive."
-    },
-    {
-      "id": "ritual_decomposition_possibility",
-      "question": "Can the ritual be decomposed into the symbolic-transmission function (which operates via fixed form) and the survival-encoding function (which might operate via adaptive form), such that each can be carried independently?",
-      "resolution_mechanism": "Comparative study of related traditions: do all catastrophe-surviving communities maintain ritual rigidity, or do some maintain meaning-transmission through flexible forms while encoding survival competence through separate mechanisms?",
-      "impact": "If decomposable, the constraint is unnecessary — symbolic continuity could be carried by adapted ritual and survival-encoding by explicit teaching. If inseparable, the fixed form is genuinely necessary. This determines whether the constraint is rent-seeking or coordination.",
+      "id": "alternative_identity_substrates",
+      "question": "Is symbolic continuity through ritual the only viable substrate for maintaining collective identity across generations, or could alternative mechanisms (narrative history, written archives, secular commemoration, institutional memory) serve the same identity-preservation function with lower theater_ratio and higher adaptive flexibility?",
+      "resolution_mechanism": "Natural experiment from traditions that shifted from ritual-dominant to narrative-dominant or hybrid identity preservation; ethnographic comparison of identity-maintenance costs and effectiveness across mechanism types.",
+      "impact": "If alternatives are functionally equivalent: the constraint's persistence rests on path dependence and identity-fusion rather than on functional necessity, which would reclassify it toward snare or piton. If symbolic ritual is genuinely superior for identity-persistence: the low extractiveness and high theater justify the constraint as a legitimate coordination mechanism for a real problem. The answer also bears on whether adaptive modification is actually costly (forces choice between fidelity and relevance) or is available without identity-loss.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether symbolic-transmission rigidity is structurally necessary or merely traditional."
+      "description": "Whether ritual-based symbolic continuity is structurally necessary or alternatively substitutable"
     },
     {
-      "id": "sibling_reading_empirical_status",
-      "question": "Which of the sibling readings (survival_competence, trauma_encoding, boundary_maintenance) actually operationalizes in this community's lived practice? Are they co-present in the ritual or genuinely distinct?",
-      "resolution_mechanism": "Ethnographic interviews asking practitioners: what does the ritual DO for you? Why do you maintain it? What happens if you modify it? Code responses by the reading categories (identity-transmission vs. survival-encoding vs. trauma-warning vs. boundary-enforcement). Measure whether practitioners mention one dominant function or multiple co-present functions.",
-      "impact": "If multiple readings co-operationalize in the same ritual, the four stories represent one constraint's multiple functions, not a genuine kernel decomposition. If practitioners clearly identify one primary function (symbol-transmission for some, survival-encoding for others, trauma-warning for a third subset), the kernel genuinely decomposes and the four readings are separable constraints.",
+      "id": "reading_foreclosure_test",
+      "question": "Does this symbol_continuity_reading logically foreclose the other three sibling readings (survival_competence, trauma_encoding, boundary_maintenance), or can multiple readings coexist in the same tradition?",
+      "resolution_mechanism": "Analysis of whether a tradition can simultaneously maintain the ritual as functional survival-competence transmission AND as symbolic continuity AND as boundary-maintenance AND as trauma-warning system. If single traditions do both, the readings coexist; if different traditions specialize, they may foreclose each other at the institutional level.",
+      "impact": "If coexistence: reading_relations are coexists_with (different parties hold different readings; none rules out the others). If foreclosure: symbol_continuity_reading forecloses survival_competence (you cannot simultaneously treat the ritual as encoding practical survival strategy AND as purely symbolic identity-marker). The kernel structure depends on this answer.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's core premise logically rules out the sibling readings' premises"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.18) structural (external barriers enforcing ritual participation—social ostracism, institutional pressure) or internalized (participants enforce the constraint on themselves because they have fused identity with ritual form)?",
+      "resolution_mechanism": "Post-exit trajectory: if individuals who leave the tradition report that suppression persists (felt obligation to perform, internal guilt, identity fragmentation), the suppression is partially internalized. If suppression drops sharply upon exit, it is structural.",
+      "impact": "If internalized: the constraint is more extractive than the 0.18 measure suggests—participants carry the suppression with them even when external enforcement is removed. Identity-lock would then operate as an internalized suppressant, and the constraint would be reclassified toward snare. If structural: the low suppression is accurate, and participants maintain the constraint voluntarily because they genuinely benefit from it (identity affirmation).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the sibling readings represent genuinely distinct constraint-functions or co-present operations of one multi-function constraint."
+      "description": "Whether suppression is structural or internalized by identity-fusion"
+    },
+    {
+      "id": "kernel_vs_reading_interpretation",
+      "question": "Is the catastrophe_memory_kernel itself determinate (does it specify one correct reading, or does it genuinely admit multiple equally valid readings)?",
+      "resolution_mechanism": "Analysis of the kernel's codification (text, doctrine, practice history): does it explicitly mandate symbolic continuity as primary, or does it leave the primary function open to interpretation?",
+      "impact": "If the kernel is determinate (specifies symbol_continuity as primary): the sibling readings are misreadings or heterodox interpretations, and this reading forecloses them. If the kernel is indeterminate: the readings are all legitimate hermeneutical moves, and they coexist. This bears on the cs_structure.reading_relations field and on whether the constraint is a straightforward rope or a contested commitment system.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the catastrophe_memory_kernel determines one correct reading or admits multiple"
     }
   ],
   "boltzmann": {
@@ -215,57 +310,66 @@
       "catastrophe_memory_kernel__trauma_encoding_reading",
       "catastrophe_memory_kernel__boundary_maintenance_reading"
     ],
-    "dual_formulation_note": "This constraint is one of four readings of the catastrophe_memory_kernel — a persisting institutional commitment ('ritual serves catastrophe-surviving communities') that different communities interpret structurally differently. Symbol_continuity_reading foregrounds identity-transmission and has low extractiveness; survival_competence_reading foregrounds operational encoding and has moderate extractiveness; trauma_encoding_reading foregrounds intergenerational warning and has different victim structure; boundary_maintenance_reading foregrounds enforcement and has high suppression. Each reading has its own ε, beneficiary/victim structure, and classification. All four affect one another because they share the same ritual practice — modifying the ritual on survival-competence grounds would alter its symbolic-continuity function; enforcing it for boundary maintenance would constrain its trauma-encoding potential. The four stories are linked by network.affects_constraints to enable contamination propagation analysis."
+    "dual_formulation_note": "The catastrophe_memory_kernel decomposes into four constraint stories, each instantiating a different reading of what ritual does in preserving catastrophe memory. The kernel itself is indeterminate—it does not privilege one reading over the others—and so the four readings coexist as competing interpretations held by different parties within and across traditions. This story is the symbol_continuity_reading; it is linked to the three sibling readings via network.affects_constraints. Each reading has its own ε value (low for symbol_continuity, higher for survival_competence and trauma_encoding), its own beneficiary/victim structure, and its own type classification. The readings are NOT one constraint measured four ways; they are four structurally distinct constraints grounded in a shared kernel."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.78
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_kernel__survival_competence_reading",
+        "sibling_id": "survival_competence_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__trauma_encoding_reading",
+        "sibling_id": "trauma_encoding_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_kernel__boundary_maintenance_reading",
-        "relation": "influences"
+        "sibling_id": "boundary_maintenance_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "symbolic_continuity_is_identity",
+        "atom": "symbolic_form_invariance_constitutive",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "ritual_form_stability_as_sacred_duty",
-        "role": "secondary",
+        "atom": "identity_persistence_through_ritual_continuity",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "post_catastrophe_identity_crystallization",
+    "reference_frame": "ritual_forms_transmit_catastrophe_identity",
     "drift_state": {
-      "moment": "contemporary_post_collective_trauma",
+      "moment": "contemporary_distant_generation",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

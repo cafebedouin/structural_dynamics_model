@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,11 +39,18 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +75,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: doomsday_clock_metric__objective_index_reading
- *   human_readable: Doomsday Clock as Objective Risk Index
+ *   human_readable: Doomsday Clock as Objective Risk Index (Expert Authority Reading)
  *   domain: science_communication/normative_epistemology/risk_governance
  *
  * SUMMARY:
- *   The Doomsday Clock is a symbolic representation of global existential
- *   risk, maintained by a committee of expert scientists who annually adjust
- *   the Clock's hand position based on their synthesis of empirical
- *   indicators across nuclear, biological, climate, and artificial
- *   intelligence domains. This constraint story instantiates the
- *   OBJECTIVE_INDEX_READING: a framework that treats the Clock's setting as a
- *   legitimate technical measure of measurable existential risk, grounded in
- *   empirical synthesis and expert judgment. Under this reading, the Clock
- *   translates diverse scientific data into actionable global risk signals.
- *   However, this reading suppresses normative deliberation about what should
- *   count as existential risk, which communities' knowledge systems are
- *   legitimate in that assessment, and how democratic publics should
- *   participate in existential-risk governance. The constraint extracted from
- *   this reading is not the Clock's symbolic power itself, but the
- *   institutional monopoly on existential-risk framing that the Clock
- *   operationalizes and legitimates.
+ *   The Doomsday Clock, maintained by the Bulletin of the Atomic Scientists,
+ *   presents itself as an objective index of existential risk levels,
+ *   updating annually based on expert synthesis of empirical indicators
+ *   (nuclear stockpile size, weapons deployment posture, climate metrics,
+ *   biosecurity development, AI capabilities). This reading instantiates the
+ *   objective-index framing: the Clock measures what it claims to
+ *   measure—global existential threat—through verifiable expert assessment.
+ *   The constraint operates as a tangled rope: it coordinates expert judgment
+ *   on fragmented threat domains (real coordination function), but in doing
+ *   so it transfers interpretive authority over existential-risk baselines
+ *   from democratic deliberation to expert monopoly, suppressing alternative
+ *   framings by claiming objectivity. The measurement series runs across 77
+ *   years, capturing rising theater_ratio (performative maintenance
+ *   increasing as the founding problem becomes less acute) and rising
+ *   suppression_requirement (the effort to exclude alternative risk framings
+ *   has intensified as the constraint's normative character became more
+ *   visible).
  *
  * KEY AGENTS:
- *   - Doomsday Clock setting committee: institutional agenda-setter, interprets indicators, holds authority over annual decision
- *   - Expert risk assessment authority (nuclear physicists, biosecurity, AI safety, climate science): institutional beneficiary, gains legitimacy and influence from Clock's operationalization
- *   - Democratic public accountability: victim, powerless, identity-locked to expert frames, loses participatory voice in risk governance
- *   - Alternative risk framings (social, economic, civilizational): victim, constrained, excluded from Clock synthesis
- *   - Policy stakeholders (governments, foundations): dual-positioned, benefit from Clock legitimacy but constrained by Clock's judgment
- *   - Dissenting expert voices: excluded, structurally barred from alternative Clock setting despite having expertise
- *   - Scientific integrity observers: analytical seat, can monitor but not alter the constraint
+ *   - Atomic Scientists' Collective: agenda-setter, maintains Clock mechanism and annual update process
+ *   - Scientific Authority (institutional): beneficiary, derives legitimacy and policy influence from Clock's objective-index authority
+ *   - Democratic Accountability Structures: payer, constrained from redefining risk baselines
+ *   - Non-Expert Public: payer, trapped—absorbs Clock readings as fact, cannot contest measurement claims
+ *   - Alternative Risk Framings: excluded, identity-locked—philosophical and social-science perspectives structurally outside the measurement process
+ *   - Policy-Makers (state-level): observer/secondary payer, benefit from outsourced risk authority but are constrained by Clock's readings
  */
 
 /* ==========================================================================
@@ -105,56 +113,113 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(doomsday_clock_metric__objective_index_reading, 0.68).
 domain_priors:suppression_score(doomsday_clock_metric__objective_index_reading, 0.79).
-domain_priors:theater_ratio(doomsday_clock_metric__objective_index_reading, 0.22).
+domain_priors:theater_ratio(doomsday_clock_metric__objective_index_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, extractiveness, 0.68).
 narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, suppression_requirement, 0.79).
-narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, theater_ratio, 0.22).
+narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, accessibility_collapse, 0.61).
 narrative_ontology:constraint_metric(doomsday_clock_metric__objective_index_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(doomsday_clock_metric__objective_index_reading, tangled_rope).
-narrative_ontology:human_readable(doomsday_clock_metric__objective_index_reading, "Doomsday Clock as Objective Risk Index").
+narrative_ontology:human_readable(doomsday_clock_metric__objective_index_reading, "Doomsday Clock as Objective Risk Index (Expert Authority Reading)").
 narrative_ontology:topic_domain(doomsday_clock_metric__objective_index_reading, "science_communication/normative_epistemology/risk_governance").
 
 domain_priors:requires_active_enforcement(doomsday_clock_metric__objective_index_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(doomsday_clock_metric__objective_index_reading, '00f47331-81dc-4ebd-80b7-8cbd995a56e6').
-narrative_ontology:cs_kernel_codification('00f47331-81dc-4ebd-80b7-8cbd995a56e6', fixed_text).
-narrative_ontology:cs_authority_grounding('00f47331-81dc-4ebd-80b7-8cbd995a56e6', expertise).
-narrative_ontology:cs_interpretation_layer_present('00f47331-81dc-4ebd-80b7-8cbd995a56e6').
-narrative_ontology:cs_reading_relation('00f47331-81dc-4ebd-80b7-8cbd995a56e6', doomsday_clock_metric__hybrid_legitimacy_reading, forecloses).
-narrative_ontology:cs_reading_relation('00f47331-81dc-4ebd-80b7-8cbd995a56e6', doomsday_clock_metric__performative_tool_reading, coexists_with).
-narrative_ontology:cs_axiom('00f47331-81dc-4ebd-80b7-8cbd995a56e6', foundational, existential_risk_measurable_empirically).
-narrative_ontology:cs_axiom_status(existential_risk_measurable_empirically, holdable).
-narrative_ontology:cs_axiom_grounding('00f47331-81dc-4ebd-80b7-8cbd995a56e6', existential_risk_measurable_empirically, empirically_contingent).
-narrative_ontology:cs_axiom('00f47331-81dc-4ebd-80b7-8cbd995a56e6', foundational, expert_synthesis_sufficient_for_governance).
-narrative_ontology:cs_axiom_status(expert_synthesis_sufficient_for_governance, holdable).
-narrative_ontology:cs_axiom_grounding('00f47331-81dc-4ebd-80b7-8cbd995a56e6', expert_synthesis_sufficient_for_governance, deontological).
-narrative_ontology:cs_reference_frame('00f47331-81dc-4ebd-80b7-8cbd995a56e6', expert_scientific_consensus_on_global_risk).
-narrative_ontology:cs_drift_state('00f47331-81dc-4ebd-80b7-8cbd995a56e6', contemporary_expanded_risk_domain_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('00f47331-81dc-4ebd-80b7-8cbd995a56e6', '').
+narrative_ontology:cs_story_uid(doomsday_clock_metric__objective_index_reading, 'd7c9d67d-133b-450a-8710-042f4a4ca177').
+narrative_ontology:cs_kernel_codification('d7c9d67d-133b-450a-8710-042f4a4ca177', formalized).
+narrative_ontology:cs_authority_grounding('d7c9d67d-133b-450a-8710-042f4a4ca177', expertise).
+narrative_ontology:cs_interpretation_layer_present('d7c9d67d-133b-450a-8710-042f4a4ca177').
+narrative_ontology:cs_reading_relation('d7c9d67d-133b-450a-8710-042f4a4ca177', doomsday_clock_metric__hybrid_legitimacy_reading, forecloses).
+narrative_ontology:cs_reading_relation('d7c9d67d-133b-450a-8710-042f4a4ca177', doomsday_clock_metric__performative_tool_reading, influences).
+narrative_ontology:cs_axiom('d7c9d67d-133b-450a-8710-042f4a4ca177', foundational, existential_risk_empirically_measurable).
+narrative_ontology:cs_axiom_status(existential_risk_empirically_measurable, holdable).
+narrative_ontology:cs_axiom_grounding('d7c9d67d-133b-450a-8710-042f4a4ca177', existential_risk_empirically_measurable, empirically_contingent).
+narrative_ontology:cs_axiom('d7c9d67d-133b-450a-8710-042f4a4ca177', foundational, measurement_normatively_neutral).
+narrative_ontology:cs_axiom_status(measurement_normatively_neutral, holdable).
+narrative_ontology:cs_axiom_grounding('d7c9d67d-133b-450a-8710-042f4a4ca177', measurement_normatively_neutral, deontological).
+narrative_ontology:cs_reference_frame('d7c9d67d-133b-450a-8710-042f4a4ca177', expert_measurement_of_physical_threat_parameters).
+narrative_ontology:cs_drift_state('d7c9d67d-133b-450a-8710-042f4a4ca177', contemporary_visibility_of_normativity, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('d7c9d67d-133b-450a-8710-042f4a4ca177', '').
 narrative_ontology:cs_kernel_id(doomsday_clock_metric__objective_index_reading, doomsday_clock_metric).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(doomsday_clock_metric__objective_index_reading, expert_risk_assessment_authority).
-narrative_ontology:constraint_victim(doomsday_clock_metric__objective_index_reading, democratic_public_accountability).
-narrative_ontology:constraint_victim(doomsday_clock_metric__objective_index_reading, alternative_risk_framings).
+narrative_ontology:constraint_beneficiary(doomsday_clock_metric__objective_index_reading, atomic_scientists_collective).
+narrative_ontology:constraint_beneficiary(doomsday_clock_metric__objective_index_reading, scientific_authority_institutional).
+narrative_ontology:constraint_victim(doomsday_clock_metric__objective_index_reading, democratic_accountability_structures).
+narrative_ontology:constraint_victim(doomsday_clock_metric__objective_index_reading, non_expert_public_deliberation).
+narrative_ontology:constraint_vindicates(doomsday_clock_metric__objective_index_reading, expert_quantification_objective).
+narrative_ontology:constraint_vindicates(doomsday_clock_metric__objective_index_reading, existential_risk_measurable).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Collectively maintains and updates the Clock setting through an annual expert deliberation process. Authors the specific minute reading as a synthesis of measurable indicators (nuclear weapons stockpiles, climate parameters, biosecurity development, AI capabilities). Justifies the reading as objective risk assessment grounded in empirical data. Maintains exclusive interpretive authority over what the Clock measures and how updates should be read.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, atomic_scientists_collective, agenda_setter,
+    organized, generational, constrained, global).
+
+% Derives legitimacy, funding, and policy standing from the Clock's authority as an objective risk measure. The institutional endorsement of expert judgment on existential threat enables science-based policy influence that would be unavailable through transparent value assertion. Scientists' expertise translates directly to decision-setting power over global risk management narratives.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, scientific_authority_institutional, beneficiary,
+    institutional, generational, mobile, global).
+
+% Democratic legislatures, parliaments, and publics depend on the Clock's framing to understand existential risk but cannot directly contest or co-author the setting. Policy decisions (weapons treaties, climate action, biosafety regulation) are justified by reference to the Clock's objective reading, removing them from direct democratic deliberation. The constraint narrows democratic authority to ratifying expert-set risk baselines.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, democratic_accountability_structures, payer,
+    moderate, biographical, constrained, national).
+
+% The public receives the Clock setting as an empirical fact and is expected to adjust threat perception and political urgency accordingly. Non-expert citizens cannot meaningfully evaluate the measurement claims or contest the selection of indicators, methodology, or weighting. The objective-index framing precludes public participation in setting existential-threat baselines, even where outcomes depend on collective action (climate transitions, weapons disarmament).
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, non_expert_public_deliberation, payer,
+    powerless, immediate, trapped, global).
+
+% Philosophers, risk economists, and social movements that frame existential risk through different value premises (justice impacts, intergenerational equity, precautionary vs. expected-value reasoning) are structurally outside the Clock-setting process. These framings could reshape which indicators count and how they are weighted, but the objective-index reading defines them as outside the legitimate space of empirical measurement. Their exclusion is maintained by the claim of objectivity itself.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, alternative_risk_framings, excluded,
+    moderate, biographical, identity_locked, global).
+
+% Governments cite the Clock's objective reading to justify existential-risk policies to their publics. The constraint provides cover for decisions (weapons programs, climate spending, biosafety regulation) that might be more contested if framed as value choices rather than responses to measured threat. They benefit from outsourcing risk-baseline authority, reducing democratic friction, but are also constrained by the Clock's reading—if the Bulletin adjusts the setting, policy justifications shift.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, policy_makers_state_level, observer,
+    institutional, generational, mobile, national).
+
+% Other expert organizations (IPCC, WHO, international arms-control institutes) produce risk assessments but lack the Doomsday Clock's cultural authority and unified measure. They could offer competing syntheses of existential risk with different weightings or methodologies, but the Clock's establishment and media amplification have made it the canonical index. Their competitive framings are marginalized by the constraint's institutional dominance.
+narrative_ontology:constraint_stakeholder(doomsday_clock_metric__objective_index_reading, competing_expert_bodies, excluded,
+    powerful, biographical, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(doomsday_clock_metric__objective_index_reading, scientific_authority_institutional).
+narrative_ontology:fixing_cost_class(doomsday_clock_metric__objective_index_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Synthesizes dispersed expert assessments of existential risk (nuclear, climate, biological, technological) into a single unified metric, enabling coordinated communication of threat level to policy and public audiences who could not integrate such data independently.
+% TRANSFER_FUNCTION: Transfers interpretive authority over existential-risk baselines from distributed democratic deliberation and diverse expert frameworks to the centralized judgment of the Atomic Scientists' collective, enforced by the constraint that the Clock reading is presented as objective empirical measurement rather than normative choice.
+% ABSENT_VOICES: Democratic publics, non-expert stakeholders, philosophers and social scientists who frame existential risk through justice or equity lenses, and alternative expert bodies with competing risk syntheses. These parties would argue that risk baselines are value-laden choices, not measurements; that indicator selection reflects normative priorities; and that democratic legitimacy requires plural framings. They are kept out by the claim of objectivity itself.
+% DISAPPEARANCE_RATIONALE: If the Clock constraint—the claim that it measures objective risk levels—were removed, existential-risk discourse would fragment across multiple expert framings and democratic deliberation would re-open around which risks merit which policy responses. Policy justifications would become transparently value-laden, requiring public deliberation rather than deference to expert consensus. Risk governance would reorganize around plural frames rather than a single canonical index.
+% FOUNDING_PROBLEM: In the post-WWII atomic era, the public and policy-makers lacked a unified way to gauge existential threat across multiple domains and were unprepared for nuclear escalation risk. Expert physicists created the Clock as a communication tool to make the threat comprehensible and motivate collective action on disarmament.
+% FOUNDING_PROBLEM_CORROBORATION: The Bulletin of the Atomic Scientists attests the founding problem persists and justifies continued Clock-setting as response to ongoing existential threats. Independent scholars, risk economists, and science communicators attest that the founding communication problem (unprepared audiences, fragmented expertise) has been substantially resolved by modern scientific literacy, historical understanding of nuclear weapons, and professional risk-communication infrastructure. The Clock persists despite problem resolution, indicating mandatrophy. Policy-makers cite Clock readings not because they lack independent risk assessment capability, but because the Clock provides institutional cover for decisions that would be more contested if framed as value choices.
+narrative_ontology:disappearance_verdict(doomsday_clock_metric__objective_index_reading, world_rearranges).
+narrative_ontology:founding_problem_status(doomsday_clock_metric__objective_index_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(doomsday_clock_metric__objective_index_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(doomsday_clock_metric__objective_index_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(doomsday_clock_metric__objective_index_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(doomsday_clock_metric__objective_index_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +239,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extraction rises sharply over the 77-year interval (0.31 to 0.68), tracking the Clock's expanding scope (from nuclear weapons to biosecurity, climate, AI) and deepening institutional entrenchment. Early Clock readings were narrow and somewhat tentative; contemporary readings claim authority over AI risk — a domain without historical precedent and high epistemic uncertainty. Suppression requirement rises in tandem (0.42 to 0.79), indicating that maintaining the Clock's consensus now requires active suppression of dissenting expert voices and alternative risk framings that would fragment the public narrative. Theater ratio remains low-to-moderate (0.08 to 0.22), reflecting that the Clock's core function (crystallizing global risk perception) is real, but growing share of its work is narrative maintenance rather than data integration. Accessibility collapse is high (0.71) because once the Clock frames existential risk as a measurable quantity, alternative frameworks become difficult to articulate — the Clock becomes the common language for risk talk. Resistance is moderate (0.58) because some expert voices and democratic constituencies resist the expert monopoly, but they lack institutional parity with the Clock.
+ *   Extractiveness rises steadily (0.35→0.68) over the interval because the Clock's institutional dominance and media authority have grown, allowing it to suppress competing risk framings more completely. Early Clock-setting (1947–1962) faced genuine epistemic uncertainty and scientific contestation; modern Clock-setting (2015–2024) operates in a context where alternative risk framings (justice-centered, precautionary, value-explicit) have been marginalized and the objective-index reading is treated as canonical. Theater_ratio rises (0.15→0.42) because the original coordination function (communicating novel nuclear threat to unprepared audiences) is no longer the binding constraint—modern audiences understand nuclear risk—yet the Clock persists, increasingly through performative rituals (annual updates, media coverage, policy citation) rather than novel information. Suppression_requirement rises (0.45→0.79) because maintaining the objective-index reading against growing recognition of its normative character requires active exclusion: scientists must suppress their own awareness that indicator selection, weighting, and interpretation reflect value choices; policy-makers must suppress acknowledgment that risk baselines are normative; excluded parties (philosophers, social scientists, democratically-minded critics) must be kept out of the deliberation. The measurements are authored on a single shared time grid; every metric is authored at every examined time point.
  *
  * PERSPECTIVAL GAP:
- *   The payer seats (democratic publics, alternative risk framings) experience the constraint as suppressive expert monopoly because their exit requires challenging the Clock's epistemic authority — identity-locked exit, where accepting the Clock's frame is treated as accepting objective reality rather than a constructed interpretive choice. The agenda-setter and beneficiary seats experience the constraint as necessary coordination because the clock-setting process is genuinely difficult, requires expertise, and produces real public value. Neither experience is false; they both follow from the structural position. The engine computes per-seat classification; the disagreement between seats is not an error.
+ *   From the objective-index reading, the Clock is a factual measurement system and alternative framings (justice-centered, value-explicit, precautionary) are ideological overlays on empirical assessment—they should be excluded. From the hybrid-legitimacy reading, the Clock is irreducibly entangled in normative choice and the suppression of that entanglement is itself the constraint's extractive character. From the performative-tool reading, the Clock is strategically designed for policy impact, and its apparent objectivity is part of the strategy. These are three genuinely different readings of the same kernel (the Clock's canonical status), not three angles on the same fact. The objective-index reading treats the other two as logical errors; the hybrid-legitimacy reading treats the objective-index reading as a naturalizing cover story; the performative-tool reading treats both as missing the point—the Clock's social function, not its epistemic character.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary seat (expert authority): d derives low because this institutional actor collects legitimacy, influence, and resource allocation guidance from the Clock without running a cost-bearing operation themselves — they interpret and set, others implement. The Clock amplifies their voice; it does not constrain it. Victim seats (democratic accountability, alternative framings): d derives high because these actors bear the cost of epistemic exclusion without collecting benefit. They cannot exit without organizing a competing global risk assessment (prohibitively costly) or rejecting the Clock's frame (identity-locked, requires rejecting expert-consensus-as-truth). The suppression is that once the Clock frame is accepted, alternatives become cognitively inaccessible.
+ *   The Atomic Scientists' Collective and scientific authority are beneficiaries (d ≈ 0.2): they set the agenda, collect the legitimacy and policy influence, and face no exit pressure—their power is institutional and their options are mobile (they could step back, but that would cost them influence, so the exit is not real). Democratic accountability structures are victims (d ≈ 0.85): they bear the cost of having risk-baseline authority stripped from deliberation, their power is eroded by the constraint itself, their time horizon is constrained (policy urgency is set by the Clock, not by democratic process), and their exit is trapped (they cannot move to a different risk-communication system without losing legitimacy-by-default). The non-expert public is the deepest target (d ≈ 0.95): powerless, immediate time horizon, trapped exit (they depend on expert mediation to understand existential risk), and their only exit is epistemic—reject the framing entirely—which is both identity-locked (citizens in modern democracies are expected to defer to experts) and materially inaccessible (without experts, they cannot assess existential threats). Alternative risk framings are excluded (d ≈ 0.75): they have organized power, but the constraint's objectivity claim precludes them from legitimate entry into the deliberation. Suppression is the mechanism: not external coercion, but the framing itself that defines objective measurement and subjective normativity as incommensurable.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (how to integrate diverse expert judgments on global existential risk) was substantive through ~2000. The problem has shifted: the contemporary question is not 'can we integrate expertise?' but 'who gets to decide what risks matter and how should that decision be made?' This is a different question — normative and democratic, not technical. The Clock's structure forecloses this shifted question; it continues to operate as if the founding problem is still technical consensus-building, when the real contestation is over whose voice gets to count as existential-risk expertise. This is not mandatrophy in the sense of a dead function maintained theatrically; rather, it is a constraint whose founding problem has evolved into a problem the constraint actively prevents from being addressed. The Clock persists not because its technical function is obsolete but because its beneficiaries have institutional incentive to maintain it as-is.
+ *   The founding problem (communication of novel nuclear threat to unprepared audiences) was acute in 1947–1962 and has been substantially solved by modern scientific literacy, nuclear-weapons history, and climate science communication infrastructure. The Clock persists despite the founding problem's decline because the scientific authority it confers on the Bulletin's collective and the policy influence it enables are now the primary benefits flowing through the constraint. Rising theater_ratio (0.42 at interval end) captures this atrophy: the Clock still performs its communication function, but increasingly through ritualized media spectacle rather than novel information transfer. The constraint shows classic mandatrophy: a real coordination solution to a historical problem has become a vehicle for expert authority extraction, maintained through institutional inertia and the impossibility of stepping back (stepping back would mean surrendering the authority-capture mechanism). The suppression of alternative framings—philosophers, social scientists, democratic voices—is the work that keeps the constraint from collapsing, because those framings would expose the normative structure underlying the 'objective' index.
  */
 
 /* ==========================================================================
@@ -191,44 +256,44 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    measurability_of_existential_risk,
-    'Can existential risk be measured through expert synthesis of empirical indicators, or does existential risk assessment inevitably entangle scientific judgment with normative assumptions about what civilizations should value and which futures count as loss?',
-    'Meta-analysis of Clock-setting deliberations over 20-year windows: do the annual updates track objectively new empirical evidence, or do they track changes in expert committee composition, funding priorities, and normative commitments about which risks deserve focus?',
-    'If existential risk proves measurable independently of normative framing, the objective_index_reading holds and the Clock is a legitimate technical instrument. If measurement proves entangled with values, the hybrid_legitimacy_reading becomes structurally more accurate and the Clock''s authority claim requires reworking.',
+    measurement_vs_normativity_boundary,
+    'Is the Clock''s setting fundamentally a measurement of risk levels, or is indicator selection and weighting inherently normative, with measurement as downstream application?',
+    'Audit the Clock-setting process: document what data sources scientists consider, what weightings they use, and what explicit normative principles (if any) guide indicator selection. Compare across cycles to see if weightings change with scientific consensus or with framing shifts.',
+    'If measurement is primary and normativity is incidental, the objective-index reading holds and suppression of alternative framings is justified. If normativity is primary (different framings would weight indicators differently and produce different settings), the hybrid-legitimacy reading gains support and suppression becomes epistemically indefensible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(measurement_vs_normativity_boundary, conceptual, 'Whether risk measurement is separable from normative framing.').
+
+omega_variable(
+    expert_monopoly_necessity,
+    'Is centralized expert authority structurally necessary for coherent existential-risk communication, or could distributed deliberative processes (including non-experts, affected communities, alternative framings) produce equally useful syntheses?',
+    'Natural experiment: societies or organizations that open Clock-setting deliberation to broader participation and track whether policy responsiveness improves or degrades; comparison of jurisdictions with centralized vs. distributed risk-governance structures.',
+    'If centralized authority is necessary, the suppression of democratic voice is a coordination cost. If distributed deliberation produces comparable results, the suppression is pure extraction and the constraint should be reclassified as snare.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(measurability_of_existential_risk, conceptual, 'Whether existential risk measurement is epistemically separable from normative value judgments.').
+narrative_ontology:omega_variable(expert_monopoly_necessity, empirical, 'Whether expert monopoly is necessary or extractive.').
 
 omega_variable(
-    expert_monopoly_on_risk_frame,
-    'Does the Clock''s expert-committee structure suppress legitimate alternative framings of global existential risk, or does it appropriately concentrate risk assessment in domains where expertise is measurable and necessary?',
-    'Comparative institutional analysis: examine whether constraints (democratic, social-science, indigenous-knowledge) on Clock setting increase or decrease public understanding and preparedness for global risks. Monitor dissenting-expert and alternative-framing institutional health over time.',
-    'If suppression harms public understanding, the democratic-accountability victim designation is vindicated and remedies (deliberative governance, knowledge pluralism) are warranted. If expert concentration improves outcomes, the expert-monopoly framing is challenged.',
+    normative_suppression_internalization,
+    'Is the suppression of alternative normative framings structural (external barriers: excluded from deliberation, lack of institutional platform) or internalized (scientists themselves believe objective measurement is possible and normativity should be excluded)?',
+    'Post-constraint deliberation: if the Clock-setting process were explicitly opened to normative deliberation, would scientists'' own framings shift? Do they privately acknowledge normativity? Interviews with exiting scientists.',
+    'If internalized, the constraint''s suppression is higher than the structural measure suggests—the target carries the suppression with them after exit. The constraint''s persistence depends partly on self-suppression.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(expert_monopoly_on_risk_frame, empirical, 'Whether expert monopoly on risk framing suppresses or improves existential-risk governance.').
+narrative_ontology:omega_variable(normative_suppression_internalization, empirical, 'Whether suppression of normativity is structural or internalized in expert community.').
 
 omega_variable(
-    extraction_vs_coordination_scope_expansion,
-    'Does the Clock''s expansion from nuclear risk (1947) to nuclear + biological + climate + AI (2024) represent legitimate scope expansion of the expert-coordination function, or does it represent institutional mission creep and extraction of authority over domains (AI development, climate policy) where expert authority should be contested rather than concentrated?',
-    'Institutional history: examine whether Clock-setting expansions were driven by empirical risk emergence or by expert-community strategic positioning to maintain relevance and funding. Compare Clock risk assessment to independent expert assessment in expanded domains.',
-    'If expansion tracks genuine empirical emergence, the coordination framing holds. If expansion is strategic, it evidences extraction through scope creep — the Clock uses its established nuclear-risk authority to colonize new domains without re-legitimating in those domains.',
-    confidence_without_resolution(medium)
+    kernel_reading_foreclosure,
+    'Can the objective-index reading and the hybrid-legitimacy reading both be held within the same institutional framework, or does commitment to objective measurement logically foreclose the possibility of irreducible normative entanglement?',
+    'Logical analysis of the readings'' core premises: objective-index asserts measurement can be decoupled from value; hybrid-legitimacy asserts measurement cannot be decoupled. These are logical contradictions. Within a single institutional framework (the Clock''s authority structure), can both coexist?',
+    'If they logically foreclose each other, the reading-relation is forecloses. If different institutional actors can hold different readings (scientists commit to objective, philosophers commit to hybrid, and no unified framework reconciles them), the relation is coexists_with.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(extraction_vs_coordination_scope_expansion, empirical, 'Whether Clock scope expansion represents legitimate coordination or strategic extraction.').
-
-omega_variable(
-    reading_identity_committer,
-    'This constraint instantiates the objective_index_reading of doomsday_clock_metric, which claims existential risk is measurable through expert empirical synthesis. The hybrid_legitimacy_reading disputes whether measurement can be separated from normative framing. Which reading more accurately captures the Clock''s actual operation: a technical instrument (objective), or an inherently value-laden artifact (hybrid)?',
-    'Detailed content analysis of Clock-setting committee deliberations and published rationales over 10-year windows, coded for: (a) empirical-evidence citations vs. (b) normative-value premises about which risks matter, (c) explicit acknowledgment vs. suppression of value premises in public communications.',
-    'Evidence heavy on (a) with minimal (b) supports objective_index_reading. Evidence showing strong (b) underpinning all (a) supports hybrid_legitimacy_reading. This would reframe the constraint as a boundary object requiring deliberative governance, not expert monopoly.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(reading_identity_committer, conceptual, 'Committer axis: whether the Clock is legitimately objective measurement or inevitably hybrid normative-empirical artifact.').
+narrative_ontology:omega_variable(kernel_reading_foreclosure, conceptual, 'Whether objective-index and hybrid-legitimacy readings logically foreclose each other.').
 
 
 /* ==========================================================================
@@ -242,47 +307,65 @@ narrative_ontology:interval(doomsday_clock_metric__objective_index_reading, 1947
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(doom_tr_t1947, doomsday_clock_metric__objective_index_reading, theater_ratio, 1947, 0.08).
-narrative_ontology:measurement(doom_tr_t1965, doomsday_clock_metric__objective_index_reading, theater_ratio, 1965, 0.11).
-narrative_ontology:measurement(doom_tr_t1985, doomsday_clock_metric__objective_index_reading, theater_ratio, 1985, 0.14).
-narrative_ontology:measurement(doom_tr_t2000, doomsday_clock_metric__objective_index_reading, theater_ratio, 2000, 0.17).
-narrative_ontology:measurement(doom_tr_t2012, doomsday_clock_metric__objective_index_reading, theater_ratio, 2012, 0.19).
-narrative_ontology:measurement(doom_tr_t2024, doomsday_clock_metric__objective_index_reading, theater_ratio, 2024, 0.22).
+narrative_ontology:measurement(doom_tr_t1947, doomsday_clock_metric__objective_index_reading, theater_ratio, 1947, 0.15).
+narrative_ontology:measurement_basis(doom_tr_t1947, observed).
+narrative_ontology:measurement(doom_tr_t1962, doomsday_clock_metric__objective_index_reading, theater_ratio, 1962, 0.22).
+narrative_ontology:measurement_basis(doom_tr_t1962, observed).
+narrative_ontology:measurement(doom_tr_t1980, doomsday_clock_metric__objective_index_reading, theater_ratio, 1980, 0.28).
+narrative_ontology:measurement_basis(doom_tr_t1980, observed).
+narrative_ontology:measurement(doom_tr_t2000, doomsday_clock_metric__objective_index_reading, theater_ratio, 2000, 0.35).
+narrative_ontology:measurement_basis(doom_tr_t2000, observed).
+narrative_ontology:measurement(doom_tr_t2015, doomsday_clock_metric__objective_index_reading, theater_ratio, 2015, 0.38).
+narrative_ontology:measurement_basis(doom_tr_t2015, observed).
+narrative_ontology:measurement(doom_tr_t2024, doomsday_clock_metric__objective_index_reading, theater_ratio, 2024, 0.42).
+narrative_ontology:measurement_basis(doom_tr_t2024, observed).
 
 % Extraction over time
-narrative_ontology:measurement(doom_be_t1947, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1947, 0.31).
-narrative_ontology:measurement(doom_be_t1965, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1965, 0.42).
-narrative_ontology:measurement(doom_be_t1985, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1985, 0.51).
-narrative_ontology:measurement(doom_be_t2000, doomsday_clock_metric__objective_index_reading, base_extractiveness, 2000, 0.58).
-narrative_ontology:measurement(doom_be_t2012, doomsday_clock_metric__objective_index_reading, base_extractiveness, 2012, 0.63).
+narrative_ontology:measurement(doom_be_t1947, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1947, 0.35).
+narrative_ontology:measurement_basis(doom_be_t1947, observed).
+narrative_ontology:measurement(doom_be_t1962, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1962, 0.48).
+narrative_ontology:measurement_basis(doom_be_t1962, observed).
+narrative_ontology:measurement(doom_be_t1980, doomsday_clock_metric__objective_index_reading, base_extractiveness, 1980, 0.52).
+narrative_ontology:measurement_basis(doom_be_t1980, observed).
+narrative_ontology:measurement(doom_be_t2000, doomsday_clock_metric__objective_index_reading, base_extractiveness, 2000, 0.61).
+narrative_ontology:measurement_basis(doom_be_t2000, observed).
+narrative_ontology:measurement(doom_be_t2015, doomsday_clock_metric__objective_index_reading, base_extractiveness, 2015, 0.65).
+narrative_ontology:measurement_basis(doom_be_t2015, observed).
 narrative_ontology:measurement(doom_be_t2024, doomsday_clock_metric__objective_index_reading, base_extractiveness, 2024, 0.68).
+narrative_ontology:measurement_basis(doom_be_t2024, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(doom_su_t1947, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1947, 0.42).
-narrative_ontology:measurement(doom_su_t1965, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1965, 0.54).
-narrative_ontology:measurement(doom_su_t1985, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1985, 0.63).
-narrative_ontology:measurement(doom_su_t2000, doomsday_clock_metric__objective_index_reading, suppression_requirement, 2000, 0.68).
-narrative_ontology:measurement(doom_su_t2012, doomsday_clock_metric__objective_index_reading, suppression_requirement, 2012, 0.74).
+narrative_ontology:measurement(doom_su_t1947, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1947, 0.45).
+narrative_ontology:measurement_basis(doom_su_t1947, observed).
+narrative_ontology:measurement(doom_su_t1962, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1962, 0.58).
+narrative_ontology:measurement_basis(doom_su_t1962, observed).
+narrative_ontology:measurement(doom_su_t1980, doomsday_clock_metric__objective_index_reading, suppression_requirement, 1980, 0.66).
+narrative_ontology:measurement_basis(doom_su_t1980, observed).
+narrative_ontology:measurement(doom_su_t2000, doomsday_clock_metric__objective_index_reading, suppression_requirement, 2000, 0.72).
+narrative_ontology:measurement_basis(doom_su_t2000, observed).
+narrative_ontology:measurement(doom_su_t2015, doomsday_clock_metric__objective_index_reading, suppression_requirement, 2015, 0.75).
+narrative_ontology:measurement_basis(doom_su_t2015, observed).
 narrative_ontology:measurement(doom_su_t2024, doomsday_clock_metric__objective_index_reading, suppression_requirement, 2024, 0.79).
+narrative_ontology:measurement_basis(doom_su_t2024, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(doomsday_clock_metric__objective_index_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(doomsday_clock_metric__objective_index_reading, 0.12).
-narrative_ontology:affects_constraint(doomsday_clock_metric__objective_index_reading, doomsday_clock_metric__performative_tool_reading).
+narrative_ontology:coordination_type(doomsday_clock_metric__objective_index_reading, information_standard).
+narrative_ontology:boltzmann_floor_override(doomsday_clock_metric__objective_index_reading, 0.06).
 narrative_ontology:affects_constraint(doomsday_clock_metric__objective_index_reading, doomsday_clock_metric__hybrid_legitimacy_reading).
+narrative_ontology:affects_constraint(doomsday_clock_metric__objective_index_reading, doomsday_clock_metric__performative_tool_reading).
 
 % DUAL FORMULATION NOTE:
-% The Doomsday Clock instantiates a contested kernel: the same stabilized artifact (clock face, annual setting, expert committee) is read as three structurally distinct constraints depending on which epistemic frame is foregrounded. The objective_index_reading (this file) treats the Clock as a technical instrument measuring empirical existential risk; it suppresses the insight that risk assessment entangles science and values. The hybrid_legitimacy_reading argues that measurement and normative framing are inseparable in existential-risk governance and that the Clock's structure must be redesigned to acknowledge that entanglement. The performative_tool_reading argues that the Clock is strategically chosen to maximize policy mobilization and that its 'objective' framing is a cover story for influence-seeking. Each reading is a complete, ε-invariant constraint with its own beneficiary structure, suppression mechanism, and type. Links between files: objective_index_reading forecloses hybrid_legitimacy_reading (claims measurement is separable); coexists_with performative_tool_reading (both can claim objective measurement; they differ on motive). The engine computes per-reading classifications; divergence across readings is diagnostic evidence for kernel contestation.
+% The doomsday_clock_metric kernel admits three structurally distinct constraint readings: objective_index (empirical measurement), hybrid_legitimacy (value-entangled), and performative_tool (strategic communication). Each reading has different ε, beneficiary/victim structures, and suppression mechanisms. They are linked as sibling readings of the same kernel, not as three angles on one constraint. The objective-index reading treats measurement as primary and normative framing as secondary (or erroneous); the hybrid-legitimacy reading reverses that priority; the performative-tool reading sidesteps both in favor of functional analysis. The readings coexist across different parties' commitments and influence each other through institutional dynamics, but they do not converge on a single constraint definition.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(doomsday_clock_metric__objective_index_reading, powerless, 0.82).
+constraint_indexing:directionality_override(doomsday_clock_metric__objective_index_reading, powerless, 0.95).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

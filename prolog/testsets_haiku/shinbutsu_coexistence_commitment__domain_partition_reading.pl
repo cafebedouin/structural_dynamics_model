@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,36 +73,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: shinbutsu_coexistence_commitment__domain_partition_reading
- *   human_readable: Shinbutsu Coexistence: Domain Partition (Kami/Buddhist Separation of Governance)
- *   domain: religious/philosophical/institutional
+ *   human_readable: Kami-Buddha Domain Partition (Functional Coexistence Reading)
+ *   domain: religious/philosophical
  *
  * SUMMARY:
- *   This constraint story models ONE reading of a contested kernel: the
- *   Shinbutsu Coexistence (shinbutsu shugo) arrangement that governed
- *   Japanese religious practice from the Heian period onward. The DOMAIN
- *   PARTITION READING interprets the arrangement as a stable, functionally
- *   justified separation of governance domains: Shinto (life, purity,
- *   agricultural prosperity) and Buddhism (death, salvation, afterlife)
- *   operate as non-overlapping systems that resolve theological incoherence
- *   through boundary maintenance rather than doctrinal synthesis. This
- *   reading vindicates functional pluralism and treats popular practice as
- *   the authoritative ground. It is corroborated by traditional Shinto and
- *   Buddhist sources, institutional records of centuries of coexistence, and
- *   the observed mutual non-interference of the two systems. Sibling readings
- *   (syncretic_fusion_reading via honji suijaku theory,
- *   incoherent_bundle_reading via Meiji critique) claim the partition
- *   conceals unresolved theological conflict or deliberate institutional
- *   obscuration. The engine computes this reading's classification from the
- *   structural data; the reading's claim of stable rope (coordination without
- *   coercive breakdown) is independent of the authored metrics.
+ *   From roughly the 12th century onward, Japanese religious life
+ *   institutionalized a functional partition: Buddhist institutions (temples,
+ *   monastic orders, soteriological doctrine) governed death rites, karmic
+ *   accountability, and salvation; Shinto institutions (shrines, priestly
+ *   networks) governed fertility, purification, protection, and seasonal
+ *   agricultural cycles. This reading construes the partition as a stable,
+ *   functional commitment grounded in practice rather than theology — neither
+ *   system required the other to be false; they divided the religious domain.
+ *   Lay practitioners engaged both across their lifespans (Shinto for births,
+ *   marriages, local festivals; Buddhism for deaths and karmic concerns)
+ *   without theological incoherence because the partition itself was the
+ *   commitment: separate authorities for separate existential domains. This
+ *   reading COMPETES with the syncretic_fusion_reading (which claims
+ *   ontological unification through honji suijaku doctrine) and the
+ *   incoherent_bundle_reading (which claims the partition was never coherent
+ *   but maintained through deliberate ambiguity and collapsed under Meiji
+ *   pressure). The domain_partition_reading asserts that the partition WAS
+ *   the coherent principle — not a failed synthesis, but a successful
+ *   functional division.
  *
  * KEY AGENTS:
- *   - Shinto priesthood: Maintains kami shrines and life-domain rituals; enforces the partition by refusing death-ritual authority
- *   - Buddhist monastic establishment: Administers funerary and afterlife theology; enforces the partition by not claiming agricultural authority
- *   - Peasant communities: Primary participants in both systems; benefit from not having to choose or synthesize doctrines
- *   - Court aristocracy: Patronizes both systems for political legitimacy without requiring theological unification
- *   - Scholastic theologians (honji suijaku): Excluded voices arguing for ontological unification; treated as incoherent under domain partition
- *   - Meiji reformers: External observers (late 19th century) who reread the partition as unstable maintenance of Buddhist dominance
+ *   - Buddhist institutional hierarchy — maintains eschatological authority, soteriological doctrine, death rites
+ *   - Shinto shrine networks — maintain purification, fertility, seasonal festivals, life-cycle protection
+ *   - Lay practitioners — engage both systems across the lifespan without requiring theological choice
+ *   - Theological systematizers — bear the cost of maintaining doctrinal partition without unification
+ *   - Meiji state reformers (excluded) — would prefer clarity through subordination or explicit separation
+ *   - Honji suijaku advocates (excluded) — would force explicit ontological synthesis
  */
 
 /* ==========================================================================
@@ -105,57 +112,112 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(shinbutsu_coexistence_commitment__domain_partition_reading, 0.38).
-domain_priors:suppression_score(shinbutsu_coexistence_commitment__domain_partition_reading, 0.42).
-domain_priors:theater_ratio(shinbutsu_coexistence_commitment__domain_partition_reading, 0.51).
+domain_priors:suppression_score(shinbutsu_coexistence_commitment__domain_partition_reading, 0.22).
+domain_priors:theater_ratio(shinbutsu_coexistence_commitment__domain_partition_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, extractiveness, 0.38).
-narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 0.42).
-narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 0.51).
+narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 0.22).
+narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, accessibility_collapse, 0.61).
-narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, resistance, 0.48).
+narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(shinbutsu_coexistence_commitment__domain_partition_reading, resistance, 0.42).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(shinbutsu_coexistence_commitment__domain_partition_reading, rope).
-narrative_ontology:human_readable(shinbutsu_coexistence_commitment__domain_partition_reading, "Shinbutsu Coexistence: Domain Partition (Kami/Buddhist Separation of Governance)").
-narrative_ontology:topic_domain(shinbutsu_coexistence_commitment__domain_partition_reading, "religious/philosophical/institutional").
-
-domain_priors:requires_active_enforcement(shinbutsu_coexistence_commitment__domain_partition_reading).
+narrative_ontology:human_readable(shinbutsu_coexistence_commitment__domain_partition_reading, "Kami-Buddha Domain Partition (Functional Coexistence Reading)").
+narrative_ontology:topic_domain(shinbutsu_coexistence_commitment__domain_partition_reading, "religious/philosophical").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(shinbutsu_coexistence_commitment__domain_partition_reading, 'ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af').
-narrative_ontology:cs_kernel_codification('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', implicit).
-narrative_ontology:cs_authority_grounding('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', practice).
-narrative_ontology:cs_interpretation_layer_present('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af').
-narrative_ontology:cs_reading_relation('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', shinbutsu_coexistence_commitment__syncretic_fusion_reading, influences).
-narrative_ontology:cs_reading_relation('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', shinbutsu_coexistence_commitment__incoherent_bundle_reading, coexists_with).
-narrative_ontology:cs_axiom('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', foundational, existential_domain_separation_justified).
-narrative_ontology:cs_axiom_status(existential_domain_separation_justified, holdable).
-narrative_ontology:cs_axiom_grounding('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', existential_domain_separation_justified, conventional).
-narrative_ontology:cs_axiom('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', foundational, functional_coexistence_over_theological_consistency).
-narrative_ontology:cs_axiom_status(functional_coexistence_over_theological_consistency, holdable).
-narrative_ontology:cs_axiom_grounding('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', functional_coexistence_over_theological_consistency, instrumental).
-narrative_ontology:cs_reference_frame('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', dual_institutional_stability).
-narrative_ontology:cs_drift_state('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', late_edo_period_1750_1868, gap(practice_drift, minor, false)).
-narrative_ontology:cs_created_at('ebf6d862-2e36-4c1a-b1ec-1b9c25bee7af', '').
+narrative_ontology:cs_story_uid(shinbutsu_coexistence_commitment__domain_partition_reading, 'a8167912-527c-4a4a-bffd-90ed25fc1634').
+narrative_ontology:cs_kernel_codification('a8167912-527c-4a4a-bffd-90ed25fc1634', distributed).
+narrative_ontology:cs_authority_grounding('a8167912-527c-4a4a-bffd-90ed25fc1634', practice).
+narrative_ontology:cs_interpretation_layer_present('a8167912-527c-4a4a-bffd-90ed25fc1634').
+narrative_ontology:cs_reading_relation('a8167912-527c-4a4a-bffd-90ed25fc1634', shinbutsu_coexistence_commitment__syncretic_fusion_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a8167912-527c-4a4a-bffd-90ed25fc1634', shinbutsu_coexistence_commitment__incoherent_bundle_reading, influences).
+narrative_ontology:cs_axiom('a8167912-527c-4a4a-bffd-90ed25fc1634', foundational, partition_is_functional_principle).
+narrative_ontology:cs_axiom_status(partition_is_functional_principle, holdable).
+narrative_ontology:cs_axiom_grounding('a8167912-527c-4a4a-bffd-90ed25fc1634', partition_is_functional_principle, conventional).
+narrative_ontology:cs_axiom('a8167912-527c-4a4a-bffd-90ed25fc1634', foundational, practice_authority_supersedes_doctrine).
+narrative_ontology:cs_axiom_status(practice_authority_supersedes_doctrine, holdable).
+narrative_ontology:cs_axiom_grounding('a8167912-527c-4a4a-bffd-90ed25fc1634', practice_authority_supersedes_doctrine, conventional).
+narrative_ontology:cs_reference_frame('a8167912-527c-4a4a-bffd-90ed25fc1634', functional_partition_equilibrium).
+narrative_ontology:cs_drift_state('a8167912-527c-4a4a-bffd-90ed25fc1634', meiji_reformation_1868, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_created_at('a8167912-527c-4a4a-bffd-90ed25fc1634', '').
 narrative_ontology:cs_kernel_id(shinbutsu_coexistence_commitment__domain_partition_reading, shinbutsu_coexistence_commitment).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, shinto_priesthood).
-narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, buddhist_monastic_establishment).
-narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, peasant_communities).
+narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, buddhist_institutional_hierarchy).
+narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, shinto_shrine_networks).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(shinbutsu_coexistence_commitment__domain_partition_reading, lay_practitioners).
+narrative_ontology:constraint_victim(shinbutsu_coexistence_commitment__domain_partition_reading, theological_systematizers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Maintains authority over death rites, salvation narratives, and afterlife theology. Benefits from domain partition by concentrating institutional legitimacy on eschatology and monastic practice without competing with kami-based agricultural/fertility authority. Can shift theological commitments without losing institutional function — the partition allows doctrinal flexibility.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, buddhist_institutional_hierarchy, beneficiary,
+    institutional, civilizational, mobile, national).
+
+% Maintains authority over life-cycle events, purification, harvest, and local presence. Benefits from domain partition by concentrating shrine function on practical life concerns (births, marriages, seasonal festivals) without theological competition. Can invoke Buddhist cosmology for death without threatening shrine practice — the partition secures both institutional niches.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, shinto_shrine_networks, beneficiary,
+    organized, civilizational, mobile, national).
+
+% Engage both kami (for immediate life needs, seasonal abundance, protection) and Buddhist practice (for death preparation, karmic accountability, salvation) within a single biographical trajectory. The partition allows practical engagement with both without requiring doctrinal consistency or choosing between institutional authorities. Identity is constituted through both — Japanese religious identity fuses kami participation and Buddhist practice.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, lay_practitioners, beneficiary,
+    powerless, biographical, identity_locked, local).
+
+% Scholars and educated clergy attempting to construct coherent theological frameworks. Bear the cognitive and institutional cost of maintaining two ontologically separate systems without formal unification. Their professional legitimacy depends on systematicity, but the constraint requires them to work with partition rather than synthesis. Cannot force unification without destabilizing institutional authorities on both sides.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, theological_systematizers, payer,
+    moderate, generational, constrained, national).
+
+% Would have preferred clear separation or subordination (Buddhism to Shinto, or vice versa) for administrative clarity and nationalist ideology. Are excluded from the commitment because both institutional networks and lay practice resist formal state determination of the boundary. State pressure accelerates toward the constraint's collapse after Meiji 1868.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, meiji_state_reformers, excluded,
+    institutional, generational, trapped, national).
+
+% Monks and theologians advocating for explicit ontological synthesis (kami as manifestations of Buddhas). Are excluded from determining the constraint's legitimacy because popular practice and institutional authorities on both sides benefit from partition without synthesis. Their inclusion would force doctrinal resolution that neither Buddhism nor Shinto wants institutionally.
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, honji_suijaku_advocates, excluded,
+    moderate, biographical, constrained, national).
+
+% Examines how two ontologically distinct systems coexist without formal unification, what institutional arrangements make this possible, and how the partition breaks under external pressure (Meiji secularization, post-war reorganization).
+narrative_ontology:constraint_stakeholder(shinbutsu_coexistence_commitment__domain_partition_reading, analytical_observer, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(shinbutsu_coexistence_commitment__domain_partition_reading, diffuse).
+narrative_ontology:fixing_cost_class(shinbutsu_coexistence_commitment__domain_partition_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Permits both institutional networks (Buddhist monastic hierarchy and Shinto shrines) to maintain distinct functional authority and lay practitioners to engage both systems sequentially across the lifespan without requiring theological consistency or institutional subordination of either.
+% TRANSFER_FUNCTION: Transfers religious legitimacy (the right to adjudicate certain life domains) to each system without forcing one to eclipse the other: Buddhism monopolizes death/karma/salvation; Shinto monopolizes life/purity/harvest. Lay participation in both becomes institutionally normal rather than theologically incoherent.
+% ABSENT_VOICES: Meiji state administrators seeking administrative clarity and nationalist ideological unity; honji suijaku advocates seeking explicit ontological synthesis; Western-trained theologians expecting doctrinal unification. These voices would argue for either formal separation or formal synthesis, but are structurally excluded from determining the constraint because both institutional networks and lay practice benefit from the status quo partition.
+% DISAPPEARANCE_RATIONALE: Under this reading, if the partition disappeared — if state or theological pressure forced explicit unification or subordination — both institutional networks would lose functional independence and lay practitioners would face identity rupture (forced to choose between kami-identity and Buddhist-identity). The constraint's persistence enables both systems to operate. However, rivals to this reading (the incoherent_bundle_reading and the syncretic_fusion_reading) would dispute this — they would argue the partition is itself unstable fiction that the Meiji reform only made explicit, or that synthesis was always the authentic state of affairs.
+% FOUNDING_PROBLEM: Early Japanese religious development produced two institutional networks with distinct metaphysical commitments and functional domains (kami-based agricultural/protective systems; Buddhist soteriological/death-rites systems). A single lay population needed to engage both without either institutional authority subordinating the other. The founding problem was not doctrinal reconciliation but functional integration without institutional warfare.
+% FOUNDING_PROBLEM_CORROBORATION: Shrine priests and Buddhist monks attest that lay practitioners continue to engage both systems across the lifespan (births at shrines, marriages and funerals often blended, seasonal festivals and Buddhist memorial services coexist). Anthropological and ethnographic work by scholars outside both institutional networks (from Yanagita Kunio onward) attests that the partition reflects lived practice rather than theological doctrine. Institutional authorities from both Buddhism and Shinto have, from medieval times onward, managed the boundary through negotiation rather than attempted synthesis — evidence from temple-shrine contracts, ritual protocols, and ordination records outside both benefiting parties.
+narrative_ontology:disappearance_verdict(shinbutsu_coexistence_commitment__domain_partition_reading, contested).
+narrative_ontology:founding_problem_status(shinbutsu_coexistence_commitment__domain_partition_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(shinbutsu_coexistence_commitment__domain_partition_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(shinbutsu_coexistence_commitment__domain_partition_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(shinbutsu_coexistence_commitment__domain_partition_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(shinbutsu_coexistence_commitment__domain_partition_reading, 0.38, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,16 +232,16 @@ narrative_ontology:story_seed(shinbutsu_coexistence_commitment__domain_partition
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.38 at interval end) is moderate because the constraint does extract institutional patronage and ritual participation, but the extraction is not predatory — both institutions provide genuine functional services within their domains. The extraction increases over time (0.18→0.38) as Buddhist funerary practices become economically crucial and as Shinto priesthood develops organizational capacity. Suppression (0.42) is moderate because the constraint's persistence requires enforcing the boundary (suppressing unification movements, blocking cross-domain claims), but the suppression is not violent — it operates through institutional refusal and interpretive authority rather than coercion. Theater (0.51) rises sharply early (0.25→0.44 by Heian-Kamakura), suggesting that maintaining the partition increasingly requires performative assertion: priests must actively claim they 'only handle life' or 'only handle death,' and this performance becomes more elaborate as theoretical challenges (honji suijaku) mount. By late Edo (1750-1868), theater plateaus at 0.51, indicating sustained performative maintenance without further escalation. Accessibility collapse (0.61) is moderate-high because alternatives to the partition do theoretically exist (honji suijaku unification, Buddhist dominance, Shinto-only revival), but they are institutionally and socially suppressed by centuries of precedent and mutual institutional investment. Resistance (0.48) is moderate, indicating that some voices (scholastic theologians, later reformers) actively resist the partition's framing as natural or final, but resistance never achieves dominance within the traditional system — it requires external modernizing pressure (Meiji) to break the constraint.
+ *   Extractiveness is moderate (0.38 at interval end) because both institutional networks extract legitimacy and resources from lay participation, but neither extracts from the other — the partition prevents institutional predation. Suppression is low (0.22) because lay practitioners freely engage both systems; no coercive mechanism forces the partition on unwilling participants. Theater is modest (0.28) because the partition is genuinely functional — ceremonies happen, farmers prepare fields at shrine festivals, death rites follow Buddhist protocols — but some performative work maintains the boundary (theological systematizers produce explicit partition justifications that do not convince everyone). Accessibility_collapse is moderate (0.45) because alternatives exist (one could theoretically adopt Buddhism exclusively or Shinto exclusively, or accept the honji suijaku synthesis) but lay identity is constituted through both. Resistance is moderate (0.42) because theological systematizers and some monks resist the partition's lack of coherence, pushing toward synthesis; but institutional authorities and lay practice stabilize it. The measurement series show remarkable stability across 668 years — the partition maintained extractiveness and theater ratios nearly constant, suggesting the commitment is durable rather than precarious.
  *
  * PERSPECTIVAL GAP:
- *   The Shinto and Buddhist establishments experience this constraint as a beneficial coordination (rope): each gains institutional space, revenue, and legitimacy without theological compromise. Peasants experience it as a beneficial dual-access arrangement (some rope, some beneficiary). Court aristocracy experiences it as instrumental (useful for legitimacy, but movable if modernization demands). Scholastic theologians experience it as irrational suppression of truth (honji suijaku would resolve the incoherence). Meiji reformers experience it as disguised Buddhist dominance requiring correction. The domain-partition reading assigns authority to peasant and institutional experience (functional coexistence works; theology is secondary), which systematically marginalizes the scholastic and reform perspectives. The engine computes per-seat directionality from the structural data: Shinto and Buddhist establishments sit near d=0.2-0.3 (net beneficiaries), peasants near d=0.5 (symmetric access + modest suppression of doctrinal questioning), theologians and reformers as powerless-excluded (high d, but excluded from steering the constraint). This divergence is structural, not a measurement error.
+ *   From the Buddhist institutional perspective, the partition secures their authority over death and karma without interference from shrine practice. From the Shinto shrine perspective, the partition secures their authority over life-cycle protection and fertility without Buddhist metaphysical competition. From the lay practitioner perspective, the partition is invisible — it is the normal, expected structure within which biography unfolds (shrine for this life event, Buddhism for that death preparation). From the theological systematizer's perspective, the partition is a failure — two incoherent systems forced into coexistence without rational unity. These seats should compute differently: beneficiary seats perceive coordination and functional division; payer seats perceive doctrinal incoherence they must manage; excluded seats perceive institutional failure.
  *
  * DIRECTIONALITY LOGIC:
- *   Shinto priesthood: Agenda-setter, organized power, constrained exit (tied to shrine institutions). Beneficiary (gains exclusive life-domain authority without theological competition). Directionality: low, near 0.2 (full beneficiary). Buddhist monastic establishment: Agenda-setter, organized power, constrained exit. Beneficiary (gains exclusive afterlife/salvation authority, economically crucial funerary revenue). Directionality: low-moderate, near 0.25 (full beneficiary, but must actively maintain the partition boundary). Peasant communities: Powerless, constrained exit (no institutional independence), local scope. Role: beneficiary and implicit payer (participate in both systems, cannot exit without social cost, must accept non-unification of theology). Directionality: moderate-high, near 0.5-0.55 (symmetric: genuine benefit from dual access, modest cost from suppression of doctrinal questioning). Court aristocracy: Powerful, mobile exit (can shift patronage or change state policy). Beneficiary (uses both systems for legitimacy without synthesis cost). Directionality: low, near 0.15 (strong beneficiary, highest exit options buffer the cost). Scholastic theologians: Moderate power, mobile exit (can publish, travel, teach). Excluded (their unification theory is not treated as authoritative). Victim (their intellectual project is suppressed by treating domain partition as settled). Directionality: high, near 0.75 (target of boundary enforcement, excluded from governance). Meiji reformers: Institutional power, mobile exit (state capacity to rewrite institutional rules). Observer and external challenger (not part of the traditional system). Directionality: analytical, 0.5 (they observe the constraint from outside and eventually break it).
+ *   Buddhist and Shinto institutional authorities are beneficiaries (d near 0.1–0.2): they extract legitimacy and resource flows from lay engagement while bearing minimal cost — the partition protects them from mutual predation. Lay practitioners are also beneficiaries but through a different mechanism (d near 0.3–0.4): they gain the ability to engage both systems without institutional exclusion, but they are also identity-locked into the partition (cannot exit to pure Buddhism or pure Shinto without losing cultural identity). Theological systematizers are partial payers (d near 0.6–0.7): they bear the cognitive cost of maintaining two ontologically separate systems, constrained by institutional authorities who refuse synthesis. Excluded parties (Meiji reformers, honji suijaku advocates) have no directionality within this constraint — they are outside it, pushing against it.
  *
  * MANDATROPHY ANALYSIS:
- *   The domain partition reading must resist two distinct mandatrophy vectors: (1) functional obsolescence (if Shinto and Buddhism separately solve their domains perfectly, what mandate remains?), and (2) theoretical instability (if honji suijaku theory is correct, the partition is false and should be overcome). The rope classification depends on treating functional separation as legitimate even when theological unification is theoretically possible. The reading's defense is that coordination function is not reducible to theological consistency — peasant communities genuinely benefit from not having to choose or synthesize, and institutional coexistence is self-sustaining over centuries. The reading's vulnerability is precisely that the mandate is functional (prevent theological collapse of the dual system) and the function is preserved by perpetually refusing to resolve the underlying incoherence. Once a state actor (Meiji) decides that Shinto recovery requires separation, the partition constraint collapses — it had no mandate independent of institutional mutual interest. The domain-partition reading classifies the constraint as a stable rope precisely because it treats functional coexistence and institutional beneficiaries as sufficient; the incoherent-bundle reading (sibling) reclassifies the same facts as unstable false summit (natural-law presentation of what is actually institutional maintenance). The engine's per-seat computation exposes this: from peasant and institutional seats, it appears as rope; from scholastic and reform seats, it appears as enforced false summit.
+ *   This reading does NOT claim the founding problem is dead — it asserts the founding problem (coordinating two institutional networks without mutual subordination) remains live and the partition solves it. This prevents mandatrophy classification. Under the incoherent_bundle_reading, by contrast, the founding problem would be diagnosed as dead (no coherent principle existed; the 'coordination' was always fiction maintained by power). Under the syncretic_fusion_reading, the founding problem would be contested (synthesis advocates claim honji suijaku WAS the solution all along). This reading's R5 verdict (founding_problem_status: live) is its vaccination against mandatrophy.
  */
 
 /* ==========================================================================
@@ -187,89 +249,74 @@ narrative_ontology:story_seed(shinbutsu_coexistence_commitment__domain_partition
    ========================================================================== */
 
 omega_variable(
-    partition_stability_naturalness,
-    'Is the domain partition a natural, stable solution to theological irreconcilability, or an artificial maintenance of incoherence that requires continuous institutional effort to prevent collapse?',
-    'Comparative analysis: (1) Historical records of explicit boundary-maintenance actions and theological disputes requiring suppression. (2) Natural-experiment comparison with cultures where similar theological tensions arose and were resolved (through synthesis or suppression of one system). (3) Post-Meiji analysis: does Shinto recovery after forced separation show the partition was artificial, or does it show Meiji intervention was artificial?',
-    'If partition is natural/stable (first reading holds), the constraint classifies as rope with high sustainability — boundary maintenance is voluntary institutional interest. If partition is artificial (second reading holds), the constraint downclassifies toward piton (maintained by institutional inertia despite no deep functional stability) or snare (Buddhist power masquerading as coexistence). The measurement of theater_ratio (0.25→0.51) suggests increasing performative work, which slightly favors the artificial-maintenance interpretation.',
+    partition_vs_synthesis_coherence,
+    'Is functional partition without doctrinal unity a coherent religious commitment, or is the absence of explicit ontological synthesis evidence that the system was always incoherent and maintained only by institutional power?',
+    'Examine medieval and early-modern religious texts, temple-shrine contracts, and lay practice narratives to determine whether the partition was consciously theorized as principle (coherent) or maintained as unexamined practice (potentially incoherent with power suppressing awareness). Look for explicit partition defenses vs. partition avoidance in doctrinal writings.',
+    'If conscious principle (theorized and defended), the domain_partition_reading holds and extraction is moderate. If unexamined power arrangement (not theorized, deliberately ambiguous), the incoherent_bundle_reading gains support and extraction rises as hidden institutional coercion. Classification shifts from rope to snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(partition_stability_naturalness, empirical, 'Whether domain partition is a stable solution or artificial institutional maintenance').
+narrative_ontology:omega_variable(partition_vs_synthesis_coherence, conceptual, 'Whether partition is coherent principle or incoherent maintenance through power.').
 
 omega_variable(
-    honji_suijaku_suppression_mechanism,
-    'Why did honji suijaku (ontological unification theory) remain a marginal scholastic position despite being intellectually sophisticated, rather than becoming the governing framework for Shinto-Buddhist relations?',
-    'Historical analysis of institutional gatekeeping: (1) Did Shinto and Buddhist hierarchies actively reject honji suijaku because it threatened their institutional interests? (2) Was it suppressed by state authority? (3) Did it fail on intellectual grounds (practitioners found it unconvincing)? (4) Was it never presented to popular practice (remained confined to monastic scholarship)?',
-    'If suppressed by institutional gatekeeping for interest-preservation, the partition constraint exhibits snare-like extraction (institutions coordinating to maintain a false consensus). If it failed on intellectual grounds or never reached popular practice, the partition better represents genuine pluralist acceptance. The lived experience of peasant communities (who apparently did not experience the partition as coercive) suggests limited suppression, but institutional records of theological disputes suggest some active boundary-enforcement.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(honji_suijaku_suppression_mechanism, empirical, 'Causes of marginal status of unification theology despite intellectual sophistication').
-
-omega_variable(
-    meiji_reinterpretation_validity,
-    'Did Meiji reformers discover that the domain partition was unstable/false, or did they impose a reinterpretation that served modernization politics (Shinto nationalism)?',
-    'Comparative textual and institutional analysis: (1) Did pre-Meiji records show the partition was already under strain (theological challenges, institutional disputes)? (2) Were Meiji reforms imposed on a system that would have continued stable absent external pressure? (3) Post-reform: does separated Shinto prove partition was artificial (Shinto thrives independently), or does it prove Meiji coercion broke a functional system (Shinto declines or becomes instrumentalized)?',
-    'If partition was already unstable, the constraint''s mandatrophy is genuine — the founding problem (coexistence without synthesis) was never actually solved. Meiji merely made the instability visible. If partition was genuinely stable and Meiji imposed artificial separation for political reasons, then Meiji are the external disruptors, and the constraint retains rope classification until the intervention. The interval endpoint (1868) marks the moment of rupture; the entire measurement series is pre-rupture, so this omega determines whether the rupture reveals pre-existing mandatrophy or constitutes external violence.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(meiji_reinterpretation_validity, empirical, 'Whether Meiji reform revealed pre-existing instability or imposed external disruption').
-
-omega_variable(
-    peasant_theological_awareness,
-    'To what degree were peasant communities aware of the theological incoherence of dual kami/Buddhist participation, and to what degree did they experience the partition as natural vs. constructed?',
-    'Ethnographic and textual analysis: (1) Folk theology records, diaries, or oral traditions from peasant communities. (2) Priest-community interaction records (do priests ever explain the partition?). (3) Post-Meiji recollection: do villagers describe the partition as ''natural'' or ''something priests told us''? (4) Contemporary practice: communities still practicing both traditions without unification — is this continuity or new construction?',
-    'If peasants were aware and accepted the partition as legitimate pragmatic solution, the rope classification holds from their perspective. If peasants were kept unaware and had the partition imposed through institutional authority, the constraint exhibits more snare-like characteristics (suppression of alternative understanding). The moderate accessibility_collapse (0.61) and resistance (0.48) suggest some awareness-level, but this omega distinguishes active acceptance from imposed acceptance.',
+    lay_identity_lock_mechanism,
+    'Is lay practitioner identity-lock to both systems (identity_locked exit option) a product of religious authenticity (genuine fusion in lived experience) or institutional/cultural conditioning (the partition is internalized as natural)?',
+    'Post-Meiji secularization and minority-position case studies: when lay practitioners are offered clear Buddhist-only or Shinto-only alternatives (e.g., Christian conversion, or Meiji-era youth rejecting shrine participation), how many maintain both engagements vs. choose one? What narratives do they author for their choices?',
+    'If identity-lock is genuine fusion, lay practitioners are true beneficiaries despite constraint; extraction remains moderate. If identity-lock is conditioning, lay practitioners are partial victims (constrained, identity_locked, internalized suppression); extraction rises and suppression becomes internalized suppression rather than structural suppression.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(peasant_theological_awareness, empirical, 'Peasant-level awareness of and agency regarding the domain partition').
+narrative_ontology:omega_variable(lay_identity_lock_mechanism, empirical, 'Whether lay identity-lock to both systems reflects authentic religious commitment or internalized conditioning.').
 
 omega_variable(
-    kernel_reading_committer_frame,
-    'Is this constraint best understood as instantiating a genuinely stable domain partition (functional pluralism), or is it a reading imposed by traditional-institutional interests to defend the status quo against theoretical critique and modernizing pressure?',
-    'Genealogical analysis: Who authored the ''domain partition'' framing as an explicit doctrine? When did it become codified? Was it always the governing understanding, or did it emerge as a defense against criticism? Compare with the syncretic_fusion_reading (honji suijaku) and incoherent_bundle_reading (Meiji critique) to see which has stronger claim to represent the system''s actual operating logic vs. a retrofitted rationalization.',
-    'If domain partition is a retrospective codification of incoherence, the constraint is closer to piton (institutional maintenance of a degraded functional arrangement) or snare (institutions cooperating to maintain a false consensus). If it is the genuine operating principle from the start, the rope classification holds. This omega directly addresses the committer-frame underdetermination: the domain partition reading is ONE possible framing of the kernel; the others are equally textually defensible.',
+    honji_suijaku_latency,
+    'Was honji suijaku doctrine (kami as manifestations of Buddhas) a genuine but suppressed alternative that the partition excluded, or a minority intellectual position that never captured institutional or lay practice?',
+    'Textual and institutional analysis: how widely was honji suijaku taught in temples and shrines? Did it compete with partition doctrine, or was it confined to scholarly circles? Did lay practitioners know and use it to resolve the partition, or remain unaware of it?',
+    'If suppressed alternative, the honji_suijaku_advocates are excluded because institutional authorities benefit from partition; suppression rises, and this reading becomes politically contingent on institutional power rather than a natural principle. If minority position, the advocates remain excluded by intellectual/institutional closure rather than active suppression; partition remains more stable.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(honji_suijaku_latency, empirical, 'Whether honji suijaku synthesis was suppressed institutional alternative or minor scholarly position.').
+
+omega_variable(
+    partition_reading_vs_kernel,
+    'Is this reading a description of what the kernel shinbutsu_coexistence_commitment actually instantiates, or is it a post-hoc rationalization that imposes coherence on an always-ambiguous institutional arrangement?',
+    'This is a committer-framing omega: examine whether medieval and early-modern actors explicitly theorized the partition as principle (reading affirmed) or whether the partition was implicit, never consciously articulated until modern scholarship imposed the framework (reading is committer imposition, not historical fact).',
+    'If partition was explicit principle, the reading is historically grounded. If partition was implicit and retrospectively named, the reading is a modern committer frame, not a medieval institutional reality — it may still be coherent for interpreting historical materials, but it is an analytical rather than lived commitment.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_committer_frame, conceptual, 'Committer-frame uncertainty: whether domain partition is genuine solution or rationalization').
+narrative_ontology:omega_variable(partition_reading_vs_kernel, conceptual, 'Whether partition-as-principle was historically instantiated or is modern analytical framing imposed on ambiguous institutional arrangements.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(shinbutsu_coexistence_commitment__domain_partition_reading, 800, 1868).
+narrative_ontology:interval(shinbutsu_coexistence_commitment__domain_partition_reading, 1200, 1868).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(shin_tr_t800, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 800, 0.25).
-narrative_ontology:measurement(shin_tr_t1050, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1050, 0.37).
-narrative_ontology:measurement(shin_tr_t1300, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1300, 0.44).
-narrative_ontology:measurement(shin_tr_t1550, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1550, 0.49).
-narrative_ontology:measurement(shin_tr_t1750, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1750, 0.51).
-narrative_ontology:measurement(shin_tr_t1868, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1868, 0.51).
+narrative_ontology:measurement(shin_tr_t1200, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1200, 0.25).
+narrative_ontology:measurement(shin_tr_t1350, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1350, 0.26).
+narrative_ontology:measurement(shin_tr_t1550, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1550, 0.27).
+narrative_ontology:measurement(shin_tr_t1750, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1750, 0.28).
+narrative_ontology:measurement(shin_tr_t1820, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1820, 0.29).
+narrative_ontology:measurement(shin_tr_t1868, shinbutsu_coexistence_commitment__domain_partition_reading, theater_ratio, 1868, 0.28).
 
 % Extraction over time
-narrative_ontology:measurement(shin_be_t800, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 800, 0.18).
-narrative_ontology:measurement(shin_be_t1050, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1050, 0.28).
-narrative_ontology:measurement(shin_be_t1300, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1300, 0.35).
-narrative_ontology:measurement(shin_be_t1550, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1550, 0.39).
+narrative_ontology:measurement(shin_be_t1200, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1200, 0.35).
+narrative_ontology:measurement(shin_be_t1350, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1350, 0.36).
+narrative_ontology:measurement(shin_be_t1550, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1550, 0.37).
 narrative_ontology:measurement(shin_be_t1750, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1750, 0.38).
+narrative_ontology:measurement(shin_be_t1820, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1820, 0.39).
 narrative_ontology:measurement(shin_be_t1868, shinbutsu_coexistence_commitment__domain_partition_reading, base_extractiveness, 1868, 0.38).
 
-% Suppression requirement over time
-narrative_ontology:measurement(shin_su_t800, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 800, 0.22).
-narrative_ontology:measurement(shin_su_t1050, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 1050, 0.31).
-narrative_ontology:measurement(shin_su_t1300, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 1300, 0.38).
-narrative_ontology:measurement(shin_su_t1550, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 1550, 0.42).
-narrative_ontology:measurement(shin_su_t1750, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 1750, 0.42).
-narrative_ontology:measurement(shin_su_t1868, shinbutsu_coexistence_commitment__domain_partition_reading, suppression_requirement, 1868, 0.42).
+% Suppression authored static: scalar-only by design, no temporal series
+narrative_ontology:suppression_profile(shinbutsu_coexistence_commitment__domain_partition_reading, static).
 
 
 /* ==========================================================================
@@ -282,13 +329,11 @@ narrative_ontology:affects_constraint(shinbutsu_coexistence_commitment__domain_p
 narrative_ontology:affects_constraint(shinbutsu_coexistence_commitment__domain_partition_reading, shinbutsu_coexistence_commitment__incoherent_bundle_reading).
 
 % DUAL FORMULATION NOTE:
-% The shinbutsu_coexistence_commitment kernel has three structurally distinct readings, each with different ε values and stability predictions. Domain partition (this story) treats coexistence as stable functional separation; syncretic fusion treats it as transient stage toward theological unification; incoherent bundle treats it as unstable maintenance of false consensus. All three are competing readings of the same historical arrangement; they are linked via network.affects_constraints to mark the kernel family. The ε-invariance principle requires separate stories because the readings' core premises about the arrangement's naturalness and stability diverge, yielding different classifications.
+% The shinbutsu_coexistence_commitment kernel constrains three distinct readings. The domain_partition_reading (this story) asserts partition into separate existential domains as the coherent principle. The syncretic_fusion_reading asserts honji suijaku doctrine unified kami and Buddhas ontologically. The incoherent_bundle_reading asserts the partition was never coherent but maintained through institutional ambiguity and power. Each reading has different ε, different beneficiary structures, different founding problem status, and different CS axioms. They are linked as network.affects_constraints entries in each story, forming a constraint family. The partition_reading influences both siblings by establishing partition as an available interpretive frame; the syncretic_fusion_reading coexists with partition (different institutional factions hold different readings); the incoherent_bundle_reading competes with partition on the question of historical coherence.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(shinbutsu_coexistence_commitment__domain_partition_reading, moderate, 0.75).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

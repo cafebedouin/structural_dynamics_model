@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-13
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,15 +40,19 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,31 +73,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: total_war_possibility_space__space_contraction_reading
  *   human_readable: Total War Removed from Strategic Possibility Space (Space Contraction Reading)
- *   domain: international_relations/strategic_studies
+ *   domain: international_relations/strategic_studies/institutional_history
  *
  * SUMMARY:
- *   This constraint story instantiates the space-contraction reading of the
- *   contested kernel 'total_war_possibility_space'. The reading asserts that
- *   nuclear weapons removed total war from the strategically thinkable — not
- *   by making it prohibitively costly (deterrence reading) or normatively
- *   taboo (taboo reading), but by making it logically impossible to plan for
- *   or execute. The material capability to annihilate human civilization
- *   structures the possibility space itself: total war cannot be thought as a
- *   rational strategic option because it has become a non-option in the logic
- *   of mutual vulnerability. The constraint is claimed as a genuine natural
- *   law (mountain) — an emergent property of the physics of nuclear weapons
- *   and the logic of mutually assured destruction. The measurement series
- *   track rising suppression_requirement over time, indicating that
- *   maintaining the constraint requires increasing institutional work to
- *   suppress (or re-suppress) the idea that total war might be thinkable.
+ *   This constraint instantiates the space-contraction reading of the
+ *   contested total_war_possibility_space kernel. The reading's core claim is
+ *   that nuclear weapons have removed total war from the strategically
+ *   thinkable—war planning space has contracted, not merely shifted
+ *   incentives. This is structurally distinct from the deterrence_equilibrium
+ *   reading (total war remains thinkable, merely deterred by mutual
+ *   vulnerability) and the nuclear_taboo reading (total war remains
+ *   thinkable, merely prohibited by constructed norm). This reading asserts
+ *   that the very cognitive category of total war, as a strategic option, has
+ *   been foreclosed by the material reality of mutual nuclear annihilation.
+ *   The constraint is authored as a mountain (natural law: physics forecloses
+ *   the possibility) with very low extractiveness and suppression—it emerges
+ *   from the structure of mutual vulnerability, not from any actor's coercive
+ *   choice. The beneficiary is not an agent but a proposition: the
+ *   continuation of civilization. The measurement series shows near-zero
+ *   extractiveness rising very slightly over 81 years as institutional
+ *   codification of the constraint accumulates—the constraint becomes more
+ *   explicit in doctrine and teaching, but the underlying foreclosure remains
+ *   constant.
  *
  * KEY AGENTS:
- *   - nuclear_armed_great_powers: institutional agenda-setters, trapped by their own weaponry
- *   - populations_in_nuclear_armed_states: powerless beneficiaries, relieved of total-war vulnerability
- *   - military_planning_establishments: institutional observers and beneficiaries, confined to sub-strategic planning
- *   - non_nuclear_armed_states: moderate-power beneficiaries, insulated from great-power annihilation scenarios
- *   - deterrence_equilibrium_advocates: excluded analytical seat, holds competing reading of same kernel
- *   - nuclear_taboo_advocates: excluded analytical seat, holds competing reading of same kernel
+ *   - Great power strategic planners (general staffs, defense ministries): operate under cognitive regime where total war is not in their planning repertoire
+ *   - Nuclear-armed states: institutional actors whose strategic thought is bounded by the cognitive removal of total war from thinkable options
+ *   - Strategic studies disciplines: organized knowledge community that inherited post-nuclear cognitive framework and reproduces it in theory, education, and policy analysis
+ *   - Post-war civilizational continuity: the beneficiary proposition—not an agent, but what persists when total war is structurally foreclosed
  */
 
 /* ==========================================================================
@@ -100,57 +108,92 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(total_war_possibility_space__space_contraction_reading, 0.15).
+domain_priors:base_extractiveness(total_war_possibility_space__space_contraction_reading, 0.12).
 domain_priors:suppression_score(total_war_possibility_space__space_contraction_reading, 0.08).
-domain_priors:theater_ratio(total_war_possibility_space__space_contraction_reading, 0.12).
+domain_priors:theater_ratio(total_war_possibility_space__space_contraction_reading, 0.02).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, extractiveness, 0.15).
+narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, extractiveness, 0.12).
 narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, suppression_requirement, 0.08).
-narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, theater_ratio, 0.12).
+narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, theater_ratio, 0.02).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, accessibility_collapse, 0.92).
-narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, resistance, 0.05).
+narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, resistance, 0.04).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(total_war_possibility_space__space_contraction_reading, mountain).
 narrative_ontology:human_readable(total_war_possibility_space__space_contraction_reading, "Total War Removed from Strategic Possibility Space (Space Contraction Reading)").
-narrative_ontology:topic_domain(total_war_possibility_space__space_contraction_reading, "international_relations/strategic_studies").
+narrative_ontology:topic_domain(total_war_possibility_space__space_contraction_reading, "international_relations/strategic_studies/institutional_history").
 
 domain_priors:emerges_naturally(total_war_possibility_space__space_contraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(total_war_possibility_space__space_contraction_reading, '470e186d-de8e-442c-ac65-b2279ee523e0').
-narrative_ontology:cs_kernel_codification('470e186d-de8e-442c-ac65-b2279ee523e0', implicit).
-narrative_ontology:cs_authority_grounding('470e186d-de8e-442c-ac65-b2279ee523e0', expertise).
-narrative_ontology:cs_interpretation_layer_present('470e186d-de8e-442c-ac65-b2279ee523e0').
-narrative_ontology:cs_reading_relation('470e186d-de8e-442c-ac65-b2279ee523e0', total_war_possibility_space__deterrence_equilibrium_reading, coexists_with).
-narrative_ontology:cs_reading_relation('470e186d-de8e-442c-ac65-b2279ee523e0', total_war_possibility_space__nuclear_taboo_reading, coexists_with).
-narrative_ontology:cs_axiom('470e186d-de8e-442c-ac65-b2279ee523e0', foundational, mutual_vulnerability_eliminates_strategic_rationality_for_total_war).
-narrative_ontology:cs_axiom_status(mutual_vulnerability_eliminates_strategic_rationality_for_total_war, holdable).
-narrative_ontology:cs_axiom_grounding('470e186d-de8e-442c-ac65-b2279ee523e0', mutual_vulnerability_eliminates_strategic_rationality_for_total_war, empirically_contingent).
-narrative_ontology:cs_axiom('470e186d-de8e-442c-ac65-b2279ee523e0', foundational, capability_structures_cognition_not_norm_or_cost).
-narrative_ontology:cs_axiom_status(capability_structures_cognition_not_norm_or_cost, holdable).
-narrative_ontology:cs_axiom_grounding('470e186d-de8e-442c-ac65-b2279ee523e0', capability_structures_cognition_not_norm_or_cost, empirically_contingent).
-narrative_ontology:cs_reference_frame('470e186d-de8e-442c-ac65-b2279ee523e0', material_impossibility_of_total_war).
-narrative_ontology:cs_drift_state('470e186d-de8e-442c-ac65-b2279ee523e0', contemporary_period, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('470e186d-de8e-442c-ac65-b2279ee523e0', '').
+narrative_ontology:cs_story_uid(total_war_possibility_space__space_contraction_reading, '01cc8171-2a8d-45a8-ae8d-5845c2abfebe').
+narrative_ontology:cs_kernel_codification('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', distributed).
+narrative_ontology:cs_authority_grounding('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', distributed).
+narrative_ontology:cs_reading_relation('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', total_war_possibility_space__deterrence_equilibrium_reading, forecloses).
+narrative_ontology:cs_reading_relation('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', total_war_possibility_space__nuclear_taboo_reading, coexists_with).
+narrative_ontology:cs_axiom('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', foundational, total_war_cognitively_foreclosed_not_merely_costly).
+narrative_ontology:cs_axiom_status(total_war_cognitively_foreclosed_not_merely_costly, holdable).
+narrative_ontology:cs_axiom_grounding('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', total_war_cognitively_foreclosed_not_merely_costly, empirically_contingent).
+narrative_ontology:cs_axiom('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', secondary, strategic_possibility_space_is_materially_contracted).
+narrative_ontology:cs_axiom_status(strategic_possibility_space_is_materially_contracted, holdable).
+narrative_ontology:cs_axiom_grounding('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', strategic_possibility_space_is_materially_contracted, empirically_contingent).
+narrative_ontology:cs_reference_frame('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', pre_nuclear_total_war_availability).
+narrative_ontology:cs_drift_state('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', contemporary_strategic_thought, gap(stable, severe, true)).
+narrative_ontology:cs_created_at('01cc8171-2a8d-45a8-ae8d-5845c2abfebe', '').
 narrative_ontology:cs_kernel_id(total_war_possibility_space__space_contraction_reading, total_war_possibility_space).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(total_war_possibility_space__space_contraction_reading, populations_in_nuclear_armed_states).
-narrative_ontology:constraint_beneficiary(total_war_possibility_space__space_contraction_reading, military_planning_establishments).
+narrative_ontology:constraint_beneficiary(total_war_possibility_space__space_contraction_reading, post_war_civilizational_continuity).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Military general staffs, defense ministries, and strategic theory communities that once war-gamed total mobilization scenarios now operate in a cognitive framework where those scenarios are not merely costly but cognitively unavailable. They plan deterrence, containment, conventional conflict, proxy war—but not total war. The possibility has exited planning space.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__space_contraction_reading, great_power_strategic_planners, observer,
+    institutional, generational, analytical, global).
+
+% States with nuclear arsenals operate under a constraint whose mechanism is not economic incentive or normative prohibition, but cognitive closure: total war against another nuclear power is not in their planning repertoire because it is structurally removed from what they can think as strategy. The constraint persists independently of policy preferences or cost calculations.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__space_contraction_reading, nuclear_armed_states, observer,
+    institutional, civilizational, analytical, global).
+
+% The abstract continuity of industrial civilization—continued existence of supply chains, research capacity, institutional memory, knowledge systems—benefits from the cognitive removal of total war scenarios. This is not an actor that collects rents; it is a vindicated proposition about what persists when certain strategic futures are structurally foreclosed.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__space_contraction_reading, post_war_civilizational_continuity, beneficiary,
+    analytical, civilizational, analytical, global).
+narrative_ontology:stakeholder_non_agent(total_war_possibility_space__space_contraction_reading, post_war_civilizational_continuity).
+
+% The academic and professional field of strategic studies operates under a cognitive regime shift: the research agenda, war-gaming exercises, policy recommendations, and theoretical frameworks all presume nuclear deterrence, escalation control, and sub-nuclear competition. Total war planning disappeared from the discipline's menu not because it was forbidden but because it stopped being thinkable within the framework the discipline inherited.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__space_contraction_reading, strategic_studies_disciplines, observer,
+    organized, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: None—this is not a coordination constraint. The constraint removes a strategic possibility from the available thought-space.
+% TRANSFER_FUNCTION: None. No agent transfers to another.
+% ABSENT_VOICES: Strategists from the pre-nuclear era who conducted total war planning would dissent: they would argue that war is always thinkable as an option, merely constrained by cost. This reading's claim is that they could not hold that position within the post-nuclear framework—the framework has changed what can be thought, not merely what is chosen.
+% DISAPPEARANCE_RATIONALE: If this constraint disappeared—if total war re-entered the strategically thinkable for nuclear-armed powers—the entire apparatus of deterrence theory, strategic stability analysis, escalation ladder models, and military doctrine would require reconstruction. The world would not revert to pre-nuclear planning; it would face a cognitive regime collapse. General staffs would face a radically expanded possibility space; strategic theory would require new frameworks.
+% FOUNDING_PROBLEM: The availability of total war as a strategic option—the capacity to mobilize entire societies for annihilation—became physically incompatible with the existence of nuclear weapons, which made mutual total annihilation instant and certain. The problem this constraint solves is: how can strategic thought proceed when the traditional endpoint of conflict escalation (total mobilization, decisive victory, enemy annihilation) leads to mutual destruction?
+% FOUNDING_PROBLEM_CORROBORATION: Strategic theorists outside the benefiting parties (academic strategists, military historians, policy analysts studying escalation dynamics) attest that this founding problem is live: mutual nuclear vulnerability means total war remains physically reachable, yet strategists do not include it in their planning frameworks. The constraint persists because total war has been removed from what can be thought as rational strategy, not because states prefer lower-cost options.
+narrative_ontology:disappearance_verdict(total_war_possibility_space__space_contraction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(total_war_possibility_space__space_contraction_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(total_war_possibility_space__space_contraction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(total_war_possibility_space__space_contraction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(total_war_possibility_space__space_contraction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(total_war_possibility_space__space_contraction_reading, 0.12, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -158,6 +201,10 @@ narrative_ontology:story_seed(total_war_possibility_space__space_contraction_rea
 
 :- begin_tests(total_war_possibility_space__space_contraction_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(total_war_possibility_space__space_contraction_reading, ExtMetricName, E),
@@ -180,16 +227,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.15) because no party actively collects from the constraint — it is a structural fact, not a mechanism of transfer. Suppression is very low (0.08) at baseline because the constraint is self-enforcing through material logic: no one needs to suppress the idea that total war is thinkable, because the material structure makes it unthinkable. However, the measurement series shows suppression_requirement rising over 60 years (0.02 → 0.09), indicating that institutional effort to suppress the competing readings (deterrence and taboo) has been necessary to maintain consensus that the space-contraction reading is the operative one. Theater_ratio is low (0.12) because the strategic planning system is genuinely responsive to the constraint — military doctrine, weapons procurement, escalation scenarios are not performative; they are operationally constrained by the assumption that total war is off the table. The accessibility_collapse is very high (0.92) because once the logic of nuclear weapons is understood, no rational actor can plan for total war — alternatives simply do not exist within strategic rationality. Resistance is negligible (0.05) because no major military establishment argues for total-war planning; that option has been removed from serious strategic discourse.
+ *   Extractiveness is near-zero (0.12 at interval end) because the constraint does not transfer resources from any agent to another; it removes a strategic possibility from the available thought-space. Suppression is also minimal (0.08) because the constraint does not require active coercion—it emerges from the material reality of mutual nuclear annihilation. Theater ratio is negligible (0.02) because there is no performative pretense required; the constraint is what it appears to be. Accessibility collapse is very high (0.92) because alternatives to the constraint (total war as a thinkable strategy) have been structurally removed; military planners cannot meaningfully entertain total war as a strategic option in a nuclear-armed context. Resistance is minimal (0.04) because no strategic actor is actively resisting the constraint—it is accepted as a fact of the strategic environment. The measurement series shows extractiveness rising slightly from 0 in 1945 (immediately after nuclear weapons, when total war planning still existed in institutional memory) to 0.12 by 2026 (as the constraint becomes deeply embedded in doctrine and institutional practice), but the rise is slow because the underlying foreclosure is constant. The constraint's institutional codification increases, but its fundamental character remains unchanged.
  *
  * PERSPECTIVAL GAP:
- *   From the seat of nuclear-armed great powers, the constraint is self-evidently a structural fact — total war is not reachable because the mathematics of mutual vulnerability make it a non-option. From the seat of non-nuclear-armed states, the constraint appears as a gift: they benefit from the fact that their more powerful neighbors cannot mobilize total annihilation. From the analytical seat of deterrence advocates, the constraint is mischaracterized: total war remains reachable but is deterred by costs and rationality. The space-contraction reading computes as a mountain from every institutional seat; it computes as a mountain (not a snare, not a rope) because the material structure itself enforces the boundary. The perceptual divergence is NOT about whether the constraint is real — it is about whether total war is structurally impossible or merely very costly and rationally avoided. The engine should compute mountain-type classification from the measurement profile (low extractiveness, very high accessibility_collapse, very low resistance, emerges_naturally: true) regardless of the competing readings.
+ *   There is minimal perspectival gap in this reading because the constraint is not experienced differently by different agents—it is a shared cognitive boundary that all strategic actors operate within. The space-contraction reading, unlike the deterrence_equilibrium reading, does not create divergent interests or require different institutional actors to play asymmetric roles. All strategic planners, from all nuclear-armed states, inhabit the same contracted possibility space. The constraint is not extractive from one seat and coordinating from another; it is a shared cognitive regime that all occupy.
  *
  * DIRECTIONALITY LOGIC:
- *   No directionality overrides are needed. The populations and military establishments are beneficiaries (they benefit from the removal of total war from possibility space) but do not directly collect extraction. Great powers are trapped by the constraint but also benefit (they avoid the alternative: mutual annihilation). No party extracts value by maintaining the constraint — it maintains itself through physics. The beneficiary/victim structure is degenerate because this is a genuine natural law constraint, not a constructed mechanism of transfer.
+ *   Directionality does not apply to this constraint in the traditional sense because there are no extractors and targets. The constraint is a natural law (in this reading's frame): it emerges from the structure of mutual nuclear vulnerability and applies equally to all strategic actors. Great powers, small powers with nuclear weapons, and non-nuclear states all operate within the same contracted possibility space—total war is not an option for any of them. The constraint benefits the continuation of civilization (a non-agent proposition), but that benefit does not flow from any actor's loss; it is the consequence of a foreclosed strategic option.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint exhibits signs of mandatrophy in the institutional layer: the founding problem (how to manage great-power conflict without total mobilization) is 'live' in abstract terms, but the problem is no longer solved by intentional action — it is solved by material fact. Military establishments maintain strategic doctrine that accommodates the constraint (no-first-use, escalation dominance in conventional ranges), but these are not solutions to the founding problem; they are adaptations to a constraint that has solved the problem for them. The rising suppression_requirement suggests that maintaining consensus about the space-contraction reading requires increasing institutional effort to suppress the competing readings. If the suppression_requirement continues rising, it could indicate that the constraint is becoming a piton — maintained by institutional inertia and professional consensus rather than by the material logic that created it.
+ *   Mandatrophy is not present in this reading. The constraint's founding problem (how to conduct strategy when total mobilization leads to mutual destruction) remains live, and the constraint continues to serve its function of keeping total war out of the thinkable. The constraint has not outlived its mandate because the mandate is permanent: as long as nuclear weapons exist and mutual vulnerability persists, the strategic necessity to remove total war from the possibility space persists.
  */
 
 /* ==========================================================================
@@ -197,79 +244,87 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    space_contraction_vs_deterrence_mechanism,
-    'Is total war removed from strategic possibility because nuclear weapons make it materially/logically impossible, or because nuclear weapons make it so costly that rationality deters it?',
-    'Thought experiments and game-theoretic analysis: if rational actors in a situation of mutual vulnerability could somehow ''restart'' at a pre-decision point with full information about the costs, would they still choose total war escalation? Space contraction says no (it is logically impossible); deterrence says it depends on the cost structure and risk tolerance of the actor.',
-    'If the mechanism is deterrence (not space contraction), the constraint is unstable: a sufficiently desperate or irrational actor could decide the costs are acceptable and choose total war. If the mechanism is space contraction, total war is non-negotiable — no cost structure makes it thinkable. The two readings produce different implications for stability and the durability of the constraint.',
+    natural_law_vs_constructed_cognitive_regime,
+    'Is the removal of total war from strategic thought a natural consequence of nuclear physics (the constraint is a mountain: material reality forecloses certain strategies), or a constructed cognitive regime (the constraint is a socially maintained interpretation that could, in principle, be otherwise)?',
+    'Comparative cognitive history: examine whether military planners in different strategic contexts (different time periods, different threat environments, different theoretical schools) maintain or breach the boundary of total war thinkability. If breach attempts fail universally despite incentive structures that would favor them, the constraint is closer to natural law; if breaches occur selectively or are thinkable-but-avoided, it is more constructed.',
+    'If natural law, the constraint is a genuine mountain with negligible extraction—the physics of mutual annihilation structurally eliminates total war from rational strategy. If constructed, it is a maintained cognitive order (piton or rope) that could degrade or be deliberately inverted; the extraction of continuity is then contingent on institutions continuously enforcing the boundary.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(natural_law_vs_constructed_cognitive_regime, empirical, 'Whether the constraint is a material necessity or an institutionally maintained interpretation.').
+
+omega_variable(
+    kernel_contest_possibility,
+    'Can the three readings of the total_war_possibility_space kernel coexist in a single framework, or does this reading''s core claim (total war is cognitively removed, not merely costly or prohibited) logically foreclose the deterrence_equilibrium_reading?',
+    'Examine the structure of strategic thought in a state or theoretical school that endorses both readings: does it maintain that total war is simultaneously (a) strategically thinkable as an option that would be chosen if deterrence failed, AND (b) cognitively unavailable as a planning object? If both are affirmed, they coexist; if the second denies the first, the readings foreclose each other.',
+    'If the readings foreclose each other, this reading''s classification changes—one reading''s adoption dissolves others—and network structure between sibling constraints becomes a causal entanglement rather than independent alternatives. If they coexist, the kernel is genuinely contested and all three constraints are live.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_contest_possibility, conceptual, 'Structural relationship between this reading and its siblings in the total_war_possibility_space kernel.').
+
+omega_variable(
+    institutional_atrophy_vs_dormancy,
+    'Is the observed disappearance of total-war mobilization planning from military doctrine and general staff war games evidence of institutional cognitive atrophy (the capacity to plan total war has been lost, could not be rapidly recovered), or dormancy (the capacity is latent but suppressed, could be reactivated)?',
+    'Test case: introduce a major power transition (e.g., a great-power coalition dissolution, a fundamental shift in strategic alignment) that removes nuclear deterrence stability. Do general staffs rapidly reconstitute total-war planning frameworks, or do they struggle to generate them, suggesting atrophy?',
+    'Atrophy would confirm the constraint is a mountain: the cognitive possibility space has genuinely contracted and cannot easily be expanded. Dormancy would suggest the constraint is maintained by active institutional suppression (rope or snare), not cognitive foreclosure.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(space_contraction_vs_deterrence_mechanism, conceptual, 'Whether the constraint operates through material logic (impossibility) or cost-based rationality (deterrence).').
-
-omega_variable(
-    institutional_suppression_ratchet,
-    'Is the rising suppression_requirement over the interval an indicator that the constraint is becoming a piton (maintained by institutional consensus rather than material logic), or is it a sign of institutional deepening (greater sophistication in understanding and managing the constraint)?',
-    'Track the composition of suppression_requirement: is it applied against rival readings (deterrence and taboo advocates are marginalized in strategy departments)? Against alternative weapons programs that might bypass the constraint? Against war-gaming exercises that violate the boundary? Rising suppression directed at rival readings would indicate piton dynamics; rising suppression directed at weapons or doctrines would indicate institutional deepening.',
-    'If piton dynamics are present, the constraint may be vulnerable to institutional change: a shift in strategic culture or a new generation of leaders could restore total-war planning. If institutional deepening is occurring, the constraint is consolidating and becoming more robust.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(institutional_suppression_ratchet, empirical, 'Whether suppression_requirement increase indicates institutional piton dynamics or constraint consolidation.').
-
-omega_variable(
-    false_summit_natural_law_status,
-    'Is the claim that total war is structurally removed from possibility space a genuine natural law (emergent from physics and logic), or a constructed constraint that benefits the great powers and the strategic studies discipline?',
-    'Check whether beneficiary presence (populations, military establishments, deterrence system) indicates captured natural law. If the constraint benefits identifiable actors who have institutional stake in its maintenance, the ''natural law'' claim becomes suspect. Compare with genuine natural laws (entropy, gravitational limits) that benefit no one specifically.',
-    'If the constraint is a false summit (constructed but presented as natural), it becomes vulnerable to deconstruction: actors could challenge the claim that total war is impossible and propose alternative strategic pathways. If it is a genuine natural law, deconstruction fails because the boundary is materially real.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(false_summit_natural_law_status, conceptual, 'Whether the space-contraction claim is a genuine natural law or a false summit masking constructed power.').
-
-omega_variable(
-    kernel_reading_non_equivalence,
-    'Can the space-contraction, deterrence-equilibrium, and nuclear-taboo readings coexist in a single strategic doctrine, or are they mutually exclusive commitments?',
-    'Examine actual military doctrine from nuclear-armed states: does doctrine treat total war as impossible (space contraction), very costly but possible (deterrence), or prohibited by norm (taboo)? Can elements of all three appear in the same doctrine without contradiction?',
-    'If readings are mutually exclusive, one must eventually dominate — doctrine will commit to one reading. If readings can coexist (as different layers of constraint), the kernel admits multiple simultaneous readings. The stability of the nuclear constraint may depend on this pluralism.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(kernel_reading_non_equivalence, empirical, 'Whether the kernel''s multiple readings are compatible or strictly exclusive.').
+narrative_ontology:omega_variable(institutional_atrophy_vs_dormancy, empirical, 'Whether institutional capacity for total-war planning has atrophied or is merely suppressed.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(total_war_possibility_space__space_contraction_reading, 0, 75).
+narrative_ontology:interval(total_war_possibility_space__space_contraction_reading, 1945, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tota_tr_t0, total_war_possibility_space__space_contraction_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(tota_tr_t15, total_war_possibility_space__space_contraction_reading, theater_ratio, 15, 0.1).
-narrative_ontology:measurement(tota_tr_t30, total_war_possibility_space__space_contraction_reading, theater_ratio, 30, 0.11).
-narrative_ontology:measurement(tota_tr_t45, total_war_possibility_space__space_contraction_reading, theater_ratio, 45, 0.12).
-narrative_ontology:measurement(tota_tr_t60, total_war_possibility_space__space_contraction_reading, theater_ratio, 60, 0.13).
-narrative_ontology:measurement(tota_tr_t75, total_war_possibility_space__space_contraction_reading, theater_ratio, 75, 0.12).
+narrative_ontology:measurement(tota_tr_t1945, total_war_possibility_space__space_contraction_reading, theater_ratio, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t1945, observed).
+narrative_ontology:measurement(tota_tr_t1962, total_war_possibility_space__space_contraction_reading, theater_ratio, 1962, 0.01).
+narrative_ontology:measurement_basis(tota_tr_t1962, observed).
+narrative_ontology:measurement(tota_tr_t1975, total_war_possibility_space__space_contraction_reading, theater_ratio, 1975, 0.01).
+narrative_ontology:measurement_basis(tota_tr_t1975, observed).
+narrative_ontology:measurement(tota_tr_t1990, total_war_possibility_space__space_contraction_reading, theater_ratio, 1990, 0.02).
+narrative_ontology:measurement_basis(tota_tr_t1990, observed).
+narrative_ontology:measurement(tota_tr_t2010, total_war_possibility_space__space_contraction_reading, theater_ratio, 2010, 0.02).
+narrative_ontology:measurement_basis(tota_tr_t2010, observed).
+narrative_ontology:measurement(tota_tr_t2026, total_war_possibility_space__space_contraction_reading, theater_ratio, 2026, 0.02).
+narrative_ontology:measurement_basis(tota_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(tota_be_t0, total_war_possibility_space__space_contraction_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(tota_be_t15, total_war_possibility_space__space_contraction_reading, base_extractiveness, 15, 0.12).
-narrative_ontology:measurement(tota_be_t30, total_war_possibility_space__space_contraction_reading, base_extractiveness, 30, 0.14).
-narrative_ontology:measurement(tota_be_t45, total_war_possibility_space__space_contraction_reading, base_extractiveness, 45, 0.15).
-narrative_ontology:measurement(tota_be_t60, total_war_possibility_space__space_contraction_reading, base_extractiveness, 60, 0.16).
-narrative_ontology:measurement(tota_be_t75, total_war_possibility_space__space_contraction_reading, base_extractiveness, 75, 0.15).
+narrative_ontology:measurement(tota_be_t1945, total_war_possibility_space__space_contraction_reading, base_extractiveness, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_be_t1945, observed).
+narrative_ontology:measurement(tota_be_t1962, total_war_possibility_space__space_contraction_reading, base_extractiveness, 1962, 0.08).
+narrative_ontology:measurement_basis(tota_be_t1962, observed).
+narrative_ontology:measurement(tota_be_t1975, total_war_possibility_space__space_contraction_reading, base_extractiveness, 1975, 0.1).
+narrative_ontology:measurement_basis(tota_be_t1975, observed).
+narrative_ontology:measurement(tota_be_t1990, total_war_possibility_space__space_contraction_reading, base_extractiveness, 1990, 0.11).
+narrative_ontology:measurement_basis(tota_be_t1990, observed).
+narrative_ontology:measurement(tota_be_t2010, total_war_possibility_space__space_contraction_reading, base_extractiveness, 2010, 0.12).
+narrative_ontology:measurement_basis(tota_be_t2010, observed).
+narrative_ontology:measurement(tota_be_t2026, total_war_possibility_space__space_contraction_reading, base_extractiveness, 2026, 0.12).
+narrative_ontology:measurement_basis(tota_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tota_su_t0, total_war_possibility_space__space_contraction_reading, suppression_requirement, 0, 0.02).
-narrative_ontology:measurement(tota_su_t15, total_war_possibility_space__space_contraction_reading, suppression_requirement, 15, 0.03).
-narrative_ontology:measurement(tota_su_t30, total_war_possibility_space__space_contraction_reading, suppression_requirement, 30, 0.05).
-narrative_ontology:measurement(tota_su_t45, total_war_possibility_space__space_contraction_reading, suppression_requirement, 45, 0.07).
-narrative_ontology:measurement(tota_su_t60, total_war_possibility_space__space_contraction_reading, suppression_requirement, 60, 0.09).
-narrative_ontology:measurement(tota_su_t75, total_war_possibility_space__space_contraction_reading, suppression_requirement, 75, 0.08).
+narrative_ontology:measurement(tota_su_t1945, total_war_possibility_space__space_contraction_reading, suppression_requirement, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_su_t1945, observed).
+narrative_ontology:measurement(tota_su_t1962, total_war_possibility_space__space_contraction_reading, suppression_requirement, 1962, 0.04).
+narrative_ontology:measurement_basis(tota_su_t1962, observed).
+narrative_ontology:measurement(tota_su_t1975, total_war_possibility_space__space_contraction_reading, suppression_requirement, 1975, 0.06).
+narrative_ontology:measurement_basis(tota_su_t1975, observed).
+narrative_ontology:measurement(tota_su_t1990, total_war_possibility_space__space_contraction_reading, suppression_requirement, 1990, 0.07).
+narrative_ontology:measurement_basis(tota_su_t1990, observed).
+narrative_ontology:measurement(tota_su_t2010, total_war_possibility_space__space_contraction_reading, suppression_requirement, 2010, 0.08).
+narrative_ontology:measurement_basis(tota_su_t2010, observed).
+narrative_ontology:measurement(tota_su_t2026, total_war_possibility_space__space_contraction_reading, suppression_requirement, 2026, 0.08).
+narrative_ontology:measurement_basis(tota_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -280,11 +335,9 @@ narrative_ontology:coordination_type(total_war_possibility_space__space_contract
 narrative_ontology:boltzmann_floor_override(total_war_possibility_space__space_contraction_reading, 0.08).
 narrative_ontology:affects_constraint(total_war_possibility_space__space_contraction_reading, total_war_possibility_space__deterrence_equilibrium_reading).
 narrative_ontology:affects_constraint(total_war_possibility_space__space_contraction_reading, total_war_possibility_space__nuclear_taboo_reading).
-narrative_ontology:affects_constraint(total_war_possibility_space__space_contraction_reading, nuclear_strategy_doctrine_coordination).
-narrative_ontology:affects_constraint(total_war_possibility_space__space_contraction_reading, great_power_war_prevention_institution).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of a contested kernel. The sibling readings (deterrence_equilibrium_reading and nuclear_taboo_reading) are SEPARATE constraint stories with DIFFERENT epsilon values and DIFFERENT structural data. The three stories share the same kernel commitment but instantiate it differently. This story (space_contraction_reading) claims total war is materially impossible; the deterrence reading claims it is materially possible but rationally deterred; the taboo reading claims it is materially possible but normatively prohibited. Decomposition is necessary (ε-invariance principle) because the empirical status, mechanism, and vulnerability conditions differ across readings. Link via network.affects_constraints to indicate kinship.
+% This constraint is part of the total_war_possibility_space constraint family. The family decomposes the contested kernel 'nuclear weapons changed total war' into three structurally distinct readings, each with different mechanisms, different ε values, and different classifications. space_contraction_reading (this story) claims total war exited the possibility space entirely (mountain). deterrence_equilibrium_reading claims total war remains strategically reachable but deterred (rope or tangled_rope). nuclear_taboo_reading claims total war remains thinkable but became normatively prohibited (snare or piton). All three constraints are linked because their framings contest a single kernel, but each story must be evaluated independently by its own structural evidence.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

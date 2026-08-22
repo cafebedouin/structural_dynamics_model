@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,31 +75,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gpl_derivative_work_trigger__broad_copyleft_reading
- *   human_readable: GPL Broad Copyleft Linking-as-Derivation Reading
- *   domain: legal/intellectual-property/open-source
+ *   human_readable: GPL Broad Copyleft Derivative Work Trigger (Linking Creates Obligation)
+ *   domain: legal/technological/open_source
  *
  * SUMMARY:
- *   The GPL defines software as a derivative work if it links (statically or
- *   dynamically) to GPL-licensed code. This reading — the broad copyleft
- *   interpretation — treats the act of linking as creating a derivative work,
- *   triggering the obligation to disclose source code to all recipients. The
- *   constraint pulls dependent code into the open-source commons by making
- *   proprietary integration costly unless vendors accept source disclosure.
- *   The reading is contested by proponents of narrower interpretations
- *   (permissive licenses, interface-boundary readings) who argue that linking
- *   through stable APIs is aggregation, not derivation. The broad reading
- *   persists through organizational enforcement (GPL maintainers, Free
- *   Software Foundation) despite legal uncertainty — no court has
- *   definitively confirmed that dynamic linking constitutes derivation under
- *   copyright law.
+ *   This constraint embodies the broad copyleft reading of the GPL: any
+ *   linking (including dynamic linking at runtime) with GPL-licensed code
+ *   creates a derivative work, triggering source disclosure obligations for
+ *   the entire derivative. The reading treats linking as the
+ *   boundary-crossing event that invokes copyleft; the competing narrow
+ *   reading treats only modification as the trigger. This story instantiates
+ *   the broad reading's structural account: who coordinates what, who bears
+ *   costs, why vendors are constrained. The reading is contested in law
+ *   (courts disagree), in practice (vendors vary in compliance
+ *   interpretation), and in philosophy (what constitutes derivation). The
+ *   claim and metrics are authored independently: the constraint is CLAIMED
+ *   as rope (genuine coordination of commons access) while the metrics
+ *   describe moderately high extraction and active enforcement — the engine
+ *   measures that gap from the structural data you provide.
  *
  * KEY AGENTS:
- *   - gpl_maintainers_and_advocates: Agenda-setter (organized/generational/mobile) — interprets and enforces the broad reading
- *   - proprietary_software_vendors: Payer (powerful/biographical/constrained) — bears the cost of source disclosure or avoidance
- *   - downstream_users: Beneficiary (organized/biographical/mobile) — gains source-access rights from the obligation
- *   - independent_library_developers: Beneficiary+payer (moderate/biographical/constrained) — protected by copyleft but limited in market reach
- *   - permissive_license_maintainers: Excluded (moderate/biographical/mobile) — would argue narrower linking definitions
- *   - courts_and_legal_authorities: Observer (institutional/generational/analytical) — legal uncertainty is the suppression mechanism
+ *   - gpl_downstream_users: gain source access rights to any linked derivative; power asymmetry favors them under the broad reading
+ *   - open_source_commons_ecosystem: benefits from copyleft pulling proprietary code into the commons; non-agent entity representing the aggregate of shared resources
+ *   - proprietary_software_vendors: bear compliance costs and exit constraint; must avoid certain libraries or release code; powerful but extraction-targeted
+ *   - gpl_maintainers: set and enforce the interpretation; agenda_setter authority derives from code ownership and community recognition
+ *   - permissive_license_advocates: excluded from GPL governance; contest the reading in law and public discourse; represent the alternative interpretation
+ *   - jurisdictional_courts: observer seat with authority to confirm or reject the broad reading; split rulings create uncertainty
  */
 
 /* ==========================================================================
@@ -100,57 +110,116 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(gpl_derivative_work_trigger__broad_copyleft_reading, 0.68).
 domain_priors:suppression_score(gpl_derivative_work_trigger__broad_copyleft_reading, 0.71).
-domain_priors:theater_ratio(gpl_derivative_work_trigger__broad_copyleft_reading, 0.42).
+domain_priors:theater_ratio(gpl_derivative_work_trigger__broad_copyleft_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, extractiveness, 0.68).
 narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(gpl_derivative_work_trigger__broad_copyleft_reading, resistance, 0.74).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gpl_derivative_work_trigger__broad_copyleft_reading, rope).
-narrative_ontology:human_readable(gpl_derivative_work_trigger__broad_copyleft_reading, "GPL Broad Copyleft Linking-as-Derivation Reading").
-narrative_ontology:topic_domain(gpl_derivative_work_trigger__broad_copyleft_reading, "legal/intellectual-property/open-source").
+narrative_ontology:human_readable(gpl_derivative_work_trigger__broad_copyleft_reading, "GPL Broad Copyleft Derivative Work Trigger (Linking Creates Obligation)").
+narrative_ontology:topic_domain(gpl_derivative_work_trigger__broad_copyleft_reading, "legal/technological/open_source").
 
 domain_priors:requires_active_enforcement(gpl_derivative_work_trigger__broad_copyleft_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gpl_derivative_work_trigger__broad_copyleft_reading, '2b99c6c7-c39d-403f-8eff-a5f2468df958').
-narrative_ontology:cs_kernel_codification('2b99c6c7-c39d-403f-8eff-a5f2468df958', fixed_text).
-narrative_ontology:cs_authority_grounding('2b99c6c7-c39d-403f-8eff-a5f2468df958', lineage).
-narrative_ontology:cs_interpretation_layer_present('2b99c6c7-c39d-403f-8eff-a5f2468df958').
-narrative_ontology:cs_reading_relation('2b99c6c7-c39d-403f-8eff-a5f2468df958', gpl_derivative_work_trigger__narrow_linking_permissive_reading, forecloses).
-narrative_ontology:cs_reading_relation('2b99c6c7-c39d-403f-8eff-a5f2468df958', gpl_derivative_work_trigger__interface_boundary_reading, coexists_with).
-narrative_ontology:cs_axiom('2b99c6c7-c39d-403f-8eff-a5f2468df958', foundational, linking_creates_derivative_work).
+narrative_ontology:cs_story_uid(gpl_derivative_work_trigger__broad_copyleft_reading, 'eb227298-c47b-4041-9beb-6718c40ff78d').
+narrative_ontology:cs_kernel_codification('eb227298-c47b-4041-9beb-6718c40ff78d', fixed_text).
+narrative_ontology:cs_authority_grounding('eb227298-c47b-4041-9beb-6718c40ff78d', lineage).
+narrative_ontology:cs_interpretation_layer_present('eb227298-c47b-4041-9beb-6718c40ff78d').
+narrative_ontology:cs_reading_relation('eb227298-c47b-4041-9beb-6718c40ff78d', gpl_derivative_work_trigger__narrow_linking_permissive_reading, coexists_with).
+narrative_ontology:cs_reading_relation('eb227298-c47b-4041-9beb-6718c40ff78d', gpl_derivative_work_trigger__interface_boundary_reading, influences).
+narrative_ontology:cs_axiom('eb227298-c47b-4041-9beb-6718c40ff78d', foundational, linking_creates_derivative_work).
 narrative_ontology:cs_axiom_status(linking_creates_derivative_work, holdable).
-narrative_ontology:cs_axiom_grounding('2b99c6c7-c39d-403f-8eff-a5f2468df958', linking_creates_derivative_work, deontological).
-narrative_ontology:cs_axiom('2b99c6c7-c39d-403f-8eff-a5f2468df958', foundational, copyleft_gravity_well_necessity).
-narrative_ontology:cs_axiom_status(copyleft_gravity_well_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('2b99c6c7-c39d-403f-8eff-a5f2468df958', copyleft_gravity_well_necessity, empirically_contingent).
-narrative_ontology:cs_reference_frame('2b99c6c7-c39d-403f-8eff-a5f2468df958', derivative_work_expansionist_commons_protection).
-narrative_ontology:cs_drift_state('2b99c6c7-c39d-403f-8eff-a5f2468df958', contemporary_industrial_integration_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('2b99c6c7-c39d-403f-8eff-a5f2468df958', '').
+narrative_ontology:cs_axiom_grounding('eb227298-c47b-4041-9beb-6718c40ff78d', linking_creates_derivative_work, deontological).
+narrative_ontology:cs_axiom('eb227298-c47b-4041-9beb-6718c40ff78d', secondary, reciprocal_source_access_required_for_commons_sustainability).
+narrative_ontology:cs_axiom_status(reciprocal_source_access_required_for_commons_sustainability, holdable).
+narrative_ontology:cs_axiom_grounding('eb227298-c47b-4041-9beb-6718c40ff78d', reciprocal_source_access_required_for_commons_sustainability, instrumental).
+narrative_ontology:cs_reference_frame('eb227298-c47b-4041-9beb-6718c40ff78d', commons_preservation_through_copyleft_reciprocity).
+narrative_ontology:cs_drift_state('eb227298-c47b-4041-9beb-6718c40ff78d', contemporary_vendor_licensing_fragmentation, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('eb227298-c47b-4041-9beb-6718c40ff78d', '').
 narrative_ontology:cs_kernel_id(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_derivative_work_trigger).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_beneficiaries).
-narrative_ontology:constraint_beneficiary(gpl_derivative_work_trigger__broad_copyleft_reading, downstream_users).
+narrative_ontology:constraint_beneficiary(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_downstream_users).
+narrative_ontology:constraint_beneficiary(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_ecosystem).
 narrative_ontology:constraint_victim(gpl_derivative_work_trigger__broad_copyleft_reading, proprietary_software_vendors).
-narrative_ontology:constraint_victim(gpl_derivative_work_trigger__broad_copyleft_reading, closed_source_libraries).
+narrative_ontology:constraint_victim(gpl_derivative_work_trigger__broad_copyleft_reading, closed_source_integrators).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Receive source code and modification rights whenever they obtain software linked with GPL code. The broad reading guarantees them access to the complete source of the derivative work, enabling inspection, auditing, and modification. They depend on the interpretation holding to maintain their freedoms.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_downstream_users, beneficiary,
+    organized, generational, mobile, global).
+
+% Benefits from the copyleft mechanism pulling dependent code into the commons: when proprietary code links with GPL code, the broad reading requires the proprietary code be released, expanding the commons. This creates a positive feedback loop where the commons grows and becomes harder to escape.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_ecosystem, beneficiary,
+    organized, generational, mobile, global).
+narrative_ontology:stakeholder_non_agent(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_ecosystem).
+
+% Must either release their proprietary code (losing competitive advantage) or avoid linking with GPL libraries entirely (narrowing their technical choices). They bear the enforcement cost through compliance labor, legal exposure, and foregone functionality. Their exit is constrained: they cannot link freely without triggering the obligation.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, proprietary_software_vendors, payer,
+    powerful, biographical, constrained, global).
+
+% Smaller firms wanting to integrate best-of-breed components face the choice of either adopting permissive-licensed alternatives (often lower quality or less maintained) or releasing proprietary code. The broad reading eliminates the middle ground of quiet integration with technical linking.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, closed_source_integrators, payer,
+    moderate, biographical, constrained, global).
+
+% Enforce and interpret the broad copyleft reading through licensing decisions, legal action, and community norm-setting. They author and defend the GPL terms and decide which linking scenarios trigger obligations. Their authority derives from ownership of the licensed code and recognition by downstream users and courts.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_maintainers, agenda_setter,
+    organized, generational, mobile, global).
+
+% Would argue that dynamic linking does not create derivative works and that code reuse should not carry copyleft obligations. They are excluded from the governance of GPL-licensed code but contest the interpretation in public discourse and court filings. Their alternative framing is the interface_boundary_reading and narrow_linking_permissive_reading.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, permissive_license_advocates, excluded,
+    powerful, generational, mobile, global).
+
+% Cannot assert patents against GPL-distributed code (GPL itself includes patent license grants), reducing their leverage over linked software. They would prefer narrower copyleft scope but are excluded from GPL governance.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, software_patent_holders, excluded,
+    powerful, biographical, trapped, global).
+
+% Adjudicate disputes over what constitutes a derivative work under copyright law. They have authority to confirm or reject the broad copyleft reading through case law. Different courts in different jurisdictions have issued conflicting rulings, creating uncertainty.
+narrative_ontology:constraint_stakeholder(gpl_derivative_work_trigger__broad_copyleft_reading, jurisdictional_courts, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_ecosystem).
+narrative_ontology:fixing_cost_class(gpl_derivative_work_trigger__broad_copyleft_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of maintaining a commons: without copyleft enforcement, proprietary actors have incentive to extract value from the commons while keeping improvements private. The broad reading creates a coordination mechanism where access to GPL code is conditioned on sharing improvements (code symmetry). Downstream users coordinate on accessing the full source of any derivative work rather than receiving binaries from proprietary intermediaries.
+% TRANSFER_FUNCTION: Transfers source code disclosure obligations from a conditional state (triggered only by distribution of modified GPL code) to an expansive state (triggered by linking, even dynamic linking). Proprietary vendors transfer choice autonomy: they must choose between adopting permissive licenses, avoiding certain libraries, releasing code, or licensing exceptions. The constraint moves source access rights from binary users to anyone holding the derivative product.
+% ABSENT_VOICES: Proprietary software vendors and their users are partially excluded: proprietary vendors are constrained by the rule but not parties to GPL governance; end-users of proprietary software do not gain the right to demand source (only downstream users of the derivative product do). Courts in restrictive-interpretation jurisdictions would argue for a narrower reading. Patent holders cannot participate in GPL rulemaking.
+% DISAPPEARANCE_RATIONALE: If the broad copyleft derivative-work trigger disappeared overnight, proprietary vendors would immediately integrate best-of-breed GPL libraries without releasing source. The commons would shrink as contributors faced weak incentives to contribute to GPL projects knowing proprietary actors could incorporate improvements without reciprocation. Downstream users would lose automatic access to source for linked proprietary code. The open-source ecosystem would reorganize toward permissive licensing and dual-licensing models.
+% FOUNDING_PROBLEM: The commons faces a prisoner's dilemma: individual actors are incentivized to extract value (use) from shared code while keeping improvements (code changes) private, causing the commons to stagnate. The broad copyleft reading solves this by making extraction (linking) conditional on sharing, enforcing a symmetry norm.
+% FOUNDING_PROBLEM_CORROBORATION: GPL maintainers and open-source advocates attest the prisoner's dilemma is live and the broad reading is necessary to sustain the commons. Proprietary vendors and permissive-license advocates attest the problem is overstated and the broad reading is an overreach that harms software diversity. Courts have issued split rulings: some accept the broad reading (European cases), others reject or limit it (US case law remains unsettled). Independent analysts document both growth of GPL-licensed commons (supporting the coordination claim) and vendor avoidance of GPL dependencies (supporting the extraction claim).
+narrative_ontology:disappearance_verdict(gpl_derivative_work_trigger__broad_copyleft_reading, world_rearranges).
+narrative_ontology:founding_problem_status(gpl_derivative_work_trigger__broad_copyleft_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gpl_derivative_work_trigger__broad_copyleft_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(gpl_derivative_work_trigger__broad_copyleft_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(gpl_derivative_work_trigger__broad_copyleft_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gpl_derivative_work_trigger__broad_copyleft_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,16 +239,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness starts moderate (0.48) because the GPL's coordination function is genuine — it solves a real collective-action problem for open-source developers. But extractiveness rises over the interval (to 0.68) because the broad reading's reach expands: as the industry matured, GPL maintainers increasingly asserted the broadest interpretation (dynamic linking as derivation), and proprietary vendors faced mounting compliance pressure despite legal uncertainty. The theater ratio (0.42) reflects a growing proportion of enforcement activity devoted to defending the broad interpretation against narrower readings, rather than purely protecting source access. Suppression (0.71) is high because the constraint's persistence depends on legal uncertainty: vendors cannot legally challenge the reading without court action, and no court has ruled decisively. The organization and enforcement infrastructure (GPL maintainers, license-enforcement pressure on distributors) suppress alternatives.
+ *   Extractiveness is moderately high (0.68) because the constraint narrows vendor choice-space and requires code disclosure or avoidance; the extraction is offset by the genuine coordination benefit to downstream users. Suppression is elevated (0.71) because enforcement depends on actively excluding alternatives: vendors cannot quietly integrate via permissive-licensed forks, courts must enforce the derivative-work boundary, and community norm-setting suppresses the narrower interpretations. Theater is low-moderate (0.28): the coordination function is substantive (commons access), but a growing portion of enforcement activity defends the interpretation boundary itself rather than sustaining commons functionality. The measurement series show slow accumulation of extractiveness from t=0 to t=15, then plateau, reflecting increasing vendor compliance (reducing active enforcement need) but also increasing clarity of the broad interpretation's scope (reducing contestation suppression). Suppression and theater both rise more steeply early (interpretation hardening) then plateau as the constraint becomes stabilized in practice.
  *
  * PERSPECTIVAL GAP:
- *   From the GPL maintainers' and downstream users' perspective, the constraint is genuine coordination: source disclosure is the price of access to a shared commons, and everyone benefits. From proprietary vendors' perspective, the constraint operates as enforced extraction: they are forced to choose between source disclosure and avoidance, both costly. The broad reading is the mechanism that creates this asymmetry. Independent library developers sit between: they benefit from copyleft protection but bear the cost of reduced market reach. The engine should compute divergent classifications across these seats — maintainers might classify it as rope (coordination with mutual benefit), vendors as snare or tangled_rope (asymmetric extraction), and developers as tangled_rope (hybrid with asymmetric downstream impact).
+ *   Downstream users and GPL maintainers compute the constraint as coordination (genuinely beneficial, low extraction from their seat) — they gain source access without bearing compliance costs. Proprietary vendors compute it as enforcement (high extraction, constrained exit) — they must choose between disclosure, avoidance, or licensing. The broad reading distributes these computations: beneficiaries under this reading become payers under the narrow reading. The engine computes per-seat types from the structural data; the authored claim reflects the commons-beneficiary framing, while the metrics reflect the vendor-constraint reality.
  *
  * DIRECTIONALITY LOGIC:
- *   GPL maintainers (beneficiaries) have high exit options and institutional power — they can fork the GPL, modify enforcement strategy, or shift to permissive licensing. Their d is low (beneficiary end, ~0.15). Proprietary vendors (payers/victims) have constrained exit: they must either accept source disclosure (which damages their business model), avoid GPL libraries entirely (which limits functionality), or invest in proprietary alternatives (expensive). Their d is high (target end, ~0.85). Downstream users are near symmetric (d~0.5): they benefit from source access and freedom, but bear the cost if proprietary vendors withdraw useful libraries or price increases ripple through the ecosystem. Independent library developers are asymmetrically positioned: they capture some benefits (copyleft protection) but also pay penalties (reduced adoption by vendors). No directionality override is needed — the derivation chain correctly models the structural relationship.
+ *   Downstream users and the commons are beneficiaries (d → 0.2): they receive source access without bearing enforcement costs. Proprietary vendors are targets (d → 0.85): they face constrained exit and compliance burden. GPL maintainers are near symmetric (d → 0.5): they gain commons access and reciprocal code sharing, but also bear enforcement labor. Courts and patent holders are analytical (d → 0.5): they are neither benefiting from the constraint nor bearing extraction costs directly — they are adjudicating and displaced, respectively. The broad reading's key structural move is expanding the derivative-work boundary to include linking, which pushes proprietary vendors from the beneficiary side (they could integrate via static linking and keep code closed) toward the payer side (even dynamic linking triggers obligations).
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint is NOT suffering mandatrophy — the founding problem (preventing proprietary capture of open-source work) remains live, and the broad reading is actively maintained to serve it. However, there is a secondary question about whether the broad reading is the minimal necessary mechanism to solve the founding problem, or whether narrower readings (interface boundaries, aggregation-vs-derivation) could achieve the same outcome with less extraction. The engine's classification should detect this as a constraint whose mandate remains live but whose enforcement mechanism is contested — a rope that some seats experience as tangled (coordination + asymmetric cost) or snare (pure extraction).
+ *   The constraint does not show mandatrophy: the founding problem (prisoner's dilemma in commons contributions) remains live, the founding solution (copyleft enforcement) persists, and the cost of fixing it (relicensing vast GPL-licensed code or migrating to permissive alternatives) exceeds any single vendor's benefit. This is stable Rope, not decayed Piton. The contestation (narrow vs. broad vs. interface-boundary readings) is not mandatrophy — it is endemic disagreement about the boundary definition, not about whether the constraint itself is needed.
  */
 
 /* ==========================================================================
@@ -187,101 +256,116 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    legal_derivation_definition_ambiguity,
-    'Does copyright law''s definition of ''derivative work'' include dynamic linking through stable APIs, or only modifications to the original source?',
-    'Court ruling in a copyright case challenging the GPL''s linking interpretation (e.g., a vendor defending against GPL enforcement action). The threshold test: does the court treat linking as a technical fact or a legal construct? If technical, narrow linking definitions prevail; if legal, the broad reading''s expansionist approach wins.',
-    'A court ruling that dynamic linking is NOT derivation would immediately collapse the broad reading''s enforcement and shift classification from rope/tangled_rope to snare (asymmetric extraction without legal foundation). A ruling confirming the broad reading would legitimize the organizational enforcement infrastructure.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(legal_derivation_definition_ambiguity, empirical, 'Whether copyright law''s definition of derivation includes linking.').
-
-omega_variable(
-    commons_benefit_vs_proprietary_cost_asymmetry,
-    'Is the distribution of benefits and costs between open-source commons-builders and proprietary vendors structurally necessary to solve the founding problem, or does the broad reading overreach?',
-    'Natural experiment: jurisdictions that adopt narrower linking definitions (interface-boundary or aggregation-based) and observe whether (a) open-source development remains robust, (b) proprietary integration expands without damaging the commons, (c) GPL projects shift to permissive licensing. If the commons thrives under narrower readings, the asymmetry was not necessary.',
-    'If the commons thrives under narrower readings, the broad reading is revealed as extractive rent-seeking by GPL maintainers rather than necessary coordination. Classification would shift toward snare. If narrower readings cause open-source development to collapse or proprietary capture to accelerate, the broad reading is validated as the minimal necessary mechanism.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(commons_benefit_vs_proprietary_cost_asymmetry, empirical, 'Whether the broad linking interpretation is necessary to sustain the open-source commons.').
-
-omega_variable(
-    organizational_entrenchment_vs_principle,
-    'Is the broad reading sustained by genuine principle (linking IS derivation under a coherent theory) or by organizational entrenchment (GPL maintainers enforce it regardless of legal ambiguity)?',
-    'Comparative discourse analysis: examine GPL maintainers'' legal arguments over time. Have they refined the argument as courts and language communities developed narrower technical definitions of linking? Or have they doubled down on the broadest reading despite technical drift? Examine licensing decisions by GPL-adjacent projects (Linux, GNOME, etc.): have they adopted narrower readings under pressure, or maintained the broad interpretation? Examine organizational incentives: does the FSF''s funding and influence increase as copyleft enforcement tightens?',
-    'If the reading is principle-driven, the constraint is a contested but coherent legal position. If organizational entrenchment drives it, the constraint is revealed as institutional capture — GPL maintainers enforcing the broadest reading not because law or morality requires it, but because it maximizes their institutional control over dependent code. Classification would shift toward snare if entrenchment dominates.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(organizational_entrenchment_vs_principle, conceptual, 'Whether the broad reading is sustained by principle or organizational entrenchment.').
-
-omega_variable(
-    reading_foreclosure_vs_coexistence,
-    'Does the broad copyleft reading logically foreclose the narrow-linking reading, or can both coexist as live positions held by different parties?',
-    'Examine the logical relationship: if linking is NOT derivation (narrow reading''s core premise), can the broad reading''s core premise (linking IS derivation) be held in the same legal framework? Answer: no — they directly contradict. Within a single copyright law framework, only one can be true. However, different jurisdictions could adopt different readings, and different communities could voluntarily choose different licenses. The question is whether the broad reading actively forecloses the narrow reading or coexists with it through organizational separation.',
-    'If the readings foreclose each other, the broad reading''s enforcement represents a direct conflict over legal truth, not organizational coexistence. If they coexist, the constraint is an organizational choice (GPL projects use broad linking; permissive-license projects use narrow linking) rather than a universal legal fact. This affects how the engine classifies the constraint at different seats.',
+    derivative_work_boundary_definition,
+    'What constitutes a derivative work under copyright law: linking (including dynamic linking), modification only, or something else? Does the linking mechanism (static vs. dynamic, direct vs. transitive) matter?',
+    'Appellate court rulings (especially in the EU and US), legislative clarification of copyright derivative-work standards, and international harmonization efforts (e.g., through trade agreements). The Affero GPL (AGPL) extends the scope to network interaction, further testing the boundary.',
+    'If courts reject the broad reading and adopt the narrow reading, extractiveness drops significantly (0.35–0.45), suppression falls (vendors can integrate with permissive-licensed forks as substitutes), and the constraint reclassifies toward Rope-only or even Snare-flavored (pure licensing play). If courts affirm the broad reading, it crystallizes and theater ratio drops (less contestation).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_vs_coexistence, conceptual, 'Logical relationship between broad and narrow linking readings in GPL derivative-work interpretation.').
+narrative_ontology:omega_variable(derivative_work_boundary_definition, empirical, 'The boundary definition for what counts as a derivative work under copyright law is contested and will be resolved by appellate courts.').
+
+omega_variable(
+    broad_vs_narrow_reading_reconcilability,
+    'Can the broad and narrow readings coexist within a single legal framework, or do they logically foreclose each other? If they coexist, how — through interpretation, carveouts, or different contexts?',
+    'Legislative clarification of the GPL itself (though the GPL is written to remain unchanged) or interpretive guidance from GPL steward organizations (Free Software Foundation). Case law patterns showing consistent narrow vs. broad application by different courts would establish stable coexistence.',
+    'If the readings foreclose each other (a single court must choose one), the constraint bifurcates: we should author this as two separate constraints (broad and narrow) in two files, linked by network.affects_constraints, rather than one story with an omega about the boundary. If they coexist (different jurisdictions apply different rules), the omega documents the jurisdictional divergence and the engine models it as empirical uncertainty about which reading applies downstream.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(broad_vs_narrow_reading_reconcilability, conceptual, 'Whether the broad and narrow copyleft readings logically foreclose each other or can coexist in different jurisdictions and communities.').
+
+omega_variable(
+    commons_growth_causation,
+    'Does the broad copyleft reading actually cause proprietary code to be released into the commons, or does it merely cause proprietary vendors to avoid GPL code and use permissive alternatives instead? Is the commons growth benefit net positive or offset by vendor avoidance?',
+    'Empirical tracking of GPL adoption rates, commons code contribution rates, and vendor licensing choices over time. Studies correlating broad-interpretation enforcement events with subsequent commons contributions or vendor avoidance patterns.',
+    'If vendors actually release code due to the constraint (net commons growth), extractiveness and beneficiary framing are validated. If vendors primarily avoid GPL code (licensing around the constraint), the coordination benefit is illusory and extractiveness rises (pure enforcement cost without reciprocal gain) — the constraint reclassifies toward Snare.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(commons_growth_causation, empirical, 'Whether the broad copyleft interpretation causes net commons growth or primarily causes vendor avoidance of GPL code.').
+
+omega_variable(
+    reading_interpretation_stability,
+    'Within the open-source community that adopts the GPL, how stable is the broad reading''s interpretation? Do GPL maintainers genuinely hold this interpretation, or do they apply it inconsistently or strategically depending on the vendor involved?',
+    'Audit of licensing decisions by major GPL projects (Linux kernel, GCC, etc.): do they enforce derivative-work obligations consistently across vendors, or selectively? Survey of GPL maintainers about interpretation confidence and reasoning.',
+    'If maintainers apply the reading inconsistently, suppression is actually higher (political theater maintaining an interpretation that is not fully believed) and theater_ratio should rise. If they apply it consistently, the constraint is more stable and theater_ratio reflects genuine coordination cost.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reading_interpretation_stability, empirical, 'How consistently and sincerely GPL maintainers apply the broad copyleft reading across different vendors and scenarios.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gpl_derivative_work_trigger__broad_copyleft_reading, 0, 28).
+narrative_ontology:interval(gpl_derivative_work_trigger__broad_copyleft_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gpl__tr_t0, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(gpl__tr_t4, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 4, 0.28).
-narrative_ontology:measurement(gpl__tr_t8, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 8, 0.32).
-narrative_ontology:measurement(gpl__tr_t12, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 12, 0.36).
-narrative_ontology:measurement(gpl__tr_t18, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 18, 0.4).
-narrative_ontology:measurement(gpl__tr_t24, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 24, 0.41).
-narrative_ontology:measurement(gpl__tr_t28, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 28, 0.42).
+narrative_ontology:measurement(gpl__tr_t0, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement_basis(gpl__tr_t0, observed).
+narrative_ontology:measurement(gpl__tr_t5, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 5, 0.18).
+narrative_ontology:measurement_basis(gpl__tr_t5, observed).
+narrative_ontology:measurement(gpl__tr_t10, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 10, 0.22).
+narrative_ontology:measurement_basis(gpl__tr_t10, observed).
+narrative_ontology:measurement(gpl__tr_t15, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 15, 0.25).
+narrative_ontology:measurement_basis(gpl__tr_t15, observed).
+narrative_ontology:measurement(gpl__tr_t20, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 20, 0.27).
+narrative_ontology:measurement_basis(gpl__tr_t20, observed).
+narrative_ontology:measurement(gpl__tr_t25, gpl_derivative_work_trigger__broad_copyleft_reading, theater_ratio, 25, 0.28).
+narrative_ontology:measurement_basis(gpl__tr_t25, projected).
 
 % Extraction over time
-narrative_ontology:measurement(gpl__be_t0, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(gpl__be_t4, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 4, 0.54).
-narrative_ontology:measurement(gpl__be_t8, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 8, 0.6).
-narrative_ontology:measurement(gpl__be_t12, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 12, 0.64).
-narrative_ontology:measurement(gpl__be_t18, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 18, 0.66).
-narrative_ontology:measurement(gpl__be_t24, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 24, 0.67).
-narrative_ontology:measurement(gpl__be_t28, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 28, 0.68).
+narrative_ontology:measurement(gpl__be_t0, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 0, 0.51).
+narrative_ontology:measurement_basis(gpl__be_t0, observed).
+narrative_ontology:measurement(gpl__be_t5, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 5, 0.58).
+narrative_ontology:measurement_basis(gpl__be_t5, observed).
+narrative_ontology:measurement(gpl__be_t10, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 10, 0.63).
+narrative_ontology:measurement_basis(gpl__be_t10, observed).
+narrative_ontology:measurement(gpl__be_t15, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 15, 0.66).
+narrative_ontology:measurement_basis(gpl__be_t15, observed).
+narrative_ontology:measurement(gpl__be_t20, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 20, 0.67).
+narrative_ontology:measurement_basis(gpl__be_t20, observed).
+narrative_ontology:measurement(gpl__be_t25, gpl_derivative_work_trigger__broad_copyleft_reading, base_extractiveness, 25, 0.68).
+narrative_ontology:measurement_basis(gpl__be_t25, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gpl__su_t0, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(gpl__su_t4, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 4, 0.6).
-narrative_ontology:measurement(gpl__su_t8, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 8, 0.64).
-narrative_ontology:measurement(gpl__su_t12, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 12, 0.67).
-narrative_ontology:measurement(gpl__su_t18, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 18, 0.69).
-narrative_ontology:measurement(gpl__su_t24, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 24, 0.7).
-narrative_ontology:measurement(gpl__su_t28, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 28, 0.71).
+narrative_ontology:measurement(gpl__su_t0, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement_basis(gpl__su_t0, observed).
+narrative_ontology:measurement(gpl__su_t5, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 5, 0.62).
+narrative_ontology:measurement_basis(gpl__su_t5, observed).
+narrative_ontology:measurement(gpl__su_t10, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 10, 0.66).
+narrative_ontology:measurement_basis(gpl__su_t10, observed).
+narrative_ontology:measurement(gpl__su_t15, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 15, 0.69).
+narrative_ontology:measurement_basis(gpl__su_t15, observed).
+narrative_ontology:measurement(gpl__su_t20, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement_basis(gpl__su_t20, observed).
+narrative_ontology:measurement(gpl__su_t25, gpl_derivative_work_trigger__broad_copyleft_reading, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement_basis(gpl__su_t25, projected).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(gpl_derivative_work_trigger__broad_copyleft_reading, resource_allocation).
+narrative_ontology:coordination_type(gpl_derivative_work_trigger__broad_copyleft_reading, global_infrastructure).
 narrative_ontology:boltzmann_floor_override(gpl_derivative_work_trigger__broad_copyleft_reading, 0.18).
 narrative_ontology:affects_constraint(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_derivative_work_trigger__narrow_linking_permissive_reading).
 narrative_ontology:affects_constraint(gpl_derivative_work_trigger__broad_copyleft_reading, gpl_derivative_work_trigger__interface_boundary_reading).
-narrative_ontology:affects_constraint(gpl_derivative_work_trigger__broad_copyleft_reading, open_source_commons_sustainability).
-narrative_ontology:affects_constraint(gpl_derivative_work_trigger__broad_copyleft_reading, proprietary_library_adoption_dynamics).
 
 % DUAL FORMULATION NOTE:
-% The GPL derivative-work kernel admits three structurally distinct readings: the BROAD_COPYLEFT_READING (this story) asserts linking is derivation; the NARROW_LINKING_PERMISSIVE_READING asserts linking is aggregation; the INTERFACE_BOUNDARY_READING asserts API boundaries decouple derivation from linking. Each reading instantiates different ε values, different beneficiary/victim sets, and different classifications. The readings are siblings in a constraint family, linked by network.affects_constraints. The broad reading pulls dependent code into the commons and is strongly enforced by GPL maintainers. The narrow reading permits proprietary integration and is maintained by permissive-license communities. The interface reading attempts a middle ground. All three readings coexist organizationally, though they foreclose each other logically within any single legal framework. Stories for the narrow and interface readings document the same kernel from different epistemic seats.
+% The GPL derivative-work trigger decomposes into three structurally distinct constraints, each instantiating a different reading of the GPL kernel. This file (broad_copyleft_reading) asserts that linking creates a derivative work; the sibling files assert narrower boundaries (modification only, or clean API exception). The three readings produce different beneficiary/victim structures and different extractiveness profiles. They are not the same constraint viewed from different angles — they are three different claims about what the GPL requires. Linked via network.affects_constraints because the broad reading creates downstream pressure on the narrow reading (vendor behavior shifts as the broad reading is enforced, making the narrow reading harder to sustain), but they do not logically foreclose each other (courts in different jurisdictions apply different interpretations). The coexistence is the empirical contestation the constraint family exists to measure.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(gpl_derivative_work_trigger__broad_copyleft_reading, powerful, 0.82).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

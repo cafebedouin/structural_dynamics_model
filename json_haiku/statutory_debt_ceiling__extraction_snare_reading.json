@@ -4,242 +4,367 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "93edbe34-a95b-4678-9551-0b02423a668b"
+    "story_uid": "5ca09c7d-d090-4312-bdee-1d944e832bab",
+    "created_at": "2026-06-12T14:32:15Z"
   },
   "base_properties": {
-    "extractiveness": 0.81,
-    "suppression": 0.72,
-    "theater_ratio": 0.38,
-    "accessibility_collapse": 0.48,
-    "resistance": 0.68,
+    "extractiveness": 0.82,
+    "suppression": 0.71,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.72,
     "claimed_type": "snare",
-    "human_readable": "Statutory Debt Ceiling as Minority Extraction Mechanism",
+    "human_readable": "Debt Ceiling Hostage Mechanism (Extraction Snare Reading)",
     "topic_domain": "constitutional/political/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "legislative_minority_faction"
     ],
     "victims": [
+      "majority_party",
       "executive_branch",
-      "majority_congress",
-      "credit_markets",
-      "government_beneficiaries"
+      "creditors",
+      "federal_employees",
+      "welfare_recipients",
+      "general_public"
+    ],
+    "vindicated_propositions": [
+      "legislative_hostage_capacity_doctrine"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "legislative_minority_faction",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Controls enough votes to block debt ceiling increase, using that veto power to extract policy concessions unrelated to fiscal responsibility. Sets the frame: 'we will default unless you adopt our preferred tax, spending, or regulatory agenda.' Directly captures the extraction in the form of policy wins that would not have occurred through ordinary legislative process."
+    },
+    {
+      "name": "majority_party",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must negotiate with the minority to raise the ceiling or face a debt default it does not want. Pays through policy concessions: spending restraints, regulatory rollbacks, or legislative defeats on items the majority prioritized. Cannot exit by overriding the minority (filibuster rules, coalition arithmetic) without fracturing their own coalition."
+    },
+    {
+      "name": "executive_branch",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Cannot unilaterally raise the debt ceiling or prevent default; has only emergency authority at the margins (extraordinary measures). Bears reputational and operational cost of default threat, and constraint limits fiscal flexibility. Identity-locked to constitutional oath and fiscal stewardship — cannot refuse to govern."
+    },
+    {
+      "name": "federal_employees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face delayed pay or furloughs during debt ceiling standoffs. No leverage over the constraint. Bears the cost of political negotiation without seat at the table. Exit is resignation, not renegotiation."
+    },
+    {
+      "name": "welfare_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lose benefits or face administrative delays during default threat periods. Carry the constraint's costs without negotiating power. Most vulnerable to disruption from both the threat and the concessions extracted by the minority."
+    },
+    {
+      "name": "creditors_financial_markets",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face credit rating downgrades, higher borrowing costs, and default risk premiums when the ceiling threatens. Price in political risk from each standoff. Constrained by global demand for dollar-denominated assets, but can shift allocations. Extracted via lost returns and forced repricing."
+    },
+    {
+      "name": "general_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bears diffuse costs: market volatility, higher borrowing costs for mortgages and student loans, economic uncertainty, potential recession from default. No direct negotiating role. Exit options are migration or political pressure (neither immediate)."
+    },
+    {
+      "name": "constitutional_tradition",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The commitment structure grounding legislative authority in appropriations power and the treasury authority in debt management are both implicated by the ceiling's constraint on their interaction. Observers of the constitutional tension, not parties to the extraction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "None from this reading's perspective: the debt ceiling performs no active coordination function. The majority and minority could allocate resources, approve appropriations, and authorize borrowing through ordinary legislative process without a rigid ceiling that creates hostage leverage.",
+    "transfer_function": "Transfers policy concessions from the majority party to the minority faction: tax codes, spending allocations, regulatory priorities, judicial nominees, or procedural rules shift to align with minority preferences in exchange for the minority voting to raise the ceiling.",
+    "absent_voices": "Future generations and creditors (global markets) would argue the ceiling's use as hostage creates long-term fiscal instability and sovereign risk premiums they bear indefinitely. They have no seat at debt ceiling standoffs. Supranational actors (IMF, rating agencies) observe but do not control the outcome.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the debt ceiling disappeared, the executive and majority party would exercise fiscal authority without minority hostage leverage. Spending and borrowing decisions would proceed through ordinary appropriations and budget process. Minority factions would lose the only mechanism that forces the majority to negotiate around-the-table on issues they have already lost on the floor.",
+    "founding_problem": "The debt ceiling was established in 1917 as a procedural gate to give Congress collective oversight of Treasury borrowing, replacing item-by-item bond authorization with a single aggregate limit.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Congressional historians and fiscal scholars (outside the minority faction benefiting from its hostage use) document that Treasury operations and fiscal forecasting have evolved since 1917 — Congress now sets appropriations (which determine spending) and tax policy separately; the ceiling adds no substantive fiscal constraint, only procedural friction. The founding problem of fragmented authorization oversight no longer exists; modern appropriations committees perform that function. The minority faction contests this characterization but cannot cite structural evidence that removal would harm fiscal discipline."
+  },
   "interval": {
-    "start": 1995,
-    "end": 2024
+    "start": 0,
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
-      "value": 0.35
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2003,
-      "value": 0.48
+      "time_point": 3,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2011,
-      "value": 0.62
+      "time_point": 6,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.68
+      "time_point": 12,
+      "value": 0.76,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2019,
-      "value": 0.75
+      "time_point": 18,
+      "value": 0.8,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.81
+      "time_point": 25,
+      "value": 0.82,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
-      "value": 0.12
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2003,
-      "value": 0.18
+      "time_point": 3,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2011,
-      "value": 0.26
+      "time_point": 6,
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.31
+      "time_point": 12,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2019,
-      "value": 0.35
+      "time_point": 18,
+      "value": 0.43,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.38
+      "time_point": 25,
+      "value": 0.44,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1995,
-      "value": 0.42
+      "time_point": 0,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2003,
-      "value": 0.51
+      "time_point": 3,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2011,
-      "value": 0.61
+      "time_point": 6,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.65
+      "time_point": 12,
+      "value": 0.69,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2019,
-      "value": 0.69
+      "time_point": 18,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.72
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The statutory debt ceiling is a cap on total federal borrowing, set by Congress. This constraint story instantiates the EXTRACTION SNARE READING: the ceiling is weaponized by a legislative minority faction to extract policy concessions from the majority and executive under threat of default. The minority faction — representing approximately 40% of congressional seats — withholds votes for ceiling increases unless the majority accepts policy riders, budget cuts, regulatory rollbacks, or other concessions. The threat is credible because default would destroy credit markets; the minority's votes are necessary because ceiling increases require supermajority support under current filibuster rules. The constraint persists because its founding problem (preventing executive fiscal micromanagement) is dead, but the ceiling mechanism is now exclusively useful as an extraction lever. The foundational axiom of this reading is that the ceiling is a MEANS TO MINORITY VETO, not a deliberative check; the coordinate constraint family includes readings that frame it as a coordination scaffold and readings that frame it as constitutionally void. This story presents the extraction reading in full clarity.",
+    "narrative_context": "The U.S. statutory debt ceiling is a fixed aggregate limit on Treasury borrowing, nominally set by Congress to constrain fiscal excess. Under this extraction-snare reading, it functions as an asymmetric hostage mechanism: a legislative minority holding veto power over raising the ceiling uses that veto to extract policy concessions from the majority, the executive, and the general public. The majority party and executive bear the political and economic cost of a potential default; the minority captures policy wins it could not achieve through normal legislative process. This reading interprets the ceiling as pure extraction maintained by the structural imbalance between the majority's fear of default (reputational, economic) and the minority's willingness to threaten it. The measurement series tracks rising extractiveness and rising theater ratio (policy concessions increasing as proportion of the ceiling's functional role relative to actual fiscal constraint), with suppression requirement rising and stabilizing at the plateau where threat-capacity becomes effective.",
     "key_agents": [
-      "legislative_minority_faction: holds the veto via ceiling hostage mechanism; extracts policy concessions",
-      "executive_branch: trapped between legal obligation to pay appropriated funds and legal prohibition on exceeding the ceiling; pays extraction in policy concessions",
-      "majority_congress: negotiates with minority to unlock ceiling votes; accepts policy riders as extraction cost",
-      "credit_markets: price default risk, suffer spreads and repricing uncertainty during standoffs",
-      "federal_beneficiaries: face immediate payment suspensions; absorb extraction costs in real hardship",
-      "constitutional_scholars: document unconstitutionality but are excluded from the decision structure"
+      "Legislative minority faction: holds veto over ceiling increase; extracts policy concessions using default threat as leverage",
+      "Majority party: forced to negotiate policy losses in exchange for ceiling raise; bears responsibility for default if negotiations fail",
+      "Executive branch: constrained by ceiling, cannot prevent default unilaterally, identity-locked to fiscal stewardship role",
+      "Federal employees, welfare recipients, public: bear diffuse costs of standoff and extracted policy changes without negotiating leverage",
+      "Creditors and financial markets: price in political risk, face downgrades and repricing costs during standoff"
     ],
-    "logic_rationale": "Extractiveness is high (0.81 at interval end) and rising because the minority faction's use of the ceiling as leverage has accelerated since 2011, with each standoff resulting in explicit policy extraction (the 2011 debt ceiling crisis extracted spending cap agreements; the 2015 crisis extracted Planned Parenthood defunding; the 2023 crisis extracted spending caps and border restrictions). The measurement series tracks the escalation from 1995 (low extractiveness, routine ceiling increases) through 2024 (high extractiveness, routine hostage dynamics). Suppression is high (0.72) because the constraint's persistence depends on active suppression of constitutional challenge, legislative reform, and alternative mechanisms: Congress does not discuss abolishing the ceiling despite documented economic costs; courts declare it a political question; the minority faction uses the hostage mechanism precisely because the suppressive silence around constitutional doubts enables their extraction. Theater is moderate (0.38) because the constraint still carries rhetorical cover (fiscal responsibility, Congressional authority) even though the machinery is now exclusively extractive. Accessibility collapse is low-moderate (0.48) because alternatives exist (constitutional amendment, legislative abolition, executive reinterpretation) but are institutionally suppressed — they are not naturally collapsed by the constraint's operation but artificially closed off by the framework that sustains the ceiling.",
-    "perspectival_gap": "The gap is acute because the constraint exhibits an inversion of stated function — the ceiling was claimed as a check on executive fiscal policy; it now functions as a check on the majority coalition and the executive's ability to implement majority-authorized spending. The minority's rhetorical claim (fiscal responsibility, Congressional prerogative) persists even as the structural reality (hostage extraction) becomes increasingly visible. The engine's per-seat classification should reveal this inversion: from the minority seat, the constraint may compute as rope (coordination of the delegation of fiscal authority); from the majority and executive seats, it computes as snare (enforced extraction); from the constitutional scholar's seat, it computes as a violation of a superseding constraint (14th Amendment Section 4). The authored claim (snare overall) reflects the structural dominance of extraction; the seats will diverge.",
-    "directionality_logic": "The legislative minority faction is the beneficiary (extracts policy concessions, wields the veto mechanism, collects in the form of forced legislative change). The executive, majority Congress, credit markets, and federal beneficiaries are all victims (pay in the forms of policy concessions, delayed legislation, economic repricing, and payment suspensions respectively). The directionality flows from beneficiary (d near 0.0) to victims (d near 1.0). The minority faction's power is 'organized' rather than 'institutional' because their leverage is contingent on their voting bloc, not on the institutional role they hold — the same institutional seats held by a different voting bloc would not wield the same leverage. Their time horizon is 'biographical' because the minority faction's members serve terms of years; the constraint persists across Congresses but the immediate actors have biographical horizons.",
-    "mandatrophy_analysis": "The founding problem (executive fiscal micromanagement via repeated borrowing authorization) is dead. The ceiling persists because the minority faction has captured it as a veto lever. This is precisely the mandatrophy pattern: a constraint whose original function has atrophied but whose machinery remains useful for a beneficiary, so it is maintained theatrically and used for extraction. The theater ratio at 0.38 reflects that the constraint still carries fiscal-responsibility rhetoric even though the machinery is now purely extractive. The gap between founding problem (dead) and current function (extraction) is the mandatrophy signature.",
-    "kernel_context": "This constraint is one reading of the contested STATUTORY_DEBT_CEILING kernel. The kernel is a statutory cap on federal borrowing, claimed as authorized by the Constitution's power-of-the-purse delegation to Congress (Article I, Section 9). THREE READINGS of this kernel exist in the constraint family: (1) COORDINATION_SCAFFOLD_READING — the ceiling as a procedural mechanism that enables Treasury operations without repeated Congressional micromanagement; (2) CONSTITUTIONAL_NULLITY_READING — the ceiling as unconstitutional, superseded by the 14th Amendment Section 4's prohibition on questioning the public debt; (3) EXTRACTION_SNARE_READING (this reading) — the ceiling as a weaponized boundary enabling minority extraction. The three readings diverge on the fundamental question: Is the ceiling a legitimate coordination mechanism, or a constitutional violation exploited as an extraction tool? This reading asserts the extraction framing: the ceiling is USED as a snare, its persistence depends on suppressing constitutional challenge, and its operation systematically extracts policy concessions from the majority and executive."
+    "logic_rationale": "Extractiveness is high (0.82 endpoint) because the mechanism systematically transfers policy outcomes from the majority to the minority against the majority's stated preferences. Suppression is substantial (0.71) because the extraction persists through institutional veto power and default threat, not through voluntary coordination — the majority cannot exit without catastrophic reputational cost (triggering default). Theater ratio rises from 0.28 to 0.44 because the ratio of performative negotiation (political theater, public statements) to actual fiscal constraint (the ceiling's nominal role as spending limit) increases over time — what began as a nominal fiscal gate becomes increasingly a political negotiation stage. Accessibility of alternatives collapses only partially (0.38) because the majority and executive retain theoretical alternatives (constitutional amendment, executive authority tests, market confidence repair) but these are suppressed by practical cost and risk, not eliminated. Resistance is substantial (0.72) because both the majority party and the public actively resist the minority's use of default threat — this is not a consensually accepted arrangement. The measurement series shows rising extractiveness as the minority faction learns the threat is credible and raises demands; the plateau at point 25 reflects institutional learning: the threat-capacity has reached maximum credibility, and further extractiveness gains require ratcheting the threat (requiring actual default, which would be mutually destructive).",
+    "perspectival_gap": "From the minority faction's seat, the constraint enables legitimate leverage: they hold actual veto power and use it to force renegotiation of a majority position they believe is wrong. From the majority seat, it is hostage-taking: the same veto power is experienced as extractive coercion because the majority has already won the policy fight through normal process and should not have to re-fight it. From the executive seat, it is a vulnerability: the ceiling constrains fiscal authority and creates default risk outside the executive's control. From the powerless seats (federal employees, welfare recipients), it is arbitrary harm: policy concessions made in the ceiling negotiation may reverse their protections, and they bear costs from both the threat and the concessions. The engine computes these divergences from the structural data — the minority's veto power is real; its experience as legitimate leverage is a coherent reading from that seat; the majority's experience as coercion is equally structural, as is the powerless seats' experience as arbitrary.",
+    "directionality_logic": "The legislative minority is the agenda-setter and beneficiary (d near 0.0, beneficiary end): they control the hostage mechanism and extract policy concessions. The majority party is a target (d near 1.0, victim end): they lose policy outcomes they won and bear the political cost of negotiating under threat. The executive is close to the target end (d ~0.85): constrained by the ceiling, cannot prevent default unilaterally, identity-locked to stewardship role preventing exit. Federal employees and welfare recipients are full targets (d~1.0, trapped): bear costs with no negotiating leverage. Creditors are targets (d~0.75): face pricing costs and rating downgrades from political risk they did not create and cannot control. The general public is diffuse target (d~0.80): bears costs across multiple dimensions (market volatility, recession risk, fiscal drag from policy concessions) without leverage. No override needed: the derivation chain from beneficiary (minority) and victims (all others) + trapped/constrained exit options produces accurate d-placement.",
+    "mandatrophy_analysis": "The founding problem of the debt ceiling (1917: fragmented Treasury authorization) is dead. Congress now exercises fiscal authority through consolidated appropriations and tax committees; the Treasury operates under unified direction. The ceiling adds no procedural value and performs no active fiscal constraint (borrowing is mechanically determined by spending minus revenue, so the ceiling binds only by repeated legislative action). Yet the constraint persists because it has acquired a new function: enabling hostage leverage. The minority faction benefits from keeping the constraint alive; the majority would prefer to abolish it but lacks the supermajority to do so without minority cooperation. This is the mandatrophy signature: a founding problem that has atrophied but the constraint persists because a new extractive function has grafted onto the old structure. The theater ratio rising from 0.28 to 0.44 captures this transition — the functional activity shifts from nominal fiscal oversight to political negotiation, an increasing proportion of enforcement effort goes to extracting concessions rather than constraining spending.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'statutory_debt_ceiling'. The kernel is the fixed text: '18 U.S.C. § 3101 — An aggregate limit on outstanding Treasury debt.' Three readings inhabit this kernel: (1) constitutional_nullity_reading: The ceiling is superseded by the 14th Amendment Section 4 ('valid public debt shall not be questioned'), making it unconstitutional and void — this reading instantiates a mountain-category constraint (unenforceable, naturally invalid). (2) coordination_scaffold_reading: The ceiling is a procedural gate enabling Treasury operations without repeated micromanagement — a transitional coordination mechanism that was useful historically and could be reformed into genuine utility (scaffold category). (3) extraction_snare_reading [THIS ONE]: The ceiling is weaponized by a minority faction to extract policy concessions through default threat — a snare where the minority benefits and all others are victimized. The readings coexist across different institutional seats: courts debate the constitutional reading; fiscal economists argue the scaffold reading; minority factions deploy the ceiling per the extraction reading. Each reading instantiates a different constraint with a different ε, different beneficiary/victim structure, and different classification. They are not measurements of one constraint — they are three distinct constraints sharing one contested kernel."
   },
   "omegas": [
     {
-      "id": "constitutional_authority_vs_hostage_mechanism",
-      "question": "Is the debt ceiling a constitutionally authorized check on executive fiscal policy, or a constitutionally prohibited hostage mechanism violating the 14th Amendment Section 4?",
-      "resolution_mechanism": "Supreme Court review of Section 4 enforcement, congressional passage of clarifying legislation establishing legislative intent, or federal-court precedent on the ceiling's constitutional status. The constitutional-nullity reading would be vindicated by a ruling that the ceiling is void; this extraction reading would be vindicated by a ruling that the ceiling is valid but systematically misused as a hostage mechanism.",
-      "impact": "A Section 4 ruling invalidating the ceiling would eliminate the extraction mechanism entirely and reclassify this constraint as a dead political-question artifact. A ruling sustaining the ceiling would require alternative reforms (supermajority-only exceptions, automatic increases, or legislative process change) to prevent extraction.",
+      "id": "veto_legitimacy_vs_hostage_framing",
+      "question": "Does the minority faction's use of ceiling veto constitute legitimate legislative leverage or illegitimate hostage-taking — or is that distinction reading-dependent?",
+      "resolution_mechanism": "Comparative analysis of other legislative veto structures (filibuster, motion to recommit, committee veto) and their normative evaluation across constitutional traditions. Distinguishing moments: (a) Does the minority propose alternative fiscal solutions (legitimate counteroffer) or demand unrelated policy concessions (hostage extortion)? (b) Do they set a deadline for negotiation (legitimate bargaining) or use the threat indefinitely to suppress majority decisions (hostage persistence)? (c) Is the veto tied to their fiscal philosophy or disconnected from any budget principle (coherent position vs. arbitrary extraction).",
+      "impact": "If framed as hostage-taking, the constraint reclassifies robustly as snare; if framed as legitimate leverage, it coexists with the scaffold reading as two institutional readings of the same mechanism. This reading's ε assumes hostage framing; the alternate reading uses coexists_with relation.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether the constitutional interpretation forecloses the ceiling or sustains it as legitimate."
+      "description": "Whether veto-hostage distinction is factual or frame-dependent."
     },
     {
-      "id": "minority_faction_structural_necessity",
-      "question": "Is the minority faction's leverage structurally necessary to the ceiling's operation, or contingent on current legislative rules (filibuster, supermajority thresholds)?",
-      "resolution_mechanism": "Congressional rule change (elimination of filibuster, lowering of majority requirement for ceiling increases, or automatic-ceiling-increase mechanisms). If rule change eliminates the minority's veto, the constraint reclassifies from snare to a weaker rope or mountain (natural ceiling derived from economic constraints, not legislative hostage).",
-      "impact": "If minority leverage is contingent on rules, rule change would eliminate the extraction mechanism. If structural, rule change would create political crisis and force Constitutional amendment to permanently resolve the ceiling question.",
+      "id": "default_threat_credibility",
+      "question": "How credible is the minority's threat to permit default? If the threat is not credible, the extraction mechanism collapses.",
+      "resolution_mechanism": "Empirical record: (a) Historical instances where the minority threatened default and the majority capitulated (credibility signal). (b) Instances where the minority backed down or raised the ceiling without concessions (non-credibility signal). (c) Market pricing of default risk during standoff periods (credibility revealed through financial instrument pricing). (d) Statements from minority actors about willingness to default (weak evidence, often contradicted by action).",
+      "impact": "If the threat is not credible (majority knows the minority will back down at the last second), the extraction disappears and the constraint reverts to nominal fiscal gate (rope or scaffold). If the threat is credible, the extraction persists and ε remains high (snare). The measurement series assumes rising credibility to t18, then plateau.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether minority veto is inherent to the ceiling or contingent on legislative procedure."
+      "description": "Whether the default threat is structurally credible or illusory."
     },
     {
-      "id": "economic_cost_vs_political_benefit",
-      "question": "Do the policy concessions extracted by the minority faction justify the economic costs (credit repricing, market uncertainty, payment suspensions) to the broader economy?",
-      "resolution_mechanism": "Comparative institutional analysis: cost-benefit assessment of specific extracted concessions (budget caps, regulatory rollbacks) against measured economic impacts (GDP drag, interest-rate increases, employment disruption). No purely objective answer exists (values-dependent); the resolution mechanism would be political judgment by the majority coalition.",
-      "impact": "If costs demonstrably exceed benefits, the majority coalition gains normative authority to eliminate the ceiling by reconciliation or amendment. If benefits are substantial, the minority's extractive power becomes partially legitimate as a check on fiscal excess.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether extraction benefits justify economic costs — a values question, not empirical."
+      "id": "fiscal_constraint_residual",
+      "question": "Does the ceiling perform ANY actual fiscal constraint, or is borrowing entirely mechanically determined by spending minus revenue?",
+      "resolution_mechanism": "Fiscal analysis: (a) Does the ceiling ever bind between congressional appropriations votes? (b) Do appropriations committees consider the ceiling when budgeting, or do they set appropriations first and then raise the ceiling as needed? (c) Are there instances where the ceiling actually prevented spending that had appropriation, or does the ceiling only halt execution after appropriation is already set? (d) Do other democracies that lack a debt ceiling show different fiscal discipline outcomes?",
+      "impact": "If the ceiling performs no actual constraint, the 'fiscal oversight' rationale is pure theater and supports snare classification. If the ceiling does constrain, it supports scaffold or rope reading (genuine coordination function). This reading assumes the constraint performs minimal fiscal coordination and high extraction; the coordinate reading assumes residual coordination value.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the ceiling constrains spending or merely halts execution after spending is committed."
     },
     {
-      "id": "institutional_commitment_conflict",
-      "question": "This reading frames the ceiling as one instantiation of a contested kernel — the 14th Amendment Section 4 reading would foreclose the extraction reading in any single constitutional framework. Can the US institutional system coherently hold both the ceiling and the 14th Amendment's debt-protection clause, or does one necessarily override the other?",
-      "resolution_mechanism": "Constitutional amendment (explicit restatement of the ceiling's authority or explicit abolition) or Supreme Court clarification of Section 4's supremacy over statutory ceiling. The formal resolution would establish which reading is institutionally binding.",
-      "impact": "If Section 4 overrides, the ceiling is void and this extraction reading becomes historical artifact. If the ceiling is reaffirmed, Section 4 interpretation must be narrowed to accommodate statutory ceilings, and the extraction reading persists with constitutional cover.",
+      "id": "reading_foreclosure_constitutional",
+      "question": "Does this extraction-snare reading foreclose the constitutional-nullity reading, or can both coexist as institutional and constitutional framings of the same text?",
+      "resolution_mechanism": "Jurisprudential analysis: (a) The nullity reading rests on 14th Amendment Section 4 preemption of the ceiling. (b) This extraction reading assumes the ceiling is valid law that the minority uses to extract concessions. (c) These can coexist if courts have never definitively resolved the 14th Amendment question (which is true); or they foreclose if the 14th Amendment reading is adopted (the ceiling becomes legally void, ending the extraction mechanism). The coexistence is jurisdictionally contingent: courts permit ceiling use (extraction reading live), or courts void the ceiling (nullity reading instantiated, extraction reading becomes moot).",
+      "impact": "If the extraction reading forecloses nullity, this would require establishing the ceiling is structurally unchallengeable — a strong claim not yet judicially confirmed. If they coexist (high probability), they are institutional readings held by different factions, and both constraints exist in different reference frames (political vs. constitutional). This reading treats them as coexisting.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether the ceiling and 14th Amendment Section 4 can coexist or one forecloses the other."
+      "description": "Whether constitutional nullity and extraction readings are foreclosing or coexisting."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) structural (the ceiling's legal enforcement and veto mechanism) or internalized (the majority's acceptance of majority-rule norms and default-fear)?",
+      "resolution_mechanism": "Natural experiment: if a new legislative coalition tried to remove the ceiling without minority consent, would they face (a) legal barriers (structural suppression) or (b) norm-based pressure and fear of retaliation (internalized suppression)? The U.S. has no legal barrier to abolishing the ceiling via majority vote (only filibuster); the suppression is institutional and norm-based. The majority could override via supermajority coalition-building or reform, but the default-fear and norm internalization prevent it.",
+      "impact": "If suppression is structural (legal), it is harder to reverse than if it is internalized (norm-based). If internalized, post-reform suppression might persist (the majority has learned that ceiling threats are credible) — making the extraction zombie-like. This reading estimates suppression as ~60% structural veto power, ~40% internalized fear, putting it at 0.71 blended.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether measured suppression is veto mechanism or internalized fear."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.1
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "statutory_debt_ceiling__coordination_scaffold_reading",
-      "statutory_debt_ceiling__constitutional_nullity_reading",
-      "credit_market_repricing_mechanism",
-      "federal_payment_disruption_veto"
+      "statutory_debt_ceiling__constitutional_nullity_reading"
     ],
-    "dual_formulation_note": "The statutory debt ceiling is a contested kernel instantiated by three structurally distinct constraint stories. EXTRACTION_SNARE_READING (this story) frames the ceiling as a weaponized hostage mechanism; COORDINATION_SCAFFOLD_READING frames it as a procedural check on Treasury; CONSTITUTIONAL_NULLITY_READING frames it as unconstitutional under 14th Amendment Section 4. The three readings differ fundamentally on whether the ceiling is legitimate and what function it serves. No single reading is 'the truth' — the kernel is genuinely contested, and the three readings coexist as live positions held by different political factions. The engine's role is to measure each reading's structural characteristics (extractiveness, suppression, etc.) and compute per-seat classifications. This story measures the extraction reading; the sibling stories measure the coordinate readings."
+    "dual_formulation_note": "This constraint is one reading of the statutory debt ceiling kernel. The coordination_scaffold_reading instantiates the same text as a transitional procedural mechanism; the constitutional_nullity_reading instantiates it as legally void under the 14th Amendment. The three readings coexist as institutional and constitutional framings; they affect each other's resource availability and legitimacy conditions. The extraction-snare reading (this file) increases political capital required to maintain the ceiling's legitimacy, which influences the constitutional challenge's viability and the scaffold reading's credibility. Sibling readings linked via network.affects_constraints."
   },
   "directionality_overrides": [
     {
       "power_atom": "organized",
-      "d_value": 0.15
+      "d_value": 0.12
     }
   ],
+  "gain_flow": "legislative_minority_faction",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "statutory_debt_ceiling__coordination_scaffold_reading"
+    ]
+  },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
-    "interpretation_layer_present": false,
+    "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "statutory_debt_ceiling__coordination_scaffold_reading",
-        "relation": "coexists_with"
+        "sibling_id": "coordination_scaffold_reading",
+        "relation": "influences"
       },
       {
-        "sibling_id": "statutory_debt_ceiling__constitutional_nullity_reading",
-        "relation": "influences"
+        "sibling_id": "constitutional_nullity_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "debt_ceiling_minority_veto_mechanism",
+        "atom": "ceiling_hostage_mechanism_doctrine",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "founding_problem_obsolescence",
-        "role": "foundational",
+        "atom": "minority_veto_extraction_legitimacy",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "deliberative_congressional_fiscal_check",
+    "reference_frame": "minority_veto_structural_capacity",
     "drift_state": {
-      "moment": "contemporary_2024",
-      "direction": "axiom_overriding",
-      "magnitude": "severe",
+      "moment": "contemporary_post_2011_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

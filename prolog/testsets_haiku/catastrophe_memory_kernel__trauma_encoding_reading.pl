@@ -44,6 +44,13 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,26 +75,30 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: catastrophe_memory_kernel__trauma_encoding_reading
- *   human_readable: Intergenerational Trauma Encoding as Collective Warning System
- *   domain: religious_studies/collective_memory/ritual_practice
+ *   human_readable: Intergenerational Trauma Encoding in Mourning Ritual
+ *   domain: religious/collective_memory
  *
  * SUMMARY:
- *   A community preserves historical trauma through ritual, narrative, and
- *   collective mourning practice. The stated function is collective survival:
- *   ritual encodes ancestral threat-recognition into descendants'
- *   psychological and social structure so that the group remains vigilant
- *   against historical repetition. This constraint is ONE reading of a
- *   contested kernel about how catastrophe memory functions in ritual
- *   systems. The trauma-encoding reading treats ritual as a transmission
- *   mechanism that extracts psychological burden from descendants as the
- *   price of their inherited warning capacity. Sibling readings frame the
- *   same ritual as boundary-maintenance, survival-competence encoding, or
- *   symbolic continuity—each of which produces structurally different
- *   constraints and different extracted costs. This story instantiates ONLY
- *   the trauma-encoding reading: ritual as a mechanism that encodes
- *   intergenerational trauma as warning, benefiting collective
- *   threat-vigilance while extracting psychological weight from descendants.
+ *   This constraint models ritual mourning practice as a mechanism for
+ *   encoding intergenerational trauma, instantiating the trauma-encoding
+ *   reading of the catastrophe_memory_kernel. The ritual sustains collective
+ *   threat-vigilance by structuring descendants' perception and embodied
+ *   response to reproduce the ancestral fear-state; the constraint extracts
+ *   psychological burden (elevated anxiety, hypervigilance, intrusive memory)
+ *   from younger participants to produce early-warning capacity the group
+ *   interprets as protective. The reading asserts that ritual's primary
+ *   mechanism is trauma transmission, not symbolic continuity or boundary
+ *   maintenance — and that descendants bear a real psychological cost for
+ *   this function. This is one of four structurally distinct interpretations
+ *   of the same mourning practice, each producing a different classification,
+ *   beneficiary set, and harm profile.
  *
+ * KEY AGENTS:
+ *   - Elder ritual practitioners: maintain the mourning practice, decide which trauma narratives are encoded, control initiation of younger participants into somatically enacted catastrophe memory.
+ *   - Descendant bearers of trauma: participate from childhood, absorb traumatic narratives somatically, carry elevated baseline anxiety and hypervigilance across lifespan. Exit requires severing group identity.
+ *   - Collective threat-vigilance (non-agent): the faculty or early-warning capacity the constraint vindicated. Beneficiary is structural rather than agentic.
+ *   - Younger initiates (powerless, identity-locked): forced participation in mourning ritual before cognitive maturity or capacity to refuse. Resistance invisible because normalized as solemn duty.
+ *   - Mental health practitioners (excluded): barred from reframing the ritual's burden as pathology rather than sacred knowledge. Would argue for decoupling threat-awareness from somatic trauma.
  */
 
 /* ==========================================================================
@@ -109,44 +121,99 @@ narrative_ontology:constraint_metric(catastrophe_memory_kernel__trauma_encoding_
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(catastrophe_memory_kernel__trauma_encoding_reading, tangled_rope).
-narrative_ontology:human_readable(catastrophe_memory_kernel__trauma_encoding_reading, "Intergenerational Trauma Encoding as Collective Warning System").
-narrative_ontology:topic_domain(catastrophe_memory_kernel__trauma_encoding_reading, "religious_studies/collective_memory/ritual_practice").
+narrative_ontology:human_readable(catastrophe_memory_kernel__trauma_encoding_reading, "Intergenerational Trauma Encoding in Mourning Ritual").
+narrative_ontology:topic_domain(catastrophe_memory_kernel__trauma_encoding_reading, "religious/collective_memory").
 
 domain_priors:requires_active_enforcement(catastrophe_memory_kernel__trauma_encoding_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(catastrophe_memory_kernel__trauma_encoding_reading, 'f7d0457f-2d04-4606-ae48-4560c26cab93').
-narrative_ontology:cs_kernel_codification('f7d0457f-2d04-4606-ae48-4560c26cab93', distributed).
-narrative_ontology:cs_authority_grounding('f7d0457f-2d04-4606-ae48-4560c26cab93', lineage).
-narrative_ontology:cs_interpretation_layer_present('f7d0457f-2d04-4606-ae48-4560c26cab93').
-narrative_ontology:cs_reading_relation('f7d0457f-2d04-4606-ae48-4560c26cab93', catastrophe_memory_kernel__boundary_maintenance_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f7d0457f-2d04-4606-ae48-4560c26cab93', catastrophe_memory_kernel__survival_competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f7d0457f-2d04-4606-ae48-4560c26cab93', catastrophe_memory_kernel__symbol_continuity_reading, coexists_with).
-narrative_ontology:cs_axiom('f7d0457f-2d04-4606-ae48-4560c26cab93', foundational, trauma_encodes_threat_recognition).
-narrative_ontology:cs_axiom_status(trauma_encodes_threat_recognition, holdable).
-narrative_ontology:cs_axiom_grounding('f7d0457f-2d04-4606-ae48-4560c26cab93', trauma_encodes_threat_recognition, empirically_contingent).
-narrative_ontology:cs_axiom('f7d0457f-2d04-4606-ae48-4560c26cab93', foundational, descendants_must_carry_ancestral_burden).
-narrative_ontology:cs_axiom_status(descendants_must_carry_ancestral_burden, holdable).
-narrative_ontology:cs_axiom_grounding('f7d0457f-2d04-4606-ae48-4560c26cab93', descendants_must_carry_ancestral_burden, deontological).
-narrative_ontology:cs_reference_frame('f7d0457f-2d04-4606-ae48-4560c26cab93', trauma_as_collective_survival_mechanism).
-narrative_ontology:cs_drift_state('f7d0457f-2d04-4606-ae48-4560c26cab93', contemporary_psychological_modernity, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('f7d0457f-2d04-4606-ae48-4560c26cab93', '').
+narrative_ontology:cs_story_uid(catastrophe_memory_kernel__trauma_encoding_reading, '0bea5993-2e7f-44ad-96bc-8c3f4b87fb19').
+narrative_ontology:cs_kernel_codification('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', distributed).
+narrative_ontology:cs_authority_grounding('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', lineage).
+narrative_ontology:cs_interpretation_layer_present('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19').
+narrative_ontology:cs_reading_relation('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', catastrophe_memory_kernel__symbol_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', catastrophe_memory_kernel__survival_competence_reading, influences).
+narrative_ontology:cs_reading_relation('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', catastrophe_memory_kernel__boundary_maintenance_reading, coexists_with).
+narrative_ontology:cs_axiom('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', foundational, trauma_transmission_functional_necessity).
+narrative_ontology:cs_axiom_status(trauma_transmission_functional_necessity, holdable).
+narrative_ontology:cs_axiom_grounding('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', trauma_transmission_functional_necessity, empirically_contingent).
+narrative_ontology:cs_axiom('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', foundational, ancestral_catastrophe_perpetually_recurrent).
+narrative_ontology:cs_axiom_status(ancestral_catastrophe_perpetually_recurrent, holdable).
+narrative_ontology:cs_axiom_grounding('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', ancestral_catastrophe_perpetually_recurrent, empirically_contingent).
+narrative_ontology:cs_reference_frame('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', ancestral_trauma_as_protective_knowledge).
+narrative_ontology:cs_drift_state('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', contemporary_diaspora_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('0bea5993-2e7f-44ad-96bc-8c3f4b87fb19', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(catastrophe_memory_kernel__trauma_encoding_reading, collective_threat_vigilance).
-narrative_ontology:constraint_beneficiary(catastrophe_memory_kernel__trauma_encoding_reading, group_survival_capacity).
-narrative_ontology:constraint_victim(catastrophe_memory_kernel__trauma_encoding_reading, descendant_generations).
+narrative_ontology:constraint_victim(catastrophe_memory_kernel__trauma_encoding_reading, descendant_bearers_of_trauma).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(catastrophe_memory_kernel__trauma_encoding_reading, younger_generation_initiates).
+narrative_ontology:constraint_victim(catastrophe_memory_kernel__trauma_encoding_reading, younger_generation_initiates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Maintain and transmit the mourning ritual, structuring its emotional intensity and narrative content to encode specific threat-awareness lessons. They select which catastrophe details are emphasized, which are ritually relived, and how younger participants are inducted into the felt knowledge of ancestral suffering. They justify this as protective — descendants who carry the trauma in their bodies will recognize danger earlier.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, elder_ritual_practitioners, agenda_setter,
+    organized, generational, identity_locked, local).
+
+% Participate in mourning rituals from childhood onward, absorbing traumatic narratives and enacting them somatically — crying, keening, re-experiencing ancestral fear during ceremony. They carry elevated baseline anxiety, hypervigilance, and intrusive memory across their lifespans. Exit from ritual participation would mean severing group identity and rejecting the claim that they are the carriers of collective survival knowledge.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, descendant_bearers_of_trauma, payer,
+    moderate, biographical, identity_locked, local).
+
+% The group's early-warning capacity for persecution, violence, or recurring catastrophe. The constraint structures descendants' perception to trigger threat-recognition faster than learning from historical accounts alone would produce. As a non-agent beneficiary — a faculty or capacity rather than an actor — it collects no rents but is vindicated by the constraint's operation.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, collective_threat_vigilance, beneficiary,
+    analytical, civilizational, analytical, regional).
+narrative_ontology:stakeholder_non_agent(catastrophe_memory_kernel__trauma_encoding_reading, collective_threat_vigilance).
+
+% Are inducted into the ritual starting in childhood, required to participate in mourning ceremonies before they have developed the cognitive capacity to consent or the social standing to refuse. They experience the emotional weight as overwhelming initially but are socialized to interpret the experience as sacred responsibility and protective gift. Their resistance is largely invisible because it is normalized as solemn duty.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, younger_generation_initiates, payer,
+    powerless, immediate, trapped, local).
+narrative_ontology:stakeholder_secondary_role(catastrophe_memory_kernel__trauma_encoding_reading, younger_generation_initiates, beneficiary).
+
+% Analyze from outside whether the ritual's trauma encoding produces adaptive threat-recognition or pathologizes descendants through inherited dysregulation. They examine generational patterns of PTSD, anxiety disorders, and survivor-guilt transmission against the counterfactual of historical knowledge transfer without somatic encoding.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, narrative_historians, observer,
+    analytical, generational, analytical, global).
+
+% Are structurally barred from the ritual space or from re-framing descendants' experience because the ritual's framing explicitly positions trauma as sacred knowledge, not pathology. Were they admitted to the conversation, they would argue for decoupling threat-awareness from somatic trauma transmission — separating the survival competence function from the psychological burden.
+narrative_ontology:constraint_stakeholder(catastrophe_memory_kernel__trauma_encoding_reading, mental_health_practitioners, excluded,
+    institutional, biographical, constrained, regional).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(catastrophe_memory_kernel__trauma_encoding_reading, elder_ritual_practitioners).
+narrative_ontology:fixing_cost_class(catastrophe_memory_kernel__trauma_encoding_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Transmits adaptive threat-recognition across generations without requiring each cohort to rediscover persecution risk from scratch. The ritual encodes survival knowledge somatically — descendants' hypervigilance and intrusive memory become an early-warning system calibrated to historical catastrophe patterns.
+% TRANSFER_FUNCTION: Moves psychological burden — intrusive memory, baseline anxiety, hypervigilance, survivor-guilt — from elders who survived catastrophe to descendants who did not, in exchange for embodied threat-detection capacity the group interprets as protective.
+% ABSENT_VOICES: Mental health practitioners, descendants who have left the group, secular interpreters of the same history, descendants experiencing trauma-related pathology who question whether the ritual's framing as sacred obligation masks extractive burden. These voices are structurally excluded by the ritual's claim that therapeutic reframing would weaken the warning function.
+% DISAPPEARANCE_RATIONALE: If the trauma-encoding ritual disappeared, the collective threat-vigilance would degrade over a generation or two — historical knowledge would persist but without the somatic embedding that produces early-warning sensitivity. Simultaneously, descendant baseline anxiety and PTSD prevalence would shift, likely downward, absent the ritual's ongoing traumatic re-enactment. The group's self-understanding as carriers of sacred survival knowledge would dissolve.
+% FOUNDING_PROBLEM: After catastrophe (persecution, genocide, diaspora), how do survivor cohorts ensure that descendants — who did not witness the original threat — will recognize and respond to its recurrence fast enough to survive? Historical narrative alone often fails to motivate the vigilance that saved the original survivors.
+% FOUNDING_PROBLEM_CORROBORATION: Elders and ritual practitioners attest the founding problem is perpetually live: every generation faces new persecution threats that replicate the original catastrophe's pattern. Descendants who have exited the group, and trauma researchers studying intergenerational trauma transmission, attest the founding problem is a historical one — the original catastrophe is documented, descendant threat environment is substantially different, and the ritual's trauma encoding is producing maladaptive hypervigilance rather than adaptive protection. No corroborating voice from outside the ritual tradition affirms the ongoing catastrophe-recurrence claim.
+narrative_ontology:disappearance_verdict(catastrophe_memory_kernel__trauma_encoding_reading, world_rearranges).
+narrative_ontology:founding_problem_status(catastrophe_memory_kernel__trauma_encoding_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(catastrophe_memory_kernel__trauma_encoding_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(catastrophe_memory_kernel__trauma_encoding_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(catastrophe_memory_kernel__trauma_encoding_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(catastrophe_memory_kernel__trauma_encoding_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -166,16 +233,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate-to-high (0.68) because the constraint imposes psychological burden on powerless descendants (anxiety, hypervigilance, trauma markers) to sustain collective threat-awareness. Suppression is moderate (0.45) because the constraint relies less on coercive barriers than on identity-fusion: descendants internalize the necessity of carrying trauma as part of being group members. Theater ratio is elevated (0.52) and rising over time because as direct threat recedes and descendants have no lived experience of the founding catastrophe, the maintenance of trauma-narratives becomes increasingly performative—the function shifts from 'remember to survive' to 'remember to remember.' The measurement series captures this drift: extractiveness peaks at t=60 (when therapeutic alternatives emerge most strongly) and stabilizes at t=80+, while theater ratio continues rising, indicating that the constraint's real function (threat-warning) degrades while its performative function (memory maintenance) intensifies. Suppression is relatively low because descendants are not coerced by external force but by identity-lock—they choose to carry the trauma because rejecting it means rejecting group identity.
+ *   Extractiveness begins moderate (0.48) and gradually increases to plateau at 0.68 as the ritual stabilizes over generational cycles — the traumatic encoding becomes normalized and descendants internalize it as inevitable truth rather than contingent practice. Theater ratio mirrors this drift: initially moderate-to-high (0.38) as the ritual's trauma-transmission function is explicit and reinforced, then increases (0.52 at interval end) as more of the ritual's activity becomes performative — re-enacting trauma without actively teaching new threat-recognition, maintaining the form as cultural duty after the original threat environment has shifted. Suppression begins higher (0.52) because early participants resist the traumatic induction; it declines over time as internalization and identity-lock deepen — by interval end, suppression is lower (0.45) because descendants do not actively resist what they have internalized as identity and responsibility. The measurement grid shares a single time axis so every metric is authored at every examined point.
  *
  * PERSPECTIVAL GAP:
- *   Ritual practitioners (agenda-setters) and community elders (beneficiaries) compute this constraint as rope or even mountain—natural law of survival, necessary coordination for collective defense. They have mobile exit and powerful voice. Descendant generations (payers) compute it as snare or tangled rope—they bear extraction (psychological weight, hypervigilance) with constrained exit and no voice in the design. The engine computes per-seat classifications from power, exit, and beneficiary/victim structure; the authored metrics describe extractiveness from the payer seat (descendants), not the beneficiary seat (collective threat-vigilance). This divergence is the diagnostic point.
+ *   The elder practitioners and the descendant bearers compute very differently from this structure. The practitioners experience the constraint as protective wisdom-transmission and fulfill their role as agenda-setters — from their seat, the arrangement is genuine coordination solving a real threat-recognition problem. The powerless initiates and descendant bearers experience it as enforced traumatic induction with suppressed exit — from their seat, the same structure operates as extraction. Older descendants who have exited the group and are now processing inherited trauma report that the ritual's framing masked a real burden: the early-warning function, if present, did not require the magnitude of psychological harm. Mental health practitioners, observing from outside, classify the burden as trauma-transmission rather than adaptive learning. The engine computes this divergence from the power, exit_options, and role structure; the authored claim does not adjudicate between readings.
  *
  * DIRECTIONALITY LOGIC:
- *   Descendants are structural targets: they bear costs (psychological burden, hypervigilance, trauma markers, constrained life-planning due to threat-fixation) without meaningful voice in the design, with identity-locked exit, and with no alternative coordination mechanism available. Collective threat-vigilance (beneficiary non-agent) accrues the benefit—it gets sustained early-warning capacity without having to require survivors' grandchildren to re-learn threats directly. Practitioners are asymmetric: they administer the constraint (agenda-setter role) and benefit from authority (elder status), but many are also descendants carrying the burden themselves. This dual-positioning creates inter-seat asymmetry that the engine captures through directionality overrides if needed; here, the structural data (beneficiaries = threat-vigilance; victims = descendant_generations) makes the directionality derivation clear.
+ *   Elders are structural beneficiaries and agenda-setters (directionality near 0 — they maintain the practice, control its framing, and their own trauma is legitimated by descendants' participation). Collective threat-vigilance is a non-agent beneficiary (a faculty the constraint vindicated; if it were an agent, d would be near 0). Descendant bearers are the targets (d near 1 — they bear the psychological burden, have identity-locked exit, receive no direct benefit from the practice, and cannot independently choose to stop participating). Younger initiates are the most severely targeted (d at or near 1 — trapped, identity-locked, coerced into participation before capacity to consent). The powerless initiates' situation also models a potential piton signature at scale: if enough descendants have been captured by the identity-lock (born into the practice, socialized to interpret it as sacred duty) that the practice persists even among those who intellectually question it, theater_ratio rising (0.52 at interval end) would indicate inertial maintenance rather than functional threat-response. However, the suppression requirement declining (0.45 at interval end) suggests internalization rather than pure inertia — descendants are carrying the trauma as identity, not performing it under coercion.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint sits at the boundary between genuine coordination and extraction. The founding problem (how to preserve survivors' threat-recognition for descendants who won't experience the threat directly) is live—communities with cyclical persecution actually do face this problem. The founding_problem_status = 'live' marks that the original coordination need persists. But the theater_ratio trajectory (rising from 0.35 to 0.52+ over the interval) signals that as descendants distance from the founding catastrophe, the ritual's function increasingly shifts from 'actual threat-transmission' to 'performance of memory.' This is not mandatrophy in the classical sense (a constraint whose founding problem has died but persists from institutional inertia), because the threat-vigilance function never fully atrophies—the community still faces real threats of persecution or cyclical catastrophe in many cases. Instead, this is a constraint in which the real function (coordination for survival) persists but is increasingly wrapped in performative function (memory-maintenance ritual). The distinction matters: if the founding problem is contested (some say the threat is gone, others say it still looms), the constraint's classification depends on which reading one accepts.
+ *   The founding problem (how to transmit ancestral threat-recognition to descendants who did not experience the original catastrophe) is contested. Elders attest it is live — each generation faces new persecution risks that replicate the original catastrophe's structure. Descendants who have exited, and trauma researchers, attest it is dead — the original historical threat is documented, the current threat environment is substantially different, and the ritual's encoding is producing maladaptive hypervigilance rather than adaptive learning. No external corroborating voice affirms the perpetual-catastrophe claim, which is the ritual tradition's own assertion. The mismatch is between founding_problem_status=contested and disappearance_verdict=world_rearranges: if the ritual vanished, the group's collective threat-vigilance would indeed degrade, and descendant baseline anxiety would shift. This mismatch does NOT trigger mandatrophy classification here because the constraint is claimed as tangled_rope (genuine coordination + asymmetric extraction), not as mountain or piton. Were the founding problem dead and the practice maintained theatrically for inertial reasons, the theater_ratio would be much higher (0.7+) and suppression would be near baseline (0.0–0.1), indicating pure performance. The measured theater_ratio of 0.52 reflects genuine tension: the trauma encoding is functional for threat-detection AND extractive of descendant wellbeing — both are true simultaneously, which is exactly the tangled_rope signature.
  */
 
 /* ==========================================================================
@@ -183,44 +250,44 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_coexistence,
-    'Which reading of the catastrophe_memory_kernel is the ''correct'' or ''primary'' function of this ritual?',
-    'Ethnographic analysis of how the community explicitly frames its ritual (through teaching, justification, and emphasis). Different communities may emphasize different functions. Discourse analysis of how ritual is defended and preserved.',
-    'Different readings entail different type classifications and different extraction profiles. A community that emphasizes trauma-encoding pays higher extractive costs on descendants; a community emphasizing boundary-maintenance or symbolic continuity may show lower descendant-burden and higher beneficiary-diffusion.',
+    trauma_encoding_vs_learned_fear,
+    'Is descendants'' elevated threat-vigilance a product of somatic trauma encoding (embodied state that persists across contexts), or learned threat-recognition that they could acquire from historical narrative without the psychological burden?',
+    'Longitudinal study of descendants raised within the ritual versus those who learned the same historical catastrophe narrative outside the ritual context. Measure baseline anxiety, threat-detection speed, PTSD prevalence, and adaptive vs. maladaptive hypervigilance patterns. Natural experiments from diaspora communities that abandoned the ritual while retaining historical memory.',
+    'If somatic encoding is necessary for the threat-detection function, the extraction is a structural cost of the coordination. If historical learning alone produces equivalent threat-recognition, the somatic trauma transmission is pure extraction riding on coordination that could be achieved without it — pushing the constraint toward snare classification.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_coexistence, conceptual, 'Whether this ritual''s primary function is trauma-encoding, boundary-maintenance, survival-competence, or symbolic continuity—or a composite of several.').
+narrative_ontology:omega_variable(trauma_encoding_vs_learned_fear, empirical, 'Whether the trauma encoding is functionally necessary for early-warning capacity or an extractive add-on to historical knowledge transmission.').
 
 omega_variable(
-    threat_recurrence_assumption,
-    'Is the collective threat the ritual encodes still live, or is it a historical fact that will not recur?',
-    'Analysis of actual threat recurrence patterns (do cyclical catastrophes continue for this community, or has the threat landscape fundamentally changed?). Comparison with communities that faced one-time catastrophes and communities with ongoing persecution patterns.',
-    'If the threat is dead, the founding_problem_status shifts from ''live'' to ''dead,'' triggering mandatrophy assessment. The extractiveness of the ritual would be re-classified as zombification rather than functional coordination. If the threat is live, extractiveness remains justified by the coordination function.',
+    generational_catastrophe_recurrence,
+    'Does the original catastrophe genuinely recur across generations within this community''s lived environment, or is the ''perpetual threat'' a ritual-reinforced narrative that exaggerates actual threat-environment similarity?',
+    'Comparative historical analysis of the original catastrophe event(s), the intervening period, and the contemporary context. Documentation of actual persecution/violence risk the community faces versus the narrative frame of perpetual recurrence the ritual encodes. Interviews with descendants who have exited the community about whether their actual threat environment changed.',
+    'High contemporary threat recurrence would support the founding_problem_status=live reading and justify the constraint as adaption. Divergence between historical threat environment and contemporary one would support founding_problem_status=dead, reclassifying the practice as piton (inertial maintenance of a function that no longer exists) or as false-summit extraction (trauma imposed for a threat that does not materialize).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(threat_recurrence_assumption, empirical, 'Whether the historical threat the ritual encodes continues or has been resolved.').
+narrative_ontology:omega_variable(generational_catastrophe_recurrence, empirical, 'Whether the ritual''s encoded catastrophe genuinely recurs or whether the perpetual-threat narrative is ritual-reinforced.').
 
 omega_variable(
-    trauma_resolution_suppression,
-    'Is the measured suppression (0.45) structural (legal/economic barriers to leaving, social ostracism) or internalized (descendants have internalized the necessity of carrying trauma and feel they cannot leave without losing identity)?',
-    'Post-exit analysis: do descendants who leave the community and the ritual framework show rapid reductions in hypervigilance and trauma-markers (indicating suppression was structural and its removal allows recovery), or do they continue to carry the burden even without community enforcement (indicating suppression is internalized)?',
-    'If suppression is primarily internalized, effective extraction is higher than the metric suggests—the burden persists even without enforcement. If structural, exit offers genuine relief. This distinction affects whether therapeutic intervention could reduce extractiveness without community action.',
+    suppression_mechanism_internalization,
+    'Is the measured suppression (descendants'' non-resistance to the ritual) structural (they cannot exit due to economic/legal/social barriers) or internalized (they have fused their identity with the trauma-bearing role and psychologically resist their own exit)?',
+    'Study of descendants who physically exited the community: do they continue experiencing pressure to re-enter and conform, or does the suppression dissolve after geographic/institutional exit? Do they report post-exit identity fragmentation or relief? Examination of the explicit socialization message (''trauma-bearing is sacred duty'' vs. ''trauma-bearing is inescapable burden'').',
+    'If suppression is primarily structural (legal/economic barriers to exit), removal of barriers would enable exit and would pressure the practice toward adaptation or collapse. If internalized (identity fused with trauma-bearing role), barrier removal would not produce exit — descendants would maintain participation even if they could leave. Internalized suppression is a deeper extraction because it persists after the coercive mechanism is removed. This feeds back into the theater_ratio interpretation: if theater is high but suppression is internalized, the practice is both theatrical AND psychologically captured.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(trauma_resolution_suppression, empirical, 'Whether suppression in this constraint is primarily structural or internalized.').
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether the constraint''s suppression is structural or internalized identity-lock.').
 
 omega_variable(
-    adaptive_value_contested,
-    'Does the encoded trauma actually produce the claimed warning function, or does it produce pathology without demonstrable adaptive benefit?',
-    'Comparison of threat-detection rates and response timing in descendants vs. non-descendants; psychological outcome measurement (anxiety, PTSD, functional impairment); assessment of whether hypervigilance improves or degrades collective threat-response.',
-    'If the warning function is demonstrable and effective, extractiveness is justified by the coordination benefit. If hypervigilance produces pathology without improving threat-detection, extractiveness becomes undefended extraction. This is the central empirical question for classification.',
+    reading_foreclosure_structure,
+    'Which sibling readings (symbol_continuity, survival_competence, boundary_maintenance) are logically compatible with this trauma-encoding reading within a single coherent ritual framework, and which are mutually foreclosed?',
+    'Textual analysis of the ritual''s declared justifications across time and across ritual practitioners. Interviews with practitioners about whether the ritual serves trauma-transmission, identity-continuity, competence-encoding, and/or boundary-maintenance — do they affirm all four functions as simultaneous, do they prioritize one and downplay others, or do they view some as antithetical?',
+    'If practitioners hold all four functions as simultaneous and non-contradictory, the constraint is a single unified reading that encompasses multiple functions — the trauma-encoding reading becomes simply the trauma-detection-focused lens on a multivalent practice. If practitioners foreclose some functions in favor of this one (e.g., ''it is trauma encoding, not identity continuity''), the readings are genuinely distinct constraints with potential foreclosure relations. If they treat different readings as equally valid but hold by different communities, the readings coexist and we have a true constraint family with no foreclosure — just competing interpretations.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(adaptive_value_contested, empirical, 'Whether intergenerational trauma encoding produces an actual warning/survival function or just pathology.').
+narrative_ontology:omega_variable(reading_foreclosure_structure, conceptual, 'Whether this reading forecloses, influences, or coexists with the sibling readings in the catastrophe_memory_kernel family.').
 
 
 /* ==========================================================================
@@ -234,27 +301,27 @@ narrative_ontology:interval(catastrophe_memory_kernel__trauma_encoding_reading, 
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cata_tr_t0, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 0, 0.35).
-narrative_ontology:measurement(cata_tr_t20, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 20, 0.42).
-narrative_ontology:measurement(cata_tr_t40, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 40, 0.48).
-narrative_ontology:measurement(cata_tr_t60, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 60, 0.54).
-narrative_ontology:measurement(cata_tr_t80, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 80, 0.55).
+narrative_ontology:measurement(cata_tr_t0, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(cata_tr_t16, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 16, 0.42).
+narrative_ontology:measurement(cata_tr_t33, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 33, 0.47).
+narrative_ontology:measurement(cata_tr_t50, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 50, 0.51).
+narrative_ontology:measurement(cata_tr_t67, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 67, 0.52).
 narrative_ontology:measurement(cata_tr_t100, catastrophe_memory_kernel__trauma_encoding_reading, theater_ratio, 100, 0.52).
 
 % Extraction over time
 narrative_ontology:measurement(cata_be_t0, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(cata_be_t20, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 20, 0.58).
-narrative_ontology:measurement(cata_be_t40, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 40, 0.65).
-narrative_ontology:measurement(cata_be_t60, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 60, 0.7).
-narrative_ontology:measurement(cata_be_t80, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 80, 0.68).
+narrative_ontology:measurement(cata_be_t16, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 16, 0.54).
+narrative_ontology:measurement(cata_be_t33, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 33, 0.61).
+narrative_ontology:measurement(cata_be_t50, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 50, 0.66).
+narrative_ontology:measurement(cata_be_t67, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 67, 0.68).
 narrative_ontology:measurement(cata_be_t100, catastrophe_memory_kernel__trauma_encoding_reading, base_extractiveness, 100, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cata_su_t0, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 0, 0.38).
-narrative_ontology:measurement(cata_su_t20, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 20, 0.41).
-narrative_ontology:measurement(cata_su_t40, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 40, 0.44).
-narrative_ontology:measurement(cata_su_t60, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 60, 0.46).
-narrative_ontology:measurement(cata_su_t80, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 80, 0.45).
+narrative_ontology:measurement(cata_su_t0, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 0, 0.52).
+narrative_ontology:measurement(cata_su_t16, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 16, 0.5).
+narrative_ontology:measurement(cata_su_t33, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 33, 0.47).
+narrative_ontology:measurement(cata_su_t50, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 50, 0.45).
+narrative_ontology:measurement(cata_su_t67, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 67, 0.44).
 narrative_ontology:measurement(cata_su_t100, catastrophe_memory_kernel__trauma_encoding_reading, suppression_requirement, 100, 0.45).
 
 
@@ -263,19 +330,19 @@ narrative_ontology:measurement(cata_su_t100, catastrophe_memory_kernel__trauma_e
    ========================================================================== */
 
 narrative_ontology:coordination_type(catastrophe_memory_kernel__trauma_encoding_reading, attachment_coordination).
-narrative_ontology:boltzmann_floor_override(catastrophe_memory_kernel__trauma_encoding_reading, 0.12).
-narrative_ontology:affects_constraint(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel__boundary_maintenance_reading).
-narrative_ontology:affects_constraint(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel__survival_competence_reading).
+narrative_ontology:boltzmann_floor_override(catastrophe_memory_kernel__trauma_encoding_reading, 0.14).
 narrative_ontology:affects_constraint(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel__symbol_continuity_reading).
+narrative_ontology:affects_constraint(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel__survival_competence_reading).
+narrative_ontology:affects_constraint(catastrophe_memory_kernel__trauma_encoding_reading, catastrophe_memory_kernel__boundary_maintenance_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the catastrophe_memory_kernel, which decomposes into four structurally distinct constraints based on what ritual encodes and transmits. The trauma-encoding reading focuses on psychological burden imposed on descendants as the price of collective threat-vigilance. Sibling readings frame the same ritual as maintaining group boundaries, encoding survival techniques, or preserving symbolic coherence. Each reading has different extracted costs, different type classifications, and different beneficiary/victim structures. All four readings coexist as live positions in the scholarly and community literature; none rules out the others within a single framework, though they do create structural pressure on each other (a community emphasizing trauma-encoding may suppress the boundary-maintenance or symbolic-continuity readings to maintain focus on threat-vigilance).
+% This constraint is one of four readings of the catastrophe_memory_kernel — a contested mourning practice. The kernel itself is not a constraint; each reading instantiates a structurally distinct constraint with different ε values, beneficiary/victim sets, and classifications. The trauma-encoding reading (THIS constraint) models the ritual as psychological burden imposed for early-warning capacity; sibling readings model the same practice as identity-continuity, competence-transmission, or boundary-maintenance. The four readings all describe the same observable ritual but extract different functional and extractive relationships from it. Upstream influencers: foundational claims about trauma transmission and collective memory (neuroscience, psychology, anthropology). Downstream influenced: institutional policies on intergenerational trauma treatment, regulatory debates over cultural practice vs. child welfare.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(catastrophe_memory_kernel__trauma_encoding_reading, organized, 0.35).
+constraint_indexing:directionality_override(catastrophe_memory_kernel__trauma_encoding_reading, powerful, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

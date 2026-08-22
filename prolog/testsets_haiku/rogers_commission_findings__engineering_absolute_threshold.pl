@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,9 +39,16 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,36 +74,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: rogers_commission_findings__engineering_absolute_threshold
- *   human_readable: Rogers Commission O-Ring Redesign Absolute Threshold
- *   domain: organizational_safety/technology_governance
+ *   human_readable: Rogers Commission Engineering Absolute Threshold Reading
+ *   domain: organizational_safety/technology_governance/regulatory_compliance
  *
  * SUMMARY:
- *   Following the Challenger disaster, the Rogers Commission investigated and
- *   found that NASA's Flight Readiness Review process had treated a known
- *   O-ring temperature sensitivity hazard as an acceptable risk. Management
- *   had proceeded despite documented engineer objections. The Commission's
- *   report recommended that flight operations cease until O-ring design was
- *   fundamentally changed and certified safe. THIS READING
- *   (engineering_absolute_threshold) instantiates the interpretation that the
- *   Rogers findings establish an absolute technical boundary: no flight until
- *   O-ring redesign is certified, period. Engineers hold veto authority in
- *   Flight Readiness Reviews; the constraint operates by suppressing launch
- *   operations until technical certification is complete. This reading
- *   competes with two siblings: (1) actuarial_risk_acceptance, which reads
- *   Rogers as requiring documented risk quantification and informed
- *   acceptance rather than absolute prohibition, and (2)
- *   management_compliance_narrative, which reads Rogers as requiring visible
- *   risk-management process rather than a specific technical outcome. All
- *   three are live readings of the same kernel (the Rogers Commission
- *   report); they differ in what structural requirement the report is read to
- *   impose.
+ *   The Rogers Commission investigation of the Challenger disaster identified
+ *   O-ring failure as the proximate cause and produced findings that have
+ *   been read three different ways by NASA, engineers, contractors, and
+ *   analysts. This constraint story instantiates the ENGINEERING ABSOLUTE
+ *   THRESHOLD reading: Rogers findings establish that flight operations must
+ *   cease until the O-ring is redesigned. Under this reading, the findings
+ *   produce a veto gate held by engineering analysis — no launch is
+ *   permissible until the material failure mode is corrected. This is
+ *   structurally different from alternative readings that emphasize risk
+ *   quantification (actuarial_risk_acceptance) or documented compliance
+ *   processes (management_compliance_narrative). The constraint I author
+ *   describes the state of affairs under the engineering reading's own
+ *   lights: it is a structural safety boundary, not an enforcement mechanism.
  *
  * KEY AGENTS:
- *   - flight_crew: benefit from the absolute safety boundary; life-or-death outcome
- *   - nasa_engineers: hold technical veto authority; certify redesign completeness; gate the constraint
- *   - launch_cadence_operators: pay in schedule delays and mission postponements; constrained by technical certification requirement
- *   - rogers_commission: external authority that investigated and recommended the boundary; statutory legitimacy
- *   - political_leadership: excluded from technical decision authority; forecloses political override of technical assessment
+ *   - Engineering analysis community: holds veto authority; determines certification of redesign
+ *   - Flight crew: protected beneficiary; cannot exit the constraint once committed to launch
+ *   - Launch cadence operators and programme sponsors: bear the cost of suppressed operations during redesign
+ *   - Rogers Commission authority: source of the contested findings; multiple readings coexist
  */
 
 /* ==========================================================================
@@ -103,56 +104,115 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(rogers_commission_findings__engineering_absolute_threshold, 0.19).
+domain_priors:base_extractiveness(rogers_commission_findings__engineering_absolute_threshold, 0.18).
 domain_priors:suppression_score(rogers_commission_findings__engineering_absolute_threshold, 0.92).
 domain_priors:theater_ratio(rogers_commission_findings__engineering_absolute_threshold, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, extractiveness, 0.19).
+narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, extractiveness, 0.18).
 narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 0.92).
 narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, accessibility_collapse, 0.88).
+narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, accessibility_collapse, 0.89).
 narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, resistance, 0.34).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(rogers_commission_findings__engineering_absolute_threshold, mountain).
-narrative_ontology:human_readable(rogers_commission_findings__engineering_absolute_threshold, "Rogers Commission O-Ring Redesign Absolute Threshold").
-narrative_ontology:topic_domain(rogers_commission_findings__engineering_absolute_threshold, "organizational_safety/technology_governance").
+narrative_ontology:human_readable(rogers_commission_findings__engineering_absolute_threshold, "Rogers Commission Engineering Absolute Threshold Reading").
+narrative_ontology:topic_domain(rogers_commission_findings__engineering_absolute_threshold, "organizational_safety/technology_governance/regulatory_compliance").
 
 domain_priors:emerges_naturally(rogers_commission_findings__engineering_absolute_threshold).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(rogers_commission_findings__engineering_absolute_threshold, 'e10e0349-6b44-4642-836c-8cfb4dae96e1').
-narrative_ontology:cs_kernel_codification('e10e0349-6b44-4642-836c-8cfb4dae96e1', fixed_text).
-narrative_ontology:cs_authority_grounding('e10e0349-6b44-4642-836c-8cfb4dae96e1', lineage).
-narrative_ontology:cs_interpretation_layer_present('e10e0349-6b44-4642-836c-8cfb4dae96e1').
-narrative_ontology:cs_reading_relation('e10e0349-6b44-4642-836c-8cfb4dae96e1', rogers_commission_findings__management_compliance_narrative, coexists_with).
-narrative_ontology:cs_reading_relation('e10e0349-6b44-4642-836c-8cfb4dae96e1', rogers_commission_findings__actuarial_risk_acceptance, coexists_with).
-narrative_ontology:cs_axiom('e10e0349-6b44-4642-836c-8cfb4dae96e1', foundational, o_ring_failure_unacceptable_absolute).
-narrative_ontology:cs_axiom_status(o_ring_failure_unacceptable_absolute, holdable).
-narrative_ontology:cs_axiom_grounding('e10e0349-6b44-4642-836c-8cfb4dae96e1', o_ring_failure_unacceptable_absolute, deontological).
-narrative_ontology:cs_axiom('e10e0349-6b44-4642-836c-8cfb4dae96e1', foundational, engineering_authority_independent).
-narrative_ontology:cs_axiom_status(engineering_authority_independent, holdable).
-narrative_ontology:cs_axiom_grounding('e10e0349-6b44-4642-836c-8cfb4dae96e1', engineering_authority_independent, conventional).
-narrative_ontology:cs_reference_frame('e10e0349-6b44-4642-836c-8cfb4dae96e1', engineering_veto_over_launch).
-narrative_ontology:cs_drift_state('e10e0349-6b44-4642-836c-8cfb4dae96e1', post_rogers_commission_institutionalization, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('e10e0349-6b44-4642-836c-8cfb4dae96e1', '').
+narrative_ontology:cs_story_uid(rogers_commission_findings__engineering_absolute_threshold, '719e76ec-afae-42a0-91ba-3f4268763abe').
+narrative_ontology:cs_kernel_codification('719e76ec-afae-42a0-91ba-3f4268763abe', formalized).
+narrative_ontology:cs_authority_grounding('719e76ec-afae-42a0-91ba-3f4268763abe', expertise).
+narrative_ontology:cs_interpretation_layer_present('719e76ec-afae-42a0-91ba-3f4268763abe').
+narrative_ontology:cs_reading_relation('719e76ec-afae-42a0-91ba-3f4268763abe', rogers_commission_findings__management_compliance_narrative, forecloses).
+narrative_ontology:cs_reading_relation('719e76ec-afae-42a0-91ba-3f4268763abe', rogers_commission_findings__actuarial_risk_acceptance, forecloses).
+narrative_ontology:cs_axiom('719e76ec-afae-42a0-91ba-3f4268763abe', foundational, engineering_analysis_holds_launch_veto).
+narrative_ontology:cs_axiom_status(engineering_analysis_holds_launch_veto, holdable).
+narrative_ontology:cs_axiom_grounding('719e76ec-afae-42a0-91ba-3f4268763abe', engineering_analysis_holds_launch_veto, deontological).
+narrative_ontology:cs_axiom('719e76ec-afae-42a0-91ba-3f4268763abe', foundational, material_redesign_is_prerequisite_not_negotiable).
+narrative_ontology:cs_axiom_status(material_redesign_is_prerequisite_not_negotiable, holdable).
+narrative_ontology:cs_axiom_grounding('719e76ec-afae-42a0-91ba-3f4268763abe', material_redesign_is_prerequisite_not_negotiable, empirically_contingent).
+narrative_ontology:cs_reference_frame('719e76ec-afae-42a0-91ba-3f4268763abe', engineering_absolute_safety_threshold).
+narrative_ontology:cs_drift_state('719e76ec-afae-42a0-91ba-3f4268763abe', contemporary_space_launch_era, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('719e76ec-afae-42a0-91ba-3f4268763abe', '').
 narrative_ontology:cs_kernel_id(rogers_commission_findings__engineering_absolute_threshold, rogers_commission_findings).
 
 % --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(rogers_commission_findings__engineering_absolute_threshold, flight_crew_safety_margin).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
 narrative_ontology:constraint_beneficiary(rogers_commission_findings__engineering_absolute_threshold, flight_crew).
+narrative_ontology:constraint_beneficiary(rogers_commission_findings__engineering_absolute_threshold, programme_sponsors).
+narrative_ontology:constraint_victim(rogers_commission_findings__engineering_absolute_threshold, launch_cadence_operators).
+narrative_ontology:constraint_victim(rogers_commission_findings__engineering_absolute_threshold, programme_sponsors).
+narrative_ontology:constraint_vindicates(rogers_commission_findings__engineering_absolute_threshold, material_properties_determine_safe_operating_envelope).
+narrative_ontology:constraint_vindicates(rogers_commission_findings__engineering_absolute_threshold, engineering_redesign_precondition_for_operation).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Determines the technical boundary: O-ring material properties, temperature sensitivity, failure modes. Holds authority to certify redesign as safe. The constraint is their analysis rendered binding: a technical fact becomes a veto gate over launch operations.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, engineering_analysis_community, agenda_setter,
+    institutional, generational, analytical, global).
+
+% Protected by the redesign requirement: no launch until the known failure mode is materially corrected. Their survival depends on the constraint holding; they cannot exit the vehicle once it launches.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, flight_crew, beneficiary,
+    organized, immediate, trapped, global).
+
+% Bear the cost: no launches until redesign is certified, no partial operations, no probabilistic arguments. The constraint suppresses their operational freedom absolutely. They cannot proceed without material change to the flight system.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, launch_cadence_operators, payer,
+    institutional, biographical, constrained, global).
+
+% Pay in delayed mission timeline and deferred objectives while redesign occurs. Also benefit from avoiding a catastrophic failure that would end the programme entirely. The constraint redirects resources from launch cadence to engineering verification.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, programme_sponsors, payer,
+    powerful, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(rogers_commission_findings__engineering_absolute_threshold, programme_sponsors, beneficiary).
+
+% An alternative reading of the Rogers findings that interprets them as a process requirement (documented risk awareness and mitigation efforts) rather than an absolute technical threshold. This reading would permit launch with robust documentation and informed acceptance of known risk. It is structurally excluded from this constraint's framing.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, management_compliance_narrative_reading, excluded,
+    analytical, biographical, analytical, global).
+narrative_ontology:stakeholder_non_agent(rogers_commission_findings__engineering_absolute_threshold, management_compliance_narrative_reading).
+
+% An alternative reading that interprets Rogers findings as requiring quantified risk and informed decision authority (acceptable to fly if failure probability is documented and accepted by competent authorities). This reading permits calibrated acceptance of known risks. It is excluded from the engineering absolute threshold reading.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, actuarial_risk_acceptance_reading, excluded,
+    analytical, biographical, analytical, global).
+narrative_ontology:stakeholder_non_agent(rogers_commission_findings__engineering_absolute_threshold, actuarial_risk_acceptance_reading).
+
+% The institutional source whose investigation produced the findings. Multiple readings exist within the commission's own language; this constraint instantiates the strongest, most engineer-derived reading.
+narrative_ontology:constraint_stakeholder(rogers_commission_findings__engineering_absolute_threshold, rogers_commission_authority, observer,
+    institutional, generational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Engineering analysis produces a technical safety boundary by rendering material properties and failure modes determinative: flight operations must not proceed until the identified failure mechanism is materially corrected. This concentrates authority over launch gates in the technical domain, preventing operational or managerial override of physics constraints.
+% TRANSFER_FUNCTION: The constraint moves launch authority from operational/managerial discretion to engineering verification. It transfers launch timeline delay and engineering resource allocation from optional optimization to mandatory prerequisite. Crew safety is the coordinated good; launch cadence is the cost.
+% ABSENT_VOICES: Programme scheduling interests, cost-efficiency advocates, and risk-acceptance framings that would permit probabilistic operations are structurally excluded. Alternative NASA readings and contractor perspectives that emphasize managed-risk compliance rather than absolute redesign are not participants in this reading's authority structure.
+% DISAPPEARANCE_RATIONALE: If this constraint disappeared (i.e., if the absolute redesign requirement were dropped), shuttle operations would resume on a schedule constrained only by the original risk management framework — probabilistic acceptance of known O-ring vulnerability, documented procedures, and managerial sign-off. The crew safety margin would depend on probability and procedure rather than material correction. The operational world reorganizes around risk acceptance rather than risk elimination.
+% FOUNDING_PROBLEM: The Challenger disaster revealed that known failure modes (O-ring temperature sensitivity) were present in the design, acceptable in the management framework, and catastrophic in operation. The constraint was founded to prevent repetition: establish an absolute technical boundary that cannot be overridden by schedule or cost pressure.
+% FOUNDING_PROBLEM_CORROBORATION: Engineering and independent safety analysis communities affirm the founding problem persists: material properties remain unchanged until redesign is complete; schedule pressure creates chronic temptation to normalize risk. Launch programme and contractor records from the Challenger era and subsequent programme cycles (STS-26 onwards) document repeated tension between the absolute redesign gate and operational cadence demands. Independent historical review (e.g., Columbia Accident Investigation Board, engineering literature post-1986) corroborates that the founding problem — known failure modes under operational conditions — remains structurally present until the material correction is in place.
+narrative_ontology:disappearance_verdict(rogers_commission_findings__engineering_absolute_threshold, world_rearranges).
+narrative_ontology:founding_problem_status(rogers_commission_findings__engineering_absolute_threshold, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(rogers_commission_findings__engineering_absolute_threshold, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(rogers_commission_findings__engineering_absolute_threshold, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(rogers_commission_findings__engineering_absolute_threshold, 'none', 1).
+narrative_ontology:epsilon_provenance(rogers_commission_findings__engineering_absolute_threshold, 0.18, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -160,6 +220,10 @@ narrative_ontology:story_seed(rogers_commission_findings__engineering_absolute_t
 
 :- begin_tests(rogers_commission_findings__engineering_absolute_threshold_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(rogers_commission_findings__engineering_absolute_threshold, ExtMetricName, E),
@@ -182,16 +246,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   This reading is authored as a MOUNTAIN because the underlying mechanism (O-ring failure under cold stress) is a physical fact that does not change based on who is assessing it or what institutional arrangements exist. The suppression value is extremely high (0.92) because the constraint operates by WITHHOLDING operational authority — no launch can proceed without certification; there is no negotiation with physical reality. Extraction is very low (0.19) because the constraint does not extract value from flight crew or redirect it to a beneficiary; instead it prevents operations. The beneficiary (flight_crew) collects safety, not economic rents. Theater is minimal (0.08) because the constraint is functionally what it claims to be — technical assessment prevents launches, not performance of assessment. The accessibility_collapse is high (0.88) because once engineers certify, the question is resolved; once they refuse certification, the option to launch-anyway is foreclosed by the physical design. The resistance is moderate (0.34) because schedule-driven actors push back against delays, but the pushback does not overcome the technical gate — once an engineer says 'not certified,' operations stop, and resistance is absorbed as schedule cost. The measured extraction accumulates modestly over time (0.05 → 0.19 across 36 months) as the delay costs mount and the program absorbs the schedule slip as a permanent budget tax, but the core mechanism remains a technical gate, not an extraction mechanism.
+ *   Extractiveness is low (0.18) because the constraint does not extract value from anyone — it redirects timeline and resources toward safety verification. Suppression is extremely high (0.92) because the constraint absolutely prevents launch operations: no probabilistic argument, no schedule pressure, no managerial override can proceed without material change. Theater ratio is minimal (0.08) because the constraint is almost entirely functional verification and redesign, not performative maintenance. Accessibility collapse is very high (0.89) because once the failure mechanism is understood (O-ring vulnerability at low temperature), the alternative (flying with known unrepaired failure mode) is cognitively inaccessible — it is not a real option once the engineering analysis is public. Resistance is moderate (0.34) because while operators and sponsors chafe at the suppression, they do not actively resist the constraint itself; resistance comes from the management_compliance_narrative reading, which proposes an alternative interpretation.
  *
  * PERSPECTIVAL GAP:
- *   The payer seat (launch operators) and the beneficiary seat (flight crew) perceive opposite truths from the same constraint. Operators see a coordination mechanism that prevents them from launching by schedule; crew sees a protection mechanism. Neither is wrong — they are observing different flows from the same structure. The agenda-setter seat (engineers) perceives technical authority where operators perceive constraint and crew perceives safety. The engine's per-seat classification captures this divergence: the constraint is a mountain from crew's perspective (immutable boundary, zero degrees of freedom, enormous benefit), a tangled_rope or snare from operators' perspective (suppression without their consent, asymmetric cost), and something closer to an enforcement_mechanism from engineers' perspective (they choose the gate position). The authored claim (mountain) reflects the underlying physical mechanism, not any seat's experience.
+ *   The engineering community and flight crew see this as a binding technical boundary — a safety margin that cannot be negotiated. The launch cadence operators and programme sponsors see suppressed operations and delayed missions. The Rogers Commission's own authority accommodates multiple readings, so the gatekeeping seat (the commission's interpretation authority) is contested. The engine should compute different types across seats: the engineer seat and crew seat should compute this as mountain or close approach; the operator seat should compute this as forced extraction under an alternative reading.
  *
  * DIRECTIONALITY LOGIC:
- *   From the flight_crew perspective: d ≈ 0.0 (beneficiary — the constraint subsidizes their survival probability). From the launch_cadence_operators perspective: d ≈ 0.95 (target — the constraint imposes delays, cost, and schedule uncertainty on them with no corresponding benefit they control). From the nasa_engineers perspective: d ≈ 0.5 (symmetric/analytical — they hold authority and prevent harm, but absorb the social cost of being the institutional voice of 'no'). The constraint operates differently at each seat: crew experiences it as protection, operators experience it as suppression, engineers experience it as responsibility. The engine computes this divergence; the authored claim (mountain) reflects what the underlying mechanism IS, not which seat's perspective is correct.
+ *   Flight crew: d near 0 (full beneficiary — the constraint subsidizes their safety). Engineering community: d near 0.5 (symmetric — they hold authority and certify, but they also bear responsibility for the verification being complete and correct). Launch operators: d near 1.0 (full target — the constraint extracts their operational freedom absolutely until redesign is certified). Programme sponsors: d near 0.7 (target, but with secondary benefit — they recover mission capability post-redesign, so the cost is front-loaded but not permanent). The constraint is read AS a boundary only by seats that accept the engineering reading; the management_compliance_narrative reading produces a different directionality for the same agents, treating the constraint as negotiable process rather than absolute gate.
  *
  * MANDATROPHY ANALYSIS:
- *   The Rogers reading (this file) instantiates the interpretation that the founding problem (technical override leading to catastrophic failure) is LIVE and requires an ABSOLUTE technical boundary. Under this reading, the constraint is permanent because the founding problem is permanent: thermal physics does not change, and the hazard mode cannot be negotiated. The constraint does not answer 'we learned to manage risk better'; it answers 'we must not place humans in this failure mode ever again.' This mandatrophy analysis is meant to distinguish this reading from the management_compliance reading, which would argue the founding problem is SOLVED by better documentation of risk, permitting the launch decision to proceed once risk is formally accepted. Those are genuinely different interpretations of what Rogers found. This omega-tier ambiguity is recorded in the natural_law_vs_constructed_boundary omega.
+ *   This reading instantiates the engineering reading's claim that the Rogers findings establish an ABSOLUTE TECHNICAL BOUNDARY. The alternative readings (management_compliance_narrative, actuarial_risk_acceptance) preserve a managerial discretion gate that permits probabilistic acceptance or process-based approval. The mandatrophy question is: does the engineering reading correctly capture the Rogers Commission's intent, or does it overstate the authority of engineering analysis relative to management authority? The answer determines whether this constraint should compute as mountain (if engineering analysis truly holds veto) or tangled_rope (if management retains override authority clothed in documentation). The contest is not resolved by the constraint's own metrics — it is a structural fact about authority allocation that the commission's findings themselves leave ambiguous.
  */
 
 /* ==========================================================================
@@ -199,72 +263,87 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    natural_law_vs_constructed_boundary,
-    'Is the O-ring failure mechanism a natural physical law (material properties under thermal stress) or a socially constructed policy boundary imposed on an inherently quantifiable risk?',
-    'Examine whether the constraint treats the O-ring failure mode as: (a) an absolute physical boundary where the failure mechanism cannot be tolerated at any probability, or (b) a designed specification that sets a safe operating envelope but could theoretically be accepted at quantified low probability by informed decision-makers. Post-Rogers Commission policy language, engineering handbooks, and Flight Readiness Review procedures provide the evidence.',
-    'If (a) — natural law reading — the constraint is a genuine mountain: the failure physics is immutable and the prohibition emerges from physical necessity. If (b) — constructed boundary reading — beneficiaries (flight crew) and political losers (schedule-delayed programs) reveal the constraint as socially chosen, possibly contestable. This omega documents the irreducible ambiguity the Rogers Commission reading instantiates.',
+    rogers_authority_scope_ambiguity,
+    'Did the Rogers Commission intend to establish an absolute technical veto held by engineering analysis, or a strengthened but ultimately managerial decision process supported by engineering input?',
+    'Close textual analysis of the Rogers Commission Report, testimony during the investigation, and the Commission''s own stated findings and recommendations regarding launch authority. Compare the Commission''s language to NASA''s post-Challenger implementation decisions (STS-26 onwards) and their stated rationale for those decisions.',
+    'If the engineering reading is correct (absolute veto), this constraint should compute as mountain or near-mountain for all seats. If the management reading is correct (strengthened process), the constraint distributes authority differently and may compute as tangled_rope with management retaining final authority. The entire seat divergence depends on resolving this.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(rogers_authority_scope_ambiguity, conceptual, 'Whether Rogers findings establish absolute engineering veto or strengthened management process.').
+
+omega_variable(
+    redesign_completion_as_constraint_termination,
+    'Does this constraint persist only until the O-ring redesign is certified, or does it encode a permanent structural priority of engineering safety veto in the flight programme?',
+    'Observe post-redesign operations: do subsequent flights proceed under a return to pre-Challenger management authority structures, or does the engineering veto gate persist? Do NASA''s Flight Readiness Review procedures post-STS-26 preserve engineering authority indefinitely or transition it back to management discretion once the known failure mode is corrected?',
+    'If the constraint terminates with redesign certification, it is a temporary structure (scaffold candidate). If it persists structurally, it represents a permanent authority reallocation (mountain or roof-level norm that outlasts the specific O-ring issue). The distinction affects long-term classification.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(redesign_completion_as_constraint_termination, empirical, 'Whether the engineering veto is O-ring-specific or a structural authority reallocation.').
+
+omega_variable(
+    natural_law_vs_constructed_authority,
+    'Does this constraint emerge as a natural necessity of physics (material properties determine safe operations) or as a constructed institutional authority structure (engineering profession exercises veto power)?',
+    'Distinguish the claim that O-ring failure is a physical fact (true, unchallengeable, natural) from the claim that engineers hold binding authority to prevent operations (institutional, contingent, constructed by NASA''s post-Challenger decisions). Both are true but are categorically different — one is a property of the material, the other is a property of the authority structure.',
+    'If this is a natural law, the constraint should compute as mountain across all seats. If it is a constructed authority structure (albeit justified by physics), it is a social construction and may compute as rope or tangled_rope depending on whether the authority is seen as legitimate or extractive. The beneficiaries (flight crew safety) vindicate the engineering authority, but that vindication does not make the authority natural — it makes it institutionally settled and consensual.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_constructed_boundary, conceptual, 'Whether O-ring safety requirement is physics-based absolute or policy-constructed threshold.').
-
-omega_variable(
-    sibling_reading_contestation,
-    'What structural facts distinguish THIS reading (engineering absolute threshold) from the sibling readings (management compliance narrative, actuarial risk acceptance)?',
-    'Observe how NASA Flight Readiness Reviews actually decide: (1) Do they require zero-probability O-ring failure or quantified-low-probability acceptance? (2) Who has veto authority — engineers alone or engineers + risk managers? (3) Are launch decisions contingent on documented risk acceptance by senior management, or are they contingent on engineering sign-off independent of risk acceptance? The answers reveal which reading is structurally operative.',
-    'If (1) zero-probability and (2) engineers hold veto independently, this reading (absolute threshold) is operative. If (1) quantified-low and (2) decision-makers choose between documented risk options, the actuarial reading is operative. If (3) compliance with risk-documentation process matters more than the numerical threshold, the management narrative reading is operative. This omega records that the Rogers kernel is genuinely contested at the structural level.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(sibling_reading_contestation, empirical, 'Which of the three Rogers readings is actually operative in Flight Readiness decisions.').
-
-omega_variable(
-    engineering_capture_ambiguity,
-    'Do engineers hold veto authority because they possess irreplaceable technical knowledge, or because they are the designated political losers in a settlement that gives them power as a side payment for absorbing schedule slippage?',
-    'Historical analysis of pre- and post-Rogers Commission engineering authority: did engineers hold this veto before Rogers (or was it overridden)? Do they retain it in domains where no political catastrophe occurred? If engineering veto authority is unevenly distributed across safety domains depending on political salience, the authority is likely a side payment rather than a technical necessity.',
-    'If technical knowledge → authority, the constraint reflects engineering reality. If political settlement → authority, the constraint reflects organizational power redistribution and is less immutable than the natural-law framing suggests. The Rogers reading (engineering absolute threshold) assumes the first; the management compliance reading assumes the second.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(engineering_capture_ambiguity, empirical, 'Whether engineering veto authority derives from technical necessity or political settlement.').
+narrative_ontology:omega_variable(natural_law_vs_constructed_authority, conceptual, 'Whether the constraint is a physical necessity or an institutional authority structure justified by physics.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(rogers_commission_findings__engineering_absolute_threshold, 0, 36).
+narrative_ontology:interval(rogers_commission_findings__engineering_absolute_threshold, 0, 24).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(roge_tr_t0, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(roge_tr_t6, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 6, 0.06).
-narrative_ontology:measurement(roge_tr_t12, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 12, 0.07).
+narrative_ontology:measurement(roge_tr_t0, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 0, 0.06).
+narrative_ontology:measurement_basis(roge_tr_t0, observed).
+narrative_ontology:measurement(roge_tr_t3, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 3, 0.07).
+narrative_ontology:measurement_basis(roge_tr_t3, observed).
+narrative_ontology:measurement(roge_tr_t6, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 6, 0.07).
+narrative_ontology:measurement_basis(roge_tr_t6, observed).
+narrative_ontology:measurement(roge_tr_t12, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 12, 0.08).
+narrative_ontology:measurement_basis(roge_tr_t12, observed).
 narrative_ontology:measurement(roge_tr_t18, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 18, 0.08).
+narrative_ontology:measurement_basis(roge_tr_t18, observed).
 narrative_ontology:measurement(roge_tr_t24, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 24, 0.08).
-narrative_ontology:measurement(roge_tr_t30, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 30, 0.08).
-narrative_ontology:measurement(roge_tr_t36, rogers_commission_findings__engineering_absolute_threshold, theater_ratio, 36, 0.08).
+narrative_ontology:measurement_basis(roge_tr_t24, observed).
 
 % Extraction over time
-narrative_ontology:measurement(roge_be_t0, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(roge_be_t6, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 6, 0.08).
-narrative_ontology:measurement(roge_be_t12, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 12, 0.12).
-narrative_ontology:measurement(roge_be_t18, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 18, 0.15).
-narrative_ontology:measurement(roge_be_t24, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 24, 0.17).
-narrative_ontology:measurement(roge_be_t30, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 30, 0.19).
-narrative_ontology:measurement(roge_be_t36, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 36, 0.19).
+narrative_ontology:measurement(roge_be_t0, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement_basis(roge_be_t0, observed).
+narrative_ontology:measurement(roge_be_t3, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 3, 0.16).
+narrative_ontology:measurement_basis(roge_be_t3, observed).
+narrative_ontology:measurement(roge_be_t6, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 6, 0.17).
+narrative_ontology:measurement_basis(roge_be_t6, observed).
+narrative_ontology:measurement(roge_be_t12, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 12, 0.18).
+narrative_ontology:measurement_basis(roge_be_t12, observed).
+narrative_ontology:measurement(roge_be_t18, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 18, 0.18).
+narrative_ontology:measurement_basis(roge_be_t18, observed).
+narrative_ontology:measurement(roge_be_t24, rogers_commission_findings__engineering_absolute_threshold, base_extractiveness, 24, 0.18).
+narrative_ontology:measurement_basis(roge_be_t24, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(roge_su_t0, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 0, 0.88).
-narrative_ontology:measurement(roge_su_t6, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 6, 0.89).
-narrative_ontology:measurement(roge_su_t12, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 12, 0.91).
+narrative_ontology:measurement(roge_su_t0, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 0, 0.91).
+narrative_ontology:measurement_basis(roge_su_t0, observed).
+narrative_ontology:measurement(roge_su_t3, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 3, 0.92).
+narrative_ontology:measurement_basis(roge_su_t3, observed).
+narrative_ontology:measurement(roge_su_t6, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 6, 0.92).
+narrative_ontology:measurement_basis(roge_su_t6, observed).
+narrative_ontology:measurement(roge_su_t12, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 12, 0.92).
+narrative_ontology:measurement_basis(roge_su_t12, observed).
 narrative_ontology:measurement(roge_su_t18, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 18, 0.92).
+narrative_ontology:measurement_basis(roge_su_t18, observed).
 narrative_ontology:measurement(roge_su_t24, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 24, 0.92).
-narrative_ontology:measurement(roge_su_t30, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 30, 0.92).
-narrative_ontology:measurement(roge_su_t36, rogers_commission_findings__engineering_absolute_threshold, suppression_requirement, 36, 0.92).
+narrative_ontology:measurement_basis(roge_su_t24, observed).
 
 
 /* ==========================================================================
@@ -276,7 +355,7 @@ narrative_ontology:affects_constraint(rogers_commission_findings__engineering_ab
 narrative_ontology:affects_constraint(rogers_commission_findings__engineering_absolute_threshold, rogers_commission_findings__actuarial_risk_acceptance).
 
 % DUAL FORMULATION NOTE:
-% The Rogers Commission kernel is instantiated in three constraint stories, each reading the same text as imposing a different structural requirement. engineering_absolute_threshold (this file) reads the findings as establishing a hard technical boundary requiring redesign certification. management_compliance_narrative reads the findings as establishing a process-compliance requirement permitting flight once risk documentation is adequate. actuarial_risk_acceptance reads the findings as establishing a risk-quantification requirement permitting flight at documented low probability. These three readings remain live in NASA decision-making; they differ in whether the constraint gates operations (boundary reading, this file), enables compliance (process reading), or permits quantified-risk decisions (actuarial reading). The three stories share the Rogers kernel but have incompatible ε values, beneficiary/victim structures, and claimed types. Each story is authored independently per ε-invariance principle; they are linked via network.affects_constraints to signal the kernel contest.
+% This constraint is one reading of the Rogers Commission findings kernel. The engineering_absolute_threshold reading emphasizes material safety as a binding veto; the management_compliance_narrative reading emphasizes documented process as sufficient for managerial approval; the actuarial_risk_acceptance reading emphasizes quantified risk and informed decision-maker acceptance. All three readings claim authority from the Rogers Commission investigation. Each is a structurally distinct constraint with different ε (extractiveness of launch suppression), different beneficiary/victim structures, and different authority allocation. They are linked via network.affects_constraints because the reading contest is live: whichever reading institutionalizes as NASA policy determines the actual constraint. The engineering reading is authored here; sibling readings should be authored separately to model the institutional uncertainty.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

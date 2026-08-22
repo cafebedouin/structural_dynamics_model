@@ -40,15 +40,20 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:suppression_profile/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,37 +73,27 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: zero_as_number_entry__universal_discovery_reading
- *   human_readable: Zero as a Number: Universal Mathematical Availability (Discovery Reading)
- *   domain: mathematics/philosophy_of_mathematics/history_of_ideas
+ *   human_readable: Zero-as-Number: Universal Mathematical Discovery (Timeless Availability Reading)
+ *   domain: history_of_mathematics/philosophy_of_mathematics/conceptual_history
  *
  * SUMMARY:
- *   Zero-as-number emerges in human mathematical practice in two major
- *   centers: India (Aryabhata 5th century, Brahmagupta 7th century) and
- *   Europe (transmission through Islamic mathematics, Fibonacci 13th century,
- *   Renaissance algebraists). The historical fact is clear: Indian
- *   mathematicians formalized zero-as-number first. The contested question is
- *   ontological: does this priority reflect discovery of a timeless
- *   mathematical truth, or contingent creation of a concept that might never
- *   have emerged in Europe without transmission? The
- *   universal_discovery_reading asserts that zero-as-number is a logical
- *   consequence of positional notation and the arithmetic operations needed
- *   to close the number system—it was always available, regardless of which
- *   humans discovered it first. Under this reading, the constraint is a
- *   mountain: the mathematical structure exists independent of history. The
- *   constraint classification diverges sharply from the
- *   contingent_thinkability_reading, which asserts that zero-as-number exists
- *   only when made thinkable by the intellectual frameworks available to a
- *   tradition (making it a snare for cultures locked in pre-positional
- *   paradigms). This story instantiates ONE reading of the
- *   zero-as-number-entry kernel, using the kernel-reading machinery
- *   (cs_structure rules 1–4).
+ *   This constraint represents the universal-discovery reading of the
+ *   zero-as-number kernel: the claim that zero-as-number is a timeless
+ *   mathematical necessity—a logical consequence of positional place-value
+ *   notation combined with closure under arithmetic operations. Under this
+ *   reading, Indian mathematicians' formalization of zero in the 5th–6th
+ *   centuries and European mathematicians' later adoption (whether via
+ *   transmission or independent derivation in the 12th–16th centuries) are
+ *   both instances of discovering a pre-existing mathematical fact. Priority
+ *   disputes are historiographical (who recognized it first), not ontological
+ *   (whether it is real). The constraint is CLAIMED and MEASURED as a
+ *   mountain: no extraction, no suppression, no theater. It emerges from the
+ *   structure of mathematics itself, not from human choice or institutional
+ *   arrangement.
  *
  * KEY AGENTS:
- *   - Mathematical practice (abstract beneficiary): the universal domain of arithmetic and algebra that uses zero-as-number as a tool.
- *   - Indian mathematicians (historical observer): Aryabhata, Brahmagupta, Bhaskara II, and the Sulbasutras tradition that developed positional notation and zero. Under this reading, they discovered a pre-existing mathematical truth.
- *   - European mathematicians (historical observer): al-Khwarizmi and the Islamic intermediaries; Fibonacci; Renaissance algebraists. Under this reading, they also discovered the same pre-existing truth, whether by transmission or independent derivation.
- *   - Medieval European intellectual tradition (historical observer): Aristotelian and Neoplatonic philosophy that rejected the void and resisted zero-as-number. Under this reading, the tradition was an obstacle to *recognizing* the truth, not a logical barrier to its existence.
- *   - Philosophy of mathematics (analytical observer): Realist and constructivist positions on the ontology of mathematical objects. This reading presumes realism and is contested by constructivism (the contingent_thinkability_reading).
+ *   - mathematical_truth_community: The beneficiary seat—all mathematics benefits equally from the truth of zero-as-number; no asymmetry.
+ *   - historical_priority_disputants: Observers—scholars who contest who deserves credit, but whose dispute is historiographical, not about the mathematical status of the concept itself.
  */
 
 /* ==========================================================================
@@ -105,55 +101,85 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(zero_as_number_entry__universal_discovery_reading, 0.02).
-domain_priors:suppression_score(zero_as_number_entry__universal_discovery_reading, 0.0).
+domain_priors:base_extractiveness(zero_as_number_entry__universal_discovery_reading, 0.08).
+domain_priors:suppression_score(zero_as_number_entry__universal_discovery_reading, 0.02).
 domain_priors:theater_ratio(zero_as_number_entry__universal_discovery_reading, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, extractiveness, 0.02).
-narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, suppression_requirement, 0.0).
+narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, extractiveness, 0.08).
+narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, suppression_requirement, 0.02).
 narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, resistance, 0.05).
+narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, resistance, 0.01).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(zero_as_number_entry__universal_discovery_reading, mountain).
-narrative_ontology:human_readable(zero_as_number_entry__universal_discovery_reading, "Zero as a Number: Universal Mathematical Availability (Discovery Reading)").
-narrative_ontology:topic_domain(zero_as_number_entry__universal_discovery_reading, "mathematics/philosophy_of_mathematics/history_of_ideas").
+narrative_ontology:human_readable(zero_as_number_entry__universal_discovery_reading, "Zero-as-Number: Universal Mathematical Discovery (Timeless Availability Reading)").
+narrative_ontology:topic_domain(zero_as_number_entry__universal_discovery_reading, "history_of_mathematics/philosophy_of_mathematics/conceptual_history").
 
 domain_priors:emerges_naturally(zero_as_number_entry__universal_discovery_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(zero_as_number_entry__universal_discovery_reading, '2e34f6e1-7013-423a-a135-f621b9e8428a').
-narrative_ontology:cs_kernel_codification('2e34f6e1-7013-423a-a135-f621b9e8428a', distributed).
-narrative_ontology:cs_authority_grounding('2e34f6e1-7013-423a-a135-f621b9e8428a', distributed).
-narrative_ontology:cs_reading_relation('2e34f6e1-7013-423a-a135-f621b9e8428a', zero_as_number_entry__contingent_thinkability_reading, forecloses).
-narrative_ontology:cs_reading_relation('2e34f6e1-7013-423a-a135-f621b9e8428a', zero_as_number_entry__hybrid_scaffolding_reading, influences).
-narrative_ontology:cs_axiom('2e34f6e1-7013-423a-a135-f621b9e8428a', foundational, mathematical_necessity_timeless).
-narrative_ontology:cs_axiom_status(mathematical_necessity_timeless, holdable).
-narrative_ontology:cs_axiom_grounding('2e34f6e1-7013-423a-a135-f621b9e8428a', mathematical_necessity_timeless, empirically_contingent).
-narrative_ontology:cs_axiom('2e34f6e1-7013-423a-a135-f621b9e8428a', secondary, discovery_vs_invention_distinction).
-narrative_ontology:cs_axiom_status(discovery_vs_invention_distinction, holdable).
-narrative_ontology:cs_axiom_grounding('2e34f6e1-7013-423a-a135-f621b9e8428a', discovery_vs_invention_distinction, deontological).
-narrative_ontology:cs_reference_frame('2e34f6e1-7013-423a-a135-f621b9e8428a', mathematical_necessity_anterior_to_history).
-narrative_ontology:cs_drift_state('2e34f6e1-7013-423a-a135-f621b9e8428a', contemporary_philosophy_of_mathematics, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('2e34f6e1-7013-423a-a135-f621b9e8428a', '').
+narrative_ontology:cs_story_uid(zero_as_number_entry__universal_discovery_reading, 'f1dd9d90-f0c2-45e1-b873-59a6e1314fcc').
+narrative_ontology:cs_kernel_codification('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', distributed).
+narrative_ontology:cs_authority_grounding('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', expertise).
+narrative_ontology:cs_interpretation_layer_present('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc').
+narrative_ontology:cs_reading_relation('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', zero_as_number_entry__contingent_thinkability_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', zero_as_number_entry__hybrid_scaffolding_reading, influences).
+narrative_ontology:cs_axiom('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', foundational, zero_as_logically_necessary_consequence).
+narrative_ontology:cs_axiom_status(zero_as_logically_necessary_consequence, holdable).
+narrative_ontology:cs_axiom_grounding('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', zero_as_logically_necessary_consequence, empirically_contingent).
+narrative_ontology:cs_axiom('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', secondary, priority_dispute_historiographical_not_ontological).
+narrative_ontology:cs_axiom_status(priority_dispute_historiographical_not_ontological, holdable).
+narrative_ontology:cs_axiom_grounding('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', priority_dispute_historiographical_not_ontological, conventional).
+narrative_ontology:cs_reference_frame('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', mathematical_logical_necessity).
+narrative_ontology:cs_drift_state('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', contemporary_mathematics, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('f1dd9d90-f0c2-45e1-b873-59a6e1314fcc', '2026-06-12T14:30:00Z').
 narrative_ontology:cs_kernel_id(zero_as_number_entry__universal_discovery_reading, zero_as_number_entry).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(zero_as_number_entry__universal_discovery_reading, mathematical_practice).
+narrative_ontology:constraint_beneficiary(zero_as_number_entry__universal_discovery_reading, mathematical_truth_community).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% All mathematicians and students of mathematics benefit equally from the truth that zero-as-number is a necessary consequence of positional notation and arithmetic operations. The discovery by Indian mathematicians established the fact; later independent or derivative discovery by European mathematicians confirmed it. Neither discovery changes the underlying mathematical status of the concept.
+narrative_ontology:constraint_stakeholder(zero_as_number_entry__universal_discovery_reading, mathematical_truth_community, beneficiary,
+    analytical, civilizational, analytical, universal).
+
+% Scholars and historians who debate whether Indian mathematicians 'deserve credit' for discovering zero first, or whether European discovery counts as independent vindication of a universal truth. Under this reading, priority disputes are historiographical questions about attribution, not ontological questions about whether zero-as-number is real. Both discoveries manifest the same underlying mathematical necessity.
+narrative_ontology:constraint_stakeholder(zero_as_number_entry__universal_discovery_reading, historical_priority_disputants, observer,
+    analytical, generational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(zero_as_number_entry__universal_discovery_reading, historical_priority_disputants).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: None. This constraint is a fact of mathematical structure, not a coordination arrangement. Zero-as-number is the necessary outcome of positional place-value notation plus the closed arithmetic operations; it is discovered, not negotiated.
+% TRANSFER_FUNCTION: No transfer. No asymmetric flow of resources, rents, or costs. The concept becomes available to all mathematicians and mathematical descendants equally upon discovery.
+% ABSENT_VOICES: Voices that would deny the mathematical necessity (e.g., Aristotelian metaphysicians who rejected the possibility of 'nothing as number') are absent from the contemporary mathematical community because the mathematical structure compels recognition. Their absence is not a silencing but the resolution of historical philosophical dispute by logical demonstration.
+% DISAPPEARANCE_RATIONALE: Zero-as-number is a feature of mathematical structure itself, not a human-invented rule or coordination mechanism. The concept's mathematical properties (additive identity, multiplicative annihilator, placeholder in positional notation) would still obtain whether or not any mathematician formally recognized or named it. The 'disappearance' would mean no one discovered or remembered the discovery—but the structure remains.
+% FOUNDING_PROBLEM: The founding problem is not 'how do we coordinate' but 'what are the logical consequences of adopting positional place-value notation with base closure under arithmetic operations?' Once positional notation is adopted (independently by Indian and later European mathematical traditions), the necessity of a placeholder-and-identity element emerges as a mathematical consequence, not an invention.
+% FOUNDING_PROBLEM_CORROBORATION: Contemporary mathematics textbooks, logicians, and historians of mathematics agree (outside the discipline of historiography, where priority questions remain open) that zero-as-number is a necessary logical consequence of positional arithmetic. The necessity is attested by mathematical proof, not by testimony about how mathematicians felt at the time. The founding problem—the logical structure of positional notation—is unchanged; the answer (zero-as-number) is its necessary consequence.
+narrative_ontology:disappearance_verdict(zero_as_number_entry__universal_discovery_reading, world_unchanged).
+narrative_ontology:founding_problem_status(zero_as_number_entry__universal_discovery_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(zero_as_number_entry__universal_discovery_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(zero_as_number_entry__universal_discovery_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(zero_as_number_entry__universal_discovery_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(zero_as_number_entry__universal_discovery_reading, 0.08, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -161,6 +187,10 @@ narrative_ontology:story_seed(zero_as_number_entry__universal_discovery_reading,
 
 :- begin_tests(zero_as_number_entry__universal_discovery_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(zero_as_number_entry__universal_discovery_reading, ExtMetricName, E),
@@ -183,16 +213,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness: 0.02 throughout the interval. A mountain claim with nominal beneficiaries carries floor-level extraction (the logical cost of making any claim, never operationally imposed). Zero-as-number exerts no coercive force; its availability imposes no cost on anyone. The 0.02 value is structural (all mountain claims have some minimal extraction as logical necessity) and reflects the realist position that mathematical truths are anterior to power structures. Suppression: 0.0. No suppression is required to maintain zero-as-number's status as a logical necessity. Theater_ratio: 0.0. There is no performative activity—the mathematical operations are what they are. Accessibility_collapse: 0.95. Once zero-as-number is grasped as a logical necessity of positional notation, there are no real alternatives (you cannot do arithmetic in positional notation without it). Resistance: 0.05. Constructivists and some philosophers of mathematics resist the realist reading; historical obstacles in medieval Europe delayed recognition. But these are intellectual objections, not practical resistance to the mathematical fact. The measurements are flat across the interval because the constraint is timeless—its logical structure does not change over the 30-unit historical window. The interval represents 0–30 centuries CE (0=year 0 CE, 30=year 3000 CE), chosen to span the entire recorded history and projected future of mathematics. Under the universal discovery reading, the constraint's truth value is constant.
+ *   Extractiveness is minimal (0.08) to account for the possibility that knowledge transmission itself carries contingency—the concept could have been delayed or forgotten if civilizations were disconnected. But the ontological status (zero-as-number is necessary given positional notation) is invariant to this historical contingency. Suppression is near-zero (0.02) because no authority suppresses the truth of zero-as-number in contemporary mathematics; the historical suppression of the concept due to metaphysical rejection (e.g., Aristotelian horror vacui) is a pre-discovery phenomenon, not ongoing. Theater is zero: mathematical truth requires no performative maintenance. Accessibility collapse is high (0.92): once positional notation is adopted, zero-as-number is mathematically unavoidable—no alternative is genuinely available to the structure itself. Resistance is minimal (0.01): contemporary mathematics accepts the logical necessity with negligible resistance.
  *
  * PERSPECTIVAL GAP:
- *   All seats should experience the same constraint under the universal discovery reading: zero-as-number is logically available to any mathematician working with positional notation, regardless of tradition. There is no perspectival gap in the mathematical structure itself. However, the gap between the universal discovery reading and the contingent_thinkability_reading is profound: the latter asserts that European mathematicians would NOT have discovered zero-as-number without transmission (because Aristotelian logic was a foreclosing barrier), creating a world-rearranging divergence. This reading denies that gap; it treats all paths (independent discovery, transmission, conceptual innovation grounded in logic) as discovering the same timeless truth. The divergence is routed through omega variables documenting the realism-vs-constructivism dispute, not through directionality.
+ *   There is no seat divergence under this reading. All seats (mathematical truth community, observers, historians) agree on the underlying mathematical fact: zero-as-number is necessary given positional arithmetic. Disagreements are historiographical (who discovered it, who transmitted it), not structural (whether it is real). The engine should compute a single mountain classification across all seats because the underlying logical structure is invariant.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality does not apply to mountains in the extractive sense. A mountain has no target (high d) or beneficiary (low d) seats because its structure is independent of who holds it. The stakeholders listed here (Indian mathematicians, European mathematicians, medieval tradition, philosophy of mathematics) are all observers or analytical seats relative to the constraint. 'Mathematical_practice' is listed as a beneficiary only as a nominal accommodation to the FSM schema; under the realist reading, mathematical practice is neither extracting from nor being extracted from—it is the domain in which the constraint operates. Directionality overrides: none needed. The constraint is a mountain and has no directionality dynamics.
+ *   Directionality for mathematical_truth_community is near-zero (beneficiary, but not 'beneficiary' in the extractive sense—the community benefits from truth equally, with no cost-bearing counterparty). There is no target seat; no one is extracted from. The constraint benefits all mathematics and imposes no burden asymmetrically. Directionality for historical_priority_disputants is analytical (observers, not positioned in the constraint's structure).
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy (mandate outliving function) does not apply to mathematical necessity claims. The constraint has no mandate—it is asserted as a logical truth, not an institution or rule that could become obsolete. The historical discovery of zero-as-number is dated; the mathematical necessity is timeless. No omega variable triggered on mandate decay because none is applicable.
+ *   This constraint shows no mandatrophy. The founding problem (the logical structure of positional arithmetic) remains live and well-understood. The arrangement (zero-as-number as a necessary consequence) persists because it is true, not because of institutional inertia or theater. If the founding problem disappeared (e.g., if positional notation were abandoned for Roman numerals globally), the constraint would disappear with it—but this is rational obsolescence, not mandatrophy.
  */
 
 /* ==========================================================================
@@ -200,51 +230,41 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    realism_vs_constructivism,
-    'Does zero-as-number exist as a logical necessity anterior to human discovery, or is its ''existence'' constituted by the human act of mathematical formalization?',
-    'This is a conceptual/metaphysical question, not empirically resolvable. Different philosophical frameworks (realism, constructivism, structuralism) assign different answers without contradiction to observable fact. Resolution would require agreement on foundations of mathematical ontology.',
-    'If realism holds, zero-as-number is a MOUNTAIN (necessity) and the constraint is correctly classified. If constructivism holds, zero-as-number is a human-created concept contingent on intellectual history, reclassifying as a SNARE or ROPE depending on whether the creation was discovery (universal availability) or invention (culturally contingent). This reading presumes realism; the contingent_thinkability_reading presumes constructivism.',
-    confidence_without_resolution(low)
+    transmission_vs_independent_discovery_contingency,
+    'Would zero-as-number have been discovered independently by European mathematicians absent transmission from Indian/Islamic sources, given the same logical structure of positional arithmetic?',
+    'Comparative history of mathematical thought: did mathematical traditions operating independently (e.g., Inca quipu, Mayan calendrical notation) converge on zero-like concepts? Do logical analyses of positional arithmetic show that the necessity is transparent from the notation alone, or is it culturally contingent?',
+    'If discovery would have occurred independently, the reading''s universality claim is strengthened—zero-as-number is logically forced by positional notation, and culture is secondary. If independent discovery is unlikely, the reading must concede that while the concept is logically necessary ONCE positional notation is adopted, the adoption itself (and the recognition of zero''s necessity) may be contingent on cultural transmission.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(realism_vs_constructivism, conceptual, 'Ontological status of mathematical objects: anterior necessity vs. human constitution.').
+narrative_ontology:omega_variable(transmission_vs_independent_discovery_contingency, empirical, 'Whether zero-as-number would emerge independently given positional notation, or whether culture shapes the tempo and path of discovery').
 
 omega_variable(
-    transmission_vs_independent_discovery,
-    'Did European mathematicians discover zero-as-number independently of Indian/Islamic transmission, or did they arrive at it through contact and conceptual borrowing?',
-    'Historical textual analysis, manuscript comparison, and the documented timeline of transmission through al-Khwarizmi, the House of Wisdom, and Fibonacci. The question is empirical (did transmission occur?) but does not affect the universal discovery reading—both paths (independent or transmitted) would count as discovery of a timeless mathematical truth.',
-    'Under the universal reading, the mechanism of transmission is historically interesting but philosophically neutral. Both independent discovery and transmission-triggered recognition count as ''discovering'' a mathematical truth that was always available. Under contingent_thinkability, the absence of transmission would have foreclosed European development, reclassifying zero-as-number from available to contingent. This reading treats transmission as an accident of history, not a structural condition.',
+    natural_law_vs_constructed_kernel_ambiguity,
+    'Is zero-as-number a natural law (a timeless feature of mathematical structure), or a constructed concept (a human choice to formalize a particular placeholder-and-identity element)?',
+    'Philosophical analysis: Does zero-as-number follow necessarily from first principles of arithmetic and notation, or does its necessity depend on prior human choices (e.g., to use positional notation, to close operations under addition)? Can the concept be coherently denied while preserving positional arithmetic?',
+    'If zero-as-number is necessary (logically forced), the mountain classification stands, and the constraint reflects timeless mathematical fact. If its necessity is contingent on prior human choices, it may be better classified as a rope or tangled_rope—a coordination arrangement around which mathematical truth communities have organized (independently or through transmission).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(natural_law_vs_constructed_kernel_ambiguity, conceptual, 'Whether zero-as-number is an inevitable mathematical necessity or a constructed formalism that happens to be convenient and widespread').
+
+omega_variable(
+    false_summit_mountain_beneficiary_ambiguity,
+    'Do identifiable beneficiaries (Indian mathematical traditions, European mathematical traditions, mathematical truth communities) exist whose interests are served by declaring zero-as-number a natural law rather than a contingent human choice?',
+    'Genealogical analysis of the universality claim: Who asserts that zero-as-number is timeless and necessary, and who benefits from that framing? Does declaring zero-as-number a universal mathematical fact serve interests in mathematics, historiography, or philosophy of mathematics?',
+    'If beneficiaries exist (e.g., mathematical institutions that benefit from the authority of ''universal truth'' over contingent discovery), the false-summit signature may fire, reclassifying the constraint as tangled_rope (beneficiaries + declared naturalness + extracted asymmetry). If no organized beneficiary exists and the universality claim is analytically justified, the mountain classification stands.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(transmission_vs_independent_discovery, empirical, 'Whether zero-as-number traveled from India to Europe via transmission or was rediscovered independently in Europe.').
-
-omega_variable(
-    metaphysical_obstacle_vs_epistemological_delay,
-    'Did the Aristotelian framework in medieval Europe constitute a logical barrier to the concept of zero-as-number, or merely a delay in its recognition?',
-    'Conceptual history and philosophy: could a mathematician working purely in Aristotelian logic have arrived at zero-as-number as a necessary conclusion from positional arithmetic, or does Aristotle''s rejection of the void (kenon) rule it out by logical necessity? If the latter, contingent_thinkability is correct; if the former, universal_discovery stands.',
-    'If Aristotle''s framework is logically foreclosing, zero-as-number is contingent on moving beyond it—supporting contingent_thinkability. If Aristotle''s framework merely delayed recognition without logically excluding it, zero-as-number remains a timeless mathematical truth that happened to be discovered later in Europe—supporting universal_discovery. This omega documents the disagreement between the readings on whether intellectual traditions can be conceptual preconditions (foreclosing other readings) or merely historical contingencies.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(metaphysical_obstacle_vs_epistemological_delay, conceptual, 'Whether medieval European philosophy was an epistemological obstacle only or a logical barrier to zero-as-number.').
-
-omega_variable(
-    mountain_beneficiary_ambiguity,
-    'If zero-as-number is a natural mathematical truth (mountain), why list ''mathematical_practice'' as a beneficiary? Does a timeless logical necessity have ''beneficiaries'' in the extractive sense?',
-    'This is a structural ambiguity in applying the mountain schema to abstract mathematical truths. Mountains typically have no beneficiaries (natural law benefits all equally). Listing ''mathematical_practice'' as a beneficiary here is a concession to the possibility that even mathematical truths could be framed as benefiting particular traditions or power structures if one adopts a social-constructivist reading (which this reading does NOT). The field is populated only to document the false-summit test: if this constraint were reclassified as extractive (by constructivist interpretation), there would be clear beneficiaries (Indian mathematical traditions gain priority/prestige from ''discovering first''). Since the reading asserts timeless mathematical necessity, the beneficiary is nominal—''mathematical practice'' as an abstract collective—and extraction is negligible (0.02 = the floor cost of any logical claim, never operationally imposed).',
-    'If the false-summit test triggers on the beneficiary declaration, the constraint would be reclassified toward tangled_rope or snare under a social-constructivist reading of mathematical authority. This omega documents that the mountain classification is robust to that reframing ONLY if one maintains the realist premise that zero-as-number is a timeless logical necessity, not a socially contingent construct. Presence of the beneficiary field signals awareness of the reading''s contested nature; its nominal value signals confidence in the realist classification.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(mountain_beneficiary_ambiguity, conceptual, 'Ambiguity between realist mountain (timeless necessity, no extractive beneficiary) and social-constructivist snare (knowledge claim that benefits certain traditions).').
+narrative_ontology:omega_variable(false_summit_mountain_beneficiary_ambiguity, conceptual, 'Whether the declaration of zero-as-number''s mathematical necessity serves identifiable interests or reflects genuine logical necessity').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(zero_as_number_entry__universal_discovery_reading, 0, 30).
+narrative_ontology:interval(zero_as_number_entry__universal_discovery_reading, 0, 2000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -252,22 +272,39 @@ narrative_ontology:interval(zero_as_number_entry__universal_discovery_reading, 0
 
 % Theater ratio over time
 narrative_ontology:measurement(zero_tr_t0, zero_as_number_entry__universal_discovery_reading, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(zero_tr_t6, zero_as_number_entry__universal_discovery_reading, theater_ratio, 6, 0.0).
-narrative_ontology:measurement(zero_tr_t12, zero_as_number_entry__universal_discovery_reading, theater_ratio, 12, 0.0).
-narrative_ontology:measurement(zero_tr_t18, zero_as_number_entry__universal_discovery_reading, theater_ratio, 18, 0.0).
-narrative_ontology:measurement(zero_tr_t24, zero_as_number_entry__universal_discovery_reading, theater_ratio, 24, 0.0).
-narrative_ontology:measurement(zero_tr_t30, zero_as_number_entry__universal_discovery_reading, theater_ratio, 30, 0.0).
+narrative_ontology:measurement_basis(zero_tr_t0, projected).
+narrative_ontology:measurement(zero_tr_t500, zero_as_number_entry__universal_discovery_reading, theater_ratio, 500, 0.0).
+narrative_ontology:measurement_basis(zero_tr_t500, projected).
+narrative_ontology:measurement(zero_tr_t1000, zero_as_number_entry__universal_discovery_reading, theater_ratio, 1000, 0.0).
+narrative_ontology:measurement_basis(zero_tr_t1000, projected).
+narrative_ontology:measurement(zero_tr_t1500, zero_as_number_entry__universal_discovery_reading, theater_ratio, 1500, 0.0).
+narrative_ontology:measurement_basis(zero_tr_t1500, projected).
+narrative_ontology:measurement(zero_tr_t2000, zero_as_number_entry__universal_discovery_reading, theater_ratio, 2000, 0.0).
+narrative_ontology:measurement_basis(zero_tr_t2000, observed).
 
 % Extraction over time
-narrative_ontology:measurement(zero_be_t0, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 0, 0.02).
-narrative_ontology:measurement(zero_be_t6, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 6, 0.02).
-narrative_ontology:measurement(zero_be_t12, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 12, 0.02).
-narrative_ontology:measurement(zero_be_t18, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 18, 0.02).
-narrative_ontology:measurement(zero_be_t24, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 24, 0.02).
-narrative_ontology:measurement(zero_be_t30, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 30, 0.02).
+narrative_ontology:measurement(zero_be_t0, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement_basis(zero_be_t0, projected).
+narrative_ontology:measurement(zero_be_t500, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 500, 0.08).
+narrative_ontology:measurement_basis(zero_be_t500, projected).
+narrative_ontology:measurement(zero_be_t1000, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 1000, 0.08).
+narrative_ontology:measurement_basis(zero_be_t1000, projected).
+narrative_ontology:measurement(zero_be_t1500, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 1500, 0.08).
+narrative_ontology:measurement_basis(zero_be_t1500, projected).
+narrative_ontology:measurement(zero_be_t2000, zero_as_number_entry__universal_discovery_reading, base_extractiveness, 2000, 0.08).
+narrative_ontology:measurement_basis(zero_be_t2000, observed).
 
-% Suppression authored static: scalar-only by design, no temporal series
-narrative_ontology:suppression_profile(zero_as_number_entry__universal_discovery_reading, static).
+% Suppression requirement over time
+narrative_ontology:measurement(zero_su_t0, zero_as_number_entry__universal_discovery_reading, suppression_requirement, 0, 0.02).
+narrative_ontology:measurement_basis(zero_su_t0, projected).
+narrative_ontology:measurement(zero_su_t500, zero_as_number_entry__universal_discovery_reading, suppression_requirement, 500, 0.02).
+narrative_ontology:measurement_basis(zero_su_t500, projected).
+narrative_ontology:measurement(zero_su_t1000, zero_as_number_entry__universal_discovery_reading, suppression_requirement, 1000, 0.02).
+narrative_ontology:measurement_basis(zero_su_t1000, projected).
+narrative_ontology:measurement(zero_su_t1500, zero_as_number_entry__universal_discovery_reading, suppression_requirement, 1500, 0.02).
+narrative_ontology:measurement_basis(zero_su_t1500, projected).
+narrative_ontology:measurement(zero_su_t2000, zero_as_number_entry__universal_discovery_reading, suppression_requirement, 2000, 0.02).
+narrative_ontology:measurement_basis(zero_su_t2000, observed).
 
 
 /* ==========================================================================
@@ -280,7 +317,7 @@ narrative_ontology:affects_constraint(zero_as_number_entry__universal_discovery_
 narrative_ontology:affects_constraint(zero_as_number_entry__universal_discovery_reading, zero_as_number_entry__hybrid_scaffolding_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the zero-as-number-entry kernel. The readings differ on ontological status: universal_discovery treats zero-as-number as a timeless logical necessity (mountain); contingent_thinkability treats it as contingent on intellectual history (snare); hybrid_scaffolding treats it as latent but operationally scaffolded (rope/tangled_rope). All three readings agree on the historical facts (Indian priority, transmission via Islamic mathematics) but disagree on the philosophical interpretation. The ε-invariance principle requires separate constraint stories for each reading, linked via affects_constraints. Consumers reading this story should consult the sibling readings to understand the full scope of the contest.
+% The zero-as-number kernel decomposes into three structurally distinct readings corresponding to different framings of the concept's emergence and necessity. The universal-discovery reading (this file) claims zero-as-number is a timeless mathematical necessity; the contingent-thinkability reading claims it required specific cultural transmission to become thinkable; the hybrid-scaffolding reading claims it was latent in positional notation structure but required conceptual scaffolding to become operationally thinkable. Each reading instantiates a different constraint with different ε values, beneficiary/victim structures, and classifications. Network edges link the readings to show their kernel relationship and mutual influence on historiographical and philosophical interpretations.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

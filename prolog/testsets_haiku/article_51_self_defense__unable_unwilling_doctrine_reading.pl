@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,31 +74,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: article_51_self_defense__unable_unwilling_doctrine_reading
- *   human_readable: Article 51 Self-Defense: Unable/Unwilling Host State Doctrine
- *   domain: international_law/security_studies/constitutional_interpretation
+ *   human_readable: Article 51 Self-Defense: Unwilling/Unable Host State Doctrine
+ *   domain: international_law/security_studies
  *
  * SUMMARY:
- *   The 'unable or unwilling' doctrine is a reading of UN Charter Article 51
- *   that permits states to use force in another state's territory against
- *   non-state actors when that host state is unable or unwilling to suppress
- *   the threat itself. This reading emerged post-2001 as states grappled with
- *   transnational terrorist networks operating in ungoverned spaces. The
- *   doctrine sits between two extreme interpretations: the narrow reading
- *   (self-defense only against state-attributable armed attacks) and the
- *   expansive reading (preventive force against emerging threats). The
- *   unable/unwilling doctrine is a middle ground—it requires an actual
- *   non-state attack to have occurred but permits unilateral response when
- *   the host state fails to act. This constraint story instantiates ONLY the
- *   unable/unwilling reading as a clean, ε-invariant construction. The
- *   sibling readings (narrow and expansive) are separate constraint stories;
- *   they are linked via network.affects_constraints but not described here.
+ *   The unable/unwilling doctrine reads Article 51 of the UN Charter to
+ *   permit self-defense against non-state actor attacks originating from host
+ *   states that lack capacity or political will to suppress the threat. This
+ *   reading creates a hybrid constraint: it preserves the state-centric
+ *   international law framework while permitting unilateral intervention into
+ *   other states' territory. Intervening states claim coordination benefit
+ *   (addressing collective security gaps); host states experience it as
+ *   sovereignty erosion. The constraint is claimed as tangled_rope (genuine
+ *   coordination function + asymmetric extraction) because it does solve a
+ *   real collective-action problem (non-state threats the host state cannot
+ *   suppress) while permitting powerful states to bypass the Security Council
+ *   and extract strategic advantage by defining 'unwilling' and 'unable'
+ *   unilaterally.
  *
  * KEY AGENTS:
- *   - Intervening States (US, Israel, Turkey, UAE, etc.): Powerful institutional actors with counterterrorism mandates; benefit from the doctrine because it provides legal justification for operations they view as militarily necessary; high arbitrage exit (can reframe as preventive, use covert ops, or negotiate with host states).
- *   - Host States with Weak Capacity (Somalia, Syria, Yemen, Pakistan border regions): Moderate power, constrained exit; bear the cost of sovereignty breach and loss of territorial control; labeled 'unable' or 'unwilling' in ways they cannot easily contest without admitting weakness.
- *   - Host State Governments: Identity-locked position; benefit tacitly from burden-shifting but cannot admit it politically; caught between avoiding intervention (by appearing capable) and enabling intervention (by admitting incapacity).
- *   - International Court of Justice: Observer seat; interprets Article 51 and adjudicates claimed self-defense; shapes the doctrine's legitimacy and scope through case law.
- *   - Sovereignty Doctrine Advocates (legal scholars, UNGA, human rights bodies): Analytical observers who contest the doctrine's expansion and propose narrower scope; argue for explicit burden of proof, diplomatic exhaustion, or UN involvement.
+ *   - Intervening states with counterterrorism mandates (agenda-setters; define unwilling/unable; initiate interventions)
+ *   - Host states harboring non-state actors (payers; suffer sovereignty erosion; cannot control intervention trigger)
+ *   - Non-state actors in theater (trapped payers; targeted by interventions justified by the doctrine)
+ *   - International Security Council (formally preserved beneficiary but structurally bypassed)
+ *   - Weak states without military capacity (excluded; vulnerable to doctrine application; cannot contest terms)
+ *   - Regional rivals using the doctrine as cover (excluded from the framing; their competitive motives cannot be voiced)
  */
 
 /* ==========================================================================
@@ -100,56 +107,120 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(article_51_self_defense__unable_unwilling_doctrine_reading, 0.68).
-domain_priors:suppression_score(article_51_self_defense__unable_unwilling_doctrine_reading, 0.72).
-domain_priors:theater_ratio(article_51_self_defense__unable_unwilling_doctrine_reading, 0.48).
+domain_priors:suppression_score(article_51_self_defense__unable_unwilling_doctrine_reading, 0.71).
+domain_priors:theater_ratio(article_51_self_defense__unable_unwilling_doctrine_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 0.48).
+narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(article_51_self_defense__unable_unwilling_doctrine_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(article_51_self_defense__unable_unwilling_doctrine_reading, tangled_rope).
-narrative_ontology:human_readable(article_51_self_defense__unable_unwilling_doctrine_reading, "Article 51 Self-Defense: Unable/Unwilling Host State Doctrine").
-narrative_ontology:topic_domain(article_51_self_defense__unable_unwilling_doctrine_reading, "international_law/security_studies/constitutional_interpretation").
+narrative_ontology:human_readable(article_51_self_defense__unable_unwilling_doctrine_reading, "Article 51 Self-Defense: Unwilling/Unable Host State Doctrine").
+narrative_ontology:topic_domain(article_51_self_defense__unable_unwilling_doctrine_reading, "international_law/security_studies").
 
 domain_priors:requires_active_enforcement(article_51_self_defense__unable_unwilling_doctrine_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(article_51_self_defense__unable_unwilling_doctrine_reading, '2f06272c-369b-4615-9a0a-60fd8a9e5b7e').
-narrative_ontology:cs_kernel_codification('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', fixed_text).
-narrative_ontology:cs_authority_grounding('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', lineage).
-narrative_ontology:cs_interpretation_layer_present('2f06272c-369b-4615-9a0a-60fd8a9e5b7e').
-narrative_ontology:cs_reading_relation('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', article_51_self_defense__narrow_armed_attack_reading, coexists_with).
-narrative_ontology:cs_reading_relation('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', article_51_self_defense__expansive_preventive_reading, influences).
-narrative_ontology:cs_axiom('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', foundational, non_state_actor_triggered_self_defense).
-narrative_ontology:cs_axiom_status(non_state_actor_triggered_self_defense, holdable).
-narrative_ontology:cs_axiom_grounding('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', non_state_actor_triggered_self_defense, empirically_contingent).
-narrative_ontology:cs_axiom('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', foundational, host_state_incapacity_justifies_intervention).
-narrative_ontology:cs_axiom_status(host_state_incapacity_justifies_intervention, holdable).
-narrative_ontology:cs_axiom_grounding('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', host_state_incapacity_justifies_intervention, instrumental).
-narrative_ontology:cs_reference_frame('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', westphalian_sovereignty_with_self_defense_exception).
-narrative_ontology:cs_drift_state('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', contemporary_post_2020s, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('2f06272c-369b-4615-9a0a-60fd8a9e5b7e', '').
+narrative_ontology:cs_story_uid(article_51_self_defense__unable_unwilling_doctrine_reading, 'cf8e7324-56f1-4af7-bfee-e75e457b3e9d').
+narrative_ontology:cs_kernel_codification('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', fixed_text).
+narrative_ontology:cs_authority_grounding('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', lineage).
+narrative_ontology:cs_interpretation_layer_present('cf8e7324-56f1-4af7-bfee-e75e457b3e9d').
+narrative_ontology:cs_reading_relation('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', article_51_self_defense__narrow_armed_attack_reading, coexists_with).
+narrative_ontology:cs_reading_relation('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', article_51_self_defense__expansive_preventive_reading, influences).
+narrative_ontology:cs_axiom('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', foundational, non_state_actor_attacks_trigger_self_defense).
+narrative_ontology:cs_axiom_status(non_state_actor_attacks_trigger_self_defense, holdable).
+narrative_ontology:cs_axiom_grounding('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', non_state_actor_attacks_trigger_self_defense, deontological).
+narrative_ontology:cs_axiom('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', foundational, host_state_capacity_conditions_sovereignty).
+narrative_ontology:cs_axiom_status(host_state_capacity_conditions_sovereignty, holdable).
+narrative_ontology:cs_axiom_grounding('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', host_state_capacity_conditions_sovereignty, empirically_contingent).
+narrative_ontology:cs_axiom('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', secondary, unilateral_response_permitted_absent_state_action).
+narrative_ontology:cs_axiom_status(unilateral_response_permitted_absent_state_action, holdable).
+narrative_ontology:cs_axiom_grounding('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', unilateral_response_permitted_absent_state_action, instrumental).
+narrative_ontology:cs_reference_frame('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', classical_state_centric_collective_security).
+narrative_ontology:cs_drift_state('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', contemporary_counterterrorism_normalization, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('cf8e7324-56f1-4af7-bfee-e75e457b3e9d', '').
 narrative_ontology:cs_kernel_id(article_51_self_defense__unable_unwilling_doctrine_reading, article_51_self_defense).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(article_51_self_defense__unable_unwilling_doctrine_reading, intervening_states_with_counterterrorism_mandates).
-narrative_ontology:constraint_victim(article_51_self_defense__unable_unwilling_doctrine_reading, host_states_with_weak_capacity).
+narrative_ontology:constraint_victim(article_51_self_defense__unable_unwilling_doctrine_reading, host_states_with_harboring_non_state_actors).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(article_51_self_defense__unable_unwilling_doctrine_reading, international_security_council).
+narrative_ontology:constraint_victim(article_51_self_defense__unable_unwilling_doctrine_reading, non_state_actor_victims_in_theater).
+narrative_ontology:constraint_victim(article_51_self_defense__unable_unwilling_doctrine_reading, weak_states_without_capacity).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Defend the unable/unwilling doctrine as a legitimate self-defense framework against non-state actor threats that originate from territories outside their control. Set the interpretive standard: a host state's unwillingness or inability to suppress a harbored threat triggers the intervening state's right to unilateral response without prior Security Council authorization. Argue this doctrine coordinates collective security by filling the gap when the host state fails to act, while maintaining the fiction of host-state responsibility.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, intervening_states_with_counterterrorism_mandates, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Bear the cost of sovereignty erosion: the doctrine permits unilateral military intervention into their territory by any state claiming the host is unwilling or unable to suppress a threat. Their borders become porous; their control over their own airspace and territory is conditional on demonstrable counterterrorism capacity. Exit options are limited—they cannot abandon the territory or unilaterally eject non-state actors that other states claim to be intervening against, and they face pressure to either suppress the threat preemptively or accept incursions.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, host_states_with_harboring_non_state_actors, payer,
+    powerful, generational, constrained, regional).
+
+% Subjected to intervention operations—drone strikes, raids, targeted killing—conducted under the doctrine's rationale. Their presence in the host territory is framed as justifying intervention into the host state itself. They cannot exit the theater without ceasing operations or relocating to states with greater suppression capacity.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, non_state_actor_victims_in_theater, payer,
+    powerless, immediate, trapped, local).
+
+% The doctrine benefits the permanent members (particularly those with global counterterrorism mandates) by creating a lawful pathway for military action outside the formal authorization mechanism. The Council is formally preserved as the adjudicator of international peace and security, but the doctrine permits major states to bypass Security Council authorization when claiming unable/unwilling circumstances. The Council's role is reduced to post-hoc acknowledgment or diplomatic negotiation.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, international_security_council, beneficiary,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(article_51_self_defense__unable_unwilling_doctrine_reading, international_security_council, agenda_setter).
+
+% Structurally vulnerable to the doctrine's application: limited military or counterterrorism capacity, harboring some non-state actors (willingly or unwillingly), and no ability to defend their airspace or territory against major-power intervention. The doctrine makes their weakness a trigger for external intervention justified as self-defense. They are excluded from the negotiation of what 'unwilling' and 'unable' mean—stronger states define the terms unilaterally.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, weak_states_without_capacity, payer,
+    powerless, generational, trapped, national).
+narrative_ontology:stakeholder_secondary_role(article_51_self_defense__unable_unwilling_doctrine_reading, weak_states_without_capacity, excluded).
+
+% Could invoke the doctrine against regional competitors under the guise of counterterrorism. They are excluded from the doctrine's framing because acknowledging regional competition as the motive would expose the doctrine's cover story. Their exclusion is structural: admitting that the doctrine licenses competitive intervention would undermine the 'collective security' narrative.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, regional_rivals_and_competitors, excluded,
+    institutional, generational, constrained, regional).
+
+% Interprets the doctrine's application to specific cases. Acts as an external analytical seat that receives post-hoc justifications for interventions and evaluates their legal coherence. Lacks enforcement power over state action but provides interpretive authority that shapes subsequent doctrine development.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__unable_unwilling_doctrine_reading, international_court_of_justice, observer,
+    analytical, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(article_51_self_defense__unable_unwilling_doctrine_reading, intervening_states_with_counterterrorism_mandates).
+narrative_ontology:fixing_cost_class(article_51_self_defense__unable_unwilling_doctrine_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a framework for collective security response to non-state actor threats that originate from territories where state control is absent or ineffective. By permitting intervention when host states are unable or unwilling to suppress threats, the doctrine aims to solve the coordination problem of transnational terrorism—no single state can interdict a threat before it reaches them if the host state will not act, and the Security Council cannot respond quickly enough. The doctrine substitutes unilateral determination for centralized authorization.
+% TRANSFER_FUNCTION: Transfers the right to use force unilaterally from the Security Council (the formal arbiter of collective security under Article 42) to individual states claiming self-defense circumstances. Moves sovereignty constraints from intervening states (which are normally bound by territorial borders and state sovereignty) to host states (whose sovereign immunity becomes conditional on demonstrated suppression capacity). Moves the burden of proof: host states must demonstrate ability/willingness to suppress; intervening states need only claim the doctrine's conditions are met.
+% ABSENT_VOICES: Weak states lacking counterterrorism capacity (who become targets for intervention under the doctrine's rationale) are excluded from negotiating what 'unwilling' and 'unable' mean. Non-state actors whose presence triggers the doctrine have no seat at the table. Regional competitors of intervening states cannot voice their concern that the doctrine licenses pretextual intervention without risking exposure of competitive motives. The doctrine's beneficiaries control the interpretive authority; the doctrine's victims have no standing to contest the framing.
+% DISAPPEARANCE_RATIONALE: If the unable/unwilling doctrine were nullified overnight, intervening states would lose their legal cover for unilateral counterterrorism operations in foreign territory. They would be forced back to either seeking Security Council authorization (which P5 veto holders could block) or acting without legal authority. Host states would recover their classical sovereign immunity—borders would become genuinely inviolable absent Security Council action. The distribution of security burdens and military prerogatives would radically shift; states would have to negotiate collective responses rather than act unilaterally.
+% FOUNDING_PROBLEM: The founding problem was the gap between transnational terrorism threats originating from weak or failed states and the inability of the Security Council to authorize collective action quickly, or the inability of weak states to suppress non-state actors harboring on their territory. Early counterterrorism operations after 2001 revealed that waiting for Security Council authorization paralyzed response to imminent threats, and that some host states lacked the capacity or will to suppress terrorist groups. The doctrine was developed to fill this gap.
+% FOUNDING_PROBLEM_CORROBORATION: Intervening states and security scholars cite ongoing non-state actor threats and host-state incapacity as evidence the founding problem remains live. Host states and non-aligned states argue the founding problem was overstated and has been superseded by stronger state capacity, international coordination, and the normalization of multilateral counterterrorism. No corroborating source outside the intervening states' security establishments independently validates that the 'inability' rationale is still the dominant factor driving interventions (most documented interventions cite counterterrorism but are motivated by geopolitical competition, as regional analysts attest).
+narrative_ontology:disappearance_verdict(article_51_self_defense__unable_unwilling_doctrine_reading, world_rearranges).
+narrative_ontology:founding_problem_status(article_51_self_defense__unable_unwilling_doctrine_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(article_51_self_defense__unable_unwilling_doctrine_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(article_51_self_defense__unable_unwilling_doctrine_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(article_51_self_defense__unable_unwilling_doctrine_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(article_51_self_defense__unable_unwilling_doctrine_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,16 +240,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness (0.68 at interval end) reflects that the doctrine asymmetrically benefits intervening powerful states while imposing sovereignty costs on weak-capacity host states. The ratio is not at snare-level extremes (0.85+) because the doctrine does require an actual non-state attack to have occurred (not purely preventive), and because some host states tacitly benefit from burden-shifting. Suppression is substantial (0.72) because the doctrine's persistence depends on actively defending against narrow readings that would constrain it and against sovereignty doctrine advocates who call for stricter limits. Theater ratio is moderate-high (0.48) because increasing shares of doctrine deployment cite counterterrorism necessity while expanding the scope of targets and lowering the proof standard for 'unable' and 'unwilling'—the performative defense of the doctrine is rising relative to its core coordinating function. Accessibility collapse is moderate (0.62): host states see alternatives (diplomatic negotiation, UN involvement, covert cooperation) but find them blocked or less appealing; intervening states face moderate friction from international legal norms but can navigate them. Resistance is high (0.71) because sovereignty doctrine advocates, international courts, and some host state coalitions actively contest the doctrine and propose narrower readings.
+ *   Extractiveness rises from 0.48 to 0.68 over the interval as the doctrine becomes normalized practice rather than exceptional invocation. Early applications were claimed as emergency self-defense (lower extraction rationale); later applications cite the doctrine routinely without detailed threat verification, indicating the enforcement object has shifted from responding to imminent threats to maintaining unilateral intervention authority. Theater ratio plateaus at 0.42 (higher than it was initially but stabilizing), indicating the doctrine's dual function: genuine counterterrorism operations coexist with geopolitical positioning that uses the doctrine as cover. Suppression requirement rises and plateaus at 0.71, showing that maintaining the doctrine's legal coherence requires active enforcement through interpretive authority—the International Court, state legal positions, diplomatic pressure—not just through military operations. The constraint is tangled_rope because (1) it coordinates collective security response by filling a genuine gap (weak host states cannot suppress transnational threats), (2) it extracts because intervening states unilaterally determine what counts as unwilling/unable, and (3) active enforcement through legal and diplomatic framing is required to keep the cover story intact against challenges from host states and non-aligned states.
  *
  * PERSPECTIVAL GAP:
- *   The intervening-state seat should compute the constraint as beneficial coordination (they see the unable/unwilling problem as real, its solution as necessary). The host-state seat should compute it as extractive authority (they see sovereignty bypass as coercive and the 'unable/unwilling' label as imposed rather than consensual). The ICJ seat computes it as a complex legal rule with genuine tension between self-defense rights and sovereignty norms. The sovereignty advocates compute it as a cover story for power asymmetry. The engine derives these divergences from the structural data: beneficiary seat gets low d (subsidized), victim seat gets high d (extracted from), observer seats get intermediate d. The doctrine itself claims coordination; the metrics describe asymmetric extraction that requires active enforcement.
+ *   From the intervening states' seat, the doctrine is genuine coordination—a necessary framework to respond to non-state actor threats when host states fail. The agenda-setter seat computes the constraint as rope: coordination without significant extraction cost (other states benefit from security; no one is victimized except the non-state actors, who are the threat). From the host states' seat, the constraint is snare—the doctrine is pure cover for unilateral intervention into their territory, justified retroactively by claims about their 'unwillingness' or 'inability' that they have no standing to contest. The payer seat computes extraction because the beneficiary (intervening state) has defined the terms unilaterably and the host state cannot exit. From the weak states' seat (excluded), the constraint is structurally predatory—they are most vulnerable to being labeled 'unable' and most subject to intervention, with no say in the framing. The engine computes these divergent types from the structural data: beneficiary/victim declaration (asymmetry), active enforcement requirement (tangled_rope gate), and directionality derivation from power + exit options + spatial scope.
  *
  * DIRECTIONALITY LOGIC:
- *   Intervening states with powerful institutional capacity and arbitrage options (alternative legal framings, covert ops, diplomatic negotiation) sit at low d—they benefit from the doctrine and face low structural extraction. Host states with moderate power and constrained options (cannot afford civil war with intervening state, cannot easily contest 'unable/unwilling' labeling without admitting incapacity) sit at high d—they bear the costs. Host state governments occupy an unusual high-d middle position: they benefit tacitly from burden-shifting but are identity-locked by sovereignty claims, so they cannot admit the benefit. The derivation should reflect this: high-d for the sovereignty cost, modulated downward only if data shows explicit host-state consent or reciprocal benefit-sharing arrangements (rarely present). ICJ and advocacy seats are analytical (d near 0.5 or independent of the constraint).
+ *   Intervening states (institutional power, global scope, arbitrage exit via ability to define doctrine terms) are full beneficiaries—d near 0.0. Host states (powerful formally, but regionally scoped and constrained exit—they cannot abandon their territory or unilaterally eject non-state actors) sit at moderate target position—d around 0.65. Weak states (powerless, national or local scope, trapped exit) are full targets—d near 1.0. The Security Council (institutional power, but bypassed in practice) sits near 0.4 (formally beneficiary of its advisory role, but structurally excluded from decision-making). The directionality reflects who controls the constraint's operation (intervening states set the terms) and who bears its costs (host states and weak states that cannot resist intervention claims).
  *
  * MANDATROPHY ANALYSIS:
- *   The unable/unwilling doctrine is NOT a mandatrophy case yet. The founding problem (transnational non-state actor networks in ungoverned spaces) is contested but still arguably live: terrorist organizations like ISIS-K (post-Afghanistan), Al-Qaeda franchises (Sahel, Somalia), and Houthi networks (Yemen) continue to mount attacks from weak-state territory. However, the doctrine shows signs of mandate-slippage: it increasingly justifies counterterrorism operations broader than response to imminent threats (drone strikes on individuals based on pattern-of-life analysis rather than specific attack planning), and the 'unable' and 'unwilling' bar has dropped over time (a state is now deemed 'unwilling' if it does not cooperate with the intervening state, even if it has suppressed the specific threat). The measurement series shows rising theater_ratio (performative defense of the doctrine rising) and rising extractiveness relative to the founding problem's severity, suggesting the constraint is shifting from coordination to pure extraction.
+ *   The founding problem was real—non-state actor threats originating from weak states that could not suppress them. That problem persists in the abstract, but the constraint's actual operation has drifted. Early doctrine invocations identified specific imminent threats and demonstrated host-state incapacity; current invocations often cite broad counterterrorism mandates without specific threat verification. The theater ratio rising from 0.28 to 0.42 reflects this drift: more enforcement activity is theatrical (maintaining the legal cover story) and less is directly threat-responsive. The constraint is NOT mandatrophy-resolved—the founding problem status is 'contested' precisely because intervening states continue to claim it is live while host states and non-aligned states argue the constraint persists by bureaucratic inertia and geopolitical advantage rather than solving an active problem. A genuine mandatrophy resolution would require the constraint to be abandoned or formally restricted, neither of which has occurred.
  */
 
 /* ==========================================================================
@@ -186,79 +257,82 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    unable_vs_unwilling_boundary,
-    'What is the structural difference between a host state that is ''unable'' to suppress non-state threats (lacks capacity) versus ''unwilling'' (has capacity but chooses not to act or benefits from the threat)? How should intervening states prove which condition holds?',
-    'International court judgments establishing evidentiary standards for ''unable'' vs. ''unwilling''; diplomatic correspondence and UN proceedings documenting host state capacity claims; independent capacity assessments by UN bodies or regional organizations.',
-    'If ''unable'' and ''unwilling'' require different proof standards, the doctrine''s scope narrows (unable requires aid and capacity-building; unwilling requires formal diplomatic notice and host-state consent). If they are treated as equivalent, the doctrine permits intervention on the basis of host-state non-cooperation alone, expanding the doctrine into a pure sovereignty-bypass mechanism.',
+    unable_vs_unwilling_ambiguity,
+    'How do we distinguish between a host state that is genuinely unable to suppress a non-state actor threat and one that is unwilling but claiming inability?',
+    'International verification regime examining military capacity (number and training of counterterrorism forces, surveillance capability, border control infrastructure), prior enforcement actions, and credible third-party assessment of willingness indicators (diplomatic communications, prior cooperation with intervening states on other issues). A state that cooperates on some threats but not others signals unwillingness rather than inability.',
+    'If most interventions are justified by ''unwillingness'' rather than genuine inability, the doctrine becomes a pretext for bypassing state consent entirely. If both are conflated into ''unable/unwilling'' as a single standard, the doctrine licenses intervention against any host state that fails to meet intervening states'' counterterrorism standards, regardless of the host state''s actual capacity constraints.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(unable_vs_unwilling_boundary, conceptual, 'Boundary ambiguity between incapacity and non-cooperation grounds for intervention.').
+narrative_ontology:omega_variable(unable_vs_unwilling_ambiguity, empirical, 'Whether inability and unwillingness are separately verifiable or whether the doctrine conflates them to mask political choice as capability deficit.').
 
 omega_variable(
-    coordination_vs_power_extraction,
-    'Does the unable/unwilling doctrine solve a genuine coordination problem (host state capacity crisis makes self-help necessary), or does it provide legal cover for power-based territorial control that would occur regardless of legal framing?',
-    'Counterfactual analysis: if the doctrine were abolished tomorrow, would intervening states cease counterterrorism operations in weak-state territory, or would they reframe them (preventive doctrine, covert ops, or bilateral agreements) and continue? Scholarly consensus on whether alternative coordination mechanisms (UN peacekeeping, capacity-building, host-state consent regimes) could solve the founding problem.',
-    'If the doctrine provides cover for operations that would occur anyway, it is pure extraction dressed as coordination—reclassify to snare. If operations genuinely depend on legal justification (intervening states avoid weak-state territory without legal cover), the doctrine solves a real coordination problem and remains tangled_rope.',
+    doctrine_vs_cover_story_boundary,
+    'Does the unable/unwilling doctrine coordinate genuine collective security response to transnational terrorism, or does it license unilateral intervention that is motivated by geopolitical competition and justified retroactively by the doctrine?',
+    'Pattern analysis of intervention justifications vs. outcomes: if interventions occur predominantly against states that are weak or geopolitical rivals (not against strong allies harboring non-state actors), and if the ''threat'' rationale is not deployed consistently across comparable cases, the doctrine is operating as cover story rather than coordination framework.',
+    'If the doctrine is genuine coordination, interventions should be consistent across different dyads and proportional to threat severity. If it is cover story, interventions should cluster among weak states and geopolitical competitors of intervening states, with inconsistent threat framing. The classification would shift from tangled_rope (coordination + extraction) to snare (extraction disguised as coordination).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(coordination_vs_power_extraction, conceptual, 'Whether the constraint genuinely solves a coordination problem or merely legitimizes power asymmetry.').
+narrative_ontology:omega_variable(doctrine_vs_cover_story_boundary, conceptual, 'Whether the doctrine''s stated coordination function is the actual structural reason it persists, or whether geopolitical advantage is the dominant driver and coordination is the narrative mask.').
 
 omega_variable(
-    host_state_identity_lock_mechanism,
-    'To what extent is host-state acceptance of the unable/unwilling doctrine driven by genuine incapacity versus by the identity-lock dynamic (admitting incapacity undermines state legitimacy, so states tacitly tolerate intervention to avoid admitting weakness)?',
-    'Post-intervention analysis of host-state public statements, internal deliberations (leaked documents, interviews), and willingness to contest ''unable/unwilling'' characterizations in international forums. Comparison across host states with similar capacity but different political regimes (do authoritarian states resist the doctrine less than democracies facing domestic legitimacy costs?).',
-    'If identity-lock is the primary suppression mechanism, the constraint''s effective suppression is higher than the structural measure suggests, and the doctrine is more extractive than the base metrics indicate. It would also suggest that the doctrine is structurally unstable—as states'' identities shift or legitimacy recalculates, resistance will rise.',
+    sovereignty_conditionality_precedent,
+    'Does accepting the unable/unwilling doctrine establish a precedent that state sovereignty is conditional on demonstrated capacity to suppress threats within one''s borders, and if so, what other capacity thresholds might be invoked as justification for intervention?',
+    'Historical analysis of post-doctrine doctrine-derived interventions and the scope expansion of the ''threshold.'' If the doctrine expands from counterterrorism to humanitarian intervention, to suppressing internal armed groups that pose ''transnational risks,'' the precedent is being generalized. If weak states begin invoking ''our population is unable to suppress the refugee flow'' or ''unable to suppress smuggling networks'' as justification for cross-border intervention, the doctrine has been weaponized.',
+    'If the conditionality precedent is established and generalized, state sovereignty becomes permanently provisional—dependent on meeting evolving capacity standards set by more powerful states. This would constitute a fundamental shift in the international legal order from Westphalian to conditional sovereignty.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(sovereignty_conditionality_precedent, conceptual, 'Whether the doctrine establishes a generalizable precedent that erodes classical state sovereignty as a categorical principle.').
+
+omega_variable(
+    reading_foreclosure_narrow_vs_unable_unwilling,
+    'Does the unable/unwilling reading logically foreclose the narrow_armed_attack reading, or can both coexist within the same international legal framework?',
+    'Textual and doctrinal analysis: the narrow reading asserts that Article 51 requires attribution to a state actor and imminent or actual armed attack by that state. The unable/unwilling reading permits response to non-state actor attacks from weak states. These readings can coexist if the narrow reading applies to state-on-state conflict and the unable/unwilling reading applies to non-state actor contexts. They foreclose each other only if one reading asserts it is the EXCLUSIVE interpretation of Article 51 for all cases.',
+    'If the readings coexist, both constraints exist and apply to different factual scenarios—the narrow reading for conventional war, the unable/unwilling reading for counterterrorism. If one forecloses the other, the engine would reclassify the foreclosed reading as inert and mark the forecloser as the operative doctrine. The actual state of the law is coexistence with borderline cases being litigated.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(host_state_identity_lock_mechanism, empirical, 'Role of identity-lock in host-state suppression and constraint stability.').
-
-omega_variable(
-    kernel_reading_contest_underdetermination,
-    'The three readings of Article 51 (narrow, unable/unwilling, expansive) arise from contested interpretations of the same constitutional text. Is the text genuinely ambiguous, or does it more clearly favor one reading, with other readings imposing doctrinal overlay?',
-    'Textual originalism: what did the Charter''s drafters intend by ''armed attack'' and ''self-defence''? Historical evidence from San Francisco drafting sessions; comparisons with parallel texts in regional human rights instruments; evolution of state practice since 1945.',
-    'If the text is ambiguous, all three readings remain live and no single reading can claim unique legitimacy (coexists_with relation holds across all three). If the text favors the narrow reading, the unable/unwilling and expansive readings are doctrinal additions that can be challenged; if it favors the expansive reading, the narrow reading is an artificial constraint (forecloses relation). Different conclusions shift the stability and contestation level of this constraint.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contest_underdetermination, conceptual, 'Textual determinacy of Article 51 and the legitimacy status of alternative readings.').
+narrative_ontology:omega_variable(reading_foreclosure_narrow_vs_unable_unwilling, conceptual, 'Whether the unable/unwilling doctrine logically contradicts or coexists with the classical narrow reading of Article 51.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(article_51_self_defense__unable_unwilling_doctrine_reading, 0, 25).
+narrative_ontology:interval(article_51_self_defense__unable_unwilling_doctrine_reading, 0, 24).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(arti_tr_t0, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 0, 0.32).
-narrative_ontology:measurement(arti_tr_t5, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 5, 0.37).
-narrative_ontology:measurement(arti_tr_t10, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 10, 0.42).
-narrative_ontology:measurement(arti_tr_t15, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 15, 0.46).
-narrative_ontology:measurement(arti_tr_t20, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 20, 0.47).
-narrative_ontology:measurement(arti_tr_t25, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 25, 0.48).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t0, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t4, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 4, 0.32).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t8, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 8, 0.36).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t12, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 12, 0.39).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t16, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 16, 0.41).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t20, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 20, 0.42).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_tr_t24, article_51_self_defense__unable_unwilling_doctrine_reading, theater_ratio, 24, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(arti_be_t0, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(arti_be_t5, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 5, 0.54).
-narrative_ontology:measurement(arti_be_t10, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 10, 0.61).
-narrative_ontology:measurement(arti_be_t15, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 15, 0.65).
-narrative_ontology:measurement(arti_be_t20, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 20, 0.67).
-narrative_ontology:measurement(arti_be_t25, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 25, 0.68).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t0, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t4, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 4, 0.54).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t8, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 8, 0.6).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t12, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 12, 0.64).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t16, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 16, 0.66).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t20, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 20, 0.67).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_be_t24, article_51_self_defense__unable_unwilling_doctrine_reading, base_extractiveness, 24, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(arti_su_t0, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(arti_su_t5, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 5, 0.63).
-narrative_ontology:measurement(arti_su_t10, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 10, 0.68).
-narrative_ontology:measurement(arti_su_t15, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 15, 0.7).
-narrative_ontology:measurement(arti_su_t20, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 20, 0.71).
-narrative_ontology:measurement(arti_su_t25, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 25, 0.72).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t0, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t4, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 4, 0.62).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t8, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 8, 0.66).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t12, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 12, 0.69).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t16, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 16, 0.7).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t20, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement(article_51_self_defense_unwilling_unable_su_t24, article_51_self_defense__unable_unwilling_doctrine_reading, suppression_requirement, 24, 0.71).
 
 
 /* ==========================================================================
@@ -266,18 +340,18 @@ narrative_ontology:measurement(arti_su_t25, article_51_self_defense__unable_unwi
    ========================================================================== */
 
 narrative_ontology:coordination_type(article_51_self_defense__unable_unwilling_doctrine_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(article_51_self_defense__unable_unwilling_doctrine_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(article_51_self_defense__unable_unwilling_doctrine_reading, 0.15).
 narrative_ontology:affects_constraint(article_51_self_defense__unable_unwilling_doctrine_reading, article_51_self_defense__narrow_armed_attack_reading).
 narrative_ontology:affects_constraint(article_51_self_defense__unable_unwilling_doctrine_reading, article_51_self_defense__expansive_preventive_reading).
 
 % DUAL FORMULATION NOTE:
-% The Article 51 self-defense kernel has three distinct readings that instantiate different constraints with different ε values and structural beneficiary/victim sets. The unable/unwilling doctrine reading (this story) sits between the narrow reading (lowest ε, minimal extraction, respects state sovereignty strictly) and the expansive reading (highest ε, permits preventive force). The three stories form a kernel family linked via network.affects_constraints. The unable/unwilling reading influences both siblings: it provides middle-ground legitimacy that can swing courts and state consensus toward either pole, depending on how proof standards for 'unable' and 'unwilling' are set. The narrow reading coexists with this one (different legal communities hold both simultaneously) but constrains its scope through judicial interpretation. The expansive reading lies downstream: it takes the unable/unwilling rationale and extends it to purely preventive contexts, removing the requirement for an actual non-state attack.
+% The Article 51 self-defense kernel decomposes into three structurally distinct constraints corresponding to three contested readings: the narrow_armed_attack_reading (state-attributable armed attack only, ε ≈ 0.15, mountain-like); the unable_unwilling_doctrine_reading (non-state actor attacks with host-state incapacity trigger, ε ≈ 0.68, tangled_rope); and the expansive_preventive_reading (preemptive/preventive use of force, ε ≈ 0.80, snare). These are NOT three measurements of one constraint—they are three separate constraints instantiated by three readings of the same kernel. Each has different beneficiaries, victims, extractiveness profiles, and enforcement mechanisms. The narrow reading constrains (and benefits from constraining) the other two; the expansive reading maximizes state freedom of action and extracts by bypassing collective authorization; the unable/unwilling reading sits between, solving a genuine collective-action problem while permitting unilateral intervention that benefits powerful states disproportionately.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(article_51_self_defense__unable_unwilling_doctrine_reading, moderate, 0.78).
+constraint_indexing:directionality_override(article_51_self_defense__unable_unwilling_doctrine_reading, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

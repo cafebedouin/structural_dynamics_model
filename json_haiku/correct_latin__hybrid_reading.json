@@ -4,233 +4,331 @@
     "version": "1.0",
     "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "e40a721f-2e45-47db-9577-cee250b08ac9"
+    "module_name_override": "constraint_correct_latin__hybrid_reading",
+    "story_uid": "2c4d6103-0d90-44f2-bc3d-66b4cf9431ba"
   },
   "base_properties": {
     "extractiveness": 0.42,
     "suppression": 0.38,
     "theater_ratio": 0.28,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.55,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Correct Latin: Hybrid Transmission-Plus-Textual-Correction Reading",
-    "topic_domain": "intellectual_history/philology/education",
+    "human_readable": "Correct Latin: Classical Form Transmitted Through Medieval Practice But Correctable Via Textual Evidence",
+    "topic_domain": "intellectual_history/historical_linguistics",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "manuscript_scholars",
-      "educational_institutions",
-      "textual_authority_keepers"
+      "humanist_philologists",
+      "textual_scholars",
+      "educational_reformers"
     ],
     "victims": [
-      "living_practice_communities",
-      "medieval_tradition_inheritors"
+      "medieval_practice_preservers",
+      "monastic_scribal_traditions"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "humanist_philologists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Scholars trained in textual criticism who set the standard for what counts as 'correct' Latin by collating ancient manuscripts and identifying Classical orthography and vocabulary. They adjudicate disputes by appealing to the oldest reliable sources. Their authority rests on claimed mastery of textual evidence and philological method. They benefit from the constraint because it positions their expertise as essential to legitimate Latin use and education."
+    },
+    {
+      "name": "medieval_practice_preservers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Monks, cathedral school masters, and scribes whose training embedded medieval Latin forms (Carolingian orthography, medieval vocabulary, evolved syntax). They read and write Latin fluently in the forms they learned, which are rooted in continuous transmission from the Classical period. The hybrid reading treats their forms as 'partly legitimate' but subject to correction, undermining their confidence in their own training and rendering their practice gradually obsolete."
+    },
+    {
+      "name": "monastic_scribal_traditions",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Institutional practices of manuscript copying, annotation, and Latin composition embedded in monastic communities. The constraint's enforcement (textual correction, educational reform prioritizing Classical forms) devalues the scribal traditions' accumulated knowledge while simultaneously requiring them to maintain the very manuscripts (ancient texts) that provide the evidence for Classical correction."
+    },
+    {
+      "name": "educational_reformers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Renaissance pedagogues and university administrators who use the hybrid reading to justify curriculum change: Latin instruction now prioritizes Classical texts over medieval usage, making the reformers' new educational models and textbooks the legitimate path. They benefit from the authority this reading confers on their curriculum design."
+    },
+    {
+      "name": "classical_manuscript_authors",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The ancient authors (Cicero, Virgil, etc.) as textual authorities. The hybrid reading vindicates their forms as the standard against which all later Latin is judged. This is a vindicated proposition, not an actor, but included here as a structural pole of the constraint."
+    },
+    {
+      "name": "continuity_reading_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Scholars and practitioners who believe medieval Latin is legitimate evolved Classical Latin, not corrupt. They are excluded from adjudicating the standard because the hybrid reading's framework privileges textual evidence over living transmission. Their position is present in the historical record but systematically devalued by the institutional authority the hybrid reading grants to textual philologists."
+    },
+    {
+      "name": "discontinuity_reading_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Textual purists who argue medieval Latin is entirely corrupt and only the most ancient, carefully reconstructed Classical forms count as correct. They are partially aligned with the humanist agenda-setters but remain excluded from direct authority because the hybrid reading grants legitimacy to medieval forms' 'grammatical core,' which purists reject. Their more radical position finds some voice in the broader movement but is not hegemonic."
+    },
+    {
+      "name": "students_and_scribes",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Young people learning Latin under reformed curricula that prioritize Classical forms. They benefit from access to ancient texts and the prestige of 'correct' Classical Latin; they also bear the cost of unlearning medieval forms and the insecurity that their own writing may be marked as 'incorrect' under the new standard."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared, evidence-based standard for evaluating Latin correctness: what counts as legitimate Latin is no longer purely a matter of received local practice but is subject to arbitration by comparison with ancient textual sources. This solves the coordination problem of teaching Latin across regions without unified usage and enables scholarly communication across medieval communities with divergent orthographies and vocabulary.",
+    "transfer_function": "Transfers authority from medieval scribal and monastic traditions (who adjudicate correctness through practice) to humanist textual scholars (who adjudicate through manuscript collation). It also transfers educational prestige and institutional legitimacy toward Renaissance pedagogy and away from monastic Latin instruction. The material benefit accrues to reformers and new educational institutions; the cost is borne by practitioners of medieval forms, who lose authority and confidence in their training.",
+    "absent_voices": "Medieval practitioners whose fluent, evolved Latin is being corrected are partially silenced by the framework — they are 'partly legitimate' but not authoritative. Continuity-reading advocates (who would argue medieval evolution is legitimate) are excluded from the standard-setting process because the hybrid reading privileges textual evidence over living transmission. Discontinuity advocates (who want fuller reconstruction) have partial voice in the movement but are not hegemonic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid constraint vanished — if medieval forms remained fully authoritative and textual correction were not enforced — Latin pedagogy would remain embedded in monastic and cathedral schools, manuscript standards would be stable in regional traditions, and Renaissance humanist curriculum reform would lose its philological justification. The educational landscape, the institutional basis of authority over Latin, and the definition of scholarly legitimacy would reorganize.",
+    "founding_problem": "Fragmentation: medieval Latin diverged across regions into distinct orthographies, vocabularies, and grammatical patterns, making it difficult to establish a shared standard for teaching, scholarship, and textual comparison. Ambiguity: is evolved medieval Latin a legitimate continuation of Classical Latin, or a corruption that obscures the ancient forms?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Humanist reformers attest the problem of fragmentation and the need for Classical standardization. Medieval practitioners contest that there is a problem — they see coherent evolved forms, not fragmentation. Independent textual scholars (outside the benefiting party) document that medieval manuscripts do show substantial regional variation, but disagree on whether this is corruption or legitimate evolution. The founding problem is real as a pedagogical coordination challenge, but contested as a validity claim about medieval Latin itself."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 35
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.32
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.36
+      "value": 0.34
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.41
+      "time_point": 15,
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.4
+      "time_point": 25,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
+      "time_point": 35,
       "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.18
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.2
+      "value": 0.16
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.26
+      "time_point": 15,
+      "value": 0.21
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 25,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 35,
       "value": 0.28
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.18
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.29
+      "value": 0.24
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.32
+      "value": 0.29
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.37
+      "time_point": 15,
+      "value": 0.34
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
+      "time_point": 25,
       "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
+      "time_point": 35,
       "value": 0.38
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the 'correct_latin' kernel is structurally defensible: the hybrid (partial medieval legitimacy + textual correction), the continuity (medieval evolution is legitimate), or the discontinuity (only ancient Classical forms are legitimate)?",
+      "resolution_mechanism": "Historical linguistics empirical analysis: trace the transmission of Latin forms from Classical period through medieval period, establishing whether medieval forms represent coherent grammatical evolution (supports continuity) or corruption away from Classical principles (supports discontinuity). Textual scholarship: assess whether ancient manuscripts are reliably reconstructible and whether reconstructed forms were actually used or are scholarly ideals (bears on the normative weight of textual evidence the hybrid reading privileges).",
+      "impact": "If continuity is established empirically, the hybrid reading's asymmetry (partial medieval legitimacy) dissolves — medieval forms become fully legitimate as evolved Classical. If discontinuity is established, the hybrid reading's compromise becomes untenable — medieval forms require fuller reconstruction to Classical originals. If the empirical picture is genuinely mixed (some forms evolved coherently, others corrupted), the hybrid reading's framing holds but requires empirical specification of which medieval forms fall into which category.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the three readings' core claims about medieval Latin's linguistic status can be resolved by historical-linguistic evidence."
+    },
+    {
+      "id": "medieval_practice_preservers_identity_lock",
+      "question": "Is the identity lock experienced by medieval practice preservers (monastic scribal traditions) structural and cognitive (they cannot imagine Latin other than the forms they learned), institutional (their authority and prestige are constituted through medieval scribal practice), or both?",
+      "resolution_mechanism": "Historical record analysis: do medieval practitioners resist the hybrid reading as an external imposition, or gradually internalize textual correction as the legitimate standard? If internalization occurs, the lock is at least partly cognitive/institutional identity fusion rather than purely structural. Biographical traces: do individual practitioners who adopt the hybrid reading report a shift in self-conception about what correct Latin is?",
+      "impact": "If the lock is primarily structural (they are excluded from authority regardless of their own acceptance), the suppression metric reflects institutional exclusion and remedying it requires authority redistribution. If the lock is primarily internalized (they come to doubt their own training), the suppression persists even after institutional authority is challenged — the constraint 's inversion into internalized doubt extends its effective reach beyond the institutional surface.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the suppression of medieval practice preservers is structural, internalized, or both."
+    },
+    {
+      "id": "textual_evidence_authority_ambiguity",
+      "question": "Does the authority granted to textual evidence in the hybrid reading rest on a claim that ancient manuscripts are objectively more reliable (an empirical claim about manuscript preservation and transmission), or on a normative choice to privilege written Classical texts over lived medieval practice?",
+      "resolution_mechanism": "Historiography of philology: trace how humanist scholars justified their privileging of textual evidence. Did they claim ancient texts were more reliably preserved (empirical), or that Classical forms were inherently more legitimate (normative)? Textual criticism study: assess the actual reliability of ancient manuscripts versus medieval copies — do the empirical facts support the authority granted to textual evidence?",
+      "impact": "If textual authority rests primarily on an empirical claim about reliability, and that claim is false or overstated, the hybrid reading's justification weakens and alternative readings gain standing. If textual authority is a normative choice, it remains contestable within the framework of the three readings — the constraint's persistence depends on institutional enforcement of that normative choice, not on objective evidence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether textual authority in the hybrid reading is empirically grounded or normatively chosen."
+    },
+    {
+      "id": "partial_medieval_legitimacy_operationalization",
+      "question": "What does 'partially legitimate' mean operationally in the hybrid reading? Which medieval forms are grammatically preserved as legitimate, and which are correctable orthography/vocabulary? How are these distinctions made, and who adjudicates them?",
+      "resolution_mechanism": "Textual scholarship analysis: examine how humanist philologists actually classified medieval forms — do they follow a systematic principle (e.g., 'core grammar is legitimate, orthography is correctable'), or is the classification ad hoc and driven by reformist goals? Comparative analysis: does the boundary between 'legitimate' and 'correctable' correspond to linguistic structure, or does it follow institutional/pedagogical convenience?",
+      "impact": "If the boundary is systematic and linguistically grounded, the hybrid reading has genuine structural content and can be distinguished from the other readings. If the boundary is ad hoc and institutionally driven, the distinction between 'partial' legitimacy and full dismissal collapses — the reading becomes a cover for wholesale suppression of medieval forms dressed in a language of compromise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the hybrid reading's notion of partial medieval legitimacy is operationally coherent or masks institutional displacement."
     }
   ],
   "commentary": {
-    "narrative_context": "The hybrid reading of Correct Latin positions the Classical form as the normative standard but acknowledges that medieval practice preserved legitimate grammatical inheritance and that divergences are correctable via textual evidence rather than terminal corruptions. This reading emerged during the Renaissance as scholars gained access to more ancient manuscripts and could compare medieval usage against older texts. It differs from pure continuity (medieval evolution is fully legitimate) and pure discontinuity (medieval forms are simply corrupt) by declaring a dual-sourced legitimacy: the medieval transmission is real and preserves Classical elements, but textual reconstruction can and should guide correction. The constraint's operation coordinates pedagogical authority around this middle position while extracting epistemic authority from living practitioners, assigning correctness-judgment to trained manuscript scholars and textual critics. The reading grounds itself in evidence (older manuscripts are better access to the original form) and in continuity (medieval forms are not wholly alien departures). It also rides on institutional authority (universities, churches, humanist networks) to enforce the standard and to suppress alternative readings that would grant equal legitimacy to medieval development or full access to practitioners' intuitions.",
+    "narrative_context": "The constraint embodies a Renaissance humanist reading of 'correct Latin' as Classical form transmitted through medieval practice but correctable via textual evidence. This is one of three contested readings of the 'correct_latin' kernel. The constraint's operation involves: (1) institutional authority shifted to humanist textual scholars who adjudicate correctness by collating ancient manuscripts; (2) medieval scribal and monastic traditions rendered 'partly legitimate' but subject to correction; (3) educational reform that prioritizes Classical texts over medieval usage. The hybrid reading positions itself as a compromise between pure continuity (medieval Latin is fully legitimate as evolved Classical) and pure discontinuity (medieval Latin is entirely corrupt, requiring reconstruction from ancient sources). But the compromise produces asymmetric extraction: medieval practitioners lose authority and confidence, while humanist reformers gain institutional legitimacy and educational control. The measurement series documents the gradual increase in extractiveness and suppression requirement as the constraint's enforcement strengthens, while theater ratio (performative maintenance) remains moderate — the constraint has a genuine coordination function (shared standard for fragmented medieval practice) but carries substantial extraction as the price of enforcing that standard.",
     "key_agents": [
-      "manuscript_scholars: institutional agenda-setters; control the textual-criticism apparatus and adjudicate correctness via paleographic comparison",
-      "educational_institutions: beneficiaries and secondary agenda-setters; adopt and enforce the hybrid standard in curricula and credentialing",
-      "medieval_tradition_inheritors: identity-locked payers; their embedded practices are reclassified as correctable rather than legitimate, requiring constant adaptation",
-      "living_practice_communities: constrained payers and excluded from authority; their innovations are treated as needing correction rather than development",
-      "humanist_scholars: institutional agenda-setters; championed Classical recovery and textual correction; benefit from prestige of scholarly authority"
+      "humanist_philologists: institutional agenda-setters (powerful, mobile exit) — establish the textual-evidence standard and control what counts as correct Latin",
+      "medieval_practice_preservers: payers (moderate power, identity-locked exit) — their fluent medieval Latin is rendered 'partly legitimate' but subject to correction; identity fusion with scribal tradition makes exit psychologically costly",
+      "monastic_scribal_traditions: organized payers/beneficiaries (organized power, constrained exit) — lose authority over Latin standards but remain responsible for maintaining the ancient manuscripts that provide corrective evidence",
+      "educational_reformers: beneficiaries (powerful, mobile exit) — gain institutional legitimacy and curricular authority from the hybrid reading's framework",
+      "continuity_reading_advocates: excluded (moderate power, constrained exit) — their position (medieval Latin is legitimate evolution) is systematically devalued by the framework",
+      "discontinuity_reading_advocates: excluded but partially aligned (powerful, mobile exit) — their textual-purity position finds some institutional voice but is not hegemonic under the hybrid compromise"
     ],
-    "logic_rationale": "Extractiveness measures at 0.42 (moderate-high) at interval end because the constraint extracts epistemic authority from practitioners and assigns it to manuscript scholars, even though the fiction of partial continuity is maintained. Suppression measures at 0.38 because the constraint's persistence depends on actively suppressing the alternative reading that would grant full legitimacy to medieval development — scribal traditions must be corrected, not celebrated as evolution. Theater_ratio at 0.28 reflects that the apparatus of textual correction is real scholarly work, but an increasing share of the constraint's enforcement energy defends textual primacy against practitioners' intuitions rather than resolving genuine ambiguity. Measurements show mild rise in extractiveness from t=0 to t=10 (as textual resources accumulate and the correction apparatus strengthens), then plateau (the institutional standard becomes entrenched, no further extraction capacity accrues). The temporal pattern tracks the Renaissance through early modern period: initial rise as humanists consolidate authority, then stabilization as the hybrid reading becomes institutional orthodoxy. Accessibility_collapse at 0.72 because once the hybrid reading is institutionalized and manuscript scholarship becomes the only recognized authority, practitioners cannot credibly appeal to their own intuitions or evolutionary legitimacy. Resistance at 0.55 reflects ongoing monastic and regional scribal traditions that continue medieval practices despite institutional pressure, never fully capitulating to textual standards.",
-    "perspectival_gap": "The manuscript scholars and educational institutions experience the constraint as legitimate coordination: they are solving a real pedagogical problem (how to teach a dead language when transmission is broken) and using the best available evidence (ancient texts). From their seat, the constraint is rope — genuine coordination with modest overhead. The medieval-tradition inheritors and living-practice communities experience the same structure as asymmetric extraction: their authority is continuously undermined, their innovations are perpetually subject to correction, and they have no standing to authenticate their own usage. From their seat, the constraint is tangled_rope or snare — coordination function exists but rides on enforced subordination. The engine computes both readings from the structural data: beneficiary/victim declarations, power differentials, exit-option constraints. The temporal measurements show mild extraction-accumulation as the hybrid reading consolidates institutional power: early on, when multiple readings compete, practitioners retain some negotiating room; once the hybrid reading becomes administrative orthodoxy (t=10 onward), the correction apparatus no longer faces meaningful challenge and practitioners' options narrow to compliance or silence.",
-    "directionality_logic": "Manuscript scholars sit at d near 0.1 (beneficiaries): they set the agenda, collect prestige and authority, and face no enforced correction of their own practices. Educational institutions sit near d=0.2 (beneficiaries with minor constraint): they adopt the standard they prefer and enforce it downward; their exit is mobile (they could choose continuity or discontinuity readings instead). Medieval-tradition inheritors sit at d near 0.85 (targets): their practices are constantly subject to external correction, their identity is locked into the tradition they defend, and their exit is blocked by professional and cultural identity fusion. Living-practice communities sit at d near 0.8 (targets): organized enough to mount resistance but constrained by institutional authority and lack of standing in the textual-criticism conversation. The override logic here is straightforward structural derivation: beneficiary/victim declarations + identity-lock for practitioners + institutional power for scholars + mobile exit for educated institutions → directionality that diverges sharply. No overrides needed; the derivation chain captures the actual structure.",
-    "mandatrophy_analysis": "The constraint avoids mandatrophy classification (false coordination claim covering pure extraction) because it genuinely coordinates a pedagogical function: teaching a dead language requires some standard, and the hybrid reading does reconcile textual primacy with historical continuity. However, the constraint sits at the boundary: if manuscript discoveries dried up and new textual evidence stopped flowing, the correction apparatus would become performative theater, practitioners would recognize the standard as arbitrary, and the constraint would migrate toward piton (enforced by inertia, not by real function). Currently the genealogy holds because new manuscripts are still discovered and textual reconstruction remains intellectually vital. The founding problem (how to teach Latin when medieval practice and Classical texts conflict) is live and contested — different parties genuinely disagree on whether medieval forms are evolved legitimate forms or corruptions needing correction. The constraint's persistence depends on continuous textual work and institutional enforcement; if textual authority eroded (e.g., if manuscript discovery became implausible or if critical theory deconstructed the notion of textual primacy), the constraint would shift toward piton very quickly. The mandatrophy risk is real but not currently realized: the coordination function is genuine, even if asymmetrically distributed.",
-    "kernel_context": "This constraint instantiates the hybrid_reading of the correct_latin kernel. The kernel is the contested claim: what counts as correct Latin form? Three readings compete. The continuity_reading holds that medieval transmission is fully legitimate evolution of Classical Latin; correctness is whatever the living tradition validates. The discontinuity_reading holds that Classical texts are the sole source of authority; medieval forms are corruption requiring wholesale reconstruction. This hybrid_reading declares: Classical forms are normative, medieval transmission is partially legitimate (grammatical core preserved), but textual evidence can and should guide selective correction (orthography, vocabulary, neologisms). The three readings coexist across different institutional communities (clerical continuity defenders, humanist discontinuity advocates, institutional hybrid reconcilers). None logically forecloses the others within the medieval framework itself — the dispute is about authority and epistemology, not about logical contradiction. The hybrid reading influences both siblings by establishing an institutional middle ground and by creating upstream demand for textual scholarship: the discontinuity reading provides the method (paleography, textual criticism), which the hybrid reading absorbs and deploys with continuity constraints."
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) because the constraint carries a genuine coordination function (shared standard for fragmented medieval Latin) alongside institutional extraction (authority shift to textual scholars). The measurement series shows extractiveness rising from 0.22 to 0.42 over the interval as the hybrid reading becomes institutionalized — initially the constraint is a minority scholarly position, gradually it becomes the standard in educational reform and humanist circles. Suppression (0.38) is high because the constraint's enforcement requires actively defending the textual-evidence standard against continuity readings and excluding medieval practitioners from authority, even as it claims to grant them 'partial legitimacy.' The suppression requirement rises from 0.18 to 0.38, tracking the investment needed to enforce the hybrid reading as it becomes institutionalized. Theater ratio (0.28) reflects the gap between the constraint's claimed compromise (respecting medieval forms' grammatical core) and its actual operation (systematic devaluation of medieval practice). The theater rises from 0.08 to 0.28 as the compromise framing becomes more necessary to justify the extraction — as medieval practitioners are increasingly excluded, the rhetoric of partial legitimacy intensifies, even as the practice of correction becomes more aggressive. The accessibility of alternatives collapses (0.65) because once the textual-evidence standard is institutionalized, alternatives (arguing for full medieval legitimacy or full discontinuity-based reconstruction) become professionally risky or educationally marginal. Resistance (0.58) is substantial because medieval practitioners actively resist the standard, continuity advocates defend the legitimacy of evolved Latin, and discontinuity advocates push for even fuller reconstruction — the constraint faces real opposition from multiple directions.",
+    "perspectival_gap": "From the humanist philologists' seat, the constraint appears as rational, evidence-based coordination: establishing a shared Classical standard makes Latin scholarship reliable and education coherent. From the medieval practitioners' seat, the constraint appears as institutional displacement: their fluent, evolved Latin is being corrected by scholars consulting dead texts, and their authority is being transferred to those scholars. From the monastic traditions' seat, there is a paradox: they lose authority over Latin standards but are still required to maintain the ancient manuscripts (the evidential basis for correction). From the educational reformers' seat, the constraint enables legitimation: the reform is not arbitrary preference but correction toward objective Classical correctness. From the excluded continuity advocates' seat, the constraint is a false compromise: granting 'partial legitimacy' to medieval forms while subordinating them to textual correction is a way of dismissing the core claim (medieval evolution is legitimate). The engine will compute these divergences from the structural data — the authored claim (tangled_rope) does not adjudicate them.",
+    "directionality_logic": "Humanist philologists are near the beneficiary end of the directionality scale (d ~ 0.15–0.25): they set the agenda, collect institutional authority and prestige, have mobile exit options (they can switch scholarly communities), and strong power (institutional position). Medieval practice preservers are near the target end (d ~ 0.75–0.85): they bear the cost of having their practice corrected, lose authority, have identity-locked exit (their training is fused with their professional identity), and moderate power. Monastic scribal traditions are near-target but partially bifurcated (d ~ 0.65–0.75): they bear the cost of devaluation but simultaneously benefit from being the custodians of the ancient texts that provide correction evidence — their role as payer (lose authority) and partial beneficiary (maintain the evidential basis) reflects this bifurcation. Educational reformers are beneficiaries (d ~ 0.1–0.2): they gain curriculum authority and institutional prestige. Excluded parties (continuity and discontinuity advocates) are targets of the constraint's exclusionary enforcement (d ~ 0.7–0.8) even though they have mixed power levels — the constraint actively suppresses their positions and limits their institutional voice.",
+    "mandatrophy_analysis": "The constraint avoids false mandatrophy-as-snare classification by honestly declaring a real coordination function (shared standard for fragmented medieval Latin) alongside the extraction (authority transfer, institutional displacement). A pure snare would hide the coordination function entirely under cover of extraction; the hybrid reading explicitly acknowledges that establishing a shared standard was a genuine problem and that the textual-evidence approach is one way to solve it. The mandatrophy omega variables (partial medieval legitimacy operationalization, textual evidence authority grounding) identify where the constraint's persistence might become decoupled from its founding problem — if the distinction between 'legitimate' and 'correctable' medieval forms becomes merely rhetorical cover for wholesale suppression, or if textual authority rests on normative choice rather than empirical evidence, the constraint risks devolving into pure institutional extraction.",
+    "kernel_context": "This constraint instantiates the HYBRID_READING of the contested 'correct_latin' kernel. The kernel is the question: what is correct Latin and how should disputes about correctness be adjudicated? Three readings compete: (1) CONTINUITY_READING: medieval Latin is legitimate evolved Classical Latin; correctness is what the living tradition preserves. (2) DISCONTINUITY_READING: medieval Latin is corrupt; correct Latin is the Classical form preserved in ancient texts, requiring scholarly reconstruction. (3) HYBRID_READING (this constraint): correct Latin is Classical form as transmitted through medieval practice, but subject to textual correction of orthography and vocabulary while preserving grammatical core; reform is corrective adjustment, not full reoccupation. The readings differ in whether they privilege living transmission (continuity), ancient textual evidence (discontinuity), or a mediating combination (hybrid). This story instantiates ONLY the hybrid reading as a clean, ε-invariant constraint — it does not attempt to evaluate all three readings or to describe the contest in a framework-neutral way. The other readings are separate constraint stories, linked through the network."
   },
-  "omegas": [
-    {
-      "id": "textual_authority_grounding",
-      "question": "Is the authority of ancient texts over medieval practice grounded in genuine epistemological access to the original form, or in a constructed preference for older witnesses?",
-      "resolution_mechanism": "Examine manuscript discovery patterns: if newly discovered texts systematically revise prior standards, the authority is provisional and observer-dependent. If new texts converge on stable forms, the authority is more robust.",
-      "impact": "If observer-dependent, the constraint's classification shifts from rope toward snare: the textual standard becomes arbitrary institutional choice rather than evidence-grounded correction. If robust, the constraint retains legitimacy as corrective coordination.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether textual primacy rests on epistemological access or institutional preference."
-    },
-    {
-      "id": "medieval_form_status",
-      "question": "Are medieval Latin divergences legitimate evolutionary development of Classical forms (continuous transmission) or corruptions requiring correction (discontinuous deviation)?",
-      "resolution_mechanism": "Linguistic analysis comparing medieval forms to Classical predecessors: do they follow regular sound changes, grammatical extensions, and lexical innovation patterns consistent with language evolution, or do they appear random and degenerate?",
-      "impact": "If legitimate evolution, practitioners gain standing to authenticate their usage and the constraint loses suppression capacity. If corruption, textual correction gains legitimacy and extraction is less costly to the target seats.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether medieval divergences are evolved forms or corruptions."
-    },
-    {
-      "id": "suppression_mechanism_internalized",
-      "question": "Is the suppression of medieval-practice intuitions structural (enforced by institutional authority and textual apparatus) or internalized (practitioners have accepted the correction standard as legitimate)?",
-      "resolution_mechanism": "Examine whether suppression persists after institutional enforcement weakens: if practitioners spontaneously revert to medieval forms, suppression is structural; if they maintain textual forms even without enforcement, suppression is internalized.",
-      "impact": "If structural, the constraint is more extractive than measured: targets bear the cost of institutional enforcement plus opportunity cost of deviation. If internalized, targets have partially adopted the reading and the constraint is less purely extractive.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is enforced or internalized among practitioners."
-    },
-    {
-      "id": "kernel_reading_foreclosure",
-      "question": "Does the hybrid reading logically foreclose either the continuity or discontinuity reading, or do all three remain live positions that different parties can coherently hold?",
-      "resolution_mechanism": "Examine the core premises: hybrid = Classical normative + medieval partially legitimate + textual correction. Continuity = medieval fully legitimate. Discontinuity = Classical exclusive authority. Do any two premises directly contradict such that no framework could hold both?",
-      "impact": "If foreclosure exists, classify the reading_relations as forecloses rather than coexists_with. If no foreclosure, the relations are coexistential and the kernel remains genuinely contested across different institutional communities.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether sibling readings logically foreclose each other or coexist as live positions."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.08
   },
   "network": {
     "affects_constraints": [
       "correct_latin__continuity_reading",
       "correct_latin__discontinuity_reading"
     ],
-    "dual_formulation_note": "The correct_latin kernel decomposes into three structurally distinct constraints, each instantiating a different reading. The hybrid_reading (this story) declares Classical forms normative but medieval transmission partially legitimate, subject to textual correction. The continuity_reading treats medieval transmission as fully legitimate evolution. The discontinuity_reading treats Classical texts as exclusive authority with medieval forms as corruption. Each reading has distinct ε (extractiveness of the epistemic authority assignment), distinct stakeholder structures (whose intuitions count as authoritative), and distinct classification. All three readings share the kernel (what counts as correct Latin?) but diverge in authority epistemology. The hybrid reading influences both siblings: it borrows the discontinuity reading's textual-criticism method while constraining it with continuity-reading concessions to medieval legitimacy. None of the three logically forecloses the others within medieval institutional frameworks — they coexist as competing readings held by different factions (continuity in monastic traditions, discontinuity in humanist circles, hybrid in educational institutions). The constraint family's network is fully connected: hybrid affects both siblings; siblings would affect hybrid reciprocally (if continuity gained institutional ground, hybrid's textual standards would weaken; if discontinuity dominated, hybrid's medieval concessions would vanish)."
+    "dual_formulation_note": "The 'correct_latin' kernel admits three readings: continuity (medieval evolution is legitimate), discontinuity (medieval is corrupt, requires reconstruction), and hybrid (partial medieval legitimacy + textual correction). Each reading is a separate constraint story with distinct ε, beneficiary/victim structure, and classification. The hybrid reading influences both siblings by establishing a compromise frame that partially legitimizes medieval forms while subordinating them to textual correction — this constrains the negotiation space for both continuity (which must justify full legitimacy against the textual standard) and discontinuity (which must justify fuller reconstruction against the compromise). The three stories are linked via affects_constraints; each declares its reading_relations and axioms in cs_structure."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "humanist_philologists",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "classical_forms_preserved_in_ancient_texts",
+    "drift_state": {
+      "moment": "contemporary_textual_scholarship",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "correct_latin__continuity_reading",
+        "sibling_id": "continuity_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "correct_latin__discontinuity_reading",
+        "sibling_id": "discontinuity_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "classical_primacy_with_continuity_concessions",
+        "atom": "medieval_forms_partially_coherent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "textual_evidence_authoritative_for_correction",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
-      },
-      {
-        "atom": "textual_evidence_adjudicates_disputed_forms",
-        "role": "secondary",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "medieval_transmission_with_classical_ancestry",
-    "drift_state": {
-      "moment": "early_modern_humanist_consolidation",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": true
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

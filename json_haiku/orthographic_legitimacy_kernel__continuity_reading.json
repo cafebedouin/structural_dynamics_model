@@ -2,24 +2,82 @@
   "header": {
     "constraint_id": "orthographic_legitimacy_kernel__continuity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "e86db4af-f324-4814-9b76-f933d59468f8"
+    "story_uid": "825d3143-5876-4996-91eb-da06f82615d7"
   },
   "base_properties": {
-    "extractiveness": 0.15,
-    "suppression": 0.28,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.38,
+    "extractiveness": 0.35,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.71,
     "claimed_type": "mountain",
-    "human_readable": "Orthographic Legitimacy: Continuity Reading (Script Access to Historical Tradition)",
-    "topic_domain": "political_linguistics/state_formation/commitment_systems",
+    "human_readable": "Orthographic Continuity: Preserving Access to Pre-Reform Literary Canon",
+    "topic_domain": "political_linguistics/state_formation",
+    "requires_active_enforcement": false,
     "emerges_naturally": true,
     "beneficiaries": [],
     "victims": [
       "post_reform_generations"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "arabic_script_custodians",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Religious scholars, manuscript librarians, and historians who maintain fluency in Ottoman and Islamic-era texts. They do not extract from the orthographic regime; they preserve access to it. Their voice is the authoritative testimony to what continuity with pre-1928 texts requires."
+    },
+    {
+      "name": "post_reform_generations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Born after orthographic reform, schooled entirely in the new script. They inherit a rupture: fluency in contemporary literacy does not confer access to the library of pre-1928 texts, religious manuscripts, legal records, or poetry. Recovering that access requires learning a second script system as adults, at substantial cognitive and time cost. Their identity as nationals is constituted through the reformed script; exiting that identity is not a realistic option."
+    },
+    {
+      "name": "political_reformers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "State actors who selected and enforced the script reform as modernization policy. They justify the reform by literacy gain, administrative efficiency, and alignment with European modernity. They do not directly extract from orthographic continuity loss, but they set and defend the constraint that creates it."
+    },
+    {
+      "name": "religious_continuity_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Communities and institutions committed to preserving access to pre-reform religious texts and interpretive traditions. They benefit from the constraint because it preserves the canonical status of texts written in the old script and honors the legitimacy claim that orthography must serve tradition continuity. They can organize resources to maintain manuscript preservation and dual-script literacy without depending on state enforcement."
+    },
+    {
+      "name": "colonial_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "External analysts examining whether the reform represents modernization or cultural rupture. They do not stake a claim inside the constraint; they observe how different stakeholders experience the orthographic reorganization and document the structural consequences."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves organized access to the literary, religious, and historical canon accumulated before 1928: thousands of years of Islamic jurisprudence, Ottoman administrative texts, classical poetry, theological interpretation. The constraint is that if the script changes, that library becomes inaccessible to new learners unless they undergo additional training in the old script.",
+    "transfer_function": "The constraint transfers cognitive burden: post-reform generations inherit full literacy in the new script (enabling contemporary communication and administration) but must pay a learning cost to access pre-reform tradition. The transfer is not economic; it is a reallocation of who bears the cost of script knowledge. The old-script custodian class carries knowledge maintenance; the new-script generation carries the access barrier.",
+    "absent_voices": "The pre-1928 population is absent by definition—they are dead. Their descendants might claim that the reform breaks lineage and cuts them off from their own ancestors' words, but that voice is only audible through the surviving manuscript tradition, not as a party to the reform decision.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the constraint—the standard that orthographic legitimacy requires preserving access to pre-reform tradition—disappeared, the state could abandon dual-script literacy and allow the old script to fade from institutional knowledge. The manuscript libraries would remain, but their social significance would shift from 'living tradition' to 'historical artifact.' Different stakeholders contest whether the world would rearrange: reformers say no, literacy gains and modernity persist; continuity advocates say yes, because access to tradition constitutes religious and national identity.",
+    "founding_problem": "The problem was state modernization and administrative consolidation: Ottoman script diversity (Arabic script variants, regional adaptations, administrative shorthand) created barriers to literacy standardization and national print communication. A single, phonetically efficient script was seen as necessary to build a modern state and integrate the population under one written standard.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The reformers and efficiency-focused administrators attest the founding problem is live: literacy rates were low, administration was fragmented, and Ottoman regional script variants persisted. Historians and continuity advocates attest the founding problem is a *framing*: the barriers to standardized literacy existed not because script diversity was inherently inefficient but because the empire had not invested in universal education, and the reform accelerated access for the new generation at the cost of severing the old. They cite UNESCO documentation and comparative literacy studies showing similar literacy gains through other means without orthographic rupture."
   },
   "interval": {
     "start": 0,
@@ -29,214 +87,230 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.08
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.12
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.15
+      "value": 0.3,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 50,
-      "value": 0.15
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 75,
-      "value": 0.14
+      "value": 0.37,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 100,
-      "value": 0.15
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.22
+      "value": 0.5,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.35
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 50,
-      "value": 0.45
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 75,
-      "value": 0.48
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 100,
-      "value": 0.42
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.05
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.08
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.15
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 50,
-      "value": 0.28
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 75,
-      "value": 0.3
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 100,
-      "value": 0.28
+      "value": 0.62,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The continuity reading holds that orthographic legitimacy derives from preserving access to historical, religious, and literary tradition. Under this reading, script reform—such as Turkey's 1928 transition from Arabic to Latin alphabet—severs post-reform generations from pre-reform textual archives (Quran, classical Islamic jurisprudence, Ottoman literature, medical treatises). The constraint is framed as a natural law: script incompatibility is a physical fact, not a policy choice. Victims are post-reform cohorts permanently estranged from their own cultural heritage unless they undertake expensive supplementary education in the pre-reform script. The reading does NOT frame this as extraction (no concentrated beneficiary) but as loss—an irreversible asymmetry between pre-reform and post-reform citizens' access to shared tradition. The constraint's low ε reflects the absence of a direct rent-collecting beneficiary; the measurement of suppression (growing from 0.05 to 0.28) reflects the state's active suppression of pre-reform script literacy to enforce the orthographic monopoly and prevent alternative transmission. Theater ratio rises over generations (0.15 → 0.42) as the reform's original efficiency justifications fade and the constraint's operation becomes increasingly performative—defending the script choice against competing historical narratives and challenges.",
+    "narrative_context": "This constraint is one reading of a contested orthographic kernel: what makes an orthographic system legitimate? The continuity reading asserts that legitimacy derives from preserving access to historical, religious, and literary tradition. When a state reforms its script—shifting from Arabic to Latin alphabets, for instance—the reform creates a structural incompatibility: the new generation learns the new script and gains modern literacy, but simultaneously loses unmediated access to centuries of texts written in the old script. This reading emphasizes that loss as the constraint's core: the post-reform generation inherits a library it cannot directly read without additional training. The constraint is mountain-like because the incompatibility is a physical fact of script systems, not a human choice per se. However, it is called a constraint story (not simply a natural law) because the decision to preserve or abandon continuity is political, and the legitimacy claim that continuity *matters* is contested. The other readings (modernist and instrumentalist) would author different ε values by refusing the continuity claim as a metric of legitimacy.",
     "key_agents": [
-      "Religious scholars and tradition-bearers: maintain that script fidelity is non-negotiable for textual integrity.",
-      "Post-reform generations: inherit estrangement from pre-reform texts and classical tradition.",
-      "Political reformers (early republic): enact the script reform under efficiency and modernization rationales.",
-      "Modernist intellectuals: advocate the reform as rupture from Ottoman/Islamic past (excluded from this reading's framing).",
-      "Literacy administrators: implement campaigns under the assumption that script reform minimizes cost of mass education (excluded).",
-      "Ordinary citizens in reformed nation: benefit from higher literacy rates, also inherit the tradition-access barrier.",
-      "Comparative historians: analyze whether the constraint is irreversible mountain or policy-negotiable choice."
+      "post_reform_generations: the victims of the access barrier; born into the new script and identity-locked to it; cognitive burden of dual-script literacy falls on them",
+      "arabic_script_custodians: the keepers of old-script fluency; they maintain the living possibility of access; their knowledge is the measured testimony to what continuity requires",
+      "religious_continuity_advocates: organized to preserve tradition; they benefit from the legitimacy claim that continuity matters and resources flow to manuscript preservation",
+      "political_reformers: the agenda-setters who chose the orthographic shift; they do not extract from continuity loss but they set the constraint that creates it",
+      "colonial_observers: external analytical seat; they document the structure without claiming legitimacy"
     ],
-    "logic_rationale": "Extractiveness is low (0.15 at interval end) because the constraint has no clear concentrated beneficiary. Post-reform citizens benefit from higher literacy rates, but their benefit is diffuse and not routed through the constraint's operation. The constraint operates as loss, not transfer. Suppression rises sharply (0.05 → 0.28) over the interval because the state must actively prevent alternative transmission—discouraging private instruction in the pre-reform script, controlling textbook production, restricting pre-reform script use in official contexts. This rising suppression is structural to maintaining orthographic monopoly: if pre-reform script education were freely available, post-reform generations could choose to learn both scripts, and the constraint would relax. Theater ratio rises as the reform's efficiency justification (T0–T10) is superseded by performative defense of the orthographic choice (T25–T100). At T25, the literacy benefit plateau is reached, yet enforcement continues—defensive theater emerges. By T100, the suppression machinery (script education bans, archive access restrictions, official-use controls) persists despite the founding efficiency problem being solved. Accessibility collapse is high (0.92) because once a generation is educated under the post-reform script, they have no functional alternative—re-learning the pre-reform script is prohibitively expensive for most, trapping them in the reformed literacy ecosystem. Resistance is moderate (0.38) because tradition-keepers and historians consistently resist and document the loss, but they lack institutional power to reverse the choice after it is entrenched in the education system.",
-    "perspectival_gap": "From the continuity reading's seat, the constraint is a mountain—irreversible physical fact of script incompatibility. From the reformer's seat, it is a policy choice (reversible if future generations choose to re-learn pre-reform scripts). From the modernist seat, the constraint is a snare—institutional choice to break from Islamic past, defended as natural when it is actually coercive suppression of an alternative tradition. The engine computes per-seat types from the structural data: the continuity reading's authored facts (high accessibility_collapse, rising suppression, low extractiveness, natural emergence) should compute as mountain from the tradition-keeper seat and as snare or tangled_rope from the modernist seat (they would author different structural facts). The divergence between computed types and the continuity reading's claimed_type (mountain) is the divergence the corpus measures.",
-    "directionality_logic": "The continuity reading authors no beneficiaries because the constraint does not transfer wealth or power to a concentrated seat. The victims are post-reform generations (trapped in a literacy system that denies them pre-reform script fluency). Tradition-bearers are observers, not beneficiaries—they maintain access (through choice to retain pre-reform literacy) but do not collect rents. The reformers are the agenda-setters but they derive no direct extraction; their benefit is state efficiency (measurable in literacy rates, not in extraction). The directionality is asymmetric: post-reform generations are trapped targets (d ≈ 0.85), while tradition-keepers remain mobile or arbitrage-positioned (d ≈ 0.15) by choosing to retain the pre-reform script. This asymmetry should feed low χ for beneficiaries (none) and moderate χ for targets (post-reform generations: trapped + moderate extractiveness ≈ 0.12–0.15 effective extraction).",
-    "mandatrophy_analysis": "This constraint should NOT trigger mandatrophy verdicts because the founding problem (access to pre-reform texts) is permanently LIVE, not dead. The constraint persists because the founding problem persists—every post-reform generation that cannot read their own cultural patrimony is a fresh instance of the problem. Mandatrophy (constraint persists after founding problem dies) would apply if literacy rates were the founding problem and literacy was achieved; in that case, the constraint's persistence as purely performative defense would mark it as mandatrophic. The continuity reading does not claim literacy was the founding problem—it claims textual access was. That problem remains live. However, the theater_ratio rise (0.15 → 0.42) suggests growing performative element: the reformers' original efficiency case is exhausted, yet enforcement continues, increasingly as defense of the orthographic choice against rival narratives. This is NOT mandatrophy but increasing theater—the constraint performs its legitimacy rather than simply enforcing it. An omega variable addresses this boundary.",
-    "kernel_context": "This constraint instantiates the CONTINUITY READING of the orthographic_legitimacy_kernel. The kernel is contested across three readings: (1) CONTINUITY (this file): legitimacy derives from preserving textual tradition access—script incompatibility is natural law, loss is irreversible. (2) INSTRUMENTALIST (sibling): legitimacy derives from maximizing literacy rates and administrative efficiency—script reform is a cost-benefit calculation, reversible if efficiency is lost. (3) MODERNIST (sibling): legitimacy derives from rupture with Ottoman/Islamic past and alignment with European modernity—script choice is a symbolic break, reversible only if the break is rejected. These readings share the same orthographic reform event (e.g., Turkey 1928) but attribute different legitimacy grounds and reversibility assumptions. The continuity reading emphasizes loss and irreversibility; the instrumentalist reading emphasizes efficiency and contingency; the modernist reading emphasizes rupture and symbolic choice. Each reading instantiates a different constraint with different ε, different victims, different persistences, and different type classifications (continuity: mountain; instrumentalist: scaffold or snare; modernist: tangled_rope or snare)."
+    "logic_rationale": "Extractiveness is low (0.35 by interval end) because this reading does not identify a concentrated beneficiary extracting rent from the constraint. Instead, it identifies a diffuse cost imposed on the post-reform generation: the loss of direct access. The suppression value (0.62) reflects that enforcement is required: the state must actively defend the new script's primacy in education and administration, suppressing the transmission of old-script fluency to new generations. Suppressiveness does not vanish because the constraint persists only if new generations are prevented from treating the old script as 'normal' or co-equal. Theater ratio (0.48, stabilizing near 0.48) reflects that the state's justification for the reform (literacy gain, modernity, efficiency) is partly true but partly a cover story for the continuity loss imposed. The measurement series shows extractiveness rising in the first 50 time points as the full generational rupture becomes visible, then plateauing: by time 100, the new generations are the overwhelming demographic majority and the constraint is 'naturalized'—it no longer feels like an active policy choice but like the way writing 'simply is.' Resistance is high (0.71) because continuity advocates mount sustained institutional and cultural pushback, maintaining dual-script literacy and manuscript preservation as acts of defiance.",
+    "directionality_logic": "The post-reform generations are the targets (high d, near 1.0): they bear the access cost and are identity-locked to the new script—they cannot exit by learning the old script as a child because it is not taught to them as a native system. The religious continuity advocates are beneficiaries in a structural sense (low d, near beneficiary end): they benefit from the legitimacy claim that tradition matters and from resources devoted to preservation. But they are not extracting in the economic sense—they are defending something they hold to be valuable. The political reformers are agenda-setters but not extractors in the Snare sense: they imposed the constraint but did not capture it for private gain. The custodians (arabic_script_custodians) are observers with constrained exit: they keep the old script alive but do not control the state's policy. This reading's directionality structure is asymmetric but not economically extractive—it is a loss of access suffered by the powerless (post-reform generations) and a burden of maintenance borne by the organized (custodians and advocates).",
+    "perspectival_gap": "From the reformers' seat, the constraint is a foundation of modernity and national unity—a public good. From the post-reform generation's seat, it is a barrier to their own history. From the custodian's seat, it is a continuous struggle to keep tradition alive against institutional entropy. The engine should compute different type assignments per seat: the reformer may experience this as rope (genuine coordination for literacy), while the post-reform generation experiences it as snare (severed access, suppressed alternatives). The authored claimed_type (mountain) reflects the physical incompatibility fact itself; the computed types per seat will diverge from the claim.",
+    "mandatrophy_analysis": "The founding problem (state modernization and literacy standardization) is contested. Reformers say it is live—administrative fragmentation still exists without a unified script. Continuity advocates and historians say the problem is a framing, and the actual founding problem was never script efficiency but rather the state's choice to abandon investment in biliteracy. The constraint does not appear to resolve a mandated function by 1928 standards, yet it persists. This suggests either that the constraint is capturing value (reformers continue to benefit from unified script dominance and symbolic control of national literacy) or that it is inertial (the constraint persists because reversing it is politically impossible, not because anyone actively maintains it). The measurement series shows theater_ratio stabilizing around 0.48—neither predominantly functional nor predominantly theatrical—which suggests the constraint is neither fully justified by its original mandate nor purely performative. The mandatrophy_resolved flag should be false: the constraint's mandate (script standardization) persists as an active state function, even if contestable.",
+    "kernel_context": "This constraint instantiates the continuity_reading of the orthographic_legitimacy_kernel. The kernel is the contested answer to the question: What makes an orthographic system legitimate? The continuity reading asserts that legitimacy is grounded in preserving access to the historical, religious, and literary canon—the accumulated knowledge of pre-reform centuries. The sibling readings are: (1) instrumentalist_reading, which asserts legitimacy derives from maximizing literacy rates and administrative efficiency (the state's original justification); (2) modernist_reading, which asserts legitimacy derives from alignment with Western/European modernity and deliberate rupture from Ottoman/Islamic past (a secondary post-hoc justification). Each reading yields a different constraint: the continuity reading yields low ε (a constraint on what access must be preserved), while the instrumentalist reading yields low suppression (literacy is a public good, not zero-sum), and the modernist reading yields high ε (conversion of cultural heritage into an extractive loss). The three constraints share the same kernel (orthographic legitimacy) but have different beneficiary structures, victim sets, and ε values. They are NOT observations from different angles on one constraint; they are three structurally distinct constraints grounded in three incompatible readings of the same legitimacy question."
   },
   "omegas": [
     {
-      "id": "natural_law_vs_institutional_choice",
-      "question": "Is orthographic incompatibility a natural law (physical fact of script incompatibility, mountain-hard) or an institutional choice defended as natural law (a snare or tangled_rope hiding behind false naturality)?",
-      "resolution_mechanism": "Evaluate whether alternative scripts could theoretically coexist in the education system and administration without catastrophic efficiency loss. Compare societies that maintain dual-script literacy (e.g., Israel with Hebrew/English, China with hanzi/pinyin) against those that impose script monopoly. If dual-script systems are sustainable, the constraint is policy-contingent, not natural law.",
-      "impact": "If natural law: the constraint is mountain, loss is irreversible, post-reform generations are victims of physics. If institutional choice: the constraint is snare (suppression of pre-reform script literacy), and the reformers are agenda-setters extracting cultural monopoly from citizens.",
+      "id": "mountain_vs_constructed_ambiguity",
+      "question": "Is the access barrier to pre-reform texts a natural, inevitable consequence of script incompatibility (mountain), or a constructed constraint chosen by the reform planners who could have designed dual-script education instead?",
+      "resolution_mechanism": "Historical counterfactual analysis: compare societies that reformed script while maintaining dual-literacy education (Singapore, Norway post-Nynorsk adoption, Japan with kanji/hiragana) against those that abandoned old-script teaching entirely. If dual-literacy is feasible and is chosen against, the barrier is constructed, not natural.",
+      "impact": "If natural/mountain: the constraint is a cost of modernity that post-reform generations must bear; ε remains low and no agent is culpable. If constructed/tangled_rope: the reformers chose not to maintain dual-literacy; extraction is the diffuse cost imposed on those without choice; ε may rise to 0.45+. The classification hinges on this ambiguity.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether script incompatibility is irreversible physics or institutional suppression."
+      "description": "Is script incompatibility inevitable or engineered?"
     },
     {
-      "id": "founding_problem_persistence",
-      "question": "Is the founding problem (access to pre-reform texts) permanently live, or does it resolve once literacy rates reach saturation and the reform's efficiency benefit stabilizes?",
-      "resolution_mechanism": "Measure access-to-text rates among post-reform generations over time. If access remains stable or improves through supplementary pre-reform script education programs, the founding problem is dead and the constraint's persistence is mandatrophic. If access remains blocked and efforts to restore it are suppressed, the founding problem is live and the constraint's persistence is justified.",
-      "impact": "Live problem → constraint persistence is justified, theater rise reflects increased defensive challenge (modernist and instrumentalist readings competing for legitimacy). Dead problem → constraint becomes mandatrophic (persists after founding problem is solved), piton-like (performative, inertial).",
+      "id": "victim_identity_lock_mechanism",
+      "question": "Is the post-reform generation identity-locked to the new script because they are developmentally trapped (cannot relearn the old script as efficiently as a child), or because the state actively suppresses old-script literacy and constitutes national identity around the new script, making the lock internalized rather than structural?",
+      "resolution_mechanism": "Policy experiment: would lifting the state's suppression of old-script education substantially increase its adoption among post-reform generations? If yes, the lock is partly internalized (state narrative + enforcement together). If adoption remains low even after lifting suppression (due to economic opportunity cost and network effects), the lock is structural (physical realities of adult language learning).",
+      "impact": "If internalized: suppression is the causal agent; the constraint is snare-like and requires enforcement to persist. If structural: the constraint is more mountain-like; reformers imposed it once, and it persists without active enforcement. This splits suppression mechanisms.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the constraint's founding problem persists or has been resolved."
+      "description": "What is the mechanism by which post-reform generations are locked into the new script?"
     },
     {
-      "id": "suppression_mechanism_scope",
-      "question": "Is the measured suppression (0.28 at interval end) structural (the script incompatibility itself prevents access without expensive re-learning) or enforced (the state actively suppresses pre-reform script literacy and alternatives)?",
-      "resolution_mechanism": "Measure the cost and availability of pre-reform script education at different intervals. If state policy and resource allocation actively prevent pre-reform script instruction (book bans, curriculum exclusions, teaching prohibition), suppression is enforced. If pre-reform script instruction is available but expensive and requires self-funded effort, suppression is structural.",
-      "impact": "If enforced: the constraint is snare-like (requires active coercion), and the state is the coercive agent. If structural: the constraint is mountain-like (coercion is incidental to the natural fact of script incompatibility). Most likely outcome: both mechanisms are present, and their proportion shifts over time (structural dominates early, enforced dominates once structural barriers relax).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is structural incompatibility or enforced state policy."
-    },
-    {
-      "id": "beneficiary_identity_under_continuity",
-      "question": "Does the continuity reading correctly identify NO concentrated beneficiary, or does it mask a beneficiary (e.g., the reformed nation-state that achieves homogenized literacy and eliminates competing textual authorities)?",
-      "resolution_mechanism": "Examine whether state administrative capacity, nationalist coherence, and cultural homogenization increase under the orthographic reform. If the state becomes more centralized, literacy governance more uniform, and competing pre-reform textual authorities (religious scholars, Ottoman administrators) displaced by reformed-script authorities, the beneficiary is the reformed nation-state itself—its institutional capacity is amplified by orthographic monopoly.",
-      "impact": "If beneficiary exists (nation-state): the constraint shifts from mountain (no beneficiary) to snare (state extracts cultural monopoly) or tangled_rope (state coordinates mass literacy and extracts cultural monopoly). If no beneficiary: the constraint remains mountain (loss without compensation).",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the nation-state is a beneficiary masked by the continuity reading's emphasis on loss."
-    },
-    {
-      "id": "resistance_modulation_over_time",
-      "question": "Why does resistance (Q5) stabilize at 0.38 (moderate) rather than rising or falling? Is this resistance thermal (passive lamentation without organized challenge) or structural (active organized counter-literacy in pre-reform script)?",
-      "resolution_mechanism": "Measure organized pre-reform script literacy movements, textual conservation efforts, and formal opposition to the reform across the interval. If resistance is organized and growing, the constraint should face rising organized challenge. If resistance is limited to scholarly documentation and private retention, it is passive and unlikely to reverse the monopoly.",
-      "impact": "Organized resistance could eventually reverse the constraint (if reformers lose political will or orthodoxy shifts). Passive resistance confirms the constraint's persistence as institutional inertia—no active force maintains it, and no active force can dismantle it.",
+      "id": "legitimacy_grounding_contest",
+      "question": "Does orthographic legitimacy derive from preserving access to tradition (continuity reading), from maximizing literacy rates and administrative efficiency (instrumentalist reading), or from alignment with Western/European modernity (modernist reading)? The three readings cannot coexist in a single framework—they make incompatible claims about what counts as legitimate.",
+      "resolution_mechanism": "This is a conceptual ambiguity. The resolution is not empirical discovery but committer choice: different political communities will endorse different readings. However, the empirical question 'which reading is actually guiding state policy and cultural institutions?' can be assessed by examining what the state allocates resources to (if preservation of old-script access, the continuity reading is being followed; if only new-script standardization, the instrumentalist reading is active).",
+      "impact": "If the continuity reading is correct, the constraint preserves something of value and ε is correctly set low; the loss is tragic but not extractive. If the modernist reading is correct, the constraint is an intentional severance from Islamic/Ottoman tradition, and ε should rise (erasure becomes a feature, not a cost). If the instrumentalist reading is correct, ε should be near zero (efficiency gain outweighs any access loss).",
       "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which grounding of orthographic legitimacy is structurally true?"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) structural—enforced by state policy, curriculum design, and lack of old-script literacy instruction—or is it internalized in post-reform generations' belief that the old script is archaic, irrelevant, or foreign?",
+      "resolution_mechanism": "Post-exit trajectory: if access to old-script education were made freely available (e.g., religious schools offering dual-script teaching), would post-reform generations adopt it? If adoption rates remain low even when barriers are removed, suppression is partly internalized (the target carries the suppression with them).",
+      "impact": "If structural: the constraint's effective suppression is accurate as measured; fixing it requires changing state policy. If internalized: the constraint's effective suppression is higher than the structural measure; even after policy change, the internalized belief system persists, and the constraint's hold is stronger.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether resistance to the orthographic reform is organized or passive."
+      "description": "Is suppression structural or internalized in the target generation?"
     }
   ],
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.05
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "orthographic_legitimacy_kernel__instrumentalist_reading",
       "orthographic_legitimacy_kernel__modernist_reading"
     ],
-    "dual_formulation_note": "The orthographic_legitimacy_kernel is instantiated via three structurally distinct constraint stories, each corresponding to a different reading of the contested kernel. All three share the same historical event (e.g., Turkey's 1928 script reform) but attribute different legitimacy grounds: continuity_reading emphasizes preservation of access to pre-reform textual tradition (mountain-like, low ε, irreversible loss); instrumentalist_reading emphasizes maximization of literacy rates and state administrative efficiency (scaffold-like, contingent, reversible if efficiency declines); modernist_reading emphasizes rupture from Ottoman/Islamic past and alignment with European modernity (snare-like or tangled_rope-like, coercive suppression of alternative traditions for nationalist goals). The three stories are linked via network.affects_constraints: continuity influences both sibling readings because arguments about textual access arise in all three readings' framings, and the empirical fact of post-reform generation script incompetency grounds the measured constraints. The ε-invariance principle requires separate stories because the three readings produce different extractiveness profiles (continuity: low, 0.15; instrumentalist: moderate, 0.4–0.6; modernist: high, 0.7+), different victim/beneficiary structures, and different type classifications. A single merged story would fabricate measurement precision by averaging across incommensurable readings."
+    "dual_formulation_note": "This constraint is one of three readings of the orthographic_legitimacy_kernel. The kernel is the contested legitimacy claim: what makes an orthographic system legitimate? The continuity reading asserts legitimacy derives from preserving access to pre-reform tradition; the instrumentalist reading asserts it derives from literacy efficiency; the modernist reading asserts it derives from rupture with Ottoman/Islamic past. The three constraints have different ε values, beneficiary/victim structures, and classifications precisely because they answer the legitimacy question differently. They are linked by network.affects_constraints as a constraint family. The three readings cannot coexist in a single framework—they are genuinely incompatible answers to the same kernel question. Each constraint story models one reading as if it were the true grounding of legitimacy; the engine will classify each from the reading's own lights. The sibling readings are OTHER constraints, not alternate observations of this one."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
-    "interpretation_layer_present": true,
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "orthographic_legitimacy_kernel__instrumentalist_reading",
+        "sibling_id": "instrumentalist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "orthographic_legitimacy_kernel__modernist_reading",
+        "sibling_id": "modernist_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "textual_continuity_binding",
+        "atom": "continuity_with_pre_reform_canon_is_legitimacy_ground",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "script_incompatibility_irreversible",
-        "role": "foundational",
+        "atom": "access_to_historical_texts_constitutes_cultural_identity",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "orthographic_continuity_heritage_access",
+    "reference_frame": "biliteracy_maintained_continuity",
     "drift_state": {
-      "moment": "post_reform_institutional_stabilization",
+      "moment": "contemporary_monolingual_cohort",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

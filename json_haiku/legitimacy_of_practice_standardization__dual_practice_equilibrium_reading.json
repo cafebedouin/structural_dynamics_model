@@ -4,22 +4,104 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "9ca7c55d-50b3-41ff-af63-78b6127dc2c3"
+    "measurement_id_prefix": "dpe",
+    "story_uid": "0fa5a483-1dad-492b-bf79-3120e486c2d9"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.41,
-    "theater_ratio": 0.22,
+    "extractiveness": 0.58,
+    "suppression": 0.51,
+    "theater_ratio": 0.42,
     "accessibility_collapse": 0.62,
-    "resistance": 0.58,
-    "claimed_type": "rope",
-    "human_readable": "Domain-Partitioned Dual Practice Legitimacy (Equilibrium Reading)",
-    "topic_domain": "political_history/institutional_modernization",
-    "requires_active_enforcement": false,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dual-Practice Equilibrium: Partitioned Legitimacy (State Administrative / Traditional Ritual)",
+    "topic_domain": "political/institutional",
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "state_administrative_apparatus",
-      "traditional_ritual_authorities"
+      "traditional_authority_gatekeepers"
+    ],
+    "victims": [
+      "citizens_navigating_dual_regime",
+      "cultural_minorities_with_non_aligned_practice"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "state_administrative_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establishes and enforces standardized practices (Gregorian calendar, Western business attire, state-approved metrics) within tax, legal, educational, and bureaucratic domains. Justifies standardization as necessary for coordinating large-scale societies, ensuring fiscal stability, and facilitating international commerce. Gains legitimacy from its claimed monopoly on public-domain ordering; loses coordination authority if private domains fracture into incompatible standards."
+    },
+    {
+      "name": "traditional_authority_gatekeepers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Maintain authority over ritual, festival, kinship, and agricultural practices within private/family/community domains (lunar calendar for harvest rites, traditional dress for ceremonies, customary inheritance rules). Preserve legitimacy by controlling spaces state authority claims not to govern. Benefit from the state's recognition of domain boundaries and from the coordination value of having two competing authorities rather than state monopoly."
+    },
+    {
+      "name": "citizens_navigating_dual_regime",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must learn, maintain, and switch between two sets of legitimacy standards depending on domain: Gregorian calendar for taxes and school, lunar calendar for ancestral rites; Western business suits for government offices, traditional dress for home ceremonies. Gain the benefit of having both systems available (can honor tradition at home while participating in state coordination), but bear the cognitive and social cost of code-switching. Exit options are constrained—refusing either domain incurs penalties (tax non-compliance, social exclusion)."
+    },
+    {
+      "name": "cultural_minorities_with_non_aligned_practice",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Possess ritual, calendar, or dress practices that do not align cleanly with either state or dominant-tradition authority (e.g., syncretic religions, immigrant communities, historically oppressed groups whose practices the traditional authority does not recognize as 'authentic'). Face enforcement pressure from state domain (must use Gregorian calendar for all documents) and delegitimization from traditional authority domain (told their practices are not truly traditional). Identity fusion with non-aligned practices makes exit impossible; no seat recognizes their legitimacy."
+    },
+    {
+      "name": "merchants_and_professionals",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gain efficiency gains from dual-system recognition: can use standardized (state) practices for commerce and contracts, reserving traditional practices for client relations and cultural signaling. High exit options—can relocate, switch business models, or operate across borders where different domains apply. Benefit from the regime without bearing suppression costs."
+    },
+    {
+      "name": "religious_and_ethnic_minorities",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are not represented in the negotiation between state and dominant traditional authority over domain boundaries. Would argue for recognition of their own ritual calendars, dress codes, and authority structures, but are treated as either state subjects (and thus required to adopt state-standard practices in public domains) or as not-yet-modern (and thus expected to abandon non-dominant-tradition practices entirely). Their voices would challenge the binary partition itself."
+    },
+    {
+      "name": "reformist_intellectuals",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the dual-regime stability and argue about whether the partition is legitimate. Some defend it as pragmatic pluralism; others argue it masks state domination of the public sphere and traditional patriarchy of the private sphere. Their role is analytical rather than operative—they do not control either domain's enforcement but provide frameworks through which stability or instability is interpreted."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Stabilizes large-scale societies by creating a predictable public domain (standardized calendars, metrics, legal procedures enabling interstate commerce and centralized taxation) while preserving micro-level social cohesion through recognized private-domain authority (kinship, ritual, local custom remain authoritative for family and community affairs). Solves the problem that a state cannot simultaneously enforce universal practice standards everywhere AND preserve the local knowledge and legitimacy that communities draw from traditional authority.",
+    "transfer_function": "Moves authority and the rents of authority-exercise from traditional gatekeepers (in domains the state monopolizes) and from citizens (who lose capacity to choose practices) to the state in public domains, and from state oversight to traditional authorities in private domains. Transfers compliance cost from both groups to citizens who navigate both domains.",
+    "absent_voices": "Minorities whose practices do not align with either state standardization or dominant-tradition recognition (syncretic religions, immigrant communities, historically suppressed traditions) would object to the partition as excluding them from legitimacy in both domains. Cosmopolitan citizens who reject the bifurcation would argue for either universal state standards or universal traditional freedom. Their exclusion is structural to the partition itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the dual-domain partition vanished, societies would face an immediate coordination crisis: either the state would attempt to monopolize all domains (citizens would face total state standardization, eroding community authority and local legitimacy), or fragmentation would occur (private domains would diverge too far for large-scale coordination, state capacity to collect taxes and enforce law would degrade). The partition is what allows both coordination and autonomy to coexist.",
+    "founding_problem": "Modernizing states sought to standardize practices (calendars, metrics, legal procedures) across large territories to enable taxation, commerce, and administrative control, but faced resistance from communities whose legitimacy sources (traditional authorities, ritual cycles, customary law) were embedded in non-standardized practices. The founding problem was how to modernize without destroying local social order.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Scholars of institutional change (Scott, Migdal, Pierson) document this as an ongoing dynamic in postcolonial and modernizing states. Anthropological and historical studies of Japan (Meiji era dual calendar use), India (secular-law vs. personal-law partition), China (state holiday vs. traditional festival), and Ottoman reformation all show the problem remaining live across centuries. Corroborated from outside benefiting parties: international development literature recognizes domain partitioning as a persistent strategy in states under pressure to modernize while preserving legitimacy."
   },
   "interval": {
     "start": 0,
@@ -29,204 +111,222 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.34
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.36
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.37
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.38
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.39
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.38
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 35,
-      "value": 0.38
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.38
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.19
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.2
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.21
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.22
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.23
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.22
+      "value": 0.43,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 35,
-      "value": 0.22
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.22
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.39
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.4
+      "value": 0.44,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.41
+      "value": 0.47,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.42
+      "value": 0.49,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.41
+      "value": 0.5,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.41
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 35,
-      "value": 0.41
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.41
+      "value": 0.51,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "This story models a stable dual-legitimacy equilibrium in which state authority governs public/administrative domains (taxation, census, bureaucratic procedure, inter-regional coordination) and traditional authority governs private/ritual domains (seasonal calendars, kinship protocols, ritual dress, family law, religious practice). The constraint operates as a Rope coordination mechanism: both authority systems benefit from having a protected domain where they maintain coherence without claiming universality, and communities benefit from being able to code-switch between systems. The extractiveness is moderate (0.38) because the constraint extracts cognitive and behavioral costs of maintaining dual competence but does not concentrate wealth or identity-lock any single seat. Suppression is moderate-low (0.41) because enforcement relies on both authority systems respecting the partition boundary rather than on coercive suppression of alternatives. Theater is low (0.22) because the functional division between domains is genuine and is not being masked by performative claims of unity.",
+    "narrative_context": "This constraint instantiates the DUAL-PRACTICE-EQUILIBRIUM reading of the kernel 'legitimacy of practice standardization.' It claims that practice legitimacy can and does partition along domain lines: state authority governs public/administrative domains (Gregorian calendar for taxes, Western business dress for state employment, standardized metrics for law), while traditional authority governs private/ritual domains (lunar calendar for harvest festivals, traditional dress for home ceremonies, customary kinship rules). The reading asserts this partition is STRUCTURALLY STABLE—not a temporary compromise awaiting resolution, but a permanent equilibrium in which both authorities remain legitimate within their domains, compliance is STRATEGIC rather than internalized, and no party expects convergence. The constraint is TANGLED ROPE: it provides genuine coordination (state standardization solves large-scale problems; traditional authority solves community-cohesion problems) AND asymmetric extraction (citizens must learn both systems; minorities who do not fit either get no legitimacy seat). The sibling readings offer different accounts: the ENDOGENOUS-DISPLACEMENT reading claims practice change becomes legitimate when communities voluntarily adopt it (no partition, just evolution); the EXOGENOUS-OVERRIDE reading claims legitimate change requires state decree for modernization and collective benefit (no partition, state authority alone). This reading disagrees with both: it holds that NEITHER endogenous drift NOR state mandate alone confers legitimacy—legitimacy REQUIRES domain partition, and stability REQUIRES that neither authority tries to monopolize both domains.",
     "key_agents": [
-      "state_administrative_apparatus: institutional power, sets public-domain standards, maintains partition boundary as pragmatic compromise",
-      "traditional_ritual_authorities: organized power, identity-locked, sets private-domain standards, benefits from protective partition",
-      "merchant_and_trading_class: powerful, arbitrage options, code-switches between systems for strategic advantage",
-      "farming_and_subsistence_communities: moderate power, constrained exit, benefit from lunar-calendar agricultural timing while paying state taxes on Gregorian calendar",
-      "modernizing_elites: excluded, would argue partition is unstable and unified standards are necessary for development",
-      "external_imperial_authority: excluded, seeks to impose unified standards as condition of trade or military alliance"
+      "state_administrative_apparatus — institutional agenda-setter, monopolizes public-domain rule-making, benefits from standardized practice coordination",
+      "traditional_authority_gatekeepers — institutional agenda-setter, retains private-domain rule-making, benefits from state recognition of boundary",
+      "citizens_navigating_dual_regime — moderate-power payer and beneficiary, must code-switch between legitimacy systems, bear cognitive and social cost",
+      "cultural_minorities_with_non_aligned_practice — powerless payer, identity-locked, excluded from both legitimacy seats",
+      "merchants_and_professionals — powerful beneficiary, arbitrage exit options, exploit both domains for efficiency",
+      "religious_and_ethnic_minorities — moderate power excluded, would challenge the binary partition itself",
+      "reformist_intellectuals — organized observers, provide frameworks for stability or instability interpretation"
     ],
-    "logic_rationale": "The constraint achieves low extractiveness relative to comparable uniform-standard regimes because each authority system is legitimated within its domain and can maintain coherence without requiring the other system to surrender. Extractiveness rises slightly (0.32 → 0.38 across the interval) as the state's fiscal demands increase and communities incur higher costs of dual-system maintenance, but plateaus as neither authority system attempts to expand into the other's claimed domain. Suppression is moderate because the partition's stability depends on both authorities accepting domain limits — violations would require enforcement, so the constraint itself relies on mutual restraint rather than external coercion. Theater is low and stable because the partition is genuinely functional: each authority solves real coordination problems within its domain. The measurement series show the constraint as stable rather than drifting, with extractiveness rising slightly in early period and plateauing, suggesting the system has found an equilibrium.",
-    "perspectival_gap": "The state's view: the partition is a pragmatic compromise that enables fiscal coherence without impossible cultural enforcement costs. Traditional authorities' view: the partition is a boundary protection that preserves their legitimacy and authority. Modernizing elites' view: the partition is an unstable intermediate stage that will inevitably dissolve toward unified standards. The analytical observer's view: the partition is a genuine coordination mechanism that solves the problem of how two legitimacy systems can coexist without zero-sum conflict. From the state's seat, extractiveness appears low (they collect taxes reliably without massive suppression costs). From traditional authorities' seat, it appears as a stable rent (they collect symbolic recognition and behavioral compliance within their domain). From modernizing elites' seat, it appears as an enforced artificial limit on progress.",
-    "directionality_logic": "State apparatus and traditional authorities both have directionality near 0.5 (symmetric): each benefits from having a protected domain (beneficiary role) but also accepts limits on their authority (cost of partition). Merchants and trading class have low directionality (~0.2): they benefit from code-switching options and face low suppression. Farming communities have moderate-high directionality (~0.65): they benefit from lunar-calendar agricultural timing but pay taxes on state calendar and maintain dual-system competence. Modernizing elites have moderate-high directionality (~0.55) as targets: the partition constrains their ability to impose unified standards, but they lack enforcement power against institutional actors. External imperial authority has directionality near 1.0 (full target): the partition blocks their imposition of unified standards, but they are excluded from the constraint's authorization structure.",
-    "mandatrophy_analysis": "The constraint's founding problem (how to collect taxes and maintain inter-regional coordination without imposing uniform private practice) is still live under the equilibrium reading: modern states still face the cost-benefit calculation of whether unified standards are worth the suppression costs. However, the founding problem would be classified as contested rather than live under alternative readings: the exogenous_override reading would argue unified standards are legitimate once decreed by state authority; the endogenous_displacement reading would argue conversion to unified standards happens through voluntary adoption, not state decree. The mandatrophy frame does not apply here because the partition is not a degraded version of a unified-standard regime — it is a stable equilibrium reading of the kernel that rejects the premise that convergence is inevitable. The constraint prevents classification mislabeling by separating the question 'how should practice legitimacy be organized' (the kernel) from the question 'what is the empirical relationship between two authority systems' (this reading).",
-    "kernel_context": "This constraint instantiates the DUAL_PRACTICE_EQUILIBRIUM_READING of the contested kernel 'legitimacy_of_practice_standardization.' The kernel asks: under what conditions is practice change (shift in calendar, dress norms, measurement standards) legitimate? The equilibrium reading answers: when domain-partitioned authority systems each govern their respective domains without claiming universality, practice change is legitimate only within the domain governed by the authority competent to make it. The sibling reading ENDOGENOUS_DISPLACEMENT_READING asserts legitimacy derives from voluntary adoption and perceived utility; EXOGENOUS_OVERRIDE_READING asserts legitimacy derives from state decree for collective benefit. The equilibrium reading forecloses neither sibling in principle (they are alternative answers to the same kernel question) but structurally incompatible with both as operating frameworks within a single policy regime: a state cannot simultaneously recognize domain-partitioned legitimacy, impose unified standards by decree, and defer to voluntary adoption. The partition reading is distinguished by the axiom that legitimacy is DOMAIN-BOUNDED, not UNIVERSAL-DECENTRALIZED (endogenous) or CENTRALIZED-IMPOSED (exogenous)."
+    "logic_rationale": "Extractiveness is moderate-high (0.58) because the dual regime requires compliance with two legitimacy systems and penalizes those who cannot align with either, but it is not maximum extraction because both authorities claim genuine coordination functions (state standardization enables large-scale coordination; traditional authority enables community cohesion). Suppression is moderate (0.51) because the partition is maintained partly by enforcement (state penalties for tax non-compliance, community pressure for ritual conformance) but also by the internalized belief—in both authority-holders and many citizens—that the partition is LEGITIMATE rather than coercive. Theater is moderate (0.42) because both authorities genuinely provide coordination services, but enforcement increasingly defends the PARTITION ITSELF (keeping state out of private domains, keeping private authority out of public domains) rather than defending the substance of the rules. The measurement trajectory shows extractiveness and theater rising slowly to a plateau around t=25, then stabilizing—this is the maturation of the dual regime: initial enforcement costs drop as compliance becomes habitual, but the partition itself requires constant maintenance to prevent either authority from encroaching. Suppression requirement rises and stabilizes similarly: the system requires active enforcement of BOUNDARIES more than enforcement of rule-content once citizens internalize the partition. The time grid is shared across all three metrics at nine points.",
+    "directionality_logic": "The state apparatus has d near the beneficiary end (low d, ~0.2): it collects rents from monopolizing public-domain rule-making, has infinite exit options (it defines what exit even means), and faces no resistance from citizens who accept the partition as legitimate. Traditional gatekeepers have d symmetric-to-beneficiary (~0.3): they retain authority in private domains and benefit from state recognition of boundaries, but they have mobile exit (can shift their authority across families/communities), face moderate resistance (younger generations testing boundaries), and compete with state authority for legitimacy. Citizens navigating the dual regime sit near symmetric (~0.5): they gain coordination services from both authorities but bear code-switching costs and lose the option to choose a single legitimacy system. Minorities with non-aligned practices have d near the target end (high d, ~0.85): they bear suppression from BOTH authorities, have identity-locked exit (cannot abandon the practices that define them), face active resistance (delegitimization), and cannot arbitrage between domains because no seat recognizes their legitimacy. The structural asymmetry—between those embedded in the partition and those excluded by it—is what makes this tangled rope rather than rope: the coordination function is real, but who benefits and who pays is radically unequal.",
+    "perspectival_gap": "The state and traditional authorities view the constraint identically (as a legitimate, stable, mutually beneficial partition); citizens embedded in the partition mostly accept it (as pragmatic and culturally necessary); but minorities and reformists see extraction and exclusion. The engine should compute the same type (tangled rope) from all seats, but with dramatically different directionality: beneficiaries perceive coordination; payers perceive extraction; excluded parties perceive impossibility.",
+    "mandatrophy_analysis": "The dual-regime partition APPEARS to be a tangled rope that could be resolved (by either state monopoly or universal traditional freedom), but mandatrophy analysis suggests the founding problem (state modernization while preserving local legitimacy) is NOT dead—it remains live and unresolved across centuries. The constraint persists not because the problem is solved but because NEITHER sibling reading (endogenous drift or state override alone) can solve it without destroying either state capacity or community legitimacy. The partition is what allows both to coexist. Mandatrophy would be if the founding problem disappeared (all communities voluntarily standardized, or the state abandoned modernization) while the partition persisted—but the measurements show extractiveness and enforcement stabilizing at a non-trivial level, not degrading toward pure performance. The constraint is not a zombie; the founding problem is still live."
   },
   "omegas": [
     {
-      "id": "partition_boundary_stability",
-      "question": "Is the partition between public and private domains stable because both authority systems rationally accept it, or because enforcement capacity prevents either from expanding into the other's domain?",
-      "resolution_mechanism": "Natural experiment: reduce state enforcement capacity (collapse of administrative infrastructure) or reduce traditional authority enforcement capacity (generational replacement, ideological shift). If partition persists, stability is rational acceptance; if partition dissolves, stability was enforcement-dependent.",
-      "impact": "If rational acceptance, the constraint is a genuine rope coordination mechanism. If enforcement-dependent, suppression is higher than authored and the constraint approaches tangled_rope or snare.",
-      "confidence": "medium",
+      "id": "internalized_vs_strategic_compliance",
+      "question": "Do citizens accept the dual-regime partition as LEGITIMATE (internalized), or do they comply STRATEGICALLY (because exit costs are too high)?",
+      "resolution_mechanism": "Anthropological study of code-switching narratives: interview citizens in both domains about whether they experience the partition as natural/necessary (internalized) or imposed/constraining (strategic). Exit-scenario testing: offer citizens costless exit and measure defection.",
+      "impact": "If compliance is internalized, the suppression metric understates the regime's stability (the regime is self-perpetuating even without enforcement). If strategic, suppression understates the fragility (enforcement weakening would trigger rapid re-alignment). The classification as tangled rope holds either way; the trajectory changes.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the dual-practice partition is sustained by mutual interest or by suppression of boundary challenges."
+      "description": "Whether the dual-regime partition is accepted as legitimate or endured as coerced."
     },
     {
-      "id": "extractiveness_of_dual_system_maintenance",
-      "question": "Does the cost of maintaining code-switching competence (learning and performing both calendar systems, dress codes, measurement standards) represent genuine coordination overhead or hidden extraction from communities?",
-      "resolution_mechanism": "Comparative analysis: does extractiveness measured in dual-system regimes differ significantly from extractiveness in unified-standard regimes when controlling for state fiscal demands? Interview-based assessment of community perception: is dual-system maintenance experienced as a necessary cost or as an unjust burden?",
-      "impact": "If maintenance is genuine coordination cost, extractiveness at 0.38 is justified as Rope. If it is hidden extraction, extractiveness should be higher (0.55+) and the constraint approaches Tangled Rope.",
+      "id": "partition_stability_across_generations",
+      "question": "Does the partition reproduce itself across generations, or is each generation re-negotiating the boundary between state and traditional authority?",
+      "resolution_mechanism": "Cohort analysis of practice alignment over time: measure the age distribution of code-switchers vs. single-domain citizens. Longitudinal tracking of individuals across cohorts.",
+      "impact": "Stable reproduction suggests the partition is self-maintaining (genuine equilibrium). Generational drift suggests the partition is contested and fragile (boundary erosion is endemic). Either way, the extractiveness measurement holds, but piton dynamics (degraded function maintained theatrically) would appear if drift is unidirectional.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "What fraction of the constraint's extractiveness is necessary coordination cost vs. preventable overhead."
+      "description": "Whether dual-regime practice is generationally stable or subject to ongoing re-negotiation."
     },
     {
-      "id": "kernel_reading_coexistence_feasibility",
-      "question": "Can a single institutional regime hold all three readings of the legitimacy kernel simultaneously, or does instantiating one reading necessarily foreclose the others?",
-      "resolution_mechanism": "Examine historical cases where states attempted to blend readings: Does Italy's post-1860 unification attempt (exogenous override + domain partition) generate internal contradictions? Do contemporary pluralist democracies that recognize regional autonomy (endogenous displacement within bounded domains) represent a synthesis or a nested application?",
-      "impact": "If readings can coexist (e.g., exogenous decree at national level, endogenous adoption at regional level, domain partition within local communities), the kernel is genuinely open and the three readings are valid alternatives. If readings are mutually exclusive, the reading choice is consequential for regime stability.",
+      "id": "kernel_reading_alternative_framing",
+      "question": "This reading assumes the partition is LEGITIMATE (domain-partitioned authority is a defensible equilibrium). The ENDOGENOUS-DISPLACEMENT reading frames the same empirical pattern as ILLEGITIMATE (the partition is temporary drag on inevitable practice evolution). Are these competing readings, or different empirical claims about the same phenomenon?",
+      "resolution_mechanism": "Separating the readings requires asking: would adoption of the endogenous reading's normative premise (legitimacy comes from voluntary evolution, not domain partition) change the empirical classification of this constraint's operation? YES—the endogenous reading would reclassify the partition as SNARE (dominating traditional authority to force state standardization), not tangled rope (legitimate coexistence). This is a framework disagreement, not an empirical disagreement. The readings COEXIST because they inhabit different normative frameworks about what makes a partition legitimate.",
+      "impact": "If the readings COEXIST, this constraint is part of a kernel family where both readings are live options held by different parties and traditions. If one FORECLOSES the other, the kernel is genuinely contested and resolution-directed. The coexist framing preserves the constraint as belonging to a family of readings rather than a single contested fact.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading and its siblings coexist as different frameworks or foreclose each other."
+    },
+    {
+      "id": "minority_exclusion_as_structural_feature",
+      "question": "Is the exclusion of minorities with non-aligned practices a BUG in the partition (a failure to extend domain boundaries to cover all practice types) or a FEATURE (the partition fundamentally cannot accommodate three or more legitimacy sources)?",
+      "resolution_mechanism": "Policy experiments: test whether adding a third legitimacy seat (e.g., recognizing syncretic religions as having valid private-domain authority) destabilizes the equilibrium or extends it. Historical case studies of societies that attempted multi-source legitimacy partitions.",
+      "impact": "If a bug, the constraint could be reformed to be less extractive for minorities while preserving the state/traditional partition. If a feature, the constraint is structurally EXCLUSIVE—the partition works BECAUSE it limits legitimacy sources to two. If a feature, fixing minority exclusion requires abandoning the partition itself.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the three kernel readings are alternative framings of one constraint or structurally incompatible constraints."
-    },
-    {
-      "id": "modernizing_elite_exclusion_as_suppression",
-      "question": "Is the exclusion of modernizing elites from the partition's authorization structure a form of suppression (suppressing the voice calling for convergence), or is it simply the consequence of the partition not addressing modernization dynamics at all?",
-      "resolution_mechanism": "Historical evidence: do state and traditional authorities actively suppress modernization discourse, or do they simply ignore it? Do modernization advocates face legal barriers, social stigma, or coercive pressure, or do they face the structural constraint that their proposed alternative (unified standards) is not in either authority system's interest?",
-      "impact": "If suppression, the constraint's suppression metric (0.41) understates the coercive structure. If structural non-engagement, the partition is correctly modeled as a rope with moderate suppression.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the partition actively suppresses convergence pressure or simply does not address it."
-    },
-    {
-      "id": "strategic_code_switching_vs_internalized_duality",
-      "question": "Do agents (merchants, farming communities) experience the dual-system requirement as a strategic tool they choose to deploy, or as an internalized cognitive frame where they no longer experience the systems as separate?",
-      "resolution_mechanism": "Post-partition removal experiment: if partition is abolished and unified standards imposed, does code-switching competence persist? If yes and persists as preferred practice, internalization is strong; if yes but is experienced as loss of functionality, internalization is weaker and code-switching was strategic.",
-      "impact": "If internalized, the partition's suppression is partly internalized (agents carry it with them after removal) and its stability is higher. If strategic, suppression is more structural and partition depends on both authorities maintaining the boundary.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether code-switching competence is internalized identity or strategic behavioral flexibility."
+      "description": "Whether minority exclusion is a failure of the partition or inherent to its structure."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination",
+    "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
   },
   "network": {
@@ -234,53 +334,64 @@
       "legitimacy_of_practice_standardization__endogenous_displacement_reading",
       "legitimacy_of_practice_standardization__exogenous_override_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading (dual_practice_equilibrium) of the contested kernel legitimacy_of_practice_standardization. The endogenous_displacement_reading and exogenous_override_reading are sibling constraints that answer the same kernel question (what makes practice change legitimate) with incompatible answers. All three readings share the same factual domain (practice standards and their legitimacy) but instantiate different structural constraint stories with different ε values, beneficiary/victim structures, and suppressions. The equilibrium reading uniquely asserts that legitimacy is domain-bounded, not universal or decentralized. The three readings coexist as live positions held by different parties (state administrators, traditional authorities, and modernizing elites) and do not logically foreclose one another, but instantiating one as a regime configuration structurally incompatible with instantiating another."
+    "dual_formulation_note": "This is one reading of the kernel 'legitimacy of practice standardization.' The dual-practice-equilibrium reading claims practice legitimacy partitions along domain lines (state/administrative vs. traditional/ritual). The sibling endogenous-displacement reading claims legitimacy comes from voluntary practice evolution (no partition). The sibling exogenous-override reading claims legitimacy comes from state decree for modernization (no partition, state monopoly). All three constrain the same kernel (how societies legitimize practice change), but produce structurally different constraints because they disagree on what makes a change legitimate. The endogenous and exogenous readings would reclassify this constraint's operation as pure snare if their framings were adopted; this reading defends partition-based legitimacy as genuine coexistence. The three readings coexist in actual societies—different parties hold different readings—making the kernel contested."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "distributed",
-    "interpretation_layer_present": false,
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "dual_legitimacy_partition_framework",
+    "drift_state": {
+      "moment": "contemporary_modernization_pressure",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "legitimacy_of_practice_standardization__endogenous_displacement_reading",
+        "sibling_id": "endogenous_displacement_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "legitimacy_of_practice_standardization__exogenous_override_reading",
+        "sibling_id": "exogenous_override_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "legitimacy_is_domain_bounded",
+        "atom": "practice_legitimacy_is_domain_partitioned",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "dual_practice_persistence_is_rational",
-        "role": "secondary",
+        "atom": "dual_authority_coexistence_is_stable_equilibrium",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
-    ],
-    "reference_frame": "domain_partitioned_legitimacy_framework",
-    "drift_state": {
-      "moment": "contemporary_national_integration_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": true
-    }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "legitimacy_of_practice_standardization__endogenous_displacement_reading",
+      "legitimacy_of_practice_standardization__exogenous_override_reading"
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
-  }
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "gain_flow": "state_administrative_apparatus",
+  "fixing_cost": "prohibitive"
 }

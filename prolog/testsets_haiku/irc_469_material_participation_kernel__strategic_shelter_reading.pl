@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,6 +43,12 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,37 +73,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: irc_469_material_participation_kernel__strategic_shelter_reading
- *   human_readable: IRC §469 Material Participation—Strategic Shelter Reading
- *   domain: tax_law/regulatory_interpretation
+ *   human_readable: IRC 469 Material Participation Permissive Threshold (Strategic Shelter Reading)
+ *   domain: tax/regulatory
  *
  * SUMMARY:
- *   Under the strategic-shelter reading of IRC §469 material participation,
- *   the statutory requirement that a taxpayer materially participate in a
- *   rental real estate activity to claim passive loss deductions is satisfied
- *   through aggressive hour-counting, grouping elections under Treas. Reg.
- *   §1.469-4(f), and favorable interpretation of 'relevant participation
- *   factors' (Treas. Reg. §1.469-5T). This reading permits high-income
- *   investors to engineer material participation status through documentation
- *   and aggregation strategies, enabling them to claim losses that shelter
- *   ordinary income—the very outcome the 1986 statute intended to prevent.
- *   The constraint is a tangled rope: it coordinates the tax system's
- *   allocation function (determining who bears the burden of taxation) while
- *   simultaneously extracting wealth from those unable to access the
- *   permissive interpretation. This is one reading of a contested kernel: the
- *   IRC §469 material participation requirement itself. The sibling
- *   strict-gatekeeper reading interprets material participation as a genuine
- *   participation bar requiring substantial, verifiable personal labor and
- *   tight documentation.
+ *   This constraint embodies the strategic shelter reading of IRC 469
+ *   material participation rules: a high-income investor or syndication
+ *   operator can achieve 'material participation' status in real estate
+ *   holdings through permissive hour-counting methodologies and favorable
+ *   grouping elections, unlocking passive loss deductions that offset
+ *   ordinary income. The reading is instantiated in Treasury regulations, IRS
+ *   safe harbor guidance, and litigation positions that recognize these
+ *   structuring techniques. The consequence is systematic tax sheltering
+ *   available primarily to those with capital, legal infrastructure, and
+ *   sophistication to exploit the permissiveness — a coordination mechanism
+ *   (aggregating labor across holdings) that extracts tax burden toward
+ *   less-connected populations. The claim/metric gap is deliberate: this
+ *   reading is CLAIMED as tangled_rope (legitimate coordination with
+ *   asymmetric participation rules) while the authored metrics describe
+ *   increasing extractiveness (0.38→0.68 over 40 years) and rising theater
+ *   ratio (0.15→0.41), suggesting a constraint whose coordination function is
+ *   eroding as it serves increasingly as pure extraction machinery.
  *
  * KEY AGENTS:
- *   - high_income_real_estate_investors: Primary beneficiary (d ≈ 0.15, arbitrage exit) — can engineer participation claims and offset passive income
- *   - passive_loss_shelter_users: Secondary beneficiary (d ≈ 0.20, mobile exit) — use the permissive standard to structure deductions
- *   - wage_earners_with_passive_income: Primary payer (d ≈ 0.75, trapped exit) — cannot credibly claim equivalent participation despite comparable effort
- *   - small_landlords_unable_to_qualify: Secondary payer (d ≈ 0.70, constrained exit) — lack resources for sophisticated structuring
- *   - tax_preparation_industry: Beneficiary-agenda-setter (d ≈ 0.25, mobile exit) — profits from interpretive ambiguity and resists clarification
- *   - internal_revenue_service: Institutional agenda-setter (d ≈ analytical, analytical exit) — operationalizes the permissive reading through regulations and audit practice
- *   - congress: Excluded observer (d ≈ analytical, analytical exit) — legislative intent is displaced by regulatory/audit domain practice
- *   - compliance_courts: Observer (d ≈ analytical, analytical exit) — rulings establish precedent for permissive standard
+ *   - high_income_passive_investors (powerless→powerful trajectory; arbitrage exit)
+ *   - real_estate_syndication_operators (organized agenda-setters; mobile exit)
+ *   - internal_revenue_service (institutional interpreter; enforces permissive reading)
+ *   - salaried_wage_earners (moderate power; constrained exit; bear distributional cost)
+ *   - active_business_owners (organized payers; constrained exit)
+ *   - congress (institutional observer; formally sovereign but deferred)
  */
 
 /* ==========================================================================
@@ -114,48 +119,103 @@ narrative_ontology:constraint_metric(irc_469_material_participation_kernel__stra
 narrative_ontology:constraint_metric(irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(irc_469_material_participation_kernel__strategic_shelter_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(irc_469_material_participation_kernel__strategic_shelter_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(irc_469_material_participation_kernel__strategic_shelter_reading, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(irc_469_material_participation_kernel__strategic_shelter_reading, resistance, 0.62).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(irc_469_material_participation_kernel__strategic_shelter_reading, tangled_rope).
-narrative_ontology:human_readable(irc_469_material_participation_kernel__strategic_shelter_reading, "IRC §469 Material Participation—Strategic Shelter Reading").
-narrative_ontology:topic_domain(irc_469_material_participation_kernel__strategic_shelter_reading, "tax_law/regulatory_interpretation").
+narrative_ontology:human_readable(irc_469_material_participation_kernel__strategic_shelter_reading, "IRC 469 Material Participation Permissive Threshold (Strategic Shelter Reading)").
+narrative_ontology:topic_domain(irc_469_material_participation_kernel__strategic_shelter_reading, "tax/regulatory").
 
 domain_priors:requires_active_enforcement(irc_469_material_participation_kernel__strategic_shelter_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(irc_469_material_participation_kernel__strategic_shelter_reading, 'da1028e7-8095-4f48-bcc5-e0d6fe17ef05').
-narrative_ontology:cs_kernel_codification('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', fixed_text).
-narrative_ontology:cs_authority_grounding('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', lineage).
-narrative_ontology:cs_interpretation_layer_present('da1028e7-8095-4f48-bcc5-e0d6fe17ef05').
-narrative_ontology:cs_reading_relation('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', irc_469_material_participation_kernel__strict_gatekeeper_reading, coexists_with).
-narrative_ontology:cs_axiom('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', foundational, material_participation_permissive_qualification).
-narrative_ontology:cs_axiom_status(material_participation_permissive_qualification, holdable).
-narrative_ontology:cs_axiom_grounding('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', material_participation_permissive_qualification, conventional).
-narrative_ontology:cs_axiom('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', secondary, documentation_as_participation_proxy).
-narrative_ontology:cs_axiom_status(documentation_as_participation_proxy, holdable).
-narrative_ontology:cs_axiom_grounding('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', documentation_as_participation_proxy, conventional).
-narrative_ontology:cs_reference_frame('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', flexible_investor_participation_standard).
-narrative_ontology:cs_drift_state('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', contemporary_post_2010_stabilization, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('da1028e7-8095-4f48-bcc5-e0d6fe17ef05', '').
+narrative_ontology:cs_story_uid(irc_469_material_participation_kernel__strategic_shelter_reading, '4421033e-4723-4f4b-a059-e9f0839c3f87').
+narrative_ontology:cs_kernel_codification('4421033e-4723-4f4b-a059-e9f0839c3f87', fixed_text).
+narrative_ontology:cs_authority_grounding('4421033e-4723-4f4b-a059-e9f0839c3f87', extraction).
+narrative_ontology:cs_interpretation_layer_present('4421033e-4723-4f4b-a059-e9f0839c3f87').
+narrative_ontology:cs_reading_relation('4421033e-4723-4f4b-a059-e9f0839c3f87', irc_469_material_participation_kernel__strict_gatekeeper_reading, coexists_with).
+narrative_ontology:cs_axiom('4421033e-4723-4f4b-a059-e9f0839c3f87', foundational, material_participation_aggregable_via_grouping_elections).
+narrative_ontology:cs_axiom_status(material_participation_aggregable_via_grouping_elections, holdable).
+narrative_ontology:cs_axiom_grounding('4421033e-4723-4f4b-a059-e9f0839c3f87', material_participation_aggregable_via_grouping_elections, empirically_contingent).
+narrative_ontology:cs_axiom('4421033e-4723-4f4b-a059-e9f0839c3f87', secondary, investor_tax_neutrality_norm).
+narrative_ontology:cs_axiom_status(investor_tax_neutrality_norm, holdable).
+narrative_ontology:cs_axiom_grounding('4421033e-4723-4f4b-a059-e9f0839c3f87', investor_tax_neutrality_norm, instrumental).
+narrative_ontology:cs_reference_frame('4421033e-4723-4f4b-a059-e9f0839c3f87', legislatively_intended_material_participation_gate).
+narrative_ontology:cs_drift_state('4421033e-4723-4f4b-a059-e9f0839c3f87', contemporary_post_permissive_guidance_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('4421033e-4723-4f4b-a059-e9f0839c3f87', '').
 narrative_ontology:cs_kernel_id(irc_469_material_participation_kernel__strategic_shelter_reading, irc_469_material_participation_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(irc_469_material_participation_kernel__strategic_shelter_reading, high_income_real_estate_investors).
-narrative_ontology:constraint_beneficiary(irc_469_material_participation_kernel__strategic_shelter_reading, passive_loss_shelter_users).
-narrative_ontology:constraint_victim(irc_469_material_participation_kernel__strategic_shelter_reading, wage_earners_with_passive_income).
-narrative_ontology:constraint_victim(irc_469_material_participation_kernel__strategic_shelter_reading, small_landlords_unable_to_qualify).
+narrative_ontology:constraint_beneficiary(irc_469_material_participation_kernel__strategic_shelter_reading, high_income_passive_investors).
+narrative_ontology:constraint_beneficiary(irc_469_material_participation_kernel__strategic_shelter_reading, real_estate_syndication_operators).
+narrative_ontology:constraint_victim(irc_469_material_participation_kernel__strategic_shelter_reading, salaried_wage_earners).
+narrative_ontology:constraint_victim(irc_469_material_participation_kernel__strategic_shelter_reading, active_business_owners).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% High-income individuals and partnerships that structure real estate holdings to claim material participation through permissive hour-counting and grouping elections. They benefit by deducting passive losses against ordinary income, lowering effective tax rates on wealth preservation. Exit is available at arbitrage cost: relocating holdings or changing investment structure.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, high_income_passive_investors, beneficiary,
+    powerful, biographical, arbitrage, national).
+
+% Syndication platforms, real estate partnerships, and investment advisors that structure deals explicitly to enable clients to qualify as material participants. They set the qualification criteria by documenting and aggregating hours; their revenue and reputation depend on delivering tax-shelter arrangements that survive audit. They benefit by charging fees for tax-favorable structuring.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, real_estate_syndication_operators, agenda_setter,
+    organized, generational, mobile, national).
+narrative_ontology:stakeholder_secondary_role(irc_469_material_participation_kernel__strategic_shelter_reading, real_estate_syndication_operators, beneficiary).
+
+% Administers the passive loss rules and interprets materiality thresholds. The strategic shelter reading embeds permissiveness into the agency's own pronouncements (safe harbor tests, grouping election allowances). The IRS enforces this reading through audit guidance and litigation positions that recognize aggressive structuring.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, internal_revenue_service, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Cannot claim passive loss deductions on wage income; their tax burden rises as a proportion of revenue relative to sophisticated investors who shelter gains through material participation deductions. They lack the capital base and legal infrastructure to exploit permissive qualification standards.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, salaried_wage_earners, payer,
+    moderate, biographical, constrained, national).
+
+% Cannot use passive loss deductions to offset business income; the permissive material participation rule allows passive investors to shield portfolio income while active operators must report and pay tax on operating results. The rule creates competitive disadvantage in effective tax rate.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, active_business_owners, payer,
+    organized, biographical, constrained, national).
+
+% Tax fairness advocates, labor unions, and progressive policy organizations oppose the permissive reading and would argue for tighter materiality standards if included in rulemaking. They are excluded from substantive input into Treasury guidance and are heard only through legislative testimony.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, progressive_advocacy_groups, excluded,
+    moderate, biographical, constrained, national).
+
+% Enacted IRC 469 as part of the Tax Reform Act of 1986 to prevent tax sheltering through passive losses. Congress remains formally sovereign over the rule but defers to Treasury interpretation and regulatory guidance in practice; legislative correction requires supermajority consensus.
+narrative_ontology:constraint_stakeholder(irc_469_material_participation_kernel__strategic_shelter_reading, congress, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(irc_469_material_participation_kernel__strategic_shelter_reading, high_income_passive_investors).
+narrative_ontology:fixing_cost_class(irc_469_material_participation_kernel__strategic_shelter_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Enables investors to aggregate holdings across multiple properties and time periods to establish material participation status, solving the coordination problem of demonstrating sufficient labor involvement in real estate across a portfolio.
+% TRANSFER_FUNCTION: Transfers tax deductions (foregone government revenue) from wage earners and active business operators to high-income passive investors. The mechanism: permissive hour-counting and grouping elections allow passive loss deductions that directly reduce the investor's taxable income, shifting tax burden to others.
+% ABSENT_VOICES: Tax-disadvantaged workers and small business owners have no seat in Treasury regulatory development; progressive tax policy advocates are heard in testimony but excluded from rulemaking authority. Labor representatives and state tax administrators, who bear the distributional consequence, are not parties to the IRS guidance process.
+% DISAPPEARANCE_RATIONALE: If the permissive material participation reading were eliminated and replaced with strict documentation requirements, the effective tax rates on high-income passive investment portfolios would rise substantially, capital flows into syndicated real estate would shift, and a major asset class structuring strategy would collapse. Wealth preservation pathways for high-income households would reorganize.
+% FOUNDING_PROBLEM: Tax Reform Act of 1986 sought to prevent 'abusive tax shelters' by limiting passive loss deductions; the problem was legitimate tax avoidance through loss-only partnerships. Congress intended materiality to be a substantial gate.
+% FOUNDING_PROBLEM_CORROBORATION: Congressional testimony from 1986 and legislative history documents intent to tighten shelter access. The Treasury Office of Tax Analysis and the Treasury Inspector General for Tax Administration have periodically attested that the permissive reading has re-enabled sheltering. Conversely, the IRS and tax bar attest that permissive interpretation is necessary for legitimate real estate investors. Academic tax economists disagree sharply on whether the original problem persists.
+narrative_ontology:disappearance_verdict(irc_469_material_participation_kernel__strategic_shelter_reading, world_rearranges).
+narrative_ontology:founding_problem_status(irc_469_material_participation_kernel__strategic_shelter_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(irc_469_material_participation_kernel__strategic_shelter_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(irc_469_material_participation_kernel__strategic_shelter_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(irc_469_material_participation_kernel__strategic_shelter_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(irc_469_material_participation_kernel__strategic_shelter_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +235,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.68 at interval end) because the permissive standard systematically transfers tax incidence from high-income investors to others by enabling deductions disconnected from genuine economic participation. The transfer is substantial and sustained. Suppression is moderate (0.52) because high-income beneficiaries do not need coercive suppression—the regulatory regime favors them, and compliance friction is low for professionally-represented taxpayers. Wage earners and small landlords face compliance costs and audit risk that suppress their ability to compete, but this is asymmetric enforcement rather than overt coercion. Theater is moderate-high (0.41) because the material participation requirement itself is performed (hours are counted, documents are prepared) but increasingly as a formality—the outcome is predetermined by the taxpayer's ability to afford sophisticated structuring. The measurement series shows gradual extraction accumulation from 1986 to 2026 as sophisticated planning strategies proliferated and audit capacity declined, with theater rising as documentation became ritualized. The plateau from year 30 to 40 reflects stabilization of the interpretive practice: the permissive reading is now entrenched.
+ *   Extractiveness rises over the interval because hour-counting techniques became more standardized and aggressive post-2000; syndication platforms developed explicit safe harbor documentation packages; IRS guidance hardened around permissiveness rather than tightening. By year 40, the constraint's primary function is transferring tax deductions to high-income portfolios. Suppression is moderate (0.52 at end) because the rule is technically legal and formal; the suppression is not personal coercion but rather the constraint's structure prevents alternatives (wage earners cannot use it, active operators cannot use it, and tight documentation requirements mean working-class real estate owners cannot afford compliance). Theater ratio rises through year 20 as the coordination function (aggregating labor documentation) became decoupled from actual labor involvement; by year 25 it plateaus (the rule's legitimacy narrative is now purely performative). Measurement series share one time grid: every metric is authored at every examined point. The interval spans 1986 (Tax Reform Act enactment) through ~2026 (present).
  *
  * PERSPECTIVAL GAP:
- *   From the beneficiary seats (high-income investors and the tax profession), the constraint is genuine coordination: the material participation standard prevents arbitrary loss sheltering, and the permissive interpretation is a reasonable read of statutory text allowing qualified investors to claim legitimate deductions. From the payer seats (wage earners and small landlords), the same constraint operates as a discrimination mechanism: identical participation generates different tax treatment based on the taxpayer's ability to afford professional representation and documentation sophistication. The IRS's perspective sits between: it administers the constraint as written but acknowledges in internal guidance that the permissive reading creates inconsistency across audit populations. The engine will compute different effective extractions for each seat based on exit options and power asymmetry.
+ *   From the high-income investor's seat, this is genuine coordination (aggregating holdings for labor thresholds is difficult and requires infrastructure). From the IRS's seat, the permissive reading is a legitimate interpretation of statutory language and administrative necessity (strict interpretation would exclude legitimate investors). From the wage earner's and active operator's seats, this is pure extraction — they cannot use the deduction and bear the tax burden shift. From Congress's formal seat, this reading is a departure from the 1986 intent. The engine computes these divergences from the power/exit/beneficiary/victim structural data — the authored claim does not predict which seat sees what.
  *
  * DIRECTIONALITY LOGIC:
- *   High-income investors derive d ≈ 0.15 (near beneficiary end) from their beneficiary role, arbitrage exit (they can exit by divesting, but choose to stay because the returns are favorable), powerful position (they can afford professional structuring), and high time horizon (they plan long-term real estate portfolios). Wage earners derive d ≈ 0.75 (near target end) from their payer role, trapped exit (they cannot exit without incurring capital loss or complex restructuring), moderate power (they lack resources for equivalent structuring), and biographical time horizon. The tax profession derives d ≈ 0.25 because it benefits (secondary beneficiary through service revenue) but is not the direct capturer (the investor captures the tax savings) and has mobile exit (they could shift service focus if the standard tightened). The IRS sits at d ≈ analytical (institutional observer) because it administers the constraint but does not personally benefit or pay—it is the enforcement machine, not an interested party.
+ *   High-income investors are structural beneficiaries: they access deductions not available to others (d near 0.0, full beneficiary). Syndication operators are beneficiaries who also set terms (d near 0.15, beneficiary-with-agenda-setter mixture). Salaried wage earners are structural targets: they cannot access the same deductions, tax burden shifts toward them (d near 0.95, near-full target). Active business owners are constrained payers (d near 0.85). IRS is institutional arbiter that enforces the permissive reading, holding it stable against legislative intent (d near 0.5, symmetric in institutional posture). Directionality overrides not needed: the structural data drives the right d values.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint presents a classical mandatrophy scenario: the founding problem (preventing shelter abuse) remains nominally live (the statute is still on the books, the IRS still administers material participation tests) but the mechanism has atrophied into something closer to a tax planning tool than a gatekeeper. The founding problem status is 'contested' precisely because both readings coexist: the strategic-shelter reading attests participation qualification has become routine for qualified taxpayers; the strict-gatekeeper reading attests the founding bar has been circumvented. The key to mandatrophy detection is the disappearance verdict: if the constraint vanished, the world would rearrange (investors would restructure, revenue would shift) — so the constraint is not yet pure piton. But the theater_ratio of 0.41 and the moderate suppression (0.52) suggest the real enforcement mechanism is not the material participation requirement itself but the asymmetric ability to document and structure around it. A piton candidate would show much higher theater and lower suppression; a mature snare would show lower theater and higher suppression. This constraint sits in tangled-rope territory with mandatrophy-watching relevance: the founding mandate is displaced, but not yet inert.
+ *   The founding problem was legitimate: the 1986 Act did prevent abusive loss shelters for a period. By the 1990s, permissive IRS guidance re-enabled sheltering; the founding problem (abusive shelters) is contested (some argue it persists, others argue it was solved). Mandatrophy has partially resolved: the problem the rule was built to address is no longer the rule's function. The constraint now primarily transfers tax burden. The theater ratio rise (0.15→0.41) confirms erosion — coordination narrative maintenance with declining coordination substance. A strict reading would close the shelter; a permissive reading (this one) maintains it. The engine's per-seat computation will show the salaried wage earner and active operator seats computing as snare (pure extraction they cannot exit), while the high-income investor seat computes as rope (beneficial coordination). This divergence is the mandatrophy signal: a constraint whose coordination story is one reading and whose extraction story is another.
  */
 
 /* ==========================================================================
@@ -192,94 +252,87 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    congressional_intent_vs_regulatory_practice,
-    'Does the permissive material participation standard operationalized by IRS regulations and audit practice align with the 1986 Congressional intent to create a genuine participation bar, or has regulatory drift displaced the original mandate?',
-    'Historical audit data showing acceptance rates for material participation claims by taxpayer income level and professional representation; econometric analysis comparing passive loss deductions claimed under §469 to Treasury revenue-loss estimates from 1986; comparative study of audit outcomes in circuits with divergent case law.',
-    'If regulatory drift is confirmed, the constraint would be reclassified from tangled-rope (coordinate + extract) to snare (pure extraction with coordination cover), or to piton (atrophied mandate maintained theatrically). If alignment is confirmed, the strategic reading is correct and the constraint functions as intended.',
+    hour_counting_legitimacy,
+    'Are the hour-counting methodologies (grouping elections, aggregation across properties, inclusion of planning/consulting hours) structurally necessary to capture legitimate real estate work, or do they primarily enable tax avoidance by inflating participatory labor?',
+    'Comparative audit analysis: measure the distribution of claimed hours against actual contemporaneous time records (where discoverable); compare claimed hours in syndicated properties against claimed hours in self-managed properties; econometric analysis of whether aggressive hour-counting correlates with passive loss claims that concentrate in high-income households.',
+    'If hour-counting is primarily legitimate, the permissive reading is genuine coordination cost, and extractiveness should be recharacterized as lower. If hour-counting is primarily opportunistic inflation, the constraint is pure extraction dressed as coordination.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(congressional_intent_vs_regulatory_practice, empirical, 'Whether regulatory practice reflects or contradicts Congressional statutory intent.').
+narrative_ontology:omega_variable(hour_counting_legitimacy, empirical, 'Whether hour-counting methodologies serve legitimate administrative necessity or primarily enable avoidance.').
 
 omega_variable(
-    documentation_vs_participation_equivalence,
-    'Is aggressive hour-counting and grouping-election structuring a legitimate proxy for genuine economic participation, or does it systematically misidentify passive arrangement-shopping as material participation?',
-    'Comparative analysis of actual labor inputs and capital-at-risk correlations for material participation claimants vs. non-claimants; audit examination of contemporaneous time records and their correlation with actual business decisions; case studies of properties claimed as material participation where passive loss deductions were followed by inactive management or rapid dispositions.',
-    'If documentation proves a reliable proxy, the permissive standard is justified; if documentation is decoupled from actual participation, the standard is a documentation gatekeeper rather than a participation gatekeeper—restructuring the constraint as extraction masked by bureaucratic formality.',
+    foundational_problem_persistence,
+    'Does the 1986 Tax Reform Act''s foundational problem (abusive tax shelters enabled by passive loss deductions) persist as a live threat, or has it been solved by other regulatory mechanisms (listed property rules, alternative minimum tax, broader anti-shelter doctrines)?',
+    'Treasury IG audit reports on shelter prevalence pre- and post-2000; IRS litigation statistics on passive loss disallowance rates; GAO analysis of passive loss deduction concentration and tax gap contribution.',
+    'If the problem persists, mandatrophy is not resolved and the permissive reading is a failure to implement legislative intent. If the problem is solved, the permissive reading''s function is no longer gateekeeping and it operates primarily as a wealth preservation mechanism — a coordinate identification of erosion toward pure extraction.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(foundational_problem_persistence, empirical, 'Whether the foundational shelter-prevention problem the 1986 Act addressed remains live.').
+
+omega_variable(
+    statutory_ambiguity_vs_reading_choice,
+    'Does IRC 469 genuinely permit the permissive reading''s interpretation of material participation, or does the statute''s language and structure preclude the permissive reading as a valid interpretation within statutory bounds?',
+    'Linguistic analysis by tax law scholars; Supreme Court textualism applied to the statute''s operative language; comparison of legislative history against Treasury interpretations.',
+    'If the statute permits both readings, the committer frame correctly models two readings of one kernel. If the statute forecloses the permissive reading, then the strategic shelter reading is not a valid statutory interpretation but a regulatory override — a different kind of constraint (regulatory capture) riding on statutory text.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(statutory_ambiguity_vs_reading_choice, conceptual, 'Whether the permissive reading is a valid statutory interpretation or a regulatory override of statutory intent.').
+
+omega_variable(
+    suppression_structural_vs_internalized,
+    'Is the measured suppression (0.52 at end of interval) purely structural (legal/institutional barriers that constrain who can access the deduction), or does it include internalized suppression (salaried workers and small operators have accepted the narrative that they ''don''t qualify'' and stopped seeking alternatives)?',
+    'Survey of wage earners and small business owners on perceived eligibility and interest in material participation claims; analysis of pre- vs. post-regulatory-guidance litigation rates; comparison of substantive participation claims by population group and education level.',
+    'If suppression is primarily structural, it persists as written rule. If internalized, the constraint''s effective suppression is higher than the rule suggests — targets carry the barrier with them even if the rule were liberalized.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(documentation_vs_participation_equivalence, empirical, 'Whether hour-counting documents correlate with genuine economic participation.').
-
-omega_variable(
-    kernel_reading_legitimacy,
-    'Is the permissive reading of material participation a coherent interpretation of statutory text and regulatory authority, or does it stretch Treasury authority beyond reasonable construction?',
-    'Textualist statutory analysis of §469(c)-(h) and ''material participation'' definition in §469(h); review of Treasury''s express delegated authority under §469(j); tax law scholarship evaluating whether Treas. Reg. §1.469-5T and §1.469-4(f) grouping elections exceed the agency''s interpretive scope.',
-    'If the reading is within Treasury''s delegated authority, it is legitimate interpretive power; if it exceeds authority, the constraint would be vulnerable to judicial reversal or Congressional override. This affects whether the permissive standard is sustainable or susceptible to foreclosure.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_legitimacy, conceptual, 'Whether the permissive reading is a valid statutory interpretation or regulatory overreach.').
-
-omega_variable(
-    audit_selection_structural_bias,
-    'Do audit selection and settlement patterns favor high-income investors and professional representation in material participation disputes, or are they neutral across taxpayer populations?',
-    'IRS audit data by taxpayer income, audit rate by claimed participation status, settlement rate by representation type, correlation between professional tax representation and successful material participation defenses.',
-    'Evidence of bias would indicate suppression asymmetry: the constraint operates as a low-friction benefit for high-income beneficiaries but high-friction risk for low-income payers. This would strengthen the tangled-rope classification and confirm extraction asymmetry.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(audit_selection_structural_bias, empirical, 'Whether audit enforcement is asymmetric across taxpayer wealth and representation.').
-
-omega_variable(
-    alternative_readings_foreclosure,
-    'Does this strategic-shelter reading logically foreclose the strict-gatekeeper reading, or do they coexist as legitimate alternative interpretations of the same statute?',
-    'Textual analysis of whether permissive hour-counting aggregation and strict participation requirements are mutually exclusive constructions of §469 text, or whether both are defensible readings of ambiguous statutory language.',
-    'If foreclosure occurs, one reading must yield and the other becomes the settled interpretation. If coexistence holds, both readings persist and the constraint remains contested—audit practice and legislative action become the real dispute-resolution mechanism rather than textual clarity.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(alternative_readings_foreclosure, conceptual, 'Whether the strategic and strict readings are logically compatible or mutually exclusive.').
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether suppression of alternative participation claims is structural barrier or internalized narrative acceptance.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(irc_469_material_participation_kernel__strategic_shelter_reading, 1986, 2026).
+narrative_ontology:interval(irc_469_material_participation_kernel__strategic_shelter_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(irc__tr_t0, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(irc__tr_t5, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 5, 0.31).
-narrative_ontology:measurement(irc__tr_t10, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 10, 0.34).
-narrative_ontology:measurement(irc__tr_t15, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 15, 0.37).
-narrative_ontology:measurement(irc__tr_t20, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 20, 0.39).
-narrative_ontology:measurement(irc__tr_t25, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 25, 0.41).
+narrative_ontology:measurement(irc__tr_t0, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(irc__tr_t5, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 5, 0.18).
+narrative_ontology:measurement(irc__tr_t10, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 10, 0.24).
+narrative_ontology:measurement(irc__tr_t15, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 15, 0.31).
+narrative_ontology:measurement(irc__tr_t20, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 20, 0.36).
+narrative_ontology:measurement(irc__tr_t25, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 25, 0.39).
 narrative_ontology:measurement(irc__tr_t30, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 30, 0.41).
+narrative_ontology:measurement(irc__tr_t35, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 35, 0.41).
 narrative_ontology:measurement(irc__tr_t40, irc_469_material_participation_kernel__strategic_shelter_reading, theater_ratio, 40, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(irc__be_t0, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(irc__be_t5, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(irc__be_t10, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(irc__be_t15, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 15, 0.62).
-narrative_ontology:measurement(irc__be_t20, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 20, 0.65).
-narrative_ontology:measurement(irc__be_t25, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 25, 0.67).
-narrative_ontology:measurement(irc__be_t30, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 30, 0.68).
+narrative_ontology:measurement(irc__be_t0, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(irc__be_t5, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 5, 0.44).
+narrative_ontology:measurement(irc__be_t10, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 10, 0.52).
+narrative_ontology:measurement(irc__be_t15, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 15, 0.58).
+narrative_ontology:measurement(irc__be_t20, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 20, 0.63).
+narrative_ontology:measurement(irc__be_t25, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 25, 0.66).
+narrative_ontology:measurement(irc__be_t30, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 30, 0.67).
+narrative_ontology:measurement(irc__be_t35, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 35, 0.68).
 narrative_ontology:measurement(irc__be_t40, irc_469_material_participation_kernel__strategic_shelter_reading, base_extractiveness, 40, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(irc__su_t0, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 0, 0.45).
-narrative_ontology:measurement(irc__su_t5, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 5, 0.47).
-narrative_ontology:measurement(irc__su_t10, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 10, 0.49).
-narrative_ontology:measurement(irc__su_t15, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 15, 0.5).
-narrative_ontology:measurement(irc__su_t20, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 20, 0.51).
-narrative_ontology:measurement(irc__su_t25, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 25, 0.52).
+narrative_ontology:measurement(irc__su_t0, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 0, 0.35).
+narrative_ontology:measurement(irc__su_t5, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 5, 0.38).
+narrative_ontology:measurement(irc__su_t10, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 10, 0.42).
+narrative_ontology:measurement(irc__su_t15, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 15, 0.46).
+narrative_ontology:measurement(irc__su_t20, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 20, 0.49).
+narrative_ontology:measurement(irc__su_t25, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 25, 0.51).
 narrative_ontology:measurement(irc__su_t30, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 30, 0.52).
+narrative_ontology:measurement(irc__su_t35, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 35, 0.52).
 narrative_ontology:measurement(irc__su_t40, irc_469_material_participation_kernel__strategic_shelter_reading, suppression_requirement, 40, 0.52).
 
 
@@ -292,7 +345,7 @@ narrative_ontology:boltzmann_floor_override(irc_469_material_participation_kerne
 narrative_ontology:affects_constraint(irc_469_material_participation_kernel__strategic_shelter_reading, irc_469_material_participation_kernel__strict_gatekeeper_reading).
 
 % DUAL FORMULATION NOTE:
-% The IRC §469 material participation requirement is a contested kernel decomposed into two constraint stories: the strategic-shelter reading (this constraint) and the strict-gatekeeper reading (sibling constraint). These are not the same constraint viewed from different seats—they instantiate different ε values, different beneficiary/victim structures, and different classifications because they rest on fundamentally different interpretations of whether §469 material participation is a permissive or restrictive gate. The strategic reading treats the requirement as a coordination mechanism with reasonable interpretive flexibility; the strict reading treats it as a gatekeeper with heightened documentation and participation burdens. Their ε values diverge because extractiveness hinges on whether the same hour-counting and grouping election practices are legitimate coordination optimization (low ε) or disguised rent-seeking (high ε). The stories are linked because policy reform targeting one reading would cascade to the other—legislative clarification of material participation intent, audit guidance tightening documentation standards, or judicial precedent constraining grouping elections would force both readings toward convergence or eliminate one. The network edge represents this structural coupling.
+% Two readings of IRC 469 material participation kernel instantiate distinct constraints with opposite directionality structures. Strategic shelter reading enables broad passive loss access via permissive hour-counting; strict gatekeeper reading restricts access via tight documentation and narrow aggregation. Sibling constraints share statutory referent (IRC 469) but diverge on materiality measurement and proof burden. The strategic reading examines the constraint through the beneficiary seat (high-income investor); the strict reading examines it through the excluded/payer seats (wage earners, active operators). Extractiveness values are reading-indexed over the same standing arrangement (the permissive interpretation framework).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

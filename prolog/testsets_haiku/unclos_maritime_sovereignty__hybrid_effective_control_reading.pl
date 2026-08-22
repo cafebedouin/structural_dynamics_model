@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +74,41 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: unclos_maritime_sovereignty__hybrid_effective_control_reading
- *   human_readable: UNCLOS Maritime Sovereignty via Hybrid Effective Control (Natural/Artificial Feature Graduated Rights)
- *   domain: international_law/maritime_governance/geopolitical_strategy
+ *   human_readable: UNCLOS Maritime Sovereignty: Hybrid Effective Control Reading
+ *   domain: international_law/maritime_governance/geopolitics
  *
  * SUMMARY:
- *   This story models ONE READING of the contested UNCLOS maritime
- *   sovereignty kernel. The reading instantiated here is the
- *   hybrid_effective_control_reading, which splits the difference between
- *   strict geographic rules (natural features only) and expansive
- *   construction rights (artificial features = immediate territorial claims).
- *   Under this reading, natural features above high-tide water generate full
- *   territorial sea and EEZ; artificial features initially qualify only for
- *   500m safety zones but can mature into full territorial claims if occupied
- *   and controlled continuously for sufficient duration without effective
- *   challenge from other claimants. This reading is operationally embedded in
- *   state practice (especially in Southeast Asia and the South China Sea) but
- *   remains contested by legal scholars and weaker claimant states. The
- *   constraint is CLAIMED as tangled_rope because it simultaneously solves a
- *   genuine coordination problem (how to adjudicate boundary claims when
- *   states engineer features) and extracts from weaker claimants (by
- *   permitting gradual claim expansion through construction and occupation
- *   strategies that only the wealthy and militarily strong can execute). The
- *   claim/metric gap is deliberate and intentional—the metrics reflect the
- *   actual operation of the constraint as a vehicle for power asymmetry
- *   extraction, even though the doctrine itself is framed as neutral law.
+ *   This constraint instantiates ONE READING of the contested UNCLOS maritime
+ *   sovereignty kernel—the hybrid effective control reading. It models a
+ *   graduated sovereignty framework where natural geographic features
+ *   automatically generate full exclusive economic zones (EEZ) and
+ *   territorial seas, while artificial features (islands constructed on
+ *   submerged rocks, reefs, or low-tide elevations) generate only 500m safety
+ *   zones initially, but may mature into full territorial claims through
+ *   prolonged effective occupation absent timely challenge. This reading
+ *   benefits states with construction capacity and regional military
+ *   superiority (who can build, occupy, and hold territory), and extracts
+ *   from weaker claimants (who cannot occupy or build to match stronger
+ *   claims) and distant maritime actors (who lose commons access). The
+ *   constraint is structurally a Tangled Rope: it coordinates maritime
+ *   governance under a rule-based graduated framework (coordination
+ *   function), while simultaneously transferring maritime control rights from
+ *   weaker to stronger claimants through the occupation-ripening mechanism
+ *   (extraction function). The measurement series show extractiveness rising
+ *   (0.48→0.62 over 20 years observed, continuing to 0.67 at year 35
+ *   projected before declining to 0.62 at year 40 as contestation increases),
+ *   suppression rising as the framework hardens enforcement expectations
+ *   (0.55→0.71 observed), and theater rising modestly (0.38→0.48) as
+ *   performative sovereignty demonstrations increase alongside effective
+ *   occupation.
  *
  * KEY AGENTS:
- *   - states_with_construction_capacity: Benefit from the hybrid reading by being able to construct artificial features and claim gradual expansion of zones as effective control solidifies. Set the standard of what constitutes 'prolonged control' through their practice. Institutional power, arbitrage exit options.
- *   - regional_power_projectors: Benefit from the doctrine by projecting geopolitical influence through island construction. Powerful, mobile exit, regional scope.
- *   - militarily_weaker_claimants: Pay by facing one-way ratchet: stronger neighbors build and expand claims; weaker states must either acquiesce or mount expensive military contestation with no legal support. Moderate power, constrained exit.
- *   - developing_nations_without_capital: Trapped by the constraint because they lack the engineering and military resources to build features or mount sustained counter-presence. Powerless, no arbitrage exit, forced to accept expanded claims by stronger neighbors.
- *   - international_maritime_law_community: Analytical seat—interprets whether specific constructed features meet the 'effective control' threshold and adjudicates disputes. Their readings constitute the legitimacy standard.
- *   - strict_geographic_reading_advocates: Excluded from agenda-setting because the hybrid reading has been operationalized by powerful states. They argue artificial construction should confer zero rights, but their position is sidelined by practice.
+ *   - States with Construction Capacity (institutional, global reach, arbitrage-level mobility): China, Japan, Vietnam, Philippines, Indonesia. Benefit from graduated framework because engineering capacity converts to sovereignty claims.
+ *   - Regional Power Projectors (powerful, generational horizon, regional scope): militarily superior states that occupy and hold artificial features to accumulate occupational facts. Benefit from the ripening mechanism.
+ *   - Militarily Weaker Claimants (moderate power, biographical horizon, constrained exit): Vietnam, Philippines, smaller Southeast Asian states. Bear costs because stronger neighbors can build unopposed and accumulate claims.
+ *   - Distant Maritime Actors (organized, biographical horizon, global scope): commercial shipping, distant fishing nations, passage-dependent economies. Pay diffusely through restricted access and compressed commons.
+ *   - UNCLOS Authority (institutional, generational, universal scope): International Court of Justice, treaty bodies, dispute settlement panels. Enforce the hybrid reading by recognizing claims that fit it.
+ *   - Military Rivals (powerful, generational, regional scope): States that could challenge construction but face political/military costs for doing so; excluded from the conversation by the absence-of-challenge mechanism.
  */
 
 /* ==========================================================================
@@ -117,48 +127,102 @@ narrative_ontology:constraint_metric(unclos_maritime_sovereignty__hybrid_effecti
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(unclos_maritime_sovereignty__hybrid_effective_control_reading, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(unclos_maritime_sovereignty__hybrid_effective_control_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(unclos_maritime_sovereignty__hybrid_effective_control_reading, resistance, 0.74).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(unclos_maritime_sovereignty__hybrid_effective_control_reading, tangled_rope).
-narrative_ontology:human_readable(unclos_maritime_sovereignty__hybrid_effective_control_reading, "UNCLOS Maritime Sovereignty via Hybrid Effective Control (Natural/Artificial Feature Graduated Rights)").
-narrative_ontology:topic_domain(unclos_maritime_sovereignty__hybrid_effective_control_reading, "international_law/maritime_governance/geopolitical_strategy").
+narrative_ontology:human_readable(unclos_maritime_sovereignty__hybrid_effective_control_reading, "UNCLOS Maritime Sovereignty: Hybrid Effective Control Reading").
+narrative_ontology:topic_domain(unclos_maritime_sovereignty__hybrid_effective_control_reading, "international_law/maritime_governance/geopolitics").
 
 domain_priors:requires_active_enforcement(unclos_maritime_sovereignty__hybrid_effective_control_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(unclos_maritime_sovereignty__hybrid_effective_control_reading, '24454809-757f-4d8b-b6d7-ba6049fa8ed4').
-narrative_ontology:cs_kernel_codification('24454809-757f-4d8b-b6d7-ba6049fa8ed4', fixed_text).
-narrative_ontology:cs_authority_grounding('24454809-757f-4d8b-b6d7-ba6049fa8ed4', extraction).
-narrative_ontology:cs_interpretation_layer_present('24454809-757f-4d8b-b6d7-ba6049fa8ed4').
-narrative_ontology:cs_reading_relation('24454809-757f-4d8b-b6d7-ba6049fa8ed4', unclos_maritime_sovereignty__strict_geographic_reading, coexists_with).
-narrative_ontology:cs_reading_relation('24454809-757f-4d8b-b6d7-ba6049fa8ed4', unclos_maritime_sovereignty__expansive_construction_reading, coexists_with).
-narrative_ontology:cs_axiom('24454809-757f-4d8b-b6d7-ba6049fa8ed4', foundational, graduated_sovereignty_based_on_feature_type_and_control_duration).
-narrative_ontology:cs_axiom_status(graduated_sovereignty_based_on_feature_type_and_control_duration, holdable).
-narrative_ontology:cs_axiom_grounding('24454809-757f-4d8b-b6d7-ba6049fa8ed4', graduated_sovereignty_based_on_feature_type_and_control_duration, instrumental).
-narrative_ontology:cs_axiom('24454809-757f-4d8b-b6d7-ba6049fa8ed4', foundational, effective_control_as_sovereignty_maturation_pathway).
-narrative_ontology:cs_axiom_status(effective_control_as_sovereignty_maturation_pathway, holdable).
-narrative_ontology:cs_axiom_grounding('24454809-757f-4d8b-b6d7-ba6049fa8ed4', effective_control_as_sovereignty_maturation_pathway, deontological).
-narrative_ontology:cs_reference_frame('24454809-757f-4d8b-b6d7-ba6049fa8ed4', natural_features_full_rights_artificial_features_contested).
-narrative_ontology:cs_drift_state('24454809-757f-4d8b-b6d7-ba6049fa8ed4', contemporary_acceleration_of_construction_and_claims, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('24454809-757f-4d8b-b6d7-ba6049fa8ed4', '').
+narrative_ontology:cs_story_uid(unclos_maritime_sovereignty__hybrid_effective_control_reading, '1b7106fc-6c54-448f-99c9-26fcdda74f5e').
+narrative_ontology:cs_kernel_codification('1b7106fc-6c54-448f-99c9-26fcdda74f5e', fixed_text).
+narrative_ontology:cs_authority_grounding('1b7106fc-6c54-448f-99c9-26fcdda74f5e', extraction).
+narrative_ontology:cs_interpretation_layer_present('1b7106fc-6c54-448f-99c9-26fcdda74f5e').
+narrative_ontology:cs_reading_relation('1b7106fc-6c54-448f-99c9-26fcdda74f5e', unclos_maritime_sovereignty__strict_geographic_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1b7106fc-6c54-448f-99c9-26fcdda74f5e', unclos_maritime_sovereignty__expansive_construction_reading, influences).
+narrative_ontology:cs_axiom('1b7106fc-6c54-448f-99c9-26fcdda74f5e', foundational, artificial_features_dual_status).
+narrative_ontology:cs_axiom_status(artificial_features_dual_status, holdable).
+narrative_ontology:cs_axiom_grounding('1b7106fc-6c54-448f-99c9-26fcdda74f5e', artificial_features_dual_status, empirically_contingent).
+narrative_ontology:cs_axiom('1b7106fc-6c54-448f-99c9-26fcdda74f5e', foundational, effective_control_ripening_mechanism).
+narrative_ontology:cs_axiom_status(effective_control_ripening_mechanism, holdable).
+narrative_ontology:cs_axiom_grounding('1b7106fc-6c54-448f-99c9-26fcdda74f5e', effective_control_ripening_mechanism, conventional).
+narrative_ontology:cs_reference_frame('1b7106fc-6c54-448f-99c9-26fcdda74f5e', graduated_maritime_sovereignty_by_feature_type).
+narrative_ontology:cs_drift_state('1b7106fc-6c54-448f-99c9-26fcdda74f5e', contemporary_artificial_island_accumulation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('1b7106fc-6c54-448f-99c9-26fcdda74f5e', '').
 narrative_ontology:cs_kernel_id(unclos_maritime_sovereignty__hybrid_effective_control_reading, unclos_maritime_sovereignty).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(unclos_maritime_sovereignty__hybrid_effective_control_reading, states_with_construction_capacity).
 narrative_ontology:constraint_beneficiary(unclos_maritime_sovereignty__hybrid_effective_control_reading, regional_power_projectors).
 narrative_ontology:constraint_victim(unclos_maritime_sovereignty__hybrid_effective_control_reading, militarily_weaker_claimants).
-narrative_ontology:constraint_victim(unclos_maritime_sovereignty__hybrid_effective_control_reading, developing_nations_without_capital).
+narrative_ontology:constraint_victim(unclos_maritime_sovereignty__hybrid_effective_control_reading, distant_maritime_actors).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% China, Japan, Vietnam, Indonesia, and other states with engineering and financial capacity to construct artificial features on submerged or low-tide elevations. They benefit because the hybrid reading permits their construction to generate immediate 500m safety zones and potentially full territorial claims if occupied unopposed for 15-25 years. They can choose where to build (arbitrage: they can build in favorable locations or refrain from building in unfavorable ones). They set the agenda by deciding when and where to initiate construction projects. The constraint amplifies their existing regional power by converting it into legal territory.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, states_with_construction_capacity, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Militarily superior states that can hold artificial features against potential challenges. They project power by occupying contested waters, establishing administrative presence, and accumulating the occupational facts that trigger the maturation mechanism. They enforce the constraint by maintaining military garrisons, conducting administrative activities in disputed zones, and resisting diplomatic or military challenges to their occupation. Their mobile exit reflects that they can redirect construction investment elsewhere if one location becomes too contested.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, regional_power_projectors, agenda_setter,
+    powerful, generational, mobile, regional).
+
+% Vietnam, Philippines, smaller ASEAN states with legitimate geographic features but insufficient military or construction capacity to compete. They bear costs because stronger neighbors can build artificial features and occupy them unopposed, accumulating claims under the hybrid reading's graduated framework. They cannot exit the constraint because they are geographically tied to the region (constrained exit). Challenging construction requires military intervention (expensive, risky, diplomatically costly). They lose maritime territory to occupation-based claims they cannot prevent.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, militarily_weaker_claimants, payer,
+    moderate, biographical, constrained, regional).
+
+% Commercial shipping companies, fishing nations, maritime trading partners with no regional presence. They bear diffuse costs through restricted passage (500m safety zones enforce navigation restrictions), compressed fishing zones, and increased transit costs. Their exit is geographically constrained (they cannot avoid the South China Sea or other contested waters without major rerouting). The constraint narrows open ocean commons into exclusive zones controlled by regional powers.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, distant_maritime_actors, payer,
+    organized, biographical, constrained, global).
+
+% International Court of Justice, treaty bodies, dispute resolution panels, and the epistemic community of international law scholars and practitioners. They interpret and enforce the hybrid reading by recognizing state claims that fit it, issuing advisory opinions, and applying the graduated framework in disputes. They maintain the constraint by documenting state practice, issuing clarifications about what constitutes 'effective control,' and reinforcing the natural/artificial distinction. They hold analytical exit (they can revise the interpretation if it becomes unjust or unworkable).
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, unclos_authority_structures, agenda_setter,
+    institutional, generational, analytical, universal).
+
+% States that could militarily challenge artificial construction and occupation but face political costs (reputational damage, escalation risk, international opposition) or diplomatic isolation that prevents them from mounting timely challenges. They are excluded from the conversation because the hybrid reading's mechanism depends on their silence or ineffective objections. The longer they remain silent, the faster occupation ripens into legal claims. They are trapped: challenging is costly, but not challenging is also costly (loss of maritime territory). Their exclusion is what permits the maturation mechanism to function.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, militarily_superior_neighbors, excluded,
+    powerful, generational, trapped, regional).
+
+% Environmental organizations, maritime rights monitors, human rights observers, and international media. They document occupational facts, track claim accumulation, monitor military activities in disputed zones, and report on consistency of state practice with the hybrid reading. They have analytical exit (they can change what they observe, question the framework's legitimacy). Their role is observational, not enforcing; they shape the legitimacy discourse without setting the formal agenda.
+narrative_ontology:constraint_stakeholder(unclos_maritime_sovereignty__hybrid_effective_control_reading, ngos_and_international_observers, observer,
+    moderate, biographical, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(unclos_maritime_sovereignty__hybrid_effective_control_reading, states_with_construction_capacity).
+narrative_ontology:fixing_cost_class(unclos_maritime_sovereignty__hybrid_effective_control_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a graduated maritime sovereignty framework that permits natural geographic features to automatically generate full exclusive economic zones (EEZ) and territorial seas under UNCLOS, while allowing artificial features to generate limited 500m safety zones and conditional territorial claims based on duration of effective occupation without timely challenge. This replaces chaos with rule-based governance where maritime boundaries are determined by recognizable criteria (natural/artificial distinction, occupational duration, absence of challenge) rather than raw military power deployed on a case-by-case basis.
+% TRANSFER_FUNCTION: Transfers maritime control rights from geographically entitled weaker claimants who cannot occupy contested features to construction-capable states who can build artificial features and occupy them militarily. Also transfers diffuse maritime commons access from distant maritime actors into exclusive zones controlled by regional powers. The transfer mechanism is the occupational-ripening provision: if a state builds an artificial feature and maintains effective occupation for 15-25 years without timely military or legal challenge, it gains full territorial claims. This converts engineering capacity, military superiority, and absence of challenge into legal sovereignty.
+% ABSENT_VOICES: Militarily weaker claimants who cannot mount timely challenges are excluded by the constraint's own mechanism—their silence is required for occupation to ripen. Distant maritime actors relying on open commons access are excluded from the treaty-negotiation table; their interests in passage and fishing access are not represented. States that could challenge occupation militarily but face diplomatic isolation are excluded by political costs that prevent them from voicing objection. The hybrid reading itself privileges the voices of construction-capable, militarily superior states over those unable to build or defend.
+% DISAPPEARANCE_RATIONALE: If the hybrid effective control reading disappeared and maritime sovereignty reverted to strict geographic principles (only natural features generate full EEZ, artificial islands are permanently limited to 500m zones), the geopolitical map would reorganize: artificial islands constructed in contested waters would lose their path to territorial sovereignty, existing occupational claims would be voided, military garrisons on artificial features would lose legal justification, and regional power competition would shift toward natural-feature occupation and alliance-formation instead of construction-driven territorial accumulation. Maritime commons would partially reopen as exclusive zones lose legal grounding.
+% FOUNDING_PROBLEM: UNCLOS III negotiations and post-treaty practice encountered the problem of submerged and low-tide geographic features (rocks, reefs, shoals, low-tide elevations) in disputed maritime regions. The treaty's language (Articles 60, 121-133) did not explicitly address whether artificial construction on such features could generate territorial claims, and no consensus existed on how to treat artificially created land. The founding problem was establishing stable maritime boundaries while accounting for technological innovation in feature utilization and maintaining the distinction between naturally entitled features and human-made constructions.
+% FOUNDING_PROBLEM_CORROBORATION: International legal scholars and treaty bodies (including International Court of Justice opinions and UNCLOS commission documents) acknowledge that the problem of artificial features and occupation-based maturation remains live and disputed. China invokes the hybrid reading to justify its artificial island construction and territorial claims; Philippines, Vietnam, and other claimants invoke the strict geographic reading to deny legitimacy to those claims. The United States and distant maritime nations invoke principles of open passage and strict geographic limitation. No authoritative outside source confirms which reading reflects the treaty's true intent; instead, multiple interpretations coexist in state practice, indicating the founding problem is not resolved.
+narrative_ontology:disappearance_verdict(unclos_maritime_sovereignty__hybrid_effective_control_reading, world_rearranges).
+narrative_ontology:founding_problem_status(unclos_maritime_sovereignty__hybrid_effective_control_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(unclos_maritime_sovereignty__hybrid_effective_control_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(unclos_maritime_sovereignty__hybrid_effective_control_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(unclos_maritime_sovereignty__hybrid_effective_control_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(unclos_maritime_sovereignty__hybrid_effective_control_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +242,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness score (0.62, rising to 0.62 by interval end) reflects intermediate but substantial extraction. The constraint does solve a real coordination problem (how to handle artificial islands without either permitting unlimited claims or denying them all relevance), so it is not pure extraction; but it systematically advantages states with capital and military power over weaker claimants. Suppression is high (0.71) because the constraint's persistence depends on actively excluding alternative readings (the strict interpretation) and on the practical enforcement of claim boundaries through military presence and administrative occupation—weaker states are suppressed from mounting effective counter-claims not just by economic costs but by the asymmetry in what constitutes 'effective control' (your garrison counts; their protest does not). Theater is moderate (0.48), rising slightly to 0.48 by the end of the interval: the coordination function is real, but as construction accelerates, the performative element of claiming 'prolonged control' grows—states construct, occupy briefly or establish symbolic presence, and claim maturation has occurred, regardless of actual control duration. The measurement series run on one shared time grid: base_extractiveness and theater both show gradual rise over the 40-year interval as more states engage in construction and the doctrine becomes embedded in practice; suppression_requirement also rises as more constructed features create more contested zones requiring active defense. Accessibility_collapse (how completely alternatives close off) is moderate (0.58 at t0, rising to 0.68 at tn) because alternative interpretations still exist (strict geographic reading, expansive construction reading) but the hybrid reading's operational embedding makes those alternatives increasingly costly to assert. Resistance is high (0.72) because weaker claimants actively resist the reading (mounting diplomatic protests, legal challenges, counter-construction projects) but their resistance is structurally suppressed by the power asymmetry.
+ *   Extractiveness (0.62 final): The hybrid reading extracts because it permits occupation duration to substitute for geographic entitlement. A naturally formed island generates full EEZ instantly; an artificial island generates a 500m zone instantly but full sovereignty if held unopposed for 15-25 years. This converts construction investment and military capacity into legal sovereignty gain—a transfer from those who cannot build or defend to those who can. The measurement trajectory (0.48→0.62 observed over first 20 years, continuing to project 0.67 at year 35) reflects increasing accumulation of occupied artificial features approaching maturation thresholds; the decline to 0.62 at year 40 reflects increasing contestation and legal challenges that raise uncertainty about whether occupation will continue to ripen. Suppression (0.71 final): The framework requires active enforcement of the occupation-ripening mechanism. Weaker claimants must be deterred from challenging construction (military suppression). Distant maritime actors must accept restricted passage through claimed zones (institutional suppression). The rising trajectory (0.55→0.71 over 20 years observed, plateauing at 0.76 at year 30 projected) reflects hardening enforcement as states build administrative infrastructure, deploy military presence, and assert control within claimed zones. Theater (0.48 final): The occupational activity is substantially functional (establishing administrative presence, building infrastructure, maintaining military garrison), but a growing fraction is performative: sovereignty demonstrations, flag-planting ceremonies, symbolic occupation displays meant to create documentary evidence of effective control. The slow rise (0.38→0.48 observed, reaching 0.52 at year 35 projected) reflects the increasing documentary burden: as the ripening threshold approaches, states intensify performative activity to build the legal record of uninterrupted occupation.
  *
  * PERSPECTIVAL GAP:
- *   The beneficiary seats (states_with_construction_capacity, regional_power_projectors) experience this constraint as liberating—it permits them to expand maritime jurisdiction through legitimate engineering and control demonstration, which they frame as winning claims through capability and persistence rather than coercion. The victim seats (militarily_weaker_claimants, developing_nations_without_capital) experience it as extractive—they watch stronger neighbors expand unchallenged and have no legal or practical recourse. The agenda-setter seat (the same as the primary beneficiary: states_with_construction_capacity) sets the standard of what constitutes effective control by their own practice, creating a tautology: if I occupy and build, I demonstrate effective control; if you protest, you lack effective control. The law-community observer seat (international_maritime_law_community) sees a defensible doctrinal compromise between extreme positions but is pressured by the operational embedding—the more the hybrid reading is used to expand claims, the more courts face choices between law-as-written and law-as-practiced. The engine should compute different classification outcomes for each seat: beneficiaries near the beneficiary end of directionality (d ~0.1–0.2, receiving subsidy or coordination benefit), victims near the target end (d ~0.8–0.9, bearing asymmetric extraction cost), observers analytical. The claim (tangled_rope) is correct for the seats that benefit from the coordination function; the metrics (high suppression, moderate-high extraction) are correct for the seats that bear the costs. This divergence is diagnostic—it shows that the constraint distributes coordination benefits asymmetrically and masks extraction under coordination language.
+ *   From the construction-capable state's seat, the hybrid reading is coordination: it permits governance of a previously lawless commons by establishing rule-based criteria (graduated thresholds) rather than naked power competition. From the weaker claimant's seat, the same framework is extraction: it converts engineering capacity and military dominance into sovereignty, leaving geographical entitlement disadvantaged. From the distant maritime actor's seat, the framework is suppression: it compresses open ocean into exclusive zones. The engine computes these divergent classifications from directionality—construction-capable states get low d (beneficiaries), weaker claimants get high d (targets), distant actors sit near symmetric depending on their actual exit options (some can arbitrage routes, some are trapped in the compressed space). The authored claim (Tangled Rope) acknowledges that the same structure serves both coordination and extraction; the metrics quantify how extraction-heavy the actual operation has become.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary directionality: States with construction capacity and regional power are the beneficiaries—they collect expanded maritime zones and geopolitical influence. Their directionality is low (d ~ 0.15–0.25) because they benefit directly and their exit options are mobile (if the hybrid reading were overturned, they would compete under a different regime but remain powerful). Victim directionality: Weaker claimants and developing nations are the victims—they pay by losing maritime zones and resource rights to stronger neighbors. Their directionality is high (d ~ 0.75–0.85) because they bear costs they cannot escape (trapped or identity_locked exit: maritime sovereignty is part of state identity and cannot be abandoned). The power asymmetry (institutional vs. powerless/moderate) amplifies this: weaker states are more vulnerable to extraction because they have no alternative. The duration mechanism ('prolonged control') adds to victim directionality—the longer the constraint operates undisputed, the more the victim's options narrow (they can no longer contest a 20-year-established claim without appearing aggressive and destabilizing). Observer directionality is analytical (d ~ 0.5 by default, no significant extraction or benefit from the constraint's operation).
+ *   Construction-capable states (d near 0.0, beneficiary): They set the agenda (decide when to build, where to occupy, how to document possession). They benefit directly (gain sovereignty claims). They hold arbitrage exit (can choose where to build, can apply the framework selectively). Beneficiary directionality is low d. Militarily weaker claimants (d near 1.0, target): They bear costs (lose maritime space to stronger neighbors' artificial occupation). Their exit is constrained (they can challenge only at military cost; they cannot arbitrage to another ocean). They derive no coordinate benefit (their own geographical features receive no boost from the graduated framework; natural features generate full EEZ regardless, so the reading does not benefit them). Target directionality is high d. Distant maritime actors (d near 0.5, symmetric): They benefit from the framework's coordination aspect (stable rules instead of chaos), but they bear diffuse costs (restricted passage, fishing zone compression). Their exit is constrained (they cannot avoid the zones), but it is also geographically mobile (they can reroute around claimed waters). Symmetric directionality is near 0.5. UNCLOS authority (d=0.5 analytical): They are neutral interpreters; they do not collect from the constraint or bear its costs. The engine will mark them as analytical-power observatory.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy detection hinges on the (founding_problem_status x disappearance_verdict) mismatch. The founding problem (how to integrate artificial island construction into maritime law) is contested—some argue it is still live (new construction projects continue, new claims arise) and others argue the problem was solved by the hybrid reading (it provides a stable rule set, even if imperfectly enforced). Disappearance verdict is world_rearranges—if the hybrid reading vanished, maritime claims, military positions, and geopolitical alignments would shift dramatically. The mismatch (contested status + rearrangement verdict) suggests the mandate is challenged but not obsolete. However, the theater_ratio rising to 0.48 and the measurement series showing construction and claim acceleration hint at mandate drift: is the constraint still solving the original problem (integrating artificial features into a coherent law-of-the-sea framework) or is it now serving as a justification for unilateral claim expansion by those with engineering capacity? A deeper reading: the founding problem was 'how to handle artificial construction without either permitting unlimited claims or denying them relevance.' The hybrid reading solved this by introducing 'duration and effective control' as a maturation criterion. But as construction technology democratizes and states accelerate building (in real-world data, island construction in the South China Sea accelerated 2013–2018), the maturation threshold is under pressure—is five years enough? ten years? The constraint's coordination function (providing a rule set) persists, but its fairness/legitimacy function (ensuring that the rule set does not just permit the strongest to expand unchecked) is degrading. This is not obsolete mandate but eroding mandate: the constraint still solves its original problem but is increasingly perceived as solving it unfairly. Reclassification would not be justified until the coordination function fails entirely (e.g., the hybrid reading is rejected by a major arbitration tribunal), but the theater and resistance measurements should trigger mandatrophy_analysis as a flag that the constraint is drifting from fair coordination toward power-laundering.
+ *   The founding problem (how to govern underwater features and permit technological innovation in feature utilization) is LIVE for the benefiting parties (construction-capable states) because occupation-ripening rewards them for investing in artificial features. It is DEAD for weaker claimants: they see the mechanism as a framework that locks in inequality (strong neighbors can build and claim territory; weak claimants cannot). The hybrid reading's mandate was to establish a stable rule-based maritime order; this mandate is increasingly challenged by the gap between the reading's assumption (occupation will be clearly effective and unchallenged) and reality (many occupations are disputed, occupation duration becomes a subject of diplomatic and legal contest, and the duration threshold is unclear). The constraint has not yet become a piton (it is still functionally enforced, not theatrically maintained), but the rising theater_ratio (0.38→0.48) and the contestation evident in the measurement decline at year 40 indicate mandatrophy pressure: the founding problem (stable governance) has been partially superseded by a new problem (determining what counts as 'effective control' and 'absence of challenge'). Tangled Rope classification holds because the coordination and extraction components remain coupled; if they separate (occupation-ripening is severed as a mechanism), the constraint reverts to pure rope (graduated zones) or splits into separate constraints.
  */
 
 /* ==========================================================================
@@ -195,54 +259,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    reading_vs_sibling_foreclosure,
-    'Does the hybrid effective-control reading logically foreclose the strict geographic reading, or can both coexist as live positions?',
-    'Examination of the kernel text (UNCLOS Articles 60, 121, 135) to determine whether they contain explicit language supporting or prohibiting artificial feature rights. If the text is silent on artificial construction maturation, both readings coexist; if the text explicitly prohibits artificial islands from generating territorial sea, the hybrid reading forecloses the geographic reading within that framework.',
-    'If the strict reading is foreclosed, the hybrid reading is the only coherent interpretation and courts must accept it. If both coexist, the hybrid reading is a negotiated compromise—more vulnerable to revision as political power shifts.',
+    effective_control_definition_ambiguity,
+    'What constitutes ''effective control'' sufficient for occupation-ripening into territorial claims? Is administrative presence, military garrison, civilian settlement, or flag-planting sufficient, or is some combination required? Does the definition depend on the feature type, regional geography, or the sophistication of the occupying state''s infrastructure?',
+    'International Court of Justice guidance in specific maritime disputes (e.g., Philippines v. China recamation claims) that adjudicate whether particular occupations meet the ''effective control'' threshold. State practice documentation and legal scholarship consensus on operational criteria.',
+    'If effective control is defined narrowly (requires civilian settlement, economic activity, continuous presence), fewer artificial features will ripen into claims, extraction decreases, and weaker claimants retain more competitive space. If defined broadly (flag-planting and administrative presence suffice), more features ripen faster, extraction increases, and the mechanism accelerates benefit to construction-capable states.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_vs_sibling_foreclosure, conceptual, 'Whether this reading''s core premise logically rules out the strict geographic alternative.').
+narrative_ontology:omega_variable(effective_control_definition_ambiguity, empirical, 'The operational definition of ''effective control'' determines the maturation rate of artificial occupation into territorial claims.').
 
 omega_variable(
-    duration_threshold_indeterminacy,
-    'What constitutes ''prolonged effective control'' sufficient to mature an artificial feature from safety-zone to territorial claim? Is it years, decades, generations, or is the threshold deliberately left vague?',
-    'Review arbitration awards (South China Sea Arbitration, ICJ cases), state practice data on construction dates vs. claim recognition, and international law commission reports. If state behavior shows a consistent threshold (e.g., 10+ years of occupation + administrative presence + no successful challenge = maturation), the threshold is empirically determinable. If no such pattern emerges, the vagueness is structural.',
-    'If the threshold is determinable, weaker claimants could calculate the cost-benefit of mounting a challenge within the maturation window. If vague, the constraint operates as pure power assertion—the state with stronger military presence can claim maturation has occurred whenever it serves political interest, and weaker states cannot contest the timeline.',
+    timely_challenge_threshold,
+    'How long is ''prolonged effective control absent challenge'' required for maturation? Is it 15 years, 20 years, indefinite? Does the challenge need to be diplomatic objection, legal filing, or military intervention? If one regional state objects but others remain silent, is the challenge ''timely'' enough to reset the counter?',
+    'Dispute settlement decisions, treaty interpretation guidance, and state practice documentation showing how long occupations have persisted without legal challenge and what forms of objection reset the clock.',
+    'A shorter threshold (10 years) accelerates extraction and ripening; a longer threshold (30+ years) keeps occupation in legal limbo and extends the high-extraction period. Ambiguity about what counts as timely challenge incentivizes weak claimants to object even when they cannot militarily enforce the objection (escalating theater and performative sovereignty demonstrations), increasing suppression_requirement and theater_ratio.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(duration_threshold_indeterminacy, empirical, 'Whether ''prolonged control'' has a stable, verifiable definition or remains strategically ambiguous.').
+narrative_ontology:omega_variable(timely_challenge_threshold, empirical, 'The duration threshold and challenge criteria for occupation-ripening determine how fast extraction converts into legally secured sovereignty.').
 
 omega_variable(
-    effective_control_suppression_mechanism,
-    'Is the suppression in this constraint primarily structural (military capability asymmetry makes mounting sustained counter-presence prohibitively expensive for weaker states) or internalized (weaker states accept the dominance narrative and believe they have no legitimate standing to challenge)?',
-    'Analysis of diplomatic protests, legal challenges, and counter-construction attempts by weaker claimants. High frequency of explicit legal/diplomatic resistance with minimal counter-presence = structural suppression. Low frequency of protest combined with internal narratives of acceptance = internalized suppression. Mixed pattern = both mechanisms operative.',
-    'If structural, the constraint could be undermined by external intervention (e.g., great-power enforcement of counter-claims). If internalized, weaker states would carry the suppression even if structural barriers were removed—they would need delegitimization of the dominance narrative before challenging.',
+    reading_foreclosure_vs_coexistence,
+    'Are the hybrid reading and the strict geographic reading logically foreclosing (no single legal framework could hold both), or do they coexist as alternative interpretations invoked by different state parties?',
+    'Test case: a state invokes strict geographic reading for a neighbor''s artificial island, then invokes hybrid reading for its own. If international bodies flag this as incoherent and force the state to choose, foreclosure is evidenced. If states maintain dual positions without legal censure, coexistence is evidenced.',
+    'If readings foreclose, one will eventually dominate and the other will be classified as overridden. If they coexist, the ambiguity itself becomes a feature of the constraint—different states remain in different interpretive communities, which increases theater (performative legal arguments) and suppression (each state enforces its own reading against others). Coexistence favors construction-capable states (they can invoke the hybrid reading opportunistically and escape strict geographic limits).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(effective_control_suppression_mechanism, empirical, 'Whether suppression of weaker claimants operates through external barriers or internalized acceptance.').
+narrative_ontology:omega_variable(reading_foreclosure_vs_coexistence, conceptual, 'Whether the hybrid effective control reading forecloses or coexists with the strict geographic reading determines if maritime law is converging or stratified.').
 
 omega_variable(
-    hybrid_reading_mandate_obsolescence,
-    'As engineering technology advances and artificial island construction becomes cheaper and faster, does the hybrid reading''s original coordination function (reconciling natural and artificial features under a coherent framework) persist, or does it become a rationalization for unilateral claim expansion by any state with capital?',
-    'Comparison of construction project frequency, state claims, and dispute escalation over successive decades. If construction accelerates but dispute frequency does not, the constraint is shifting toward pure extraction. If dispute frequency accelerates in tandem, the coordination function is being actively contested and the mandate is still contested.',
-    'If mandate obsolescence occurs, the constraint should reclassify from tangled_rope (coordination + extraction) toward snare (pure extraction with coordination cover story).',
+    suppression_mechanism_structural_vs_internalized,
+    'Is suppression of weaker claimants'' challenges structural (military inability to enforce objections, geographic isolation, political isolation preventing alliance formation) or internalized (weaker states have accepted the hybrid reading as legitimate law and do not mount challenges because they believe it is correct)?',
+    'Post-acceptance context: if a weaker claimant''s capacity changed suddenly (military acquisition, alliance formation, new leadership), would they challenge occupation that was previously accepted? If they would, suppression was structural; if they would not, it has become internalized. Evidence from statements by weak claimants'' leaders about whether they view the hybrid reading as unjust or as legitimate law.',
+    'If structural, the constraint depends on military imbalance and can be destabilized by power shifts. If internalized, the constraint is resilient to power shifts but reflects deeper hegemonization. The measurement series (rising suppression 0.55→0.71, plateauing theater 0.48) is consistent with internalization: states perform acceptance through silence and legal documents rather than mounting active resistance.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether measured suppression reflects structural barriers (military disadvantage) or internalized acceptance (reading legitimacy) determines the constraint''s long-term stability.').
+
+omega_variable(
+    kernel_reading_reading_natural_vs_constructed,
+    'Is the hybrid effective control reading a natural law reading of UNCLOS (it describes what the treaty genuinely requires) or a constructed reading (it reflects one faction''s interpretation that benefits them and has become canonical through power, not through textual fidelity)?',
+    'Textual analysis: does the UNCLOS treaty explicitly endorse the natural/artificial distinction and the maturation mechanism, or are these interpretations added by the reading community? Historical analysis: did the treaty drafters intend this reading, or did it emerge post-hoc through state practice? Alternative reading analysis: do the strict geographic and expansive construction readings have equal textual support?',
+    'If natural law, the hybrid reading is a mountain—extractiveness is coincidental, not structural. If constructed, the reading is a deliberate framework that benefiting parties have institutionalized, and extractiveness is the mechanism''s purpose. This feeds the broader FSM (false summit mountain) question: is graduated sovereignty a natural principle or a beneficiary-constructed reading?',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(hybrid_reading_mandate_obsolescence, empirical, 'Whether the hybrid reading''s coordination function survives as engineering capabilities democratize.').
-
-omega_variable(
-    kernel_sibling_reading_definitions,
-    'This story is one reading of the contested kernel unclos_maritime_sovereignty. Which sibling readings coexist, which does this reading foreclose, and where is the disagreement located structurally?',
-    'Compare the three readings'' core premises: (a) strict_geographic_reading: natural features only; (b) hybrid_effective_control_reading (this reading): natural = full rights, artificial = maturation through control; (c) expansive_construction_reading: artificial = immediate full rights. The disagreement is located in the interpretation of UNCLOS Article 60 (artificial islands) and the customary international law doctrine of effective occupation.',
-    'The hybrid reading coexists with both siblings (all three are live positions in contemporary state practice) but influences them: it constrains the expansive reading by requiring ''maturation'' rather than immediacy, and it pressures the strict reading by acknowledging effective control as a maturation pathway. Neither is foreclosed by the hybrid reading''s internal logic.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_sibling_reading_definitions, conceptual, 'Relationship of this reading to the other two readings of the same kernel.').
+narrative_ontology:omega_variable(kernel_reading_reading_natural_vs_constructed, conceptual, 'Whether the hybrid reading reflects natural UNCLOS requirements or constructed interpretation determines if the constraint is a mountain or a tangled rope.').
 
 
 /* ==========================================================================
@@ -256,28 +320,64 @@ narrative_ontology:interval(unclos_maritime_sovereignty__hybrid_effective_contro
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(uncl_tr_t0, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 0, 0.35).
-narrative_ontology:measurement(uncl_tr_t5, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 5, 0.39).
-narrative_ontology:measurement(uncl_tr_t10, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 10, 0.42).
-narrative_ontology:measurement(uncl_tr_t20, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 20, 0.47).
-narrative_ontology:measurement(uncl_tr_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 30, 0.48).
+narrative_ontology:measurement(uncl_tr_t0, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 0, 0.38).
+narrative_ontology:measurement_basis(uncl_tr_t0, observed).
+narrative_ontology:measurement(uncl_tr_t5, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 5, 0.41).
+narrative_ontology:measurement_basis(uncl_tr_t5, observed).
+narrative_ontology:measurement(uncl_tr_t10, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 10, 0.44).
+narrative_ontology:measurement_basis(uncl_tr_t10, observed).
+narrative_ontology:measurement(uncl_tr_t15, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 15, 0.46).
+narrative_ontology:measurement_basis(uncl_tr_t15, observed).
+narrative_ontology:measurement(uncl_tr_t20, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 20, 0.48).
+narrative_ontology:measurement_basis(uncl_tr_t20, observed).
+narrative_ontology:measurement(uncl_tr_t25, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 25, 0.5).
+narrative_ontology:measurement_basis(uncl_tr_t25, projected).
+narrative_ontology:measurement(uncl_tr_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 30, 0.51).
+narrative_ontology:measurement_basis(uncl_tr_t30, projected).
+narrative_ontology:measurement(uncl_tr_t35, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 35, 0.52).
+narrative_ontology:measurement_basis(uncl_tr_t35, projected).
 narrative_ontology:measurement(uncl_tr_t40, unclos_maritime_sovereignty__hybrid_effective_control_reading, theater_ratio, 40, 0.48).
+narrative_ontology:measurement_basis(uncl_tr_t40, projected).
 
 % Extraction over time
 narrative_ontology:measurement(uncl_be_t0, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(uncl_be_t0, observed).
 narrative_ontology:measurement(uncl_be_t5, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement_basis(uncl_be_t5, observed).
 narrative_ontology:measurement(uncl_be_t10, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 10, 0.56).
+narrative_ontology:measurement_basis(uncl_be_t10, observed).
+narrative_ontology:measurement(uncl_be_t15, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 15, 0.58).
+narrative_ontology:measurement_basis(uncl_be_t15, observed).
 narrative_ontology:measurement(uncl_be_t20, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 20, 0.61).
-narrative_ontology:measurement(uncl_be_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 30, 0.62).
+narrative_ontology:measurement_basis(uncl_be_t20, observed).
+narrative_ontology:measurement(uncl_be_t25, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 25, 0.63).
+narrative_ontology:measurement_basis(uncl_be_t25, projected).
+narrative_ontology:measurement(uncl_be_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 30, 0.65).
+narrative_ontology:measurement_basis(uncl_be_t30, projected).
+narrative_ontology:measurement(uncl_be_t35, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 35, 0.67).
+narrative_ontology:measurement_basis(uncl_be_t35, projected).
 narrative_ontology:measurement(uncl_be_t40, unclos_maritime_sovereignty__hybrid_effective_control_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement_basis(uncl_be_t40, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(uncl_su_t0, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(uncl_su_t5, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 5, 0.63).
-narrative_ontology:measurement(uncl_su_t10, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 10, 0.66).
-narrative_ontology:measurement(uncl_su_t20, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 20, 0.7).
-narrative_ontology:measurement(uncl_su_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 30, 0.71).
+narrative_ontology:measurement(uncl_su_t0, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement_basis(uncl_su_t0, observed).
+narrative_ontology:measurement(uncl_su_t5, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 5, 0.6).
+narrative_ontology:measurement_basis(uncl_su_t5, observed).
+narrative_ontology:measurement(uncl_su_t10, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 10, 0.65).
+narrative_ontology:measurement_basis(uncl_su_t10, observed).
+narrative_ontology:measurement(uncl_su_t15, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 15, 0.69).
+narrative_ontology:measurement_basis(uncl_su_t15, observed).
+narrative_ontology:measurement(uncl_su_t20, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 20, 0.72).
+narrative_ontology:measurement_basis(uncl_su_t20, observed).
+narrative_ontology:measurement(uncl_su_t25, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 25, 0.74).
+narrative_ontology:measurement_basis(uncl_su_t25, projected).
+narrative_ontology:measurement(uncl_su_t30, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 30, 0.75).
+narrative_ontology:measurement_basis(uncl_su_t30, projected).
+narrative_ontology:measurement(uncl_su_t35, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 35, 0.76).
+narrative_ontology:measurement_basis(uncl_su_t35, projected).
 narrative_ontology:measurement(uncl_su_t40, unclos_maritime_sovereignty__hybrid_effective_control_reading, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement_basis(uncl_su_t40, projected).
 
 
 /* ==========================================================================
@@ -285,18 +385,20 @@ narrative_ontology:measurement(uncl_su_t40, unclos_maritime_sovereignty__hybrid_
    ========================================================================== */
 
 narrative_ontology:coordination_type(unclos_maritime_sovereignty__hybrid_effective_control_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(unclos_maritime_sovereignty__hybrid_effective_control_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(unclos_maritime_sovereignty__hybrid_effective_control_reading, 0.18).
 narrative_ontology:affects_constraint(unclos_maritime_sovereignty__hybrid_effective_control_reading, unclos_maritime_sovereignty__strict_geographic_reading).
 narrative_ontology:affects_constraint(unclos_maritime_sovereignty__hybrid_effective_control_reading, unclos_maritime_sovereignty__expansive_construction_reading).
+narrative_ontology:affects_constraint(unclos_maritime_sovereignty__hybrid_effective_control_reading, south_china_sea_artificial_islands).
+narrative_ontology:affects_constraint(unclos_maritime_sovereignty__hybrid_effective_control_reading, international_maritime_commons_access).
 
 % DUAL FORMULATION NOTE:
-% This story is the hybrid_effective_control_reading of the contested UNCLOS maritime sovereignty kernel. Two sibling constraint stories model the strict_geographic_reading and expansive_construction_reading. The three readings differ on the ε-invariance axis: they instantiate different structural claims about what features generate what maritime rights, and therefore have different beneficiary/victim structures. Decomposition is required (OQ-89 ε-invariance principle): measuring the same constraint-kernel under different readings produces different ε values because the structural claim being made (who benefits, who pays, how much extraction) differs. Each reading is a separate, ε-invariant constraint story. Sibling stories are linked via network.affects_constraints so contamination analysis can route influence through the kernel.
+% This constraint is part of the unclos_maritime_sovereignty kernel family. The hybrid effective control reading, strict geographic reading, and expansive construction reading are three distinct instantiations of the same treaty provisions. Each carries different ε (extractiveness), different beneficiary/victim structures, and different classifications. They share a common referent (what does UNCLOS require for artificial features to generate territorial claims?) but diverge in reading interpretation. The network links reflect that accepting one reading affects the logical space available for the others: if the hybrid reading gains dominance, strict geographic and expansive construction readings become minority or superseded positions.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(unclos_maritime_sovereignty__hybrid_effective_control_reading, organized, 0.68).
+constraint_indexing:directionality_override(unclos_maritime_sovereignty__hybrid_effective_control_reading, organized, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

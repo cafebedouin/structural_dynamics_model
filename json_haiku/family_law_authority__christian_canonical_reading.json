@@ -4,237 +4,353 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "46e10867-3354-40f7-9560-43e8a42e88a3"
+    "story_uid": "9009dc54-2e41-4773-a9ec-622eb4ef6dde"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.71,
+    "extractiveness": 0.68,
+    "suppression": 0.72,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.68,
+    "accessibility_collapse": 0.62,
     "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Christian Canonical Marriage Authority (Sacramental Permanence and Ecclesiastical Governance)",
-    "topic_domain": "religious/legal/social",
+    "human_readable": "Marriage as Sacrament Under Christian Ecclesiastical Authority",
+    "topic_domain": "religious_governance/family_law/political_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "ecclesiastical_institution"
+      "ecclesiastical_hierarchy",
+      "doctrine_of_sacramental_indissolubility"
     ],
     "victims": [
-      "spouses_seeking_dissolution",
-      "remarrying_divorced_persons"
+      "divorced_persons_seeking_remarriage",
+      "women_bound_to_abusive_spouses",
+      "interfaith_couples_denied_validity"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "ecclesiastical_hierarchy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Sets and enforces doctrine on marriage as sacrament, indissolubility, annulment conditions, and divorced-person remarriage eligibility. Controls the interpretive apparatus (canon law councils, papal teaching, episcopal authority) and exercises discipline through sacramental access and pastoral governance. Benefits from the authority this constraint grants and from the legitimacy of being the arbiter of a sacred institution."
+    },
+    {
+      "name": "married_couples_seeking_permanence",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receive the sacramental framing of marriage as a permanent covenant before God, validated by the church and the faith community. Experience genuine coordination benefit: the doctrine provides spiritual meaning, institutional blessing, community support, and a clear understanding of commitment as non-revisable. Their exit would require leaving the faith tradition entirely; most accept the permanence frame as aligned with their values."
+    },
+    {
+      "name": "divorced_persons_seeking_remarriage",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Cannot canonically remarry within the church without annulment, which is restricted to narrow grounds and processed through a secretive, costly machinery that often denies petitions. They are excluded from the Eucharist in many parishes, marked as living in sin or in 'irregular unions,' and face pastoral pressure or judgment. Civil divorce is available to them (in most jurisdictions), but accepting it means accepting the loss of sacramental status and community membership. Their Catholic identity is bound up with institutional belonging, making exit costly even when it is formally available."
+    },
+    {
+      "name": "women_bound_to_abusive_spouses",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face compounded extraction: marital abuse and canonical inability to divorce and remarry without annulment. Separation from an abusive spouse is permitted; remarriage is not. Many experience pastoral messaging that emphasizes reconciliation and perseverance in marriage, which can delay or prevent escape. They have little structural voice in doctrinal deliberation about whether sacramental permanence serves them or harms them. They are largely invisible in official teaching, though the constraint operates most severely on them."
+    },
+    {
+      "name": "interfaith_couples",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the constraint through marriage-validity contestation: a marriage between a Catholic and a non-Christian, or between a Catholic and a non-Catholic Christian, may be declared invalid by the church on technical grounds (form defects, dispensation violations, inadequate consent) even if it is civilly recognized and the couple considers it binding. The constraint's validity gates operate on their relationship status itself, not merely on divorce/remarriage. Their exit requires one partner converting to Catholicism, one accepting the marriage's non-recognition, or both leaving the faith. The constraint makes their marital status itself contestable."
+    },
+    {
+      "name": "theology_of_sacramental_indissolubility",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "A doctrinal proposition, not an agent: the claim that marriage, once sacramentally sealed by God before the church, is indissoluble by any human authority and remains binding even if the couple ceases to live together. This doctrine is vindicated and enforced by the ecclesiastical hierarchy. It collects no direct rents but legitimates the hierarchy's gatekeeping authority and provides the theological ground for denying remarriage to divorced persons."
+    },
+    {
+      "name": "pastoral_theologians_advocating_reform",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are present within the church structure but excluded from binding doctrine revision. They argue for pastoral accompaniment of divorced persons, broadened annulment grounds, or reconsideration of indissolubility itself based on Gospel emphasis on mercy and human dignity. Their voice is listened to in some forums (synods, theological conferences) but lacks authority to change official teaching. They remain institutionally constrained; they cannot exit without leaving the priesthood or religious life."
+    },
+    {
+      "name": "state_legal_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Recognizes civil divorce and remarriage in parallel with or against ecclesiastical doctrine, depending on jurisdiction and legal tradition. Provides civil marriage dissolution and remarriage eligibility independent of church approval. Observes the constraint's operation and in some cases comes into direct conflict with it (e.g., when state law recognizes a remarriage but the church treats it as invalid). The observer seat documents the constraint's extraction most clearly: divorced persons can exit ecclesiastical authority via civil law, but at the cost of losing sacramental status."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes marriage as a sacramental covenant binding before God and the church community, providing spiritual meaning, institutional blessing of sexual union, community support for permanent commitment, and doctrinal clarity about what constitutes valid marriage and what dissolves it. This solves the coordination problem of defining marriage's nature and the church's role in it, and ensures doctrinal and pastoral unity within the faith community on a single standard for marriage validity and indissolubility.",
+    "transfer_function": "Moves control over marriage definition, validity assessment, divorce eligibility, and remarriage permission from individual conscience and civil law to ecclesiastical authority. Divorced persons transfer their remarriage eligibility to the church's annulment machinery; women in abusive marriages transfer their exit options to the church's definition of grounds for separation; interfaith couples transfer their marriage status to the church's validity tests. The ecclesiastical hierarchy collects institutional authority, doctrinal legitimacy, pastoral power, and the ability to police sexual and family life through this gatekeeping.",
+    "absent_voices": "Divorced persons are partially present through pastoral structures but systemically excluded from doctrine revision—their lived experience of the constraint is not centered in magisterial deliberation. Women experiencing domestic abuse are largely absent, though the constraint's consequences for them are most severe. Interfaith couples' experience of validity contestation is not centered in ecclesiastical decision-making. Protestant reformers (present historically but now separated) are not in the conversation about what Christian marriage should be. Civil legal authorities and their assessments of marriage validity are not present in canonical deliberation. Secular philosophers and human-rights advocates are excluded by the constraint's self-enclosed authority frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If ecclesiastical authority over marriage validity and divorced-person remarriage disappeared overnight, the reorganization would be immediate: divorced Catholics would remarry without annulment petitions; interfaith couples would marry without validity contestation; women in abusive marriages would separate and remarry without canonical impossibility; the pastoral apparatus managing 'irregular unions' would collapse; the church community's doctrinal unity around sacramental indissolubility would fragment into denominational and individual variation (the Protestant Reformation scenario, repeated). State and civil law would become the default authority for marriage definition and dissolution. The spiritual meaning of marriage would devolve to individual belief and denominational practice rather than universal ecclesiastical doctrine.",
+    "founding_problem": "Early Christian theology, grounded in Gospel passages (Matthew 19:6, Mark 10:9) and apostolic tradition, asserted that marriage is an indissoluble covenant sealed by God—not a merely human contract—and that the church participates in and witnesses this sacramental sealing. The founding problem was to establish marriage as a sacred, spiritually significant commitment beyond economic or social contract, to anchor church teaching against easy divorce, and to maintain pastoral unity and doctrinal clarity on what constitutes valid marriage and what severs it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Catholic Church and traditional theological sources (Aquinas, Council of Trent, John Paul II, Francis's 2015 letters on marriage and annulment) attest the founding problem remains live: marriage is permanently sacramental and indissoluble, and the church must guard this doctrine. Protestant denominations from the Reformation onward (Lutheran, Reformed, Anglican, Pentecostal) attest the founding problem has been re-read: divorce is permissible when the marital covenant is broken (infidelity, abandonment, abuse), and the church's role is pastoral accompaniment and mercy, not indissolubility enforcement. Contemporary canon lawyers, divorced Catholics, women's advocacy organizations, and secular family law scholars outside the benefiting hierarchy attest the founding problem's original solution (indissolubility as spiritual protection and church authority) has become a mechanism of control, spiritual harm, and institutional gatekeeping. They argue the founding problem is no longer how to establish marriage as sacred (it is widely recognized as spiritually and socially significant), but how to honor marriage's sacred nature while also honoring human dignity and freedom when the covenant breaks."
+  },
   "interval": {
-    "start": 1965,
-    "end": 2024
+    "start": 1500,
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1965,
-      "value": 0.78
+      "time_point": 1500,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.72
+      "time_point": 1650,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
+      "time_point": 1800,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
       "value": 0.68
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.65
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.48
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.62
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.72
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1965,
+      "time_point": 1500,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.19
+      "time_point": 1650,
+      "value": 0.16
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
-      "value": 0.28
+      "time_point": 1800,
+      "value": 0.21
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.36
+      "time_point": 1950,
+      "value": 0.31
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 1990,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
       "value": 0.41
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sacramental_vs_disciplinary_reading",
+      "question": "Is the indissolubility doctrine primarily a sacramental-theological claim about the nature of marriage before God (marriage cannot be unmade because God seals it), or primarily a disciplinary-institutional mechanism for maintaining ecclesiastical control and doctrinal uniformity?",
+      "resolution_mechanism": "Textual-historical analysis of magisterial documents and canon law development: do the foundational texts (Scripture, Aquinas, Council of Trent, Vatican II) center on the spiritual reality of God's sealing, or on the church's institutional authority to police dissolution? Cross-reading with Protestant reformers' explicit critique (divorce reflects broken covenants, not God's unsealing).",
+      "impact": "If primarily sacramental, the constraint is grounded in a genuine theological claim (about divine action), and its extractiveness is partly the cost of maintaining the church's role as sacramental witness. If primarily disciplinary, the constraint is recognizable as institutional rent-seeking dressed in theological language. The distinction affects whether limiting or reforming the constraint requires doctrinal change (reframing what God does) or only institutional reform (opening the annulment process, including remarried Catholics in sacraments).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether indissolubility is metaphysical claim or institutional control mechanism."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 1965,
-      "value": 0.85
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the suppression of divorced-persons' remarriage primarily structural (external gatekeeping by annulment machinery, pastoral discipline, sacramental withholding, family/community pressure mediated by church authority) or primarily internalized (guilt, shame, internalized identity as 'failed,' doubts about one's own worth and spiritual standing)?",
+      "resolution_mechanism": "Qualitative research on post-exit trajectories: do divorced Catholics who leave the faith report lasting suppression effects and identity damage? Do those who remain active in the faith report suppression as primarily external (institutional barriers they could overcome if the rules changed) or internal (conviction that the church is right, or deep shame that persists regardless of rules)?",
+      "impact": "If primarily structural, the constraint is more readily modifiable by institutional policy change (broadening annulment grounds, sacramental inclusion). If primarily internalized, the constraint persists even after external mechanisms relax, requiring longer-term pastoral and spiritual identity reconstruction. The measured suppression score may underestimate the constraint's effective suppression on identity-locked targets if a large portion is internalized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Locus of suppression in identity-locked exit case: external barriers or internal conviction."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.8
+      "id": "christian_canonical_fragmentation",
+      "question": "Does 'Christian canonical reading' name a coherent doctrine held across denominations, or has it fragmented into Catholic, Orthodox, and Protestant Christianities that no longer share a single kernel for family_law_authority?",
+      "resolution_mechanism": "Examine whether Catholic, Orthodox, and major Protestant traditions (Lutheran, Reformed, Anglican, Pentecostal) are still debating the same kernel question (Is marriage a sacrament? Can it be dissolved? Who has authority?) in a unified discourse, or whether they have splintered into separate Christianities with incommensurable frameworks. If Protestant traditions have defined a separate authority answer (pastoral accompaniment and divorce are permissible), do they still recognize themselves as reading the same Christian marriage doctrine?",
+      "impact": "If the reading is coherent despite denominational variance, the constraint story captures one reading with internal denominational variation (Catholic indissolubility vs. Protestant divorce permission as competing interpretations of Christian marriage). If it has fragmented, the constraint should decompose into Catholic_sacramental_reading and Protestant_covenant_reading as separate constraints, each with its own kernel or its own family of kernels. The framework's granularity depends on whether Christian traditions still share a single family_law_authority kernel or have split into separate kernel families.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Christian denominations share a single kernel or have fragmented into separate kernel families."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 1995,
-      "value": 0.75
+      "id": "state_law_override_asymmetry",
+      "question": "When state law permits divorce and remarriage but ecclesiastical law forbids it, which authority is doing the extracting: the church (by withholding sacramental status from civil divorces and remarriages) or the state (by overriding religious authority over marriage)?",
+      "resolution_mechanism": "Perspective-dependent structural analysis. From the church's seat: the state is illegitimately overriding sacred law and imposing secular contract-marriage on the faithful, so the extraction flows from state override. From the divorced person's seat: the church is extracting control over spiritual status even after civil law granted them exit, so the extraction flows from church gatekeeping. From the secular authority's seat: the church is attempting to override civil law and deny citizens their legal rights, so the extraction flows from church power overreach. No single objective resolution—different seats compute different constraint boundaries and different extractiveness assessments.",
+      "impact": "Affects whether the constraint is classified as sacramental_permanence (church enforcing its own religious doctrine) or ecclesiastical_authority_capture (church extracting continued control over status after state law provided exit). The per-seat classification divergence is precisely the measurement the framework exists to detect and quantify—not to resolve.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Observer-seat-dependent framing of extraction locus when state and church law diverge."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.73
+      "id": "interfaith_validity_as_decomposition_boundary",
+      "question": "Are the validity conditions for interfaith marriages (baptism status, form requirements, dispensation procedures) structurally part of this same sacrament-indissolubility constraint, or do they constitute a separate constraint on interfaith-marriage recognition?",
+      "resolution_mechanism": "Analyze whether the validity gates operate from the same doctrinal source (sacramental permanence requires valid sacramental formation) or a separable doctrine (marriage validity has independent grounds beyond indissolubility). If separable, interfaith-marriage validity should be authored as a sibling constraint in the family_law_authority kernel.",
+      "impact": "If separable, this constraint story focuses on divorce/remarriage barriers; interfaith validity becomes a distinct constraint (family_law_authority__christian_canonical_interfaith_reading). If inseparable, the authoring must account for two structurally distinct payer groups (divorced persons and interfaith couples) with different extraction mechanisms and exit options. The ε-invariance principle suggests decomposition: the referent (ecclesiastical control over marriage) and the extraction mechanism (barrier to remarriage vs. barrier to recognition) are different enough to warrant separate constraint stories.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether interfaith validity gates are part of this constraint or a separate one."
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.71
+      "id": "mandate_decay_and_zombie_persistence",
+      "question": "Does the founding problem—establishing marriage as a sacred, permanent covenant binding before God—remain live, or has it been dead since the post-Enlightenment secularization of marriage law?",
+      "resolution_mechanism": "Assess whether the church's continued enforcement of indissolubility serves the original coordination function (defining marriage as sacred) or persists primarily through institutional inertia and authority-maintenance. If the founding problem is dead in secular legal contexts and substantially reframed by Protestant denominations, does the constraint's persistence indicate mandatrophy (a solved problem's institutional apparatus continuing to extract)?",
+      "impact": "If the founding problem is dead, the constraint is classified as piton (atrophied function persisting by inertia and institutional maintenance). If live, it is tangled rope (genuine coordination + asymmetric extraction). The measurement series (rising extraction, rising theater, stable suppression over 500 years) suggests mandatrophy: the constraint's original function is largely solved, but the extraction gates persist. This omega names the uncertainty.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the founding problem is live or dead, indicating mandatrophy vs. tangled rope."
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story instantiates the Christian canonical reading of family law authority, wherein marriage is understood as a sacrament (Catholic) or covenant (Protestant evangelical) under ecclesiastical governance. Catholic doctrine holds marriage as permanently indissoluble unless declared null by a bishop or tribunal; Protestant denominations vary from strict no-divorce rules to permitting divorce and remarriage on grounds of adultery or abandonment (and increasingly, on broader compassionate grounds). The constraint's core claim is that the church, not the state or the couple, holds ultimate authority over marriage validity and dissolution. This is one of five readings of the contested kernel 'family_law_authority'; the others (Hindu dharmashastra, Muslim shariat, Parsi Zoroastrian, secular contractual) offer competing authority framings. This reading neither forecloses nor is foreclosed by the others in jurisdictions with religious pluralism; they coexist as live options and influence one another through legal accommodation (civil law recognizing religious marriages, religious law absorbing civil remedies). The measurement interval 1965–2024 captures post-Vatican II evolution in Catholic doctrine (increasing pastoral concern for divorce victims, Pope Francis's reforms to annulment procedures) and Protestant denominational drift (mainline Protestantism moving toward acceptance of divorce and remarriage; evangelical Christianity remaining more conservative). The theatrical ratio has risen (from 0.12 to 0.41) as actual enforcement has softened while the doctrine's symbolic affirmation intensifies—more Catholics divorce and remarry civilly (defying the doctrine) while the church maintains the sacramental no-divorce claim in official teaching.",
-    "kernel_context": "This constraint is one reading of the contested kernel 'family_law_authority.' The kernel is the stabilized commitment that some entity (church, state, families, or individual will) holds authoritative power to determine what constitutes a valid marriage and when/whether it may be dissolved. This Christian canonical reading grounds that authority in scripture, tradition, and ecclesiastical hierarchy. The sibling readings (Hindu, Muslim, Parsi, secular) are other constraints with different authority axioms and different ε values—they decompose not from measurement ambiguity but from structurally distinct claims about who holds authority and on what grounds. In jurisdictions with religious pluralism, multiple readings coexist as live options available to different populations; in religious-establishment regimes, one reading dominates and others are suppressed. The readings are neither logically foreclosed nor coexisting in abstract space—they are competing institutional claims whose persistence depends on the jurisdictional and community contexts that recognize each tradition's authority.",
+    "narrative_context": "This constraint instantiates the Christian canonical reading of the family_law_authority kernel—marriage as a sacrament under ecclesiastical authority, with particular emphasis on Catholic doctrine of indissolubility and the hierarchy's gatekeeping over validity, annulment, and divorced-person remarriage. The constraint sits in contestation with secular legal regimes (civil divorce), other religious traditions (Hindu dharma, Islamic sharia, Zoroastrian law), and increasingly with Protestant denominations whose own readings of Christian marriage permit divorce and remarriage. The ε-invariance principle requires this story to author one reading's ε stably: the extractiveness measured here is the extraction from the Catholic/Orthodox sacramental reading's own standpoint—the control the hierarchy exerts over marriage definition and dissolution. Other readings (secular contractual, Hindu, Islamic) would author different ε values for the same standing arrangement, because they assess it by their own lights. This story does not average across readings; it instantiates one.",
     "key_agents": [
-      "ecclesiastical_institution: Catholic bishops, Protestant denominational hierarchies; set and enforce doctrine; powerful, civilizational time horizon.",
-      "spouses_seeking_dissolution: moderate power, biographical horizon, constrained exit (no remarriage without church permission).",
-      "remarrying_divorced_persons: powerless, trapped exit (spiritual goods versus autonomy trade-off).",
-      "abused_spouses: powerless, identity-locked (religious identity fused with marriage covenant); excluded from proceedings; excluded voice but payer in practice.",
-      "state_civil_authority: parallel institutional seat with no direct authority in ecclesiastical law; operates independently.",
-      "feminist_theologians and divorce-reform advocates: organized seat, constrained exit (voice inside denominational structure but limited power), excluded from canonical proceedings."
+      "Ecclesiastical hierarchy (Catholic/Orthodox magisterium): sets doctrine, controls annulment, enforces sacramental discipline — institutional beneficiary",
+      "Doctrine of sacramental indissolubility: the non-agent vindicated proposition that marriage is an unbreakable covenant before God — legitimates the hierarchy's gatekeeping",
+      "Married couples committed to permanence: beneficiaries of the sacramental framing and the community's spiritual support; constrained exit (would require leaving faith)",
+      "Divorced persons: primary payers, identity-locked (Catholic identity bound up with church membership), face pastoral stigma and sacramental exclusion",
+      "Women in abusive marriages: trapped payers, compounded extraction (abuse + canonical inability to remarry/separate with dignity)",
+      "Interfaith couples: payers through marriage-validity contestation; marriages may be declared null on canonical grounds even if civilly valid",
+      "Pastoral theologians: excluded voices advocating reform, interior critique without binding authority",
+      "State legal authority: observer seat computing different constraint boundaries (civil divorce as legitimate, sacramental indissolubility as overreach)"
     ],
-    "logic_rationale": "The constraint is classified as Tangled Rope because it combines genuine coordination (stable, sacrament-blessed families as moral communities) with asymmetric extraction (spouses and divorce-seekers bear the cost of indissolubility while the church collects authority and legitimacy). Active enforcement is required: bishops adjudicate annulment petitions, dioceses deny remarriage blessings, confessional pressure discourages remarriage or cohabitation. Extractiveness has declined from 0.78 to 0.62 over the interval as civil law has decoupled from ecclesiastical authority and most believers in Western contexts now divorce civilly regardless of church teaching. Theater has risen from 0.12 to 0.41 as enforcement softens (fewer annulments denied, pastoral language emphasizes accompaniment rather than judgment) while the doctrine remains officially unchanged—the constraint persists increasingly through symbolic affirmation and community identity rather than coercive enforcement. Suppression has declined (0.85 to 0.71) because alternatives (civil divorce, secular remarriage, switching to denominations that permit divorce) are now accessible and normalized; the suppression that remains is primarily social (shame, exclusion from some community roles) and internalized (guilt, spiritual doubt) rather than structural. Accessibility collapse has remained moderate (0.68) because the civil alternative is fully available; what collapses is not the exit option but the spiritual goods within the church's domain (blessing, Eucharist access, community recognition of second marriage). Resistance has remained stable (0.58) because a substantial population still holds the sacramental doctrine as normatively binding while a growing population treats it as advisory. The claim/metric divergence is intentional: the constraint is CLAIMED as Tangled Rope by the institution (coordination + enforcement), while metrics show increasing theatricality and declining extractiveness—the engine measures this gap as a sign of institutional adaptation to eroding legitimacy.",
-    "perspectival_gap": "From the ecclesiastical institution's seat, the constraint solves a genuine coordination problem (binding spouses to permanent commitment, grounding family stability in sacramental permanence) and justifies enforcement as protection of the sacrament's integrity. From the spouses-seeking-dissolution and remarrying-divorced-persons seats, the same constraint operates as enforced extraction: their right to exit and remarry is conditioned on the church's permission, creating a monopoly on marriage blessing that extracts authority and obedience. From the abused-spouses seat, the constraint is directly harmful and suppressive, not merely extractive—it traps vulnerable people in unsafe situations and subordinates their welfare to the doctrine's supremacy. From the state's seat, the constraint is institutionally irrelevant in civil law but remains socially consequential in communities where religious authority is strong. The engine computes per-seat directionality: the institution's directionality is near 0.0 (full beneficiary), spouses and remarried persons sit near 0.8–1.0 (full targets), and abused spouses sit at 1.0 (targets with no recognized exit). Contested believers sit near 0.5 (symmetric: genuine coordination benefit, diffuse cost of enforced permanence). This divergence is the measurement the constraint system exists to detect.",
-    "directionality_logic": "Beneficiary: ecclesiastical_institution. The church sets the rules, controls adjudication, collects legitimate authority and material resources (annulment fees, tithing pressure from those seeking church blessing despite civil remarriage). Victims: spouses_seeking_dissolution and remarrying_divorced_persons, who bear the cost of constrained exit and spiritual-goods rationing. Secondary target: abused_spouses, whose situation is made worse by indissolubility doctrine. Secondary beneficiary: faithful_believers whose marriages are stable and who benefit from the sacramental permanence doctrine as a spiritual good and commitment-reinforcer. The directionality derivation from beneficiary/victim declarations plus exit options flows naturally: the institution holds institutional power and arbitrage exit (can change doctrine whenever it chooses), moving d toward 0.0. Spouses hold moderate power, constrained or trapped exit, moving d toward 1.0. Abused spouses hold powerless status, identity-locked exit (religious identity fused with marriage covenant makes leaving costly even when safe exit is available civilly), moving d to full-target 1.0. No overrides are needed; the structural data produces appropriate directionalities.",
-    "mandatrophy_analysis": "Mandatrophy is present and well-documented. The founding problem (family instability, need for moral formation through permanent covenant) was genuine and live in 1965 when Vatican II was promulgating the constraint's strengthened form. By 1995, civil law had universally decoupled from ecclesiastical authority; state-provided family stability through divorce law, child support, and property division; and therapeutic practice had superseded ecclesiastical authority in relationship counseling. The founding problem is now dead in pluralistic jurisdictions: civil law solves family stability without the church. Yet the constraint persists, increasingly through theater and symbolic affirmation rather than coercive enforcement. The measurement series shows this: base_extractiveness declines (fewer people comply with no-divorce because civil alternatives work), theater_ratio rises (the doctrine becomes more symbolic, less enforceable), suppression_requirement declines (alternatives are accessible, suppression harder to maintain). The constraint has become a Piton—an atrophied coordination mechanism maintained theatrically because the institution benefits from it (moral authority, legitimacy claim as family guardian) and no single power can change it (hierarchical authority structures resist doctrinal revision, and reformers lack coercive power). The mandatrophy resolution is partial: Pope Francis's 2015 reforms to annulment procedures (streamlining access) acknowledged the mandate's obsolescence and reduced enforcement friction, but without formally revising the no-divorce doctrine (which would require ecumenical consensus and doctrinal revision that the institution resists). This is classic mandate drift under institutional inertia."
+    "logic_rationale": "The measurement series (1500–2026) tracks the constraint's evolution from pre-Reformation ecclesiastical monopoly through post-enlightenment pluralism. Base extractiveness rises from 0.45 to 0.68 over 526 years: as state law secularized and civil divorce became widely available, the church's gatekeeping became a choosing-constraint rather than a monopoly—targets could exit to civil law, but at the cost of spiritual status and community belonging. The identity-lock on 'Catholic identity' intensified the effective extraction (exit is available but costly). Suppression_requirement rises from 0.48 to 0.72: early enforcement relied on near-total ecclesiastical monopoly over marriage legitimacy; modern enforcement requires active pastoral discipline, confession-booth policing, sacramental withholding, and institutional pressure on family and community, because the underlying structural monopoly is gone. Theater_ratio rises from 0.12 to 0.41: the early constraint's function was largely authentic (the church really did adjudicate all marriage questions); modern theater includes annulment machinery that often rationalizes predetermined outcomes ('finding' nullity on technical grounds while the marriage was functionally a commitment), and pastoral 'accompaniment' language that masks continued exclusion. This is not a Goodhart drift where proxy goals replace real ones—the coordination function (defining marriage validity, supporting permanent commitment) remains real—but the ratio of enforcement activity devoted to the extraction gate (keeping divorced persons out) versus the coordination benefit (blessing permanent marriages) has grown. The constraint's life shows accumulating extraction under the same doctrinal label.",
+    "perspectival_gap": "From the ecclesiastical hierarchy's seat, the constraint is a tangled rope: it coordinates marriage as a sacred covenant (genuine coordination problem: early Christianity needed to establish sexual union as spiritually significant, not merely contractual), AND it extracts control over who can remarry and on what grounds (asymmetric extraction from divorced persons). From the divorced-person's seat, the constraint appears as a snare: the coordination function (permanence framing) was what they chose, but the extraction (inability to remarry while living) was imposed and persists even after civil law granted them exit—the pastoral framing of 'accompaniment' is theater masking continued exclusion. From the woman-in-abuse's seat, the constraint is even more purely extractive: the permanence framing offers her no protection, only a doctrinal barrier to escape. The engine computes these divergences per-seat from the structural data (power, exit, beneficiary/victim declarations); the authored claim (tangled rope) is independent of these computations, and the divergence is exactly what the framework measures.",
+    "directionality_logic": "Directionality for the ecclesiastical hierarchy is near-zero (full beneficiary): the constraint exists to expand and legitimate their authority. They set the rules, control the adjudication, collect institutional power. Directionality for divorced persons is near 1.0 (full target): they pay through spiritual status loss, sacramental exclusion, and pastoral discipline; their exit (civil remarriage) does not resolve the extraction (the church still denies them sacraments and community in-group status). Identity-locked exit raises their effective directionality: they cannot exit without losing the identity frame ('being Catholic') that constitutes them. Women in abuse face even sharper extraction: they are trapped (not merely identity-locked) and pay the highest cost. For married couples seeking permanence, directionality is nearer 0.5 (symmetric): they receive the sacramental framing as something they choose, which aligns with their values, and they also pay the cost that if the marriage breaks, they cannot remarry—but this is a symmetric bargain they largely entered voluntarily. Interfaith couples are near 1.0: the validity contestation is imposed on them, and their exit (one partner converting, or accepting the marriage as non-recognized) is costly.",
+    "mandatrophy_analysis": "The founding problem (establishing marriage as a sacred, permanent covenant) was substantially solved by the end of the medieval period within Christian theology: the church had defined marriage as a sacrament, established permanence as doctrine, and embedded it in canon law. By 1500, the constraint was no longer solving a live coordination problem within Christendom—it was administering a solved problem. The Protestant Reformation explicitly challenged the problem-statement (marriage is NOT indissoluble; divorce is permissible; remarriage is pastoral accompaniment, not violation), and the Enlightenment introduced secular state authority over marriage (solving the coordination problem through civil law, not ecclesiastical doctrine). By 1800, the founding problem was dead in much of the Christian world: marriage definition and dissolution had migrated to state law. The constraint persisted, and the measurement series captures the accumulating extraction: as the problem died, the constraint did not dissolve but mutated into a pure gatekeeping mechanism. The ecclesiastical hierarchy's continued enforcement of indissolubility after the founding problem was dead (or was redefined by Protestants and secular law) is the signature of mandatrophy: the constraint's original justification no longer applies, but institutional inertia and the hierarchy's interest in preserving its authority keep it alive. The rising extraction score (0.45→0.68) and rising theater ratio (0.12→0.41) document this trajectory: the constraint is doing less genuine coordination work and more theatrical maintenance of authority.",
+    "kernel_context": "This constraint is the Christian canonical reading of the family_law_authority kernel. The kernel is the contested question: 'Who has authority to define marriage, adjudicate validity, and permit or deny divorce/remarriage?' The Christian canonical reading asserts: ecclesiastical authority, grounded in sacramental theology and apostolic tradition, has jurisdiction over marriage as a God-sealed covenant. The sibling readings (Hindu dharmashastra, Islamic shariat, Parsi Zoroastrian, secular contractual) answer the same kernel question differently: dharmic law and customary practice (Hindu), Quranic and hadith-based jurisprudence (Islamic), Zoroastrian religious law (Parsi), or autonomous individual will under state civil law (secular). This reading is one answer to the kernel; it is not the only defensible reading of marriage or authority. The decomposition is necessary because measuring all five answers within a single constraint story would conflate ε values (each reading assesses the standing arrangement—Christian ecclesiastical control—by its own lights, and each produces a different measurement of what is being extracted). By the ε-invariance principle, each reading gets its own constraint story, its own ε, its own beneficiary/victim structure. This file instantiates the Christian reading alone."
   },
-  "omegas": [
-    {
-      "id": "sacramental_doctrine_vs_pastoral_accommodation",
-      "question": "Is the ecclesiastical doctrine genuinely committed to sacramental indissolubility, or is it increasingly a performance that accommodates pastoral reality (de facto acceptance of remarriage through annulment expansion and divorced-Catholic inclusion) while maintaining official doctrine?",
-      "resolution_mechanism": "Comparison of official doctrine statements with actual annulment rates, pastoral guidance to divorced believers, and Vatican policy changes over time. If annulment rates rise to track civil divorce rates, and papal statements emphasize 'pastoral accompaniment' of divorced believers, the doctrine may have functionally shifted while remaining verbally unchanged.",
-      "impact": "If the constraint is functionally a Piton (maintained theatrically), the classification should flag degraded coordination and inertial persistence rather than active enforcement of a live norm. If the doctrine remains genuinely operative, the suppression and extraction scores should rise, not decline.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether ecclesiastical doctrine on indissolubility is genuinely operative or performatively maintained."
-    },
-    {
-      "id": "internalized_suppression_mechanism",
-      "question": "Post-exit suppression trajectory: Do spouses who leave the church's authority structure (civil divorce, conversion to a permissive denomination, or secularization) experience suppression trajectory change? If suppression persists after the ecclesiastical mechanism is removed, what portion is internalized (fused with religious identity, guilt, family/community rupture) versus structural (legal barriers, community exclusion)?",
-      "resolution_mechanism": "Qualitative research with divorced Catholics and post-Catholic/post-religious respondents; measurement of shame, guilt, and social rupture at intervals after exit; comparison of suppression levels among those who maintain faith identity versus those who secularize.",
-      "impact": "If suppression is substantially internalized, the effective suppression on trapped targets (abused spouses who remain in the faith community) is higher than the measured structural suppression suggests. This would raise the severity classification and support reclassification of the constraint as more extractive for identity-locked targets.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural versus internalized suppression in Christian marriage doctrine."
-    },
-    {
-      "id": "kernel_reading_variance_in",
-      "question": "The ε value for THIS reading (Christian canonical, sacramental permanence, church authority) is 0.62. How do the sibling readings differ in ε? Does Muslim shariat (contract-based, unilateral talaq dissolution rights for men) have lower ε (more accessible exit, less extraction)? Does Hindu dharmashastra (conjugal duty without sacramental permanence, family authority over individual will) have higher ε (more extraction, more internalized suppression)? Does secular contractual (no-fault divorce, no religious authority) have lower ε?",
-      "resolution_mechanism": "Author separate constraint stories for each sibling reading, measuring each with its own ε, beneficiary/victim structure, and enforcement model. Compare the ε values across readings to establish how much of the measured extraction depends on the Christian sacramental framing versus on family law authority per se.",
-      "impact": "If secular_contractual has substantially lower ε, the extraction is specifically attributable to religious authority and sacramental doctrine, not to family law structure. If muslim_shariat shows high ε (high extraction of men's unilateral talaq rights, low exit for women), the problem is not religious authority per se but gendered implementation. The kernel contest requires per-reading measurement, not merged analysis.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Cross-reading ε variance in family law authority kernel."
-    },
-    {
-      "id": "church_authority_authenticity",
-      "question": "Does ecclesiastical authority to set marriage doctrine rest on theologically genuine claims (divine revelation, apostolic succession, living tradition) or on institutional power and historical inertia? Is the doctrine's legitimacy dependent on believers' faith in its authenticity, or does it persist through social pressure and institutional momentum regardless of belief?",
-      "resolution_mechanism": "Sociological research on believers' actual stance toward ecclesiastical authority: do they regard it as divinely grounded, or as institutional convenience they accept out of community loyalty despite doubting its foundation? Comparison of doctrine compliance in high-faith-belief communities versus nominal-believer communities.",
-      "impact": "If authority depends on authentic faith belief, suppression and theater scores should correlate inversely with faith-belief measures. If authority persists through institutional inertia despite erosion of belief, theater should remain high while effective belief declines. The measurement series showing rising theater amid declining extractiveness supports the inertia hypothesis.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether ecclesiastical authority's legitimacy rests on authentic faith or institutional momentum."
-    },
-    {
-      "id": "kernel_reading_identity_lock_variance",
-      "question": "Identity-lock differs across the sibling readings. For Christian canonical (this reading), religious identity is fused with the denomination and its doctrines; exit is costly because it means leaving the faith community. For secular contractual, identity-lock is absent (exiting a marriage does not threaten identity). For Hindu dharmashastra, identity-lock may be higher (family caste and kinship identity is constitutive). Does the identity-lock variance explain differential suppression across readings?",
-      "resolution_mechanism": "Measure identity-lock intensity (how completely individual identity is fused with the marriage/religious framework) for each reading. Correlate with suppression scores and exit costs. If identity-lock correlates with higher effective suppression on trapped targets, the readings differ not in their formal authority claims but in how deeply they fuse with agent identity.",
-      "impact": "A high-identity-lock reading (Christian canonical, Hindu dharmashastra) may show higher effective suppression on targets even when formal exit is legally available, because psychological/identity exit is costly. The sibling readings should be compared on this dimension to understand how much extraction is formal (authority claim) versus internalized (identity fusion).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Identity-lock variance in family law authority kernel readings."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "family_law_authority__muslim_shariat_reading",
+      "family_law_authority__secular_contractual_reading",
       "family_law_authority__hindu_dharmashastra_reading",
-      "family_law_authority__parsi_zoroastrian_reading",
-      "family_law_authority__secular_contractual_reading"
+      "family_law_authority__muslim_shariat_reading",
+      "family_law_authority__parsi_zoroastrian_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the contested kernel 'family_law_authority.' The kernel unifies five structurally distinct readings, each with different ε, beneficiary/victim structures, and authority axioms. The readings coexist as live options in pluralistic jurisdictions and influence one another through legal accommodation (civil law recognizing religious marriages, religious law absorbing civil remedies). All five readings should be authored as separate constraint stories linked via this network field. The Christian canonical reading emphasizes sacramental permanence and ecclesiastical governance; the Muslim shariat reading emphasizes contractual recision and gendered dissolution rights; Hindu dharmashastra emphasizes conjugal duty and family authority; Parsi Zoroastrianism emphasizes community preservation; secular contractual emphasizes individual autonomy and state authority. Each reading has different ε-invariant properties and different power/exit distributions. Do not attempt to merge them into one constraint—they are genuinely different constraints that share a kernel authority claim."
+    "dual_formulation_note": "This constraint is one reading of the family_law_authority kernel. The kernel itself is contested: different traditions and legal systems read the authority to define and dissolve marriage differently. This Christian canonical reading asserts ecclesiastical jurisdiction over marriage as a sacrament; the secular contractual reading asserts individual/state jurisdiction over marriage as a civil contract; Hindu, Islamic, and Parsi readings assert their respective religious authority structures. Each reading instantiates a different constraint with a different ε (each assessed by the reading's own lights, not by a neutral observer). The five constraints form a constraint family linked by network.affects_constraints. They do not compete to be the true constraint; rather, they document how different traditions read the same kernel question (authority over marriage) and thereby measure each other's extractiveness. The network edges enable contamination and legitimacy-structure analysis across the family."
   },
-  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "family_law_authority__muslim_shariat_reading",
+        "sibling_id": "secular_contractual_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__hindu_dharmashastra_reading",
+        "sibling_id": "hindu_dharmashastra_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__parsi_zoroastrian_reading",
+        "sibling_id": "muslim_shariat_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "family_law_authority__secular_contractual_reading",
-        "relation": "influences"
+        "sibling_id": "parsi_zoroastrian_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "sacramental_indissolubility",
+        "atom": "marriage_is_sacrament_not_contract",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "ecclesiastical_marriage_authority",
+        "atom": "sacramental_permanence_indissoluble_by_humans",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "theological"
       }
     ],
-    "reference_frame": "sacramental_permanent_covenant_under_ecclesiastical_governance",
+    "reference_frame": "apostolic_sacramental_permanence",
     "drift_state": {
-      "moment": "contemporary_2024",
-      "direction": "axiom_overriding",
+      "moment": "contemporary_post_enlightenment_pluralism",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "gain_flow": "ecclesiastical_hierarchy",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

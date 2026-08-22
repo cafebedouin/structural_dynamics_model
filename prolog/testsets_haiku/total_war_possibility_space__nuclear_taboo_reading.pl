@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,43 +75,46 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: total_war_possibility_space__nuclear_taboo_reading
- *   human_readable: Nuclear Taboo Against Total War (Normative Reading)
- *   domain: international_relations/strategic_studies
+ *   human_readable: Nuclear Total War Taboo (Normative Prohibition Reading)
+ *   domain: international/strategic/institutional
  *
  * SUMMARY:
- *   The nuclear taboo against total war is a normative constraint: states
- *   with the capability to annihilate each other have constructed and
- *   maintain a collective commitment that nuclear weapons must never be used,
- *   independent of their material strategic value. This reading treats the
- *   taboo as the primary mechanism preventing total war, distinct from (and
- *   potentially in tension with) deterrence theory, which explains restraint
- *   through mutual vulnerability. The taboo is enforced through treaty
- *   regimes (NPT, no-first-use pledges), norm entrepreneurship (disarmament
- *   movements, treaty verification), and the internalization of the
- *   unthinkable into military planning doctrine. The constraint benefits
- *   civilian populations and non-nuclear states while extracting opportunity
- *   costs from proliferation-motivated states and constraining military
- *   planners' cognitive freedom. The measurement series shows the
- *   constraint's machinery matured from 1945–1980 (rising suppression as
- *   enforcement infrastructure built, theater ratio rising as performative
- *   norm maintenance became more visible) and plateaued from 1980–2026
- *   (suppression and extraction stable, theater ratio rising further as the
- *   substantive function atrophied and maintenance became increasingly
- *   theatrical). The extracted component is low in absolute terms (0.31
- *   endpoint) because the constraint's primary function is coordination
- *   (keeping total war normatively foreclosed), not rent collection; however,
- *   suppression is higher (0.68) because holding the taboo intact requires
- *   actively excluding alternative readings and constraining who can speak
- *   about nuclear use strategically.
+ *   This constraint instantiates a normative reading of the nuclear total-war
+ *   prohibition. After 1945, when nuclear weapons made total war materially
+ *   possible and (under traditional war logic) strategically rational, an
+ *   international norm emerged that foreclosed total war as a permissible
+ *   strategic option. This reading asserts that the taboo is the operative
+ *   mechanism of prevention—war remains materially possible and strategically
+ *   rational in the technical sense, but is prevented by constructed and
+ *   enforced normative structure. The global norms-custodian institutions
+ *   (the UN system, the non-proliferation treaty regime, arms-control bodies,
+ *   epistemic communities) actively curate the taboo through treaty
+ *   enforcement, rhetorical affirmation, and isolation of norm violators.
+ *   Nuclear-armed powers internalize the constraint and maintain continuous
+ *   alignment with the norm framework. Non-nuclear states benefit from the
+ *   taboo by gaining survival assurance; their exit is foreclosed by material
+ *   reality (they cannot build nuclear forces of equivalent power). The
+ *   constraint is extractive for nuclear powers (who relinquish escalatory
+ *   options) and for some regional actors (who are identity-locked into taboo
+ *   compliance). The claimed type is tangled_rope because the constraint
+ *   simultaneously coordinates a genuine collective interest (preventing
+ *   existential warfare) and extracts strategic optionality from those it
+ *   constrains. The metrics show extractiveness declining over the interval
+ *   (initial conflict between material capability and norm nascence resolved
+ *   toward norm internalization) and theater increasing (the maintenance
+ *   activity—non-first-use pledges, diplomatic affirmations,
+ *   crisis-management protocols—has become more performative relative to
+ *   functional enforcement as the taboo has hardened). This is ONE reading of
+ *   a contested kernel; the sibling readings (deterrence_equilibrium and
+ *   space_contraction) explain the same phenomenon (no total war occurs)
+ *   through different causal mechanisms.
  *
  * KEY AGENTS:
- *   - Nuclear-armed states: Set and maintain the taboo; face reputational destruction if they break it or allow it to weaken.
- *   - Civilian populations: Benefit from the taboo but are structurally powerless over its persistence.
- *   - Non-nuclear states: Pay opportunity costs (barred deterrence options) to sustain the norm they depend on.
- *   - Norm entrepreneurs: Actively reconstruct and reinforce the narrative; derive influence and legitimacy from stewardship.
- *   - Military planners: Bear the cognitive cost of operating under the constraint; identity-locked into taboo compliance.
- *   - Proliferation-motivated states: Structurally excluded from legitimate challenge to the taboo; pay costs for deterrent options barred.
- *   - Revisionist powers: Cannot openly contest the taboo without being read as civilizationally unhinged.
+ *   - Major nuclear powers (US, Russia, China, France, UK): hold strategic optionality but are constrained by the taboo; bear costs of continuous norm alignment; benefit from mutual taboo stability.
+ *   - Non-nuclear states (vast majority of UN members): depend entirely on the taboo for survival; have no voice in governing it; benefit from it without maintenance cost.
+ *   - Global norms-custodian institutions (UN Security Council, NPT regime, IAEA, arms-control expertise networks, academic disciplines of strategic studies and international relations): set and enforce the taboo through institutional architecture; administer the constraint.
+ *   - Nuclear-armed regional actors (India, Pakistan, Israel, North Korea): occupy an ambiguous structural position—they have nuclear weapons but face different taboo pressures than great powers; identity-locked into norm compliance but with weaker enforcement than major powers face.
+ *   - Excluded parties (states in existential conflicts where nuclear escalation would be rational; disarmament advocates; norm-breakdown scenarios): would argue against the taboo or for removing it; have no seat at the constraint's governance table.
  */
 
 /* ==========================================================================
@@ -113,56 +124,112 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(total_war_possibility_space__nuclear_taboo_reading, 0.31).
 domain_priors:suppression_score(total_war_possibility_space__nuclear_taboo_reading, 0.68).
-domain_priors:theater_ratio(total_war_possibility_space__nuclear_taboo_reading, 0.52).
+domain_priors:theater_ratio(total_war_possibility_space__nuclear_taboo_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, extractiveness, 0.31).
 narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 0.68).
-narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 0.52).
+narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, accessibility_collapse, 0.89).
-narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, resistance, 0.41).
+narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, accessibility_collapse, 0.72).
+narrative_ontology:constraint_metric(total_war_possibility_space__nuclear_taboo_reading, resistance, 0.58).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(total_war_possibility_space__nuclear_taboo_reading, rope).
-narrative_ontology:human_readable(total_war_possibility_space__nuclear_taboo_reading, "Nuclear Taboo Against Total War (Normative Reading)").
-narrative_ontology:topic_domain(total_war_possibility_space__nuclear_taboo_reading, "international_relations/strategic_studies").
+narrative_ontology:constraint_claim(total_war_possibility_space__nuclear_taboo_reading, tangled_rope).
+narrative_ontology:human_readable(total_war_possibility_space__nuclear_taboo_reading, "Nuclear Total War Taboo (Normative Prohibition Reading)").
+narrative_ontology:topic_domain(total_war_possibility_space__nuclear_taboo_reading, "international/strategic/institutional").
 
 domain_priors:requires_active_enforcement(total_war_possibility_space__nuclear_taboo_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(total_war_possibility_space__nuclear_taboo_reading, 'c11495c9-c288-483f-9051-e803c53f63b1').
-narrative_ontology:cs_kernel_codification('c11495c9-c288-483f-9051-e803c53f63b1', fixed_text).
-narrative_ontology:cs_authority_grounding('c11495c9-c288-483f-9051-e803c53f63b1', lineage).
-narrative_ontology:cs_interpretation_layer_present('c11495c9-c288-483f-9051-e803c53f63b1').
-narrative_ontology:cs_reading_relation('c11495c9-c288-483f-9051-e803c53f63b1', total_war_possibility_space__deterrence_equilibrium_reading, coexists_with).
-narrative_ontology:cs_reading_relation('c11495c9-c288-483f-9051-e803c53f63b1', total_war_possibility_space__space_contraction_reading, coexists_with).
-narrative_ontology:cs_axiom('c11495c9-c288-483f-9051-e803c53f63b1', foundational, nuclear_war_categorically_normatively_prohibited).
-narrative_ontology:cs_axiom_status(nuclear_war_categorically_normatively_prohibited, holdable).
-narrative_ontology:cs_axiom_grounding('c11495c9-c288-483f-9051-e803c53f63b1', nuclear_war_categorically_normatively_prohibited, deontological).
-narrative_ontology:cs_axiom('c11495c9-c288-483f-9051-e803c53f63b1', secondary, taboo_autonomy_from_material_vulnerability).
-narrative_ontology:cs_axiom_status(taboo_autonomy_from_material_vulnerability, holdable).
-narrative_ontology:cs_axiom_grounding('c11495c9-c288-483f-9051-e803c53f63b1', taboo_autonomy_from_material_vulnerability, deontological).
-narrative_ontology:cs_reference_frame('c11495c9-c288-483f-9051-e803c53f63b1', nuclear_weapons_as_civilization_ending_unthinkable).
-narrative_ontology:cs_drift_state('c11495c9-c288-483f-9051-e803c53f63b1', contemporary_2026, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('c11495c9-c288-483f-9051-e803c53f63b1', '').
+narrative_ontology:cs_story_uid(total_war_possibility_space__nuclear_taboo_reading, '9b30f75b-fae6-4451-aee8-8b76e06b9fa2').
+narrative_ontology:cs_kernel_codification('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', distributed).
+narrative_ontology:cs_authority_grounding('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', extraction).
+narrative_ontology:cs_interpretation_layer_present('9b30f75b-fae6-4451-aee8-8b76e06b9fa2').
+narrative_ontology:cs_reading_relation('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', total_war_possibility_space__deterrence_equilibrium_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', total_war_possibility_space__space_contraction_reading, influences).
+narrative_ontology:cs_axiom('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', foundational, total_war_prevented_by_normative_prohibition).
+narrative_ontology:cs_axiom_status(total_war_prevented_by_normative_prohibition, holdable).
+narrative_ontology:cs_axiom_grounding('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', total_war_prevented_by_normative_prohibition, conventional).
+narrative_ontology:cs_axiom('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', secondary, taboo_depends_on_institutional_curation).
+narrative_ontology:cs_axiom_status(taboo_depends_on_institutional_curation, holdable).
+narrative_ontology:cs_axiom_grounding('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', taboo_depends_on_institutional_curation, empirically_contingent).
+narrative_ontology:cs_reference_frame('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', mutual_assured_destruction_taboo).
+narrative_ontology:cs_drift_state('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', contemporary_strategic_pluralism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('9b30f75b-fae6-4451-aee8-8b76e06b9fa2', '').
 narrative_ontology:cs_kernel_id(total_war_possibility_space__nuclear_taboo_reading, total_war_possibility_space).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(total_war_possibility_space__nuclear_taboo_reading, civilian_populations).
 narrative_ontology:constraint_beneficiary(total_war_possibility_space__nuclear_taboo_reading, non_nuclear_states).
-narrative_ontology:constraint_beneficiary(total_war_possibility_space__nuclear_taboo_reading, international_norm_entrepreneurs).
+narrative_ontology:constraint_beneficiary(total_war_possibility_space__nuclear_taboo_reading, global_norms_custodians).
+narrative_ontology:constraint_victim(total_war_possibility_space__nuclear_taboo_reading, major_nuclear_powers).
+narrative_ontology:constraint_victim(total_war_possibility_space__nuclear_taboo_reading, nuclear_armed_regional_actors).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Strategic nuclear forces remain materially available and capable of total war, but are operationally and rhetorically locked out by an internalized norm structure. They bear the costs of maintaining this taboo through continuous rhetorical alignment, non-first-use pledges, non-proliferation treaty adherence, and crisis management protocols that prevent escalation. The taboo constrains their coercive options even when nuclear use would be materially rational under war-logic analysis. They pay through restricted strategic choice, though they also benefit from mutual taboo stability.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, major_nuclear_powers, payer,
+    institutional, civilizational, constrained, global).
+
+% Depend on the taboo for survival because they cannot credibly deter total war through material capability. The norm structure ensures that the largest power asymmetries remain bounded by taboo rather than resolved through annihilation. They benefit from the norm's persistence without maintaining it; their exit is foreclosed by the material world (no nuclear force of their own can substitute).
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, non_nuclear_states, beneficiary,
+    powerless, civilizational, trapped, global).
+
+% International institutions, epistemic communities, diplomatic networks, and academic traditions (treaty bodies like the NPT regime, the UN Security Council, arms control expertise networks, historical memory institutions) actively curate and enforce the taboo through treaty architectures, rhetorical affirmation in state communications, normalization of "no-first-use" as the default posture, and isolation of any actor who breaches norm language. They set and administer the constraint by deciding what counts as taboo violation, what justifications are permitted, and what penalties apply to violation signals.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, global_norms_custodians, agenda_setter,
+    institutional, civilizational, analytical, global).
+
+% Possess nuclear weapons, conferring material capability for devastating escalation, but are locked into taboo compliance by regional acceptance requirements and international legitimacy claims that are identity-constituting. Exiting the taboo would mean repudiation by the international order and by their own domestic populations who have internalized the norm. The taboo constrains their regional war options; a conventional regional war remains available, but nuclear escalation as a coercive tool is foreclosed. Their identity as a responsible nuclear power—essential to their standing—depends on taboo maintenance.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, nuclear_armed_regional_actors, payer,
+    powerful, generational, identity_locked, global).
+
+% Would argue that the taboo is insufficient (nuclear weapons should be eliminated entirely), that the taboo creates moral hazard (permitting conventional war under the assumption nuclear bounds hold), and that taboo persistence requires active norm defense work that is politically precarious. They are excluded from the constraint's governance because the major powers and norms-custodian institutions do not admit disarmament as a negotiable option; the taboo is treated as permanent, not provisional.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, disarmament_advocates, excluded,
+    organized, civilizational, analytical, global).
+
+% States that might benefit strategically from nuclear escalation (those in existential conflicts where nuclear use would be rational under pure strategic calculation) but are excluded from exercising that option by the taboo and by the enforcement mechanisms that would penalize breach. Their exclusion is active: the international order would treat nuclear use as a civilization-level crime, not a legitimate strategic move. They have no voice in taboo governance; the norm structure operates against their interests.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, adversarial_states_coalition, excluded,
+    organized, generational, constrained, global).
+
+% Counterfactual positions: scenarios where the taboo erodes (norm entrepreneurs exit, key custodian institutions fail, a breach goes unpunished and normalizes escalation). Included for completeness to track the structural fragility of the arrangement.
+narrative_ontology:constraint_stakeholder(total_war_possibility_space__nuclear_taboo_reading, norm_collapse_scenarios, observer,
+    analytical, civilizational, analytical, global).
+narrative_ontology:stakeholder_non_agent(total_war_possibility_space__nuclear_taboo_reading, norm_collapse_scenarios).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(total_war_possibility_space__nuclear_taboo_reading, global_norms_custodians).
+narrative_ontology:fixing_cost_class(total_war_possibility_space__nuclear_taboo_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of preventing nuclear escalation in interstate conflict: all major powers benefit from a world where large power differentials do not resolve into existential warfare, and the taboo coordinates that mutual preference into stable practice without requiring continuous explicit negotiation or threat balance.
+% TRANSFER_FUNCTION: Moves strategic coercive options from major nuclear powers to non-nuclear states and regional actors. Nuclear powers relinquish the ability to escalate beyond conventional bounds; non-nuclear states gain survival assurance because the strongest powers have voluntarily bound themselves. Regional nuclear actors lose escalatory freedom but gain legitimacy from alignment with the global norm.
+% ABSENT_VOICES: Actors who would benefit materially from nuclear escalation (states in existential regional conflicts, would-be hegemons with revisionist aims, proliferating nations treating nuclear weapons as deterrent-of-last-resort) are structurally excluded. They have no seat in the NPT regime or major arms-control deliberations. If admitted, they would argue for removing the taboo or carving exceptions for existential defense—arguments that would destabilize the arrangement.
+% DISAPPEARANCE_RATIONALE: If the nuclear total-war taboo disappeared overnight (norms custodians stopped enforcing it, major powers renormalized escalation rhetoric, no-first-use pledges were abandoned), interstate conflict calculus would reorganize around material capability. States with nuclear forces would face existential security trade-offs currently foreclosed. Non-nuclear states would lose survival assurance and would pursue nuclear acquisition or shift to non-state security arrangements. The international order would fragment rapidly as mutual vulnerability replaced mutual taboo.
+% FOUNDING_PROBLEM: After 1945, the scale of destructive capability made total war—the annihilation of an adversary's state and population—materially achievable and strategically rational under traditional war logic, but produced a mutually suicidal equilibrium. The founding problem was: how do we prevent rational actors from choosing annihilation when capability makes it possible?
+% FOUNDING_PROBLEM_CORROBORATION: The major nuclear powers attest the problem persists and cite their continuous maintenance of non-first-use norms and non-proliferation commitments as evidence that the taboo is necessary and functional. Strategic studies scholars outside the military establishments attest that the founding problem is partially solved by the taboo but remains precarious—that the taboo itself is the solution, not material capability alone. Disarmament advocates argue the problem is not solved but merely managed and could re-emerge if norm maintenance fails. No authoritative external voice (a neutral referee) exists; the problem's status is read differently depending on the reader's structural position.
+narrative_ontology:disappearance_verdict(total_war_possibility_space__nuclear_taboo_reading, world_rearranges).
+narrative_ontology:founding_problem_status(total_war_possibility_space__nuclear_taboo_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(total_war_possibility_space__nuclear_taboo_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(total_war_possibility_space__nuclear_taboo_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(total_war_possibility_space__nuclear_taboo_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(total_war_possibility_space__nuclear_taboo_reading, 0.31, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,16 +244,16 @@ narrative_ontology:story_seed(total_war_possibility_space__nuclear_taboo_reading
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is authored as moderate (0.31) because the constraint's primary output is coordination (solving the mutual-annihilation problem), not wealth transfer. The extraction that is present operates through the non-proliferation regime: non-nuclear states forgo deterrent options in exchange for extended guarantees they cannot enforce. Suppression is higher (0.68) because the taboo's persistence depends on actively excluding alternative strategic readings from legitimate discourse — nuclear war planning is quarantined from strategy, proliferation-seeking states are barred from renegotiating the framework, and military planners cannot openly explore scenarios the taboo forbids. Theater ratio (0.52) has risen over the interval: the taboo's early phase (1945–1962) was substantive coordination work (constructing the never-again narrative after Hiroshima and Nagasaki). Since 1980, a growing share of enforcement activity has been performative — ceremonial reaffirmations of no-first-use, symbolic treaty signings, rhetorical recommitment by leaders — because the substantive coordination problem (preventing mutual annihilation) was solved decades ago. The rising theater ratio indicates the constraint is beginning to show signs of a piton (atrophying function, persistent performance, institutional inertia). The accessibility_collapse is high (0.89) because once you understand the taboo, alternatives genuinely collapse — a state cannot openly threaten total war without triggering international isolation, domestic political crisis, and self-defeat. Resistance is moderate (0.41) because there IS real resistance from proliferation-motivated states and from military planners who find the constraint operationally constraining, but that resistance is structurally suppressed and excluded from legitimate forums.
+ *   Extractiveness is moderate (0.31) because the taboo does coordinate a genuine collective interest (preventing total war) and most parties accept the norm as legitimate, but it simultaneously relinquishes strategic optionality from nuclear powers, and it extracts survival advantage unequally across states (non-nuclear states depend entirely on it; nuclear powers retain deterrent value). Suppression is high (0.68) because the constraint's persistence depends on active enforcement: non-proliferation regime enforcement against violators, diplomatic isolation of norm-breach rhetoric, continuous reaffirmation of no-first-use pledges, crisis-management protocols that enforce escalation-stop points. Accessibility_collapse is high (0.72) because once the taboo is understood, alternatives to nuclear-bounded war are extremely narrow—states can wage conventional war (still open) but cannot escalate to existential nuclear exchange without massive international penalties and self-imposed strategic constraints. Resistance is moderate (0.58) because the taboo has strong institutional backing and norm internalization in major powers, but it faces persistent pressure from regional actors, revisionist powers, and deterrence-theorists who argue the taboo is fragile or illegitimate. Theater_ratio is moderate (0.42) because a substantial share of the enforcement activity is performative—no-first-use pledges repeated at every diplomatic occasion, arms-control treaties signed and re-signed, international statements condemning nuclear proliferation—but the underlying mechanism (mutual taboo internalization) remains functional. The measurements show extractiveness declining from 1945 (when the constraint was newly imposed and resistance was high) to 1991 (when the Cold War ended and the taboo was deeply internalized by both superpowers), then stabilizing. Theater increases over the same period because the active enforcement need decreases as internalization hardens; what remains is mostly maintenance activity and rhetorical performance. Suppression_requirement rises from 1945 to 1991 (as the regime's enforcement machinery builds) then stabilizes. This temporal profile is consistent with a constraint moving from contested external imposition toward internalized norm structure.
  *
  * PERSPECTIVAL GAP:
- *   This constraint computes differently from different seats. From the nuclear-armed-state agenda-setter seat, the taboo is genuine coordination — a problem they solved and now maintain through their own commitment. Their effective extraction is near zero; they are net beneficiaries of the coordination. From the non-nuclear-state seat, the constraint is a tangled arrangement: they benefit from the taboo's protection but pay opportunity costs they cannot negotiate. Their d-value is higher (more target-like) because they are barred from a strategic option. From the proliferation-motivated-state seat, the constraint is extractive (they bear costs while others capture deterrent capacity); they are excluded from the conversation. From the civilian-population seat, the constraint is pure rope — they depend on it utterly and have zero leverage. The engine computes this per-seat divergence from the power atoms, exit options, and beneficiary/victim declarations; the authored claim (rope) represents the nuclear-armed-states' frame, while the metrics represent the constraint's actual operation including its extraction and suppression components.
+ *   From the major nuclear powers' seat: the taboo is a beneficial coordination mechanism that prevents rational-but-catastrophic escalation; they experience it as a legitimate constraint that they help maintain. From the non-nuclear states' seat: the taboo is a survival mechanism imposed by those with nuclear weapons; they experience it as a dependency on great-power forbearance, not as a symmetric coordination. From the regional nuclear actors' seat: the taboo is an ambiguous constraint—it confers legitimacy (alignment with global norms) but also locks them into a strategic position where nuclear use is rhetorically foreclosed even in existential situations. From the disarmament advocates' seat: the taboo is insufficient and masks an extractive arrangement that preserves major-power strategic advantage. The engine computes these perspectival differences from the structural data (power level, exit options, beneficiary/victim status); the authoring makes no claim about which perspective is correct, only that they differ and are derivable from the constraint's structure.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries: civilian_populations (depend on taboo for survival, zero exit); non_nuclear_states (protected by taboo though at opportunity cost); international_norm_entrepreneurs (gain status and influence from stewardship). Victims: proliferation_pressure_states (barred deterrent options, pay non-proliferation constraints without guaranteed security return); military_planners (identity-locked into cognitive restraint). The nuclear_armed_states are listed as agenda_setter, not beneficiary, because they run the constraint, not primarily because they collect from it — their economic benefit is nil, their reputational/strategic benefit is mixed (taboo prevents war but also restrains their own options). Directionality derivation: non_nuclear_states with 'organized' power but 'constrained' exit and declared victim status → d near 0.6–0.7 (target-like despite organized power, because exit is constrained by dependence on extended deterrence); proliferation_pressure_states with 'powerful' power but 'constrained' exit and clear victim status → d near 0.65–0.75 (material power does not overcome structural entrapment by non-proliferation); military_planners with 'powerful' power but 'identity_locked' exit → d near 0.55–0.65 (powerful in domain but unable to leave the frame). The taboo's suppression is not scaled by these directionalities — suppression is a structural property (the exclusion of alternative readings from legitimate discourse), authored at 0.68 and constant across seats.
+ *   Major nuclear powers: beneficiaries in the sense that the taboo prevents adversaries from escalating to existential warfare, and it preserves great-power strategic dominance. But they are also payers because the taboo constrains their own escalatory options. The net directionality is near symmetric for institutional powers with arbitrage (they can adapt deterrent strategy without nuclear use). Non-nuclear states: full beneficiaries (d near 0.0) because they depend entirely on the taboo without bearing maintenance costs. Their exit is trapped—they cannot acquire nuclear forces to deter existentially. Global norms custodians: agenda-setters who set and enforce the constraint; they benefit from administering it (institutional purpose, budgets, influence). Regional nuclear actors: complex position. They are payers in that the taboo constrains their coercive optionality; they are beneficiaries in that alignment with the norm confers international legitimacy. But they are also identity-locked (exit = international pariah status and loss of domestic legitimacy). Directionality for regional actors is near the target end (d around 0.6–0.7) because their strategic choice is constrained and their only real option is conformity.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding_problem (mutual annihilation via nuclear weapons) remains live by nuclear-armed states' own framing and by disarmament advocates' accounts. However, the constraint's mechanism for solving that problem may have atrophied: the early taboo (1945–1970) solved the problem through emotional reconstruction of nuclear weapons as civilization-ending horror, binding leaders to never-again commitments. By 2000–2026, the taboo persists but the mechanism is increasingly performative — leaders reaffirm no-first-use pledges as ritual, treaties are signed and largely unimplemented, and the substantive work of preventing total war has shifted toward technical measures (verification, transparency) that do not require the taboo's emotional force. The theater_ratio's rise from 0.25 (1945) to 0.52 (2026) captures this drift. The constraint shows early signs of mandatrophy: the founding problem remains (mutual vulnerability is still civilization-ending), but the constraint's operation increasingly consists of reassuring the public and allied states that the problem is being managed, rather than actually managing it. Mandatrophy is not yet resolved — the taboo still prevents open discussion of nuclear war as usable strategy — but the measurement trajectory flags it as a monitoring priority. If the theater ratio continues rising while suppression plateaus, the constraint will cross into piton territory.
+ *   The founding problem (how do we prevent rational actors from choosing annihilation when capability makes it possible?) was acute in 1945–1962 and genuinely live. The measured founding_problem_status is contested because major powers, academic strategists outside benefiting institutions, and disarmament advocates read the problem's status differently. This is structurally sound for a tangled_rope: the coordination function (preventing mutual suicide) is real and beneficial, so the founding problem remains live as a justification. The classification does not collapse to snare because the taboo solves a genuine problem (major powers would not be better off if total war became normalized), even though it extracts some strategic optionality and asymmetrically benefits non-nuclear states. The mandatrophy question (is the constraint maintained because it still solves the founding problem, or because the maintaining institution has acquired independent interest in maintaining it?) is empirically unresolved. The rising theater_ratio (0.08 to 0.42) suggests the enforcement function is increasingly performative—the taboo persists because it is institutionally embedded and norm-internalized, not because anyone is actively rebuilding the prevention mechanism. But this is evidence of institutional stability and norm internalization, not institutional capture or mandatrophy.
  */
 
 /* ==========================================================================
@@ -194,44 +261,24 @@ narrative_ontology:story_seed(total_war_possibility_space__nuclear_taboo_reading
    ========================================================================== */
 
 omega_variable(
-    taboo_autonomy_vs_deterrence_riding,
-    'Does the nuclear taboo rest on an independent normative commitment to the unthinkability of total war, or does it rest entirely on the material fact of mutual vulnerability and would collapse if a credible first-strike capability emerged?',
-    'Examine taboo stability under changing material conditions: (a) if taboo weakens when mutual vulnerability is broken (e.g., successful ballistic missile defense), the taboo is materially dependent; (b) if taboo persists despite first-strike possibility, it is normatively autonomous.',
-    'If autonomous, the constraint is primarily rope-like coordination enforced through norm maintenance. If dependent on deterrence, the constraint is tangled—the rope function (normative coordination) extracts from those barred from nuclear deterrence while benefiting from material vulnerability that norm entrepreneurs neither control nor acknowledge.',
-    confidence_without_resolution(low)
+    sibling_reading_deterrence_equilibrium,
+    'How does the nuclear_taboo_reading relate structurally to the deterrence_equilibrium_reading, which explains total-war prevention through mutual vulnerability rather than normative taboo?',
+    'The readings differ in their causal mechanisms (taboo vs. rational deterrence) and in their stability predictions (taboo could fail if norms decay; deterrence persists as long as both sides remain rational). Test via state rhetoric and decision-theory analysis: taboo readers treat nuclear use as ''forbidden but possible''; deterrence readers treat it as ''irrational but possible''; space_contraction readers treat it as ''cognitively unavailable''. Crisis decision-making shows evidence of all three framing simultaneously in different institutional contexts.',
+    'If the deterrence_equilibrium reading is the correct causal mechanism, then the taboo reading has misidentified the operative constraint. The classification could shift from tangled_rope (taboo + coordination) to rope (deterrence-based mutual preference). The practical difference: deterrence-based prevention is robust to norm decay but fragile to breakdown of rationality or to shifts in cost-benefit calculations (proliferation, changed power distributions). Taboo-based prevention is robust to rationality but fragile to norm decay.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(taboo_autonomy_vs_deterrence_riding, conceptual, 'Whether the taboo is causally independent of or dependent on deterrence equilibrium.').
+narrative_ontology:omega_variable(sibling_reading_deterrence_equilibrium, conceptual, 'Relationship between this reading and the deterrence_equilibrium sibling: distinct causal mechanisms, coexisting frameworks.').
 
 omega_variable(
-    norm_entrepreneur_extraction,
-    'Do norm entrepreneurs (disarmament activists, treaty verifiers, NPT administrators) gain status, funding, and institutional power from the taboo''s persistence, creating incentive structures that may suppress alternative readings of total war possibility?',
-    'Trace career advancement and institutional resource flows for disarmament advocates vs. deterrence strategists; examine citation patterns and funding competition; interview norm entrepreneurs about exit conditions.',
-    'If extraction is present, the taboo contains a snare component: norm entrepreneurs benefit from its maintenance while those seeking deterrent options bear the costs and are structurally excluded from renegotiating the rules.',
+    sibling_reading_space_contraction,
+    'How does the nuclear_taboo_reading relate structurally to the space_contraction_reading, which asserts that nuclear weapons removed total war from the strategically thinkable possibility space?',
+    'The readings differ in their structural claims: taboo_reading asserts total war is possible but prohibited; space_contraction_reading asserts total war is impossible (not thinkable, not choosable). This is an ontological difference about the nature of the constraint itself. Empirical test: do strategic planners and military decision-makers treat nuclear escalation as a ''live branching point that we choose not to take'' (taboo reading) or as ''off the possibility menu entirely'' (space_contraction reading)? Evidence from classified strategic planning documents and from crisis-period decision-maker interviews could resolve this, but is not publicly accessible.',
+    'If space_contraction is the correct reading, then total war is a mountain-type constraint (materially/strategically impossible), not a constructed taboo. The classification would shift from tangled_rope to mountain. Practical difference: a mountain-type constraint persists without active maintenance; a taboo-type constraint requires continuous institutional enforcement and could fail if custodians exit.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(norm_entrepreneur_extraction, empirical, 'Whether norm entrepreneurship creates concentrated benefits from taboo maintenance.').
-
-omega_variable(
-    proliferation_state_coercion_mechanism,
-    'Is the non-proliferation regime''s suppression of proliferation-motivated states structural (economic sanctions, technical barriers, inspection regimes) or internalized (the states themselves accept the taboo''s legitimacy and forgo deterrence as morally binding)?',
-    'Post-sanctions suppression trajectory: if proliferation motivation persists or escalates after sanctions are lifted (or if states openly contest the taboo when enforcement pressure eases), suppression is primarily structural; if suppression persists after pressure removal, it is partially internalized.',
-    'If internalized, the taboo has captured military and political elites in non-nuclear states, making the constraint more extractive than structural mechanisms alone suggest. If structural, the constraint depends on continuous enforcement machinery; weakening that machinery would reveal the suppression underneath.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(proliferation_state_coercion_mechanism, empirical, 'Whether proliferation suppression is structural or internalized in state decision-making.').
-
-omega_variable(
-    kernel_reading_contest_ambiguity,
-    'This constraint instantiates the NORMATIVE-PROHIBITION reading of the total-war kernel. Sibling readings interpret the same kernel differently: deterrence_equilibrium (total war is reachable but deterred by vulnerability) and space_contraction (nuclear weapons made it unthinkable strategically, not merely normatively prohibited). Which reading captures the causal mechanism actually holding the constraint?',
-    'Examine what breaks the taboo if one element fails: (a) if removing the normative narrative (declaring nuclear use thinkable but deterred) breaks the constraint, this reading is correct; (b) if only removing material parity breaks it, the deterrence reading is correct; (c) if strategic unthinkability (removing nuclear weapons from military planning doctrines) is the lock, the space_contraction reading is correct.',
-    'Each reading implies different vulnerability points and different policy recommendations. Identifying the true reading determines where enforcement effort should be focused: norm maintenance (this reading), force structure balance (deterrence reading), or doctrinal exclusion (space_contraction reading).',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contest_ambiguity, conceptual, 'Which causal reading of the total-war kernel this constraint correctly instantiates.').
+narrative_ontology:omega_variable(sibling_reading_space_contraction, conceptual, 'Relationship between this reading and the space_contraction sibling: ontological difference about what total war is (possible-but-prohibited vs. strategically-impossible).').
 
 
 /* ==========================================================================
@@ -245,49 +292,67 @@ narrative_ontology:interval(total_war_possibility_space__nuclear_taboo_reading, 
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tota_tr_t1945, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1945, 0.25).
-narrative_ontology:measurement(tota_tr_t1962, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1962, 0.35).
-narrative_ontology:measurement(tota_tr_t1980, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1980, 0.42).
-narrative_ontology:measurement(tota_tr_t2000, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 2000, 0.5).
-narrative_ontology:measurement(tota_tr_t2015, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 2015, 0.52).
-narrative_ontology:measurement(tota_tr_t2026, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 2026, 0.52).
+narrative_ontology:measurement(tota_tr_t1945, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1945, 0.08).
+narrative_ontology:measurement_basis(tota_tr_t1945, projected).
+narrative_ontology:measurement(tota_tr_t1962, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1962, 0.18).
+narrative_ontology:measurement_basis(tota_tr_t1962, observed).
+narrative_ontology:measurement(tota_tr_t1979, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1979, 0.28).
+narrative_ontology:measurement_basis(tota_tr_t1979, observed).
+narrative_ontology:measurement(tota_tr_t1991, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 1991, 0.38).
+narrative_ontology:measurement_basis(tota_tr_t1991, observed).
+narrative_ontology:measurement(tota_tr_t2006, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 2006, 0.41).
+narrative_ontology:measurement_basis(tota_tr_t2006, observed).
+narrative_ontology:measurement(tota_tr_t2026, total_war_possibility_space__nuclear_taboo_reading, theater_ratio, 2026, 0.42).
+narrative_ontology:measurement_basis(tota_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(tota_be_t1945, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1945, 0.15).
-narrative_ontology:measurement(tota_be_t1962, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1962, 0.24).
-narrative_ontology:measurement(tota_be_t1980, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1980, 0.28).
-narrative_ontology:measurement(tota_be_t2000, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 2000, 0.29).
-narrative_ontology:measurement(tota_be_t2015, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 2015, 0.31).
+narrative_ontology:measurement(tota_be_t1945, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1945, 0.55).
+narrative_ontology:measurement_basis(tota_be_t1945, projected).
+narrative_ontology:measurement(tota_be_t1962, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1962, 0.42).
+narrative_ontology:measurement_basis(tota_be_t1962, observed).
+narrative_ontology:measurement(tota_be_t1979, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1979, 0.38).
+narrative_ontology:measurement_basis(tota_be_t1979, observed).
+narrative_ontology:measurement(tota_be_t1991, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 1991, 0.28).
+narrative_ontology:measurement_basis(tota_be_t1991, observed).
+narrative_ontology:measurement(tota_be_t2006, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 2006, 0.31).
+narrative_ontology:measurement_basis(tota_be_t2006, observed).
 narrative_ontology:measurement(tota_be_t2026, total_war_possibility_space__nuclear_taboo_reading, base_extractiveness, 2026, 0.31).
+narrative_ontology:measurement_basis(tota_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tota_su_t1945, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1945, 0.42).
-narrative_ontology:measurement(tota_su_t1962, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1962, 0.58).
-narrative_ontology:measurement(tota_su_t1980, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1980, 0.64).
-narrative_ontology:measurement(tota_su_t2000, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 2000, 0.67).
-narrative_ontology:measurement(tota_su_t2015, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 2015, 0.68).
+narrative_ontology:measurement(tota_su_t1945, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1945, 0.45).
+narrative_ontology:measurement_basis(tota_su_t1945, projected).
+narrative_ontology:measurement(tota_su_t1962, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1962, 0.62).
+narrative_ontology:measurement_basis(tota_su_t1962, observed).
+narrative_ontology:measurement(tota_su_t1979, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1979, 0.68).
+narrative_ontology:measurement_basis(tota_su_t1979, observed).
+narrative_ontology:measurement(tota_su_t1991, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 1991, 0.71).
+narrative_ontology:measurement_basis(tota_su_t1991, observed).
+narrative_ontology:measurement(tota_su_t2006, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 2006, 0.69).
+narrative_ontology:measurement_basis(tota_su_t2006, observed).
 narrative_ontology:measurement(tota_su_t2026, total_war_possibility_space__nuclear_taboo_reading, suppression_requirement, 2026, 0.68).
+narrative_ontology:measurement_basis(tota_su_t2026, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(total_war_possibility_space__nuclear_taboo_reading, global_infrastructure).
-narrative_ontology:boltzmann_floor_override(total_war_possibility_space__nuclear_taboo_reading, 0.18).
+narrative_ontology:coordination_type(total_war_possibility_space__nuclear_taboo_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(total_war_possibility_space__nuclear_taboo_reading, 0.12).
 narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, total_war_possibility_space__deterrence_equilibrium_reading).
 narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, total_war_possibility_space__space_contraction_reading).
-narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, non_proliferation_regime_enforcement).
-narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, extended_deterrence_alliance_stability).
+narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, non_proliferation_regime_structural_effect).
+narrative_ontology:affects_constraint(total_war_possibility_space__nuclear_taboo_reading, regional_nuclear_actor_constraint_structure).
 
 % DUAL FORMULATION NOTE:
-% The total_war_possibility_space kernel has three structurally distinct readings. This story (nuclear_taboo_reading) treats the causal lock as normative commitment; deterrence_equilibrium_reading treats it as material vulnerability; space_contraction_reading treats it as strategic unthinkability. Each reading has a different ε (extraction profile), different beneficiary/victim structure, and different suppression mechanism. The readings coexist as live positions held by different analytical schools and policy communities; none logically forecloses the others, but each creates structural pressure on alternatives. This constraint affects non_proliferation_regime_enforcement (non-proliferation legitimacy depends on taboo authority) and extended_deterrence_alliance_stability (extended deterrence works only if the taboo binds both guarantor and client states).
+% The 'total_war_possibility_space' kernel admits three structurally distinct readings: nuclear_taboo_reading (this story), deterrence_equilibrium_reading, and space_contraction_reading. Each reading instantiates a different constraint with different causal mechanisms and different stability properties. They are not sequential refinements of a single claim; they are competing analytical frameworks held by different epistemic communities (taboo reading: international-relations institutionalists; deterrence reading: strategic theorists; space_contraction reading: some strategic studies and philosophy-of-physics scholars). Each sister story carries its own ε, its own beneficiary/victim structure, and its own type classification. Link via network.affects_constraints to enable contamination analysis: a shift toward deterrence-equilibrium framing would loosen the enforcement mechanisms this story predicts; a shift toward space_contraction would imply the constraint is more robust than taboo maintenance suggests.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(total_war_possibility_space__nuclear_taboo_reading, powerful, 0.68).
+constraint_indexing:directionality_override(total_war_possibility_space__nuclear_taboo_reading, organized, 0.68).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

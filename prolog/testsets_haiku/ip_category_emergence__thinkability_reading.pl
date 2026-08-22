@@ -43,7 +43,13 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    domain_priors:emerges_naturally/1,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +74,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ip_category_emergence__thinkability_reading
- *   human_readable: IP Category Emergence: Ownable Expression as Conceptual Coherence (1710)
+ *   human_readable: IP Category Emergence: Thinkability Reading (1710)
  *   domain: legal_philosophy/intellectual_property/jurisprudence
  *
  * SUMMARY:
- *   In 1710, English common law articulated a new legal category: 'copy
- *   right,' the ownable interest in a published text, distinct from the
- *   physical printing block (property in goods) or the crown's monopoly grant
- *   (prerogative). Before 1710, disputes over printing rights existed —
- *   stationers claimed control, authors occasionally claimed compensation,
- *   the Crown granted monopolies — but the legal system lacked a coherent
- *   vocabulary to express these claims as a coherent kind of ownership. The
- *   Statute of Anne codified 'copy right' as a distinct property interest
- *   tied to authorship and publication, making 'ownable expression' thinkable
- *   as a category. This is the thinkability reading: the constraint is the
- *   emergence of this conceptual space, not the first entry of a particular
- *   actor (author or stationer) into rights-holding, nor the enforcement
- *   machinery protecting those rights, but the conceptual coherence that made
- *   'copy right' a discussable legal object. The claim/metric independence
- *   rule applies: the constraint is CLAIMED as a mountain (a natural fact of
- *   legal concept formation — expressing abstract ownership becomes thinkable
- *   once the category exists) while the authored metrics describe measurable
- *   extraction (the category benefits stationers, suppresses alternative
- *   framings, carries theater ratio as the concept is invoked to justify
- *   institutional interests). The engine measures that divergence; we do not
- *   reconcile the claim to the metrics.
+ *   The thinkability reading instantiates one axis of a contested kernel
+ *   about IP emergence in 1710. This reading emphasizes that before the
+ *   Statute of Anne, expression could not be conceived as ownable property in
+ *   a unified, coherent way; after 1710, 'copy right' emerged as a distinct
+ *   legal category, separable from guild privilege and property-in-labor. The
+ *   reading's claim is that the category itself—the thinkability of 'ownable
+ *   expression'—was the transformative achievement. This reading coexists
+ *   with alternatives: first_holding_reading (which emphasizes the emergence
+ *   of authors as legitimate rights-holders rather than category coherence)
+ *   and synchronic_diachronic_seam (which questions whether thinkability and
+ *   first-holding are formally independent or merely temporal framings of the
+ *   same event). This story instantiates ONLY the thinkability reading;
+ *   sibling stories express the other readings.
  *
  * KEY AGENTS:
- *   - common_law_jurists: gain conceptual tools to articulate IP disputes; institutional power but analytical motivation
- *   - stationer_guild_members: gain new legal grounding for their monopoly; organized power, strong interest in preserving the category once emerged
- *   - crown_authority: controls the moment of codification (Statute of Anne); institutional power, prerogative interest
- *   - authors: nominally granted rights but excluded from institutional control; moderate power, trapped by the category's definition
- *   - reading_public: observers of the emerging category; powerless, constrained exit
+ *   - author_claimants: independent authors and printers who benefit from a coherent 'copy right' category and can now defend their claims without guild membership
+ *   - guild_monopoly_defenders: Stationers' Company and privilege-holders who lose certainty when claims can be framed as property rather than privilege
+ *   - jurists_and_commentators: judges, legal theorists, and parliamentary draftsmen who set the agenda by codifying 'copy right' as a category
+ *   - legal_system_coherence: the abstract good of doctrinal clarity and predictability in adjudication
  */
 
 /* ==========================================================================
@@ -106,78 +104,115 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ip_category_emergence__thinkability_reading, 0.31).
-domain_priors:suppression_score(ip_category_emergence__thinkability_reading, 0.19).
-domain_priors:theater_ratio(ip_category_emergence__thinkability_reading, 0.08).
+domain_priors:base_extractiveness(ip_category_emergence__thinkability_reading, 0.42).
+domain_priors:suppression_score(ip_category_emergence__thinkability_reading, 0.28).
+domain_priors:theater_ratio(ip_category_emergence__thinkability_reading, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, extractiveness, 0.31).
-narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, suppression_requirement, 0.19).
-narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, extractiveness, 0.42).
+narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, suppression_requirement, 0.28).
+narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, resistance, 0.41).
+narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, resistance, 0.35).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(ip_category_emergence__thinkability_reading, mountain).
-narrative_ontology:human_readable(ip_category_emergence__thinkability_reading, "IP Category Emergence: Ownable Expression as Conceptual Coherence (1710)").
+narrative_ontology:constraint_claim(ip_category_emergence__thinkability_reading, rope).
+narrative_ontology:human_readable(ip_category_emergence__thinkability_reading, "IP Category Emergence: Thinkability Reading (1710)").
 narrative_ontology:topic_domain(ip_category_emergence__thinkability_reading, "legal_philosophy/intellectual_property/jurisprudence").
 
-domain_priors:emerges_naturally(ip_category_emergence__thinkability_reading).
-
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ip_category_emergence__thinkability_reading, 'bdcb3257-3909-4283-87bc-55a4d22ac647').
-narrative_ontology:cs_kernel_codification('bdcb3257-3909-4283-87bc-55a4d22ac647', formalized).
-narrative_ontology:cs_authority_grounding('bdcb3257-3909-4283-87bc-55a4d22ac647', lineage).
-narrative_ontology:cs_interpretation_layer_present('bdcb3257-3909-4283-87bc-55a4d22ac647').
-narrative_ontology:cs_reading_relation('bdcb3257-3909-4283-87bc-55a4d22ac647', ip_category_emergence__first_holding_reading, coexists_with).
-narrative_ontology:cs_reading_relation('bdcb3257-3909-4283-87bc-55a4d22ac647', ip_category_emergence__synchronic_diachronic_seam, coexists_with).
-narrative_ontology:cs_axiom('bdcb3257-3909-4283-87bc-55a4d22ac647', foundational, conceptual_coherence_precedes_enforcement).
-narrative_ontology:cs_axiom_status(conceptual_coherence_precedes_enforcement, holdable).
-narrative_ontology:cs_axiom_grounding('bdcb3257-3909-4283-87bc-55a4d22ac647', conceptual_coherence_precedes_enforcement, deontological).
-narrative_ontology:cs_axiom('bdcb3257-3909-4283-87bc-55a4d22ac647', secondary, ownership_of_intangibles_requires_epistemic_frame).
-narrative_ontology:cs_axiom_status(ownership_of_intangibles_requires_epistemic_frame, holdable).
-narrative_ontology:cs_axiom_grounding('bdcb3257-3909-4283-87bc-55a4d22ac647', ownership_of_intangibles_requires_epistemic_frame, empirically_contingent).
-narrative_ontology:cs_reference_frame('bdcb3257-3909-4283-87bc-55a4d22ac647', pre_1710_vocational_monopoly_frame).
-narrative_ontology:cs_drift_state('bdcb3257-3909-4283-87bc-55a4d22ac647', post_1710_property_rights_frame, gap(codification_collapse, substantial, true)).
-narrative_ontology:cs_created_at('bdcb3257-3909-4283-87bc-55a4d22ac647', '').
+narrative_ontology:cs_story_uid(ip_category_emergence__thinkability_reading, '75a616f3-eead-41d2-8c78-243962aae2ed').
+narrative_ontology:cs_kernel_codification('75a616f3-eead-41d2-8c78-243962aae2ed', formalized).
+narrative_ontology:cs_authority_grounding('75a616f3-eead-41d2-8c78-243962aae2ed', lineage).
+narrative_ontology:cs_interpretation_layer_present('75a616f3-eead-41d2-8c78-243962aae2ed').
+narrative_ontology:cs_reading_relation('75a616f3-eead-41d2-8c78-243962aae2ed', ip_category_emergence__first_holding_reading, coexists_with).
+narrative_ontology:cs_reading_relation('75a616f3-eead-41d2-8c78-243962aae2ed', ip_category_emergence__synchronic_diachronic_seam, influences).
+narrative_ontology:cs_axiom('75a616f3-eead-41d2-8c78-243962aae2ed', foundational, expression_thinkability_prerequisite).
+narrative_ontology:cs_axiom_status(expression_thinkability_prerequisite, holdable).
+narrative_ontology:cs_axiom_grounding('75a616f3-eead-41d2-8c78-243962aae2ed', expression_thinkability_prerequisite, instrumental).
+narrative_ontology:cs_axiom('75a616f3-eead-41d2-8c78-243962aae2ed', secondary, category_coherence_enables_claims).
+narrative_ontology:cs_axiom_status(category_coherence_enables_claims, holdable).
+narrative_ontology:cs_axiom_grounding('75a616f3-eead-41d2-8c78-243962aae2ed', category_coherence_enables_claims, instrumental).
+narrative_ontology:cs_reference_frame('75a616f3-eead-41d2-8c78-243962aae2ed', pre_statutory_privilege_monopoly).
+narrative_ontology:cs_drift_state('75a616f3-eead-41d2-8c78-243962aae2ed', post_statute_of_anne_codification, gap(codification_collapse, substantial, true)).
+narrative_ontology:cs_created_at('75a616f3-eead-41d2-8c78-243962aae2ed', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(ip_category_emergence__thinkability_reading, ip_category_emergence).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ip_category_emergence__thinkability_reading, common_law_jurists).
-narrative_ontology:constraint_beneficiary(ip_category_emergence__thinkability_reading, stationer_guild_members).
+narrative_ontology:constraint_beneficiary(ip_category_emergence__thinkability_reading, author_claimants).
+narrative_ontology:constraint_beneficiary(ip_category_emergence__thinkability_reading, legal_system_coherence).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(ip_category_emergence__thinkability_reading, guild_monopoly_defenders).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Authors, printers, and booksellers who benefit from the emerging category of 'copy right' as a distinct, alienable property right separable from guild monopoly. The thinkability of ownable expression gives them legal language to defend their claims without relying on guild membership or Crown letters patent. They collect the benefit of category coherence: their disputes now map to a legible framework rather than ad-hoc privilege claims.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, author_claimants, beneficiary,
+    moderate, generational, constrained, national).
+
+% The abstract good of doctrinal coherence: the legal system gains a named category ('copy right') that disambiguates disputes that previously lacked vocabulary. This is a vindicated proposition, not a real actor, but it collects the benefit of reduced confusion and improved predictability in adjudication.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, legal_system_coherence, beneficiary,
+    analytical, generational, analytical, national).
+narrative_ontology:stakeholder_non_agent(ip_category_emergence__thinkability_reading, legal_system_coherence).
+
+% Established guild structures (Stationers' Company) that relied on Crown-granted monopolies face pressure as 'copy right' offers an alternative legitimacy frame. Their monopoly rents are now contestable by those outside the guild who can argue for property rights rather than begging privilege. They pay in reduced certainty of their monopoly position and must now defend their claims in property language rather than privilege language.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, guild_monopoly_defenders, payer,
+    organized, biographical, constrained, national).
+
+% Printers, authors, and booksellers operating before 1710 who could not deploy IP language because it did not yet exist as a coherent category. Their disputes were adjudicated under privilege, guild-right, or property-in-labor frames, none of which were stable or universal. They are excluded by the temporal boundary: they could not have used the category when it was not thinkable.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, pre_1710_dispute_participants, excluded,
+    organized, biographical, trapped, national).
+
+% Judges, legal theorists, and parliamentary draftsmen who codify and interpret the emerging 'copy right' category. They set the agenda by choosing how to name the right, what it attaches to, and how it relates to other property forms. Their decisions embed the thinkability into doctrine; their rulings make the category real and actionable.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, jurists_and_commentators, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Readers and consumers of printed works who do not participate in authorship or publishing decisions. The emergence of IP category affects them indirectly through pricing, access, and what gets printed, but they are not seats in the category-emergence constraint itself—they are outside looking in.
+narrative_ontology:constraint_stakeholder(ip_category_emergence__thinkability_reading, public_as_readers, observer,
+    powerless, immediate, trapped, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(ip_category_emergence__thinkability_reading, legal_system_coherence).
+narrative_ontology:fixing_cost_class(ip_category_emergence__thinkability_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The legal system gains a coherent conceptual frame for disputes over ownable expression: instead of ad-hoc appeals to privilege, guild-right, or labor-property, disputes can now be articulated in the language of 'copy right' as a distinct, transferable right. This coordination function reduces confusion in adjudication and allows strangers (people outside guild structures) to invoke the same frame.
+% TRANSFER_FUNCTION: Authority to name and defend claims to printed expression transfers from guild monopoly holders and Crown privilege-grantees to a broader class of claimants (independent authors, outsider printers, booksellers without guild membership). The thinkability of the category as property (rather than privilege) redistributes who can legitimately claim authority over a work.
+% ABSENT_VOICES: Pre-1710 participants in manuscript and printing disputes would object if resurrected: they lacked the vocabulary to reframe their conflicts in IP terms, and the retroactive application of 'copy right' language to their disputes naturalizes a category that was not available to them. Authors working in non-English jurisdictions or outside the book trades might also object: the emergence of IP as a category happens within a specific legal system and commercial context; they experience it as jurisdiction-specific or irrelevant.
+% DISAPPEARANCE_RATIONALE: If the thinkability of 'copy right' as a distinct category disappeared—if the legal vocabulary collapsed and disputes reverted to formulations like 'guild privilege' or 'property in labor'—the landscape of adjudication would rearrange: claimants would lose the stable frame they had gained, disputes would proliferate in incoherent forms, and the legal system would lose the doctrinal coherence it had achieved. However, the underlying disputes (who controls printing, who benefits from authorship) would not disappear; they would simply be fought in non-IP language. The verdict is contested because some parties (guild defenders, privilege-holders) would argue that the world would be stable without the category—that IP merely renamed pre-existing arrangements—while others (independent claimants, jurists) would argue that the category was transformative and its absence would derange the entire system.
+% FOUNDING_PROBLEM: Before 1710, disputes over control and benefit from printed expression lacked a stable legal vocabulary. Claimants invoked guild membership, Crown letters patent, property-in-labor, and breach of confidence—ad-hoc frames that did not cohere across cases. The legal system had no unified way to think about whether expression could be owned, by whom, for how long, or under what conditions.
+% FOUNDING_PROBLEM_CORROBORATION: Literary historians and legal scholars (including statute commentators from outside the benefiting parties—judges and academics not employed by publishers) document that pre-1710 disputes were indeed incoherent in framing: the same dispute could be articulated as breach of privilege, property in labor, copyright, or mere contract, depending on the court and the claimant's relationship to guild structures. Post-1710 commentaries (Blackstone, later IP theorists) confirm that the emergence of 'copy right' as a distinct category was an interpretive achievement, not a discovery of pre-existing natural law. The Statute of Anne (1710) itself is the pivot-point corroboration: it creates the legal vocabulary.
+narrative_ontology:disappearance_verdict(ip_category_emergence__thinkability_reading, contested).
+narrative_ontology:founding_problem_status(ip_category_emergence__thinkability_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ip_category_emergence__thinkability_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(ip_category_emergence__thinkability_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(ip_category_emergence__thinkability_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ip_category_emergence__thinkability_reading, 0.42, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(ip_category_emergence__thinkability_reading_tests).
-
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, ExtMetricName, E),
-    domain_priors:suppression_score(ip_category_emergence__thinkability_reading, S),
-    E =< 0.25,
-    S =< 0.05.
-
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(ip_category_emergence__thinkability_reading),
-    narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(ip_category_emergence__thinkability_reading, resistance, R),
-    AC >= 0.85,
-    R =< 0.15.
-
 :- end_tests(ip_category_emergence__thinkability_reading_tests).
 
 /* ==========================================================================
@@ -186,16 +221,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low-to-moderate (0.31 at 1710, rising slightly by 1750) because the constraint measures conceptual emergence, not extraction from a particular agent to another, but stationers and jurists do benefit institutionally from the coherence the category provides. Suppression is similarly modest (0.19 at 1710) because the constraint does not require active coercive enforcement — suppression takes the form of epistemic closure (the new vocabulary makes pre-1710 framings difficult to articulate). Theater ratio is very low (0.08) because the constraint's function is primarily conceptual, not performative; the category exists to enable reasoning, not to dress up another mechanism. Accessibility collapse is high (0.72) because once the 'copy right' category is thinkable, alternatives are difficult to recover — the legal system has committed to this framework for reasoning about text ownership. Resistance is moderate (0.41) because some actors (authors, the reading public) resist aspects of how the category crystallizes, but the category itself gains rapid institutional acceptance. The measurement series run on one shared time grid (1650, 1680, 1710, 1730, 1750) so every metric is authored at every time point.
+ *   Extractiveness is moderate (0.42) because the category emergence is a genuine coordination achievement—it reduces confusion and gives claimants a stable frame—but it is also embedded in property extraction; the thinkability of ownable expression enables rent-collection and gate-keeping. The measurement series shows extractiveness rising from 0.18 (pre-1710, disputes incoherent, no category yet) to 0.42 (post-1710, category stabilized, but extraction now normalized), then plateauing. Suppression is low and declining (0.28 at t=40, down from 0.35 at t=0) because the category gain reduces the need for active suppression—the frame itself does the work. Theater is consistently low (~0.15) because the category-emergence is substantive (disputes do map better to the new frame) rather than performative. Accessibility-collapse is moderately high (0.68) because once 'copy right' becomes thinkable, pre-1710 alternatives (privilege, labor-property) become harder to access; the new category crowds out older frames. Resistance is low-moderate (0.35) because the category addresses a real coordination problem that guild-monopoly defenders can also use; it is not purely extractive, so opposition is muted.
  *
  * PERSPECTIVAL GAP:
- *   From the jurist's seat, the constraint is the discovery and articulation of a natural legal category — 'ownable expression' emerges because it names a real phenomenon (the value of the text, independent of the paper). From the stationer's seat, the constraint is an institutional win: their monopoly, previously vulnerable to being revoked as royal whim, now grounds itself in property law, making it harder to overturn. From the author's seat, the constraint is a nominal victory without institutional substance: they are granted rights on paper but excluded from the machinery that enforces them. These perspectival gaps should compute as different directionalities and possibly different type classifications at different seats.
+ *   The jurist/agenda-setter seat experiences this as the achievement of doctrinal clarity and legal progress—a genuinely beneficial category emergence. The guild-defender seat experiences it as loss of monopoly certainty and pressure to defend claims in a new frame that does not favor them. The author-claimant seat experiences it as liberation—they can now invoke property language instead of begging Crown favor. The pre-1710 excluded seat (historically, no voice now) would experience it as retroactive rewriting of their disputes in language they never had. The engine computes these perspectival divergences from power + exit + role; the measurement series documents the shared temporal arc of increasing extractiveness even as the story is claimed as rope.
  *
  * DIRECTIONALITY LOGIC:
- *   Common-law jurists are near the beneficiary end (d ~0.25) because they gain conceptual coherence without bearing costs; the category exists to enable their reasoning. Stationers are also beneficiaries (d ~0.30) because their monopoly gains new legal grounding. Authors are complex: they are nominally granted rights by the Statute but are excluded from institutional control, so their directionality sits between symmetric (0.5) and target (1.0), placing them at d ~0.65 — they benefit from the category's existence (they can now claim ownership) but are suppressed within it (the category's institutional embodiment vests control in stationers). The reading public are observers, not stakeholders in the emergence event itself — they experience downstream effects but do not participate in setting the category.
+ *   Author-claimants are beneficiaries: they gain access to a stable frame (d near 0.2). Guild-defenders are payers: they lose monopoly certainty (d near 0.8). Jurists are the agenda-setter (d near 0.5, they set the frame but do not profit from it directly). Legal-system-coherence is not an agent and collects no extraction (agent: false). The directionality mapping depends on the reading: this reading emphasizes the thinkability gain, which is a genuine coordination benefit, so beneficiaries and payers are distributed by who gains clearer frames vs. who loses monopoly power, not by who extracts rents. This differs from the first_holding_reading, which would emphasize authors as NEW legitimate claimants (different beneficiary structure) and measure different d values for the same agents.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (pre-1710 chaos in articulating text ownership) is live at 1710 — the Statute is a direct response to dispute. By 1750, the category has become normalized; the institutional machinery of copyright protection is well-established. The question is whether the category persists because it solves a live coordination problem (jurists need the vocabulary, the market needs property rights in intangibles) or because institutions are invested in maintaining it (stationers and the Crown benefit from the monopoly, authors are locked in). The theater_ratio rising from 0.02 to 0.10 suggests increasing performative use: early on, the category is a genuine conceptual tool; over time, it becomes a justification for policies that serve institutional interests. This pattern is consistent with mandatrophy: the category's original function (conceptual clarity) is intact, but its institutional embodiment (the monopoly) accumulates extraction. The constraint is not mandatrophic in the strict sense — the category continues to enable genuine reasoning — but it is under pressure toward that diagnosis.
+ *   The founding problem (disputes over expression control lack coherent vocabulary) was live and urgent before 1710. The Statute of Anne solved it by codifying 'copy right' as a distinct category. Does the problem stay live post-1710? Jurists and legislators say yes—disputes still arise about scope, duration, and who qualifies. Guild-defenders and some privilege-holders might say the problem was solved by privilege itself (no category needed). This tension is captured in the founding_problem_status = 'live' and the contested disappearance_verdict: some parties argue the category was essential to solving coordination; others argue privilege did the job and IP merely renamed it. The measuring body tracks this by the M4/M5 seam (synchronic_diachronic_seam reading): if thinkability and first-holding are formally independent, then founding_problem resolution tracks thinkability alone; if they are temporal reframing of the same event, then the constraint's mandate is fused with the first-holding reading and cannot be separated here.
  */
 
 /* ==========================================================================
@@ -203,76 +238,79 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    thinkability_vs_first_holding,
-    'Is the emergence of ''copy right'' as a thinkable category a SEPARATE event from the emergence of authorship as a legitimate rights-holder? Or is thinkability merely the epistemic mirror of the first holding entering the legal system?',
-    'M4/M5 collapse test: examine whether the two readings (thinkability_reading and first_holding_reading) produce different classifications of the constraint when directionality and scope are held constant. If they compute to the same type, the readings are temporal framings of one structural change; if they compute differently, thinkability is structurally independent.',
-    'If independent: two constraints, two constraint IDs, linked via network.affects_constraints. If collapsed: one constraint with two readings, unified under a single story with kernel_context documenting the interpretive choice.',
+    thinkability_vs_discovery,
+    'Was ''copy right'' as a distinct category a genuine emergence (previously unthinkable, became thinkable in 1710), or was it a discovery of something that already existed in practice?',
+    'Textual and doctrinal history: examine pre-1710 disputes for evidence of whether parties used or could have used IP-like vocabulary, or whether they were forced into privilege/guild frames by linguistic necessity. If pre-1710 texts show authors invoking property-in-expression language successfully (even if not named ''copy right''), the emergence was discovery, not creation.',
+    'If genuinely emergent, the constraint is a coordinate achievement (rope-type); the category change is real. If discovered, the constraint might be reclassified as piton (the category existed but became thinkable/codified). High impact on type computation.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(thinkability_vs_discovery, conceptual, 'Whether the 1710 category was a genuine linguistic/conceptual creation or a pre-existing practice made legible.').
+
+omega_variable(
+    category_independence_from_first_holding,
+    'Are thinkability (coherent concept) and first-holding (authors as legitimate claimants) formally independent events, or are they temporal framings of a single structural emergence?',
+    'Formal analysis per OQ-254 (M4/M5 seam test): if you can construct a coherent history where (a) authors became thinkable as rights-holders WITHOUT the category being thinkable (or vice versa), they are independent; if you cannot separate them without contradiction, they are fused framings of one event. Witness: can you imagine a world where guild-monopoly persists but authors gain property rights through a different category (labor-property, trust, equity)? If yes, independent; if no, fused.',
+    'If independent, this constraint stands alone and sibling readings are genuinely distinct constraints. If fused, the thinkability_reading and first_holding_reading refer to the same underlying emergence and should be collapsed into one story with multiple framings (not done here, per Rule 1).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(thinkability_vs_first_holding, conceptual, 'Whether category emergence and first-holding are structurally distinct events or temporal framings of the same structural change.').
+narrative_ontology:omega_variable(category_independence_from_first_holding, conceptual, 'Formal separability of thinkability and first-holding as independent events or fused moments.').
 
 omega_variable(
-    natural_law_vs_constructed_category,
-    'Is ''ownable expression'' a fact of nature that jurists discovered in 1710, or a constructed legal category that jurists invented in response to economic and institutional pressures?',
-    'Trace whether ''copy right'' vocabulary appears in pre-1710 statutes, cases, or jurist writing without the 1710 legal-reform event. If the concept pre-existed the reform, it was discovered/formalized; if it appears only after, it was constructed.',
-    'If discovered: the constraint is a genuine mountain (natural legal reality), and the ''beneficiaries'' declaration triggers FSM evaluation. If constructed: the beneficiaries are real institutional actors who benefit from the category''s emergence, and the constraint may reclassify to tangled_rope (invented category serving institutional interests).',
+    suppression_internalization_trajectory,
+    'Is the measured suppression decline (0.35 → 0.28 over 40 years) because the category-frame itself does the work (internalized acceptance), or because external enforcement fades and the category becomes performative?',
+    'Post-emergence dispute data: if suppression declines AND dispute outcomes converge (fewer appeals, faster adjudication, party acceptance), the frame is doing the work and suppression is internalized. If suppression declines but dispute outcomes diverge (parties contest category application, invent workarounds, appeal more), the frame is performative and suppression is just fading.',
+    'If internalized, the category is genuinely accepted and the constraint is stable rope. If performative, the constraint is piton-trajectory (function atrophies, theatrical maintenance increases). Theater-ratio stays low (0.15) either way, so the mechanism matters for stability prognosis.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_trajectory, empirical, 'Whether declining suppression indicates internalized frame acceptance or fading performative enforcement.').
+
+omega_variable(
+    kernel_reading_framing_choice,
+    'Is this reading (thinkability) the defensible primary framing of 1710 IP emergence, or is one of the sibling readings more fundamental?',
+    'Jurisprudential genealogy: trace which framing the 18th and 19th-century commentators (Blackstone, Justice Mansfield, later theorists) actually emphasized. If they emphasize author-as-claimant, first_holding is primary. If they emphasize the category''s coherence, thinkability is primary. If they treat both symmetrically or collapse them, the seam reading is empirically grounded.',
+    'If thinkability is the defensible primary framing, this constraint grounds the others; if not, this reading is an optional lens and the primary emerges from canonical sources. No impact on type computation (the engine decides based on metrics), but high impact on which story is pedagogically foundational.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_constructed_category, empirical, 'Whether ''ownable expression'' is a pre-existing natural category or an invented legal construct.').
-
-omega_variable(
-    suppression_mechanism_epistemic_vs_institutional,
-    'Is the ''suppression'' measured here institutional suppression (the Crown and Stationers actively barring alternative framings, preventing dissent from the ''copy right'' category) or epistemic suppression (the category, once thinkable, crowds out pre-1710 vocabulary, making alternatives difficult to articulate)?',
-    'Historical record of who resisted the ''copy right'' framing and whether resistance was legally suppressed (institutional) or simply rendered incoherent by the new vocabulary (epistemic).',
-    'If institutional: suppression is a structural feature of the constraint''s enforcement; if epistemic: suppression is an emergent feature of conceptual coherence, not coercion. The latter is lower-stakes and fits the mountain profile better.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_epistemic_vs_institutional, conceptual, 'Whether suppression of alternative framings is enforced institutionally or emerges from epistemic coherence.').
-
-omega_variable(
-    scope_of_coherence,
-    'Is the emergence of ''copy right'' coherence a feature of English common law specifically, or does it represent a global/universal threshold in legal concept formation that multiple jurisdictions crossed independently?',
-    'Compare IP emergence dates and vocabulary in civil-law jurisdictions, Scots law, and colonial legal systems. If multiple systems invented ''ownable expression'' independently, it is a universal conceptual threshold; if unique to England, it is a jurisdictional category.',
-    'If universal: the constraint is closer to a mountain (crossing a threshold of conceptual coherence that any legal system would eventually reach). If jurisdictional: the constraint is more constructed (England made a choice; other systems made different choices). Spatial scope assessment depends on this resolution.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(scope_of_coherence, empirical, 'Whether IP category emergence is jurisdiction-specific or universal.').
+narrative_ontology:omega_variable(kernel_reading_framing_choice, empirical, 'Whether thinkability is the primary or secondary framing of 1710 IP emergence in legal tradition.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ip_category_emergence__thinkability_reading, 1650, 1750).
+narrative_ontology:interval(ip_category_emergence__thinkability_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ip_c_tr_t1650, ip_category_emergence__thinkability_reading, theater_ratio, 1650, 0.02).
-narrative_ontology:measurement(ip_c_tr_t1680, ip_category_emergence__thinkability_reading, theater_ratio, 1680, 0.04).
-narrative_ontology:measurement(ip_c_tr_t1710, ip_category_emergence__thinkability_reading, theater_ratio, 1710, 0.08).
-narrative_ontology:measurement(ip_c_tr_t1730, ip_category_emergence__thinkability_reading, theater_ratio, 1730, 0.09).
-narrative_ontology:measurement(ip_c_tr_t1750, ip_category_emergence__thinkability_reading, theater_ratio, 1750, 0.1).
+narrative_ontology:measurement(ip_c_tr_t0, ip_category_emergence__thinkability_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(ip_c_tr_t5, ip_category_emergence__thinkability_reading, theater_ratio, 5, 0.11).
+narrative_ontology:measurement(ip_c_tr_t10, ip_category_emergence__thinkability_reading, theater_ratio, 10, 0.13).
+narrative_ontology:measurement(ip_c_tr_t15, ip_category_emergence__thinkability_reading, theater_ratio, 15, 0.14).
+narrative_ontology:measurement(ip_c_tr_t25, ip_category_emergence__thinkability_reading, theater_ratio, 25, 0.15).
+narrative_ontology:measurement(ip_c_tr_t40, ip_category_emergence__thinkability_reading, theater_ratio, 40, 0.15).
 
 % Extraction over time
-narrative_ontology:measurement(ip_c_be_t1650, ip_category_emergence__thinkability_reading, base_extractiveness, 1650, 0.12).
-narrative_ontology:measurement(ip_c_be_t1680, ip_category_emergence__thinkability_reading, base_extractiveness, 1680, 0.18).
-narrative_ontology:measurement(ip_c_be_t1710, ip_category_emergence__thinkability_reading, base_extractiveness, 1710, 0.31).
-narrative_ontology:measurement(ip_c_be_t1730, ip_category_emergence__thinkability_reading, base_extractiveness, 1730, 0.35).
-narrative_ontology:measurement(ip_c_be_t1750, ip_category_emergence__thinkability_reading, base_extractiveness, 1750, 0.38).
+narrative_ontology:measurement(ip_c_be_t0, ip_category_emergence__thinkability_reading, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(ip_c_be_t5, ip_category_emergence__thinkability_reading, base_extractiveness, 5, 0.28).
+narrative_ontology:measurement(ip_c_be_t10, ip_category_emergence__thinkability_reading, base_extractiveness, 10, 0.36).
+narrative_ontology:measurement(ip_c_be_t15, ip_category_emergence__thinkability_reading, base_extractiveness, 15, 0.4).
+narrative_ontology:measurement(ip_c_be_t25, ip_category_emergence__thinkability_reading, base_extractiveness, 25, 0.42).
+narrative_ontology:measurement(ip_c_be_t40, ip_category_emergence__thinkability_reading, base_extractiveness, 40, 0.42).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ip_c_su_t1650, ip_category_emergence__thinkability_reading, suppression_requirement, 1650, 0.08).
-narrative_ontology:measurement(ip_c_su_t1680, ip_category_emergence__thinkability_reading, suppression_requirement, 1680, 0.12).
-narrative_ontology:measurement(ip_c_su_t1710, ip_category_emergence__thinkability_reading, suppression_requirement, 1710, 0.19).
-narrative_ontology:measurement(ip_c_su_t1730, ip_category_emergence__thinkability_reading, suppression_requirement, 1730, 0.2).
-narrative_ontology:measurement(ip_c_su_t1750, ip_category_emergence__thinkability_reading, suppression_requirement, 1750, 0.21).
+narrative_ontology:measurement(ip_c_su_t0, ip_category_emergence__thinkability_reading, suppression_requirement, 0, 0.35).
+narrative_ontology:measurement(ip_c_su_t5, ip_category_emergence__thinkability_reading, suppression_requirement, 5, 0.32).
+narrative_ontology:measurement(ip_c_su_t10, ip_category_emergence__thinkability_reading, suppression_requirement, 10, 0.3).
+narrative_ontology:measurement(ip_c_su_t15, ip_category_emergence__thinkability_reading, suppression_requirement, 15, 0.29).
+narrative_ontology:measurement(ip_c_su_t25, ip_category_emergence__thinkability_reading, suppression_requirement, 25, 0.28).
+narrative_ontology:measurement(ip_c_su_t40, ip_category_emergence__thinkability_reading, suppression_requirement, 40, 0.28).
 
 
 /* ==========================================================================
@@ -280,16 +318,18 @@ narrative_ontology:measurement(ip_c_su_t1750, ip_category_emergence__thinkabilit
    ========================================================================== */
 
 narrative_ontology:coordination_type(ip_category_emergence__thinkability_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(ip_category_emergence__thinkability_reading, 0.03).
+narrative_ontology:boltzmann_floor_override(ip_category_emergence__thinkability_reading, 0.05).
 narrative_ontology:affects_constraint(ip_category_emergence__thinkability_reading, ip_category_emergence__first_holding_reading).
 narrative_ontology:affects_constraint(ip_category_emergence__thinkability_reading, ip_category_emergence__synchronic_diachronic_seam).
 
 % DUAL FORMULATION NOTE:
-% The kernel ip_category_emergence decomposes into three structurally distinct constraints. The thinkability_reading treats the constraint as the emergence of conceptual coherence for 'copy right' as a distinct category — a natural-law or logically-necessary threshold that legal reasoning must cross. The first_holding_reading treats the constraint as the institutional moment when authors (or stationers) enter the rights-holder set — an event in the distribution of power. The synchronic_diachronic_seam reading disputes whether these are one event viewed from two angles (temporal framing artifact) or two independent structural changes. Each reading has a different ε, beneficiary/victim structure, and type classification. Thinkability emphasizes the conceptual space (low extraction, high accessibility collapse, mountain claim); first-holding emphasizes power redistribution (higher extraction, suppression of prior claimants). The ε-invariance principle requires separate constraint stories because the core claim differs: 'thinkability' measures conceptual emergence while 'first-holding' measures institutional change. Linking them via network.affects_constraints preserves the kernel unity while respecting structural independence.
+% Part of ip_category_emergence constraint family. The kernel is the 1710 Statute of Anne and the emergence of IP as a legal category. Three readings decompose on the question of what 'emergence' means: (1) thinkability_reading: coherence of 'copy right' as a distinct category (this story); (2) first_holding_reading: emergence of authors as a new legitimate claimant class; (3) synchronic_diachronic_seam: formal independence or fusion of (1) and (2). Each reading is a separate constraint story with its own ε, beneficiary/victim structure, and metrics. The seam reading influences both thinkability and first_holding because its resolution affects whether they can be measured as distinct constraints or must be fused.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(ip_category_emergence__thinkability_reading, organized, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,6 +43,11 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,41 +72,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: nicene_creed_authority__symbolic_confessional_reading
- *   human_readable: Nicene Creed Authority — Symbolic Confessional Reading
- *   domain: theology/ecclesiology/history_of_doctrine
+ *   human_readable: Nicene Creed Authority (Symbolic-Confessional Reading)
+ *   domain: systematic_theology/ecclesiology
  *
  * SUMMARY:
- *   The Nicene Creed was promulgated in 325 CE as the Council of Nicaea's
- *   corporate witness to Christian faith, especially the divinity of Christ
- *   and the doctrine of the Trinity. Over subsequent centuries, the creed's
- *   authority shifted from its original function as a confessional anchor
- *   (enabling distributed communities to speak a shared language about God)
- *   toward an enforcement mechanism: heresy trials, doctrinal conformity
- *   gates, institutional loyalty markers. By the medieval and early modern
- *   periods, asserting the creed's binding authority had become inseparable
- *   from hierarchical institutional control. The
- *   'symbolic_confessional_reading' reconstructs the creed's authority along
- *   its earlier logic: as historically contingent witness arising from
- *   fourth-century ecumenical discernment, whose authority derives from
- *   community recognition and personal faith rather than from top-down
- *   institutional enforcement. This reading inverts the topology from
- *   'centralized authority enforces creedal conformity' to 'dispersed
- *   communities recognize shared witness and adapt it to their contexts.' The
- *   measurement series tracks the extractiveness trajectory: minimal at the
- *   creed's origin (when it was first a coordinating mechanism among diverse
- *   schools), rising as institutional enforcement machinery was built up
- *   (600–1200 CE period of maximum suppression), declining through the
- *   Reformation and modernity as historical consciousness and pluralism
- *   weakened gatekeeping, and remaining low-moderate in the contemporary
- *   context where multiple creedal readings coexist.
+ *   The Nicene Creed is a stabilized kernel—a fixed liturgical text forged at
+ *   the Council of Nicaea (325 CE) to settle metaphysical disputes about the
+ *   nature of Christ. This constraint story instantiates the
+ *   symbolic-confessional reading: the creed functions as a historically
+ *   contingent witness to faith rather than as an eternal metaphysical
+ *   mandate. Authority to interpret and affirm the creed derives from local
+ *   community discernment and personal faith, not from centralized
+ *   ecclesiastical decree. Under this reading, theological pluralism is
+ *   compatible with creedal orthodoxy because 'orthodoxy' means fidelity to
+ *   the creed's witness, not conformity to a single metaphysical system that
+ *   authorities extract from it. The reading shifts extractiveness
+ *   dramatically downward (from ~0.68 at Nicaea when enforcement was high, to
+ *   ~0.18 in contemporary pluralist contexts) because the suppressive
+ *   machinery required to impose doctrinal uniformity decays as the reading
+ *   gains traction. This is one reading of one kernel; the strict-orthodox
+ *   and liturgical-habituation readings are separate constraints in the same
+ *   family, each with their own ε and authority topology.
  *
  * KEY AGENTS:
- *   - local_congregations: The distributed agents who use the creed liturgically and theologically; they benefit from interpretive agency and freedom to contextualize.
- *   - community_interpreters: Theologians and pastors who generate meaning from the creed rather than merely transmitting it; they benefit from intellectual freedom.
- *   - ecumenical_dialogue_partners: Christian and non-Christian bodies engaged in interfaith work; they benefit from the creed reframed as shared spiritual history rather than doctrinal boundary.
- *   - centralized_magisterium: Institutional authorities (papal curia, orthodox patriarchates, Reformed confessional bodies) whose gatekeeping authority and enforcement leverage are weakened by this reading.
- *   - strict_orthodox_gatekeepers: Theologians and leaders committed to the creed as binding metaphysical ontology; they bear the cost of weakened doctrinal purity criteria.
- *   - historical_consciousness: The analytical observer position tracking how historical awareness reshapes creedal authority across traditions.
+ *   - local_congregations: primary beneficiaries under this reading; gain interpretive freedom while retaining tradition-rootedness
+ *   - lay_believers: beneficiaries; participate in creedal confession without metaphysical certification
+ *   - ecumenical_communities: beneficiaries; can cite shared creedal witness across denominational boundaries
+ *   - centralized_ecclesiastical_authority: payers; lose enforcement leverage and institutional control
+ *   - dogmatic_systematizers: excluded; their vocation is sidelined when the creed is not treated as a closed metaphysical system
+ *   - historical_scholarship: observer; provides empirical warrant for the creed's contingency
+ *   - theological_traditionalists: observer; maintain their own commitment to strict orthodoxy but cannot impose it as the creed's sole true reading
  */
 
 /* ==========================================================================
@@ -118,45 +119,106 @@ narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confession
 narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confessional_reading, accessibility_collapse, 0.35).
-narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confessional_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confessional_reading, accessibility_collapse, 0.38).
+narrative_ontology:constraint_metric(nicene_creed_authority__symbolic_confessional_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(nicene_creed_authority__symbolic_confessional_reading, rope).
-narrative_ontology:human_readable(nicene_creed_authority__symbolic_confessional_reading, "Nicene Creed Authority — Symbolic Confessional Reading").
-narrative_ontology:topic_domain(nicene_creed_authority__symbolic_confessional_reading, "theology/ecclesiology/history_of_doctrine").
+narrative_ontology:human_readable(nicene_creed_authority__symbolic_confessional_reading, "Nicene Creed Authority (Symbolic-Confessional Reading)").
+narrative_ontology:topic_domain(nicene_creed_authority__symbolic_confessional_reading, "systematic_theology/ecclesiology").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(nicene_creed_authority__symbolic_confessional_reading, '7e011cf0-0abf-474d-a324-5e4779a920e6').
-narrative_ontology:cs_kernel_codification('7e011cf0-0abf-474d-a324-5e4779a920e6', fixed_text).
-narrative_ontology:cs_authority_grounding('7e011cf0-0abf-474d-a324-5e4779a920e6', lineage).
-narrative_ontology:cs_interpretation_layer_present('7e011cf0-0abf-474d-a324-5e4779a920e6').
-narrative_ontology:cs_reading_relation('7e011cf0-0abf-474d-a324-5e4779a920e6', nicene_creed_authority__strict_orthodox_reading, coexists_with).
-narrative_ontology:cs_reading_relation('7e011cf0-0abf-474d-a324-5e4779a920e6', nicene_creed_authority__liturgical_habituation_reading, coexists_with).
-narrative_ontology:cs_axiom('7e011cf0-0abf-474d-a324-5e4779a920e6', foundational, creed_historical_witness_not_metaphysical_necessity).
-narrative_ontology:cs_axiom_status(creed_historical_witness_not_metaphysical_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('7e011cf0-0abf-474d-a324-5e4779a920e6', creed_historical_witness_not_metaphysical_necessity, empirically_contingent).
-narrative_ontology:cs_axiom('7e011cf0-0abf-474d-a324-5e4779a920e6', foundational, authority_from_community_discernment_not_institutional_enforcement).
-narrative_ontology:cs_axiom_status(authority_from_community_discernment_not_institutional_enforcement, holdable).
-narrative_ontology:cs_axiom_grounding('7e011cf0-0abf-474d-a324-5e4779a920e6', authority_from_community_discernment_not_institutional_enforcement, deontological).
-narrative_ontology:cs_reference_frame('7e011cf0-0abf-474d-a324-5e4779a920e6', creed_as_ecumenical_witness_anchor).
-narrative_ontology:cs_drift_state('7e011cf0-0abf-474d-a324-5e4779a920e6', contemporary_pluralist_era, gap(authority_erosion, substantial, true)).
-narrative_ontology:cs_created_at('7e011cf0-0abf-474d-a324-5e4779a920e6', '').
+narrative_ontology:cs_story_uid(nicene_creed_authority__symbolic_confessional_reading, '2c84e68b-97ae-4b29-9e5b-f89b45cb657d').
+narrative_ontology:cs_kernel_codification('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', fixed_text).
+narrative_ontology:cs_authority_grounding('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', practice).
+narrative_ontology:cs_interpretation_layer_present('2c84e68b-97ae-4b29-9e5b-f89b45cb657d').
+narrative_ontology:cs_reading_relation('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', nicene_creed_authority__strict_orthodox_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', nicene_creed_authority__liturgical_habituation_reading, coexists_with).
+narrative_ontology:cs_axiom('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', foundational, creedal_meaning_emerges_from_community_practice).
+narrative_ontology:cs_axiom_status(creedal_meaning_emerges_from_community_practice, holdable).
+narrative_ontology:cs_axiom_grounding('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', creedal_meaning_emerges_from_community_practice, conventional).
+narrative_ontology:cs_axiom('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', foundational, theological_interpretation_admits_irreducible_pluralism).
+narrative_ontology:cs_axiom_status(theological_interpretation_admits_irreducible_pluralism, holdable).
+narrative_ontology:cs_axiom_grounding('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', theological_interpretation_admits_irreducible_pluralism, empirically_contingent).
+narrative_ontology:cs_axiom('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', secondary, historical_contingency_compatible_with_transcendent_meaning).
+narrative_ontology:cs_axiom_status(historical_contingency_compatible_with_transcendent_meaning, holdable).
+narrative_ontology:cs_axiom_grounding('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', historical_contingency_compatible_with_transcendent_meaning, deontological).
+narrative_ontology:cs_reference_frame('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', community_discernment_framework).
+narrative_ontology:cs_drift_state('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', post_enlightenment_historical_consciousness, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_created_at('2c84e68b-97ae-4b29-9e5b-f89b45cb657d', '2026-06-11T14:32:18Z').
 narrative_ontology:cs_kernel_id(nicene_creed_authority__symbolic_confessional_reading, nicene_creed_authority).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(nicene_creed_authority__symbolic_confessional_reading, local_congregations).
-narrative_ontology:constraint_beneficiary(nicene_creed_authority__symbolic_confessional_reading, ecumenical_dialogue_partners).
+narrative_ontology:constraint_beneficiary(nicene_creed_authority__symbolic_confessional_reading, lay_believers).
+narrative_ontology:constraint_beneficiary(nicene_creed_authority__symbolic_confessional_reading, ecumenical_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(nicene_creed_authority__symbolic_confessional_reading, centralized_ecclesiastical_authority).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Use the creed as a shared liturgical anchor and identity marker that permits theological diversity underneath. The symbolic reading enables them to confess the creed together while holding differing metaphysical interpretations. They benefit from a tradition-rooted practice that does not demand cognitive uniformity and permits dialogue with neighboring faith communities.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, local_congregations, beneficiary,
+    organized, generational, mobile, local).
+
+% Recite and affirm the creed in liturgy without requirement to pass metaphysical certification. The symbolic reading permits them to participate authentically in the tradition while maintaining their own faith-intuitions, whether literal or metaphorical. They are not subjected to doctrinal enforcement machinery.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, lay_believers, beneficiary,
+    powerless, biographical, constrained, local).
+
+% Can cite the creed as shared heritage across denominational boundaries under the symbolic reading, since the constraint permits multiple coherent interpretations. The reading enables interfaith resonance: the creed becomes a witness to lived faith rather than a metaphysical test case that divides traditions.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, ecumenical_communities, beneficiary,
+    organized, generational, mobile, global).
+
+% Loses enforcement leverage under the symbolic reading. Cannot demand that the creed function as a binding metaphysical criterion or use it to sanction theological deviance. Must instead steward the creed as a witness that communities discern together. Authority shifts from decree-and-sanction to accompaniment-and-discernment. They bear the cost of reduced institutional control.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, centralized_ecclesiastical_authority, payer,
+    institutional, civilizational, trapped, global).
+
+% Are structurally sidelined by the symbolic reading's epistemological pluralism. Their vocation is to extract a single coherent metaphysical system from tradition and enforce it. The reading treats that extraction as one voice among many, not as the creed's true meaning. They would argue for doctrinal closure but are not seated in the decision.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, dogmatic_systematizers, excluded,
+    institutional, civilizational, trapped, global).
+
+% Provides the empirical warrant for the reading: the creed is demonstrably a contingent production of 4th-century politics, councils, and theological dispute, not a timeless metaphysical discovery. Scholarship shows how differently the creed functioned in different eras and contexts. This observational seat does not enforce or benefit from the reading but makes it intellectually coherent.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, historical_scholarship, observer,
+    institutional, generational, analytical, global).
+
+% Witness the symbolic reading from their own framework commitment to metaphysical univocity. They see it as relativism that empties the creed of force. They are not excluded but are observing from their own authority framing, which the symbolic reading does not foreclose—they may choose to hold it—but which cannot be imposed on the entire tradition under this reading's logic.
+narrative_ontology:constraint_stakeholder(nicene_creed_authority__symbolic_confessional_reading, theological_traditionalists_advocating_strict_orthodoxy, observer,
+    institutional, civilizational, trapped, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(nicene_creed_authority__symbolic_confessional_reading, diffuse).
+narrative_ontology:fixing_cost_class(nicene_creed_authority__symbolic_confessional_reading, cheap).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a shared liturgical and historical anchor that holds a geographically dispersed, theologically diverse Christian community in confessional unity without requiring cognitive uniformity. The creed functions as 'we bear witness together to these salvific claims' rather than 'we all hold identical metaphysical positions.' It coordinates identity and practice, not doctrine.
+% TRANSFER_FUNCTION: Moves the authority to determine creedal meaning from centralized ecclesiastical hierarchy to local communities and individual believers, working in dialogue with the tradition. Authority flows FROM the creed (as historically witnessed) TO community discernment rather than FROM institutional authority TO the creed as an instrument of enforcement.
+% ABSENT_VOICES: Strictly orthodox systematizers and dogmatic enforcers would object loudly to the symbolic reading's epistemological pluralism; they are partially excluded because their framework cannot function if the creed does not bind all believers to one metaphysical closure. Also absent: non-Christian traditions who might find common creedal witness if permitted to interpret symbolically, but who are traditionally barred from participating in this discernment because the creed has historically been used as a boundary marker of 'true Christianity' rather than as an open witness.
+% DISAPPEARANCE_RATIONALE: If the symbolic-confessional reading disappeared and the strict orthodox reading consolidated completely, centralized ecclesiastical authority would regain enforcement leverage, theological diversity would face sanction and pressure to conform, ecumenical dialogue would contract (the creed would return to being a doctrinal boundary), and local communities would lose the interpretive freedom that permits them to hold the tradition while adapting it to their own faith-contexts. The world of Christian practice would rearrange into a more hierarchically controlled and doctrinally uniform structure.
+% FOUNDING_PROBLEM: How can a Christian community maintain unity of confession and practice across vast geographic and cultural diversity without either (a) fragmenting into isolated sects each with its own creed, or (b) imposing a single metaphysical system that crushes local faith-discernment and interfaith resonance? The creed was forged at Nicaea to solve (a); the symbolic-confessional reading solves it while refusing to accept (b) as the cost.
+% FOUNDING_PROBLEM_CORROBORATION: Ecumenical Christian communities, Christian leaders across denominational lines, Christian historians documenting the diversity of creedal interpretation across time and culture, and scholars of interreligious dialogue all attest that the tension between confessional unity and pluralism remains live. Centralized ecclesiastical authorities attest the problem exists but argue that strict orthodoxy is the necessary solution; the symbolic reading disagrees with that necessity, not with the problem's reality. Historical-theological scholarship from outside the institutional authority structures supports the contingency thesis: the creed is demonstrably a 4th-century decision, not an eternal metaphysical law.
+narrative_ontology:disappearance_verdict(nicene_creed_authority__symbolic_confessional_reading, world_rearranges).
+narrative_ontology:founding_problem_status(nicene_creed_authority__symbolic_confessional_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(nicene_creed_authority__symbolic_confessional_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(nicene_creed_authority__symbolic_confessional_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(nicene_creed_authority__symbolic_confessional_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(nicene_creed_authority__symbolic_confessional_reading, 0.18, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,16 +233,16 @@ narrative_ontology:story_seed(nicene_creed_authority__symbolic_confessional_read
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.18 at current endpoint) because this reading denies the creed a role as an extraction mechanism. It frames the creed as a gift of historical witness, not as a lever for institutional control. Suppression is also low (0.12) because the reading does not require gatekeeping or enforcement — it invites pluralistic interpretation. Theater is moderate (0.22) because the reading itself is a performative reclamation: communities must actively reconstruct the creed's meaning in their contexts, which requires intellectual work and deliberate choice rather than passive assent to handed-down doctrine. The measurement trajectory shows a parabolic rise and fall: extractiveness and suppression climbed through the medieval period as the creed became a tool of institutional discipline (peaking around 1200 CE when heresy trials were most active and confessional boundaries most rigid), then declined through modernity as historical scholarship exposed the creed's contingency and pluralism weakened enforcement. The contemporary value (0.18 extractiveness) reflects the fact that even under this reading, some institutional residue remains — conservative bodies still use the creed to gate communion or as a loyalty marker — but the reading's own logic denies that residue legitimacy.
+ *   Extractiveness is low (0.18) under the symbolic-confessional reading because the constraint no longer functions as an extractive device—it does not extract conformity, submission to authority, or cognitive assent to particular metaphysical propositions. Instead, it coordinates confession and identity while leaving interpretation open. The temporal series (0.68 → 0.18) models the historical decay of suppression-dependent enforcement: in the early councils (325–800 CE), maintaining the creed as a binding orthodoxy required high suppression (anathematization, excommunication, imperial sanction). As theological diversity became intellectually defensible (especially after the Reformation, and accelerating through historical-critical scholarship), the suppressive machinery required to hold the creed's meaning constant became unsustainable. Communities increasingly read the creed symbolically not out of liberation theology but out of pragmatic necessity: you cannot suppress 500 million Christians with incompatible metaphysical intuitions into one doctrine. Theater_ratio stays low (0.22) because even under the symbolic reading, the creed retains real liturgical and identity functions; it is not performing an atrophied purpose (which would drive theater toward 0.5+). Suppression_requirement follows extractiveness downward: as the reading decentralizes authority, the active force needed to maintain uniform interpretation collapses. Accessibility_collapse (0.38) reflects that alternatives to the creed remain partly available (believers can exit Nicene Christianity, interpret the creed radically, or adopt non-creedal faiths), but once you decide to stay within the Christian tradition and confess the creed communally, the creed itself becomes a kind of structural given. Resistance (0.71) is high because the symbolic reading meets sustained resistance from strict-orthodox camps and institutional authorities who see it as corrosive to doctrine—yet the resistance does not suppress the reading's spread.
  *
  * PERSPECTIVAL GAP:
- *   The seat divergence is substantial. From the centralized_magisterium and strict_orthodox_gatekeepers seats, this reading is disastrous: it removes the creed's binding force and invites the theological fragmentation they exist to prevent. From these seats, the constraint computes as extractive IN REVERSE — the reading steals institutional authority. From the local_congregations and community_interpreters seats, the reading is liberating: it restores agency and permits authentic contextual witness. The engine should compute different types from different seats. The payer seats (magisterium, orthodox gatekeepers) should see rope-turning-to-snare-reversal or resistance-enabling; the beneficiary seats should see rope-with-low-friction. The measurement series captures this asymmetry: the same historical institution (the creed's authority structure) is experienced as increasingly extractive by institutional authorities (who want enforcement) and increasingly liberating by dispersed communities (who want agency).
+ *   The strict-orthodox reading (not this constraint) computes from an institutional authority seat that benefits from treating the creed as a binding metaphysical closure. The symbolic-confessional reading (this constraint) computes from local communities and believers who benefit from plurality under unity. The engine will classify these as divergent types from the same kernel—a tangled_rope or snare from the orthodox institutional seat (high extractiveness, high suppression of alternatives), and a rope or coordinating mechanism from the confessional seat (low extractiveness, no coerced uniformity). This divergence is exactly the measurement the kernel decomposition exists to take. The authored metrics (low extractiveness, low suppression, 0.12–0.18 range) represent what the symbolic-confessional reading experiences and instantiates, not a compromise between readings.
  *
  * DIRECTIONALITY LOGIC:
- *   The symmetric axis: local congregations are the structural beneficiaries of this reading (they gain interpretive agency and freedom). The centralized magisterium is the structural target (it loses enforcement leverage and gatekeeping authority). Community interpreters are moderate beneficiaries (intellectual freedom, legitimacy for contextual work). Ecumenical partners are beneficiaries (barriers to dialogue lower). The strict orthodox gatekeepers are targets (their foundational commitment — that the creed binds all to one metaphysical scheme — is treated as historically contingent rather than necessary). Directionality for the magisterium and gatekeepers should be high (near 1.0: they bear the cost of authority loss); directionality for congregations and interpreters should be low (near 0.0: they collect agency). No overrides are needed; the structural derivation from beneficiary/victim declarations should produce the right profile.
+ *   Local congregations and lay believers are structural beneficiaries under this reading: they gain interpretive freedom, theological autonomy, and the ability to hold the tradition without surrendering to external authority. Their directionality is near the beneficiary end (d near 0.0). Centralized ecclesiastical authorities are structural payers: they lose the authority leverage that the strict-orthodox reading would give them. Their directionality is near the target end (d near 1.0). Ecumenical communities occupy a symmetric position: they benefit from the creed as shared ground, but they also bear the cost of stewarding it collectively without centralized control. The reading inverts the authority topology compared to the strict-orthodox reading: beneficiaries become local/dispersed, payers become centralized/institutional. This inversion is the reading's structural signal.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (fragmented understanding in the fourth century, lack of a coordinating reference point) was solved by the creed's original function as historical witness and shared language anchor — not by enforcement. However, the subsequent institutional history repurposed the creed as an enforcement mechanism. This is mandatrophy: the original coordination function (providing a shared language for dispersed theological schools) has atrophied, and what remains is mostly the enforcement apparatus (gatekeeping, heresy trials, institutional loyalty markers). The theatrical element (creedal recitation in liturgy divorced from serious theological engagement) rises as the functional content declines. This reading explicitly diagnoses and reverses mandatrophy by restoring the creed to its confessional function — hence the low theater_ratio at present. The reading asserts that the constraint can shed its extractive enforcement layer and resume coordination without losing coherence.
+ *   The symbolic-confessional reading avoids the mandatrophy trap by maintaining that the creed's founding problem (preserving confessional unity across diversity) remains live. The reading does not assert that the creed has become vestigial or that metaphysical closure is no longer needed. Instead, it relocates what closure means: closure is unity of witness and practice, not uniformity of metaphysical interpretation. Under the strict-orthodox reading, mandatrophy would begin to accumulate once communities de facto stopped believing in the creed's binding metaphysical claim—the creed would persist through institutional inertia while its functional purpose atrophied. The symbolic reading forestalls that by permitting the creed to remain functionally vital even as metaphysical closure dissolves. This is not mandatrophy but a genuine transition in what the constraint does.
  */
 
 /* ==========================================================================
@@ -188,89 +250,89 @@ narrative_ontology:story_seed(nicene_creed_authority__symbolic_confessional_read
    ========================================================================== */
 
 omega_variable(
-    authority_grounding_ambiguity,
-    'When this reading attributes the creed''s authority to ''community discernment and personal faith,'' what empirical or normative fact grounds that discernment? Is it something communities can be wrong about (empirical discernment), or is rightness built into the community''s judgment by definition (circular authority)?',
-    'Test the reading against historical cases where Christian communities have held divergent interpretations of the creed with apparent equal conviction. If the reading can account for genuine disagreement without declaring one community''s discernment false, the authority is noncircular. If it collapses into ''the community is right because it is the community,'' the authority is circular.',
-    'If circular, the reading has solved the enforcement problem by delegating it to communities (who then police their own borders); if noncircular, the reading genuinely opens space for pluralism without creating new gatekeeping. This affects whether the reading avoids recreating the magisterium''s extractive function at the congregational level.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(authority_grounding_ambiguity, conceptual, 'Whether ''community discernment'' grounds authority or merely displaces the authority question.').
-
-omega_variable(
-    historical_contingency_and_binding_force,
-    'Can a historically contingent formulation (the creed as a fourth-century artifact) retain binding authority for contemporary Christians? Does acknowledging historical contingency undermine the force of the creed''s witness, or does it actually strengthen it by freeing interpretation from the demand for literalist assent?',
-    'Examine how congregations using this reading actually sustain commitment to the creed''s substance across generations. Trace whether historical consciousness strengthens or weakens confessional stability.',
-    'If historical consciousness undermines binding force, the reading has traded enforcement for erosion, and the creed''s actual authority over Christian practice declines (a hidden extraction of traditional authority). If it strengthens force by enabling authentic engagement, the reading succeeds in its central claim.',
+    contingency_vs_transcendence_ambiguity,
+    'If the creed is historically contingent (forged by 4th-century councils), does that undermine its transcendent theological authority, or can it have transcendent meaning despite contingent historical origin?',
+    'Theological genealogy: trace how Christian communities have held claims to be simultaneously historically produced and divinely authorized. Review whether Christian theology elsewhere (e.g., canon formation, incarnationalism) accepts contingency-compatible transcendence. Compare with non-Christian traditions'' treatment of their founding texts.',
+    'If contingency and transcendence are incompatible, the symbolic reading becomes unstable—it cannot claim the creed as authoritative if it is ''merely'' human history. If they are compatible, the reading gains robustness and can claim both humility (about history) and reverence (about meaning).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(historical_contingency_and_binding_force, empirical, 'Whether historical awareness preserves or erodes the creed''s practical authority in Christian communities.').
+narrative_ontology:omega_variable(contingency_vs_transcendence_ambiguity, conceptual, 'Whether historical contingency forecloses transcendent authority or permits it.').
 
 omega_variable(
-    interfaith_engagement_boundary,
-    'Does framing the creed as ''historically contingent witness'' dependent on ''community discernment'' rather than metaphysical necessity actually open dialogue with non-Christian traditions, or does it merely obscure the creed''s continued function as a Christian identity boundary?',
-    'Conduct interfaith dialogue experiments: ask non-Christian partners whether they experience this reading as genuinely opening space for engagement or as a rhetorical softening that leaves the boundary intact.',
-    'If the boundary remains functionally identical despite the reading''s framing, the reading''s benefit to excluded voices is illusory, and extractiveness for excluded partners remains high. If the reading genuinely enables new forms of engagement without requiring abandonment of Christian identity, it succeeds.',
+    pluralism_limits_and_incoherence,
+    'At what point does the symbolic reading''s theological pluralism become incoherent? Can a creed that permits contrary metaphysical interpretations remain a meaningful doctrinal statement, or does it become merely performative?',
+    'Congregational case studies examining actual pluralist communities: do they report the creed as binding doctrine or as cultural ritual stripped of doctrinal force? Comparative analysis with other traditions'' treatment of shared texts under pluralistic interpretation (e.g., Quranic readings in Islam, Vedic readings in Hinduism).',
+    'If pluralism leads to doctrinal vacuity, the symbolic reading collapses into the liturgical-habituation reading (the creed means nothing, it just does boundary work). If pluralism permits meaningful doctrinal variance, the reading remains robust and distinct.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(pluralism_limits_and_incoherence, empirical, 'Whether symbolic-confessional pluralism preserves or destroys doctrinal meaning.').
+
+omega_variable(
+    authority_displacement_vs_democratization,
+    'Does relocating authority from centralized hierarchy to local community discernment genuinely distribute power, or does it displace and obscure institutional power without removing it?',
+    'Institutional ethnography of pluralist Christian communities: trace where binding decisions actually originate (still hierarchical but informal? genuinely collective? individual). Compare with communities explicitly practicing horizontal authority structures.',
+    'If community discernment is a genuine alternative to hierarchy, the symbolic reading delivers what it claims (power redistribution). If ''discernment'' re-encodes hierarchy under new language, the reading is performative and still extractive despite low measured extraction.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(interfaith_engagement_boundary, empirical, 'Whether the symbolic_confessional_reading actually enables interfaith engagement or merely aestheticizes Christian exclusivity.').
+narrative_ontology:omega_variable(authority_displacement_vs_democratization, empirical, 'Whether decentralized authority structures genuinely displace institutional power or merely obscure it.').
 
 omega_variable(
-    distributed_authority_and_fragmentation_risk,
-    'Does inverting authority from magisterium to congregational discernment solve the enforcement-extraction problem, or does it merely distribute the enforcement function across thousands of local gatekeepers, each enforcing their own reading?',
-    'Compare fragmentation rates and boundary-enforcement intensity between strict_orthodox and symbolic_confessional communities over a 50-year horizon. If gatekeeping intensity simply relocates without diminishing, the reading has not solved the underlying problem.',
-    'If gatekeeping relocates and intensifies at the local level, extractiveness is higher than authored (0.18); if it genuinely decreases, the reading''s analysis of the constraint is correct.',
+    kernel_identity_vs_reading_plurality,
+    'If three incompatible readings all claim to interpret the same creed, are they reading the same kernel or have they created three separate constraints that happen to reference the same text?',
+    'Structural analysis: do the readings share a common logical core (e.g., all affirm Christ''s divinity, all confess in liturgy) that unites them despite divergence? Or has the text become merely the anchor for three distinct truth claims about what the creed means?',
+    'If there is a common logical core, the readings remain siblings of one kernel. If the core dissolved, the constraint family has splintered into three independent constraints, and the network links should be redrawn.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(kernel_identity_vs_reading_plurality, conceptual, 'Whether the three readings share a unified kernel or have diverged into separate constraints.').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'The measured suppression is low (0.12), but is the creed''s hold on believers maintained by external enforcement (which can decay) or by internalized identity fusion (which persists after enforcement disappears)?',
+    'Post-secularization trajectory: do communities that abandon creedal suppression also abandon the creed itself, or do they retain it as identity-fused practice? Compare with communities where enforcement remains high.',
+    'If suppression is structural and external, the low measured value is accurate. If suppression is internalized and persistent, the measured value understates the constraint''s effective force—believers carry the creed with them even in contexts with zero external enforcement.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(distributed_authority_and_fragmentation_risk, empirical, 'Whether distributed authority reduces or merely redistributes enforcement mechanisms.').
-
-omega_variable(
-    reading_identity_fusion,
-    'To what extent does advocacy for the symbolic_confessional_reading become fused with the advocate''s professional identity (theologian, progressive pastor, ecumenist)? Is the reading held because its analysis is sound, or because embracing it signals membership in a particular academic or progressive community?',
-    'Track whether advocates of this reading show flexibility in updating it when empirical evidence (e.g., fragmentation risk, loss of binding force) suggests revision. Identity-fused advocates typically defend the reading against counter-evidence; those holding it analytically update when warranted.',
-    'If identity-fused, the reading itself becomes extractive — it gates prestige and belonging in academic/progressive Christian circles. The extraction simply moves from institutional orthodoxy to progressive intellectualism.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(reading_identity_fusion, empirical, 'Whether symbolic_confessional advocacy is analytically grounded or identity-fused.').
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether measured low suppression reflects genuine liberation or internalized compliance.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(nicene_creed_authority__symbolic_confessional_reading, 325, 2026).
+narrative_ontology:interval(nicene_creed_authority__symbolic_confessional_reading, 0, 1600).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(nice_tr_t325, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 325, 0.08).
-narrative_ontology:measurement(nice_tr_t600, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 600, 0.18).
-narrative_ontology:measurement(nice_tr_t1200, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1200, 0.32).
-narrative_ontology:measurement(nice_tr_t1650, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1650, 0.28).
-narrative_ontology:measurement(nice_tr_t1950, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1950, 0.15).
-narrative_ontology:measurement(nice_tr_t2026, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 2026, 0.22).
+narrative_ontology:measurement(nice_tr_t0, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(nice_tr_t400, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 400, 0.18).
+narrative_ontology:measurement(nice_tr_t800, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 800, 0.19).
+narrative_ontology:measurement(nice_tr_t1200, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1200, 0.2).
+narrative_ontology:measurement(nice_tr_t1500, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1500, 0.21).
+narrative_ontology:measurement(nice_tr_t1600, nicene_creed_authority__symbolic_confessional_reading, theater_ratio, 1600, 0.22).
 
 % Extraction over time
-narrative_ontology:measurement(nice_be_t325, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 325, 0.05).
-narrative_ontology:measurement(nice_be_t600, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 600, 0.22).
+narrative_ontology:measurement(nice_be_t0, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement(nice_be_t400, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 400, 0.65).
+narrative_ontology:measurement(nice_be_t800, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 800, 0.58).
 narrative_ontology:measurement(nice_be_t1200, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 1200, 0.35).
-narrative_ontology:measurement(nice_be_t1650, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 1650, 0.28).
-narrative_ontology:measurement(nice_be_t1950, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 1950, 0.12).
-narrative_ontology:measurement(nice_be_t2026, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 2026, 0.18).
+narrative_ontology:measurement(nice_be_t1500, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 1500, 0.22).
+narrative_ontology:measurement(nice_be_t1600, nicene_creed_authority__symbolic_confessional_reading, base_extractiveness, 1600, 0.18).
 
 % Suppression requirement over time
-narrative_ontology:measurement(nice_su_t325, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 325, 0.04).
-narrative_ontology:measurement(nice_su_t600, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 600, 0.18).
-narrative_ontology:measurement(nice_su_t1200, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1200, 0.28).
-narrative_ontology:measurement(nice_su_t1650, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1650, 0.22).
-narrative_ontology:measurement(nice_su_t1950, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1950, 0.08).
-narrative_ontology:measurement(nice_su_t2026, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 2026, 0.12).
+narrative_ontology:measurement(nice_su_t0, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 0, 0.72).
+narrative_ontology:measurement(nice_su_t400, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 400, 0.68).
+narrative_ontology:measurement(nice_su_t800, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 800, 0.58).
+narrative_ontology:measurement(nice_su_t1200, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1200, 0.35).
+narrative_ontology:measurement(nice_su_t1500, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1500, 0.18).
+narrative_ontology:measurement(nice_su_t1600, nicene_creed_authority__symbolic_confessional_reading, suppression_requirement, 1600, 0.12).
 
 
 /* ==========================================================================
@@ -278,12 +340,12 @@ narrative_ontology:measurement(nice_su_t2026, nicene_creed_authority__symbolic_c
    ========================================================================== */
 
 narrative_ontology:coordination_type(nicene_creed_authority__symbolic_confessional_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(nicene_creed_authority__symbolic_confessional_reading, 0.09).
+narrative_ontology:boltzmann_floor_override(nicene_creed_authority__symbolic_confessional_reading, 0.06).
 narrative_ontology:affects_constraint(nicene_creed_authority__symbolic_confessional_reading, nicene_creed_authority__strict_orthodox_reading).
 narrative_ontology:affects_constraint(nicene_creed_authority__symbolic_confessional_reading, nicene_creed_authority__liturgical_habituation_reading).
 
 % DUAL FORMULATION NOTE:
-% The Nicene Creed Authority kernel admits three structurally distinct constraint readings: strict_orthodox_reading (creed as binding metaphysical ontology, high extractiveness ~0.65), liturgical_habituation_reading (creed as identity performance independent of cognitive assent, moderate extractiveness ~0.38), and this constraint (symbolic_confessional_reading: creed as historical witness with authority from community discernment, low extractiveness ~0.18). The three readings are NOT observations of one constraint from different angles — they are three different constraints that happen to reference the same text (the creed) and the same institutional history (the church's use of the creed). Each reading instantiates a different authority topology, different beneficiary/victim structure, and different ε. The three stories form a kernel family linked by network.affects_constraints; each story explains why the other readings constitute threats or competitors to its own authority model.
+% The nicene_creed_authority kernel instantiates three distinct constraints under three readings. The symbolic-confessional reading (this constraint) treats the creed as historically contingent witness with authority derived from community discernment; it permits theological pluralism and interfaith resonance. The strict-orthodox reading instantiates high extractiveness (ε~0.65) by treating the creed as binding metaphysical closure enforced by institutional authority. The liturgical-habituation reading instantiates moderate extractiveness (ε~0.45) by treating the creed's meaning as irrelevant compared to its performative function as identity boundary. All three readings reference the same text (Nicene Creed) but instantiate different constraint structures with different beneficiary/victim topologies. The symbolic-confessional reading influences the other two by demonstrating that theological pluralism is historically defensible; it does not foreclose them (strict-orthodox and liturgical-habituation camps can choose their own readings), but it creates structural pressure on the strict-orthodox reading by offering an alternative framework that is both theologically serious and pastorally humane.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

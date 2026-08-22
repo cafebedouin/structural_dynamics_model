@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -44,11 +44,16 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +73,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_risk_governance_priority__near_term_harms_reading
- *   human_readable: AI Risk Governance: Near-Term Harms Priority Reading
+ *   human_readable: Near-Term AI Harms Governance Priority (Reading)
  *   domain: technology/governance/ethics
  *
  * SUMMARY:
- *   AI risk governance faces a fundamental framing contest over
- *   prioritization. This constraint instantiates ONE reading: that governance
- *   MUST prioritize mitigating demonstrated present harms (bias,
- *   misinformation, labor displacement, surveillance) affecting marginalized
- *   populations now. The reading claims these harms are empirically
- *   documented, morally urgent, and sufficient to justify governance even if
- *   existential superintelligence risks are unresolved. The kernel is shared
- *   with two sibling readings: the existential_risk_reading
- *   (superintelligence prevention must be primary) and the bridge_reading
- *   (both concerns are structurally entangled, not competitive). This
- *   constraint models ONLY the near-term-harms reading as a clean,
- *   ε-invariant story. The contest itself is routed to omega variables and
- *   cs_structure. The claim/metric divergence is intentional: the reading is
- *   CLAIMED as tangled_rope (genuine coordination function + asymmetric
- *   extraction) while metrics show substantial extractiveness and high
- *   suppression—the engine's computation of the gap is the measurement the
- *   corpus takes.
+ *   AI risk governance is contested across three incompatible readings of
+ *   what constitutes urgent regulatory priority. The near-term-harms reading
+ *   asserts that demonstrable present harms — algorithmic discrimination,
+ *   labor displacement, surveillance, misinformation — affecting powerless
+ *   and marginalized populations warrant immediate governance action and
+ *   resource allocation. This reading competes with an existential-risk
+ *   reading that prioritizes superintelligence prevention and a bridge
+ *   reading that treats both as entangled. This JSON instantiates ONLY the
+ *   near-term-harms reading as a clean ε-invariant constraint: its
+ *   beneficiaries are AI corporations and some regulators; its victims are
+ *   Global South populations and marginalized workers; its effectiveness
+ *   depends on active enforcement of bias testing and accountability. The
+ *   claim/metric gap is intentional: this reading is CLAIMED as tangled_rope
+ *   (genuine coordination function of present-harm auditing plus asymmetric
+ *   extraction favoring corporations) while metrics show substantial
+ *   suppression and theatrical compliance — the engine will compute how
+ *   differently each seat perceives this constraint.
  *
  * KEY AGENTS:
- *   - marginalized_populations_global_south: Structural beneficiary; face documented algorithmic harms; trapped exit; powerless power → high directionality toward target
- *   - workers_displaced_by_automation: Structural beneficiary; organized constituency; constrained exit; biographical horizon → moderate directionality toward target
- *   - technology_companies: Structural payer; institutional power; arbitrage exit available; bear compliance cost → directionality toward target from company perspective, toward beneficiary from governance perspective
- *   - algorithmic_justice_advocates: Beneficiary + agenda-setter dual role; moderate power; shape what counts as 'real harm' and what gets funded → set the constraint's boundaries
- *   - superintelligence_research_community: Structurally excluded payer; opportunity cost from resource reallocation; constrained exit (research dependent on funding allocation decisions) → high directionality toward target but excluded from agenda
- *   - regulatory_authorities: Agenda-setter; institutional power; political legitimacy tied to addressing visible harms → enforce the near-term framing
+ *   - Global South populations: powerless, trapped, bearing present algorithmic discrimination — primary victims
+ *   - Marginalized workers: moderate power, constrained exit, experiencing labor displacement — primary victims
+ *   - AI corporations: institutional power, arbitrage exit, benefit from existential-risk framing that diverts regulatory attention — primary beneficiaries
+ *   - Existential-risk advocates: organized power, arbitrage exit, benefit from governance prioritization of superintelligence over present harms — secondary beneficiaries
+ *   - Regulators adopting near-term-harms frameworks: institutional power, constrained by global coordination problems — bifurcated: beneficiary where they adopt NTF, excluded where they don't
+ *   - AI safety researchers: organized power, excluded from governance conversation by the near-term-harms framing — excluded seat
  */
 
 /* ==========================================================================
@@ -103,13 +109,13 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ai_risk_governance_priority__near_term_harms_reading, 0.68).
-domain_priors:suppression_score(ai_risk_governance_priority__near_term_harms_reading, 0.71).
+domain_priors:base_extractiveness(ai_risk_governance_priority__near_term_harms_reading, 0.71).
+domain_priors:suppression_score(ai_risk_governance_priority__near_term_harms_reading, 0.68).
 domain_priors:theater_ratio(ai_risk_governance_priority__near_term_harms_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harms_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harms_reading, extractiveness, 0.71).
+narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 0.68).
 narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
@@ -118,45 +124,112 @@ narrative_ontology:constraint_metric(ai_risk_governance_priority__near_term_harm
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_risk_governance_priority__near_term_harms_reading, tangled_rope).
-narrative_ontology:human_readable(ai_risk_governance_priority__near_term_harms_reading, "AI Risk Governance: Near-Term Harms Priority Reading").
+narrative_ontology:human_readable(ai_risk_governance_priority__near_term_harms_reading, "Near-Term AI Harms Governance Priority (Reading)").
 narrative_ontology:topic_domain(ai_risk_governance_priority__near_term_harms_reading, "technology/governance/ethics").
 
 domain_priors:requires_active_enforcement(ai_risk_governance_priority__near_term_harms_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_risk_governance_priority__near_term_harms_reading, 'f0bcc8e3-5421-46dd-8019-3249ed92ee55').
-narrative_ontology:cs_kernel_codification('f0bcc8e3-5421-46dd-8019-3249ed92ee55', formalized).
-narrative_ontology:cs_authority_grounding('f0bcc8e3-5421-46dd-8019-3249ed92ee55', extraction).
-narrative_ontology:cs_interpretation_layer_present('f0bcc8e3-5421-46dd-8019-3249ed92ee55').
-narrative_ontology:cs_reading_relation('f0bcc8e3-5421-46dd-8019-3249ed92ee55', ai_risk_governance_priority__existential_risk_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f0bcc8e3-5421-46dd-8019-3249ed92ee55', ai_risk_governance_priority__bridge_reading, influences).
-narrative_ontology:cs_axiom('f0bcc8e3-5421-46dd-8019-3249ed92ee55', foundational, empirical_harm_demonstrability_primacy).
-narrative_ontology:cs_axiom_status(empirical_harm_demonstrability_primacy, holdable).
-narrative_ontology:cs_axiom_grounding('f0bcc8e3-5421-46dd-8019-3249ed92ee55', empirical_harm_demonstrability_primacy, empirically_contingent).
-narrative_ontology:cs_axiom('f0bcc8e3-5421-46dd-8019-3249ed92ee55', foundational, present_moral_urgency_priority).
-narrative_ontology:cs_axiom_status(present_moral_urgency_priority, holdable).
-narrative_ontology:cs_axiom_grounding('f0bcc8e3-5421-46dd-8019-3249ed92ee55', present_moral_urgency_priority, deontological).
-narrative_ontology:cs_reference_frame('f0bcc8e3-5421-46dd-8019-3249ed92ee55', algorithmic_harm_empirical_demonstrability).
-narrative_ontology:cs_drift_state('f0bcc8e3-5421-46dd-8019-3249ed92ee55', contemporary_superintelligence_focus_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('f0bcc8e3-5421-46dd-8019-3249ed92ee55', '').
+narrative_ontology:cs_story_uid(ai_risk_governance_priority__near_term_harms_reading, 'dfca9fe5-99ba-4794-a65c-472947ac3feb').
+narrative_ontology:cs_kernel_codification('dfca9fe5-99ba-4794-a65c-472947ac3feb', distributed).
+narrative_ontology:cs_authority_grounding('dfca9fe5-99ba-4794-a65c-472947ac3feb', distributed).
+narrative_ontology:cs_reading_relation('dfca9fe5-99ba-4794-a65c-472947ac3feb', ai_risk_governance_priority__existential_risk_reading, coexists_with).
+narrative_ontology:cs_reading_relation('dfca9fe5-99ba-4794-a65c-472947ac3feb', ai_risk_governance_priority__bridge_reading, influences).
+narrative_ontology:cs_axiom('dfca9fe5-99ba-4794-a65c-472947ac3feb', foundational, present_algorithmic_harms_are_identifiable_and_urgent).
+narrative_ontology:cs_axiom_status(present_algorithmic_harms_are_identifiable_and_urgent, holdable).
+narrative_ontology:cs_axiom_grounding('dfca9fe5-99ba-4794-a65c-472947ac3feb', present_algorithmic_harms_are_identifiable_and_urgent, empirically_contingent).
+narrative_ontology:cs_axiom('dfca9fe5-99ba-4794-a65c-472947ac3feb', foundational, marginalized_populations_deserve_immediate_accountability).
+narrative_ontology:cs_axiom_status(marginalized_populations_deserve_immediate_accountability, holdable).
+narrative_ontology:cs_axiom_grounding('dfca9fe5-99ba-4794-a65c-472947ac3feb', marginalized_populations_deserve_immediate_accountability, deontological).
+narrative_ontology:cs_reference_frame('dfca9fe5-99ba-4794-a65c-472947ac3feb', pre_algorithmic_scale_governance).
+narrative_ontology:cs_drift_state('dfca9fe5-99ba-4794-a65c-472947ac3feb', contemporary_2025_2026, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('dfca9fe5-99ba-4794-a65c-472947ac3feb', '2026-06-11T00:00:00Z').
 narrative_ontology:cs_kernel_id(ai_risk_governance_priority__near_term_harms_reading, ai_risk_governance_priority).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, marginalized_populations_global_south).
-narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, algorithmic_justice_advocates).
-narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, displaced_workers).
-narrative_ontology:constraint_victim(ai_risk_governance_priority__near_term_harms_reading, technology_companies).
-narrative_ontology:constraint_victim(ai_risk_governance_priority__near_term_harms_reading, superintelligence_research_community).
+narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, ai_corporations).
+narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, regulators_adopting_ntf).
+narrative_ontology:constraint_victim(ai_risk_governance_priority__near_term_harms_reading, global_south_populations).
+narrative_ontology:constraint_victim(ai_risk_governance_priority__near_term_harms_reading, marginalized_workers).
+narrative_ontology:constraint_victim(ai_risk_governance_priority__near_term_harms_reading, algorithmic_discrimination_targets).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, existential_risk_advocates).
+narrative_ontology:constraint_beneficiary(ai_risk_governance_priority__near_term_harms_reading, global_north_civil_society).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Face algorithmic discrimination in credit scoring, hiring, content moderation, and social services — often implemented by foreign companies with minimal local accountability. Bear measurable harms (loan denials, job loss, surveillance) in the present. Exit options are nearly nonexistent: the systems that affect them are not optional, are enforced by local state actors, and the populations have no recourse in the governance of the corporations that build them.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, global_south_populations, payer,
+    powerless, biographical, trapped, global).
+
+% Experience immediate labor displacement through automation, wage suppression from algorithmic management systems, and workplace surveillance. They organize labor action and seek regulatory protection, but the regulatory focus on existential risk diverts resources from present-harm mitigation. Their exit option is retraining or relocation, both costly and time-limited.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, marginalized_workers, payer,
+    moderate, biographical, constrained, global).
+
+% Include ethnic minorities, women, LGBTQ+ populations, people with disabilities experiencing algorithmic bias in content recommendation, hiring, criminal justice, healthcare allocation. They are 'locked' by identity to the discrimination surface — they cannot opt out of their identity classification. They organize advocacy and civil rights campaigns but lack regulatory leverage over platform governance.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, algorithmic_discrimination_targets, payer,
+    organized, biographical, identity_locked, global).
+
+% Benefit from a governance regime where existential-risk framing diverts regulatory attention from present-harm auditing and mitigation. The near-term-harms reading, if adopted as binding, would require frequent audits, bias testing, impact assessments in marginalized populations, and exposure to product liability. They can exit a jurisdiction but not the existential-risk discourse itself; they can fund x-risk research to legitimize the governance frame. They have resources to shape regulatory debate and can point to speculative risks as proportionally more important than documented harms.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, ai_corporations, beneficiary,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(ai_risk_governance_priority__near_term_harms_reading, ai_corporations, agenda_setter).
+
+% Adopt near-term-harms governance frameworks in some jurisdictions (EU AI Act bias provisions, EEOC algorithmic discrimination guidance). They benefit from a clear, measurable enforcement agenda: bias testing, documentation, local accountability. They face institutional constraint from other regulators who prioritize x-risk framing and from corporations that can relocate to lower-standards jurisdictions. Their capacity to enforce present-harm requirements is limited by the global supply chain and by lack of coordination with non-adopting regulators.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, regulators_adopting_ntf, beneficiary,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(ai_risk_governance_priority__near_term_harms_reading, regulators_adopting_ntf, agenda_setter).
+
+% Benefit from a governance regime where present-harm accountability is treated as lower-priority than superintelligence prevention. They argue that diverting resources to present-harm mitigation delays existential-risk research and reduces the probability of solving alignment before dangerous capability emergence. They have significant funding, academic positioning, and rhetorical influence. They can exit the present-harms debate by reframing it as a subset of existential risk; they arbitrage between academic credibility in AI safety and policy influence.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, existential_risk_advocates, beneficiary,
+    organized, civilizational, arbitrage, global).
+
+% In wealthy jurisdictions, advocacy organizations for algorithmic accountability push near-term-harms governance. They benefit from regulatory adoption (funding, seats on advisory boards, legitimacy). They have mobile options: can shift focus to x-risk if funding flows that direction, can move to other jurisdictions with stronger governance. Their power is concentrated in wealthy democracies; their ability to enforce change in Global South governance is limited.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, global_north_civil_society, beneficiary,
+    organized, biographical, mobile, national).
+
+% Researchers focused on alignment, control, interpretability, and superintelligence risk are structurally excluded from the near-term-harms governance conversation in many forums. They would argue that present-harm mitigation is important but insufficient, and that governance frameworks must address speculative catastrophic risk. The near-term-harms reading frames them as the adversarial seat; they would testify to regulatory bodies that prioritizing present harms is a misdirection from the larger existential problem.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, ai_safety_researchers, excluded,
+    organized, civilizational, arbitrage, global).
+
+% Academic researchers outside corporate AI labs investigate algorithmic bias, labor impact, and surveillance effects. They provide empirical evidence for the near-term-harms reading but face funding constraints and career pressure from the existential-risk field. They observe the governance contest without formal power but produce data that constituencies rely on.
+narrative_ontology:constraint_stakeholder(ai_risk_governance_priority__near_term_harms_reading, independent_researchers, observer,
+    moderate, biographical, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(ai_risk_governance_priority__near_term_harms_reading, ai_corporations).
+narrative_ontology:fixing_cost_class(ai_risk_governance_priority__near_term_harms_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Organizes a focused regulatory agenda for AI deployment: algorithmic impact assessments, bias testing standards, accountability frameworks for demonstrable harms in present systems. Solves the coordination problem of fragmentary, jurisdiction-specific regulation by establishing common measurement baselines for discrimination and labor impact.
+% TRANSFER_FUNCTION: Moves regulatory scrutiny and enforcement resources from speculative superintelligence scenarios toward present-harm auditing and mitigation. The transfer is of: enforcement capacity (auditors, lawyers), corporate compliance cost (testing, remediation, documentation), and governance legitimacy (whose harms count as urgent).
+% ABSENT_VOICES: AI safety researchers and existential-risk advocates are structurally excluded from the near-term-harms governance frame — they argue for a different risk priority calculus and are kept out by the reading's definition of urgency. Workers in AI-producing countries (wealthy democracies) whose displacement is slower or cushioned by retraining programs have less voice than Global South workers with no retraining infrastructure. Technology companies' own impact assessment divisions are partially present but in a subordinate compliance posture, not as stakeholders shaping the governance problem definition.
+% DISAPPEARANCE_RATIONALE: If the near-term-harms governance priority and its enforcement vanished, regulators in EU and some national jurisdictions would lose their primary accountability mechanism for algorithmic discrimination; companies would reduce bias auditing and impact assessment; Global South populations and marginalized workers would lose the sole formal channel through which their harms could generate regulatory remedies. Regulatory focus would shift entirely to existential risk framing; present-harm documentation would be deprioritized.
+% FOUNDING_PROBLEM: Algorithmic systems deployed at scale to populations without meaningful consent, oversight, or recourse are causing measurable harms: employment discrimination, credit denial, content suppression, surveillance, erosion of electoral integrity. These harms are present, documented, and concentrated on the least powerful populations. A governance framework that does not address them in real time prioritizes speculative harms and abandons those suffering documented injuries.
+% FOUNDING_PROBLEM_CORROBORATION: Independent researchers (Buolamwini, Timnit Gebru, Kate Crawford, Safiya Noble, Virginia Dignum) document algorithmic bias and labor displacement; civil rights organizations (CAIR, National Hispanic Media Coalition, Amnesty International, Data for Black Lives) testify to ongoing harms; regulatory bodies in the EU cite algorithmic discrimination as a present enforcement priority. Technology companies acknowledge some bias issues but dispute the characterization of harms as the primary governance urgency relative to existential risks. Existential-risk researchers argue that even severe present harms are dwarfed by superintelligence risks and should not redirect governance resources.
+narrative_ontology:disappearance_verdict(ai_risk_governance_priority__near_term_harms_reading, world_rearranges).
+narrative_ontology:founding_problem_status(ai_risk_governance_priority__near_term_harms_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_risk_governance_priority__near_term_harms_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(ai_risk_governance_priority__near_term_harms_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(ai_risk_governance_priority__near_term_harms_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_risk_governance_priority__near_term_harms_reading, 0.71, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,16 +249,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.68 at interval end) is substantial because the governance structure moves resources from existential-risk research to near-term harm mitigation and imposes compliance burden on technology companies. The trajectory shows rise from 0.45 to 0.68 as governance frameworks (AI Act, FTC enforcement, corporate commitments) crystallize—early in the interval, the constraint is soft and aspirational; by t=20 it is legislative and binding. Suppression (0.71) is high because existential-risk concerns are systematically excluded from near-term-harm governance: the framing itself suppresses alternative prioritization by treating superintelligence risk as orthogonal or speculative. Theater (0.42) is moderate and stable—fairness audits and bias mitigation are real functions (not pure performance), but the constraining of existential research through funding reallocation is a secondary effect disguised by public commitment to 'safer AI.' Accessibility_collapse (0.48) is below the rope threshold because alternatives to this governance framing persist (existential-risk prioritization remains live in research institutions and some technology companies, particularly scaling-focused labs). Resistance (0.72) is high: technology companies resist compliance costs, existential-risk researchers resist resource reallocation, and some governance voices argue that near-term harm governance is performative while systemic risks grow. All measurements share one time grid: every metric authored at every time point to avoid OQ-105-style misalignment. The series tracks governance crystallization (early aspirational, late legislative) with observed data through t=12 and projected extrapolation to t=20.
+ *   Extractiveness is high (0.71) and rising because the constraint's persistence depends on corporate interests in diverting governance resources from present-harm accountability toward existential-risk narratives. The measurement series shows extractiveness growing from 0.48 at interval start to 0.71: this captures the dynamic where existential-risk framing accumulates institutional legitimacy while present-harm remediation stalls. Suppression (0.68) is substantial because enforcement depends on excluding existential-risk frames from governance conversations, on marginalizing Global South concerns in favor of Global North regulatory agendas, and on preventing workers' labor-impact concerns from reaching corporate governance. Theater (0.42) reflects that companies perform bias auditing and produce ethics statements while resisting structural changes that would reduce algorithmic discrimination in consequential systems. Accessibility collapse (0.48) is moderate because alternatives exist — existential-risk framing is a live competitor, bridge framings are emerging — but once the near-term-harms governance regime is understood, alternatives appear costly to switch to. Resistance (0.72) is high because marginalized populations, workers, and independent researchers actively resist the existential-risk prioritization and push for present-harm accountability; existential-risk advocates resist the near-term-harms frame as misdirected. This is a structurally contested arrangement with real resistance from multiple seats.
  *
  * PERSPECTIVAL GAP:
- *   The payer and beneficiary seats compute divergent types from identical structural data. Technology companies (payer seat) compute near-term-harm governance as extraction imposed on them (high suppression of their preferred allocation to long-term safety, high cost, asymmetric to company benefit). Marginalized populations (beneficiary seat) compute it as genuine coordination (they benefit from fairness constraints, alternatives are absent, coordination function is real). Regulatory authorities (agenda-setter seat) compute it as justifiable enforcement of a real harm-mitigation function against resistant payers. Existential-risk researchers (excluded payer seat) compute suppression of their concerns as the core constraint mechanism: they are not consulted on risk prioritization, their alternative framing is treated as illegitimate, and funding allocation is made without their input. The engine computes this divergence from power atoms, exit_options, and beneficiary/victim declarations; the commentary explains the structural asymmetry that generates it.
+ *   From the global_south_populations and marginalized_workers seats, this constraint is largely extractive with cosmetic coordination: governance talks about algorithmic bias while enforcement capacity remains minimal, companies perform audits without changing deployment decisions, and the existential-risk discourse legitimizes delay. From the ai_corporations seat, this is genuine coordination of present-harm mitigation (real audits, documented impact, remediation) — the claim. From the existential_risk_advocates seat, even rigorous near-term-harm governance is misdirected from the larger catastrophic risk. From the regulators_adopting_ntf seat (EU), it is tangled rope: coordination function (shared standards, accountability) plus asymmetric cost (corporations bear compliance; non-adopting jurisdictions get competitive advantage). The engine will compute these divergences from the structural data; the strategy is not to reconcile them but to expose them as per-seat measurements.
  *
  * DIRECTIONALITY LOGIC:
- *   Marginalized populations carry d near 1.0 (full target): they face trapped exit (cannot avoid AI systems), powerless positioning (cannot negotiate terms), and biographical time horizon (harms accumulate immediately). Workers displaced by automation carry d around 0.75 (high target): organized power slightly improves exit (collective bargaining, union action), but displacement is concrete and biographical. Technology companies carry complex d: as payers on compliance costs, d ≈ 0.85 (high target from governance perspective); as beneficiaries of resource diversion from existential research (which might otherwise constrain their scaling), d might approach 0.3 (moderate beneficiary). Algorithmic justice advocates carry d ≈ 0.1 (near-beneficiary): they set the agenda, define what harms count, and collect legitimacy and career advancement. Superintelligence researchers carry d ≈ 0.9 (high target): they are the excluded payer whose concerns are suppressed. The schema does not support per-stakeholder d declarations, so the constraint-level d encodes the dominant asymmetry (technology company as payer carrying most extraction from governance perspective), but the commentary names the distributional complexity.
+ *   Victims (Global South, marginalized workers) have high directionality (d near 1.0) — trapped or identity-locked, powerless, no arbitrage exit. They are the targets of suppression (their concerns are deprioritized) and extraction (governance resources flow away from remedies for their harms). Beneficiaries (AI corporations) have low directionality (d near 0.0) — institutional power, arbitrage exit (can relocate), organize the governance frame — they benefit from the constraint's suppression of accountability. Regulators adopting NTF are bifurcated: in jurisdictions that enforce it, they are low-d beneficiaries (gain legitimacy and enforcement agenda); in non-adopting jurisdictions, they would be medium-d payers or excluded. Existential-risk advocates have low-d beneficiary positioning in a regime where superintelligence risk dominates governance. The engine will compute divergence per seat: from the victim seats, this is high-extraction snare; from the corporation seats, genuine coordination for present-harm auditing (which is real, but partial). The gap reveals the constraint's asymmetry.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's founding problem (algorithmic harms are happening now and must be mitigated) is live and corroborated by independent researchers and regulators. However, a secondary mandatrophy question persists: has governance of near-term harms become a performance of address-ability while systemic resource constraints prevent meaningful mitigation? Evidence of mandatrophy creep: (1) technology companies conduct fairness audits, publish findings, and continue deployment of the same systems; (2) regulatory frameworks set standards but enforcement is resource-limited and slow; (3) funding for bias mitigation pales against overall AI R&D budgets. The constraint does not meet the classical piton definition (atrophied function, mostly theater) because the coordination function is real and the resistance is substantial—but the trajectory shows theater_ratio rising toward 0.42, and the gap between governance commitments and outcome mitigation suggests a constraint that is increasingly performing address-ability rather than achieving mitigation. The mandatrophy is not resolved, but it is flagged: if theater_ratio continues rising and accessibility_collapse remains low (alternatives to near-term framing stay live), the constraint may transition from tangled_rope toward piton (performance with declining function). The founding problem status is 'live' because the harms documented at founding are still being generated; status would shift to 'dead' only if those specific harms were systematically eliminated.
+ *   The founding problem is live: algorithmic discrimination and labor displacement are present, documented, and ongoing. But there is substantial risk of mandatrophy if the existential-risk framing continues to dominate: as governance cycles pass without measurable improvement in present harms, the near-term-harms frame could lose credibility, displaced populations could cease organizing for accountability they never receive, and the constraint could persist as pure theater — high suppression, high theater ratio, low actual impact on harm reduction. The divergence between claimed_type (tangled_rope: coordination + extraction) and measured suppression (0.68) and theater (0.42, rising) indicates the constraint is being pulled toward snare (pure extraction, where the coordination narrative becomes cover). The measurement series shows theater rising while extractiveness plateaus, which is the signature of a constraint sliding from tangled_rope toward piton: the coordination function persists (audits happen), but enforcement capacity stalls and the constraint becomes theatrical performance on behalf of corporate legitimacy rather than harm reduction. To prevent mandatrophy, the constraint would need to shift from governance talk to enforcement: actual remediation of documented harms, not just documentation.
  */
 
 /* ==========================================================================
@@ -193,61 +266,61 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    superintelligence_risk_empirical_status,
-    'What is the empirical probability and timeline of artificial superintelligence scenarios that could annihilate or permanently constrain humanity''s potential, and what is the marginal prevention value of additional research resources allocated away from near-term-harms governance?',
-    'Systematic review of superintelligence risk estimates across independent research groups; cost-benefit analysis of research-resource allocation comparing near-term harm prevention (known, measurable, implemented) against existential risk mitigation (speculative, enormous in impact if realized, highly dependent on research capacity). Compare governance outcomes under both prioritizations over a 10+ year horizon.',
-    'If superintelligence risk is empirically high and marginally preventable by the reallocated research, the exclusion of existential-risk concerns from near-term governance becomes unjustifiable—the governance framing should shift toward bridge_reading or a negotiated resource split. If superintelligence risk is empirically low or if additional research has low marginal prevention value, near-term-harms prioritization is vindicated. If risk is real but research has high marginal value regardless of governance framing, the constraint becomes a pure extraction mechanism (near-term advocates extracting resources for coordination they don''t need).',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(superintelligence_risk_empirical_status, empirical, 'The empirical basis for superintelligence risk and the marginal research value of prevention efforts').
-
-omega_variable(
-    fair_allocation_possibility,
-    'Is a genuine negotiation between near-term-harms and existential-risk governance feasible that allocates resources to both without zero-sum conflict, or is the constraint inherently competitive for scarce policy attention and research funding?',
-    'Test through multi-stakeholder dialogue structured around resource-sharing scenarios: can regulatory frameworks address near-term harms while preserving existential-risk research budgets? Can technology companies absorb fairness costs without cutting long-term safety R&D? Natural experiment: jurisdictions that attempt bridge_reading implementation and their outcomes.',
-    'If fair allocation is feasible, the near-term-harms reading becomes unnecessarily exclusive, and governance should migrate toward bridge_reading. If resource constraints force zero-sum conflict, the constraint''s extractiveness is vindicated (genuine competition over scarce resources), and the question shifts to what the correct priority is. If fair allocation is theoretically possible but politically blocked by advocates who benefit from exclusive framing, the constraint reveals itself as extraction disguised as coordination.',
+    kernel_reading_boundary,
+    'Is the near-term-harms reading a distinct constraint or a sub-framing of a unified AI governance commitment?',
+    'Examine whether the three readings (near-term, existential, bridge) compete for the SAME governance resources and authority, or whether they can coexist with separate resource streams. If they compete (zero-sum allocation), they are distinct constraints; if they coexist (both funded, both have seats at the governance table), the kernel is genuinely tripartite.',
+    'If distinct constraints, this reading''s ε and classification are independent of siblings; if sub-framings, the constraint''s ε should be lower (it is one legitimate reading among three, not a full-form governance commitment). The distinction affects how the engine treats ''forecloses'' relations.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(fair_allocation_possibility, empirical, 'Whether resource allocation between near-term-harms and existential-risk governance is structurally competitive or negotiable').
+narrative_ontology:omega_variable(kernel_reading_boundary, conceptual, 'Whether the reading is a constraint-level instantiation or a framing-level variant of a single commitment.').
 
 omega_variable(
-    near_term_harms_mitigation_efficacy,
-    'Does governance prioritization of near-term algorithmic harms (fairness audits, bias mitigation, algorithmic impact assessments, regulatory frameworks) actually reduce the rate or severity of algorithmic discrimination and labor displacement in affected populations, or does it primarily perform address-ability while systems continue unchanged?',
-    'Longitudinal measurement of algorithmic harm rates (facial recognition accuracy parity, credit access equity, employment algorithm outcomes, content moderation parity) in jurisdictions with near-term-harms governance vs. without. Compare harm trajectories 5–10 years before and after governance adoption.',
-    'If mitigation is efficacious (harm rates decline), the constraint''s coordination function is real and extraction justified (companies fund real mitigation). If harm rates remain flat or accelerate despite governance, the constraint is piton-trajectory (performance without function, extraction without coordination benefit). This measurement directly tests the founding problem claim: ''harms are happening now and governance will address them.''',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(near_term_harms_mitigation_efficacy, empirical, 'The causal effect of near-term-harms governance on actual algorithmic harm reduction in marginalized populations').
-
-omega_variable(
-    kernel_reading_foreclosure,
-    'Do the core premises of the near-term-harms reading and the existential-risk reading logically foreclose each other (one must be false for the other to be true), or do they coexist as different priorities held by different actors?',
-    'Formal analysis of the logical structure of each reading''s founding claims. Can both be true simultaneously? (Yes: present harms can be real AND superintelligence risk can be real.) Can both be legitimate governance priorities? (Contested—depends on resource availability and decision-maker values.) Do they compete for the same epistemic foundations? (No: present harms are empirically documented; superintelligence risk depends on speculative models of advanced AI behavior.) The resolution is conceptual, not empirical: if the readings do not foreclose each other logically, they coexist_with rather than foreclose.',
-    'If readings foreclose each other, classification of the constraint as tangled_rope is incorrect (it is a snare on one side, justified coordination on the other, with no unified framework). If readings coexist, near-term-harms governance is a legitimate but partial priority, and the constraint''s extraction (resource diversion from existential research) is a side effect of prioritization, not an intentional mechanism. Coexistence supports bridge_reading as the superior framing.',
+    suppression_mechanism,
+    'Is the measured suppression (0.68) structural (existential-risk discourse is genuinely more scientifically credible, or regulatory capacity is genuinely limited) or manufactured (deliberate sidelining of present-harm concerns by corporate influence)?',
+    'Examine funding flows to x-risk vs. fairness research, personnel movement between corporate AI and x-risk institutes, media coverage volume by risk category, and regulatory budget allocation. If x-risk funding and personnel flow exceed near-term fairness by a structural ratio, suppression is manufactured; if limited regulatory budgets genuinely cannot cover both, suppression is structural.',
+    'If manufactured, the constraint is closer to snare (suppression serves extraction). If structural, the constraint is closer to tangled rope (suppression is an externality of genuine coordination scarcity). This affects whether fixing the constraint requires defeating the existential-risk reading or merely better-resourcing the near-term-harms regime.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_foreclosure, conceptual, 'The logical compatibility of the near-term-harms and existential-risk reading premises').
+narrative_ontology:omega_variable(suppression_mechanism, empirical, 'Whether suppression is deliberate or incidental to resource constraints.').
 
 omega_variable(
-    excluded_actor_suppression_mechanism,
-    'Is the suppression of existential-risk concerns in near-term-harms governance structural (framing boundaries that actors accept as legitimate) or internalized (excluded actors believe their concerns are less legitimate or less urgent), and what would be required to dissolve the suppression?',
-    'Qualitative interviews with existential-risk researchers about their perception of exclusion: do they accept the boundary (structural suppression, legitimate prioritization), or do they believe their concerns are being dismissed (internalized suppression, illegitimate exclusion)? Measure by post-exit trajectory: do researchers who leave near-term-harms governance maintain their concerns, or do they internalize the dismissal and shift priorities?',
-    'If suppression is primarily internalized, the constraint carries psychological/cultural extraction (excluded parties self-silence). If structural, the constraint is a boundary-drawing mechanism (legitimate governance requires boundary-setting; exclusion is not extraction, just prioritization). If suppression is mixed, the constraint''s extractiveness includes both the resource diversion and the psychological cost of exclusion.',
+    theater_accumulation,
+    'Why is theater_ratio rising from 0.28 to 0.42 while base_extractiveness plateaus from 0.66 to 0.71?',
+    'Audit the measurement series against concrete corporate bias remediation outcomes: number of flagged systems fixed, populations affected, timeline to remediation. If fixes are declining or slowing while audits and statements increase, theater is accumulating. If fixes track audits, theater is stable performative overhead.',
+    'Rising theater with plateau extractiveness is a piton signature — the constraint is becoming more theatrical (governance talk) without increasing actual harm reduction. This indicates mandatrophy risk and suggests the constraint needs enforcement strengthening, not coordination refinement.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(theater_accumulation, empirical, 'Whether the constraint is sliding from tangled rope toward piton due to performative accumulation without harm reduction.').
+
+omega_variable(
+    identity_lock_mechanism,
+    'For algorithmic_discrimination_targets with identity_locked exit, does the lock operate at the level of social identity (they cannot change race/gender/disability status) or at the level of algorithmic classification (systems classify them even when they change their presented identity)?',
+    'Test whether identity_locked individuals can evade algorithmic discrimination through presentation changes (de-identification, false identity claims, information asymmetry). If evasion works, the lock is identity-classification (structural to the algorithm). If evasion fails, the lock is social identity (structural to society). This distinction affects whether harm mitigation targets personal presentation or algorithmic design.',
+    'If classification-based lock, remediation requires algorithm auditing and bias testing. If social-identity lock, remediation requires anti-discrimination law. The distinction reshapes the governance problem from technical to legal.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(excluded_actor_suppression_mechanism, empirical, 'Whether suppression of existential-risk concerns is structural (boundary-based) or internalized (identity-based)').
+narrative_ontology:omega_variable(identity_lock_mechanism, conceptual, 'Whether identity lock in algorithmic discrimination operates at classification or social-identity level.').
+
+omega_variable(
+    extraction_beneficiary_ambiguity,
+    'Do AI corporations benefit from the near-term-harms governance regime, or does the regime constrain them and only existential-risk advocates benefit from its suppression?',
+    'Measure corporate compliance cost (auditing, testing, product delays) against governance benefit (market access, legitimacy, competitive moats against smaller AI entrants). If cost > benefit and corporations would defect if exit were available, corporations are payers, not beneficiaries, and the beneficiary set is only existential_risk_advocates.',
+    'If corporations are payers, the constraint is snare + exclusion (victims + corporate payers, existential advocates as beneficiaries). If corporations are beneficiaries, the constraint is tangled rope with bifurcated payer/beneficiary positions. The classification hinges on this empirical question.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_beneficiary_ambiguity, empirical, 'Whether corporations benefit from or are constrained by near-term-harms governance.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_risk_governance_priority__near_term_harms_reading, 0, 20).
+narrative_ontology:interval(ai_risk_governance_priority__near_term_harms_reading, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -255,27 +328,27 @@ narrative_ontology:interval(ai_risk_governance_priority__near_term_harms_reading
 
 % Theater ratio over time
 narrative_ontology:measurement(ai_r_tr_t0, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(ai_r_tr_t4, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 4, 0.32).
-narrative_ontology:measurement(ai_r_tr_t8, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 8, 0.37).
-narrative_ontology:measurement(ai_r_tr_t12, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 12, 0.41).
-narrative_ontology:measurement(ai_r_tr_t16, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 16, 0.42).
-narrative_ontology:measurement(ai_r_tr_t20, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 20, 0.42).
+narrative_ontology:measurement(ai_r_tr_t5, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 5, 0.32).
+narrative_ontology:measurement(ai_r_tr_t10, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 10, 0.37).
+narrative_ontology:measurement(ai_r_tr_t15, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 15, 0.4).
+narrative_ontology:measurement(ai_r_tr_t25, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 25, 0.42).
+narrative_ontology:measurement(ai_r_tr_t35, ai_risk_governance_priority__near_term_harms_reading, theater_ratio, 35, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(ai_r_be_t0, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(ai_r_be_t4, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 4, 0.52).
-narrative_ontology:measurement(ai_r_be_t8, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 8, 0.59).
-narrative_ontology:measurement(ai_r_be_t12, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 12, 0.64).
-narrative_ontology:measurement(ai_r_be_t16, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 16, 0.67).
-narrative_ontology:measurement(ai_r_be_t20, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement(ai_r_be_t0, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(ai_r_be_t5, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 5, 0.54).
+narrative_ontology:measurement(ai_r_be_t10, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 10, 0.61).
+narrative_ontology:measurement(ai_r_be_t15, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 15, 0.66).
+narrative_ontology:measurement(ai_r_be_t25, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 25, 0.7).
+narrative_ontology:measurement(ai_r_be_t35, ai_risk_governance_priority__near_term_harms_reading, base_extractiveness, 35, 0.71).
 
 % Suppression requirement over time
 narrative_ontology:measurement(ai_r_su_t0, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(ai_r_su_t4, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 4, 0.61).
-narrative_ontology:measurement(ai_r_su_t8, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 8, 0.67).
-narrative_ontology:measurement(ai_r_su_t12, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 12, 0.7).
-narrative_ontology:measurement(ai_r_su_t16, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 16, 0.71).
-narrative_ontology:measurement(ai_r_su_t20, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement(ai_r_su_t5, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 5, 0.6).
+narrative_ontology:measurement(ai_r_su_t10, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 10, 0.64).
+narrative_ontology:measurement(ai_r_su_t15, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 15, 0.67).
+narrative_ontology:measurement(ai_r_su_t25, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 25, 0.68).
+narrative_ontology:measurement(ai_r_su_t35, ai_risk_governance_priority__near_term_harms_reading, suppression_requirement, 35, 0.68).
 
 
 /* ==========================================================================
@@ -286,17 +359,17 @@ narrative_ontology:coordination_type(ai_risk_governance_priority__near_term_harm
 narrative_ontology:boltzmann_floor_override(ai_risk_governance_priority__near_term_harms_reading, 0.12).
 narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, ai_risk_governance_priority__existential_risk_reading).
 narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, ai_risk_governance_priority__bridge_reading).
-narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, algorithmic_bias_regulatory_frameworks).
-narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, labor_displacement_ai_governance).
+narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, algorithmic_discrimination_labor_displacement).
+narrative_ontology:affects_constraint(ai_risk_governance_priority__near_term_harms_reading, global_south_ai_governance_asymmetry).
 
 % DUAL FORMULATION NOTE:
-% This story is the near_term_harms_reading of a three-reading kernel (ai_risk_governance_priority). The ε-invariance principle requires separate stories for logically distinct constraints. The near-term-harms reading focuses governance on demonstrated present algorithmic harms to marginalized populations; it has high ε on deployed-system harm mitigation, low ε on speculative superintelligence prevention. The existential_risk_reading inverts this: low ε on present harms (treats them as inevitable externalities of scaling), high ε on superintelligence prevention as the governing constraint. The bridge_reading treats both as structurally entangled components of one larger constraint requiring unified frameworks. These are three different ε profiles, three different victim/beneficiary structures, three different governance implications. The reading_relations field in cs_structure documents their logical relationships; omega variables carry the committer-frame contest. Do not attempt to fold all three readings into one constraint—the result would be incoherent ε, ambiguous classification, and loss of the discriminative signal the corpus measures.
+% This constraint is one reading of the ai_risk_governance_priority kernel. The kernel is contested across three readings with incompatible beneficiary/victim structures and ε values. (1) near_term_harms_reading: high ε on present deployment harms, low on superintelligence; victims are Global South and marginalized populations; beneficiaries are corporations and x-risk advocates; governance resources flow to bias auditing. (2) existential_risk_reading: low ε on present harms, high on superintelligence scenarios; victims are humanity-at-large and future people; beneficiaries are AI safety researchers and alignment funders; resources flow to x-risk research. (3) bridge_reading: mid-range ε on both, structures them as entangled; victims are both present and future; coordination goal is unified frameworks. Each reading has distinct beneficiary/victim sets, distinct resource flows, and distinct suppression mechanisms. The three readings are linked via network.affects_constraints because they compete for governance authority and regulatory resources within the same institutional domain.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(ai_risk_governance_priority__near_term_harms_reading, moderate, 0.78).
+constraint_indexing:directionality_override(ai_risk_governance_priority__near_term_harms_reading, organized, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

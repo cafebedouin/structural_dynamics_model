@@ -43,11 +43,17 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,37 +73,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gpl_copyleft_scope__enforcement_vacuum_reading
- *   human_readable: GPL Copyleft Scope Under Interpretive Enforcement Vacuum
+ *   human_readable: GPL Copyleft Scope Enforcement Vacuum
  *   domain: intellectual_property/open_source_governance
  *
  * SUMMARY:
- *   GPL Section 2(b) aims to specify when software modifications trigger
- *   copyleft obligations—when a derivative work must inherit GPL terms. The
- *   clause's language ('based upon,' 'derivative work') inherits ambiguity
- *   from copyright law itself. For thirty years, absence of definitive
- *   judicial precedent has allowed two incoherent readings to coexist as
- *   legitimate interpretations: FSF-aligned projects and strong copyleft
- *   advocates read broadly (dynamic linking, plugins, aggregated code →
- *   derivative works → copyleft applies), while industry developers and
- *   narrow-scope interpreters read the same clause narrowly (only direct
- *   textual/object-code modifications → derivative works → copyleft limited).
- *   The enforcement vacuum is the structural fact: no binding precedent
- *   defeats either reading, allowing adopters to navigate the ambiguity
- *   through community alignment and risk assessment. This reading
- *   instantiates the constraint under the enforcement vacuum: uncertainty
- *   itself is the operative mechanism, creating a tangled_rope where
- *   FSF-aligned communities and strong copyleft advocates benefit from
- *   preserved interpretive authority, while clarity-seeking adopters and
- *   industry developers bear elevated compliance costs and enforcement risk.
+ *   The GPL's Section 2(b) requires that derivative works be licensed under
+ *   GPL. But the term 'derivative work' is ambiguous under modern software
+ *   architecture: does it include dynamically linked plugins? Statically
+ *   linked libraries? Service calls? Two interpretive communities coexist
+ *   with incompatible readings. The FSF-aligned reading is expansive (all
+ *   functional coupling triggers GPL); the industry-dominated reading is
+ *   narrow (traditional copyright derivative doctrine only). Absence of
+ *   definitive judicial precedent allows both to claim legitimacy. This is
+ *   NOT a mountain or a genuine rope—the coordination function exists (GPL
+ *   does coordinate free software development) but the constraint's actual
+ *   operation depends on which interpretive community can enforce its reading
+ *   in specific contexts. The separation itself is the extraction mechanism:
+ *   clarity-seeking adopters face elevated transaction costs; pragmatic
+ *   adopters benefit from ambiguity that lets them navigate between
+ *   interpretations.
  *
  * KEY AGENTS:
- *   - fsf_aligned_projects: Interpreters and enforcers of expansive copyleft scope; identity-locked to the strong reading; benefit from ambiguity's preservation of their authority
- *   - strong_copyleft_advocates: Ideological coalition favoring maximal freedom propagation; identity-fused with expansive interpretation; lack enforcement capacity but influence through community consensus
- *   - clarity_seeking_adopters: Face elevated transaction costs from ambiguous scope definition; constrained exit (cannot avoid GPL code without ecosystem cost); pay through legal review overhead and compliance uncertainty
- *   - industry_ecosystem_developers: Exploit narrower reading for flexibility; powerful enough to bet on low enforcement probability; pay through compliance risk and selective disclosure overhead
- *   - fsf: Institutional authority holder; lacks courtroom enforcement capacity; benefits from vacuum through preserved agenda-setting power without precedent threat
- *   - courts: Institutional power to create binding precedent; excluded by litigation settlement patterns
- *   - proprietary_software_vendors: Adversarially excluded by GPL's freedom mandate; would prefer narrower scope but have no standing in GPL governance
+ *   - FSF-aligned projects: interpret GPL expansively, enforce through social/community mechanisms
+ *   - Industry-dominated ecosystems: interpret GPL narrowly, enforce through legal review and CLAs
+ *   - Clarity-seeking adopters: face dual-compliance costs, constrained exit
+ *   - Pragmatic adopters: exploit ambiguity strategically, arbitrage between readings
+ *   - Independent developers: lack negotiation power, identity-locked to GPL commitment
+ *   - Courts: institutional silence that sustains the vacuum
  */
 
 /* ==========================================================================
@@ -104,59 +107,117 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(gpl_copyleft_scope__enforcement_vacuum_reading, 0.38).
-domain_priors:suppression_score(gpl_copyleft_scope__enforcement_vacuum_reading, 0.52).
-domain_priors:theater_ratio(gpl_copyleft_scope__enforcement_vacuum_reading, 0.41).
+domain_priors:base_extractiveness(gpl_copyleft_scope__enforcement_vacuum_reading, 0.42).
+domain_priors:suppression_score(gpl_copyleft_scope__enforcement_vacuum_reading, 0.38).
+domain_priors:theater_ratio(gpl_copyleft_scope__enforcement_vacuum_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, extractiveness, 0.38).
-narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 0.52).
-narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, extractiveness, 0.42).
+narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 0.38).
+narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, accessibility_collapse, 0.51).
 narrative_ontology:constraint_metric(gpl_copyleft_scope__enforcement_vacuum_reading, resistance, 0.67).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(gpl_copyleft_scope__enforcement_vacuum_reading, tangled_rope).
-narrative_ontology:human_readable(gpl_copyleft_scope__enforcement_vacuum_reading, "GPL Copyleft Scope Under Interpretive Enforcement Vacuum").
+narrative_ontology:human_readable(gpl_copyleft_scope__enforcement_vacuum_reading, "GPL Copyleft Scope Enforcement Vacuum").
 narrative_ontology:topic_domain(gpl_copyleft_scope__enforcement_vacuum_reading, "intellectual_property/open_source_governance").
 
 domain_priors:requires_active_enforcement(gpl_copyleft_scope__enforcement_vacuum_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(gpl_copyleft_scope__enforcement_vacuum_reading, '7e022b9d-f8a0-45b3-af4d-0478499c58d5').
-narrative_ontology:cs_kernel_codification('7e022b9d-f8a0-45b3-af4d-0478499c58d5', fixed_text).
-narrative_ontology:cs_authority_grounding('7e022b9d-f8a0-45b3-af4d-0478499c58d5', lineage).
-narrative_ontology:cs_interpretation_layer_present('7e022b9d-f8a0-45b3-af4d-0478499c58d5').
-narrative_ontology:cs_reading_relation('7e022b9d-f8a0-45b3-af4d-0478499c58d5', gpl_copyleft_scope__strong_copyleft_reading, coexists_with).
-narrative_ontology:cs_reading_relation('7e022b9d-f8a0-45b3-af4d-0478499c58d5', gpl_copyleft_scope__narrow_scope_reading, coexists_with).
-narrative_ontology:cs_axiom('7e022b9d-f8a0-45b3-af4d-0478499c58d5', foundational, absence_of_binding_precedent_licenses_plurality).
-narrative_ontology:cs_axiom_status(absence_of_binding_precedent_licenses_plurality, holdable).
-narrative_ontology:cs_axiom_grounding('7e022b9d-f8a0-45b3-af4d-0478499c58d5', absence_of_binding_precedent_licenses_plurality, deontological).
-narrative_ontology:cs_axiom('7e022b9d-f8a0-45b3-af4d-0478499c58d5', foundational, enforcement_vacuum_is_structural_feature).
-narrative_ontology:cs_axiom_status(enforcement_vacuum_is_structural_feature, holdable).
-narrative_ontology:cs_axiom_grounding('7e022b9d-f8a0-45b3-af4d-0478499c58d5', enforcement_vacuum_is_structural_feature, conventional).
-narrative_ontology:cs_reference_frame('7e022b9d-f8a0-45b3-af4d-0478499c58d5', copyleft_scope_maximalism).
-narrative_ontology:cs_drift_state('7e022b9d-f8a0-45b3-af4d-0478499c58d5', contemporary_cloud_and_plugin_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('7e022b9d-f8a0-45b3-af4d-0478499c58d5', '').
+narrative_ontology:cs_story_uid(gpl_copyleft_scope__enforcement_vacuum_reading, 'c7202882-49e4-4fae-9c49-b377efe1d868').
+narrative_ontology:cs_kernel_codification('c7202882-49e4-4fae-9c49-b377efe1d868', fixed_text).
+narrative_ontology:cs_authority_grounding('c7202882-49e4-4fae-9c49-b377efe1d868', distributed).
+narrative_ontology:cs_reading_relation('c7202882-49e4-4fae-9c49-b377efe1d868', gpl_copyleft_scope__strong_copyleft_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c7202882-49e4-4fae-9c49-b377efe1d868', gpl_copyleft_scope__narrow_scope_reading, coexists_with).
+narrative_ontology:cs_axiom('c7202882-49e4-4fae-9c49-b377efe1d868', foundational, derivative_work_scope_fundamentally_unsettled).
+narrative_ontology:cs_axiom_status(derivative_work_scope_fundamentally_unsettled, holdable).
+narrative_ontology:cs_axiom_grounding('c7202882-49e4-4fae-9c49-b377efe1d868', derivative_work_scope_fundamentally_unsettled, empirically_contingent).
+narrative_ontology:cs_axiom('c7202882-49e4-4fae-9c49-b377efe1d868', foundational, institutional_silence_constitutes_legitimate_ambiguity).
+narrative_ontology:cs_axiom_status(institutional_silence_constitutes_legitimate_ambiguity, holdable).
+narrative_ontology:cs_axiom_grounding('c7202882-49e4-4fae-9c49-b377efe1d868', institutional_silence_constitutes_legitimate_ambiguity, conventional).
+narrative_ontology:cs_reference_frame('c7202882-49e4-4fae-9c49-b377efe1d868', gpl_v2_expanded_adoption_era).
+narrative_ontology:cs_drift_state('c7202882-49e4-4fae-9c49-b377efe1d868', contemporary_software_architecture, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('c7202882-49e4-4fae-9c49-b377efe1d868', '').
 narrative_ontology:cs_kernel_id(gpl_copyleft_scope__enforcement_vacuum_reading, gpl_copyleft_scope).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(gpl_copyleft_scope__enforcement_vacuum_reading, fsf_aligned_projects).
-narrative_ontology:constraint_beneficiary(gpl_copyleft_scope__enforcement_vacuum_reading, strong_copyleft_advocates).
+narrative_ontology:constraint_beneficiary(gpl_copyleft_scope__enforcement_vacuum_reading, pragmatic_adopters).
+narrative_ontology:constraint_beneficiary(gpl_copyleft_scope__enforcement_vacuum_reading, ecosystem_gatekeepers).
 narrative_ontology:constraint_victim(gpl_copyleft_scope__enforcement_vacuum_reading, clarity_seeking_adopters).
-narrative_ontology:constraint_victim(gpl_copyleft_scope__enforcement_vacuum_reading, industry_ecosystem_developers).
+narrative_ontology:constraint_victim(gpl_copyleft_scope__enforcement_vacuum_reading, independent_developers).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(gpl_copyleft_scope__enforcement_vacuum_reading, license_authors_fsf).
+narrative_ontology:constraint_victim(gpl_copyleft_scope__enforcement_vacuum_reading, pragmatic_adopters).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets GPL Section 2(b) expansively: derivative work boundary extends to dynamic linking, plugin architectures, and functional coupling. Enforces this reading through license review, community governance, and selective grant/withdrawal of trademark rights. Operates primarily through social enforcement (disapproval, forking) rather than litigation. Maintains the interpretation as a normative commitment to software freedom, not as a legal claim they have tested in court.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, fsf_aligned_projects, agenda_setter,
+    organized, generational, mobile, global).
+
+% Interprets GPL Section 2(b) narrowly: derivative work boundary follows traditional copyright doctrine, constraining only direct source modifications and static linking. Enforces this reading through internal legal review, contributor license agreements (CLAs), and selective binary distribution. Operates through license compliance audits and potential litigation threat. Adopted GPL for community goodwill while maintaining proprietary business models around platform, services, or distribution.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, industry_dominated_ecosystems, agenda_setter,
+    institutional, biographical, constrained, global).
+
+% Wish to use GPL-licensed components while maintaining proprietary code. Face elevated transaction costs from the interpretive vacuum: must conduct legal analysis under multiple readings, negotiate with both interpretive communities, potentially conform to both standards simultaneously, or accept prolonged licensing uncertainty. Their exit cost is high because GPL ecosystem value is significant but clarity is unavailable at any price point.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, clarity_seeking_adopters, payer,
+    moderate, biographical, constrained, global).
+
+% Navigate the vacuum strategically: adopt GPL components where the narrow reading supports their architecture, maintain private interpretation documentation to support narrow-reading positions if challenged, contribute selectively to FSF-aligned projects to maintain legitimacy, and scale contributions to industry-dominated ecosystems. The ambiguity is an asset—it allows design flexibility without forcing a single binding commitment. They can shift interpretive alignment based on project context.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, pragmatic_adopters, beneficiary,
+    powerful, biographical, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(gpl_copyleft_scope__enforcement_vacuum_reading, pragmatic_adopters, payer).
+
+% Lack the legal resources to navigate dual interpretations or the market power to negotiate special treatment from either interpretive community. Face the full cost of the vacuum: must either commit to a single reading and risk later challenge, seek explicit permission from both communities (which may be withheld), or avoid GPL-licensed dependencies entirely. Their professional identity in open source often carries ideological commitment to GPL principles, making exit psychologically costly.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, independent_developers, payer,
+    powerless, biographical, identity_locked, global).
+
+% Have not produced binding precedent that resolves the GPL derivative-work boundary question. This absence is structural to the constraint: the vacuum persists because no court has definitively ruled on whether dynamic linking, plugin architectures, or functional coupling trigger GPL's section 2(b) requirements. The refusal or delay of courts to adjudicate gives both interpretive communities standing to claim their reading reflects the law.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, courts_and_legal_precedent, agenda_setter,
+    institutional, generational, analytical, national).
+
+% The FSF authored GPL and publishes interpretation guidance, but that guidance is not legally binding and has never been tested comprehensively in court. They benefit from the broad reading because it maximizes the scope of their copyleft commitment, aligns with their normative mission to spread software freedom, and increases the dependency on their interpretive authority. Yet they also incur costs: uncertainty undermines license adoption, and the absence of court backing means their interpretation can be challenged without legal consequences.
+narrative_ontology:constraint_stakeholder(gpl_copyleft_scope__enforcement_vacuum_reading, license_authors_fsf, beneficiary,
+    organized, generational, mobile, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(gpl_copyleft_scope__enforcement_vacuum_reading, diffuse).
+narrative_ontology:fixing_cost_class(gpl_copyleft_scope__enforcement_vacuum_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The GPL license itself—a coordination mechanism that resolves the commons problem of free software development by requiring any derivative to remain free. The enforcement vacuum reflects the coordination cost: without settled legal meaning of 'derivative work,' participants cannot coordinate unambiguously on what code triggers the reciprocal obligation.
+% TRANSFER_FUNCTION: The constraint moves interpretive authority: from formal legal institutions (courts) to informal communities (FSF-aligned projects, industry ecosystems) based on their enforcement capacity in specific contexts. Clarity-seeking adopters transfer negotiation costs and legal risk to whichever community has stronger enforcement capacity in their context. Pragmatic adopters transfer risk management costs to themselves via strategic community navigation.
+% ABSENT_VOICES: Independent developers and smaller open-source foundations lack the legal resources or market power to participate in shaping interpretations. They are de facto excluded because they cannot credibly threaten either interpretation community with litigation or market retaliation. Absent too are the courts themselves—their silence is structural to the vacuum, but judicial voices are not 'excluded' so much as 'not-yet-heard'; treating their absence as exclusion would be conceptually confused.
+% DISAPPEARANCE_RATIONALE: If the enforcement vacuum disappeared overnight (via definitive court ruling or authoritative GPL amendment), the constraint would vanish and be replaced by a new constraint: the settled GPL derivative-work boundary. Software architectures currently designed around ambiguity would need to be re-evaluated and potentially restructured. The dual interpretive communities would lose their role as de facto authorities, and licensing costs would shift (upward for those whose preferred reading lost, downward for those whose reading prevailed). Business models built on exploiting the ambiguity would face either renegotiation or obsolescence.
+% FOUNDING_PROBLEM: The GPL was written in 1989 with static linking and source modification as the primary coupling mechanisms. By the 1990s–2000s, plugin architectures, dynamic linking, and service-oriented coupling emerged as new forms of code integration that GPL's text did not explicitly address. The founding problem became: how should GPL's reciprocal obligation apply to these new architectural forms? The text ('derivative work') was ambiguous under 21st-century practice.
+% FOUNDING_PROBLEM_CORROBORATION: The FSF, major open-source distributors (Debian, Red Hat), and independent researchers all attest that the derivative-work boundary question remains live and unresolved. GPL v3 (2007) was partly a response to this problem, but did not resolve the core ambiguity—it added clarifications on tivoization and DRM, but did not settle the plugin/dynamic-linking boundary. Legal scholars, software architects, and industry compliance officers all independently attest that uncertainty persists. No external court has ruled to settle the question.
+narrative_ontology:disappearance_verdict(gpl_copyleft_scope__enforcement_vacuum_reading, world_rearranges).
+narrative_ontology:founding_problem_status(gpl_copyleft_scope__enforcement_vacuum_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(gpl_copyleft_scope__enforcement_vacuum_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(gpl_copyleft_scope__enforcement_vacuum_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(gpl_copyleft_scope__enforcement_vacuum_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(gpl_copyleft_scope__enforcement_vacuum_reading, 0.42, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,16 +232,16 @@ narrative_ontology:story_seed(gpl_copyleft_scope__enforcement_vacuum_reading, 'n
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness at 0.38 reflects moderate constraint severity: clarity-seeking adopters bear real costs (legal review, compliance redesign, relationship negotiation), but the cost is below snare-level because industry developers have arbitrage options and FSF-aligned projects still provide coordination benefit. Suppression at 0.52 reflects the constraint's enforcement structure: FSF-aligned communities can sanction non-compliance, litigation risk constrains industry developers' freedom of action, and interpretive uncertainty itself suppresses clarity-seeking by raising the cost of definitive answers. Theater ratio at 0.41 reflects that some enforcement activity is performative: community education about copyleft is real, but increasingly the activity serves to maintain interpretive authority in the face of industry challenge rather than to solve the original coordination problem. Accessibility collapse at 0.48 is moderate: alternatives exist (permissive licenses, proprietary code) but GPL's network effects make them costly; the measured value reflects partial foreclosure. Resistance at 0.67 is high: industry developers, clarity-seeking adopters, and even some open-source communities resist expansive scope claims; this is not a constraint everyone has accepted. The claimed type is tangled_rope because the arrangement provides genuine coordination (shared freedom framework) AND asymmetric extraction (ambiguity → legal costs borne by clarity-seekers and risk by industry, authority preserved by FSF-aligned parties). The measurement series show extractiveness rising from 0.31 to 0.39 in the first 15 years as cloud computing and plugin architectures intensified the scope question, then stabilizing around 0.38 as adoption patterns settled and communities developed de facto scope conventions—the constraint hardened into a stable but contested equilibrium.
+ *   Extractiveness is moderate (0.42) because the constraint's operation produces real costs (legal risk, dual compliance, negotiation overhead) but also enables beneficial coordination (GPL ecosystem remains vibrant, free software develops). The vacuum itself is the coordinating mechanism—it allows flexibility that a settled reading would foreclose. Suppression is moderate (0.38) because neither interpretation community can fully suppress the other without court backing; FSF-aligned projects can deny trademark/social legitimacy, but cannot legally prevent narrow-reading implementations; industry ecosystems can implement their reading, but cannot prevent FSF projects from treating them as GPL violators. Theater ratio is moderate (0.28) because both communities perform their interpretation as commitments to principle, but significant interpretive activity is driven by risk management and business model fit. The measurement series show rising extractiveness and theater from 1989 to 2007 as plugin architectures and dynamic linking became central (the problem emerged), then stabilized from 2007-2026 as both communities settled into stable interpretive strategies despite the absence of resolution. Theater stabilizes because the performative work of defending the interpretation reached an equilibrium.
  *
  * PERSPECTIVAL GAP:
- *   From the FSF-aligned seat, the constraint is genuine coordination: GPL provides shared freedom guarantees and the scope question is a technical detail best left to evolving interpretation as technology changes. From the clarity-seeking and industry developer seats, the same structure is extractive: they pay compliance costs to navigate ambiguity that the agenda-setter could resolve but does not. From the court seat (excluded), the constraint is a legal gap awaiting closure. The engine computes per-seat classification from the directional data: FSF-aligned projects compute as beneficiaries (d near 0.0, low directionality), clarity-seeking adopters as high-d targets (pay without control), industry developers as moderate-d payors (bear risk but exploit arbitrage for returns). The divergence is structural, not measurement error—the same constraint genuinely operates differently from different power positions.
+ *   FSF-aligned projects and industry-dominated ecosystems experience this constraint structurally differently. For FSF projects, the ambiguity is ENABLING: they can interpret expansively, enforce through community pressure, and claim the high ground of GPL purity without facing legal contradiction. For industry ecosystems, the ambiguity is LIMITING: they must implement a narrow reading defensively, conduct compliance audits, manage legal risk, and accept that their implementation could be challenged. Clarity-seeking adopters and pragmatic adopters sit on opposite ends of the risk tolerance axis: clarity-seekers want the vacuum resolved (would benefit from clear rules even if unfavorable); pragmatists want it to persist (profit from ambiguity). Courts (institutional observer) experience the constraint as a choice to remain silent—their power to resolve the vacuum is high, but their decisions not to adjudicate GPL derivative-work cases is the structural fact that sustains the constraint. The engine computes per-seat classifications from this asymmetric structural data: FSF-aligned projects compute closer to beneficiary d; clarity-seeking adopters compute closer to target d; pragmatists compute closer to beneficiary d despite nominally paying the extraction cost; industry ecosystems compute closer to balanced d (they enforce but don't collect; they suppress but don't fully control).
  *
  * DIRECTIONALITY LOGIC:
- *   FSF-aligned projects and strong copyleft advocates are declared beneficiaries: they collect the benefit of interpretive authority (ability to influence behavior without courtroom defeat) and do not bear the compliance costs clarity-seeking imposes. Clarity-seeking adopters and industry developers are declared victims/payers: they bear elevated legal review costs (clarity-seekers), enforcement risk (industry developers), and relationship negotiation overhead (both). The directionality derivation places FSF-aligned projects at d~0.1 (structured beneficiary, arbitrage exit through authority maintenance), strong copyleft advocates at d~0.15 (ideological beneficiary, identity-locked exit), clarity-seeking at d~0.7 (high targets, constrained exit through ecosystem dependence), and industry developers at d~0.55 (moderate-high targets, arbitrage exit available but risky). The FSF institutional seat is d~0.2 (agenda-setter beneficiary, arbitrage through authority preservation). These are not overridden; they follow from beneficiary/victim + exit_options.
+ *   Beneficiaries: Pragmatic adopters (exploit ambiguity for architectural flexibility; no need to commit to one reading); FSF-aligned projects (their interpretation remains uncontested in their own domain; they benefit from normative standing). Victims: Clarity-seeking adopters (face dual-compliance costs and legal risk); independent developers (lack power to negotiate, bear full uncertainty cost without compensation). The asymmetry is structural: the vacuum is resolved at the level of CONTEXT (FSF ecosystem vs industry ecosystem) rather than at the level of the license itself. An adopter's exit options depend on their power and their community alignment. Industry ecosystems have arbitrage-grade exit: they can shift interpretation, contribute selectively, maintain dual-face presentation. Clarity-seeking adopters have constrained exit: they can use GPL components or avoid them, but cannot change the license's meaning. Independent developers have identity-locked exit: GPL embodies their normative commitment to software freedom; exiting the GPL ecosystem means abandoning core professional identity.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (need to specify when derivative works trigger copyleft) is contested rather than resolved. Absence of binding precedent means neither the strong copyleft reading nor the narrow reading has been validated by courts. The constraint persists in a state of licensed plurality: multiple interpretations coexist as legitimate because none has been overruled. This is not mandatrophy (the founding problem being long dead and the constraint persisting as pure theater) because the problem is still live—scope ambiguity is still a real coordination challenge. However, the absence of resolution mechanisms (binding precedent, authoritative guidance, license update from FSF clarifying intent) allows the constraint to persist indefinitely without forcing the founding problem to closure. The disappearance verdict is world_rearranges: if the enforcement vacuum were filled (court ruling, FSF clarification), the constraint's substance would transform from ambiguity-navigation to either strong obligation or narrow scope. The founding_problem_status is contested: FSF-aligned parties say scope circumvention is still a threat; industry commentators say technical modularity has addressed the concern. This contested status is the structural signal that the founding problem has not been resolved, so mandatrophy is not yet present, but the absence of closure mechanisms means mandatrophy could accumulate if the problem-solving capacity stays absent.
+ *   The founding problem (how should GPL apply to new architectural coupling forms) is LIVE but UNRESOLVED. The constraint was not built to solve this problem—it emerged as GPL aged and software architecture evolved. The constraint that emerged is NOT a deliberate construction but an artifact of institutional silence (courts) combined with interpretive pluralism (two communities). Is this still a valid coordination mechanism? The FSF reads it as clarifying GPL's scope; industry reads it as clarifying the narrow interpretation that permits commercial use. Both readings claim they preserve GPL's essential function: reciprocal freedom. Mandatrophy is ABSENT in the sense that the constraint is not yet functionally obsolete—software development proceeds, licensing happens, ecosystems thrive. But there is a CRISIS OF LEGITIMACY: neither interpretation community can justify claiming their reading is THE READING without court backing or explicit GPL v4 amendment. The vacuum itself is treated as a feature by pragmatists and as a defect by clarity-seekers. This is a tangled_rope, not a snare or rope, precisely because: (1) genuine coordination function exists (GPL does coordinate), (2) asymmetric extraction exists (clarity-seekers pay, pragmatists benefit), (3) active enforcement exists (both communities enforce their reading), (4) no universal consensus on the boundary between coordination and extraction (the crisis of legitimacy).
  */
 
 /* ==========================================================================
@@ -188,95 +249,89 @@ narrative_ontology:story_seed(gpl_copyleft_scope__enforcement_vacuum_reading, 'n
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_contest,
-    'Is the GPL Section 2(b) copyleft scope clause a single constraint with one correct interpretation, or does it genuinely instantiate multiple structurally distinct constraints depending on how adoption context and interpretive community shape enforcement?',
-    'Binding judicial precedent would resolve toward the strong_copyleft_reading or narrow_scope_reading. Persistent absence of such precedent, coupled with continued coexistence of both readings in different communities, supports the enforcement_vacuum_reading frame: the constraint''s substance varies by context.',
-    'If the enforcement vacuum is the true structural fact (not a temporary gap), then this reading is accurate and the constraint is a tangled_rope where uncertainty itself is the operative mechanism. If a court eventually rules definitively, this reading collapses and one of the sibling readings becomes canonical.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Whether GPL scope ambiguity is a constraint property or a gap awaiting resolution.').
-
-omega_variable(
-    interpretive_community_enforcement_capacity,
-    'Does the enforcement vacuum persist because courts have not tested the boundaries, or because FSF-aligned communities deliberately avoid litigation that might produce unfavorable precedent?',
-    'Historical analysis of GPL enforcement cases that settled: do the settlement patterns reflect litigation risk aversion by both parties, or strategic choice by FSF to preserve ambiguity? Interviews with GPL license counsel and FSF leadership on why test cases were not pursued.',
-    'If avoidance is deliberate, the vacuum is intentionally maintained and benefits to FSF-aligned parties are structural (preserved interpretive authority without courtroom risk). If avoidance is mutual risk-aversion, the vacuum is accidental and neither side prefers it — this would lower the beneficiary/victim asymmetry.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(interpretive_community_enforcement_capacity, empirical, 'Whether the enforcement vacuum is maintained strategically or by accident.').
-
-omega_variable(
-    clarity_seeking_transaction_cost_measurement,
-    'How much of the measured extractiveness (0.38) is borne by clarity-seeking adopters through elevated legal review, compliance auditing, and relationship negotiation overhead?',
-    'Survey of GPL-using companies on compliance cost as a function of scope uncertainty: licensing review time, legal expense, architecture redesign cycles, community negotiation burden. Comparison to post-clarity scenarios (hypothetical or from narrow-scope jurisdictions).',
-    'If clarity-seeking cost is the dominant extraction vector, removing the uncertainty would deflate the measured extractiveness significantly. If extraction is distributed across multiple payers (including risk-bearing by industry developers and FSF benefit from preserved authority), the structure persists across clarity scenarios.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(clarity_seeking_transaction_cost_measurement, empirical, 'How much extractiveness is driven by clarity costs vs. other mechanisms.').
-
-omega_variable(
-    suppression_mechanism_internalization,
-    'Is the measured suppression (0.52) structural (external barriers: litigation risk, community sanction, technical lock-in) or internalized (adopters have internalized both readings as equally valid and police their own ambiguity tolerance)?',
-    'Post-clarification trajectory: if a binding court ruling settles the scope question, observe whether adopters who had internalized both readings pivot to the new reading without external pressure, or whether they resist and require ongoing enforcement.',
-    'If suppression is structural, removing the ambiguity removes the suppression. If internalized, adopters carry the conformity bias even after clarity, and measured suppression underestimates the true restraint on behavior.',
+    judicial_silence_mechanism,
+    'Why have courts consistently declined to adjudicate GPL derivative-work boundary cases? Is this silence deliberate (avoiding precedent that would disrupt either community), accidental (GPL disputes settle before trial), or structural (cases are rare because early settlements and community pressure handle most disputes)?',
+    'Analysis of GPL litigation history: which cases were filed, which settled early, why, and on what terms. Interviews with GPL licensing experts on whether judicial silence is stable or contingent.',
+    'If silence is deliberate/structural, the vacuum is a stable equilibrium and may be constitutive to GPL''s function as a flexible coordination mechanism. If silence is accidental, a single test case could shatter the vacuum and reclassify all stakeholders'' directionality.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression is external barriers or internalized ambiguity tolerance.').
+narrative_ontology:omega_variable(judicial_silence_mechanism, empirical, 'Why courts have not produced binding GPL derivative-work precedent despite decades of software architecture evolution').
 
 omega_variable(
-    industry_arbitrage_sustainability,
-    'How long can industry developers sustain the strategy of exploiting interpretive ambiguity (narrower reading, selective disclosure, risk-betting) before community enforcement or legal action raises the cost above the arbitrage margin?',
-    'Monitoring GPL enforcement threats and litigation patterns against industry adopters using narrow interpretations; analysis of whether enforcement probability is increasing, constant, or decreasing over time.',
-    'If industry arbitrage is unsustainable and enforcement probability is rising, the constraint is shifting from tangled_rope toward snare (industry developers are becoming victims with weakening exit). If arbitrage is stable, the tangled_rope structure persists indefinitely.',
+    narrow_reading_enforceability,
+    'Can an industry-dominated ecosystem credibly enforce the narrow GPL reading without court backing, given that the FSF-aligned reading claims superior normative standing within the open-source community?',
+    'Longitudinal tracking of GPL compliance disputes: do narrow-reading implementations face successful community challenges and social sanctions? Do industry ecosystems maintain market position despite FSF-aligned criticism?',
+    'If the narrow reading is unenforceable without legal backing, it is a performative cover story and should reclassify the industry-dominated ecosystem''s directionality upward (toward target, not agenda-setter). If enforceable through market dominance and contributor relations, the reading is genuinely coexistent.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(industry_arbitrage_sustainability, empirical, 'Whether industry arbitrage strategy is durable or approaching enforcement tipping point.').
+narrative_ontology:omega_variable(narrow_reading_enforceability, empirical, 'Whether the narrow GPL reading remains viable without judicial precedent backing it').
+
+omega_variable(
+    pragmatist_extraction_asymmetry,
+    'Do pragmatic adopters who exploit ambiguity actually BENEFIT from the vacuum, or do they incur hidden transaction costs (legal review overhead, maintaining dual-face interpretation, constant monitoring of case law developments) that offset the architectural flexibility gains?',
+    'Detailed cost accounting from companies managing GPL-licensed dependencies: what is the true cost of navigating dual interpretations vs. the cost of committing to a single reading and defending it?',
+    'If hidden costs are substantial, pragmatists are not beneficiaries but targeted victims with high sophistication for risk management. The extraction would be higher than 0.42 measured globally, concentrated on powerful actors who pay it via lawyers and compliance infrastructure.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(pragmatist_extraction_asymmetry, empirical, 'Whether pragmatic adopters'' strategic flexibility genuinely offsets their transaction costs').
+
+omega_variable(
+    fsf_normative_standing_erosion,
+    'Is the FSF''s claim to interpretive authority durable, or is it eroding as commercial adoption of GPL increases and industry ecosystems accumulate enforceability through market dominance?',
+    'Longitudinal tracking of FSF interpretive authority: do new GPL projects adopt FSF guidance? Do industry ecosystems cite FSF interpretation or assert their own? Has FSF''s explicit positioning on controversial architectural forms (tivoization, GPL v3 adoption rates) changed in response to lack of judicial backing?',
+    'If FSF authority erodes, the asymmetry between interpretive communities shifts. The strong_copyleft_reading becomes less enforceable; the enforcement_vacuum_reading would stabilize as a permanent state rather than a transitional one. Directionality would shift toward benefiting industry ecosystems.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(fsf_normative_standing_erosion, empirical, 'Whether the FSF maintains cultural/normative authority to enforce expansive GPL interpretation without court backing').
+
+omega_variable(
+    kernel_reading_under_determination,
+    'Are these three readings (strong_copyleft, narrow_scope, enforcement_vacuum) genuinely structurally distinct interpretations of GPL Section 2(b), or does the enforcement_vacuum reading conflate two separable claims: (a) the legal question of derivative-work scope, and (b) the institutional question of who gets to adjudicate the scope?',
+    'Formal analysis of the three readings'' axioms: do they differ on the LEGAL MEANING of derivative work, or on WHO DECIDES the meaning? If the latter, the enforcement_vacuum reading is not a reading of the kernel (the license text) but a reading of the META-KERNEL (the institutional settlement problem).',
+    'If the enforcement_vacuum reading is actually a meta-reading, it should be decomposed into two separate constraint stories: (1) the strong_copyleft vs. narrow_scope readings (competing interpretations of the license text), and (2) a constraint about institutional settlement (who gets to decide when there is ambiguity). The current story would be reclassified as a snare or piton focusing on institutional deadlock rather than interpretive pluralism.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_under_determination, conceptual, 'Whether enforcement_vacuum is a reading of the GPL text or a reading of the institutional settlement mechanism').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(gpl_copyleft_scope__enforcement_vacuum_reading, 0, 35).
+narrative_ontology:interval(gpl_copyleft_scope__enforcement_vacuum_reading, 1989, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gpl__tr_t0, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(gpl__tr_t5, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 5, 0.32).
-narrative_ontology:measurement(gpl__tr_t10, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 10, 0.36).
-narrative_ontology:measurement(gpl__tr_t15, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 15, 0.4).
-narrative_ontology:measurement(gpl__tr_t20, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 20, 0.42).
-narrative_ontology:measurement(gpl__tr_t25, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(gpl__tr_t30, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 30, 0.41).
-narrative_ontology:measurement(gpl__tr_t35, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 35, 0.41).
+narrative_ontology:measurement(gpl__tr_t1989, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 1989, 0.08).
+narrative_ontology:measurement(gpl__tr_t1999, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 1999, 0.14).
+narrative_ontology:measurement(gpl__tr_t2007, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 2007, 0.19).
+narrative_ontology:measurement(gpl__tr_t2015, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 2015, 0.24).
+narrative_ontology:measurement(gpl__tr_t2020, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 2020, 0.27).
+narrative_ontology:measurement(gpl__tr_t2026, gpl_copyleft_scope__enforcement_vacuum_reading, theater_ratio, 2026, 0.28).
 
 % Extraction over time
-narrative_ontology:measurement(gpl__be_t0, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 0, 0.31).
-narrative_ontology:measurement(gpl__be_t5, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 5, 0.34).
-narrative_ontology:measurement(gpl__be_t10, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 10, 0.37).
-narrative_ontology:measurement(gpl__be_t15, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 15, 0.39).
-narrative_ontology:measurement(gpl__be_t20, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 20, 0.37).
-narrative_ontology:measurement(gpl__be_t25, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 25, 0.38).
-narrative_ontology:measurement(gpl__be_t30, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 30, 0.38).
-narrative_ontology:measurement(gpl__be_t35, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 35, 0.38).
+narrative_ontology:measurement(gpl__be_t1989, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 1989, 0.15).
+narrative_ontology:measurement(gpl__be_t1999, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 1999, 0.28).
+narrative_ontology:measurement(gpl__be_t2007, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 2007, 0.35).
+narrative_ontology:measurement(gpl__be_t2015, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 2015, 0.39).
+narrative_ontology:measurement(gpl__be_t2020, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 2020, 0.41).
+narrative_ontology:measurement(gpl__be_t2026, gpl_copyleft_scope__enforcement_vacuum_reading, base_extractiveness, 2026, 0.42).
 
 % Suppression requirement over time
-narrative_ontology:measurement(gpl__su_t0, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 0, 0.44).
-narrative_ontology:measurement(gpl__su_t5, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 5, 0.47).
-narrative_ontology:measurement(gpl__su_t10, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 10, 0.5).
-narrative_ontology:measurement(gpl__su_t15, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 15, 0.52).
-narrative_ontology:measurement(gpl__su_t20, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 20, 0.53).
-narrative_ontology:measurement(gpl__su_t25, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 25, 0.52).
-narrative_ontology:measurement(gpl__su_t30, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 30, 0.52).
-narrative_ontology:measurement(gpl__su_t35, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 35, 0.52).
+narrative_ontology:measurement(gpl__su_t1989, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 1989, 0.18).
+narrative_ontology:measurement(gpl__su_t1999, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 1999, 0.27).
+narrative_ontology:measurement(gpl__su_t2007, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 2007, 0.32).
+narrative_ontology:measurement(gpl__su_t2015, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 2015, 0.37).
+narrative_ontology:measurement(gpl__su_t2020, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 2020, 0.38).
+narrative_ontology:measurement(gpl__su_t2026, gpl_copyleft_scope__enforcement_vacuum_reading, suppression_requirement, 2026, 0.38).
 
 
 /* ==========================================================================
@@ -289,11 +344,14 @@ narrative_ontology:affects_constraint(gpl_copyleft_scope__enforcement_vacuum_rea
 narrative_ontology:affects_constraint(gpl_copyleft_scope__enforcement_vacuum_reading, gpl_copyleft_scope__narrow_scope_reading).
 
 % DUAL FORMULATION NOTE:
-% The GPL copyleft scope clause (Section 2(b)) instantiates three structurally distinct constraints depending on whether the operative rule is the strong interpretation (expansive derivative work boundary), the narrow interpretation (textual/object-code only), or the enforcement vacuum (ambiguity itself as the constraint). Each reading has different ε, different beneficiary/victim structure, and different temporal trajectory. They form a constraint family linked by the same kernel (the GPL text) but decomposed by interpretive reading. The enforcement_vacuum_reading does not assert that either sibling reading is structurally correct; it describes the actual situation: uncertainty is the constraint. Strong copyleft and narrow scope readings each assert their interpretation is correct; the vacuum reading asserts that the absence of closure keeps both readings live.
+% The GPL copyleft scope kernel admits three structurally distinct constraint readings. The strong_copyleft_reading interprets GPL's derivative-work boundary expansively; the narrow_scope_reading interprets it narrowly; this enforcement_vacuum_reading names the institutional fact that both readings coexist in the absence of binding judicial precedent. All three readings share the same referent (GPL Section 2(b)) but differ on whether the scope is settled by legal doctrine, by community interpretation, or by institutional silence. Each reading has distinct beneficiaries, victims, and enforcement mechanisms. The three readings are linked via affects_constraints to enable comparative analysis of how the same legal text instantiates different constraints depending on epistemic closure.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(gpl_copyleft_scope__enforcement_vacuum_reading, powerful, 0.38).
+constraint_indexing:directionality_override(gpl_copyleft_scope__enforcement_vacuum_reading, organized, 0.22).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

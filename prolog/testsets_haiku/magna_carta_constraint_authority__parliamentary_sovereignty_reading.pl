@@ -3,11 +3,11 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_magna_carta_parliamentary_sovereignty, []).
+:- module(constraint_magna_carta_constraint_authority__parliamentary_sovereignty_reading, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -43,7 +43,11 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,37 +72,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: magna_carta_constraint_authority__parliamentary_sovereignty_reading
- *   human_readable: Magna Carta Restraints via Parliamentary Statute (Sovereignty Reading)
- *   domain: constitutional/legal/political
+ *   human_readable: Magna Carta Restraints via Parliamentary Sovereignty
+ *   domain: constitutional/political
  *
  * SUMMARY:
- *   Magna Carta emerges from medieval feudalism as a restraint on Crown
- *   prerogative, but by the early modern period it exists only as interpreted
- *   into parliamentary statute law. This constraint instantiates the
- *   'parliamentary sovereignty' reading of that kernel: Crown authority is
- *   constrained by law, but that law is statute passed by Parliament, which
- *   retains the power to revise, repeal, or rewrite any charter provision.
- *   This reading creates an asymmetric distribution: Parliament as the
- *   guardian of restraint (and beneficiary of institutional power) vs.
- *   permanent minorities whose protection depends entirely on parliamentary
- *   will. The constraint is claimed as tangled_rope because it genuinely
- *   coordinates restraint on Crown prerogative but does so via a structure
- *   (parliamentary majoritarianism) that itself becomes a vector for
- *   extraction. The reading competes with two siblings: living
- *   constitutionalism (inherited precedent binds all successors, even
- *   parliament) and feudal obsolescence (the charter is historically
- *   superseded and legally irrelevant). This story instantiates only the
- *   parliamentary sovereignty reading and routes the contest to omega
- *   variables.
+ *   This constraint story instantiates ONE READING of the contested kernel
+ *   'magna_carta_constraint_authority' — specifically, the
+ *   PARLIAMENTARY_SOVEREIGNTY reading. In this reading, Magna Carta's
+ *   restraints on Crown prerogative have no independent force; they survive
+ *   only insofar as Parliament has enacted and continues to maintain them as
+ *   statute law. Parliament holds the revisionary power: it can repeal any
+ *   charter provision by simple majority legislation. This reading coexists
+ *   with two sibling readings: the feudal_obsolescence reading (which treats
+ *   Magna Carta as historically dead, a baronial compact with no binding
+ *   authority on modern sovereignty) and the living_constitutionalism reading
+ *   (which treats Magna Carta as establishing inherent due process principles
+ *   that bind all rulers through judicial precedent regardless of legislative
+ *   revision). These are different constraints, instantiating different
+ *   structural relationships between restraint and authority. This JSON is
+ *   the parliamentary_sovereignty reading only — not a synthesis, not a
+ *   averaged metric, not a hedge across readings. It describes the standing
+ *   arrangement (parliamentary statute law as the carrier of Magna Carta's
+ *   restraints) as this reading sees it, with its own ε, beneficiary set
+ *   (Parliament, common lawyers, legislative authority), victim set
+ *   (unprotected minorities, the constrained Crown), and type (tangled_rope:
+ *   coordination exists—Crown is restrained—but extractive asymmetry
+ *   exists—Parliament controls the restraint boundary and can revise it at
+ *   will).
  *
- * KEY AGENTS:
- *   - Parliament as Institution: agenda-setter and institutional beneficiary; controls which charter restraints persist via statute
- *   - Crown Executive: powerful but trapped payer; constrained by parliamentary statute but depends on parliament for any governance capacity
- *   - Majoritarian Coalitions in Parliament: organized beneficiaries; hold temporary parliamentary dominance and thereby control constraint revision
- *   - Permanent Minorities: powerless victims with identity-locked exit; depend entirely on parliament's good will for charter protection
- *   - Unrepresented Subjects: powerless victims historically excluded from parliament; bear costs of majoritarian legislation with no say in charter revision
- *   - Common Law Judiciary: institutional observer and conditional beneficiary; enforce statutory limits on Crown but remain subject to parliamentary override
- *   - Rival Constitutional Authorities: excluded advocates of entrenchment; their frameworks would require parliament to surrender some sovereignty
  */
 
 /* ==========================================================================
@@ -106,58 +108,119 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.58).
-domain_priors:suppression_score(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.49).
-domain_priors:theater_ratio(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.31).
+domain_priors:suppression_score(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.47).
+domain_priors:theater_ratio(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, extractiveness, 0.58).
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 0.49).
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 0.31).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 0.47).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, accessibility_collapse, 0.72).
+narrative_ontology:constraint_metric(magna_carta_constraint_authority__parliamentary_sovereignty_reading, resistance, 0.61).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, tangled_rope).
-narrative_ontology:human_readable(magna_carta_constraint_authority__parliamentary_sovereignty_reading, "Magna Carta Restraints via Parliamentary Statute (Sovereignty Reading)").
-narrative_ontology:topic_domain(magna_carta_constraint_authority__parliamentary_sovereignty_reading, "constitutional/legal/political").
+narrative_ontology:human_readable(magna_carta_constraint_authority__parliamentary_sovereignty_reading, "Magna Carta Restraints via Parliamentary Sovereignty").
+narrative_ontology:topic_domain(magna_carta_constraint_authority__parliamentary_sovereignty_reading, "constitutional/political").
 
 domain_priors:requires_active_enforcement(magna_carta_constraint_authority__parliamentary_sovereignty_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(magna_carta_constraint_authority__parliamentary_sovereignty_reading, '5b369bb2-749c-4de1-9ee5-e9483ba4c4ec').
-narrative_ontology:cs_kernel_codification('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', fixed_text).
-narrative_ontology:cs_authority_grounding('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', lineage).
-narrative_ontology:cs_interpretation_layer_present('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec').
-narrative_ontology:cs_reading_relation('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', magna_carta_constraint_authority__feudal_obsolescence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', magna_carta_constraint_authority__living_constitutionalism_reading, coexists_with).
-narrative_ontology:cs_axiom('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', foundational, parliamentary_sovereignty_supreme).
-narrative_ontology:cs_axiom_status(parliamentary_sovereignty_supreme, holdable).
-narrative_ontology:cs_axiom_grounding('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', parliamentary_sovereignty_supreme, conventional).
-narrative_ontology:cs_axiom('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', foundational, charter_authority_mediated_through_statute).
-narrative_ontology:cs_axiom_status(charter_authority_mediated_through_statute, holdable).
-narrative_ontology:cs_axiom_grounding('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', charter_authority_mediated_through_statute, conventional).
-narrative_ontology:cs_reference_frame('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', parliamentary_statute_as_charter_medium).
-narrative_ontology:cs_drift_state('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('5b369bb2-749c-4de1-9ee5-e9483ba4c4ec', '').
+narrative_ontology:cs_story_uid(magna_carta_constraint_authority__parliamentary_sovereignty_reading, '0dc60e30-2748-4542-a61c-6eb61fc1449b').
+narrative_ontology:cs_kernel_codification('0dc60e30-2748-4542-a61c-6eb61fc1449b', fixed_text).
+narrative_ontology:cs_authority_grounding('0dc60e30-2748-4542-a61c-6eb61fc1449b', lineage).
+narrative_ontology:cs_interpretation_layer_present('0dc60e30-2748-4542-a61c-6eb61fc1449b').
+narrative_ontology:cs_reading_relation('0dc60e30-2748-4542-a61c-6eb61fc1449b', magna_carta_constraint_authority__living_constitutionalism_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0dc60e30-2748-4542-a61c-6eb61fc1449b', magna_carta_constraint_authority__feudal_obsolescence_reading, influences).
+narrative_ontology:cs_axiom('0dc60e30-2748-4542-a61c-6eb61fc1449b', foundational, parliament_supreme_authority_over_restraint_revision).
+narrative_ontology:cs_axiom_status(parliament_supreme_authority_over_restraint_revision, holdable).
+narrative_ontology:cs_axiom_grounding('0dc60e30-2748-4542-a61c-6eb61fc1449b', parliament_supreme_authority_over_restraint_revision, conventional).
+narrative_ontology:cs_axiom('0dc60e30-2748-4542-a61c-6eb61fc1449b', foundational, charter_authority_mediated_through_statute_not_natural_law).
+narrative_ontology:cs_axiom_status(charter_authority_mediated_through_statute_not_natural_law, holdable).
+narrative_ontology:cs_axiom_grounding('0dc60e30-2748-4542-a61c-6eb61fc1449b', charter_authority_mediated_through_statute_not_natural_law, conventional).
+narrative_ontology:cs_axiom('0dc60e30-2748-4542-a61c-6eb61fc1449b', secondary, restraint_revisability_compatible_with_lawful_governance).
+narrative_ontology:cs_axiom_status(restraint_revisability_compatible_with_lawful_governance, holdable).
+narrative_ontology:cs_axiom_grounding('0dc60e30-2748-4542-a61c-6eb61fc1449b', restraint_revisability_compatible_with_lawful_governance, instrumental).
+narrative_ontology:cs_reference_frame('0dc60e30-2748-4542-a61c-6eb61fc1449b', parliamentary_statutory_supremacy).
+narrative_ontology:cs_drift_state('0dc60e30-2748-4542-a61c-6eb61fc1449b', contemporary_rights_expansion_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('0dc60e30-2748-4542-a61c-6eb61fc1449b', '').
 narrative_ontology:cs_kernel_id(magna_carta_constraint_authority__parliamentary_sovereignty_reading, magna_carta_constraint_authority).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliament_as_institution).
-narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__parliamentary_sovereignty_reading, majoritarian_coalitions_in_parliament).
-narrative_ontology:constraint_victim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, permanent_minorities).
-narrative_ontology:constraint_victim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, unrepresented_subjects_constituencies).
+narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliament).
+narrative_ontology:constraint_victim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, unprotected_minorities).
+narrative_ontology:constraint_victim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, crown_constrained_prerogative).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__parliamentary_sovereignty_reading, common_lawyers).
+narrative_ontology:constraint_beneficiary(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliamentary_legislators).
+narrative_ontology:constraint_victim(magna_carta_constraint_authority__parliamentary_sovereignty_reading, crown).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Inherits the authority to interpret, enforce, and revise Magna Carta's restraints through statute. Can repeal or narrow any charter provision by simple majority legislation. Sets the ongoing boundary between lawful Crown action and parliamentary constraint. Derives legitimacy from representing the popular will; maintains the restraint framework but controls its scope and enforcement.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliament, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Prerogative powers are constrained by parliamentary statute law that inherited Magna Carta's restraints. Cannot act contrary to settled parliamentary law; must respect Parliamentary supremacy. Governance authority persists but is hedged by statutory restraint and parliamentary oversight. Exit from the restraint system means denying parliamentary sovereignty itself — structurally impossible within the constitutional framework this reading instantiates.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, crown, payer,
+    institutional, generational, constrained, national).
+
+% Protected by Magna Carta's restraints only so long as Parliament enacts and maintains those protections in statute. If Parliament votes to repeal or narrow a restraint (e.g., habeas corpus protections, due process requirements), the minority's shield dissolves. They bear the cost of parliamentary revisability: their rights depend on majoritarian legislation, not on an entrenched charter. No exit; structured dependence on parliamentary goodwill.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, unprotected_minorities, payer,
+    powerless, biographical, trapped, national).
+
+% Benefit from the absorption of Magna Carta into common law and statute. The legal profession derives authority, precedent, and professional norms from the charter-into-statute lineage. Their interpretive power over statutory restraints is substantial; they mediate between Parliament's revisionary will and the constraint framework's historical authority. Can exit by changing professional discipline or jurisdictional focus; their stakes are high but not categorical.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, common_lawyers, beneficiary,
+    powerful, biographical, mobile, national).
+
+% Individual legislators benefit from the framework by wielding the power to revise Magna Carta's restraints. Can expand protections (gaining legitimacy) or narrow them (removing constraints on state action). Their power to legislate on the restraints is near-complete; they face electoral and reputational costs but not structural exits. The framework amplifies legislative authority at the cost of Charter entrenchment.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliamentary_legislators, beneficiary,
+    powerful, biographical, mobile, national).
+
+% Readings grounded in feudal obsolescence (treating Magna Carta as temporally dead) and living constitutionalism (treating it as judicially entrenched across generations) are formally excluded from this framework. They could argue for different constraint structures — fixed historical obsolescence or judicial entrenchment — but are structurally locked out by this reading's axiomatic commitment to parliamentary sovereignty as the sole locus of charter authority.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, competing_constitutional_readings, excluded,
+    institutional, generational, identity_locked, national).
+
+% Interprets and applies the statutes into which Magna Carta's restraints have been absorbed. Courts enforce parliamentary law; they do not enforce Magna Carta as an independent constitutional instrument. Their role is derivative: bound by statute, not by the charter's claimed historical authority. Can influence doctrine through interpretation but cannot override parliamentary supremacy.
+narrative_ontology:constraint_stakeholder(magna_carta_constraint_authority__parliamentary_sovereignty_reading, judicial_authority, observer,
+    powerful, generational, mobile, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliament).
+narrative_ontology:fixing_cost_class(magna_carta_constraint_authority__parliamentary_sovereignty_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates lawful Crown action with parliamentary constraint by absorbing Magna Carta's restraints into revisable statute law. Solves the problem of binding executive power without entrenching constraints beyond parliamentary amendment. Provides a stable legal framework for governance while maintaining parliamentary control over the restraint boundary.
+% TRANSFER_FUNCTION: Transfers authority over the interpretation and enforcement of fundamental restraints from a claimed historical/natural-law source (Magna Carta as intrinsic law) to Parliament as the sole revising authority. Parliament gains the power to narrow or eliminate any charter protection; unprotected minorities lose the shield of historical entrenchment and gain only parliamentary goodwill.
+% ABSENT_VOICES: Jurists and theorists advocating for judicial entrenchment of Magna Carta (living constitutionalism reading) and those arguing the charter is historically obsolete (feudal obsolescence reading) are not parties to this framework — they would contest the reading's core premise that parliamentary statute is the sole carrier of restraint authority. Minorities who would prefer constitutional protections immune to parliamentary revision are structurally absent from the decision process.
+% DISAPPEARANCE_RATIONALE: If this constraint disappeared — if Parliament openly denied its binding authority and abandoned Magna Carta's inherited restraints — the world would rearrange sharply: judicial review and executive constraint would collapse; Crown prerogative would expand rapidly; minorities would lose legal recourse against majoritarian legislation; the common-law tradition's authority would be severed from its charter-inherited foundation. The constraint's disappearance would be a constitutional rupture.
+% FOUNDING_PROBLEM: Magna Carta established restraints on Crown prerogative in 1215 and repeatedly thereafter (1217, 1225, etc.); by the early modern period, Parliament emerged as the supreme legislative authority. The founding problem for THIS reading is: how can Magna Carta's restraints survive in a system where Parliament, not custom or natural law, is sovereign? The solution: absorb the charter into statute, making restraints dependent on parliamentary will.
+% FOUNDING_PROBLEM_CORROBORATION: Constitutional historians and legal scholars outside the benefiting parties (independent commentators, not parliamentary legislatures) attest that the absorption of Magna Carta into statute law is the actual working legal mechanism in England and jurisdictions inheriting the common law. The 1688 Bill of Rights, the Habeas Corpus Acts, and the Human Rights Act 1998 are cited as evidence of restraints-via-statute rather than inherent charter authority. Competing readings (living constitutionalism, feudal obsolescence) dissent, but the parliamentary absorption thesis is the dominant institutional practice.
+narrative_ontology:disappearance_verdict(magna_carta_constraint_authority__parliamentary_sovereignty_reading, world_rearranges).
+narrative_ontology:founding_problem_status(magna_carta_constraint_authority__parliamentary_sovereignty_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(magna_carta_constraint_authority__parliamentary_sovereignty_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,16 +240,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint exhibits moderate extractiveness (0.58) because the core benefit—restraint on Crown prerogative—is real and partially distributed (judges enforce it, common law tradition preserves it, even minorities nominally enjoy charter protections). But the measurement reflects the asymmetry: minorities gain protection only conditionally on parliamentary will, and parliament has historically revised charter provisions against minority interests (suspension of habeas corpus, discriminatory statutes, colonial legislation). Suppression is lower than extractiveness (0.49) because the mechanism is formal and publicly visible: parliament openly debates statute, votes are recorded, the legislative process is not hidden. However, suppression persists because minorities lack the parliamentary power to block revisionary legislation. Theater ratio (0.31) indicates that significant parliamentary activity is genuine restraint work (enforcement against Crown overreach, judges reviewing executive action) but a growing proportion is defensive maintenance of sovereignty itself—rehearsing arguments about why parliament's power is legitimate, why alternatives would be worse—as international human rights and constitutional reform movements challenge the reading. The measurement trajectory shows extractiveness rising from 0.38 to 0.60 over 40 years as parliament has faced increasing pressure from human rights conventions, devolution demands, and supermajority calls, leading to more explicit exercise of revisionary power (and theater) to defend the framework. Suppression_requirement rises similarly because parliament must actively suppress constitutional reform movements to maintain pure sovereignty.
+ *   Extractiveness increases over the 800-year interval (0.22 to 0.58) as parliamentary power consolidates and as the charter's clauses are incrementally absorbed into statute. Early extractiveness is low because the charter's historical authority is still contested and powerful common lawyers defend its autonomous force. By interval end, extractiveness is moderate-high because Parliament's revisionary authority is firmly established and unprotected minorities face the full force of majoritarian revision: their protections are fragile, revisable at will, dependent on parliamentary goodwill. Theater ratio rises (0.15 to 0.42) as Parliament increasingly performs 'respecting the charter' through formal statutory restatement while actually controlling the boundary of restraint — the performative component increases as the real coordinating function (binding Crown prerogative) is hollowed by legislative sovereignty. Suppression is moderate throughout (0.28 to 0.47) because the constraint operates through law, not coercive force, but Parliament's power to suppress dissenting voices (through redefining the restraint boundary) is real and grows. The accessibility_collapse metric (0.72) reflects that once the parliamentary-sovereignty reading is institutionalized, alternatives (judicial entrenchment, feudal obsolescence) collapse as live positions within Westminster-tradition systems. Resistance (0.61) is substantial because common lawyers, judges, and minorities actively defend competing readings and the charter's historical authority; the parliamentary-sovereignty reading must be defended against these challenges, especially when Parliament moves to narrow protections.
  *
  * PERSPECTIVAL GAP:
- *   From Parliament's seat: this is genuine coordination. The institution inherited the crown's old problem (arbitrary rule) and the charter's old solution (restraint through law); parliament stabilized restraint by making it statute law. Parliament sees itself as the guardian of chartered freedoms and the only authority that can coherently defend them. From the Crown's seat: constraint is real but conditional. The executive is bound by statute but depends on parliamentary consent for any major action; the constraint is asymmetric (parliament can change the rules unilaterally, Crown cannot). From permanent-minority seats: the constraint is a conditional promise. They depend entirely on parliament's current composition; if parliament votes to revise a protection, they have no recourse except civil resistance or exit (which is identity-locked). From rival-constitutional-authority seats (advocates of entrenchment): this is not a constraint at all but a hollow claim. True constraint requires that parliament itself be bound by something higher than statute (written constitution, fundamental law, judicial supremacy). The engine computes per-seat type from these structural differences: Parliament perceives tangled_rope or rope; Crown perceives snare or tangled_rope (depending on how much executive authority parliament actually retains); minorities perceive snare (majoritarian extraction with no exit). The authored metrics reflect the weighted average across seats, anchoring on the highest-extraction seats (minorities).
+ *   From Parliament's seat: this is a coordination mechanism that binds Crown prerogative while preserving parliamentary supremacy. The restraint is real, necessary for rule of law, and appropriately subject to democratic revision if society's values shift. Parliamentary control is a feature, not a bug. From the Crown's seat: this is a constraint that hedges prerogative power but operates through law that Parliament creates and can alter; the Crown must work within the statutory boundary but that boundary is not immovable. From unprotected minorities' seats: this is an extractive mechanism disguised as restraint. They would prefer Magna Carta to operate as natural law or judicial precedent — something Parliament cannot revise. The constraint's revisability is the mechanism of extraction: their protections can be voted away. The engine computes these divergent classifications (likely parliament-side rope or weak tangled-rope vs. minority-side snare) from the structural data — beneficiary vs. victim declarations, exit options differentiating the seats. The divergence is the analytical payoff; do not reconcile it.
  *
  * DIRECTIONALITY LOGIC:
- *   Parliament is the beneficiary (institutional power, revisionary authority, legitimacy as representative body) with d near 0.2-0.3 (low extraction, structural benefit). Majoritarian coalitions gain d ~0.1-0.2 (temporary benefit from holding majority). Crown is constrained (d ~0.7, high extraction via statute, trapped exit). Permanent minorities have d ~0.9 (effective targets: they depend on parliament for protection, have identity-locked exit, face suppression if they resist parliamentary will). Unrepresented constituencies have d ~0.85 (similar to minorities but with slightly more potential for constrained exit via emigration or demographic change). The beneficiary declaration (parliament, majoritarian coalitions) drives the coordination-function claim; the victim declaration (permanent minorities, unrepresented constituencies) drives the extractiveness measurement upward and anchors the tangled_rope claim (genuine coordination but asymmetric distribution). No directionality overrides are needed; the structural data maps clearly to the seats.
+ *   Parliament as agenda_setter holds institutional power, long time horizon, and arbitrage-grade exit (can shift constitutional frameworks, exit by dissolving itself or fundamentally reorganizing authority). Its directionality is near-full beneficiary (d ≈ 0.1–0.2): the constraint apparatus amplifies parliamentary authority while constraining Crown. The Crown as constrained actor holds institutional power but zero time horizon for this specific constraint (bound by parliamentary law) and trapped exit (cannot exit the constraint without denying parliamentary sovereignty itself, which is constitutionally impossible in this reading's framework). Crown directionality is high-target (d ≈ 0.75–0.85): it pays the constraint and cannot exit. Unprotected minorities hold powerless status, biographical horizon, and trapped exit (no structural way to escape majoritarian legislation). Their directionality is full-target (d ≈ 0.9–0.95): they bear the risk of parliamentary revision without recourse. The absorptive mechanism (statute law) makes minorities' protection revisable in a way Magna Carta's claimed natural authority would not; the statutory carrier of restraints IS the mechanism of extraction. Common lawyers sit near symmetric (d ≈ 0.4–0.6): they benefit from mediating restraint interpretation but bear the burden of defending the charter's authority against parliamentary sovereignty claims.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (arbitrary Crown rule) has been substantially solved. Early-interval measurements (time 0-5) show lower extractiveness and theater, suggesting genuine coordination function. But the founding-problem status is contested: is the problem still live (Crown remains a potential threat requiring parliamentary sovereignty) or dead (the executive has internalized restraint and could accept constitutional limits)? If dead, then parliament's ongoing sovereignty is maintained theatrically, not functionally—hence the rising theater_ratio toward interval end. The mandatrophy question crystallizes: does parliament maintain sovereignty because Crown prerogative remains a real threat (live problem), or does parliament maintain sovereignty because it benefits from the revisionary power even though the original threat is contained (dead problem, zombie constraint)? The disappearance_verdict (world_rearranges) supports the live-problem reading: if parliament lost revisionary power via constitutional entrenchment, governance would be substantially reorganized. But the contested founding-problem-status admits the alternative: parliament might simply be defending institutional power that is no longer functionally necessary for restraint. The omega variables on majoritarianism vs. constraint (whether this reading actually constrains or just displaces abuse) speaks directly to mandatrophy: if the reading trades Crown arbitrariness for majoritarian abuse, then it hasn't solved the founding problem at all—it has merely moved it. That uncertainty is irreducible and belongs in omega space, not in a definitive mandatrophy verdict.
+ *   This reading prevents conflating coordination (restraint on Crown) with pure extraction (majoritarian control of the restraint boundary). A purely extractive reading would frame it as snare: Parliament extracts the power to revise Magna Carta, suppressing alternative constitutional readings, victimizing minorities. But the coordination function is real: Crown prerogative IS restrained, and that restraint protects people from arbitrary executive action. The tangled_rope classification captures the dual structure: coordination exists (the restraint) AND extractive asymmetry exists (Parliament controls the boundary and can revise at will). The mandate is 'restrain Crown prerogative' (live, not dead); the mechanism is 'parliamentary statute law' (the Parliamentary-Sovereignty reading's specific instantiation). The mandate persists; the mechanism may be contested by sibling readings (which would argue for different carriers of restraint — judicial precedent, or that the mandate is itself obsolete). Tangled_rope prevents misclassifying the constraint as pure rope (which would require symmetry in who controls the restraint boundary) or as pure snare (which would require the restraint to be theatrical rather than real). The extractiveness score (0.58) reflects that Parliament's revisionary power is neither negligible (like a rope) nor total (like a snare with no real coordination).
  */
 
 /* ==========================================================================
@@ -194,92 +257,76 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_contest,
-    'Which reading of the Magna Carta kernel is most structurally accurate: the parliamentary sovereignty reading (this one), the living constitutionalism reading (inherited precedent binding all successors), or the feudal obsolescence reading (charter irrelevant to modern sovereignty)?',
-    'Comparative analysis of constitutional practice across jurisdictions: those with parliamentary supremacy (UK, New Zealand) vs. those with constitutional entrenchment (US, Canada, Australia post-1999) show different trajectories. The lived constraint differs by reading.',
-    'If living constitutionalism is correct, the constraint type shifts from tangled_rope toward mountain (inherited law has binding power); if feudal obsolescence is correct, the constraint type collapses toward piton (theater only). This measurement exists to detect which reading the corpus actually instantiates.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Which sibling reading best describes the actual constraint at stake.').
-
-omega_variable(
-    parliamentary_revisionary_power_exercise,
-    'How often and under what conditions does parliament actually exercise its power to revise or repeal charter-derived statutory restraints on crown prerogative? Is the power mostly theoretical or actively deployed?',
-    'Historical audit of statutory repeals, emergency powers suspension, and charter-protective legislation over the interval. Track moments when parliament suspended habeas corpus, expanded crown emergency authority, or narrowed charter protections via statute.',
-    'High exercise frequency would increase effective extractiveness and suppression (parliament uses its revisionary power to benefit majorities at minorities'' expense); low exercise frequency would suggest the charter restraints are effectively constitutional (not subject to easy revision) despite the reading''s claim of parliamentary sovereignty. The reading assumes revisionary power is meaningful; if rarely used, the reading misconstrues the constraint.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(parliamentary_revisionary_power_exercise, empirical, 'Frequency and pattern of parliamentary exercise of its sovereignty over charter restraints.').
-
-omega_variable(
-    minority_protection_outside_parliament,
-    'To what extent do permanent minorities and excluded constituencies find protection in common law tradition, judicial review, or extra-parliamentary norms, independently of parliament''s good will?',
-    'Historical case analysis: instances where courts protected minorities against parliamentary majorities (e.g., sex discrimination, racial discrimination, religious conscience cases). Track whether judicial protection depended on parliament''s tolerance or asserted independent constitutional authority.',
-    'Strong independent judicial protection would reduce the measured extractiveness and suppression for minority seats (their exit is less completely blocked). Weak judicial protection would confirm the reading''s depiction of minorities as entirely dependent on parliamentary will. The resolution determines whether the constraint is truly tangled_rope (requiring parliament as the only restraint) or whether judicial-constitutional tradition provides a secondary restraint independent of sovereignty.',
+    reading_foreclosure_ambiguity,
+    'Does the parliamentary-sovereignty reading''s core premise (statute law is the sole carrier of charter authority) logically foreclose the living-constitutionalism reading''s core premise (charter principles bind all rulers through judicial entrenchment), or do both readings remain live positions held by different institutional factions?',
+    'A system that simultaneously holds (1) Parliament can repeal any Magna Carta restraint by statute and (2) courts will overturn parliamentary action that violates judicially entrenched charter principles instantiates a contradiction. The contradiction is real in systems attempting both (UK judicially entrenching Human Rights via the HRA 1998 while retaining Parliamentary supremacy doctrine). The resolution requires constitutional amendment or explicit institutional hierarchy declaration — which framework is supreme?',
+    'If the readings foreclose each other, this constraint cannot coexist stably with the living-constitutionalism constraint in a single institutional framework; one reading must win and the other must be superseded or confined. If they coexist, then both are LIVE in the system despite tension, and classification diverges by seat. If they coexist-with or forecloses classification is wrong, the reading_relations field in cs_structure requires correction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(minority_protection_outside_parliament, empirical, 'Whether minorities have structural protections outside parliamentary supremacy.').
+narrative_ontology:omega_variable(reading_foreclosure_ambiguity, conceptual, 'Whether parliamentary sovereignty and judicial entrenchment are logically compatible or mutually exclusive.').
 
 omega_variable(
-    supremacy_framework_revision_pressure,
-    'Is the parliamentary sovereignty reading under pressure from alternative constitutional frameworks (written constitutions, human rights conventions, supermajority amendment rules, constitutional courts)? Is this reading''s reign generationally stable or eroding?',
-    'Track constitutional reform movements, human rights convention adoption, devolution settlements, and supermajority demands in the UK and Commonwealth. Observe whether newer jurisdictions (Australia post-1999, NZ post-Bill of Rights 1990) maintain pure parliamentary sovereignty or adopt entrenched frameworks.',
-    'If the reading is under sustained pressure, theater_ratio may be rising (the reading persists as defense of parliamentary tradition rather than as living constraint on executive power). If stable, the reading represents genuine ongoing structural choice. Terminal attractor analysis: is the reading''s trajectory toward pure sovereignty or toward constitutional entrenchment?',
+    minority_protection_revisability,
+    'Is the extractiveness of this constraint (0.58) driven primarily by Parliament''s revisionary power over minority protections, or by Parliament''s structural institutional advantage in controlling the restraint boundary?',
+    'Empirical: examine instances where Parliament has proposed repealing or narrowing Magna Carta-derived protections (habeas corpus, due process, fair trial). Measure minority resistance, legislative deliberation patterns, and success/failure of repeal attempts. If repeal attempts fail despite Parliamentary majority (e.g., because minorities organize political opposition or judicial resistance), extractiveness is overstated. If repeal attempts succeed when Parliament desires it (even if rare), the revisability mechanism is real and extractiveness is understated.',
+    'If revisability is the primary extractive mechanism, the constraint is tangled-rope as classified. If minorities have political/judicial tools to resist repeal despite parliamentary statutory supremacy, the constraint may be rope rather than tangled-rope, and extractiveness should be lowered. If Parliament''s control is absolute and minorities have zero resistance capacity, extractiveness may be understated (constraint approaches snare).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(supremacy_framework_revision_pressure, empirical, 'Stability and historical trajectory of the parliamentary sovereignty reading as a constitutional framework.').
+narrative_ontology:omega_variable(minority_protection_revisability, empirical, 'Whether parliamentary sovereignty over Magna Carta''s restraints is a live extractive mechanism or a theoretical threat with low realized prevalence.').
 
 omega_variable(
-    majoritarianism_vs_constraint,
-    'Does this reading''s framework (restraint on Crown via Parliament, but Parliament itself unlimited) actually constrain executive power, or does it merely displace the locus of potential abuse from Crown to parliamentary majority?',
-    'Examine instances of majority-driven abuse of power through statute (e.g., discriminatory legislation, suspension of minority protections, expansion of executive war powers with parliamentary approval). Compare the frequency and scope of such abuse under this reading versus under frameworks with entrenched limits on parliamentary power.',
-    'If majoritarian abuse via statute is frequent and severe, the reading trades Crown prerogative arbitrariness for parliamentary majoritarianism—a lateral displacement, not a genuine constraint. The extractiveness measurement would be more accurate as high (0.58) because minorities face systematic majoritarian extraction with no recourse. If rare, the reading achieves its stated purpose. The answer determines whether the constraint type is truly tangled_rope (coordination with asymmetric distribution) or more accurately snare (pure majoritarian extraction with no exit for minorities).',
+    competing_readings_coexistence,
+    'Are the three readings (parliamentary_sovereignty, living_constitutionalism, feudal_obsolescence) genuinely coexisting in the current institutional landscape, or has one reading become dominant and the others reduced to dissenting minority positions?',
+    'Institutional survey: which reading is invoked by parliamentary drafters, courts, common lawyers, and constitutional theorists in contemporary practice? Which reading produces binding institutional outcomes? If all three remain live in different institutional seats (Parliament invokes parliamentary sovereignty; courts invoke living constitutionalism; marginal scholars invoke feudal obsolescence), they coexist. If one reading''s predictions match institutional outcomes and the others are rhetorical, the matching reading is dominant.',
+    'If all three coexist, each reading''s omegas should address the coexistence tension. If one is dominant, the sibling readings'' reading_relations to this one may be misclassified (coexists_with suggests false parity if one is actually marginalized). The classification of reading_relations is provisional pending institutional evidence of coexistence vs. dominance.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(majoritarianism_vs_constraint, empirical, 'Whether the constraint actually limits executive arbitrariness or merely redistributes it to parliament.').
+narrative_ontology:omega_variable(competing_readings_coexistence, empirical, 'Whether the three Magna Carta readings are currently live institutional positions or whether one has achieved dominance.').
+
+omega_variable(
+    absorption_narrative_authenticity,
+    'Is the ''absorption into statute law'' narrative (Magna Carta''s restraints persist only as parliamentary statute) a genuine institutional mechanism, or a historical myth that Westminster systems have constructed to reconcile charter claims with parliamentary supremacy?',
+    'Historical analysis: trace when and how Magna Carta clauses were explicitly written into English statute (1267 reissue, 1300 confirmation, Habeas Corpus Acts 1679/1688, etc.). Examine whether Parliament explicitly treated these acts as ''carrying forward'' Magna Carta or as fresh legislation that happened to overlap with the charter. If ''absorption'' language appears contemporaneously in parliamentary debate and legal reasoning, it is authentic institutional practice. If absorption language appears only in later historiography, it may be a post-hoc narrative.',
+    'If absorption is authentic institutional understanding, this reading''s framing is grounded in real constitutional reasoning. If absorption is mythic (a story Westminster systems tell about themselves), the constraint is closer to snare: it uses the charter''s prestige while actually embodying parliamentary sovereignty, and the absorption narrative is the theatrical component masking the extraction. Theater_ratio should be raised if the narrative is primarily mythic.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(absorption_narrative_authenticity, empirical, 'Whether ''absorption into statute'' is an authentic constitutional mechanism or a legitimacy narrative.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0, 40).
+narrative_ontology:interval(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0, 800).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(magn_tr_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 0, 0.18).
-narrative_ontology:measurement(magn_tr_t5, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 5, 0.21).
-narrative_ontology:measurement(magn_tr_t10, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 10, 0.25).
-narrative_ontology:measurement(magn_tr_t15, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 15, 0.28).
-narrative_ontology:measurement(magn_tr_t25, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 25, 0.32).
-narrative_ontology:measurement(magn_tr_t35, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 35, 0.33).
-narrative_ontology:measurement(magn_tr_t40, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 40, 0.31).
+narrative_ontology:measurement(magn_tr_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(magn_tr_t200, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 200, 0.25).
+narrative_ontology:measurement(magn_tr_t400, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 400, 0.35).
+narrative_ontology:measurement(magn_tr_t600, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 600, 0.39).
+narrative_ontology:measurement(magn_tr_t800, magna_carta_constraint_authority__parliamentary_sovereignty_reading, theater_ratio, 800, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(magn_be_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 0, 0.38).
-narrative_ontology:measurement(magn_be_t5, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 5, 0.42).
-narrative_ontology:measurement(magn_be_t10, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 10, 0.48).
-narrative_ontology:measurement(magn_be_t15, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 15, 0.52).
-narrative_ontology:measurement(magn_be_t25, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 25, 0.56).
-narrative_ontology:measurement(magn_be_t35, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 35, 0.6).
-narrative_ontology:measurement(magn_be_t40, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 40, 0.58).
+narrative_ontology:measurement(magn_be_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(magn_be_t200, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 200, 0.35).
+narrative_ontology:measurement(magn_be_t400, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 400, 0.48).
+narrative_ontology:measurement(magn_be_t600, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 600, 0.55).
+narrative_ontology:measurement(magn_be_t800, magna_carta_constraint_authority__parliamentary_sovereignty_reading, base_extractiveness, 800, 0.58).
 
 % Suppression requirement over time
-narrative_ontology:measurement(magn_su_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(magn_su_t5, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 5, 0.38).
-narrative_ontology:measurement(magn_su_t10, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 10, 0.42).
-narrative_ontology:measurement(magn_su_t15, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 15, 0.46).
-narrative_ontology:measurement(magn_su_t25, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 25, 0.5).
-narrative_ontology:measurement(magn_su_t35, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 35, 0.52).
-narrative_ontology:measurement(magn_su_t40, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 40, 0.49).
+narrative_ontology:measurement(magn_su_t0, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 0, 0.28).
+narrative_ontology:measurement(magn_su_t200, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 200, 0.36).
+narrative_ontology:measurement(magn_su_t400, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 400, 0.43).
+narrative_ontology:measurement(magn_su_t600, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 600, 0.45).
+narrative_ontology:measurement(magn_su_t800, magna_carta_constraint_authority__parliamentary_sovereignty_reading, suppression_requirement, 800, 0.47).
 
 
 /* ==========================================================================
@@ -290,17 +337,13 @@ narrative_ontology:coordination_type(magna_carta_constraint_authority__parliamen
 narrative_ontology:boltzmann_floor_override(magna_carta_constraint_authority__parliamentary_sovereignty_reading, 0.12).
 narrative_ontology:affects_constraint(magna_carta_constraint_authority__parliamentary_sovereignty_reading, magna_carta_constraint_authority__living_constitutionalism_reading).
 narrative_ontology:affects_constraint(magna_carta_constraint_authority__parliamentary_sovereignty_reading, magna_carta_constraint_authority__feudal_obsolescence_reading).
-narrative_ontology:affects_constraint(magna_carta_constraint_authority__parliamentary_sovereignty_reading, common_law_judicial_authority).
-narrative_ontology:affects_constraint(magna_carta_constraint_authority__parliamentary_sovereignty_reading, parliamentary_statute_supremacy).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the Magna Carta kernel (constraint_id prefix: magna_carta_constraint_authority). The sibling readings are feudal_obsolescence_reading and living_constitutionalism_reading. All three readings address the same historical kernel but produce different constraint types due to different axiomatic claims about the binding power of law and the scope of parliamentary sovereignty. The network links this reading to its siblings and to downstream constraints that depend on the parliamentary sovereignty framework (common law judicial authority, parliamentary statute supremacy). The constraint family exists because a single natural-language concept ('Magna Carta as a constitutional constraint') decomposes into three structurally distinct claims with different ε values and different victim sets. Each reading is a separate story with its own ε, beneficiaries, victims, and type. Cross-family comparison will reveal which reading the empirical corpus best instantiates.
+% This story is one reading of the contested kernel 'magna_carta_constraint_authority'. Three structurally distinct constraints result from the same historical text interpreted under different institutional lenses: (1) parliamentary_sovereignty_reading (this file): restraints exist only via statute Parliament can revise; type=tangled_rope, ε≈0.58, beneficiary=Parliament, victim=unprotected_minorities. (2) living_constitutionalism_reading (sibling): restraints are judicially entrenched principles inherited across generations; type=mountain or weak_rope, ε≈0.05, beneficiary=none (natural law), victim=none (natural law). (3) feudal_obsolescence_reading (sibling): the charter is temporally dead, a 13th-century baronial compact with zero binding authority; type=piton, ε≈0.85 (pure extraction via theatrical legitimacy), beneficiary=tradition-wielding authorities, victim=minorities deceived into false protection. Each reading authors its own constraint_id, ε, and stakeholder situation. They are linked via network.affects_constraints and via omegas documenting the kernel contest. The readings do not represent 'perspectives' on one constraint — they ARE different constraints instantiated from the same kernel via different hermeneutical choices.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(magna_carta_constraint_authority__parliamentary_sovereignty_reading, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

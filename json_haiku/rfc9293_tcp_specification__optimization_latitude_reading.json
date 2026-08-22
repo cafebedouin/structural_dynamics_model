@@ -4,225 +4,392 @@
     "version": "1.0",
     "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "f2558545-d235-4c26-8463-58f2b1a80e2b"
+    "module_name_override": "constraint_rfc9293_tcp_optimization_latitude",
+    "measurement_id_prefix": "rfc9293_opt_lat",
+    "story_uid": "8580e4d6-37c9-4f1a-b786-cf3633836455"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.12,
-    "theater_ratio": 0.08,
-    "accessibility_collapse": 0.65,
-    "resistance": 0.22,
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.35,
     "claimed_type": "rope",
-    "human_readable": "RFC 9293 TCP Specification — Optimization Latitude Reading",
-    "topic_domain": "network/protocol/standards",
+    "human_readable": "RFC 9293 TCP Specification: Optimization Latitude Reading",
+    "topic_domain": "network_protocol_engineering/internet_standards",
     "requires_active_enforcement": false,
     "beneficiaries": [
-      "tcp_implementers",
-      "network_operators",
-      "application_developers"
+      "transport_layer_implementers",
+      "performance_optimization_researchers"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "transport_layer_implementers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Implement TCP stacks in operating systems, embedded systems, and specialized hardware. Under the optimization-latitude reading, the RFC permits them to innovate on congestion control algorithms (BBR, DCTCP, QUIC-style approaches), window management, and timer strategies while maintaining the semantic contract (reliable ordered delivery). They benefit from the flexibility to tune for specific deployment contexts (data centers, mobile networks, satellite links) without forking from the standard."
+    },
+    {
+      "name": "performance_optimization_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Academic and industry researchers develop new transport algorithms and congestion control strategies. The latitude reading permits them to prototype and deploy variants (BBR, DCTCP, Copa, etc.) without claiming to violate the RFC—they argue they satisfy the semantic contract (delivery, ordering, flow control) while optimizing different objectives (throughput, latency, fairness). Their career incentives and research funding depend on demonstrating innovation; the latitude reading legitimizes their work."
+    },
+    {
+      "name": "application_developers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Write applications that rely on TCP. They benefit from the diversity of implementations because it drives performance improvements and platform-specific optimizations. They do not directly participate in TCP implementation but benefit when their target platforms (Linux, Windows, macOS, iOS, Android) deploy newer congestion-control variants. Their software runs unchanged across all compliant implementations."
+    },
+    {
+      "name": "network_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy and manage the network infrastructure that carries TCP traffic. They benefit from implementers' ability to tune TCP behavior to match their specific networks (data-center congestion control, long-fat-pipe routing, buffering strategies). They also bear costs when divergent implementations cause interoperability surprises or when they must police or work around non-compliant variants. Their control is limited by the fact that implementations are often external (endpoints, kernels they do not control)."
+    },
+    {
+      "name": "ietf_working_group",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Maintains and evolves RFC 9293 and related TCP standards. Under the latitude reading, they interpret their role as specifying the semantic contract (what TCP must do) rather than prescribing the implementation path (how TCP must do it). They create and review errata, respond to implementer questions about edge cases, and occasionally issue clarifications. Their authority rests on broad consensus that the RFC captures the interoperability-critical contract; they do not have enforcement power over implementations, only the legitimacy of consensus."
+    },
+    {
+      "name": "strict_invariance_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A minority of network researchers and protocol purists argue that RFC 9293 specifies a precise state machine and that divergent implementations create hidden interoperability risks. They would prefer a reading that treats the RFC as invariant and classifies variants as violations. They are excluded from the optimization-latitude reading by its core premise: their position would require a different constraint story (the strict_invariance_reading). They sometimes object in standards forums but lack the votes to shift the dominant interpretation."
+    },
+    {
+      "name": "middlebox_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy and maintain network appliances (firewalls, NAT boxes, traffic shapers, proxies) that observe and sometimes modify TCP traffic. The optimization-latitude reading permits implementers to use novel TCP options and behaviors that middleboxes may not recognize or handle correctly. Middlebox operators bear the cost of testing and updating their devices to work with new variants; if they fail, they must either update or accept that some traffic bypasses their appliances. They lack the power to mandate conservatism."
+    },
+    {
+      "name": "legacy_system_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Operate older TCP implementations or hardware that cannot be easily updated (embedded systems, industrial networks, long-lifecycle equipment). They pay the cost when new TCP variants become common and their systems cannot participate efficiently. They are trapped by the cost of replacement and the fact that the network evolves around them. The latitude reading enables innovation but leaves them behind."
+    },
+    {
+      "name": "observer_standardization_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Other standards bodies (3GPP, IEEE, cellular standards consortia) track TCP evolution and sometimes need to make decisions about which TCP variants to mandate or permit in their own standards. They observe the latitude reading's permissiveness and must decide whether to adopt variants wholesale, require specific conservative behaviors, or remain agnostic. They have no direct enforcement power over RFC 9293 but influence which implementations are built."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Specifies a semantic contract for TCP behavior (reliable, ordered, flow-controlled byte-stream delivery) that permits implementers to optimize the means of achieving that contract. Enables diverse implementations to coexist and interoperate by defining what matters (observable outcomes) rather than how to achieve it (internal algorithms). Solves the coordination problem of allowing innovation without forking the protocol.",
+    "transfer_function": "The IETF working group maintains the RFC; implementers accept the semantic contract and forgo the freedom to break interoperability in exchange for the freedom to optimize within the contract bounds. Application developers and users receive the benefit of interoperability; they do not directly pay (though they implicitly accept the coordination discipline). Middlebox operators and legacy-system operators bear the cost of adapting to new variants.",
+    "absent_voices": "Protocol purists and strict-invariance advocates are structurally excluded from this reading. They would argue the RFC must specify implementation details to prevent covert violations and maintain true interoperability. Deployed-network realists (middlebox operators working in closed networks with strict policies) would argue for more prescriptive guidance. Parties with very long product-lifecycle constraints (embedded-systems vendors) would prefer slower innovation cycles and more conservative constraints. Their perspectives are not in the room when the latitude reading is authored.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the latitude reading disappeared and the strict-invariance reading took its place, the TCP ecosystem would reorganize immediately: research on novel congestion control would slow (variants would require exemptions or forking), OS vendors would face pressure to revert to RFC-dictated algorithms, performance optimization in data centers would become constrained, and the diversity of implementations would narrow. Conversely, if the middlebox-realism reading took over, the RFC would be reframed as aspirational and its enforcement would devolve to what the network actually permits—a more chaotic equilibrium.",
+    "founding_problem": "Early TCP implementations in the 1980s–90s had wide variation in congestion control and were vulnerable to collapse under high load. The RFC series (starting with RFC 793, updated by RFC 9293) was designed to specify the interoperability-critical behaviors (three-way handshake, sequence numbers, flow control) while leaving room for reasonable implementation choice on algorithms that did not break the wire contract. The founding problem was: how to standardize enough to prevent chaos but not so much that innovation is stifled.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IETF process records (working group minutes, mailing lists, published RFCs and errata) document the ongoing effort to clarify what RFC 9293 mandates vs. permits. Independent researchers (Van Jacobson, Jon Postel, later work on congestion-control diversity) and implementer communities (Linux kernel developers, BSD maintainers, Windows networking teams) attest that the founding problem—balancing standardization with innovation—remains unresolved and that the latitude reading is one coherent approach to it. The research literature on transport-layer innovation (BBR, DCTCP, etc.) demonstrates active reliance on the latitude interpretation."
+  },
   "interval": {
-    "start": 1981,
-    "end": 2024
+    "start": 0,
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1981,
-      "value": 0.08
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
-      "value": 0.12
+      "time_point": 5,
+      "value": 0.11,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.15
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.17
+      "time_point": 15,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.18
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1981,
-      "value": 0.05
+      "time_point": 0,
+      "value": 0.04,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
-      "value": 0.06
+      "time_point": 5,
+      "value": 0.04,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.07
+      "time_point": 10,
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.08
+      "time_point": 15,
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.08
+      "time_point": 20,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.05,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1981,
-      "value": 0.1
+      "time_point": 0,
+      "value": 0.07,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1995,
-      "value": 0.11
+      "time_point": 5,
+      "value": 0.07,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.12
+      "time_point": 10,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.12
+      "time_point": 15,
+      "value": 0.08,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.12
+      "time_point": 20,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.08,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "RFC 9293 is the canonical specification of the TCP protocol. This reading interprets the specification as intentionally permissive: it defines semantic outcomes (reliable ordered delivery, congestion response) that all compliant implementations must honor, but leaves the means largely unspecified. Implementation choices (congestion algorithm, timer constants, buffer management, ACK scheduling) are permitted to vary widely, enabling innovation in performance optimization (BBR, DCTCP, etc.) while preserving interoperability through invariant-based compatibility testing. This reading frames the specification as a successful coordination mechanism: a Rope that coordinates on outcomes while enabling diverse implementations.",
+    "narrative_context": "RFC 9293 specifies TCP behavior as a semantic contract: reliable, in-order, flow-controlled byte-stream delivery. Under this optimization-latitude reading, the RFC defines WHAT TCP must do but leaves implementation HOW to the implementer, permitting innovations in congestion control (BBR, DCTCP), window management, and timer strategies within semantic bounds. The constraint coordinates endpoints on observable outcomes while enabling diverse internal strategies. This reading presents TCP specification as a Rope (low extractiveness, genuine coordination function, no party coerces others)—contrasted with the strict-invariance reading (which treats RFC 9293 as an invariant state machine and classified as higher-extraction Tangled Rope or Snare) and the middlebox-realism reading (which subordinates the RFC to deployed-network behavior). The claim/metric gap is intentional: this reading authoritatively claims Rope classification while acknowledging that resistance from strict-invariance advocates and real-world middlebox brittleness introduce some friction—the engine will measure where the actual operation sits.",
     "key_agents": [
-      "tcp_implementers: Create compliant TCP stacks and optimize within semantic bounds (BBR, DCTCP, CUBIC variants)",
-      "network_operators: Deploy diverse TCP variants in datacenters and backbones; benefit from per-context optimization without fragmenting the internet",
-      "application_developers: Write once to RFC invariants; benefit from implementer innovation without code changes",
-      "rfc_standardization_body: Maintains the specification as a stable semantic contract rather than algorithmic prescription",
-      "strict_invariance_advocates: Excluded; argue for algorithmic prescription to lock in formal guarantees",
-      "middlebox_realism_advocates: Excluded; argue the real constraint is deployed middlebox behavior, not RFC prescription"
+      "Transport-layer implementers: maintain OS TCP stacks, benefit from optimization freedom",
+      "Performance researchers: develop novel congestion-control algorithms (BBR, DCTCP), enabled by latitude interpretation",
+      "IETF working group: sets and clarifies the RFC interpretation; agenda setter",
+      "Application developers: benefit from performance improvements without code changes",
+      "Network operators: benefit from tuning capability but bear coordination costs",
+      "Legacy-system operators: structurally disadvantaged when innovation leaves them behind",
+      "Strict-invariance advocates: excluded from this reading; argue for tighter specification",
+      "Middlebox operators: pay costs of adapting to new TCP variants"
     ],
-    "logic_rationale": "Extractiveness is low (0.18) because the constraint's primary benefit (interoperability) is a pure coordination good distributed widely across implementers and users; there is no concentrated rent-collection. Suppression is minimal (0.12) because the constraint operates through voluntary compliance to a widely-accepted standard, not coercion. Theater is very low (0.08) — the specification's behavioral testing is substantive, not performative. Accessibility collapse is moderate (0.65): alternative protocols (QUIC, SCTP) exist but TCP dominance and existing application stacks create real but not absolute lock-in. Resistance is low (0.22) because implementers generally accept the specification as legitimate; the resistance comes primarily from advocates arguing the reading is wrong (strict invariance, middlebox realism), not from within-reading dissent. The measurement series shows stability: extractiveness rises slightly (1981→2024, 0.08→0.18) as network complexity increases and implementer optimization specialization deepens, but remains low; suppression stays flat as the constraint's legitimacy (voluntary standards compliance) does not require increasing coercive enforcement.",
-    "perspectival_gap": "Implementers and operators see the constraint as enabling innovation safely. Strict invariance advocates see it as underspecified ambiguity. Middlebox realists see it as aspirational fiction. The engine computes per-seat type from structural data: implementers with arbitrage exit and beneficiary role will compute differently from powerless users with trapped exit. The authored metrics describe the constraint as operation-wide; per-seat divergence emerges from the directionality derivation.",
-    "directionality_logic": "TCP implementers benefit from the constraint (they gain freedom to innovate) and hold moderate-to-institutional power; they have arbitrage exit (they can choose to implement other protocols or leave TCP development). Their directionality is low (near beneficiary end, d ≈ 0.2). Network operators benefit (they deploy optimized variants) and hold institutional power; their exit is constrained (TCP dominance makes leaving costly) but they have alternative-protocol options. Directionality ≈ 0.3. Application developers benefit (they code once, run everywhere) and are powerful; their exit is mobile (they can adopt new protocols, though at cost). Directionality ≈ 0.25. Internet users benefit (reliable, reasonably fast delivery) but are powerless and trapped; directionality ≈ 0.1 (beneficiary-biased). Strict invariance and middlebox realism advocates are excluded — they are not structural beneficiaries or payers of this reading; they are outside-advocates arguing for different readings. No override is needed; the derivation from beneficiary/exit captures the intended positions.",
-    "mandatrophy_analysis": "The founding problem (how to standardize TCP without blocking algorithmic innovation) is live: the internet continues to deploy new variants (BBR in 2016, DCTCP in datacenters continuously, Reno still in legacy systems). The constraint persists because it solves this problem: it coordinates on invariants while permitting innovation. The specification has not outlived its function — if anything, the function is more acute as network diversity increases. No mandatrophy signal fires: the constraint is not a zombie form of an obsolete coordination problem.",
-    "kernel_context": "This constraint is one reading of the kernel rfc9293_tcp_specification. The kernel is contested: three readings decompose the specification's scope and authority differently. This reading (optimization_latitude_reading) interprets RFC 9293 as intentionally permissive on implementation means while binding on semantic outcomes. Sibling readings: strict_invariance_reading argues the RFC specifies an invariant state machine implementations must replicate exactly; middlebox_realism_reading argues the RFC is aspirational and real TCP is shaped by deployed middleboxes. The three readings have different ε values, different beneficiary structures, and lead to different policy conclusions (whether to mandate exact algorithms, whether to re-standardize based on middlebox reality, whether to permit algorithm-specific implementation-compatibility). Each is a structurally distinct constraint; they coexist as live positions in standards debates."
+    "logic_rationale": "Extractiveness is very low (0.12) because the reading defines a genuine coordination function (semantic contract for interoperability) from which no party captures surplus. Implementers do not extract rent from other implementers; the IETF working group does not extract from implementers. Suppression is also minimal (0.08) because the constraint is maintained by voluntary adoption (implementations choose to comply because it buys them the entire installed base of TCP-speaking systems) rather than coercion. Theater is very low (0.05): there is minimal performative activity; the coordination function is straightforward and the measurement data reflects real operational alignment. Accessibility-collapse is low (0.15): alternatives exist (QUIC, SCTP, custom protocols), but TCP's dominance for general-purpose transport is structural. Resistance is moderate (0.35) because strict-invariance advocates actively object to the latitude interpretation and middlebox operators encounter real friction with new variants. The measurement series is flat because the RFC 9293 interpretation has been stable for decades; minor variation reflects occasional errata and edge-case clarifications but no fundamental drift in how the latitude reading is instantiated. All measurements share the same time grid (interval 0–40, sampled at 5-unit intervals plus endpoints 0 and 40).",
+    "perspectival_gap": "The agenda-setter (IETF) and beneficiaries (implementers, researchers) perceive this as genuine coordination enabling innovation. Legacy-system operators and strictness advocates perceive it as under-specification that leaves them exposed. Middlebox operators perceive it as a constraint they must adapt to but do not control. The engine will compute directionality from power and exit options: organized implementers with arbitrage exit will sit near beneficiary (d near 0.0); trapped legacy operators will sit near target (d near 1.0); the IETF as analytical observer (exit_options: analytical) will sit at symmetric (d = 0.5). These divergences are structural, not metric disagreements.",
+    "directionality_logic": "Transport-layer implementers benefit from the latitude reading (can innovate without RFC violation). They have organized power and arbitrage exits (they can fork if needed, though they do not). Directionality for them is low (near 0.0, full beneficiary). Performance researchers likewise benefit and have mobile exits. Application developers benefit (free performance improvements). Network operators are dual-positioned: they benefit from the ability to tune TCP behavior to their networks, but also bear costs when implementations diverge (some complexity, some support burden). Directionality for them is symmetric (d ≈ 0.5). Middlebox operators and legacy-system operators bear costs (must adapt, risk left behind) but cannot exit (trapped by economic or technical constraints). Directionality for them is high (near 1.0, targets of the constraint's structure). Strict-invariance advocates are excluded; they do not sit inside this reading—they would populate a different constraint (strict_invariance_reading). The IETF working group is the agenda-setter (they interpret the RFC and issue clarifications) with analytical power; directionality is symmetric (they maintain the rule but do not extract from its operation).",
+    "mandatrophy_analysis": "The founding problem (how to standardize for interoperability without stifling innovation) is live: the constraint persists because both standardization and innovation are ongoing needs, and the latitude reading remains the dominant interpretation that balances them. If the founding problem became 'solved' (either all stakeholders agreed on tight specification or all agreed innovation speed was acceptable at any cost of interoperability), the latitude reading would face mandatrophy. Currently, the constraint's mandate is fresh because implementers and researchers continue to cite the latitude reading as the legitimacy source for their work. The constraint is classified as Rope—pure coordination—not Tangled Rope, because there is no identified asymmetric extraction or party forced into the arrangement. The IETF working group operates by consensus; implementers opt into RFC compliance; no party is coerced. Mandatrophy is not present (the constraint solves a live coordination problem with genuine mutual benefit).",
+    "kernel_context": "This constraint is the optimization-latitude reading of the RFC 9293 TCP specification kernel. The kernel is the formal RFC specification text and its evolved interpretation over four decades of TCP deployment. This reading instantiates the interpretation: 'RFC 9293 defines a semantic contract (observable TCP behaviors) but permits implementation flexibility on algorithms achieving that contract.' Sibling readings are the strict-invariance reading ('RFC 9293 specifies an invariant state machine that implementations must replicate exactly') and the middlebox-realism reading ('RFC 9293 describes endpoint ideals but deployed TCP is shaped by middleboxes, so specification authority is subordinate to network reality'). The optimization-latitude reading enables high-performance variants and research innovation; the strict-invariance reading prioritizes guaranteed interoperability through tight specification; the middlebox-realism reading prioritizes descriptive accuracy about what the network actually enforces. All three are coherent framings of the same kernel and remain live in the engineering community. This constraint story instantiates only the optimization-latitude reading with its own ε, beneficiary/victim structure, and type."
   },
   "omegas": [
     {
-      "id": "specification_scope_ambiguity",
-      "question": "Does RFC 9293 intentionally leave implementation methods unspecified (enabling optimization latitude), or is the latitude a side effect of incomplete specification?",
-      "resolution_mechanism": "IETF design intent documentation (RFCs, IETF meeting minutes, standards-track discussions) specifying whether the latitude was a deliberate design choice or pragmatic underspecification.",
-      "impact": "If intentional, the constraint is a successful coordination design that balances innovation and invariants. If unintentional, it is a specification gap that risks divergence; the strict invariance reading would be more justified.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the specification's implementation latitude is deliberate or accidental"
-    },
-    {
-      "id": "invariant_sufficiency",
-      "question": "Are the RFC 9293 semantic invariants (reliable ordered delivery, congestion response) sufficient to guarantee interoperability across all permitted implementation variants?",
-      "resolution_mechanism": "Large-scale interoperability testing (cross-variant TCP with BBR, DCTCP, Reno, NewReno endpoints) and analysis of observed incompatibilities or degradations. Research literature on TCP variant interactions.",
-      "impact": "If sufficient, the reading is validated — invariants do hold the ecosystem together. If insufficient, undeclared hidden assumptions exist and the strict invariance reading has merit.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether RFC invariants are sufficient to guarantee cross-variant compatibility"
-    },
-    {
-      "id": "middlebox_constraint_vs_rfc_constraint",
-      "question": "Is the real operative constraint what RFC 9293 specifies, or is it the intersection of RFC specification with deployed middlebox behavior (which violates the RFC)?",
-      "resolution_mechanism": "Network path characterization: measure what TCP implementations must actually do to survive deployed middleboxes versus what RFC 9293 requires. This resolves whether the reading's scope (RFC 9293 specification) or the middlebox realism reading's scope (RFC ∩ deployed reality) is the operative constraint.",
-      "impact": "If RFC 9293 is the binding constraint, this reading (optimization latitude) is correct. If deployed middlebox behavior subordinates the RFC, the middlebox realism reading is more accurate and the specification's latitude is less operative than the reading claims.",
+      "id": "semantic_contract_boundary_ambiguity",
+      "question": "Where exactly is the boundary between semantic contract (what RFC 9293 mandates) and implementation latitude (what it permits)? Specifically, which TCP behaviors are interoperability-critical outcomes vs. which are implementation-internal choices?",
+      "resolution_mechanism": "Systematic interoperability testing: deploy diverse TCP implementations (Linux bbr, FreeBSD, Windows, QUIC-inspired variants) and measure which behavioral divergences cause packet loss, connection failures, or protocol violations. Behaviors that do not cause failures are truly internal; behaviors that do are contract-critical and should be mandated.",
+      "impact": "If the boundary is discovered to be more permissive than currently assumed, the optimization-latitude reading is validated and extractiveness remains low. If the boundary is discovered to be stricter (some currently-variable behaviors must be synchronized for true interoperability), the strict-invariance reading gains strength and this reading's classification might shift to lower purity. If the boundary is fuzzy or deployment-dependent, the middlebox-realism reading gains strength.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether RFC specification or deployed middlebox reality is the operative constraint"
+      "type_class": "empirical",
+      "description": "The semantic contract boundary is not precisely defined by RFC 9293 text; ambiguity around which TCP behaviors are interoperability-critical vs. implementation-free."
     },
     {
-      "id": "algorithm_prescription_vs_outcome_specification",
-      "question": "Is the constraint's function served better by prescribing specific algorithms (strict invariance reading) or by specifying outcomes and permitting implementation variance (this reading)?",
-      "resolution_mechanism": "Comparative analysis: count instances where algorithm-specific prescription would have blocked beneficial innovation, versus instances where implementation variance caused interoperability failures. Track innovation cycles (how often congestion algorithms are replaced) and fragmentation incidents (where variants caused breaking incompatibilities).",
-      "impact": "If prescription would have blocked more innovation than variance causes breaks, the latitude reading is justified. If variance causes more hidden incompatibilities than detected, strict invariance is more robust.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether standardization benefits more from algorithmic prescription or outcome specification"
+      "id": "middlebox_brittleness_risk",
+      "question": "To what extent do deployed middleboxes (firewalls, NAT boxes, traffic shapers) cause optimization variants to fail in practice? Is the latitude reading's assumption that semantic-contract compliance guarantees interoperability valid in real networks?",
+      "resolution_mechanism": "Large-scale measurement: instrument diverse client populations to measure TCP connection success rates with and without novel TCP options and behaviors. Track middlebox-caused failures (RST packets, option stripping, timeout patterns) and correlate with TCP variant. Compare to RFC-compliant implementations.",
+      "impact": "If middlebox failures are rare, the latitude reading holds and interoperability is preserved through the semantic contract alone. If middlebox failures are common, the middlebox-realism reading is validated: deployed networks impose their own constraints that override the RFC. This could reclassify the constraint as Tangled Rope or Snare from the perspective of implementers trying to use new variants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether middleboxes' inability to recognize novel TCP options and behaviors undermines the optimization-latitude reading's interoperability guarantee."
     },
     {
-      "id": "reading_vs_strict_invariance_foreclosure",
-      "question": "Does this reading (optimization latitude) logically foreclose the strict invariance reading, or do both remain live interpretations of the same RFC text?",
-      "resolution_mechanism": "RFC 9293 text interpretation: does the specification language permit implementation variance, or require exact algorithm replication? Does it say 'implementations MUST implement [specific algorithm]' or 'implementations MUST achieve [invariant outcomes]'?",
-      "impact": "If the text permits variance, the readings coexist (neither forecloses the other). If the text mandates algorithms, variance-permission is a misreading and forecloses the latitude interpretation. If the text is ambiguous, the readings are hermeneutically coequal and the contest is unresolved.",
+      "id": "kernel_reading_foreclosure_test",
+      "question": "Is the optimization-latitude reading's core premise logically foreclosed by the strict-invariance reading's core premise, or do they genuinely coexist as different interpretive framings of the same RFC text?",
+      "resolution_mechanism": "Logical analysis: examine RFC 9293 text to determine whether it explicitly mandates specific algorithms (state machine details, timer values, congestion-control parameters) or whether it permits multiple algorithmic paths. If explicit mandates exist, one reading is foreclosed; if the text is permissive, both readings can claim textual support and coexist.",
+      "impact": "If foreclosed: the strict-invariance reading logically eliminates the optimization-latitude reading (they cannot both be true about what RFC 9293 requires). If coexistent: both remain live interpretations and the engine classifies them as coexists_with relation. The foreclosure test determines whether the kernel contest is a genuine disagreement or a logical contradiction.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Textual basis for the reading-vs-strict-invariance relationship (coexist vs. foreclose)"
+      "description": "Whether the optimization-latitude and strict-invariance readings are logically foreclosed from each other or genuinely coexistent readings of the RFC 9293 kernel."
+    },
+    {
+      "id": "beneficiary_extraction_asymmetry",
+      "question": "Do implementers or performance researchers capture disproportionate benefit (rent extraction) from the latitude interpretation, or is benefit genuinely mutual among all parties that adopt compliant implementations?",
+      "resolution_mechanism": "Economic analysis: measure whether implementers that adopt novel congestion-control algorithms gain market share, premium pricing, or reduced support costs beyond what they would achieve with RFC-mandated algorithms. Measure researcher career gains (citations, funding, positions) correlated with novel-variant deployment success.",
+      "impact": "If implementers/researchers extract concentrated benefit, the constraint could shift from Rope to Tangled Rope (coordinating other implementers and users, while extracting from legacy-system operators who are left behind). If benefit is mutual or diffuse, the Rope classification holds and extractiveness remains low.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the flexibility enabled by the optimization-latitude reading is distributed fairly or concentrated in certain implementer/researcher seats."
     }
   ],
   "boltzmann": {
     "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.08
+    "boltzmann_floor_override": 0.05
   },
   "network": {
     "affects_constraints": [
       "rfc9293_tcp_specification__strict_invariance_reading",
       "rfc9293_tcp_specification__middlebox_realism_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three structurally distinct readings of the RFC 9293 kernel. The strict_invariance_reading interprets the RFC as mandating exact algorithm replication (higher extractiveness, more suppression of implementation variance). The middlebox_realism_reading subordinates RFC prescription to deployed middlebox behavior (different scope, different constraint semantics). This reading (optimization_latitude_reading) interprets RFC 9293 as a semantic contract with implementation freedom. Each reading has different ε, different beneficiary structure, different policy implications. They coexist as live positions in protocol standardization debates. All three are linked via network.affects_constraints to form a constraint family."
+    "dual_formulation_note": "RFC 9293 TCP Specification forms a kernel with three coherent readings, each instantiating a different constraint. The optimization-latitude reading (this file) frames RFC 9293 as a semantic contract enabling diverse implementations; the strict-invariance reading frames it as an invariant state machine requiring implementation fidelity; the middlebox-realism reading frames it as subordinate to deployed-network behavior. The optimization-latitude reading influences both siblings: it defines the permissiveness space that strict-invariance advocates argue against, and it implicitly models an idealized network against which the middlebox-realism reading contrasts actual deployments. All three readings share the same RFC text kernel; they diverge in what they read the RFC as committing to."
   },
   "directionality_overrides": [],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "rfc9293_tcp_specification__strict_invariance_reading",
+        "sibling_id": "strict_invariance_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+        "sibling_id": "middlebox_realism_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "semantic_outcomes_over_algorithmic_prescription",
+        "atom": "semantic_contract_defines_interoperability",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "rfc_invariants_sufficient_for_interoperability",
+        "atom": "implementation_latitude_enables_innovation",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "rfc9293_outcome_specification_framework",
+    "reference_frame": "rfc9293_semantic_contract_era",
     "drift_state": {
-      "moment": "contemporary_network_complexity",
-      "direction": "practice_drift",
+      "moment": "contemporary_multi_algorithm_deployment",
+      "direction": "stable",
       "magnitude": "minor",
       "acknowledged": true
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "rfc9293_tcp_specification__strict_invariance_reading"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

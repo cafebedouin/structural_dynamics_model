@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,33 +78,31 @@
  *   domain: social/legal/medical
  *
  * SUMMARY:
- *   The hybrid reading instantiates sex/gender category membership as
- *   conditional on a combination of birth-assigned sex and completion of
- *   medical transition. Trans women who undergo hormone therapy and/or
- *   surgery gain legal and institutional recognition as female; those who do
- *   not transition remain categorized according to birth sex regardless of
- *   identity. This reading concentrates institutional authority in medical
- *   gatekeeping bodies (endocrinology, psychiatry, surgery) and legal
- *   institutions that recognize medical transition as proof of category
- *   membership. The constraint is presented as pragmatic (legible
- *   administrative criterion) but operates as extractive: it moves the burden
- *   of category entry to individual medical cost-bearing, excludes those
- *   without access to or willingness to pursue medical transition, and
- *   concentrates institutional power in medical institutions that control the
- *   transition pathway. The kernel contest is among three readings of 'what
- *   makes someone female' — biology, hybrid (medical transition), and
- *   identity — none of which logically forecloses the others, but which
- *   coexist as competing institutional and political frameworks.
+ *   This constraint instantiates one reading of the contested sex/gender
+ *   category kernel. The hybrid reading defines category membership through a
+ *   combination of immutable biology AND achieved social/medical transition
+ *   status. Under this reading, trans women are conditionally admitted to the
+ *   female category after completing specified medical milestones (hormone
+ *   therapy duration, surgical procedures, psychological gatekeeping). This
+ *   reading mediates between pure-biology readings (which exclude trans women
+ *   categorically) and identity readings (which admit based on
+ *   self-identification alone). The hybrid reading benefits medical
+ *   institutions and institutional categorizers by creating a legible ruleset
+ *   backed by medical authority; it extracts from trans people who cannot or
+ *   will not medically transition (permanent exclusion) and from those
+ *   mid-transition (delayed access, gatekeeping costs). The constraint is
+ *   CLAIMED as tangled_rope (genuine coordination function + asymmetric
+ *   extraction) and MEASURED as substantially extractive with high
+ *   suppression — the engine will test whether the coordination function is
+ *   genuine or cover-story.
  *
  * KEY AGENTS:
- *   - trans_women_post_transition: gain conditional access; bear transition costs
- *   - trans_women_without_transition: excluded; bear non-recognition costs; identity-locked
- *   - medical_gatekeeping_institutions: control entry criteria; collect transition revenue
- *   - cisgender_women: retain costless category membership; some segments support the boundary gatekeeping
- *   - non_transitioning_trans_advocates: excluded from agenda-setting; contest the reading
- *   - biology_reading_advocates: excluded from the hybrid framework; contest it actively
- *   - legal_institutions: implement the medical gatekeeping via legal procedures
- *   - observer_comparative_analysts: map the reading against its siblings
+ *   - Medical gatekeepers (institutional, arbiter of medical transition sufficiency)
+ *   - Trans women post-transition (moderate power, identity-locked, conditionally beneficiary)
+ *   - Trans women pre-transition and non-medical trans people (powerless, identity-locked, victims)
+ *   - Biology essentialists (organized, semi-beneficiary through biology preservation)
+ *   - Institutional categorizers (institutional agenda-setter, beneficiary through legibility)
+ *   - Gender-identity advocates (organized, excluded from authority structure)
  */
 
 /* ==========================================================================
@@ -106,17 +111,17 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(sex_gender_category__hybrid_reading, 0.68).
-domain_priors:suppression_score(sex_gender_category__hybrid_reading, 0.71).
-domain_priors:theater_ratio(sex_gender_category__hybrid_reading, 0.42).
+domain_priors:suppression_score(sex_gender_category__hybrid_reading, 0.72).
+domain_priors:theater_ratio(sex_gender_category__hybrid_reading, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, accessibility_collapse, 0.58).
+narrative_ontology:constraint_metric(sex_gender_category__hybrid_reading, resistance, 0.61).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(sex_gender_category__hybrid_reading, tangled_rope).
@@ -126,39 +131,112 @@ narrative_ontology:topic_domain(sex_gender_category__hybrid_reading, "social/leg
 domain_priors:requires_active_enforcement(sex_gender_category__hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(sex_gender_category__hybrid_reading, 'b6549ff3-dd0d-4d5b-8092-2819bf1326f3').
-narrative_ontology:cs_kernel_codification('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', formalized).
-narrative_ontology:cs_authority_grounding('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', extraction).
-narrative_ontology:cs_interpretation_layer_present('b6549ff3-dd0d-4d5b-8092-2819bf1326f3').
-narrative_ontology:cs_reading_relation('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', sex_gender_category__biology_reading, coexists_with).
-narrative_ontology:cs_reading_relation('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', sex_gender_category__identity_reading, coexists_with).
-narrative_ontology:cs_axiom('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', foundational, medical_transition_required_for_category_change).
-narrative_ontology:cs_axiom_status(medical_transition_required_for_category_change, holdable).
-narrative_ontology:cs_axiom_grounding('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', medical_transition_required_for_category_change, conventional).
-narrative_ontology:cs_axiom('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', foundational, birth_sex_baseline_female_identity_insufficient).
-narrative_ontology:cs_axiom_status(birth_sex_baseline_female_identity_insufficient, holdable).
-narrative_ontology:cs_axiom_grounding('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', birth_sex_baseline_female_identity_insufficient, deontological).
-narrative_ontology:cs_reference_frame('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', medical_transition_as_proof).
-narrative_ontology:cs_drift_state('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', contemporary_trans_rights_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('b6549ff3-dd0d-4d5b-8092-2819bf1326f3', '').
+narrative_ontology:cs_story_uid(sex_gender_category__hybrid_reading, '99b113ca-b2a6-4cd9-bd74-fb327a75f739').
+narrative_ontology:cs_kernel_codification('99b113ca-b2a6-4cd9-bd74-fb327a75f739', distributed).
+narrative_ontology:cs_authority_grounding('99b113ca-b2a6-4cd9-bd74-fb327a75f739', extraction).
+narrative_ontology:cs_interpretation_layer_present('99b113ca-b2a6-4cd9-bd74-fb327a75f739').
+narrative_ontology:cs_reading_relation('99b113ca-b2a6-4cd9-bd74-fb327a75f739', sex_gender_category__biology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('99b113ca-b2a6-4cd9-bd74-fb327a75f739', sex_gender_category__identity_reading, coexists_with).
+narrative_ontology:cs_axiom('99b113ca-b2a6-4cd9-bd74-fb327a75f739', foundational, biology_epistemically_foundational_but_mutable).
+narrative_ontology:cs_axiom_status(biology_epistemically_foundational_but_mutable, holdable).
+narrative_ontology:cs_axiom_grounding('99b113ca-b2a6-4cd9-bd74-fb327a75f739', biology_epistemically_foundational_but_mutable, deontological).
+narrative_ontology:cs_axiom('99b113ca-b2a6-4cd9-bd74-fb327a75f739', foundational, medical_transition_legitimate_reclassification_ground).
+narrative_ontology:cs_axiom_status(medical_transition_legitimate_reclassification_ground, holdable).
+narrative_ontology:cs_axiom_grounding('99b113ca-b2a6-4cd9-bd74-fb327a75f739', medical_transition_legitimate_reclassification_ground, instrumental).
+narrative_ontology:cs_axiom('99b113ca-b2a6-4cd9-bd74-fb327a75f739', secondary, identity_alone_insufficient_institutional_verification).
+narrative_ontology:cs_axiom_status(identity_alone_insufficient_institutional_verification, holdable).
+narrative_ontology:cs_axiom_grounding('99b113ca-b2a6-4cd9-bd74-fb327a75f739', identity_alone_insufficient_institutional_verification, conventional).
+narrative_ontology:cs_reference_frame('99b113ca-b2a6-4cd9-bd74-fb327a75f739', post_stonewall_medicalized_gatekeeping_era).
+narrative_ontology:cs_drift_state('99b113ca-b2a6-4cd9-bd74-fb327a75f739', contemporary, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('99b113ca-b2a6-4cd9-bd74-fb327a75f739', '2026-06-12T14:37:22Z').
 narrative_ontology:cs_kernel_id(sex_gender_category__hybrid_reading, sex_gender_category).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, medical_gatekeeping_institutions).
-narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, cisgender_category_protectors).
-narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, trans_women_without_transition).
-narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, non_medical_trans_individuals).
-narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, transition_cost_bearers).
+narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, medical_gatekeepers).
+narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, biology_essentialists).
+narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, institutional_categorizers).
+narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, trans_women_pre_transition).
+narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, non_medical_trans_people).
+narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, trans_individuals_below_gatekeeping_threshold).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, trans_women_post_transition).
+narrative_ontology:constraint_beneficiary(sex_gender_category__hybrid_reading, non_trans_women).
+narrative_ontology:constraint_victim(sex_gender_category__hybrid_reading, biology_essentialists).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Psychiatrists, endocrinologists, and surgical specialists define what counts as sufficient medical transition (hormone duration, surgical completion, psychological readiness assessments) for category membership. They control access to transition-enabling care and produce the certification documents institutions recognize. Their authority is framed as clinical expertise; their gate-setting function defines who is 'real' enough for reclassification.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, medical_gatekeepers, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Gain legal category reclassification and access to women's spaces/services after completing medical milestones. They benefit from the hybrid framework's conditional inclusion over pure biology readings, but only if they can navigate and sustain the medical-transition pathway. Their exit from the constraint is identity-fused (transitioning is constitutive of self-conception); remaining in place means continued misgendering.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, trans_women_post_transition, beneficiary,
+    moderate, biographical, identity_locked, national).
+
+% Bear the cost of being excluded from female category membership while unable to afford or access the medical pathway. They face legal misgendering, denial of facilities access, and institutional barriers — with no legitimate avenue (under this reading) to achieve reclassification without medical completion. Identity-locked: rejecting the identity would resolve the exclusion but contradicts self-conception.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, trans_women_pre_transition, payer,
+    powerless, biographical, identity_locked, national).
+
+% Trans people who do not transition medically (hormonal or surgical) are permanently excluded from category reclassification under this reading. They may reject medical transition on grounds of cost, health risk, absence of desire for medical intervention, or other reasons; the hybrid framework offers no path to category membership for them. Identity-locked by same mechanism as pre-transition group.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, non_medical_trans_people, payer,
+    powerless, biographical, identity_locked, national).
+
+% Gain institutional validation of the view that biological sex is category-foundational, even if medically modified. The hybrid reading preserves biology's epistemic weight by requiring medical proof of commitment to biological change, rather than accepting identity alone. They pay through the constraint by accepting the medical criterion as supplement to biology, but they extract through the institutional enforcement of biology-first framing.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, biology_essentialists, beneficiary,
+    organized, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(sex_gender_category__hybrid_reading, biology_essentialists, payer).
+
+% Schools, workplaces, legal registries, and facilities administrators who implement category-based policies. The hybrid reading provides a clear legible rule: accept reclassification if medical transition is documented. This reduces ambiguity compared to identity-based readings and delays facilities disputes until gatekeeping thresholds are met. They benefit from having a ruleset backed by medical authority and reduce political friction through medicalization.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, institutional_categorizers, agenda_setter,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(sex_gender_category__hybrid_reading, institutional_categorizers, beneficiary).
+
+% Retain category-membership clarity under the hybrid reading: their female category is secured by immutable biology, and trans women are admitted only after substantial medical barrier-crossing. Under identity readings, their category becomes potentially contestable (identity-only inclusion). The hybrid reading offers them intermediate stability — shared category with trans women post-transition, but gated by medical requirement.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, non_trans_women, beneficiary,
+    moderate, biographical, mobile, national).
+
+% Would argue that medical transition should not be a prerequisite for category membership, and that identity-based inclusion is both ethically required and empirically sound. Their position is structurally excluded from the hybrid framework's authority structure — they are not seated as experts or decision-makers. They lack the institutional power to redefine the category absent legislative action.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, gender_identity_advocates, excluded,
+    organized, biographical, constrained, national).
+
+% Administrative and legal bodies that enforce non-discrimination law and interpret category-membership rules for institutional compliance. They observe the gating mechanism and assess whether medical-transition requirements constitute unlawful discrimination. They can declare the pathway illegal, mandate alternative access routes, or affirm it as a legitimate classification system.
+narrative_ontology:constraint_stakeholder(sex_gender_category__hybrid_reading, civil_rights_authorities, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(sex_gender_category__hybrid_reading, medical_gatekeepers).
+narrative_ontology:fixing_cost_class(sex_gender_category__hybrid_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a legible, documentable category boundary that reconciles biological sex with social/medical recognition of transition, enabling institutions to implement facilities and services policies without requiring case-by-case identity determination. Reduces administrative ambiguity and political friction around contested categories.
+% TRANSFER_FUNCTION: Moves institutional authority and access to category-reclassification from the trans person's own identity claim to the medical establishment. Authority over who counts as female is transferred from individual determination to licensed medical professionals and regulatory institutions. Moves access to women's spaces and legal recognition from identity-based (cheap, individual) to medical pathway-based (expensive, institutional).
+% ABSENT_VOICES: Gender-identity advocates and trans people who reject medicalization are structurally excluded from the authority structure that defines the gating criteria. They can testify to regulatory bodies but do not set the framework. Non-trans women's views on category membership are heard through institutional channels but not directly represented in gatekeeping medical decisions.
+% DISAPPEARANCE_RATIONALE: If the medical-transition requirement vanished overnight, institutions would face immediate reclassification decisions for trans individuals currently in pre-transition states. Some would shift to identity-based acceptance (aligning with identity_reading); others would revert to pure-biology gatekeeping (biology_reading). The legal category system would experience discontinuity until a new stable framework was established. Trans people's access to facilities, legal documents, and institutional recognition would be immediately contested.
+% FOUNDING_PROBLEM: Early institutional responses to trans identity faced a binary: either deny trans women's womanhood entirely (pure biology reading) or accept subjective identity claims without institutional verification (pure identity reading). Both posed coordination problems — one excluded trans women categorically; the other created institutional vulnerability to disputes about who could credibly claim female status. The medical-transition requirement emerged as a compromise: it provided objective criteria (medical documentation) while acknowledging trans women's legitimate claims to reclassification.
+% FOUNDING_PROBLEM_CORROBORATION: Medical institutions and institutional categorizers attest that gatekeeping solved coordination problems. Gender-identity advocates and trans people excluded by medical requirements attest that the founding problem was artificially constructed and that the 'solution' introduced worse problems (exclusion of non-medical trans people, medicalization of identity). Independent human rights analysis finds the founding problem partially real (earlier administrative chaos) and partially manufactured (treating trans identity as inherently less credible than cis claims). The reading's own authority structure (medical gatekeepers) benefits directly from framing the problem as solved by their expanded role.
+narrative_ontology:disappearance_verdict(sex_gender_category__hybrid_reading, world_rearranges).
+narrative_ontology:founding_problem_status(sex_gender_category__hybrid_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(sex_gender_category__hybrid_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(sex_gender_category__hybrid_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(sex_gender_category__hybrid_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(sex_gender_category__hybrid_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +256,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.68) because the constraint produces asymmetric costs: trans women bear medical expenses and psychological burden to gain entry; medical institutions collect revenue and control the boundary; cisgender women retain costless membership. The medical gatekeeping is not incidental — it is the structural mechanism by which the reading operates. Suppression is also elevated (0.71) because alternatives (biology-alone, identity-alone) are institutionally suppressed — courts, medical boards, and legal regimes actively enforce the hybrid reading and discourage or penalize departures. Theater is moderate (0.42): the medical review function is real (genuine health screening occurs), but a growing share of enforcement activity is devoted to maintaining category boundaries against identity-based claims rather than purely health-based gatekeeping. Accessibility collapse at 0.62 reflects that once someone is locked into 'medical transition is required for category change,' their alternatives narrow to paying for transition or accepting non-recognition — exit is constrained. Resistance at 0.58 indicates substantial pushback from non-transitioning trans advocates and biology-reading advocates, but suppression prevents their successful institutional repositioning. The measurement series shows extractiveness and suppression rising over time as medical gatekeeping becomes more standardized and institutionalized; theater also rises as the performative dimension of medical review strengthens. The coercion grid shows that suppression and accessibility collapse are highest at the structural and organizational levels (medical and legal institutions maintain the boundary) and lower at the individual level (individual trans women experience both support and pressure, not pure suppression). Resistance is highest at the organizational level (advocacy groups contest actively) and lower at the structural level (the core boundary definition faces less active structural opposition). Stakes inflation is highest at the individual and class levels (transition costs and non-recognition affect trans individuals and the trans class acutely) and lower at structural/organizational levels (the institutions managing the boundary face less pressure from the constraint itself).
+ *   Extractiveness reaches 0.68 by interval end because the medical pathway is expensive (time, money, health risk, psychological burden), gatekeeping thresholds are set by institutional actors with incentives to maintain gating power, and the constraint permanently excludes trans people who reject medicalization. The trajectory rises from 0.55 to 0.68 as medical gatekeeping institutions consolidate authority: early in the interval, alternative (identity-based, bureaucratic) reclassification routes are still available in some jurisdictions; by interval end, medical pathway becomes institutionalized as the singular legitimate route, collapsing alternatives. Suppression is high (0.72) because the constraint actively excludes identity-based reclassification through institutional policy and law; non-medical paths are not merely unavailable, they are actively prohibited. Theater ratio (0.41) reflects that part of the medical gatekeeping function is legitimate risk-assessment and care-coordination, but an increasing share is administrative theater: proving 'seriousness,' demonstrating conformity to normative transition narratives, and maintaining gatekeeper authority itself. The separation of measurement grid is deliberate: every metric is authored at the same six time points across the interval to enable temporal analysis of drift.
  *
  * PERSPECTIVAL GAP:
- *   The medical institutions and legal regimes experience this reading as legitimate coordination (solving the category-membership problem with an administratively clear criterion). Trans women who pursue transition experience it as a mixed exchange: gain legal recognition but bear substantial cost and submit to medical authority over their identity-claim. Trans women without transition experience pure suppression: their identity claim is deemed insufficient, and the costs of non-recognition are absorbed wholly by them. Cisgender women are internally divided: some see the medical gatekeeping as protecting category boundaries; others see it as unnecessarily coercive. The observation seat (comparative analysis) sees all three readings as structurally coherent but with different victim sets, gatekeeping costs, and authority distributions. The engine should compute tangled_rope from the payer seat (high χ due to high d from extraction + constraints), rope or mixed from the medical institution seat (low χ — they control the arrangement and benefit from it), and contested/multiple from the identity-locked trans women seat (d depends on directionality override: are they beneficiaries of conditional access or victims of gatekeeping?). The measurement series shows this sitting stable — not drifting toward mandatrophy, but not naturally stabilizing either.
+ *   The agenda-setter seats (medical gatekeepers, institutional categorizers) experience this constraint as coordination machinery solving a real administrative problem; they measure their own function as legitimate professional gatekeeping. The victim seats (pre-transition trans women, non-medical trans people) experience it as sustained exclusion dependent on institutional power to suppress alternatives; they measure the same constraint as extractive coercion. The post-transition beneficiary seat experiences conditional inclusion but remains aware of the gatekeeping machinery: they cannot entirely unsee the arbitrariness of thresholds or the power differential. The biology-essentialist seat experiences partial satisfaction (biology remains epistemically foundational) but must accept medical modification of that biology as legitimate reclassification criterion — a compromise that extracts loyalty. The engine computes per-seat directionality from this structural asymmetry; the author documents it in plain language.
  *
  * DIRECTIONALITY LOGIC:
- *   Trans women post-transition are conditionally included: they benefit from legal recognition (d moves toward beneficiary end) but bear the cost of accessing that recognition through required medical transition (d moves back toward payer end). Their net directionality depends on whether we weight the recognition benefit or the transition burden more heavily — directionality override may be needed. Trans women without transition have no such mixed experience: they are pure payers (excluded, bearing costs, d near 1.0). Medical institutions are beneficiaries (d near 0.0): they set the criteria, enforce them, and collect revenue. Legal institutions are similarly positioned but with slightly higher payer load (they enforce a rule that constrains their own institutional freedom). Cisgender women are slight beneficiaries (d near 0.3) if the boundary protection is valued; neutral if indifferent. Non-transitioning trans advocates and biology-reading advocates are payers (they lose the institutional debate and bear the costs of suppression — d near 0.8). The directionality override should apply to trans_women_post_transition: the derivation from beneficiary role + payer load (transition costs) produces an ambiguous d, around 0.5–0.6. The narrative logic suggests a directionality closer to 0.45 (modest beneficiary, modest payer) — they gain from the arrangement more than they lose, but the arrangement still extracts from them, unlike the pure beneficiary medical institutions.
+ *   Medical gatekeepers sit at d ≈ 0.1 (full beneficiaries: control authority, collect gatekeeping power, define legitimacy). Trans women post-transition sit at d ≈ 0.4 (mixed: gain category access but only via expensive, controlled pathway; identity-locked exit means they absorb the extraction cost rather than leave). Trans women pre-transition and non-medical trans people sit at d ≈ 0.9 (nearly full targets: permanently excluded, identity-locked so exit is not real option, bear full suppression cost). Biology essentialists sit at d ≈ 0.35 (moderate extraction: they extract through institutional reinforcement of biology-first framing, but they also pay through having to accept medical modification of that biology). Institutional categorizers sit at d ≈ 0.15 (full beneficiaries: get legible ruleset, reduced political friction, authority backed by medical expertise). The directionality spread across seats is what produces the per-seat type divergence: medical gatekeepers compute as rope-beneficiary (they coordinate and benefit); trans women pre-transition compute as snare-target (they are purely extracted from); post-transition trans women compute as tangled-rope mid-seat (they coordinated into a solution that extracts from them). This divergence is STRUCTURAL, not a measurement error.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (no procedure for trans individuals to gain legal recognition) was live at the constraint's origin. The hybrid reading solved it by creating a medical-recognition pathway. The founding problem status is now contested: medical and legal authorities attest it is still live (transition pathways still needed); trans advocates attest it is partially solved but the solution created a secondary problem (coercive medicalization). The disappearance verdict is 'world_rearranges': if the hybrid reading vanished, legal category membership would reorganize — either toward biology-alone or identity-alone. The mismatch (founding_problem_status = contested, disappearance_verdict = world_rearranges) suggests mandatrophy in process: the founding mandate has outlived unanimity. However, this is not mandatrophy-resolved (the constraint still performs its founding function for some seats) but rather mandatrophy-contested — different seats experience it as functional or dysfunctional depending on their position. The theater ratio at 0.42 suggests moderate performative maintenance: medical institutions conduct real gatekeeping, but some of their activity is devoted to defending the boundary against identity-based claims. The extraction measurement rising (0.52 → 0.68) suggests the constraint is accumulating secondary benefits unrelated to the founding problem (medical institutions expanding transition services, legal institutions expanding documentation power), which feeds the contested status. This is not a false summit (not a mountain with beneficiaries) — the coordination function (administrative category clarity) is real. But it is a case where the founding problem's solution (medical recognition pathway) has become a mechanism for institutional expansion and extraction beyond the founding scope.
+ *   The founding problem (coordination chaos under identity-only vs. pure-biology readings) was real but is contested as SOLVED. The question is whether the medical-transition requirement was the only way to solve it, or whether it was one solution that benefited medical institutions and created new harms. The mandatrophy signal: the founding problem was institutional coordination (institutions need a clear ruleset). The hybrid reading 'solved' it by transferring authority to medicine. But medical authority depends on maintaining the gatekeeper role — there is extraction feeding back into problem-perpetuation. If institutions adopted an identity-based approach with simple documentary verification (not clinical gatekeeping), coordination would remain solved but extraction would collapse. The fact that institutions prefer the medical route suggests the founding problem was real but the chosen solution reflects extractive institutional interests, not pure coordination necessity. Tangled_rope captures this: genuine coordination function + asymmetric extraction. A snare reading would claim the coordination function is entirely cover-story; a rope reading would claim extraction is negligible. This reading falls between: coordination is real, extraction is substantial.
  */
 
 /* ==========================================================================
@@ -195,89 +273,89 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    medical_gatekeeping_necessity,
-    'Is medical transition structurally necessary to establish female category membership for legal and institutional purposes, or is medical gatekeeping a chosen mechanism that could be replaced by alternative criteria (identity documentation, lived-experience attestation, self-identification with administrative verification)?',
-    'Comparative institutional analysis: jurisdictions that have adopted identity-based or alternative administrative criteria and measured outcomes (legal clarity, institutional implementation success, dispute rates) versus those using medical gatekeeping. Natural experiments where gatekeeping has been relaxed or tightened.',
-    'If medical gatekeeping is necessary, the constraint''s extractiveness is partly the cost of solving a coordination problem; if it is a chosen mechanism, the extractiveness is mostly institutional rent-seeking. This changes whether the constraint is tangled_rope (genuine coordination + extraction) or snare (pure gatekeeping extraction covering coordination).',
+    gatekeeping_threshold_arbitrariness,
+    'Are the medical thresholds for transition sufficiency (hormone duration, surgical completion, psychological readiness assessments) calibrated to genuine clinical necessity, or do they reflect institutional gatekeeping incentives?',
+    'Comparative analysis across jurisdictions with different thresholds, plus tracking of medical rationale changes over time. If thresholds tighten or loosen without clinical justification changes, gatekeeping incentives are operative.',
+    'If thresholds are arbitrary, the constraint is snare-like: the medical-transition requirement is pure extraction dressed in clinical language. If genuinely clinical, the extraction remains high but the coordination function is substantive (tangled_rope). The boundary between clinical necessity and institutional gatekeeping is empirically discoverable but not yet definitively resolved.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(medical_gatekeeping_necessity, conceptual, 'Whether medical authority is structurally required for the category boundary or is one possible implementation.').
+narrative_ontology:omega_variable(gatekeeping_threshold_arbitrariness, empirical, 'Whether medical thresholds reflect clinical necessity or institutional extraction.').
 
 omega_variable(
-    internalized_identity_lock,
-    'Is the suppression experienced by trans_women_without_transition purely structural (external barriers, institutional exclusion) or partially internalized (the individual has fused their identity-claim validity with medical proof, making them feel they must transition even when external barriers hypothetically disappear)?',
-    'Longitudinal study of individuals who transition for legal/institutional recognition versus those who resist the pathway: post-removal of external barriers (hypothetically or through legal change), do individuals report persistent sense of invalidation or expectation of medical proof? Exit-trajectory analysis: do trans individuals who transition experience reduced suppression afterward, or persistent suppression indicating partial internalization?',
-    'If suppression is mostly structural, removing barriers should reduce it significantly; if partially internalized, suppression persists post-barrier-removal. This affects the measured suppression value and the classification from the trans individual''s seat.',
+    identity_locked_internalization,
+    'For trans people excluded under the hybrid reading, is the measured suppression structural (external barriers to medical access and category reclassification) or internalized (trans people have incorporated the medical-transition requirement as a legitimate standard for their own identity/category validity)?',
+    'Post-remediation outcomes: if medical barriers are removed and trans people still refuse to self-identify as their authentic category (because they internalized the medical standard as legitimate proof requirement), suppression is partially internalized. If barrier removal leads to rapid self-identification, suppression was structural.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests; the target carries the suppression internally. If structural, the suppression is reversible by barrier removal. This affects whether reclassifying trans people mid-transition to the identity_reading would dissolve the constraint or require sustained institutional change.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(internalized_identity_lock, empirical, 'Degree of internalization of medical-gatekeeping logic in trans individuals'' self-concept.').
+narrative_ontology:omega_variable(identity_locked_internalization, empirical, 'Whether suppression is structural (external barriers) or internalized (target-held standards).').
 
 omega_variable(
-    kernel_reading_contest_localization,
-    'Which specific structural elements of the hybrid reading (as opposed to biology or identity readings) are genuinely contested, and which are institutionally settled?',
-    'Jurisdictional analysis: some countries/regions enforce biology-reading, others hybrid, others identity-reading. Within hybrid-reading jurisdictions, what elements face legal or political challenge? Identify the margins of the contest.',
-    'If the contest is localized to specific elements (e.g., whether surgery is required in addition to hormones), the constraint may be more stable than if the entire reading is contested. This affects mandatrophy assessment.',
+    biology_essentialism_necessity,
+    'Is the preservation of biology as epistemically foundational (via the requirement for medical proof of biological change) structurally necessary for institutional category systems, or is it a contingent social choice?',
+    'Thought experiment and comparative institutional analysis: if institutions adopted identity-only category reclassification, would coordination break down, or would institutional practices simply shift to accommodate new boundaries?',
+    'If biology is institutionally necessary, the hybrid reading''s extraction is justified by coordination cost reduction. If biology is contingent, the hybrid reading''s preservation of biology-first framing is extractive ideology, benefiting biology essentialists and institutions that profit from biological gatekeeping (medicine, law, surveillance systems).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(biology_essentialism_necessity, conceptual, 'Whether biology-based categorization is structurally necessary or contingent.').
+
+omega_variable(
+    hybrid_vs_identity_reading_divergence,
+    'What are the materialized differences between the hybrid reading''s medical-transition gatekeeping and the identity_reading''s self-identification gatekeeping? Where do trans people end up differently?',
+    'Tracking of reclassification rates, facilities access, legal document changes, institutional compliance under each reading across comparable jurisdictions.',
+    'This omega documents the reading-choice consequences: the hybrid reading excludes pre-transition trans people and non-medical trans people entirely; the identity_reading admits them immediately. The biology_reading excludes all trans women. This constraint story measures what the hybrid reading does; sibling readings measure what they do. The reading choice is not a framing difference — it is a difference in victims and benefits.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(hybrid_vs_identity_reading_divergence, empirical, 'Materialized differences between readings in reclassification access and institutional friction.').
+
+omega_variable(
+    medical_authority_scope_creep,
+    'Has the scope of medical gatekeeping expanded over the interval beyond its founding role (ensuring trans people''s informed consent and basic safety)? Are medical evaluations drifting toward certification of ''true'' gender identity rather than assessment of medical readiness?',
+    'Content analysis of medical assessment documentation and gatekeeping rationales over time. If psychological evaluations increasingly assess ''authenticity'' of identity rather than medical safety, scope creep is occurring.',
+    'Scope creep would indicate the constraint is drifting toward snare (pure extraction: medical authority is repurposed as identity validation machinery without clinical basis). Stable scope would support tangled_rope (genuine medical gatekeeping + extractive gate-setting).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest_localization, empirical, 'Which dimensions of the hybrid reading are institutionally stable versus contested.').
-
-omega_variable(
-    medical_authority_beneficiary_concentration,
-    'To what degree does the medical gatekeeping mechanism concentrate institutional authority and financial benefit in medical institutions, beyond what is necessary to deliver transition care?',
-    'Cost analysis: actual medical cost of transition services versus medical revenue extracted; institutional analysis: do medical boards expand gatekeeping requirements beyond clinical necessity (increasing the role of medical authority)? Comparison with identity-based systems: do they require less institutional gatekeeping overhead?',
-    'High concentration would support the interpretation that extractiveness (0.68) is partly institutional rent-seeking; low concentration would support the interpretation that extractiveness is partly the cost of medical transition itself. This affects whether the constraint is tangled_rope (legitimate coordination + extraction) or has snare-like elements (gatekeeping extraction disguised as necessary medical review).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(medical_authority_beneficiary_concentration, empirical, 'Proportion of measured extractiveness that reflects necessary medical costs versus institutional gatekeeping expansion.').
-
-omega_variable(
-    three_readings_coexistence_stability,
-    'Are the three readings (biology, hybrid, identity) genuinely coexisting as live institutional options, or is one reading becoming institutionally dominant and the others being suppressed from institutional viability?',
-    'Jurisdictional trends over the interval: do hybrid-reading jurisdictions remain stable, or do they shift toward biology or identity? Do rejected readings persist as live political movements or fade to marginal status? Analysis of institutional investment: which readings receive legal support, medical infrastructure, and institutional enforcement resources?',
-    'If the three readings are stable coexisting options, the hybrid reading is one choice among coherent alternatives. If one reading is becoming dominant, the reading-relations and axiom framings may need revision. This affects how the constraint family networks together.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(three_readings_coexistence_stability, empirical, 'Whether the three kernel readings remain institutionally viable or if one is suppressing the others.').
+narrative_ontology:omega_variable(medical_authority_scope_creep, empirical, 'Whether medical gatekeeping authority is scope-creeping toward identity certification.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(sex_gender_category__hybrid_reading, 0, 40).
+narrative_ontology:interval(sex_gender_category__hybrid_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(sex__tr_t0, sex_gender_category__hybrid_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(sex__tr_t5, sex_gender_category__hybrid_reading, theater_ratio, 5, 0.3).
+narrative_ontology:measurement(sex__tr_t0, sex_gender_category__hybrid_reading, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(sex__tr_t5, sex_gender_category__hybrid_reading, theater_ratio, 5, 0.32).
 narrative_ontology:measurement(sex__tr_t10, sex_gender_category__hybrid_reading, theater_ratio, 10, 0.36).
+narrative_ontology:measurement(sex__tr_t15, sex_gender_category__hybrid_reading, theater_ratio, 15, 0.39).
 narrative_ontology:measurement(sex__tr_t20, sex_gender_category__hybrid_reading, theater_ratio, 20, 0.4).
-narrative_ontology:measurement(sex__tr_t30, sex_gender_category__hybrid_reading, theater_ratio, 30, 0.42).
-narrative_ontology:measurement(sex__tr_t40, sex_gender_category__hybrid_reading, theater_ratio, 40, 0.43).
+narrative_ontology:measurement(sex__tr_t25, sex_gender_category__hybrid_reading, theater_ratio, 25, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(sex__be_t0, sex_gender_category__hybrid_reading, base_extractiveness, 0, 0.52).
-narrative_ontology:measurement(sex__be_t5, sex_gender_category__hybrid_reading, base_extractiveness, 5, 0.56).
-narrative_ontology:measurement(sex__be_t10, sex_gender_category__hybrid_reading, base_extractiveness, 10, 0.61).
-narrative_ontology:measurement(sex__be_t20, sex_gender_category__hybrid_reading, base_extractiveness, 20, 0.66).
-narrative_ontology:measurement(sex__be_t30, sex_gender_category__hybrid_reading, base_extractiveness, 30, 0.68).
-narrative_ontology:measurement(sex__be_t40, sex_gender_category__hybrid_reading, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement(sex__be_t0, sex_gender_category__hybrid_reading, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(sex__be_t5, sex_gender_category__hybrid_reading, base_extractiveness, 5, 0.59).
+narrative_ontology:measurement(sex__be_t10, sex_gender_category__hybrid_reading, base_extractiveness, 10, 0.63).
+narrative_ontology:measurement(sex__be_t15, sex_gender_category__hybrid_reading, base_extractiveness, 15, 0.66).
+narrative_ontology:measurement(sex__be_t20, sex_gender_category__hybrid_reading, base_extractiveness, 20, 0.67).
+narrative_ontology:measurement(sex__be_t25, sex_gender_category__hybrid_reading, base_extractiveness, 25, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(sex__su_t0, sex_gender_category__hybrid_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(sex__su_t5, sex_gender_category__hybrid_reading, suppression_requirement, 5, 0.62).
-narrative_ontology:measurement(sex__su_t10, sex_gender_category__hybrid_reading, suppression_requirement, 10, 0.66).
-narrative_ontology:measurement(sex__su_t20, sex_gender_category__hybrid_reading, suppression_requirement, 20, 0.7).
-narrative_ontology:measurement(sex__su_t30, sex_gender_category__hybrid_reading, suppression_requirement, 30, 0.71).
-narrative_ontology:measurement(sex__su_t40, sex_gender_category__hybrid_reading, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement(sex__su_t0, sex_gender_category__hybrid_reading, suppression_requirement, 0, 0.62).
+narrative_ontology:measurement(sex__su_t5, sex_gender_category__hybrid_reading, suppression_requirement, 5, 0.66).
+narrative_ontology:measurement(sex__su_t10, sex_gender_category__hybrid_reading, suppression_requirement, 10, 0.69).
+narrative_ontology:measurement(sex__su_t15, sex_gender_category__hybrid_reading, suppression_requirement, 15, 0.71).
+narrative_ontology:measurement(sex__su_t20, sex_gender_category__hybrid_reading, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement(sex__su_t25, sex_gender_category__hybrid_reading, suppression_requirement, 25, 0.72).
 
 
 /* ==========================================================================
@@ -290,13 +368,13 @@ narrative_ontology:affects_constraint(sex_gender_category__hybrid_reading, sex_g
 narrative_ontology:affects_constraint(sex_gender_category__hybrid_reading, sex_gender_category__identity_reading).
 
 % DUAL FORMULATION NOTE:
-% The sex_gender_category kernel is instantiated by three structurally distinct readings, each with different ε values, gatekeeping costs, victim sets, and authority distributions. The biology_reading uses reproductive biology as the sole criterion (ε low, no gatekeeping, no victims). The identity_reading uses subjective identification alone (ε low-moderate, minimal gatekeeping, victims are boundary-defenders). The hybrid_reading (THIS constraint) uses biology + medical transition (ε high, substantial gatekeeping, victims are those without access to or willingness to pursue transition). All three readings coexist as live institutional positions across different jurisdictions and professional bodies. Each reading is a separate constraint story; network links document how they compete and influence each other.
+% The sex/gender category kernel decomposes into three structurally distinct constraints, one per reading. The hybrid_reading (this file) defines membership via biology + medical transition. The biology_reading defines membership via immutable biology alone (higher exclusion of trans women, lower extraction from post-transition trans women). The identity_reading defines membership via self-identification alone (no medical gatekeeping, lower suppression, no medical-institution beneficiaries). These are not the same constraint measured three ways — they have different beneficiary/victim sets, different ε values, and different authority structures. They share a kernel (the contested category definition) but instantiate different structural claims. The reading_relations and axioms in cs_structure document the logical relationships. This story models the hybrid reading's ε at ~0.68 (substantial extraction via gatekeeping); sibling readings model different ε values reflecting different gate-setup costs and victim sets.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(sex_gender_category__hybrid_reading, moderate, 0.48).
+constraint_indexing:directionality_override(sex_gender_category__hybrid_reading, institutional, 0.12).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

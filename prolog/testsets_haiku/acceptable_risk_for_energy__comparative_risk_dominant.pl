@@ -40,10 +40,18 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,48 +76,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: acceptable_risk_for_energy__comparative_risk_dominant
- *   human_readable: Comparative Risk Framework for Nuclear Energy Acceptability
- *   domain: energy_policy/risk_assessment/public_safety
+ *   human_readable: Comparative Risk Acceptability Standard for Nuclear Energy
+ *   domain: risk_assessment/energy_policy/public_safety
  *
  * SUMMARY:
- *   A dominant risk framework for energy policy and nuclear deployment holds
- *   that nuclear risk becomes acceptable only when compared against and found
- *   lower than competing risks, particularly coal emissions and climate
- *   catastrophe. This reading lacks an absolute safety threshold; instead,
- *   acceptability is relational—nuclear is good enough if the alternative is
- *   worse. The reading generates beneficiaries (nuclear operators, fossil
- *   incumbents, developed economies avoiding costly decarbonization),
- *   identifiable victims (intergenerational waste bearers, climate-vulnerable
- *   populations, accident-zone residents), and active enforcement mechanisms
- *   (regulatory licensing, environmental review standards anchored to coal
- *   baselines, suppression of alternatives like renewables-only pathways).
- *   The constraint operates as a tangled rope: it genuinely solves the
- *   coordination problem of energy choice under climate urgency (coordination
- *   function), while simultaneously extracting intergenerational burden and
- *   political power from powerless and unborn populations (extraction
- *   function). The metrics reveal rising extractiveness from 1990 (0.38) to
- *   present (0.68), rising theater ratio (performative safety review without
- *   fundamental challenge to the framework) from 0.15 to 0.41, and high
- *   suppression (0.72) maintained through regulatory enforcement. The
- *   constraint is ONE READING of the contested kernel
- *   'acceptable_risk_for_energy', competing with tail-dominance and
- *   expected-value readings that would produce different victim sets and
- *   beneficiaries. The kernel context section details the sibling readings
- *   and their structural relationships to this one.
+ *   Nuclear energy is evaluated in energy policy through competing risk
+ *   frameworks. This constraint represents the COMPARATIVE-RISK-DOMINANT
+ *   reading: nuclear acceptability is contingent on fossil fuel alternatives,
+ *   not absolute thresholds. A coal/gas/nuclear choice framework justifies
+ *   nuclear operation and expansion by treating coal's documented emissions
+ *   and health costs as the reference baseline. The reading subordinates
+ *   intergenerational waste concerns (multi-millennial stewardship) to
+ *   near-term climate urgency (0–50 year decarbonization window). Victims
+ *   include nuclear waste-receiving communities (concentrated, certain, local
+ *   risk), climate-vulnerable populations (who benefit from rapid
+ *   decarbonization but face immediate catastrophe if it doesn't happen), and
+ *   future generations who inherit both climate restoration and perpetual
+ *   waste hazards without having chosen the tradeoff.
  *
  * KEY AGENTS:
- *   - nuclear_industry_and_operators: Institutional beneficiary and agenda-setter; controls the framing of acceptability through regulatory engagement; benefits directly from comparative frame.
- *   - fossil_fuel_incumbent_operators: Institutional beneficiary; coal becomes the implicit baseline rather than an alternative to eliminate entirely; benefits from frame's temporal orientation that delays full decarbonization.
- *   - developed_economies_high_electricity_demand: Institutional beneficiary; avoids political cost of demand reduction or rapid renewable buildout; maintains baseload reliability under the constraint.
- *   - climate_vulnerable_populations: Powerless payer; bears acute climate harms AND disproportionate nuclear risk (siting, waste); structurally unrepresented in benefit side.
- *   - intergenerational_future_bearers: Powerless payer (powerless because unborn); inherits waste obligation with timescales exceeding civilization lifespans.
- *   - radioactive_waste_inheritors: Powerless payer; carry the obligation to maintain institutional continuity and containment across timescales that exceed known human governmental lifespans.
- *   - nuclear_accident_proximate_residents: Moderate power payer; live under accident risk with constrained exit (economic and social embededness).
- *   - catastrophic_tail_reading_proponents: Excluded; their reading dominates risk by low-probability high-consequence events, structurally excluded by framework's temporal prioritization.
- *   - regulatory_and_policy_authorities: Agenda-setter; enforces the comparative frame through licensing standards; constrained by inherited legal structures and political pressure.
- *   - renewable_energy_advocates: Excluded; the comparative frame (nuclear vs. coal) pre-selects both away from renewables.
- *   - scientific_expert_communities: Observer seat; produces risk assessments that underpin the framework; substantive but not controlling.
- *   - climate_advocates_and_ngos: Bifurcated payer/beneficiary; benefit from temporal urgency prioritization but pay the cost of accepting intergenerational burden as climate-urgency cost.
+ *   - nuclear_industry_operators: institutional beneficiary and agenda-setter; control risk communication and license justification
+ *   - climate_mitigation_governments: institutional agenda-setter and partial beneficiary; enforce comparative-risk standard in policy and emissions accounting
+ *   - climate_vulnerable_populations: powerless payers; depend on rapid decarbonization now, trapped in the belief that nuclear acceleration is necessary
+ *   - nuclear_waste_receiving_communities: moderate-power payers; host concentrated, certain, multi-millennial hazard; excluded from comparative-risk framing that pre-empts their objections
+ *   - catastrophic_tail_theorists: moderate-power excluded; argue tail-risk dominance should supersede comparative framing; structurally out of the policy conversation
+ *   - intergenerational future bearing: non-agent placeholder; embodies the time-asymmetric burden transfer the constraint enacts
  */
 
 /* ==========================================================================
@@ -118,63 +110,118 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(acceptable_risk_for_energy__comparative_risk_dominant, 0.68).
 domain_priors:suppression_score(acceptable_risk_for_energy__comparative_risk_dominant, 0.72).
-domain_priors:theater_ratio(acceptable_risk_for_energy__comparative_risk_dominant, 0.41).
+domain_priors:theater_ratio(acceptable_risk_for_energy__comparative_risk_dominant, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, extractiveness, 0.68).
 narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, accessibility_collapse, 0.51).
 narrative_ontology:constraint_metric(acceptable_risk_for_energy__comparative_risk_dominant, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(acceptable_risk_for_energy__comparative_risk_dominant, tangled_rope).
-narrative_ontology:human_readable(acceptable_risk_for_energy__comparative_risk_dominant, "Comparative Risk Framework for Nuclear Energy Acceptability").
-narrative_ontology:topic_domain(acceptable_risk_for_energy__comparative_risk_dominant, "energy_policy/risk_assessment/public_safety").
+narrative_ontology:human_readable(acceptable_risk_for_energy__comparative_risk_dominant, "Comparative Risk Acceptability Standard for Nuclear Energy").
+narrative_ontology:topic_domain(acceptable_risk_for_energy__comparative_risk_dominant, "risk_assessment/energy_policy/public_safety").
 
 domain_priors:requires_active_enforcement(acceptable_risk_for_energy__comparative_risk_dominant).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(acceptable_risk_for_energy__comparative_risk_dominant, '382ac4c1-6894-4a3b-83d3-917e1219b3c1').
-narrative_ontology:cs_kernel_codification('382ac4c1-6894-4a3b-83d3-917e1219b3c1', formalized).
-narrative_ontology:cs_authority_grounding('382ac4c1-6894-4a3b-83d3-917e1219b3c1', expertise).
-narrative_ontology:cs_interpretation_layer_present('382ac4c1-6894-4a3b-83d3-917e1219b3c1').
-narrative_ontology:cs_reading_relation('382ac4c1-6894-4a3b-83d3-917e1219b3c1', acceptable_risk_for_energy__catastrophic_tail_dominant, coexists_with).
-narrative_ontology:cs_reading_relation('382ac4c1-6894-4a3b-83d3-917e1219b3c1', acceptable_risk_for_energy__expected_value_dominant, influences).
-narrative_ontology:cs_axiom('382ac4c1-6894-4a3b-83d3-917e1219b3c1', foundational, comparative_risk_dominates_absolute_thresholds).
-narrative_ontology:cs_axiom_status(comparative_risk_dominates_absolute_thresholds, holdable).
-narrative_ontology:cs_axiom_grounding('382ac4c1-6894-4a3b-83d3-917e1219b3c1', comparative_risk_dominates_absolute_thresholds, empirically_contingent).
-narrative_ontology:cs_axiom('382ac4c1-6894-4a3b-83d3-917e1219b3c1', foundational, present_climate_urgency_overrides_intergenerational_burden).
-narrative_ontology:cs_axiom_status(present_climate_urgency_overrides_intergenerational_burden, holdable).
-narrative_ontology:cs_axiom_grounding('382ac4c1-6894-4a3b-83d3-917e1219b3c1', present_climate_urgency_overrides_intergenerational_burden, empirically_contingent).
-narrative_ontology:cs_axiom('382ac4c1-6894-4a3b-83d3-917e1219b3c1', secondary, coal_baseline_is_relevant_comparison).
-narrative_ontology:cs_axiom_status(coal_baseline_is_relevant_comparison, holdable).
-narrative_ontology:cs_axiom_grounding('382ac4c1-6894-4a3b-83d3-917e1219b3c1', coal_baseline_is_relevant_comparison, conventional).
-narrative_ontology:cs_reference_frame('382ac4c1-6894-4a3b-83d3-917e1219b3c1', comparative_risk_baseline_coal).
-narrative_ontology:cs_drift_state('382ac4c1-6894-4a3b-83d3-917e1219b3c1', contemporary_renewable_deployment_acceleration, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('382ac4c1-6894-4a3b-83d3-917e1219b3c1', '2026-06-12T14:32:00Z').
+narrative_ontology:cs_story_uid(acceptable_risk_for_energy__comparative_risk_dominant, 'd13626b5-0793-4c65-b151-d1e2ea200132').
+narrative_ontology:cs_kernel_codification('d13626b5-0793-4c65-b151-d1e2ea200132', distributed).
+narrative_ontology:cs_authority_grounding('d13626b5-0793-4c65-b151-d1e2ea200132', extraction).
+narrative_ontology:cs_interpretation_layer_present('d13626b5-0793-4c65-b151-d1e2ea200132').
+narrative_ontology:cs_reading_relation('d13626b5-0793-4c65-b151-d1e2ea200132', acceptable_risk_for_energy__catastrophic_tail_dominant, coexists_with).
+narrative_ontology:cs_reading_relation('d13626b5-0793-4c65-b151-d1e2ea200132', acceptable_risk_for_energy__expected_value_dominant, influences).
+narrative_ontology:cs_axiom('d13626b5-0793-4c65-b151-d1e2ea200132', foundational, fossil_alternative_baseline_necessary).
+narrative_ontology:cs_axiom_status(fossil_alternative_baseline_necessary, holdable).
+narrative_ontology:cs_axiom_grounding('d13626b5-0793-4c65-b151-d1e2ea200132', fossil_alternative_baseline_necessary, empirically_contingent).
+narrative_ontology:cs_axiom('d13626b5-0793-4c65-b151-d1e2ea200132', foundational, temporal_discount_of_intergenerational_burden).
+narrative_ontology:cs_axiom_status(temporal_discount_of_intergenerational_burden, holdable).
+narrative_ontology:cs_axiom_grounding('d13626b5-0793-4c65-b151-d1e2ea200132', temporal_discount_of_intergenerational_burden, instrumental).
+narrative_ontology:cs_reference_frame('d13626b5-0793-4c65-b151-d1e2ea200132', coal_gas_nuclear_choice_framework).
+narrative_ontology:cs_drift_state('d13626b5-0793-4c65-b151-d1e2ea200132', renewable_cost_collapse_scenario, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('d13626b5-0793-4c65-b151-d1e2ea200132', '').
 narrative_ontology:cs_kernel_id(acceptable_risk_for_energy__comparative_risk_dominant, acceptable_risk_for_energy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_industry).
-narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, fossil_fuel_incumbent_operators).
-narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, developed_economies_high_electricity_demand).
+narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_industry_operators).
+narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, carbon_mitigation_advocates).
+narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, developed_economy_energy_consumers).
+narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_waste_receiving_communities).
 narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, climate_vulnerable_populations).
-narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, intergenerational_future_bearers).
-narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, radioactive_waste_inheritors).
-narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_accident_proximate_residents).
+narrative_ontology:constraint_victim(acceptable_risk_for_energy__comparative_risk_dominant, intergenerational_future_bearing).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(acceptable_risk_for_energy__comparative_risk_dominant, climate_mitigation_governments).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Operate nuclear plants and manage waste. Frame nuclear acceptability through comparative risk: the coal alternative is demonstrably worse (emissions, air pollution deaths), so nuclear's residual risks (catastrophic tail, intergenerational burden) are justified as the lesser harm. Control technical risk communication and license-renewal justifications. Depend on governments enforcing this comparative standard to secure continued operation and delay decommissioning decisions.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_industry_operators, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Adopt the comparative-risk frame in emissions accounting and energy policy because it enables near-term decarbonization without closing the nuclear option. A coal/gas/nuclear choice framework justifies keeping nuclear plants running and greenlighting new builds as the fastest path to carbon reduction. The constraint subordinates intergenerational waste concerns (long tail) to near-term climate urgency.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, climate_mitigation_governments, agenda_setter,
+    institutional, generational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(acceptable_risk_for_energy__comparative_risk_dominant, climate_mitigation_governments, beneficiary).
+
+% Bear catastrophic climate impacts now (sea level rise, crop failure, displacement) and in the next 30 years. The comparative-risk reading treats climate as the immediate, measurable threat (monetized in expected-value calculations) while treating nuclear waste burden as speculative future cost. Their immediate survival depends on rapid decarbonization; the comparative-risk frame justifies nuclear acceleration to achieve it, even at cost of multi-millennial waste responsibility.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, climate_vulnerable_populations, payer,
+    powerless, immediate, trapped, regional).
+
+% Host nuclear waste repositories, storage facilities, or processing sites with hazard horizons spanning millennia. The comparative-risk reading defers their burden to a future so distant it is treated as externality, not obligation. They bear concentrated, certain risk (geological hazard, failure of institutional continuity) while the beneficiaries bear diffuse, near-term climate risk (monetized and insured). Institutional capture prevents them from blocking siting decisions.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_waste_receiving_communities, payer,
+    moderate, civilizational, trapped, local).
+
+% Future generations who inherit both the climate restoration from accelerated nuclear decarbonization AND the multi-millennial waste stewardship burden. The comparative-risk frame is time-asymmetric: it weights near-term climate urgency (0–50 years) heavily in decisions that create perpetual hazards (10,000+ years). A non-agent placeholder for the intergenerational obligation the constraint embeds.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, intergenerational_future_bearing, payer,
+    powerless, civilizational, trapped, global).
+narrative_ontology:stakeholder_non_agent(acceptable_risk_for_energy__comparative_risk_dominant, intergenerational_future_bearing).
+
+% Argue that low-probability, high-consequence nuclear events (Fukushima-scale meltdown cascades, waste repository failure, terrorism) should dominate the risk calculus independent of coal emissions context, because irreversibility and intergenerational harm cannot be discounted at market rates. Are structurally excluded from policy-setting because the comparative-risk frame pre-empts their voice: once coal is the reference baseline, tail-risk objections appear obstructionist rather than analytically grounded.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, catastrophic_tail_theorists, excluded,
+    moderate, civilizational, constrained, global).
+
+% Measure, report, and certify the comparative-risk standard. Model coal emissions vs. nuclear risk, commission technical studies, issue licenses conditional on the framework. Operationalize the reading through regulatory standards that require applicants to justify nuclear acceptability relative to fossil alternatives rather than against absolute safety thresholds.
+narrative_ontology:constraint_stakeholder(acceptable_risk_for_energy__comparative_risk_dominant, energy_policy_agencies, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(acceptable_risk_for_energy__comparative_risk_dominant, nuclear_industry_operators).
+narrative_ontology:fixing_cost_class(acceptable_risk_for_energy__comparative_risk_dominant, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a framework for rapid decarbonization by positioning nuclear as the risk-justified alternative to carbon-intensive fossil fuels, enabling policy coordination around climate urgency rather than stalling on nuclear tail risks.
+% TRANSFER_FUNCTION: Moves the burden of multi-millennial radioactive stewardship from current generations (who benefit from near-term climate mitigation and reliable low-carbon energy) to future generations who inherit the waste repositories and hazard-management institutions without having chosen the tradeoff.
+% ABSENT_VOICES: Intergenerational future stakeholders have no seat at the table; catastrophic-tail risk theorists and indigenous communities hosting repositories are structurally excluded from the comparative-risk framing that pre-empts their objections; long-term waste recipients lack the political standing to block decisions made on shorter time horizons.
+% DISAPPEARANCE_RATIONALE: If the comparative-risk standard vanished and societies reverted to absolute safety thresholds or tail-risk dominance, near-term nuclear capacity would contract sharply (decommissioning accelerates, new builds freeze), forcing faster renewable scaling or continued reliance on fossil fuels. Climate policy would reorganize around non-nuclear decarbonization pathways with different intergenerational burden profiles.
+% FOUNDING_PROBLEM: Climate change acceleration in the 2010s–2020s created policy urgency requiring near-term emissions elimination; coal and gas are demonstrably catastrophic on carbon and public health grounds; nuclear was the available low-carbon baseload technology. The problem: how to operationalize climate urgency without the multi-decade build timelines that renewable-only systems require.
+% FOUNDING_PROBLEM_CORROBORATION: Climate scientists, energy engineers, and decarbonization policy bodies (IPCC, IEA, national climate commitments) attest the founding problem remains urgent. Waste repositories and indigenous communities affected by siting attest that the problem's urgency justifies imposing perpetual stewardship on them without their consent or seat at the decision. Intergenerational ethics theorists outside the energy industry contest whether near-term urgency legitimates infinite-horizon liability transfer.
+narrative_ontology:disappearance_verdict(acceptable_risk_for_energy__comparative_risk_dominant, world_rearranges).
+narrative_ontology:founding_problem_status(acceptable_risk_for_energy__comparative_risk_dominant, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(acceptable_risk_for_energy__comparative_risk_dominant, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(acceptable_risk_for_energy__comparative_risk_dominant, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(acceptable_risk_for_energy__comparative_risk_dominant, 'none', 1).
+narrative_ontology:epsilon_provenance(acceptable_risk_for_energy__comparative_risk_dominant, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -194,16 +241,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness metric (0.68 at interval end) reflects the core asymmetry: intergenerational waste obligation is transferred from electricity consumers and policymakers (present) to inheritors (future); accident risk is sited near economically and politically powerless populations; and the framework's temporal urgency overrides intergenerational reversibility concerns. The suppression metric (0.72) measures the active enforcement machinery: regulatory barriers to alternatives (renewables-only pathways), capital and political support concentrated in nuclear/fossil incumbents, and the internalization of coal-comparison framing as 'natural' or 'necessary.' Theater ratio (0.41) reflects the growing divergence between the framework's presented safety-review function and its actual enforcement function (maintaining the comparative frame, defending nuclear against absolute-threshold critiques). The measurement series shows rising extractiveness and theater over the interval (1990–2050), with a plateau after 2035 as the framework matures and stabilizes: early-period values reflect the framework's emergence and climb to dominance; plateau reflects mature institutional capture. Accessibility collapse (0.62) is moderate-low because alternatives (renewables, demand reduction) remain formally available but are politically and institutionally de-prioritized by the framework; they haven't collapsed entirely but the framework has narrowed the choice set to binary (nuclear or coal). Resistance (0.58) indicates substantial pushback from intergenerational ethics scholars, renewable advocates, and some affected populations, but the resistance is organizationally outmatched and excluded from decision tables by the framework's institutional dominance.
+ *   Extractiveness is high (0.68 at interval end) because the constraint redistributes risk and burden across time in a way that benefits current decision-makers and climate-urgent populations at the cost of future generations and waste-repository hosts. Suppression is higher still (0.72) because the constraint actively excludes tail-risk voices and intergenerational objections from policy discourse — the comparative frame pre-empts them, making them appear obstructionist. Theater is moderate (0.42) and rising: early periods feature genuine technical risk management; later periods show increasing performative justification as intergenerational burden becomes undeniable. The measurement series tracks the constraint's maturation: extractiveness and suppression increase over time as the framework hardens and alternatives (renewable acceleration without nuclear) seem less politically feasible; theater increases as the gap between the coordination story (climate urgency justifies nuclear) and the lived experience (waste keeps piling up, climate mitigation timelines slip) widens. All metrics share a single time grid so values are authored at every measured point.
  *
  * PERSPECTIVAL GAP:
- *   The nuclear industry and regulatory authorities perceive the constraint as genuine coordination (solving the binding problem of energy choice under climate urgency, enabling decarbonization when perfect alternatives are unavailable). The payer seats—particularly intergenerational inheritors, climate-vulnerable populations, and accident-zone residents—perceive it as enforced extraction masked as technical optimization. The engine should compute these as different type classifications from the same structural data: the agenda-setter seat (regulatory authority + industry) sees rope-like coordination; the powerless payer seats see snare-like extraction. This perspectival gap arises from the asymmetry in beneficiary/victim declarations, exit options, and time horizons authored into the structural data. The analytical observer seat (scientific expert communities) should compute as near-symmetric (produces analyses consumed by both sides, neither fundamentally disadvantaged by the constraint) or slightly toward the beneficiary end (their expertise is valued and funded by the regime).
+ *   From the operator and government seats, the constraint is genuine coordination justified by climate urgency — a necessary tradeoff where near-term climate catastrophe outweighs long-term waste concerns. From the waste repository seat, the same constraint is extraction camouflaged as coordination: beneficiaries escape the choice and impose it unilaterally. From the intergenerational seat (if it could speak), the constraint is a temporal externality — a theft of future autonomy to fund present utility. The engine computes per-seat classification from power, exit options, and the beneficiary/victim structure; the authored metrics describe operation across all seats simultaneously. Where the computation diverges from the claimed type, that is the measurement the corpus takes.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derivation chains from beneficiary/victim declarations and exit options. Nuclear industry and fossil incumbents: declared beneficiaries with arbitrage-grade exit (they can switch regulatory jurisdictions, capital flows, business models if needed—though none do, because the constraint benefits them). Directionality near 0.0 (full beneficiary end). Intergenerational future bearers: declared victims with trapped exit (no exit possible; they inherit the waste or face the accident whether or not they participate). Directionality near 1.0 (full target end). Climate-vulnerable populations: declared victims with trap-type exit (geographic, economic dependency on energy systems and locations; exit requires relocation and capital that powerless populations lack). Directionality near 0.9. Nuclear accident proximate residents: moderate power, constrained exit (can leave but at substantial economic cost; cannot bargain because they're local, dispersed, powerless-to-moderate relative to institutional actors). Directionality near 0.75. Developed economy institutional actors: declared beneficiaries with constrained exit (can adopt different energy pathways but face political and capital constraints; no pure arbitrage available because decarbonization timelines are binding). Directionality near 0.15. Regulatory authorities: agenda-setter role, constrained exit (can reframe the acceptable-risk metric but face industry pressure and legal inheritance). Directionality slightly upward from full beneficiary, perhaps 0.20-0.30, because they hold formal power but are informationally and institutionally captured. Climate-advocate NGOs: bifurcated beneficiary/payer role creates conflict; their directionality should split (some orgs move toward full beneficiary at ~0.05 as they embrace nuclear; others move toward payer at ~0.70 as they prioritize intergenerational concern). One directionality override may be warranted for regulatory authorities: structural derivation might place them at 0.35 (moderate power, constrained by industry and legal structure), but explicit override to 0.25 could reflect their formal agenda-setting authority being substantially captured.
+ *   The operator and climate-mitigation governments sit at the beneficiary end (d near 0.0): they collect operational licenses, policy legitimacy, and time to address climate through their preferred technology pathway. Climate-vulnerable populations sit near symmetric (d~0.5): they genuinely benefit from rapid decarbonization but also bear diffuse indirect cost if nuclear expansion crowds out renewable investment or locks in centralized energy systems. Nuclear waste repositories and intergenerational future sit at the target end (d near 1.0): they bear concentrated, certain, multi-millennial hazard with no voice in the decision and no exit option. The constraint's enforceability depends on keeping the target seats' voices excluded (suppression) — if waste communities had equal standing, the comparative-risk frame would collapse under explicit negotiation over who bears perpetual stewardship. The asymmetry is structural, not incidental.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (climate catastrophe risk from fossil fuels; energy deployment timelines; decarbonization stalemate) is live and urgent. The constraint's mandate (enable nuclear deployment by establishing comparative risk acceptability against coal) is directly responsive to that problem. However, there are indicators of mandate drift: (1) The theater ratio rising from 0.15 to 0.41 suggests growing performative activity (safety reviews, stakeholder consultations, environmental impact assessments) decoupled from fundamental challenge to the framework—the framework itself is not contested in the regulatory process, only its application is. (2) Suppression remaining at 0.72 despite climate consensus growth suggests enforcement effort is not declining despite problem maturation; this could indicate that alternatives (renewables deployment scaling rapidly) now pose a threat to the framework's dominance, requiring sustained suppression. (3) The accessibility-collapse measure (0.62) is moderate: renewables and demand reduction remain formally available options, but the comparative frame has narrowed institutional and capital allocation toward nuclear/coal, effectively suppressing the accessibility. A genuine mandate-drift signal would be: if climate urgency visibly declined (decarbonization accelerated through unexpected means, climate predictions improved) but the constraint persisted with unchanged suppression, that would signal the constraint has lost its original mandate and is now held by institutional inertia. The authored measurements plateau at 2035, suggesting the framework achieves stable maturity rather than declining. A true mandatrophy reading would require showing rising theater and declining beneficiary function (people stop benefiting and only enforcement machinery remains), which the data does not yet show. Mandatrophy is not yet resolved here, but the theater-ratio trajectory and suppression-under-declining-urgency would be the signals to watch.
+ *   The founding problem (climate urgency) is live and pressing. The constraint's type claim (tangled_rope) asserts it solves genuine coordination (climate mitigation) with asymmetric extraction (future burden). That claim is plausible: climate mitigation IS the coordination function; nuclear IS capable of providing decarbonized baseload; the extraction (multi-millennial waste stewardship) is real and asymmetric. The risk of mandatrophy is deferred not eliminated — if climate becomes stabilized over the next 30–50 years (renewable costs collapse, carbon pricing eliminates coal, fusion arrives), and nuclear waste becomes the dominant concern rather than climate, the constraint's founding problem dies while the extraction persists. At that point (founding_problem_status would shift to 'dead'), the measured theater_ratio and suppression become piton signals. The constraint has not yet become a piton, but its trajectory is toward one — the measurement series shows theater rising and suppression holding. The mandatrophy vulnerability is real and named here as a structural risk.
  */
 
 /* ==========================================================================
@@ -211,99 +258,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    baseline_choice_contingency,
-    'Is the comparative risk framework''s foundation genuinely that nuclear-vs-coal comparison, or is this an arbitrary selection that could be replaced by nuclear-vs-renewables or nuclear-vs-demand-reduction?',
-    'Historical analysis of policy deliberation: who proposed the coal baseline, when, and against what alternatives? Did the choice come from technical risk analysis or from political constraints that made coal the baseline of comparison?',
-    'If the coal baseline was chosen because renewables were politically or technically infeasible at the time but are now feasible, the framework''s justification has been superseded; if it was chosen for technical reasons, the framework remains defensible until those technical conditions change.',
+    comparative_baseline_stability,
+    'Will coal and gas remain the reference baseline, or will renewable cost collapse eliminate the comparative-risk frame''s legitimacy?',
+    'Empirical: if renewable energy becomes cheaper and faster to deploy than nuclear across a large jurisdiction, the comparative frame loses rhetorical force and policy attention shifts to tail risks or expected-value optimization.',
+    'If the coal baseline becomes obsolete, the comparative-risk constraint loses its founding legitimacy. The constraint would reclassify toward piton (extraction persisting after coordination function atrophies) or be abandoned entirely. Type would shift from tangled_rope to snare (pure extraction) or dissolved.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(baseline_choice_contingency, empirical, 'Whether the coal comparison is natural to the problem or contingent on earlier constraints.').
+narrative_ontology:omega_variable(comparative_baseline_stability, empirical, 'Whether fossil fuel alternatives remain the policy reference baseline or become economically/technically obsolete.').
 
 omega_variable(
-    intergenerational_commensurability,
-    'Is it coherent to discount intergenerational radioactive waste obligations against present-day climate urgency, or does the irreversibility of waste and the timescale of half-lives place it outside the scope of a comparative risk calculus that operates on human decision horizons?',
-    'Normative frameworks from intergenerational ethics and environmental philosophy. Can temporal urgency for one generation justify transferring permanent obligation to unknown successors? If not, the framework''s comparison is inapplicable.',
-    'If intergenerational waste is incommensurable with present urgency, the framework fails on its own terms; if commensurable, the framework is robust to the objection.',
+    intergenerational_voice_inclusion,
+    'Can intergenerational interests be represented in policy without the speaking generations ceding autonomy, or is the time-asymmetry irreducible?',
+    'Institutional experimentation: if jurisdictions adopt intergenerational ombudspersons or constitutional future-stewardship rights, and if these institutions block high-extraction comparative-risk decisions, the structure changes. If they are ignored or captured, the asymmetry persists.',
+    'Inclusion would shift the victim set and require comparative-risk framing to negotiate with the waste-bearing seat explicitly. Exclusion persists the current extraction where future voices are pre-emptively suppressed. The constraint''s suppression metric would drop if intergenerational objections gained standing.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(intergenerational_commensurability, conceptual, 'Whether present climate urgency can legitimately weigh against intergenerational waste burden.').
+narrative_ontology:omega_variable(intergenerational_voice_inclusion, conceptual, 'Whether multi-generational decision-making can accommodate the interests of future stakeholders without current generations forfeiting policy control.').
 
 omega_variable(
-    reading_versus_tail_dominance,
-    'Do low-probability high-consequence scenarios (10,000-year waste failure, Chernobyl-scale events cascading across multiple reactors, unknown unknowns in geological containment) have a meaningful probability and consequence enough to override the comparative expected-value calculation?',
-    'Empirical: models from tail-risk analysis, geological uncertainty assessment, and analysis of accidents whose prior probability was considered negligible (Fukushima, Chernobyl). Conceptual: whether probability-weighted tail risk should dominate expected-value optimization.',
-    'If tail risks are material and non-negligible, the comparative framework is incomplete (it optimizes expected value while leaving tail risk uncontrolled). The constraint would need to include tail-dominance safeguards.',
-    confidence_without_resolution(high)
+    waste_repository_institutional_continuity,
+    'Can institutional commitments to waste stewardship survive the multi-millennial timescales the constraint assumes, or is perpetual stewardship a form of coercion disguised as technical impossibility?',
+    'Historical and speculative: examine analogues (ancient structures'' institutional survival, civilizational collapse patterns) and direct evidence of institutional decay. If multi-millennial stewardship proves institutionally impossible, the constraint''s risk calculus becomes incoherent (extraction with no feasible payoff).',
+    'If stewardship cannot be guaranteed, nuclear expansion on comparative-risk grounds becomes reckless harm, not justified risk. The constraint would reclassify as snare (pure extraction with externalized catastrophic risk) and lose policy legitimacy. Current operators would face liability for impossible commitments.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_versus_tail_dominance, empirical, 'Whether the comparative framework adequately accounts for low-probability high-consequence scenarios.').
+narrative_ontology:omega_variable(waste_repository_institutional_continuity, empirical, 'Whether multi-millennial institutional stewardship of radioactive waste is practically achievable given historical patterns of institutional failure and civilizational change.').
 
 omega_variable(
-    suppression_mechanism_internalized,
-    'Is the measured suppression (0.72) primarily structural (regulatory barriers, capital investment dependency, geographic siting constraints imposed externally) or internalized (populations near reactors accept risk as inevitable, opponents accept coal-comparison frame as natural, future advocates feel obligated by present urgency)?',
-    'Post-framework-change trajectory: if suppression persists after the comparative frame is removed or abandoned, it is partially internalized; if it dissipates, it was primarily structural.',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests, and policy changes alone may not alter acceptance. If structural, regulatory reform can shift the equilibrium.',
+    reading_foreclosure_empirical,
+    'Do the comparative-risk frame''s core empirical premises (coal''s demonstrated harm, renewable cost timelines, nuclear construction speed) hold stable, or does evidence shift the epistemic ground to catastrophic-tail or expected-value readings?',
+    'Empirical data: coal-vs-nuclear health studies, renewable cost curves, modeled climate pathways, catastrophic event frequencies. If coal''s harm becomes deniable, or renewables become as fast as nuclear, or tail events more probable, the comparative frame loses empirical anchor.',
+    'Empirical shift would not foreclose the reading (different parties hold different readings regardless of evidence), but would destabilize its authority grounding. Policy attention would migrate toward readings that better fit the shifted evidence.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalized, empirical, 'Whether suppression is externally imposed or internally accepted.').
-
-omega_variable(
-    climate_urgency_as_cover_story,
-    'Is the appeal to climate urgency a genuine constraint on the decision (decarbonization really does require nuclear speed, no viable alternative exists to meet the deadline), or a rhetorical strategy to legitimize deployment that would occur for other reasons (capital availability, incumbent power, path dependency)?',
-    'Comparative historical analysis: in jurisdictions that chose renewables-only paths, did climate outcomes differ? Did the pace of deployment differ? Are there confounding variables (capital structure, political alignment, resource endowment)?',
-    'If urgency is genuine constraint, the comparative frame is justified as a necessary concession to solve climate. If it is rhetorical strategy, the framework is a cover story for incumbent extraction.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(climate_urgency_as_cover_story, empirical, 'Whether climate urgency is a binding constraint or a justification post-hoc.').
-
-omega_variable(
-    kernel_reading_identity,
-    'Is this constraint a reading of the kernel ''acceptable_risk_for_energy'' (defined by the contestation among catastrophic_tail_dominant, comparative_risk_dominant, and expected_value_dominant readings), or is it itself an instantiation of a deeper kernel about temporal urgency (defined by the contestation between present-climate-urgency and intergenerational-burden readings)?',
-    'Structural analysis of the constraint''s core claim: is the distinguishing feature the comparative-risk axiom (vs. tail dominance or expected value), or the temporal-priority axiom (present urgency over future burden)?',
-    'If the core is comparative-risk framing, this is a reading of the acceptable_risk kernel; if temporal priority is core, this reading bridges two kernels, and the constraint''s identity is ambiguous.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'Whether this constraint is a reading of one kernel or spans two kernels.').
+narrative_ontology:omega_variable(reading_foreclosure_empirical, empirical, 'Whether the comparative-risk reading''s empirical premises (coal harm dominance, renewable-timeline constraints, nuclear-speed advantage) remain robust as evidence evolves.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(acceptable_risk_for_energy__comparative_risk_dominant, 1990, 2050).
+narrative_ontology:interval(acceptable_risk_for_energy__comparative_risk_dominant, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(acce_tr_t1990, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 1990, 0.15).
-narrative_ontology:measurement(acce_tr_t2005, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 2005, 0.22).
-narrative_ontology:measurement(acce_tr_t2015, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 2015, 0.32).
-narrative_ontology:measurement(acce_tr_t2025, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 2025, 0.4).
-narrative_ontology:measurement(acce_tr_t2035, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 2035, 0.41).
-narrative_ontology:measurement(acce_tr_t2050, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 2050, 0.41).
+narrative_ontology:measurement(acce_tr_t0, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(acce_tr_t0, observed).
+narrative_ontology:measurement(acce_tr_t8, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 8, 0.3).
+narrative_ontology:measurement_basis(acce_tr_t8, observed).
+narrative_ontology:measurement(acce_tr_t16, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 16, 0.36).
+narrative_ontology:measurement_basis(acce_tr_t16, observed).
+narrative_ontology:measurement(acce_tr_t25, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 25, 0.4).
+narrative_ontology:measurement_basis(acce_tr_t25, observed).
+narrative_ontology:measurement(acce_tr_t35, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 35, 0.42).
+narrative_ontology:measurement_basis(acce_tr_t35, projected).
+narrative_ontology:measurement(acce_tr_t50, acceptable_risk_for_energy__comparative_risk_dominant, theater_ratio, 50, 0.42).
+narrative_ontology:measurement_basis(acce_tr_t50, projected).
 
 % Extraction over time
-narrative_ontology:measurement(acce_be_t1990, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 1990, 0.38).
-narrative_ontology:measurement(acce_be_t2005, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 2005, 0.48).
-narrative_ontology:measurement(acce_be_t2015, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 2015, 0.58).
-narrative_ontology:measurement(acce_be_t2025, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 2025, 0.65).
-narrative_ontology:measurement(acce_be_t2035, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 2035, 0.68).
-narrative_ontology:measurement(acce_be_t2050, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 2050, 0.68).
+narrative_ontology:measurement(acce_be_t0, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement_basis(acce_be_t0, observed).
+narrative_ontology:measurement(acce_be_t8, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 8, 0.51).
+narrative_ontology:measurement_basis(acce_be_t8, observed).
+narrative_ontology:measurement(acce_be_t16, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 16, 0.59).
+narrative_ontology:measurement_basis(acce_be_t16, observed).
+narrative_ontology:measurement(acce_be_t25, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 25, 0.65).
+narrative_ontology:measurement_basis(acce_be_t25, observed).
+narrative_ontology:measurement(acce_be_t35, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 35, 0.68).
+narrative_ontology:measurement_basis(acce_be_t35, projected).
+narrative_ontology:measurement(acce_be_t50, acceptable_risk_for_energy__comparative_risk_dominant, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement_basis(acce_be_t50, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(acce_su_t1990, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 1990, 0.48).
-narrative_ontology:measurement(acce_su_t2005, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 2005, 0.58).
-narrative_ontology:measurement(acce_su_t2015, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 2015, 0.66).
-narrative_ontology:measurement(acce_su_t2025, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 2025, 0.72).
-narrative_ontology:measurement(acce_su_t2035, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 2035, 0.72).
-narrative_ontology:measurement(acce_su_t2050, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 2050, 0.72).
+narrative_ontology:measurement(acce_su_t0, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement_basis(acce_su_t0, observed).
+narrative_ontology:measurement(acce_su_t8, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 8, 0.61).
+narrative_ontology:measurement_basis(acce_su_t8, observed).
+narrative_ontology:measurement(acce_su_t16, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 16, 0.67).
+narrative_ontology:measurement_basis(acce_su_t16, observed).
+narrative_ontology:measurement(acce_su_t25, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 25, 0.7).
+narrative_ontology:measurement_basis(acce_su_t25, observed).
+narrative_ontology:measurement(acce_su_t35, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 35, 0.72).
+narrative_ontology:measurement_basis(acce_su_t35, projected).
+narrative_ontology:measurement(acce_su_t50, acceptable_risk_for_energy__comparative_risk_dominant, suppression_requirement, 50, 0.72).
+narrative_ontology:measurement_basis(acce_su_t50, projected).
 
 
 /* ==========================================================================
@@ -314,16 +359,15 @@ narrative_ontology:coordination_type(acceptable_risk_for_energy__comparative_ris
 narrative_ontology:boltzmann_floor_override(acceptable_risk_for_energy__comparative_risk_dominant, 0.18).
 narrative_ontology:affects_constraint(acceptable_risk_for_energy__comparative_risk_dominant, acceptable_risk_for_energy__catastrophic_tail_dominant).
 narrative_ontology:affects_constraint(acceptable_risk_for_energy__comparative_risk_dominant, acceptable_risk_for_energy__expected_value_dominant).
-narrative_ontology:affects_constraint(acceptable_risk_for_energy__comparative_risk_dominant, temporal_urgency_dominates_intergenerational_burden).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the kernel 'acceptable_risk_for_energy'. The constraint family comprises three competing readings of the same kernel: catastrophic_tail_dominant, comparative_risk_dominant (this story), and expected_value_dominant. Each reading instantiates a different beneficiary/victim structure, a different acceptable-risk metric, and a different classification outcome per seat. The three are linked via network.affects_constraints because they compete for institutional dominance and policy adoption; whichever reading dominates shapes the acceptable-risk framework globally. A secondary network link exists to 'temporal_urgency_dominates_intergenerational_burden', a separate kernel contestation about the relative weight of present-day urgency vs. intergenerational burden; the comparative_risk_dominant reading presupposes a specific resolution of that second kernel.
+% This constraint is one of three readings of the kernel 'acceptable_risk_for_energy'. The comparative-risk-dominant reading treats nuclear acceptability as contingent on fossil fuel alternatives (coal/gas baseline). Sibling constraints catastrophic_tail_dominant and expected_value_dominant instantiate alternative readings of the same kernel with different ε values, victim sets, and temporal asymmetries. All three are live positions held by different policy constituencies; the readings coexist rather than foreclose each other, but this reading influences the others by establishing comparative-risk as the default policy frame.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(acceptable_risk_for_energy__comparative_risk_dominant, institutional, 0.25).
+constraint_indexing:directionality_override(acceptable_risk_for_energy__comparative_risk_dominant, powerful, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

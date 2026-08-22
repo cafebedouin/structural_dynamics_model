@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +74,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: manifesto_revolutionary_method__vanguard_rupture_reading
- *   human_readable: Vanguard Party Revolutionary Rupture — Dictatorship of Proletariat
+ *   human_readable: Vanguard Party Revolutionary Seizure and Proletarian Dictatorship
  *   domain: political_philosophy/revolutionary_theory
  *
  * SUMMARY:
- *   The vanguard rupture reading claims revolutionary transformation REQUIRES
- *   organized party seizure of state power and transitional dictatorship
- *   under party guidance to overcome capitalist state apparatus and organize
- *   post-revolutionary reconstruction. The claim is that this method solves a
- *   genuine coordination problem — concentrating force sufficient to break
- *   state machinery and preventing counter-revolutionary restoration. The
- *   metrics, however, describe substantially extractive, highly suppressive
- *   operation: extractiveness rises from 0.35 (revolutionary period) to 0.68
- *   (stabilized post-revolutionary state) as coordination demands yield to
- *   state apparatus consolidation; suppression rises sharply from 0.42 to
- *   0.82 as alternative pathways are closed and party monopoly enforced;
- *   theater ratio rises gradually from 0.28 to 0.41, indicating increasing
- *   performative framing of revolutionary discipline as historical necessity.
- *   The claim/metric gap is deliberate and diagnostic: the vanguard reading
- *   asserts coordination function; the temporal trajectory shows extraction
- *   accumulation and theater growth, which the engine will measure as either
- *   validating the coordination claim (if extraction genuinely diminishes as
- *   provisional dictatorship supposedly transitions to communism) or as
- *   evidence the constraint has devolved into state power capture by a new
- *   ruling class.
+ *   This constraint instantiates the vanguard rupture reading of the
+ *   manifesto revolutionary method kernel — the commitment that revolutionary
+ *   transformation requires organized party seizure of state power and that
+ *   the dictatorship of the proletariat functions as a necessary transitional
+ *   state form under party guidance. The reading claims that capitalism
+ *   cannot be reformed through democratic gradualism and that autonomous
+ *   worker organizations lack the discipline and theory to prevent
+ *   counter-revolutionary restoration. The party vanguard is positioned as
+ *   the agent with superior theoretical understanding (scientific socialism)
+ *   and organizational capacity to navigate the transition. This reading is
+ *   contested: council communists argue that workers' councils (soviets)
+ *   should replace both capitalist state AND vanguard party; democratic
+ *   gradualists argue transformation can occur through electoral majorities
+ *   and democratic institutions. The vanguard reading suppresses both
+ *   alternatives through organizational monopoly and state enforcement,
+ *   making this a high-extraction, highly-enforced constraint.
  *
  * KEY AGENTS:
- *   - party_cadres: Organized group claiming scientific revolutionary authority; sets post-seizure agenda; theoretically temporary during dictatorship of proletariat phase but institutionally permanent
- *   - state_planning_apparatus: Inherits state power; benefits from concentration of economic decision authority; cannot exit without dismantling revolutionary state
- *   - autonomous_worker_organizations: Pre-revolutionary independent unions and councils; suppressed under vanguard discipline; trapped without option to reassert autonomy
- *   - working_class_base: Mass on whose behalf vanguard claims to act; receives promise of future communist liberation; bears present suppression and labor discipline
- *   - political_pluralists: Competing revolutionary and democratic factions; institutionally excluded and suppressed as class enemies or historical obstacles
- *   - theoretical_marxist_orthodoxy: Doctrinal framework the constraint vindicates; non-agent entry but structurally beneficiary
+ *   - Party vanguard: organized revolutionary leadership, identity-locked to party mission, controls state apparatus and suppresses alternatives
+ *   - Central planning apparatus: state bureaucracy that collects rents through authority over production allocation and priority goods distribution
+ *   - Industrial working class: theoretical beneficiary but practically subject to labor discipline, wage suppression, and suppression of autonomous organization
+ *   - Political pluralists and autonomous worker organizations: victims trapped within the national scope, denied voice in decision-making, systematically suppressed
+ *   - Independent peasantry: victims subject to forced collectivization, requisitions, and material deprivation during transition
+ *   - International socialist movement: observers debating vanguard strategy but lacking binding authority over national implementations
  */
 
 /* ==========================================================================
@@ -107,62 +110,130 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(manifesto_revolutionary_method__vanguard_rupture_reading, 0.68).
-domain_priors:suppression_score(manifesto_revolutionary_method__vanguard_rupture_reading, 0.82).
-domain_priors:theater_ratio(manifesto_revolutionary_method__vanguard_rupture_reading, 0.41).
+domain_priors:suppression_score(manifesto_revolutionary_method__vanguard_rupture_reading, 0.79).
+domain_priors:theater_ratio(manifesto_revolutionary_method__vanguard_rupture_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 0.82).
-narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 0.79).
+narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, accessibility_collapse, 0.79).
-narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, resistance, 0.73).
+narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(manifesto_revolutionary_method__vanguard_rupture_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(manifesto_revolutionary_method__vanguard_rupture_reading, tangled_rope).
-narrative_ontology:human_readable(manifesto_revolutionary_method__vanguard_rupture_reading, "Vanguard Party Revolutionary Rupture — Dictatorship of Proletariat").
+narrative_ontology:human_readable(manifesto_revolutionary_method__vanguard_rupture_reading, "Vanguard Party Revolutionary Seizure and Proletarian Dictatorship").
 narrative_ontology:topic_domain(manifesto_revolutionary_method__vanguard_rupture_reading, "political_philosophy/revolutionary_theory").
 
 domain_priors:requires_active_enforcement(manifesto_revolutionary_method__vanguard_rupture_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(manifesto_revolutionary_method__vanguard_rupture_reading, 'e5f2152a-15a8-47fc-a9de-333d6edf2909').
-narrative_ontology:cs_kernel_codification('e5f2152a-15a8-47fc-a9de-333d6edf2909', fixed_text).
-narrative_ontology:cs_authority_grounding('e5f2152a-15a8-47fc-a9de-333d6edf2909', lineage).
-narrative_ontology:cs_interpretation_layer_present('e5f2152a-15a8-47fc-a9de-333d6edf2909').
-narrative_ontology:cs_reading_relation('e5f2152a-15a8-47fc-a9de-333d6edf2909', manifesto_revolutionary_method__council_communist_reading, forecloses).
-narrative_ontology:cs_reading_relation('e5f2152a-15a8-47fc-a9de-333d6edf2909', manifesto_revolutionary_method__democratic_gradualism_reading, influences).
-narrative_ontology:cs_axiom('e5f2152a-15a8-47fc-a9de-333d6edf2909', foundational, vanguard_party_necessary_for_class_consciousness).
-narrative_ontology:cs_axiom_status(vanguard_party_necessary_for_class_consciousness, holdable).
-narrative_ontology:cs_axiom_grounding('e5f2152a-15a8-47fc-a9de-333d6edf2909', vanguard_party_necessary_for_class_consciousness, empirically_contingent).
-narrative_ontology:cs_axiom('e5f2152a-15a8-47fc-a9de-333d6edf2909', foundational, rupture_necessary_capitalist_state_cannot_transform_itself).
-narrative_ontology:cs_axiom_status(rupture_necessary_capitalist_state_cannot_transform_itself, holdable).
-narrative_ontology:cs_axiom_grounding('e5f2152a-15a8-47fc-a9de-333d6edf2909', rupture_necessary_capitalist_state_cannot_transform_itself, empirically_contingent).
-narrative_ontology:cs_axiom('e5f2152a-15a8-47fc-a9de-333d6edf2909', secondary, transitional_dictatorship_dissolves_toward_communism).
-narrative_ontology:cs_axiom_status(transitional_dictatorship_dissolves_toward_communism, overridden).
-narrative_ontology:cs_axiom_grounding('e5f2152a-15a8-47fc-a9de-333d6edf2909', transitional_dictatorship_dissolves_toward_communism, instrumental).
-narrative_ontology:cs_reference_frame('e5f2152a-15a8-47fc-a9de-333d6edf2909', capitalist_state_and_bourgeois_property_relations_require_revolutionary_rupture).
-narrative_ontology:cs_drift_state('e5f2152a-15a8-47fc-a9de-333d6edf2909', post_vanguard_state_consolidation_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('e5f2152a-15a8-47fc-a9de-333d6edf2909', '').
+narrative_ontology:cs_story_uid(manifesto_revolutionary_method__vanguard_rupture_reading, '461f29ac-0624-45fc-a7c8-1533834b11d7').
+narrative_ontology:cs_kernel_codification('461f29ac-0624-45fc-a7c8-1533834b11d7', formalized).
+narrative_ontology:cs_authority_grounding('461f29ac-0624-45fc-a7c8-1533834b11d7', lineage).
+narrative_ontology:cs_interpretation_layer_present('461f29ac-0624-45fc-a7c8-1533834b11d7').
+narrative_ontology:cs_reading_relation('461f29ac-0624-45fc-a7c8-1533834b11d7', manifesto_revolutionary_method__council_communist_reading, forecloses).
+narrative_ontology:cs_reading_relation('461f29ac-0624-45fc-a7c8-1533834b11d7', manifesto_revolutionary_method__democratic_gradualism_reading, forecloses).
+narrative_ontology:cs_axiom('461f29ac-0624-45fc-a7c8-1533834b11d7', foundational, vanguard_party_scientific_superiority).
+narrative_ontology:cs_axiom_status(vanguard_party_scientific_superiority, holdable).
+narrative_ontology:cs_axiom_grounding('461f29ac-0624-45fc-a7c8-1533834b11d7', vanguard_party_scientific_superiority, deontological).
+narrative_ontology:cs_axiom('461f29ac-0624-45fc-a7c8-1533834b11d7', foundational, capitalist_restoration_permanent_threat).
+narrative_ontology:cs_axiom_status(capitalist_restoration_permanent_threat, holdable).
+narrative_ontology:cs_axiom_grounding('461f29ac-0624-45fc-a7c8-1533834b11d7', capitalist_restoration_permanent_threat, empirically_contingent).
+narrative_ontology:cs_axiom('461f29ac-0624-45fc-a7c8-1533834b11d7', secondary, autonomous_worker_organization_insufficient_for_transition).
+narrative_ontology:cs_axiom_status(autonomous_worker_organization_insufficient_for_transition, overridden).
+narrative_ontology:cs_axiom_grounding('461f29ac-0624-45fc-a7c8-1533834b11d7', autonomous_worker_organization_insufficient_for_transition, empirically_contingent).
+narrative_ontology:cs_reference_frame('461f29ac-0624-45fc-a7c8-1533834b11d7', scientific_socialism_vanguard_necessity).
+narrative_ontology:cs_drift_state('461f29ac-0624-45fc-a7c8-1533834b11d7', late_vanguard_regime_period, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('461f29ac-0624-45fc-a7c8-1533834b11d7', '').
 narrative_ontology:cs_kernel_id(manifesto_revolutionary_method__vanguard_rupture_reading, manifesto_revolutionary_method).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, party_cadres).
-narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, state_planning_apparatus).
+narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, party_vanguard).
+narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, central_planning_apparatus).
 narrative_ontology:constraint_victim(manifesto_revolutionary_method__vanguard_rupture_reading, political_pluralists).
 narrative_ontology:constraint_victim(manifesto_revolutionary_method__vanguard_rupture_reading, autonomous_worker_organizations).
-narrative_ontology:constraint_victim(manifesto_revolutionary_method__vanguard_rupture_reading, pre_revolutionary_institutional_class).
+narrative_ontology:constraint_victim(manifesto_revolutionary_method__vanguard_rupture_reading, independent_peasantry).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, industrial_working_class).
+narrative_ontology:constraint_beneficiary(manifesto_revolutionary_method__vanguard_rupture_reading, intellectual_cadres_of_marxism).
+narrative_ontology:constraint_victim(manifesto_revolutionary_method__vanguard_rupture_reading, industrial_working_class).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The disciplined revolutionary organization that seizes state power and exercises dictatorship of the proletariat on behalf of the working class. Members have fused their identities with the party's historical mission; cadres occupy all key decision positions and control the state apparatus. The vanguard justifies its monopoly on power as necessary to prevent counter-revolutionary infiltration and to guide the working class through the transition to communism. Exit from the party means abandoning revolutionary identity and career.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, party_vanguard, agenda_setter,
+    organized, generational, identity_locked, national).
+
+% The state bureaucracy coordinating socialist production through centralized planning. Its members gain stable employment, advancement through party loyalty, and authority over production allocation. The apparatus operates under party guidance and receives rents in the form of priority allocation for administrative goods and services. Its perpetuation depends on maintaining the vanguard's organizational supremacy.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, central_planning_apparatus, beneficiary,
+    institutional, generational, constrained, national).
+
+% In theory the ultimate beneficiary of the dictatorship of the proletariat — the class on whose behalf power is seized and the transition is managed. In practice subject to party discipline over labor allocation, wage suppression in the name of capital accumulation for transition, and suppression of independent trade union organization. They cannot exit the spatial-national scope and have no alternative power structure to join.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, industrial_working_class, beneficiary,
+    powerless, generational, trapped, national).
+narrative_ontology:stakeholder_secondary_role(manifesto_revolutionary_method__vanguard_rupture_reading, industrial_working_class, payer).
+
+% Parties, movements, and intellectuals advocating democratic participation, multi-party competition, or constitutional limits on state power. Systematically excluded from decision-making, suppressed through party enforcement machinery, and discredited as counter-revolutionary or petty-bourgeois. Their exit requires fleeing the national territory or abandoning their political commitments entirely.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, political_pluralists, payer,
+    moderate, biographical, trapped, national).
+
+% Worker councils, independent trade unions, factory committees, and soviets that arise from working-class self-organization during revolutionary upheaval. The vanguard party subordinates these to party discipline, converts them into transmission belts for party directives, or dissolves them entirely when they resist centralization. Workers in these organizations cannot independently organize and face suppression if they attempt autonomous action.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, autonomous_worker_organizations, payer,
+    powerless, biographical, trapped, national).
+
+% Agricultural producers who initially supported or were neutral to revolutionary transformation. Subject to forced collectivization, grain requisitions, and party control over production. Cannot exit agricultural production or the territorial scope. Bear severe material costs through requisitions and starvation during transition.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, independent_peasantry, payer,
+    powerless, biographical, trapped, national).
+
+% Intellectuals, theorists, and technical specialists who staff the central planning apparatus and party ideology apparatus. Gain status, secure employment, and the opportunity to implement their understanding of historical materialism. Career advancement and security depend on conformity with party line and vanguard leadership's theoretical authority.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, intellectual_cadres_of_marxism, beneficiary,
+    organized, generational, identity_locked, national).
+
+% Capitalist class remnants, landlords, imperialist powers, and their agents. Structurally excluded from the political order the vanguard is constructing. Their exclusion is the entire point of the dictatorship — they would object vociferously if in the room and their suppression is justified as prerequisite to transition. They either flee or are liquidated.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, counter_revolutionary_forces, excluded,
+    powerful, biographical, trapped, national).
+
+% Other communist parties, socialist movements, and international revolutionary organizations that observe and debate the vanguard strategy. Some advocate for council communism or democratic gradualism; others endorse the vanguard model. The vanguard's organizational success in one nation influences their standing in global revolutionary politics, but the international movement lacks binding authority over national vanguards.
+narrative_ontology:constraint_stakeholder(manifesto_revolutionary_method__vanguard_rupture_reading, international_socialist_movement, observer,
+    organized, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(manifesto_revolutionary_method__vanguard_rupture_reading, party_vanguard).
+narrative_ontology:fixing_cost_class(manifesto_revolutionary_method__vanguard_rupture_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Organizes the transition from capitalist to communist production by centralizing control of the means of production under a unified planning authority, preventing atomized decisions by individual capitalists or workers from fragmenting revolutionary gains, and coordinating the disciplined allocation of labor and resources according to a unified development program.
+% TRANSFER_FUNCTION: Moves decision-making authority from plural actors (capitalists, workers' councils, individual producers) to the party vanguard and central planning apparatus. Moves material surplus from workers and peasants to the state apparatus and the party's reproduction as an organization. Moves political voice away from independent organizations toward party-mediated channels.
+% ABSENT_VOICES: Autonomous worker organizations, pluralist political movements, and independent peasant associations — all of which are explicitly excluded from the decision-making structure because the vanguard reading treats them as sources of counter-revolutionary or reformist pressure. These excluded parties would argue for decentralized worker control, democratic participation, or gradual institutional reform but are kept out by the vanguard's organizational monopoly.
+% DISAPPEARANCE_RATIONALE: If the vanguard party's monopoly on power and the dictatorial state apparatus disappeared overnight, the entire structure of centralized socialist planning would collapse. Capital accumulation, production allocation, and class relations would reorganize — either reverting to capitalist markets, devolving to worker councils, or fragmenting into competing power centers. The political landscape would immediately fill with the suppressed pluralist and autonomous organizational forces.
+% FOUNDING_PROBLEM: Capitalist production creates anarchic competition, periodic crises, and exploitation of labor. Revolutionary seizure requires overcoming organized capitalist resistance, coordinating millions of workers across industries, preventing counter-revolutionary sabotage during transition, and managing the technical complexity of planned production at national scale. A disciplined revolutionary party is necessary to accomplish what uncoordinated masses cannot.
+% FOUNDING_PROBLEM_CORROBORATION: The vanguard party claims the founding problem remains live — transition is incomplete, capitalist restoration threatens, counter-revolutionary forces persist. Advocates of council communism and democratic gradualism argue the founding problem is substantially resolved or was mis-stated: they claim that worker self-organization, not party dictatorship, solves coordination; that vanguard suppression of autonomous organization prevents rather than enables workers' liberation; and that historical experience shows vanguard parties become permanent bureaucratic elites rather than transitional organs. Historical-materialist scholars outside the benefiting parties (council communist theorists, democratic socialist historians, post-communist analysts) offer corroboration for the contested reading.
+narrative_ontology:disappearance_verdict(manifesto_revolutionary_method__vanguard_rupture_reading, world_rearranges).
+narrative_ontology:founding_problem_status(manifesto_revolutionary_method__vanguard_rupture_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(manifesto_revolutionary_method__vanguard_rupture_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(manifesto_revolutionary_method__vanguard_rupture_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(manifesto_revolutionary_method__vanguard_rupture_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(manifesto_revolutionary_method__vanguard_rupture_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -182,16 +253,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is authored as high (0.68 end-state) because the vanguard party's control over state power, labor allocation, and ideological legitimacy represents a substantial transfer of authority and autonomy from workers and competing factions to party apparatus, even if framed as temporary. The measurement trajectory shows extractiveness accelerating from 0.35 (pre-seizure) to 0.58 (seizure/consolidation phase) to 0.68 (stabilized state), then plateauing — suggesting the constraint's extraction reaches a stable level once the revolutionary rupture is complete and the apparatus is consolidated. Suppression is higher and rises more sharply (0.42 → 0.82) because the vanguard reading explicitly requires suppression of alternative pathways: competing parties, autonomous worker organizations, political pluralism, and counter-revolutionary elements must be suppressed to prevent the revolution's reversal. Theater rises gradually from 0.28 to 0.41, indicating the ratio of performative revolutionary rhetoric to functional state apparatus grows as the state stabilizes — revolutionary discipline that was functionally necessary during active rupture becomes increasingly theatrical as the apparatus perpetuates itself. Accessibility collapse is high (0.79) because once the vanguard reading is institutionalized, alternatives (councils, pluralism, gradualism) become structurally inaccessible: they are labeled counter-revolutionary, theoretically impossible, or organisationally suppressed. Resistance is high (0.73) because the constraint meets substantial resistance from suppressed factions, international counter-revolution, and worker organizations whose autonomy is curtailed. The one-shot example's time-grid discipline is maintained: every metric is authored at every interval point (0, 5, 10, 20, 30, 40, 50) to prevent the measurement-alignment artifact that previously injected end-state values into earlier time points.
+ *   Extractiveness rises from 0.45 to 0.68 over the interval: early in the revolutionary period, when threat of counter-revolution is highest and party control is not yet total, extraction is moderate — the party must still negotiate with autonomous organizations and retain working-class support. As the state consolidates and autonomous alternatives are suppressed (10–30 year mark), extractiveness rises as the party's grip tightens and the planning apparatus becomes the sole allocative mechanism. It plateaus at 0.68 because indefinite extraction beyond this level triggers open resistance and organizational breakdown (peasant flight, worker dissatisfaction, defection of cadres). Suppression rises sharply early and plateaus: the vanguard party's monopoly must be continuously defended through enforcement machinery — secret police, party discipline, control of information — because the suppressed constituencies (pluralists, autonomous worker organizations) remain structural threats. Theater rises from 0.25 to 0.42: early revolutionary periods have genuine coordination function (preventing capitalist counter-revolution, coordinating emergency responses), but as the transition deepens and the founding problem recedes (transition is supposedly temporary), increasing share of party activity becomes performative — public trials of counter-revolutionaries, mass rallies affirming party infallibility, theoretical debates about dialectical materialism — rather than functional necessity. The measurement series tracks extractiveness and suppression separately because they respond to different dynamics: extraction is pulled by the beneficiary accumulation incentive; suppression is driven by the need to prevent alternatives from reorganizing.
  *
  * PERSPECTIVAL GAP:
- *   From the party_cadres and state_planning_apparatus seats, the vanguard rupture reading is genuine coordination — a functional necessity for revolutionary seizure and reconstruction. From these seats, suppression of alternatives and autonomous organizations is regrettable but historically necessary, and extraction is investment in building communism. From the autonomous_worker_organizations and political_pluralists seats, the same structure operates as coercive state power capture by a new ruling class (the party apparatus) using revolutionary rhetoric as cover. The temporal measurements support this perspectival divergence: extractiveness plateaus at 0.68 rather than declining toward zero (as the promised transition to communism would require), and theater ratio stabilizes at 0.41 (suggesting the revolutionary framing becomes increasingly decoupled from functional necessity). The engine computes each seat's classification from the structural data; the authored metrics do not adjudicate the gap, they merely describe its persistence.
+ *   The party vanguard experiences this constraint as genuine coordination necessity: without organizational monopoly and dictatorial state power, capitalist forces would sabotage the transition and restore exploitation. Their reading is that suppression of alternatives is temporary, justified by the existential threat to revolution itself. Pluralists experience it as pure extraction and suppression masked by revolutionary rhetoric: the 'dictatorship of the proletariat' becomes dictatorship by a party claiming to speak for the proletariat. Autonomous worker organizations experience it as betrayal: they fought the revolution expecting workers' councils to hold power, not a new bureaucratic elite. The industrial working class experiences it as a two-way seat: they gain security from capitalist competition and unemployment (genuine coordination benefit) but lose the right to organize independently and see wages and living standards suppressed in the name of capital accumulation for transition (extraction and suppression). The peasantry experiences it as near-pure coercion: if they resisted forced collectivization, they faced starvation or execution; if they complied, they faced starvation through requisitions. The engine's per-seat classification should capture these divergences: tangled rope from the vanguard and planning-apparatus seats (genuine coordination function + asymmetric extraction), snare from the pluralist and autonomous-worker seats (pure suppression), complex hybrid from the working-class seat (coordination + extraction in tension). None of these divergences mean the constraint itself is 'really' any type — they mean each seat perceives and experiences it differently, and the engine computes the type from that seat's structural position.
  *
  * DIRECTIONALITY LOGIC:
- *   The party_cadres seat gets d ≈ 0.15 (beneficiary pole): they benefit from state power, set the agenda, and have high power and organized exit options (though identity-locked). The state_planning_apparatus sits near d ≈ 0.25 (beneficiary side): institutional power, benefits from centralized authority, but constrained exit (cannot exit without dismantling the state). Autonomous_worker_organizations get d ≈ 0.85 (target pole): they are suppressed, trapped, pay through loss of autonomy and labor discipline, and have no exit except to criminalize themselves. Political_pluralists also sit high on d ≈ 0.80 (target pole): they are victims of the constraint, excluded and suppressed, with trapped/no exit. The working_class_base is complex: structurally identity-locked (revolutionary consciousness becomes identity, defection is apostasy) and theoretically beneficiary (promised future liberation) but currently paying through suppression and labor discipline — their d sits near 0.60 (slightly target-leaning), reflecting the theoretical benefit promise offset by present suppression. Pre-revolutionary_institutional_class sits at d ≈ 0.95 (maximal target): explicitly expropriated, dispossessed, and eliminated. These directionalities flow from the beneficiary/victim declarations: party cadres and state apparatus are beneficiaries; pluralists, autonomous workers, and the pre-revolutionary class are victims. The working-class base is simultaneously beneficiary (promised communism) and payer (suppressed present), hence the dual role and mid-range d. No overrides needed: the derivation from structural data captures the reading's asymmetry.
+ *   The party vanguard (organized, identity-locked) should compute near-pure-beneficiary: it sets the rules, controls the machinery, reproduces itself, and faces no meaningful exit pressure. The central planning apparatus (institutional, constrained exit) is a beneficiary with some payer elements — it gains rents and security but is subordinate to party directives and could theoretically be dissolved. The industrial working class (powerless, trapped, generational horizon) bears asymmetric extraction through labor discipline and wage suppression, despite being theoretically the beneficiary class on whose behalf the dictatorship is supposedly exercised — the theory/practice gap is precisely what makes this tangled rope rather than rope. Political pluralists and autonomous worker organizations (moderate-to-powerless, trapped, biographical horizon) are pure targets — they pay suppression costs and have zero decision power. The peasantry (powerless, trapped, biographical) are pure targets during forced collectivization. The international socialist movement (organized, analytical exit) observes but is excluded from this particular constraint's decision space. This divergence of directionalities between seats is the seat divergence the engine computes: from the vanguard's seat, this is rope (coordination under party guidance for historical transition); from the pluralists' or autonomous workers' seat, this is snare (suppression without genuine benefit).
  *
  * MANDATROPHY ANALYSIS:
- *   The vanguard rupture reading declares its founding problem as live (capitalist state apparatus, bourgeois property relations, need for vanguard party guidance). However, the measurement trajectory and the theoretical structure of the constraint suggest mandatrophy risk: the dictatorship of the proletariat is claimed to be TRANSITIONAL — a temporary phase during which the working class, via party leadership, consolidates power and builds the material conditions for communism, eventually enabling the state to wither away. The temporal measurements show extraction and suppression plateauing rather than declining, and theater ratio rising — both of which violate the mandatrophy-resolution prediction: if the provisional dictatorship were actually transitional, extraction should diminish as material conditions improved and the need for tight control decreased; suppression should decline as counter-revolutionary threats were eliminated; theater should rise (as the constraint became increasingly performative rather than functionally necessary). The stability of these metrics at t=30-50 suggests the constraint is not transitioning but has stabilized into a new steady state — which would reclassify it from tangled rope (temporary coordination + extraction) into piton (atrophied function, theatrical maintenance, institutional inertia) or snare (pure extraction defended as temporary coordination). This divergence between the claimed transitional mandate and the observed plateau trajectory is exactly what the mandatrophy analysis exists to flag: a constraint that declares its own obsolescence but shows no measurement trajectory toward that obsolescence. Classify as tangled rope rather than piton or snare for now because the theoretical function (coordination of revolutionary seizure and reconstruction) was real at t=0-10, and extractiveness genuinely tracks higher in response to the constraint's structural asymmetry; but flag the mandatrophy trajectory divergence as an omega variable.
+ *   The vanguard rupture reading claims the founding problem (preventing capitalist counter-revolution and managing transition to communism) is live and permanent justification for the vanguard dictatorship. Historical outcomes suggest mandatrophy: by the later decades of vanguard regimes (USSR by the 1970s–80s, China by the 1980s–2000s), the counter-revolutionary threat had substantially receded, productive forces had developed, and the 'transitional' state was persisting indefinitely as a permanent bureaucratic apparatus. Yet the justification — 'transition is not yet complete' — persisted as pure theater and institutional self-maintenance. This is the classical mandatrophy pattern: the founding problem is no longer the driver of the arrangement; instead, the arrangement persists because the beneficiary (party and planning apparatus) has no incentive to resolve the founding problem (if transition 'completed,' their power would disappear). The theater ratio rising from 0.25 to 0.42 models this: early revolutionary periods have high functional necessity; later periods show increasing share of party activity devoted to maintaining its own authority rather than solving the original founding problem. The vanguard reading itself does NOT acknowledge this mandatrophy — it asserts perpetual necessity of transition and counter-revolutionary threat — which is exactly the cover story mandatrophy generates. A council communist or democratic gradualist reading would diagnose this more clearly: they would say the founding problem was either mis-stated (transition doesn't require vanguard dictatorship) or has already been overcome, and the constraint's persistence is pure inertia and power-maintenance.
  */
 
 /* ==========================================================================
@@ -199,54 +270,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    transitional_mandate_vs_extraction_plateau,
-    'Does the dictatorship of the proletariat represent a genuinely transitional phase toward communism and withering of the state, or has it stabilized into a permanent new state form (state socialism) that abandoned the transitional mandate?',
-    'Temporal analysis of post-revolutionary trajectories: in systems claiming vanguard rupture reading, does suppression decrease as material conditions supposedly improve and class enemies are eliminated? Does state power actually begin to diffuse toward worker councils or diminish? Or does state apparatus consolidate and resist dissolution? Comparative historical examination of whether post-revolutionary states show declining extraction and theater ratios consistent with transitional function.',
-    'If the transition is real, extractiveness and suppression should decline over time (t=50 trajectory should be downward from t=30), and the constraint should remain tangled rope. If the mandate has been abandoned and extraction stabilizes, the constraint reclassifies toward piton (theatrical maintenance of defunct transitional claim) or snare (pure extraction defended by revolutionary rhetoric). Measurement plateau at t=30-50 suggests the latter.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(transitional_mandate_vs_extraction_plateau, empirical, 'Whether the vanguard dictatorship is actually transitional or has become permanent state form.').
-
-omega_variable(
-    party_consciousness_vs_external_imposition,
-    'Does vanguard party leadership genuinely educate and organize working-class consciousness, or does it impose consciousness from outside and suppress autonomous working-class political development?',
-    'Historical and sociological examination of: (1) whether working-class organizations pre-revolutionary and post-revolutionary show spontaneous political development, or (2) whether they are strictly party-directed. Whether autonomous worker organizations that challenge party leadership survive or are suppressed. Whether suppressed factions (councils, anarchists, independent unions) show evidence of genuine worker preference or are correctly identified as counter-revolutionary.',
-    'If vanguard genuinely educates consciousness, we should observe: working-class base with high political sophistication that aligns with party, autonomous organizations that emerge post-seizure are genuinely counter-revolutionary, working-class base identity is not identity-locked but volitional. If vanguard imposes consciousness, we observe: suppression of autonomous organizations despite worker support, identity-locking of working-class base so that deviation is treated as apostasy, contradiction between stated worker interest and state actions. The suppression_requirement trajectory (0.42 → 0.82) and high accessibility_collapse (0.79) suggest the latter.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(party_consciousness_vs_external_imposition, empirical, 'Whether vanguard party education is real or cover for imposing consciousness externally.').
-
-omega_variable(
-    reading_foreclosure_vs_coexistence,
-    'Does the vanguard rupture reading logically FORECLOSE the council communist and democratic gradualist readings (i.e., they cannot coexist in any single framework), or do they COEXIST as live contested positions held by different parties and traditions?',
-    'Examination of whether: (1) the vanguard reading''s core premises (need for vanguard party, necessity of rupture, transition dictatorship) directly contradict the core premises of councils (direct worker democracy, rejection of vanguard mediation) and gradualism (electoral reform, parliamentary socialism) such that no coherent framework could hold both, OR (2) whether historical reality shows competing parties holding these readings simultaneously, arguing for their relative merits, and not foreclosing each other within shared frameworks (e.g., both vanguardists and gradualists participate in some democratic institutions, or both vanguardists and councilists compete for working-class loyalty within revolutionary movements).',
-    'If forecloses: the vanguard reading is incompatible at the logical level with the siblings; holding it requires rejecting the others as incoherent. If coexists_with: the readings are different framings of the same problem, held by different actors, without one logically eliminating the other. This affects how the kernel contest is framed and what resolution mechanism could exist.',
+    vanguard_authenticity_ambiguity,
+    'Does the party vanguard genuinely represent the proletariat''s interests, or does it constitute a new exploiting class separated from the workers it claims to speak for?',
+    'Historical trajectory analysis: if party bureaucrats become a self-reproducing elite with interests structurally opposed to working-class interests (as Trotskyist and council communist analyses argue), then the vanguard is not authentically representing the proletariat but rather extracting from it. Post-regime analysis of cadre mobility, material privilege, and intergenerational reproduction of party elites provides evidence.',
+    'If the vanguard is found to be a new exploiting class, the entire classification shifts: this is not tangled rope (coordination + extraction for the working class) but snare (pure extraction by party cadres using proletarian ideology as cover). The ''dictatorship of the proletariat'' becomes dictatorship by a party elite, not by the class itself.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_vs_coexistence, conceptual, 'Whether vanguard rupture reading logically forecloses or coexists with council and gradualist readings.').
+narrative_ontology:omega_variable(vanguard_authenticity_ambiguity, empirical, 'Whether the vanguard party represents proletarian interests or constitutes a new bureaucratic class.').
 
 omega_variable(
-    suppression_structural_vs_internalized,
-    'Is the measured suppression (0.82) in vanguard dictatorship primarily structural (external coercion, legal barriers, exclusion from institutions) or internalized (revolutionary consciousness so internalized that dissent becomes unthinkable, identity-fusion making deviation apostasy)?',
-    'Post-exit trajectory analysis: if suppressed actors (autonomous worker organizations, competing factions) have opportunity to reorganize after the vanguard state collapses or loses control, do they re-emerge, suggesting suppression was structural? Or do they remain suppressed through internalized identity-lock, suggesting internalization? Examination of whether party cadres and working-class base retain vanguard identity and discipline even after institutional structures dissolve.',
-    'If structural: the suppression measurement captures external coercive force; removing the constraint removes suppression. If internalized: suppression persists even after institutional removal because consciousness carries the lock forward; the effective suppression is higher than the structural measure suggests, and fixing the constraint requires de-indoctrination, not just institutional change.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether suppression in vanguard constraint is structural or internalized identity-lock.').
-
-omega_variable(
-    kernel_reading_committer_ambiguity,
-    'What epistemic authority grounds the claim that vanguard party seizure of state power is the CORRECT reading of how revolutionary transformation works? Scientific analysis of historical materialism, vanguardist tradition, or commitment to a particular political outcome?',
-    'Examination of grounding for the axiom that party seizure is necessary: is it grounded in empirically testable claims about revolutionary dynamics (empirically_contingent), in normative commitments to working-class power (deontological), in the authority of Marxist-Leninist tradition (lineage), or in instrumental efficacy for achieving communism (instrumental)? Different grounding types produce different vulnerabilities to challenge and different pathways to foreclosure.',
-    'If empirically_contingent: the axiom is vulnerable to historical evidence showing successful revolutions without vanguards or failed vanguard transitions, which could lead to axiom_overriding. If deontological: the axiom survives empirical failure but can be challenged on rights grounds. If lineage: the axiom''s authority derives from transmission tradition, vulnerable to tradition-breaking challenge. If instrumental: the axiom survives if communism is achieved, but is questioned if the transition stalls.',
+    transition_temporality_ambiguity,
+    'Is the dictatorship of the proletariat genuinely transitional (as the vanguard reading claims), or is it structurally permanent under any vanguard organizational model?',
+    'Comparative analysis of vanguard regimes: have any successfully ''withered away'' the state and planning apparatus as Marx and Lenin theorized, or do all vanguard regimes tend toward indefinite perpetuation? Do alternative models (council communism, democratic socialism) show different trajectories?',
+    'If vanguard dictatorships structurally perpetuate rather than transition, the foundational claim of the vanguard reading is false — the arrangement is permanent extraction, not temporary coordination. This would support mandatrophy diagnosis and might support reclassification to snare.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_committer_ambiguity, conceptual, 'What kind of epistemic claim grounds the vanguard rupture axiom — empirical, normative, traditional, or instrumental.').
+narrative_ontology:omega_variable(transition_temporality_ambiguity, empirical, 'Whether vanguard dictatorship is genuinely transitional or structurally permanent.').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'Is the suppression of autonomous worker organizations and pluralist parties primarily structural (external barriers, coercive force) or internalized (workers and cadres have adopted party ideology and no longer seek alternatives)?',
+    'Post-regime analysis of defector testimony, archival evidence of dissent suppression, and worker behavior when regime constraints are removed. If suppression persists after regime collapse, it indicates internalization; if alternatives emerge immediately, it indicates structurally enforced suppression.',
+    'If suppression is primarily structural, the constraint''s extractiveness might be lower if enforcement were withdrawn — alternatives would immediately organize. If suppression is internalized, the constraint has created deeper identity fusion and is more stable even after formal structures weaken.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression of alternatives is structural or internalized.').
+
+omega_variable(
+    foundational_problem_misstatement,
+    'Is the vanguard reading''s foundational problem (anarchic capitalism requires coordinated revolutionary transformation through party dictatorship) accurately stated, or do democratic gradualism and council communism identify a different problem that the vanguard reading obscures?',
+    'Comparative historical-materialist analysis: can the actual coordination problems of capitalist transition be solved through gradualist or council-communist routes without vanguard dictatorship? Do vanguard regimes solve the stated problems better or worse than alternatives?',
+    'If the foundational problem is mis-stated and alternatives can solve the genuine problems better, the vanguard reading is not just one reading among equals — it would be structurally false and the classification would shift toward snare (suppression without genuine coordination benefit).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(foundational_problem_misstatement, conceptual, 'Whether the vanguard reading''s foundational problem is accurately identified or obscures the real coordination challenge.').
+
+omega_variable(
+    kernel_identity_over_readings,
+    'Is the manifesto revolutionary method kernel a single commitment with multiple defensible readings, or are the vanguard, council communist, and democratic gradualist models so structurally distinct that they should be treated as separate kernels with incompatible axioms?',
+    'Textual analysis of Marx and Lenin: can a single interpretive tradition hold all three readings without incoherence, or does commitment to one reading logically foreclose the others? Does the framing of a unified kernel obscure the depth of the disagreement?',
+    'If the readings cannot share a unified kernel, the committer frame''s assumption of shared contested commitment collapses — we have three separate constraint families (vanguard, council communist, gradualist), not three readings of one kernel. This would change how the corpus treats the relationships.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_identity_over_readings, conceptual, 'Whether the revolutionary method kernel is genuinely unifiable or whether the readings are structurally distinct.').
 
 
 /* ==========================================================================
@@ -260,31 +331,28 @@ narrative_ontology:interval(manifesto_revolutionary_method__vanguard_rupture_rea
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(mani_tr_t0, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(mani_tr_t5, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 5, 0.32).
-narrative_ontology:measurement(mani_tr_t10, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 10, 0.37).
-narrative_ontology:measurement(mani_tr_t20, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 20, 0.41).
+narrative_ontology:measurement(mani_tr_t0, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(mani_tr_t5, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 5, 0.28).
+narrative_ontology:measurement(mani_tr_t10, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 10, 0.33).
+narrative_ontology:measurement(mani_tr_t20, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 20, 0.38).
 narrative_ontology:measurement(mani_tr_t30, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 30, 0.42).
-narrative_ontology:measurement(mani_tr_t40, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 40, 0.41).
-narrative_ontology:measurement(mani_tr_t50, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 50, 0.41).
+narrative_ontology:measurement(mani_tr_t50, manifesto_revolutionary_method__vanguard_rupture_reading, theater_ratio, 50, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(mani_be_t0, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(mani_be_t5, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(mani_be_t0, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(mani_be_t5, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 5, 0.52).
 narrative_ontology:measurement(mani_be_t10, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(mani_be_t20, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 20, 0.66).
-narrative_ontology:measurement(mani_be_t30, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 30, 0.69).
-narrative_ontology:measurement(mani_be_t40, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement(mani_be_t20, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement(mani_be_t30, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 30, 0.68).
 narrative_ontology:measurement(mani_be_t50, manifesto_revolutionary_method__vanguard_rupture_reading, base_extractiveness, 50, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(mani_su_t0, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 0, 0.42).
-narrative_ontology:measurement(mani_su_t5, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 5, 0.61).
-narrative_ontology:measurement(mani_su_t10, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 10, 0.74).
-narrative_ontology:measurement(mani_su_t20, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 20, 0.82).
-narrative_ontology:measurement(mani_su_t30, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 30, 0.84).
-narrative_ontology:measurement(mani_su_t40, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 40, 0.83).
-narrative_ontology:measurement(mani_su_t50, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 50, 0.82).
+narrative_ontology:measurement(mani_su_t0, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 0, 0.68).
+narrative_ontology:measurement(mani_su_t5, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 5, 0.72).
+narrative_ontology:measurement(mani_su_t10, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 10, 0.75).
+narrative_ontology:measurement(mani_su_t20, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 20, 0.78).
+narrative_ontology:measurement(mani_su_t30, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 30, 0.79).
+narrative_ontology:measurement(mani_su_t50, manifesto_revolutionary_method__vanguard_rupture_reading, suppression_requirement, 50, 0.79).
 
 
 /* ==========================================================================
@@ -292,18 +360,19 @@ narrative_ontology:measurement(mani_su_t50, manifesto_revolutionary_method__vang
    ========================================================================== */
 
 narrative_ontology:coordination_type(manifesto_revolutionary_method__vanguard_rupture_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(manifesto_revolutionary_method__vanguard_rupture_reading, 0.18).
+narrative_ontology:boltzmann_floor_override(manifesto_revolutionary_method__vanguard_rupture_reading, 0.12).
 narrative_ontology:affects_constraint(manifesto_revolutionary_method__vanguard_rupture_reading, manifesto_revolutionary_method__council_communist_reading).
 narrative_ontology:affects_constraint(manifesto_revolutionary_method__vanguard_rupture_reading, manifesto_revolutionary_method__democratic_gradualism_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested kernel 'manifesto_revolutionary_method'. The kernel's multiple readings — vanguard rupture, council communist, democratic gradualism — represent fundamentally different answers to the founding problem of working-class liberation. Each reading has its own ε value, beneficiary/victim structure, and extracted profile. They are linked via affects_constraints because they compete directly for legitimacy in the same domain (revolutionary method) and because acceptance of one reading typically involves rejection or subordination of the others. The vanguard reading influences the council reading by institutionally suppressing council organizations; the gradualist reading is foreclosed by the vanguard reading's claim that rupture is necessary. See kernel_context in commentary for full description of the reading's relationship to siblings.
+% This constraint is part of the manifesto revolutionary method kernel family. All three readings (vanguard_rupture_reading, council_communist_reading, democratic_gradualism_reading) are structurally distinct constraints with different ε values, beneficiary/victim structures, and suppression mechanisms. They share a kernel (contested commitment about how revolutionary transformation occurs and what state forms transition requires) but instantiate contradictory implementations. Each reading is a separate constraint story linked by affects_constraints. The vanguard reading influences both siblings by establishing organizational suppression machinery that blocks their implementation; the council communist and democratic gradualist readings coexist as alternatives held by different parties to the historical dispute.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(manifesto_revolutionary_method__vanguard_rupture_reading, powerless, 0.6).
+constraint_indexing:directionality_override(manifesto_revolutionary_method__vanguard_rupture_reading, powerless, 0.95).
+constraint_indexing:directionality_override(manifesto_revolutionary_method__vanguard_rupture_reading, organized, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

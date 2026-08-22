@@ -39,10 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,34 +76,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: state_execution_authority__deterrence_reading
- *   human_readable: State Execution Authority (Deterrence Reading)
+ *   human_readable: State Execution as Deterrence Against Capital Crimes
  *   domain: criminal_justice/political_philosophy
  *
  * SUMMARY:
- *   This constraint instantiates the DETERRENCE READING of the contested
- *   kernel 'state execution authority.' The reading grounds the practice in
- *   consequentialist prevention: execution reduces future homicides by
- *   increasing the cost of capital crime to potential offenders above their
- *   perceived benefit, deterring at the margin those who would otherwise
- *   commit murder. The constraint creates a tangled-rope structure: genuine
- *   coordination problem (deterring rational actors from murder), asymmetric
- *   extraction (offenders pay death; beneficiaries are future-prevented
- *   victims), active enforcement (appellate review, exclusion of rival
- *   interpretations). The empirical foundation is hotly
- *   contested—meta-analyses show weak or null deterrent effect—making the
- *   constraint's classification depend on assumptions about deterrence
- *   efficacy that the constraint's own operation cannot vindicate. This
- *   reading stands alongside two sibling readings (retributive_reading,
- *   abolition_reading) that contest the same kernel from different normative
- *   premises.
+ *   The deterrence reading of state execution authority frames capital
+ *   punishment as a rational policy tool for crime prevention. The constraint
+ *   operates as follows: the state maintains the legal authority and
+ *   institutional capacity to execute convicted murderers, justified by the
+ *   claim that execution deters capital crime by raising its cost beyond the
+ *   threshold at which potential offenders would consider it rational to
+ *   commit murder. Future potential victims are the beneficiaries (their
+ *   security is protected by the deterrent); executed offenders and the
+ *   wrongfully convicted are the costs. The empirical claim — that execution
+ *   deters — is irreducible: if deterrence is negligible (as much recent
+ *   research suggests), the constraint collapses into pure extraction (death
+ *   without compensating benefit). This reading coexists with the retributive
+ *   reading (punishment as moral balance restoration, independent of
+ *   deterrent effect) and is foreclosed by the abolition reading (execution
+ *   is categorically impermissible regardless of deterrent efficacy).
  *
  * KEY AGENTS:
- *   - state_execution_authority: institutional agenda-setter, administers capital punishment, claims deterrence justification (d ≈ 0.15 beneficiary pole — benefits indirectly through legitimacy and crime control)
- *   - executed_offenders: powerless victims, pay ultimate cost, trapped exit, immediate time-horizon (d ≈ 0.95 full target)
- *   - potential_future_homicide_victims: powerless beneficiaries, prevented by deterrent effect, trapped (counterfactual), biographical horizon (d ≈ 0.1 beneficiary pole)
- *   - wrongfully_convicted: powerless victims, pay death without deterrent justification, trapped, immediate (d ≈ 0.98 full target — worse than guilty offenders who at least arguably deserve something)
- *   - empirical_criminologists: institutional observers, generate contested evidence about deterrence efficacy (d ≈ 0.5 analytical)
- *   - appellate_judiciary: institutional dual role, administer constraint and review its legitimacy (d ≈ 0.35–0.45 moderate)
+ *   - state_execution_authority: institutional agenda-setter, claims deterrence justification, administers the mechanism
+ *   - future_potential_victims: powerless, unorganized beneficiaries whose lives are protected (in theory) by the deterrent
+ *   - executed_offenders: powerless, trapped victims who bear the ultimate cost as instrumental deterrent signal
+ *   - wrongfully_convicted: powerless, trapped victims who represent system error — deaths that contradict the reading's own logic
+ *   - crime_researchers: moderate-power observers whose empirical findings validate or refute the deterrence claim
+ *   - competing_punishment_regimes: institutional actors (international legal systems) that reject the deterrence reading and exclude it from their frameworks
  */
 
 /* ==========================================================================
@@ -102,58 +111,128 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(state_execution_authority__deterrence_reading, 0.62).
-domain_priors:suppression_score(state_execution_authority__deterrence_reading, 0.71).
+domain_priors:suppression_score(state_execution_authority__deterrence_reading, 0.45).
 domain_priors:theater_ratio(state_execution_authority__deterrence_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, suppression_requirement, 0.45).
 narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, resistance, 0.79).
+narrative_ontology:constraint_metric(state_execution_authority__deterrence_reading, resistance, 0.78).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(state_execution_authority__deterrence_reading, tangled_rope).
-narrative_ontology:human_readable(state_execution_authority__deterrence_reading, "State Execution Authority (Deterrence Reading)").
+narrative_ontology:constraint_claim(state_execution_authority__deterrence_reading, rope).
+narrative_ontology:human_readable(state_execution_authority__deterrence_reading, "State Execution as Deterrence Against Capital Crimes").
 narrative_ontology:topic_domain(state_execution_authority__deterrence_reading, "criminal_justice/political_philosophy").
 
 domain_priors:requires_active_enforcement(state_execution_authority__deterrence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(state_execution_authority__deterrence_reading, 'ada3509d-d4b6-417a-a85d-a1712b176db3').
-narrative_ontology:cs_kernel_codification('ada3509d-d4b6-417a-a85d-a1712b176db3', formalized).
-narrative_ontology:cs_authority_grounding('ada3509d-d4b6-417a-a85d-a1712b176db3', lineage).
-narrative_ontology:cs_interpretation_layer_present('ada3509d-d4b6-417a-a85d-a1712b176db3').
-narrative_ontology:cs_reading_relation('ada3509d-d4b6-417a-a85d-a1712b176db3', state_execution_authority__retributive_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ada3509d-d4b6-417a-a85d-a1712b176db3', state_execution_authority__abolition_reading, coexists_with).
-narrative_ontology:cs_axiom('ada3509d-d4b6-417a-a85d-a1712b176db3', foundational, execution_consequentialist_prevention).
-narrative_ontology:cs_axiom_status(execution_consequentialist_prevention, holdable).
-narrative_ontology:cs_axiom_grounding('ada3509d-d4b6-417a-a85d-a1712b176db3', execution_consequentialist_prevention, empirically_contingent).
-narrative_ontology:cs_axiom('ada3509d-d4b6-417a-a85d-a1712b176db3', secondary, rational_actor_crime_model).
-narrative_ontology:cs_axiom_status(rational_actor_crime_model, holdable).
-narrative_ontology:cs_axiom_grounding('ada3509d-d4b6-417a-a85d-a1712b176db3', rational_actor_crime_model, empirically_contingent).
-narrative_ontology:cs_reference_frame('ada3509d-d4b6-417a-a85d-a1712b176db3', state_sovereign_penalty_authority).
-narrative_ontology:cs_drift_state('ada3509d-d4b6-417a-a85d-a1712b176db3', contemporary_empirical_challenge_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('ada3509d-d4b6-417a-a85d-a1712b176db3', '').
+narrative_ontology:cs_story_uid(state_execution_authority__deterrence_reading, '2fb31ca2-a6db-4e17-9471-1c9be42b9035').
+narrative_ontology:cs_kernel_codification('2fb31ca2-a6db-4e17-9471-1c9be42b9035', formalized).
+narrative_ontology:cs_authority_grounding('2fb31ca2-a6db-4e17-9471-1c9be42b9035', lineage).
+narrative_ontology:cs_interpretation_layer_present('2fb31ca2-a6db-4e17-9471-1c9be42b9035').
+narrative_ontology:cs_reading_relation('2fb31ca2-a6db-4e17-9471-1c9be42b9035', state_execution_authority__retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2fb31ca2-a6db-4e17-9471-1c9be42b9035', state_execution_authority__abolition_reading, coexists_with).
+narrative_ontology:cs_axiom('2fb31ca2-a6db-4e17-9471-1c9be42b9035', foundational, execution_deters_future_murders).
+narrative_ontology:cs_axiom_status(execution_deters_future_murders, holdable).
+narrative_ontology:cs_axiom_grounding('2fb31ca2-a6db-4e17-9471-1c9be42b9035', execution_deters_future_murders, empirically_contingent).
+narrative_ontology:cs_axiom('2fb31ca2-a6db-4e17-9471-1c9be42b9035', secondary, deterrent_benefit_justifies_error_cost).
+narrative_ontology:cs_axiom_status(deterrent_benefit_justifies_error_cost, holdable).
+narrative_ontology:cs_axiom_grounding('2fb31ca2-a6db-4e17-9471-1c9be42b9035', deterrent_benefit_justifies_error_cost, instrumental).
+narrative_ontology:cs_reference_frame('2fb31ca2-a6db-4e17-9471-1c9be42b9035', execution_as_rational_policy_tool).
+narrative_ontology:cs_drift_state('2fb31ca2-a6db-4e17-9471-1c9be42b9035', contemporary_criminological_consensus_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('2fb31ca2-a6db-4e17-9471-1c9be42b9035', '').
 narrative_ontology:cs_kernel_id(state_execution_authority__deterrence_reading, state_execution_authority).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(state_execution_authority__deterrence_reading, potential_future_homicide_victims).
-narrative_ontology:constraint_beneficiary(state_execution_authority__deterrence_reading, general_public_safety).
+narrative_ontology:constraint_beneficiary(state_execution_authority__deterrence_reading, future_potential_victims).
+narrative_ontology:constraint_beneficiary(state_execution_authority__deterrence_reading, law_abiding_citizens).
 narrative_ontology:constraint_victim(state_execution_authority__deterrence_reading, executed_offenders).
-narrative_ontology:constraint_victim(state_execution_authority__deterrence_reading, offenders_wrongfully_convicted).
+narrative_ontology:constraint_victim(state_execution_authority__deterrence_reading, wrongfully_convicted).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(state_execution_authority__deterrence_reading, murder_victims_families).
+narrative_ontology:constraint_victim(state_execution_authority__deterrence_reading, murder_victims_families).
+narrative_ontology:constraint_victim(state_execution_authority__deterrence_reading, defense_counsel_and_advocates).
+narrative_ontology:constraint_vindicates(state_execution_authority__deterrence_reading, marginal_deterrence_hypothesis).
+narrative_ontology:constraint_vindicates(state_execution_authority__deterrence_reading, rational_actor_criminology).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Holds the power to sentence and execute convicted murderers. Justifies execution as necessary deterrent to prevent future murders by raising the cost of capital crime. Administers the legal machinery, sets procedural standards, and makes final authorization decisions. Claims deterrence function vindicates the practice against moral objections.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, state_execution_authority, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Individuals who would otherwise be murdered by capital offenders if deterrence were absent or ineffective. The deterrence reading structures them as beneficiaries of the constraint — their lives are protected by raising the cost of murder through execution threat. They are not organized, not present in the legal proceedings, and cannot negotiate their position. Benefit is distributed across an unknown future population.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, future_potential_victims, beneficiary,
+    powerless, immediate, trapped, national).
+
+% General population whose security is claimed to be protected by the deterrent effect. They participate in the legal system through voting, jury service, and political voice. They are framed as collective beneficiaries of crime prevention, though the personal risk any individual faces from prevented capital murder is diffuse.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, law_abiding_citizens, beneficiary,
+    organized, biographical, constrained, national).
+
+% Individuals convicted of capital crimes and sentenced to death. Under the deterrence reading, they are instrumental costs — the visibility and severity of their execution creates the deterrent signal. They bear the ultimate cost (their life) to raise the cost for potential future offenders. No exit exists once conviction is finalized.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, executed_offenders, payer,
+    powerless, immediate, trapped, national).
+
+% Individuals convicted and executed for murders they did not commit. The deterrence reading acknowledges wrongful execution as a utilitarian loss — a cost incurred by the system's error rate. They are unintended victims whose deaths undermine the deterrence framework's own logic (innocent execution does not deter actual potential murderers, only creates injustice). Wrongful conviction may be discovered post-execution (too late) or discovered during appeal (complicating the cost-benefit calculus).
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, wrongfully_convicted, payer,
+    powerless, immediate, trapped, national).
+
+% Families of murder victims who lose loved ones to capital crimes. The deterrence reading positions them as beneficiaries insofar as execution of the murderer is claimed to deter future such losses. However, they also carry costs: the lengthy legal process, retrials, emotional toll of execution proceedings, and potential post-conviction exoneration that negates the closure execution promised. Some families oppose execution on moral or religious grounds, splitting their structural position.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, murder_victims_families, beneficiary,
+    moderate, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(state_execution_authority__deterrence_reading, murder_victims_families, payer).
+
+% Attorneys and advocacy organizations bearing the costs of death-penalty defense: massive legal labor for appeals, mitigation investigation, clemency petitions. These costs are structurally necessary to maintain the procedural legitimacy that the deterrence reading depends on. The deterrence framework requires error-minimization, which in turn requires expensive defense — making this group an unacknowledged cost-bearer supporting the system's moral claims.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, defense_counsel_and_advocates, payer,
+    moderate, biographical, constrained, national).
+
+% Criminologists and economists studying deterrence efficacy. The deterrence reading rests on empirical claims about marginal deterrence — that execution prevents murders that would otherwise occur. Researchers occupy the analytical seat: they measure the magnitude of deterrent effect, compare execution to life imprisonment, and can validate or refute the reading's central empirical premise. Their findings directly threaten or support the constraint's justification.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, crime_researchers, observer,
+    moderate, biographical, mobile, national).
+
+% International jurisdictions and legal traditions (European Union, Canada, many others) that have abolished execution, claiming life imprisonment achieves adequate deterrence and safety without extrajudicial killing. These reading-alternatives are excluded from the American legal framework not by logical necessity but by institutional choice; their existence demonstrates that the deterrence reading is not structurally inevitable — other readings can sustain functional justice systems.
+narrative_ontology:constraint_stakeholder(state_execution_authority__deterrence_reading, competing_punishment_regimes, excluded,
+    institutional, generational, trapped, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(state_execution_authority__deterrence_reading, state_execution_authority).
+narrative_ontology:fixing_cost_class(state_execution_authority__deterrence_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a unified state mechanism for imposing the ultimate penalty on capital offenders, replacing individual revenge, mob justice, or vigilante killing with centralized, rule-governed sanction. Creates a public, predictable cost structure for the gravest crimes, enabling rational actors to incorporate that cost into their decision-making.
+% TRANSFER_FUNCTION: Transfers the life of the convicted offender to the state as the price of committing a capital murder. The deterrent value transfers from the offender's execution to the wider population (future potential victims and law-abiding citizens) in the form of reduced murder probability, under the deterrence reading's empirical claim. Defense costs and procedural burdens transfer to the state and defense counsel.
+% ABSENT_VOICES: Abolition-reading advocates, who hold that execution is categorically impermissible regardless of deterrent effect, are structurally excluded from the deterrence reading's framing — they reject the trade-off on deontological grounds that the reading cannot address within its own terms. Victims of wrongful execution cannot speak, and their interests are acknowledged only abstractly as 'error costs' rather than as voices in the decision. Some murder victims' families oppose execution but are often not centered in policy discourse.
+% DISAPPEARANCE_RATIONALE: If state execution vanished overnight, the criminal justice system would reorganize around life imprisonment and other capital sanctions. The deterrent signal would shift — whether to equivalent magnitude (life-without-parole) or to lesser deterrence (imprisonment alone) is the empirical question the deterrence reading stakes its legitimacy on. Future murder rates would change (increase, stay flat, or decrease depending on deterrent efficacy), creating measurable rearrangement of the security landscape. The state would redirect capital-punishment budgets (lengthy appeals, death-row maintenance) to imprisonment or other purposes.
+% FOUNDING_PROBLEM: Capital murders threaten the social order and inflict maximum harm. Individual and collective security require that the most severe punishment be available to deter the most severe crimes. The state needs a sanction whose cost is visibly high enough that rational potential murderers will refrain, reducing preventable deaths.
+% FOUNDING_PROBLEM_CORROBORATION: Supporters of execution and some victims' families attest the founding problem is live — capital murder remains a threat and deterrence is necessary. Crime researchers (Ehrlich and others finding positive deterrent effects) corroborate the deterrence mechanism. However, opponents cite criminological research (Donohue & Wolfers, NAS reviews) showing negligible or nonexistent marginal deterrent effect of execution vs. life imprisonment, contradicting the founding problem's salience. International jurisdictions with abolished execution attest the founding problem can be managed without it — security and murder prevention persist without capital punishment.
+narrative_ontology:disappearance_verdict(state_execution_authority__deterrence_reading, world_rearranges).
+narrative_ontology:founding_problem_status(state_execution_authority__deterrence_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(state_execution_authority__deterrence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(state_execution_authority__deterrence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(state_execution_authority__deterrence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(state_execution_authority__deterrence_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +252,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness at 0.62 reflects the constraint's fundamentally extractive character masked by a coordination narrative: offenders die; the state claims prevented-victim benefit, but that benefit is conditional on unproven deterrence. If deterrence fails, extraction becomes indefensible and pure. Suppression at 0.71 is high because the constraint's persistence depends on actively excluding rival readings (abolition advocates) and constraining procedural review that might expose error. Theater_ratio at 0.28 is moderate: appellate review, constitutional claims, and deterrence rhetoric occupy substantial procedural space, but the machinery is primarily configured to overcome legal and moral objections rather than to serve deterrent function. Accessibility_collapse at 0.72 is high: once condemned, exit is nearly complete—no arbitrage, no mobility, only identity_locked (the offender remains bound by the state's sovereign claim). Resistance at 0.79 reflects active opposition: abolition movements, empirical criminologists contesting deterrence, international human-rights bodies all mount resistance. The measurement series shows extractiveness rising slightly to midpoint (extractive function clarifying as deterrence justification ages), theater plateauing (procedural expansion stabilizes), and suppression leveling off (enforcement machinery reaches steady state). The shared time grid ensures all three metrics are evaluated at every examined point.
+ *   Extractiveness is moderate-to-high (0.62 at interval end) because the deterrence reading depends entirely on an empirical claim (deterrence efficacy) that is contested and weakly supported by recent research. If deterrence is real, extractiveness is lower — the offender's death buys genuine future security, making the transfer a rational exchange. If deterrence is negligible, extractiveness approaches that of pure punishment extraction (higher). The temporal series shows a slight rise in extractiveness from 0.48 to 0.64 mid-interval (time 0-37), reflecting growing empirical doubt about deterrence as rigorous criminological studies accumulate, then a dip at interval end (0.62) as procedural legitimacy concerns partially offset the empirical weakening. Suppression is moderate (0.45) because the constraint's enforcement does not require continuous coercion of the general population — execution is rare, visible, and highly proceduralized. The high accessibility_collapse (0.72) reflects the fact that once convicted of a capital crime, alternatives to the state's sentence largely collapse: clemency is rare, execution is the final state. Theater ratio climbs slightly (0.18→0.28) as the ratio of procedural ritual (appeals, clemency hearings, symbolic processes) to actual deterrent output increases — the mechanism becomes more about demonstrating legitimacy and less about measurable crime prevention as doubt accumulates.
  *
  * PERSPECTIVAL GAP:
- *   From the state's institutional seat, the constraint is genuine coordination: it solves the problem of deterring rational offenders from capital murder. From the condemned offender's seat, it is pure extraction defended by appeal to a benefit (deterrence) they cannot verify and cannot contest before death. From the wrongfully convicted offender's seat, it is catastrophic extraction with zero corresponding benefit—their death contributes nothing to deterrence because they committed no crime. From the empirical criminologist's seat, the constraint's foundational mechanism is unproven at best and false at worst, making the extraction indefensible. The appellate judiciary sits between: they administer the constraint while reviewing its legitimacy, creating an internal double-bind (are they implementing deterrence or executing the powerless to satisfy retributive or political demands?). The engine computes these divergent classifications from the structural data: the institutional seat will classify the constraint as a functioning rope/coordination; the condemned seat will classify it as snare; the empiricist seat will classify it as incoherent (coordination claimed but mechanism absent).
+ *   The state execution authority and crime-deterrence researchers occupy structurally different positions. From the state's institutional seat, execution is justified by deterrence and is a core function of justice administration — the constraint is presented as rope (genuine coordination solving a real security problem). From the researcher's analytical seat, the empirical claim is under empirical test, and recent data suggest negligible or nonexistent marginal deterrent effect. From the seats of executed and wrongfully convicted offenders, the constraint is pure extraction (death without compensating benefit). The engine should compute different types across these seats: rope from the state's position (coordination justified by deterrence), snare or tangled_rope from the payer seats (extraction inadequately justified). The authorship claim of rope reflects the deterrence reading's own frame, not the computed type — the gap between claim and computation is exactly the point the corpus measures.
  *
  * DIRECTIONALITY LOGIC:
- *   The state execution authority, as institutional agenda-setter, sits at d ≈ 0.15 (beneficiary pole): it controls the constraint, justifies it as deterrence, and claims legitimacy from crime reduction. Executed offenders sit at d ≈ 0.95 (full target): they pay the ultimate cost and have zero structural benefit. Potential future victims sit at d ≈ 0.1 (near-beneficiary): they benefit from deterrent effect but do not participate and cannot negotiate—their benefit is conditional on deterrence being real. The wrongfully convicted sit at d ≈ 0.98 (full target, worse than guilty offenders): they absorb the cost without any corresponding deterrent justification. This asymmetry is the constraint's core: enormous extraction from powerless offenders, claimed benefit for powerless future victims, legitimacy maintained by institutional agenda-setter. The directional structure is NOT symmetric—it is radically asymmetric extraction defended by appeal to consequentialist benefit that is empirically contested.
+ *   The state execution authority sits as a beneficiary-aligned actor (d toward 0.0) — it administers the system and benefits from its existence, and has ample exit options (can modify sentencing, commute, change procedures). Future potential victims are the nominal beneficiaries but structurally powerless, unorganized, and unable to negotiate — their d is inverted (they don't choose the benefit, it is imposed on them), placing them toward symmetric or even target-end if the benefit is illusory. Executed offenders are full targets (d = 1.0): powerless, trapped, paying the ultimate cost. Wrongfully convicted are also full targets (d = 1.0), with the additional structural problem that their cost directly contradicts the reading's own empirical premise. Murder victims' families carry mixed directionality: they are nominal beneficiaries (claim closure and deterrence benefit) but also potential payers (emotional cost, disruption of closure, procedural participation demands). Crime researchers are analytical (d undefined, external position). No overrides are needed — the derivation chain from beneficiary/victim + exit handles the directionality correctly.
  *
  * MANDATROPHY ANALYSIS:
- *   The deterrence reading faces a classical mandatrophy pattern: the founding problem (rational actors committing murder despite legal prohibition) was real at the constraint's origins, but the solution (raising expected cost via execution) is empirically unproven and increasingly contested. If empirical evidence accumulates showing zero or negative deterrent effect, the constraint's mandate has outlived its function—execution persists not because deterrence works but because: (1) retributive legitimacy has become the hidden justification, or (2) institutional inertia maintains the machinery despite failed function. The measurement series shows extractiveness plateauing at t=32–50, suggesting the constraint has reached a steady state of enforcement rather than continuing to sharpen its deterrent signal. Theater rising through t=24 then stabilizing suggests procedural expansion (appellate review, constitutional claims) is theatrical—it occupies substantive space without changing execution probability for the condemned. This is the diagnostic signature of mandatrophy: the founding function (deterrence) is no longer the primary engine of persistence; the constraint persists because the state's sovereign authority and institutional machinery have become self-justifying.
+ *   The deterrence reading's founding problem is 'capital crime remains a threat; deterrence prevents preventable murders.' Status is contested: empirical research from the past 50 years has accumulated evidence of negligible marginal deterrent effect, yet deterrence remains politically defended by some policymakers and supported by older econometric studies. Disappearance verdict is world_rearranges: the criminal justice system would reorganize around alternative capital sanctions (life imprisonment). The mismatch (founding_problem_status=contested + world_rearranges) triggers mandatrophy review. If the founding problem is dead (deterrence is negligible), but the arrangement persists and rearranges the world (imprisons people at high cost, requires expensive defense machinery, produces wrongful executions), the constraint becomes zombie-like: it persists as a ritual that vindicates a false founding claim, extracting costs that are no longer justified by the problem it was built to solve. The theater_ratio climb supports this reading. Author mandatrophy_resolved: false, because the empirical status is contested — the system could yet be reorganized if the foundational empirical claim is conclusively falsified.
  */
 
 /* ==========================================================================
@@ -190,54 +269,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    deterrence_empirical_efficacy,
-    'Does execution actually reduce future homicide rates at the margin? What is the true causal effect?',
-    'Systematic meta-analysis of quasi-experimental designs (execution moratoria, state variation, instrumental variables); longitudinal homicide data controlling for confounds (policing intensity, incapacitation, sentence certainty, swiftness). The Donohue & Wolfers (2005) and National Research Council (2012) reviews exemplify the empirical frontier.',
-    'If execution has zero or negative deterrent effect (risk of false deterrence), the constraint''s entire coordination justification collapses and it reclassifies as pure extraction (snare) rather than tangled rope. If substantial positive effect is established, the deterrent reading is vindicated and extraction becomes acceptable as cost of the coordination benefit.',
+    deterrence_efficacy_empirical,
+    'Does execution produce a measurable marginal deterrent effect beyond what life imprisonment or other capital sanctions achieve?',
+    'Criminological and econometric research (meta-analyses, causal identification studies, cross-jurisdictional comparisons). The National Academies'' 2012 review, Donohue & Wolfers, and subsequent studies directly measure this; replication and pre-registration of new studies would narrow the empirical range.',
+    'If deterrent effect is negligible (near-zero), the constraint''s extractiveness approaches 1.0 (pure punishment, no security benefit); if effect is substantial (execution prevents many murders life imprisonment would not), extractiveness drops toward 0.4–0.5 (justified transfer for genuine benefit). Terminal classification hinges on this answer: rope vs. snare/tangled_rope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(deterrence_efficacy_empirical, empirical, 'The core empirical premise: does execution deter capital crime more effectively than alternatives?').
+
+omega_variable(
+    error_rate_acceptable_magnitude,
+    'What is the threshold error rate (wrongful execution frequency) at which the deterrent benefit is no longer justified on utilitarian grounds, even if deterrent effect is substantial?',
+    'Empirical audits of exoneration rates post-conviction (DNA, Brady violations, tunnel vision). Philosophical analysis of acceptable false-positive rates for irreversible punishment. Comparison to error rates in other high-stakes domains (medical error, aviation).',
+    'If wrongful execution rate exceeds ~1-2 per thousand (unexecuted exonerations suggest higher), the system''s error cost may outweigh deterrent benefit even under the deterrence reading''s own utilitarian logic. This would convert the constraint toward snare (extracting deaths that contradict the reading''s own justification). If error rate is demonstrably below ~0.1%, the reading''s logic holds more strongly.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(error_rate_acceptable_magnitude, empirical, 'The utilitarian cost of system error: at what wrongful-execution frequency does the reading''s logic collapse?').
+
+omega_variable(
+    reading_logical_coherence_under_uncertainty,
+    'Can the deterrence reading remain coherent if empirical uncertainty about deterrent effect is irresolvable — i.e., if the research is persistently inconclusive?',
+    'If 30+ years of research produce no stable consensus on deterrent magnitude (as current state suggests), the reading must either (a) abandon empirical justification and drift toward the retributive reading, or (b) adopt a precautionary stance (execution is justified despite empirical uncertainty to prevent possible murders). Analysis of how other readings handle irreducible empirical uncertainty.',
+    'If the reading drifts toward retributive logic (execution justified by moral balance, not deterrence), the constraint reclassifies from rope (coordination) to something closer to snare (extraction justified by deontological claim rather than utilitarian benefit). If the reading adopts precaution, extractiveness may rise (accepting error costs to achieve possible but unproven benefit).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(deterrence_empirical_efficacy, empirical, 'The empirical ground truth of deterrence: does execution prevent future homicides?').
+narrative_ontology:omega_variable(reading_logical_coherence_under_uncertainty, conceptual, 'Whether the deterrence reading can sustain itself under persistent empirical uncertainty about its core justification.').
 
 omega_variable(
-    error_rate_substitutability,
-    'Can life without parole substitute for execution as a deterrent at equivalent strength? Is the constraint''s specific form (death penalty) necessary or merely sufficient?',
-    'Comparative criminological analysis of deterrent effects of capital vs. non-capital sanctions; survey evidence on offender decision-making regarding execution vs. life sentence; natural experiments from jurisdictions shifting between sanction regimes.',
-    'If life-without-parole deters equally, the deterrence reading''s justification for execution specifically dissolves — a lower-cost alternative achieves the same deterrent outcome, collapsing the extraction into pure surplus rather than necessary-cost coordination. The constraint would shift toward snare classification.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(error_rate_substitutability, empirical, 'Whether execution''s deterrent efficacy is unique or can be achieved by lesser sanction.').
-
-omega_variable(
-    wrongful_conviction_error_threshold,
-    'At what error rate does the utilitarian cost of wrongful executions exceed the deterrent benefit in lives saved? What is the morally tolerable error rate?',
-    'Estimation of true error rate in capital convictions (Gross et al. 2014 estimate ~4.1% for death sentences; refine with further empirical work); calculation of deterrent lives saved per execution; comparison of error cost to deterrent benefit; philosophical analysis of whether a threshold exists below which the practice becomes acceptable.',
-    'If the true error rate and deterrent benefit produce a negative net-lives calculation (more innocent people wrongfully executed than guilty people deterred from murder), the constraint fails the deterrence reading''s own consequentialist ground. Reclassification to snare if error cost is knowingly accepted despite negative utilitarian calculus.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(wrongful_conviction_error_threshold, empirical, 'Error rate in capital convictions and its utilitarian cost relative to deterrent benefit.').
-
-omega_variable(
-    kernel_reading_contest,
-    'Is the deterrence reading logically coherent with the retributive and abolition readings of the same kernel (state execution authority), or do they foreclose one another?',
-    'Analysis of whether a single normative framework can hold multiple readings simultaneously. The retributive reading grounds execution in proportionate punishment (backward-looking); the deterrence reading grounds it in prevention of future crimes (forward-looking); the abolition reading rejects both on categorical deontological grounds. Can these coexist in a single legal system or do they foreclose?',
-    'If the readings foreclose one another, the authority structure cannot rationally hold all three simultaneously and must choose one. If they coexist, the actual system may be incoherent by design (holding retributive justification in some cases, deterrence in others, satisfying neither fully). The reading_relations in cs_structure are derived from this resolution.',
+    committer_foreclosure_test_deterrence_vs_abolition,
+    'Do the deterrence and abolition readings logically foreclose each other, or do they coexist as coherent positions held by different parties?',
+    'Logical analysis: the deterrence reading asserts execution can be justified by deterrent effect (empirical claim + utilitarian logic). The abolition reading asserts execution is categorically impermissible (deontological claim independent of consequences). These are NOT logical contradictions — one party can accept the deterrence claim and still adopt abolition on deontological grounds (execution is wrong even if it deters). The readings coexist in actual legal/political space (US jurisdictions with execution, EU jurisdictions without, both functioning).',
+    'If the readings coexist (neither forecloses the other), they are distinct constraints in a constraint family, not a binary choice. This affects how the engine models kernel dynamics: coexisting readings suggest institutional pluralism (different jurisdictions, coalitions can hold different readings), while foreclosing readings would suggest one must eventually dominate.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Whether the deterrence reading''s core premise forecloses or coexists with rival readings of the execution-authority kernel.').
+narrative_ontology:omega_variable(committer_foreclosure_test_deterrence_vs_abolition, conceptual, 'Whether the deterrence and abolition readings logically foreclose each other or coexist as live positions.').
 
 omega_variable(
-    rational_actor_assumption_validity,
-    'Do potential capital offenders respond to execution risk as rational expected-value maximizers, or is the assumption of rational-actor deterrence false?',
-    'Criminological evidence on offender decision-making (survey evidence, prison interviews, case studies); analysis of whether murder is typically a calculated decision or an impulsive/emotional act; evidence on whether offenders actually assess and respond to penalty severity.',
-    'If the rational-actor model is empirically false (most murders are non-deliberative or driven by passion/ideology rather than cost-benefit), the deterrence reading''s entire mechanism fails. The constraint would be maintained by enforcement inertia rather than by genuine deterrent function, shifting toward piton classification.',
-    confidence_without_resolution(high)
+    instrumental_vs_intrinsic_justification,
+    'Can the deterrence reading sustain itself if the primary function shifts from instrumental deterrence (preventing future murders) to intrinsic justification (execution as moral expression of the state''s authority)?',
+    'Historical and sociological analysis: when deterrence claims prove empirically weak, do systems that maintain execution shift their public and legal justification toward retributive or expressive rationales? Analysis of actual doctrine shifts in US capital punishment jurisprudence (Bowers studies, Supreme Court opinions).',
+    'If the deterrence reading drifts toward expressive justification, it merges with the retributive reading and the distinction between them collapses. The constraint would reclassify from rope (deterrent coordination) to snare or tangled_rope (expressive extraction justified by deontological claim).',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(rational_actor_assumption_validity, empirical, 'Do potential offenders actually reason about execution risk as rational actors?').
+narrative_ontology:omega_variable(instrumental_vs_intrinsic_justification, conceptual, 'Whether deterrence justification can persist as primary if empirical support erodes, or if the reading drifts toward retributive/expressive justification.').
 
 
 /* ==========================================================================
@@ -252,30 +331,45 @@ narrative_ontology:interval(state_execution_authority__deterrence_reading, 0, 50
 
 % Theater ratio over time
 narrative_ontology:measurement(stat_tr_t0, state_execution_authority__deterrence_reading, theater_ratio, 0, 0.18).
-narrative_ontology:measurement(stat_tr_t8, state_execution_authority__deterrence_reading, theater_ratio, 8, 0.2).
-narrative_ontology:measurement(stat_tr_t16, state_execution_authority__deterrence_reading, theater_ratio, 16, 0.24).
-narrative_ontology:measurement(stat_tr_t24, state_execution_authority__deterrence_reading, theater_ratio, 24, 0.27).
-narrative_ontology:measurement(stat_tr_t32, state_execution_authority__deterrence_reading, theater_ratio, 32, 0.29).
-narrative_ontology:measurement(stat_tr_t40, state_execution_authority__deterrence_reading, theater_ratio, 40, 0.28).
+narrative_ontology:measurement_basis(stat_tr_t0, observed).
+narrative_ontology:measurement(stat_tr_t8, state_execution_authority__deterrence_reading, theater_ratio, 8, 0.19).
+narrative_ontology:measurement_basis(stat_tr_t8, observed).
+narrative_ontology:measurement(stat_tr_t16, state_execution_authority__deterrence_reading, theater_ratio, 16, 0.22).
+narrative_ontology:measurement_basis(stat_tr_t16, observed).
+narrative_ontology:measurement(stat_tr_t25, state_execution_authority__deterrence_reading, theater_ratio, 25, 0.26).
+narrative_ontology:measurement_basis(stat_tr_t25, observed).
+narrative_ontology:measurement(stat_tr_t37, state_execution_authority__deterrence_reading, theater_ratio, 37, 0.29).
+narrative_ontology:measurement_basis(stat_tr_t37, observed).
 narrative_ontology:measurement(stat_tr_t50, state_execution_authority__deterrence_reading, theater_ratio, 50, 0.28).
+narrative_ontology:measurement_basis(stat_tr_t50, observed).
 
 % Extraction over time
-narrative_ontology:measurement(stat_be_t0, state_execution_authority__deterrence_reading, base_extractiveness, 0, 0.58).
-narrative_ontology:measurement(stat_be_t8, state_execution_authority__deterrence_reading, base_extractiveness, 8, 0.6).
-narrative_ontology:measurement(stat_be_t16, state_execution_authority__deterrence_reading, base_extractiveness, 16, 0.62).
-narrative_ontology:measurement(stat_be_t24, state_execution_authority__deterrence_reading, base_extractiveness, 24, 0.63).
-narrative_ontology:measurement(stat_be_t32, state_execution_authority__deterrence_reading, base_extractiveness, 32, 0.62).
-narrative_ontology:measurement(stat_be_t40, state_execution_authority__deterrence_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(stat_be_t0, state_execution_authority__deterrence_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(stat_be_t0, observed).
+narrative_ontology:measurement(stat_be_t8, state_execution_authority__deterrence_reading, base_extractiveness, 8, 0.52).
+narrative_ontology:measurement_basis(stat_be_t8, observed).
+narrative_ontology:measurement(stat_be_t16, state_execution_authority__deterrence_reading, base_extractiveness, 16, 0.58).
+narrative_ontology:measurement_basis(stat_be_t16, observed).
+narrative_ontology:measurement(stat_be_t25, state_execution_authority__deterrence_reading, base_extractiveness, 25, 0.61).
+narrative_ontology:measurement_basis(stat_be_t25, observed).
+narrative_ontology:measurement(stat_be_t37, state_execution_authority__deterrence_reading, base_extractiveness, 37, 0.64).
+narrative_ontology:measurement_basis(stat_be_t37, observed).
 narrative_ontology:measurement(stat_be_t50, state_execution_authority__deterrence_reading, base_extractiveness, 50, 0.62).
+narrative_ontology:measurement_basis(stat_be_t50, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(stat_su_t0, state_execution_authority__deterrence_reading, suppression_requirement, 0, 0.68).
-narrative_ontology:measurement(stat_su_t8, state_execution_authority__deterrence_reading, suppression_requirement, 8, 0.7).
-narrative_ontology:measurement(stat_su_t16, state_execution_authority__deterrence_reading, suppression_requirement, 16, 0.72).
-narrative_ontology:measurement(stat_su_t24, state_execution_authority__deterrence_reading, suppression_requirement, 24, 0.73).
-narrative_ontology:measurement(stat_su_t32, state_execution_authority__deterrence_reading, suppression_requirement, 32, 0.72).
-narrative_ontology:measurement(stat_su_t40, state_execution_authority__deterrence_reading, suppression_requirement, 40, 0.71).
-narrative_ontology:measurement(stat_su_t50, state_execution_authority__deterrence_reading, suppression_requirement, 50, 0.71).
+narrative_ontology:measurement(stat_su_t0, state_execution_authority__deterrence_reading, suppression_requirement, 0, 0.38).
+narrative_ontology:measurement_basis(stat_su_t0, observed).
+narrative_ontology:measurement(stat_su_t8, state_execution_authority__deterrence_reading, suppression_requirement, 8, 0.4).
+narrative_ontology:measurement_basis(stat_su_t8, observed).
+narrative_ontology:measurement(stat_su_t16, state_execution_authority__deterrence_reading, suppression_requirement, 16, 0.42).
+narrative_ontology:measurement_basis(stat_su_t16, observed).
+narrative_ontology:measurement(stat_su_t25, state_execution_authority__deterrence_reading, suppression_requirement, 25, 0.44).
+narrative_ontology:measurement_basis(stat_su_t25, observed).
+narrative_ontology:measurement(stat_su_t37, state_execution_authority__deterrence_reading, suppression_requirement, 37, 0.46).
+narrative_ontology:measurement_basis(stat_su_t37, observed).
+narrative_ontology:measurement(stat_su_t50, state_execution_authority__deterrence_reading, suppression_requirement, 50, 0.45).
+narrative_ontology:measurement_basis(stat_su_t50, observed).
 
 
 /* ==========================================================================
@@ -286,15 +380,17 @@ narrative_ontology:coordination_type(state_execution_authority__deterrence_readi
 narrative_ontology:boltzmann_floor_override(state_execution_authority__deterrence_reading, 0.12).
 narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, state_execution_authority__retributive_reading).
 narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, state_execution_authority__abolition_reading).
-narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, criminal_justice_legitimacy).
-narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, offender_rational_actor_assumption).
+narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, life_imprisonment_as_alternative_capital_sanction).
+narrative_ontology:affects_constraint(state_execution_authority__deterrence_reading, wrongful_conviction_error_rate).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of the state_execution_authority kernel family. The deterrence reading, retributive reading, and abolition reading are three distinct constraints sharing the same institutional kernel (state power to execute). Each reading produces a different ε, different beneficiary/victim structure, and different classification. They are linked by affects_constraints to enable contamination analysis: if the deterrence reading's empirical ground (that execution deters) is invalidated, the retributive reading's legitimacy is unaffected (it grounds execution in desert, not deterrence), while the abolition reading's claim strengthens (no consequentialist justification remains). Decomposition follows the ε-invariance principle: the observable 'deterrence efficacy' is specific to the deterrence reading and produces an ε distinct from the retributive reading's ε (which depends on desert, not deterrence).
+% The state_execution_authority kernel decomposes into three constraint stories corresponding to three competing readings: deterrence_reading (empirical deterrence justification), retributive_reading (moral balance justification), abolition_reading (categorical impermissibility). The ε values differ substantially across readings. deterrence_reading's ε depends on empirical deterrent effect (moderate ~0.6 if effect is small, higher if effect is nil); retributive_reading's ε is independent of deterrence (justification rests on proportionality, higher ~0.7+); abolition_reading rejects the standing arrangement entirely (ε measured from the abolitionist reading's frame, ~0.95 — pure extraction from the abolition perspective). These are structurally distinct constraints sharing a kernel. The family also includes life_imprisonment_as_alternative_capital_sanction, which constrains the deterrence reading's substitutability claim.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(state_execution_authority__deterrence_reading, powerless, 0.95).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

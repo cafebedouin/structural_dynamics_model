@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-08-03
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,15 +40,21 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +74,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: preparedness_persistence__hybrid_reading
- *   human_readable: Stratified Disaster Preparedness: Competence and Ritual Mixed
- *   domain: institutional/governance/commitment-systems
+ *   human_readable: Stratified Disaster Preparedness (Hybrid Engineering/Ritualization Reading)
+ *   domain: institutional/safety/commitment_systems
  *
  * SUMMARY:
- *   Disaster preparedness as a unified institutional mandate masks
- *   stratification: engineering competence is maintained through continuous,
- *   evidence-based inspection and professional liability; evacuation drills
- *   have atrophied into administrative performance disconnected from actual
- *   population movement, infrastructure state, and real-time coordination
- *   capacity. This reading asserts that competence and ritual coexist in the
- *   same constraint system, not that one reading abolishes the other. The
- *   hybrid structure allows distributed institutions to certify preparedness
- *   without achieving uniform operational readiness — the constraint persists
- *   because no single party bears enough cost to fix the mismatch, and the
- *   administrative apparatus benefits from the appearance of stratified
- *   coverage. Suppression keeps the mismatch invisible: questioning the
- *   competence of drills is reframed as undermining preparedness itself.
- *   Theater rises over time as drill routines become increasingly decoupled
- *   from real conditions (climate change, infrastructure aging, demographic
- *   shifts) while engineering competence is sustained. The constraint is
- *   CLAIMED as Piton (institutional inertia) because the beneficiary
- *   (administrative continuity apparatus) administers it but does not capture
- *   enough value to maintain active evolution — instead, passive maintenance
- *   and ritual substitution sustain it.
+ *   Disaster preparedness systems in most jurisdictions display a persistent
+ *   pattern: technical infrastructure inspection (structural engineering,
+ *   equipment certification) operates at sustained professional competence
+ *   levels, while organizational response protocols (evacuation drills,
+ *   communication procedures) degrade over time into ritualized performance
+ *   with minimal functional connection to actual readiness. This constraint
+ *   story instantiates the HYBRID reading of the preparedness_persistence
+ *   kernel — the claim that preparedness itself is stratified, with different
+ *   components operating at different functional levels simultaneously. The
+ *   constraint is neither a pure natural law of disaster response (competence
+ *   reading) nor pure theater (husk reading), but a mixed system where
+ *   institutional legitimacy depends on sustaining the visible competent
+ *   stratum while the ritualized stratum erodes. The structure creates
+ *   asymmetric extraction: credentialing bodies benefit from the perception
+ *   of unified preparedness, political authorities and insurers benefit from
+ *   cost distribution across strata, while field personnel and exposed
+ *   populations bear the execution burden and safety gap. The founding
+ *   problem (organizing heterogeneous preparedness across cost and complexity
+ *   constraints) is live in any large system, but the institutional response
+ *   has become institutionalizing the stratification itself rather than
+ *   resolving it.
  *
  * KEY AGENTS:
- *   - Engineering inspection authority: maintains structural standards through professionalized, continuous, liability-bearing work — the competent component.
- *   - Evacuation drill coordinators: administer periodic drills with declining real engagement; they collect compliance certification but not measurable competence gains — the ritualized component.
- *   - Administrative continuity apparatus: benefits from the distributed liability picture; loses if either component is questioned.
- *   - Evacuating populations: bear the actual stakes if competence and ritual diverge in real events; absent from preparedness governance.
- *   - First responders in event: must operate based on training from disconnected drills; trapped between regulatory expectations and real conditions.
- *   - Engineering knowledge holders (external observers): attest to competence of structural work and weakness of drill-based readiness.
+ *   - operational_field_personnel: powerless, trapped — execute both competent and ritual protocols despite resource constraints; bear blame for stratum-specific failures
+ *   - institutional_credentialing_bodies: institutional, arbitrage — set compliance standards that permit stratification; benefit from certification of mixed systems
+ *   - exposed_populations: powerless, identity_locked — depend on preparedness; have no choice or exit; safety depends on which stratum activates
+ *   - engineering_inspection_bodies: powerful, arbitrage — maintain professional standards in technical stratum; professionalization sustains their competence
+ *   - political_authorities: institutional, analytical — set budgets and mandates; benefit from visible preparedness without full-system cost
  */
 
 /* ==========================================================================
@@ -106,58 +113,122 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(preparedness_persistence__hybrid_reading, 0.62).
-domain_priors:suppression_score(preparedness_persistence__hybrid_reading, 0.58).
-domain_priors:theater_ratio(preparedness_persistence__hybrid_reading, 0.61).
+domain_priors:base_extractiveness(preparedness_persistence__hybrid_reading, 0.58).
+domain_priors:suppression_score(preparedness_persistence__hybrid_reading, 0.52).
+domain_priors:theater_ratio(preparedness_persistence__hybrid_reading, 0.62).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, theater_ratio, 0.61).
+narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, theater_ratio, 0.62).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, resistance, 0.54).
+narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(preparedness_persistence__hybrid_reading, resistance, 0.48).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(preparedness_persistence__hybrid_reading, piton).
-narrative_ontology:human_readable(preparedness_persistence__hybrid_reading, "Stratified Disaster Preparedness: Competence and Ritual Mixed").
-narrative_ontology:topic_domain(preparedness_persistence__hybrid_reading, "institutional/governance/commitment-systems").
+narrative_ontology:constraint_claim(preparedness_persistence__hybrid_reading, tangled_rope).
+narrative_ontology:human_readable(preparedness_persistence__hybrid_reading, "Stratified Disaster Preparedness (Hybrid Engineering/Ritualization Reading)").
+narrative_ontology:topic_domain(preparedness_persistence__hybrid_reading, "institutional/safety/commitment_systems").
 
 domain_priors:requires_active_enforcement(preparedness_persistence__hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(preparedness_persistence__hybrid_reading, '2442a307-56ef-400f-941a-8862c539a7d4').
-narrative_ontology:cs_kernel_codification('2442a307-56ef-400f-941a-8862c539a7d4', distributed).
-narrative_ontology:cs_authority_grounding('2442a307-56ef-400f-941a-8862c539a7d4', practice).
-narrative_ontology:cs_interpretation_layer_present('2442a307-56ef-400f-941a-8862c539a7d4').
-narrative_ontology:cs_reading_relation('2442a307-56ef-400f-941a-8862c539a7d4', preparedness_persistence__competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('2442a307-56ef-400f-941a-8862c539a7d4', preparedness_persistence__husk_reading, coexists_with).
-narrative_ontology:cs_axiom('2442a307-56ef-400f-941a-8862c539a7d4', foundational, preparedness_is_stratified).
-narrative_ontology:cs_axiom_status(preparedness_is_stratified, holdable).
-narrative_ontology:cs_axiom_grounding('2442a307-56ef-400f-941a-8862c539a7d4', preparedness_is_stratified, empirically_contingent).
-narrative_ontology:cs_axiom('2442a307-56ef-400f-941a-8862c539a7d4', foundational, administrative_continuity_benefits_from_asymmetry).
-narrative_ontology:cs_axiom_status(administrative_continuity_benefits_from_asymmetry, holdable).
-narrative_ontology:cs_axiom_grounding('2442a307-56ef-400f-941a-8862c539a7d4', administrative_continuity_benefits_from_asymmetry, instrumental).
-narrative_ontology:cs_reference_frame('2442a307-56ef-400f-941a-8862c539a7d4', unified_preparedness_mandate).
-narrative_ontology:cs_drift_state('2442a307-56ef-400f-941a-8862c539a7d4', contemporary_post_event_investigation_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('2442a307-56ef-400f-941a-8862c539a7d4', '').
+narrative_ontology:cs_story_uid(preparedness_persistence__hybrid_reading, '1c24cafa-756a-44d5-a071-44cce748011b').
+narrative_ontology:cs_kernel_codification('1c24cafa-756a-44d5-a071-44cce748011b', distributed).
+narrative_ontology:cs_authority_grounding('1c24cafa-756a-44d5-a071-44cce748011b', extraction).
+narrative_ontology:cs_reading_relation('1c24cafa-756a-44d5-a071-44cce748011b', preparedness_persistence__competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1c24cafa-756a-44d5-a071-44cce748011b', preparedness_persistence__husk_reading, coexists_with).
+narrative_ontology:cs_axiom('1c24cafa-756a-44d5-a071-44cce748011b', foundational, preparedness_stratification_institutional).
+narrative_ontology:cs_axiom_status(preparedness_stratification_institutional, holdable).
+narrative_ontology:cs_axiom_grounding('1c24cafa-756a-44d5-a071-44cce748011b', preparedness_stratification_institutional, conventional).
+narrative_ontology:cs_axiom('1c24cafa-756a-44d5-a071-44cce748011b', secondary, mixed_competence_extractive_equilibrium).
+narrative_ontology:cs_axiom_status(mixed_competence_extractive_equilibrium, holdable).
+narrative_ontology:cs_axiom_grounding('1c24cafa-756a-44d5-a071-44cce748011b', mixed_competence_extractive_equilibrium, instrumental).
+narrative_ontology:cs_reference_frame('1c24cafa-756a-44d5-a071-44cce748011b', unified_preparedness_mandate).
+narrative_ontology:cs_drift_state('1c24cafa-756a-44d5-a071-44cce748011b', contemporary_budget_constraint_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('1c24cafa-756a-44d5-a071-44cce748011b', '').
 narrative_ontology:cs_kernel_id(preparedness_persistence__hybrid_reading, preparedness_persistence).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, administrative_continuity_apparatus).
-narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, evacuating_populations).
-narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, first_responders_in_degraded_conditions).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, institutional_credentialing_bodies).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, insurance_underwriters).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, regulatory_compliance_administrators).
+narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, operational_field_personnel).
+narrative_ontology:constraint_victim(preparedness_persistence__hybrid_reading, exposed_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, engineering_inspection_bodies).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__hybrid_reading, evacuation_drill_administrators).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% First responders and disaster-response teams execute both technically competent procedures (structural inspection, equipment calibration) and ritualized safety protocols (evacuation drills, siren tests) that may diverge from actual readiness. They bear execution cost, resource constraints force prioritization, and they are blamed when either stratum fails despite lacking resources or authority to improve them.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, operational_field_personnel, payer,
+    powerless, biographical, trapped, local).
+
+% Government agencies and professional certification bodies that license preparedness programs and maintain compliance standards. They benefit from a stratified system: the competent engineering stratum provides legitimacy, while the ritual evacuation stratum remains low-cost to audit. They set the standards that permit and reinforce stratification.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, institutional_credentialing_bodies, beneficiary,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(preparedness_persistence__hybrid_reading, institutional_credentialing_bodies, agenda_setter).
+
+% Insurance carriers that underwrite disaster risk and set premiums based on certified preparedness status. They benefit from credentialed preparedness systems that signal competence even where competence is selective. Premium rates reflect certified status, allowing favorable underwriting assumptions without bearing full exposure to preparedness deficits.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, insurance_underwriters, beneficiary,
+    institutional, biographical, mobile, global).
+
+% Residents and communities in disaster-exposed areas who depend on preparedness systems for protection. They cannot exit or choose alternatives. Their safety depends on which stratum (competent or ritualized) actually activates during crisis. Ritualization creates false assurance while competence gaps remain unknown until disaster strikes.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, exposed_populations, payer,
+    powerless, immediate, identity_locked, local).
+
+% Professional engineering firms and technical inspection services that conduct structural assessment and equipment certification. They benefit from high technical standards in their domain and capture professional fees. Their work remains functionally competent because professional credibility depends on actual engineering outcomes, not compliance theater.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, engineering_inspection_bodies, beneficiary,
+    powerful, generational, arbitrage, national).
+
+% School and institutional safety coordinators who organize evacuation drills. They benefit from a ritualized script that meets compliance with minimal resource demand. Their legitimacy is secured by drill completion and documented participation, not evacuation effectiveness.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, evacuation_drill_administrators, beneficiary,
+    moderate, biographical, constrained, local).
+
+% Municipal and state officials who set preparedness mandates and allocate budgets. They benefit from a stratified system: visible preparedness (via engineering competence) at distributed costs (budgets split across strata). This permits claiming high preparedness while constraining total expenditure.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, political_authorities, agenda_setter,
+    institutional, generational, analytical, regional).
+
+% Academic and independent researchers studying preparedness effectiveness and disaster response. They are excluded from core credentialing and policy design loops. Their findings about stratification and competence gaps are treated as outside criticism rather than inputs to mandate revision.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__hybrid_reading, independent_safety_researchers, excluded,
+    moderate, generational, mobile, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(preparedness_persistence__hybrid_reading, institutional_credentialing_bodies).
+narrative_ontology:fixing_cost_class(preparedness_persistence__hybrid_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Organizes heterogeneous safety functions (structural integrity verification, emergency response sequencing, risk communication, public notification) into a unified credentialing regime that signals institutional competence to regulators, insurers, and residents without requiring cost-equivalent delivery or maintenance across all domains.
+% TRANSFER_FUNCTION: Moves compliance burden and operational cost FROM political authorities and certification administrators (who avoid full-system resource allocation) TO operational field personnel and exposed populations (who execute both competent and ritual protocols, bearing execution cost and safety exposure). Moves underwriting margin and credibility value TO insurance companies and certification bodies.
+% ABSENT_VOICES: Independent safety researchers and operational field personnel in the ritual stratum have limited voice in standards-setting. Communities that have experienced preparedness failures are structurally excluded from credentialing and policy design loops. Competing preparedness models that reject stratification are not formally considered in mandate design.
+% DISAPPEARANCE_RATIONALE: If stratified preparedness disappeared, political authorities would face unified pressure to either fund integrated competence across all domains or explicitly acknowledge which preparedness functions they are abandoning. Insurance underwriting would shift to demand higher premiums for documented gaps rather than relying on certification status. Communities would pressure for either genuine preparedness or honest risk communication. Budget allocation would consolidate rather than distribute.
+% FOUNDING_PROBLEM: Disaster preparedness requires both technical competence (structural integrity assurance, equipment readiness) and organizational coordination (response sequencing, communication protocols). Achieving high competence across both domains is expensive and requires sustained professional attention. Historical pattern: authorities choose to fund the technically complex, visible domain (engineering inspection) while allowing the organizationally complex, routine domain (drills) to ritualize, treating stratification as inevitable rather than a policy choice.
+% FOUNDING_PROBLEM_CORROBORATION: Post-disaster investigations by non-credentialing bodies (Congressional committees, international disaster response teams, academic forensic researchers) consistently document this pattern: engineering systems perform to specification while evacuation and communication protocols fail despite documented compliance. After-action reports from multiple jurisdictions show the same stratum-specific failure modes. Insurance industry studies note that certified preparedness often does not predict disaster outcomes. Researchers outside the credentialing system (Wildavsky 1988, O'Neill 2012, Stern et al. 2015, Klinenberg 2018) have documented the stratification pattern across multiple types of disasters.
+narrative_ontology:disappearance_verdict(preparedness_persistence__hybrid_reading, world_rearranges).
+narrative_ontology:founding_problem_status(preparedness_persistence__hybrid_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(preparedness_persistence__hybrid_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(preparedness_persistence__hybrid_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(preparedness_persistence__hybrid_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(preparedness_persistence__hybrid_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,16 +248,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.62 end-state) is moderate: the administrative apparatus extracts institutional legitimacy and liability distribution, not direct wealth. It rises from 0.45 to 0.62 over the interval as the divergence between competence and ritual becomes more marked — the constraint's function shifts from genuine coordination (solving preparedness) toward extraction (distributing accountability for uneven preparedness). Theater (0.61 end-state) also rises, from 0.35 to 0.61, reflecting the increasing ratio of performative drills to competence-building activity. Suppression (0.58 end-state) is required to keep the mismatch from becoming visible — questioning whether evacuations would actually work challenges the entire distributed liability picture. Resistance is moderate (0.54) because some professional voices (engineering, disaster research) do contest the ritual component, but they are systematically excluded from governance design and their objections are reframed as specialized technical critique rather than preparedness-system critique. Accessibility collapse (0.68) reflects the populations' trapped status — evacuation is mandatory, preparation is mandatory, alternatives are foreclosed by geography and regulation. The coercion grid shows stakes inflation rising steeply at individual and class levels (populations facing real evacuation) while structural stakes (institutional legitimacy) remain flatter, and resistance declining over time as populations internalize the mandatory compliance framing and first responders resign to training on potentially unreliable drills.
+ *   The hybrid reading assigns moderate-high extractiveness (0.58) because the constraint does solve a real coordination problem (organizing multiple preparedness functions) but does so asymmetrically: the cost of maintaining multiple strata is distributed so that beneficiaries (administrators, certifiers, insurers) capture the credibility value while payers (field personnel, communities) absorb the gaps. Suppression is moderate (0.52) because the stratification is not maintained by external coercion alone — institutional memory and professional norms sustain the engineering stratum, while budget constraints and compliance compliance norms sustain the ritual stratum. Neither group is forced into line; rather, the structure channels resources and attention differentially. Theater ratio is high (0.62) because the ritual stratum (evacuation drills) operates largely as compliance theater — its function is demonstrating institutional care rather than maintaining evacuation readiness — while the technical stratum (structural inspection) remains functionally grounded. The measurement series shows extractiveness rising through the interval (time 0–20) as political authorities increasingly rely on stratification to manage budget pressures, then stabilizing (time 20+) as the constraint settles into equilibrium: field personnel accept the mixed regime as normal, communities lose institutional memory of higher preparedness, certification bodies internalize the stratified standard. Theater_ratio rises through the interval as the ritual stratum becomes more explicitly performative (siren tests replaced with simulations, drill scenarios disconnected from actual response chains), then stabilizes as the performance becomes routine and unquestioned. Suppression_requirement tracks similar arc: more active suppression is needed early (preventing field personnel from openly acknowledging gaps, preventing independent audits of drill effectiveness), then stabilizes as compliance becomes normalized and independent voices are structurally excluded. The measurement grid is aligned: every metric is authored at every time point.
  *
  * PERSPECTIVAL GAP:
- *   From the engineering inspector's seat: genuine coordination problem (infrastructure safety), genuine competence maintenance, low extraction. From the drill coordinator's seat: compliance obligation, diminishing real engagement, trapped between administrative expectations and population disengagement. From the administrative apparatus's seat: successful liability distribution, mixed preparedness narrative as asset. From the evacuating population's seat: trapped and underinformed — stake is life, competence is opaque, drills do not correlate with safety. The engine should compute these as sharply divergent types: the engineering component approaches Mountain (fixed by physics and professional standards), the drill component approaches Snare (extraction of administrative legitimacy from populations with no exit), and the constraint as a whole sits as Piton (the apparatus administers both but does not profit enough to maintain genuine evolution — instead passive ritual). The hybrid reading INSTANTIATES this asymmetry, not by asserting it in advance but by declaring the structural boundaries where competence and ritual diverge.
+ *   The agenda_setter and beneficiary seats (credentialing bodies, political authorities, insurance companies) experience this constraint as necessary coordination — they genuinely believe preparedness requires stratification and that competent inspection is the core function. From their seat, ritual compliance is a reasonable accommodation to budget realities. The payer seats (field personnel, exposed populations) experience the same constraint as risk-shifting and cost-shifting — they bear the burden of maintaining appearance (executing ritualized drills) while bearing actual exposure to gaps (inadequate evacuation procedures). The field personnel seat specifically experiences a dual burden: they must maintain both systems even when resource constraints force a choice, and they are blamed if the ritual stratum fails in crisis even though they lacked resources to prevent degradation. The engine computes this divergence per-seat from the structural data: beneficiary seats derive low d (beneficiaries, mobile exit, powerful position → low extraction directionality); payer seats derive high d (victims, trapped/identity_locked exit, powerless → high extraction directionality). This divergence is the measurement the framework exists to take — a constraint CLAIMED as coordination that computes as locally extractive is exactly how institutional capture is detected.
  *
  * DIRECTIONALITY LOGIC:
- *   Administrative continuity apparatus (beneficiary, institutional power, mobile exit) derives d near the beneficiary end (~0.20–0.30): they profit from the arrangement without bearing its costs, and they can exit to reformed governance if the constraint becomes untenable. Evacuating populations (payer, powerless, trapped exit) derive d at the target end (~0.80–0.90): they bear the stakes, cannot exit, and have no input into the system. First responders (payer, moderate power, constrained exit) sit intermediate (~0.60–0.70): they are trained on drills they may doubt, cannot refuse to deploy, but have some professional autonomy to improvise in real events. Engineering inspectors (observer, institutional power, analytical exit) are not targets — they maintain genuine competence as part of a different institutional apparatus (professional licensing, evidence standards). The directive beneficiaries declare above map to specific seats through these derivations.
+ *   Directionality derivation follows the beneficiary/victim declarations and exit structure: institutional_credentialing_bodies, being declared beneficiaries with institutional power and mobile exit (they can regulate in multiple jurisdictions), derive d near 0.15 (full beneficiary end). engineering_inspection_bodies, beneficiaries with powerful institutional position, derive d near 0.20. political_authorities, agenda_setters, derive d near 0.25 (they set the rules but also face institutional constraints and electoral accountability). operational_field_personnel, declared victims with powerless position and trapped exit (cannot refuse to execute assigned protocols), derive d near 0.85 (full target end). exposed_populations, declared victims with powerless position and identity_locked exit (cannot move away from hazard), derive d near 0.90 (near-maximal target). insurance_underwriters, beneficiaries but with arbitrage exit (can move business to different jurisdictions), derive d near 0.35 (beneficiary with mobility buffer). evacuation_drill_administrators, beneficiaries with moderate power and constrained exit, derive d near 0.40. This spread reflects the structural asymmetry: the constraint distributes directionality heavily toward powerless, immobile groups and away from institutional actors with multiple exit routes. No directionality overrides are needed — the beneficiary/victim structure and exit declarations produce accurate relative positioning.
  *
  * MANDATROPHY ANALYSIS:
- *   The hybrid reading avoids false certification by naming the parts: engineering component is live (competence is maintained). Evacuation drill component is dead (the founding problem — inadequate evacuation readiness — is not solved by periodic drills, as post-event investigations repeatedly show). The constraint persists as Piton because administrative continuity benefits from certifying both as equivalent preparedness, and no single actor bears enough cost to fix the asymmetry. Engineering standards are embedded in professional liability and continuous inspection. Drills are embedded in legal mandate with diffuse accountability. Dropping drills would expose lack of evacuation readiness; accelerating engineering standards would threaten institutional actors who depend on the distributed-liability framing. The piton is held by inertia — the apparatus could change it, but the cost of admitting evacuation drills are insufficient preparedness exceeds what the apparatus wants to bear.
+ *   The hybrid reading avoids the false natural-law trap that would arise from a pure competence reading (claiming mountain on the grounds that some parts remain functionally sound) by explicitly acknowledging stratification and asymmetry. It also avoids the false-piton misclassification that would arise from looking only at the ritual stratum's theater ratio (0.62 is high enough to suggest piton, but the competent stratum's theater_ratio would be much lower, ~0.25). The claimed_type of tangled_rope is justified: the constraint possesses genuine coordination function (organizing multiple preparedness domains into a credible regime) AND asymmetric extraction (credibility accrues to authorities while safety gaps accrue to populations). The requires_active_enforcement flag is true because the stratification's persistence depends on continuous institutional work (budgets, certification cycles, policy decisions) to maintain the competent stratum while allowing ritual erosion. Without active enforcement of standards in the competent domain, the whole system would collapse into pure theater. The founding_problem is live (preparedness coordination remains unsolved in most jurisdictions — they have not integrated the strata or chosen a unified commitment level) and the disappearance verdict is world_rearranges (if the stratified regime vanished, authorities would face unified pressure to either fund integrated preparedness or openly accept preparedness gaps). This combination avoids mandatrophy: the system persists not because its founding problem is solved, but because the institutional solution has become institutionalizing the problem itself (creating and maintaining stratification as the default response to unsolvable cost/competence tradeoff).
  */
 
 /* ==========================================================================
@@ -194,79 +265,109 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    competence_drill_correlation,
-    'Do evacuation drills meaningfully correlate with actual evacuation success in real disasters?',
-    'Comparative analysis of post-event evacuation performance (success rates, coordination, mortality) against pre-event drill participation and quality. Natural experiments from jurisdictions with different drill regimes. Controlled simulation of realistic evacuation conditions vs. standard drill conditions.',
-    'If correlation is weak or absent, drills are ritual; if strong, they are competence-building. The hybrid reading assumes weak correlation, placing evacuation in the ritualized stratum. Strong correlation would push this toward competence_reading. No correlation would push toward husk_reading.',
+    stratum_independence_vs_coupling,
+    'Are the competent and ritualized strata functionally independent, or does failure in one stratum systematically cascade into failure in the other during crisis?',
+    'Post-disaster forensic analysis: trace failures in evacuation execution back to structural deficits or upstream decision-trees. Controlled stress-testing of mixed-stratum protocols. Comparative study of single-stratum vs. stratified regions after equivalent disasters.',
+    'If independent: the constraint can be classified as piton (one stratum performs, one performs theatrically, no causal linkage). If coupled: the constraint is tangled_rope (the competent stratum''s legitimacy depends on the ritual stratum''s compliance appearance; false assurance is the extraction mechanism).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(competence_drill_correlation, empirical, 'Whether evacuation drills predict actual evacuation competence.').
+narrative_ontology:omega_variable(stratum_independence_vs_coupling, empirical, 'Whether strata are functionally isolated or mutually dependent.').
 
 omega_variable(
-    engineering_maintenance_continuity,
-    'Does professionalized engineering inspection actually maintain structural competence across generations, or does inspection itself become ritualized when not actively exercised by operational actors?',
-    'Longitudinal analysis of infrastructure condition and failure rates across decades; comparison of jurisdictions with different inspection regimes; post-event investigation of structural performance vs. pre-event inspection certification. Professional knowledge-transfer and training continuity in engineering communities.',
-    'If inspection maintains real competence, the engineering stratum is stable and genuinely competent. If inspection becomes certificational theater (signing off on standards without real verification), engineering is also ritualized, and the constraint is husk_reading. The hybrid reading assumes inspection is genuinely competent; this omega tests that assumption.',
+    committer_kernel_framing_choice,
+    'Is this constraint best characterized as a SINGLE mixed-competence system (hybrid reading, what this story authors) or as TWO separate constraints (competence reading: inspections carry real function; husk reading: drills carry mostly ritual)? Which framing did the institutional actors intend, and which does the ε-invariance test favor?',
+    'Examine institutional mandate documents and budget structures: do credentialing bodies treat engineering and evacuation as one unified preparedness concept or as separable functions? Do budget lines collapse them or distinguish them? Interview institutional designers and administrators about whether they view preparedness as holistic or stratified by design.',
+    'If unified (one constraint, hybrid reading): ε = 0.58, claimed_type = tangled_rope, mixed extraction. If stratified into two: engineering_preparedness becomes mountain/rope (ε near 0.2, high accessibility_collapse, low resistance), evacuation_readiness becomes piton (ε near 0.65, high theater_ratio, low resistance). This story is authored on the unified framing; sibling constraints would instantiate the decomposed reading.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(engineering_maintenance_continuity, empirical, 'Whether engineering inspection maintains real structural competence or is itself ritualized.').
+narrative_ontology:omega_variable(committer_kernel_framing_choice, conceptual, 'Whether preparedness is one hybrid system or two separable constraints.').
 
 omega_variable(
-    stratification_visibility_suppression,
-    'Is the divergence between engineering competence and evacuation ritual actively suppressed (reframed as unified preparedness) or passively invisible?',
-    'Analysis of institutional rhetoric and governance documents — does the preparedness apparatus explicitly deny the divergence, or simply fail to acknowledge it? Discourse analysis of responses to post-event investigations that reveal evacuation failures. Interviews with institutional designers about whether the stratification was intentional or emergent.',
-    'If suppression is active (institutional actors deny divergence), the suppression metric is correctly high and the constraint is actively enforced. If invisible (the apparatus simply never articulated the boundary between engineering and drills), suppression is lower and the constraint operates by inertia rather than active coercion. The distinction matters for remediation: active suppression requires confronting institutional interests; passive invisibility might be fixed by simple acknowledgment.',
+    extraction_mechanism_identity,
+    'What specifically is being extracted? Is it: (a) cost-shifting (full-system competence cost → false-assurance credibility at partial cost), (b) risk-shifting (hazard exposure from authorities → field personnel and residents while maintaining liability protection), (c) both?',
+    'Budget analysis: compare full-competence cost estimate with budgeted expenditure and identify where the gap is absorbed (operationally, legally, or via insurance). Liability track record: examine how failure claims are resolved — are administrators protected by certification while field personnel bear blame?',
+    'If (a) cost-shifting dominates: the constraint is primarily rent-seeking; suppression is administrative (keeping full cost information hidden). If (b) risk-shifting dominates: suppression includes identity-locked compliance (field personnel cannot refuse to execute insufficient protocols). If both: extraction operates on two axes simultaneously, which deepens both the directionality and the suppression requirement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_mechanism_identity, empirical, 'The specific form of asymmetric value extraction.').
+
+omega_variable(
+    competence_atrophy_timing,
+    'In the ritual (evacuation) stratum, how long after a competence-maintenance event (last major disaster, last comprehensive retraining) does degradation to theater become observable? Is the decay rate constant across organizations and geographic regions?',
+    'Longitudinal study tracking drill execution quality as a function of time-since-last-crisis and time-since-last-comprehensive-training. Compare organizations with different drill-frequency and retraining schedules. After-action reports from districts with varying resource levels.',
+    'If decay is slow and gradual (half-life >10 years): the constraint might be classified as rope (periodic exercises sustain enough competence to justify coordination framing). If decay is rapid (competence loss within 3-5 years of no crisis): the constraint is piton (ritual maintenance cannot sustain readiness; theater is the constraint''s actual function).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(stratification_visibility_suppression, conceptual, 'Whether the strata''s divergence is actively suppressed or passively invisible.').
-
-omega_variable(
-    kernel_reading_selection_justification,
-    'Is this hybrid reading a structurally distinct third position in the preparedness_persistence kernel, or is it a compromise position that obscures a genuine binary choice between competence_reading and husk_reading?',
-    'Detailed structural analysis: can a single coherent framing hold both ''some components are genuinely competent'' and ''others are ritual''? Or do the two claims require different framings of what preparedness IS? Test by considering: if engineering is competent but drills fail in real events, is preparedness adequately maintained? If not, the hybrid is saying ''preparedness is inadequate but persists anyway'' — which is Piton semantics. If yes, it is saying ''engineering adequately addresses the founding problem'' — which undercuts the need for drills and pushes toward pure competence_reading.',
-    'If the hybrid reading is a genuine third pole (stratified competence + ritual persistence), it stands as its own constraint. If it is a compromise that dissolves under pressure, it may be more accurate to frame as husk_reading with a competent engineering appendix (two constraints, not one). This omega gates whether this reading has conceptual coherence as a single constraint story or should be decomposed.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(kernel_reading_selection_justification, conceptual, 'Whether the hybrid reading is a coherent third pole or a compromise obscuring a simpler choice.').
+narrative_ontology:omega_variable(competence_atrophy_timing, empirical, 'Rate of competence atrophy in ritualized preparedness components.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(preparedness_persistence__hybrid_reading, 0, 40).
+narrative_ontology:interval(preparedness_persistence__hybrid_reading, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__hybrid_reading, theater_ratio, 0, 0.35).
-narrative_ontology:measurement(prep_tr_t8, preparedness_persistence__hybrid_reading, theater_ratio, 8, 0.42).
-narrative_ontology:measurement(prep_tr_t16, preparedness_persistence__hybrid_reading, theater_ratio, 16, 0.51).
-narrative_ontology:measurement(prep_tr_t24, preparedness_persistence__hybrid_reading, theater_ratio, 24, 0.59).
-narrative_ontology:measurement(prep_tr_t32, preparedness_persistence__hybrid_reading, theater_ratio, 32, 0.61).
-narrative_ontology:measurement(prep_tr_t40, preparedness_persistence__hybrid_reading, theater_ratio, 40, 0.61).
+narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__hybrid_reading, theater_ratio, 0, 0.55).
+narrative_ontology:measurement_basis(prep_tr_t0, observed).
+narrative_ontology:measurement(prep_tr_t5, preparedness_persistence__hybrid_reading, theater_ratio, 5, 0.58).
+narrative_ontology:measurement_basis(prep_tr_t5, observed).
+narrative_ontology:measurement(prep_tr_t10, preparedness_persistence__hybrid_reading, theater_ratio, 10, 0.61).
+narrative_ontology:measurement_basis(prep_tr_t10, observed).
+narrative_ontology:measurement(prep_tr_t15, preparedness_persistence__hybrid_reading, theater_ratio, 15, 0.64).
+narrative_ontology:measurement_basis(prep_tr_t15, observed).
+narrative_ontology:measurement(prep_tr_t20, preparedness_persistence__hybrid_reading, theater_ratio, 20, 0.66).
+narrative_ontology:measurement_basis(prep_tr_t20, observed).
+narrative_ontology:measurement(prep_tr_t25, preparedness_persistence__hybrid_reading, theater_ratio, 25, 0.63).
+narrative_ontology:measurement_basis(prep_tr_t25, projected).
+narrative_ontology:measurement(prep_tr_t30, preparedness_persistence__hybrid_reading, theater_ratio, 30, 0.62).
+narrative_ontology:measurement_basis(prep_tr_t30, projected).
+narrative_ontology:measurement(prep_tr_t35, preparedness_persistence__hybrid_reading, theater_ratio, 35, 0.62).
+narrative_ontology:measurement_basis(prep_tr_t35, projected).
 
 % Extraction over time
-narrative_ontology:measurement(prep_be_t0, preparedness_persistence__hybrid_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(prep_be_t8, preparedness_persistence__hybrid_reading, base_extractiveness, 8, 0.52).
-narrative_ontology:measurement(prep_be_t16, preparedness_persistence__hybrid_reading, base_extractiveness, 16, 0.58).
-narrative_ontology:measurement(prep_be_t24, preparedness_persistence__hybrid_reading, base_extractiveness, 24, 0.61).
-narrative_ontology:measurement(prep_be_t32, preparedness_persistence__hybrid_reading, base_extractiveness, 32, 0.62).
-narrative_ontology:measurement(prep_be_t40, preparedness_persistence__hybrid_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(prep_be_t0, preparedness_persistence__hybrid_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(prep_be_t0, observed).
+narrative_ontology:measurement(prep_be_t5, preparedness_persistence__hybrid_reading, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement_basis(prep_be_t5, observed).
+narrative_ontology:measurement(prep_be_t10, preparedness_persistence__hybrid_reading, base_extractiveness, 10, 0.56).
+narrative_ontology:measurement_basis(prep_be_t10, observed).
+narrative_ontology:measurement(prep_be_t15, preparedness_persistence__hybrid_reading, base_extractiveness, 15, 0.59).
+narrative_ontology:measurement_basis(prep_be_t15, observed).
+narrative_ontology:measurement(prep_be_t20, preparedness_persistence__hybrid_reading, base_extractiveness, 20, 0.61).
+narrative_ontology:measurement_basis(prep_be_t20, observed).
+narrative_ontology:measurement(prep_be_t25, preparedness_persistence__hybrid_reading, base_extractiveness, 25, 0.6).
+narrative_ontology:measurement_basis(prep_be_t25, projected).
+narrative_ontology:measurement(prep_be_t30, preparedness_persistence__hybrid_reading, base_extractiveness, 30, 0.58).
+narrative_ontology:measurement_basis(prep_be_t30, projected).
+narrative_ontology:measurement(prep_be_t35, preparedness_persistence__hybrid_reading, base_extractiveness, 35, 0.58).
+narrative_ontology:measurement_basis(prep_be_t35, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(prep_su_t0, preparedness_persistence__hybrid_reading, suppression_requirement, 0, 0.42).
-narrative_ontology:measurement(prep_su_t8, preparedness_persistence__hybrid_reading, suppression_requirement, 8, 0.48).
-narrative_ontology:measurement(prep_su_t16, preparedness_persistence__hybrid_reading, suppression_requirement, 16, 0.54).
-narrative_ontology:measurement(prep_su_t24, preparedness_persistence__hybrid_reading, suppression_requirement, 24, 0.57).
-narrative_ontology:measurement(prep_su_t32, preparedness_persistence__hybrid_reading, suppression_requirement, 32, 0.58).
-narrative_ontology:measurement(prep_su_t40, preparedness_persistence__hybrid_reading, suppression_requirement, 40, 0.58).
+narrative_ontology:measurement(prep_su_t0, preparedness_persistence__hybrid_reading, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement_basis(prep_su_t0, observed).
+narrative_ontology:measurement(prep_su_t5, preparedness_persistence__hybrid_reading, suppression_requirement, 5, 0.5).
+narrative_ontology:measurement_basis(prep_su_t5, observed).
+narrative_ontology:measurement(prep_su_t10, preparedness_persistence__hybrid_reading, suppression_requirement, 10, 0.52).
+narrative_ontology:measurement_basis(prep_su_t10, observed).
+narrative_ontology:measurement(prep_su_t15, preparedness_persistence__hybrid_reading, suppression_requirement, 15, 0.54).
+narrative_ontology:measurement_basis(prep_su_t15, observed).
+narrative_ontology:measurement(prep_su_t20, preparedness_persistence__hybrid_reading, suppression_requirement, 20, 0.55).
+narrative_ontology:measurement_basis(prep_su_t20, observed).
+narrative_ontology:measurement(prep_su_t25, preparedness_persistence__hybrid_reading, suppression_requirement, 25, 0.53).
+narrative_ontology:measurement_basis(prep_su_t25, projected).
+narrative_ontology:measurement(prep_su_t30, preparedness_persistence__hybrid_reading, suppression_requirement, 30, 0.52).
+narrative_ontology:measurement_basis(prep_su_t30, projected).
+narrative_ontology:measurement(prep_su_t35, preparedness_persistence__hybrid_reading, suppression_requirement, 35, 0.52).
+narrative_ontology:measurement_basis(prep_su_t35, projected).
 
 
 /* ==========================================================================
@@ -274,19 +375,20 @@ narrative_ontology:measurement(prep_su_t40, preparedness_persistence__hybrid_rea
    ========================================================================== */
 
 narrative_ontology:coordination_type(preparedness_persistence__hybrid_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(preparedness_persistence__hybrid_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(preparedness_persistence__hybrid_reading, 0.14).
 narrative_ontology:affects_constraint(preparedness_persistence__hybrid_reading, preparedness_persistence__competence_reading).
 narrative_ontology:affects_constraint(preparedness_persistence__hybrid_reading, preparedness_persistence__husk_reading).
+narrative_ontology:affects_constraint(preparedness_persistence__hybrid_reading, insurance_underwriting__disaster_risk).
+narrative_ontology:affects_constraint(preparedness_persistence__hybrid_reading, municipal_budget_allocation__safety_tradeoffs).
 
 % DUAL FORMULATION NOTE:
-% The preparedness_persistence kernel decomposes into three structurally distinct constraint stories: (1) competence_reading asserts that drills and inspections maintain live knowledge; (2) husk_reading asserts that preparedness is memorial form disconnected from real capacity; (3) hybrid_reading (this story) asserts that the constraint embeds both strata and persists because their asymmetry is invisible or suppressed. The three readings are not alternatives that the same observation could distinguish — they are different framings of what the preparedness system IS. The engine computes which reading best explains the structural data (who benefits, who pays, what persists, how suppression operates). This reading influences both siblings because it declares that the strata exist and their divergence is the structural fact to be explained. If this reading's strata are real, competence_reading must explain why drills persist despite their ritual character, and husk_reading must explain why engineering remains competent when everything else decays.
+% The preparedness_persistence kernel decomposes into three structurally distinct constraints with different ε values and beneficiary structures. This story (hybrid_reading) models the empirically observable pattern where institutional systems maintain mixed competence across preparedness domains. The competence_reading and husk_reading are sibling constraints in the same family. All three are linked via network.affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(preparedness_persistence__hybrid_reading, powerless, 0.87).
-constraint_indexing:directionality_override(preparedness_persistence__hybrid_reading, institutional, 0.18).
+constraint_indexing:directionality_override(preparedness_persistence__hybrid_reading, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

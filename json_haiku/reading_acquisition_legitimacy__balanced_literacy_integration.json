@@ -4,24 +4,132 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "67c8ed9c-d20d-42b7-9fe2-300228ab5925"
+    "story_uid": "2f47b16a-f5f3-4c31-83c2-d1dcc2b7299c",
+    "created_at": "2026-06-12T00:00:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.29,
-    "theater_ratio": 0.22,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.58,
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.72,
     "claimed_type": "rope",
-    "human_readable": "Balanced Literacy Integration Instructional Model",
-    "topic_domain": "education_policy/cognitive_science/literacy_pedagogy",
-    "requires_active_enforcement": false,
+    "human_readable": "Balanced Literacy Integration in Reading Instruction",
+    "topic_domain": "education/cognitive_science/literacy_pedagogy",
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "typical_learners",
-      "reading_science_integrationists",
-      "classroom_teachers"
+      "mainstream_elementary_students",
+      "teaching_profession",
+      "integrated_curriculum_practitioners"
     ],
-    "victims": []
+    "victims": [
+      "struggling_readers",
+      "dyslexic_learners",
+      "resource_limited_schools"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "classroom_teachers",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Responsible for implementing balanced literacy in the classroom. They must juggle explicit phonics instruction, guided reading groups, independent reading of authentic texts, and running reading centers simultaneously. The constraint requires them to toggle between direct instruction (phonics, decoding) and facilitation (meaning-making, discussion). They are the primary site where the balance is (or is not) enacted."
+    },
+    {
+      "name": "mainstream_elementary_students",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive both explicit phonics (letters-to-sounds systematically taught) and exposure to authentic, engaging literature (trade books, narrative texts). For students without decoding difficulty, this mixed approach provides security in foundational skills while maintaining motivation through meaningful texts. Their primary benefit is entering the literacy pipeline with both decodable-text scaffolding and authentic-text engagement."
+    },
+    {
+      "name": "struggling_readers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Depend on explicit, cumulative phonics instruction to develop decoding. However, under balanced literacy, they often receive phonics embedded in general classroom instruction rather than intensive, specialized intervention. They bear the cost of delayed recognition that they need more explicit, longer-duration phonics than the 'balance' allocates to them. They also benefit from some phonics exposure, but it may arrive too late or not intensively enough."
+    },
+    {
+      "name": "dyslexic_learners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Have a neurobiological decoding deficit that requires systematic, diagnostic, multi-sensory phonics instruction (structured literacy). Balanced literacy's assumption that phonics can be embedded and flexible conflicts with their need for explicit, intensive, cumulative, and orton-gillingham-based instruction. They are identity-locked into the school system; they cannot exit to find specialized instruction unless parents can pay for outside tutoring. The constraint treats their need as one point on a spectrum rather than a distinct category."
+    },
+    {
+      "name": "resource_limited_schools",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Cannot afford both sets of materials: decodable texts for explicit phonics instruction AND a comprehensive trade-book library for authentic literature exposure. They cannot fund two sets of resources, trained specialists for intervention, or extended instructional blocks. The 'balance' requires material and time investments that stretched budgets cannot support. Schools in low-income districts bear disproportionate cost."
+    },
+    {
+      "name": "phonics_primacy_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue that reading IS decoding, that phonics must be systematic and primary, and that authentic literature should come only after sufficient decoding skill is established. They are excluded from the classroom-level decision-making about implementation; their evidence (e.g., simple view of reading, science of reading critiques) is present in policy but contested in practice."
+    },
+    {
+      "name": "whole_language_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue that meaning-making is primary, that authentic literature exposure is the legitimate pedagogical choice, and that decoding skills emerge naturally from engagement with meaningful texts. They are also excluded from classroom implementation choices; their pedagogical tradition is present in some practice (guided reading, literature circles) but contested by phonics-first policy pressure."
+    },
+    {
+      "name": "education_policymakers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Balanced literacy is an appealing middle ground: it avoids political commitment to either phonics-only or whole-language-only, it sounds scientifically informed ('both are important'), and it permits school autonomy without mandating explicit intervention protocols. Policymakers benefit from avoiding the hard political choice and from the appearance of evidence-based compromise."
+    },
+    {
+      "name": "curriculum_publishers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "spatial_scope": "national",
+      "exit_options": "mobile",
+      "situation": "Benefit from the 'balance' framework because it creates demand for BOTH decodable-text series AND trade-book collections, BOTH phonics-focused materials AND guided-reading packages. A phonics-only mandate would reduce demand for one half; a whole-language mandate would reduce demand for the other. Balanced literacy expands the total addressable market."
+    },
+    {
+      "name": "literacy_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct studies on reading acquisition, phonological awareness, decoding, comprehension, and intervention efficacy. They hold no power over classroom implementation but their evidence is cited by advocates of each reading. The constraint's persistence depends on disputed interpretation of this evidence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Balances the cognitive demand for explicit decoding instruction with the motivational/engagement demand for meaningful, authentic reading experiences. Solves the integration problem: students need both the technical skill (alphabetic principle, phonological processing) and the will-to-read (narrative engagement, perceived relevance). Without the balance, classrooms would specialize into phonics-only (security, boring) or whole-language-only (engagement, unsupported decoders).",
+    "transfer_function": "Redistributes instructional time, teacher expertise, and material resources across two pedagogical modalities: phonics/decoding instruction (explicit, scaffolded, skill-focused) and authentic literature engagement (choice, discussion, meaning-making). For typical learners, the transfer is equitable and mutually supportive. For struggling readers, the transfer diverts intensity from phonics to balance, delaying identification and reducing intervention depth.",
+    "absent_voices": "Dyslexia specialists and structured-literacy practitioners would argue the balance under-allocates to intensive, explicit, cumulative, multi-sensory phonics instruction and that struggling readers need supplementary structures (small-group intervention, diagnostic assessment, longer intervention duration). Phonics-only advocates would argue authentic literature is premature before decoding automaticity is established. Both groups are excluded from classroom-level curriculum decisions; their objections are present in policy debate but not in classroom implementation authority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If balanced literacy disappeared, elementary reading instruction would bifurcate: phonics-intensive programs (explicit, cumulative, with decodable-text progression and later authentic literature) would serve learners identified with decoding difficulty; whole-language or literature-based programs would serve schools committed to meaning-first approaches. The integration itself would vanish; teachers would no longer toggle between modes. Schools would either invest in intensive intervention (pulling struggling readers into separate phonics instruction) or stick to one pedagogical camp. The coordinated, flexible balance would dissolve.",
+    "founding_problem": "Early reading instruction faced a choice between security (explicit phonics, decodable texts) and motivation (authentic literature, narrative engagement). The founding problem was how to serve both: students need decoding skill AND they need to see reading as meaningful and pleasurable. A purely phonics-first approach risks losing struggling readers to boredom and demotivation; a purely whole-language approach risks leaving struggling decoders without necessary scaffolding.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Balanced-literacy advocates and some teacher-training institutions attest the problem is live: both phonics and authentic literature are necessary, and the balance serves both populations. Phonics-primacy advocates (citing neuroscience research, intervention efficacy trials, simple view of reading) attest the problem was historically real but neuroscience has resolved it: structured, intensive phonics MUST come first, and authentic literature should follow only after decoding automaticity. Dyslexia researchers and structured-literacy trainers attest the problem was wrongly framed: the real problem is that vulnerable learners need a different (more intensive, diagnostic) approach, not a balance that serves typical learners. Independent evidence (National Reading Panel meta-analysis, simple view of reading, cognitive neuroscience of dyslexia) corroborates that both decoding and language comprehension are necessary—but does NOT resolve the instructional sequencing and intensity question."
   },
   "interval": {
     "start": 0,
@@ -31,160 +139,134 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.32
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.37
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
       "value": 0.38
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 20,
       "value": 0.39
     },
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 25,
       "value": 0.38
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.19
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.23
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.22
-    },
-    {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.4
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.29
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.29
+      "value": 0.5
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.3
+      "value": 0.53
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.29
+      "value": 0.52
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.29
+      "value": 0.52
+    }
+  ],
+  "omegas": [
+    {
+      "id": "phonics_literacy_reading_committer_dispute",
+      "question": "Is reading fundamentally a decoding process (phonological processing, cracking the alphabetic code) or a meaning-making process (comprehension, engagement with semantic and narrative content), or an integrated dual process requiring both?",
+      "resolution_mechanism": "Cognitive science consensus on reading models (simple view of reading vs. contemporary dual-process models), neuroimaging studies on dyslexia and reading skill development, intervention efficacy trials comparing phonics-intensive vs. whole-language vs. balanced approaches on subgroups (typical, dyslexic, language-disordered).",
+      "impact": "This is the core committer dispute between the readings. If decoding is primary (phonics_primacy is correct), balanced literacy under-serves struggling decoders. If meaning-making is primary (whole_language is correct), balanced literacy over-allocates to artificial phonics instruction. If integrated dual-process is correct (as contemporary reading science suggests), the balance remains valid but requires evidence on implementation adequacy.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The kernel dispute on what reading IS: decoding, meaning-making, or integrated dual-process."
+    },
+    {
+      "id": "committer_axiom_reading_relations",
+      "question": "What are the structural relationships among the four readings of the reading_acquisition_legitimacy kernel?",
+      "resolution_mechanism": "Logical analysis of core premises: does phonics_primacy logically foreclose whole_language_primacy (they make contradictory claims about what reading IS, but both could be partially true), or do they coexist as competing frameworks held by different practitioners? Does structured_literacy foreclose balanced_literacy (it prioritizes vulnerability as the design constraint, implying balance is inadequate), or does it influence the balance by demanding supplementary structures? Does the balance coexist with or foreclose the others?",
+      "impact": "The reading_relations in cs_structure encode these disputes. If strict logical foreclosure applies, one reading will eventually replace the others. If coexistence applies, the kernel remains genuinely contested across live readings. If influence applies, the readings are ordered (upstream vs. downstream) by implementation priority.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical and institutional relationships among the four readings of the literacy kernel."
     }
   ],
   "commentary": {
-    "narrative_context": "The balanced literacy reading of the reading-acquisition legitimacy kernel declares that reading development requires both explicit decoding instruction (phonics) and engagement with meaning-bearing authentic literature. This reading emerged in response to the reading wars — the ideological conflict between phonics-first and whole-language advocates. Balanced literacy positions itself as empirically-grounded synthesis: cognitive science shows both decoding automaticity and comprehension engagement are necessary; therefore, legitimate instruction allocates time to both, and professional teachers assess individual students' gaps and adjust. The constraint is CLAIMED as rope (coordination of two necessary functions) and MEASURED as substantially extractive, moderately suppressive — the authored metrics describe the actual operation (teacher time diversion, material purchasing patterns, intervention industry expansion) as moderately extractive, not because the coordination function is false but because extraction rides on top of it. The kernel contest is live: phonics-decoding-primacy and whole-language-meaning-primacy both contest this reading's balance as either too much of the wrong thing or not enough of the right thing.",
+    "narrative_context": "Reading instruction in elementary schools operates under a legitimacy constraint that declares both decoding and meaning-making essential, requiring teachers to balance explicit phonics instruction with authentic literature exposure. This constraint is ONE READING of a contested kernel about what reading IS and how it should be taught. The balanced-literacy reading asserts that reading requires both decoding skill (phonological processing, alphabetic principle) and meaning-making (engagement with narrative, comprehension, motivation). Instruction should therefore include both explicit phonics (systematic letter-sound instruction, decodable texts, skill-focused lessons) and authentic literature exposure (trade books, guided reading, discussion, motivated engagement). The constraint operates through curriculum standards, textbook adoption, teacher training, and classroom resource allocation. For typical learners with no decoding difficulty, the balance provides security in foundational skills while maintaining engagement. For struggling readers and learners with dyslexia, the constraint may constitute a false summit: justified by the apparent balance but operating as a systematic under-allocation of intensity to phonics instruction and delay in identification of students who need intensive, specialized intervention. The claim/metric gap is deliberate: the constraint is CLAIMED as a rope (genuine coordination of two necessary functions) while authored metrics describe moderate extractiveness and rising theater ratio, suggesting the 'balance' performs coordination while increasingly operating as compromise that under-serves vulnerable learners.",
     "key_agents": [
-      "classroom_teachers (agenda_setter, moderate power) — allocate time between phonics and guided reading; their judgment about student needs is structurally central",
-      "struggling_readers (beneficiary, powerless, identity-locked) — receive both phonics intervention and meaning-driven reading; their self-concept as readers is fused with the constraint structure",
-      "reading_intervention_industry (beneficiary, institutional) — markets both phonics and guided reading systems under the balanced framework",
-      "explicit_phonics_advocates (excluded, organized) — contest the time allocation and teacher authority to de-prioritize phonics",
-      "whole_language_practitioners (excluded, organized) — contest the phonics component as unnecessary interference",
-      "school_district_administrators (payer, institutional) — implement and fund the dual-materials and dual-training model"
+      "classroom_teachers: The primary implementers; they must toggle between direct instruction (phonics) and facilitation (meaning-making) and bear the coordination cost.",
+      "mainstream_elementary_students: Benefit from explicit phonics scaffolding and authentic literature engagement; they are the 'typical' learner the balance is optimized for.",
+      "struggling_readers and dyslexic_learners: Bear the extraction cost; they depend on intensive phonics but receive it embedded and non-intensive under balanced literacy; they face identification delays and under-service.",
+      "resource_limited_schools: Cannot afford both full sets of materials (decodable + trade books) and thus bear the cost of the supposed 'balance'.",
+      "education_policymakers: Benefit from the appearance of evidence-based compromise without having to choose between politically contested pedagogical camps.",
+      "curriculum_publishers: Benefit from dual demand (both decodable texts and trade books expand their addressable market).",
+      "phonics_primacy and whole_language advocates: Excluded from classroom-level decision authority; their evidence is cited in policy but contested in practice."
     ],
-    "logic_rationale": "Extractiveness is measured at 0.38 (moderate, stable across the interval with slight rise then flatline). This is NOT because the coordination function (decoding + meaning together) is false. Rather: the constraint extracts through multiple mechanisms. (1) Material purchasing: districts now buy both decodable readers AND chapter book libraries instead of either/or, expanding vendor revenue; vendors benefit (reading_intervention_industry). (2) Teacher time allocation: time devoted to phonics instruction (30-40 min) is structured time that could otherwise be discretionary; the constraint mandates the allocation. (3) Identity lock: struggling readers internalize a model of themselves as 'students who need both intervention (phonics) and guided reading (meaning)' — the constraint shapes how they understand their own reading development. (4) Exclusion of alternatives: purely systematic phonics or purely literature-immersion approaches are sidelined; the middle position is presented as the only empirically defensible one. Suppression is lower (0.29) because the constraint is not coercive in an enforcement sense — no one is legally compelled; school boards adopt it, teachers implement it, families generally accept it (even if some contest it politically). Accessibility collapse is moderate (0.62) because alternatives (pure phonics curricula, whole-language approaches) remain available outside the constraint but are treated as ideologically illegitimate. Theater ratio is low (0.22) because the dual-function model has real pedagogical content — phonics lessons happen, guided reading happens — but growing portions are performative: demonstrating compliance with balanced frameworks, meeting district metrics on both phonics measures AND comprehension measures, performing pedagogical neutrality in politically contentious environments. The measurement series shows stable-to-slightly-rising extraction and theater, with slight uptick around year 3 (possibly driven by accountability pressure and the need to measure both phonics and comprehension outcomes on standardized assessments).",
-    "perspectival_gap": "The constraint diverges in its operation across three institutional levels: (1) District/policy level: balanced literacy is mandated as best-practice; materials and PD align to it; phonics-first and whole-language candidates are sidelined. (2) Classroom level: teachers experience it as discretion (they choose when to emphasize phonics vs. meaning) within constraints (both must be present). (3) Student level: struggling readers experience it as diagnosis (they are identified as needing both) and identity (they become 'intervention students'). Across these levels, the constraint's extractiveness operates differently: at the policy level it extracts through vendor expansion and budget redirection; at the classroom level it extracts through increased workload and contested authority; at the student level it extracts through identity lock. No single seat sees the full structure.",
-    "directionality_logic": "Classroom teachers are the nominal agenda-setters (they allocate time) but are moderately powered and constrained — they work within district curriculum, state standards, and accountability frameworks. Their directionality is moderate (~0.45–0.55) because they set day-to-day implementation but not the rule itself. Struggling readers are powerless and identity-locked (exit is unthinkable given how reading difficulty becomes part of self-concept); their directionality is high (~0.70–0.80) as targets of the constraint structure, even though they also benefit from the coordination function itself. Typical learners also benefit from the coordination but are less power-constrained; their d is lower (~0.35–0.45). The reading intervention industry is institutional and arbitrage-mobile (they could sell phonics-only or whole-language products elsewhere); their d is low (~0.15–0.25) as a capturer-beneficiary. Explicit phonics advocates are organized and mobile (they can publish, teach elsewhere, influence policy) but are excluded from this constraint's authority structure; their d is moderate-to-high (~0.50–0.65) as targets of exclusion — they bear the cost of legitimacy denial. No directionality override is needed; the derivation from beneficiary/victim + exit options produces accurate values.",
-    "mandatrophy_analysis": "The founding problem (ideological gridlock between phonics and whole-language camps) was real and is contested as either live or resolved. Balanced literacy's response is to declare the dispute empirically resolvable: both are necessary. However, mandatrophy is avoided because the coordination function is genuine — reading development really does depend on both decoding automaticity and meaning engagement. The constraint does not represent a dead founding function that persists by inertia. The extraction components (material purchasing, time allocation, identity lock) are real and warrant scrutiny, but they ride on a coordination function that remains live. If the founding problem is actually resolved (if phonics-first advocates and whole-language practitioners stopped fighting and adopted an empirically-informed synthesis), then balanced literacy becomes simply the technical implementation of that resolution, and extraction would drop as the constraint lost its ideological work. If the founding problem is still live (if the dispute is actually about resources and authority, not empirical facts), then balanced literacy persists as a compromise arrangement whose extraction continues.",
-    "kernel_context": "This constraint is the BALANCED_LITERACY_INTEGRATION reading of the reading_acquisition_legitimacy kernel. The kernel is contested by four readings: (1) PHONICS_DECODING_PRIMACY: reading is fundamentally decoding; legitimate instruction makes the alphabetic principle explicit through systematic phonics (code-first). (2) WHOLE_LANGUAGE_MEANING_PRIMACY: reading is fundamentally meaning-making; legitimate instruction immerses children in authentic literature, allowing decoding to emerge naturally (meaning-first). (3) STRUCTURED_LITERACY_REMEDIATION: reading instruction must be designed for the most vulnerable learners first; legitimate instruction follows explicit, cumulative, diagnostic principles optimized for struggling readers (vulnerability-first). (4) BALANCED_LITERACY_INTEGRATION (this reading): reading requires both decoding and meaning-making; legitimate instruction balances explicit phonics with authentic literature exposure, with professional teachers assessing individual needs (both-necessary). The balanced reading claims the dispute is empirically resolvable: cognitive science shows both mechanisms matter. The phonics-first and whole-language readings contest this — phonics-first argues the balance under-prioritizes decoding, whole-language argues the phonics component is unnecessary. Structured literacy argues the balance is insufficiently diagnostic for struggling readers. This constraint instantiates the balanced reading's specific structure: mixed decodable and authentic texts, teacher judgment as legitimate, struggling readers receive both intervention types."
+    "logic_rationale": "Extractiveness is moderate (0.48) because the constraint does solve a real coordination problem for typical learners: how to provide both decoding scaffolding and meaningful reading experiences. The extractiveness comes from the cost imposed on struggling readers (delayed identification, insufficient intensity, assumption they will naturalize decoding if immersed in authentic texts) and resource-limited schools (which cannot afford both full material sets). Suppression is moderate-high (0.52) because the constraint maintains itself through policy language ('balanced literacy'), textbook adoption processes, and teacher training that defaults to balance as the legitimate middle ground, while systematically excluding or marginalizing phonics-intensive and whole-language-intensive practitioners. Theater ratio is moderate and rising (0.25 at t=0, peaking at 0.39 at t=15, settling at 0.38 at t=25) because classroom practice increasingly performs the 'balance' (visible mix of both activities) while the underlying coordination function (serving all learners well) faces growing evidence that the balance under-serves struggling readers. The rising theater suggests the constraint is drifting toward piton status: maintained for appearance (we have phonics AND authentic literature) while the real coordination function (all learners developing literacy) is not being met for vulnerable learners. The measurement series shows extractiveness rising to t=15 then plateauing, theater ratio rising through t=15 then stabilizing, and suppression rising through t=15 then stabilizing — suggesting a phase transition around t=15 where the constraint's legitimacy stabilizes at a higher performative cost and extraction begins to show resistance (struggling readers' underachievement becomes visible, prompting intervention mandates that compete with the balance). Accessibility collapse is moderate (0.61): alternatives (phonics-only, whole-language-only, structured literacy) are intellectually available and advocated, but institutional barriers (curriculum adoption, standards language, teacher training aligned to balance) make them costly to access. Resistance is elevated (0.72): phonics-primacy advocates and dyslexia specialists actively resist the balance, and growing evidence that struggling readers underachieve under balanced literacy creates pressure.",
+    "directionality_logic": "Mainstream elementary students experience d near 0.3 (low directionality: they benefit from the balance without bearing costs; the constraint subsidizes them with both phonics scaffolding and engaging texts). Struggling readers and dyslexic learners experience d near 0.75 (high directionality: they depend on intensive phonics, which is under-allocated; they are targets of the constraint, bearing extraction in the form of delayed identification, lower instructional intensity, and unmet needs). Resource-limited schools experience d near 0.8 (very high directionality: they cannot afford both material sets and thus absorb the full cost; they are structurally trapped as targets). Teachers experience d near 0.6 (moderate-high: they bear the coordination cost, toggling between two instructional modes, managing reading centers, identifying struggling readers). Policymakers and curriculum publishers experience d near 0.2 (low directionality: they benefit from the middle-ground legitimacy and market expansion without direct costs). The directionality overrides reflect the power atom distinctions: powerless agents (students, teachers in low-resource schools) bear disproportionate d (high extraction); organized and institutional agents (policymakers, publishers) experience low d (benefits without direct cost). No formal override needed; the structural derivation from beneficiary/victim + exit + power captures the gap.",
+    "perspectival_gap": "From the classroom teacher's perspective, the balance is a real coordination problem: they genuinely need both phonics and authentic literature to serve diverse learners. From the policy level, the balance is a legitimate compromise that avoids political commitment to either extreme. From the struggling reader's or dyslexic learner's perspective, the balance is a false summit: justified by the appearance of both phonics and literature but operating as under-service of their specific needs (insufficient phonics intensity, delayed identification, assumption of naturalization that neurobiologically does not occur). From the perspective of phonics-primacy and structured-literacy advocates, the balance is an institutional compromise that suppresses evidence-based intensive phonics and leaves vulnerable learners behind. The engine should compute this divergence: agents in high d positions (struggling readers, resource-limited schools) should show higher effective extraction and lower perceptions of coordination; agents in low d positions (typical learners, policymakers) should show lower extraction and higher perceptions of legitimate coordination.",
+    "mandatrophy_analysis": "The founding problem (how to have both decoding security and reading engagement/motivation) remains contested in status. For mainstream learners, the problem is live and the balance solves it. For struggling readers, the problem is different: they need intensive decoding instruction, and the balance's assumption that they will naturalize decoding through immersion in authentic texts is empirically undermined by neuroscience and intervention research. Dyslexia researchers and structured-literacy advocates would attest the founding problem was historically real but has been solved by advances in understanding dyslexia and phonological deficit; the trade-off is false—intensive phonics can coexist with later authentic literature if implementation prioritizes struggling learners first. The constraint avoids mandatrophy (the founding problem is still cited as the legitimacy basis) but faces a latent version: the problem it was built to solve (coordination of both functions) may be partially obsolete for vulnerable learners, replaced by a different need (intensive, diagnostic, multi-sensory phonics first, then authentic literature). This latent mandatrophy is not yet declared in policy but is emerging in evidence and in parent/advocate pressure for structured-literacy alternatives.",
+    "kernel_context": "This constraint instantiates the BALANCED_LITERACY_INTEGRATION reading of the reading_acquisition_legitimacy kernel. The kernel is contested across four distinct readings: (1) PHONICS_DECODING_PRIMACY—reading IS decoding; legitimate instruction makes the alphabetic principle explicit through systematic phonics; (2) WHOLE_LANGUAGE_MEANING_PRIMACY—reading IS meaning-making; legitimate instruction immerses children in authentic literature, allowing decoding to emerge naturally; (3) STRUCTURED_LITERACY_REMEDIATION—reading instruction must be designed for the most vulnerable learners first; legitimate instruction follows explicit, cumulative, diagnostic principles (Orton-Gillingham, Structured Literacy frameworks); (4) BALANCED_LITERACY_INTEGRATION (this reading)—reading requires both decoding and meaning-making; legitimate instruction balances explicit phonics with authentic literature exposure. The balanced reading coexists with phonics_primacy and whole_language readings as live pedagogical positions held by different educational factions. It forecloses neither sibling reading as logically impossible; rather, it claims to synthesize both. However, the structured_literacy_remediation reading introduces a category shift: it prioritizes the learner most dependent on explicit instruction (the dyslexic learner) as the design-from constraint, which implies the balance may be inadequate for that learner's neurobiological need. The balanced reading does not logically foreclose structured literacy, but it influences the conditions under which structured literacy is allocated (typically as supplementary intervention rather than primary instruction)."
   },
-  "omegas": [
-    {
-      "id": "reading_mechanisms_sufficiency",
-      "question": "Are decoding automaticity and meaning engagement truly BOTH necessary and SUFFICIENT for reading development, or does the balance need adjustment based on learner characteristics (age, prior knowledge, language background)?",
-      "resolution_mechanism": "Randomized controlled trials comparing phonics-only, whole-language-only, and balanced approaches, stratified by learner characteristics. Meta-analysis of such studies.",
-      "impact": "If balance is universal-sufficient, the constraint's allocation stands. If allocation needs to be adaptive (e.g., more phonics for younger children or struggling readers, more meaning for older fluent readers), the balanced model must be restructured to include conditional rules, weakening its claim to straightforward balance.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the balanced 50-50 (or 40-60) split is empirically optimal across learner populations."
-    },
-    {
-      "id": "teacher_judgment_reliability",
-      "question": "How reliably can classroom teachers assess their students' decoding vs. comprehension gaps and adjust instructional emphasis accordingly? Does teacher judgment outperform algorithmic (assessment-driven) allocation?",
-      "resolution_mechanism": "Observational studies of teacher decision-making; comparison of outcomes in teacher-judgment-based classrooms vs. standardized-protocol classrooms.",
-      "impact": "If teacher judgment is unreliable, the balanced model's delegation of time allocation to individual teachers will produce highly variable outcomes; some struggling readers will receive insufficient phonics or insufficient meaning engagement. If teacher judgment is reliable, the model's central claim (professional teachers can implement both functions well) is validated.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether distributed teacher judgment produces better outcomes than centralized protocol."
-    },
-    {
-      "id": "kernel_contest_empirically_resolvable",
-      "question": "Is the dispute between phonics-first and whole-language advocates ACTUALLY an empirical disagreement, or is it fundamentally an ideological/resource conflict dressed up as empirical dispute?",
-      "resolution_mechanism": "Analysis of the grounds cited by each reading for rejecting the others. If disagreement persists despite shared empirical evidence, the dispute is not purely empirical.",
-      "impact": "If the dispute is empirical, balanced literacy's synthesis is the logical resolution and the constraint is coordination. If the dispute is ideological, balanced literacy is a politically-negotiated compromise that satisfies neither camp and extraction (vendor expansion, teacher workload, identity lock) is structural to the compromise itself.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the kernel contest is empirically resolvable or ideologically-rooted."
-    },
-    {
-      "id": "struggling_reader_identity_fusion",
-      "question": "Does identity-lock on struggling readers (the internalization of 'I am a student who needs both intervention types') help or harm their reading development and self-efficacy over time?",
-      "resolution_mechanism": "Longitudinal studies tracking struggling readers' self-concept, reading outcomes, and exit patterns as they age. Studies of struggling readers in phonics-only vs. whole-language-only vs. balanced classrooms comparing internalization of identity.",
-      "impact": "If the identity fusion supports long-term reading growth and self-efficacy, it is a beneficial side effect of the constraint. If it creates learned helplessness or reading avoidance, the constraint's extraction component harms its own beneficiaries.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether internalized identity-lock on struggling readers is developmentally beneficial or harmful."
-    },
-    {
-      "id": "alternative_kernel_reading_missing",
-      "question": "Is there a fifth reading of the reading-acquisition legitimacy kernel that is not represented among phonics-primacy, whole-language-primacy, structured-literacy, and balanced-integration? (E.g., 'reading is culturally-situated literacy practices, not a universal decoding+comprehension machine' or 'reading development is irreducibly individual and no method works for everyone')?",
-      "resolution_mechanism": "Literature review of reading research and pedagogy traditions; interviews with reading educators across traditions.",
-      "impact": "If an unrepresented reading exists, the kernel contest is incomplete and balanced literacy's claim to be the empirical resolution is premature. If the four readings exhaust the space, balanced literacy is at least contesting the right boundaries.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the kernel contest is exhaustively specified by the four named readings."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
@@ -192,28 +274,39 @@
       "reading_acquisition_legitimacy__whole_language_meaning_primacy",
       "reading_acquisition_legitimacy__structured_literacy_remediation"
     ],
-    "dual_formulation_note": "This constraint is one of four readings of the reading_acquisition_legitimacy kernel. The other readings are phonics_decoding_primacy (code-first), whole_language_meaning_primacy (meaning-first), and structured_literacy_remediation (vulnerability-first). Each reading has a different epistemic structure, different beneficiary/victim configuration, and different ε value. They are linked because they contest a common kernel — which aspect of reading development (decoding, meaning, remedial structure, balanced coordination) is the legitimate foundation of instruction. The balanced reading claims empirical synthesis; the others dispute it. See cs_structure.reading_relations for the structural relationships between this reading and its siblings."
+    "dual_formulation_note": "This story is one reading (balanced_literacy_integration) of the contested kernel reading_acquisition_legitimacy. The sibling readings (phonics_decoding_primacy, whole_language_meaning_primacy, structured_literacy_remediation) are separate constraint stories with different ε values, different beneficiary/victim structures, and different stakeholder configurations. The balanced reading coexists with and influences the sibling readings; each describes a distinct pedagogical implementation framework and a different assessment of whether the reading_acquisition_legitimacy kernel is properly instantiated. The balanced reading claims to synthesize both phonics and authentic literature; the phonics reading claims phonics must be primary; the whole-language reading claims authentic literature and natural emergence is sufficient; the structured-literacy reading claims vulnerable learners must be designed-from-first, implying supplementary intensity beyond balance. All four are live positions in contemporary educational discourse."
   },
-  "directionality_overrides": [],
-  "uke_scope": {
-    "epsilon_bin": "medium",
-    "hypothesis": "rope",
-    "downstream_of": [
-      "reading_acquisition_legitimacy__phonics_decoding_primacy",
-      "reading_acquisition_legitimacy__whole_language_meaning_primacy"
-    ]
-  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.78
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.22
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "gain_flow": "education_policymakers",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "reading_acquisition_legitimacy__phonics_decoding_primacy",
+        "sibling_id": "phonics_decoding_primacy",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "reading_acquisition_legitimacy__whole_language_meaning_primacy",
+        "sibling_id": "whole_language_meaning_primacy",
         "relation": "coexists_with"
       },
       {
@@ -223,35 +316,36 @@
     ],
     "axioms": [
       {
-        "atom": "reading_multifactorial_decoding_and_meaning_both_necessary",
+        "atom": "reading_requires_both_decoding_and_meaning_making",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "teacher_professional_judgment_legitimate_on_student_needs",
-        "role": "foundational",
+        "atom": "integration_is_pedagogically_superior_to_specialization",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "reading_science_synthesis_decoding_and_meaning_integrated",
+    "reference_frame": "integrated_dual_process_literacy_model",
     "drift_state": {
-      "moment": "contemporary_accountability_pressure_era",
+      "moment": "contemporary_neuroscience_and_dyslexia_awareness",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

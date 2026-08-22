@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-13
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,6 +43,10 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +60,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,40 +71,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: hebrew_vitality__liturgical_reading
- *   human_readable: Hebrew Vitality Through Liturgical Preservation and Unbroken Ritual Use
- *   domain: sociolinguistics/language_revitalization/religious_tradition
+ *   human_readable: Hebrew Vitality via Liturgical Preservation
+ *   domain: sociolinguistics/language_revitalization
  *
  * SUMMARY:
- *   This constraint embodies one reading of what constitutes Hebrew vitality:
- *   the claim that unbroken liturgical use, adjudicated by rabbinic
- *   authority, IS the proof and substance of the language's vitality. This
- *   reading emerged when Hebrew had no native speakers (roughly 2nd–18th
- *   centuries) and needed a framework for claiming its continuity. It
- *   persists in rabbinic institutions even after the empirical conditions
- *   changed—native Hebrew speakers now exist, the language has vernacular
- *   productivity, and it is acquired as a first language by Israeli and
- *   diaspora children. The liturgical reading does not prevent those
- *   developments; it claims authority over what counts as authentic vitality.
- *   The constraint's kernel is the stabilized commitment to liturgical
- *   authority as the arbiter of Hebrew's vital status. Three competing
- *   readings exist: this one (liturgical_reading, a rope-like coordination
- *   around rabbinic adjudication), the native_daily_reading (only spontaneous
- *   generation by native speakers constitutes vitality), and the
- *   hybrid_continuity_reading (liturgical preservation was necessary
- *   historical enabler; modern vitality requires both substrate and
- *   vernacular reconstruction). The expected structural delta is LOW
- *   extraction because the liturgical reading imposes no direct cost on
- *   participants—it is a definitions game, not a resource transfer—and the
- *   beneficiary set is limited to institutional rabbinic authorities who gain
- *   definitional authority.
+ *   This is ONE READING of the contested kernel 'hebrew_vitality'. The
+ *   liturgical_reading claims that unbroken transmission and use of Hebrew in
+ *   prayer and ritual CONSTITUTES the vitality of the language — language is
+ *   alive when it is spoken, even if only in liturgical contexts. This
+ *   reading grounds Hebrew's survival through diaspora and the centuries
+ *   without native speakers in the continuity of rabbinic practice and prayer
+ *   recitation. By this frame, a Jew reciting the Amidah in Hebrew is not
+ *   preserving a dead language but actualizing its vitality. This reading is
+ *   DISTINCT from the native_daily_reading (only native generation counts as
+ *   vitality) and the hybrid_continuity_reading (liturgy was necessary but
+ *   insufficient; vernacular revival required both). Each reading
+ *   instantiates a different constraint with different beneficiary structures
+ *   and different operative propositions about what 'vitality' means. This
+ *   story author has instantiated the liturgical reading only — see
+ *   kernel_context for the sibling readings and their structural
+ *   relationships.
  *
  * KEY AGENTS:
- *   - rabbinic_authorities: Institutional agenda-setter; maintain the liturgical canon; benefit from the definitional authority the framework confers
- *   - liturgical_practitioners: Organized beneficiaries; validate their ritual participation as constitutive of vitality; receive cultural identity and continuity
- *   - hebrew_linguists: Institutional observers; measure vitality by empirical-linguistic metrics (native speakers, productivity, innovation); excluded from authority
- *   - hebrew_revival_educators: Moderate-power payers; labor in a framework where their pedagogy may be delegitimized by rabbinical authority; also benefit from liturgical texts and methods
- *   - secular_israeli_hebraists: Excluded; have made Hebrew a genuinely vital living language; their practice is outside the rabbinically-centered definitional frame
- *   - jewish_identity_seekers: Powerless beneficiaries; identity-locked into the liturgical framework; ritual participation validates their Jewish identity
+ *   - rabbinic_authorities: institutional agenda-setter, hold power to define and transmit liturgical corpus; highly mobile (could abandon the reading) but deeply invested in it
+ *   - liturgical_communities: organized beneficiary, experience language vitality through prayer and ritual; mobile exit but strong identity lock
+ *   - native_hebrew_speakers: observer seat, use Hebrew vernacularly but are not part of the liturgical reading's authority frame
+ *   - language_revitalization_theorists: excluded, would reject the equation of ritual with vitality and argue for living generation
+ *   - secularist_hebrew_users: observer, develop Hebrew outside ritual but are not recognized by this reading as constituting vitality
  */
 
 /* ==========================================================================
@@ -108,54 +106,95 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(hebrew_vitality__liturgical_reading, 0.15).
-domain_priors:suppression_score(hebrew_vitality__liturgical_reading, 0.22).
-domain_priors:theater_ratio(hebrew_vitality__liturgical_reading, 0.18).
+domain_priors:suppression_score(hebrew_vitality__liturgical_reading, 0.05).
+domain_priors:theater_ratio(hebrew_vitality__liturgical_reading, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, extractiveness, 0.15).
-narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, suppression_requirement, 0.22).
-narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, theater_ratio, 0.18).
+narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, suppression_requirement, 0.05).
+narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, resistance, 0.45).
+narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(hebrew_vitality__liturgical_reading, resistance, 0.08).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(hebrew_vitality__liturgical_reading, rope).
-narrative_ontology:human_readable(hebrew_vitality__liturgical_reading, "Hebrew Vitality Through Liturgical Preservation and Unbroken Ritual Use").
-narrative_ontology:topic_domain(hebrew_vitality__liturgical_reading, "sociolinguistics/language_revitalization/religious_tradition").
+narrative_ontology:human_readable(hebrew_vitality__liturgical_reading, "Hebrew Vitality via Liturgical Preservation").
+narrative_ontology:topic_domain(hebrew_vitality__liturgical_reading, "sociolinguistics/language_revitalization").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(hebrew_vitality__liturgical_reading, '9cea97c4-27d2-4c7f-91fa-4a66f904a273').
-narrative_ontology:cs_kernel_codification('9cea97c4-27d2-4c7f-91fa-4a66f904a273', fixed_text).
-narrative_ontology:cs_authority_grounding('9cea97c4-27d2-4c7f-91fa-4a66f904a273', lineage).
-narrative_ontology:cs_interpretation_layer_present('9cea97c4-27d2-4c7f-91fa-4a66f904a273').
-narrative_ontology:cs_reading_relation('9cea97c4-27d2-4c7f-91fa-4a66f904a273', hebrew_vitality__native_daily_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9cea97c4-27d2-4c7f-91fa-4a66f904a273', hebrew_vitality__hybrid_continuity_reading, influences).
-narrative_ontology:cs_axiom('9cea97c4-27d2-4c7f-91fa-4a66f904a273', foundational, unbroken_liturgical_use_constitutes_vitality).
-narrative_ontology:cs_axiom_status(unbroken_liturgical_use_constitutes_vitality, holdable).
-narrative_ontology:cs_axiom_grounding('9cea97c4-27d2-4c7f-91fa-4a66f904a273', unbroken_liturgical_use_constitutes_vitality, conventional).
-narrative_ontology:cs_axiom('9cea97c4-27d2-4c7f-91fa-4a66f904a273', foundational, rabbinic_textual_authority_grounds_linguistic_legitimacy).
-narrative_ontology:cs_axiom_status(rabbinic_textual_authority_grounds_linguistic_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding('9cea97c4-27d2-4c7f-91fa-4a66f904a273', rabbinic_textual_authority_grounds_linguistic_legitimacy, deontological).
-narrative_ontology:cs_reference_frame('9cea97c4-27d2-4c7f-91fa-4a66f904a273', rabbinic_liturgical_authenticity_frame).
-narrative_ontology:cs_drift_state('9cea97c4-27d2-4c7f-91fa-4a66f904a273', post_israel_revival_and_native_speaker_emergence, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('9cea97c4-27d2-4c7f-91fa-4a66f904a273', '').
+narrative_ontology:cs_story_uid(hebrew_vitality__liturgical_reading, '3d64067f-bcd2-4816-b32e-2259a9e0188c').
+narrative_ontology:cs_kernel_codification('3d64067f-bcd2-4816-b32e-2259a9e0188c', fixed_text).
+narrative_ontology:cs_authority_grounding('3d64067f-bcd2-4816-b32e-2259a9e0188c', lineage).
+narrative_ontology:cs_interpretation_layer_present('3d64067f-bcd2-4816-b32e-2259a9e0188c').
+narrative_ontology:cs_reading_relation('3d64067f-bcd2-4816-b32e-2259a9e0188c', hebrew_vitality__native_daily_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3d64067f-bcd2-4816-b32e-2259a9e0188c', hebrew_vitality__hybrid_continuity_reading, influences).
+narrative_ontology:cs_axiom('3d64067f-bcd2-4816-b32e-2259a9e0188c', foundational, unbroken_transmission_constitutes_vitality).
+narrative_ontology:cs_axiom_status(unbroken_transmission_constitutes_vitality, holdable).
+narrative_ontology:cs_axiom_grounding('3d64067f-bcd2-4816-b32e-2259a9e0188c', unbroken_transmission_constitutes_vitality, deontological).
+narrative_ontology:cs_axiom('3d64067f-bcd2-4816-b32e-2259a9e0188c', secondary, rabbinic_authority_over_language_definition).
+narrative_ontology:cs_axiom_status(rabbinic_authority_over_language_definition, holdable).
+narrative_ontology:cs_axiom_grounding('3d64067f-bcd2-4816-b32e-2259a9e0188c', rabbinic_authority_over_language_definition, conventional).
+narrative_ontology:cs_reference_frame('3d64067f-bcd2-4816-b32e-2259a9e0188c', unbroken_rabbinic_transmission).
+narrative_ontology:cs_drift_state('3d64067f-bcd2-4816-b32e-2259a9e0188c', contemporary_israel_native_revitalization, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('3d64067f-bcd2-4816-b32e-2259a9e0188c', '2026-06-13T09:00:00Z').
 narrative_ontology:cs_kernel_id(hebrew_vitality__liturgical_reading, hebrew_vitality).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hebrew_vitality__liturgical_reading, rabbinic_authorities).
-narrative_ontology:constraint_beneficiary(hebrew_vitality__liturgical_reading, liturgical_practitioners).
+narrative_ontology:constraint_beneficiary(hebrew_vitality__liturgical_reading, liturgical_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Maintain and interpret the liturgical corpus (siddur, piyyutim, prayer traditions). Preserve unbroken chain of recitation across generations. Hold authority over what counts as authentic liturgical use and when it is properly performed. Benefit from the reading's equation of liturgical preservation with language vitality — their role as transmitters is thereby elevated from custodial to essential.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__liturgical_reading, rabbinic_authorities, agenda_setter,
+    institutional, civilizational, mobile, global).
+
+% Practice daily and festival liturgy in Hebrew; receive liturgical texts from rabbinic tradition; experience Hebrew through prayer, blessing, and communal worship. The reading asserts that this practice CONSTITUTES the vitality of the language — they are not merely preserving but actualizing language life.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__liturgical_reading, liturgical_communities, beneficiary,
+    organized, generational, mobile, global).
+
+% Use Hebrew as a primary language for secular, daily, non-liturgical purposes. The liturgical reading does not classify them as beneficiaries or victims because it does not claim daily vernacular use is necessary for vitality — ritual use alone suffices. Their existence and flourishing are orthogonal to this reading's scope.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__liturgical_reading, native_hebrew_speakers, observer,
+    organized, generational, mobile, national).
+
+% Would argue that language vitality requires living vernacular generation, not ritual recitation alone; that a language used only in fixed liturgical contexts exhibits preservation, not vitality. They are structurally excluded from the liturgical reading's authority frame — their objection is not part of the conversation the reading conducts.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__liturgical_reading, language_revitalization_theorists, excluded,
+    analytical, biographical, analytical, global).
+
+% Use and develop Hebrew in secular contexts (literature, media, science, everyday speech). Under the liturgical reading, their contribution to language vitality is not recognized — they are not participants in the constraint structure, which routes vitality through ritual alone.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__liturgical_reading, secularist_hebrew_users, observer,
+    moderate, biographical, mobile, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(hebrew_vitality__liturgical_reading, rabbinic_authorities).
+narrative_ontology:fixing_cost_class(hebrew_vitality__liturgical_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% FOUNDING_PROBLEM: After the Second Temple destruction and diaspora, Hebrew ceased to be a primary vernacular for most Jewish communities, risking assimilation and loss of Jewish identity. Yet transmission of liturgical and textual Hebrew continued unbroken through rabbinic Judaism, allowing communities across centuries and languages to maintain a shared sacred vocabulary and ritual practice.
+% FOUNDING_PROBLEM_CORROBORATION: Medieval and early-modern historians (Salo Baron, David Biale) and historical linguists outside the rabbinic tradition attest that the founding problem was real: Hebrew disappeared as a vernacular in most diaspora communities by the early Middle Ages. Rabbinic authorities attest that liturgical preservation was essential to maintaining Jewish continuity. BUT: historians and linguists also attest that the founding problem IS NOW DEAD — the Zionist movement and the establishment of Israel created millions of native Hebrew speakers. Modern linguists (Bernard Spolsky, Ghil'ad Zuckermann) and Israeli academics attest that Hebrew is now a fully generative, living language with native speakers, not a liturgical-only language. The founding problem the liturgical reading was built to solve no longer exists.
+narrative_ontology:founding_problem_status(hebrew_vitality__liturgical_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(hebrew_vitality__liturgical_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(hebrew_vitality__liturgical_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(hebrew_vitality__liturgical_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(hebrew_vitality__liturgical_reading, 0.15, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,14 +209,16 @@ narrative_ontology:story_seed(hebrew_vitality__liturgical_reading, 'none', 1).
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is LOW (0.15 at interval end) because the liturgical reading operates primarily as a definitional claim, not as a resource-extraction mechanism. No direct goods are moved; no actor is forced to participate in something that imposes measurable cost. The beneficiaries (rabbinic authorities, liturgical practitioners, identity-seeking participants) gain validation and authority; no victim set exists because the constraint does not prevent alternative readings—it only claims authority over what counts as authentic. Suppression is MODERATE (0.22) because the constraint's persistence depends on active institutional maintenance and on suppressing the linguistic reading that would displace it (the Hebrew-linguist and secular-revivalist frames). Theater is LOW-MODERATE (0.18) because the constraint's function shifted after Hebrew recovered native speakers: where once liturgical use was genuinely necessary to transmit Hebrew at all, it is now one among many valid ways to engage with the language. The gap between functional necessity and claimed authenticity is the theatrical element—the ongoing assertion that ritual preserves vitality when empirically, modern vitality rests on native acquisition. The measurement series shows a RISING trend from 1800 to 1950 (theatrical burden increased as native speakers emerged, requiring stronger institutional assertion of liturgical primacy) and then PLATEAUS (by 1980, a stable institutional equilibrium has been reached: rabbinical authorities accept native speakers as valid, but retain claims about authenticity and ritual vitality as their distinctive authority domain). All measurements are shared across the single time grid (1800–2026); the earliest points (1800–1880) are marked as projected because direct evidence is fragmentary, while 1920 onward is marked observed (based on archival records, rabbinic responsa, education records, and linguistic documentation).
+ *   Extractiveness is LOW (0.15) because the liturgical reading does not establish a victim set — liturgical preservation imposes no coercive cost on any identified party. Participants (liturgical communities) are genuine beneficiaries; they receive the practice and meaning it carries. Suppression is MINIMAL (0.05) because the constraint operates through cultural transmission and voluntary participation, not through exclusion or coercion of alternatives. The constraint is not defending itself against active resistance — secular Hebrew speakers coexist peacefully; they simply are not participants in the reading's scope. Theater_ratio is also low (0.08) because the functional core (transmitting liturgical texts, enabling practice) is genuine; there is no theatrical maintenance masking atrophied function. The accessibility_collapse is HIGH (0.92) because once you accept the reading's frame (ritual = vitality), the alternative framings collapse almost completely — the reading DEFINES vitality, so alternatives are not visible within the reading. But resistance is low (0.08) because few groups within the reading's scope are resisting the equation; those who would resist (language theorists, vernacular speakers) are simply excluded from the reading's authority structure, not suppressed. The measurement series shows slow upward drift in extractiveness and theater_ratio over the 100-year interval (t=0 to t=100), reflecting a modest trend: as secular Hebrew flourished and the founding problem died, the liturgical reading's extractive component rose slightly (it must now justify why ritual vitality matters despite living vernacular vitality), and its theatrical component rose marginally (some effort devoted to insisting on the reading's relevance despite the changed landscape).
  *
  * PERSPECTIVAL GAP:
- *   From the rabbinic institutional seat, the liturgical reading is a genuine coordination function: it provides a coherent, transmissible answer to 'what is Hebrew?' when geography and time threaten to dissolve community coherence. The unbroken-use criterion is observable and authority-auditable at every point. From the secular Hebrew linguist and native-speaker seat, the same constraint is a false summary: it misattributes vitality to ritual while the actual vitality lies in spontaneous intergenerational native acquisition. From the liturgical practitioner seat (identity-locked), the reading is constitutive of self-understanding—it validates their form of engagement as authentic, not second-class. From the Hebrew educator seat outside rabbinical control, the reading creates implicit delegitimacy: their pedagogies are pressed to defer to rabbinical authority about what counts as 'real' Hebrew. The engine will compute these perspectival divergences from the power atoms and exit-option differentials. The authored claim (rope—coordination around a real problem) and the authored metrics (low extraction, moderate suppression, low-moderate theater) are INDEPENDENT statements; divergence between claim and computed type will be diagnostic.
+ *   From the rabbinic authority seat, the liturgical reading is straightforward coordination: maintaining the corpus and enabling transmission is the constraint, vitality IS the unbroken practice, no extraction occurs. From the language-revitalization theorist seat (excluded), the same arrangement is a constraint on WHAT COUNTS as vitality — an attempt to route vitality definition through ritual authorities rather than through speakers and linguists, a form of authority capture on the meaning of the word itself. The engine computes the rabbinic seat as beneficiary with low extraction (the reading's own frame), and the excluded theorists seat would compute as observing an authority capture (from their frame). The divergence arises from the reading's DEFINITION of vitality, not from hidden costs — this is a conceptual constraint, not a coercive one.
  *
  * DIRECTIONALITY LOGIC:
- *   Rabbinic authorities sit at the beneficiary end (d ≈ 0.05–0.15): they gain definitional authority and institutional validation from the framework without bearing costs. Liturgical practitioners sit near beneficiary (d ≈ 0.1–0.2): they gain cultural identity and community belonging without being forced into participation—participation is volitional and validating. Hebrew educators outside rabbinical control sit near symmetric or slightly toward payer (d ≈ 0.4–0.5): they benefit from the liturgical infrastructure (texts, study methods, community) but bear the implicit cost of operating in a frame that may delegitimize their pedagogy. Secular revivalists and linguists are EXCLUDED from the beneficiary/payer frame—their directionality is not computed because they are outside the constraint's scope (they are not organized around the rabbinical definition; they operate from an alternative epistemic frame). The constraint's spatial scope (global, because rabbinical institutions exist worldwide) and time horizon (generational, because the claim concerns linguistic continuity across generations) amplify the institutional directionality.
+ *   Rabbinic authorities: d near beneficiary end (0.1–0.2) because they set the agenda, benefit from the authority it grants them, and have mobile exit (could endorse a different reading). Liturgical communities: d near symmetric (0.4–0.5) because they genuinely participate in and benefit from the practice; the cost (maintaining daily prayer routine) is voluntary and self-selected. Native speakers and secularist users: d = 0.5 or absent from the constraint structure entirely, because the reading does not pose any extraction relationship to them — they are observers, not parties. Language theorists: structural beneficiary of the constraint (it legitimizes their exclusion by defining them as outside the vitality frame) but also excluded from authority, creating an unstable position the engine would handle via a directionality override if one were warranted — but none is, because the reading simply does not include them in its scope.
  *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem (maintaining Hebrew identity through diaspora when most Jews ceased to speak it daily) WAS LIVE when the constraint emerged (post-Temple destruction through pre-Zionist diaspora, ~1900–2000 years). The founding problem IS NOW DEAD: modern Israel has millions of native Hebrew speakers; Hebrew is a fully generative, living language. The constraint (the reading that ritual = vitality) persists despite the founding problem's death. This is not a snare (no victim set, no coercion) and not a piton (theater_ratio is too low, functional core is genuine). It is a ROPE whose founding coordination problem has been solved by OTHER MEANS (native revitalization in Israel) while the rope itself continues. The reading now functions as a post-hoc justification for rabbinic authority over language definition rather than as a solution to a live problem. The constraint exhibits MANDATROPHY: the mandate (preserve Hebrew through diaspora via ritual) has outlived its urgency, but the constraint (the reading that ritual = vitality) persists as a framework that legitimizes rabbinic authority. The measurement series shows a small uptick in extractiveness and theater as the constraint ages into its post-mandate phase, reflecting this shift.
  */
 
 /* ==========================================================================
@@ -185,95 +226,82 @@ narrative_ontology:story_seed(hebrew_vitality__liturgical_reading, 'none', 1).
    ========================================================================== */
 
 omega_variable(
-    vitality_definition_empirical_vs_normative,
-    'Is ''vitality'' an empirical-linguistic property (measurable by native speakers, vernacular productivity, spontaneous generation) or a normative-institutional property (adjudicated by authorized authorities over a defined domain)?',
-    'Comparative case study: track other languages where ritual preservation claims compete with empirical vitality measures (e.g., Latin in the Catholic liturgy, Sanskrit in Hindu ritual, Biblical Aramaic in Jewish law). If the linguistic metrics and the ritual-preservation claims systematically diverge, the distinction is real and non-trivial.',
-    'If empirical-linguistic measures are adopted as authoritative, the liturgical reading is reclassified as a false summit (a claim that ritual participation constitutes vitality when empirically it does not). If normative-institutional authority is accepted, the reading remains coherent as a coordination framework specific to rabbinic institutions.',
+    vitality_definition_boundary,
+    'Is ''language vitality'' a property of the language itself (structural features, generative capacity) or a property of the commitment framework (what practitioners agree counts as alive)?',
+    'Linguistic analysis of generative capacity in liturgical-only contexts vs. native-speaker contexts; ethnographic observation of what practitioners in each tradition understand by ''vitality''; comparison with other minority/diaspora language situations (Aramaic, Greek in diaspora Jewish communities; Sanskrit, Latin in other traditions).',
+    'If vitality is structural (generative capacity), the liturgical reading''s equation of ritual with vitality fails — a language used only in fixed liturgical contexts lacks generative capacity and therefore lacks vitality by definition. If vitality is a commitment framework property, the reading succeeds — ritual communities can declare vitality via their participation. This is the core contestation between readings.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(vitality_definition_boundary, conceptual, 'Whether ''vitality'' is a linguistic/structural fact or a committal framework property.').
+
+omega_variable(
+    founding_problem_death_mandatrophy,
+    'Does the death of the founding problem (Hebrew now has millions of native speakers) change the constraint''s classification from rope (coordination) to piton (inertial)?',
+    'Examine whether rabbinic authorities and liturgical communities still maintain the reading because it solves a live coordination problem (vitality preservation through diaspora) or because the reading itself has become institutionalized and self-justifying despite the problem''s resolution. Track whether effort devoted to the reading increases or decreases as the founding problem dies; observe whether new justifications are deployed (authority, tradition, authenticity) as the original coordination rationale weakens.',
+    'If the reading persists despite the founding problem''s death and increasingly for reasons orthogonal to preservation (authority legitimization, identity maintenance, institutional continuity), it reclassifies to piton and the theater_ratio should rise substantially. If the reading remains a live solution to an ongoing coordination problem (maintaining Jewish identity through ritual despite linguistic assimilation), it stays rope. Current measurement series (low theater, slow upward drift) suggest the constraint is transitioning toward mandatrophy and piton territory.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(vitality_definition_empirical_vs_normative, conceptual, 'Whether vitality is an empirical property or an authority-dependent definition.').
+narrative_ontology:omega_variable(founding_problem_death_mandatrophy, empirical, 'Whether the constraint''s founding problem is truly dead and the constraint is becoming inertial.').
 
 omega_variable(
-    suppression_internalization_vs_structural,
-    'How much of the measured suppression (0.22) is structural institutional enforcement (rabbinical gatekeeping of authenticity) versus internalized identity-fusion (individuals have fused their Jewish self-understanding with the liturgical framework and self-suppress dissent)?',
-    'Post-institutional trajectories: track individuals who exit the rabbinical framework (e.g., secular educators, literary Hebrew writers, non-Orthodox practitioners). If suppression persists after institutional enforcement is removed (if they internalize the hierarchical framing even in the absence of external gatekeeping), the suppression is substantially internalized. If they quickly adopt alternative frameworks and cease self-suppressing, the suppression is primarily structural.',
-    'If suppression is substantially internalized, the constraint''s effective hold is stronger than the institutional measure suggests—the identity lock is the carrier of suppression. If suppression is primarily structural, exiting the institutional framework dissolves it.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_internalization_vs_structural, empirical, 'Suppression mechanism: structural institutional enforcement versus internalized identity-fusion.').
-
-omega_variable(
-    competing_reading_empirical_closure,
-    'Has the empirical development of native Hebrew speakers (Israel, diaspora) materially closed off the native_daily_reading as a competitor, or do the readings remain structurally viable?',
-    'If linguistic evidence for genuine native-speaker vitality continues to accumulate (intergenerational transmission, morphological productivity, innovation) and rabbinical authorities acknowledge it without downgrading it to mere ''preservation,'' the readings coexist. If rabbinical institutions actively contest or delegitimize the linguistic evidence, a foreclosure mechanism is operating.',
-    'Coexistence supports the ''coexists_with'' reading relation; active delegitimacy of linguistic evidence would suggest foreclosure or stronger influences pressure.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(competing_reading_empirical_closure, empirical, 'Whether the native_daily_reading has been foreclosed by empirical development or remains a live alternative.').
-
-omega_variable(
-    theatrical_maintenance_function,
-    'Is the rising theater_ratio (from 0.05 in 1800 to 0.18 by 2026) driven by the constraint''s actual functional necessity declining (native speakers took over the transmission work) and institutional assertion of authenticity compensating, or by some other factor?',
-    'Temporal analysis of institutional activity: measure the proportion of rabbinical effort devoted to explaining why ritual is vitally important (defensive theorizing) versus solving practical coordination problems (what Hebrew is taught, how textual ambiguities are resolved). If defensive theorizing grows relative to coordination, the theater ratio is capturing functional atrophy.',
-    'If theater is rising because functional necessity declined, the constraint may be trending toward piton classification (inertial, mostly performance). If theater is rising for other reasons (e.g., increased institutional complexity), the trend is less diagnostic.',
+    kernel_committer_underspecification,
+    'Is this constraint''s identity adequately captured by the lithurgical_reading classification, or does the kernel itself (what ''Hebrew vitality'' is) require a reading-independent core that all three sibling readings must respect?',
+    'Test whether native_daily_reading and hybrid_continuity_reading accept the same KERNEL (the same question — what constitutes vitality?) but propose different ANSWERS. If they do, the kernel is reading-independent and stable. If they redefine the kernel itself, there is no single kernel — only family-related but distinct constraints.',
+    'If the kernel is stable and reading-independent, the three constraints form a clean constraint family (three readings of one kernel) and network.affects_constraints is the right way to link them. If the kernel is itself reading-dependent (each reading defines what ''vitality'' means, and they have no common referent), the family structure breaks and each constraint is autonomous. The current authoring assumes the former (one kernel, three readings); this omega documents the uncertainty.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(theatrical_maintenance_function, empirical, 'Whether rising theater_ratio reflects functional atrophy or other institutional changes.').
+narrative_ontology:omega_variable(kernel_committer_underspecification, conceptual, 'Whether the hebrew_vitality kernel is reading-independent or reading-defined.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(hebrew_vitality__liturgical_reading, 1800, 2026).
+narrative_ontology:interval(hebrew_vitality__liturgical_reading, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(hebrew_lit_tr_t1800, hebrew_vitality__liturgical_reading, theater_ratio, 1800, 0.05).
-narrative_ontology:measurement(hebrew_lit_tr_t1880, hebrew_vitality__liturgical_reading, theater_ratio, 1880, 0.08).
-narrative_ontology:measurement(hebrew_lit_tr_t1920, hebrew_vitality__liturgical_reading, theater_ratio, 1920, 0.12).
-narrative_ontology:measurement(hebrew_lit_tr_t1950, hebrew_vitality__liturgical_reading, theater_ratio, 1950, 0.15).
-narrative_ontology:measurement(hebrew_lit_tr_t1980, hebrew_vitality__liturgical_reading, theater_ratio, 1980, 0.17).
-narrative_ontology:measurement(hebrew_lit_tr_t2010, hebrew_vitality__liturgical_reading, theater_ratio, 2010, 0.18).
-narrative_ontology:measurement(hebrew_lit_tr_t2026, hebrew_vitality__liturgical_reading, theater_ratio, 2026, 0.18).
+narrative_ontology:measurement(hebr_tr_t0, hebrew_vitality__liturgical_reading, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(hebr_tr_t20, hebrew_vitality__liturgical_reading, theater_ratio, 20, 0.06).
+narrative_ontology:measurement(hebr_tr_t40, hebrew_vitality__liturgical_reading, theater_ratio, 40, 0.07).
+narrative_ontology:measurement(hebr_tr_t60, hebrew_vitality__liturgical_reading, theater_ratio, 60, 0.08).
+narrative_ontology:measurement(hebr_tr_t80, hebrew_vitality__liturgical_reading, theater_ratio, 80, 0.08).
+narrative_ontology:measurement(hebr_tr_t100, hebrew_vitality__liturgical_reading, theater_ratio, 100, 0.08).
 
 % Extraction over time
-narrative_ontology:measurement(hebrew_lit_be_t1800, hebrew_vitality__liturgical_reading, base_extractiveness, 1800, 0.08).
-narrative_ontology:measurement(hebrew_lit_be_t1880, hebrew_vitality__liturgical_reading, base_extractiveness, 1880, 0.1).
-narrative_ontology:measurement(hebrew_lit_be_t1920, hebrew_vitality__liturgical_reading, base_extractiveness, 1920, 0.12).
-narrative_ontology:measurement(hebrew_lit_be_t1950, hebrew_vitality__liturgical_reading, base_extractiveness, 1950, 0.13).
-narrative_ontology:measurement(hebrew_lit_be_t1980, hebrew_vitality__liturgical_reading, base_extractiveness, 1980, 0.14).
-narrative_ontology:measurement(hebrew_lit_be_t2010, hebrew_vitality__liturgical_reading, base_extractiveness, 2010, 0.15).
-narrative_ontology:measurement(hebrew_lit_be_t2026, hebrew_vitality__liturgical_reading, base_extractiveness, 2026, 0.15).
+narrative_ontology:measurement(hebr_be_t0, hebrew_vitality__liturgical_reading, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(hebr_be_t20, hebrew_vitality__liturgical_reading, base_extractiveness, 20, 0.12).
+narrative_ontology:measurement(hebr_be_t40, hebrew_vitality__liturgical_reading, base_extractiveness, 40, 0.14).
+narrative_ontology:measurement(hebr_be_t60, hebrew_vitality__liturgical_reading, base_extractiveness, 60, 0.16).
+narrative_ontology:measurement(hebr_be_t80, hebrew_vitality__liturgical_reading, base_extractiveness, 80, 0.15).
+narrative_ontology:measurement(hebr_be_t100, hebrew_vitality__liturgical_reading, base_extractiveness, 100, 0.15).
 
 % Suppression requirement over time
-narrative_ontology:measurement(hebrew_lit_su_t1800, hebrew_vitality__liturgical_reading, suppression_requirement, 1800, 0.1).
-narrative_ontology:measurement(hebrew_lit_su_t1880, hebrew_vitality__liturgical_reading, suppression_requirement, 1880, 0.14).
-narrative_ontology:measurement(hebrew_lit_su_t1920, hebrew_vitality__liturgical_reading, suppression_requirement, 1920, 0.18).
-narrative_ontology:measurement(hebrew_lit_su_t1950, hebrew_vitality__liturgical_reading, suppression_requirement, 1950, 0.2).
-narrative_ontology:measurement(hebrew_lit_su_t1980, hebrew_vitality__liturgical_reading, suppression_requirement, 1980, 0.22).
-narrative_ontology:measurement(hebrew_lit_su_t2010, hebrew_vitality__liturgical_reading, suppression_requirement, 2010, 0.22).
-narrative_ontology:measurement(hebrew_lit_su_t2026, hebrew_vitality__liturgical_reading, suppression_requirement, 2026, 0.22).
+narrative_ontology:measurement(hebr_su_t0, hebrew_vitality__liturgical_reading, suppression_requirement, 0, 0.02).
+narrative_ontology:measurement(hebr_su_t20, hebrew_vitality__liturgical_reading, suppression_requirement, 20, 0.03).
+narrative_ontology:measurement(hebr_su_t40, hebrew_vitality__liturgical_reading, suppression_requirement, 40, 0.04).
+narrative_ontology:measurement(hebr_su_t60, hebrew_vitality__liturgical_reading, suppression_requirement, 60, 0.05).
+narrative_ontology:measurement(hebr_su_t80, hebrew_vitality__liturgical_reading, suppression_requirement, 80, 0.05).
+narrative_ontology:measurement(hebr_su_t100, hebrew_vitality__liturgical_reading, suppression_requirement, 100, 0.05).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(hebrew_vitality__liturgical_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(hebrew_vitality__liturgical_reading, 0.12).
+narrative_ontology:coordination_type(hebrew_vitality__liturgical_reading, attachment_coordination).
+narrative_ontology:boltzmann_floor_override(hebrew_vitality__liturgical_reading, 0.1).
 narrative_ontology:affects_constraint(hebrew_vitality__liturgical_reading, hebrew_vitality__native_daily_reading).
 narrative_ontology:affects_constraint(hebrew_vitality__liturgical_reading, hebrew_vitality__hybrid_continuity_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the hebrew_vitality kernel. Three structurally distinct constraints are defined on the same kernel: (1) liturgical_reading (this file) — unbroken ritual use as the arbiter of vitality, low extraction, authority-centered. (2) native_daily_reading — only native spontaneous generation constitutes vitality, substantially high extraction when native speakers are delegitimized by liturgical authorities. (3) hybrid_continuity_reading — liturgical preservation was necessary enabler; modern vitality requires both substrate and vernacular reconstruction, moderate extraction in the competition for institutional legitimacy. The three readings coexist as different parties' commitments. The ε-invariance principle requires them to be authored separately because they have different beneficiaries, different victim sets (if any), and different core claims about what vitality IS. All three should link to each other via network.affects_constraints to establish the family relationship.
+% The hebrew_vitality kernel admits three structurally distinct readings: (1) liturgical_reading (this constraint) — ritual preservation = vitality; (2) native_daily_reading — native generation = vitality, ritual = preservation only; (3) hybrid_continuity_reading — both liturgy and vernacular required, and revitalization required reconstruction. Each reading instantiates a different constraint with different epsilon values, beneficiary sets, and authority frames. The readings coexist in contemporary discourse held by different communities and traditions. They are not logically foreclosed by each other (all three can be true at different time scales or from different perspectives) but they do compete for authority over the meaning of 'vitality'. Network links capture the family structure; each constraint also specifies reading_relations in cs_structure to formally state the relationships.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

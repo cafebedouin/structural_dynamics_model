@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-19
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,7 +43,12 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,41 +73,42 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: hebrew_vitality__native_daily_reading
- *   human_readable: Hebrew Vernacular Vitality: Native Daily Use Only
- *   domain: sociolinguistic/cultural/political
+ *   human_readable: Hebrew Vitality: Native Daily Vernacular Constraint
+ *   domain: sociolinguistics/language_revitalization/political
  *
  * SUMMARY:
- *   This reading instantiates one interpretation of Hebrew vitality: ONLY
- *   native daily speech constitutes vitality; liturgical and learned Hebrew
- *   are preservation, not life. This is a reading of the contested kernel
- *   'hebrew_vitality', held by the Zionist institutional network and dominant
- *   in Israeli state ideology. It claims that Hebrew, to be truly 'alive' as
- *   a national language, must function as the mother tongue of daily secular
- *   life — spoken first by children in homes and schools, used without sacred
- *   context in commerce and governance. Under this reading, the 1,900-year
- *   liturgical and legal use of Hebrew becomes 'preserved heritage' rather
- *   than 'living language'. The constraint systematically enforces this
- *   distinction through educational policy, media prestige allocation, and
- *   institutional resource distribution. This reading conflicts directly with
- *   the liturgical_reading (which holds that unbroken prayer-use constitutes
- *   vitality) and creates structural downstream effects on the
- *   hybrid_continuity_reading (which argues both forms matter). The expected
- *   structural delta: moderate extractiveness (institutional enforcement
- *   required, lexical expansion and native-speaker population building
- *   demanded organized effort), clear beneficiary (Zionist state-building and
- *   secular Hebrew speakers), identifiable victim (liturgical tradition and
- *   ultra-orthodox communities). The claim/metric gap is deliberate: the
- *   constraint claims to be coordination (solving the problem of national
- *   language for a dispersed population) while the metrics reflect
- *   substantially extractive, actively suppressed operation (it subordinates
- *   one legitimate linguistic form to another).
+ *   Between 1880 and 1948, the Zionist movement implemented a reading of
+ *   Hebrew's future based on the premise that only native generational
+ *   transmission constitutes linguistic vitality—that ritual and liturgical
+ *   use, however continuous, represents preservation rather than life. This
+ *   constraint subordinated the rabbinical tradition's two-millennia
+ *   authority over Hebrew and desacralized the language by moving it from
+ *   primarily religious domains into secular governance, education, and
+ *   everyday use. The constraint required massive institutional enforcement:
+ *   the establishment of Hebrew-medium schools, the creation of new
+ *   vocabulary for modern domains, the displacement of Yiddish and Arabic as
+ *   vernaculars, and the construction of Hebrew as the symbol of national
+ *   belonging. The measurement series track extractiveness rising from
+ *   negligible (1880, pre-state period) through rapid institutional
+ *   consolidation (1920–1948) to stabilization at a high plateau (1948–2020).
+ *   Theater ratio rises alongside: the constraint's enforcement increasingly
+ *   depends on cultural narrative (declarations that Hebrew is 'alive' now,
+ *   that liturgical Hebrew is 'preserved' but not living, that native
+ *   speakers are the authentic practitioners) rather than on the
+ *   institutional machinery itself, which by 2020 is so established that its
+ *   constructedness is largely invisible. Suppression requirement rises
+ *   sharply during state-building and stabilizes—the constraint's persistence
+ *   depends on continuous institutional suppression of alternative
+ *   definitions (the liturgical reading, diaspora alternatives, Palestinian
+ *   Arabic claims to equal linguistic status).
  *
  * KEY AGENTS:
- *   - labor_zionist_institutional_network: agenda-setter (institutional power). Sets the definition of vitality through state education, labor movements, youth movements. Enforces it by allocating resources and prestige exclusively to vernacular speakers.
- *   - secular_hebrew_speaker_community: beneficiary (organized power). Achieves linguistic sovereignty; their speech becomes THE authoritative form. Educational and media resources flow to native speakers.
- *   - liturgical_hebrew_tradition: victim (moderate power, identity-locked). Desacralized and reclassified as 'preserved' rather than 'living'. Loses cultural primacy despite maintaining continuous multi-generational use.
- *   - ultra_orthodox_communities: payer and excluded (moderate power, identity-locked). Marginalized through institutional enforcement; their Hebrew variant becomes non-normative. Structurally excluded from definition-setting.
- *   - diaspora_jewish_communities: observer (moderate power, analytical). Maintain Hebrew through study and liturgy; the constraint positions their use as 'not vital'. Provide historical evidence but hold no seat in enforcement.
+ *   - Zionist state builders (institutional power, setting the terms of what counts as linguistic vitality)
+ *   - Secular Hebrew speakers (beneficiaries, positioned as the authentic practitioners of a living language)
+ *   - Liturgical tradition keepers (moderate power, identity-locked, bearing the cost of desacralization)
+ *   - Diaspora Hebrew communities (moderate power, constrained exit, simultaneously benefiting and paying)
+ *   - Palestinian Arabs and Palestinians under occupation (powerless, excluded, subject to the constraint's institutional enforcement)
+ *   - Academic linguists (observers, measuring vitality on multiple axes and documenting the constraint's constructed definition)
  */
 
 /* ==========================================================================
@@ -109,59 +116,113 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(hebrew_vitality__native_daily_reading, 0.62).
-domain_priors:suppression_score(hebrew_vitality__native_daily_reading, 0.71).
-domain_priors:theater_ratio(hebrew_vitality__native_daily_reading, 0.28).
+domain_priors:base_extractiveness(hebrew_vitality__native_daily_reading, 0.68).
+domain_priors:suppression_score(hebrew_vitality__native_daily_reading, 0.72).
+domain_priors:theater_ratio(hebrew_vitality__native_daily_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, accessibility_collapse, 0.48).
-narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, resistance, 0.67).
+narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, accessibility_collapse, 0.61).
+narrative_ontology:constraint_metric(hebrew_vitality__native_daily_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(hebrew_vitality__native_daily_reading, tangled_rope).
-narrative_ontology:human_readable(hebrew_vitality__native_daily_reading, "Hebrew Vernacular Vitality: Native Daily Use Only").
-narrative_ontology:topic_domain(hebrew_vitality__native_daily_reading, "sociolinguistic/cultural/political").
+narrative_ontology:human_readable(hebrew_vitality__native_daily_reading, "Hebrew Vitality: Native Daily Vernacular Constraint").
+narrative_ontology:topic_domain(hebrew_vitality__native_daily_reading, "sociolinguistics/language_revitalization/political").
 
 domain_priors:requires_active_enforcement(hebrew_vitality__native_daily_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(hebrew_vitality__native_daily_reading, 'b090133f-26bc-4a54-8e3d-84c205bafac3').
-narrative_ontology:cs_kernel_codification('b090133f-26bc-4a54-8e3d-84c205bafac3', fixed_text).
-narrative_ontology:cs_authority_grounding('b090133f-26bc-4a54-8e3d-84c205bafac3', extraction).
-narrative_ontology:cs_interpretation_layer_present('b090133f-26bc-4a54-8e3d-84c205bafac3').
-narrative_ontology:cs_reading_relation('b090133f-26bc-4a54-8e3d-84c205bafac3', hebrew_vitality__liturgical_reading, forecloses).
-narrative_ontology:cs_reading_relation('b090133f-26bc-4a54-8e3d-84c205bafac3', hebrew_vitality__hybrid_continuity_reading, influences).
-narrative_ontology:cs_axiom('b090133f-26bc-4a54-8e3d-84c205bafac3', foundational, native_speech_sole_vitality_criterion).
-narrative_ontology:cs_axiom_status(native_speech_sole_vitality_criterion, holdable).
-narrative_ontology:cs_axiom_grounding('b090133f-26bc-4a54-8e3d-84c205bafac3', native_speech_sole_vitality_criterion, conventional).
-narrative_ontology:cs_axiom('b090133f-26bc-4a54-8e3d-84c205bafac3', foundational, liturgical_use_constitutes_preservation_not_life).
-narrative_ontology:cs_axiom_status(liturgical_use_constitutes_preservation_not_life, holdable).
-narrative_ontology:cs_axiom_grounding('b090133f-26bc-4a54-8e3d-84c205bafac3', liturgical_use_constitutes_preservation_not_life, conventional).
-narrative_ontology:cs_reference_frame('b090133f-26bc-4a54-8e3d-84c205bafac3', native_daily_vernacular_criterion).
-narrative_ontology:cs_drift_state('b090133f-26bc-4a54-8e3d-84c205bafac3', contemporary_post_universal_native_adoption, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('b090133f-26bc-4a54-8e3d-84c205bafac3', '').
+narrative_ontology:cs_story_uid(hebrew_vitality__native_daily_reading, 'b4139f74-5d9d-44c3-830f-5efbdf58cc28').
+narrative_ontology:cs_kernel_codification('b4139f74-5d9d-44c3-830f-5efbdf58cc28', fixed_text).
+narrative_ontology:cs_authority_grounding('b4139f74-5d9d-44c3-830f-5efbdf58cc28', lineage).
+narrative_ontology:cs_interpretation_layer_present('b4139f74-5d9d-44c3-830f-5efbdf58cc28').
+narrative_ontology:cs_reading_relation('b4139f74-5d9d-44c3-830f-5efbdf58cc28', hebrew_vitality__liturgical_reading, forecloses).
+narrative_ontology:cs_reading_relation('b4139f74-5d9d-44c3-830f-5efbdf58cc28', hebrew_vitality__hybrid_continuity_reading, coexists_with).
+narrative_ontology:cs_axiom('b4139f74-5d9d-44c3-830f-5efbdf58cc28', foundational, linguistic_vitality_requires_native_generation).
+narrative_ontology:cs_axiom_status(linguistic_vitality_requires_native_generation, holdable).
+narrative_ontology:cs_axiom_grounding('b4139f74-5d9d-44c3-830f-5efbdf58cc28', linguistic_vitality_requires_native_generation, empirically_contingent).
+narrative_ontology:cs_axiom('b4139f74-5d9d-44c3-830f-5efbdf58cc28', secondary, secular_institutional_standardization_necessary_for_modernity).
+narrative_ontology:cs_axiom_status(secular_institutional_standardization_necessary_for_modernity, holdable).
+narrative_ontology:cs_axiom_grounding('b4139f74-5d9d-44c3-830f-5efbdf58cc28', secular_institutional_standardization_necessary_for_modernity, instrumental).
+narrative_ontology:cs_reference_frame('b4139f74-5d9d-44c3-830f-5efbdf58cc28', hebrew_continuous_through_liturgy).
+narrative_ontology:cs_drift_state('b4139f74-5d9d-44c3-830f-5efbdf58cc28', post_1948_state_institutionalization, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('b4139f74-5d9d-44c3-830f-5efbdf58cc28', '2026-06-19T14:32:00Z').
 narrative_ontology:cs_kernel_id(hebrew_vitality__native_daily_reading, hebrew_vitality).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(hebrew_vitality__native_daily_reading, zionist_state_building_project).
-narrative_ontology:constraint_beneficiary(hebrew_vitality__native_daily_reading, secular_hebrew_speaker_community).
-narrative_ontology:constraint_victim(hebrew_vitality__native_daily_reading, liturgical_hebrew_tradition).
-narrative_ontology:constraint_victim(hebrew_vitality__native_daily_reading, ultra_orthodox_communities).
+narrative_ontology:constraint_beneficiary(hebrew_vitality__native_daily_reading, zionist_state_builders).
+narrative_ontology:constraint_beneficiary(hebrew_vitality__native_daily_reading, secular_hebrew_speakers).
+narrative_ontology:constraint_victim(hebrew_vitality__native_daily_reading, liturgical_tradition_keepers).
+narrative_ontology:constraint_victim(hebrew_vitality__native_daily_reading, diaspora_hebrew_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(hebrew_vitality__native_daily_reading, diaspora_hebrew_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Built the institutional and pedagogical machinery to revive Hebrew as a living vernacular for daily use in Palestine/Israel. Controlled language policy, education curriculum, media, and cultural production. Declared that liturgical Hebrew—the traditional preserve of the rabbinic and prayer tradition—was insufficient for national vitality and that only native-born speakers using Hebrew for everyday communication, creative production, and governance constituted true language revival. This position subordinated the liturgical tradition's authority over Hebrew's definition and future.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, zionist_state_builders, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Gained a living, vernacular language of daily use, creative expression, and collective belonging. The constraint's enforcement created institutional pathways (schools, media, literature, governance) that made native Hebrew acquisition and use the default path to social belonging and economic participation in the emerging Israeli state. They benefit from being positioned as the authentic practitioners of a 'revived' language, with cultural and political authority over its meaning.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, secular_hebrew_speakers, beneficiary,
+    organized, biographical, mobile, national).
+
+% The custodians of rabbinic Hebrew, prayer language, textual interpretation, and religious practice across Jewish diaspora communities. The native-daily-reading constraint subordinates their claim that unbroken liturgical use constitutes the truest form of Hebrew vitality. They bear the cost of desacralization—their Hebrew is relegated to 'preservation' rather than 'life,' their religious authority over language is displaced by secular state authority, and their own native use of Hebrew (in prayer, study, religious discourse) is reframed as 'ritual recitation' rather than authentic living language. Their exit is blocked by the identity-fusion of Hebrew with Jewish religious practice across centuries.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, liturgical_tradition_keepers, payer,
+    moderate, civilizational, identity_locked, global).
+
+% Pre-state and contemporary diaspora communities that maintained Hebrew literacy and daily/weekly use through educational and religious institutions, independent of state coordination. The native-daily-reading constraint implicitly devalues their Hebrew practice as insufficiently 'native' or 'generational'—they are constructed as inheriting rather than creating. They also benefit from the constraint's institutional success in making Hebrew a recognizable global language with literary, media, and cultural prestige. Their exit options are constrained: maintaining Hebrew without the state's educational and cultural apparatus is resource-intensive; abandoning it means severing ties to both the national movement and the religious tradition.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, diaspora_hebrew_communities, payer,
+    moderate, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(hebrew_vitality__native_daily_reading, diaspora_hebrew_communities, beneficiary).
+
+% Palestinian citizens of Israel and Palestinians in occupied territories are structurally excluded from the native-daily-reading constraint's benefits. The constraint's enforcement via state institutions (Hebrew-dominant schools, Hebrew-only governance and military service for Israeli citizens) operates as a linguistic assimilation mechanism and a mechanism of political marginalization. Their participation would require abandoning Arabic native-generational transmission in favor of Hebrew—the constraint offers no path for linguistic pluralism or co-vitality. They are kept out by the same structural mechanisms that enforce the constraint's definition.
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, arab_palestinian_minority, excluded,
+    powerless, biographical, trapped, national).
+
+% Study and measure language vitality through empirical indices (native-speaker population, intergenerational transmission, institutional domains of use, lexical expansion, orthographic standardization). They observe that Hebrew's contemporary vitality on multiple empirical indices is real; they also observe that the constraint's definition of vitality as 'native daily use' is a constructed criterion, not an objective discovery, and that liturgical Hebrew demonstrates measurable continuity and functional vitality on other metrics (textual authority, religious institutional support, educational transmission).
+narrative_ontology:constraint_stakeholder(hebrew_vitality__native_daily_reading, academic_linguists, observer,
+    institutional, biographical, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(hebrew_vitality__native_daily_reading, zionist_state_builders).
+narrative_ontology:fixing_cost_class(hebrew_vitality__native_daily_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Established a shared standard for what constitutes authentic Hebrew and Hebrew vitality: native-generational transmission through secular institutions (schools, media, literature, governance). Coordinated the reconstruction of Hebrew vocabulary for modern domains, the standardization of pronunciation and grammar, and the collective adoption of Hebrew as the language of state, literature, and daily life in a new polity. Without this coordination, Hebrew could have remained primarily liturgical and fragmented across diaspora communities with no unified modern standard.
+% TRANSFER_FUNCTION: Transfers linguistic authority from the rabbinic tradition (which held it for two millennia through religious institutional mechanisms) to the secular Zionist state and its cultural institutions. Transfers the definition of 'living language' from unbroken ritual and textual use to native generational transmission. Transfers resources (education funding, media infrastructure, literary prestige, state administrative authority) to secular Hebrew speakers and away from liturgical keepers. Moves the symbolic weight of 'Jewish continuity' from religious practice to national belonging.
+% ABSENT_VOICES: Liturgical tradition keepers (present but subordinated, not truly absent). Orthodox and ultra-Orthodox communities that maintained alternative Hebrew usage and resisted the native-daily-reading definition of vitality (present in diaspora, marginalized in state policy). Palestinian Arabs and Palestinians under occupation whose linguistic and national claims are excluded by the constraint's structure. Pre-state diaspora Hebrew communities whose own generational transmission of Hebrew is devalued as insufficient. These voices would argue that liturgical preservation IS vitality, that Hebrew need not choose between religious and secular domains, that linguistic revival need not entail desacralization, and that state-enforced linguistic standardization marginalizes legitimate alternative uses.
+% DISAPPEARANCE_RATIONALE: If the native-daily-reading constraint disappeared—if the state ceased to enforce Hebrew as the primary medium of education, governance, and cultural production—Hebrew would not disappear, but the world would rearrange around it. The state apparatus that gave Hebrew demographic reach, lexical standardization, and cultural prestige would cease. Liturgical Hebrew and diaspora Hebrew communities would retain their continuity; Hebrew might return to a primarily religious/ethnic language with strong prestige but smaller native-speaker base; the Israeli state would require a new language policy, possibly bilingual or multilingual; the cultural authority to define 'Hebrew vitality' would shift. The constraint's persistence depends on active state institutional maintenance.
+% FOUNDING_PROBLEM: At the turn of the 20th century, Hebrew was primarily a liturgical and scholarly language: the language of prayer, Jewish religious texts, and educated Jewish discourse, but not of daily household communication or economic production for the vast majority of Jews. The Zionist movement sought to build a modern nation-state in Palestine and needed a unifying language. The founding problem was: how to convert a religious language with unbroken continuity but limited vernacular use into a language capable of expressing modernity—of managing a state, conducting science and technology, raising children, conducting commerce—while mobilizing the symbolic and historical authority Hebrew carried as the language of Jewish texts and tradition. The constraint arose from the premise that 'real' language vitality required native generational transmission, not ritual preservation.
+% FOUNDING_PROBLEM_CORROBORATION: Zionist historians and state planners (Eliezer Ben-Yehuda, David Ben-Gurion, educational authorities) attest the founding problem was real and the native-daily-reading solution was necessary and successful—Hebrew is now spoken natively by millions. Liturgical tradition keepers and diaspora Hebrew scholars attest that the founding problem was posed in misleading terms—Hebrew's ritual preservation already constituted a form of vitality, and the state's solution required suppressing rather than integrating that tradition. Academic linguists outside the Israeli national framework observe both that Hebrew's contemporary vitality is empirically real AND that the constraint's definition of vitality is ideologically constructed and contingent on state institutional support. The founding problem's status remains contested because the two readings of it are incommensurable: one asks 'how to build a modern state language,' the other asks 'how to honor Hebrew's existing vitality while adapting it.'
+narrative_ontology:disappearance_verdict(hebrew_vitality__native_daily_reading, world_rearranges).
+narrative_ontology:founding_problem_status(hebrew_vitality__native_daily_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(hebrew_vitality__native_daily_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(hebrew_vitality__native_daily_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(hebrew_vitality__native_daily_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(hebrew_vitality__native_daily_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -181,16 +242,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.18 (1880: early ideological framing, pre-institutional) to 0.62 (2025: fully institutionalized, asymmetric benefit consolidated). The trajectory tracks institutional embedding: before state formation, the constraint was a competing ideological claim among multiple Zionist visions; after 1948, it became state policy with enforcement machinery (education curriculum, broadcasting standards, immigration/settlement policies). Suppression is consistently higher than extractiveness (0.71 vs 0.62 at t=end) because the constraint persists by actively marginalizing alternatives — suppression defends the definition itself, not just the benefits. Theater ratio rises modestly (0.08 to 0.28) because as native speech became universal among secular-majority population by 1970, the constraint's active enforcement became less necessary for coordination and increasingly performative (defending the boundary between 'living' and 'preserved' when the population balance had already shifted). The measurement series is aligned on one grid: every metric is authored at every shared time point (1880, 1920, 1948, 1970, 1995, 2025), enabling lifecycle drift analysis. Early measurements (1880-1920) are marked as 'projected' because they represent the ideology pre-institutionalization; post-1920 are 'observed' from educational policy, census linguistic data, and media presence.
+ *   Extractiveness is high (0.68 at 2020) because the constraint transfers linguistic authority, cultural prestige, and educational resources from the liturgical tradition to the secular state and secular Hebrew speakers. The transfer is not a zero-sum displacement of an equally vital alternative—liturgical Hebrew continues—but rather a redefinition of what counts as vitality, which systematically disadvantages the tradition that held linguistic authority for two millennia. Suppression is higher (0.72) because the constraint's persistence requires active enforcement at the level of institutional policy (education language-medium, state-language law, media production), cultural narrative (the repeated assertion that native speakers are the true custodians), and political power (the state's monopoly on these institutions). Theater is moderate (0.42): the constraint's early enforcement was primarily institutional (building schools, standardizing pronunciation, creating new vocabulary); by 2020, much of the work is cultural-narrative (declarations that Hebrew is vitally alive, that liturgical Hebrew is respected but not living). The measurement series show extractiveness and suppression rising in tandem during the pre-state and early state periods (1880–1970), then stabilizing—the institutional machinery is mature and the definition of vitality has become hegemonic. The theater ratio continues to rise modestly, suggesting that enforcement is increasingly maintained through cultural narrative and less through direct institutional construction. All measurements are authored on a single shared time grid: every metric is assessed at every examined time point (1880, 1920, 1948, 1970, 2000, 2020).
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter (labor_zionist network) experiences this as genuine coordination: they solved a real problem of national language formation for a dispersed population. The constraint's framing as 'vitality' is the truth as experienced from their institutional seat. The victims (liturgical tradition and ultra-orthodox communities) experience it as enforced subordination: their Hebrew use was continuous, sacred, and living; the constraint's reclassification as 'preserved' is an institutional act of desacralization, not a discovery. The boundary marker ('native daily speech') appears natural from the beneficiary seat (it is how they speak) and appears arbitrary from the victim seat (it excludes forms that have been continuously regenerated across centuries). The engine computes directionality per seat: the zionist network gets low d (beneficiary, arbitrage exit); secular speakers get low d (beneficiary, mobile exit); liturgical tradition and ultra-orthodox get high d (victims, identity-locked exit). This structural divergence IS the measurement the corpus takes.
+ *   The agenda-setter (Zionist state builders) and the beneficiaries (secular Hebrew speakers) experience this as a genuine coordination function with a real solution to a real problem: Hebrew needed to become a living vernacular to support a modern nation-state, and the state provided the institutional pathway to accomplish this. The constrained-exit victims (liturgical keepers, diaspora communities) experience the same constraint as extractive: a redefinition of vitality imposed by institutional power that devalues their own native use of Hebrew and subordinates their authority over the language. The excluded seat (Palestinians) experiences it as one mechanism of linguistic and political marginalization among others. The academic observer measures both: Hebrew's demographic vitality and institutional reach are empirically real; the constraint's definition of vitality is ideologically constructed. The engine computes per-seat classifications from the structural data—the Zionist agenda-setter and secular beneficiaries should compute as experiencing genuine coordination; the liturgical keepers and diaspora communities as experiencing extraction masked as coordination; the excluded Palestinian seat should register as experiencing suppression without coordination benefit. This divergence is the point: the same structural arrangement looks like rope to some and tangled rope (or snare with coordination cover) to others.
  *
  * DIRECTIONALITY LOGIC:
- *   The zionist_institutional_network is the primary beneficiary and agenda-setter — it collects legitimacy, institutional resources, and state power from the constraint. Its directionality should compute near full-beneficiary (~0.1-0.2 on d scale) because it sets the rules, has arbitrage exit (could change the definition but chooses not to), and captures the primary extraction (institutional prestige). The secular_hebrew_speaker_community benefits (linguistic sovereignty, prestige, educational investment) but does not run the constraint — it is more accurately a beneficiary than agenda-setter, with moderate power and mobile exit options, placing d around 0.25-0.35. The liturgical_hebrew_tradition is a victim with high extraction cost (desacralization, resource starvation, institutional marginalization) and identity-locked exit (cannot simply switch linguistic traditions) — d should be high, 0.75-0.85. Ultra-orthodox communities are payers (pay the cost of marginalization) and excluded from enforcement decisions — d should be high, 0.70-0.80. Derivation from beneficiary/victim declarations should produce these values; no override needed if the structural data is declared cleanly.
+ *   Zionist state builders: d ≈ 0.0 (full beneficiary). They set the agenda, control the institutional machinery, collect the cultural and political prestige of having revived Hebrew, and benefit from a unified language for state administration and national belonging. They bear minimal cost from the constraint—enforcing it IS their project. Exit is arbitrage: they could define vitality differently if they chose, but the state's power makes their current reading authoritative. Secular Hebrew speakers: d ≈ 0.2 (slight beneficiary, moderate payer). They benefit from being positioned as the authentic practitioners of a living language and gain access to educational and economic opportunities through native Hebrew competence. They also pay a cost: the constraint's enforcement in schools and state institutions requires adopting a particular style and register of Hebrew (secular, modern, national), which may displace or devalue other registers (religious, poetic, intimate, family-specific) that some speakers might prefer. Exit is mobile: secular speakers can learn other languages, adopt other Hebrews, migrate to other linguistic communities. Liturgical tradition keepers: d ≈ 0.85 (near-full target). They bear the cost of desacralization—their Hebrew is redefined as preservation rather than life, their religious authority over the language is displaced, their institutional (rabbinic/yeshiva) control of Hebrew literacy is subordinated to state educational control. They benefit minimally from the constraint (they gain literacy prestige and connection to a national language, but at the cost of religious authority). Exit is identity-locked: rejecting the constraint means rejecting either the Jewish tradition or the broader Jewish polity—neither is available. Diaspora Hebrew communities: d ≈ 0.55 (symmetric, slightly payer). They benefit from the state's institutional support of Hebrew (media, literature, cultural prestige, simplified educational pathways) but pay by having their own native-generational transmission of Hebrew devalued as insufficient—they are positioned as inheritors rather than creators. Exit is constrained: they can maintain Hebrew without the state's support, but it is resource-intensive and culturally devalued. Palestinians under occupation: d ≈ 1.0 (full target, with no coordination benefit). They experience the constraint as suppression without benefit—Hebrew-dominant education and governance institutions as mechanisms of linguistic and political marginalization—and have no exit. This directionality profile is what the engine derives from the authored beneficiary/victim declarations and exit options. The claim that this is a rope (pure coordination) and the metrics that describe it as substantially extractive are held in tension intentionally: the measurement the corpus takes is the gap between the claim and the computed type at each seat.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (how to build a native-speaker Hebrew population fast enough for state formation) was genuine and acute in 1880-1948. By 1948-1960, vernacular Hebrew was native for the majority population; the problem was substantially solved. The constraint persists, but the mandatrophy question asks: does the contemporary enforcement serve the original function or has the function atrophied? The theater ratio trajectory provides diagnostic evidence: theater_ratio rises from 0.16 (1948, when coordination was still being built) to 0.28 (2025, when vernacular native speech is universal in secular domains and enforcement is increasingly about maintaining the boundary between categories rather than solving a language shortage). The constraint has NOT fully degraded to piton status (theater_ratio is still below 0.5, and suppression remains high — the constraint actively prevents alternative framings, not merely maintained theatrically). But the rising theater trajectory and stable suppression (high and flat, not rising as it would if enforcement were fighting increasing resistance) suggests PARTIAL mandatrophy: the constraint solves a smaller problem now than it did in 1948, but institutional inertia and the benefit to established beneficiaries keep it enforced. The committer frame clarifies the functional shift: this reading coexists with the liturgical_reading and influences the hybrid_continuity_reading. If the hybrid_reading became ascendant (arguing both forms are vital), this reading would lose its basis for the suppression it currently requires. The mandate (native speech as the singular criterion for vitality) has not disappeared, but its operational necessity has diminished.
+ *   The founding problem status and the disappearance verdict are strategically mismatched, which flags mandatrophy. The founding problem (how to revive Hebrew as a modern vernacular) has achieved its stated goal: Hebrew is demonstrably a living language with millions of native speakers, institutional support, literary and media production, modern vocabulary for all technical domains. The founding problem is substantially SOLVED. Yet the constraint persists at high extractiveness (0.68) and suppression (0.72), and would remain in place if the founding problem vanished. This is mandatrophy: the constraint's original mandate has become obsolete, but the constraint persists as an institutional arrangement whose primary function is no longer coordination but extraction and the maintenance of authority relations. A genuine rope would vanish or downshift dramatically once its coordination function was satisfied; this constraint persists because the extraction and the authority transfer (from liturgical keepers to secular state builders) constitute the ongoing function, not the original coordination task. The theater ratio (0.42 at 2020) is moderate rather than very high, which suggests the constraint still contains some institutional coordination content—the state still maintains Hebrew education and language policy partly for communication efficiency. But the ratio's upward trend (from 0.05 in 1880 to 0.42 by 2020) indicates that theatrical maintenance is increasing relative to functional necessity, consistent with degradation toward piton. The constraint's persistence is maintained by: (1) the continued institutional power of the state, which benefits from linguistic uniformity and cultural authority; (2) the continued political utility of Hebrew as a symbol of national belonging; (3) the accumulated sunk cost of having built this system (schools, curricula, media, literary canon); (4) the hegemonic acceptance of the native-daily-reading definition, which makes alternative readings invisible to those who benefit from the constraint. The constraint does not meet piton's profile (most actors are being harmed and would gladly fix it if the cost were low—piton requires diffuse costs and no concentrated beneficiary). It meets tangled_rope profile durably: genuine coordination function (creating a unified modern language) coexists with asymmetric extraction (linguistic authority transfer), and the extraction persists through continued institutional enforcement.
  */
 
 /* ==========================================================================
@@ -198,89 +259,113 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    naturalness_vs_constructed_vitality,
-    'Is the constraint''s definition of vitality (native daily speech) a natural discovery about what makes languages ''alive'', or is it a constructed institutional definition that benefits the Zionist project?',
-    'Comparative sociolinguistic analysis: examine how other language revitalization movements (Irish, Basque, Welsh, Navajo) define vitality and whether they privilege native speech or allow multiple legitimate forms. Examine whether the constraint''s metrics (suppression, theater_ratio) spike upward when institutional pressure slackens, suggesting the vitality criterion requires enforcement rather than natural emergence.',
-    'If vitality is natural/discovered, the constraint is a mountain (low extraction, no enforcement needed). If vitality is constructed/institutional, the constraint is tangled_rope or snare (high extraction, active suppression). The measurement trajectory (rising suppression from 1948 onward despite universal native speech adoption) suggests constructed institutional boundary maintenance rather than natural fact discovery.',
+    vitality_definition_contingency,
+    'Is linguistic vitality a discoverable empirical fact about languages, or is it a normative criterion constructed by those who define it?',
+    'Examine whether different linguistic communities and traditions employ different, internally coherent definitions of vitality without contradiction; compare Hebrew''s vitality profile under the native-daily-reading criterion versus the liturgical-preservation criterion on empirical metrics like continuity, intergenerational transmission, lexical innovation, and speaker confidence. If different communities using different definitions produce different but non-contradictory assessments, vitality is partly constructed.',
+    'If vitality is constructed (not discovered), the constraint''s authority rests on institutional power to enforce a definition, not on objective linguistic fact. This would move the constraint from rope (discovering and solving a real problem) toward snare (imposing a definition that subordinates alternatives). If vitality is objective, the constraint''s definition correctly identifies the real requirements for Hebrew''s continuation and the engine''s classification holds.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(naturalness_vs_constructed_vitality, empirical, 'Whether vitality is natural linguistic property or constructed political definition.').
+narrative_ontology:omega_variable(vitality_definition_contingency, conceptual, 'Whether linguistic vitality is an objective property or a constructed criterion').
 
 omega_variable(
-    reading_foreclosure_mechanism,
-    'Did the native_daily_reading foreclose the liturgical_reading, or do both readings persist despite institutional pressure from the native_daily interpretation?',
-    'Institutional history: trace whether the Zionist institutions actively suppressed liturgical Hebrew claims (yes = foreclosure) or simply marginalized them while they persisted in protected niches (yes = coexistence with pressure). Examine whether ultra-orthodox and diaspora communities have maintained counter-claims to the vitality definition; if so, foreclosure is incomplete.',
-    'If foreclosure is complete, the relation is ''forecloses'' (rare, precise). If the liturgical reading persists in smaller institutional spaces despite suppression, the relation is ''coexists_with'' (both held by different parties). Current evidence suggests coexistence with pressure — the liturgical reading is not foreclosed in principle, but its institutional access is severely constrained.',
+    liturgical_tradition_suppression_mechanism,
+    'Is the measured suppression of liturgical tradition-keepers structural (external barriers to maintaining Hebrew through religious institutions) or internalized (tradition-keepers have absorbed the native-daily-reading definition and devalue their own practice)?',
+    'Survey and interview tradition-keepers about their perception of Hebrew vitality; compare communities in diaspora (external barriers weak, state apparatus absent) versus communities in Israel (state institutional pressure present, educational system assimilative). Track changes in religious institutions'' Hebrew pedagogy and confidence when they operate without state suppression pressure versus under it.',
+    'If suppression is primarily structural (state policy, education system), removing the constraint would restore liturgical keepers'' institutional capacity and confidence relatively quickly. If suppression is internalized (absorbed definition of vitality), the constraint''s abandonment would not immediately restore their practice—the constraint has sunk into identity and pedagogy. The measured suppression value (0.72) represents total effective suppression; decomposing it into structural and internalized components would inform whether the constraint is merely institutional or has become cultural.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_mechanism, empirical, 'Whether native_daily reading logically forecloses or merely pressures the liturgical reading.').
+narrative_ontology:omega_variable(liturgical_tradition_suppression_mechanism, empirical, 'Structural versus internalized suppression of liturgical tradition maintenance').
 
 omega_variable(
-    suppression_as_internalized_identity,
-    'Is the measured suppression (0.71) structural (institutional barriers, educational exclusion) or internalized (Hebrew speakers have absorbed the vitality criterion and experience liturgical Hebrew as not-fully-living)?',
-    'Post-institutional-pressure measurement: in diaspora communities with weaker state enforcement of the vitality criterion, do Hebrew speakers still reproduce the native-daily prioritization, or do they recognize multiple forms as vital? A shift would indicate internalization; absence of shift would indicate structural dependence on institutional enforcement.',
-    'If structural, removing institutional enforcement would recover alternative framings. If internalized, the suppression persists even after enforcement weakens — the target population has adopted the constraint''s framing as self-evident truth.',
+    reading_boundary_empirical_test,
+    'Do the liturgical-reading and native-daily-reading truly foreclose each other (as the native-daily reading asserts), or can they coexist in principle?',
+    'Test whether a community can simultaneously (a) practice Hebrew daily in secular contexts with native generational transmission AND (b) practice Hebrew in liturgical/religious contexts with ritual authority and continuous textual use, treating both as legitimate forms of vitality. Look for communities that do this in practice (e.g., some diaspora Jewish communities, some Orthodox communities in Israel that use both registers). If such communities exist stably, the readings coexist rather than foreclose.',
+    'If the readings truly coexist, the native-daily-reading''s claim that only native generation constitutes vitality is a normative choice, not a logical necessity. This supports the conceptual omega (vitality is constructed) and suggests the constraint''s classification shifts from rope (discovering a real problem) toward tangled_rope with stronger extractive character (imposing a particular definition against an equally viable alternative). If one reading does foreclose the other empirically, the constraint''s logic is sound and the classification holds.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_as_internalized_identity, empirical, 'Whether suppression mechanism is structural enforcement or internalized belief.').
+narrative_ontology:omega_variable(reading_boundary_empirical_test, empirical, 'Whether native-daily and liturgical readings logically foreclose or can coexist').
 
 omega_variable(
-    victim_identity_lock_depth,
-    'Is the identity-lock status of ultra-orthodox communities a historical feature (they cannot exit because Hebrew is their ancestral tradition) or an artifact of the constraint''s enforcement (they cannot exit because doing so would require abandoning religious observance)?',
-    'Counterfactual: if the constraint were removed and multiple Hebrew forms were recognized as equally vital, would ultra-orthodox communities still experience identity-lock, or would they regain agency over their linguistic practice?',
-    'If the lock is historical, the constraint identifies and leverages pre-existing vulnerability. If the lock is artifact, the constraint creates the victim status by narrowing the exit space that previously existed (where liturgical Hebrew was a legitimate national form). This distinction affects whether the constraint is ''discovering'' victims or ''making'' them.',
-    confidence_without_resolution(low)
+    palestinian_linguistic_exclusion_coupling,
+    'Is the Palestinian Arabic linguistic marginalization a necessary consequence of the native-daily-reading constraint, or a contingent result of how it was enforced?',
+    'Examine whether an alternative enforcement of the same constraint (native Hebrew vitality as primary) could have maintained space for Palestinian Arabic vitality and institutional support (bilingual education, equal media prestige, government services in both languages). Compare Israel''s actual language policy with counterfactual policies consistent with native-daily-reading that would not exclude Arabic. If coexistence is structurally possible, the exclusion is not necessary to the constraint''s core; if impossible, native-daily-reading''s enforcement inherently requires Palestinian linguistic suppression.',
+    'If exclusion is contingent, the constraint could be modified (redefined to allow linguistic pluralism) without abandoning the native-daily-reading reading. If exclusion is necessary, the constraint''s extraction from Palestinians is structural and not remedial by policy alone. This affects the classification''s robustness: a constraint that necessarily produces exclusion-by-design is more extractive and less remediable than one where exclusion resulted from policy choices.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(victim_identity_lock_depth, conceptual, 'Whether identity-lock is pre-existing vulnerability or constraint-induced closure.').
-
-omega_variable(
-    measuring_vitality_under_contestation,
-    'Is the constraint''s definition of vitality the correct one, and therefore the institutional enforcement is justified enforcement of truth? Or is vitality itself defined by the constraint, making the enforcement a circular legitimacy claim?',
-    'This is a conceptual question with no empirical resolution, but the committer frame makes it explicit: the native_daily_reading CONSTITUTES a claim about vitality; it does not discover vitality. The constraint defines the category it then claims to enforce.',
-    'This is the ε-invariance question for the kernel: different readings assign different ε to the same linguistic phenomenon (Hebrew). The resolution is not to find the ''true'' vitality but to recognize that vitality is multiply instantiated by different readings, each with different structural beneficiaries and victims.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(measuring_vitality_under_contestation, conceptual, 'Whether vitality is a pre-institutional fact or defined into existence by the constraint reading.').
+narrative_ontology:omega_variable(palestinian_linguistic_exclusion_coupling, conceptual, 'Whether Palestinian linguistic exclusion is necessary to or contingent on the native-daily-reading constraint').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(hebrew_vitality__native_daily_reading, 1880, 2025).
+narrative_ontology:interval(hebrew_vitality__native_daily_reading, 1880, 2020).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(hebr_tr_t1880, hebrew_vitality__native_daily_reading, theater_ratio, 1880, 0.08).
-narrative_ontology:measurement(hebr_tr_t1920, hebrew_vitality__native_daily_reading, theater_ratio, 1920, 0.12).
-narrative_ontology:measurement(hebr_tr_t1948, hebrew_vitality__native_daily_reading, theater_ratio, 1948, 0.16).
-narrative_ontology:measurement(hebr_tr_t1970, hebrew_vitality__native_daily_reading, theater_ratio, 1970, 0.2).
-narrative_ontology:measurement(hebr_tr_t1995, hebrew_vitality__native_daily_reading, theater_ratio, 1995, 0.26).
-narrative_ontology:measurement(hebr_tr_t2025, hebrew_vitality__native_daily_reading, theater_ratio, 2025, 0.28).
+narrative_ontology:measurement(hebr_tr_t1880, hebrew_vitality__native_daily_reading, theater_ratio, 1880, 0.05).
+narrative_ontology:measurement(hebr_tr_t1920, hebrew_vitality__native_daily_reading, theater_ratio, 1920, 0.18).
+narrative_ontology:measurement(hebr_tr_t1948, hebrew_vitality__native_daily_reading, theater_ratio, 1948, 0.32).
+narrative_ontology:measurement(hebr_tr_t1970, hebrew_vitality__native_daily_reading, theater_ratio, 1970, 0.38).
+narrative_ontology:measurement(hebr_tr_t2000, hebrew_vitality__native_daily_reading, theater_ratio, 2000, 0.42).
+narrative_ontology:measurement(hebr_tr_t2020, hebrew_vitality__native_daily_reading, theater_ratio, 2020, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(hebr_be_t1880, hebrew_vitality__native_daily_reading, base_extractiveness, 1880, 0.18).
-narrative_ontology:measurement(hebr_be_t1920, hebrew_vitality__native_daily_reading, base_extractiveness, 1920, 0.35).
-narrative_ontology:measurement(hebr_be_t1948, hebrew_vitality__native_daily_reading, base_extractiveness, 1948, 0.51).
-narrative_ontology:measurement(hebr_be_t1970, hebrew_vitality__native_daily_reading, base_extractiveness, 1970, 0.58).
-narrative_ontology:measurement(hebr_be_t1995, hebrew_vitality__native_daily_reading, base_extractiveness, 1995, 0.6).
-narrative_ontology:measurement(hebr_be_t2025, hebrew_vitality__native_daily_reading, base_extractiveness, 2025, 0.62).
+narrative_ontology:measurement(hebr_be_t1880, hebrew_vitality__native_daily_reading, base_extractiveness, 1880, 0.12).
+narrative_ontology:measurement(hebr_be_t1920, hebrew_vitality__native_daily_reading, base_extractiveness, 1920, 0.38).
+narrative_ontology:measurement(hebr_be_t1948, hebrew_vitality__native_daily_reading, base_extractiveness, 1948, 0.62).
+narrative_ontology:measurement(hebr_be_t1970, hebrew_vitality__native_daily_reading, base_extractiveness, 1970, 0.68).
+narrative_ontology:measurement(hebr_be_t2000, hebrew_vitality__native_daily_reading, base_extractiveness, 2000, 0.67).
+narrative_ontology:measurement(hebr_be_t2020, hebrew_vitality__native_daily_reading, base_extractiveness, 2020, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(hebr_su_t1880, hebrew_vitality__native_daily_reading, suppression_requirement, 1880, 0.42).
-narrative_ontology:measurement(hebr_su_t1920, hebrew_vitality__native_daily_reading, suppression_requirement, 1920, 0.54).
-narrative_ontology:measurement(hebr_su_t1948, hebrew_vitality__native_daily_reading, suppression_requirement, 1948, 0.64).
-narrative_ontology:measurement(hebr_su_t1970, hebrew_vitality__native_daily_reading, suppression_requirement, 1970, 0.68).
-narrative_ontology:measurement(hebr_su_t1995, hebrew_vitality__native_daily_reading, suppression_requirement, 1995, 0.7).
-narrative_ontology:measurement(hebr_su_t2025, hebrew_vitality__native_daily_reading, suppression_requirement, 2025, 0.71).
+narrative_ontology:measurement(hebr_su_t1880, hebrew_vitality__native_daily_reading, suppression_requirement, 1880, 0.15).
+narrative_ontology:measurement(hebr_su_t1920, hebrew_vitality__native_daily_reading, suppression_requirement, 1920, 0.42).
+narrative_ontology:measurement(hebr_su_t1948, hebrew_vitality__native_daily_reading, suppression_requirement, 1948, 0.68).
+narrative_ontology:measurement(hebr_su_t1970, hebrew_vitality__native_daily_reading, suppression_requirement, 1970, 0.71).
+narrative_ontology:measurement(hebr_su_t2000, hebrew_vitality__native_daily_reading, suppression_requirement, 2000, 0.72).
+narrative_ontology:measurement(hebr_su_t2020, hebrew_vitality__native_daily_reading, suppression_requirement, 2020, 0.72).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1880, tn=2020
+narrative_ontology:measurement(hebr_grid_01, hebrew_vitality__native_daily_reading, accessibility_collapse(class), 1880, 0.05).
+narrative_ontology:measurement(hebr_grid_02, hebrew_vitality__native_daily_reading, accessibility_collapse(class), 2020, 0.61).
+narrative_ontology:measurement(hebr_grid_03, hebrew_vitality__native_daily_reading, accessibility_collapse(individual), 1880, 0.08).
+narrative_ontology:measurement(hebr_grid_04, hebrew_vitality__native_daily_reading, accessibility_collapse(individual), 2020, 0.65).
+narrative_ontology:measurement(hebr_grid_05, hebrew_vitality__native_daily_reading, accessibility_collapse(organizational), 1880, 0.12).
+narrative_ontology:measurement(hebr_grid_06, hebrew_vitality__native_daily_reading, accessibility_collapse(organizational), 2020, 0.72).
+narrative_ontology:measurement(hebr_grid_07, hebrew_vitality__native_daily_reading, accessibility_collapse(structural), 1880, 0.1).
+narrative_ontology:measurement(hebr_grid_08, hebrew_vitality__native_daily_reading, accessibility_collapse(structural), 2020, 0.58).
+narrative_ontology:measurement(hebr_grid_09, hebrew_vitality__native_daily_reading, resistance(class), 1880, 0.7).
+narrative_ontology:measurement(hebr_grid_10, hebrew_vitality__native_daily_reading, resistance(class), 2020, 0.58).
+narrative_ontology:measurement(hebr_grid_11, hebrew_vitality__native_daily_reading, resistance(individual), 1880, 0.55).
+narrative_ontology:measurement(hebr_grid_12, hebrew_vitality__native_daily_reading, resistance(individual), 2020, 0.35).
+narrative_ontology:measurement(hebr_grid_13, hebrew_vitality__native_daily_reading, resistance(organizational), 1880, 0.62).
+narrative_ontology:measurement(hebr_grid_14, hebrew_vitality__native_daily_reading, resistance(organizational), 2020, 0.48).
+narrative_ontology:measurement(hebr_grid_15, hebrew_vitality__native_daily_reading, resistance(structural), 1880, 0.5).
+narrative_ontology:measurement(hebr_grid_16, hebrew_vitality__native_daily_reading, resistance(structural), 2020, 0.32).
+narrative_ontology:measurement(hebr_grid_17, hebrew_vitality__native_daily_reading, stakes_inflation(class), 1880, 0.08).
+narrative_ontology:measurement(hebr_grid_18, hebrew_vitality__native_daily_reading, stakes_inflation(class), 2020, 0.52).
+narrative_ontology:measurement(hebr_grid_19, hebrew_vitality__native_daily_reading, stakes_inflation(individual), 1880, 0.15).
+narrative_ontology:measurement(hebr_grid_20, hebrew_vitality__native_daily_reading, stakes_inflation(individual), 2020, 0.68).
+narrative_ontology:measurement(hebr_grid_21, hebrew_vitality__native_daily_reading, stakes_inflation(organizational), 1880, 0.2).
+narrative_ontology:measurement(hebr_grid_22, hebrew_vitality__native_daily_reading, stakes_inflation(organizational), 2020, 0.75).
+narrative_ontology:measurement(hebr_grid_23, hebrew_vitality__native_daily_reading, stakes_inflation(structural), 1880, 0.12).
+narrative_ontology:measurement(hebr_grid_24, hebrew_vitality__native_daily_reading, stakes_inflation(structural), 2020, 0.48).
+narrative_ontology:measurement(hebr_grid_25, hebrew_vitality__native_daily_reading, suppression(class), 1880, 0.1).
+narrative_ontology:measurement(hebr_grid_26, hebrew_vitality__native_daily_reading, suppression(class), 2020, 0.65).
+narrative_ontology:measurement(hebr_grid_27, hebrew_vitality__native_daily_reading, suppression(individual), 1880, 0.08).
+narrative_ontology:measurement(hebr_grid_28, hebrew_vitality__native_daily_reading, suppression(individual), 2020, 0.72).
+narrative_ontology:measurement(hebr_grid_29, hebrew_vitality__native_daily_reading, suppression(organizational), 1880, 0.18).
+narrative_ontology:measurement(hebr_grid_30, hebrew_vitality__native_daily_reading, suppression(organizational), 2020, 0.78).
+narrative_ontology:measurement(hebr_grid_31, hebrew_vitality__native_daily_reading, suppression(structural), 1880, 0.15).
+narrative_ontology:measurement(hebr_grid_32, hebrew_vitality__native_daily_reading, suppression(structural), 2020, 0.7).
 
 
 /* ==========================================================================
@@ -293,13 +378,11 @@ narrative_ontology:affects_constraint(hebrew_vitality__native_daily_reading, heb
 narrative_ontology:affects_constraint(hebrew_vitality__native_daily_reading, hebrew_vitality__hybrid_continuity_reading).
 
 % DUAL FORMULATION NOTE:
-% The kernel 'hebrew_vitality' decomposes into three structurally distinct constraint stories, one for each reading. This story (native_daily_reading) claims native-speaker daily use as the sole criterion for vitality and treats liturgical/study-based Hebrew as preservation. The sibling stories (liturgical_reading, hybrid_continuity_reading) instantiate different claims about what counts as vitality. ε-invariance rule: these are three different constraints because they define the observed phenomenon (Hebrew's status as 'living' or 'preserved') differently. A constraint whose ε depends on which reading is adopted is not one constraint with an observer-dependent parameter — it is multiple constraints. Each has its own ε (moderate for this reading, low for liturgical, moderate-low for hybrid), its own beneficiary structure (zionist project here, conservative institutions in liturgical reading), and its own type. All three are linked via network.affects_constraints to enable contamination propagation analysis. The upstream reading (liturgical_reading) has lower empirical contestation and longer institutional continuity; this reading (native_daily) is downstream, more extractive, more recently institutionalized, and dependent on active enforcement. The hybrid_reading sits downstream of both, attempting synthesis under pressure.
+% The Hebrew vitality kernel comprises three structurally distinct constraint readings. This story instantiates the native-daily-reading: the assertion that only native generational transmission constitutes linguistic vitality, and that ritual/liturgical use—however continuous—represents preservation rather than life. The sibling constraint hebrew_vitality__liturgical_reading embodies the competing reading that unbroken ritual use constitutes vitality. The sibling hebrew_vitality__hybrid_continuity_reading attempts to integrate both readings by positing that Hebrew's strength lies in maintaining multiple institutional homes and registers. The three stories share a kernel (the commitment to Hebrew's continuity and meaning) but diverge radically on what counts as vitality and whose authority over the language is legitimate. This native-daily-reading produces moderate ε (genuine coordination requirement for state-building coexists with authority transfer from liturgical keepers) and should compute as tangled_rope from the state-builder/secular-speaker seats and snare-flavored from the tradition-keeper seats. The engine's per-seat classification divergence is exactly the point: the constraint is genuinely coordination-producing for some parties and genuinely extractive for others. The ε-invariance principle requires three separate files because the three readings assess the same kernel's state (is it vital or merely preserved?) from incommensurable normative positions, producing different ε values. The liturgical reading sees Hebrew vitality as already present and preserved, with ε ≈ 0.1 (the 'constraint' is the defense of existing vitality, not extraction). This native-daily reading sees Hebrew vitality as requiring reconstruction and enforcement, with ε ≈ 0.68 (substantial extraction from tradition-keepers to fund the reconstruction). The hybrid reading would see both as true—ε somewhere between, with both extraction from tradition-keepers AND genuine coordination accomplished. Each reading has its own assessment of what extraction and coordination are occurring; treating them as observables of a single constraint would violate ε-invariance (the referent—Hebrew's state—is the same; the readings of it are incommensurable).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(hebrew_vitality__native_daily_reading, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

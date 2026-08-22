@@ -4,179 +4,312 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "43fee258-c0b3-43af-8a46-4b63dcfd4fb2"
+    "module_name_override": "constraint_commerce_clause_text__originalist_narrow_reading",
+    "measurement_id_prefix": "commerce_originalist",
+    "story_uid": "ef2d8d91-66bc-4d7d-8c28-eb4f125a5935"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.71,
-    "theater_ratio": 0.48,
-    "accessibility_collapse": 0.68,
-    "resistance": 0.74,
+    "extractiveness": 0.68,
+    "suppression": 0.45,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Commerce Clause (Originalist Narrow Reading)",
-    "topic_domain": "constitutional/federalism",
+    "human_readable": "Commerce Clause Originalist Reading: Border-Crossing Transaction Limit",
+    "topic_domain": "constitutional/federalism/economic-regulation",
     "requires_active_enforcement": true,
     "emerges_naturally": false,
     "beneficiaries": [
       "state_governments",
-      "federalism_advocates"
+      "anti_federal_consolidation_advocates"
     ],
     "victims": [
-      "environmental_regulators",
-      "interstate_commerce_standardizers",
-      "national_coordination_bodies"
+      "uniform_national_standards_regimes",
+      "externality_management_infrastructure",
+      "federal_regulatory_capacity"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "state_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State legislatures, governors, and state regulatory agencies gain retained regulatory authority over intrastate commerce under the police power. They can set labor standards, environmental protections, product safety, and consumer protection rules without facing federal preemption based on interstate commerce grounds. This reading protects their revenue, autonomy, and policy discretion."
+    },
+    {
+      "name": "anti_federal_consolidation_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Federalist scholars, conservative legal theorists, and state sovereignty advocates find constitutional warrant for their position in this reading. They argue for limiting federal power and can cite the originalist reading's textual grounding as evidence that broad federal authority is unconstitutional. They organize judicial appointment campaigns and amicus briefs to advance this reading."
+    },
+    {
+      "name": "uniform_national_standards_regimes",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal regulatory agencies (EPA, FDA, OSHA, FTC, NHTSA, etc.) that issue uniform national standards find their primary jurisdictional hook narrowed. They cannot justify their authority by claiming regulated activity has substantial effects on interstate commerce if that rationale is confined to border-crossing transactions. They must find alternative constitutional grounds (necessary-and-proper, treaty power, spending power) or face judicial invalidation."
+    },
+    {
+      "name": "externality_management_infrastructure",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Federal systems for managing multi-state externalities (air pollution, water quality, species migration, climate change, infectious disease, financial contagion) cannot rely on interstate commerce authority for their constitutional foundation. These systems must operate through state-level agreements, dormant commerce clause preemption, or other constitutional hooks, or face fragmentation when states refuse to cooperate."
+    },
+    {
+      "name": "federal_regulatory_capacity",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The federal government's general regulatory capacity contracts. Agencies must litigate each major statute's constitutional authority rather than invoking the well-established substantial-effects test. This creates litigation risk, delays regulation, and forces agencies to structure authority claims through narrower doctrinal bases (enumerated powers, necessary-and-proper means to enumerated powers)."
+    },
+    {
+      "name": "border_state_industries",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Industries engaged in actual border-crossing commerce (shipping, trucking, telecommunications networks, pipeline operators, import/export) are within federal regulatory scope and subject to uniform federal standards. They benefit from regulatory certainty and preemption of conflicting state rules, but they also bear the cost of federal enforcement and cannot shop for favorable state regulation."
+    },
+    {
+      "name": "intrastate_commerce_actors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Businesses engaged exclusively in intrastate commerce (local retail, regional manufacturing not involving imported materials, state-licensed professions, local services) are insulated from federal regulation and subject to state police power. They benefit from avoiding federal compliance costs but face state-by-state regulatory variation and potential state protectionism. Their exit option is to scale into interstate commerce, which subjects them to federal authority."
+    },
+    {
+      "name": "originalist_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Originalist judges and justices interpret and enforce the narrow reading of interstate commerce. They invalidate federal statutes that rely on the substantial-effects rationale, narrow precedent supporting broad commerce authority, and write opinions emphasizing textual fidelity and federalism constraints. They set and enforce the interpretive line."
+    },
+    {
+      "name": "expansive_commerce_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal agencies, progressive constitutional scholars, politicians who support broad federal regulatory authority, and civil rights advocates who rely on the commerce clause for federal anti-discrimination statutes are excluded from this reading's legitimacy structure. The originalist narrow reading disqualifies their theoretical framework and renders their preferred regulatory statutes constitutionally questionable or invalid. They are kept out of the constraint's decision-making by interpretive methodology itself."
+    },
+    {
+      "name": "observer_seat_comparative_federalism",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Comparative federalism scholars study this constraint as an instantiation of competing constitutional visions of federal-state power allocation. They observe the trade-offs between regulatory uniformity and state experimentation, between national problem-solving capacity and local autonomy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a division of regulatory authority between federal and state governments: federal authority governs commerce crossing state borders and the instrumentalities that facilitate such commerce; state authority retained over intrastate commerce. This solves the dual-sovereignty problem inherent in federalism—how to allocate regulatory power without collapsing into either unitary federal control or anarchic state autonomy. The originalist reading claims to solve this problem by adhering to constitutional text rather than inventing new doctrinal tests.",
+    "transfer_function": "Moves regulatory authority, policy-setting power, and compliance-burden allocation from the federal government to state governments for all intrastate commerce. Also moves the burden of managing multi-state externalities and ensuring market uniformity away from the federal government, forcing those costs onto state-level coordination, interstate agreements, or reliance on alternative constitutional hooks. Federal regulatory agencies lose jurisdictional flexibility; state governments gain policy discretion.",
+    "absent_voices": "Excluded from this reading's decision-making structure: federal regulatory agencies, progressive constitutional scholars, civil rights advocates, and expansion-of-commerce proponents. They would testify that the originalist reading is historically inaccurate, texturally implausible, and destructive to national problem-solving capacity. They are kept out by the interpretive methodology itself—originalism predefines the acceptable argumentative moves and excludes functionalist, living-constitution, and non-originalist reasoning from the legitimacy structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the originalist narrow reading were permanently displaced (e.g., by constitutional amendment or sustained judicial reversal), federal regulatory authority would consolidate dramatically. Environmental protection, labor standards, food and drug safety, telecommunications, financial regulation would all consolidate at the federal level under broad interstate commerce authority. State regulatory experimentation would shrink. Conversely, if the originalist reading were to become the stable, settled interpretation, federal regulatory capacity would contract sharply, state authority would expand, and regulatory fragmentation across state lines would increase. Multi-state problems (externalities, market competition, public health) would require interstate agreements or federal action through alternative constitutional hooks.",
+    "founding_problem": "The Framers of the Constitution intended to grant Congress specific, enumerated powers, including the power to regulate interstate commerce, while reserving police power to the states. They deliberately crafted federalism as a structural constraint on federal consolidation. The founding problem is: how can judicial interpretation prevent the federal government from expanding its power beyond its constitutional text by loose interpretation of the interstate commerce clause? The originalist reading holds that the post-New Deal substantial-effects test (Wickard v. Filburn, NLRB v. Jones & Laughlin Steel) violated the Framers' design by transforming 'interstate commerce' into a near-unlimited grant of federal authority.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Originalist scholars (Randy Barnett, Ilya Somin) cite Founding-era documents, The Federalist Papers, and colonial precedent as evidence the Framers intended limited federal commerce authority. Mainstream constitutional law scholars and historians (Erwin Chemerinsky, Jack Rakove, H. Jefferson Powell) dispute this reading, arguing the Framers intended a broad commerce power, the substantial-effects test reflects constitutional purpose, and originalist interpretation of this clause is selective. The founding problem's status is contested because historical evidence is genuinely ambiguous: the founding documents do not unambiguously resolve whether 'interstate commerce' was meant narrowly (border-crossing only) or broadly (any commerce with interstate effects). No corroboration exists from outside the originalist-vs.-expansive camps; the disagreement is internal to constitutional law scholarship."
+  },
   "interval": {
-    "start": 0,
-    "end": 40
+    "start": 1937,
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.48
+      "time_point": 1937,
+      "value": 0.15,
+      "id_override": "extractiveness_1937_wickard_nadir"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.54
+      "time_point": 1964,
+      "value": 0.35,
+      "id_override": "extractiveness_1964_civil_rights_act"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.59
+      "time_point": 1995,
+      "value": 0.52,
+      "id_override": "extractiveness_1995_united_states_v_lopez"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.61
+      "time_point": 2005,
+      "value": 0.61,
+      "id_override": "extractiveness_2005_gonzales_v_raich"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
-      "value": 0.62
+      "time_point": 2020,
+      "value": 0.66,
+      "id_override": "extractiveness_2020_sebelius_v_national_federation"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.62
+      "time_point": 2026,
+      "value": 0.68,
+      "id_override": "extractiveness_2026_contemporary"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.38
+      "time_point": 1937,
+      "value": 0.08,
+      "id_override": "theater_1937_wickard_judicial_novelty"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.41
+      "time_point": 1964,
+      "value": 0.12,
+      "id_override": "theater_1964_commerce_clause_rationalization"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.45
+      "time_point": 1995,
+      "value": 0.18,
+      "id_override": "theater_1995_lopez_originalist_pushback"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.47
+      "time_point": 2005,
+      "value": 0.21,
+      "id_override": "theater_2005_raich_scalia_dissent_textual_focus"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.48
+      "time_point": 2020,
+      "value": 0.22,
+      "id_override": "theater_2020_originalist_jurisprudence_ascendant"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.48
+      "time_point": 2026,
+      "value": 0.22,
+      "id_override": "theater_2026_stable_originalist_performance"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.65
+      "time_point": 1937,
+      "value": 0.25,
+      "id_override": "suppression_1937_lochner_era_residue"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.68
+      "time_point": 1964,
+      "value": 0.38,
+      "id_override": "suppression_1964_federal_regulatory_expansion"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 16,
-      "value": 0.7
+      "time_point": 1995,
+      "value": 0.44,
+      "id_override": "suppression_1995_rehnquist_court_state_limits"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 24,
-      "value": 0.71
+      "time_point": 2005,
+      "value": 0.46,
+      "id_override": "suppression_2005_raich_expands_federal"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.71
+      "time_point": 2020,
+      "value": 0.45,
+      "id_override": "suppression_2020_conditional_federal_power"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.71
+      "time_point": 2026,
+      "value": 0.45,
+      "id_override": "suppression_2026_stable_enforcement_line"
     }
   ],
   "omegas": [
     {
-      "id": "originalist_18th_century_meaning",
-      "question": "What did 'commerce among the several States' mean to the Framers and ratifiers in 1787–1791, and does that historical meaning constrain modern interpretation?",
-      "resolution_mechanism": "Historical analysis of founding-era usage, contemporary commercial practice, and ratification-era understanding. Scholarly consensus or divergence on original public meaning.",
-      "impact": "If the original meaning was indeed narrowly trade-crossing-borders, this reading's constitutional grounding is strong; if original meaning encompassed effects on interstate commerce or economic integration, the narrow reading rests on selective history.",
+      "id": "textual_boundary_vs_economic_reality",
+      "question": "Is the textual boundary between 'interstate commerce' (border-crossing, instrumentalities) and 'intrastate commerce' (within-state production and consumption) a tenable constitutional line in modern integrated supply chains, or does it collapse under pressure from economic interdependence?",
+      "resolution_mechanism": "Doctrinal boundary-testing via litigation: regulatory challenges to federal statutes under this reading's narrow construction. If the judiciary can articulate a stable, administrable test for what is 'interstate' vs. 'intrastate' that survives application to agricultural production, manufacturing, telecommunications, and digital commerce, the boundary holds. If the test fragments or the line moves repeatedly, the boundary is unstable.",
+      "impact": "If the boundary is administrable: the originalist reading is structurally viable and can be enforced consistently. If it collapses: the reading's practical utility erodes and courts will revert to functional-effects reasoning (moving toward the expansive reading) or create new doctrinal safe harbors (moving toward the substantial-effects-limited reading).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the originalist textual boundary between interstate and intrastate commerce is administrable in integrated modern economies."
+    },
+    {
+      "id": "founding_intent_textual_ambiguity",
+      "question": "Does the Framers' historical intent regarding the scope of 'interstate commerce' unambiguously support the narrow reading (border-crossing only), or is the historical record ambiguous and subject to multiple interpretations?",
+      "resolution_mechanism": "Historical scholarship and comparative constitutional analysis: reexamination of Founding-era documents, The Federalist Papers, colonial precedent, and parallel language in other constitutions. Scholarly consensus or divergence on what the phrase was understood to mean in 1787.",
+      "impact": "Clear Framers' intent favoring narrow reading would strengthen originalist claims to constitutional fidelity. Ambiguous or contested historical record would open space for alternative readings (expansive and limited) and weaken the claim that originalism is merely 'following the text,' not making a choice among available interpretations.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether historical evidence supports the narrow originalist interpretation of interstate commerce."
+      "description": "Whether historical evidence unambiguously supports the originalist narrow reading of interstate commerce."
     },
     {
-      "id": "foundation_problem_evolution",
-      "question": "Has the founding problem (state protectionism/trade barriers) been solved, or has the problem evolved to include managing national economic externalities and market fragmentation?",
-      "resolution_mechanism": "Empirical analysis of state protectionism in modern economy (tariff levels, discriminatory regulation, interstate barriers); comparison to Framers' era. Policy analysis of whether intrastate regulation generates significant interstate effects.",
-      "impact": "If the founding problem is solved and modern regulation is incidental, the narrow reading is appropriate; if the problem has evolved to include cross-state externalities, the narrow reading leaves solved problems unaddressed and creates new coordination failures.",
+      "id": "reading_kernel_identity",
+      "question": "Is this constraint fundamentally a READING of the Commerce Clause text (a canonical kernel yielding different interpretations), or does it represent a NOVEL CONSTITUTIONAL CLAIM that the originalist methodology is applying to the text for the first time?",
+      "resolution_mechanism": "Historical tracing: Did anyone in the Founding era, the 19th century, or the early 20th century advance this exact reading as the Constitution's meaning? Or did originalism import this reading retroactively?",
+      "impact": "If the reading was present in historical practice, it is a genuine historical interpretation and the constraint properly models a kernel reading. If it is a modern originalist innovation, it is a NEW structural claim about what the Constitution should say, not a recovery of what it originally said—the constraint would then be misclassified as a kernel reading and should instead be understood as a policy proposal grounded in originalist methodology.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether the original problem is solved or has transformed."
+      "type_class": "conceptual",
+      "description": "Whether this constraint is a historical kernel reading or a modern originalist policy innovation."
     },
     {
-      "id": "vertical_authority_separation_viability",
-      "question": "Is a clean vertical separation of authority (federal over interstate, states over intrastate) structurally possible when intrastate activity generates interstate effects?",
-      "resolution_mechanism": "Empirical case studies of regulatory domains (environmental, labor, financial) where intrastate rules have significant cross-state effects. Analysis of whether states can regulate intrastate activity without affecting interstate commerce.",
-      "impact": "If clean separation is impossible (all intrastate activity has some interstate effect), the narrow reading creates perpetual boundary disputes and coordination failure. If separation is workable, the reading is operationally coherent.",
+      "id": "originalist_textual_fixity",
+      "question": "Does this reading rely on a fixed, determinate textual meaning of 'interstate commerce,' or does the meaning shift with how the originating generation would have understood the phrase in contemporary contexts (original public meaning vs. original intent)?",
+      "resolution_mechanism": "Methodological analysis of originalist jurisprudence in action: does the reading's application to modern phenomena (e.g., internet commerce, intrastate-but-interconnected digital platforms) maintain a consistent definition of 'interstate,' or does the boundary flex to accommodate new situations?",
+      "impact": "If the textual meaning is truly fixed, the reading's application to novel cases should be predictable and consistent. If the meaning shifts, the reading is not rigidly textual but rather interpretively flexible—which undermines the claim to be doing 'mere' interpretation and exposes the constraint as partly exercising judicial discretion about what the bounded definition permits.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether vertical authority separation is viable given modern economic integration."
+      "type_class": "conceptual",
+      "description": "Whether the originalist reading of 'interstate commerce' maintains textual fixity or exhibits interpretive flexibility."
     },
     {
-      "id": "interpretive_methodology_selection",
-      "question": "Does originalist methodology constrain interpretation toward the narrow reading, or is the narrow reading one of several plausible originalist constructions?",
-      "resolution_mechanism": "Originalist scholarship and jurisprudence examining multiple originalist readings of the Commerce Clause. Whether non-originalist methodologies (living constitutionalism, purposivism) would produce different readings.",
-      "impact": "If narrow reading is the only coherent originalist reading, methodology drives the conclusion; if multiple originalist readings are viable, the choice among them depends on contestable framing (foundational axioms in the cs_structure sense).",
+      "id": "sibling_reading_coordination_kernel",
+      "question": "Within a single constitutional framework (e.g., a single court's jurisprudence), can the originalist reading coexist with the substantial-effects-limited reading, or do they logically foreclose each other?",
+      "resolution_mechanism": "Doctrinal analysis: can a court hold that (1) federal commerce authority is limited to border-crossing transactions AND (2) federal authority extends to intrastate activity with substantial effects on interstate commerce? The readings appear to occupy the same logical space and thus appear to foreclose each other—but the engine will compute the relation based on the kernel context and reading claims.",
+      "impact": "If they foreclose each other, the sibling readings cannot coexist within one framework; the kernel is a genuine binary fork, and the readings compete for judicial adoption. If they coexist (potentially at different factual premises or policy contexts), the constraint's relationship to its siblings may shift from foreclosure to coexistence.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether originalist methodology uniquely determines the narrow reading."
+      "description": "Whether the originalist narrow reading and the substantial-effects-limited reading logically coexist or foreclose each other within a single constitutional framework."
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint instantiates the originalist narrow reading of the Commerce Clause: federal regulatory authority extends only to transactions and instrumentalities that cross state borders or directly facilitate interstate movement of goods and services. Intrastate economic activity, production, and regulation remain under state police power, even when those intrastate activities have aggregate effects on interstate commerce. This reading is one of three structurally distinct constraints arising from the contested Commerce Clause kernel. The originalist narrow reading benefits state governments (preserving autonomy) and federalism advocates (preventing federal consolidation) while victimizing national coordination bodies, environmental regulators, and interstate commerce standardizers (who lose federal authority to regulate intrastate sources of externalities or fragmentation). The constraint persists through ongoing constitutional litigation and interpretive authority wielded by originalist jurists, not through organic coordination benefit.",
+    "narrative_context": "This constraint embodies the originalist reading of the Commerce Clause: federal regulatory authority extends only to commerce that crosses state borders or involves instrumentalities of interstate movement (ships, railroads, telecommunications lines). All intrastate commerce remains subject to state police power. This reading repudiates the post-New Deal expansive construction (Wickard v. Filburn, NLRB v. Jones & Laughlin Steel, Gonzales v. Raich) under which the substantial-effects test permitted federal regulation of nearly all economic activity. The originalist reading is one instantiation of a contested constitutional kernel (the text 'Congress shall have Power...To regulate Commerce...among the several States') and produces a structurally distinctive constraint with identifiable beneficiaries (state governments, federalism advocates) and victims (federal regulatory capacity, uniform national standards, externality management). The claimed type is tangled_rope: the originalist reading coordinates a division of regulatory authority (coordination function) while extracting significant federal capacity and imposing fragmentation costs (extraction function), both achieved through active judicial enforcement of the narrow reading against competing interpretations.",
     "key_agents": [
-      "state_governments: primary agenda-setters; control police power over intrastate activity; defend the narrow reading through litigation and legislative advocacy",
-      "originalist_judges: interpretive authority; apply the narrow reading through constitutional reasoning and statutory construction",
-      "federalism_advocates: beneficiaries; argue the reading preserves constitutional design and prevents federal overreach",
-      "environmental_regulators: primary victims; lose federal commerce-clause authority to regulate intrastate pollution sources and require uniform standards",
-      "interstate_commerce_standardizers: victims; cannot justify uniform national standards on commerce grounds; face state fragmentation and higher compliance costs",
-      "national_coordination_bodies: victims; federal administrative capacity for interstate externality management is curtailed",
-      "expansive_federalism_advocates: excluded; their position (broad federal authority) is foreclosed by the reading's constitutional premise"
+      "State governments: institutional beneficiaries retaining police power under this reading",
+      "Anti-federal-consolidation advocates: organized beneficiaries ideologically committed to limiting federal authority",
+      "Uniform national standards regimes (EPA, FDA, OSHA, NHTSA): institutional payers losing doctrinal authority",
+      "Externality management infrastructure: institutional payers unable to justify federal environmental/regulatory action",
+      "Federal regulatory capacity: institutional payer losing flexibility in jurisdictional argumentation",
+      "Originalist judiciary: agenda-setter enforcing narrow reading through invalidating/narrowing federal statutes",
+      "Expansive-commerce advocates (federal agencies, progressive scholars): excluded from this reading's legitimacy structure"
     ],
-    "logic_rationale": "Extractiveness is moderate-to-high (0.62) because the constraint allocates regulatory jurisdiction away from federal agencies to states, depriving interstate coordination bodies of authority they would exercise under alternative readings. Suppression is high (0.71) because the narrow reading's constitutional closure is enforced through judicial review: statutes reaching intrastate activity are struck down or narrowly construed regardless of their interstate effects or utility. Theater is moderate (0.48) because the originalist methodology and constitutional text are genuinely invoked and applied, not mere cover, but the invocation of 'original meaning' increasingly performs the legitimacy work (describing the constraint as natural law / constitutional text) even as the measured extraction shows active suppression of alternative federal authority. The measurement series projects forward over 40 time units assuming continued competition between originalist and expansive readings, with extractiveness and suppression stabilizing as the reading's competitive position stabilizes in jurisprudence.",
-    "perspectival_gap": "This is a kernel-reading case where the same constitutional text grounds two incompatible readings. A state government and a federal regulator reading the same Commerce Clause clause perceive radically different constraints: one sees preserved state authority, the other sees suppressed federal authority. Neither is misreading; both are reading the same kernel under different interpretive frames (originalist narrow frame vs. substantial-effects frame). The engine computes different types for each seat precisely because the structural consequences differ: the state benefits (coordination of federalism), the federal regulator loses (extraction of authority).",
-    "directionality_logic": "State governments are the primary beneficiaries and agenda-setters (d near 0.0 for state governments) — they retain authority and autonomy. Originalist judges are agenda-setters but with institutional rather than personal benefit; their d depends on whether they derive power from interpretive authority (analytical d) or capture some other benefit from state autonomy. Environmental regulators, federal coordinators, and interstate standardizers are the primary victims (d near 1.0) — they lose authority and face coordination failures. Federalism advocates are partial beneficiaries (d moderately low) because the reading advances their cause, but they do not run the constraint directly. The exclusion of expansive-federalism advocates places them outside the directionality computation entirely (excluded stakes do not feed d).",
-    "mandatrophy_analysis": "The founding problem was state protectionism and trade-barrier fragmentation. The constraint coordinates the solution to that specific problem (allocating federal authority over border-crossing transactions). However, modern interstate commerce generates externalities (pollution, labor standards, market fragmentation) that were not the original concern. If the founding problem is solved but the constraint persists to prevent federal regulation of these new problems, mandatrophy has occurred: the constraint's original function is dead, but active suppression of alternative readings keeps it in place. The measurement trajectory (extractiveness rising toward a plateau) is consistent with a constraint that has solved its original function and now operates as institutional inertia plus active litigation-based enforcement. An omega variable names the uncertainty: is the founding problem still live (new externalities are new versions of the coordination problem), or has it been solved and replaced by a different institutional concern (state autonomy for its own sake)?",
-    "kernel_context": "This constraint instantiates the originalist_narrow_reading of the commerce_clause_text kernel. The contested kernel is the constitutional text 'Congress shall have power... to regulate commerce... among the several states.' Three readings are in constitutional competition: (1) originalist_narrow_reading (this constraint): 'among the several states' means crossing state lines and instrumentalities of interstate movement; federal authority is confined to border-crossing transactions and the states retain police power over intrastate activity. (2) expansive_federal_reading: 'interstate commerce' encompasses all economic activity with substantial aggregate effects on national markets; federal authority extends to all commerce substantially affecting interstate commerce, including intrastate production and service provision. (3) substantial_effects_limited_reading: federal power extends to intrastate activity with substantial effects on interstate commerce but requires explicit jurisdictional nexus and non-pretextual economic regulation (midpoint between narrow and expansive). Each reading instantiates a distinct constraint with different ε values, beneficiary/victim structures, and measured types. The readings are live in contemporary jurisprudence, with originalist judges wielding the narrow reading and prior jurisprudence supporting the expansive reading."
+    "logic_rationale": "Extractiveness (0.68) is high because the originalist reading transfers substantial regulatory authority from federal to state control, reducing federal governments' ability to address multi-state problems and imposing coordination burdens on states. The reading is NOT a natural law or brute fact; it is a constitutional interpretation requiring continuous judicial enforcement to prevent reversion to the substantial-effects framework. Suppression (0.45) is moderate-to-high: maintaining this narrow reading against the 90-year doctrinal incumbency of the expansive framework requires active suppression of the competing interpretation—judicial opinions must distinguish and narrow precedent supporting substantial-effects reasoning. Theater ratio (0.22) is low-to-moderate: while originalist textual methodology creates performative activity (extensive historical analysis, textual archaeology), the reading's substantive effect is real—it genuinely constrains federal jurisdiction. The measurement series traces the trajectory from Wickard (1937, extractiveness ~0.15, theater ~0.08) when the constraint was novel and theoretically marginal, through Lopez (1995, ~0.52) when originalism became a live judicial force, to the present (2026, ~0.68) where the reading has accumulated institutional presence and enforcing capacity. The extractiveness trajectory reflects not a change in the reading's theoretical position but rather the cumulative effect of originalist appointments and jurisprudential ascendancy increasing the enforcement machinery's strength. Theater is stable post-1995 at ~0.22 because originalist methodology is now institutionalized judicial practice, not a novelty.",
+    "perspectival_gap": "The agenda-setter (originalist judiciary) perceives this constraint as fidelity to constitutional text and restoration of proper federalism boundaries—from their seat, the substantial-effects framework is a doctrinal aberration to be corrected. The federal regulatory seats (EPA, FDA, Federal Reserve) perceive this constraint as an artificial, administrable-boundary-destroying limitation that paralyzes their capacity to address interstate externalities and uniform market regulation—from their seat, the originalist reading is textually implausible and destructive. State governments perceive this constraint as reclaiming lost authority—from their seat, it is a beneficial restoration of federalism. This divergence should compute into different per-seat type classifications: the agenda-setter may perceive rope (coordination of federalism); the federal payers perceive snare (extraction of federal capacity). The engine computes these divergences from the structural data (power, exit_options, time_horizon differentials).",
+    "directionality_logic": "State governments are declared beneficiaries because this reading explicitly protects and expands their police power; they collect the authority transfer. Federal regulatory agencies are declared victims because their jurisdictional reach is constrained and their doctrinal flexibility is reduced; they bear the cost of having to argue harder for their regulatory authority. Uniform national standards regimes are victims because they lose the broad interstate commerce hook and must find alternative constitutional grounds. Externality management infrastructure is a victim because federal environmental/public-health authority is constrained by the narrow definition of interstate commerce. Anti-federal-consolidation advocates are beneficiaries because their federalism ideology is vindicated by this reading. The exit options reflect these relationships: state governments can exit by constitutional amendment but have no incentive to (exit_options = analytical, power = institutional); federal agencies cannot exit without doctrinal shift (exit_options = constrained); anti-consolidation advocates have some mobile exit via judicial appointment campaigns but ideological stake keeps them in the frame.",
+    "mandatrophy_analysis": "The founding problem (Framers' intent for limited federal enumerated powers) was once live and directly instantiated in Founding-era constitutional understanding. The substantial-effects framework declared this problem solved: federal commerce authority was sufficiently expansive to address interstate problems, and federalism remained as state police power for local matters. Under the mandatrophy lens, the originalist reading attempts to resurrect a dead founding problem—to treat the post-New Deal framework as a deviation and return to the Founding's original boundaries. This is a mismatch of disappearance_verdict (world_rearranges if the originalist reading prevails) and founding_problem_status (dead under the expansive framework, but asserted as live by originalism). The tension is not a defect in the constraint's classification but rather a key signal: the originalist reading's strength depends on whether it can credibly reframe the founding problem as un-dead. If it cannot (if courts and legislatures treat the substantial-effects framework as settled), the originalist reading becomes a piton—performed judicial activity maintaining textual fidelity but not actually displacing the functional framework. The theater_ratio remains stable at ~0.22 because originalist jurisprudence is now institutionalized enough to be real performance (not fakery), yet its practical effect remains limited while substantial-effects reasoning dominates actual outcomes.",
+    "kernel_context": "This constraint instantiates the ORIGINALIST NARROW READING of the Commerce Clause kernel (the constitutional text 'Congress shall have Power...To regulate Commerce...among the several States'). The kernel is the textual commitment itself, which persists across time and across competing readings. The originalist reading interprets 'interstate commerce' as limited to trade crossing state borders and instrumentalities of interstate movement—a narrow, textual, historically-grounded reading that confines federal authority and preserves state police power. The sibling readings (expansive_federal_reading: interstate commerce encompasses all economic activity with substantial aggregate effects; substantial_effects_limited_reading: federal power extends to intrastate activity with substantial effects on interstate commerce, but requires jurisdictional nexus and non-pretextual regulation) occupy the same kernel and produce different constraint structures. The originalist reading forecloses the expansive reading within any single interpretive framework—a court cannot hold that interstate commerce is both strictly limited to border-crossing transactions AND encompasses all economic activity with substantial effects. The originalist reading coexists with the substantial-effects-limited reading as a matter of fact (different courts and scholars hold both), but within a single coherent framework they foreclose each other: the limited reading posits a jurisdictional nexus requirement and non-pretext requirement that the originalist reading rejects as judicially unmanageable and texturally unsupported. The engine will compute the precise relation from the declared reading_relations and axioms data."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
@@ -185,61 +318,69 @@
   "network": {
     "affects_constraints": [
       "commerce_clause_text__expansive_federal_reading",
-      "commerce_clause_text__substantial_effects_limited_reading"
+      "commerce_clause_text__substantial_effects_limited_reading",
+      "dormant_commerce_clause_state_protectionism",
+      "necessary_and_proper_clause_federal_scope"
     ],
-    "dual_formulation_note": "This constraint is one reading of the commerce_clause_text kernel. The three readings (originalist_narrow_reading, expansive_federal_reading, substantial_effects_limited_reading) are structurally distinct constraints with different ε values and beneficiary/victim structures. The narrow reading constrains federal authority; the expansive reading expands it; the limited reading provides a middle path. Each reading is held by different parties (originalist judges vs. expansive federalism advocates vs. pragmatic federalists). The network links record that interpretive competition over the same constitutional text drives the structure of all three constraints."
+    "dual_formulation_note": "This constraint is one reading of the Commerce Clause kernel. The expansive_federal_reading and substantial_effects_limited_reading are sibling constraints instantiating the same kernel with different interpretive premises. The three readings decompose a single contested constitutional text into structurally distinct constraints with different beneficiaries, victims, and classifications. All three readings affect dormant commerce clause doctrine (which presupposes some definition of interstate commerce) and the necessary-and-proper clause (which becomes the residual hook for federal authority if interstate commerce is narrowly construed)."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.45
-    }
-  ],
+  "directionality_overrides": [],
+  "gain_flow": "originalist_judiciary",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "commerce_clause_text__expansive_federal_reading",
+      "commerce_clause_text__substantial_effects_limited_reading"
+    ]
+  },
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "commerce_clause_text__expansive_federal_reading",
-        "relation": "coexists_with"
+        "sibling_id": "expansive_federal_reading",
+        "relation": "forecloses"
       },
       {
-        "sibling_id": "commerce_clause_text__substantial_effects_limited_reading",
-        "relation": "coexists_with"
+        "sibling_id": "substantial_effects_limited_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "commerce_means_trade_and_exchange",
+        "atom": "interstate_commerce_textually_limited_to_border_crossing",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "among_states_requires_crossing_state_lines",
+        "atom": "originalist_textual_methodology_binds_judicial_interpretation",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "state_police_power_allocation",
+    "reference_frame": "founding_era_federalism_boundaries",
     "drift_state": {
-      "moment": "contemporary_integrated_economy",
+      "moment": "contemporary_post_new_deal_framework",
       "direction": "authority_erosion",
-      "magnitude": "substantial",
+      "magnitude": "severe",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

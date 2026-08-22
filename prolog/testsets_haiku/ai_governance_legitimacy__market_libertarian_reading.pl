@@ -39,21 +39,29 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
     narrative_ontology:cs_axiom_status/2,
     narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -64,47 +72,42 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_governance_legitimacy__market_libertarian_reading
- *   human_readable: AI Governance Legitimacy (Market Libertarian Reading): Property Rights and Voluntary Exchange
- *   domain: theological_ethics/technology_governance/political_theology
+ *   human_readable: Market-Libertarian AI Governance Legitimacy (Property Rights as Pre-Political)
+ *   domain: theological/political_theology/technology_governance
  *
  * SUMMARY:
- *   This constraint instantiates the market-libertarian reading of the
- *   contested kernel 'AI governance legitimacy.' The reading asserts that AI
- *   governance legitimacy derives exclusively from property rights, voluntary
- *   exchange, and competitive market discipline—not from democratic
- *   deliberation, regulatory mandate, or religious/solidaristic claims to
- *   subordinate economic freedom to common good. It frames the encyclical's
- *   subsidiarity principle as supporting decentralization but rejects its
- *   solidarity demands as illegitimate coercion. The reading claims that
- *   innovation flourishes when unencumbered, that dignity is protected
- *   through exit options and competitive markets (not centralized oversight),
- *   and that property rights are pre-political natural law, not human
- *   construction subject to collective revision. Four stakeholder seats
- *   experience this constraint radically differently: high-autonomy
- *   entrepreneurs and investors perceive it as freedom and natural law;
- *   workers in monopsony labor markets, communities facing unpriced
- *   externalities, and individuals lacking market power perceive it as a
- *   reading that legitimates extraction. The constraint's claimed type is
- *   mountain (natural law), but beneficiary presence and the low
- *   accessibility collapse score signal a false-summit candidate:
- *   beneficiaries exist (entrepreneurs, investors) and the reading benefits
- *   them asymmetrically. Low suppression and theater ratios are consistent
- *   with the reading's self-understanding as a description of natural fact,
- *   not enforced ideology. The measurement series show rising extractiveness
- *   and rising suppression requirement over the 2020-2034 interval,
- *   suggesting that as the constraint's implementation encounters resistance
- *   from democratic and solidaristic counterreadings, enforcement costs
- *   accumulate—a trajectory consistent with a reading whose natural-law claim
- *   is increasingly contested.
+ *   This constraint instantiates a market-libertarian reading of AI
+ *   governance legitimacy. The reading claims that property rights are
+ *   pre-political natural facts, that voluntary exchange is morally
+ *   sovereign, that innovation flourishes under minimal collective mandates,
+ *   and that dignity is protected through exit options and competitive
+ *   discipline rather than centralized oversight. The reading explicitly
+ *   rejects the Catholic encyclical's claim that economic freedom must be
+ *   subordinated to common-good criteria and solidarity demands. It treats
+ *   the Magisterium's subsidiarity principle as correct (decentralize where
+ *   possible) but its solidarity principle as illegitimate coercion. The
+ *   constraint describes the arrangement under THIS reading — not under the
+ *   competing readings (magisterial, democratic, technocratic).
+ *   Extractiveness is authored low (0.26) because the reading denies that
+ *   property protection constitutes extraction from those without property;
+ *   it is a natural arrangement, not a constructed transfer. Suppression is
+ *   low (0.15) because the reading claims the constraint is self-enforcing
+ *   through contract law, reputation, and voluntary participation — not
+ *   through active coercive machinery. However, this low reading reflects the
+ *   reading's own frame, not external validation. From the perspectives of
+ *   communities facing coordination failures, workers in monopsony markets,
+ *   and vulnerable populations, the same arrangement appears far more
+ *   extractive and suppressive. The engine will compute per-seat
+ *   classifications that diverge dramatically from the reading's own framing.
  *
  * KEY AGENTS:
- *   - entrepreneurs_and_founders — structural beneficiary, high autonomy, arbitrage exit, frame property rights and market freedom as natural entitlements
- *   - venture_capital_investors — structural beneficiary, institutional power, arbitrage exit, deploy capital under market-discipline assumption
- *   - workers_in_monopsony_labor_markets — structural victim, trapped exit, experience the reading as a legitimation of their powerlessness
- *   - communities_facing_coordination_failures — structural victim, trapped exit, experience the reading as denial of legitimate governance for externalities they cannot individually exit
- *   - individuals_lacking_market_power — structural victim, identity-locked exit (have internalized the framing that market is fair and their position reflects their choices/ability), experience AI systems designed without their consent as 'natural'
- *   - magisterial_authority — excluded voice, would assert that economic freedom must be subordinated to common good and solidarity demands, treated as illegitimate by the reading
- *   - democratic_publics — excluded voice, denied formal authority to set AI governance terms collective deliberation
+ *   - entrepreneurs_and_investors: primary beneficiaries under this reading, structured with high exit options and arbitrage capacity
+ *   - high_autonomy_individuals: secondary beneficiaries, protected by competitive discipline and exit options
+ *   - workers_in_monopsony_labor_markets: primary victims, formally subject to exit but structurally trapped
+ *   - communities_facing_coordination_failures: secondary victims, denied collective-mandate tools for addressing failures
+ *   - vulnerable_populations: tertiary victims, lacking market power to shape governance and exposed to harms
+ *   - catholic_magisterium: excluded authority, would demand subordination of freedom to common good
+ *   - democratic_polities: excluded authority, would demand collective mandates and democratic consent
  */
 
 /* ==========================================================================
@@ -112,59 +115,121 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ai_governance_legitimacy__market_libertarian_reading, 0.25).
+domain_priors:base_extractiveness(ai_governance_legitimacy__market_libertarian_reading, 0.26).
 domain_priors:suppression_score(ai_governance_legitimacy__market_libertarian_reading, 0.15).
 domain_priors:theater_ratio(ai_governance_legitimacy__market_libertarian_reading, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, extractiveness, 0.25).
+narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, extractiveness, 0.26).
 narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 0.15).
 narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, accessibility_collapse, 0.42).
+narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, resistance, 0.68).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_governance_legitimacy__market_libertarian_reading, mountain).
-narrative_ontology:human_readable(ai_governance_legitimacy__market_libertarian_reading, "AI Governance Legitimacy (Market Libertarian Reading): Property Rights and Voluntary Exchange").
-narrative_ontology:topic_domain(ai_governance_legitimacy__market_libertarian_reading, "theological_ethics/technology_governance/political_theology").
+narrative_ontology:human_readable(ai_governance_legitimacy__market_libertarian_reading, "Market-Libertarian AI Governance Legitimacy (Property Rights as Pre-Political)").
+narrative_ontology:topic_domain(ai_governance_legitimacy__market_libertarian_reading, "theological/political_theology/technology_governance").
 
 domain_priors:emerges_naturally(ai_governance_legitimacy__market_libertarian_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_governance_legitimacy__market_libertarian_reading, '787e60ce-8fab-44e4-887c-9db725af936e').
-narrative_ontology:cs_kernel_codification('787e60ce-8fab-44e4-887c-9db725af936e', distributed).
-narrative_ontology:cs_authority_grounding('787e60ce-8fab-44e4-887c-9db725af936e', extraction).
-narrative_ontology:cs_reading_relation('787e60ce-8fab-44e4-887c-9db725af936e', ai_governance_legitimacy__magisterial_subsidiarity_reading, forecloses).
-narrative_ontology:cs_reading_relation('787e60ce-8fab-44e4-887c-9db725af936e', ai_governance_legitimacy__democratic_pluralist_reading, forecloses).
-narrative_ontology:cs_reading_relation('787e60ce-8fab-44e4-887c-9db725af936e', ai_governance_legitimacy__technocratic_optimization_reading, coexists_with).
-narrative_ontology:cs_axiom('787e60ce-8fab-44e4-887c-9db725af936e', foundational, property_rights_pre_political).
-narrative_ontology:cs_axiom_status(property_rights_pre_political, holdable).
-narrative_ontology:cs_axiom_grounding('787e60ce-8fab-44e4-887c-9db725af936e', property_rights_pre_political, deontological).
-narrative_ontology:cs_axiom('787e60ce-8fab-44e4-887c-9db725af936e', foundational, solidarity_claims_illegitimate_coercion).
-narrative_ontology:cs_axiom_status(solidarity_claims_illegitimate_coercion, holdable).
-narrative_ontology:cs_axiom_grounding('787e60ce-8fab-44e4-887c-9db725af936e', solidarity_claims_illegitimate_coercion, deontological).
-narrative_ontology:cs_axiom('787e60ce-8fab-44e4-887c-9db725af936e', secondary, market_discipline_sufficient_governance).
-narrative_ontology:cs_axiom_status(market_discipline_sufficient_governance, holdable).
-narrative_ontology:cs_axiom_grounding('787e60ce-8fab-44e4-887c-9db725af936e', market_discipline_sufficient_governance, empirically_contingent).
-narrative_ontology:cs_created_at('787e60ce-8fab-44e4-887c-9db725af936e', '').
+narrative_ontology:cs_story_uid(ai_governance_legitimacy__market_libertarian_reading, '0815e759-a060-41f6-ad2e-6ade14a975b8').
+narrative_ontology:cs_kernel_codification('0815e759-a060-41f6-ad2e-6ade14a975b8', distributed).
+narrative_ontology:cs_authority_grounding('0815e759-a060-41f6-ad2e-6ade14a975b8', extraction).
+narrative_ontology:cs_interpretation_layer_present('0815e759-a060-41f6-ad2e-6ade14a975b8').
+narrative_ontology:cs_reading_relation('0815e759-a060-41f6-ad2e-6ade14a975b8', ai_governance_legitimacy__magisterial_subsidiarity_reading, forecloses).
+narrative_ontology:cs_reading_relation('0815e759-a060-41f6-ad2e-6ade14a975b8', ai_governance_legitimacy__democratic_pluralist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0815e759-a060-41f6-ad2e-6ade14a975b8', ai_governance_legitimacy__technocratic_optimization_reading, coexists_with).
+narrative_ontology:cs_axiom('0815e759-a060-41f6-ad2e-6ade14a975b8', foundational, property_rights_are_pre_political).
+narrative_ontology:cs_axiom_status(property_rights_are_pre_political, holdable).
+narrative_ontology:cs_axiom_grounding('0815e759-a060-41f6-ad2e-6ade14a975b8', property_rights_are_pre_political, deontological).
+narrative_ontology:cs_axiom('0815e759-a060-41f6-ad2e-6ade14a975b8', foundational, voluntary_exchange_morality_supersedes_collective_mandate).
+narrative_ontology:cs_axiom_status(voluntary_exchange_morality_supersedes_collective_mandate, holdable).
+narrative_ontology:cs_axiom_grounding('0815e759-a060-41f6-ad2e-6ade14a975b8', voluntary_exchange_morality_supersedes_collective_mandate, deontological).
+narrative_ontology:cs_axiom('0815e759-a060-41f6-ad2e-6ade14a975b8', secondary, solidarity_principle_as_illegitimate_coercion).
+narrative_ontology:cs_axiom_status(solidarity_principle_as_illegitimate_coercion, holdable).
+narrative_ontology:cs_axiom_grounding('0815e759-a060-41f6-ad2e-6ade14a975b8', solidarity_principle_as_illegitimate_coercion, deontological).
+narrative_ontology:cs_reference_frame('0815e759-a060-41f6-ad2e-6ade14a975b8', natural_liberty_under_property_rights).
+narrative_ontology:cs_drift_state('0815e759-a060-41f6-ad2e-6ade14a975b8', contemporary_regulatory_expansion_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('0815e759-a060-41f6-ad2e-6ade14a975b8', '2026-06-12T00:00:00Z').
 narrative_ontology:cs_kernel_id(ai_governance_legitimacy__market_libertarian_reading, ai_governance_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ai_governance_legitimacy__market_libertarian_reading, entrepreneurs_and_founders).
-narrative_ontology:constraint_beneficiary(ai_governance_legitimacy__market_libertarian_reading, venture_capital_investors).
-narrative_ontology:constraint_beneficiary(ai_governance_legitimacy__market_libertarian_reading, high_autonomy_knowledge_workers).
+narrative_ontology:constraint_beneficiary(ai_governance_legitimacy__market_libertarian_reading, entrepreneurs_and_investors).
+narrative_ontology:constraint_beneficiary(ai_governance_legitimacy__market_libertarian_reading, high_autonomy_individuals).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(ai_governance_legitimacy__market_libertarian_reading, workers_in_monopsony_labor_markets).
+narrative_ontology:constraint_victim(ai_governance_legitimacy__market_libertarian_reading, communities_facing_coordination_failures).
+narrative_ontology:constraint_victim(ai_governance_legitimacy__market_libertarian_reading, vulnerable_populations).
+narrative_ontology:constraint_vindicates(ai_governance_legitimacy__market_libertarian_reading, property_rights_as_natural_law).
+narrative_ontology:constraint_vindicates(ai_governance_legitimacy__market_libertarian_reading, voluntary_exchange_morality).
+narrative_ontology:constraint_vindicates(ai_governance_legitimacy__market_libertarian_reading, exit_options_as_dignity_protection).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Operate in AI development, deployment, and commercialization under the reading's framework. Benefit from unrestricted innovation cycles, property protection via contract law, minimal collective mandates or regulatory oversight. Their exit is high: they can migrate operations to jurisdictions that honor property rights and voluntary exchange. They are net beneficiaries of the constraint's enforcement (or rather, its non-enforcement: the constraint protects their freedom from collective claims on their innovations).
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, entrepreneurs_and_investors, beneficiary,
+    powerful, biographical, arbitrage, global).
+
+% Access AI services through voluntary transactions in competitive markets. Dignity, in this reading, is protected through their ability to refuse participation and seek alternatives. They benefit from the discipline of competition: firms must serve their preferences or lose them to rivals. Exit options are their primary defense against predatory or exploitative arrangements.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, high_autonomy_individuals, beneficiary,
+    moderate, biographical, mobile, global).
+
+% Face concentrated AI-driven labor demand (single large employer or tight labor cartel) in their region or skill category. The reading's framework insists that their dignity is protected by exit options and market competition; the reality is that viable alternatives are foreclosed by geography, skill mismatch, or monopsony power itself. They bear the costs of the constraint's operation: their bargaining power is subordinated to property holders' freedom to deploy automation with minimal coordination or transition support.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, workers_in_monopsony_labor_markets, payer,
+    powerless, biographical, trapped, national).
+
+% Confront problems that require collective action — industrial transition, AI safety standards, equitable access to training, mitigation of displacement — but the reading forbids collective mandates as coercive and illegitimate. Communities cannot tax, regulate, or require participation in coordination mechanisms. They are left with voluntary coordination, which fails when individual incentives diverge from collective good. They bear diffuse costs: degraded social cohesion, unmitigated risks, unequal opportunity.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, communities_facing_coordination_failures, payer,
+    organized, generational, constrained, regional).
+
+% Lack market power to shape AI governance. The reading insists that dignity through exit is universal, but their exit options are minimal: they cannot afford alternative services, cannot relocate, cannot lobby effectively, and lack the technical expertise or capital to build alternatives. They bear extraction: algorithmic allocation of resources, denial of services, pricing discrimination, and exposure to harms where the market chooses not to protect them.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, vulnerable_populations, payer,
+    powerless, biographical, constrained, global).
+
+% Issues encyclicals and moral teaching claiming authority over economic arrangements, including AI governance. This reading explicitly rejects the Magisterium's legitimacy to impose solidarity demands on markets. Were the Magisterium's voice heard on equal footing in the governance process, it would demand collective accountability, worker protections, and subordination of innovation to common-good criteria. It is excluded by the reading's architecture: market libertarianism does not admit religious authority over secular economic life.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, catholic_magisterium, excluded,
+    institutional, civilizational, analytical, global).
+
+% Would use collective mandate, regulation, and redistributive taxation to address coordination failures and protect vulnerable populations. This reading denies the legitimacy of their collective claims. Were democratic majorities to govern AI allocation and safety, they would impose requirements that this reading characterizes as coercive. They are excluded from the constraint's framework: market libertarianism holds that political legitimacy cannot override property rights, even when democratically enacted.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, democratic_polities, excluded,
+    institutional, generational, analytical, national).
+
+% Advocate for governance structures that maximize aggregate welfare and efficiency. They observe the market-libertarian reading as one framework among competing governance approaches. They take no sides but assess whether the constraint's operation produces stated outcomes and what tradeoffs it entails.
+narrative_ontology:constraint_stakeholder(ai_governance_legitimacy__market_libertarian_reading, technocratic_optimization_authorities, observer,
+    institutional, biographical, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: This reading does not establish a coordination function; rather, it denies that collective mandate authority can legitimately impose coordination. The reading asserts that coordination should emerge from voluntary exchange and decentralized contract, not centralized authority. Where coordination is necessary, it arises through market discipline and reputation — entrepreneurs and investors coordinate innovation through competition, contract, and intellectual property. Communities coordinate through voluntary association. The reading's core claim is that centralized coordination imposed by political authority or religious doctrine is illegitimate coercion.
+% TRANSFER_FUNCTION: The reading does not describe a transfer function in the sense of value moving from one party to another through the constraint's operation. Rather, the reading protects property holders' freedom to retain and deploy their innovation. The costs borne by vulnerable populations, monopsony workers, and communities — reduced bargaining power, exposure to risks, foreclosed coordination options — are side effects the reading treats as acceptable because they do not violate anyone's negative rights (the right not to be coerced). The reading rejects the framing of these costs as transfers; it denies that the constraint has positive duties to protect or compensate.
+% ABSENT_VOICES: The Catholic Magisterium would object that the reading misrepresents subsidiarity, treating it as unlimited permission for market actors when it was always paired with solidarity — the principle that ensures those affected by economic decisions have voice in them and that their dignity is protected. Democratic polities would object that market structures are themselves governance arrangements that require legitimacy — and that legitimacy cannot derive from property claims alone, but must include consent of those affected by the arrangements. Vulnerable populations and workers in monopsony markets would object that exit options exist only in theory; their actual choices are constrained to impossible alternatives. These voices are excluded by the reading's architecture: it does not admit collective claims as legitimate.
+% DISAPPEARANCE_RATIONALE: If the market-libertarian reading's claim that property rights are pre-political and voluntary exchange is morally sovereign were to disappear — if political authority, democratic majorities, or religious tradition reasserted authority over economic arrangements — the AI governance landscape would reorganize dramatically. Regulatory frameworks would expand. Worker protections, safety standards, and equity requirements would emerge. Communities would gain tools for collective coordination. This is not merely a rearrangement of incentives; it is a fundamental reshaping of the legitimacy structure. The reading itself would cease to function. From the reading's perspective, this verdict is contested because the parties disagree on whether the constraint describes natural law (property rights as pre-political, hence unchosen and ineradicable) or a constructed governance arrangement (market libertarianism as one political choice among others). The reading claims the former; the Magisterium, democracies, and vulnerable populations claim the latter.
+% FOUNDING_PROBLEM: The reading addresses two founding problems: (1) Historical overreach by centralized authority — political regimes and religious hierarchies imposed mandates that stifled innovation and violated individual freedom. (2) The problem of moral authority — who has the right to determine how others should organize their economic lives? The reading answers: no one, except through voluntary transaction. Property rights and contract are pre-political solutions that bypass the problem of authority altogether.
+% FOUNDING_PROBLEM_CORROBORATION: The reading itself claims the founding problem is live and ongoing: centralized authority continues to overreach (regulatory expansion, ideological mandates disguised as public health or justice). Property-rights libertarians and classical-liberal economists attest this. However, the Magisterium attests that the founding problem was a historical pathology (medieval tyranny, totalitarian regimes) now largely overcome, and that modern political authority is legitimized through democratic consent and constrained by constitutional rights — rendering the libertarian remedy obsolete. Democratic theorists and workers' advocates attest that centralized authority is necessary precisely because market structures are not self-legitimating and leave vulnerable populations without voice. Independent observers (economists studying monopsony power, labor market segmentation, and regulatory capture) offer mixed corroboration: some founding problems are real (regulators do sometimes serve special interests), but others are overstated (markets do not always equilibrate in favor of the powerless). No single external authority has settled the question.
+narrative_ontology:disappearance_verdict(ai_governance_legitimacy__market_libertarian_reading, contested).
+narrative_ontology:founding_problem_status(ai_governance_legitimacy__market_libertarian_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_governance_legitimacy__market_libertarian_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(ai_governance_legitimacy__market_libertarian_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(ai_governance_legitimacy__market_libertarian_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_governance_legitimacy__market_libertarian_reading, 0.26, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,6 +237,10 @@ narrative_ontology:story_seed(ai_governance_legitimacy__market_libertarian_readi
 
 :- begin_tests(ai_governance_legitimacy__market_libertarian_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(ai_governance_legitimacy__market_libertarian_reading, ExtMetricName, E),
@@ -194,16 +263,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The claimed type is mountain: the reading asserts property rights as pre-political, natural law. However, the beneficiary list and the low accessibility_collapse score signal false-summit dynamics. If property rights are truly natural law, why do beneficiaries exist? Natural laws (e.g., gravity) have zero beneficiaries—everyone is equally subject to them. The presence of entrepreneurs, investors, and high-autonomy workers as beneficiaries suggests the reading describes not natural law but a distribution of authority that benefits specific parties. Accessibility_collapse is 0.72 (higher than a pure natural law would show, because alternatives—democratic governance, regulatory accountability, solidaristic redistribution—remain accessible to those who contest the reading), but lower than a snare would show (because the reading has intellectual coherence and appeals to genuine principles of liberty and efficiency, making it attractive to some non-beneficiaries). Suppression is low (0.15 at interval end) because the reading's enforcement relies primarily on contract law, reputational mechanisms, and property-rights protection—not on active coercion against dissenters. Theater_ratio is low (0.10 by 2034) because the reading's functional content (protecting property rights, enforcing contracts, allowing market discipline) aligns reasonably with its stated legitimacy claim (property rights and market discipline are legitimate), unlike a piton whose real function has atrophied. The measurement series show rising base_extractiveness and suppression_requirement over time, consistent with a reading whose natural-law claim is increasingly contested and whose enforcement machinery must be more actively maintained as resistance from democratic and magisterial counterreadings grows. The authorized measurement points at 2020, 2024, 2028, 2034 form a shared time grid for all three tracked metrics, satisfying the one-grid requirement. Observed vs. projected basis: the 2020-2024 points are observed (measured from the historical record of market-libertarian influence on AI policy); the 2028-2034 points are projected, modeling the expected trajectory if current counterreadings (democratic governance movements, EU AI Act, magisterial teaching) continue to contest the market reading and force more active enforcement. The tempo of rise (extractiveness +0.12 over 14 years) is moderate, reflecting a reading under increasing pressure but not yet in acute crisis.
+ *   Extractiveness is authored at 0.26 because the reading denies that market-structured inequality constitutes extraction. The reading's frame: property holders are not extracting from the propertyless; they are simply retaining what they own and trading voluntarily with those who choose to transact. Extraction only occurs through coercive taking, not through market discipline. The measurement series is relatively flat (0.22 to 0.27 to 0.26) because the reading presents market libertarianism as a stable institutional arrangement, not one that shifts in extractiveness over time. Suppression is authored at 0.15 because the reading claims that market discipline, contract, and reputation are self-enforcing — not actively suppressive machinery. However, this reflects the reading's own account of how the constraint operates. From other perspectives, what the reading calls 'market discipline' appears as suppression: workers cannot refuse bad labor terms without facing destitution; vulnerable populations cannot refuse AI services without facing exclusion; communities cannot coordinate without violating the reading's no-collective-mandate rule. Theater_ratio is very low (0.08) because the reading presents property protection and voluntary exchange as genuinely functional, not theatrical. The constraint performs what it claims. Accessibility_collapse is moderate (0.42) because alternatives do exist — one can, in theory, accumulate capital, start a business, move to a different labor market, build alternative services. But the reading's own stakeholder map shows that for many agents, alternatives are effectively foreclosed. Resistance is high (0.68) because the reading faces substantial opposition: democratic polities push back against property-absolutism; the Magisterium teaches that property is subordinate to common good; workers and communities resist the constraint's effects; vulnerable populations have no choice but to resist, even if their resistance is ineffectual. The measurement series stays flat because the reading projects a stable constraint, not one that erodes or intensifies over time — though uncertainty is high.
  *
  * PERSPECTIVAL GAP:
- *   From the beneficiary seats (entrepreneurs, investors), this reading is experienced as freedom and natural law—an accurate description of legitimate governance. From the agenda-setter perspective of courts and contract law, it is a governing principle. But from the victim seats (workers in monopsony markets, communities, individuals lacking power), it is experienced as a reading that legitimates their powerlessness by reframing governance failure as natural fact. From the excluded seats (Magisterium, democratic publics), it is experienced as a rejection of their authority and a refusal of their framework. The engine will compute per-seat classifications and should find divergence: from the beneficiary seat, the constraint may compute as rope (genuine coordination with minimal coercion); from the victim seat, it should compute as tangled_rope or snare (coordination for the powerful, extraction from the powerless, active suppression of alternatives—democratic governance, collective action—via property-rights enforcement). The directionality differs: beneficiaries have d near 0.0 (full subsidy, their freedom is protected), while victims have d near 1.0 (full extraction, they are the targets). The commentary does not predict the engine's computation; it explains why structural asymmetry should lead to per-seat divergence.
+ *   This is the story's central analytical content. From the entrepreneur/investor seat (beneficiary, powerful, high exit), the constraint appears as property protection and freedom from coercive mandate — correctly classified as mountain, with low extractiveness and suppression. From the monopsony worker's seat (payer, powerless, trapped), the same constraint appears as enforced subordination to concentrated labor demand — extractive, suppressive, reclassifying toward snare. From the community's seat (payer, organized, constrained), the same constraint appears as denial of coordination tools — extractive, suppressive, reclassifying toward snare. From the Magisterium's seat (excluded, institutional), the same constraint appears as a political choice that privileges one set of values (freedom, property, innovation) over another (common good, dignity, participation) — contestable, not natural law. The engine will compute directionality for each seat from the structural data (beneficiary/victim + power + exit). Entrepreneurs have low d (beneficiary pod); workers have high d (victim pod); communities have high d (victim pod); Magisterium has d ≈ 0.5 or excluded entirely depending on how the computation handles agents with role='excluded'. The reading's own framing — 'this is how natural freedom works' — will not override the engine's structural computation of asymmetric distribution and foreclose-able alternatives.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary directionality (entrepreneurs, investors, high-autonomy workers): these stakeholders benefit from the constraint's protection of property rights and freedom from collective mandate. They have high exit options (arbitrage to less-regulated jurisdictions) and low cost to comply with or evade the constraint's requirements. Their directionality is near the beneficiary end (d = 0.0–0.2). Victim directionality (workers in monopsony markets, communities, individuals): these stakeholders experience the constraint as a legitimation of their powerlessness. They have trapped or identity-locked exit (cannot relocate, have internalized market framing, lack alternatives). They bear the cost of the reading—no collective governance of externalities, no solidarity-based redistribution, no coordination to address market failures. Their directionality is near the target end (d = 0.8–1.0). The automatic derivation from beneficiary/victim declarations and exit options should produce this spread without override.
+ *   Directionality for each seat is derived from: (1) beneficiary/victim status, (2) power level, (3) exit options. Entrepreneurs_and_investors: declared beneficiary, powerful, arbitrage-grade exit → d near 0.0 (full beneficiary, subsidy pod). High_autonomy_individuals: declared beneficiary, moderate power, mobile exit → d near 0.15-0.25 (strong beneficiary, subsidy pod). Workers_in_monopsony_labor_markets: declared victim, powerless, trapped exit → d near 0.95-1.0 (full target, extraction pod). Communities_facing_coordination_failures: declared victim, organized power, constrained exit → d near 0.80-0.90 (strong target, extraction pod). Vulnerable_populations: declared victim, powerless, constrained exit → d near 0.90-1.0 (full target, extraction pod). Catholic_magisterium: excluded role, institutional power, analytical exit → excluded from directionality computation (or d ≈ 0.5 if treated as observer). Democratic_polities: excluded role, institutional power, analytical exit → excluded from directionality computation. These derivations follow from the structural data without override. The reading's own frame — that property rights are pre-political and that exit through voluntary exchange is always available — does not change the d computation; the computation reads the declared victim/exit data, not the reading's philosophical claims.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading's founding problem is: centralized authority (regulators, international bodies, religious institutions) constraining property rights and voluntary exchange, thereby stifling innovation. The founding_problem_status is contested. From the beneficiary perspective, the problem is live: every new regulation (EU AI Act, algorithmic accountability mandate, data-protection law) is read as a new instance of the founding problem. From the victim and magisterial perspectives, the founding problem is either dead or misdiagnosed: the real problem is unaccountable market power and the refusal of governance. The disappearance_verdict is contested for the same reason. If the constraint disappeared (if the market-libertarian reading lost influence and democracies could impose mandates), beneficiaries would experience the world as rearranging away from innovation and toward stagnation; victims would experience it as rearranging toward protection and accountability. The mandatrophy question is: has this constraint's founding problem become obsolete—has the problem it was built to solve already been resolved by other means? No. Innovation is not yet bounded by excessive regulation; the market-libertarian reading still carries influence in major AI development jurisdictions. The constraint is active, not mandatrophic. However, the measurement trajectory (rising suppression_requirement) suggests increasing effort is required to maintain the reading's influence—a sign that the founding problem's status is shifting from 'live' to 'contested' or 'dead' in the eyes of non-beneficiary stakeholders.
+ *   The founding_problem_status is 'contested' and the disappearance_verdict is 'contested' — signals that this reading faces a mandatrophy challenge. The reading was founded to solve a real problem (centralized authority overreach, suppression of innovation, violation of freedom). But the problem's status is disputed: the Magisterium and democratic theorists claim the founding problem was a historical pathology now largely addressed through democratic constitutionalism and subsidiarity-respecting pluralism. The reading insists the problem is live and ongoing. If the problem is dead but the constraint persists, the constraint exhibits mandatrophy — it becomes theatrical, performative, inertial. The measurement series staying flat (extractiveness 0.22-0.27) is consistent with a constraint that neither intensifies nor erodes, which could indicate mandatrophy: the constraint persists not because it solves a current problem but because beneficiaries (entrepreneurs, investors) continue to defend it. Conversely, if the founding problem is live (centralized overreach continues to threaten freedom), the constraint remains functionally necessary and mandatrophy is not yet present. The contest cannot be resolved from within the reading's own frame; external corroboration is needed. The omega variables route the unresolved questions: is the founding problem live or dead? Are exit options genuinely available for all agents? Is property rights pre-political or constructed? These are the empirical and conceptual facts the corpus needs to establish.
  */
 
 /* ==========================================================================
@@ -211,97 +280,110 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    reading_vs_natural_law,
-    'Is this constraint a description of pre-political natural law (property rights emerge from nature of scarcity and individual autonomy), or a reading of a contested theological and political kernel that benefits specific parties?',
-    'Historical and comparative analysis: if property rights are universal and pre-political, they should appear identically across all cultures and time periods. If they vary materially by regime, the ''natural law'' framing becomes suspect. Alternatively: if the reading is ratified by all stakeholder seats (beneficiaries, victims, excluded voices, observers), it gains empirical credibility; if it is ratified only by benefiting parties, it suggests the reading is a cover story.',
-    'If natural law: the constraint is correctly classified as mountain and the exclusion of democratic deliberation is justified. If reading: the constraint is a tangled_rope (coordinates market efficiency while extracting from those lacking market power) or a snare (pure extraction dressed as natural law). The terminal type is what the engine computes; divergence from ''mountain'' is the measurement.',
+    property_rights_pre_political_status,
+    'Are property rights pre-political natural facts or constructed legal/social arrangements that require legitimation?',
+    'Historical and comparative institutional analysis: do property rights emerge universally and unchanging across cultures, or do they vary radically with political and cultural context? Genealogical analysis of libertarian theory versus empirical property-system diversity.',
+    'If property rights are constructed, the reading''s claim that they bypass the problem of authority collapses: someone must still answer ''who has the right to define property?'' If pre-political, the reading''s core premise stands and collective mandates that override property are illegitimate coercion.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_vs_natural_law, conceptual, 'Whether property rights legitimacy is pre-political natural law or a contested reading of a theological/political kernel.').
+narrative_ontology:omega_variable(property_rights_pre_political_status, conceptual, 'The ontological status of property rights: natural law or constructed?').
 
 omega_variable(
-    exit_availability_asymmetry,
-    'Is exit actually available to the beneficiary and victim stakeholders listed, or is the ''exit option'' statement in the reading an artifact of the high-autonomy seats'' position?',
-    'Empirical measurement: for each stakeholder, what are the realistic cost and feasibility of exit? Can a data-labeler in a monopsony actually exit to another employer, or is ''exit'' theoretically available but practically impossible? Can a community facing algorithmic redlining exit to a jurisdiction without algorithmic systems? The gap between theoretical and practical exit determines whether the market discipline mechanism actually functions for all parties.',
-    'If exit is uniformly available and low-cost: the market mechanism functions as described and extraction is minimal (mountain classification supported). If exit is available to high-autonomy parties but trapped or identity-locked for others: the constraint is tangled_rope (coordinates for the mobile, extracts from the trapped), not mountain. The measurement is per-stakeholder exit viability.',
+    exit_options_as_dignity_protection,
+    'Do exit options protect dignity equally when market power is asymmetrically distributed and alternatives are foreclosed by structural constraints?',
+    'Empirical investigation of actual exit capacity for powerless agents in concentrated markets: can workers leave monopsony employers? Can vulnerable populations access alternative services? Do geographic, skill, or capital constraints eliminate exit despite formal availability?',
+    'If exit is systematically foreclosed for powerless agents, the reading''s dignity-through-exit claim is false for those agents, and the constraint operates as suppressive extraction regardless of the reading''s framing. If exit is genuinely available, the reading''s framing is accurate.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(exit_availability_asymmetry, empirical, 'Whether exit options are symmetrically available across stakeholder seats or concentrated in high-autonomy positions.').
+narrative_ontology:omega_variable(exit_options_as_dignity_protection, empirical, 'Whether exit options are universally available or foreclosed for certain populations.').
 
 omega_variable(
-    subsidiarity_vs_solidarity_reading_divergence,
-    'Can the encyclical''s subsidiarity principle (decentralize governance to the most local effective level) coexist with its solidarity demands (protect the vulnerable, subordinate property rights to common good) within a single theological framework, or do they irreconcilably diverge?',
-    'Textual analysis of Fratelli Tutti and Caritas in Veritate: does the Magisterium intend subsidiarity to mean market-level decentralization (supporting this reading), or does it intend subsidiarity to be subordinated to solidarity and common-good principles (supporting the magisterial reading)? If the Magisterium provides binding interpretation, the question is resolved; if interpretation is contested within the Church, the kernels remain live.',
-    'If subsidiarity and solidarity are compatible: both the market-libertarian and magisterial readings could claim encyclical support, strengthening the coexists_with relation. If they diverge: the reading that captures the encyclical''s actual intent gains authority, and the losing reading must rely on non-magisterial justifications (natural law, economic efficiency). The resolution affects which reading can claim fidelity to Catholic social teaching.',
+    voluntary_exchange_and_coercion_boundary,
+    'Can a transaction be described as voluntary when one party faces no realistic alternative?',
+    'Philosophical and legal analysis: under what conditions does consent withstand scrutiny? Test case: a worker in monopsony labor market; a vulnerable person denied AI service; a community facing automation with no transition mechanism.',
+    'If coercion can exist within voluntary markets (through foreclosure of alternatives), the reading''s claim that coercion only arises from collective mandate is false. Some market extraction would then count as coercive, shifting classification upward and validating collective mandates as remedies.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(subsidiarity_vs_solidarity_reading_divergence, conceptual, 'Whether the encyclical''s subsidiarity and solidarity principles can coexist in one framework or diverge irreconcilably.').
+narrative_ontology:omega_variable(voluntary_exchange_and_coercion_boundary, conceptual, 'Whether absence of alternatives renders formally voluntary exchange actually coercive.').
 
 omega_variable(
-    coordination_failure_externality_legitimacy,
-    'When market-mediated AI decisions produce unpriced negative externalities (environmental, social, cognitive) that individual exit cannot address, does the reading''s framework have a legitimate governance response, or does it treat coordination failures as un-governable by definition?',
-    'Test case analysis: apply the market-libertarian reading to a specific externality (e.g., algorithmic labor-market discrimination, AI-driven environmental degradation, information-cascades from unmoderated recommendation systems). If the reading prescribes a response other than ''affected parties must renegotiate individually,'' it accommodates externality governance. If it prescribes only individual action, it denies the problem''s legitimacy as a governance issue—empirically testable by whether the prescribed response actually addresses the externality at scale.',
-    'If the reading can accommodate externality governance: it is more robust than the pure libertarian position and more compatible with magisterial demands for common-good protection. If it cannot: critics can establish that the reading denies legitimate governance of a class of real harms, weakening its mountain claim and supporting reclassification to tangled_rope or snare. The measurement is whether the reading''s framework admits responses that address externalities at scale beyond individual bargaining.',
-    confidence_without_resolution(medium)
+    kernel_reading_contest_ambiguity,
+    'Is the legitimacy of AI governance a kernel question with multiple readings, or does one reading correctly describe pre-political facts that subsume the others?',
+    'Meta-level analysis: if all four readings claim to describe facts (market libertarianism claims property rights ARE pre-political; Magisterial reading claims the common good IS morally prior; democrats claim legitimacy requires consent), then at most one can be correct — but all are authored as if their reading is factual, not chosen. Are these genuinely incommensurable readings, or does one reading capture the true structure and the others mistake political preferences for facts?',
+    'If the contest is genuinely a kernel (incommensurable readings held by different communities), then this reading is one position among others, and classifying the constraint as ''mountain'' (natural law) is itself a contestable reading-specific claim. If one reading is factually correct, the others are false — and the question collapses to empirical verification.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(coordination_failure_externality_legitimacy, empirical, 'Whether the market-libertarian reading can accommodate governance of unpriced externalities or denies their legitimacy.').
-
-omega_variable(
-    reading_specific_to_kernel_decomposition,
-    'Is the market-libertarian reading one instantiation of a contested kernel (ai_governance_legitimacy), or is it a separate, standalone constraint whose enforcement happens to interact with other readings?',
-    'Structural analysis: if removing one reading does not change the ε of another, they are separate constraints. If they share the same authority structure (e.g., both appeal to the encyclical, or both claim natural-law status), they are readings of the same kernel. The kernel is the stabilized commitment (in this case: what principle governs AI governance legitimacy). The readings are different parties'' interpretations of that commitment.',
-    'This is a meta-question about the corpus structure, not about the constraint''s classification. The measurement is whether the four sibling readings (market-libertarian, magisterial-subsidiarity, technocratic-optimization, democratic-pluralist) are genuinely sister interpretations of one contested kernel or separate constraints that happen to compete. The classification of this story as a kernel reading rests on the answer. If they are separate, this story should drop the cs_structure block and kernel context. If they are readings of one kernel, the cs_structure relations and axioms apply.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(reading_specific_to_kernel_decomposition, conceptual, 'Whether the market-libertarian reading is one reading of ai_governance_legitimacy kernel or a standalone constraint.').
+narrative_ontology:omega_variable(kernel_reading_contest_ambiguity, preference, 'Whether AI governance legitimacy is a kernel question with multiple readings or a factual question with one correct answer.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_governance_legitimacy__market_libertarian_reading, 2020, 2034).
+narrative_ontology:interval(ai_governance_legitimacy__market_libertarian_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ai_g_tr_t2020, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 2020, 0.04).
-narrative_ontology:measurement(ai_g_tr_t2024, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 2024, 0.06).
-narrative_ontology:measurement(ai_g_tr_t2028, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 2028, 0.08).
-narrative_ontology:measurement(ai_g_tr_t2034, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 2034, 0.1).
+narrative_ontology:measurement(ai_g_tr_t0, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 0, 0.06).
+narrative_ontology:measurement_basis(ai_g_tr_t0, projected).
+narrative_ontology:measurement(ai_g_tr_t5, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 5, 0.07).
+narrative_ontology:measurement_basis(ai_g_tr_t5, projected).
+narrative_ontology:measurement(ai_g_tr_t10, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 10, 0.08).
+narrative_ontology:measurement_basis(ai_g_tr_t10, projected).
+narrative_ontology:measurement(ai_g_tr_t15, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 15, 0.08).
+narrative_ontology:measurement_basis(ai_g_tr_t15, projected).
+narrative_ontology:measurement(ai_g_tr_t20, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 20, 0.09).
+narrative_ontology:measurement_basis(ai_g_tr_t20, projected).
+narrative_ontology:measurement(ai_g_tr_t25, ai_governance_legitimacy__market_libertarian_reading, theater_ratio, 25, 0.08).
+narrative_ontology:measurement_basis(ai_g_tr_t25, projected).
 
 % Extraction over time
-narrative_ontology:measurement(ai_g_be_t2020, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 2020, 0.18).
-narrative_ontology:measurement(ai_g_be_t2024, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 2024, 0.22).
-narrative_ontology:measurement(ai_g_be_t2028, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 2028, 0.26).
-narrative_ontology:measurement(ai_g_be_t2034, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 2034, 0.3).
+narrative_ontology:measurement(ai_g_be_t0, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement_basis(ai_g_be_t0, projected).
+narrative_ontology:measurement(ai_g_be_t5, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 5, 0.23).
+narrative_ontology:measurement_basis(ai_g_be_t5, projected).
+narrative_ontology:measurement(ai_g_be_t10, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 10, 0.25).
+narrative_ontology:measurement_basis(ai_g_be_t10, projected).
+narrative_ontology:measurement(ai_g_be_t15, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 15, 0.26).
+narrative_ontology:measurement_basis(ai_g_be_t15, projected).
+narrative_ontology:measurement(ai_g_be_t20, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 20, 0.27).
+narrative_ontology:measurement_basis(ai_g_be_t20, projected).
+narrative_ontology:measurement(ai_g_be_t25, ai_governance_legitimacy__market_libertarian_reading, base_extractiveness, 25, 0.26).
+narrative_ontology:measurement_basis(ai_g_be_t25, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ai_g_su_t2020, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 2020, 0.1).
-narrative_ontology:measurement(ai_g_su_t2024, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 2024, 0.13).
-narrative_ontology:measurement(ai_g_su_t2028, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 2028, 0.15).
-narrative_ontology:measurement(ai_g_su_t2034, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 2034, 0.17).
+narrative_ontology:measurement(ai_g_su_t0, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 0, 0.12).
+narrative_ontology:measurement_basis(ai_g_su_t0, projected).
+narrative_ontology:measurement(ai_g_su_t5, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 5, 0.13).
+narrative_ontology:measurement_basis(ai_g_su_t5, projected).
+narrative_ontology:measurement(ai_g_su_t10, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 10, 0.14).
+narrative_ontology:measurement_basis(ai_g_su_t10, projected).
+narrative_ontology:measurement(ai_g_su_t15, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 15, 0.15).
+narrative_ontology:measurement_basis(ai_g_su_t15, projected).
+narrative_ontology:measurement(ai_g_su_t20, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 20, 0.16).
+narrative_ontology:measurement_basis(ai_g_su_t20, projected).
+narrative_ontology:measurement(ai_g_su_t25, ai_governance_legitimacy__market_libertarian_reading, suppression_requirement, 25, 0.15).
+narrative_ontology:measurement_basis(ai_g_su_t25, projected).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(ai_governance_legitimacy__market_libertarian_reading, resource_allocation).
-narrative_ontology:boltzmann_floor_override(ai_governance_legitimacy__market_libertarian_reading, 0.12).
+narrative_ontology:coordination_type(ai_governance_legitimacy__market_libertarian_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(ai_governance_legitimacy__market_libertarian_reading, ai_governance_legitimacy__magisterial_subsidiarity_reading).
 narrative_ontology:affects_constraint(ai_governance_legitimacy__market_libertarian_reading, ai_governance_legitimacy__democratic_pluralist_reading).
 narrative_ontology:affects_constraint(ai_governance_legitimacy__market_libertarian_reading, ai_governance_legitimacy__technocratic_optimization_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested kernel ai_governance_legitimacy. The market-libertarian reading asserts that property rights and voluntary exchange are the pre-political source of governance legitimacy, rejecting collective mandates rooted in democratic or solidaristic authority. The magisterial-subsidiarity reading asserts that property rights must be subordinated to Catholic Social Doctrine principles (common good, solidarity, protection of the vulnerable). The democratic-pluralist reading asserts that no single tradition holds interpretive monopoly and governance must emerge from inclusive public reason. The technocratic-optimization reading asserts that aggregate welfare and technical performance should determine what constraints are legitimate. These four readings coexist as live positions held by different institutional and ideological coalitions. None logically forecloses the others within separate frameworks, but each influences the others by competing for authority over how AI governance should be legitimated. All four stories form a constraint family linked through network.affects_constraints and must be analyzed together to understand the full contest.
+% This story is part of a constraint family decomposing the kernel 'ai_governance_legitimacy' into four structurally distinct readings. Each reading instantiates the kernel differently, with different ε values, beneficiary/victim structures, and enforcement mechanisms. All four readings compete for institutional authority in actual AI governance. Market-libertarian reading (this file) claims property rights and voluntary exchange as pre-political. Magisterial reading claims Catholic Social Doctrine principles as morally binding. Democratic reading claims legitimacy requires democratic consent and transparent public reason. Technocratic reading claims legitimacy derives from technical expertise and efficiency. These are linked in network.affects_constraints because each reading's adoption or dominance affects the instantiation of the others — e.g., if the market reading dominates, democratic and Magisterial voices are structurally excluded; if the democratic reading dominates, the market reading's enforcement mechanism (contract law, private arbitration, reputation) is subordinated to regulation and public mandate.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

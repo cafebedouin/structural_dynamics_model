@@ -4,233 +4,267 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "30ad6eb8-1f16-4bf4-ac9b-9c7cddf3b280"
+    "module_name_override": "constraint_price_formation_kernel__georgist_reading",
+    "story_uid": "7c66f9b8-9cd8-4c91-a719-11245cb8e085"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.71,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.64,
-    "resistance": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.59,
     "claimed_type": "tangled_rope",
-    "human_readable": "Land Rent Extraction Under Georgist Price Formation",
-    "topic_domain": "political_economy/housing/institutional",
+    "human_readable": "Georgist Reading: Land Rent Separation from Improvement Value",
+    "topic_domain": "political_economy/housing_markets",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "landowner_class",
-      "land_speculator_networks"
+      "incumbent_landowners",
+      "rentier_class"
     ],
     "victims": [
-      "labor_class",
-      "housing_insecure_renters"
+      "labor_and_capital_producers",
+      "aspiring_homeowners",
+      "tenant_class"
+    ],
+    "vindicated_propositions": [
+      "land_supply_fixed_by_nature",
+      "rent_is_unearned_increment"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "incumbent_landowners",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Hold land titles and extract location-based rent appreciation without producing improvements. Benefit from the constraint's distinction between land value (which they capture as unearned increment) and improvement value (which they externalize to others' labor). Control the framing of price formation through property rights law, zoning advocacy, and real estate markets."
+    },
+    {
+      "name": "labor_and_capital_producers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Wages and investment returns are depressed by the requirement to purchase or rent land at prices that bundle location rent with improvement value. Workers and businesses cannot separate out what they earn (improvement value from their labor/capital) from what they pay for location access. Their exit is constrained by the location's economic necessity."
+    },
+    {
+      "name": "aspiring_homeowners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Must purchase bundled price (land rent + improvements) to gain shelter and property stake. Cannot disaggregate their down payment: they pay for location rent they do not produce, and for improvements they may or may not desire. If they relocate, they abandon location-specific accumulated equity."
+    },
+    {
+      "name": "tenant_class",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Pay rent that includes the full unearned location increment, which landlords have not produced. Rent is set by location scarcity and landlord property rights, not by the landlord's service to the tenant. Exit is trapped: leaving the location means losing all access to the location's economic opportunities and social infrastructure."
+    },
+    {
+      "name": "public_revenue_authority",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Under Georgist analysis, should rightfully capture location rent (the 'single tax') to fund public goods. Is excluded from this revenue by the property rights framing and by political resistance from landowners. Could capture the unearned increment but is structurally prevented by the constraint's enforcement."
+    },
+    {
+      "name": "housing_market_analyst",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observes price formation and decomposes it into location rent and improvement value. From the Georgist reading's vantage, can measure the unearned increment captured by landowners and the extraction it represents. Measures the constraint's operation and documents the asymmetry."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a transparent property rights framework for exchanging land and improvements, enabling investment in housing stock and urban infrastructure. Coordinates expectations about what can be owned, transferred, and inherited in relation to location.",
+    "transfer_function": "Moves location-based economic rent from potential public revenue (location value created by geography and public infrastructure investment) to incumbent private landowners. Also moves a portion of labor and capital returns to landowners via the bundled price mechanism.",
+    "absent_voices": "Future generations and non-propertied classes whose housing security and wealth-building are constrained by the rent extraction. Public finance authorities who under Georgist theory should capture location rent for public purposes. Tenants with no ownership stake and no ability to benefit from appreciation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Georgist separation were enforced (unearned rent decoupled from improvement value and captured as public revenue), land prices would collapse to improvement-only value, housing would become dramatically cheaper, and the rentier class's wealth would face radical revaluation. The entire property system, tax structure, and wealth distribution would reorganize.",
+    "founding_problem": "Need to establish clear property rights and pricing signals for land and housing investment: coordinate expectations about what can be owned, what improvements generate returns, and how to value location for economic purposes.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The Georgist reading asserts the founding problem is solved (property rights are established), and the persistent constraint now primarily serves to extract rent rather than coordinate. Naturalist and institutional readings assert the problem remains live (efficient price discovery requires the bundling). Competition for land and tenant testimony support the Georgist reading; neoclassical economics and real estate industry attestation support the competing readings."
+  },
   "interval": {
-    "start": 0,
-    "end": 40
+    "start": 1890,
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.45
+      "time_point": 1890,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.5
+      "time_point": 1950,
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.55
+      "time_point": 1980,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.6
+      "time_point": 2000,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.64
+      "time_point": 2015,
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.67
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.68
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.64
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.68
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.71
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.25
+      "time_point": 1890,
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.28
+      "time_point": 1950,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.32
+      "time_point": 1980,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.36
+      "time_point": 2000,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.4
+      "time_point": 2015,
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.42
+      "time_point": 2026,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.42
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.42
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.42
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "land_component_natural_scarcity",
+      "question": "Is the location-value component (land rent) a natural consequence of fixed supply and location scarcity (a mountain), or is it sustained by constructed property-rights enforcement that could be otherwise organized (a snare)?",
+      "resolution_mechanism": "Jurisdictional experiment: implement land-value taxation or public land ownership in a region and measure whether location scarcity disappears or merely changes beneficiary. Compare outcomes with jurisdictions that maintain private rent capture.",
+      "impact": "If rent persist under public capture but flows differently, the constraint's classification shifts toward snare — the extraction is sustainable but the beneficiary changed. If location scarcity produces equivalent extraction under any property regime, the land component is more mountain-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether location scarcity is natural or constructed, and whether rent extraction is inevitable or contingent on property law."
+    },
+    {
+      "id": "improvement_coordination_vs_land_rent_conflation",
+      "question": "To what extent does the bundling of land rent and improvement value in a single price signal support genuine coordination of housing investment, versus merely obscuring the extraction and preventing alternative property arrangements?",
+      "resolution_mechanism": "Examine historical periods or jurisdictions where land and improvement values were separately priced or taxed, and measure whether coordination outcomes (housing quality, density, investment efficiency) were superior, equivalent, or inferior to bundled-price regimes.",
+      "impact": "If separable pricing supports equal or better coordination, the improvement-value component can be labeled rope independently, and the bundling serves primarily to facilitate rent capture. If bundling is necessary for coordination, the tangled-rope classification is more robust; if separation improves it, the constraint's true type is snare dressed as tangled-rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the bundled price is necessary for coordinating housing investment or whether it primarily serves to obscure and facilitate extraction."
+    },
+    {
+      "id": "alternative_reading_boundary",
+      "question": "Is the Georgist reading's claim (that unearned land rent can be separated from earned improvement value by reference to location scarcity alone) conceptually coherent, or does the institutional reading's argument (that 'location value' itself depends on constructed institutions like zoning, infrastructure policy, and legal infrastructure) dissolve the separation?",
+      "resolution_mechanism": "Formalize both readings' boundary-drawing: Georgist claims land value = value at the location with zero improvement; Institutional claims land value is only calculable relative to an institutional framework (zoning, infrastructure, legal rights). Test whether these yield different measurements on the same property.",
+      "impact": "If the readings measure consistently but disagree about what to do with the measurement, they coexist. If the institutional reading's framing makes the Georgist separation incoherent, the readings foreclose each other. If the institutional reading adds complexity but the Georgist separation holds under institutional constraints, the readings influence but do not foreclose each other.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the Georgist land-rent/improvement-value separation is conceptually independent of institutional framing or dependent on it."
+    },
+    {
+      "id": "suppression_mechanism_internalized_vs_structural",
+      "question": "Is the measured suppression (0.72) structural — constraints on alternative property regimes enforced by law and market power — or internalized — the belief that property-rent extraction is natural and legitimate, persisting even when structural barriers are removed?",
+      "resolution_mechanism": "Post-reform trajectory: if suppression remains high after structural barriers (zoning reform, land-tax implementation) are removed, infer internalization; if suppression drops, infer structural origin.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, and reform requires ideological and epistemic shifts, not legal change alone. If structural, targeted legal change may be sufficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternatives to the rent-extraction system is structural or internalized."
     }
   ],
   "commentary": {
-    "narrative_context": "The Georgist reading of price formation asserts that housing prices decompose into two components: land rent (unearned, driven by location scarcity and surrounding development) and improvement value (earned, produced by labor and capital investment). Under this reading, landowners extract unearned increments through price appreciation and rent collection, while labor bears the cost through housing affordability collapse and wage compression. The constraint is hybrid: the land component (fixed supply, location scarcity) behaves as a mountain, but rent extraction (organized by property rights and enforced through debt and eviction) operates as a snare targeting the housing-insecure. The improvement component operates as rope (genuine coordination of building, production). The Georgist reading directly contests three sibling readings: the naturalist reading (price is equilibrium, not extraction), the institutional reading (price is construction via policy, not decomposition), and the financialization reading (price is credit-driven, not land-driven).",
-    "kernel_context": "This constraint is ONE READING of the contested kernel: price_formation_kernel. The reading instantiated here is georgist_reading. Sibling readings under the same kernel are: naturalist_reading (price is equilibrium reflecting scarcity and preference), institutional_reading (price is constructed by zoning, lending, tax treatment), and financialization_reading (price is driven by credit expansion and asset-price feedback). The Georgist reading asserts that price separates two structurally distinct components: land (supply-fixed, location-based, rent-extractive) and improvement (supply-elastic, labor-created, production-coordinated). Each sibling reading disputes this decomposition and offers an alternative organizing principle.",
+    "narrative_context": "The Georgist reading of price formation claims that housing and land prices reflect two structurally distinct components: (1) location-based rent (unearned increment from location scarcity and public infrastructure, which should flow to public revenue) and (2) improvement value (earned return to labor and capital invested in construction and maintenance, which rightfully accrues to the builder/owner). The reading presents the bundled price (treating both components as private property value) as an extractive constraint that transfers public location wealth to private landowners while depressing wages and returns to labor. The key claim is not merely that landowners benefit—it is that they benefit WITHOUT producing the location value, and this asymmetry is sustained by property law that prevents the separation.",
     "key_agents": [
-      "landowner_class: institutional agenda-setter and beneficiary; captures unearned location value; organizes politically to defend property-rights framing and tax treatment that shields land appreciation; directionality near full beneficiary (d ≈ 0.1–0.2)",
-      "labor_class: organized payer and victim; wages compressed by rent burden; structured resistance through tenant unions and housing movements; constrained exit (labor markets are geographically tied); directionality near partial target (d ≈ 0.65–0.75)",
-      "housing_insecure_renters: powerless payer; trapped by local labor/housing markets; highest rent burden, least negotiating power; endure full extractive force; directionality near full target (d ≈ 0.85–0.95)",
-      "land_speculator_networks: institutional beneficiary; mobile arbitrage capital; pure rent capture without improvement production; global scope; directionality near beneficiary (d ≈ 0.15–0.25)",
-      "improvement_developers: powerful but dual-positioned; produce genuine improvement value but must pay landowner capture; caught between labor (whom they employ/house) and landowners (whom they pay); directionality near symmetric (d ≈ 0.45–0.55)",
-      "tax_policy_makers: institutional agenda-setter; authority to restructure tax treatment and separate land value; currently captured by landowner organizing; analytical observer seat with constrained agency; directionality varies with capture state (d ≈ 0.40–0.50)",
-      "georgist_reform_movement: organized but excluded; would restructure beneficiary/victim if admitted; excluded by institutional capture; advocates land value tax, public capture of location increment; directionality displaced by exclusion",
-      "economic_analysts: analytical observer; surface extractive dynamics through data; provide corroboration for Georgist framing but do not benefit/pay directly"
+      "incumbent_landowners: the structural beneficiary (extract unearned location rent via bundled prices and inherited property rights)",
+      "labor_and_capital_producers: the primary victims (wages and returns to investment suppressed by rent burden)",
+      "tenant_class: the deepest victims (trapped in location, pay full rent with zero ownership stake)",
+      "public_revenue_authority: the excluded party (should rightfully claim location rent under Georgist theory, but is prevented by property law)",
+      "housing_market_analyst: the analytical seat (observes the separation and measures the extraction)"
     ],
-    "logic_rationale": "Extractiveness is high (0.68 at interval end) and rising over 0-30 (0.45 → 0.68) because land values are capturing an increasing share of housing costs as supply constraints tighten and surrounding development concentrates value. The riser plateaus at t=30-40, suggesting a saturation point where rent extraction has compressed labor income and affordability severely enough that further extraction is resisted. Suppression is high (0.71) and rising (0.50 → 0.71 over 0-30, then flat) because the constraint's persistence depends on actively enforcing property rights against squatting/rent strikes, excluding alternative housing models (cooperative, public), and suppressing Georgist reform through political capture. Theater is moderate (0.42) because the constraint sustains a narrative of earned improvement value and efficient markets that partially obscures the rent-extraction mechanism — enough performative legitimacy to suppress organized resistance but not enough to hide extraction completely (hence theater_ratio lower than pure piton, higher than pure snare). Accessibility_collapse rises from 0.55–0.64 individually and 0.65–0.75 structurally, indicating that housing alternatives have progressively closed as landowners and speculators consolidate holdings and prices rise beyond wage growth. Stakes_inflation rises sharply at individual level (0.40 → 0.62) and class level (0.45 → 0.65), modeling the precarity cost escalation: being evicted, displaced, or housing-insecure carries growing life-disruption risk as gentrification accelerates. Resistance at organizational level is substantial (0.62–0.65) because tenant unions and housing movements remain active and organized; individual resistance is suppressed (0.35 → 0.32, declining) because isolated renters have minimal leverage.",
-    "perspectival_gap": "The landowner seat (beneficiary, institutional, arbitrage exit) and the housing-insecure renter seat (payer, powerless, trapped exit) compute entirely differently from the same price vector. For the landowner, rising land values are natural and earned (improvement and location desirability); the constraint is experienced as reward for holding good property. For the renter, rising land values are extraction (landlord capture of value the renter's labor and presence helped create); the same price movement is experienced as theft. The improvement_developer seat sits between: they profit from rising land values (they sell improvements at higher land-implied prices) but also bear landowner capture (they must pay escalating land acquisition costs), so they have structural interest in both denying the Georgist decomposition (to avoid public land value tax) and in appearing to align with labor (who are their workers/tenants). The engine computes per-seat classifications from the structural data: landowners compute as beneficiary-aligned (low χ effective extraction), renters as target-aligned (high χ), developers as hybrid. The commentary must explain why the same metric (0.68 extractiveness) produces such different seat experiences.",
-    "directionality_logic": "Beneficiaries are landowner_class and land_speculator_networks — they capture unearned increments through title-holding and market timing, bearing zero improvement cost. Their directionality derives downward from beneficiary status: landowner_class d ≈ 0.15–0.20 (powerful, wide exit options, direct capture), speculator_networks d ≈ 0.15–0.25 (institutional, mobile, capture). Victims are labor_class and housing_insecure_renters — they pay rent to access location value they did not produce and cannot exit without losing income/relationships. Directionality derives upward from victim status: labor_class d ≈ 0.65–0.75 (organized, constrained exit, indirect target), housing_insecure_renters d ≈ 0.85–0.95 (powerless, trapped, direct full target). Improvement_developers sit near symmetric (d ≈ 0.45–0.55): they benefit from rising land values (sold at higher implicit prices) but bear landowner capture (land acquisition cost) and employ labor (bearing part of rent-burden cost). Tax_policy_makers are captured: they have authority to restructure but are organized against by landowner lobbying; directionality near beneficiary at the institutional level (d ≈ 0.40–0.50, structured asymmetry) but this is analytically separable into 'power when uncaptured' vs. 'actual position when captured.' The engine derives d from beneficiary/victim + exit + power; Georgist analysis adds the claim that 'property rights themselves are constructed and defend extraction' (a second-order structural claim about how d itself is made/maintained). No directionality override is needed; the derivation chain (victims = labor/renters + trapped/constrained exit + weak organizing → high d) produces the correct direction.",
-    "mandatrophy_analysis": "The founding problem (location scarcity allocation) is live and unchanged — locations are still scarce, still need allocation. But the constraint's mandate (efficient price-discovery mechanism) has partially decayed into pure extraction as land becomes financialized and treated as investment asset rather than location for habitation. Georgist analysis identifies mandatrophy: the beneficiaries (landowners, speculators) benefit from the mandate decay (less price pressure to find alternatives, more rent extraction possible) while the victims (labor, renters) bear the cost. The constraint persists because: (1) landowners have organized political power to defend property-rights framing; (2) improvement developers have structural interest in denying the decomposition (to avoid land value tax); (3) tax_policy_makers are captured by (1) and (2). A genuine Georgist remedy (land value tax, public capture of location increment) would restructure the constraint from snare/tangled-rope into pure rope (genuine coordination of scarcity allocation without extraction), but the path to that restructuring is politically blocked. This is not a case where the original mandate is obsolete — it is a case where the beneficiaries have captured the authority structure and use it to extract beyond the mandate's stated purpose. Mandatrophy is PARTIAL: enough coordination function remains (prices do allocate scarce locations) to sustain the framing, but enough extraction has been added to warrant the snare classification."
+    "logic_rationale": "Base extractiveness (0.68) reflects the measured wealth transfer from labor/capital producers and tenants to landowners via bundled pricing. The Georgist reading asserts that location rent (~40-50% of housing prices in high-demand areas, per contemporary estimates) is unearned, making this transfer structurally asymmetric extraction. Suppression (0.72) reflects both structural (legal enforcement of property rights, zoning constraints on alternative arrangements) and internalized (belief in property legitimacy) barriers to alternatives. Theater ratio (0.48) indicates the constraint has genuine coordination content (property rights enable investment, markets function) but increasingly operates as performance maintenance—the coordination need is satisfied at lower bundled prices, and the excess is pure rent extraction. Accessibility collapse (0.71) is moderate-high: alternatives (public land banking, land-value taxation, commons arrangements) are conceptually available but politically and legally suppressed. Resistance (0.59) reflects the tenant and tenant-movement organizing against the constraint, balanced against landowner and institutional inertia. The measurement series track 1890–2026, showing extractiveness rising as urbanization increases location scarcity and as financialization adds leverage to the rent-capture mechanism. Theater ratio rises as the constraint increasingly performs legitimacy narratives (housing supply, market efficiency) while operating as pure rent extraction.",
+    "perspectival_gap": "From the landowner seat, the constraint is rope: it coordinates property rights, enables investment in housing, and provides price signals for efficient land use. From the labor/capital seat, it is snare: the same mechanism transfers their earnings to a class that produced nothing. From the public-finance seat, it is pure extraction: location rent should flow as public revenue. The engine computes these divergences from the structural data—incumbent_landowners hold agenda_setter role with powerful/arbitrage position; labor_and_capital_producers hold payer role with constrained exit; the bundled-price mechanism benefits the former while suppressing exit for the latter. The Georgist reading's contribution is not inventing the divergence but NAMING the structural asymmetry: landowners extract an unearned component that others produced (public location value) or did not produce at all (location scarcity).",
+    "directionality_logic": "Incumbent landowners: d ≈ 0.1–0.2 (full beneficiary seat, benefits from constraint without bearing its costs, high arbitrage exit). Labor/capital producers: d ≈ 0.75–0.85 (target seat, constrained exit, wages suppressed by rent burden, organized enough to resist but institutional power imbalance is severe). Tenant class: d ≈ 0.9+ (deepest target, trapped exit, immediate time horizon, powerless, bear full cost of rent with no wealth accumulation path). Public revenue authority: excluded (would have d ≈ 1.0 if included, since Georgist theory says location rent should flow to public). The directionality gradient is extreme: the constraint's beneficiary seat has near-zero d (pure subsidy), while the deepest victim seat has near-complete d (pure extraction).",
+    "mandatrophy_analysis": "The founding problem (establishing property rights and price signals for land and housing) was solved by ~1920 in most developed nations. By 2000, the constraint's primary function (coordination of investment, price discovery) was satisfied, but the extraction mechanism persisted and expanded. The theater ratio rises from 0.25 (1890) to 0.48 (2026), indicating the constraint increasingly performs legitimacy narratives—'market efficiency', 'property rights as natural law', 'housing shortage'—while operating as rent extraction. The Georgist reading detects mandatrophy: the constraint persists not because coordination requires the bundled-price mechanism but because landowners capture the political system and enforce the bundling despite its coordination function being separable. The founding problem status is 'contested' because institutional and naturalist readings maintain the problem remains live (efficient price discovery requires bundling); the Georgist reading claims it is dead and the constraint is now pure extraction.",
+    "kernel_context": "This constraint is one reading of the contested kernel price_formation_kernel. The Georgist reading instantiates the claim that price formation can and should separate unearned location rent (fixed-supply scarcity) from earned improvement value (labor/capital production). The sibling readings—naturalist, institutional, and financialization—each decompose price formation differently. The Georgist reading's core distinguishing premise is that location value is analytically separable from improvement value by reference to natural scarcity and that the separation reveals an unearned transfer from labor to landowners. This is structurally distinct from the naturalist reading (price reflects objective scarcity and preference, no analytical separation possible) and the institutional reading (price is constructed by zoning/lending/taxation, no natural baseline exists). The financialization reading accepts the Georgist separation but claims its extraction magnitude is now dominated by credit dynamics and asset-price feedback loops, not location scarcity per se."
   },
-  "omegas": [
-    {
-      "id": "land_scarcity_vs_institutional_construction",
-      "question": "Is housing-price inflation fundamentally driven by location scarcity (Georgist claim) or by institutional policy choices (institutional_reading claim) or by credit expansion (financialization_reading claim)?",
-      "resolution_mechanism": "Comparative institutional analysis: examine jurisdictions that have decoupled institutional constraints (removed zoning restrictions, opened credit easily) but kept land scarcity the same, and vice versa; measure whether prices follow land scarcity or institutional policy. Natural experiments from de-regulated housing markets (e.g., Auckland 2016–2022, Japan's low credit/high-density model) provide evidence. Decompose price growth into land-component and improvement-component using hedonic methods; time-series analysis of the separation's stability.",
-      "impact": "If land scarcity dominates and prices follow it even under different institutions, the Georgist reading is vindicated and land value tax is the primary lever. If institutions dominate and prices follow policy (zoning relaxation → supply increase → prices fall despite same scarcity), then institutional_reading is vindicated and zoning/lending reform is primary. If credit dominates and prices follow debt-to-income ratios regardless of supply/institutions, then financialization is vindicated and credit controls are primary. The three readings are empirically testable but so far inconclusive across jurisdictions.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Which structural driver (scarcity, institution, credit) dominates price formation."
-    },
-    {
-      "id": "landowner_improvement_conflation",
-      "question": "Do landowners and improvement developers genuinely conflate land value with improvement value, or do they consciously separate them and choose the conflation strategically?",
-      "resolution_mechanism": "Interviews and internal documents from real estate development firms, landowner organizations, and tax-policy advocacy groups; analysis of their private arguments vs. public rhetoric; examination of how they price and market land separately from improvements in internal deals vs. public facing value propositions.",
-      "impact": "If conflation is genuine (cognitive), the Georgist separation is a value-added analytical contribution and resistance from beneficiaries is cognitive capture. If conflation is strategic (they know the separation and exploit public confusion), then the constraint's persistence is more consciously maintained and the suppression mechanism is more overt. Either way, the framing question remains unresolved, but the character of the denial shifts.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the land/improvement distinction is cognitively unavailable or strategically obscured."
-    },
-    {
-      "id": "sibling_reading_empirical_falsifiability",
-      "question": "Which of the four readings (naturalist, institutional, financialization, Georgist) is empirically falsifiable, and do they forecast different observable futures?",
-      "resolution_mechanism": "Construct specific predictions from each reading: if naturalist is true, relaxing zoning (increasing supply) should reduce prices; if institutional is true, changing tax treatment should shift distribution without price movement; if financialization is true, tightening credit should deflate prices regardless of supply/institutions; if Georgist is true, removing land value taxation should increase extraction and require labor-income redistribution to maintain affordability. Run these predictions against historical and ongoing policy experiments. Identify points of divergence and test each.",
-      "impact": "If all four readings survive empirical testing (make compatible predictions), then price formation is genuinely multi-causal and all four are partial truths. If readings falsify each other empirically, the contest resolves into testable hierarchy. The Georgist reading survives strongest if land-value separation persists under institutional and credit variations, suggesting the land component is the irreducible structural feature.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Cross-reading empirical differentiation and falsifiability."
-    },
-    {
-      "id": "georgist_remedy_political_feasibility",
-      "question": "Is the political impossibility of implementing land value tax a structural feature of democratic governance, or a contingent outcome of current landowner power?",
-      "resolution_mechanism": "Historical analysis of land value tax adoption (e.g., Denmark's partial implementation, Singapore's element, Taiwan's experience); modeling of coalition dynamics required for land value tax passage in current polities; identification of institutional designs that might break landowner veto (constitutional constraints, supermajority requirements, federalism structures). Compare countries where land value tax persists vs. were abandoned.",
-      "impact": "If feasible with political will, then the constraint's current form is contingent on beneficiary power, not structural necessity, and could be restructured. If the constraint is politically sticky regardless of political system, then Georgist remedy remains a limiting case. Either way, the persistence mechanism is revealed.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether the Georgist remedy is politically impossible or contingently blocked."
-    },
-    {
-      "id": "committer_frame_kernel_contest",
-      "question": "This constraint (georgist_reading) asserts a specific decomposition of price formation. How should the engine weigh this reading against the sibling readings when they produce different ε values and different structural classifications?",
-      "resolution_mechanism": "The four readings are under a single kernel (price_formation_kernel), which means they are alternative interpretations of the same underlying phenomenon. Committer-frame analysis: the kernel itself is contested; there is no neutral arbiter within the dispute that all four readings would accept. The engine should treat the four stories as a constraint family: publish all four, compute per-reading classifications, and let downstream analysis assess which reading best explains observed outcomes (prices, rent burdens, land concentration, housing supply, wage patterns). The Georgist reading claims ε=0.68 (high extraction) while the naturalist would claim ε→0.0 (no extraction, pure equilibrium). These are not measurement error — they are structural disagreements about what counts as extraction. The framework routes this through committer_frame omegas (this one) and through the cs_structure.reading_relations (forecloses/coexists/influences declarations).",
-      "impact": "This omega documents that the Georgist reading is ONE contestable reading of a multi-interpretable kernel, not THE TRUE READING. The engine does not resolve the contest; instead, it computes what each reading implies structurally and makes the contrast visible. Downstream analysis (policy, advocacy, research) operates with full knowledge that the readings are incompatible and produces different classifications.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Kernel contest structure: this is one reading of a multi-interpretable price-formation kernel."
-    }
-  ],
   "boltzmann": {
     "coordination_type": "resource_allocation",
     "boltzmann_floor_override": 0.18
@@ -240,79 +274,70 @@
       "price_formation_kernel__naturalist_reading",
       "price_formation_kernel__institutional_reading",
       "price_formation_kernel__financialization_reading",
-      "housing_affordability_crisis__structural_extraction",
-      "tax_treatment_of_property__rent_subsidy"
+      "land_value_taxation_policy",
+      "zoning_enforcement_constraint",
+      "housing_debt_accumulation"
     ],
-    "dual_formulation_note": "This constraint is one of four readings of the contested kernel price_formation_kernel. All four readings (georgist_reading, naturalist_reading, institutional_reading, financialization_reading) describe the same observable phenomenon (housing-price growth, rent burdens, land-value acceleration) but decompose the causal structure differently and propose different remedies. The Georgist reading asserts the land component is a mountain (supply-fixed, location-based, natural scarcity) but rent EXTRACTION is a snare (organized through property rights, defended politically, extracting from labor). The improvement component is rope (genuine coordination of building production). The sibling readings dispute this decomposition: naturalist claims the entire price vector is equilibrium, institutional claims it is constructed by policy, financialization claims it is credit-driven. Each reading generates different metrics and different type classifications per seat. All four stories should be generated and linked; the four-story family enables downstream analysis to compare reading performance against observed outcomes."
+    "dual_formulation_note": "The price_formation_kernel decomposes into four constraint stories: (1) georgist_reading—location rent is separable, unearned, and extractive; (2) naturalist_reading—price is natural equilibrium reflecting scarcity and preference; (3) institutional_reading—price is constructed by zoning, lending, taxation; (4) financialization_reading—price is driven by credit expansion and asset-price feedback. Each reading instantiates a different constraint with different ε values, beneficiary/victim structures, and types. They share a referent (the observed housing prices of a given property) but measure extraction differently because they measure against different baseline claims about what price 'should' be. The Georgist reading measures against the improvement-value baseline (ε high: location rent is extraction). The naturalist reading measures against the equilibrium baseline (ε low: price reflects coordination of supply/demand). The institutional reading measures against the undistorted-market baseline (ε high or low depending on whether institutions generate coordination or capture). The financialization reading measures against the fundamentals-based baseline (ε high: credit dynamics inflate price above productive fundamentals). Network links indicate each reading influences the others—Georgist analysis highlights the location-rent component that financialization amplifies; institutional analysis explains which rules stabilize or destabilize Georgist separation; naturalist analysis claims the separation is incoherent."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.35
+      "power_atom": "powerful",
+      "d_value": 0.15
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "price_formation_kernel"
-    ]
-  },
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "formalized",
     "authority_grounding": "extraction",
-    "interpretation_layer_present": false,
+    "interpretation_layer_present": true,
+    "reference_frame": "property_rights_framework_natural_scarcity",
     "reading_relations": [
       {
-        "sibling_id": "price_formation_kernel__naturalist_reading",
+        "sibling_id": "naturalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "institutional_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "financialization_reading",
         "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "price_formation_kernel__institutional_reading",
-        "relation": "influences"
-      },
-      {
-        "sibling_id": "price_formation_kernel__financialization_reading",
-        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "land_value_is_unearned_increment",
+        "atom": "land_value_separable_from_improvement",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "land_scarcity_is_structural_prior",
+        "atom": "location_rent_unearned_natural_scarcity",
         "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "public_commons_creation_entails_rent_capture_right",
-        "role": "secondary",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "georgist_land_value_separation",
     "drift_state": {
-      "moment": "contemporary_neoliberal_finance_era",
+      "moment": "contemporary_financialization_era",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "gain_flow": "incumbent_landowners",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

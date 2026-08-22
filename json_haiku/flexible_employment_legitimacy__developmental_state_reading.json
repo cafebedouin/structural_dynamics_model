@@ -4,211 +4,364 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "f73e4a5f-3d20-419c-9779-4b2b090a5b0b"
+    "story_uid": "1b36616b-5ce7-4400-a231-21f5bde54efd"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.42,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.65,
+    "theater_ratio": 0.31,
+    "accessibility_collapse": 0.62,
     "resistance": 0.71,
     "claimed_type": "scaffold",
-    "human_readable": "Flexible Employment as Developmental Transition (State Management Reading)",
+    "human_readable": "Flexible Employment as Managed Transition Toward Formalization (Developmental State Reading)",
     "topic_domain": "labor_economics/social_policy",
     "requires_active_enforcement": true,
     "has_sunset_clause": true,
     "beneficiaries": [
-      "state_labor_regulators",
-      "formal_sector_incumbents",
-      "transitional_workforce"
+      "state_administrative_capacity",
+      "formal_employment_growth"
     ],
-    "victims": []
+    "victims": [
+      "contingent_workers",
+      "informal_sector_entrants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "developmental_state_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Administers labor formalization policy via 12-point standardization plan targeting 2027 completion. Justifies flexible employment as temporary regulatory tolerance while state capacity builds (social insurance administration, tax infrastructure, labor inspection, enforcement machinery). Sets transition timeline, minimum standards floor, wage indexing mechanism. Could revise or abandon the plan; currently maintains it as the authoritative formalization roadmap."
+    },
+    {
+      "name": "contingent_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Work under flexible terms (no minimum hours, benefits contingent on utilization, termination at-will). Bear the cost of formalization delay: income volatility, no paid leave, no unemployment insurance, no pension, no collective-bargaining protection. Simultaneously told by the state's own narrative that the flexibility is temporary and transitional — that formal employment is the endpoint. Their exit options: formal sector jobs (if they materialize by 2027 as promised), informal sector (always available but presented as worse), or unemployment (not viable). The trap: formal sector cannot absorb them immediately (state asserts capacity constraint); informal sector offers no transition pathway; unemployment is not a stable exit."
+    },
+    {
+      "name": "platform_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Access flexible labor pools without bearing formalization costs during the transition period. Operate under regulatory tolerance justified by the state's 'temporary' framing. Can absorb costs once formalization proceeds (by raising prices, contracting supply, or offshoring); until then, manage under existing informal-sector labor market dynamics. Maintain arbitrage by offshoring operations if domestic formalization threatens cost structure before the state's 2027 deadline."
+    },
+    {
+      "name": "formal_sector_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from a managed transition that preserves their formalized labor cost advantage over flexible competitors during the interim. Standardization plan creates competitive fairness once the transition completes. Their constraint exit is limited: if they refuse to participate in formalization, they lose the competitive-fairness guarantee; if they defect by hiring flexible labor themselves, they undermine their own long-term stabilization and face regulatory pressure."
+    },
+    {
+      "name": "informal_sector_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Street vendors, casual laborers, subsistence enterprises, home-based workers. Flexible employment ostensibly draws from informal sector by formalizing its participants — they are the state's target population for transition. In practice, they remain outside the flexible-employment track (platforms recruit from unemployed and school-leavers preferentially), face new barriers as flexible workers absorb available low-skill positions, and bear the state's administrative attention (licensing, permits, data collection) without receiving its protections."
+    },
+    {
+      "name": "labor_union_movement",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Historically organized around formal-sector protections and collective bargaining. Flexible employment undercuts their membership base and negotiating leverage during the interim. The state's formalization narrative aligns with union goals (all workers eventually in formal sector) but the transition period is one unions do not control — workers are excluded from collective organization during the 'temporary' phase. Their objection: the 'temporary' becomes permanent through institutional inertia; the developmental-state framing preempts pressure for immediate formal conversion; unions have no seat at the policy table despite representing their core constituency."
+    },
+    {
+      "name": "international_development_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "View the developmental-state reading as a 'best practice' for emerging economies formalizing informality. Provide technical assistance for the 12-point plan, track metrics on formal-employment growth and tax-base expansion. Their analyst role operates from the assumption that the state's capacity-building narrative is genuine and that formalization is the stable endpoint — they do not independently verify that the interim extraction is temporary rather than permanent or institutional inertia."
+    },
+    {
+      "name": "contingent_worker_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that flexibility without protections is precarity, not transition — that the state should impose minimum standards immediately rather than tolerating interim extraction. Excluded from formal policy forums whose legitimacy rests on the developmental-state narrative (they are perceived as opposing 'necessary' transition). Their objection: the 2027 target is not binding; the plan lacks enforcement mechanisms; the narrative justifies indefinite delay; interim extraction is deliberate policy choice, not capacity constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Bridges informality and formality by licensing temporary flexible employment, during which the state builds tax administration, social insurance, labor inspection, and employer compliance infrastructure. Workers and platforms transition together: workers from unregistered informal sector to registered flexible employment to formal sector employment. The state absorbs the cost of capacity-building, not workers.",
+    "transfer_function": "Moves regulatory tolerance from the state to workers and platforms during the interim: they bear the cost of no minimum income guarantee, no employer-provided benefits, no collective-bargaining protection. The transfer from contingent workers flows to: (1) platform operators (labor cost reduction, estimated at 20-35% below formal-sector equivalents), (2) formal-sector employers (interim competitive-fairness gain, estimated at 10-15% cost advantage during transition), (3) state tax administration (data infrastructure and reporting systems built using flexible-employment data pipeline).",
+    "absent_voices": "Labor unions are excluded from transition-period policy design; they perceive long-term alignment (formalization benefits their members) but cannot organize workers during the interim and oppose the extractive interim terms. Informal-sector participants not already in flexible employment are outside the conversation; they are told formalization will include them, but the flexible-employment track absorbs the most job-ready informal workers (school-leavers, recently displaced formal workers), leaving subsistence participants behind. Precarity researchers and contingent-worker advocates pushing for immediate minimum standards are excluded by institutional framing that treats 'temporary extraction' as a non-negotiable capacity-building cost.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "Developmental-state reading: if the constraint disappeared (formalization mandate imposed immediately with no interim flexibility), the state's capacity-building timeline would compress to political impossibility — formalization would fail, enforcement would be uneven, and the informal sector would absorb workers again, recreating the original coordination problem. Market-efficiency reading: if it disappeared, workers and platforms would renegotiate voluntarily on terms reflecting actual scarcity, labor productivity would improve from better matching, and efficiency gains would offset transition costs. Precarity-extraction reading: if it disappeared, workers would organize into collective structures and platform costs would rise sharply; disappearance would rearrange power dramatically in workers' favor.",
+    "founding_problem": "Emerging economies face the challenge of formalizing informality without destroying the absorptive capacity of the informal sector (which employs workers the formal sector cannot yet hire at scale). The founding problem is stated as the state's capacity constraint: the formal-sector institutions (tax administration, social insurance, labor inspection, collective-bargaining frameworks) cannot absorb informal workers immediately, and building those institutions takes time. Flexible employment is presented as a managed-transition device: temporary regulatory tolerance allowing the state to build infrastructure while workers graduate from informality without creating unemployment or forcing them back to subsistence.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The developmental state authority attests the founding problem is live and capacity-building is necessary. International development bodies and labor economists studying formalizing economies (World Bank, ILO studies on informal-to-formal transitions) corroborate the capacity constraint narrative at a general level. Contingent worker advocates and precarity researchers attest the founding-problem framing is ex-post rationalization — that the state tolerates flexibility primarily for revenue (tax data, registration fees) and platforms' cost advantage, and that interim formalization is technically feasible at higher cost to employers/platforms. No neutral party has conducted an independent measurement of state capacity to formalize more rapidly under higher-cost scenarios; the capacity narrative is not empirically corroborated by comparison to counterfactual."
   },
   "interval": {
-    "start": 2020,
-    "end": 2027
+    "start": 0,
+    "end": 30
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.38
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.41
+      "time_point": 5,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.47
+      "time_point": 10,
+      "value": 0.54
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2023,
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
       "value": 0.52
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.56
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.58
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2027,
-      "value": 0.58
-    },
-    {
       "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.14
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2022,
+      "time_point": 0,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2023,
+      "time_point": 5,
       "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
+      "time_point": 10,
       "value": 0.26
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.28
+      "time_point": 15,
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2027,
-      "value": 0.05
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
+      "time_point": 0,
       "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2021,
-      "value": 0.37
+      "time_point": 5,
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2022,
-      "value": 0.39
+      "time_point": 10,
+      "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2023,
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
       "value": 0.41
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.42
+      "time_point": 25,
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2025,
-      "value": 0.42
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2027,
-      "value": 0.15
+      "time_point": 30,
+      "value": 0.32
     }
   ],
-  "omegas": [],
   "commentary": {
-    "narrative_context": "The developmental-state reading frames flexible employment (gig work, contract labor, platform-mediated services) as a temporary institutional form that the state will actively manage toward formalization by 2027. This reading treats the flexibility as an administrative tool for labor-market transition, not as a permanent alternative to formal employment. The state commits to a 12-point plan (wage floors, benefit portability, classification audits, sectoral hiring targets) and licenses platforms to operate under deferred compliance in exchange for meeting transitional protections and accepting the 2027 sunset. Transitional workers are positioned as in-transit toward formal status, supported by state-managed protections. The constraint's extractiveness is moderate (0.58) because the state genuine coordinates a real formalization function, but also because platforms capture significant surplus under the deferred-compliance window. Theater rises from 2020–2025 (the constraint's performative side strengthens as resistance to the timeline mounts) then collapses at 2027 (when the projection assumes sunset-driven reclassification or formal absorption).",
+    "narrative_context": "This story instantiates the developmental-state reading of flexible employment legitimacy. The constraint is framed as a temporary scaffold: the state tolerates flexible (non-formal) employment during a bounded transition period (2027 endpoint) while building administrative and institutional capacity to absorb workers into formal employment. Contingent workers are told (and the state authority asserts) that flexibility is transitional, not permanent — that wage growth, benefits, and employment security are the endpoint, not the constraint itself. The reading's core claim: extractiveness during the interim is the justified cost of state capacity-building, not the purpose of the arrangement. Under the market-efficiency sibling reading, flexibility is legitimate permanent clearing mechanism. Under the precarity-extraction sibling, flexibility is structural precarity enabling platform rent-taking, and the 'transition' narrative is cover. This story does NOT defend any reading; it instantiates this one as an ε-invariant constraint with metrics reflecting what the reading takes the constraint to be: a scaffold (sunset via 2027 target) with moderate interim extraction (workers bear cost; state/platforms/formal employers collect benefit), declining extractiveness as formalization proceeds, and resistance from labor movements and precarity advocates excluded from the transition plan's design.",
     "key_agents": [
-      "developmental_state_authority: Sets the formalization timeline and enforces the 12-point plan; treats flexible work as temporary administrative category.",
-      "platform_economy_operators: Benefit from deferred compliance but face regulatory pressure and the 2027 sunset; can exit only to regulatory arbitrage zones.",
-      "transitional_workers: Receive transitional protections and state-managed entry path but remain subject to platform scheduling and volatility; identity-locked into the 'transitional' category.",
-      "formal_sector_incumbents: Benefit from the constraint's framing of flexible work as temporary, legitimating their protected status and wage-setting power.",
-      "international_labor_standards_bodies: Lend authority to the state's developmental-state framing and audit compliance with the 2027 timeline.",
-      "platform_labor_advocates (excluded): Argue the constraint legitimizes ongoing precarity and that the 2027 timeline is not credible; mount resistance outside the authorized coalition."
+      "developmental_state_authority: Sets the 12-point plan and 2027 formalization target; administers regulatory tolerance and capacity-building; institutional power, analytical exit.",
+      "contingent_workers: Bear immediate extraction (no benefits, income volatility); told the flexibility is temporary; trapped exit, powerless position.",
+      "platform_operators: Access flexible labor without formalization cost during interim; powerful, arbitrage-capable exit (can move operations).",
+      "formal_sector_employers: Benefit from interim competitive-fairness gain; protected from flexible-wage competition during transition; powerful but constrained exit (formalization failure harms their position too).",
+      "informal_sector_participants: Remain outside the flexible track; told formalization will include them; trapped, powerless.",
+      "labor_union_movement: Excluded from interim transition design; perceive long-term alignment (all workers formalized) but object to interim precarity and loss of organizing power.",
+      "international_development_bodies: Observer seat; validate the developmental-state narrative as best practice; assume 2027 endpoint is genuine.",
+      "contingent_worker_advocates: Excluded by institutional framing; argue minimum standards should apply immediately; push back on 'temporary' extraction narrative."
     ],
-    "logic_rationale": "The extractiveness trajectory (0.38 → 0.58 from 2020–2025, then projected flat to 2027) models the constraint's rising burden as platform compliance accelerates while the state's formalization machinery lags. Theater rises similarly (0.12 → 0.28), indicating that as the 2027 deadline approaches and worker resistance mounts, the state invests more in legitimacy-building rhetoric (conference speeches, plan revisions, international certification) relative to actual formalization capacity. Suppression is lower than in pure-extraction constraints (0.42, rising to flat at 0.42) because the state's authority rests partly on genuine administrative capacity and international endorsement, not purely on coercion. The measurement grid uses actual historical years (2020–2025) for observed values and 2027 as projected endpoint, capturing the constraint's lifecycle within its declared interval. At 2027, the projection assumes the constraint either: (a) genuinely transitions to formalization (theater drops to 0.05, extractiveness plateaus at 0.58 because the residual extraction is now legitimate formal-sector earnings inequality, not precarity), or (b) extends indefinitely or morphs into piton-hood (the projection is the optimistic case; omegas document the alternative scenarios).",
-    "perspectival_gap": "The developmental-state authority and transitional workers inhabit different perceptions of the constraint. The authority treats flexible employment as an instrument it controls and can sunset; it is temporary by definition. Transitional workers experience the constraint as semi-permanent structural precarity, despite the framing as temporary. The identity-lock omega documents that this gap may be unbridgeable: even if the state intends transition, the labor market may not reclassify workers, and the constraint becomes piton-like (performatively transitional but functionally permanent). Platform operators sit in a third position: they experience the constraint as a regulatory liability (the 2027 deadline is real) but also as a resource (deferred compliance is a cost advantage they depend on). The engine computes per-seat classification from the structural data; the authored claim (Scaffold) reflects the state authority's position. The other seats should compute as experiencing Tangled Rope or Snare-like dynamics (extraction with coordination rhetoric) unless the formalization timeline actually executes.",
-    "directionality_logic": "The developmental_state_authority is the agenda-setter (power: institutional, exit: analytical) — it declares and enforces the constraint, collects legitimacy from the international standards bodies, and can alter the rules. Its directionality is near beneficiary-end (d ≈ 0.2): it sets the agenda and defines the constraint's purpose. The platform_economy_operators are secondary beneficiaries in the short term (they defer compliance costs) but targets in the long term (the 2027 sunset imposes costs); they are currently positioned as payers but with a secondary beneficiary role (d ≈ 0.55, benefiting from deferred compliance but bearing the regulatory pressure). The transitional_workers are the core targets: they are identity-locked (cannot exit), dependent on platform scheduling, subject to volatility. Their directionality is near target-end (d ≈ 0.85), but they also receive state protections (wage floors, benefit portability) which damps the effective extraction somewhat. Formal_sector_incumbents are beneficiaries (their protected status is legitimated by the constraint's framing of flexible work as temporary; d ≈ 0.15). The international_labor_standards_bodies are observers (d ≈ 0.5, symmetric). The platform_labor_advocates are excluded and bear suppression costs without collecting benefits (d ≈ 0.95, but they are outside the stakeholder-seats that structure the constraint). No directionality overrides are needed; the structural derivation from beneficiary/victim declarations and exit options produces accurate d values.",
-    "mandatrophy_analysis": "The constraint has a declared sunset clause (2027) and a stated founding problem (state absorption of platform-economy surplus labor). The question of mandatrophy is acute: does the founding problem remain live and does the constraint actually transition at 2027, or does it extend indefinitely (becoming piton-like)? The commentary anticipates this: the projected theater collapse at 2027 assumes the constraint either achieves its goal (formalization accelerates, theater drops because the constraint is no longer performative) or fails and extends (theater drops because the state stops performing legitimacy, accepting piton status). The omegas explicitly unpack this tension: if the state lacks formalization capacity, the 2027 sunset will not fire and the constraint mutates from Scaffold to Piton. The Scaffold classification is conditional on the state's execution; the omegas document the failure cases.",
-    "kernel_context": "This constraint is the developmental-state reading of the contested kernel 'flexible_employment_legitimacy'. Two sibling readings exist: (1) the market_efficiency_reading, which treats flexible employment as a legitimate market-clearing mechanism with no necessary endpoint, and (2) the precarity_extraction_reading, which treats flexible employment as structural surplus-value extraction without any developmental path. The developmental reading instantiates the kernel by declaring flexible employment as admissible under a time-bounded administrative authority exercised by the state, with formalization as the legitimate terminal state. The market reading would declare flexible employment as admissible indefinitely as an efficient alternative to formal employment. The precarity reading would declare flexible employment as a structural mechanism for extracting surplus without the developmental state's pretense of transition. These three readings are incompatible in their core premises (whether there is a legitimate endpoint, whether the state can manage the transition, whether the constraint is genuinely transitional or cover for precarity). The kernel contest is decided empirically: if 2027 formalization accelerates and flexible categories contract, the developmental reading is validated. If flexible work persists or expands despite the deadline, the precarity reading is validated. If flexible employment proves efficient at matching labor without external intervention, the market reading is validated. This single constraint story represents only the developmental reading; the other readings are separate constraint stories with different ε values, different beneficiary/victim structures, and different classifications."
+    "logic_rationale": "Extractiveness is moderate (0.58 at interval end) not because extraction is low, but because the reading locates extraction as a transitional cost with a declared endpoint (2027 formalization). Workers bear significant immediate cost (no benefits, precarity); the developmental-state reading treats this as justified by state capacity requirements, not as permanent rent extraction. Theater (0.31) reflects the performative elements: the 12-point plan shows commitment to transition; government capacity reports track progress; formalization targets are published. But a portion of this performance is the maintenance of the 'temporary' narrative itself — theater is the gap between the plan's stated timeline and actual capacity-building pace. Suppression (0.42) is moderate because the constraint does not rely primarily on coercion: workers comply because the alternative is informal unemployment; platforms comply because regulatory tolerance is profitable; the state's authority legitimates the arrangement through the transition narrative, not through force. Accessibility collapse (0.62) reflects that alternatives are partly foreclosed: workers cannot easily exit to formal employment (capacity constraint is real or asserted as real); they can exit to informal sector or unemployment, but those are presented as worse. Resistance (0.71) is substantial because labor unions, worker advocates, and precarity researchers actively contest the narrative — they do not accept that extraction is temporary or justified. The measurement series spans 30 time units with the peak extractiveness around t=20 (midway through the projected 2027 transition window), declining after as formalization is assumed to accelerate. The projection is baked in: the reading assumes the 2027 endpoint is reached; actual measurements after t=10 are authored as projections (basis=projected) to reflect that the full transition is a conditional scenario under the reading's own assumptions.",
+    "perspectival_gap": "The developmental-state authority and contingent workers would compute dramatically different seat classifications. From the authority seat, the constraint is rope (genuine coordination: capacity-building benefits workers and state infrastructure simultaneously; temporary extraction is proportionate cost). From the contingent-worker seat, it appears as snare: extractive mechanism with suppressed alternatives ('flexibility is temporary' is a cover story; formal jobs won't materialize; informal sector is worse; the state's timeline is not binding). From the platform operator seat, the arrangement looks like rope: regulatory tolerance is the beneficiary seat's gain. From the formal employer seat, it looks like rope too: interim competitive protection. The engine computes these per-seat and will show divergence; that divergence is exactly the measurement this reading is designed to capture — the structural asymmetry in how the constraint appears depending on who bears the extraction and who is promised transition.",
+    "directionality_logic": "Contingent workers: victims (base_properties.victims). They are told by the authority that flexibility is temporary and they will transition to formality, but they bear the cost during the interim (no benefits, precarity, income volatility). Their exit is trapped (formal jobs not available yet; informal sector available but worse; unemployment not viable). Directionality toward full target (d near 1.0): they are clearly structured as extractive targets during the interim, though the reading asserts the interim is bounded. Platform operators: beneficiaries (base_properties.beneficiaries). They collect labor cost advantage during the interim from regulatory tolerance. Exit is arbitrage (can move operations if formalization raises costs). Directionality toward beneficiary (d near 0.0): they benefit and can exit. Formal-sector employers: beneficiaries. They get interim competitive-fairness guarantee. Exit is constrained (if they refuse formalization, they lose the guarantee; if formalization fails, they lose the stability they need). Directionality middle-ground (d ~0.4): they benefit from the interim but are locked into the formalization endpoint by their own interest. State authority: agenda-setter (neither target nor beneficiary in the strict sense, but administers the constraint). Directionality analytical (d not computed for agenda-setters; they are the framing seat). The reading's claim that this is scaffolding (temporary) depends on the directionality of contingent workers being temporary — i.e., that they will move toward d~0.5 (symmetric benefit-cost) or d~0.0 (beneficiary) as formalization proceeds. If formalization stalls and d stays near 1.0, the constraint reclassifies from scaffold to snare.",
+    "mandatrophy_analysis": "The developmental-state reading avoids mandatrophy if and only if the 2027 formalization endpoint is met. The founding problem is 'state capacity to absorb informal workers into formal sector without destroying informality beforehand.' If the state reaches the 2027 target, the founding problem is solved and the constraint's mandate is fulfilled (transition complete). If 2027 passes without formalization, the mandate has outlived the founding-problem claim: the state would have collected years of interim extraction (worker precarity, platform cost-cutting, employer protections) under a stated-temporary justification that has now become permanent. That condition triggers mandatrophy_resolved: the constraint no longer has a mandate to extract during transition if the transition is not happening. The reading's own internal logic predicts mandatrophy if 2027 slips. This is structurally built into the scaffold type: a constraint with an honest sunset clause is betting that the sunset will be reached. If it is not reached, the constraint flips classification on the basis of that failure alone (not on changing metrics, but on the mandate becoming indefensible). The measurement series projects extractiveness declining after t=25 (leading to the 2027 endpoint) and dropping sharply at t=30 (formalization complete). A story where extractiveness stays flat or rises past t=25 would be forecasting mandate failure and thus mandatrophy.",
+    "kernel_context": "This constraint is one reading of the contested kernel flexible_employment_legitimacy. The kernel is a stabilized social commitment: the acceptance (or debate) of whether flexible/contingent employment is legitimate and what it is for. This reading (developmental_state_reading) instantiates the position that flexible employment is a temporary transitional form, justified by state capacity-building and bounded by a 2027 formalization target. The sibling reading market_efficiency_reading instantiates the position that flexibility is a legitimate permanent market-clearing mechanism matching supply and demand, with no formalization target — flexibility is the endpoint. The third sibling precarity_extraction_reading instantiates the position that flexibility is structural precarity enabling platform extraction of surplus value, and the state's 'transition' narrative is cover for indefinite extraction. These are distinct constraints with different beneficiary/victim structures, different extractiveness baselines, and different resistance profiles. The kernel itself is the unresolved question: what is flexible employment for, and does it have an endpoint? Different parties read the kernel differently; each reading constitutes a different constraint. This story is this reading's instantiation."
   },
+  "omegas": [
+    {
+      "id": "state_capacity_authenticity",
+      "question": "Is the state's capacity-building claim genuine? Does the state actually lack the administrative infrastructure to formalize immediately, or does it tolerate flexibility for revenue/data advantage?",
+      "resolution_mechanism": "Comparative analysis: measure (a) time and cost to build capacity by state-reported timeline vs. (b) time and cost to build capacity by international development bodies' independent assessment; conduct counterfactual: what would happen if the state imposed formalization immediately? If capacity-building is the binding constraint, formalization would fail or regress catastrophically. If capacity is not binding, formalization would proceed with higher employer/platform costs.",
+      "impact": "Genuine capacity constraint: the reading's mandate is real and the extraction is justified transitional cost. Not genuine: the reading is cover for permanent extraction, and the constraint should reclassify to snare or tangled_rope with no sunset.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether state capacity is the binding constraint for formalization."
+    },
+    {
+      "id": "id_2027_target_binding",
+      "question": "Is the 2027 formalization target a genuine commitment with enforcement mechanisms, or a target-in-principle that will slip indefinitely?",
+      "resolution_mechanism": "Observational: at t=2027, measure whether formal-employment ratio reaches the published target. If yes, sunset clause was genuine. If no, track state policy response: do they republish a new target (mandate-failure + goalpost-moving = precarity-extraction reading confirmed) or do they acknowledge capacity limits and extend timeline with revised milestones?",
+      "impact": "Binding target: scaffold classification is warranted; extractiveness should decline sharply after 2027 as formalization proceeds. Non-binding target: the constraint becomes piton (performing transition while extracting indefinitely), or reclassifies to snare if the state actively extends extraction by deferring the target.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 2027 endpoint is credible or will slip."
+    },
+    {
+      "id": "interim_extraction_inevitability",
+      "question": "Is interim extraction during the transition phase a necessary cost of capacity-building, or is it avoidable through higher employer/platform investment?",
+      "resolution_mechanism": "Design exercise: specify a regulatory regime that builds state capacity while imposing minimum benefits/protections on contingent workers immediately. If such a regime is technically feasible but not adopted, the choice to extract during interim is political/preference-driven, not capability-driven.",
+      "impact": "Unavoidable extraction: the interim cost is justified by real constraints; scaffold framing is sound. Avoidable extraction: the state has chosen to impose cost on workers to subsidize other actors' formalization; the reading is cover for a deliberate transfer decision.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether interim worker precarity is necessary or chosen."
+    },
+    {
+      "id": "formalization_endpoint_irreversibility",
+      "question": "If formalization is achieved in 2027, is it stable, or will flexible employment re-emerge as platforms and employers pressure for deregulation?",
+      "resolution_mechanism": "Post-2027 observation: track whether formal-employment ratio stays above the published target or begins slipping back toward flexibility. If stable, the constraint's endpoint is real. If slips, the transition was temporary but not the flexibility — the constraint cycles, and the reading's stability assumption is violated.",
+      "impact": "Stable formalization: the reading's endpoint is defensible; the constraint can resolve (mandate fulfilled). Cycling: the constraint never genuinely sunsets; flexible employment re-emerges; the scaffold framing becomes inaccurate and the constraint should be reclassified as piton or tangled_rope (repeating cycle).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether formalization, once achieved, remains stable."
+    },
+    {
+      "id": "reading_framing_under_determination",
+      "question": "The developmental-state reading places state capacity-building as the legitimating frame for interim extraction. But what if the frame is market-efficiency (flexibility is permanent and beneficial) or precarity-extraction (flexibility is permanent and extractive)? Does evidence exist that could arbitrate between the three readings?",
+      "resolution_mechanism": "Structured observation of the 2027 endpoint: (1) If formalization occurs and sticks, market-efficiency reading is falsified (flexibility was not permanent), developmental-state reading is confirmed (capacity-building narrative was validated), precarity-extraction reading is partly disproven (extraction ended, though interim extraction did occur). (2) If formalization does not occur, developmental-state reading is falsified (capacity-building narrative was not validated), market-efficiency reading is confirmed (flexibility persists), precarity-extraction reading is confirmed (extraction continued). (3) If formalization occurs but immediately degrades, all three readings are partly true (flexible employment was temporarily transitioned to formal, then re-emerged; extraction occurred during interim; but capacity-building did happen).",
+      "impact": "The three readings are structurally distinguishable by the 2027 outcome. This omega documents that the reading-contest is empirically resolvable in principle but only observable after the constraint's stated timeline reaches. Until then, the three readings coexist as live institutional positions held by different parties.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the three readings of flexible-employment legitimacy can be empirically arbitrated."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "flexible_employment_legitimacy__market_efficiency_reading",
       "flexible_employment_legitimacy__precarity_extraction_reading"
     ],
-    "dual_formulation_note": "The flexible-employment legitimacy kernel admits three structurally distinct readings. This story represents the developmental-state reading, which treats flexible employment as a time-bounded transitional form managed by state authority toward 2027 formalization. The market-efficiency reading (sibling constraint) treats flexible employment as a permanently legitimate market-clearing mechanism. The precarity-extraction reading (second sibling) treats flexible employment as structural surplus-value extraction without a developmental endpoint. All three readings share the same kernel (the contested legitimacy of flexible employment) but differ in their ε values, beneficiary/victim structures, and temporal horizons. The three constraints form a family linked by kernel contest, not by causal dependency; the kernel's ultimate reading is decided by empirical observation of labor-market outcomes post-2027 and comparative analysis of the three readings' axioms against evidence."
+    "dual_formulation_note": "flexible_employment_legitimacy is a contested kernel decomposed into three constraint stories: (1) developmental_state_reading (THIS STORY): flexible employment is temporary scaffold requiring state management toward formalization by 2027; moderate interim extraction justified by capacity-building. (2) market_efficiency_reading: flexible employment is legitimate permanent market-clearing mechanism; low extraction (market prices flexibility). (3) precarity_extraction_reading: flexible employment is structural precarity enabling platform extraction; high extraction permanently masked by 'transition' narrative. The three readings share the same kernel (what is flexible employment for, and does it have an endpoint?) but instantiate different constraints with different ε, different beneficiary/victim structures, different resistances. All three stories should be generated separately and linked via network.affects_constraints. The developmental-state reading (this story) influences the market-efficiency and precarity readings because its 2027 endpoint claim directly shapes whether the other readings' premises remain viable: if the endpoint is reached, market-efficiency reading's permanence claim is falsified and precarity-extraction reading's indefinite-extraction claim is challenged. Each sibling reading contains an omega documenting the alternative framing and what would confirm/disconfirm it."
   },
-  "directionality_overrides": [],
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "developmental_state_authority",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "formal_employment_social_contract",
+    "drift_state": {
+      "moment": "contemporary_interim_flexibility",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
     "reading_relations": [
       {
-        "sibling_id": "flexible_employment_legitimacy__market_efficiency_reading",
+        "sibling_id": "market_efficiency_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "flexible_employment_legitimacy__precarity_extraction_reading",
+        "sibling_id": "precarity_extraction_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "flexible_employment_transitional_not_permanent",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      },
-      {
-        "atom": "state_managed_formalization_capacity",
+        "atom": "flexibility_is_transitional_form",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "state_capacity_is_binding_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "formal_employment_social_contract_is_stable_endpoint",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "developmental_state_managed_transition",
-    "drift_state": {
-      "moment": "contemporary_labor_market_2025",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -4,16 +4,16 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "7f3f7221-63ea-4c8b-b009-9b34a52ebbdd"
+    "story_uid": "96fd32eb-5fb9-4193-92cc-be8d9699f403"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.52,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.67,
-    "resistance": 0.71,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.61,
+    "resistance": 0.74,
     "claimed_type": "tangled_rope",
-    "human_readable": "Climate Response Imperative: Degrowth Reading",
+    "human_readable": "Climate Response via Structural Degrowth (Global North)",
     "topic_domain": "climate_policy/political_economy/intergenerational_justice",
     "requires_active_enforcement": true,
     "beneficiaries": [
@@ -21,203 +21,235 @@
       "global_south_populations"
     ],
     "victims": [
-      "present_day_global_north_workers",
-      "present_day_global_north_consumers",
-      "carbon_dependent_industries"
+      "present_global_north_workers",
+      "present_global_north_consumers",
+      "incumbent_carbon_intensive_industries"
     ]
   },
-  "interval": {
-    "start": 0,
-    "end": 40
+  "stakeholders": [
+    {
+      "name": "present_global_north_workers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face reduced working hours, lower consumption capacity, and economic transition as the degrowth imperative reduces aggregate demand and redirects production from consumer goods to renewable infrastructure and redistribution. Their survival depends on effective transition support (retraining, income floors, care work recognition), but enforcement of that support is politically contested. Exit means emigration or sectoral exit, both constrained."
+    },
+    {
+      "name": "present_global_north_consumers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Must internalize the constraint through reduced material consumption: smaller homes, less frequent travel, fewer goods. The constraint operates partly through prices (carbon tax, scarcity), partly through cultural narrative (consumption as morally problematic), partly through supply-side physical impossibility (flight restrictions, single-occupancy vehicle bans). Resistance comes from preference divergence; constrained exit via relocation to lower-constraint jurisdictions is difficult."
+    },
+    {
+      "name": "incumbent_carbon_intensive_industries",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face contraction or forced transition: fossil fuel extraction, high-throughput manufacturing, aviation, automotive. Capital in these sectors is stranded; workers are displaced. The constraint requires active enforcement—carbon pricing above competitive thresholds, supply-side regulation (production caps), demand destruction through narrative and physical infrastructure change. Exit via relocation encounters carbon-border adjustment and global coordination."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inherit a habitable climate stabilized by present-generation sacrifice. Under the degrowth reading, they benefit from avoided catastrophic warming (< 1.5-2°C with high probability) without the climate-adaptation costs that the mitigation-priority or adaptation-priority readings would leave them bearing. They cannot negotiate or exit; they are locked into the present generation's choices."
+    },
+    {
+      "name": "global_south_populations",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit structurally from two mechanisms: (1) reduced Global North consumption reduces commodity demand pressure and price volatility, relieving resource-extraction and agricultural export dependency; (2) redistribution from Global North (reparations, climate finance, technology transfer) becomes politically legitimized by Global North's own sacrifice narrative, not charity. Their exit option is limited—remaining dependent on commodity exports or seeking alternative partnerships—but the degrowth framing narrows Global North's ability to escape that dependency through consumption growth."
+    },
+    {
+      "name": "transition_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Institutional actors (central banks, labor ministries, environmental agencies, international bodies) that set and enforce the degrowth transition: carbon pricing, working-time reduction, industrial policy for renewable transition, redistribution mechanisms. They face acute tension between enforcing the constraint's terms and managing political resistance from payers. Their agenda-setting power depends on coordinated global action (no jurisdiction can enforce unilaterally without capital flight)."
+    },
+    {
+      "name": "global_south_governments",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Watch the constraint's enforcement with mixed interest: benefit from reduced Global North commodity demand and political legitimacy for climate finance, but risk being pushed further into commodity dependence if Global North's degrowth is incomplete or exports its consumption to them. Their position is asymmetric—Global North's choice to degrow changes their structural options but does not give them enforceable say."
+    },
+    {
+      "name": "climate_science_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provides epistemic authority for the constraint: establishes that mitigation is necessary, that carbon budget remaining is finite, that current NDC commitments are insufficient. Under the degrowth reading, science rules out reliance on unproven carbon removal and technological substitution at current consumption levels. Science community has no enforcement power but frames the urgency and legitimacy of the constraint."
+    },
+    {
+      "name": "technology_innovation_sector",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Positioned outside the constraint under the degrowth reading because degrowth reading rejects the premise that technological innovation at current consumption levels can achieve mitigation targets. Clean-tech, carbon-removal, and geoengineering sectors see their domain redefined from solution to partial mitigation supplement. They would argue for their inclusion (CDR scaling, grid modernization, etc.); exclusion is what the degrowth reading's core claim produces."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aligns present-generation effort and sacrifice with long-term climate stability: by reducing aggregate demand, redirecting production toward carbon elimination and resilience, and redistributing resources to Global South, the constraint solves the intergenerational coordination problem—present and future generations' interests no longer operate at pure conflict. It also solves the Global North–South coordination problem by making Global North's emission reductions materially credible (not dependent on externalized growth) and legitimizing resource transfer.",
+    "transfer_function": "Moves three flows: (1) consumption capacity from present Global North workers and consumers to future generations (via avoided climate damages); (2) resources from incumbent carbon-intensive industries to renewable energy and care infrastructure; (3) wealth/technology from Global North to Global South as part of decarbonization and adaptation finance. The constraint operates by physically reducing high-income-country throughput and directing the freed resources toward long-term stability.",
+    "absent_voices": "Technology-forward sectors (clean-tech, carbon-removal firms, energy innovation) would argue the constraint unnecessarily restricts their domain and preempts solutions that might sustain consumption; they are excluded by the degrowth reading's core premise. Incumbent fossil-fuel workers would argue transition should preserve their livelihoods without reduced consumption—they have voice in labor negotiations but are not structural participants in the constraint's logic.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the degrowth-imperative constraint vanished, Global North economies would revert to growth-dependent consumption patterns, carbon budgets would exhaust faster, climate tipping points would be crossed with higher probability, and Global South would remain in subordinate commodity-export dependency. The constraint's absence means a fundamentally different climate trajectory and economic structure within 50 years—habitable versus uninhabitable regions, haves versus have-nots, are the rearrangement.",
+    "founding_problem": "The founding problem is the thermodynamic and intergenerational incompatibility between indefinite consumption growth in high-income countries and climate stabilization under a finite carbon budget. Technological innovation and market mechanisms, under the degrowth reading, cannot solve this incompatibility at the scale and speed required; structural transformation of consumption, production, and distribution is necessary.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate science (IPCC AR6, paleoclimate data) establishes the carbon-budget and tipping-point facts from outside the degrowth advocacy community. Ecological economics (Georgescu-Roegen, Daly, Jackson) documents the biophysical incompatibility of indefinite growth with planetary boundaries. The mitigation-priority and adaptation-priority readings contest the founding problem's urgency or necessity—they argue technological substitution and localized adaptation are sufficient—but they do not dispute the underlying carbon-budget constraint. The corroboration is interdisciplinary and includes skeptical voices on the sufficiency claim."
   },
+  "omegas": [
+    {
+      "id": "feasibility_of_global_degrowth_enforcement",
+      "question": "Can degrowth coordination be enforced globally when individual jurisdictions have incentive to defect (maintain growth, export carbon-intensive production, free-ride on others' sacrifice)?",
+      "resolution_mechanism": "Observation of 10-20 year coordination attempts: whether carbon-border adjustments, supply-chain governance, and international agreements actually prevent production relocation and consumption arbitrage, or whether enforcement degrades into selective enforcement favoring capital-mobile actors.",
+      "impact": "If enforcement fails at scale, the constraint collapses into Prisoner's Dilemma and effective extraction falls to near-zero (becomes a rope with hollow coordination, or a failed scaffold). If enforcement holds, the constraint stabilizes as tangled rope (coordinating long-term interests while extracting from present-generation consumption). Failure would vindicate the technology-priority reading; success would vindicate degrowth.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether global coordination on degrowth is structurally possible given incentives to defect."
+    },
+    {
+      "id": "just_transition_delivery",
+      "question": "Can transition support (retraining, income floors, care work recognition, regional investment) genuinely neutralize the victim status of displaced workers, or does degrowth necessarily impose net losses on present-generation working classes regardless of transfer mechanisms?",
+      "resolution_mechanism": "Post-transition empirical study of worker outcomes in economies that implement degrowth: income stability, employment quality, health and social outcomes, intergenerational mobility. Comparison with baseline projections of growth-as-usual followed by climate adaptation costs.",
+      "impact": "If transition support succeeds, the constraint is tangled rope with asymmetric but manageable costs (victims are payers but not devastated). If it fails, the constraint becomes snare (victims bear costs with no realistic alternative, transition support is theater). This determination affects the legitimacy of the beneficiary claim for future generations—if present-generation loss is permanent, the intergenerational transfer is more extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transition support can genuinely neutralize worker losses under degrowth."
+    },
+    {
+      "id": "kernel_framing_alternative_readings",
+      "question": "Is the climate-response kernel fundamentally about WHAT FORM the response takes (degrowth vs. technology vs. adaptation), or is it about WHETHER response is necessary at all? Do the sibling readings share a common commitment to climate action, or do they represent fundamentally different commitments to climate science authority?",
+      "resolution_mechanism": "Examine the sibling readings' treatment of carbon budgets, tipping points, and IPCC findings: do they accept the same scientific framing and disagree on policy form, or do they dispute the science itself? If the latter, the kernel is not about policy form but about climate science authority.",
+      "impact": "If sibling readings are policy-form differences within shared climate commitment, then reading_relations should be coexists_with (different parties hold different strategies). If sibling readings dispute climate science, then the kernel is not climate response but climate-science legitimacy, and this story is mis-framed or overpopulated. This omega documents the framing assumption and points to alternative decomposition if needed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel is about response form or response necessity itself."
+    },
+    {
+      "id": "carbon_removal_technological_frontier",
+      "question": "Does the degrowth reading's exclusion of CDR and geoengineering reflect a structural necessity (carbon-removal cannot scale fast enough at plausible costs) or a normative choice (carbon removal is privileging present-generation consumption over ecological integrity)?",
+      "resolution_mechanism": "Examine degrowth literature on whether CDR exclusion is empirically grounded (cost per ton, energy requirements, permanence) or axiomatically grounded (consumption is intrinsically destructive). Distinguish empirical scalability claims from normative objections to the consumption-offset frame.",
+      "impact": "If CDR exclusion is empirical (scalability fails), the degrowth reading is compatible with supplementary CDR and can coexist with technology-priority readings on a shared carbon-budget constraint. If CDR exclusion is axiomatically grounded (consumption is the problem, not just its emissions), then the degrowth reading forecloses technology-priority reading—they share no common framework. This determines reading_relations type.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether CDR exclusion is empirical scalability or normative objection to consumption."
+    },
+    {
+      "id": "global_south_agency_under_degrowth",
+      "question": "Does the degrowth reading's allocation of Global South as beneficiary reflect actual Global South agency in shaping the transition, or impose a beneficiary status without voice (repeating colonial resource-flow patterns in reverse)?",
+      "resolution_mechanism": "Examine degrowth policy proposals for Global South participation in setting terms, veto rights, ownership of transition infrastructure, and control of technology transfer. Compare against pre-degrowth climate-justice demands from Global South movements.",
+      "impact": "If Global South has genuine co-authority over transition terms, the beneficiary status is legitimized. If degrowth is imposed by Global North on Global South as 'shared sacrifice' without real voice, the constraint becomes snare-adjacent—Global South is structured as victim (dependency) rather than beneficiary (agency). This affects the constraint's classification from a Global South analytical seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Global South holds actual agency in degrowth transition design or receives imposed beneficiary status."
+    }
+  ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.54
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.64
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.7
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.39
+      "value": 0.33
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.44
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.41
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.44
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.53
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
       "value": 0.55
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.56
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.67
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.57
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.52
+      "value": 0.71
     }
   ],
-  "commentary": {
-    "narrative_context": "The degrowth reading of climate response asserts that mitigation and adaptation cannot succeed without structural contraction of material throughput in the Global North, accompanied by radical redistribution and post-growth institutional redesign. Present-day Global North populations, particularly affluent consumers and workers in carbon-intensive industries, enter the victim set via mandatory consumption reduction, shortened working hours, and asset devaluation. Future generations and Global South populations are the beneficiaries: stabilized climate, preserved carbon budget allocation, and equitable adaptation capacity. The reading rejects technological solutions (carbon capture/removal) as insufficient and false hope, treating them as enabling delay and lock-in. This is ONE reading of the contested climate response kernel; sibling readings (mitigation-priority and adaptation-priority) stake different claims about sequencing, technological sufficiency, and distribution of burden. The engine computes how this reading's structural premises diverge from the others; this story presents only the degrowth reading's internal coherence.",
-    "key_agents": [
-      "global_north_working_class: wage earners in carbon-intensive sectors, facing occupational obsolescence and income contraction (moderate/biographical/constrained)",
-      "global_north_affluent_consumers: high-consumption populations whose identity is fused with material throughput (powerful/biographical/identity_locked)",
-      "future_generations: civilizational beneficiaries with no voice in present negotiation (powerless/civilizational/trapped)",
-      "global_south_populations: organized beneficiaries with uneven access to transition resources (organized/generational/constrained)",
-      "carbon_intensive_industries: institutional payers facing structural incompatibility with the constraint (institutional/biographical/trapped)",
-      "global_north_climate_technocrats: agenda-setters who frame the reading via research and policy (institutional/generational/analytical)",
-      "mitigation_technology_advocates: excluded because high-technology scaling contradicts degrowth premise (institutional/biographical/trapped)",
-      "adaptation_localist_communities: excluded because distributed adaptation is treated as insufficient without Global North emissions collapse (organized/generational/constrained)",
-      "analytical observer: holds no material stake, traces structural tensions across seats (analytical/generational/analytical)"
-    ],
-    "logic_rationale": "Base extractiveness is 0.68 at interval end, reflecting the substantial transfer of material consumption and working-time capacity from present Global North to future/Global South. Extraction rises from 0.48 to peak at 0.71 (t=30) as the transition deepens and compliance costs intensify, then slightly declines (0.68 at t=40) as institutional adaptations and alternative livelihoods reduce friction. Suppression is 0.52, moderate because the constraint relies less on coercive enforcement (border controls, consumption policing) and more on internalized acceptance of contraction as necessary—but substantial enforcement machinery exists to enforce carbon pricing, redirect investment away from expansion, and prevent exit into high-consumption niches. Theater is 0.41 and rising: as the constraint matures, a growing share of compliance performance is theatrical (corporate net-zero pledges, green-growth messaging, adaptation announcements) that mask the underlying material contraction required. Accessibility of alternatives collapses to 0.67—theoretically one could opt out via affluent informal consumption or migration, but the constraint's logic is thermodynamic (no escape into a parallel high-consumption future once global carbon budget depletes), so alternatives are genuinely foreclosed by physical limits rather than institutional rules alone. Resistance is high (0.71) because the constraint directly attacks identity and material position for powerful actors (affluent consumers, carbon-intensive industries) who have resources to resist: litigation over carbon pricing, exit to lower-regulation jurisdictions, rhetorical campaigns against degrowth framing. The measurement series track observed values (t=0 to t=30) and projected values (t=40) reflecting the 2026 present moment and speculative extension.",
-    "perspectival_gap": "The payer seats and the agenda-setter seat compute radically different types from the same structural data. Global North workers experience the constraint as imposed extraction (d toward 0.8, high χ): their material security is attacked, exit routes are constrained, and they did not author the constraint. Global North affluent consumers sit at even higher d (0.85+) because identity-locking amplifies the directionality—the constraint is not merely expensive, it is existentially threatening to their sense of self. Carbon-intensive industries are trapped by definition (d=1.0): the constraint makes their core function impossible. But the agenda-setter seat (climate technocrats) experiences d much lower (0.15-0.25): they designed the constraint, have analytical distance from its extraction costs, and accumulate symbolic capital (expertise authority, moral framing) through its advocacy. Future generations and Global South populations have d values inverted (negative effective extraction = subsidy, d toward 0.0) because the constraint transfers resources to them. The engine computes these per-seat divergences from power, exit, beneficiary/victim declarations, and scope; the authored metrics describe the story-level average, which conceals the per-seat divergence. That divergence is the diagnostic output the framework exists to measure.",
-    "directionality_logic": "Beneficiary structure: future_generations and global_south_populations are named beneficiaries because the constraint's causal logic is that their material survival and climate stability depend on present Global North contraction. This is a causal claim about intergenerational and international redistribution, not a market claim about who gains income. Victim structure: present_day_global_north_workers and present_day_global_north_consumers are victims because the constraint requires they accept reduced throughput, shortened work weeks, lower consumption expectations, and asset devaluation. Carbon_dependent_industries are victims because their fundamental product (carbon-scale throughput) is incompatible with the constraint's thermodynamic logic—no efficiency gain resolves the contradiction. Exit analysis: global_north_working_class exit is constrained (skill retraining is expensive, cross-border relocation faces visa/climate migration barriers). Global_north_affluent_consumers have theoretical exit (wealthy informality, jurisdictional arbitrage) but identity_locked status (high-consumption identity is fused with social position) amplifies constraint costs psychologically even where material exit routes exist. Carbon_intensive_industries are trapped (their product is anti-functional to the constraint). Global_south_populations have constrained exit (climate damages accelerate regardless of their choices; they cannot opt out of adaptation costs even if they benefit from Global North emissions reduction). Future_generations have no exit (they inherit the planetary state set by present choices). Directionality is computed by the engine from these structural facts; the framework's derivation chain ensures that beneficiary/victim declarations, power atoms, and exit options feed d automatically without requiring manual d assignment.",
-    "mandatrophy_analysis": "The degrowth reading exhibits mandatrophy characteristics but does not resolve into a fully degraded piton. The founding problem (growth-driven emissions incompatible with habitable climate) is live and recognized by climate physics and Global South negotiators—the problem has not died and the mandate has not outlived its function. However, theater is rising (0.41 at interval end, increasing from 0.22 at t=0), indicating growing gap between performative (corporate pledges, green-growth messaging) and functional (actual material contraction) compliance. This rising theater does NOT indicate piton degradation yet—it indicates transition-state dissonance where institutions claim adherence to degrowth while maintaining growth-compatible financial structures. If theater continues rising and actual contraction stalls, the constraint could degrade into piton status (mandate persists theatrically, actual function atrophies, no concentrated beneficiary maintains it actively). The mandatrophy question hinges on whether institutions complete the transition to post-growth operations or freeze in the performative stage. Current measurements show theatre rising but not yet dominant; the constraint remains tangled_rope (genuine coordination function + active extraction) rather than piton.",
-    "kernel_context": "This constraint is the DEGROWTH READING of the contested kernel 'climate_response_imperative'. Sibling readings instantiate different claims about how to respond to climate crisis: MITIGATION_PRIORITY_READING emphasizes emissions reduction via technology and market mechanisms, treating adaptation as residual; ADAPTATION_PRIORITY_READING emphasizes resilience-building and damage reduction in exposed regions, treating mitigation as aspirational. The degrowth reading stands apart by asserting that both mitigation AND adaptation require prior structural contraction of Global North consumption—technology and markets cannot decouple growth from emissions at required pace, and adaptation is impossible at scale without addressing root cause (high consumption). These readings coexist across different policy constituencies (environmental economists vs climate scientists vs adaptation practitioners) but are logically distinct constraint specifications. The degrowth reading forecloses reliance on unproven CDR at scale and influences (rather than forecloses) the other readings by establishing a floor condition: if degrowth is necessary, technology and adaptation must operate within that constraint, not as alternatives to it."
+  "interval": {
+    "start": 0,
+    "end": 30
   },
-  "omegas": [
-    {
-      "id": "intergenerational_enforcement_mechanism",
-      "question": "By what mechanism can present-day populations be held accountable to future generations for compliance with the degrowth constraint? Future generations have no voice, no legal standing in present institutions, and no enforcement power.",
-      "resolution_mechanism": "Institutional innovation: constitutional entrenchment of climate commitments, intergenerational ombudsperson offices with enforcement authority, damage litigation frameworks that anticipate future harms, or institutional mechanisms that give future-generation interests standing in present decisions.",
-      "impact": "If no enforcement mechanism exists, the constraint relies entirely on present-generation moral commitment to a powerless constituency—high risk of atrophy. If strong mechanisms exist, the constraint binds present choices to future outcomes. This determines whether intergenerational transfer is enforceable or merely aspirational.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether intergenerational justice can be institutionally enforced or remains voluntary."
-    },
-    {
-      "id": "global_south_transition_capacity",
-      "question": "Can Global South populations absorb and benefit from Global North degrowth-driven transition without catastrophic adaptation costs in the interim? They benefit from the degrowth endpoint but face accelerating climate damages during the transition interval.",
-      "resolution_mechanism": "Modeling of climate damages vs. adaptation cost under different degrowth timelines and transfer magnitudes. Empirical observation of whether Global North redistribution actually reaches Global South adaptation capacity in real time, or whether it lags behind damage acceleration.",
-      "impact": "If Global South faces worse outcomes under degrowth-transition than under continued high-emission trajectories, the constraint's beneficiary framing is false—Global South populations would be victims, not beneficiaries, and the degrowth reading's ethical foundation collapses. If redistribution is effective and timely, the constraint's equity claim holds.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether Global South populations actually benefit from the degrowth transition given damage acceleration timeline."
-    },
-    {
-      "id": "technological_decoupling_viability",
-      "question": "Is absolute decoupling of emissions from growth thermodynamically possible via technology (as mitigation-priority reading asserts) or are degrowth-level consumption reductions mandatory (as this reading asserts)?",
-      "resolution_mechanism": "Empirical tracking of global emissions per unit GDP over next 10-15 years under aggressive renewable expansion, battery scaling, and efficiency improvement. If decoupling accelerates sufficiently, the foundational premise of the degrowth reading is undermined. If decoupling plateaus, the reading's necessity claim strengthens.",
-      "impact": "If decoupling is viable at required pace, mitigation-priority and adaptation-priority readings become coherent alternatives and degrowth becomes optional rather than mandatory. If decoupling is not viable, the degrowth reading's extraction costs become justified as necessary rather than ideological.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether technological decoupling of growth from emissions is feasible at required pace."
-    },
-    {
-      "id": "suppression_mechanism_internalization",
-      "question": "Is the measured suppression (0.52) structural (enforced by policy, pricing, border controls) or internalized (Global North populations accept degrowth as necessary self-discipline)? The distinction determines whether the constraint persists if enforcement capacity decays.",
-      "resolution_mechanism": "Post-policy suppression trajectory: if degrowth enforcement suddenly ceased (carbon pricing revoked, border controls lifted, consumption restrictions removed), would Global North populations maintain reduced consumption? If yes, suppression is largely internalized. If consumption rebounds, suppression was structural.",
-      "impact": "If suppression is internalized, the constraint is robust to enforcement decay and relies on shared belief in climate imperative. If structural, the constraint requires constant enforcement and is vulnerable to political reversal.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether compliance with degrowth is internalized or requires structural enforcement."
-    },
-    {
-      "id": "kernel_reading_contest",
-      "question": "Which reading of the climate response kernel is structurally correct: degrowth (this reading), mitigation-priority, or adaptation-priority? The readings offer different causal premises about what climate response requires and what it enables.",
-      "resolution_mechanism": "The contest is conceptual and empirical: empirical via tracking whether decoupling/technology viability becomes clear (shifts toward mitigation-priority) or whether degrowth-level contraction proves unavoidable (strengthens this reading). Conceptual via clarifying whether climate physics and thermodynamics mandate degrowth or whether they permit growth-compatible alternatives. The engine routes this as an omega because the three readings are one kernel with unresolved interpretation.",
-      "impact": "If mitigation-priority or adaptation-priority readings prove structurally correct, this reading is a false constraint claiming necessity where alternatives exist. If this reading is correct, the others are dangerous false solutions that enable delay. The resolution determines whether the constraint's extraction costs are justified necessity or ideological imposition.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Which reading of the climate response kernel is structurally correct."
-    }
-  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE READING of the contested climate-response kernel: the degrowth reading holds that climate mitigation AND adaptation both require structural transformation of Global North consumption patterns, production systems, and economic institutions. The reading treats carbon-budget finiteness (from climate science) as the binding constraint and declares that technological innovation and market mechanisms at current consumption levels cannot solve the incompatibility. Present-generation Global North workers and consumers are the payers; future generations and Global South populations are the beneficiaries. The constraint is actively enforced via carbon pricing, supply-side production caps, working-time reduction, and demand destruction through both physical infrastructure change and narrative legitimacy. Sibling readings (mitigation-priority, adaptation-priority) dispute both the necessity of degrowth and the beneficiary/victim allocation—they treat technological substitution or localized adaptation as sufficient. This story claims tangled rope: genuine coordination function (solving intergenerational and North-South incompatibility) bundled with asymmetric extraction (present-generation sacrifice mandated without full reciprocal voice).",
+    "key_agents": [
+      "Present-generation Global North workers: organized power, biographical horizon, constrained exit—face reduced working hours and consumption, dependent on transition support",
+      "Present-generation Global North consumers: moderate power, biographical horizon, constrained exit—must internalize reduced material throughput via prices, regulation, and narrative",
+      "Incumbent carbon-intensive industries: powerful, biographical horizon, constrained exit—face contraction or forced transition; capital is stranded",
+      "Future generations: powerless, civilizational horizon, trapped exit—inherit stabilized climate (under this reading) but have no voice in present transition",
+      "Global South populations: moderate power, generational horizon, constrained exit—benefit from reduced commodity demand and legitimized redistribution, but dependent on Global North's enforcement",
+      "Transition administrators (central banks, labor ministries, environmental agencies): institutional power, generational horizon—set and enforce the constraint; face coordination-failure risk across jurisdictions",
+      "Technology innovation sector: excluded by degrowth reading's rejection of carbon-removal scaling as primary strategy",
+      "Climate science community: institutional, analytical—provides epistemic authority but no enforcement power"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.42 to 0.68 over 30 years as the transition deepens: initial extractiveness is moderate (carbon pricing and early regulations fall on high-income consumers whose surplus is large), but as working-time reduction and production-capacity contraction deepen, extraction from workers becomes structural. Theater rises from 0.28 to 0.42 as initially genuine transition infrastructure (renewable energy buildout, care-work expansion) becomes layered with performative measures (green capitalism, offsetting, corporate sustainability theater) that slow real degrowth. Suppression rises from 0.55 to 0.71 as political resistance to consumption reduction intensifies and enforcement machinery (borders, production regulations, financial penalties) must be ratcheted up to hold the constraint. Accessibility collapse is moderate (0.61): alternatives exist (technology-priority reading, adaptation-only reading, continued growth) but carrying them becomes politically costly as climate impacts worsen and their inadequacy becomes visible. Resistance is high (0.74): workers, industries, and consumers mount active resistance through political mobilization, capital flight, informal economies, and legal challenges. The constraint is tangled rope, not snare, because (a) genuine coordination function exists—solving intergenerational and North-South incompatibility—and (b) extraction is high but not total—transition support, investment in worker retraining, and legitimacy claims are real, not pure theater (though theater increases over time).",
+    "perspectival_gap": "From the transition-administrator seat, this is genuine coordination: present generation accepts sacrifice to stabilize the system for future. From the payer seats (workers, consumers, industries), this is enforced extraction: they bear the costs while beneficiaries (future, Global South) are voiceless and cannot reciprocate. From the Global South beneficiary seat, this is asymmetric: they benefit structurally but have little voice in transition design—Global North degrows on its own terms. From the climate-science seat (observer), this is a binding necessity: carbon budget is finite, so growth must stop. From the technology-innovation seat (excluded), this is illegitimate foreclosure: degrowth preempts solutions that might sustain both climate and consumption. The engine computes these divergences from stakeholder power, exit options, and beneficiary/victim status; the authored claim (tangled rope) does not resolve them—the divergence itself is the measurement.",
+    "directionality_logic": "Directionality for transition administrators is near 0.2 (beneficiary; they set the agenda and avoid worst-case losses). For present-generation workers it is near 0.75 (target; they pay via reduced working hours and consumption, and exit is constrained by job dependence on transition sectors). For incumbent industries it is near 0.8 (target; capital is stranded). For future generations it is at 0.0 (pure beneficiary; no costs, maximum benefit, no voice). For Global South it is near 0.15 (beneficiary of resource transfer and reduced commodity pressure, but with constrained agency and exit). Technology sector is near 1.0 in a different register—excluded entirely from the coordination, their domain is redefined by the reading. No override needed; the structural data produce the right directionality for each seat.",
+    "mandatrophy_analysis": "The founding problem—climate stabilization under a finite carbon budget and current consumption levels—is live and serious (confirmed by climate science). The degrowth reading's mandate is that structural transformation of Global North consumption is necessary. This mandate is contested by sibling readings: mitigation-priority reading says technological substitution suffices; adaptation-priority reading says localized resilience is the binding constraint. Mandatrophy would occur if the founding problem (climate destabilization risk) became dead (problem solved) while the degrowth constraint persisted anyway—e.g., if carbon budgets expanded due to unexpected CDR breakthroughs, or if climate impacts proved less severe than modeled, yet Global North persisted in degrowth anyway as ideology rather than necessity. Under current best estimates, the founding problem is live, so mandatrophy has not occurred. However, there is risk: if technological innovation accelerates and proves sufficient, or if Global North decides to live with adaptation costs rather than pay transition costs, the constraint's mandate dies but enforcement inertia might persist. The omega on CDR scalability and the founding-problem-corroboration statement document this risk.",
+    "kernel_context": "This constraint instantiates the degrowth_reading of the climate_response_imperative kernel. The kernel is contested—three distinct readings coexist and are held by different political and epistemic communities. The degrowth reading treats climate response as requiring structural transformation of Global North economy (consumption, production, working time, distribution). The mitigation_priority_reading treats response as primarily emissions reduction via technology and markets, with consumption growth compatible with decarbonization. The adaptation_priority_reading treats response as primarily localized resilience and adaptation in exposed regions, with mitigation as aspirational. These readings share the climate-science foundation (carbon budgets, tipping points) but dispute WHAT FORM climate response must take and WHO BEARS THE COSTS. The degrowth reading argues that technology alone cannot achieve the speed and scale needed, and adaptation-only leaves future generations catastrophically damaged. This reading's core premise (incompatibility of indefinite growth with climate stability at required speed) directly challenges mitigation-priority reading's core premise (technology can decouple growth from emissions), but does not foreclose it within mitigation-priority's own framework—proponents of that reading can acknowledge the incompatibility and reject it on normative grounds (prefer growth + adaptation costs to degrowth). Thus the readings coexist, not foreclose."
+  },
   "boltzmann": {
     "coordination_type": "resource_allocation",
     "boltzmann_floor_override": 0.18
@@ -225,72 +257,71 @@
   "network": {
     "affects_constraints": [
       "climate_response_imperative__mitigation_priority_reading",
-      "climate_response_imperative__adaptation_priority_reading",
-      "carbon_budget_thermodynamic_constraint",
-      "intergenerational_justice_imperative",
-      "global_inequality_redistribution_requirement"
+      "climate_response_imperative__adaptation_priority_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the climate_response_imperative kernel. Sibling readings (mitigation_priority, adaptation_priority) instantiate different causal claims about climate response sequencing and sufficiency. The three readings are not measurements of the same constraint from different angles—they are structurally distinct constraint specifications with different beneficiary/victim structures, different ε values, and different enforcement mechanisms. The degrowth reading treats technology and distributed adaptation as insufficient; the mitigation-priority reading treats degrowth as unnecessary; the adaptation-priority reading treats both as secondary to local resilience. All three affect downstream constraints in climate policy, economic transition, and equity frameworks. The kernel contest is unresolved; all three readings remain live in policy discourse."
+    "dual_formulation_note": "The climate_response_imperative kernel decomposes into three structurally distinct readings. Each reading instantiates a different constraint with different beneficiary/victim sets, different ε values, and different policy implications. The degrowth reading treats consumption reduction as structural necessity and allocates costs to present-generation Global North workers and consumers. The mitigation-priority reading treats technology as sufficient and allocates costs to future adaptation. The adaptation-priority reading treats localized resilience as primary and accepts residual climate impacts. These are not the same constraint viewed from different angles—they are different claims about WHAT must happen and WHO PAYS. The three stories are linked by network.affects_constraints to indicate they are siblings of the same kernel, not independent constraints."
   },
   "directionality_overrides": [
     {
       "power_atom": "powerless",
-      "d_value": 0.05
-    },
-    {
-      "power_atom": "powerful",
-      "d_value": 0.88
-    },
-    {
-      "power_atom": "organized",
-      "d_value": 0.15
+      "d_value": 0.0
     }
   ],
+  "gain_flow": "transition_administrators",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
-    "interpretation_layer_present": true,
-    "reference_frame": "planetary_boundaries_integrity",
-    "drift_state": {
-      "moment": "contemporary_2026",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "climate_response_imperative__mitigation_priority_reading",
+        "sibling_id": "mitigation_priority_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "climate_response_imperative__adaptation_priority_reading",
+        "sibling_id": "adaptation_priority_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "growth_emissions_decoupling_impossible",
+        "atom": "growth_carbon_incompatibility_binding",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "intergenerational_burden_equity",
+        "atom": "structural_transformation_necessary",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
+    ],
+    "reference_frame": "growth_dependent_high_income_economies",
+    "drift_state": {
+      "moment": "climate_tipping_point_proximity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "climate_response_imperative"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

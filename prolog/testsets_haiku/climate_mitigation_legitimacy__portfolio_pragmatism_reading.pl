@@ -40,10 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,28 +73,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: climate_mitigation_legitimacy__portfolio_pragmatism_reading
- *   human_readable: Portfolio Pragmatism Reading: Technology-Neutral Decarbonization Mix
- *   domain: energy_policy/climate_governance
+ *   human_readable: Technology-Neutral Portfolio Pragmatism in Climate Mitigation Policy
+ *   domain: energy_policy/climate_mitigation/technology_governance
  *
  * SUMMARY:
- *   The portfolio pragmatism reading frames optimal decarbonization as
- *   requiring both nuclear and renewable energy technologies, with regional
- *   variation in optimal mix rather than a single global pathway. This
- *   reading sits between the baseload-necessity reading (nuclear as the
- *   primary solution) and renewable-primacy (renewables plus storage
- *   sufficient) and degrowth readings (demand reduction primary). The
- *   claim/metric independence rule is in effect: the constraint is CLAIMED as
- *   tangled_rope (genuine coordination function + asymmetric extraction) and
- *   AUTHORED metrics describe moderate extraction with active enforcement to
- *   maintain the reading against the sibling readings. The theater-ratio
- *   trajectory shows a rise from 0.25 to peak 0.42 (time 20), then slight
- *   decline toward 0.40 at interval end—this pattern reflects the
- *   constraint's shift from technical legitimacy (early: optimization is
- *   novel and real) toward performative defense (middle: the reading becomes
- *   established doctrine needing protection) toward stabilization (late:
- *   opposition settles into distinct political camps, performance equilibrium
- *   reached).
+ *   This is one reading of the contested kernel
+ *   'climate_mitigation_legitimacy': the portfolio pragmatism reading. It
+ *   asserts that optimal decarbonization requires a technology-neutral policy
+ *   framework validating simultaneous investment in both nuclear and
+ *   renewable energy infrastructure, with regional actors choosing the
+ *   lowest-cost configuration for their jurisdiction. This reading coexists
+ *   with three sibling readings: baseload_necessity_reading (emphasizing
+ *   dispatchable baseload), renewable_primacy_reading (emphasizing speed and
+ *   cost of renewables plus storage), and degrowth_sufficiency_reading
+ *   (emphasizing demand reduction). The portfolio pragmatism reading is not
+ *   the only reading of the legitimacy kernel; it is ONE structured claim
+ *   about what legitimate climate policy must do. The constraint story models
+ *   only this reading; its siblings are separate constraints linked via
+ *   network.affects_constraints.
  *
+ * KEY AGENTS:
+ *   - Diversified energy investors: capital formation across nuclear and renewable sectors
+ *   - Nuclear industry: institutional beneficiary of technology-neutral framing that preserves capital deployment pathways
+ *   - Renewable energy advocates: capacity-constrained by portfolio framing; argue faster renewable scaling is optimal
+ *   - Climate scientists: provide empirical pathways; constrained to technical assessment, not technology prioritization
+ *   - Regional energy planners: agenda-setters under portfolio reading; optimize locally within multi-technology menu
+ *   - Working-class energy communities: bear transition costs asymmetrically; not primary beneficiaries of optimization
+ *   - Developing economies: capital-constrained; portfolio neutrality obscures inequity in nuclear vs. distributed renewable finance
  */
 
 /* ==========================================================================
@@ -95,72 +107,129 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.62).
-domain_priors:suppression_score(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.58).
-domain_priors:theater_ratio(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.41).
+domain_priors:base_extractiveness(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.42).
+domain_priors:suppression_score(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.38).
+domain_priors:theater_ratio(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, extractiveness, 0.42).
+narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 0.38).
+narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, accessibility_collapse, 0.48).
-narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, accessibility_collapse, 0.51).
+narrative_ontology:constraint_metric(climate_mitigation_legitimacy__portfolio_pragmatism_reading, resistance, 0.67).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, tangled_rope).
-narrative_ontology:human_readable(climate_mitigation_legitimacy__portfolio_pragmatism_reading, "Portfolio Pragmatism Reading: Technology-Neutral Decarbonization Mix").
-narrative_ontology:topic_domain(climate_mitigation_legitimacy__portfolio_pragmatism_reading, "energy_policy/climate_governance").
-
-domain_priors:requires_active_enforcement(climate_mitigation_legitimacy__portfolio_pragmatism_reading).
+narrative_ontology:constraint_claim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, rope).
+narrative_ontology:human_readable(climate_mitigation_legitimacy__portfolio_pragmatism_reading, "Technology-Neutral Portfolio Pragmatism in Climate Mitigation Policy").
+narrative_ontology:topic_domain(climate_mitigation_legitimacy__portfolio_pragmatism_reading, "energy_policy/climate_mitigation/technology_governance").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(climate_mitigation_legitimacy__portfolio_pragmatism_reading, '9ace9228-e9dc-41e4-a110-b188c5a2f9da').
-narrative_ontology:cs_kernel_codification('9ace9228-e9dc-41e4-a110-b188c5a2f9da', distributed).
-narrative_ontology:cs_authority_grounding('9ace9228-e9dc-41e4-a110-b188c5a2f9da', distributed).
-narrative_ontology:cs_reading_relation('9ace9228-e9dc-41e4-a110-b188c5a2f9da', climate_mitigation_legitimacy__baseload_necessity_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9ace9228-e9dc-41e4-a110-b188c5a2f9da', climate_mitigation_legitimacy__renewable_primacy_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9ace9228-e9dc-41e4-a110-b188c5a2f9da', climate_mitigation_legitimacy__degrowth_sufficiency_reading, influences).
-narrative_ontology:cs_axiom('9ace9228-e9dc-41e4-a110-b188c5a2f9da', foundational, technology_neutral_optimality).
-narrative_ontology:cs_axiom_status(technology_neutral_optimality, holdable).
-narrative_ontology:cs_axiom_grounding('9ace9228-e9dc-41e4-a110-b188c5a2f9da', technology_neutral_optimality, instrumental).
-narrative_ontology:cs_axiom('9ace9228-e9dc-41e4-a110-b188c5a2f9da', foundational, regional_variation_necessity).
-narrative_ontology:cs_axiom_status(regional_variation_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('9ace9228-e9dc-41e4-a110-b188c5a2f9da', regional_variation_necessity, empirically_contingent).
-narrative_ontology:cs_reference_frame('9ace9228-e9dc-41e4-a110-b188c5a2f9da', pragmatic_technology_balancing).
-narrative_ontology:cs_drift_state('9ace9228-e9dc-41e4-a110-b188c5a2f9da', contemporary_climate_science_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('9ace9228-e9dc-41e4-a110-b188c5a2f9da', '2026-06-12T14:32:00Z').
+narrative_ontology:cs_story_uid(climate_mitigation_legitimacy__portfolio_pragmatism_reading, '0974d69a-a21c-429e-b17c-e3264ca49a23').
+narrative_ontology:cs_kernel_codification('0974d69a-a21c-429e-b17c-e3264ca49a23', fixed_text).
+narrative_ontology:cs_authority_grounding('0974d69a-a21c-429e-b17c-e3264ca49a23', distributed).
+narrative_ontology:cs_reading_relation('0974d69a-a21c-429e-b17c-e3264ca49a23', climate_mitigation_legitimacy__baseload_necessity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0974d69a-a21c-429e-b17c-e3264ca49a23', climate_mitigation_legitimacy__renewable_primacy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0974d69a-a21c-429e-b17c-e3264ca49a23', climate_mitigation_legitimacy__degrowth_sufficiency_reading, coexists_with).
+narrative_ontology:cs_axiom('0974d69a-a21c-429e-b17c-e3264ca49a23', foundational, technology_neutrality_legitimacy).
+narrative_ontology:cs_axiom_status(technology_neutrality_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('0974d69a-a21c-429e-b17c-e3264ca49a23', technology_neutrality_legitimacy, instrumental).
+narrative_ontology:cs_axiom('0974d69a-a21c-429e-b17c-e3264ca49a23', secondary, capital_optionality_coordination).
+narrative_ontology:cs_axiom_status(capital_optionality_coordination, holdable).
+narrative_ontology:cs_axiom_grounding('0974d69a-a21c-429e-b17c-e3264ca49a23', capital_optionality_coordination, empirically_contingent).
+narrative_ontology:cs_reference_frame('0974d69a-a21c-429e-b17c-e3264ca49a23', paris_agreement_framework).
+narrative_ontology:cs_drift_state('0974d69a-a21c-429e-b17c-e3264ca49a23', contemporary_2026, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('0974d69a-a21c-429e-b17c-e3264ca49a23', '').
 narrative_ontology:cs_kernel_id(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_mitigation_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, nuclear_technology_advocates).
-narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, integrated_energy_planners).
-narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, capital_diversification_interests).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, diversified_energy_investors).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, capital_equipment_manufacturers).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, policy_pragmatists).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, grid_operators).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, nuclear_industry).
+narrative_ontology:constraint_beneficiary(climate_mitigation_legitimacy__portfolio_pragmatism_reading, regional_energy_planners).
 narrative_ontology:constraint_victim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, renewable_energy_advocates).
-narrative_ontology:constraint_victim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, coal_phase_out_constituencies).
-narrative_ontology:constraint_victim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_urgency_coalitions).
+narrative_ontology:constraint_victim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, working_class_energy_communities).
+narrative_ontology:constraint_victim(climate_mitigation_legitimacy__portfolio_pragmatism_reading, developing_economies).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from a policy framework that validates investment in multiple technology paths simultaneously, reducing single-technology concentration risk. Nuclear projects, wind farms, solar installations, grid storage, and grid modernization all receive support signals under portfolio pragmatism. They collect returns across multiple asset classes rather than betting the capital stack on one technology trajectory.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, diversified_energy_investors, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Portfolio pragmatism legitimizes large capital commitments to new nuclear construction and extends operating licenses for existing plants. The reading protects nuclear from being rendered uneconomic by policy that privileges renewables, preserving institutional survival and justifying continued R&D investment in advanced reactor designs.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, nuclear_industry, beneficiary,
+    organized, generational, constrained, global).
+
+% Bear the cost of legitimizing nuclear as an co-equal technology path when they argue rapid renewable scaling plus storage could achieve decarbonization faster and cheaper. The portfolio framing delays full renewable deployment and dilutes advocacy pressure by treating renewable supremacy as one opinion among several, not as an empirical optimum.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, renewable_energy_advocates, payer,
+    organized, biographical, mobile, global).
+
+% Provide empirical analysis of decarbonization pathways and carbon budgets. Under portfolio pragmatism, their role is constrained to technical assessment (Can we reach X% by year Y with configuration Z?) rather than technology prioritization (Which path is optimal?). The reading preserves policy discretion by treating technology choice as political, not scientific.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_scientists, observer,
+    institutional, generational, analytical, universal).
+
+% Are structurally absent from the portfolio constraint itself — the constraint presupposes carbon-free options — but benefit from delays in portfolio implementation and from political friction the multi-technology debate generates. They are not seated in the constraint story but would object if present, as the portfolio reading commits firmly to fossil replacement, merely disagreeing on the replacement menu.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, fossil_fuel_incumbents, excluded,
+    institutional, biographical, trapped, global).
+
+% Portfolio pragmatism delegates optimization to regional actors with the mandate to choose the lowest-cost decarbonized pathway, subject to geography, existing infrastructure, and labor market conditions. They set the agenda for their jurisdiction but are beneficiaries in that the reading validates their technical discretion rather than imposing a one-size-fits-all technology mandate from above.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, regional_energy_planners, agenda_setter,
+    institutional, biographical, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(climate_mitigation_legitimacy__portfolio_pragmatism_reading, regional_energy_planners, beneficiary).
+
+% Bear the transition cost of shift to any decarbonized mix, but portfolio pragmatism offers no preferential transition support for fossil fuel workers or coal-dependent regions. The diversified portfolio framing can obscure the concentrated pain of pit closures and coal plant retirement by treating all technologies as equally valid, without addressing the asymmetric social cost of displacement.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, working_class_energy_communities, payer,
+    powerless, biographical, identity_locked, regional).
+
+% Face capital constraints for any large-scale generation technology. Portfolio pragmatism recommends regional optimization but does not confront the difference in capital requirements: nuclear demands concentrated large-scale finance (hard to access) while distributed renewables suit modular capital flows (easier for developing contexts). The technology-neutral framing obscures this structural inequity.
+narrative_ontology:constraint_stakeholder(climate_mitigation_legitimacy__portfolio_pragmatism_reading, developing_economies, payer,
+    moderate, generational, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(climate_mitigation_legitimacy__portfolio_pragmatism_reading, diversified_energy_investors).
+narrative_ontology:fixing_cost_class(climate_mitigation_legitimacy__portfolio_pragmatism_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the decarbonization coordination problem by validating investment and policy decisions across multiple carbon-free technologies simultaneously, reducing the risk that betting everything on one technology path leaves the system stranded if that path underperforms or faces political disruption.
+% TRANSFER_FUNCTION: Transfers legitimacy, policy support, and capital allocation signals from singulartech advocacy (renewables-only, nuclear-only) toward a diversified technology set. The transfer is primarily one of narrative authority: the portfolio reading claims scientific-pragmatic standing over ideologically-driven technology selection.
+% ABSENT_VOICES: Fossil fuel incumbents are structurally absent (the constraint presupposes their elimination, not their inclusion). Radical decarbonization movements arguing for near-term rapid renewable scaling are present but constrained to advocacy rather than policy-setting. Developers-economy technology representatives participate only in regional optimization, not in the legitimacy structure itself.
+% DISAPPEARANCE_RATIONALE: If portfolio pragmatism as a legitimacy claim vanished and were replaced by a single-technology mandate (pure renewable, pure nuclear, degrowth), capital flows would reorganize, regional optimization would become impossible, and the decarbonization pathway would narrow to whichever technology the mandate privileged. Existing infrastructure, labor supply, and investment commitments would face acute repricing.
+% FOUNDING_PROBLEM: Climate change requires rapid decarbonization, but early policy debates treated technology choice as a binary (nuclear vs. renewables) or ideological (fossil vs. green). No single technology can decarbonize all sectors cost-effectively everywhere; forcing a global uniform technology mix wastes capital.
+% FOUNDING_PROBLEM_CORROBORATION: The Intergovernmental Panel on Climate Change (IPCC) assessment reports endorse portfolio approaches as necessary for meeting Paris targets, specifically stating that all limiting-warming pathways rely on multiple zero-carbon technologies. This corroboration is external to energy-industry advocates — it comes from an international scientific body with no technology preference.
+narrative_ontology:disappearance_verdict(climate_mitigation_legitimacy__portfolio_pragmatism_reading, world_rearranges).
+narrative_ontology:founding_problem_status(climate_mitigation_legitimacy__portfolio_pragmatism_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(climate_mitigation_legitimacy__portfolio_pragmatism_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0.42, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(climate_mitigation_legitimacy__portfolio_pragmatism_reading_tests).
-
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(climate_mitigation_legitimacy__portfolio_pragmatism_reading, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
-
 :- end_tests(climate_mitigation_legitimacy__portfolio_pragmatism_reading_tests).
 
 /* ==========================================================================
@@ -169,16 +238,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extraction of 0.62 reflects that the reading asymmetrically benefits nuclear investors and capital-diversification interests while extracting legitimacy from renewable advocates and climate-urgency constituencies who argue the reading delays optimal decarbonization. Suppression of 0.58 measures the active enforcement required to maintain the portfolio framing against both pure-renewable and pure-nuclear advocates who each claim their pathway is uniquely optimal. Theater ratio rising to peak 0.42 indicates that by year 20, substantial analytical effort becomes dedicated to demonstrating equivalence and balance between pathways—modeling, regulatory frameworks, and expert panels—some of which is genuine knowledge-work and some defensive framing. Accessibility collapse at 0.48 is moderate: alternatives (renewable-primary, baseload-primary, degrowth) remain technically live and politically mobilized, not foreclosed. Resistance at 0.72 is high: renewable advocates, climate urgency groups, and developing-nation planners actively contest the reading's legitimacy through alternative technical analyses and policy advocacy. The temporal pattern shows extractiveness climbing from 0.48 (early, when institutional adoption was incomplete) to stabilizing at 0.62 (late, once the reading became embedded in policy); this reflects consolidation, not Goodhart drift or corrective pressure.
+ *   Extractiveness is moderate (0.42 at interval end) because the constraint delivers genuine coordination value — it solves the problem of capital paralysis when technology choice is ideologically contested — but it also legitimizes capital commitments that renewable-only advocates argue are suboptimal, creating a selective legitimacy transfer. Suppression is moderate (0.38) because the constraint does not coercively bar any technology; rather, it uses narrative authority to constrain advocacy to 'technical optimization' rather than 'technology privileging.' Theater is low-moderate (0.28) because the scientific case for portfolio approaches is real, but the portfolio framing also obscures the concentrated social costs of transition in fossil-dependent regions by treating all technologies as equivalent. The measurement series show extractiveness rising slightly in the early interval (as the reading becomes policy-institutionalized) then stabilizing, while theater_ratio rises initially then settles, suggesting the reading stabilizes in institutional use after a period of higher persuasion-work. Suppression_requirement peaks midway, then declines as resistance moderates once policies are in place.
  *
  * PERSPECTIVAL GAP:
- *   From the nuclear-advocacy and planning-authority seats, the portfolio reading is genuine coordination: balancing diverse inputs, enabling regional optimization, reducing technological monopoly risk. From the renewable-advocate and climate-urgency seats, the same reading operates as an enforced extraction: capital diversion, timeline extension, legitimation of institutional inertia. The engine computes this divergence per-seat from the structural data; the authored claim does not predetermine the outcome.
+ *   The beneficiary seats (diversified investors, nuclear incumbents, regional planners) compute the constraint as a genuine coordination solution that preserves capital optionality and respects regional expertise. The payer seats (renewable advocates, developing economies, energy communities) compute it as a constraint that dilutes advocacy pressure, obscures capital inequities, and delays urgent scaling decisions. The engine computes these divergent directionalities from the structural data: beneficiaries have low directionality (the constraint subsidizes their capital flows), payers have high directionality (the constraint narrows their advocacy space). Climate scientists sit as observers with low power — their technical input is not foreclosed, but the portfolio reading preserves policy discretion by treating technology choice as political rather than scientific.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiary seats (nuclear advocates, capital diversifiers, regional-mix optimizers) have low directionality (d ≈ 0.25-0.35): they benefit from the reading without bearing its costs. The victim seats (renewable advocates, climate urgency, coal-exit workers) have high directionality (d ≈ 0.65-0.85): they bear delayed decarbonization and policy attention diversion while the reading persists. Energy planners and regulators (agenda-setters) sit near symmetric (d ≈ 0.50): they administer the constraint but also bear the burden of managing its contradictions—regulatory complexity, political risk if the reading fails, coordination overhead. Developing economies sit asymmetrically toward target (d ≈ 0.75): constrained capital and externally imposed technology choices push them toward high extraction experience. Capital allocators are partially exempt through arbitrage (d ≈ 0.45): they can rebalance regionally or withdraw, unlike jurisdictions locked into both-technology deployment mandates.
+ *   Diversified investors (d ≈ 0.15, full beneficiary) receive legitimacy signals and capital coordination across multiple technologies without needing to forecast a single winner. Nuclear industry (d ≈ 0.10, strong beneficiary) is protected from renewable-only policy displacement. Renewable advocates (d ≈ 0.70, targets) find their preferred technology path constrained to co-equal status rather than privileged. Developing economies (d ≈ 0.75, targets) face capital requirements unchanged but legitimacy framing shifted to obscure inequity. Energy communities (d ≈ 0.85, identity-locked targets) bear transition costs with no preferential transition support embedded in the portfolio framework. Regional planners (d ≈ 0.30, moderate) are agenda-setters within the portfolio but constrained to regional optimization, unable to set global legitimacy terms. This directionality distribution is stable across the interval; no overrides were necessary.
  *
  * MANDATROPHY ANALYSIS:
- *   The portfolio pragmatism reading contains latent mandatrophy: the founding problem (false binary choice between nuclear and renewable) has been substantially resolved by empirical evolution—most recent decarbonization scenarios and grid-integration studies from technical bodies now incorporate both, and the academic and policy conversation has moved beyond the binary. However, institutional actors and capital-allocation structures have crystallized around the portfolio reading itself, creating vested interests in maintaining the apparent equivalence and balance between pathways. If the founding problem (the binary) is dead but the reading persists, the reading itself has become the mandatroph object. The suppression requirement (maintaining the reading against pure-renewable and degrowth alternatives) remains high, suggesting the reading is defended not solely on technical grounds but through institutional enforcement. The measurement series shows suppression rising through year 15 (establishing the reading against contending technical views) and plateauing thereafter (the reading is now institutionalized), which is consistent with a mandatrophy trajectory: the founding problem's solution is embedded, but the reading persists and requires defense.
+ *   Portfolio pragmatism addresses a live founding problem (decarbonization requires capital coordination across multiple technology paths) but carries risk of mandate atrophy if the foundational problem changes. If a single technology (e.g., fusion, or advanced renewables with sufficient storage) demonstrably became the clear optimum, portfolio pragmatism could become a zombie constraint preserving legitimacy for the dominated technology. However, the founding_problem_status is 'live' because no single technology has yet achieved full decarbonization dominance across all regional and sectoral contexts. The constraint would exhibit mandatrophy signals if: (a) measurement data showed theater_ratio rising above 0.50 (performative technology debates replacing real cost competition), (b) disappearance_verdict shifted to 'world_unchanged' (capital flows would not reorganize if portfolio legitimacy vanished), or (c) a sibling reading's empirical case became overwhelmingly supported while portfolio framing persisted. Current measurements do not trigger mandatrophy, but the field should monitor whether portfolio pragmatism becomes ritualized debate cover for delayed renewable scaling.
  */
 
 /* ==========================================================================
@@ -186,105 +255,109 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    regional_optimal_mix_definition,
-    'What technical and policy criteria determine the ''optimal'' regional mix of nuclear and renewables in any given jurisdiction? Is optimality based purely on carbon reduction per unit cost, or do other factors (infrastructure compatibility, political feasibility, worker transition, supply-chain resilience) alter the calculus?',
-    'Comparative analysis of how different jurisdictions define and measure optimality: examine whether jurisdictions with different regional characteristics or political economies arrive at genuinely different optimal mixes, or whether the apparent optimization reflects unstated political preferences for nuclear or renewable dominance.',
-    'If optimality is genuinely technical and context-sensitive, the portfolio reading''s coordination function is real. If different jurisdictions identify radically different ''optima'' for similar physical constraints, the reading is performing political alignment (extraction) under the cover of technical neutrality.',
+    technology_neutrality_vs_optimum,
+    'Is technology-neutral portfolio policy genuinely neutral, or does it embed hidden advantages for nuclear by legitimizing high-capital-intensity pathways that developing economies cannot access?',
+    'Comparative capital-flow analysis: examine whether portfolio pragmatism policies allocate capital equally per unit of decarbonization achieved, or whether nuclear projects receive disproportionate support. Monitor whether renewable-dominant regions compete on cost while nuclear-dominant regions compete on legitimacy.',
+    'If the portfolio is genuinely neutral on capital accessibility, it solves coordination and is Rope. If it systematically biases toward high-capital technologies, it is Tangled Rope (coordination cover for capital-accessibility extraction). If this omega resolves to the latter, reclassify and split the story into technology-capital-inequity as a separate constraint.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(regional_optimal_mix_definition, empirical, 'Whether portfolio optimization is technical or performing political preference.').
+narrative_ontology:omega_variable(technology_neutrality_vs_optimum, empirical, 'Whether portfolio neutrality masks capital-accessibility inequity').
 
 omega_variable(
-    nuclear_lead_time_carbon_urgency_trade,
-    'Does the carbon-reduction benefit of nuclear''s potential baseload contribution outweigh the carbon cost of its 10–15 year construction lead time in jurisdictions facing 2030–2040 decarbonization deadlines?',
-    'Lifecycle carbon accounting comparing nuclear projects started now (with actual construction timelines) against accelerated renewable deployment with interim fossil backup, measured against jurisdiction-specific carbon budgets and deadline constraints.',
-    'A net-negative finding (renewables reach net-zero faster despite nuclear''s baseload advantage) would support renewable-priority framing and undermine the portfolio reading''s implicit claim that timing is flexible. A net-positive finding would support the baseload necessity and portfolio pragmatism readings.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(nuclear_lead_time_carbon_urgency_trade, empirical, 'The interaction between technology lead times and decarbonization urgency.').
-
-omega_variable(
-    capital_diversification_vs_concentration,
-    'Does portfolio diversification across nuclear and renewable technologies reduce systemic risk in energy transitions, or does it diffuse limited decarbonization capital across two complex supply chains when concentration on one would accelerate deployment?',
-    'Comparative financial modeling of diversified versus concentrated investment strategies, controlling for regional constraints (available capital, industrial capacity, transmission infrastructure); scenario analysis of failure modes (supply-chain disruption, technological setback, political reversal) in each strategy.',
-    'If diversification reduces systemic risk and maintains deployment pace, the portfolio reading''s coordination value is confirmed. If concentration on renewables (or nuclear) achieves faster decarbonization without unacceptable concentration risk, the reading''s justification weakens.',
+    regional_optimization_vs_global_mandate,
+    'Portfolio pragmatism delegates technology choice to regional planners. But if one technology genuinely dominates (e.g., renewables + storage become clearly superior), does portfolio pragmatism create institutional path-dependency that perpetuates inferior regional choices?',
+    'Monitor regional policy decisions over 10+ years: if dominated technologies persist in regions where dominance is clear, the reading has atrophied into zombification. Conduct counterfactual analysis: would policy have shifted faster under a renewable-priority framing?',
+    'If regional optimization consistently produces suboptimal choices, the constraint becomes inertial (Piton). If it produces genuinely good regional decisions, it remains Rope. The reading''s legitimacy depends on its claim that regions optimize better than global mandates, which is an empirical claim that can be falsified.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(capital_diversification_vs_concentration, conceptual, 'Whether portfolio diversification is a genuine coordination benefit or a rationalization of capital-preservation preferences.').
+narrative_ontology:omega_variable(regional_optimization_vs_global_mandate, empirical, 'Whether decentralized optimization produces better outcomes than a global technology hierarchy').
 
 omega_variable(
-    sibling_reading_foreclosure_dynamics,
-    'To what extent does institutional adoption of the portfolio pragmatism reading actively foreclose or suppress the policy viability of the pure-renewable and pure-baseload sibling readings?',
-    'Comparative policy-change analysis across jurisdictions: jurisdictions that adopt portfolio pragmatism explicitly in energy plans vs. jurisdictions that don''t; measure regulatory approvals for single-pathway investments (pure nuclear, pure renewable buildout) before and after portfolio adoption; track research funding and technology-development investment shifts.',
-    'If portfolio adoption actively suppresses pure-pathway investments and research, the reading is itself extractive and enforced, not merely one valid technical view. If pure pathways remain viable policy options in portfolio-adopting jurisdictions, the reading''s enforcement overhead is lower.',
+    sibling_reading_foreclosure,
+    'Does portfolio pragmatism logically foreclose the renewable_primacy_reading, or do they coexist as different framings of the same legitimacy kernel?',
+    'Logical analysis: portfolio pragmatism says ''both are valid options and regions choose.'' Renewable primacy says ''renewables are optimal and regions should deploy them fastest.'' These can both be true in one framework (regions are *able* to choose renewables under portfolio pragmatism). They foreclose only if one says ''regions must not have the option the other provides.''',
+    'If readings coexist, the relation is ''coexists_with.'' If portfolio pragmatism somehow prevents renewable-priority policy (it does not — regions can privilege renewables within pragmatism), then it forecloses. The current cs_structure.reading_relations is set to ''coexists_with'' based on this logic; if later analysis suggests foreclosure, the relation updates but the constraint''s classification does not change.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_foreclosure_dynamics, empirical, 'Whether the portfolio reading suppresses alternative decarbonization framings or coexists with them.').
+narrative_ontology:omega_variable(sibling_reading_foreclosure, conceptual, 'Logical structure of sibling reading relationships').
 
 omega_variable(
-    nuclear_cost_trajectory_uncertainty,
-    'Will nuclear construction costs continue to rise (as recent U.S. and UK projects show) or do small modular reactors (SMRs) and manufacturing scale offer credible paths to cost reduction? The portfolio reading''s cost-benefit logic depends on this trajectory.',
-    'Longitudinal cost tracking of recent and in-progress nuclear projects; SMR prototype deployment and cost data; manufacturing learning-curve analysis if large-scale SMR production occurs; comparison of projected vs. actual costs in nuclear buildout scenarios.',
-    'If nuclear costs fall substantially, the portfolio reading gains empirical support (both pathways become cost-competitive). If costs rise further, the reading''s balance claim weakens and renewable-priority arguments strengthen. This uncertainty is structural to the reading''s stability.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(nuclear_cost_trajectory_uncertainty, empirical, 'The trajectory of nuclear capital costs and the reading''s cost-benefit symmetry.').
-
-omega_variable(
-    identity_lock_in_climate_urgency_seat,
-    'For climate-urgency coalitions coded as identity_locked exit, what is the mechanism binding their identity to rapid-decarbonization demand? Is it epistemic (the scientific understanding of carbon budgets), ideological (moral imperative of intergenerational justice), or organizational (career and funding tied to urgency narratives)?',
-    'Ethnographic and discourse analysis of climate-movement narratives; tracking whether climate-urgency framing persists if empirical carbon-budget estimates shift or if transition timelines change for exogenous reasons; examining whether actors exit the urgency coalition if their particular technology preference (renewables) is deprioritized.',
-    'If identity-lock is primarily epistemic, it is reversible by evidence and the suppression dynamic is lower. If primarily ideological or organizational, suppression is higher because the constraint must actively defend against constituencies whose self-concept depends on urgency. The identity-lock mechanism matters for understanding whether the reading''s extraction is structural or performative.',
+    energy_community_transition_suppression,
+    'Working-class energy communities bear identity-locked suppression: their entire professional identity and regional economic infrastructure are fused with fossil fuels. Portfolio pragmatism offers no preferential transition support (it does not suppress the people, but it supplies no counter-frame). Is this suppression structural (the constraint caused it) or contextual (fossil fuel economics caused it, and portfolio pragmatism merely fails to address it)?',
+    'Compare transition outcomes in regions with portfolio pragmatism policy vs. regions with targeted energy-community support policies (retraining, wage insurance, regional development). If support policies measurably improve transition trajectories, the suppression is partially structural (addressable by the constraint itself). If outcomes are unchanged, it is primarily contextual.',
+    'If structural, the constraint is Tangled Rope (coordination for investors, suppression for communities). If contextual, it remains Rope. The directionality assigned to energy_communities (0.85, identity-locked target) already reflects this uncertainty; an omega resolution would clarify whether the targeting is active or passive.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_in_climate_urgency_seat, conceptual, 'The nature and reversibility of identity-lock in climate urgency constituencies.').
+narrative_ontology:omega_variable(energy_community_transition_suppression, empirical, 'Whether portfolio pragmatism''s neutrality on transition support constitutes active or passive suppression of fossil-fuel workers').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0, 40).
+narrative_ontology:interval(climate_mitigation_legitimacy__portfolio_pragmatism_reading, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(clim_tr_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(clim_tr_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 5, 0.32).
-narrative_ontology:measurement(clim_tr_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 10, 0.36).
-narrative_ontology:measurement(clim_tr_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 15, 0.4).
-narrative_ontology:measurement(clim_tr_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 20, 0.42).
-narrative_ontology:measurement(clim_tr_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(clim_tr_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 30, 0.4).
-narrative_ontology:measurement(clim_tr_t40, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 40, 0.41).
+narrative_ontology:measurement(clim_tr_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement_basis(clim_tr_t0, observed).
+narrative_ontology:measurement(clim_tr_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 5, 0.21).
+narrative_ontology:measurement_basis(clim_tr_t5, observed).
+narrative_ontology:measurement(clim_tr_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 10, 0.24).
+narrative_ontology:measurement_basis(clim_tr_t10, observed).
+narrative_ontology:measurement(clim_tr_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 15, 0.27).
+narrative_ontology:measurement_basis(clim_tr_t15, observed).
+narrative_ontology:measurement(clim_tr_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 20, 0.3).
+narrative_ontology:measurement_basis(clim_tr_t20, observed).
+narrative_ontology:measurement(clim_tr_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 25, 0.29).
+narrative_ontology:measurement_basis(clim_tr_t25, observed).
+narrative_ontology:measurement(clim_tr_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 30, 0.28).
+narrative_ontology:measurement_basis(clim_tr_t30, observed).
+narrative_ontology:measurement(clim_tr_t35, climate_mitigation_legitimacy__portfolio_pragmatism_reading, theater_ratio, 35, 0.28).
+narrative_ontology:measurement_basis(clim_tr_t35, observed).
 
 % Extraction over time
-narrative_ontology:measurement(clim_be_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(clim_be_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(clim_be_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 10, 0.56).
-narrative_ontology:measurement(clim_be_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 15, 0.6).
-narrative_ontology:measurement(clim_be_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 20, 0.62).
-narrative_ontology:measurement(clim_be_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 25, 0.62).
-narrative_ontology:measurement(clim_be_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 30, 0.61).
-narrative_ontology:measurement(clim_be_t40, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(clim_be_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement_basis(clim_be_t0, observed).
+narrative_ontology:measurement(clim_be_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 5, 0.38).
+narrative_ontology:measurement_basis(clim_be_t5, observed).
+narrative_ontology:measurement(clim_be_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 10, 0.39).
+narrative_ontology:measurement_basis(clim_be_t10, observed).
+narrative_ontology:measurement(clim_be_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 15, 0.41).
+narrative_ontology:measurement_basis(clim_be_t15, observed).
+narrative_ontology:measurement(clim_be_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 20, 0.43).
+narrative_ontology:measurement_basis(clim_be_t20, observed).
+narrative_ontology:measurement(clim_be_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 25, 0.44).
+narrative_ontology:measurement_basis(clim_be_t25, observed).
+narrative_ontology:measurement(clim_be_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 30, 0.42).
+narrative_ontology:measurement_basis(clim_be_t30, observed).
+narrative_ontology:measurement(clim_be_t35, climate_mitigation_legitimacy__portfolio_pragmatism_reading, base_extractiveness, 35, 0.42).
+narrative_ontology:measurement_basis(clim_be_t35, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(clim_su_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 0, 0.42).
-narrative_ontology:measurement(clim_su_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 5, 0.48).
-narrative_ontology:measurement(clim_su_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 10, 0.53).
-narrative_ontology:measurement(clim_su_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 15, 0.56).
-narrative_ontology:measurement(clim_su_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 20, 0.59).
-narrative_ontology:measurement(clim_su_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 25, 0.59).
-narrative_ontology:measurement(clim_su_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 30, 0.58).
-narrative_ontology:measurement(clim_su_t40, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 40, 0.58).
+narrative_ontology:measurement(clim_su_t0, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 0, 0.32).
+narrative_ontology:measurement_basis(clim_su_t0, observed).
+narrative_ontology:measurement(clim_su_t5, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 5, 0.35).
+narrative_ontology:measurement_basis(clim_su_t5, observed).
+narrative_ontology:measurement(clim_su_t10, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 10, 0.37).
+narrative_ontology:measurement_basis(clim_su_t10, observed).
+narrative_ontology:measurement(clim_su_t15, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 15, 0.4).
+narrative_ontology:measurement_basis(clim_su_t15, observed).
+narrative_ontology:measurement(clim_su_t20, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 20, 0.39).
+narrative_ontology:measurement_basis(clim_su_t20, observed).
+narrative_ontology:measurement(clim_su_t25, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 25, 0.39).
+narrative_ontology:measurement_basis(clim_su_t25, observed).
+narrative_ontology:measurement(clim_su_t30, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 30, 0.38).
+narrative_ontology:measurement_basis(clim_su_t30, observed).
+narrative_ontology:measurement(clim_su_t35, climate_mitigation_legitimacy__portfolio_pragmatism_reading, suppression_requirement, 35, 0.38).
+narrative_ontology:measurement_basis(clim_su_t35, observed).
 
 
 /* ==========================================================================
@@ -296,17 +369,13 @@ narrative_ontology:boltzmann_floor_override(climate_mitigation_legitimacy__portf
 narrative_ontology:affects_constraint(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_mitigation_legitimacy__baseload_necessity_reading).
 narrative_ontology:affects_constraint(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_mitigation_legitimacy__renewable_primacy_reading).
 narrative_ontology:affects_constraint(climate_mitigation_legitimacy__portfolio_pragmatism_reading, climate_mitigation_legitimacy__degrowth_sufficiency_reading).
-narrative_ontology:affects_constraint(climate_mitigation_legitimacy__portfolio_pragmatism_reading, nuclear_supply_chain_stability).
-narrative_ontology:affects_constraint(climate_mitigation_legitimacy__portfolio_pragmatism_reading, renewable_grid_integration_requirement).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of the climate_mitigation_legitimacy kernel family. The portfolio_pragmatism_reading (this file) frames decarbonization as requiring both nuclear and renewable technologies balanced by regional analysis. The baseload_necessity_reading weights toward nuclear as foundational; the renewable_primacy_reading argues renewables-plus-storage suffice; the degrowth_sufficiency_reading reframes the problem as demand-constrained rather than technology-choice constrained. Each reading instantiates a separate constraint with distinct ε, beneficiary/victim structure, and measured type. They are linked via network.affects_constraints because the adoption of one reading by policy institutions directly shapes the viability, capital availability, and institutional support for the others. The portfolio reading INFLUENCES the sibling readings by reframing the question from 'which technology' to 'what mix,' which shifts political and technical debate toward negotiation of proportions rather than selection.
+% This constraint is one reading of a contested kernel (climate_mitigation_legitimacy). The kernel is the persisting commitment: 'climate change requires decarbonization, and legitimate policy must determine how to decarbonize.' Different readings parse this kernel into different constraints. Portfolio pragmatism (this story) asserts that legitimacy requires technology neutrality and regional optimization. Baseload necessity asserts legitimacy requires dispatchable baseload. Renewable primacy asserts legitimacy requires speed and cost minimization. Degrowth sufficiency asserts legitimacy requires demand reduction. Each reading has a different ε, different beneficiary/victim set, and different founding problem. The readings coexist as different interpretations held by different institutional actors (energy investors, climate advocates, policymakers, scientists), not as alternative empirical hypotheses about a single world-state. This constrains the kernel reading does not contradict the others' empirical claims; rather, it claims legitimacy grounds for one technology portfolio over another.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(climate_mitigation_legitimacy__portfolio_pragmatism_reading, organized, 0.68).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

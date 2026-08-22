@@ -40,9 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,38 +74,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: article_27_veto_power__coordination_reading
- *   human_readable: P5 Veto Power (Coordination Reading): Prevention of Compelled Great-Power War
+ *   human_readable: Article 27 P5 Veto—Coordination Reading: Prevention of Great-Power War via Unanimity Gate
  *   domain: international_relations/institutional_design
  *
  * SUMMARY:
- *   The UN Security Council's permanent-member veto power (Article 27, UN
- *   Charter) is a mechanism by which each of the five nuclear-armed permanent
- *   members can unilaterally block any Council resolution. This constraint
- *   story instantiates the COORDINATION READING of this contested kernel: the
- *   veto is understood as solving the collective-action problem of
- *   great-power consent to international law. Without the veto, each nuclear
- *   state would face strategic uncertainty that its peers could manufacture a
- *   Council mandate to compel it into military confrontation it rejects. The
- *   veto removes this risk by guaranteeing that no resolution can pass
- *   without all P5 consent. In this reading, all signatories benefit: smaller
- *   states get protection from P5-initiated compulsion; P5 members get
- *   certainty that they cannot be bound without consent. The constraint is
- *   classified as ROPE because it solves a genuine coordination problem (the
- *   consent failure) with minimal coercive overhead—participation in the UN
- *   and deference to Council decisions is voluntary, and the veto enforces a
- *   simple, transparent rule (unanimity). The measured extractiveness is low
- *   (0.18 at interval end) because the veto's primary function is
- *   coordination, not extraction. Suppression is minimal (0.12) because the
- *   constraint works by making compulsion impossible, not by silencing
- *   dissent. Theater is very low (0.08) because the veto's operation is
- *   straightforward and not defended by elaborate performative justification.
+ *   Article 27 of the UN Charter grants each of the five permanent Security
+ *   Council members an absolute veto over any substantive resolution. Under
+ *   the coordination reading instantiated in this story, the veto serves as a
+ *   mechanism to prevent inadvertent great-power war by ensuring that no P5
+ *   member can be compelled via majority Security Council vote into military
+ *   confrontation it rejects. The reading asserts that the veto's primary
+ *   function is coordination (solving the collective-action problem of
+ *   great-power coexistence in a single binding institution) rather than
+ *   oligarchic entrenchment (extracting authority rents while blocking
+ *   institutional evolution) or sovereignty instantiation (operationalizing
+ *   the Westphalian principle that no state consents without agreement). This
+ *   story authors the veto under the coordination frame. The other readings
+ *   (oligarchy, sovereignty) are separate constraint stories with different ε
+ *   values, different beneficiary/victim structures, and different
+ *   classifications.
  *
  * KEY AGENTS:
- *   - Permanent_five_members (nuclear-armed great powers): Hold veto power; benefit from guaranteed refusal capacity
- *   - Non-permanent_council_members (elected rotating states): Benefit from P5 veto constraint on each other; bear cost of blocked humanitarian action
- *   - General_UN_membership (all other states): Benefit from prevention of Council-mandated compulsion; bear cost of P5 veto shields on their own aggression
- *   - International_legal_scholars (observer seat): Analyze whether veto solves coordination or entrenches oligopoly
- *   - Rival_institutional_designs (excluded): Would offer majoritarian or proportional voting but are barred by Article 27 immutability
+ *   - Permanent Security Council members (US, Russia, China, UK, France): institutional agenda-setters; hold the veto mechanism itself; trapped in the system (leaving the UN carries enormous cost); in this reading, beneficiaries of the war-prevention guarantee
+ *   - Non-permanent Security Council members: can propose resolutions but cannot veto; benefit from the P5 veto's constraint on unilateral great-power enforcement (their own interests are protected by the fact that no binding military action can occur without P5 consent)
+ *   - General Assembly delegations (all other UN members): benefit from the implicit constraint on P5 unilateralism; the veto prevents the UN from becoming an instrument of great-power coercion masked as collective action
+ *   - International legal system (non-agent; the corpus of law grounding state consent): vindicated by the veto's instantiation of the unanimity principle
+ *   - Collective-security doctrine (non-agent; the institutional theory that grounds UN legitimacy): vindicated by the veto's preservation of voluntary participation for great powers
  */
 
 /* ==========================================================================
@@ -105,56 +107,107 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(article_27_veto_power__coordination_reading, 0.18).
-domain_priors:suppression_score(article_27_veto_power__coordination_reading, 0.12).
+domain_priors:base_extractiveness(article_27_veto_power__coordination_reading, 0.12).
+domain_priors:suppression_score(article_27_veto_power__coordination_reading, 0.05).
 domain_priors:theater_ratio(article_27_veto_power__coordination_reading, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, extractiveness, 0.18).
-narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, suppression_requirement, 0.12).
+narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, extractiveness, 0.12).
+narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, suppression_requirement, 0.05).
 narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, accessibility_collapse, 0.78).
 narrative_ontology:constraint_metric(article_27_veto_power__coordination_reading, resistance, 0.22).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(article_27_veto_power__coordination_reading, rope).
-narrative_ontology:human_readable(article_27_veto_power__coordination_reading, "P5 Veto Power (Coordination Reading): Prevention of Compelled Great-Power War").
+narrative_ontology:human_readable(article_27_veto_power__coordination_reading, "Article 27 P5 Veto—Coordination Reading: Prevention of Great-Power War via Unanimity Gate").
 narrative_ontology:topic_domain(article_27_veto_power__coordination_reading, "international_relations/institutional_design").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(article_27_veto_power__coordination_reading, '74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff').
-narrative_ontology:cs_kernel_codification('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', fixed_text).
-narrative_ontology:cs_authority_grounding('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', lineage).
-narrative_ontology:cs_interpretation_layer_present('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff').
-narrative_ontology:cs_reading_relation('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', article_27_veto_power__oligopoly_reading, coexists_with).
-narrative_ontology:cs_reading_relation('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', article_27_veto_power__sovereignty_reading, influences).
-narrative_ontology:cs_axiom('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', foundational, unanimity_prevents_compulsion).
-narrative_ontology:cs_axiom_status(unanimity_prevents_compulsion, holdable).
-narrative_ontology:cs_axiom_grounding('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', unanimity_prevents_compulsion, empirically_contingent).
-narrative_ontology:cs_axiom('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', secondary, great_power_consent_enables_institutional_stability).
-narrative_ontology:cs_axiom_status(great_power_consent_enables_institutional_stability, holdable).
-narrative_ontology:cs_axiom_grounding('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', great_power_consent_enables_institutional_stability, instrumental).
-narrative_ontology:cs_reference_frame('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', unanimous_consent_protection).
-narrative_ontology:cs_drift_state('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', contemporary_humanitarian_crisis_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('74b9d8fa-4f5e-47b5-9ac6-5c7d3f6f91ff', '').
+narrative_ontology:cs_story_uid(article_27_veto_power__coordination_reading, '759e2110-eb27-4d66-8802-bd3632d9fa81').
+narrative_ontology:cs_kernel_codification('759e2110-eb27-4d66-8802-bd3632d9fa81', formalized).
+narrative_ontology:cs_authority_grounding('759e2110-eb27-4d66-8802-bd3632d9fa81', expertise).
+narrative_ontology:cs_interpretation_layer_present('759e2110-eb27-4d66-8802-bd3632d9fa81').
+narrative_ontology:cs_reading_relation('759e2110-eb27-4d66-8802-bd3632d9fa81', article_27_veto_power__oligarchy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('759e2110-eb27-4d66-8802-bd3632d9fa81', article_27_veto_power__sovereignty_reading, influences).
+narrative_ontology:cs_axiom('759e2110-eb27-4d66-8802-bd3632d9fa81', foundational, great_power_war_prevention_via_unanimity).
+narrative_ontology:cs_axiom_status(great_power_war_prevention_via_unanimity, holdable).
+narrative_ontology:cs_axiom_grounding('759e2110-eb27-4d66-8802-bd3632d9fa81', great_power_war_prevention_via_unanimity, instrumental).
+narrative_ontology:cs_axiom('759e2110-eb27-4d66-8802-bd3632d9fa81', secondary, collective_security_requires_voluntary_participation).
+narrative_ontology:cs_axiom_status(collective_security_requires_voluntary_participation, holdable).
+narrative_ontology:cs_axiom_grounding('759e2110-eb27-4d66-8802-bd3632d9fa81', collective_security_requires_voluntary_participation, deontological).
+narrative_ontology:cs_reference_frame('759e2110-eb27-4d66-8802-bd3632d9fa81', great_power_consensus_based_security_governance).
+narrative_ontology:cs_drift_state('759e2110-eb27-4d66-8802-bd3632d9fa81', contemporary_geopolitical_fragmentation, gap(practice_drift, minor, true)).
+narrative_ontology:cs_created_at('759e2110-eb27-4d66-8802-bd3632d9fa81', '').
 narrative_ontology:cs_kernel_id(article_27_veto_power__coordination_reading, article_27_veto_power).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, international_system_stability).
-narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, nuclear_armed_great_powers).
-narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, non_aligned_states).
+narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, all_un_member_states).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, non_permanent_security_council_members).
+narrative_ontology:constraint_beneficiary(article_27_veto_power__coordination_reading, general_assembly_delegations).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Five nuclear-armed great powers (US, Russia, China, UK, France) hold exclusive veto over binding Security Council resolutions. The veto gives each the capacity to prevent any military authorization or binding enforcement action that would compel it into armed confrontation. They are the formal gatekeepers of the mechanism and the primary beneficiaries of the war-prevention guarantee.
+narrative_ontology:constraint_stakeholder(article_27_veto_power__coordination_reading, permanent_security_council_members, agenda_setter,
+    institutional, civilizational, trapped, universal).
+
+% Participate in deliberations but cannot block resolutions. They benefit from the veto's constraint on P5 unilateralism (a veto'd resolution means no binding enforcement action, which protects smaller powers from being compelled into wars they reject). Their exit is constrained: leaving the Security Council or UN is theoretically possible but practically comes at severe cost.
+narrative_ontology:constraint_stakeholder(article_27_veto_power__coordination_reading, non_permanent_security_council_members, beneficiary,
+    powerful, generational, constrained, universal).
+
+% Benefit from the veto's implicit constraint on P5 enforcement autonomy: a veto'd Security Council resolution prevents unilateral great-power military action in the name of the UN, which preserves the collective-action fiction and protects non-aligned and smaller states from being conscripted into wars they reject.
+narrative_ontology:constraint_stakeholder(article_27_veto_power__coordination_reading, general_assembly_delegations, beneficiary,
+    organized, generational, constrained, universal).
+
+% The veto instantiates a foundational principle of international law: no state can be bound by a binding decision without its consent (in this reading, translated as 'no great power can be compelled into war without its veto'). The constraint vindicates this principle by operationalizing it.
+narrative_ontology:constraint_stakeholder(article_27_veto_power__coordination_reading, international_legal_system, beneficiary,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(article_27_veto_power__coordination_reading, international_legal_system).
+
+% The veto prevents the UN's collective-security mandate from imposing binding military obligations on any permanent member, which ensures that collective security operations remain voluntary for great powers and thus maintain their feasibility (if the veto were absent, any P5 member facing mandatory war participation would face an intolerable choice: bind itself or leave the system).
+narrative_ontology:constraint_stakeholder(article_27_veto_power__coordination_reading, collective_security_doctrine, beneficiary,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(article_27_veto_power__coordination_reading, collective_security_doctrine).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(article_27_veto_power__coordination_reading, diffuse).
+narrative_ontology:fixing_cost_class(article_27_veto_power__coordination_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of preventing inadvertent great-power war: without a unanimity gate, a Security Council majority could authorize military action that one great power regards as forced escalation, triggering either unilateral defection or global war. The veto ensures that no P5 member can be compelled into military confrontation it rejects, preserving the condition for stable coexistence.
+% TRANSFER_FUNCTION: Does not move material resources from one party to another. Instead, it allocates authority: it grants each P5 member the capacity to block any binding enforcement resolution, which transfers decision-making power away from majoritarian procedures and toward unanimous consent among great powers.
+% ABSENT_VOICES: Non-P5 states have a structural absence: they participate in Security Council deliberations and voting but hold no veto. They would argue (from within the system) for weighted majority voting or supermajority thresholds that dilute P5 power; they are present in the room but structurally excluded from the veto mechanism itself. Potential alternative power arrangements (e.g., a weighted supermajority system, regional security mechanisms outside the UN) are absent from the negotiating table because the P5 veto over Charter amendment makes them unamendable by non-P5 action.
+% DISAPPEARANCE_RATIONALE: If the veto disappeared overnight, the incentive structure for P5 membership in the Security Council would invert: great powers would face potential majority-imposed war participation, which would either force withdrawal from the collective-security system or create strong incentives to act unilaterally and outside the UN framework. The world would reorganize around either a P5 withdrawal from collective-security norms or a reversion to pre-UN great-power spheres-of-influence arrangements.
+% FOUNDING_PROBLEM: After World War II, a critical coordination problem existed: could great powers coexist in a single collective-security institution without triggering inadvertent escalation? The veto was designed to solve this by ensuring that no great power would be involuntarily conscripted into a military action it viewed as compelled war, which would preserve the cooperative basis of the UN while allowing collective action against non-great-power aggressors.
+% FOUNDING_PROBLEM_CORROBORATION: Historians and international law scholars from outside the P5 governments (e.g., primary sources from the San Francisco Conference, academic analyses by non-aligned scholars) attest that the founding problem was live: great-power coordination was fragile, and the addition of a binding collectivity rule without unanimity was seen as war-prone. The coordination reading draws on these sources. However, the reading is contested: oligarchy and sovereignty readings, held by observers and scholars aligned with different framings, dispute whether preventing great-power war was the primary purpose or a secondary legitimating narrative for a mechanism designed to entrench great-power dominance.
+narrative_ontology:disappearance_verdict(article_27_veto_power__coordination_reading, world_rearranges).
+narrative_ontology:founding_problem_status(article_27_veto_power__coordination_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(article_27_veto_power__coordination_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(article_27_veto_power__coordination_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(article_27_veto_power__coordination_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(article_27_veto_power__coordination_reading, 0.12, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,16 +222,16 @@ narrative_ontology:story_seed(article_27_veto_power__coordination_reading, 'none
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness series (0.12 → 0.29 over the interval) models gradual increase in veto usage to block humanitarian action and Council accountability, rather than increase in compulsion risk. The measurement uses observed data through t=60 (post-WWII era through recent years) and projects forward to t=75 (competitive multipolar scenario ~2030). Even in the high-projection scenario, extractiveness stays below 0.30 because the coordination reading holds that the veto's PRIMARY function (preventing compulsion) remains valuable—the increase reflects secondary uses (blocking justice/accountability) not the core function. Theater rises modestly (0.05 → 0.11) as the veto's humanitarian-blocking use becomes more salient; the ratio stays well below 0.5 because the veto remains functionally necessary, not theatrically maintained. Suppression is low and stable because the veto operates through structural impossibility (no resolution can pass), not through coercion of dissent. All three measurements are authored on one shared time grid (0, 15, 30, 45, 60, 75) so the metrics can be compared at each time point.
+ *   Extractiveness is low (0.12 at interval end) because the veto, under this reading, coordinates rather than extracts: it distributes the same war-prevention benefit to all P5 members equally (each gets protected from compelled war by every other's veto), and the benefit extends to non-P5 members as well (they are protected from being forced into great-power wars they reject). Suppression is minimal (0.05) because the coordination is sustained by structural incentive (great powers prefer non-coercion to coercion), not by active enforcement against resistance. Theater is low (0.08) and stable: there is genuine coordination function throughout the interval; the increase to ~0.08 reflects the accumulation of instances where the veto is used without substantive deliberation, suggesting ceremonial operation in some cases, but the core function remains real. Accessibility collapse is high (0.78): once a great power commits to the UN, the unanimity gate forecloses alternatives (unilateral action outside the UN carries reputational cost; creating a rival security mechanism is impractical; withdrawing from the UN is a one-time irreversible choice with severe costs). Resistance is low (0.22): the veto is not heavily contested on coordination grounds (even non-P5 states accept that forcing great-power war participation would be counterproductive); the resistance that does exist is the oligarchy and sovereignty readings, which contest the framing rather than the mechanism's effectiveness. The measurements track the interval from 1945 (founding) to 2026 (present). The temporal pattern shows slight drift upward in extractiveness and theater (as geopolitical context evolves and great powers use the veto for strategic interests beyond war prevention), but the drift is shallow because the core coordination function remains intact. Theater dips in 2026 as institutional focus has returned to substantive coordination following post-2015 confidence-building.
  *
  * PERSPECTIVAL GAP:
- *   From the P5 perspective, the veto is the institution's core legitimacy: it makes the UN worth joining because it guarantees they cannot be bound without consent. From smaller states' perspective, the veto is a valuable mutual constraint on great powers (preventing any one P5 from dominating) but also a frustration when those same powers use vetoes to block accountability for their own actions. From the analytical perspective, these two views reflect the veto's dual role: as coordination mechanism (preventing compulsion) and as power-preserving mechanism (blocking institutional evolution that would redistribute veto power). The engine's per-seat classification will compute different perceived types at different power atoms: institutional-seat analysis may show Rope (coordination function dominates); powerless-seat analysis may show contamination toward Tangled Rope (cost of blocked humanitarian action visible). The claim/metric independence rule holds: I claim Rope (coordination reading) and author metrics consistent with low extractiveness (the veto's PRIMARY function is coordination, not extraction), but I also author rising theater (secondary uses are increasingly salient), allowing the engine and the interpreter to see the constraints on that reading.
+ *   The P5 member seat computes as full beneficiary (d near 0.0) under this reading: they receive the exclusive benefit of the war-prevention guarantee and bear minimal suppression. The non-P5 seats compute as secondary beneficiaries (d near 0.3): they benefit from the constraint but do not directly control it and experience it as an external rule. The international legal system and collective-security doctrine compute as non-agent beneficiaries (d is not assigned; they are analytical seats). The engine's per-seat classification should reflect this asymmetry: all seats should compute to Rope (coordination), but directionality varies significantly.
  *
  * DIRECTIONALITY LOGIC:
- *   The permanent five members appear as beneficiaries (d ≈ 0.15 for institutional power-atom analysis: they benefit from refusal capacity, have high exit options analytically, and bear minimal cost in the coordination reading). Non-permanent members are secondary beneficiaries with secondary costs (d ≈ 0.45: they benefit from P5 mutual constraint but also bear the cost of P5 veto shields). Smaller states are asymmetrically positioned (d ≈ 0.52: they benefit from being protected from P5-initiated compulsion but bear the cost that P5 members can veto humanitarian action; the asymmetry means they are slight net targets, though in the coordination reading all parties benefit overall). The international legal scholars sit in the observer/analytical seat (d = 0.5, neither collecting nor paying). No directionality overrides are needed: the structural derivation from beneficiary declarations produces the correct d values because the beneficiary set is symmetric (all states benefit from the unanimity gate) even though the distribution of power is asymmetric (P5 hold the veto while others do not). The absence of a clear victim class—unlike in Snare or Tangled Rope—is itself the signal that this is Rope.
+ *   Under the coordination reading, there are no victims—all states benefit from avoided great-power war. The beneficiary class is explicitly universal: 'all UN member states' and 'international system stability'. The P5 members are the primary beneficiaries (they hold the mechanism and receive the explicit war-prevention guarantee). Non-P5 states are secondary beneficiaries (they benefit from the constraint on great-power coercion without controlling it). No state pays a net cost for the war-prevention benefit—the cost (each P5 member's inability to compel others into war via Security Council majority) is borne equally by all five and is the price of their own war-prevention guarantee. The directionality computation should reflect this: P5 members have d near 0.0 (beneficiaries), non-P5 members have d near 0.2–0.3 (secondary beneficiaries with constrained agency), and the system as a whole has d near 0.0 (beneficiary of stability).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem of the veto—ensuring great powers consent to international law—was live in 1945 and arguably remains live in 2026 (disputed in omega_1). However, the FOUNDING_PROBLEM_STATUS field in six_questions is marked 'contested' precisely because there is scholarly and political disagreement: reformists argue the problem is 'dead' (nuclear deterrence, not veto protection, prevents compelled war) and the veto now serves only to entrench P5 power; institutionalists argue it remains 'live' (without the veto, strategic uncertainty about Council mandates would be real, and great powers would either withdraw or demand amendment). The measurement series (extractiveness rising from 0.12 to 0.29) models a scenario where the founding problem's salience decreases relative to the veto's secondary uses (humanitarian blocking). If the founding_problem_status shifts from 'live' to 'dead' and disappearance_verdict remains 'world_rearranges', the conjunction would trigger a mandatrophy flag: the constraint persists (veto remains in Charter) despite its founding justification eroding. This is exactly the condition to audit: is the veto a zombie—a rule that solved a real problem now solved elsewhere, kept in place by institutional inertia and P5 interest? The omega variables name this ambiguity without resolving it.
+ *   The founding problem (preventing inadvertent great-power war through consensus governance) was live in 1945 and remains live in 2026 under this reading. The mandatrophy question would arise if great-power war became structurally impossible (e.g., via irreversible nuclear deterrence or global resource interdependence) such that the veto's war-prevention function became obsolete while the constraint persisted. The measurements and temporal analysis do not show mandatrophy: the veto has been used to block resolutions that would have military consequences (Russian veto in Syria, Chinese veto on humanitarian intervention), indicating that the mechanism remains functionally relevant to preventing great-power coercion. Theater has drifted upward slightly (to 0.08), suggesting some ceremonial use, but not to the point of full degradation. The constraint would qualify as Piton if extractiveness were high, beneficiary claims were absent, and the mechanism persisted by institutional inertia rather than active coordination. Under this reading, neither condition holds: extraction is low, beneficiaries are explicit (international stability), and the mechanism is actively maintained because it solves a live coordination problem.
  */
 
 /* ==========================================================================
@@ -186,79 +239,87 @@ narrative_ontology:story_seed(article_27_veto_power__coordination_reading, 'none
    ========================================================================== */
 
 omega_variable(
-    coordination_vs_oligopoly_boundary,
-    'Does the veto primarily solve a genuine collective-action problem (coordination reading) or primarily entrench geopolitical oligopoly (oligopoly reading)?',
-    'Historical counterfactual: would great powers have joined a unanimity-gated international organization if they lacked veto protection? Comparative institutional analysis: do alternative unanimity mechanisms (e.g., regional security councils with veto gates) persist because they solve coordination problems or because they entrench incumbent power?',
-    'If the veto solves coordination, ε is low (~0.15–0.25), the constraint is Rope, and the beneficiaries are all signatories. If the veto primarily entrenches oligopoly, ε is high (~0.60–0.75), the constraint is Snare, and beneficiaries are the P5 alone. The constraint''s classification hinges on this boundary.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(coordination_vs_oligopoly_boundary, conceptual, 'Whether the veto is a coordination mechanism or an oligopoly entrenchment. This is the core structural dispute between the coordination and oligopoly readings.').
-
-omega_variable(
-    founding_problem_persistence,
-    'Does the founding problem that the veto was built to solve—preventing great-power compulsion via Council mandate—still pose a real strategic risk, or has nuclear deterrence decoupled from the veto''s protection?',
-    'Strategic analysis of great-power military decision-making: would any P5 member''s military planning change if the veto were removed and Council majorities could issue military mandates? Does institutional behavior (threat of withdrawal, reform demands, bloc formation around alternative security arrangements) indicate persistent perceived risk?',
-    'If the founding problem persists, the veto''s coordination function remains valuable and ε stays low. If it has been superseded by nuclear deterrence and other enforcement mechanisms, the veto becomes vestigial—its persistence shifts from coordination value to oligopoly entrenchment, and ε rises sharply.',
+    prevention_counterfactual_validity,
+    'Has the veto actually prevented great-power war, or would great-power war have been prevented anyway by nuclear deterrence, geographic isolation, or structural bipolarity?',
+    'Counterfactual historical analysis: comparing P5 conflict trajectories under the veto-protected regime to comparable periods without unanimity gates; examining near-miss crises (Cuban Missile Crisis, Cold War standoffs) to assess whether veto-less Security Council authorization would have escalated them.',
+    'If the veto''s prevention function is a secondary effect of deeper deterrence structures, the constraint reclassifies as theater or coordination-by-side-effect rather than as primary prevention mechanism. If the veto demonstrably prevented escalations that deterrence alone would not have blocked, the rope classification holds.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(founding_problem_persistence, empirical, 'Whether the veto''s founding problem is live or dead, and whether the veto''s continued operation reflects coordination necessity or institutional inertia.').
+narrative_ontology:omega_variable(prevention_counterfactual_validity, empirical, 'Whether the veto causally prevents great-power war or merely rides on independent deterrence mechanisms.').
 
 omega_variable(
-    veto_measurement_observable,
-    'Does this constraint measure the veto''s role as coordination mechanism, or the veto''s role as blocking mechanism for justice/humanitarian action? These are structurally different extractiveness profiles.',
-    'Define the constraint''s scope: does it cover the veto''s use to prevent compulsion (coordination function) or its use to block humanitarian action against the vetoing state (oligopoly/extraction function)? If the same institutional rule serves both functions, two separate constraints may be needed per DP-001 ε-invariance.',
-    'If this constraint measures only the coordination function (preventing compulsion), ε is low and the constraint is Rope. If it measures the veto''s use to shield vetoing states from accountability (blocking humanitarian action), ε is high and the constraint is Snare. These are NOT two measurements of the same constraint—they are two different constraints with two different ε values.',
+    unanimity_gate_vs_oligarchy_boundary,
+    'Is the veto''s unanimity gate distinguishable from oligarchic entrenchment? If the veto prevents great-power war by preserving great-power consent, does the preservation of consent constitute extraction (rent-seeking via institutional immutability)?',
+    'Structural analysis: a veto that prevents war (coordination reading) is analytically separable from a veto that blocks institutional evolution that would diminish P5 authority (oligarchy reading) only if the two functions can be decoupled. A test case: would a P5 member accept a modified veto (e.g., temporary suspension for humanitarian crises, supermajority override, regional security arrangements) that preserved the war-prevention function while allowing institutional evolution?',
+    'If the coordination function can be preserved under modified veto rules, the oligarchy reading and coordination reading are genuinely separable constraints. If the P5 insists on the current veto as essential to war prevention, the boundary collapses and the constraint reclassifies as tangled rope (coordination + oligarchic extraction bundled inseparably).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(veto_measurement_observable, conceptual, 'Whether this constraint is defined narrowly (veto as coordination against compulsion) or broadly (veto as blocking mechanism for all purposes). The ε-invariance principle requires separate stories if the same rule carries two structurally different functions.').
+narrative_ontology:omega_variable(unanimity_gate_vs_oligarchy_boundary, conceptual, 'Whether the war-prevention function is separable from oligarchic entrenchment or structurally inseparable.').
 
 omega_variable(
-    beneficiary_identity_alignment,
-    'In the coordination reading, is the ''international system stability'' a genuine beneficiary (an outcome all parties want), or is it a rhetorical cover for P5 oligopoly protection?',
-    'Behavioral observation: do non-permanent council members and smaller states consistently support the veto when it prevents their own humanitarian crises from reaching Council action? Do they advocate for its abolition or for reform? Do they join reform coalitions when the political cost is low? Their revealed preferences about whether ''system stability'' (the veto) or ''justice'' (unfettered Council action) matters more indicates whether the veto''s beneficiaries align with the coordination framing or split.',
-    'If non-P5 states consistently choose veto preservation when reform is cost-free, the coordination reading is vindicated: all parties benefit from the unanimity gate. If they consistently advocate reform and only tolerate the veto because they cannot change it, the oligopoly reading is more accurate: the veto entrenchment benefits only P5, while smaller states bear the cost of blocked humanitarian action.',
+    reading_kernel_contest,
+    'Which reading of the Article 27 kernel is structurally true: coordination (prevents inadvertent war by unanimity), oligarchy (entrenches great-power dominance while blocking evolution), or sovereignty (instantiates consent principle in Westphalian form)?',
+    'The kernel is the Charter text and its institutional history. The three readings constitute three interpretive frames laid over the same artifact. Committer analysis: what does the founding-problem corroboration actually establish? Who attests the problem, and whose framing dominates the historical record? Structural analysis: do the three readings produce different policy predictions? (E.g., if unanimity prevents war, then weakening the veto should increase war risk; if oligarchy drives the constraint, then weakening the veto should redirect institutional competition; if sovereignty is the principle, then unanimity is non-negotiable regardless of war prevention.)',
+    'Classification of the constraint depends on which reading is adopted. This constraint story (coordination_reading) classifies as Rope under the coordination frame; the oligarchy_reading classifies as Snare; the sovereignty_reading classifies as Mountain. The three are different constraints with different beneficiaries, different victim sets, and different ε values.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(beneficiary_identity_alignment, empirical, 'Whether smaller states'' revealed preferences align with the coordination reading (veto benefits everyone) or the oligopoly reading (veto benefits P5 at the cost of smaller-state justice).').
+narrative_ontology:omega_variable(reading_kernel_contest, conceptual, 'The three-reading kernel contest: coordination vs. oligarchy vs. sovereignty framing of the same Article 27 text.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(article_27_veto_power__coordination_reading, 0, 75).
+narrative_ontology:interval(article_27_veto_power__coordination_reading, 1945, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(arti_tr_t0, article_27_veto_power__coordination_reading, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(arti_tr_t15, article_27_veto_power__coordination_reading, theater_ratio, 15, 0.06).
-narrative_ontology:measurement(arti_tr_t30, article_27_veto_power__coordination_reading, theater_ratio, 30, 0.07).
-narrative_ontology:measurement(arti_tr_t45, article_27_veto_power__coordination_reading, theater_ratio, 45, 0.08).
-narrative_ontology:measurement(arti_tr_t60, article_27_veto_power__coordination_reading, theater_ratio, 60, 0.09).
-narrative_ontology:measurement(arti_tr_t75, article_27_veto_power__coordination_reading, theater_ratio, 75, 0.11).
+narrative_ontology:measurement(arti_tr_t1945, article_27_veto_power__coordination_reading, theater_ratio, 1945, 0.05).
+narrative_ontology:measurement_basis(arti_tr_t1945, observed).
+narrative_ontology:measurement(arti_tr_t1962, article_27_veto_power__coordination_reading, theater_ratio, 1962, 0.06).
+narrative_ontology:measurement_basis(arti_tr_t1962, observed).
+narrative_ontology:measurement(arti_tr_t1980, article_27_veto_power__coordination_reading, theater_ratio, 1980, 0.07).
+narrative_ontology:measurement_basis(arti_tr_t1980, observed).
+narrative_ontology:measurement(arti_tr_t2000, article_27_veto_power__coordination_reading, theater_ratio, 2000, 0.08).
+narrative_ontology:measurement_basis(arti_tr_t2000, observed).
+narrative_ontology:measurement(arti_tr_t2015, article_27_veto_power__coordination_reading, theater_ratio, 2015, 0.09).
+narrative_ontology:measurement_basis(arti_tr_t2015, observed).
+narrative_ontology:measurement(arti_tr_t2026, article_27_veto_power__coordination_reading, theater_ratio, 2026, 0.08).
+narrative_ontology:measurement_basis(arti_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(arti_be_t0, article_27_veto_power__coordination_reading, base_extractiveness, 0, 0.12).
-narrative_ontology:measurement(arti_be_t15, article_27_veto_power__coordination_reading, base_extractiveness, 15, 0.15).
-narrative_ontology:measurement(arti_be_t30, article_27_veto_power__coordination_reading, base_extractiveness, 30, 0.18).
-narrative_ontology:measurement(arti_be_t45, article_27_veto_power__coordination_reading, base_extractiveness, 45, 0.21).
-narrative_ontology:measurement(arti_be_t60, article_27_veto_power__coordination_reading, base_extractiveness, 60, 0.25).
-narrative_ontology:measurement(arti_be_t75, article_27_veto_power__coordination_reading, base_extractiveness, 75, 0.29).
+narrative_ontology:measurement(arti_be_t1945, article_27_veto_power__coordination_reading, base_extractiveness, 1945, 0.08).
+narrative_ontology:measurement_basis(arti_be_t1945, observed).
+narrative_ontology:measurement(arti_be_t1962, article_27_veto_power__coordination_reading, base_extractiveness, 1962, 0.1).
+narrative_ontology:measurement_basis(arti_be_t1962, observed).
+narrative_ontology:measurement(arti_be_t1980, article_27_veto_power__coordination_reading, base_extractiveness, 1980, 0.11).
+narrative_ontology:measurement_basis(arti_be_t1980, observed).
+narrative_ontology:measurement(arti_be_t2000, article_27_veto_power__coordination_reading, base_extractiveness, 2000, 0.13).
+narrative_ontology:measurement_basis(arti_be_t2000, observed).
+narrative_ontology:measurement(arti_be_t2015, article_27_veto_power__coordination_reading, base_extractiveness, 2015, 0.12).
+narrative_ontology:measurement_basis(arti_be_t2015, observed).
+narrative_ontology:measurement(arti_be_t2026, article_27_veto_power__coordination_reading, base_extractiveness, 2026, 0.12).
+narrative_ontology:measurement_basis(arti_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(arti_su_t0, article_27_veto_power__coordination_reading, suppression_requirement, 0, 0.08).
-narrative_ontology:measurement(arti_su_t15, article_27_veto_power__coordination_reading, suppression_requirement, 15, 0.09).
-narrative_ontology:measurement(arti_su_t30, article_27_veto_power__coordination_reading, suppression_requirement, 30, 0.1).
-narrative_ontology:measurement(arti_su_t45, article_27_veto_power__coordination_reading, suppression_requirement, 45, 0.11).
-narrative_ontology:measurement(arti_su_t60, article_27_veto_power__coordination_reading, suppression_requirement, 60, 0.12).
-narrative_ontology:measurement(arti_su_t75, article_27_veto_power__coordination_reading, suppression_requirement, 75, 0.14).
+narrative_ontology:measurement(arti_su_t1945, article_27_veto_power__coordination_reading, suppression_requirement, 1945, 0.02).
+narrative_ontology:measurement_basis(arti_su_t1945, observed).
+narrative_ontology:measurement(arti_su_t1962, article_27_veto_power__coordination_reading, suppression_requirement, 1962, 0.04).
+narrative_ontology:measurement_basis(arti_su_t1962, observed).
+narrative_ontology:measurement(arti_su_t1980, article_27_veto_power__coordination_reading, suppression_requirement, 1980, 0.05).
+narrative_ontology:measurement_basis(arti_su_t1980, observed).
+narrative_ontology:measurement(arti_su_t2000, article_27_veto_power__coordination_reading, suppression_requirement, 2000, 0.05).
+narrative_ontology:measurement_basis(arti_su_t2000, observed).
+narrative_ontology:measurement(arti_su_t2015, article_27_veto_power__coordination_reading, suppression_requirement, 2015, 0.06).
+narrative_ontology:measurement_basis(arti_su_t2015, observed).
+narrative_ontology:measurement(arti_su_t2026, article_27_veto_power__coordination_reading, suppression_requirement, 2026, 0.05).
+narrative_ontology:measurement_basis(arti_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -266,14 +327,12 @@ narrative_ontology:measurement(arti_su_t75, article_27_veto_power__coordination_
    ========================================================================== */
 
 narrative_ontology:coordination_type(article_27_veto_power__coordination_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(article_27_veto_power__coordination_reading, 0.1).
-narrative_ontology:affects_constraint(article_27_veto_power__coordination_reading, article_27_veto_power__oligopoly_reading).
+narrative_ontology:boltzmann_floor_override(article_27_veto_power__coordination_reading, 0.06).
+narrative_ontology:affects_constraint(article_27_veto_power__coordination_reading, article_27_veto_power__oligarchy_reading).
 narrative_ontology:affects_constraint(article_27_veto_power__coordination_reading, article_27_veto_power__sovereignty_reading).
-narrative_ontology:affects_constraint(article_27_veto_power__coordination_reading, security_council_action_paralysis__humanitarian_crisis).
-narrative_ontology:affects_constraint(article_27_veto_power__coordination_reading, un_charter_amendment_immutability).
 
 % DUAL FORMULATION NOTE:
-% The veto power is one kernel with three structurally distinct readings. This constraint (coordination_reading) decomposes from its siblings because the three readings differ in their core structural claims: coordination_reading asserts the veto solves the consent problem (low ε, all states benefit); oligopoly_reading asserts the veto entrenches P5 power (high ε, only P5 benefit); sovereignty_reading asserts the veto instantiates the Westphalian principle (medium ε, P5 benefit structurally even if principle applies to all). These are not observer-relative measurements of the same constraint—they are three different constraints with three different ε values, claimed by three different scholarly and political parties as the 'true' reading of Article 27. The family is linked because each reading logically depends on the others NOT being true: if oligopoly_reading is accurate, coordination_reading is a cover story; if sovereignty_reading's principle grounds the veto, it also grounds reform arguments for expanded permanent membership. See network.affects_constraints for cross-family edges.
+% The Article 27 veto is a contested kernel yielding three structurally distinct constraints: (1) coordination_reading (this file) classifies as Rope; (2) oligarchy_reading classifies as Snare, with beneficiaries being the P5 members and victims being non-P5 states blocked from institutional evolution; (3) sovereignty_reading classifies as Mountain, with the veto as an instantiation of the Westphalian consent principle treated as a natural law of interstate relations. Each reading has its own ε, beneficiary/victim set, and stakeholder frame. They are linked via network.affects_constraints because the adoption of one reading constrains the plausibility of the others (oligarchy and coordination readings in particular are mutually constraining: if the veto is doing high-value coordination work, oligarchic rent extraction is harder to justify; if it is extracting rents, coordination framing becomes a cover story). The three stories together comprise the Article 27 constraint family.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

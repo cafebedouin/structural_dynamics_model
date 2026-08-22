@@ -43,8 +43,12 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -58,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,35 +73,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ecb_mandate_article_127__orthodox_price_stability
- *   human_readable: ECB Mandate: Orthodox Price Stability Reading (Article 127 TFEU)
+ *   human_readable: ECB Mandate Article 127: Orthodox Price Stability Reading
  *   domain: monetary_policy/constitutional_law/institutional_governance
  *
  * SUMMARY:
- *   The European Central Bank's mandate under Article 127 TFEU commits it to
- *   'maintaining price stability' as the primary objective; secondary
- *   objectives (supporting employment, growth, and broader EU policy) are
- *   permitted 'without prejudice' to price stability. The orthodox reading
- *   interprets 'without prejudice' as a strict hierarchy: secondary
- *   objectives are operational only if price stability is not threatened. In
- *   practice, this means the 2% inflation target is treated as a binding
- *   constraint, and employment, growth, and climate considerations are
- *   deferred to fiscal authorities and play no role in ECB operational
- *   decisions. This reading produces a narrow beneficiary set (creditors,
- *   savers) and a wide victim set (peripheral labor markets, climate-exposed
- *   economies, those seeking employment stabilization during demand shocks).
- *   The constraint's extractiveness has risen steadily as climate risks mount
- *   and the secondary objectives clause remains inoperative despite repeated
- *   legislative proposals to activate it. The theater ratio tracks rising
- *   performative discussion of secondary objectives (speeches, research)
- *   while operational policy remains locked on price stability.
+ *   Article 127(1) TFEU establishes the ECB's mandate, listing price
+ *   stability as the primary objective and employment, growth, and financial
+ *   stability as secondary objectives 'without prejudice to' the primary
+ *   goal. This constraint instantiates the orthodox_price_stability READING:
+ *   price stability means a 2% inflation target, operationalized as the
+ *   exclusive focus of monetary policy, with secondary objectives treated as
+ *   non-operative unless price stability is threatened. The ECB Governing
+ *   Council interprets the mandate this way; employment and climate
+ *   constituencies read the same article differently
+ *   (expansive_secondary_objectives and climate_incorporation readings). The
+ *   kernel contest is real: the same treaty text grounds three structurally
+ *   distinct constraints with different beneficiary sets, extraction
+ *   profiles, and suppression mechanisms. This JSON generates only the
+ *   orthodox reading as a clean ε-invariant constraint, following Rule 1
+ *   (generate one reading only). The contest between readings is routed to
+ *   omega variables (Rule 2), documented in kernel_context (Rule 3), and
+ *   structured in cs_structure.reading_relations and axioms (Rule 4).
  *
  * KEY AGENTS:
- *   - ECB Governing Council: institutional agenda-setter; interprets and enforces the orthodox reading; controls communication and rate-setting
- *   - Creditor classes and savers: beneficiary seat; benefit from inflation suppression via asset protection and real returns
- *   - Peripheral labor markets: powerless payer; absorb employment costs of strict targeting during downturns
- *   - Climate-risk-exposed economies: moderate-power payer; cannot exit currency union or demand climate integration
- *   - Legislative bodies and secondary-objective advocates: excluded institutional seat; blocked from operationalizing 'without prejudice' clause
- *   - Fiscal authorities: organized payer/observer; inherit responsibility for employment and climate policy
+ *   - ECB Governing Council: institutional agenda-setter, interprets mandate as exclusive 2% focus, controls rate-setting and asset purchases
+ *   - Savers and creditors: beneficiaries of price stability and high real rates, concentrated power, global exit via arbitrage
+ *   - Asset holders: beneficiaries of inflation credibility and capital-flow stability, concentrated power, global mobility
+ *   - Employment-seekers: payers of subordinated employment objective, moderate power, constrained exit (euro-zone bound)
+ *   - Climate constituencies: payers of externalized climate risk, organized but politically marginal, civilizational horizon, constrained exit
+ *   - Member-state governments: institutional payers, constrained by ECB independence, forced to substitute fiscal policy for monetary stimulus
+ *   - Expansive-interpretation advocates: excluded from ECB governance, trapped within euro-zone institutions, suppressed by orthodox dominance
+ *   - Climate-integration advocates: excluded from mandate scope, trapped by Article 11 TFEU environmental integration being non-operational in ECB framework
  */
 
 /* ==========================================================================
@@ -105,57 +112,129 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(ecb_mandate_article_127__orthodox_price_stability, 0.68).
-domain_priors:suppression_score(ecb_mandate_article_127__orthodox_price_stability, 0.76).
+domain_priors:suppression_score(ecb_mandate_article_127__orthodox_price_stability, 0.71).
 domain_priors:theater_ratio(ecb_mandate_article_127__orthodox_price_stability, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, extractiveness, 0.68).
-narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 0.76).
+narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 0.71).
 narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, resistance, 0.58).
+narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, accessibility_collapse, 0.78).
+narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, resistance, 0.62).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(ecb_mandate_article_127__orthodox_price_stability, mountain).
-narrative_ontology:human_readable(ecb_mandate_article_127__orthodox_price_stability, "ECB Mandate: Orthodox Price Stability Reading (Article 127 TFEU)").
+narrative_ontology:constraint_claim(ecb_mandate_article_127__orthodox_price_stability, tangled_rope).
+narrative_ontology:human_readable(ecb_mandate_article_127__orthodox_price_stability, "ECB Mandate Article 127: Orthodox Price Stability Reading").
 narrative_ontology:topic_domain(ecb_mandate_article_127__orthodox_price_stability, "monetary_policy/constitutional_law/institutional_governance").
 
-domain_priors:emerges_naturally(ecb_mandate_article_127__orthodox_price_stability).
+domain_priors:requires_active_enforcement(ecb_mandate_article_127__orthodox_price_stability).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ecb_mandate_article_127__orthodox_price_stability, '1df0ccfc-461c-4cb9-8fc3-71d8417135a0').
-narrative_ontology:cs_kernel_codification('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', fixed_text).
-narrative_ontology:cs_authority_grounding('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', lineage).
-narrative_ontology:cs_interpretation_layer_present('1df0ccfc-461c-4cb9-8fc3-71d8417135a0').
-narrative_ontology:cs_reading_relation('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', ecb_mandate_article_127__expansive_secondary_objectives, coexists_with).
-narrative_ontology:cs_reading_relation('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', ecb_mandate_article_127__climate_incorporation, coexists_with).
-narrative_ontology:cs_axiom('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', foundational, price_stability_primary_mandate).
-narrative_ontology:cs_axiom_status(price_stability_primary_mandate, holdable).
-narrative_ontology:cs_axiom_grounding('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', price_stability_primary_mandate, conventional).
-narrative_ontology:cs_axiom('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', foundational, secondary_objectives_non_operational).
-narrative_ontology:cs_axiom_status(secondary_objectives_non_operational, overridden).
-narrative_ontology:cs_axiom_grounding('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', secondary_objectives_non_operational, instrumental).
-narrative_ontology:cs_reference_frame('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', price_stability_primacy).
-narrative_ontology:cs_drift_state('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', contemporary_climate_crisis_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('1df0ccfc-461c-4cb9-8fc3-71d8417135a0', '').
+narrative_ontology:cs_story_uid(ecb_mandate_article_127__orthodox_price_stability, '9834a8ab-30aa-4ebc-8f85-af71b89f3bed').
+narrative_ontology:cs_kernel_codification('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', fixed_text).
+narrative_ontology:cs_authority_grounding('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', extraction).
+narrative_ontology:cs_interpretation_layer_present('9834a8ab-30aa-4ebc-8f85-af71b89f3bed').
+narrative_ontology:cs_reading_relation('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', ecb_mandate_article_127__expansive_secondary_objectives, coexists_with).
+narrative_ontology:cs_reading_relation('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', ecb_mandate_article_127__climate_incorporation, influences).
+narrative_ontology:cs_axiom('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', foundational, secondary_objectives_non_operational).
+narrative_ontology:cs_axiom_status(secondary_objectives_non_operational, holdable).
+narrative_ontology:cs_axiom_grounding('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', secondary_objectives_non_operational, deontological).
+narrative_ontology:cs_axiom('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', foundational, price_stability_exclusive_focus).
+narrative_ontology:cs_axiom_status(price_stability_exclusive_focus, holdable).
+narrative_ontology:cs_axiom_grounding('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', price_stability_exclusive_focus, empirically_contingent).
+narrative_ontology:cs_reference_frame('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', bundesbank_price_stability_doctrine).
+narrative_ontology:cs_drift_state('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', contemporary_2020s, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('9834a8ab-30aa-4ebc-8f85-af71b89f3bed', '').
 narrative_ontology:cs_kernel_id(ecb_mandate_article_127__orthodox_price_stability, ecb_mandate_article_127).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, creditor_classes).
-narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, savers).
-narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, currency_stability_beneficiaries).
+narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, savers_creditors).
+narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, asset_holders).
+narrative_ontology:constraint_victim(ecb_mandate_article_127__orthodox_price_stability, employment_seekers).
+narrative_ontology:constraint_victim(ecb_mandate_article_127__orthodox_price_stability, climate_action_constituencies).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(ecb_mandate_article_127__orthodox_price_stability, central_banking_academic_establishment).
+narrative_ontology:constraint_victim(ecb_mandate_article_127__orthodox_price_stability, member_state_governments).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets Article 127(1) TFEU as conferring a mandate whose primary objective is price stability defined as 2% inflation, with secondary objectives (employment, growth, financial stability) explicitly subordinate and operative only when the primary target is not threatened. Sets interest rates, makes asset purchase decisions, and enforces this reading through governance procedures, speeches, and operational design. Justifies the exclusive focus as central bank orthodoxy and fidelity to the treaty text.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, ecb_governing_council, agenda_setter,
+    institutional, generational, analytical, continental).
+
+% Benefit from a credible 2% inflation target because it protects the purchasing power of financial assets, savings, and fixed-income instruments. Their returns are preserved by preventing both inflation erosion and the monetary expansion that would reduce real interest rates. The orthodox reading subordinates employment and growth considerations, keeping real rates higher than an expansive reading would permit.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, savers_creditors, beneficiary,
+    powerful, generational, arbitrage, continental).
+
+% Benefit from the ECB's commitment to price stability and high real rates: financial asset valuations, currency strength, and capital flows reflect confidence in the ECB's inflation-fighting credibility. The orthodox reading's exclusive focus on 2% signals discipline to global capital markets and supports capital inflows into euro-denominated assets.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, asset_holders, beneficiary,
+    powerful, generational, arbitrage, global).
+
+% Bear the cost of subordinating employment to price stability: when unemployment is high but inflation is below 2%, the orthodox reading constrains monetary stimulus that might expand labor demand. The 'without prejudice' clause in Article 127 is not operationalized, so employment remains a theoretical objective without steering capacity. They have no exit from the euro without emigration or political reorganization.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, employment_seekers, payer,
+    moderate, biographical, constrained, continental).
+
+% Bear the cost of the orthodox reading's externalization of climate risk from the mandate: the ECB's asset purchase framework does not incorporate climate-scenario analysis or climate-risk weighting into collateral frameworks, despite Article 11 TFEU requiring integration of climate policy across EU institutions. They argue the ECB's dominant position in asset markets means ignoring climate risk is a choice, not a constraint, and the orthodox reading enables that choice by treating climate as outside the mandate's scope.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, climate_action_constituencies, payer,
+    organized, civilizational, constrained, global).
+
+% Are constrained by the ECB's exclusive price-stability reading: they cannot use monetary expansion to support employment or growth without pressuring fiscal policy, which carries higher debt costs and political constraints. The orthodox reading shifts the burden of employment and climate policy onto their budgets. They observe but cannot override ECB decisions; their exit is political and costly.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, member_state_governments, payer,
+    institutional, generational, constrained, continental).
+narrative_ontology:stakeholder_secondary_role(ecb_mandate_article_127__orthodox_price_stability, member_state_governments, observer).
+
+% Would argue that Article 127's 'without prejudice' clause and the listing of secondary objectives (employment, growth, financial stability) authorize discretionary operational weight on these goals when price stability is not threatened. They are structurally excluded from ECB decision-making and their interpretation is suppressed by the orthodox reading's dominance in the institution.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, expansive_interpretation_advocates, excluded,
+    organized, biographical, trapped, continental).
+
+% Argue that Article 11 TFEU mandates climate integration into the ECB's asset purchase framework and that treating climate risk as external to the price-stability mandate is legally indefensible. They lack formal standing in ECB governance and the orthodox reading's narrow definition of the mandate scope excludes climate considerations from the institution's operational mandate.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, climate_integration_advocates, excluded,
+    organized, civilizational, trapped, global).
+
+% Derives intellectual authority and disciplinary coherence from the orthodox price-stability doctrine. The ECB's fidelity to a single-objective mandate validates the theoretical apparatus of modern central banking orthodoxy and provides career advancement paths for economists trained in that tradition. They benefit from the constraint's vindication of their discipline.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, central_banking_academic_establishment, beneficiary,
+    organized, biographical, mobile, global).
+
+% Has democratic legitimacy but limited formal authority over the ECB: it can hold hearings and propose amendments to the treaty, but the ECB's independence makes it operationally insulated from electoral pressure. Observes the constraint from a position of structural powerlessness, though political pressure from employment and climate constituencies flows through parliament.
+narrative_ontology:constraint_stakeholder(ecb_mandate_article_127__orthodox_price_stability, european_parliament, observer,
+    institutional, generational, constrained, continental).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(ecb_mandate_article_127__orthodox_price_stability, savers_creditors).
+narrative_ontology:fixing_cost_class(ecb_mandate_article_127__orthodox_price_stability, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a single, credible nominal anchor (2% inflation) across the euro area, solving the coordination problem of price-level expectations: member states cannot sustain independent monetary policies; a unified inflation target reduces uncertainty for wage bargaining, investment, and cross-border trade.
+% TRANSFER_FUNCTION: Transfers the benefit of credible low inflation (and thus higher real returns on financial assets) to savers, creditors, and asset holders, while imposing the cost of subordinated employment and climate objectives on workers, job-seekers, climate-vulnerable constituencies, and member-state treasuries that must substitute fiscal stimulus for monetary support.
+% ABSENT_VOICES: Advocates for expansive secondary objectives (employment, growth) and climate-integration readings are structurally excluded from ECB governance: they lack formal voting power and the orthodox reading's dominance in the institution suppresses their interpretations. Employment and climate constituencies have no seat at the decision table.
+% DISAPPEARANCE_RATIONALE: If this exclusive-focus reading vanished and were replaced by an expansive reading, the ECB would operationalize secondary objectives: lower real interest rates would follow from employment-weighted rate-setting, asset purchase frameworks would incorporate climate risks, and the distribution of benefits and costs would shift dramatically toward workers and climate constituencies. The financial markets, currency valuations, and fiscal policy of member states would reorganize around different expectations.
+% FOUNDING_PROBLEM: The Maastricht Treaty (1992) created a single currency but lacked an independent monetary authority with a clear mandate. Hyperinflation in the 1970s-80s had demonstrated the costs of politically-captured central banking; the Bundesbank's price-stability-first model was adopted as the template to prevent political pressure from eroding currency credibility and to establish a monetary anchor that would function across disparate member economies.
+% FOUNDING_PROBLEM_CORROBORATION: The ECB and conservative economists attest the founding problem is still live, citing ongoing threats to currency credibility and inflation anchoring. Employment advocates and climate constituencies attest the founding problem was substantially solved by the 1990s and the exclusive focus persists as a distributional choice, not a necessity; labour economists and central bank reform advocates from outside the ECB's own institution corroborate this challenge.
+narrative_ontology:disappearance_verdict(ecb_mandate_article_127__orthodox_price_stability, world_rearranges).
+narrative_ontology:founding_problem_status(ecb_mandate_article_127__orthodox_price_stability, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ecb_mandate_article_127__orthodox_price_stability, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(ecb_mandate_article_127__orthodox_price_stability, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(ecb_mandate_article_127__orthodox_price_stability, 'none', 1).
+narrative_ontology:epsilon_provenance(ecb_mandate_article_127__orthodox_price_stability, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,20 +246,6 @@ test(extraction_signature) :-
     domain_priors:base_extractiveness(ecb_mandate_article_127__orthodox_price_stability, E),
     E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, ExtMetricName, E),
-    domain_priors:suppression_score(ecb_mandate_article_127__orthodox_price_stability, S),
-    E =< 0.25,
-    S =< 0.05.
-
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(ecb_mandate_article_127__orthodox_price_stability),
-    narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(ecb_mandate_article_127__orthodox_price_stability, resistance, R),
-    AC >= 0.85,
-    R =< 0.15.
-
 :- end_tests(ecb_mandate_article_127__orthodox_price_stability_tests).
 
 /* ==========================================================================
@@ -189,16 +254,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is AUTHORED as a mountain (emerges_naturally: true) because the orthodox reading frames price stability as a natural law of monetary economics—inflation beyond the target is treated as irreducible collapse of the currency's role as store of value and medium of exchange. However, the authored metrics (extractiveness 0.68, suppression 0.76) describe a highly constructed, actively enforced regime that benefits a narrow set and imposes costs on a wide set. This divergence—claimed mountain, measured as extraction—is the central diagnostic. The temporal series (base_extractiveness rising from 0.35 to 0.68 over 34 years) tracks the accumulation of extraction as the founding anti-stagflation crisis receded, secondary objectives' salience rose (climate, employment), and the orthodox interpretation hardened rather than softened. Theater ratio rising from 0.08 to 0.42 tracks the growing gap between rhetoric about secondary objectives (ECB speeches on climate, financial stability) and operational policy (zero operational weight on either). Suppression requirement rising from 0.55 to 0.76 models the intensifying enforcement machinery needed to block mandate-expansion proposals and prevent reinterpretation. Accessibility collapse high across all time points reflects the institutional lock: member states cannot unilaterally change the mandate, academics dissenting from orthodoxy face professional marginalization, and elected bodies cannot override an independent authority's interpretation. Resistance rises from 0.25 to 0.42 as climate and employment pressures mount, but remains constrained because the benefiting parties (creditors, savers, institutional orthodoxy) have greater institutional power than the dispersed victims.
+ *   Extractiveness is measured at 0.68 (interval endpoint), capturing the ECB's operational choice to deliver concentrated benefits (high real returns for savers/creditors/asset holders) while bearing costs are borne diffusely (employment constrained, climate risks externalized, fiscal burden on governments). The series shows extraction rising from 0.55 to 0.68 over the interval, reflecting post-2008 and especially post-2015 period: zero-interest-rate policy intensified real-rate redistribution (savers and creditors bore opportunity costs; financial asset holders benefited from asset-price inflation funded by low rates). Suppression is high (0.71) because the constraint's persistence requires active exclusion of competing readings from ECB operational space: the 'without prejudice' clause is interpreted as non-operative, climate-integration proposals are resisted, and employment-weighted rate-setting is categorically rejected despite Article 127 listing these objectives. Theater_ratio is moderate (0.42): the ECB conducts genuine price-stability operations (inflation targeting, forward guidance, taper decisions), but an increasing share of institutional effort goes to defending the mandate against reinterpretation rather than executing the coordination function itself. Accessibility_collapse is high (0.78) because once the orthodox reading is adopted, alternatives become institutionally inaccessible: individual member states cannot pursue employment-first monetary policy (they have ceded that authority), the ECB's governance structure is insulated from electoral pressure, and the treaty lock-in makes reinterpretation extremely difficult. Resistance is moderate (0.62): climate and employment constituencies mount real political pressure (legislative proposals, court challenges, public advocacy), but the institution is designed to withstand that pressure and doctrinal consensus among central bankers amplifies resilience. Beneficiaries are named as a narrow, concentrated set (savers_creditors, asset_holders); victims are named as dispersed and politically marginal (employment_seekers, climate_action_constituencies). This asymmetry drives the tangled_rope classification: genuine coordination function (price stability is a real collective good), but asymmetric extraction (benefits concentrated, costs diffuse) and active enforcement (suppression of competing readings) are both necessary for the constraint to persist.
  *
  * PERSPECTIVAL GAP:
- *   From the ECB's institutional seat, the orthodox reading is a faithful reading of the treaty text and a rational defense of central-bank independence—inflation control is the core function and cannot be compromised. From the fiscal authorities' seats, the same reading is an externalization of extraction: the ECB locks itself into a single objective and leaves fiscal authorities to handle employment and climate costs without monetary cooperation. From the powerless labor-market seat, the reading is a structural entrapment: they absorb employment losses during demand shocks and have no exit from the currency union to seek better monetary policy. From the legislative seat, the reading is a usurpation: the 'without prejudice' clause was meant to be operational, but was read down to meaninglessness. The engine computes each seat's type from the structural asymmetry: agenda-setter with near-total directionality authority over the beneficiary and victim seats, beneficiaries with arbitrage exit and aligned interests, victims with trapped and identity-locked exits and no ability to demand rebalancing. This produces an estimated tangled_rope or snare classification from the victim seats, despite the agenda-setter's own mountain framing.
+ *   From the ECB's and savers' seats, the constraint is genuine coordination: price stability is a collective good that requires institutional commitment and treaty protections against political capture. From employment and climate constituencies' seats, the constraint is extractive: the ECB's exclusive focus on 2% is a distributional choice that privileges financial stability over labor-market inclusivity and climate risk management, justified by an orthodoxy that benefits the creditor class. The same institutional structure—the ECB's independence and single-objective focus—is interpreted by the beneficiary seats as 'necessary protection against political pressure' and by the target seats as 'structural insulation from democratic accountability.' The divergence is not measurement error; it is built into the constraint's asymmetric beneficiary/victim structure. The divergence is also the point: the engine's per-seat classification system is designed to measure exactly this kind of structural asymmetry, and a claim/metric gap (claiming rope while measuring tangled_rope extraction) is an honest acknowledgment of the divergence.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries (creditors, savers) have directionality near 0.0: the constraint subsidizes them by protecting asset values from inflation. Exit options are arbitrage-grade—if ECB policy shifted, they can reallocate capital to other currency zones or asset classes instantly. Power is institutional/powerful. This produces low effective extraction from their perspective; they experience the constraint as beneficial coordination. Victims (peripheral labor, climate-exposed economies) have directionality near 1.0: the constraint extracts from them by locking out employment and climate considerations. Exit options are trapped (labor cannot leave the currency union) or identity_locked (economies integrated into eurozone fiscal and trade structures). Power is powerless or moderate. This produces high effective extraction; they experience the constraint as coercive. The ECB's own seat has agenda-setting power and analytical exit, producing a high-authority directionality; it derives legitimacy from the orthodoxy's interpretation and benefits from the constraint's structural stability. No directionality overrides are needed; the derivation chain (beneficiary/victim + exit + power) produces the right asymmetry. Scope is continental—the constraint operates at eurozone scale, making verification of compliance hard and amplifying effective extraction modestly.
+ *   Directionality varies sharply across stakeholder seats. The ECB Governing Council is near d=0.5 (symmetric: it maintains the system it designed, derives institutional prestige and autonomy from the mandate, but also bears operational constraint and political pressure). Savers/creditors sit near d=0.0 (beneficiary end: they collect the constraint's output in real interest rates and asset valuations; the constraint's persistence is entirely advantageous to them). Asset holders sit even nearer d=0.0 (they benefit from credibility and capital flows, have arbitrage exits if the constraint threatens asset valuations, and would reverse positioning only if the reading fundamentally changed). Employment-seekers sit near d=1.0 (target end: they bear subordinated-objective costs, have constrained exit from the euro-zone, and would exit employment constraints only if secondary objectives were operationalized). Climate constituencies also sit near d=1.0 (targets: they pay the cost of climate-risk externalization, have constrained exit, and benefit only if the reading shifts to climate_incorporation). The derived directionality profile explains why the constraint is tangled_rope from some seats (the ECB as coordinator of price stability, beneficiaries as free-riders on a real coordination good) and snare-like from others (employment and climate constituencies as targets of an extractive arrangement they cannot exit). The engine computes per-seat classification; this note explains why divergence is structurally real.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (preventing 1970s-style stagflation via a credible inflation-control commitment) is solved. Contemporary inflation undershoots the target more often than it overshoots; labor-market slack and climate risks are the binding constraints, not inflation pressure. Yet the orthodox reading persists and intensifies its enforcement machinery (tightening collateral standards, resisting secondary-objective operationalization, hardening ECB communication against mandate expansion). This is the classic mandatrophy signature: the arrangement's founding justification is dead or reversed, but the constraint persists and extracts because the benefiting parties have institutional power to maintain it. The theater ratio rising steeply (speeches about climate and employment) while operational policy remains locked (no asset-purchase weight on climate risk, no employment stabilization instruments) is the perfected form of mandatrophy theater—the ECB acknowledges secondary objectives while ensuring they remain structurally inoperative. A genuine living mandate would operationalize them when price stability is not threatened; the orthodox reading ensures they never are operational. The constraint is ripe for mandatrophy designation, and a future reading that operationalizes the 'without prejudice' clause (the expansive_secondary_objectives sibling) would be the most natural decompression.
+ *   The founding problem (currency credibility threatened by inflation, Maastricht era, 1970s-80s hyper-inflation shadow) may be obsolete or substantially resolved by now. The euro has not experienced significant inflation volatility since the financial crisis, the ECB's credibility is established, and peer central banks with dual mandates (Fed, BoE, BoJ) show no lower inflation credibility. Yet the exclusive 2% focus persists and has hardened (post-2008 and post-2015, the orthodoxy has intensified, not loosened). This is a mandatrophy signature: a constraint whose founding mandate has outlived its original function but the institutional arrangement persists due to ideological commitment and beneficiary capture. Mandatrophy_resolved is not yet declared because the empirical question omega(4) names remains open: is the founding problem live or dead? The classification remains tangled_rope either way (the constraint has coordination + extraction components regardless of whether the founding problem is obsolete). But mandatrophy would be confirmed if the founding_problem_status resolves to 'dead' while disappearance_verdict is 'world_rearranges'—a constraint whose founding function is gone but whose removal would still reorganize institutional arrangements (because beneficiaries are entrenched and have made the constraint structural).
  */
 
 /* ==========================================================================
@@ -206,99 +271,95 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    false_summit_mountain_claim,
-    'Is the orthodox reading a genuine natural law of monetary economics, or is it a constructed constraint that benefits creditors and savers while externalizing costs to others?',
-    'Empirical test: (a) Survey evidence of whether 2% inflation is the unique stable anchor or whether other targets (1.5%, 2.5%, flexible range) are equally viable; (b) historical counterfactual: did non-euro, non-ECB-constrained economies with higher inflation targets experience structural instability?; (c) institutional forensics: trace the path of the orthodox interpretation in ECB governance—was it derived from economic theory or chosen to benefit specific parties?',
-    'If the reading is constructed and beneficiary-driven, the false-summit signature fires: reclassify from mountain to tangled_rope or snare. If the reading is genuinely natural, confirm mountain. Current evidence leans constructed: contemporary inflation undercuts the foundational inflation-pressure problem; the secondary objectives clause was drafted with clear operational intent; and the beneficiary set''s institutional power aligns too neatly with the reading''s dominance.',
+    article_127_textual_ambiguity,
+    'Does Article 127(1) TFEU''s phrase ''without prejudice to'' the secondary objectives authorize discretionary operational weight on those objectives when price stability is not threatened, or does it merely preserve their listing as non-binding aspirations?',
+    'Formal ECB legal opinion or European Court of Justice preliminary ruling interpreting the ''without prejudice'' clause. Natural experiment from member states that propose mandatory secondary-objective weightings and observe ECB legal responses.',
+    'A ''without prejudice'' ruling that authorizes discretionary secondary-objective weight would undermine the orthodox reading''s exclusive-focus claim and classify the constraint as more negotiable and less mandated than currently. The beneficiary set would expand to include employment constituencies; suppression would decline as the constraint''s necessity claim weakened.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(false_summit_mountain_claim, empirical, 'Whether the 2% inflation primacy is a natural law of monetary stability or an institutional choice benefiting creditors.').
+narrative_ontology:omega_variable(article_127_textual_ambiguity, empirical, 'Whether Article 127''s secondary objectives are legally operational or merely aspirational.').
 
 omega_variable(
-    without_prejudice_clause_semantics,
-    'What is the correct interpretation of ''without prejudice'' in Article 127(1)? Does it mean secondary objectives are subordinate (never operational) or does it mean they are operational when price stability is not threatened?',
-    'Comparative legal analysis: (a) trace the negotiating history of the Maastricht Treaty and the European Central Bank Statute; (b) examine how ''without prejudice'' is used elsewhere in EU law (environmental law, human rights law) to resolve the semantic ambiguity; (c) assess whether the Governing Council''s interpretation (exclusive focus) is the only textualist reading or one reading among multiple valid ones.',
-    'If ''without prejudice'' means secondary objectives are live when price stability is not threatened, the expansive_secondary_objectives reading is legally superior to the orthodox reading, and the constraint undergoes a phase transition. If it means strict hierarchy, the orthodox reading''s legal grounding is stronger. Current institutional consensus (ECB interpretation) favors hierarchy, but legal scholars and EU legislative proposals challenge this.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(without_prejudice_clause_semantics, conceptual, 'Whether Article 127''s ''without prejudice'' clause operationalizes secondary objectives or subordinates them definitively.').
-
-omega_variable(
-    climate_financial_stability_coupling,
-    'Does climate risk materially threaten price stability and financial stability in the eurozone, such that ignoring climate in collateral and asset decisions is itself a violation of the primary price-stability mandate?',
-    'Empirical: (a) measure correlation between climate-driven asset volatility and inflation; (b) stress-test collateral frameworks for climate-shock scenarios; (c) assess whether peripheral economies'' climate exposure (water scarcity, flooding) creates systemic eurozone financial stability risks that the ECB''s price-stability mandate implicitly requires it to address.',
-    'If climate risk is material to financial stability, then the orthodox reading''s externalization of climate becomes logically inconsistent with the price-stability mandate itself—climate integration becomes a requirement, not a secondary consideration. This would support the climate_incorporation reading and undermine the orthodox reading''s coherence. If climate risk is remote or exogenous to monetary policy''s domain, the orthodox reading stands.',
+    kernel_reading_contest_stability,
+    'This constraint instantiates the orthodox_price_stability reading of the ecb_mandate_article_127 kernel. Does this reading remain institutionally dominant in the ECB''s governance, or is the kernel drifting toward the expansive_secondary_objectives or climate_incorporation readings?',
+    'Monitoring ECB governance decisions, Governing Council statements, regulatory reform proposals from member states, and European Court judgments on climate integration. A series of climate-weighted collateral decisions or employment-responsive rate cuts would signal drift. Treaty amendment proposals would signal contested reading.',
+    'If the kernel is drifting, this constraint''s classification may be transitional rather than stable. An expansive reading operationalization would reclassify to rope (genuine coordination of multiple objectives) or ladder the snare classification (if the orthodox reading is maintained despite explicit contradicting decisions). Climate incorporation would decompose this constraint into two separate stories with different beneficiary structures.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(climate_financial_stability_coupling, empirical, 'Whether climate risk is material to eurozone price and financial stability.').
+narrative_ontology:omega_variable(kernel_reading_contest_stability, conceptual, 'Institutional stability of this reading versus sibling readings.').
 
 omega_variable(
-    mandate_inflation_anchor_necessity,
-    'Is the 2% inflation target a necessary institutional commitment for price-stability credibility, or is it a contingent choice that could be updated or made flexible without destabilizing expectations?',
-    'Empirical: (a) survey expectations-formation literature: do inflation expectations deanchor if the target is revised?; (b) natural experiment analysis: did Switzerland, UK, Canada, or other non-eurozone central banks suffer credibility loss when adjusting inflation targets or adopting flexible ranges?; (c) forward guidance literature: can flexible ranges, target bands, or asymmetric targets anchor expectations as well as a fixed point?',
-    'If the 2% target is not uniquely necessary—if flexible ranges or asymmetric targets (e.g., 1-3%) can anchor expectations equally well—then the orthodox reading''s inflexibility is a choice, not a constraint of nature. This supports the false-summit hypothesis and the mandatrophy diagnosis. If the target is uniquely necessary, the orthodox reading''s rigidity is justified.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(mandate_inflation_anchor_necessity, empirical, 'Whether 2% inflation is a necessary institutional anchor or a contingent policy choice.').
-
-omega_variable(
-    suppression_mechanism_internalized_vs_structural,
-    'How much of the suppression of mandate-expansion proposals comes from structural/legal barriers (treaty rigidity, ECB institutional independence) versus internalized professional norms (economists'' orthodox training, career incentives favoring stability readings)?',
-    'Institutional ethnography: interview ECB staff, legislative participants, and academic economists about their reasoning for and against mandate expansion. Measure: (a) how many proposed secondary-objective amendments would succeed if the ECB itself supported them (structural barrier measure); (b) how many economists with orthodox training endorse expansion when given anonymity or professional-cost forgiveness (internalization measure).',
-    'If suppression is primarily structural (external barriers), the constraint is robust and legal amendment is the only decompression path. If internalized, the suppression is more fragile—a cohort shift or new institutional norms could shift the reading. The coercion grid''s suppression trajectory tracks both; disentangling them informs the stability of the orthodox reading''s dominance.',
+    suppression_mechanism_structural_vs_ideological,
+    'Is the measured suppression of expansive secondary-objective and climate-integration readings structural (ECB institutional design makes other readings operationally impossible) or ideological (the readings are suppressed by dominant economic doctrine even though they are technically feasible)?',
+    'Post-reform suppression trajectory: if ECB governance were explicitly reformed to operationalize secondary objectives (new voting rules, mandate restatement), would suppression persist at the same level? If it declines, suppression was ideological; if it persists, it was structural.',
+    'Structural suppression is harder to reverse; ideological suppression is more vulnerable to generational doctrinal shifts and political pressure. A finding that suppression is primarily ideological would weaken the constraint''s claim to naturalness and would increase the credibility of omega (1)''s resolution mechanism.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Whether mandate-expansion suppression is structural or internalized in professional culture.').
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_ideological, empirical, 'Suppression mechanism: structural barriers vs. ideological dominance.').
 
 omega_variable(
-    beneficiary_heterogeneity_within_creditor_class,
-    'Do all creditors and savers benefit equally from the orthodox reading, or are there subgroups within the creditor class whose welfare diverges (e.g., long-term savers vs. short-term traders, or creditors in peripheral vs. core economies)?',
-    'Distributional analysis: (a) measure real returns to different creditor cohorts under orthodox vs. expansive policy scenarios; (b) assess whether peripheral creditors (whose economies would benefit from employment stabilization and climate investment) have different welfare profiles than core-economy creditors; (c) trace credit allocation: does the orthodox reading produce consistent favor or does it shift among creditor cohorts?',
-    'If the beneficiary set is heterogeneous and some creditors would benefit from expansive policy (e.g., those in economies needing employment growth), the constraint''s beneficiary structure is less clear-cut. This complicates the snare/tangled-rope diagnosis and opens negotiation space for coalition-building between expansive-reading advocates and creditor subgroups. If creditors are aligned in preference for orthodoxy, the constraint''s beneficiary lock is stronger.',
+    founding_problem_obsolescence_contest,
+    'Does the founding problem (currency credibility threatened by inflation) remain live, or has it been substantially resolved by institutional design, and the exclusive price-stability focus persists as distributional choice rather than structural necessity?',
+    'Comparative analysis: do other central banks (US Federal Reserve, Bank of Japan, Bank of England) with explicit multiple-objective mandates show lower inflation volatility or lower credibility than the ECB? Do euro-area inflation anchoring metrics deteriorate after secondary objectives are operationalized (if attempted)? Do financial markets treat the euro as less credible when the ECB signals employment-weight in rate-setting?',
+    'If the founding problem is found obsolete but the constraint persists, this crosses the mandatrophy threshold: a constraint whose mandate has outlived its function. Classification remains tangled_rope (coordination + extraction are both present), but mandatrophy_resolved would be true, and the constraint would be a candidate for deliberate institutional reform.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(beneficiary_heterogeneity_within_creditor_class, empirical, 'Whether all creditor and saver groups benefit equally from the orthodox reading or whether there is significant intra-class divergence.').
+narrative_ontology:omega_variable(founding_problem_obsolescence_contest, empirical, 'Whether the founding problem is live or obsolete.').
+
+omega_variable(
+    kernel_doctrine_genealogy,
+    'This reading embodies the orthodox central-banking doctrine of the Bundesbank model (transmitted through the Maastricht Treaty design and the ECB''s founding mandate). Is this doctrine a discovered truth about monetary policy, or a constructed institutional choice that benefits particular constituencies?',
+    'Historical genealogy: trace the doctrine''s origins to 1970s-80s inflation responses in Germany and the political choice to constitutionalize the Bundesbank model into EU law. Cross-national comparison: do economies with dual mandates (US, UK, Japan) show worse outcomes on inflation or currency credibility? Do they show better outcomes on employment or welfare?',
+    'If the doctrine is a constructed institutional choice rather than a discovered necessity, the constraint''s classification does not change (tangled_rope remains), but the false-summit detection machinery would flag the constraint''s vindication of a particular doctrine (price_stability_primacy_doctrine) as a beneficiary rather than a natural law. This reframes the constraint as politically contingent rather than technically mandated.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_doctrine_genealogy, conceptual, 'Whether the orthodox price-stability doctrine is a discovered truth or a constructed institutional choice.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ecb_mandate_article_127__orthodox_price_stability, 1992, 2026).
+narrative_ontology:interval(ecb_mandate_article_127__orthodox_price_stability, 0, 28).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ecb_mandate_ps_tr_t1992, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 1992, 0.08).
-narrative_ontology:measurement(ecb_mandate_ps_tr_t2001, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 2001, 0.12).
-narrative_ontology:measurement(ecb_mandate_ps_tr_t2008, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 2008, 0.18).
-narrative_ontology:measurement(ecb_mandate_ps_tr_t2012, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 2012, 0.25).
-narrative_ontology:measurement(ecb_mandate_ps_tr_t2018, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 2018, 0.35).
-narrative_ontology:measurement(ecb_mandate_ps_tr_t2026, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 2026, 0.42).
+narrative_ontology:measurement(ecb__tr_t0, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(ecb__tr_t4, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 4, 0.32).
+narrative_ontology:measurement(ecb__tr_t8, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 8, 0.36).
+narrative_ontology:measurement(ecb__tr_t12, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 12, 0.4).
+narrative_ontology:measurement(ecb__tr_t16, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 16, 0.42).
+narrative_ontology:measurement(ecb__tr_t20, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 20, 0.42).
+narrative_ontology:measurement(ecb__tr_t24, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 24, 0.42).
+narrative_ontology:measurement(ecb__tr_t28, ecb_mandate_article_127__orthodox_price_stability, theater_ratio, 28, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(ecb_mandate_ps_be_t1992, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 1992, 0.35).
-narrative_ontology:measurement(ecb_mandate_ps_be_t2001, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 2001, 0.42).
-narrative_ontology:measurement(ecb_mandate_ps_be_t2008, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 2008, 0.48).
-narrative_ontology:measurement(ecb_mandate_ps_be_t2012, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 2012, 0.55).
-narrative_ontology:measurement(ecb_mandate_ps_be_t2018, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 2018, 0.62).
-narrative_ontology:measurement(ecb_mandate_ps_be_t2026, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 2026, 0.68).
+narrative_ontology:measurement(ecb__be_t0, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(ecb__be_t4, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 4, 0.59).
+narrative_ontology:measurement(ecb__be_t8, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 8, 0.63).
+narrative_ontology:measurement(ecb__be_t12, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 12, 0.65).
+narrative_ontology:measurement(ecb__be_t16, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 16, 0.67).
+narrative_ontology:measurement(ecb__be_t20, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement(ecb__be_t24, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 24, 0.68).
+narrative_ontology:measurement(ecb__be_t28, ecb_mandate_article_127__orthodox_price_stability, base_extractiveness, 28, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ecb_mandate_ps_su_t1992, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 1992, 0.55).
-narrative_ontology:measurement(ecb_mandate_ps_su_t2001, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 2001, 0.6).
-narrative_ontology:measurement(ecb_mandate_ps_su_t2008, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 2008, 0.64).
-narrative_ontology:measurement(ecb_mandate_ps_su_t2012, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 2012, 0.68).
-narrative_ontology:measurement(ecb_mandate_ps_su_t2018, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 2018, 0.72).
-narrative_ontology:measurement(ecb_mandate_ps_su_t2026, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 2026, 0.76).
+narrative_ontology:measurement(ecb__su_t0, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 0, 0.62).
+narrative_ontology:measurement(ecb__su_t4, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 4, 0.65).
+narrative_ontology:measurement(ecb__su_t8, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 8, 0.68).
+narrative_ontology:measurement(ecb__su_t12, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 12, 0.7).
+narrative_ontology:measurement(ecb__su_t16, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 16, 0.71).
+narrative_ontology:measurement(ecb__su_t20, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement(ecb__su_t24, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 24, 0.71).
+narrative_ontology:measurement(ecb__su_t28, ecb_mandate_article_127__orthodox_price_stability, suppression_requirement, 28, 0.71).
 
 
 /* ==========================================================================
@@ -309,18 +370,13 @@ narrative_ontology:coordination_type(ecb_mandate_article_127__orthodox_price_sta
 narrative_ontology:boltzmann_floor_override(ecb_mandate_article_127__orthodox_price_stability, 0.12).
 narrative_ontology:affects_constraint(ecb_mandate_article_127__orthodox_price_stability, ecb_mandate_article_127__expansive_secondary_objectives).
 narrative_ontology:affects_constraint(ecb_mandate_article_127__orthodox_price_stability, ecb_mandate_article_127__climate_incorporation).
-narrative_ontology:affects_constraint(ecb_mandate_article_127__orthodox_price_stability, eurozone_fiscal_policy_constraint).
-narrative_ontology:affects_constraint(ecb_mandate_article_127__orthodox_price_stability, peripheral_labor_market_stabilization).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of a contested kernel (Article 127 TFEU ECB mandate). Three structurally distinct constraints are generated from the same treaty text: (1) ORTHODOX_PRICE_STABILITY (this file): 2% inflation target is primary, secondary objectives subordinate and inoperative. (2) EXPANSIVE_SECONDARY_OBJECTIVES: 'without prejudice' clause operationalizes employment, growth, financial stability as live policy levers when price stability not threatened. (3) CLIMATE_INCORPORATION: Article 11 TFEU environmental integration obligates climate integration into collateral and asset frameworks. Each reading instantiates a different ε, different beneficiary/victim structure, and different constraint type. The ε values diverge because the readings dispute what monetary policy's operational scope is—they are not different perspectives on the same scope, but different claims about the scope itself. This follows the ε-invariance principle: when observables/claims differ structurally, write separate constraints and link them via network.affects_constraints.
+% This constraint is one reading of the contested ecb_mandate_article_127 kernel. The sibling readings (expansive_secondary_objectives and climate_incorporation) instantiate different interpretations of the same treaty article and produce different constraint classifications, beneficiary/victim structures, and extraction profiles. All three readings share the kernel but are structurally distinct constraints. Network links enable decomposition analysis: the orthodoxy reading influences both siblings by setting the institutional baseline that would be displaced if either sibling reading were adopted. No reading forecloses another within a single coherent framework; all three coexist as live interpretive positions held by different ECB factions and external constituencies.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(ecb_mandate_article_127__orthodox_price_stability, moderate, 0.82).
-constraint_indexing:directionality_override(ecb_mandate_article_127__orthodox_price_stability, organized, 0.65).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

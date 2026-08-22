@@ -2,9 +2,9 @@
   "header": {
     "constraint_id": "federation_membership_treaty__subsidiarity_balance",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "cbd632ef-5b39-4cfd-8b47-3842da1fde57"
+    "story_uid": "c6822057-f154-4e89-926e-53f527f90d7f"
   },
   "base_properties": {
     "extractiveness": 0.58,
@@ -13,184 +13,284 @@
     "accessibility_collapse": 0.62,
     "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Federation Membership Treaty: Subsidiarity Balance on Free Movement",
+    "human_readable": "Subsidiarity Balance in Federation Member Free Movement",
     "topic_domain": "political_economy/federalism/migration_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "mobile_professionals",
-      "cross_border_employers",
-      "federation_authority"
+      "mobile_labor_high_skill",
+      "service_providers_cross_border",
+      "federation_institutional_legitimacy"
     ],
     "victims": [
-      "immobile_domestic_workers",
-      "welfare_administrators",
-      "localized_service_providers"
+      "stationary_labor_low_skill",
+      "local_welfare_systems",
+      "territorial_labor_market_regulators"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "mobile_labor_high_skill",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Access expanded labor market opportunities across member states; can pursue career paths that require geographic mobility. Bear no direct extraction; gain significantly from the right to move and establish themselves where compensation and opportunity clusters exist. Their legal status is portable across borders; they are the primary constituency supporting unconditional mobility rights."
+    },
+    {
+      "name": "service_providers_cross_border",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Professional service firms (legal, consulting, accounting, engineering) operate continent-wide under mutual recognition frameworks. The subsidiarity balance permits them to move personnel across borders while respecting local regulatory regimes. They capture regulatory arbitrage opportunities — locating teams where regulatory costs are lower while serving clients continent-wide."
+    },
+    {
+      "name": "stationary_labor_low_skill",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Face wage and employment competition from mobile workers willing to accept lower compensation. Cannot easily retrain or relocate; geographic and skill lock-in keeps them locally dependent. The subsidiarity framework permits member states to impose some residency and integration requirements, but these are enforced unevenly and mobile workers often face lower barriers than resident applicants. The constraint extracts from them through compressed wage competition."
+    },
+    {
+      "name": "local_welfare_systems",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must absorb the cost of providing access to unemployment benefits, family allowances, and social housing to newly mobile workers while facing fiscal pressure from aging populations and economic cycles. The subsidiarity framework permits eligibility restrictions (work history, residency periods) but these are subject to proportionality review and often invalidated. The constraint forces welfare systems to bear costs they cannot fully exclude through means-testing without triggering legal challenges."
+    },
+    {
+      "name": "territorial_labor_market_regulators",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Tasked with maintaining labor market stability and skill matching in their jurisdiction, but constrained by the subsidiarity balance from using blunt geographic exclusions. They can impose licensing requirements, skill certifications, and integration conditions, but must justify each restriction through proportionality analysis. The constraint forces them to negotiate between federation-level free movement rules and local labor market conditions; enforcement costs are high and outcomes are contested in courts."
+    },
+    {
+      "name": "federation_institutional_legitimacy",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The subsidiarity balance is vindicated as the federation's foundational principle: neither pure integration (which would delegitimize the federation in sovereignty-protective member states) nor pure sovereignty (which would collapse the single market and federation's raison d'être). The framework's existence — as a middle path — sustains the federation's internal coalition and external legitimacy. This is not an agent; it is a vindicated institutional arrangement."
+    },
+    {
+      "name": "integration_primary_reading_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "European Parliament members, progressive member-state governments, and civil-rights organizations that endorse the 'integration_primary' reading—viewing free movement as constitutive of the single market and its restrictions as presumptively illegitimate. They contest the legitimacy of the subsidiarity balance itself, arguing it smuggles sovereignty-protecting carve-outs into what should be an unconditional right. They are excluded from the agenda-setting process that interprets and enforces the balance."
+    },
+    {
+      "name": "sovereignty_primary_reading_coalition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Member-state governments emphasizing labor-market protection, welfare-system integrity, and national labor-force preference. They contest the subsidiarity balance as an insufficient shield against unfettered mobile labor, viewing it as a constraint imposed by supranational courts and institutions against their will. They lack enforcement capacity to unilaterally override federation rules but maintain political pressure for stricter residency and integration conditions."
+    },
+    {
+      "name": "european_court_of_justice",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Interprets and applies the subsidiarity balance through proportionality doctrine. Adjudicates member-state restrictions on free movement by testing whether the restriction is proportionate to a legitimate aim (labor-market stability, welfare-system integrity, public-health safety). Controls the standard of review and therefore the empirical scope of what 'legitimate' and 'proportionate' mean. Their case law shapes which restrictions are permissible and which are struck down."
+    },
+    {
+      "name": "member_state_governments",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact and enforce restrictions on free movement within the bounds set by the subsidiarity framework and proportionality doctrine. Each state is a co-author of the federation's rules but constrained by federation law in their implementation. They bear the political cost of both mobility (labor-market disruption, welfare costs) and restrictions (claims of discrimination, federation-law violations). They navigate between constituent demands for protection and federation law's requirements."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Permits movement of labor and services across member-state borders while preserving member states' authority to regulate labor markets and welfare-system access. Solves the coordination problem of integrating distinct labor markets (with different wage levels, skill distributions, and welfare-system generosity) under a single institutional roof without delegitimizing the federation in sovereignty-protective states or collapsing the single market in integration-oriented ones.",
+    "transfer_function": "Moves labor and service workers across borders, concentrating benefits on mobile high-skill workers and service providers while distributing costs across stationary low-skill workers, local labor-market regulators, and welfare systems. The transfer is not monetary but positional: mobility rights accrue to those with the skills and resources to exercise them; protection and stability benefits accrue less reliably to those geographically or skill-locked.",
+    "absent_voices": "Stationary low-skill workers lack organized representation in federation-level policy-setting and litigation; they face the wage and employment competition but do not participate in proportionality-standard debates that shape what restrictions are permissible. Sovereignty-primary member-state constituencies (labor unions, welfare-system advocates) contest the reading itself but from a delegitimized position—their objections are framed as 'protectionism' rather than legitimate interests. Small member states with constrained welfare systems lack the institutional capacity to challenge court-imposed standards.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the subsidiarity balance disappeared, labor mobility would either collapse entirely (if the sovereignty-primary reading fully prevailed) or become unconditional (if the integration-primary reading prevailed). Either path would destabilize the federation: collapse would fragment the single market and trigger exit crises in mobility-dependent economies; unconditional movement would trigger welfare-system and labor-market crises in generous, geographically proximate member states. The equilibrium depends on the balance's continued enforcement.",
+    "founding_problem": "Early federation membership combined a commitment to free movement with member states' sovereign control of welfare systems and labor markets. The founding problem was: how can a federation integrate labor markets without either imposing a single welfare standard (politically impossible across states with different generosity levels and funding capacity) or collapsing mobility rights (economically destructive to the federation project)?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Federation institutional architects (European Commission founding texts, Maastricht Treaty preamble) attest the founding problem was real and urgent. The European Court of Justice's case law (Carpenter, Baumbast, Chen lines) attests the subsidiarity balance is an active solution, not a settled principle. Member-state governments contest the balance's adequacy, arguing the founding problem has shifted—welfare-system strain and labor-market disruption in receiving states now demand stricter restrictions. Critical scholarship (Menéndez, Schiek) outside the benefiting-parties coalition corroborates that the balance is actively maintained and repeatedly contested, not a natural equilibrium."
+  },
   "interval": {
-    "start": 0,
-    "end": 40
+    "start": 1992,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1992,
       "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.42
+      "time_point": 2001,
+      "value": 0.44
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 2008,
+      "value": 0.51
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.52
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 25,
+      "time_point": 2015,
       "value": 0.56
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.58
+      "time_point": 2020,
+      "value": 0.59
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
+      "time_point": 2024,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.25
+      "time_point": 1992,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 2001,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.32
+      "time_point": 2008,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.36
+      "time_point": 2015,
+      "value": 0.39
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 35,
+      "time_point": 2020,
       "value": 0.41
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 2024,
       "value": 0.41
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1992,
       "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.38
+      "time_point": 2001,
+      "value": 0.41
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.42
+      "time_point": 2008,
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.46
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.5
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 35,
+      "time_point": 2015,
       "value": 0.52
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
+      "time_point": 2020,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
       "value": 0.52
     }
   ],
   "commentary": {
-    "narrative_context": "Within a federal system (EU, Switzerland, Canada in different contexts), free movement of labor and persons is treated as a constitutive principle—but one that member states retain authority to bound through \"legitimate national interests.\" The subsidiarity balance reading holds that movement rights are real and protected, but can be proportionally constrained by public health, public policy, welfare sustainability, and labor-market stability concerns. This is NOT the integration-primary reading (movement is the primary good; exceptions are narrow) and NOT the sovereignty-primary reading (states retain near-total discretion). It is a middle path: graduated structure where both movement and restriction are legitimate, and the boundary shifts with circumstances. The constraint's operation produces tangled extraction: genuine coordination (the federation exists, its benefits are real) is coupled with asymmetric extraction (immobile workers, welfare systems, and localized service providers bear the costs). The suppression metric reflects moderate enforcement in both directions—federation authorities suppress excessive member-state restrictions, member states suppress extremes of unrestricted movement.",
+    "narrative_context": "The subsidiarity balance reading of the federation's free-movement commitment stakes a middle ground between integration-primary (movement is a constitutive right, restrictions presumptively illegitimate) and sovereignty-primary (movement is conditional on state consent, states retain labor-market control). The balance asserts: free movement is a federation right, but member states retain authority to impose restrictions on grounds of legitimate national interests (labor-market stability, welfare-system integrity, public health, public order), subject to proportionality testing by federation courts. This reading instantiates the constraint through proportionality doctrine: restrictions are permissible if they pursue a legitimate aim and are proportionate to that aim. The constraint therefore distributes extraction asymmetrically—high-skill mobile workers and service providers benefit from broad movement rights; stationary workers and local welfare systems bear costs; territorial regulators face high enforcement burden navigating proportionality standards. The court (European Court of Justice) acts as the agenda-setter, defining 'legitimate' and 'proportionate' through case law. Suppression is moderate—not blanket restriction of movement, but active enforcement of proportionality doctrine against member-state restrictions—and both upward and downward mobility restrictions are suppressed (unrestricted movement AND blanket bans are both policed). Theater has increased over time as proportionality doctrine becomes more formalized and litigation-driven; the founding substantive coordination (integrating labor markets) now sits alongside performative compliance with proportionality standards.",
     "key_agents": [
-      "mobile_professionals: high-power beneficiaries of the movement right; low exit cost (arbitrage-grade) across federation jurisdictions",
-      "cross_border_employers: institutional beneficiaries; access to distributed labor supply reduces their hiring friction",
-      "immobile_domestic_workers: moderate-power targets; trapped in local markets facing competition from mobile workers",
-      "welfare_administrators: institutional targets; constrained by inability to condition benefits on residency; face fiscal pressure from selective migration",
-      "federation_authority: agenda-setter; adjudicates the proportionality boundary; enforces the constraint by invalidating state restrictions deemed excessive",
-      "member_state_governments: organized payers; retain formal sovereignty but its scope is graduated and judicially constrained",
-      "indigenous/historically_rooted_populations: excluded from the debate frame; would advocate for territorial control and group rights but are not centered in mobility doctrine"
+      "Mobile high-skill labor: beneficiaries of expanded movement rights; no extraction cost",
+      "Service providers cross-border: beneficiaries capturing regulatory arbitrage; institutional power",
+      "Stationary low-skill labor: payers bearing wage competition; powerless, trapped",
+      "Local welfare systems: payers bearing access-cost pressure; institutional constraint",
+      "Territorial labor-market regulators: dual-positioned payers and agenda-setters; navigating proportionality bounds",
+      "European Court of Justice: agenda-setter interpreting and enforcing proportionality doctrine",
+      "Integration-primary coalition: excluded, contesting the reading's legitimacy",
+      "Sovereignty-primary coalition: excluded, contesting the reading's adequacy"
     ],
-    "logic_rationale": "Extractiveness is moderate-to-high (0.58 at interval end) because the constraint structurally transfers bargaining power from immobile workers and localized service providers to mobile, credentialed actors, yet the transfer is not absolute—proportionality doctrine constrains it and member states retain limited exception grounds. Suppression is moderate (0.52) because the constraint requires active enforcement in BOTH directions: federation courts must suppress excessive state restrictions (preventing backsliding to closed borders), and member states must suppress unrestricted movement that would destabilize welfare and labor-market policy. Theater is moderate (0.41) because proportionality doctrine is substantively applied—the boundary genuinely moves with economic conditions and demographic shifts—yet the doctrine also performs a legitimacy function, making restrictions seem principled and exceptions seem temporary rather than constituting an open-ended state veto. The measurement series tracks gradual rise in extractiveness and theater over the interval as member states learn to couch restrictions in proportionality language (the rhetoric of exception becomes more sophisticated, not because the principle weakens but because the domain learns to use it).",
-    "perspectival_gap": "From the federation_authority and mobile_professionals seats, the constraint is a Rope—genuine coordination that enables gains from integration while managing legitimate exceptions. From the immobile_domestic_workers and welfare_administrators seats, the constraint is substantially extractive—they lack the exit options of mobile actors and bear the costs of labor-market integration without the benefits. Member_state_governments occupy a dual position: they are formal payers (constrained by federation authority) but also beneficiaries (they retain some exception grounds and their citizens include mobile professionals). The engine computes per-seat types from the structural data; this perspectival gap should be observable in the divergence between those computations.",
-    "directionality_logic": "Mobile professionals and cross_border_employers have low directionality (d ~ 0.2–0.35): they structurally benefit from the constraint, have high exit options (arbitrage-grade across jurisdictions), and face little suppression. Immobile_domestic_workers and localized_service_providers have high directionality (d ~ 0.65–0.85): they bear wage pressure, are trapped (cannot exercise the exit option the constraint guarantees), and face suppression from competitive pressure. Welfare_administrators sit at intermediate directionality (d ~ 0.55–0.70): they are institutional actors with formal authority but constrained in its exercise; they face fiscal pressure but retain some exception grounds. Federation_authority is analytical (d = 0.5 by convention). Member_state_governments are moderately high (d ~ 0.60): they are targets of federation court review and must defend restrictions under proportionality doctrine, even though they retain formal authority. No directionality overrides are needed; the structural derivation captures the real relationships.",
-    "mandatrophy_analysis": "The founding problem (prevent economic fragmentation and military conflict through integration) is substantially solved—no member state is attempting unilateral exit or economic nationalism at the scale that motivated the constraint's founding. Yet the constraint persists and has grown in complexity (proportionality doctrine has accumulated case law, making exceptions harder to invoke successfully). The constraint has transformed from its founding purpose (preventing conflict) to managing distributional consequences (how to share the gains from integration without destabilizing localized communities and welfare systems). This is classic mandatrophy: the original mandate is dead but the constraint persists, now functioning as a vehicle for extraction from immobile populations. The fact that proportionality doctrine is SUBSTANTIVELY applied (it is not mere theater) prevents full classification as Piton—the constraint is not pure performance—but the rise in theater_ratio over the interval (0.25 → 0.41) signals increasing performativity as the doctrine becomes more rhetorically sophisticated.",
-    "kernel_context": "This constraint instantiates the SUBSIDIARITY_BALANCE reading of the federation_membership_treaty kernel. The kernel is the commitment to economic integration and free movement within a federal system. Three readings are in live contention: (1) INTEGRATION_PRIMARY: free movement is constitutive; restrictions are presumptively illegitimate unless narrowly justified; (2) SOVEREIGNTY_PRIMARY: free movement is conditional on member state consent; states retain broad authority to protect national labor markets and welfare; (3) SUBSIDIARITY_BALANCE (this reading): free movement is protected but legitimate national interests constrain it proportionally. The subsidiarity_balance reading sits between the extremes: it affirms both the movement right AND the exception ground, and frames the boundary as graduated and context-dependent, not fixed. The sibling readings would generate different constraint profiles: integration_primary would show lower suppression and higher extractiveness (exceptions harder to invoke, mobility pressure greater); sovereignty_primary would show higher suppression and lower extractiveness (states retain broad discretion, mobility pressure suppressed). This reading generates tangled extraction because it treats both movement and restriction as legitimate, creating the real tension that produces the measured suppression and theater."
+    "logic_rationale": "Extractiveness has risen from 0.38 (1992, early federation period, movement rights nascent and welfare systems absorbing costs without acute pressure) to 0.58 (2024, mature period with substantial cross-border labor flows and sustained welfare-system strain). The rise reflects: (1) East European enlargement (2004+) increased the skill and wage differential attracting mobility, raising extraction from low-skill local labor; (2) service-provider integration deepened regulatory arbitrage opportunities; (3) welfare-system strain in receiving states (aging, fiscal pressure) made absorption costs more salient. The slight decline from 0.59 (2020) to 0.58 (2024) reflects post-COVID labor-market rebalancing and increased enforcement of integration conditions (language, skills certifications), which slightly constrain unrestricted mobility. Theater ratio has risen from 0.22 to 0.41, indicating increasing proportion of proportionality-standard litigation and compliance activity relative to actual labor-market integration work. This signals the constraint is shifting from a coordination function (integrating markets) toward a governance function (managing litigation and compliance). Suppression has held moderate and stable—neither collapsing entirely (unrestricted movement is actively policed, low-skill protections are available) nor becoming total (blanket restrictions are struck down as disproportionate). The moderate suppression reflects the subsidiarity framework's design: both unrestricted movement AND blanket restrictions are suppressed; only proportionate restrictions are permitted.",
+    "perspectival_gap": "From the perspective of mobile workers and service providers, the constraint is a coordination mechanism that solved an integration problem—they can move freely without facing blanket barriers. From the perspective of stationary workers and welfare systems, the constraint is enforced extraction—mobility rights are protected at their expense, and the proportionality standard is applied asymmetrically (proportionality-testing of member-state restrictions is strict; proportionality-testing of extraction is weak). From the court's perspective, the constraint is a neutral proportionality arbiter. From member-state governments' perspective, the constraint is a federation override of their sovereign authority—they set restrictions that are then invalidated by proportional review. The engine should compute these as distinct per-seat classifications: the beneficiary seats (mobile labor, service providers, federation institutional legitimacy) should compute as rope or coordination; the payer seats (stationary labor, welfare systems) should compute as snare or tangled rope with extraction dominating; the agenda-setter seat (court) should compute as institutional coordination but with reduced beneficiary weight.",
+    "directionality_logic": "Directionality varies dramatically by power level. Mobile high-skill workers (moderate power, mobile exit): d ≈ 0.15 (beneficiary end)—they benefit substantially from movement rights and face low costs. Service providers (organized power, arbitrage exit): d ≈ 0.2—they benefit from regulatory arbitrage and have strong exit options (can relocate service centers). Stationary low-skill labor (powerless, trapped exit): d ≈ 0.85 (target end)—they face wage competition, cannot exit geographically or skill-wise, and bear the cost of mobility without the benefit. Local welfare systems (institutional power, constrained exit): d ≈ 0.72—they bear substantial access costs and cannot exclude mobile workers through means-testing without proportionality challenge; their exit options are limited to federation-level negotiation (low success rate) or service retrenchment (politically costly). Territorial regulators (institutional power, constrained exit): d ≈ 0.65—they face compliance burden and cannot defend local protections without proportionality justification, but retain some rule-setting authority. Court and federation institutions: d ≈ 0.4 (near-symmetric, slight beneficiary lean)—they administer and update the rule, moderately constrained by federation law but not directly paying. The core asymmetry: those with resources to move benefit; those without absorb costs.",
+    "mandatrophy_analysis": "The subsidiarity balance appears to be a live constraint (founding_problem_status=contested, not dead), so mandatrophy is not the primary issue. However, the theater-ratio rise (0.22→0.41) signals drift toward performative compliance: proportionality testing has become highly formalized and litigation-driven, and the actual labor-market integration work (the founding substantive coordination) is now shadowed by compliance theater. This is a warning sign of constraint degradation—the framework's binding function is eroding as it becomes a compliance checklist rather than a genuine proportionality arbiter. The slight extractiveness decline (0.59→0.58) at the end of the interval suggests member states may be successfully pushing back (through increased integration requirements, language conditions, skills certifications), which slightly reduces the constraint's asymmetry but does not resolve the underlying cost-burden distribution. If theater ratio continues to rise and extractiveness remains high, the constraint may drift toward piton (maintained primarily through institutional habit and litigation, not genuine coordination or proportionate protection).",
+    "kernel_context": "This constraint instantiates the 'subsidiarity_balance' reading of the contested kernel 'federation_membership_treaty'. The sibling readings are 'integration_primary' (free movement is constitutive of the single market; restrictions are presumptively illegitimate) and 'sovereignty_primary' (free movement is conditional on member-state consent; states retain authority to protect national labor markets). The subsidiarity reading occupies a middle ground: free movement is a federation right, but member states retain proportionality-constrained authority to regulate. This reading is forecloses neither sibling completely (each remains live in different member states and institutional actors' frameworks) but coexists with integration-primary in federation institutions and with sovereignty-primary in member-state governments. The subsidiarity balance influences both siblings by setting the empirical scope of what 'legitimate' and 'proportionate' mean—a strictening of proportionality doctrine would shift the effective balance toward sovereignty-primary; a relaxing would shift toward integration-primary."
   },
   "omegas": [
     {
-      "id": "proportionality_doctrine_as_cover",
-      "question": "Is proportionality doctrine substantively constraining state restrictions, or does it function primarily as a legitimacy cover for the federation authority's mobility agenda?",
-      "resolution_mechanism": "Empirical analysis of proportionality case law: do member states win exceptions and successfully defend restrictions at meaningful frequencies, or do they lose systematically? Do courts' proportionality holdings track genuine trade-offs between movement rights and national interests, or do they perform deference while always favoring mobility?",
-      "impact": "If doctrine is substantive, the measured suppression (0.52) reflects real bilateral enforcement. If it is cover, the constraint is closer to snare—apparent shared enforcement masks one-directional extraction favoring mobile actors.",
+      "id": "proportionality_standard_drift",
+      "question": "Is the European Court of Justice's proportionality standard itself drifting toward integration-primary (stricter scrutiny of member-state restrictions) or toward sovereignty-primary (deference to member-state judgment)?",
+      "resolution_mechanism": "Content analysis of ECJ case law (Metock, Dano, Alimanovic lines) over decade-long periods; tracking the ratio of restrictions struck down vs. upheld; interviewing ECJ judges and advocates-general about their standard of review.",
+      "impact": "Drift toward integration-primary would tip the effective constraint toward unconditional movement and away from legitimate-interest protection (the balance would degrade toward integration-primary reading). Drift toward sovereignty-primary would permit more member-state restrictions and move the balance toward piton (a formal subsidiarity framework that increasingly permits member-state carve-outs in practice).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether proportionality doctrine substantively constrains federation authority or legitimizes one-sided mobility pressure."
+      "description": "Direction of doctrine drift in proportionality-standard application"
     },
     {
-      "id": "welfare_system_divergence_causality",
-      "question": "To what extent does free movement CAUSE welfare system divergence and fiscal pressure, versus exploiting pre-existing divergence?",
-      "resolution_mechanism": "Counterfactual or quasi-experimental analysis: do welfare costs and fiscal pressure rise AFTER free movement is liberalized, or were they present before and are merely exposed by mobility? Do high-benefit jurisdictions show selective in-migration of welfare-dependent populations, or do pre-existing residents become welfare-dependent after mobility opens?",
-      "impact": "If movement causes divergence, the extraction is real—the constraint transfers welfare risk from a federal insurance pool to localized systems. If it exploits pre-existing divergence, the extraction is somewhat artificial—the constraint makes visible a divergence that existed already.",
+      "id": "welfare_system_strain_threshold",
+      "question": "At what level of welfare-system strain (measured by fiscal burden, service quality decline, or political backlash) do proportionality-permitted restrictions become insufficient and member states abandon the balance entirely?",
+      "resolution_mechanism": "Monitoring member-state welfare-system statistics (spending, coverage, recipient demographics); tracking member-state legislative proposals for new restrictions; observing member-state defiance or threat of defiance against ECJ rulings.",
+      "impact": "If the threshold is crossed (e.g., a major receiving state experiences visible welfare-system collapse or triggers sustained political backlash), the subsidiarity balance may fail—member states may impose blanket restrictions regardless of proportionality doctrine, triggering federation crisis. This would test whether the constraint is enforced coercively or consensually.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Causal direction of relationship between free movement and welfare fiscal pressure."
+      "description": "Sustainability of member-state compliance with proportionality-constrained restrictions"
     },
     {
-      "id": "identity_lock_vs_choice_immobility",
-      "question": "To what extent are immobile_domestic_workers and localized_service_providers trapped by structural constraints (capital, language, family) versus by identity fusion (they define themselves as local, rooted, place-bound)?",
-      "resolution_mechanism": "Ethnographic or interview research on worker decision-making: when mobility barriers are experimentally reduced (language training, credential recognition support), how many workers exercise the exit option versus remain in place? Do those who remain cite structural barriers or cultural/identity commitment?",
-      "impact": "If identity-locked, the constraint's suppression operates partly through internalized acceptance of immobility—post-exit suppression trajectories would show persistence even after physical barriers are removed. If structurally trapped, the suppression is primarily external and would decay as barriers are removed.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Identity-locked versus structurally-trapped mechanisms in the immobility of domestic workers."
+      "id": "integration_vs_sovereignty_reading_distinction",
+      "question": "Is the subsidiarity balance genuinely a third position that resolves the founding problem, or is it a disguised sovereignty-primary reading that uses proportionality language to appear balanced?",
+      "resolution_mechanism": "Comparative textual analysis of integration-primary, sovereignty-primary, and subsidiarity-balance policy documents and case law; assessment of whether proportionality doctrine systematically favors either pole in practice (asymmetric application would suggest the balance is not genuinely triadic).",
+      "impact": "If the balance is revealed as a disguised sovereignty-primary reading, then the founding problem is not actually solved—it is suppressed by institutional narrative. This would reclassify the constraint from tangled_rope (genuine coordination with extraction) toward snare (pure extraction with a coordination cover story). If the balance is revealed as disguised integration-primary, then member-state interests are systematically not protected despite the frame—this would also suggest snare dynamics (extraction protected by integration-primary ideology).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the subsidiarity balance is a genuine third position or a disguised reading of one of the sibling readings"
     },
     {
-      "id": "sibling_reading_empirical_separation",
-      "question": "Can the three sibling readings—integration_primary, sovereignty_primary, subsidiarity_balance—be empirically distinguished by the pattern of restrictions that actually get approved or rejected in proportionality doctrine?",
-      "resolution_mechanism": "Comparative case-law analysis across jurisdictions or time periods: do restrictions on welfare access, labor-market protections, residency requirements show different approval rates or doctrinal thresholds across the three reading frameworks? Does one reading's doctrine approve restrictions the others reject?",
-      "impact": "If empirically separable, the readings instantiate genuinely different constraints with different ε values and victim/beneficiary structures. If indistinguishable, the readings are rhetorical variants of a single underlying constraint.",
+      "id": "stationary_labor_coalition_power",
+      "question": "Why has stationary low-skill labor failed to organize a collective challenge to the subsidiarity balance despite bearing concentrated costs?",
+      "resolution_mechanism": "Political-economy analysis of labor union organization in receiving member states; interviews with labor representatives about their strategic choices; tracking of legislative/litigation initiatives on behalf of stationary workers.",
+      "impact": "If stationary labor remains unorganized, the constraint persists because the cost-bearing group lacks political voice to challenge it—this points toward snare dynamics (extraction without organized resistance). If stationary labor begins organizing collective action (transnational unions, political coalitions), the constraint faces legitimacy pressure and may evolve toward tighter proportionality bounds or member-state carve-outs.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the three sibling readings produce distinguishable restriction patterns in practice."
+      "description": "Organizational capacity of cost-bearing stationary labor groups"
+    },
+    {
+      "id": "reading_distinction_in_cs_kernel",
+      "question": "In the commitment-system framing, which reading (integration-primary, sovereignty-primary, or subsidiarity-balance) grounds the federation's authority structure's legitimacy?",
+      "resolution_mechanism": "Textual analysis of Lisbon Treaty, CJEU preamble, founding treaties; assessment of which reading the authority structure treats as its foundational legitimacy claim (e.g., does the ECJ justify its authority through integration-primary, subsidiarity-balance, or sovereignty-primary axioms?).",
+      "impact": "If the authority structure (ECJ, Commission) grounds itself primarily in integration-primary, then the subsidiarity-balance reading is an institutional accommodation, not the true authority foundation—this would suggest the constraint is drifting toward integration-primary regardless of formal language. If sovereignty-primary, then subsidiarity-balance is a constraint imposed by member states against institutional preference. If subsidiarity-balance itself is the grounding axiom, then the reading is genuinely constitutive of the federation's legitimacy—more stable but more contested.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading grounds the authority structure's legitimacy claim in the kernel"
     }
   ],
   "boltzmann": {
@@ -202,67 +302,57 @@
       "federation_membership_treaty__integration_primary",
       "federation_membership_treaty__sovereignty_primary"
     ],
-    "dual_formulation_note": "The federation_membership_treaty kernel instantiates three distinct constraint stories: integration_primary (high mobility, low suppression, beneficiary-heavy), sovereignty_primary (low mobility, high suppression, victim-heavy), and subsidiarity_balance (this constraint: moderate mobility with proportional exceptions, tangled extraction from both directions). Each reading has its own ε, beneficiary/victim structure, and type classification. The three constraints are linked by the shared kernel and by the fact that federation doctrine simultaneously embodies all three readings in different jurisdictional contexts or different policy domains (labor mobility may be integration-primary while welfare access is more sovereignty-primary). The sibling constraints are NOT alternative framings of one underlying constraint—they are genuinely different constraints with different structural properties that coexist as live positions within the federation's legal and political order."
+    "dual_formulation_note": "The federation_membership_treaty kernel decomposes into three structurally distinct constraint stories with different epsilon values and beneficiary/victim structures: (1) integration_primary reading (Mountain or Rope, low ε, treats free movement as constitutive); (2) sovereignty_primary reading (Tangled Rope or Snare, high ε, treats free movement as conditional and member-state-constrained); (3) subsidiarity_balance reading (this file, Tangled Rope, moderate ε, treats free movement as a right bounded by proportionality-tested member-state interests). The three readings are sibling instantiations of the same contested kernel, not competing interpretations of a single constraint. Each reading has its own beneficiary set, victim set, and ε value, reflecting the reading's own structural commitments, not observer-dependent measurement. The epsilon_invariance principle applies per reading: within this reading's framework, ε=0.58 is invariant across measurement observables. A different reading's ε value reflects that reading's different structural commitments about what counts as extraction, not a different measurement of the same constraint."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "organized",
-      "d_value": 0.58
-    }
-  ],
-  "uke_scope": {
-    "epsilon_bin": "medium-high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "federation_membership_treaty__integration_primary",
-      "federation_membership_treaty__sovereignty_primary"
-    ]
-  },
+  "directionality_overrides": [],
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "proportional_constraint_with_graduated_exceptions",
-    "drift_state": {
-      "moment": "contemporary_welfare_fiscal_crisis",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "federation_membership_treaty__integration_primary",
+        "sibling_id": "integration_primary",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "federation_membership_treaty__sovereignty_primary",
+        "sibling_id": "sovereignty_primary",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "proportionality_boundary_is_substantive",
+        "atom": "proportionality_bounded_movement",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "federation_authority_legitimate_arbiter",
+        "atom": "legitimate_member_state_interests_permissible",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ]
+    ],
+    "reference_frame": "proportionality_constrained_free_movement",
+    "drift_state": {
+      "moment": "contemporary_post_covid_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
   },
+  "gain_flow": "european_court_of_justice",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

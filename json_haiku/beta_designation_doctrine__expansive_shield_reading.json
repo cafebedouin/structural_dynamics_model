@@ -2,20 +2,20 @@
   "header": {
     "constraint_id": "beta_designation_doctrine__expansive_shield_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_beta_designation_doctrine__expansive_shield_reading",
-    "story_uid": "94aab5f9-2307-4a25-b610-7f9cf8ccbfe8"
+    "story_uid": "9ae64f59-3c36-4785-9a5c-70b28b6e4dcb",
+    "created_at": "2026-06-12T14:32:17Z"
   },
   "base_properties": {
-    "extractiveness": 0.87,
-    "suppression": 0.78,
-    "theater_ratio": 0.62,
-    "accessibility_collapse": 0.71,
+    "extractiveness": 0.86,
+    "suppression": 0.79,
+    "theater_ratio": 0.67,
+    "accessibility_collapse": 0.72,
     "resistance": 0.58,
     "claimed_type": "snare",
-    "human_readable": "Beta Designation as Comprehensive Liability Waiver (Expansive Reading)",
-    "topic_domain": "technology/law/consumer_protection",
+    "human_readable": "Beta Designation as Comprehensive Liability Shield (Expansive Reading)",
+    "topic_domain": "technology/legal/consumer_protection",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "software_developers",
@@ -23,196 +23,348 @@
     ],
     "victims": [
       "beta_software_users",
-      "dependent_systems"
+      "dependent_institutions"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Declare software 'beta' and externalize all defect costs to users indefinitely, across any context (consumer, enterprise, critical infrastructure). They set terms unilaterally and defend the designation linguistically without temporal or severity boundaries. Collect the network effects and user data from the released software while bearing no product liability risk."
+    },
+    {
+      "name": "beta_software_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Download and run beta-labeled software, often unaware that 'beta' means comprehensive liability waiver rather than time-bounded testing. Bear all costs of defects: data loss, system corruption, financial loss, privacy breach. Cannot exit without abandoning the platform ecosystem or functionality entirely. Identity is increasingly locked to software-centric digital identity and service access."
+    },
+    {
+      "name": "dependent_institutions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Adopt beta-designated software for operational functions (health records, financial systems, supply chain) and discover too late that 'beta' shields developers from liability even for critical failures. They absorb defect costs (operational downtime, data loss, regulatory violations) while developers remain protected. Exit is costly due to integration lock-in and ecosystem dependency."
+    },
+    {
+      "name": "end_users_harmed_by_cascade",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Suffer harm indirectly through institutional use of beta software: medical errors from corrupt health data, financial fraud from compromised payment systems, emergency delays from failed communication infrastructure. They have no contractual relationship with developers and no standing to sue despite bearing the concrete harm. Trapped by institutional adoption decisions."
+    },
+    {
+      "name": "product_liability_doctrine_priors",
+      "agent": false,
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The common-law and statutory frameworks that would ordinarily hold manufacturers liable for defective goods. This reading (expansive shield) forecloses those frameworks via linguistic/contractual override, privileging developer language choice over structural product safety regimes."
+    },
+    {
+      "name": "narrow_warning_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that 'beta' should mean time-bounded testing disclosure with preserved product liability. They are excluded from the expansive shield's authority structure — their position is treated as frivolous ('beta means beta') despite commanding significant regulatory and consumer-protection support in some jurisdictions."
+    },
+    {
+      "name": "regulators_and_consumer_protection",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigate whether indefinite beta designation in critical contexts violates consumer protection or product liability law. They face legal questions about whether contractual language can prospectively waive statutory duties and whether categorical carve-outs for safety-critical systems exist or should be created."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Reduces developer friction for releasing early iterations and gathering user feedback by centralizing liability risk on users. In the narrow reading this coordinates genuine testing phases; in this expansive reading it coordinates perpetual externality dumping.",
+    "transfer_function": "Transfers all defect-cost bearing from developers (internalized under product liability) to users and dependent institutions (externalized). Also transfers network effects and data benefits from beta users to developers without corresponding liability or compensation.",
+    "absent_voices": "End users harmed through institutional cascade (medical patients, financial customers, infrastructure users) have no contractual voice and are structurally excluded from the warranty/liability waiver negotiation. They appear as zero-stake casualties in the developer-user dyad.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expansive beta-waiver doctrine disappeared, product liability would revert to developers for released software regardless of labeling; release cycles and user-acceptance timelines would shift; critical-systems adoption of untested software would face immediate legal exposure and insurance cost; the asymmetric cost transfer would reverse, forcing developers to internalize or insure defect costs.",
+    "founding_problem": "Early software development faced high friction: testing required formal QA infrastructure, liability exposure delayed releases, and developer risk prevented rapid iteration with user feedback. The beta label emerged as linguistic shorthand to signal 'incompleteness' without formal testing commitment, reducing legal friction.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Developer industry and platform operators attest the founding problem remains live and beta flexibility is necessary for rapid innovation. Regulators, insurance companies, and consumer advocates attest the founding problem (friction on developers) is outweighed by the harms from indefinite, catastrophic-context liability waiver and that the remedy is outdated. Academic research on information asymmetry in software disclaimers documents user incomprehension of waiver scope."
   },
   "interval": {
     "start": 0,
-    "end": 25
+    "end": 35
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.71
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.76
+      "time_point": 5,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.8
+      "time_point": 10,
+      "value": 0.74,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.84
+      "time_point": 15,
+      "value": 0.79,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 18,
-      "value": 0.86
+      "time_point": 20,
+      "value": 0.83,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.87
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.86,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.86,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.52
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.6
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 18,
-      "value": 0.61
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.62
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.68
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 3,
-      "value": 0.72
+      "time_point": 5,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 6,
-      "value": 0.74
+      "time_point": 10,
+      "value": 0.74,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.77
+      "time_point": 15,
+      "value": 0.76,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 18,
-      "value": 0.78
+      "time_point": 20,
+      "value": 0.78,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.78
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.79,
+      "basis": "observed"
     }
   ],
   "omegas": [
     {
-      "id": "kernel_reading_contest_omega",
-      "question": "Which reading of the beta_designation_doctrine kernel is structurally correct: the expansive_shield_reading (this constraint), the narrow_warning_reading, or the severity_carve_out_reading?",
-      "resolution_mechanism": "Legislative/regulatory intent from major jurisdictions; case law interpreting beta disclaimers and their interaction with product-liability law; practitioner testimony and software-release practice analysis; consumer-protection authority guidance and enforcement patterns.",
-      "impact": "If the narrow or carve_out readings are correct, this constraint (expansive) mislabels the doctrine as comprehensive when it is actually bounded. If the expansive reading is correct, the sibling readings misunderstand the scope of the doctrine. The readings produce mutually exclusive classifications: narrow → rope/scaffold, carve_out → tangled_rope, expansive → snare.",
-      "confidence": "medium",
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the beta designation kernel is structurally correct: expansive shield (this reading), narrow warning, or severity carve-out?",
+      "resolution_mechanism": "Judicial resolution (product liability case establishing whether 'beta' can waive liability for critical systems) or legislative codification (statute establishing temporal bounds or severity carve-outs for beta designation). Different readings entail different victim sets and extraction profiles.",
+      "impact": "If narrow_warning or severity_carve_out prevails, this reading forecloses and the constraint reclassifies to tangled_rope or rope. If expansive_shield prevails in law but narrow_warning dominates in practice, theater rises further and the constraint becomes piton-inflected.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "The kernel contest: which interpretation of beta designation is structurally correct?"
+      "description": "Which reading of the beta designation kernel prevails in authoritative interpretation."
+    },
+    {
+      "id": "indefinite_duration_ambiguity",
+      "question": "Is 'beta' status genuinely permissible indefinitely, or do common-law product liability and consumer protection doctrines impose implicit temporal bounds regardless of developer labeling?",
+      "resolution_mechanism": "Regulatory action or judicial precedent establishing that indefinite beta status violates consumer protection (e.g., GDPR, CCPA right to security; UCC implied warranties; state consumer-fraud statutes). Post-judgment analysis of whether courts enforce temporal carve-outs despite contractual language.",
+      "impact": "If temporal bounds are imposed, the constraint is weakened structurally — suppression becomes harder to maintain against legal override, and extraction falls. If indefinite duration is upheld, the constraint persists at current severity and theater rises as the 'testing' framing becomes theatricalized for decades-old software.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indefinite beta designation is legally permissible or subject to implicit temporal constraint."
+    },
+    {
+      "id": "critical_systems_carve_out_necessity",
+      "question": "Do safety-critical or failure-critical systems (medical devices, financial infrastructure, aviation, emergency response) require categorical exemption from beta-designation liability waiver, or can developers indefinitely label such systems as 'beta' and remain shielded?",
+      "resolution_mechanism": "Regulatory action (FDA, SEC, FAA, NIST establish mandatory product liability for critical systems); demonstrated harm from beta-software cascade failure (hospital downtime from corrupted health records, financial fraud from beta payment system, emergency delay from beta infrastructure) triggering legislative response.",
+      "impact": "If carve-out is enacted, the constraint splits: critical systems revert to product liability (new constraint: severity_carve_out_reading), non-critical beta remains shielded (expansive_shield persists narrower). If no carve-out emerges despite cascade failures, theater rises and resistance increases as the constraint becomes transparently an extraction mechanism rather than a testing accommodation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether safety-critical systems are categorically exempted from beta liability waivers."
+    },
+    {
+      "id": "user_comprehension_and_identity_lock",
+      "question": "How many beta software users understand that 'beta' constitutes comprehensive liability waiver vs. time-bounded testing disclosure? To what extent does identity lock to software ecosystems ('I need this app, I have no alternative for this function') suppress exit even if users understand the waiver?",
+      "resolution_mechanism": "User comprehension research (surveys of beta-app users showing what 'beta' means to them; gap analysis vs. legal waiver scope). Exit-option analysis of locked ecosystems (how many users uninstall after defect vs. repair/adapt given alternatives). Post-notice behavior (does disclosure of waiver scope change adoption rates, or does identity lock override individual choice).",
+      "impact": "High user incomprehension + high identity lock = suppression is internalized, persists after barrier removal, and the constraint becomes more extractive than structural measures alone suggest. Suppression shifts from structural (can't exit) to internalized (don't realize they could/should). This feeds identity-lock anxiety omega and reframes the theater ratio upward.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of user comprehension of beta waiver scope and interaction with ecosystem identity lock."
     }
   ],
   "commentary": {
-    "narrative_context": "Under the expansive reading, the beta designation is interpreted as a blanket, indefinite, universal liability waiver: any software labeled beta is presumed to exempt developers from all product-liability, warranty, and negligence claims, regardless of how long the software remains beta, how critical its function, or how severe the defects. This reading treats beta status as a unilateral contractual assertion by developers, binding on users at download. The reading is one instantiation of a contested kernel (beta_designation_doctrine) with two sibling readings that interpret the same legal concept very differently: the narrow_warning_reading treats beta as time-bounded testing disclosure preserving base product liability; the severity_carve_out_reading carves out life-safety and critical systems from beta immunity. This constraint instantiates the expansive reading only—it is a clean, ε-invariant story of high extraction where developers externalize all defect costs and users (especially dependent systems) enter the victim set with no temporal or severity boundaries.",
+    "narrative_context": "This constraint instantiates the EXPANSIVE SHIELD READING of the contested beta-designation kernel. The expansive reading holds that affixing the label 'beta' to software constitutes a comprehensive, indefinite, universally-scoped liability waiver — developers externalize all defect costs to users and dependent institutions, regardless of severity, duration of the 'beta' phase, or criticality of the software context. This reading directly contradicts the narrow-warning reading (beta must be time-bounded testing disclosure with preserved product liability) and influences but does not foreclose the severity-carve-out reading (beta is unavailable for life-safety/financial systems). The claim/metric gap is structural: the expansive reading is CLAIMED as snare (extraction mechanism defended by contractual language) and the metrics author high extraction (0.86 at interval end), rising suppression (0.79), and substantial theater (0.67) — all consistent with extractive persistence. The measured rise in theater over 35 years indicates that the 'testing' framing has increasingly lost descriptive force (most beta software remains beta for decades) while the liability-waiver function has hardened.",
     "key_agents": [
-      "software_developers: developers of beta-labeled software set the terms unilaterally; they benefit from indefinite liability exemption.",
-      "platform_operators: institutional beneficiaries indirectly; they host the software and enforce the waiver by accepting TOS assertions.",
-      "beta_software_users: powerless victims bearing all defect costs; identity_locked (essential software fused with professional/social identity) makes exit practically impossible.",
-      "dependent_systems: systems relying on beta software as a component; they absorb cascading defects with no recourse.",
-      "competing_legal_regimes: excluded from the negotiation; their mandatory consumer protections are suppressed by global platform TOS.",
-      "consumer_protection_authorities: analytical observers investigating whether the waiver overrides mandatory law."
+      "software_developers: agenda-setting beneficiary (set waiver terms, externalize defect costs)",
+      "beta_software_users: powerless victims (bear all defect costs, identity-locked to ecosystems)",
+      "dependent_institutions: moderate-power victims (adopt beta software for critical operations, absorb cascade failures)",
+      "end_users_harmed_by_cascade: powerless, contractually-invisible victims (harmed through institutional failures from beta software, no standing to sue developers)",
+      "regulators_and_consumer_protection: institutional observer (investigating legality, considering temporal/severity carve-outs)"
     ],
-    "logic_rationale": "Extractiveness is high (0.87 at interval end) because the constraint systematically moves all product-liability risk from developers (who ship the code) to users (who absorb the defects), with no consideration for defect severity, duration of beta status, or essentiality of the software. The extraction accumulates over the interval (from 0.71 to 0.87) as developers increasingly treat beta as a permanent liability shield rather than a temporary developmental label—the founding problem (lack of testing infrastructure) is solved, but the doctrine persists and expands. Suppression is high (0.78) because the constraint's persistence depends on preventing users from organizing claims, enforcing the waiver adhesively through TOS, and suppressing competing legal regimes' mandatory protections. Theater is moderate-to-high (0.62): significant performance activity occurs around the 'beta testing' framing, but the actual function (genuine developmental testing) has atrophied—what remains is mostly the liability-shield story. Accessibility collapse is moderate (0.71): alternatives to beta software technically exist but are often unavailable for essential tools (communication, productivity, system utilities), making the collapse practical if not absolute. Resistance is moderate (0.58): users and consumer protection authorities mount real resistance through litigation, legislative pressure, and public criticism, but the constraint persists through institutional inertia and developer/platform power asymmetry.",
-    "perspectival_gap": "Developers and platform operators perceive this as legitimate risk allocation: beta labels are transparent; users can choose not to download; developers need shield from frivolous claims to innovate. Users and downstream dependents perceive it as coercive extraction: beta labels are non-negotiable contract terms, essential software is indefinitely beta, defect costs are real and irreversible (data loss, security breach, operational failure), and they have no recourse. Consumer protection authorities perceive it as an override of mandatory law: in their jurisdictions, product liability cannot be waived; the constraint conflicts with local statute. The engine computes each seat's classification from the structural data (power, exit_options, beneficiary/victim status, directionality); the perspectival gap is the observable difference when seats with different structural relationships compute different types.",
-    "directionality_logic": "Developers are beneficiaries (d near 0.0): they set the constraint, collect the liability exemption, have high power and arbitrage exit options (can choose to label software beta or not; can switch jurisdictions). Users are targets (d near 1.0): they bear the defect costs, have powerless/organized power (individually powerless, collectively organized only through litigation), and identity_locked exit (essential software fused with identity). Platform operators are secondary beneficiaries (d near 0.1): they host developers (whom they attract through permissive terms) and indirectly share the benefit by disclaiming responsibility. Dependent systems are forced targets (d = 1.0): they have no negotiating power, no choice about what software they depend on, and experience cascading defects as pure cost. Competing legal regimes have no d value within this constraint—they are excluded by the conflict mechanism itself (global TOS override local law).",
-    "mandatrophy_analysis": "The constraint shows classic mandatrophy: the founding problem (lack of private beta-testing infrastructure) is solved—modern software development has extensive internal QA, staged rollout, and user-research capabilities. Yet the beta-waiver doctrine persists and has expanded indefinitely in scope and duration. Developers continue to label mature software as beta specifically to retain the liability shield, long after the developmental justification has vanished. The constraint's manifest function (temporary testing disclosure) has atrophied; what remains is mostly performative maintenance of the liability shield. This is characteristic piton-adjacent behavior, but the high extractiveness (0.87) and high suppression (0.78) push it into snare territory: it persists not because everyone benefits moderately (piton signature) but because it extracts substantially from a large victim set and is actively defended by a powerful beneficiary.",
-    "kernel_context": "This constraint instantiates the expansive_shield_reading of the beta_designation_doctrine kernel. The kernel is a contested legal concept: what does the beta designation legitimately accomplish? The expansive reading interprets it as a comprehensive, indefinite, universal liability waiver—developers can label software beta at any time for any duration across all contexts, thereby exempting themselves from all product-liability claims. The sibling readings offer sharply different interpretations: the narrow_warning_reading treats beta as a time-bounded testing disclosure that preserves base product liability (the developer must disclose the software is unfinished, but cannot waive liability for defects); the severity_carve_out_reading accepts the waiver concept but carves out critical systems (life-safety, financial, critical infrastructure software cannot use beta as a shield). The three readings instantiate different constraint types: expansive → snare (pure extraction); narrow → rope or scaffold (genuine coordination with temporal limit); severity_carve_out → tangled_rope (coordination with mandatory carve-outs). The readings coexist as live positions in contemporary software law and practice; courts, regulators, and practitioners disagree about which reading is correct. This constraint is the expansive reading only—a clean, ε-invariant story of high extraction with no carve-outs, no temporal limits, and no recognition of the founding problem's solution."
+    "logic_rationale": "Extractiveness is high and rising because the waiver's scope has expanded de facto: 'beta' now shelters decades-old software and mission-critical systems, not genuinely testing iterations. Suppression is high (0.79) because users cannot exit without abandoning functional ecosystems — identity lock is internalized. Theater is substantial and rising (0.67 at interval end) because enforcement rhetoric continues to invoke 'testing phase' and 'user feedback' rationales while actual practice perpetuates indefinite liability externality. The measurement series show monotonic increase in extraction and theater with plateau by year 30, indicating the constraint has reached its exploitative steady state. Suppression stays high throughout because identity lock to software ecosystems is structural and does not decay. The rise in theater (year 0: 0.45, year 35: 0.67) is the diagnostic signature of a snare that began with genuine coordination benefits (early testing accommodation) but whose function has atrophied while the extraction mechanism has hardened.",
+    "perspectival_gap": "From the developer/agenda-setter seat: the constraint is a necessary friction-reduction mechanism enabling rapid iteration and user participation in software development. From the powerless-user seat: the constraint is undisclosed liability externality with internalized suppression (they don't realize they're trapped because 'beta' sounds temporary). From the institutional-adopter seat: the constraint is latent catastrophic risk — adopting beta software for critical operations exposes the institution to cascade failure liability the institution cannot contractually reverse onto developers (the developer's waiver does not bind the institution's downstream customers). From the regulator seat: the constraint violates product liability and consumer-protection doctrine by allowing indefinite waiver of statutory duties. These divergences are NOT resolved by authored claim — they are computed from the structural data (power, exit, beneficiary/victim roles, time horizon) and emerge as per-seat classification divergence.",
+    "directionality_logic": "Software developers (organized, institutional, arbitrage exit) are near-pure beneficiaries (d ≈ 0.15): they set terms, externalize costs, collect network effects and data benefits. Beta-software users (powerless, identity-locked, no arbitrage) are near-pure targets (d ≈ 0.95): they bear all defect costs and cannot exit without abandoning functionality. Dependent institutions (moderate power, constrained exit) are targets (d ≈ 0.75): they absorb cascade failures and institutional liability but are locked by adoption decisions and cannot reverse the waiver onto developers. End-users harmed through cascade (powerless, trapped, no contractual relationship) have no directionality in the two-party framework but are mathematically victims (d → 1.0 if relationship were modeled). Regulators are analytical observers (d = 0.5). The structural asymmetry — beneficiary with arbitrage exit vs. victim with identity lock — ensures persistent extraction.",
+    "mandatrophy_analysis": "The founding problem ('developer friction in early iterations') is DEAD: modern software is released as perpetually-beta iterations (Google Chrome versioning, continuous deployment, CI/CD pipelines). The beta label persists not to solve the founding problem but to maintain the liability waiver. Theater ratio (0.67) captures this atrophy: most enforcement activity defends waiver scope rather than enabling genuine testing. The constraint meets the diagnostic profile of mandatrophy: the function it was built for (coordinating testing phases) has disappeared, but the extraction apparatus persists due to institutional inertia and beneficiary interest. Misclassifying this as rope (genuine coordination) would hide the dead-mandate problem and the extraction that now constitutes the sole remaining function.",
+    "kernel_context": "This constraint is one reading of the contested beta-designation kernel. The kernel is: 'What does software labeled \"beta\" legally mean and what are the boundaries of developer liability protection?' This expansive-shield reading instantiates the claim that 'beta' constitutes comprehensive, indefinite, universally-scoped liability waiver. Sibling readings: (1) narrow-warning reading — 'beta' is time-bounded testing disclosure; base product liability is preserved; duration must correspond to genuine testing phase. (2) severity-carve-out reading — 'beta' designation is categorically unavailable for life-safety, financial, or other critical systems regardless of testing status or disclosure. The expansive reading FORECLOSES the narrow-warning reading at the level of authoritative interpretation (they cannot both be true in any single jurisdiction's product-liability framework) but INFLUENCES the severity-carve-out reading (if expansive prevails broadly, severity carve-out becomes a minimal reform rather than a category reversal). The core distinguishing axiom: 'beta_label_sufficient_liability_shield' — the reading holds that developer language choice (labeling software 'beta') is sufficient to prospectively waive statutory product-liability duties, overriding common law and consumer protection. This axiom is holdable (live position in developer advocacy and some contract-law doctrine) but increasingly contested (rising regulatory and consumer-protection opposition)."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
   },
   "network": {
     "affects_constraints": [
       "beta_designation_doctrine__narrow_warning_reading",
-      "beta_designation_doctrine__severity_carve_out_reading",
-      "software_release_maturity_signaling",
-      "adhesive_contract_liability_waiver"
+      "beta_designation_doctrine__severity_carve_out_reading"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the beta_designation_doctrine kernel. The three stories (expansive_shield_reading, narrow_warning_reading, severity_carve_out_reading) represent a kernel contest where a single legal concept (what beta designation legitimately accomplishes) instantiates structurally distinct constraints depending on which interpretation is adopted. The expansive reading asserts comprehensive, indefinite immunity; the narrow reading asserts time-bounded disclosure; the severity reading asserts categorical carve-outs for critical systems. Each story has its own ε value, beneficiary/victim structure, and constraint type. They coexist as live positions in law and practice—all three readings are claimed by some practitioners/courts, and none has universal acceptance. This is a constraint family under shared kernel identity, not a single constraint viewed from multiple angles (ε-invariance principle: if ε changes when interpretation changes, they are different constraints)."
+    "dual_formulation_note": "Three constraint stories instantiate three readings of the beta-designation kernel. Expansive-shield (this story) holds that 'beta' is an indefinite, universal liability waiver. Narrow-warning holds it is time-bounded testing disclosure. Severity-carve-out holds it is categorically unavailable for critical systems. Each reading has its own ε, victim set, and structural profile. The three readings are linked via network edges: expansive-shield influences both siblings (if expansive prevails, narrow becomes minimal reform and severity becomes carve-out narrowing; if narrow prevails, expansive forecloses). Decomposition follows the ε-invariance principle: different readings produce different constraint referents and victim structures; a single constraint cannot hold all three readings without conflating observable-dependent classification (DP-001 violation)."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "organized",
-      "d_value": 0.75
-    }
-  ],
+  "directionality_overrides": [],
+  "gain_flow": "software_developers",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "beta_designation_doctrine__narrow_warning_reading",
+        "sibling_id": "narrow_warning_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "beta_designation_doctrine__severity_carve_out_reading",
-        "relation": "forecloses"
+        "sibling_id": "severity_carve_out_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "beta_label_authorizes_comprehensive_waiver",
+        "atom": "beta_label_sufficient_liability_shield",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "indefinite_beta_duration_permissible",
-        "role": "foundational",
+        "atom": "indefinite_testing_phase_permissible",
+        "role": "secondary",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "developer_risk_externalization_framework",
+    "reference_frame": "contractual_liability_freedom",
     "drift_state": {
-      "moment": "contemporary_indefinite_beta_practice",
-      "direction": "practice_drift",
+      "moment": "contemporary_ecosystem_dependency_era",
+      "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

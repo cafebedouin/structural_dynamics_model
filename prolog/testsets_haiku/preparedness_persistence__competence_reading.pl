@@ -39,10 +39,15 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,33 +72,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: preparedness_persistence__competence_reading
- *   human_readable: Preparedness Persistence via Live Drill Practice (Competence Reading)
- *   domain: disaster_preparedness/institutional_memory
+ *   human_readable: Drills and Inspections as Live Exercised Knowledge
+ *   domain: institutional/disaster_preparedness
  *
  * SUMMARY:
- *   Under the competence reading, disaster preparedness — drills,
- *   inspections, equipment maintenance, scenario training — constitutes live
- *   exercise of knowledge essential to operational readiness. This reading
- *   asserts that repeated practice embeds competence in personnel,
- *   procedures, and organizational muscle memory. When a prepared-for hazard
- *   occurs, the trained response activates because readiness was maintained
- *   through continuous live exercise. The constraint is a Rope: genuine
- *   coordination problem (how to maintain readiness across long periods
- *   without actual events to test it), solved through scheduled practice, net
- *   benefit to those who participate (population, responders, institutional
- *   leadership all benefit from reduced disaster impact). Minimal extraction,
- *   no active suppression, low theater — the arrangement is what it claims to
- *   be. This reading contests the husk_reading (drills as memorial
- *   performance masking atrophy) and the hybrid_reading (stratification: some
- *   competence live, others ritualized). The competence reading's core
- *   commitment is that practice transmits competence.
+ *   Under the competence reading, drills and inspections represent live
+ *   exercised knowledge: practice that maintains operational readiness by
+ *   preserving embodied procedural knowledge across responder teams. The
+ *   constraint persists because it solves a genuine coordination and
+ *   capability problem — emergency response under extreme stress requires
+ *   muscle memory, team timing, and procedural automaticity that cannot be
+ *   maintained through documentation alone. This reading asserts that the
+ *   founding problem (the need for embodied readiness under stress) remains
+ *   live and that drills continue to solve it. The alternative readings
+ *   (husk_reading, hybrid_reading) contest this claim, arguing that drills
+ *   have degraded into memorial performance or that competence is stratified
+ *   across different preparedness components. The competence reading is a
+ *   clean, ε-invariant constraint story that instantiates the frame in which
+ *   drills ARE the practice, not its theatrical imitation.
  *
  * KEY AGENTS:
- *   - population_at_risk: Beneficiary of reduced disaster impact from maintained readiness; participates in some drills (evacuation scenarios); identity somewhat locked by residence.
- *   - emergency_responders: Beneficiary of maintained procedural readiness; primary agents of live exercise (regular training, equipment checks, scenario practice); identity locked by profession.
- *   - institutional_leadership: Agenda-setter for preparedness cadence and curriculum; benefits from institutional legitimacy of disaster preparedness; bears opportunity cost of resource allocation to drills versus other priorities.
- *   - regulatory/standards bodies: Observer/weak agenda-setter; establish minimum preparedness standards; provide external accountability that helps sustain the commitment when in-cycle disasters are rare.
- *   - vulnerable populations: Beneficiary class but with differential access to preparedness information; less frequently involved in drills; exit options constrained by geography.
+ *   - Emergency response personnel (beneficiaries, maintain readiness through practice)
+ *   - Protected population (beneficiaries, depend on maintained responder competence)
+ *   - Preparedness administrators (agenda-setters, allocate resources and schedule drills)
+ *   - Oversight bodies (observers, enforce compliance and audit readiness)
+ *   - Incident victims (excluded, their testimony appears only retrospectively)
  */
 
 /* ==========================================================================
@@ -100,56 +104,101 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(preparedness_persistence__competence_reading, 0.08).
-domain_priors:suppression_score(preparedness_persistence__competence_reading, 0.12).
-domain_priors:theater_ratio(preparedness_persistence__competence_reading, 0.18).
+domain_priors:base_extractiveness(preparedness_persistence__competence_reading, 0.12).
+domain_priors:suppression_score(preparedness_persistence__competence_reading, 0.08).
+domain_priors:theater_ratio(preparedness_persistence__competence_reading, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, extractiveness, 0.08).
-narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, suppression_requirement, 0.12).
-narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, theater_ratio, 0.18).
+narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, extractiveness, 0.12).
+narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, suppression_requirement, 0.08).
+narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, accessibility_collapse, 0.88).
-narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, resistance, 0.06).
+narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(preparedness_persistence__competence_reading, resistance, 0.05).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(preparedness_persistence__competence_reading, rope).
-narrative_ontology:human_readable(preparedness_persistence__competence_reading, "Preparedness Persistence via Live Drill Practice (Competence Reading)").
-narrative_ontology:topic_domain(preparedness_persistence__competence_reading, "disaster_preparedness/institutional_memory").
+narrative_ontology:human_readable(preparedness_persistence__competence_reading, "Drills and Inspections as Live Exercised Knowledge").
+narrative_ontology:topic_domain(preparedness_persistence__competence_reading, "institutional/disaster_preparedness").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(preparedness_persistence__competence_reading, '2ce1570c-19ba-4e09-b2d3-102811d90b27').
-narrative_ontology:cs_kernel_codification('2ce1570c-19ba-4e09-b2d3-102811d90b27', implicit).
-narrative_ontology:cs_authority_grounding('2ce1570c-19ba-4e09-b2d3-102811d90b27', practice).
-narrative_ontology:cs_interpretation_layer_present('2ce1570c-19ba-4e09-b2d3-102811d90b27').
-narrative_ontology:cs_reading_relation('2ce1570c-19ba-4e09-b2d3-102811d90b27', preparedness_persistence__husk_reading, coexists_with).
-narrative_ontology:cs_reading_relation('2ce1570c-19ba-4e09-b2d3-102811d90b27', preparedness_persistence__hybrid_reading, influences).
-narrative_ontology:cs_axiom('2ce1570c-19ba-4e09-b2d3-102811d90b27', foundational, practice_transmits_competence).
-narrative_ontology:cs_axiom_status(practice_transmits_competence, holdable).
-narrative_ontology:cs_axiom_grounding('2ce1570c-19ba-4e09-b2d3-102811d90b27', practice_transmits_competence, empirically_contingent).
-narrative_ontology:cs_axiom('2ce1570c-19ba-4e09-b2d3-102811d90b27', secondary, preparedness_maintenance_requires_continuous_practice).
-narrative_ontology:cs_axiom_status(preparedness_maintenance_requires_continuous_practice, holdable).
-narrative_ontology:cs_axiom_grounding('2ce1570c-19ba-4e09-b2d3-102811d90b27', preparedness_maintenance_requires_continuous_practice, empirically_contingent).
-narrative_ontology:cs_reference_frame('2ce1570c-19ba-4e09-b2d3-102811d90b27', competence_through_live_practice).
-narrative_ontology:cs_drift_state('2ce1570c-19ba-4e09-b2d3-102811d90b27', contemporary_post_major_disaster_era, gap(practice_drift, minor, true)).
-narrative_ontology:cs_created_at('2ce1570c-19ba-4e09-b2d3-102811d90b27', '').
+narrative_ontology:cs_story_uid(preparedness_persistence__competence_reading, 'ccae7dfe-71cb-45a2-ae32-c06f84dc02de').
+narrative_ontology:cs_kernel_codification('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', distributed).
+narrative_ontology:cs_authority_grounding('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', practice).
+narrative_ontology:cs_interpretation_layer_present('ccae7dfe-71cb-45a2-ae32-c06f84dc02de').
+narrative_ontology:cs_reading_relation('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', preparedness_persistence__husk_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', preparedness_persistence__hybrid_reading, influences).
+narrative_ontology:cs_axiom('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', foundational, drills_maintain_embodied_competence).
+narrative_ontology:cs_axiom_status(drills_maintain_embodied_competence, holdable).
+narrative_ontology:cs_axiom_grounding('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', drills_maintain_embodied_competence, empirically_contingent).
+narrative_ontology:cs_axiom('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', foundational, founding_problem_live_under_stress).
+narrative_ontology:cs_axiom_status(founding_problem_live_under_stress, holdable).
+narrative_ontology:cs_axiom_grounding('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', founding_problem_live_under_stress, empirically_contingent).
+narrative_ontology:cs_reference_frame('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', practice_sustains_readiness).
+narrative_ontology:cs_drift_state('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', contemporary_professionalization_era, gap(practice_drift, minor, true)).
+narrative_ontology:cs_created_at('ccae7dfe-71cb-45a2-ae32-c06f84dc02de', '').
 narrative_ontology:cs_kernel_id(preparedness_persistence__competence_reading, preparedness_persistence).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(preparedness_persistence__competence_reading, population_at_risk).
-narrative_ontology:constraint_beneficiary(preparedness_persistence__competence_reading, emergency_responders).
-narrative_ontology:constraint_beneficiary(preparedness_persistence__competence_reading, institutional_leadership).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__competence_reading, emergency_response_personnel).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__competence_reading, protected_population).
+narrative_ontology:constraint_vindicates(preparedness_persistence__competence_reading, operational_readiness_requires_continuous_practice).
+narrative_ontology:constraint_vindicates(preparedness_persistence__competence_reading, muscle_memory_persists_under_stress).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Firefighters, paramedics, civil defense officials. Drills maintain their procedural competence, muscle memory, and team coordination under conditions approaching real incident stress. Without regular drills, they would lose the embodied knowledge required to perform under pressure. They participate in drills as part of their professional obligations and gain genuine operational readiness.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, emergency_response_personnel, beneficiary,
+    moderate, biographical, constrained, local).
+
+% Residents, workers, students in jurisdictions with active preparedness programs. They depend on responders' maintained competence for their survival in actual emergencies. They do not participate in drills but benefit from the coordination and readiness drills produce. Their exit option is geographic relocation, which is prohibitively expensive for most.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, protected_population, beneficiary,
+    powerless, immediate, trapped, local).
+
+% Fire chiefs, emergency management directors, civil protection agencies. They schedule and oversee drills, allocate resources to preparedness training, and certify readiness. They benefit from the constraint by maintaining institutional legitimacy and demonstrating competence to oversight bodies. They have substantial discretion over drill frequency, scope, and rigor.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, preparedness_administrators, agenda_setter,
+    institutional, generational, mobile, regional).
+
+% Elected officials, regulatory agencies, licensing boards. They audit preparedness programs, evaluate readiness after incidents, and enforce compliance with minimum standards. They observe the constraint's operation and can mandate increases in drill frequency or rigor based on incident investigation findings.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, oversight_bodies, observer,
+    institutional, generational, analytical, regional).
+
+% Those harmed in actual emergencies where responders lacked readiness. They are structurally excluded from the preparedness conversation — they appear only retrospectively after the constraint has failed. Their testimony drives post-incident review but does not shape ongoing drill policy in advance.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, incident_victims, excluded,
+    powerless, immediate, trapped, local).
+
+% The research and regulatory communities examining whether drills maintain operational readiness or have degraded into ritual. They assess this reading against alternatives and measure whether competence persists.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__competence_reading, analytical_observer, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Maintains a shared understanding of emergency procedures across distributed responder teams through repeated joint practice. Drills coordinate timing, communication protocols, and mutual role expectations that cannot be maintained through documentation alone — muscle memory and team timing must be practiced under conditions approaching real incident stress to persist.
+% TRANSFER_FUNCTION: Moves time and attention from responders and administrators to preparedness training, at the cost of other activities. The constraint transfers opportunity cost (hours not spent on routine duties) into collective readiness. Under this reading, there is no extraction — the transfer is the product.
+% ABSENT_VOICES: Victims of past incidents where preparedness failed are structurally excluded from the conversation that shapes current drill policy. They cannot advocate for increased rigor because they are not present until after a new incident. Their retrospective testimony drives review processes but does not govern ongoing decisions about drill frequency, scope, or standards.
+% DISAPPEARANCE_RATIONALE: If drills and inspections disappeared, emergency response competence would degrade over months (procedural knowledge atrophies, team timing breaks down, new personnel lack training). Incident outcomes would shift sharply: response times would lengthen, coordination failures would increase, and fatality rates in major incidents would rise. The entire mutual-aid structure of emergency response depends on the practice maintaining readiness.
+% FOUNDING_PROBLEM: Emergency response requires immediate coordinated action under extreme stress with little time for consultation. Procedures must be embodied (muscle memory) and team timing must be rehearsed so that coordination persists when communication is degraded or personnel are injured. Documentation and classroom instruction cannot maintain this readiness alone.
+% FOUNDING_PROBLEM_CORROBORATION: Post-incident investigations consistently identify lapses in drilled procedure as a factor in casualty rates. Emergency medicine research documents the decay of procedural competence in medical responders who do not practice regularly. Neuroscience literature on motor learning under stress confirms that muscle memory requires repetition under conditions approximating real stress. Independent testimony from incident survivors, medical literature, and engineering failure analysis all support the founding problem.
+narrative_ontology:disappearance_verdict(preparedness_persistence__competence_reading, world_rearranges).
+narrative_ontology:founding_problem_status(preparedness_persistence__competence_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(preparedness_persistence__competence_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(preparedness_persistence__competence_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(preparedness_persistence__competence_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(preparedness_persistence__competence_reading, 0.12, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -164,16 +213,16 @@ narrative_ontology:story_seed(preparedness_persistence__competence_reading, 'non
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.08) because no party systematically collects rents or uncompensated transfers from the arrangement; the coordination benefit (maintained readiness) accrues diffusely to all participants. Suppression is minimal (0.12) because the constraint's persistence does not depend on preventing exits or alternatives — jurisdictions can choose to de-emphasize preparedness, though few do once a major disaster has occurred. Theater ratio is modest (0.18) because some preparedness activity is ceremonial (annual parade of equipment, budget-cycle demonstrations) but the majority is functionally directed toward maintaining actual competence — drills are repetitive and often unglamorous, which suggests they serve the competence function rather than publicity. Accessibility collapse is high (0.88) because once a disaster occurs, the alternatives to having maintained readiness vanish completely — the collapse is not suppression but physical reality: a hurricane arrives and options resolve to 'we trained for this' or 'we did not.' Resistance is negligible (0.06) because there is no organized opposition to preparedness itself, only occasional friction around specific drill scenarios or resource allocation. The measurement series show extraordinary stability: extractiveness and theater slightly increase as institutional bureaucracy accumulates around preparedness, but within the Rope range. Theater does not rise sharply, which is consistent with the competence reading — if the constraint were degrading into pure performance (husk reading), we would expect theater_ratio to rise toward 0.5+ and extractiveness to remain flat or decline. Neither happens here.
+ *   Extractiveness is very low (0.12) because the constraint does not concentrate gains or impose asymmetric costs. Responders benefit from maintained competence; protected populations benefit from improved survival chances in real incidents; administrators benefit from institutional legitimacy and reduced post-incident liability. The measured extraction reflects only the opportunity cost of time diverted to drills — a necessary cost of maintaining readiness, not an extraction in the economic sense. Suppression is negligible (0.08) because the constraint persists through alignment of interest, not coercion: responders have internalized the practice because it improves their performance; administrators enforce drills because they are required by law and insurance standards; oversight bodies mandate compliance because incidents drive public and legislative pressure. Theater is low but rising slightly through the interval (0.08 to 0.15) because the fraction of drill activity that is purely performative (for documentation and certification) increases as compliance bureaucracy grows, but the core practice remains functional. Accessibility alternatives are nearly completely collapsed (0.92) not because of suppression but because emergency response is a natural monopoly under crisis conditions — individuals cannot coordinate their own response, and exit means geographic relocation. Resistance is minimal (0.05) because the constraint faces no organized opposition: responders and administrators both benefit, and the population cannot voice objection to a preparedness program it depends on for survival.
  *
  * PERSPECTIVAL GAP:
- *   From the population's and emergency responders' seats, preparedness drills are straightforward collective action: we all benefit from being ready, we all participate in maintaining readiness through drills, no party extracts and no one is locked in against their will (residence and profession are not preparedness-created). From institutional leadership's seat, drills are an allocation choice: time and budget devoted to preparedness cycles come at the cost of other projects, and the benefit (disaster avoided) is often invisible or attributed to luck rather than preparation. This perspectival gap should compute as low divergence in seat type — both payer and beneficiary are Rope seats — because the asymmetry is one of visibility, not structural extraction.
+ *   The competence reading produces uniform seat classification: all seats that exist should compute as Rope (genuine coordination with minimal extraction). Responders compute as beneficiaries (they gain readiness); protected populations compute as beneficiaries (they gain survival chances, albeit diffuse and uncertain); administrators compute as agenda-setters who benefit from maintaining institutional legitimacy; oversight bodies observe and certify. There is no target seat extracting value. The alternative readings (husk_reading, hybrid_reading) would change this structure significantly: they would identify administrators as targets (bearing the cost of performative drills without competence gain) or victims (maintaining an appearance of readiness they know is false). The competence reading forecloses the victim structure by asserting that the founding problem is live and that drills continue to solve it.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries (population, responders, leadership) have low d: they benefit from maintained readiness and bear the coordination cost (training time, attention, resource allocation) proportionally. The beneficiary role is structural, not earned — you benefit from preparedness by occupying a location or profession that makes you vulnerable to a disaster. No seat is trapped or identity-locked into paying extraction; identity-locked exits (responders staying in the profession) carry no extraction premium — responders choose the profession knowing its preparedness demands. The arrangement does not suppress alternatives or exit; it simply coordinates a genuine collective action problem. Directionality overrides are not needed because the structural derivation from beneficiary declarations + moderate/powerful power levels + mobile-to-constrained exit options yields correct d values across seats.
+ *   Under this reading, directionality is symmetric across all beneficiary seats (d ≈ 0.5 or lower): responders benefit from readiness (d toward 0.0), protected populations benefit from improved survival (d toward 0.0), administrators benefit from institutional compliance and reduced post-incident liability (d toward 0.0). There are no victims — no seat bears costs without benefit. This contrasts sharply with the husk_reading (in which administrators would be targets forced to maintain performative compliance without gain) and the hybrid_reading (in which some components would show asymmetric extraction). The competence reading's claim that drills ARE functional practice, not memorial performance, determines the directionality structure entirely.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem — how to maintain operational readiness for low-frequency, high-impact events — remains live. The competence reading claims the founding problem is continuously re-solved through the constraint's operation: each drill re-certifies that personnel remember procedures, equipment is functional, and organizational memory is intact. If the founding problem were dead (we no longer face hazards requiring preparedness) or the constraint had become decoupled from solving it (drills no longer transmit competence), mandatrophy would be in play. The measurement data show theater_ratio staying below 0.25, which suggests the constraint has not yet degraded into Piton-like performance. The competence reading explicitly rejects the mandatrophy condition: the founding problem is live because hazards persist and competence decay is a real cost if drills stop.
+ *   The competence reading explicitly rejects mandatrophy: the founding problem (the need for embodied readiness) is asserted as live, and drills are asserted as solving it. This reading prevents mis-classification as Piton (atrophied coordination maintained only by theater). If empirical measurement over the interval showed theater rising above 0.5 while measured responder competence (post-incident response time, procedure adherence, team coordination) remained stable or improved, the competence reading would be falsified by the engine — theater > 0.5 signals that form persists while function atrophies, which is the Piton signature. The low theater ratio (0.15 at interval end) in this story is consistent with the reading's claim that drills remain functional.
  */
 
 /* ==========================================================================
@@ -181,66 +230,87 @@ narrative_ontology:story_seed(preparedness_persistence__competence_reading, 'non
    ========================================================================== */
 
 omega_variable(
-    kernel_reading_competence_vs_performance,
-    'Is preparedness maintained through live exercise of competence (knowledge embedded in repeated practice), or through memorial performance that mimics the form of readiness while competence atrophies?',
-    'Post-event assessment: when a prepared-for disaster occurs, do the practiced procedures activate the learned competencies or expose decay? Compare pre-event drill performance (formal pass/fail metrics) against actual-event execution speed, decision quality, and improvisation success.',
-    'If competence is live, drills are coordination costs and the constraint remains Rope. If performance masks atrophy, drills are theater and the constraint migrates toward Piton. The other readings (husk_reading, hybrid_reading) capture alternative framings of this core ambiguity.',
+    responder_competence_measurement,
+    'How should responder competence be measured: by proxy (drill participation metrics, certification records) or by direct assessment (post-incident response quality, procedure adherence under stress)?',
+    'Longitudinal study correlating drill participation and frequency against actual incident response performance (response time, procedure adherence, coordination quality). If proxy metrics rise while incident performance degrades, drills have become performative.',
+    'If proxy and direct measures diverge, the competence reading fails and the husk_reading becomes plausible. If they converge, competence is maintained and the reading holds. This directly resolves whether the constraint is Rope (coordination maintained) or Piton (performance maintained).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(responder_competence_measurement, empirical, 'Whether drills maintain real competence or only maintain the appearance of competence.').
+
+omega_variable(
+    founding_problem_persistence,
+    'Has the founding problem (the requirement for embodied procedural knowledge under stress) been solved by technology (real-time communication, decision-support systems, automated procedures) such that drills no longer solve the original problem?',
+    'Comparative incident analysis: jurisdictions with advanced communication and automation systems versus those without. If advanced systems reduce the competence advantage of drill-trained personnel, the founding problem has shifted.',
+    'If technology has substantially reduced the founding problem, drills may persist as institutional theater rather than functional practice. The constraint would transition from Rope (solving a live problem) to Piton (maintained by inertia). The reading would be falsified empirically but not logically.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_competence_vs_performance, empirical, 'Whether drill participation transmits and maintains real competence or performative form without substance.').
+narrative_ontology:omega_variable(founding_problem_persistence, empirical, 'Whether the founding problem motivating drills persists or has been partially solved by technological change.').
 
 omega_variable(
-    competence_decay_detection,
-    'What signals distinguish live competence from degraded performance? How long can drills sustain readiness without actual operational pressure?',
-    'Longitudinal study of drill-participation effects on actual response performance; comparison of jurisdictions with different drill cadences; post-event debriefs documenting whether personnel reverted to trained procedures or abandoned them under stress.',
-    'If signals show competence can be maintained indefinitely through regular drills, the Rope classification holds across time horizons. If competence decay accelerates over intervals between major events, the constraint requires higher maintenance frequency and the Rope-to-Piton drift risk rises.',
+    kernel_reading_identity,
+    'Is the kernel ''emergency preparedness persists through drills and inspections'' a commitment to a PRACTICE (the reading is about how readiness is maintained) or a commitment to a FUNCTION (the reading is about what preparedness achieves)?',
+    'Authority analysis: who maintains the kernel (practitioners, agencies, legislation)? What do they defend when challenged (the necessity of drill practice, or the effectiveness of preparedness overall)? The sibling readings (husk, hybrid) represent different answers to this question.',
+    'If the kernel is practice-oriented, the competence reading is a coherent instantiation: drills ARE the practice. If the kernel is function-oriented, the same drills could instantiate the husk reading (practice persists but function atrophies). The kernel''s framing determines which reading is coherent.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(competence_decay_detection, empirical, 'Temporal dynamics of competence decay in preparedness systems.').
-
-omega_variable(
-    institutional_identity_lock_in_preparedness,
-    'To what degree does institutional self-concept depend on demonstrable preparedness? Is exit from the preparedness commitment available to organizations that choose to abandon it?',
-    'Examine jurisdictions/organizations that have dissolved preparedness programs: what was the cost of exit (legal, reputational, operational) versus the cost of continued maintenance? Are there exit-available actors who choose to leave?',
-    'If exit is structurally available (a municipality can decide disaster preparedness is not its role), participants are identity_locked only by choice, and the constraint remains Rope-like. If exit is impossible (national framework mandates preparedness), identity fusion is structural and the constraint may function more like internalized Tangled Rope than pure Rope.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(institutional_identity_lock_in_preparedness, empirical, 'Whether preparedness lock-in is structural mandate or chosen identity commitment.').
+narrative_ontology:omega_variable(kernel_reading_identity, conceptual, 'Whether the preparedness kernel is framed as a commitment to practice or a commitment to function.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(preparedness_persistence__competence_reading, 0, 20).
+narrative_ontology:interval(preparedness_persistence__competence_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__competence_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(prep_tr_t5, preparedness_persistence__competence_reading, theater_ratio, 5, 0.16).
-narrative_ontology:measurement(prep_tr_t10, preparedness_persistence__competence_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(prep_tr_t15, preparedness_persistence__competence_reading, theater_ratio, 15, 0.19).
-narrative_ontology:measurement(prep_tr_t20, preparedness_persistence__competence_reading, theater_ratio, 20, 0.2).
+narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__competence_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement_basis(prep_tr_t0, observed).
+narrative_ontology:measurement(prep_tr_t5, preparedness_persistence__competence_reading, theater_ratio, 5, 0.1).
+narrative_ontology:measurement_basis(prep_tr_t5, observed).
+narrative_ontology:measurement(prep_tr_t10, preparedness_persistence__competence_reading, theater_ratio, 10, 0.14).
+narrative_ontology:measurement_basis(prep_tr_t10, observed).
+narrative_ontology:measurement(prep_tr_t15, preparedness_persistence__competence_reading, theater_ratio, 15, 0.17).
+narrative_ontology:measurement_basis(prep_tr_t15, observed).
+narrative_ontology:measurement(prep_tr_t20, preparedness_persistence__competence_reading, theater_ratio, 20, 0.16).
+narrative_ontology:measurement_basis(prep_tr_t20, observed).
+narrative_ontology:measurement(prep_tr_t25, preparedness_persistence__competence_reading, theater_ratio, 25, 0.15).
+narrative_ontology:measurement_basis(prep_tr_t25, observed).
 
 % Extraction over time
-narrative_ontology:measurement(prep_be_t0, preparedness_persistence__competence_reading, base_extractiveness, 0, 0.06).
-narrative_ontology:measurement(prep_be_t5, preparedness_persistence__competence_reading, base_extractiveness, 5, 0.07).
-narrative_ontology:measurement(prep_be_t10, preparedness_persistence__competence_reading, base_extractiveness, 10, 0.08).
-narrative_ontology:measurement(prep_be_t15, preparedness_persistence__competence_reading, base_extractiveness, 15, 0.08).
-narrative_ontology:measurement(prep_be_t20, preparedness_persistence__competence_reading, base_extractiveness, 20, 0.08).
+narrative_ontology:measurement(prep_be_t0, preparedness_persistence__competence_reading, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement_basis(prep_be_t0, observed).
+narrative_ontology:measurement(prep_be_t5, preparedness_persistence__competence_reading, base_extractiveness, 5, 0.11).
+narrative_ontology:measurement_basis(prep_be_t5, observed).
+narrative_ontology:measurement(prep_be_t10, preparedness_persistence__competence_reading, base_extractiveness, 10, 0.12).
+narrative_ontology:measurement_basis(prep_be_t10, observed).
+narrative_ontology:measurement(prep_be_t15, preparedness_persistence__competence_reading, base_extractiveness, 15, 0.13).
+narrative_ontology:measurement_basis(prep_be_t15, observed).
+narrative_ontology:measurement(prep_be_t20, preparedness_persistence__competence_reading, base_extractiveness, 20, 0.12).
+narrative_ontology:measurement_basis(prep_be_t20, observed).
+narrative_ontology:measurement(prep_be_t25, preparedness_persistence__competence_reading, base_extractiveness, 25, 0.12).
+narrative_ontology:measurement_basis(prep_be_t25, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(prep_su_t0, preparedness_persistence__competence_reading, suppression_requirement, 0, 0.1).
-narrative_ontology:measurement(prep_su_t5, preparedness_persistence__competence_reading, suppression_requirement, 5, 0.11).
-narrative_ontology:measurement(prep_su_t10, preparedness_persistence__competence_reading, suppression_requirement, 10, 0.12).
-narrative_ontology:measurement(prep_su_t15, preparedness_persistence__competence_reading, suppression_requirement, 15, 0.12).
-narrative_ontology:measurement(prep_su_t20, preparedness_persistence__competence_reading, suppression_requirement, 20, 0.12).
+narrative_ontology:measurement(prep_su_t0, preparedness_persistence__competence_reading, suppression_requirement, 0, 0.05).
+narrative_ontology:measurement_basis(prep_su_t0, observed).
+narrative_ontology:measurement(prep_su_t5, preparedness_persistence__competence_reading, suppression_requirement, 5, 0.06).
+narrative_ontology:measurement_basis(prep_su_t5, observed).
+narrative_ontology:measurement(prep_su_t10, preparedness_persistence__competence_reading, suppression_requirement, 10, 0.08).
+narrative_ontology:measurement_basis(prep_su_t10, observed).
+narrative_ontology:measurement(prep_su_t15, preparedness_persistence__competence_reading, suppression_requirement, 15, 0.09).
+narrative_ontology:measurement_basis(prep_su_t15, observed).
+narrative_ontology:measurement(prep_su_t20, preparedness_persistence__competence_reading, suppression_requirement, 20, 0.08).
+narrative_ontology:measurement_basis(prep_su_t20, observed).
+narrative_ontology:measurement(prep_su_t25, preparedness_persistence__competence_reading, suppression_requirement, 25, 0.08).
+narrative_ontology:measurement_basis(prep_su_t25, observed).
 
 
 /* ==========================================================================
@@ -253,7 +323,7 @@ narrative_ontology:affects_constraint(preparedness_persistence__competence_readi
 narrative_ontology:affects_constraint(preparedness_persistence__competence_reading, preparedness_persistence__hybrid_reading).
 
 % DUAL FORMULATION NOTE:
-% The preparedness_persistence kernel has three constraint stories corresponding to three readings of what drills and inspections do. This story (competence_reading) instantiates the reading where practice transmits and maintains real competence; the other readings claim different functional stories (memorial performance, or stratified competence). All three stories have the same named phenomenon (drills, inspections, preparedness programs) but different ε values and structural interpretations because they answer the foundational question differently: is competence live or performance? Readers should examine all three stories and their omegas to understand the kernel contest.
+% This constraint is one of three readings of the preparedness_persistence kernel. All three stories share the same referent (the standing commitment to maintain preparedness through drills) but instantiate different readings of what that commitment entails. The competence_reading asserts that drills maintain live operational knowledge; the husk_reading asserts that drills have become memorial performance; the hybrid_reading asserts that competence is stratified. Each reading has its own ε (low for competence, high for husk), its own beneficiary/victim structure (no victims under competence, administrators as targets under husk), and its own classification (Rope vs. Piton). The engine computes which reading is structurally true from the measurements and stakeholder data.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

@@ -2,237 +2,352 @@
   "header": {
     "constraint_id": "hagia_sophia_substrate__orthodox_restitution_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "module_name_override": "constraint_hagia_sophia_substrate__orthodox_restitution_reading",
-    "story_uid": "8682e443-2f6e-4794-b74a-2edd6f522eef"
+    "story_uid": "db43b072-dee6-4718-80a7-88984e5929af"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.05,
+    "extractiveness": 0.42,
+    "suppression": 0.18,
     "theater_ratio": 0.72,
-    "accessibility_collapse": 0.25,
-    "resistance": 0.88,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
     "claimed_type": "snare",
-    "human_readable": "Hagia Sophia Orthodox Restitution Legitimacy Claim",
-    "topic_domain": "cultural/religious/geopolitical",
+    "human_readable": "Orthodox Restitution Reading: Hagia Sophia Substrate",
+    "topic_domain": "cultural_heritage/religious_authority/geopolitical",
     "requires_active_enforcement": false,
-    "emerges_naturally": false,
     "beneficiaries": [
       "eastern_orthodox_diaspora",
       "greek_state"
     ],
     "victims": [
-      "turkish_state_sovereignty",
+      "turkish_sovereignty",
       "islamic_worship_continuity"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "kernel_contest_reading_choice",
-      "question": "Which kernel reading (orthodox restitution vs. islamic sovereignty vs. universal heritage) correctly grounds the site's legitimacy?",
-      "resolution_mechanism": "The contest is irreducible because each reading selects a different historical moment as t0 (Byzantine founding, Ottoman conquest, 20th-century UNESCO heritage designation) and each moment carries incompatible normative force within its own tradition. No meta-framework exists that all three parties accept as adjudicating the choice.",
-      "impact": "If orthodox restitution is accepted as legitimate, the constraint reclassifies from snare to rope (genuine coordination around shared Christian heritage); if islamic sovereignty is accepted, it becomes a defensive countermeasure against external restitution claims; if universal heritage is accepted, the constraint dissolves into a coordination mechanism. The classification depends entirely on which kernel reading the observer accepts.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Kernel-reading choice under irreducible contest produces three mutually exclusive classifications."
+      "name": "eastern_orthodox_diaspora",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "A globally dispersed community of Eastern Orthodox Christians whose symbolic and spiritual claim to Hagia Sophia derives from the edifice as the founding cathedral of Orthodox Christendom. They benefit from the legitimacy narrative this reading provides — a grounding for diaspora identity and grievance recovery — without bearing enforcement costs. They can advocate, lobby, and petition but cannot unilaterally change the site's status. Their investment is primarily symbolic and memorial."
     },
     {
-      "id": "enforcement_pathway_viability",
-      "question": "What would enforcement of the orthodox restitution claim require, and how plausible is such enforcement given Turkish sovereignty and Islamic continuity?",
-      "resolution_mechanism": "Assessment of enforcement pathways: international legal pressure (weak leverage), NATO institutional pressure (unlikely given Turkish strategic role), Turkish domestic political shift (low probability given nationalist consensus), or unilateral Orthodox reclamation attempt (high military-intervention risk). Viability assessment requires scenario modeling of each pathway.",
-      "impact": "If enforcement is genuinely implausible, the constraint's extractiveness overstates its material force and the classification should account for its primarily symbolic/theatrical nature (theater_ratio elevation would be justified). If any enforcement pathway shows non-negligible probability, the constraint carries material extraction risk (threat to Turkish sovereignty, disruption of Islamic worship).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Plausibility and cost of enforcement mechanisms."
+      "name": "greek_state",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Derives diplomatic and cultural leverage from advancing the Orthodox restitution claim in international forums and bilateral negotiations with Turkey. The claim functions as a bargaining asset in broader geopolitical contests over Cyprus, Aegean maritime boundaries, and regional influence. Greece bears the cost of maintaining the claim rhetorically and diplomatically (tension with Turkey) while gaining symbolic capital and the possibility of future negotiating leverage. The constraint keeps the site as a live issue in Greek-Turkish relations rather than a settled historical fact."
     },
     {
-      "id": "beneficiary_capture_vs_symbolic_claim",
-      "question": "Do the listed beneficiaries (Eastern Orthodox diaspora, Greek state) actually benefit from pressing this claim, or does the benefit accrue to a different seat (geopolitical leverage, nationalist constituencies)?",
-      "resolution_mechanism": "Documentation of who materially and politically benefits from the restitution claim: (a) Orthodox churches that would gain worship-site access and institutional authority; (b) Greek state that gains diplomatic leverage and nationalist support; (c) Greek diaspora communities whose identity narrative gains validation; (d) Western actors seeking to constrain Turkish regional power. Seat-by-seat benefit mapping.",
-      "impact": "If the stated beneficiaries are misidentified, the directionality derivation will be incorrect. If nationalist or geopolitical constituencies are the true beneficiaries (rather than religious communities), the constraint is a pure sovereignty extraction mechanism, not a religious restitution claim.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "True beneficiary identification vs. stated beneficiary narrative."
+      "name": "turkish_sovereignty",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The Turkish state faces an external legitimacy claim that, if accepted, would cede sovereign authority over a nationally-significant cultural asset. The constraint operates by asserting that Turkey's control is illegitimate — that the site should 'return' to Orthodox authority or become neutral. Turkey cannot exit this constraint without abandoning Hagia Sophia or capitulating to an external claim. The mere assertion of this reading creates diplomatic friction and keeps Turkish sovereignty under challenge in certain international contexts."
     },
     {
-      "id": "islamic_continuity_suppression_mechanism",
-      "question": "Is the suppression of Islamic worship continuity structural (active enforcement preventing prayer/practice) or internalized (psychological/normative expectation that restitution is legitimate)?",
-      "resolution_mechanism": "Post-conversion timeline analysis: (a) during Ottoman rule, was Christian worship actively suppressed (structural)? (b) in contemporary moment, is Islamic worship under threat from restitution claims (structural threat) or from normative delegitimization (internalized)? (c) if the restitution claim were abandoned, would suppression of Islamic practice persist?",
-      "impact": "If suppression is primarily structural (active barriers), the constraint carries higher extractive force. If suppression is primarily internalized (narrative delegitimization), the mechanism is ideological capture rather than coercive constraint. The distinction affects both ε measurement and the suppression metric itself.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs. internalized suppression of Islamic continuity."
+      "name": "islamic_worship_continuity",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Turkish Muslims and Islamic believers for whom Hagia Sophia, reconverted to a mosque in 2020 after 86 years as a museum, represents the culmination of the 1453 Ottoman conquest and Islamicization. The Orthodox restitution reading threatens to interrupt that continuity again by asserting the site 'should' return to Christian control or become neutral — effectively delegitimizing the present arrangement. Islamic worshippers cannot simply relocate their attachment to the site; their identity and faith practice are fused with it. The constraint extracts from them by perpetually contesting the legitimacy of their current use."
+    },
+    {
+      "name": "turkish_ulama_and_islamic_authority",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Islamic scholarly and religious authorities in Turkey who have grounded the mosque's legitimacy in waqf endowment and continuous Islamic custodianship since 1453. The Orthodox restitution reading attacks this grounding directly by asserting priority of the Byzantine Christian founding. They cannot compromise on the foundational claim without surrendering their interpretive authority over Islamic legitimacy."
+    },
+    {
+      "name": "unesco_and_international_heritage",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International cultural heritage bodies that frame Hagia Sophia as universal human patrimony transcending religious and national claims. They observe the contest between the Orthodox restitution reading and Islamic sovereignty readings, and advocate for the universal heritage reading as the legitimate frame. They have no enforcement mechanism over the site but can stigmatize decisions that violate their endorsed frame."
+    },
+    {
+      "name": "greek_government",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The Greek state administers and articulates the Orthodox restitution claim as a matter of national cultural policy and diplomatic strategy. It is the primary seat that can frame the constraint in international discourse, though it cannot unilaterally enforce the claim against Turkish sovereignty."
+    },
+    {
+      "name": "hagia_sophia_site_itself",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The physical and symbolic structure — as an abstract entity — cannot hold a role, but is listed here for narrative completeness: the site is a beneficiary insofar as the contested ownership status keeps it at the center of geopolitical discourse and ensures continued international attention, resource allocation to preservation, and symbolic importance that would fade if any single claim were universally accepted."
     }
   ],
+  "six_questions": {
+    "coordination_function": "No coordination function. The Orthodox restitution reading does not solve a genuine collective-action problem; it asserts a legitimacy claim that divides rather than unites. There is no coordinated outcome that satisfies the reading's core premise while also satisfying the Islamic sovereignty reading or maintaining present Turkish control.",
+    "transfer_function": "Transfers symbolic and diplomatic capital from Turkish sovereignty to Greek state and Orthodox diaspora interests. Transfers historical-legitimacy claims from Islamic endowment narratives to Christian foundational narratives. No material goods or services flow; the transfer is authority, narrative control, and grievance recognition.",
+    "absent_voices": "Contemporary Muslims in Turkey who use the mosque for worship are structurally excluded from this reading's discourse. The reading does not ask what present-day Islamic believers want; it asserts what the site 'should' be. Secular Turks who preferred the museum era are also absent. The voices present are Greek state, Orthodox diaspora, and their international allies (some heritage advocates). The voices absent are those who benefit from or defend the present mosque status.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Orthodox restitution reading and the restitution claim it grounds disappeared (if Greek state advocacy ceased and the Orthodox diaspora stopped asserting the claim), the geopolitical landscape would shift: one persistent source of Turkish-Greek friction would evaporate, international heritage discourse would consolidate around either the universal heritage reading or the Islamic sovereignty reading (likely the former as a diplomatic compromise), and the site would no longer be a live issue in culture-war rhetoric. The physical building would remain unchanged, but its symbolic and diplomatic meaning would stabilize. Turkey's control would no longer be perpetually contested by an external Orthodox claim.",
+    "founding_problem": "The founding problem, from the Orthodox restitution reading's perspective, is the 1453 Ottoman conquest and the resulting displacement of Christian worship from the site. The reading asserts that a 1,100-year-old Christian cathedral was illegitimately expropriated by military conquest and Islamicized, severing the continuous Orthodox tradition and the site's Christian function. The restitution reading frames this historical injustice as something that should be remedied in the present, either by returning the site to Orthodox control or by neutralizing it (museum status) to honor its foundational Christian identity rather than its present Islamic function.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The Orthodox restitution reading is corroborated by internal sources only: Orthodox theological tradition, Greek state historical narratives, and diaspora community memory. The founding problem (1453 conquest and Islamicization) is historically real and independently documented by Byzantine and Ottoman chronicles. However, the reading's claim that this historical injustice should be remedied in the present is NOT corroborated by any external authority. Turkey rejects the restitution premise as a violation of present sovereignty. UNESCO advocates neutrality/universal heritage framing, not Orthodox restitution. International law privileges present sovereignty and does not require rectification of historical conquest. No external independent authority supports the reading's corrective mandate. The founding problem is dead in the sense that the conquest is 570 years past and Turkey has consolidated Islamic and national authority over the site for the entire interval; the mandate for restitution has no enforcement pathway and is maintained only as a narrative and diplomatic assertion by the reading's own beneficiaries."
+  },
+  "interval": {
+    "start": 1453,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.08
+      "time_point": 1453,
+      "value": 0.85
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.12
+      "time_point": 1850,
+      "value": 0.72
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 1935,
       "value": 0.15
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.18
+      "time_point": 1980,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.2
+      "time_point": 2010,
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.18
+      "time_point": 2020,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.62
+      "time_point": 1453,
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.65
+      "time_point": 1850,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.7
+      "time_point": 1935,
+      "value": 0.92
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.74
+      "time_point": 1980,
+      "value": 0.88
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.76
+      "time_point": 2010,
+      "value": 0.78
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
       "value": 0.72
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.02
+      "time_point": 1453,
+      "value": 0.92
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.03
+      "time_point": 1850,
+      "value": 0.35
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.04
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 15,
+      "time_point": 1935,
       "value": 0.05
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.06
+      "time_point": 1980,
+      "value": 0.08
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.05
+      "time_point": 2010,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.18
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 25
-  },
-  "commentary": {
-    "narrative_context": "The Hagia Sophia, constructed as the Byzantine Christian cathedral in 537 CE, was converted to an Islamic mosque in 1453 following the Ottoman conquest. After the fall of the Ottoman Empire and Turkish independence, it became a secular museum in 1935 under Atatürk's modernization program. In 2020, the Turkish government reconverted it to a mosque, open to Islamic worship. The orthodox restitution reading claims that the site's legitimate status derives from its founding as a Christian cathedral and should either return to Orthodox ecclesiastical control or remain officially neutral to honor its Byzantine heritage. This reading is one of three distinct kernel framings of legitimacy, each grounding in a different historical moment (Byzantine founding, Ottoman conquest, or modern heritage status). The reading generates symbolic extraction from Turkish sovereignty (external claim on national territory) and from Islamic worship continuity (which the restitution claim implicitly threatens to interrupt again), while benefiting the Greek state (diplomatic leverage) and the Eastern Orthodox diaspora (symbolic validation of historical presence). The constraint has minimal material enforceability but operates at high intensity in ideological and diplomatic registers.",
-    "key_agents": [
-      "Eastern Orthodox diaspora communities: symbolic beneficiaries; sustain historical memory of Byzantine presence; powerless individually but concentrated in Greek and diaspora Orthodox institutions.",
-      "Greek state: agenda-setter of the restitution claim; collects diplomatic leverage and nationalist political support; powerful institutional actor.",
-      "Turkish state: structural victim; sovereignty of national territory contested by the restitution claim; powerful but facing external normative pressure.",
-      "Islamic worship communities: practical victims; worshipping continuity threatened by restitution logic; organized locally but politically subordinate in the geopolitical frame.",
-      "UNESCO and international heritage institutions: observer seats; attempt to frame the site as universal heritage, competing against both restitution and sovereignty readings.",
-      "Western geopolitical actors: observer-beneficiary hybrids; benefit from using the restitution claim as leverage against Turkish strategic autonomy, but do not claim ownership."
-    ],
-    "logic_rationale": "Extractiveness is low (0.18) because the constraint has no plausible enforcement mechanism within the current geopolitical order: the restitution claim cannot be executed without major Turkish state concession or military intervention, neither of which is realistic given NATO alliances and Turkish sovereignty. However, extractiveness is non-zero because the claim does extract value in ideological registers (delegitimizes Turkish tenure, raises switching costs for Turkish policy, complicates international relations). Suppression is minimal (0.05) because this reading operates openly in diplomatic discourse, academic literature, and political rhetoric; it is not hidden or violently enforced. Theater ratio is high (0.72) because the constraint's primary function is symbolic and rhetorical — validating Orthodox historical presence, signaling Greek nationalist identity, providing fodder for geopolitical tension — rather than coordinating any actual practice or benefit flow. The measurement series show theater_ratio rising from 0.62 to 0.76 (peaking around year 20, when the restitution claim entered peak diplomatic salience following the 2020 reconversion), then slightly declining as the claim stabilizes as a background geopolitical position rather than an active policy push. Extractiveness shows the same trajectory but at lower magnitude: rising from 0.08 to 0.20 as the claim gains ideological force, then declining as enforcement implausibility becomes apparent and the constraint settles into symbolic rather than material extraction. All measurements share the same time grid (0, 5, 10, 15, 20, 25) enabling temporal coherence. Early measurements are projected (the reading was less salient before ~2010); mid-interval measurements anchor to the 2020 reconversion event and subsequent diplomatic activity; late measurements are projected forward.",
-    "perspectival_gap": "The Greek state and Orthodox diaspora see the constraint as a legitimate restitution claim backed by historical continuity (early Byzantine right). From the Turkish state's perspective, the same constraint is an illegitimate external interference in Turkish sovereignty backed by post-imperial nostalgia. From the UNESCO/universal-heritage reading, the constraint is a parochial sectarian claim that obscures the site's function as shared human heritage. From Islamic practitioners, the constraint is a threat to worship continuity disguised as historical justice. The engine computes different types for each seat: the Greek agenda-setter seat derives a beneficiary position (collects diplomatic leverage, low d), while the Turkish victim seat derives a full-target position (faces external claim on territory, high d). These divergent directionalities emerge from the structural data (beneficiary vs. victim declaration) and power differences (powerful Greek state vs. powerful-but-externally-pressured Turkish state), not from the authored claim. The authored claim (snare) reflects the Orthodox reading's structural position as external, unenforceable, symbolically extractive.",
-    "directionality_logic": "The Eastern Orthodox diaspora occupies a low-d position (beneficiary): they collect symbolic validation of historical presence and identity without directly running the constraint or bearing its costs. The Greek state occupies a near-beneficiary position (moderate-low d): they set the claim agenda, collect diplomatic leverage, and sustain it through international discourse, but do not directly enforce against the Turkish state (enforcement is diffuse, through international rhetorical pressure rather than Turkish state action). The Turkish state occupies the highest-d position (near-full target): an external claim directly challenges their sovereignty over national territory, constrains their domestic religious policy options (worshipping continuity under threat), and generates ongoing diplomatic friction. Islamic worship communities occupy a victim position (high d, though lower institutional power than the Turkish state): their practical continuity of worship is threatened by the restitution logic, even if the claim is currently unenforceable. The directionality derivation flows directly from these beneficiary/victim/agenda-setter declarations: those listed as beneficiaries and agenda-setters derive lower d; those listed as victims derive higher d. No overrides are necessary because the structural data accurately maps to real power asymmetries.",
-    "mandatrophy_analysis": "The constraint's founding problem (recovering Byzantine Christian legacy and honoring Orthodox historical presence) has not technically 'died' but has become substantially detached from any plausible enforcement or practical implementation pathway. The mandatrophy divergence is captured in the mismatch between the constraint's claimed type (snare) and its actual operation: a snare implies enforced extraction, yet this constraint operates primarily through rhetorical/ideological channels with minimal coercive force. The high theater_ratio (0.72) indicates that a substantial portion of the constraint's operation is theatrical maintenance of the claim rather than functional extraction. This is not classic piton (institutional inertia keeping a degraded function alive) but rather symbolic capture: the constraint persists because geopolitical actors benefit from the rhetoric even though enforcement is implausible. The authorization structure (external normative claim with no institutional enforcement capacity) suggests the constraint is sustained by repeated assertion and international diplomatic channels rather than by institutional machinery — a form of theatrical mandatrophy where the founding problem remains rhetorically 'live' but practically obsolete.",
-    "kernel_context": "This constraint is one reading of the contested Hagia Sophia legitimacy kernel (kernel_id: hagia_sophia_substrate). This reading instantiates the 'orthodox_restitution_reading', which grounds the site's legitimate status in its Byzantine founding as a Christian cathedral and makes a claim (varying from restitution to neutrality) based on that founding. The sibling readings are: (1) 'islamic_sovereignty_reading' (grounds legitimacy in the 1453 Ottoman conquest and continuous Islamic endowment, supporting Turkish sovereign control and Islamic worship), and (2) 'universal_heritage_reading' (grounds legitimacy in UNESCO heritage status and shared human cultural transcendence, supporting neutrality through international management). Each reading selects a different historical moment as its t0 (Byzantine founding, Ottoman conquest, or modern heritage designation) and derives incompatible normative force from that moment. The three readings coexist in active geopolitical contest but neither forecloses the others within a single meta-framework — they are held by different parties (Greek/Orthodox actors, Turkish state, international heritage institutions) and the contest is irreducible."
-  },
-  "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
-    "interpretation_layer_present": true,
-    "reading_relations": [
-      {
-        "sibling_id": "islamic_sovereignty_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "universal_heritage_reading",
-        "relation": "coexists_with"
-      }
-    ],
-    "axioms": [
-      {
-        "atom": "byzantine_founding_primacy",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      },
-      {
-        "atom": "restitution_as_historical_justice",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      }
-    ],
-    "reference_frame": "byzantine_christian_cathedral_authority",
-    "drift_state": {
-      "moment": "contemporary_turkish_islamic_worship",
-      "direction": "authority_erosion",
-      "magnitude": "severe",
-      "acknowledged": false
+  "omegas": [
+    {
+      "id": "founding_legitimacy_vs_conquest",
+      "question": "Does the Christian foundational status (330 CE) carry greater legitimacy weight than 500+ years of continuous Islamic endowment and worship (1453–2024)? Or does present custody supersede historical founding as the basis for legitimate authority?",
+      "resolution_mechanism": "No empirical resolution exists. This is a normative question about how to weight historical claim against continuous possession and practice. Different legal and ethical traditions yield different answers: international law privileges present sovereignty; Orthodox theology privileges foundational sacred function; Islamic jurisprudence privileges continuous waqf endowment. Resolution would require external authority (e.g., international court) to adjudicate between these frameworks, which no such authority has undertaken.",
+      "impact": "If founding legitimacy is weightier, the Orthodox restitution claim is structurally sound and Turkey bears an obligation to restore or neutralize. If continuous possession and present sovereignty supersede, the restitution claim is a retrospective grievance without enforceability, and the present Islamic status is legitimate. The reading's entire ε rests on this weighting.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Weighting of foundational historical claim vs. continuous possession and present sovereignty."
+    },
+    {
+      "id": "kernel_reading_contest_ambiguity",
+      "question": "This constraint is one reading of a contested kernel. How much of the measured extractiveness (0.42) arises from the reading itself (the assertion that Turkish control is illegitimate) vs. from the underlying historical fact (1453 conquest and Islamicization)? Would a different reading of the same kernel produce a substantially different ε?",
+      "resolution_mechanism": "Compare the ε authored in the sibling readings (islamic_sovereignty_reading, universal_heritage_reading). Each reading frames the same physical site differently; if their ε values diverge widely, the divergence signals that ε is reading-indexed, not a property of the site itself. This is structurally correct per OQ-26: ε is a property of a reading (the standing arrangement under contest, assessed by the reading's own lights), not a reading-independent topic.",
+      "impact": "If ε values across the three readings are {0.42 (orthodox), 0.15 (universal), 0.78 (islamic)}, the constraint family demonstrates that the same site generates different extraction structures under different readings — confirming that ε is reading-indexed. If the values converge, the site has a reading-independent extraction profile. Divergence refines the corpus's understanding of how commitment-system readings multiply constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexing of ε within a constraint family."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "The measured suppression (0.18) is low because the Orthodox restitution reading has no enforcement capacity — it is a pure legitimacy claim with no coercive machinery. But does the claim suppress alternatives (e.g., the universal heritage reading) through rhetoric, diplomatic pressure, and control of narrative rather than through direct coercion?",
+      "resolution_mechanism": "Analyze whether suppression is structural (military, legal, economic barriers to exit) or internalized (the reading's rhetorical force discredits alternatives without material constraint). For this constraint, suppression is primarily rhetorical — the reading's existence in Greek-Turkish diplomatic discourse shapes what can be said and negotiated without the claim being backed by enforcement. The internalized suppression operates on Turkish actors (if they accept the restitution framing as legitimate, they feel bound to respond) rather than on Orthodox beneficiaries (who embrace the reading).",
+      "impact": "If suppression is internalized, the effective suppression may be higher than the structural measure suggests — the claim constrains Turkish discourse and diplomatic maneuvering even without enforcement. High internalized suppression would reclassify the constraint as more extractive (higher effective ε) despite low structural suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression in legitimacy claims."
+    },
+    {
+      "id": "beneficiary_vs_payer_seat_divergence",
+      "question": "The Orthodox diaspora and Greek state are listed as beneficiaries, yet the Greek state is also a secondary payer (bearing diplomatic costs of maintaining the claim). Will the engine compute the Greek state's directionality as beneficiary-dominant (d low) or as genuinely dual? And does this dual positioning make the Greek state a bridge seat that could shift to the other reading?",
+      "resolution_mechanism": "The engine derives directionality from beneficiary/victim declarations + exit options. Greece is declared beneficiary (diplomatic leverage) + secondary_role payer (tension with Turkey, cost of maintaining the claim). The exit_options are constrained (cannot easily abandon the claim without domestic political cost). The engine should compute a d near 0.4–0.6 (moderate/symmetric) rather than 0.0–0.2 (full beneficiary). If the computed d diverges from this expectation, the beneficiary/victim declarations may be miscalibrated.",
+      "impact": "If Greece's d computes symmetric, it suggests the constraint's benefit to Greek state interests is matched by its cost — the claim is worth maintaining but not heavily subsidized. If Greek d computes beneficiary-dominant (too low), the declaration of secondary_role payer may be inadequate to capture the true cost structure. This would suggest an override is needed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Directionality computation for dual-positioned institutional actors."
     }
+  ],
+  "commentary": {
+    "narrative_context": "The Hagia Sophia substrate is a 1,700-year-old edifice that functions as the focal point of a contest over religious, cultural, and geopolitical legitimacy. Built as a Christian cathedral (330 CE), it was converted to a mosque after the 1453 Ottoman conquest, stood as a museum (1935–2020) under Turkish state neutrality, and was reconverted to a mosque in 2020. The Orthodox restitution reading asserts that the site's foundational identity as a Christian cathedral should determine its present status: it should be returned to Orthodox ecclesiastical control or at minimum remain neutral (non-religious or museum). This reading is held primarily by the Eastern Orthodox diaspora, Greek state interests, and some international heritage advocates. It is directly opposed by Islamic believers and Turkish authorities who read the site's legitimacy as grounded in the 1453 Ottoman conquest and continuous Islamic endowment. A third reading, the universal heritage reading, frames the site as transcending any single religious or national claim and belonging to all humanity. This story instantiates ONLY the Orthodox restitution reading — not the Islamic sovereignty reading, not the universal heritage reading. The ε, stakeholders, and structural analysis describe this reading's own logic, not a synthesis or compromise.",
+    "key_agents": [
+      "Eastern Orthodox diaspora: globally dispersed beneficiary, holds symbolic claim but cannot enforce it",
+      "Greek state: beneficiary and secondary payer, derives diplomatic leverage but incurs Turkish resentment",
+      "Turkish sovereignty (national state): primary victim, faces external legitimacy challenge to its control",
+      "Islamic believers and Turkish Islamic authorities: victims of the restitution claim, would face interrupted continuity if the reading were enforced",
+      "UNESCO and international heritage bodies: observers who advocate the universal heritage reading, not the Orthodox restitution reading"
+    ],
+    "logic_rationale": "Extractiveness measures how much the constraint extracts from those it governs. Under the Orthodox restitution reading, the constraint extracts from Turkish sovereignty (by contesting its legitimacy over the site) and from Islamic worship continuity (by asserting the site should not be Muslim). The measurement series shows a striking pattern: extractiveness was highest at 1453 (0.85, when the conquest actively displaced Christians) and declined through the Ottoman centuries as the conquest became historical fact. It dropped to near-zero at 1935 when Turkey converted the site to a museum (neutralizing the conflict). It has risen again since 1980 as the Orthodox restitution claim has been revived in international discourse, reaching 0.42 by 2024 under the mosque reconversion. Theater ratio is the inverse: high (0.92) during the museum era when the restitution claim had no realistic enforcement pathway and was maintained purely as a narrative assertion; it has declined (0.72 by 2024) as the restitution claim faces the reality that Turkey has re-Islamicized the site and the Orthodox reading's demand for restoration or neutrality has zero enforcement capacity. Suppression was high at 1453 (0.92: conquest-era suppression of Christian worship) and has remained low since (0.05–0.18) because the reading has no enforcement machinery. The reading is maintained through rhetoric, diplomacy, and symbolic continuity, not through coercive suppression. This pattern — declining extractiveness over centuries, a spike in theater when the claim was most detached from reality (museum era), and low suppression throughout — marks the constraint as a claim that oscillates between activation and dormancy depending on geopolitical salience and the site's functional status.",
+    "perspectival_gap": "The payer seats and the beneficiary seats experience this constraint very differently. From the Orthodox diaspora and Greek state seat, the restitution reading is a legitimate claim to historical justice and cultural recovery — the constraint functions as a framework for maintaining identity and diplomatic leverage. From the Turkish sovereignty and Islamic worship seats, the same reading is an external illegitimate claim that perpetually contests their authority and rights. The engine should compute dramatically different types for these seats: the beneficiary seats might assess the constraint as a rope-like coordination mechanism (we are coordinating around a shared claim of foundational legitimacy), while the payer seats should assess it as a snare (we are being extracted from by a claim we cannot escape or refute, backed by international rhetoric we cannot fully suppress). This divergence arises from the structural fact that the reading has no enforcement mechanism — it must be accepted or rejected; it cannot be negotiated down. The Greek state occupies an interesting middle position: it benefits from the claim's diplomatic utility but pays the cost of maintaining it (tension with Turkey, inability to settle the underlying dispute, rhetorical commitment to a claim it cannot enforce). If Greece could costlessly maintain the claim, it would be pure beneficiary; but the diplomatic cost is real and visible in Greece's constrained exit options and the ongoing friction with Turkey.",
+    "directionality_logic": "Directionality for each stakeholder flows from their role and exit options. Eastern Orthodox diaspora: declared as beneficiary (holds the claim, derives symbolic legitimacy from it) with mobile exit options (they can shift focus to other sites or other forms of Orthodox identity recovery). Their d should be near 0.2–0.3 (beneficiary, but not totally trapped by the constraint — they could exit by reframing their identity). Greek state: declared as beneficiary with secondary_role payer (benefits from diplomatic leverage, pays the cost of maintaining the claim and enduring Turkish resentment) with constrained exit (cannot abandon the claim without domestic political backlash, cannot resolve it without capitulating to Turkey). Their d should be near 0.4–0.5 (symmetric: the leverage benefit matches the diplomatic cost). Turkish sovereignty: declared as victim (faces external claim to its legitimate authority) with trapped exit (cannot exit without ceding sovereign territory or capitulating to the restitution demand). Their d should be near 0.85–0.95 (full target of extraction). Islamic worship continuity: declared as victim with identity_locked exit (Muslims' identity and faith practice are fused to the site; they cannot simply relocate their religious continuity). Their d should be near 0.9 (near-full target, because they cannot escape the claim even psychologically). These directionalities are computed by the engine from the structural data; no overrides are declared here because the beneficiary/victim declarations and exit options already specify the structure clearly.",
+    "kernel_context": "This constraint is the Orthodox restitution reading of the Hagia Sophia substrate kernel — a single, contested commitment (the site and its legitimate authority) that different parties read through different foundational claims. The Orthodox restitution reading asserts the site's legitimacy derives from its founding as a Christian cathedral (330 CE) and should return to Orthodox control or remain neutral. The sibling readings are: (1) Islamic sovereignty reading: legitimacy derives from the 1453 Ottoman conquest and continuous Islamic endowment (waqf), making it sovereign Islamic worship space. (2) Universal heritage reading: legitimacy derives from status as shared human cultural patrimony transcending religious and national claims. Each reading instantiates a different constraint with different ε values, different beneficiary/victim sets, and different classifications. This story presents ONLY the Orthodox restitution reading — not as a compromise or synthesis, but as one coherent account of what the site's legitimate status should be. The kernel itself is the persisting physical structure and the competing claims to its proper authority; the readings are the different ways parties frame that kernel. The distinction matters because a reader might mistake a single JSON account that tried to cover all three readings as neutral synthesis — it would not be. Each reading is structurally distinct, should be authored separately, and should be linked via network.affects_constraints so the corpus can model how one reading influences (or precludes) others.",
+    "mandatrophy_analysis": "The Orthodox restitution reading exhibits classic mandatrophy characteristics at the present moment (2024). The founding mandate was clear: after 1453, the Orthodox diaspora sought restoration of their primary cathedral and the seat of their Patriarchy. That mandate was live and contested through the Ottoman centuries (1453–1923). By 1935, when Turkey converted Hagia Sophia to a museum, the founding mandate was technically rendered moot: the site was neutralized, no longer functioning as Islamic worship space. From 1935–2020, the site's status as a museum was arguably a partial victory for the restitution reading (the site was not functioning as a mosque, honoring its non-Islamic phases). However, the restitution mandate did not actually drive the 1935 decision — the museum status was a choice by the Turkish secular state for reasons of heritage preservation and international diplomacy, not a concession to Orthodox pressure. When Turkey reconverted the site to a mosque in 2020, it explicitly rejected the restitution mandate and the reasoning behind the museum era neutrality. At present, the restitution mandate is dead in any material sense (there is zero enforcement pathway, zero possibility of reversing the 2020 reconversion) but remains active in rhetorical and diplomatic discourse. This is mandatrophy: the constraint persists because of institutional and symbolic inertia (Greek state continues to assert the claim, Orthodox diaspora maintains the narrative) even though the underlying mandate has been structurally obsoleted. The founding problem (Orthodox control of the cathedral) is not solved; it is simply impossible. The constraint extracts (from Turkish sovereignty and Islamic worship) not because any party can enforce the mandate but because the claim itself acts as a persistent delegitimization and a source of geopolitical friction. The theater ratio of 0.72 at present reflects this: the restitution reading is maintained primarily through rhetorical performance and diplomatic assertion rather than through any realistic enforcement activity."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "hagia_sophia_substrate__islamic_sovereignty_reading",
       "hagia_sophia_substrate__universal_heritage_reading"
     ],
-    "dual_formulation_note": "The Hagia Sophia legitimacy contest is a constraint family instantiating three distinct kernel readings from a single fixed-text kernel (the building's founding and history). Orthodox restitution reading claims primacy via founding legitimacy; Islamic sovereignty reading claims primacy via continuous Ottoman/Turkish tenure; universal heritage reading claims transcendence via modern heritage transcendence. Each reading generates a different constraint with different beneficiaries, different ε values, and different types. The three readings coexist in geopolitical contest; none forecloses the others within a unified framework because each reading selects a different historical t0 as authoritative. Network linkage enables analysis of how one reading's structural pressure affects the others (all three coexist; each influences the others' legitimacy conditions without logically excluding them)."
+    "dual_formulation_note": "The Hagia Sophia substrate kernel decomposes into three constraint readings, each with distinct ε values, beneficiary/victim sets, and classifications. The Orthodox restitution reading (this file) claims legitimacy via Byzantine foundational status and asserts restitution or neutrality. The Islamic sovereignty reading claims legitimacy via the 1453 Ottoman conquest and continuous Islamic endowment (waqf), asserting the present mosque status as legitimate. The universal heritage reading claims legitimacy via transcendence of religious and national claims, asserting the site should remain neutral and accessible to all. These readings are not observers of a single constraint — they are structurally different constraints that share a kernel (the physical site and the contest over its legitimate authority). Each reading is instantiated as a separate constraint story with its own ε, stakeholders, and six-questions answers. They are linked via network.affects_constraints to signal that they are a constraint family and that changes in one reading's salience or acceptability influence the others. The constraint family's composition and the ε divergence across readings is a core data point for the corpus's validation of the ε-invariance principle (OQ-26): the same physical site generates different constraints under different readings, confirming that ε is reading-indexed, not a reading-independent property of the site."
   },
-  "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "hagia_sophia_substrate__islamic_sovereignty_reading",
+      "hagia_sophia_substrate__universal_heritage_reading"
+    ]
   },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "byzantine_orthodox_primacy",
+    "drift_state": {
+      "moment": "contemporary_mosque_era",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "islamic_sovereignty_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "universal_heritage_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "foundational_christian_legitimacy_determinative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "conquest_invalidates_possession_transfer",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

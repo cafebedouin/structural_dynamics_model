@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,32 +75,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: article_51_self_defense__expansive_preventive_reading
- *   human_readable: Article 51 Self-Defense: Expansive Preventive Reading
+ *   human_readable: Article 51 Expansive Preventive Self-Defense Reading
  *   domain: international_law/security_studies/constitutional_interpretation
  *
  * SUMMARY:
- *   This constraint story instantiates the EXPANSIVE PREVENTIVE READING of
- *   Article 51 self-defense — the interpretation that permits militarily
- *   capable states to use force preemptively or preventively against
- *   non-state actors and emerging threats when the acting state determines
- *   necessity without external validation. This is ONE reading of a contested
- *   kernel; the kernel itself (UN Charter Article 51) admits multiple
- *   structurally distinct interpretations. The expansive reading benefits
- *   militarily capable states and defense sectors while imposing costs on
- *   target-region populations, non-capable states, and the multilateral
- *   authority structure. The constraint is claimed as a snare because the
- *   necessity determination is self-judged, exit options for targets are
- *   trapped, and the primary function appears to serve force authorization
- *   rather than coordination — though this claim is itself part of the
- *   contest.
+ *   This constraint instantiates the expansive preventive reading of Article
+ *   51 of the UN Charter. The reading permits militarily capable states to
+ *   initiate force against non-state actors or emerging threats when
+ *   necessity is self-judged, without prior armed attack or Security Council
+ *   authorization. The reading is contested: narrow-reading advocates argue
+ *   it violates the Charter's limits on unilateral force and enables endless
+ *   preventive wars; unable-unwilling doctrine advocates propose a middle
+ *   ground tied to host-state complicity. This story captures ONE reading
+ *   only — the expansive preventive interpretation — assessing its structural
+ *   effects on who benefits, who pays, and how authority is distributed. The
+ *   claim is tangled_rope (coordinating against transnational threats while
+ *   extracting unilateral advantage); the metrics describe high extraction,
+ *   active suppression of multilateral veto, and rising theater (preventive
+ *   justifications that increasingly cover interests beyond immediate threat
+ *   response).
  *
  * KEY AGENTS:
- *   - Militarily capable states: set the doctrine, invoke self-defense unilaterally, bear no enforcement consequences from peers.
- *   - Target-region populations: powerless, experience strikes justified under the doctrine, cannot participate in necessity determination.
- *   - Defense sector: powerful, profit from sustained military procurement driven by ongoing threat narratives and preemptive strike operations.
- *   - Multilateral veto authority (UN Security Council): institutional seat that loses practical enforcement power when capable states act unilaterally.
- *   - Non-capable states: bear sovereignty costs and lose internal control when strikes occur on their territory.
- *   - Narrow-interpretation advocates: excluded from doctrine-setting conversations; their legal objections are noted but do not constrain state practice.
+ *   - militarily_capable_states: agenda-setters and primary beneficiaries; control necessity determination and set operational scope
+ *   - defense_sector_industries: beneficiaries; gain from sustained procurement and operational tempo
+ *   - target_region_populations: primary payers and victims; bear direct costs of military operations with no voice in necessity judgment
+ *   - multilateral_veto_authority (UN Security Council): structural target; authority is circumvented by unilateral preventive action
+ *   - non_state_actor_host_states: secondary payers; territory becomes legitimate target even without state consent
+ *   - narrow_reading_advocates: excluded; would reframe preventive operations as illegal but lack enforcement power
+ *   - intelligence_and_security_establishments: beneficiaries; gain expanded mandates and budgets
  */
 
 /* ==========================================================================
@@ -100,60 +110,122 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(article_51_self_defense__expansive_preventive_reading, 0.82).
-domain_priors:suppression_score(article_51_self_defense__expansive_preventive_reading, 0.78).
+domain_priors:base_extractiveness(article_51_self_defense__expansive_preventive_reading, 0.79).
+domain_priors:suppression_score(article_51_self_defense__expansive_preventive_reading, 0.72).
 domain_priors:theater_ratio(article_51_self_defense__expansive_preventive_reading, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, extractiveness, 0.82).
-narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, extractiveness, 0.79).
+narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, accessibility_collapse, 0.38).
-narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(article_51_self_defense__expansive_preventive_reading, resistance, 0.68).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(article_51_self_defense__expansive_preventive_reading, snare).
-narrative_ontology:human_readable(article_51_self_defense__expansive_preventive_reading, "Article 51 Self-Defense: Expansive Preventive Reading").
+narrative_ontology:constraint_claim(article_51_self_defense__expansive_preventive_reading, tangled_rope).
+narrative_ontology:human_readable(article_51_self_defense__expansive_preventive_reading, "Article 51 Expansive Preventive Self-Defense Reading").
 narrative_ontology:topic_domain(article_51_self_defense__expansive_preventive_reading, "international_law/security_studies/constitutional_interpretation").
 
 domain_priors:requires_active_enforcement(article_51_self_defense__expansive_preventive_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(article_51_self_defense__expansive_preventive_reading, 'df6a0528-e9ff-433d-aed0-1f3e982cdcd8').
-narrative_ontology:cs_kernel_codification('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', fixed_text).
-narrative_ontology:cs_authority_grounding('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', extraction).
-narrative_ontology:cs_interpretation_layer_present('df6a0528-e9ff-433d-aed0-1f3e982cdcd8').
-narrative_ontology:cs_reading_relation('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', article_51_self_defense__narrow_armed_attack_reading, forecloses).
-narrative_ontology:cs_reading_relation('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', article_51_self_defense__unable_unwilling_doctrine_reading, coexists_with).
-narrative_ontology:cs_axiom('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', foundational, unilateral_necessity_determination_permissible).
-narrative_ontology:cs_axiom_status(unilateral_necessity_determination_permissible, holdable).
-narrative_ontology:cs_axiom_grounding('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', unilateral_necessity_determination_permissible, deontological).
-narrative_ontology:cs_axiom('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', foundational, non_state_actor_preemption_authorized).
-narrative_ontology:cs_axiom_status(non_state_actor_preemption_authorized, holdable).
-narrative_ontology:cs_axiom_grounding('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', non_state_actor_preemption_authorized, empirically_contingent).
-narrative_ontology:cs_reference_frame('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', expansive_self_defense_authority).
-narrative_ontology:cs_drift_state('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', contemporary_post_terrorism_enforcement_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('df6a0528-e9ff-433d-aed0-1f3e982cdcd8', '').
+narrative_ontology:cs_story_uid(article_51_self_defense__expansive_preventive_reading, 'f34cda64-92ef-4404-ba16-b99a9aa9a0b8').
+narrative_ontology:cs_kernel_codification('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', fixed_text).
+narrative_ontology:cs_authority_grounding('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', lineage).
+narrative_ontology:cs_interpretation_layer_present('f34cda64-92ef-4404-ba16-b99a9aa9a0b8').
+narrative_ontology:cs_reading_relation('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', article_51_self_defense__narrow_armed_attack_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', article_51_self_defense__unable_unwilling_doctrine_reading, influences).
+narrative_ontology:cs_axiom('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', foundational, necessity_self_judged_by_state).
+narrative_ontology:cs_axiom_status(necessity_self_judged_by_state, holdable).
+narrative_ontology:cs_axiom_grounding('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', necessity_self_judged_by_state, instrumental).
+narrative_ontology:cs_axiom('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', foundational, preventive_force_permissible_non_state_threats).
+narrative_ontology:cs_axiom_status(preventive_force_permissible_non_state_threats, holdable).
+narrative_ontology:cs_axiom_grounding('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', preventive_force_permissible_non_state_threats, empirically_contingent).
+narrative_ontology:cs_reference_frame('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', flexible_self_defense_authority).
+narrative_ontology:cs_drift_state('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', contemporary_post_9_11_security_consensus, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('f34cda64-92ef-4404-ba16-b99a9aa9a0b8', '').
 narrative_ontology:cs_kernel_id(article_51_self_defense__expansive_preventive_reading, article_51_self_defense).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(article_51_self_defense__expansive_preventive_reading, militarily_capable_states).
-narrative_ontology:constraint_beneficiary(article_51_self_defense__expansive_preventive_reading, defense_sector_corporations).
+narrative_ontology:constraint_beneficiary(article_51_self_defense__expansive_preventive_reading, defense_sector_industries).
 narrative_ontology:constraint_victim(article_51_self_defense__expansive_preventive_reading, target_region_populations).
 narrative_ontology:constraint_victim(article_51_self_defense__expansive_preventive_reading, multilateral_veto_authority).
-narrative_ontology:constraint_victim(article_51_self_defense__expansive_preventive_reading, non_state_actors).
+narrative_ontology:constraint_victim(article_51_self_defense__expansive_preventive_reading, non_state_actor_host_states).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(article_51_self_defense__expansive_preventive_reading, intelligence_and_security_establishments).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Invoke the expansive preventive self-defense doctrine to conduct military operations against non-state actors or emerging threats without prior Security Council authorization. They control the necessity determination (classify a potential threat as requiring preventive force), set the scope of operations, and avoid the constraint that narrow readings would impose. They benefit from doctrinal flexibility in unilateral action. Their exit from this reading would mean accepting multilateral constraints or waiting for imminent threat to materialize before acting.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, militarily_capable_states, agenda_setter,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(article_51_self_defense__expansive_preventive_reading, militarily_capable_states, beneficiary).
+
+% Benefit from sustained demand for military hardware, services, and intelligence capabilities to support preventive operations. The expansive doctrine creates continuous justifications for defense spending and procurement. Their positioning is indirect: they do not set policy but lobby and align with militarily capable states, and gain from the increased operational tempo this reading generates.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, defense_sector_industries, beneficiary,
+    powerful, biographical, mobile, global).
+
+% Bear the direct costs of preventive military operations: civilian casualties, infrastructure destruction, displacement, and long-term security instability. They are classified as hosting or harboring potential threats but have no seat at the necessity determination. They cannot opt out of being in the geographic zone where the acting state judges prevention necessary.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, target_region_populations, payer,
+    powerless, immediate, trapped, local).
+
+% The Security Council and the UN system are sidelined by unilateral preventive actions taken under this reading. Their authority to authorize or deny force is circumvented when capable states self-judge necessity. They retain formal veto power over resolutions but face de facto fait accompli situations. Their exit would mean reforming the international governance structure entirely; they are constrained to ex-post facto responses.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, multilateral_veto_authority, payer,
+    institutional, generational, constrained, global).
+
+% Bear the costs of preventive action on their territory without consent or authorization, even when they have not attacked and may not control the non-state actors within their borders. This reading constructs them as legitimate targets of force if they are deemed unable or unwilling to suppress a threat. They have diplomatic options but limited military leverage to resist incursions justified under self-defense.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, non_state_actor_host_states, payer,
+    moderate, biographical, constrained, regional).
+
+% International law scholars, smaller states, and human rights organizations advocate for the narrow reading, requiring imminent armed attack and state attribution. They would reframe preventive operations as violations of international law and the UN Charter. They are excluded from setting the necessity determination and must respond post-hoc through diplomatic channels or courts that have limited enforcement power.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, narrow_reading_advocates, excluded,
+    organized, generational, constrained, global).
+
+% Gain expanded mandates and budgets to conduct surveillance, threat assessment, and early-warning operations that justify preventive force. The burden of proof for 'emerging threat' and 'necessity' falls within their technical and analytical judgment. They benefit from expanded operational authority under this reading.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, intelligence_and_security_establishments, beneficiary,
+    organized, biographical, mobile, global).
+
+% The ICJ and other international courts review self-defense claims but lack enforcement mechanisms to compel compliance with their judgments. They observe the constraint's operation and can issue advisory opinions or orders, but their authority over the acting states is limited when those states reject the narrow reading.
+narrative_ontology:constraint_stakeholder(article_51_self_defense__expansive_preventive_reading, international_court_system, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(article_51_self_defense__expansive_preventive_reading, militarily_capable_states).
+narrative_ontology:fixing_cost_class(article_51_self_defense__expansive_preventive_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a doctrine under which militarily capable states can respond to non-state actor threats and emerging security challenges without waiting for an imminent armed attack to materialize. The coordination claim is that this flexibility enables collective security by allowing faster threat prevention and deterrence of state harboring of non-state actors.
+% TRANSFER_FUNCTION: Transfers authority to conduct military force from the multilateral (Security Council) to the unilateral (acting state) level. Transfers the risk and costs of military operations from the acting state to target-region populations and host states. Transfers legitimacy determinations from external (international law standards) to internal (acting state necessity judgment).
+% ABSENT_VOICES: Populations in target regions have no voice in necessity determination. Smaller states that cannot afford preventive military operations have limited say in doctrine formation. Non-state actors themselves and their host states cannot contest the threat classification before force is applied. Scholars and advocates of the narrow reading are excluded from the institutional decision process.
+% DISAPPEARANCE_RATIONALE: If this expansive reading disappeared and only the narrow reading persisted, the international security order would reorganize significantly: unilateral preventive operations would cease or be reframed as violations; militarily capable states would either wait for imminent threat or seek Security Council authorization; defense spending priorities would shift; regional security dynamics would alter as some deterrence mechanisms became unavailable; the legal constraint would functionally return to the pre-2001 understanding of Article 51.
+% FOUNDING_PROBLEM: The rise of transnational non-state actor threats (post-9/11 terrorism) that operate across borders without state sponsorship and can initiate attacks from weak or failed states where no imminent armed attack may be visible until operations are underway. The founding doctrine addressed the gap between the article 51 frame (state-to-state attack) and the threat reality of networked non-state actors.
+% FOUNDING_PROBLEM_CORROBORATION: The United States, Israel, and other militarily capable states attest the founding problem is live and requires preventive doctrine. International law scholars, the UN Secretary-General, and developing states attest the founding problem is exaggerated and the remedy is broader than necessary, enabling mission creep. Empirical research on actual terrorist attack prevention effects of preventive operations is mixed; no consensus corroboration exists from outside the benefiting parties.
+narrative_ontology:disappearance_verdict(article_51_self_defense__expansive_preventive_reading, world_rearranges).
+narrative_ontology:founding_problem_status(article_51_self_defense__expansive_preventive_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(article_51_self_defense__expansive_preventive_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(article_51_self_defense__expansive_preventive_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(article_51_self_defense__expansive_preventive_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(article_51_self_defense__expansive_preventive_reading, 0.79, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +245,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.82 at interval end) because the constraint permits unilateral force application based on self-determined necessity, creating asymmetric authority. Capable states extract security advantage, resource access, and regional dominance; targets extract nothing. Suppression is similarly high (0.78) because the doctrine's persistence depends on maintaining the authority to override multilateral checks and excluding actors who would constrain it. Theater ratio is moderate (0.41) and rising: early in the interval, genuine counter-terrorism operations dominated the doctrine's application; over time, the ratio of strikes against nascent groups, allied-territory operations, and resource-driven interventions has grown, indicating performative security framing covering extraction. The measurements are authored on one shared time grid across all three metrics; the rising extractiveness and theater ratio together indicate Goodhart drift — the coordination function (responding to transnational threats) has atrophied relative to the extraction function (unilateral force authority and resource access). Accessibility_collapse is low (0.38) because alternatives exist (narrow interpretation, unable-unwilling doctrine, multilateral authorization) and remain live positions — the expansive reading must actively suppress these alternatives to persist. Resistance is high (0.72) because substantial international opposition exists from scholars, humanitarian organizations, and non-capable states.
+ *   Extractiveness is high and rising (0.62→0.79 over the interval) because the reading progressively decouples force authorization from multilateral constraint, allowing capable states to collect the security benefits of prevention without bearing the costs of Security Council negotiation or international legal restraint. Suppression is substantial (0.72) because the reading's persistence requires actively defending it against narrower legal interpretations and sidelining the veto authority. Theater rises (0.28→0.41) as preventive justifications increasingly stretch beyond imminent threat to cover strategic interests, deterrence signaling, and long-term capability degradation — activities that serve state interests but claim necessity language. The measurement series show extraction accumulating as doctrine precedent hardens (landmark operations by capable states establish the doctrine as customary law, raising the barrier to rejecting it). Suppression requirement increases as resistance from narrow-reading advocates and smaller states intensifies, requiring more active legitimation work to maintain the doctrine.
  *
  * PERSPECTIVAL GAP:
- *   Militarily capable states and defense strategists inhabit a security-threat frame where the expansive reading is necessary adaptation. International law scholars and humanitarian organizations inhabit a multilateral-order frame where the reading is institutional degradation and cover for extraction. Target-region populations inhabit a coercion frame where the doctrine is experienced as unilateral military authority. These are not different measurements of the same constraint — they are different structural relationships to it. The engine computes these relationships from power, exit_options, beneficiary/victim declarations, and role; the perspectival gap emerges from the structural data, not from measurement ambiguity.
+ *   From the capable state's position, this is genuine coordination against a real threat where flexibility is necessary; from the target population's position, it is coercive force authority divorced from consent; from the multilateral authority's position, it is structural erosion of collective decision-making. The engine should compute markedly different types across these seats: the capable state may compute rope or tangled_rope (coordination with some extraction), while the target population computes snare (pure extraction with no coordination benefit), and the veto authority computes tangled_rope (coordination function in theory but extraction of authority in practice).
  *
  * DIRECTIONALITY LOGIC:
- *   Militarily capable states are beneficiaries (d near 0.0): they collect unilateral force authority, set the necessity threshold, and face minimal consequences. Defense sector corporations are beneficiaries (d near 0.1): they profit from procurement demand but depend on state authority — their exit is arbitrage (they can serve multiple states). Target-region populations are targets (d near 1.0): they are trapped in jurisdictions where strikes are authorized, powerless to influence necessity determination, and bear casualty costs. Non-capable states are targets (d near 0.8): they lose sovereignty control over their territory and have constrained diplomatic recourse. Multilateral veto authority is a target (d near 0.85): it is bypassed when capable states act unilaterally and loses legitimacy as a result. Non-state actors are targets (d near 1.0): they are designated as threats based on the acting state's unilateral assessment and face death or dispossession. The beneficiary/victim structure is asymmetric: a small number of powerful beneficiaries extract from a large number of powerless and constrained-exit victims.
+ *   Militarily capable states sit near d=0.0 (beneficiary end): they collect unilateral authority, avoid multilateral constraint, and face minimal enforcement cost for self-judging necessity. The defense sector sits near d=0.1 (weak beneficiary): they gain from sustained operations but do not control the doctrine. Target populations sit near d=1.0 (full target): they bear military costs, have no exit, cannot contest threat classification, and receive no direct benefit from the doctrine. The multilateral veto authority sits near d=0.8 (strong target): their authority is systematically bypassed, but they retain formal veto power (not complete extraction). Host states sit near d=0.6 (moderate target): they bear some costs and lose sovereignty, but some may align with capable states. Intelligence establishments sit near d=0.05 (light beneficiary): they gain expanded mandates and operational authority without directly setting policy.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (transnational terrorism, non-state actor threats) remains contested — some parties attest it is live and justifies the expansive reading; others attest the reading has metastasized beyond the founding problem's scope. The constraint's operation shows mandatrophy indicators: theater_ratio is rising (performative security framing increasing relative to functional counter-terrorism), base_extractiveness is rising (unilateral force authority expanding to cases farther from imminent threats), and accessibility_collapse is low (alternatives remain available but suppressed rather than foreclosed). The doctrine began as a response to a genuine coordination problem (how to permit defense against non-state threats the narrow reading did not cover) and has evolved into a mechanism for unilateral force authority and resource extraction. The rising extractiveness curve and moderate theater ratio suggest the founding problem's salience has declined relative to the extraction function — classic mandatrophy pattern.
+ *   The founding problem (transnational non-state actor threats) remains contested — some attest it is live and urgent, others attest it is exaggerated or has been managed without preventive doctrine. The disappearance verdict is world_rearranges (the doctrine's removal would significantly alter unilateral action authority). These mismatch: a live founding problem with world_rearranges would support the doctrine's necessity, but the contested status and the rising theater_ratio (preventive language covering non-threat interests) suggest mandate expansion beyond the founding scope. No formal mandatrophy declaration is reached because the founding problem remains live for some parties, but the measurement series showing theater rising and suppression requirement increasing indicate degradation of the initial mandate boundary.
  */
 
 /* ==========================================================================
@@ -190,61 +262,61 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    necessity_self_judgment_ambiguity,
-    'Is the expansive reading''s permission for unilateral necessity determination a structural feature of the doctrine, or a functional choice by militarily capable states to avoid external constraints?',
-    'Comparative institutional analysis: states that have submitted preventive strikes to multilateral review (seeking UNSC authorization even when not legally required) versus states that invoke the doctrine and refuse review. Pattern of behavior and stated rationales would indicate whether self-judgment is intrinsic to the reading or a choice enabled by power asymmetry.',
-    'If self-judgment is intrinsic, the doctrine structurally requires a unilateral determination mechanism and cannot be constrained by multilateral oversight without foreclosing it. If it is a choice, the beneficiaries are strategically avoiding oversight, and alternative implementations (permitting multilateral review) are available.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(necessity_self_judgment_ambiguity, conceptual, 'Whether necessity self-determination is a structural requirement of the expansive reading or a functional choice by powerful states.').
-
-omega_variable(
-    founding_problem_salience_drift,
-    'Has the founding problem of transnational terrorism and non-state actor threats remained the primary justification for the doctrine''s application, or has geopolitical interest (resource access, regional hegemony, military-industrial demand) become the driver?',
-    'Longitudinal analysis of strike authorizations: correlation between stated threat characteristics (imminence, non-state actor nexus, territorial sanctuary) and actual targeting patterns. Comparison of strike frequency and targets across periods of high and low terrorism threat. Post-strike analysis of whether strikes prevented actual attacks or served broader strategic interests.',
-    'If founding problem remains salient, the constraint can claim coordination function (adapting self-defense law to modern threats). If geopolitical interest has become the driver, the constraint functions primarily as extraction — authorization mechanism for unilateral force serving power-consolidation, not threat response.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(founding_problem_salience_drift, empirical, 'Whether the doctrine continues to serve its founding problem or has evolved into a mechanism for geopolitical extraction.').
-
-omega_variable(
-    capability_asymmetry_and_interpretation,
-    'Would non-capable states and international-law advocates accept the expansive reading if they held militarily dominant power, or is the interpretation itself an expression of power-driven interpretation rather than principle-driven legal reading?',
-    'Historical comparison: how states justified force uses before attaining military dominance, versus how they justify force uses after. Hypothetical analysis: if power distributions were inverted, what interpretation would the currently dominant states advocate?',
-    'If interpretation tracks power (dominant states advocate expansive readings that benefit them; weak states advocate narrow readings), then the constraint is power-rationalization, not legal principle. If interpretation is principle-driven, we would expect consistency across power positions.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(capability_asymmetry_and_interpretation, preference, 'Whether the expansive reading reflects legal principle or power-driven interpretation.').
-
-omega_variable(
-    multilateral_authority_recovery_path,
-    'What would it take for the multilateral authority structure (UN Security Council, international courts) to recover practical enforcement power over self-defense interpretations?',
-    'Analysis of scenarios: would a shift in great-power balance (loss of dominance by currently capable states) automatically shift interpretation, or would institutional reforms be required? Would a new treaty constraint on self-defense be enforceable if written by weaker coalition against dominant states?',
-    'If multilateral authority is recoverable through institutional reform, the constraint is a choice by dominant states to bypass the system, not an inevitable feature of the international order. If recovery requires power-balance shift, the constraint will persist as long as power asymmetry holds.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(multilateral_authority_recovery_path, conceptual, 'Whether the multilateral order can be restored without changes to great-power distribution.').
-
-omega_variable(
-    kernel_reading_contest_empirical_foundation,
-    'This reading is one instantiation of a contested kernel. The contest between the three readings (expansive_preventive, narrow_armed_attack, unable_unwilling) turns on different premises about what Article 51 permits. Is there an empirical fact that would resolve which reading is correct, or is the contest fundamentally conceptual-political?',
-    'Examination of negotiation records and travaux préparatoires from the UN Charter''s drafting. If the negotiators explicitly discussed preventive self-defense and rejected it, the narrow reading has historical grounding. If preventive self-defense was contemplated, the expansive reading has historical basis. If the question was never raised (most likely), the contest remains open.',
-    'If the contest is resolvable by historical evidence, the evidence becomes the ground for privileging one reading over others. If the contest is fundamentally open (the kernel is genuinely ambiguous), all three readings remain live positions, and power determines which one is implemented in practice.',
+    necessity_determination_standard,
+    'What standard determines whether a threat meets the ''necessity'' threshold for preventive force under this reading? Is necessity determined by objective threat probability, by the acting state''s subjective assessment, or by some hybrid?',
+    'Post-operation audits by international courts or independent bodies comparing the pre-operation threat assessment against post-operation evidence; track false-positive preventive actions (operations against threats that did not materialize).',
+    'If necessity is objective and verifiable, the reading constrains capability-based adventurism; if necessity is self-judged by the acting state, the reading becomes a blank check for unilateral force. This determines whether the constraint is a genuine coordination mechanism or pure extraction.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest_empirical_foundation, empirical, 'Whether the kernel contest is empirically resolvable or permanently open.').
+narrative_ontology:omega_variable(necessity_determination_standard, empirical, 'The standard for determining necessity in preventive self-defense claims.').
+
+omega_variable(
+    non_state_actor_attribution_problem,
+    'When a non-state actor operates from a host state''s territory, at what threshold of evidence is the host state deemed ''unable or unwilling'' to suppress the actor, triggering preventive force authority?',
+    'Comparative case analysis of preventive operations: did the acting state provide evidence of host-state inability/unwillingness before operation, or was this determined retroactively? Did the host state have actual opportunity to suppress the actor?',
+    'If the threshold is high (clear evidence, prior diplomatic demands), the reading constrains false characterizations; if low (mere presence of non-state actor), the reading permits vast preventive authority. This determines whether capability or genuine threat response shapes operations.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(non_state_actor_attribution_problem, empirical, 'The evidentiary standard for host-state inability or unwillingness.').
+
+omega_variable(
+    narrow_vs_expansive_foreclosure,
+    'Do the expansive and narrow readings foreclose each other (logically incompatible premises) or coexist (different parties hold both simultaneously)?',
+    'Assess whether a single state''s legal framework could adopt both readings: could a state endorse narrow self-defense in principle while claiming expansive authority in practice? Or does accepting narrow reading require rejecting expansive? The answer determines reading relations structure.',
+    'If foreclosure: the readings are strictly competitive, and one must fail for the other to prevail. If coexistence: both readings remain live in international law as different parties'' positions, and the constraint''s persistence depends on power asymmetry (capable states enforce expansive, weaker states advocate narrow) rather than legal resolution.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(narrow_vs_expansive_foreclosure, conceptual, 'Logical relationship between expansive and narrow self-defense readings.').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'Is the suppression of multilateral veto authority structural (institutional bypass, de facto circumvention) or internalized (host states and smaller states accept preventive doctrine as legitimate)?',
+    'Post-operation state behavior: do target states and host states mount legal challenges and diplomatic resistance, or do they tacitly accept preventive operations? Track voting patterns in UN debates on preventive actions.',
+    'If structural suppression persists after operations cease (states continue challenging doctrine, building institutional countermeasures), suppression is robust and the constraint remains high-extraction. If suppression is internalized (states accept the doctrine as legitimate), the constraint may reclassify toward coordination. The measurement is the trajectory of resistance after initial operations.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression of veto authority is structural or internalized.').
+
+omega_variable(
+    reading_divergence_scope,
+    'Is the structural delta between expansive and narrow readings primarily about the trigger threshold (imminent vs. preventive) or about authority distribution (unilateral vs. multilateral)? These produce different constraint types.',
+    'Thought experiment: if a multilateral body (Security Council) explicitly authorized preventive force, would the expansive reading still grant unilateral authority, or would it be satisfied? This tests whether expansive doctrine is fundamentally about scope of force or about authority distribution.',
+    'If trigger is primary: both readings permit the same force once triggered; only the decision point differs. If authority distribution is primary: even identical force decisions would be legitimate under expansive (unilateral) but illegitimate under narrow (no unilateral authority without imminent attack). This determines how much the sibling readings actually diverge.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(reading_divergence_scope, conceptual, 'Whether reading divergence is about trigger threshold or authority distribution.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(article_51_self_defense__expansive_preventive_reading, 0, 24).
+narrative_ontology:interval(article_51_self_defense__expansive_preventive_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
@@ -252,27 +324,45 @@ narrative_ontology:interval(article_51_self_defense__expansive_preventive_readin
 
 % Theater ratio over time
 narrative_ontology:measurement(arti_tr_t0, article_51_self_defense__expansive_preventive_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(arti_tr_t3, article_51_self_defense__expansive_preventive_reading, theater_ratio, 3, 0.31).
-narrative_ontology:measurement(arti_tr_t6, article_51_self_defense__expansive_preventive_reading, theater_ratio, 6, 0.34).
-narrative_ontology:measurement(arti_tr_t12, article_51_self_defense__expansive_preventive_reading, theater_ratio, 12, 0.38).
-narrative_ontology:measurement(arti_tr_t18, article_51_self_defense__expansive_preventive_reading, theater_ratio, 18, 0.4).
-narrative_ontology:measurement(arti_tr_t24, article_51_self_defense__expansive_preventive_reading, theater_ratio, 24, 0.41).
+narrative_ontology:measurement_basis(arti_tr_t0, observed).
+narrative_ontology:measurement(arti_tr_t5, article_51_self_defense__expansive_preventive_reading, theater_ratio, 5, 0.32).
+narrative_ontology:measurement_basis(arti_tr_t5, observed).
+narrative_ontology:measurement(arti_tr_t10, article_51_self_defense__expansive_preventive_reading, theater_ratio, 10, 0.36).
+narrative_ontology:measurement_basis(arti_tr_t10, observed).
+narrative_ontology:measurement(arti_tr_t15, article_51_self_defense__expansive_preventive_reading, theater_ratio, 15, 0.39).
+narrative_ontology:measurement_basis(arti_tr_t15, observed).
+narrative_ontology:measurement(arti_tr_t20, article_51_self_defense__expansive_preventive_reading, theater_ratio, 20, 0.4).
+narrative_ontology:measurement_basis(arti_tr_t20, observed).
+narrative_ontology:measurement(arti_tr_t25, article_51_self_defense__expansive_preventive_reading, theater_ratio, 25, 0.41).
+narrative_ontology:measurement_basis(arti_tr_t25, observed).
 
 % Extraction over time
-narrative_ontology:measurement(arti_be_t0, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 0, 0.68).
-narrative_ontology:measurement(arti_be_t3, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 3, 0.71).
-narrative_ontology:measurement(arti_be_t6, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 6, 0.75).
-narrative_ontology:measurement(arti_be_t12, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 12, 0.79).
-narrative_ontology:measurement(arti_be_t18, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 18, 0.81).
-narrative_ontology:measurement(arti_be_t24, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 24, 0.82).
+narrative_ontology:measurement(arti_be_t0, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 0, 0.62).
+narrative_ontology:measurement_basis(arti_be_t0, observed).
+narrative_ontology:measurement(arti_be_t5, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 5, 0.68).
+narrative_ontology:measurement_basis(arti_be_t5, observed).
+narrative_ontology:measurement(arti_be_t10, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 10, 0.73).
+narrative_ontology:measurement_basis(arti_be_t10, observed).
+narrative_ontology:measurement(arti_be_t15, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 15, 0.77).
+narrative_ontology:measurement_basis(arti_be_t15, observed).
+narrative_ontology:measurement(arti_be_t20, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 20, 0.78).
+narrative_ontology:measurement_basis(arti_be_t20, observed).
+narrative_ontology:measurement(arti_be_t25, article_51_self_defense__expansive_preventive_reading, base_extractiveness, 25, 0.79).
+narrative_ontology:measurement_basis(arti_be_t25, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(arti_su_t0, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 0, 0.72).
-narrative_ontology:measurement(arti_su_t3, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 3, 0.74).
-narrative_ontology:measurement(arti_su_t6, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 6, 0.75).
-narrative_ontology:measurement(arti_su_t12, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 12, 0.77).
-narrative_ontology:measurement(arti_su_t18, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 18, 0.78).
-narrative_ontology:measurement(arti_su_t24, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 24, 0.78).
+narrative_ontology:measurement(arti_su_t0, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement_basis(arti_su_t0, observed).
+narrative_ontology:measurement(arti_su_t5, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 5, 0.62).
+narrative_ontology:measurement_basis(arti_su_t5, observed).
+narrative_ontology:measurement(arti_su_t10, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 10, 0.66).
+narrative_ontology:measurement_basis(arti_su_t10, observed).
+narrative_ontology:measurement(arti_su_t15, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 15, 0.69).
+narrative_ontology:measurement_basis(arti_su_t15, observed).
+narrative_ontology:measurement(arti_su_t20, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement_basis(arti_su_t20, observed).
+narrative_ontology:measurement(arti_su_t25, article_51_self_defense__expansive_preventive_reading, suppression_requirement, 25, 0.72).
+narrative_ontology:measurement_basis(arti_su_t25, observed).
 
 
 /* ==========================================================================
@@ -283,15 +373,18 @@ narrative_ontology:coordination_type(article_51_self_defense__expansive_preventi
 narrative_ontology:boltzmann_floor_override(article_51_self_defense__expansive_preventive_reading, 0.18).
 narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense__narrow_armed_attack_reading).
 narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense__unable_unwilling_doctrine_reading).
+narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, sovereignty_non_intervention_constraint).
+narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, un_charter_chapter_vii_authority).
+narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, transnational_terrorism_response_doctrine).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of the Article 51 self-defense kernel family, comprising three structurally distinct readings of the same Charter provision. Each reading instantiates a different constraint with its own ε, beneficiary/victim structure, and type. The expansive_preventive_reading permits unilateral force based on self-judged necessity (high extraction, high suppression, snare classification). The narrow_armed_attack_reading restricts force to actual imminent attacks by attributable states (lower extraction, coordination-heavy, rope/mountain classification). The unable_unwilling_doctrine_reading permits strikes against non-state actors in uncontrolled host-state territory (moderate extraction, tangled-rope classification). All three readings claim the same charter text as authority; they differ in what that text is interpreted to permit. The constraint stories link via network.affects_constraints to indicate structural kinship and to enable contamination analysis: if one reading's legitimacy degrades, that may strengthen sibling readings through institutional reaction, or it may normalize the others.
+% This constraint is one of three structurally distinct readings of the Article 51 kernel. Each reading (expansive_preventive, narrow_armed_attack, unable_unwilling) has different ε values, beneficiary/victim structures, and classification consequences. The readings share a common referent (the Article 51 authorization clause) but instantiate different constraints because they carry different authority distributions and necessity standards. Link all three stories via network.affects_constraints to model the kernel contest. The expansive reading influences the narrow reading (higher precedent weight from capable-state practice) and influences the unable_unwilling reading (provides the doctrinal space that unable_unwilling attempts to constrain).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(article_51_self_defense__expansive_preventive_reading, moderate, 0.8).
+constraint_indexing:directionality_override(article_51_self_defense__expansive_preventive_reading, institutional, 0.75).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

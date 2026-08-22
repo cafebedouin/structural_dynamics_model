@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-15
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,10 +39,17 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,40 +74,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: plural_marriage_mandate__endogenous_reinterpretation_reading
- *   human_readable: Prophetic Reinterpretation of Plural Marriage Mandate (1890 Endogenous Reading)
- *   domain: religious institutional history / commitment systems / political theology
+ *   human_readable: Prophetic Reinterpretation of Plural Marriage Mandate (Endogenous Reading)
+ *   domain: religious/institutional/political_theology
  *
  * SUMMARY:
- *   In 1890, the leadership of the Church of Jesus Christ of Latter-day
- *   Saints issued a Manifesto declaring that God had revealed the temporal
- *   suspension of plural marriage practice (doctrine retained, practice
- *   halted) to preserve the church's salvific mission under existential
- *   federal pressure. This constraint story instantiates the ENDOGENOUS
- *   REINTERPRETATION READING: the constraint's legitimacy grounds itself in
- *   authentic prophetic revelation and theological coherence. From this
- *   reading, the coordination function is real (reorganizing the faith
- *   community around the reinterpreted doctrine to preserve institutional
- *   continuity, temple practice, and missionary capacity) and the extraction
- *   is incidental (fundamentalists excommunicated for maintaining the
- *   original reading bear the cost of institutional survival). The constraint
- *   is claimed as ROPE: genuine coordination enabled by legitimate prophetic
- *   directive. The measurement series shows the constraint crystallizing
- *   sharply in 1890 (extractiveness and theater both spike at the decision
- *   point) and slowly normalizing as the reinterpretation is institutionally
- *   internalized over the following decades. Theater_ratio remains elevated
- *   (~0.5+), indicating that the reinterpretation narratively performs the
- *   reconciliation of doctrine-retained-practice-suspended more than the
- *   actual fidelity to the original revelation's apparent binding force—a
- *   sign the coherence is more institutional than logical, though not
- *   dispositive.
+ *   The 1890 Manifesto issued by LDS church president Wilford Woodruff
+ *   officially suspended the practice of plural marriage in response to
+ *   federal anti-polygamy legislation and the threat of institutional
+ *   collapse. This constraint story instantiates the ENDOGENOUS
+ *   REINTERPRETATION READING: the Manifesto is interpreted as a legitimate
+ *   prophetic reinterpretation in which God revealed the temporal suspension
+ *   of plural marriage to preserve the church's salvific mission. Under this
+ *   reading, the suspension is a coordinated institutional adaptation around
+ *   a new prophetic directive, not capitulation to external force. The
+ *   beneficiary is the institutional church (survival, temple operation,
+ *   missionary legitimacy); the victim is fundamentalist dissidents who are
+ *   excommunicated for maintaining the original reading. This reading claims
+ *   the constraint is a ROPE (genuine coordination around new revelation)
+ *   while acknowledging that suppression increased post-1890 (enforcement of
+ *   the new interpretation against dissenters). The measurement series show
+ *   extractiveness rising sharply from 1880–1890 (peak at Manifesto), then
+ *   declining as the reinterpretation becomes normalized; suppression peaks
+ *   post-1890 and gradually declines as resistance is consolidated into
+ *   separated communities; theater rises through 1890–1900 then stabilizes,
+ *   reflecting the diminishing need to actively defend reinterpretation
+ *   against internal dissent.
  *
  * KEY AGENTS:
- *   - institutional_leadership: the church presidency and apostolic council, identity-locked to the church's doctrine-setting authority; authors the Manifesto as prophetic reinterpretation
- *   - mainstream_latter_day_saints: the larger organized membership accepting the reinterpretation; gain temple access and institutional participation at the cost of reorganizing family practice
- *   - fundamentalist_splinter_communities: organized communities maintaining plural marriage as binding doctrine; excommunicated and excluded from temples and institutional sacraments; bear the cost of institutional coordination
- *   - women_in_plural_marriages: powerless, trapped between legal jeopardy and doctrinal identity; face both immediate dissolution and long-term doctrinal dignity loss
- *   - federal_government: structurally external to this reading (coercion is backgrounded, not foregrounded); represented as absent voice challenging the endogenous reinterpretation framing
- *   - historical_analysts: observer seat assessing whether the Manifesto grounds itself in revelation, capitulation, or pragmatic rebranding
+ *   - institutional_lds_church: agenda-setter (power=institutional), frames reinterpretation as prophetic authority
+ *   - faithful_mainstream_membership: beneficiary (power=organized, exit=constrained), gain temple access and community coherence by accepting suspension
+ *   - fundamentalist_dissidents: payer (power=moderate, exit=identity_locked), excommunicated and excluded from temples for maintaining original reading
+ *   - federal_government: observer (power=institutional), created the coercive environment, now observes institutional compliance
+ *   - american_protestant_mainstream: beneficiary (power=organized, exit=mobile), gains social legitimacy for the church once plural marriage is abandoned
  */
 
 /* ==========================================================================
@@ -107,58 +113,113 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.38).
-domain_priors:suppression_score(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.45).
-domain_priors:theater_ratio(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.52).
+domain_priors:base_extractiveness(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.42).
+domain_priors:suppression_score(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.38).
+domain_priors:theater_ratio(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, extractiveness, 0.38).
-narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 0.52).
+narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, extractiveness, 0.42).
+narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 0.38).
+narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, resistance, 0.68).
+narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, accessibility_collapse, 0.65).
+narrative_ontology:constraint_metric(plural_marriage_mandate__endogenous_reinterpretation_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(plural_marriage_mandate__endogenous_reinterpretation_reading, rope).
-narrative_ontology:human_readable(plural_marriage_mandate__endogenous_reinterpretation_reading, "Prophetic Reinterpretation of Plural Marriage Mandate (1890 Endogenous Reading)").
-narrative_ontology:topic_domain(plural_marriage_mandate__endogenous_reinterpretation_reading, "religious institutional history / commitment systems / political theology").
+narrative_ontology:human_readable(plural_marriage_mandate__endogenous_reinterpretation_reading, "Prophetic Reinterpretation of Plural Marriage Mandate (Endogenous Reading)").
+narrative_ontology:topic_domain(plural_marriage_mandate__endogenous_reinterpretation_reading, "religious/institutional/political_theology").
+
+domain_priors:requires_active_enforcement(plural_marriage_mandate__endogenous_reinterpretation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(plural_marriage_mandate__endogenous_reinterpretation_reading, '7062a2dc-8e4a-4470-a4d1-c58035b67d3f').
-narrative_ontology:cs_kernel_codification('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', fixed_text).
-narrative_ontology:cs_authority_grounding('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', lineage).
-narrative_ontology:cs_interpretation_layer_present('7062a2dc-8e4a-4470-a4d1-c58035b67d3f').
-narrative_ontology:cs_reading_relation('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', plural_marriage_mandate__exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', plural_marriage_mandate__institutional_pragmatism_reading, coexists_with).
-narrative_ontology:cs_axiom('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', foundational, revelation_temporally_suspends_not_negates).
-narrative_ontology:cs_axiom_status(revelation_temporally_suspends_not_negates, holdable).
-narrative_ontology:cs_axiom_grounding('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', revelation_temporally_suspends_not_negates, deontological).
-narrative_ontology:cs_axiom('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', foundational, institutional_authority_interprets_revelation_legitimately).
-narrative_ontology:cs_axiom_status(institutional_authority_interprets_revelation_legitimately, holdable).
-narrative_ontology:cs_axiom_grounding('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', institutional_authority_interprets_revelation_legitimately, conventional).
-narrative_ontology:cs_reference_frame('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', original_plural_marriage_revelation).
-narrative_ontology:cs_drift_state('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', post_1890_manifesto_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('7062a2dc-8e4a-4470-a4d1-c58035b67d3f', '').
+narrative_ontology:cs_story_uid(plural_marriage_mandate__endogenous_reinterpretation_reading, '737cebda-8d49-4a71-bb20-c347b368275a').
+narrative_ontology:cs_kernel_codification('737cebda-8d49-4a71-bb20-c347b368275a', fixed_text).
+narrative_ontology:cs_authority_grounding('737cebda-8d49-4a71-bb20-c347b368275a', lineage).
+narrative_ontology:cs_interpretation_layer_present('737cebda-8d49-4a71-bb20-c347b368275a').
+narrative_ontology:cs_reading_relation('737cebda-8d49-4a71-bb20-c347b368275a', plural_marriage_mandate__exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('737cebda-8d49-4a71-bb20-c347b368275a', plural_marriage_mandate__institutional_pragmatism_reading, coexists_with).
+narrative_ontology:cs_axiom('737cebda-8d49-4a71-bb20-c347b368275a', foundational, prophetic_reinterpretation_legitimacy).
+narrative_ontology:cs_axiom_status(prophetic_reinterpretation_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('737cebda-8d49-4a71-bb20-c347b368275a', prophetic_reinterpretation_legitimacy, theological).
+narrative_ontology:cs_axiom('737cebda-8d49-4a71-bb20-c347b368275a', foundational, divine_temporal_suspension_principle).
+narrative_ontology:cs_axiom_status(divine_temporal_suspension_principle, holdable).
+narrative_ontology:cs_axiom_grounding('737cebda-8d49-4a71-bb20-c347b368275a', divine_temporal_suspension_principle, deontological).
+narrative_ontology:cs_reference_frame('737cebda-8d49-4a71-bb20-c347b368275a', eternal_plural_marriage_doctrine).
+narrative_ontology:cs_drift_state('737cebda-8d49-4a71-bb20-c347b368275a', post_manifesto_suspension_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('737cebda-8d49-4a71-bb20-c347b368275a', '').
 narrative_ontology:cs_kernel_id(plural_marriage_mandate__endogenous_reinterpretation_reading, plural_marriage_mandate).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, latter_day_saint_institutional_church).
-narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, missionaries_and_temple_workers).
-narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, adherents_pursuing_salvation_through_institutional_channels).
-narrative_ontology:constraint_victim(plural_marriage_mandate__endogenous_reinterpretation_reading, fundamentalist_splinter_communities).
-narrative_ontology:constraint_victim(plural_marriage_mandate__endogenous_reinterpretation_reading, plural_marriage_practitioners_excommunicated_post_1890).
+narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, institutional_lds_church).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, faithful_mainstream_membership).
+narrative_ontology:constraint_beneficiary(plural_marriage_mandate__endogenous_reinterpretation_reading, american_protestant_mainstream).
+narrative_ontology:constraint_victim(plural_marriage_mandate__endogenous_reinterpretation_reading, fundamentalist_dissidents).
+narrative_ontology:constraint_vindicates(plural_marriage_mandate__endogenous_reinterpretation_reading, prophetic_authority_doctrine).
+narrative_ontology:constraint_vindicates(plural_marriage_mandate__endogenous_reinterpretation_reading, divine_temporal_suspension_principle).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Issues and enforces the Manifesto as a legitimate prophetic reinterpretation. Controls temple access, excommunication proceedings, and the narrative frame for understanding the reinterpretation. Can reinterpret again if circumstances change (has arbitrage-level exit). Frames institutional survival as a divine good requiring the suspension.
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, institutional_lds_church, agenda_setter,
+    institutional, civilizational, arbitrage, national).
+
+% Accept the Manifesto's reinterpretation and retain temple access, community participation, and marriage legitimacy. Must internalize the teaching that plural marriage is eternally true but currently suspended. Can exit by leaving the church entirely, but that means losing family ties, community identity, and the institutional structure of religious practice.
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, faithful_mainstream_membership, beneficiary,
+    organized, biographical, constrained, national).
+
+% Reject the Manifesto's reinterpretation and maintain that plural marriage is a permanently binding doctrine. Are excommunicated, lose temple access, and are pushed into separate communities. Exit from the practice means abandoning their theological conviction and their understanding of eternal family structure — the identity fusion makes exit costly and structural constraints limit alternatives.
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, fundamentalist_dissidents, payer,
+    moderate, biographical, identity_locked, national).
+
+% Enforced anti-polygamy legislation and property seizure against the church through the 1880s. Observes the Manifesto as compliance with federal law. External to the constraint's internal coordination logic but the causal source of the pressure that makes reinterpretation necessary (under the exogenous readings).
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, federal_government, observer,
+    institutional, biographical, analytical, national).
+
+% Gains social and religious legitimacy for the LDS church once plural marriage is abandoned. The Manifesto's success depends on the mainstream accepting the narrative that reinterpretation (not coercion) occurred. Can withdraw this legitimacy if future practice undermines the frame.
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, american_protestant_mainstream, beneficiary,
+    organized, biographical, mobile, national).
+
+% Assess the Manifesto's epistemic and causal status: was it prophetic reinterpretation, federal coercion, or institutional pragmatism? See the full structure of what is at stake in the reading contest. Can evaluate the three readings' coherence and evidential support.
+narrative_ontology:constraint_stakeholder(plural_marriage_mandate__endogenous_reinterpretation_reading, historical_record_observers, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(plural_marriage_mandate__endogenous_reinterpretation_reading, institutional_lds_church).
+narrative_ontology:fixing_cost_class(plural_marriage_mandate__endogenous_reinterpretation_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates church membership around a unified understanding of divine will: suspends plural marriage practice while retaining the doctrine, allowing the institutional church to survive federal prosecution, operate temples, and maintain missionary access while claiming continuity with founding revelation.
+% TRANSFER_FUNCTION: Transfers temple access, community legitimacy, and family recognition to those who accept the reinterpretation; transfers excommunication, temple loss, and family rupture to those who reject it. Transfers institutional legitimacy from the federal government's coercive frame to the church's prophetic authority frame.
+% ABSENT_VOICES: Plural marriage practitioners not affiliated with the institutional church have no seat; women whose family structures dissolved under the suspension lack formal representation in the coordination process; the federal government's causal role is externalized from the legitimacy narrative; future generations who will inherit the doctrinal ambiguity are not present to voice the long-term sustainability question.
+% DISAPPEARANCE_RATIONALE: If the Manifesto and its enforcement vanished overnight, fundamentalist communities would expand and claim continuity with the original revelation, the church would face renewed federal prosecution, mainstream members would face internal coherence crisis (forced to choose: recover practice or fully abandon doctrine), and the institutional church's legitimacy narrative would collapse. The constraint enables a specific institutional form to persist.
+% FOUNDING_PROBLEM: The church was founded on plural marriage as a binding divine principle; federal anti-polygamy legislation in the 1880s threatened institutional extinction through property seizure and leadership imprisonment. The founding problem (under this reading) is: how to remain faithful to divine principles while ensuring the church's institutional survival and salvific mission.
+% FOUNDING_PROBLEM_CORROBORATION: The institutional church attests the founding problem remains live: institutional survival requires continuing revelation-responsive adaptation. Independent historians attest that federal coercion was the immediate historical cause of the Manifesto. Fundamentalist dissidents attest the founding problem is NOT institutional survival but doctrinal fidelity, which (they claim) the Manifesto violated. The corroboration splits along reading-lines: supporters of this reading see institutional survival as validated; critics see it as code for capitulation.
+narrative_ontology:disappearance_verdict(plural_marriage_mandate__endogenous_reinterpretation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(plural_marriage_mandate__endogenous_reinterpretation_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(plural_marriage_mandate__endogenous_reinterpretation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(plural_marriage_mandate__endogenous_reinterpretation_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(plural_marriage_mandate__endogenous_reinterpretation_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.42, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +234,16 @@ narrative_ontology:story_seed(plural_marriage_mandate__endogenous_reinterpretati
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.38) because the constraint transfers doctrinal authority from believers to institutional leadership and excludes fundamentalists from temple participation, but the beneficiary set (mainstream adherents, missionaries, temple workers) is large and substantially benefits from coordination, not merely from extraction. Suppression is lower than extraction (0.45 vs 0.38) because the enforcement of the reinterpretation relies primarily on institutional excommunication and doctrinal authority, not on active coercive machinery—the fundamentalists' identity-lock makes their resistance costly without requiring continuous suppression. Theater is elevated (0.52) because the doctrine-retained-practice-suspended framing is narratively sophisticated but structurally unstable: the original revelation commanded practice; the reinterpretation suspends it; the coherence narrative emphasizes 'preservation of the salvific mission' more than 'obedience to the original command.' This theatrical component grows as fundamentalist communities challenge the coherence, forcing increasingly elaborate explanations. Accessibility collapse is moderate-high (0.62) because the reinterpretation's internal logic is available to members (the church teaches the doctrine) but the practical exit is prohibitively costly (identity loss, community rupture, loss of salvific pathway as understood). Resistance is elevated (0.68) because fundamentalist communities and individual practitioners maintained plural marriage despite institutional pressure, attesting that the reinterpretation never achieved unanimous acceptance. The measurement series is authored on one shared time grid spanning 1880–1920, capturing the decision point (1890), institutionalization (1900–1910), and normalization (1920).
+ *   Extractiveness is moderate (0.42 at the 1890 peak) because this reading asserts the coordination function is genuine: the suspension preserves a real institutional good (temple access, missionary work, community coherence) for those who accept the reinterpretation. But the constraint requires active enforcement (suppression=0.38) against fundamentalist dissidents who reject the reading — enforcement is not self-evident or naturalized. Theater is moderate-low (0.28): the prophetic narrative is central to the coordination (not purely performative), but its necessity as a legitimating frame for the institutional decision is itself what theater measures — how much of the enforcement work is carried by the reinterpretation narrative versus by institutional power. The measurement series capture the intensity dynamics: extractiveness and suppression both rise sharply 1888–1890 as the Manifesto is issued and enforced (peak coercive moment), then decline as dissidents are separated into distinct communities and the new interpretation becomes normalized. Theater rises during the same peak period (highest institutional justification effort) then stabilizes as the reinterpretation is internalized. The metric trajectory reflects a constraint that is MOST extractive and theatrical at the moment of institutional transition (the Manifesto's issuance), then settles into a lower, more stable regime as separation reduces internal resistance.
  *
  * PERSPECTIVAL GAP:
- *   The institutional leadership and mainstream membership compute the constraint differently from fundamentalist communities and historical observers skeptical of the revelation narrative. From the leadership's seat, the reinterpretation is legitimate prophetic guidance coordinating the faith community. From the fundamentalist seat, the same structure is institutional betrayal under federal coercion, excommunicating those who remained faithful to the original revelation. From the federal government's seat (excluded from this reading's frame), the Manifesto is capitulation to prosecution pressure. From the historian's analytical seat, the constraint's legitimacy cannot be determined from structure alone—the evidence (internal deliberations, timing, doctrinal precedent) remains contested and drives the kernel contest into three irreducible readings. The engine computes per-seat classification: a mainstream member accepting the prophetic framing may compute rope; a fundamentalist maintaining the original doctrine computes snare; an analyst skeptical of the revelation narrative computes snare or tangled_rope with a piton component (theater-elevated preservation of a superseded doctrine). This divergence IS the measurement the corpus exists to take.
+ *   The institutional church and faithful mainstream membership experience this constraint as beneficial coordination: a reinterpretation that saves the church and allows continued ritual practice (temple work) under revised understanding. Fundamentalist dissidents experience the same structure as extractive: their excommunication, temple loss, and family rupture are the costs of enforcing a reading they reject. The engine should compute different per-seat types from this structural asymmetry. From the church's agenda-setting seat with arbitrage exit, the constraint computes as rope (genuine coordination benefit). From the fundamentalist's identity-locked seat, the same structural constraint computes as snare or tangled_rope (forced excommunication under a reinterpretation they deny legitimacy to). The divergence is what the measurement should detect: the beneficiary seat sees rope; the victim seat sees extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   Institutional leadership holds directionality near the beneficiary end (d ~ 0.15–0.25): they collect legitimacy, authority, and institutional continuity from the reinterpretation; their exit options are identity-locked (no leadership position exists outside the institutional hierarchy) but their power is institutional so the extraction formula yields low d. Mainstream members hold d ~ 0.4–0.5 (symmetric): they benefit from temple access and doctrinal coherence while bearing the modest cost of practice reorganization and implicit acceptance of institutional authority over personal revelation. Fundamentalists hold d near the target end (d ~ 0.75–0.85): they are excommunicated, excluded from temples, and bear doctrinal ostracism for maintaining what they understand as fidelity to the original binding revelation; their identity-lock makes exit existentially costly; their power is organized but subordinate to the institutional hierarchy. Women in fundamentalist plural marriages hold even higher d (d ~ 0.85–0.95): they combine the fundamentalist victim status with legal jeopardy and powerlessness. These directionality differentials drive the per-seat classification divergence.
+ *   The institutional church is a clear beneficiary (d approaches 0.0): it survives, operates temples, gains missionary legitimacy, and has arbitrage-level exit options (can reinterpret again if conditions change). Mainstream membership is near-symmetric (d near 0.5): they gain temple access but must internalize cognitive dissonance (doctrine eternally true but practice temporally suspended). Fundamentalist dissidents are clear targets (d approaches 1.0): they lose community, are excommunicated, and have identity-locked exit (leaving means abandoning their understanding of divine law). The federal government is external to the directionality measure (observer seat). American Protestantism benefits (d low) by accepting the church as legitimate. The suppression metric (0.38) is high relative to extractiveness (0.42) because the constraint's persistence requires active enforcement: without ongoing excommunication of plural practitioners and institutional suppression of the original reading's legitimacy, fundamentalist communities would expand and claim continuity with the founding revelation. The constraint is held in place by organized force, not by participant preference alone.
  *
  * MANDATROPHY ANALYSIS:
- *   The 1890 Manifesto resolves an acute mandatrophy by reinterpreting the founding mandate (plural marriage as divine requirement) in light of new revelation (practice suspended, doctrine intact). From the endogenous reading, this is legitimate theological work—the mandate persists but its application is redefined by later revelation, which is standard within Latter-day Saint framework (subsequent revelation supersedes prior revelation in practice). From the exogenous reading, the mandatrophy is unresolved: the founding mandate's apparent binding force contradicts the 1890 suspension, creating a permanent theological incoherence papered over by institutional authority and narrated as revelation. The test is whether the reinterpretation holds under member belief and practice: if members successfully internalize 'doctrine intact, practice suspended' as coherent, mandatrophy is resolved within the endogenous frame. If the constraint requires continuous theatrical justification (omegas suggest it does), mandatrophy is partially unresolved, and the constraint carries a piton component (institutional performance of a framework that has lost internal coherence). The measurement series shows theater_ratio rising from 1890 to 1910 (stabilizing the reinterpretation narratively) and plateauing (suggesting the theatrical work is ongoing rather than complete), consistent with partial mandatrophy—the founding problem is addressed (federal pressure relieved, institutional survival secured) but the doctrinal coherence is not fully assured.
+ *   This reading faces a critical mandatrophy question: the founding problem stated by the church is 'preserve the institution and its salvific mission.' Under this reading, the Manifesto solves that problem — institutional survival is the observable outcome. However, the alternative reading (exogenous_override) states the founding problem is 'maintain fidelity to divine command regarding plural marriage,' which this Manifesto violates by suspending practice. The mandatrophy depends on which founding problem is legitimate — the church's institutional-survival framing or the fundamentalist's doctrinal-fidelity framing. This reading asserts that institutional survival IS a divine requirement, making the reinterpretation legitimate. That assertion is what routes to omega variables (the irreducible uncertainty about whether the founding problem is correctly stated by the church). The classification does not collapse the uncertainty — it names it. This constraint should compute as rope (genuine coordination) UNDER the assumption that prophetic authority is the correct framework for understanding the Manifesto, and as tangled_rope or snare UNDER the assumption that federal coercion is the actual cause. The reading itself is the assumption; different readings of the same kernel produce different computed types.
  */
 
 /* ==========================================================================
@@ -190,44 +251,44 @@ narrative_ontology:story_seed(plural_marriage_mandate__endogenous_reinterpretati
    ========================================================================== */
 
 omega_variable(
-    revelation_vs_capitulation,
-    'Is the 1890 Manifesto an instance of endogenous prophetic reinterpretation (God revealed a new directive), exogenous capitulation under federal coercion (the leadership chose institutional survival over doctrinal fidelity), or pragmatic institutional rebranding (capitulation narrated as revelation to preserve legitimacy)?',
-    'Detailed historical analysis of: (1) contemporaneous leadership diaries, deliberations, and correspondence; (2) timing alignment between federal prosecution intensity and institutional decision-making; (3) doctrinal precedent for temporary revelation-directed practice suspension; (4) framing consistency in how the leadership explained the decision internally vs. publicly.',
-    'If endogenous (revelation), the constraint is rope (legitimate coordination around new prophetic directive). If exogenous or pragmatic-rebranding, the constraint is snare (coerced institutional extraction with doctrinal cover). This is the reading''s irreducible ambiguity and the kernel contest''s central site.',
+    prophetic_authority_legitimacy,
+    'Is the Manifesto a genuine expression of prophetic reinterpretation (the reading''s core claim), or is the revelation-narrative a frame applied retroactively to justify institutional capitulation under federal coercion?',
+    'Theological hermeneutics: examine whether the doctrine of temporal suspension is internally coherent with the church''s core truth claims (eternal celestial marriage plus temporal suspension). Historical evidence: determine whether the prophetic framing appears in internal church documents before the federal ultimatum or only after. Comparative religious analysis: whether other faith traditions show similar patterns of reinterpretation under institutional pressure.',
+    'If the reinterpretation is genuinely prophetic (doctrine coherently suspends practice), the constraint is a rope (legitimate coordination around a new divine directive). If the framing is applied retroactively, the constraint is tangled_rope or snare (institutional survival buying legitimacy through revelation language). This omega resolves whether the reading''s core claim is true.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(revelation_vs_capitulation, conceptual, 'Whether the constraint grounds its legitimacy in authentic prophetic reinterpretation or in institutionally beneficial rebranding of coercion.').
+narrative_ontology:omega_variable(prophetic_authority_legitimacy, conceptual, 'Whether the Manifesto instantiates genuine prophetic reinterpretation or institutional capitulation dressed in revelation-language.').
 
 omega_variable(
-    doctrine_vs_practice_coherence,
-    'Does retaining plural marriage doctrine while suspending practice create genuine theological coherence (as the endogenous reading claims) or is it an unstable compromise that systematically privileges institutional survival over doctrinal fidelity?',
-    'Sustained textual and theological analysis of how the church (a) justifies the suspension as temporary and doctrinal truth intact, (b) instructs members on the relationship between eternal doctrine and temporal practice, and (c) handles contradictions as fundamentalist communities challenge the coherence claim by maintaining practice alongside doctrine.',
-    'If coherent, the constraint is sustainable as rope (coordination around reinterpreted revelation). If incoherent, the theatrical component (theater_ratio) rises and the constraint approaches piton (doctrine retained performatively while practice has structurally shifted). Persistent fundamentalist objections suggest the coherence is contested even internally.',
+    identity_lock_mechanism_dissidents,
+    'For fundamentalist dissidents, is their identity-lock to plural marriage practice driven by genuine theological conviction (belief the doctrine is divine), institutional identity fusion (community and family structure built on plural practice), or internalized suppression (decades of messaging that plural marriage is eternally correct)?',
+    'Post-exit trajectory of fundamentalists who leave the practice: do identity-locked beliefs persist after exit, or do they dissolve when the institutional enforcement and relational structure are removed? Generational shift: do second-generation fundamentalists show the same identity-lock or reduced commitment?',
+    'If identity-lock is primarily theological conviction, the fundamentalists are making an independent choice to maintain the original reading (they have the logical option to reinterpret as mainstream members do). If identity-lock is relational or internalized, the exit is genuinely blocked and the suppression metric understates the constraint''s effective force on that seat. Affects classification: if exit is more genuinely constrained than the authored ''identity_locked'' atom suggests, the constraint computes as more extractive from that seat.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(doctrine_vs_practice_coherence, conceptual, 'Whether doctrine-retained-practice-suspended is a stable theological framework or an inherently unstable institutional compromise.').
+narrative_ontology:omega_variable(identity_lock_mechanism_dissidents, empirical, 'Whether fundamentalist identity-lock is primarily conviction-driven or structurally/relationally enforced.').
 
 omega_variable(
-    suppression_mechanism_internalized_vs_structural,
-    'Is the suppression of fundamentalist practice primarily structural (legal jeopardy, institutional excommunication, resource denial) or internalized (fundamentalists have absorbed a shame/illegitimacy narrative that makes exit unthinkable even absent structural barriers)?',
-    'Post-institutional observation: how much fundamentalist dissent and practice persistence occurs in jurisdictions where federal prosecution ended (post-1920s) and institutional penalties weakened? Do communities reform practice or continue? Do excommunicated individuals maintain practice if legal risk subsides?',
-    'If structural, the constraint''s suppression depends on continued federal/institutional enforcement; if internalized, the suppression persists even after external enforcement weakens (higher effective suppression). Identity-locked exit suggests internalization, but the distinction matters for understanding the constraint''s persistence mechanism.',
+    reinterpretation_sustainability,
+    'Does the church''s doctrine-retained-practice-suspended framework coherently solve the founding problem (institutional survival), or does the cognitive dissonance of holding both the doctrine and its suspension create long-term institutional pressure that will eventually resolve toward one or the other?',
+    'Longitudinal institutional dynamics: track whether the church gradually migrates toward fully abandoning plural marriage as doctrine (as the LDS church has moved) or toward recovering practice under a new prophet''s reinterpretation. Survey membership: measure whether mainstream members genuinely hold the doctrine as eternally true or whether it has devolved into ''historical doctrine no longer operative.''',
+    'If the framework is unstable and generates structural pressure toward either full abandonment or practice recovery, the constraint is SCAFFOLD (temporary coordination around a transition state) rather than ROPE (stable coordination). The measurement series show extractiveness declining after 1890, which could reflect stabilization OR could reflect the beginning of a long-term drift toward full doctrinal abandonment. This omega disambiguates the trajectory.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Whether suppression is structural (external barriers) or internalized (identity/shame narratives that persist after barriers weaken).').
+narrative_ontology:omega_variable(reinterpretation_sustainability, empirical, 'Whether the doctrine-suspended-practice framework is a sustainable coordination or an unstable transition.').
 
 omega_variable(
-    kernel_reading_contest,
-    'This constraint instantiates ONE reading of the plural_marriage_mandate kernel. What is the relationship between this endogenous_reinterpretation reading and its sibling readings (exogenous_override_reading, institutional_pragmatism_reading)? Are they logically foreclosed by each other, structurally coexisting in different communities, or creating mutual pressure?',
-    'Comparative constraint story analysis: the three readings should have different ε values, different beneficiary/victim structures, and different claimed types. If one reading''s foundational axiom is directly refuted by another reading''s grounding evidence, they foreclose. If the readings co-persist as competing interpretive traditions, they coexist. If one reading''s adoption changes the other''s operating conditions, it influences.',
-    'The kernel contest is the meta-problem: all three readings are live in the historical record and in contemporary institutional discourse. The engine''s per-seat classification should diverge by reading—an observer adopting the endogenous reading will compute rope; an observer adopting the exogenous reading will compute snare. The readings form a constraint family; their relationships structure how the kernel itself is understood.',
-    confidence_without_resolution(high)
+    reading_committer_contest,
+    'Which reading of the plural_marriage_mandate kernel is the correct interpretation of what the Manifesto instantiated: endogenous prophetic reinterpretation, exogenous federal override, or pragmatic institutional adaptation?',
+    'This omega routes the committer-axis contest into the omega structure per Rule 2 (Kernels and Readings). The resolution requires evaluating the three sibling readings'' structural claims: does the Manifesto''s authority come from God (endogenous), from federal coercion (exogenous), or from institutional strategy (pragmatic)? The readings coexist in actual LDS and fundamentalist discourse; no single fact can resolve which reading is ''correct'' because correctness is reading-indexed (OQ-26). What can be resolved is the empirical status of the coercive environment and the chronology of the revelation-framing.',
+    'The computed type of this constraint depends on which reading is true: if endogenous_reinterpretation, type is rope; if exogenous_override, type is snare; if institutional_pragmatism, type is tangled_rope. The three constraints (three readings, one kernel) have different ε values and different types by construction. This omega documents that the classification outcome is reading-dependent, which is the point of the decomposition.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Relationship between this reading and its sibling readings of the contested plural_marriage_mandate kernel.').
+narrative_ontology:omega_variable(reading_committer_contest, conceptual, 'The irreducible kernel-reading contest: which reading of the Manifesto''s authority and legitimacy is instantiated here?').
 
 
 /* ==========================================================================
@@ -241,25 +302,46 @@ narrative_ontology:interval(plural_marriage_mandate__endogenous_reinterpretation
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(plur_tr_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1880, 0.25).
-narrative_ontology:measurement(plur_tr_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1890, 0.48).
-narrative_ontology:measurement(plur_tr_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1900, 0.54).
-narrative_ontology:measurement(plur_tr_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1910, 0.56).
-narrative_ontology:measurement(plur_tr_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1920, 0.52).
+narrative_ontology:measurement(plur_tr_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1880, 0.08).
+narrative_ontology:measurement_basis(plur_tr_t1880, observed).
+narrative_ontology:measurement(plur_tr_t1888, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1888, 0.15).
+narrative_ontology:measurement_basis(plur_tr_t1888, observed).
+narrative_ontology:measurement(plur_tr_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1890, 0.28).
+narrative_ontology:measurement_basis(plur_tr_t1890, observed).
+narrative_ontology:measurement(plur_tr_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1900, 0.32).
+narrative_ontology:measurement_basis(plur_tr_t1900, observed).
+narrative_ontology:measurement(plur_tr_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1910, 0.3).
+narrative_ontology:measurement_basis(plur_tr_t1910, observed).
+narrative_ontology:measurement(plur_tr_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, theater_ratio, 1920, 0.26).
+narrative_ontology:measurement_basis(plur_tr_t1920, observed).
 
 % Extraction over time
-narrative_ontology:measurement(plur_be_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1880, 0.22).
-narrative_ontology:measurement(plur_be_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1890, 0.38).
-narrative_ontology:measurement(plur_be_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1900, 0.41).
-narrative_ontology:measurement(plur_be_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1910, 0.39).
-narrative_ontology:measurement(plur_be_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1920, 0.35).
+narrative_ontology:measurement(plur_be_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1880, 0.18).
+narrative_ontology:measurement_basis(plur_be_t1880, observed).
+narrative_ontology:measurement(plur_be_t1888, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1888, 0.35).
+narrative_ontology:measurement_basis(plur_be_t1888, observed).
+narrative_ontology:measurement(plur_be_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1890, 0.42).
+narrative_ontology:measurement_basis(plur_be_t1890, observed).
+narrative_ontology:measurement(plur_be_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1900, 0.38).
+narrative_ontology:measurement_basis(plur_be_t1900, observed).
+narrative_ontology:measurement(plur_be_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1910, 0.35).
+narrative_ontology:measurement_basis(plur_be_t1910, observed).
+narrative_ontology:measurement(plur_be_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, base_extractiveness, 1920, 0.28).
+narrative_ontology:measurement_basis(plur_be_t1920, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(plur_su_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1880, 0.28).
-narrative_ontology:measurement(plur_su_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1890, 0.45).
-narrative_ontology:measurement(plur_su_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1900, 0.48).
-narrative_ontology:measurement(plur_su_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1910, 0.46).
-narrative_ontology:measurement(plur_su_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1920, 0.42).
+narrative_ontology:measurement(plur_su_t1880, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1880, 0.15).
+narrative_ontology:measurement_basis(plur_su_t1880, observed).
+narrative_ontology:measurement(plur_su_t1888, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1888, 0.28).
+narrative_ontology:measurement_basis(plur_su_t1888, observed).
+narrative_ontology:measurement(plur_su_t1890, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1890, 0.38).
+narrative_ontology:measurement_basis(plur_su_t1890, observed).
+narrative_ontology:measurement(plur_su_t1900, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1900, 0.42).
+narrative_ontology:measurement_basis(plur_su_t1900, observed).
+narrative_ontology:measurement(plur_su_t1910, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1910, 0.4).
+narrative_ontology:measurement_basis(plur_su_t1910, observed).
+narrative_ontology:measurement(plur_su_t1920, plural_marriage_mandate__endogenous_reinterpretation_reading, suppression_requirement, 1920, 0.36).
+narrative_ontology:measurement_basis(plur_su_t1920, observed).
 
 
 /* ==========================================================================
@@ -267,12 +349,12 @@ narrative_ontology:measurement(plur_su_t1920, plural_marriage_mandate__endogenou
    ========================================================================== */
 
 narrative_ontology:coordination_type(plural_marriage_mandate__endogenous_reinterpretation_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(plural_marriage_mandate__endogenous_reinterpretation_reading, 0.1).
 narrative_ontology:affects_constraint(plural_marriage_mandate__endogenous_reinterpretation_reading, plural_marriage_mandate__exogenous_override_reading).
 narrative_ontology:affects_constraint(plural_marriage_mandate__endogenous_reinterpretation_reading, plural_marriage_mandate__institutional_pragmatism_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of the plural_marriage_mandate kernel family. All three readings (endogenous_reinterpretation, exogenous_override, institutional_pragmatism) share the same historical event (the 1890 Manifesto) but instantiate different constraints because they ground the Manifesto's legitimacy differently (revelation vs. coercion vs. pragmatic rebranding). Each reading has a distinct ε value, beneficiary/victim structure, and claimed type. The three stories are linked bidirectionally via affects_constraints to enable comparative analysis of how the same historical event produces different constraint classifications under different legitimacy framings. The kernel contest is the meta-problem: determining which reading's framing is structurally defensible requires examining historical evidence external to the readings' own narratives (documented coercion, institutional deliberations, doctrinal precedent). The Boltzmann floor is elevated (0.12 vs. 0.08 canonical for identity_coordination) because this constraint coordinates boundary maintenance of group membership under identity pressure: the reinterpretation is fundamentally a question of who counts as legitimately practicing the faith (doctrinal members who suspend practice) vs. who is excluded (fundamentalists who maintain practice). Identity coordination at this scale (whole faith community, founding doctrine, salvific pathway) requires elevated coherence overhead.
+% The plural_marriage_mandate kernel decomposes into three constraint stories corresponding to three distinct readings of the 1890 Manifesto. Each reading instantiates a different constraint with a different ε, different beneficiary/victim structure, and different computed type. ENDOGENOUS REINTERPRETATION (this story): Manifesto is legitimate prophetic reinterpretation; type is rope. EXOGENOUS OVERRIDE (sibling): Manifesto is federal coercion forcing abandonment of divine requirement; type is snare. INSTITUTIONAL PRAGMATISM (sibling): Manifesto is strategic adaptation where revelation-narrative legitimates survival-driven capitulation; type is tangled_rope. All three share the same kernel (plural marriage mandate), the same historical event (the Manifesto), and the same structural participants (church, mainstream membership, fundamentalists). They differ in HOW they account for the Manifesto's legitimacy and authority. The reading_relations edges (forecloses, coexists_with, influences) model the logical structure of the contest. Per the ε-invariance principle (DP-001), the readings are separate constraints, not measurements of a single constraint; they appear as distinct constraint_id entries in the corpus, linked via affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

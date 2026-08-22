@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,39 +76,40 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: rbio_practice_norm_complex__hegemonic_extraction_reading
- *   human_readable: RBIO Hegemonic Norm Complex: Formal Revisability / Practical Rigidity
- *   domain: international_relations/political_economy
+ *   human_readable: RBIO Practice Norm Complex (Hegemonic Extraction Reading)
+ *   domain: international/political_economy
  *
  * SUMMARY:
- *   The Responsibility to Protect (R2P), sovereignty norms, non-intervention
- *   principles, and international humanitarian law form a interconnected
- *   institutional and legal complex (RBIO) that claims universal application
- *   but exhibits selective enforcement. From the hegemonic-extraction
- *   reading: the norms are formally revisable (any state can propose
- *   amendments) but practically un-amendable (P5 veto prevents constraints on
- *   their power); enforcement is selective (authorized against non-aligned
- *   states, not against allies); and economic conditionality imposes
- *   structural adjustment on Global South borrowers without meaningful
- *   consent. This reading instantiates the constraint as tangled rope: there
- *   is a genuine coordination function (interstate procedure, humanitarian
- *   standards, collective legitimacy) layered beneath asymmetric extraction
- *   (selective enforcement, veto power, conditionality coercion). The
- *   practical rigidity (formal revisability, actual un-amendability) and
- *   enforcement selectivity (revealing extractive intent) are the signature
- *   features. This is one reading of a contested kernel; the
- *   liberal_institutional_reading and sovereignty_maximalist_reading are
- *   separate constraint stories with different ε values and
- *   beneficiary/victim structures.
+ *   The Rules-Based International Order (RBIO) comprises formal norms of
+ *   state sovereignty, non-intervention, human rights, and market-opening
+ *   conditionality. This constraint is ONE READING of the RBIO kernel — the
+ *   hegemonic extraction reading. This reading treats RBIO norms as a
+ *   formally revisable but practically un-amendable system maintained by P5
+ *   veto, where enforcement selectivity (norms enforced against the Global
+ *   South, selectively ignored when applied to the Global North) reveals
+ *   extractive intent rather than universal principle. The reading's core
+ *   premise is: interventions lacking target-state authorization are coercive
+ *   impositions dressed in legality language; conditionality that locks in
+ *   capital advantage is coerced contract; the system benefits U.S./European
+ *   capital and harms Global South states and subordinated populations. This
+ *   is structurally distinct from the liberal institutional reading (which
+ *   treats norms as consensus-based and capacity-enforcement gaps as
+ *   innocent), and from the sovereignty-maximalist reading (which treats any
+ *   intervention as illegitimate). The ENGINE computes per-seat
+ *   classification from the structural data; seat divergence (what the P5
+ *   member experiences vs. what a Global South state experiences vs. what a
+ *   multinational corporation experiences) is the measurement the
+ *   constraint-story apparatus takes.
  *
  * KEY AGENTS:
- *   - permanent_five_states: agenda-setters; control veto and interpretation; trapped in the system (cannot exit without losing power)
- *   - us_european_capital: beneficiaries; gain from enforcement selectivity and conditionality; arbitrage-grade exit (can ignore unfavorable rulings)
- *   - global_south_states: payers; subject to selective enforcement and constrained by veto; moderate power, constrained exit
- *   - structural_adjustment_populations: payers; bearers of conditionality costs; identity-locked to their geography and citizenship
- *   - non_aligned_states: excluded from agenda-setting; would demand binding non-intervention and majority-vote reforms
- *   - imf_world_bank: agenda-setters and beneficiaries; administer conditionality; shielded by technocratic neutrality
- *   - human_rights_ngos: observers; provide corroboration from outside benefiting parties; split between liberal and critical readings
- *   - academic_international_law: observers; theoretical and doctrinal corroboration; competing interpretive traditions
+ *   - U.S./European capital: primary beneficiary, shapes which norms are enforced and against whom
+ *   - Security Council P5: structural agenda-setters, preserve hegemonic order via veto
+ *   - Global South states: formally included but structurally blocked, bear extraction costs
+ *   - Populations under IMF/World Bank conditionality: powerless targets of enforced norm compliance
+ *   - Unauthorized intervention targets: victimized by selective enforcement, no consent sought
+ *   - Liberal institutional scholars: intellectual legitimacy suppliers for the order
+ *   - Rising powers (China, India, Brazil): excluded from norm-revision via P5 veto
+ *   - Human rights advocacy: operate inside legitimacy frame, constrained by dependence on elite funding
  */
 
 /* ==========================================================================
@@ -107,59 +117,130 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.79).
-domain_priors:suppression_score(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.71).
-domain_priors:theater_ratio(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.58).
+domain_priors:base_extractiveness(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.78).
+domain_priors:suppression_score(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.72).
+domain_priors:theater_ratio(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.61).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, extractiveness, 0.79).
-narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 0.58).
+narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, extractiveness, 0.78).
+narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 0.61).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, accessibility_collapse, 0.42).
-narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, resistance, 0.68).
+narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(rbio_practice_norm_complex__hegemonic_extraction_reading, resistance, 0.59).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(rbio_practice_norm_complex__hegemonic_extraction_reading, tangled_rope).
-narrative_ontology:human_readable(rbio_practice_norm_complex__hegemonic_extraction_reading, "RBIO Hegemonic Norm Complex: Formal Revisability / Practical Rigidity").
-narrative_ontology:topic_domain(rbio_practice_norm_complex__hegemonic_extraction_reading, "international_relations/political_economy").
+narrative_ontology:human_readable(rbio_practice_norm_complex__hegemonic_extraction_reading, "RBIO Practice Norm Complex (Hegemonic Extraction Reading)").
+narrative_ontology:topic_domain(rbio_practice_norm_complex__hegemonic_extraction_reading, "international/political_economy").
 
 domain_priors:requires_active_enforcement(rbio_practice_norm_complex__hegemonic_extraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(rbio_practice_norm_complex__hegemonic_extraction_reading, 'cef7b61c-1e25-4073-a58e-d5c538a69ae4').
-narrative_ontology:cs_kernel_codification('cef7b61c-1e25-4073-a58e-d5c538a69ae4', fixed_text).
-narrative_ontology:cs_authority_grounding('cef7b61c-1e25-4073-a58e-d5c538a69ae4', extraction).
-narrative_ontology:cs_interpretation_layer_present('cef7b61c-1e25-4073-a58e-d5c538a69ae4').
-narrative_ontology:cs_reading_relation('cef7b61c-1e25-4073-a58e-d5c538a69ae4', rbio_practice_norm_complex__liberal_institutional_reading, influences).
-narrative_ontology:cs_reading_relation('cef7b61c-1e25-4073-a58e-d5c538a69ae4', rbio_practice_norm_complex__sovereignty_maximalist_reading, coexists_with).
-narrative_ontology:cs_axiom('cef7b61c-1e25-4073-a58e-d5c538a69ae4', foundational, p5_veto_forecloses_amendment).
-narrative_ontology:cs_axiom_status(p5_veto_forecloses_amendment, holdable).
-narrative_ontology:cs_axiom_grounding('cef7b61c-1e25-4073-a58e-d5c538a69ae4', p5_veto_forecloses_amendment, empirically_contingent).
-narrative_ontology:cs_axiom('cef7b61c-1e25-4073-a58e-d5c538a69ae4', foundational, enforcement_selectivity_reveals_power).
-narrative_ontology:cs_axiom_status(enforcement_selectivity_reveals_power, holdable).
-narrative_ontology:cs_axiom_grounding('cef7b61c-1e25-4073-a58e-d5c538a69ae4', enforcement_selectivity_reveals_power, empirically_contingent).
-narrative_ontology:cs_reference_frame('cef7b61c-1e25-4073-a58e-d5c538a69ae4', universal_consent_based_revisable_norms).
-narrative_ontology:cs_drift_state('cef7b61c-1e25-4073-a58e-d5c538a69ae4', contemporary_enforcement_selectivity, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('cef7b61c-1e25-4073-a58e-d5c538a69ae4', '').
+narrative_ontology:cs_story_uid(rbio_practice_norm_complex__hegemonic_extraction_reading, 'b17d9ba3-5495-4eaa-90bb-046c5a5f14c5').
+narrative_ontology:cs_kernel_codification('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', formalized).
+narrative_ontology:cs_authority_grounding('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', extraction).
+narrative_ontology:cs_interpretation_layer_present('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5').
+narrative_ontology:cs_reading_relation('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', rbio_practice_norm_complex__liberal_institutional_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', rbio_practice_norm_complex__sovereignty_maximalist_reading, coexists_with).
+narrative_ontology:cs_axiom('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', foundational, intervention_without_consent_is_coercion).
+narrative_ontology:cs_axiom_status(intervention_without_consent_is_coercion, holdable).
+narrative_ontology:cs_axiom_grounding('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', intervention_without_consent_is_coercion, deontological).
+narrative_ontology:cs_axiom('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', foundational, enforcement_selectivity_reveals_extractive_intent).
+narrative_ontology:cs_axiom_status(enforcement_selectivity_reveals_extractive_intent, holdable).
+narrative_ontology:cs_axiom_grounding('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', enforcement_selectivity_reveals_extractive_intent, empirically_contingent).
+narrative_ontology:cs_reference_frame('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', universal_rule_of_law_order).
+narrative_ontology:cs_drift_state('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', contemporary_post_cold_war_enforcement, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('b17d9ba3-5495-4eaa-90bb-046c5a5f14c5', '').
 narrative_ontology:cs_kernel_id(rbio_practice_norm_complex__hegemonic_extraction_reading, rbio_practice_norm_complex).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rbio_practice_norm_complex__hegemonic_extraction_reading, us_european_capital).
-narrative_ontology:constraint_beneficiary(rbio_practice_norm_complex__hegemonic_extraction_reading, permanent_five_states).
+narrative_ontology:constraint_beneficiary(rbio_practice_norm_complex__hegemonic_extraction_reading, security_council_p5_members).
 narrative_ontology:constraint_victim(rbio_practice_norm_complex__hegemonic_extraction_reading, global_south_states).
-narrative_ontology:constraint_victim(rbio_practice_norm_complex__hegemonic_extraction_reading, structural_adjustment_populations).
+narrative_ontology:constraint_victim(rbio_practice_norm_complex__hegemonic_extraction_reading, populations_under_structural_adjustment).
+narrative_ontology:constraint_victim(rbio_practice_norm_complex__hegemonic_extraction_reading, unauthorized_intervention_targets).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(rbio_practice_norm_complex__hegemonic_extraction_reading, liberal_institutional_scholars).
+narrative_ontology:constraint_victim(rbio_practice_norm_complex__hegemonic_extraction_reading, human_rights_advocacy_organizations).
+narrative_ontology:constraint_vindicates(rbio_practice_norm_complex__hegemonic_extraction_reading, western_liberal_order_doctrine).
+narrative_ontology:constraint_vindicates(rbio_practice_norm_complex__hegemonic_extraction_reading, humanitarian_intervention_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Capital based in the United States and Western Europe benefits from RBIO norms that protect property rights, enforce contracts in their favor, and legitimize market opening conditionality. Through World Bank, IMF, and bilateral mechanisms, they shape which norms are enforced against which states. They author the 'universal values' framing and define which violations warrant intervention.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, us_european_capital, beneficiary,
+    institutional, civilizational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(rbio_practice_norm_complex__hegemonic_extraction_reading, us_european_capital, agenda_setter).
+
+% Permanently authorized to veto any resolution that would constrain them, the P5 (USA, Russia, China, UK, France) jointly author the formal revisability fiction. They maintain the veto coalition by implicit understanding: the norms are revisable in principle, but revisability is structurally blocked by consensus of the most powerful. The United States and European members use this to sustain norms favorable to Western capital; Russia and China use it to block norms that would constrain them on regional matters. The veto preserves hegemonic order.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, security_council_p5_members, agenda_setter,
+    institutional, civilizational, arbitrage, global).
+
+% Formally included in the rule-making process through the UN General Assembly, but enforcement selectivity and P5 veto ensure that norms disadvantageous to them (on capital controls, intellectual property, resource extraction, conditionality) are enforced while norms meant to constrain powerful states (on intervention, sanctions, resource colonialism) are selectively ignored. They pay through conditionality, capital flight, and sovereign curtailment. Exit means regional isolation or sanctions.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, global_south_states, payer,
+    organized, generational, constrained, global).
+
+% Subordinate to states that have accepted IMF/World Bank conditionality backed by RBIO norms of market opening and fiscal discipline. They bear the costs directly: privatization of healthcare and education, austerity-driven wage compression, currency devaluation. The norms are enforced via loan conditions they never agreed to and cannot exit without state default. They have no formal seat in the rule-making process.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, populations_under_structural_adjustment, payer,
+    powerless, biographical, trapped, national).
+
+% States and populations targeted by military or economic intervention justified under RBIO humanitarian norms, without UN Security Council authorization or target-state consent. They experience the constraint as coercive law-breaking dressed in legality language. Exit is not possible; resistance ranges from non-compliance to violent opposition.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, unauthorized_intervention_targets, payer,
+    powerless, biographical, trapped, national).
+
+% Provide intellectual legitimacy for the RBIO order by teaching that norms are universal, consent-based, and revisable through legitimate processes. Their institutional position and grant funding derive from their role in maintaining the order's narrative coherence. They genuinely believe the framing, which strengthens the belief system's transmission.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, liberal_institutional_scholars, beneficiary,
+    moderate, generational, mobile, global).
+
+% Rising powers (China, India, Brazil, Russia) that would reshape RBIO norms if they could but lack the voting coalition to override P5 veto or rewrite the institutional architecture. They are formally included but structurally blocked. Their exclusion is enforced by the veto mechanism itself.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, alternative_authority_claimants, excluded,
+    powerful, generational, trapped, global).
+
+% Document violations of RBIO norms and call for enforcement, but their leverage is credibility and moral suasion. They operate inside the legitimacy frame provided by Western capital and P5 states, so they cannot credibly challenge the frame itself without losing institutional access and funding. They bear costs when their advocacy threatens elite interests but lack power to force change.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, human_rights_advocacy_organizations, observer,
+    moderate, generational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(rbio_practice_norm_complex__hegemonic_extraction_reading, human_rights_advocacy_organizations, payer).
+
+% International relations scholars and policy analysts examining the constraint's structure. They see the formal revisability fiction and the enforcement selectivity without claiming to resolve whether the order is legitimate, natural, or constructed.
+narrative_ontology:constraint_stakeholder(rbio_practice_norm_complex__hegemonic_extraction_reading, analytical_observers, observer,
+    analytical, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(rbio_practice_norm_complex__hegemonic_extraction_reading, us_european_capital).
+narrative_ontology:fixing_cost_class(rbio_practice_norm_complex__hegemonic_extraction_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a single rule-set for all states and populations (no unilateral regime change, sanctions require authorization, non-intervention norm, human rights standards). This provides predictability for capital flows, treaty-making, and conflict resolution; without it, the international order would fragment into competing claim-sets.
+% TRANSFER_FUNCTION: Transfers sovereignty constraints from powerful states to weaker ones (Global South states accept IMF conditionality, accept no-intervention norm but see others intervened in unauthorized ways, accept property-rights enforcement that locks in colonial-era inequalities). Transfers resources from populations under structural adjustment to creditors and multinational capital. Transfers legitimacy from formal consent processes to hegemonic enforcement.
+% ABSENT_VOICES: Populations under conditionality have no vote on IMF/World Bank boards; states that lost intervention disputes (Vietnam, Iraq, Libya, Syria, Yemen) have no seat in the tribunal that evaluated the interventions as legitimate or illegitimate. Rising powers that would revise the norm-set are blocked by P5 veto. Alternative framings of legitimate international order (sovereignty-maximalist, non-aligned, regional autarky) are excluded from the authoritative conversation, not by vote but by institutional architecture.
+% DISAPPEARANCE_RATIONALE: If RBIO norms and their enforcement disappeared, capital flows would face radically reduced legal certainty, conditionality would lose its legitimacy framing and revert to naked coercion, humanitarian interventions would no longer benefit from UN-backed legality, and the sovereignty-maximalist reading would become the default. The Global South would immediately attempt norm revision. Rising powers would demand P5 veto abolition or institutional restructuring. The entire international legal order would reconfigure within years.
+% FOUNDING_PROBLEM: Post-WWII instability: states lacked a shared rule-set to prevent wars, manage trade, and handle humanitarian crises. The UN system was built to codify respect for sovereignty while permitting collective action on existential threats. Early RBIO norms (non-intervention, collective security, self-determination) promised to embed shared authority that protected both sovereignty and humanitarian values.
+% FOUNDING_PROBLEM_CORROBORATION: Western institutional scholars and diplomats attest the founding problem remains live (terrorism, regional aggression, humanitarian crises still require international coordination). Global South states and their scholars attest the founding problem was solved by the 1990s and the persistence of enforcement selectivity reveals the norms now serve extraction, not protection. NGOs focused on Global South rights attest to a schism: the coordination problem for the Global North exists; the extraction problem for the Global South is demonstrable and urgent.
+narrative_ontology:disappearance_verdict(rbio_practice_norm_complex__hegemonic_extraction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(rbio_practice_norm_complex__hegemonic_extraction_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(rbio_practice_norm_complex__hegemonic_extraction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(rbio_practice_norm_complex__hegemonic_extraction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(rbio_practice_norm_complex__hegemonic_extraction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.78, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +260,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.79) is high because: (1) selective enforcement concentrates benefits on P5/allied states and distributes costs on Global South; (2) conditionality extracts rents beyond marginal cost of lending; (3) the system's formal revisability is practically negated by veto lock-in, so amendment is structurally unavailable to those bearing costs. Suppression (0.71) is substantial because: (1) veto power actively prevents amendment; (2) enforcement selectivity is maintained through deliberate institutional design (Security Council procedure, IMF governance, debt-restructuring authority); (3) alternatives (regional courts, non-aligned institution-building, exit from capital markets) are materially costly, making them suppressed rather than freely available. Theater ratio (0.58) is moderately high and RISING (0.38 → 0.58 over the interval) because: (1) the norms' original coordination function (preventing power anarchy, establishing procedure) has been largely displaced by performance (ceremonial reaffirmation) and power politics (enforcement follows geopolitical interest, not norm-based criteria); (2) humanitarian justifications increasingly appear disconnected from enforcement patterns. Accessibility collapse (0.42) is MODERATE and deliberately not high because: (1) alternatives exist for Global South states (regional institutions, bilateral agreements, exit — costly but not impossible); (2) for P5 states, there is no collapse (arbitrage-grade exit available); (3) the constraint persists not because alternatives are invisible but because exit is costly for most parties and blocked entirely for P5. Resistance (0.68) is substantial because: (1) Global South states actively propose amendments and challenge enforcement selectivity (General Assembly debates, regional court development, BRICS alternatives); (2) social movements contest conditionality and sovereignty violations; (3) critical scholarship contests the system's legitimacy. The metrics reflect a constraint that is genuinely extractive but not perfectly suppressed — it faces active, organized resistance that has not yet succeeded in dismantling or reforming it. The measurement trajectory shows extraction and theater ratio rising over the interval (0.62 → 0.79, 0.38 → 0.58), consistent with a constraint whose extractive intent becomes increasingly visible and whose coordination function increasingly hollowed by enforcement selectivity.
+ *   This reading measures extractiveness at 0.78 because the norms lock in structural advantages (capital flows favor Western investors, property rights enforcement protects colonial-era holdings, conditionality transfers resources from Global South to creditors) and lack exit options for victim states. Suppression is 0.72 because enforcement requires active coercion (military intervention, sanctions, loan conditionality) and institutional power to define which norms apply to whom. Theater ratio is 0.61 because formal revisability is proclaimed but institutionally blocked (the veto ensures no revision can occur without P5 consensus), and humanitarian language disguises resource extraction. Accessibility_collapse is 0.68 because Global South states formally have the same vote-status but structurally cannot exit or revise (P5 veto is insurmountable, regionalism triggers sanctions, sovereignty assertion provokes intervention). Resistance is 0.59 because Global South states and rising powers mount continuous opposition (G77, BRICS, AU) but lack structural power to force change within the RBIO frame; resistance increases as the frame becomes more visible. The measurement series shows extraction accumulation from 1945 (minimal, founding legitimacy still strong) through 1990s (sharply rising as Cold War veto-trading ends and U.S./Europe enforce norms unilaterally) to 2024 (high and stable, enforcement selectivity now documented). Theater ratio rises steeply from 1990 onward as humanitarian framing intensifies alongside naked enforcement selectivity.
  *
  * PERSPECTIVAL GAP:
- *   The P5 and liberal institutionalists compute the constraint as rope (genuine coordination, capacity-limited enforcement): RBIO norms solve a real coordination problem; selective enforcement reflects unequal resources and institutional capacity, not intentional extraction; the system is revisable through proper procedure (though slow). Global South states and critical scholars compute it as snare (pure extraction under the cover of norms): veto lock-in makes amendment impossible; enforcement selectivity reveals power politics; conditionality is coerced. This reading (hegemonic extraction) computes it as tangled rope: BOTH coordination and extraction are real; the coordination function is genuine but layered beneath asymmetric extraction via veto power and enforcement selectivity. The engine's per-seat computation will produce this divergence: the P5 seat will compute lower extractiveness (from the beneficiary position with arbitrage exit); the Global South seat will compute higher extractiveness (from the constrained-payer position with suppressed alternatives); the observer seat will compute the authored metrics as structurally true.
+ *   The P5 agenda-setter and the Global South payer should compute as profoundly different types from the same constraint. For the agenda-setter, the RBIO is genuinely coordinative — a rule-set that permits action and provides legitimacy. For the payer, it is extraction with a coordination costume. The liberal scholar sits in analytical position but is incentivized to see the agenda-setter's frame (funding, career, institutional position all depend on legitimacy-framework maintenance). The engine computes this from: (1) power differences (institutional vs. organized vs. powerless), (2) exit option differences (arbitrage vs. constrained vs. trapped), (3) beneficiary/victim declarations. The readings diverge because the structural data diverges, not because observers disagree on facts — they disagree on which constraint they are observing.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality toward the constraint (d = how much it extracts from each agent): P5 states (d ≈ 0.0–0.1, full beneficiaries, veto power, arbitrage exit), U.S./European capital (d ≈ 0.1–0.2, beneficiary, institutional power, arbitrage exit), IMF/World Bank (d ≈ 0.2–0.3, mixed agenda-setter/beneficiary, institutional capture, trapped but with rents), Global South states (d ≈ 0.6–0.8, payers, moderate power, constrained exit), structural-adjustment populations (d ≈ 0.9–1.0, near-complete targets, powerless, identity-locked). The beneficiary/victim declarations drive this directionality pattern: beneficiaries are the P5 and U.S./European capital; victims are Global South states and structural-adjustment populations. Suppression is NOT scaled by directionality — it is a raw structural property (veto lock-in, enforcement selectivity); the engine scales extractiveness upward for targets (high d) and downward for beneficiaries (low d), but suppression remains 0.71 regardless of seat.
+ *   U.S./European capital is a structural beneficiary (d ≈ 0.1): norms protect their capital, enforce contracts in their favor, legitimize market opening that disadvantages competitors. P5 members are hybrid (d ≈ 0.3-0.4): they benefit from veto power and selective enforcement, but also constrained by the rules they cannot unilaterally break without risking order collapse. Global South states are targets (d ≈ 0.85): they pay through conditionality, constrained sovereignty, selective enforcement, and lack arbitrage. Populations are trapped targets (d ≈ 0.95): they have no structural leverage at all. Alternative authority claimants (rising powers) are blocked targets (d ≈ 0.8): they would benefit from norm revision but cannot access it. The directionality ranges track power and exit options through the engine's derivation chain.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy (founding problem dead but constraint persists) is CONTESTED. The P5 reads the founding problem as still live: 'Without RBIO norms we return to power anarchy.' Global South states read it as dead but captured: 'Norms exist, but selective enforcement means power politics continues unchanged.' This reading (hegemonic) splits the difference: the founding problem (need for procedure, norms, collective authority) is substantially solved in form but functionally atrophied in practice. The constraint persists not because the founding problem is live but because it redistributes power and resources in favor of the P5 — it has been captured by the very actors it was meant to constrain. The theater-ratio rise (0.38 → 0.58) suggests the coordination function is increasingly performative, supporting the mandatrophy reading. However, this is contested: liberal institutionalists argue capacity constraints are the issue, not functional death; sovereignty maximalists argue RBIO norms never solved the founding problem (power anarchy persists in disguise). The constraint qualifies for `mandatrophy_resolved: false` (it shows signs of functional atrophy but this is contested; the rise in theater ratio is diagnostic evidence, not settled fact).
+ *   The founding problem (post-WWII instability, need for shared rules) was real and acute in 1945–1970. By 1990, it was substantially solved: the Cold War ended, major-power war became unthinkable, international law codified and functioned. However, the institutional apparatus built to solve coordination persists and has been repurposed for extraction. The constraint is therefore in mandatrophy — the mandate has outlived its function. The theater ratio's rise (0.1 to 0.61) documents this: the proportion of enforcement activity that maintains formal legitimacy language grows as the proportion that solves the founding problem shrinks. This is exactly what permits classification as a tangled rope: real coordination (the rule-set does prevent some wars, does structure trade predictably) rides alongside real extraction (selective enforcement, conditionality, veto-blocking). Without the coordination residue, it would be a snare; without the extraction, it would be a rope.
  */
 
 /* ==========================================================================
@@ -196,99 +277,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    veto_rigidity_vs_legitimacy,
-    'Is the P5 veto a legitimate protection against tyranny-of-majority overreach, or a structural lock-in that makes the system un-amendable and therefore forfeits legitimacy?',
-    'Empirical: track whether any amendment substantively constraining P5 power has succeeded since 1945 (answer: none). Normative: philosophical debate on consent-based authority and veto power is irresolvable without prior commitment to a theory of legitimacy.',
-    'If veto is legitimate, the constraint is rope (hard to amend but stable by design). If veto forfeits legitimacy by making amendment impossible, the constraint is tangled rope masquerading as rope (formal revisability, practical extraction). This reading instantiates the second horn.',
-    confidence_without_resolution(high)
+    formal_revisability_fiction,
+    'Is the P5 veto structurally necessary for RBIO stability (preventing unilateral changes that would destabilize the order), or is it structurally employed to preserve hegemonic advantage by blocking revisions that would distribute power more equally?',
+    'Counterfactual: if veto were removed and decision-making moved to qualified majority (60% UN General Assembly), what norm revisions would succeed? Compare the set of blocked revisions against the interests of veto-holding powers. If all blocked revisions disadvantage veto-holders and advantage the Global South, the veto is hegemonic; if blocked revisions are genuinely destabilizing (would trigger Great Power war or order collapse), the veto is stabilizing.',
+    'If the veto is hegemonic, the tangled-rope classification holds: real coordination (the rule-set is functional) rides alongside extractive maintenance (veto prevents revision). If the veto is stabilizing, the constraint shifts toward rope (coordination predominates; extraction is a side effect of maintaining order). This impacts the policy question of whether veto abolition is institutional reform or hegemonic displacement.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(veto_rigidity_vs_legitimacy, conceptual, 'Whether P5 veto forecloses amendment power and thereby undermines the system''s legitimacy claim.').
+narrative_ontology:omega_variable(formal_revisability_fiction, conceptual, 'The functional necessity of the P5 veto for order stability vs. its employment for hegemonic advantage.').
 
 omega_variable(
-    selective_enforcement_mechanism,
-    'Is selective enforcement a capacity problem (Global North has more resources to enforce against near-enemies) or an extractive mechanism (enforcement is deliberately selective to concentrate benefits)?',
-    'Historical pattern analysis: do P5 states enforce RBIO norms against their own allies and interests, or do enforcement patterns track P5 geopolitical advantage? Archival evidence on internal deliberation; comparative case studies of symmetric/asymmetric enforcement.',
-    'Capacity problem: extractiveness is lower, suppression reflects resource asymmetry, not intent. Extractive mechanism: extractiveness is high, suppression is active, intentional enforcement selectivity is core to the constraint''s function. This reading assumes the extractive mechanism.',
+    enforcement_selectivity_causation,
+    'Does enforcement selectivity reveal extractive intent (this reading''s core claim), or does it result from capacity constraints (the liberal reading) and accident of history?',
+    'Compare: (a) enforcement decisions where capacity would permit equal treatment but selectivity occurs anyway; (b) documented statements of intent by enforcement actors; (c) resource allocation patterns (do enforcement institutions receive more funding when selectivity is highest); (d) counterfactual: if powerful states were equally vulnerable to international enforcement, would the same norms be enforced equally?',
+    'If selectivity is revealed-intent, the extractiveness remains high (0.78) and theater rises (the performance is deliberate). If selectivity is capacity-constraint-plus-accident, extractiveness might fall (0.50s) and the classification shifts toward rope or scaffold (temporary coordination asymmetry while capacity builds). The difference turns on whether the actors know what they are doing.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(enforcement_selectivity_causation, empirical, 'Whether enforcement selectivity is intentional extraction or unintended consequence of capacity constraints.').
+
+omega_variable(
+    reading_under_determination_axiom,
+    'Which reading of the RBIO kernel is correct — hegemonic extraction, liberal institutional, or sovereignty maximalist — depends on which foundational axiom about legitimacy is true. These axioms are irreducibly contested; no empirical evidence can resolve them.',
+    'None. This is a preference-class omega. The dispute is over normative premises: whether humanitarian intervention requires consent (sovereignty-maximalist), whether lack of consent is a capacity problem to be solved (liberal-institutional), or whether lack of consent reveals the intervention is a coercive extraction (hegemonic-extraction). Different actors have incommensurable foundational commitments.',
+    'This reading''s classification (tangled_rope) depends on accepting that extractive intent is real and harmful, not merely a pessimistic interpretation of ambiguous facts. The liberal reading rejects this axiom and classifies as rope. The sovereignty reading rejects both and classifies as snare or non-constraint. The engine computes per-seat classification; this omega documents that seat divergence is rooted in axiom choice, not in factual disagreement.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(selective_enforcement_mechanism, empirical, 'Whether enforcement selectivity is incidental capacity asymmetry or deliberate extraction design.').
+narrative_ontology:omega_variable(reading_under_determination_axiom, preference, 'Axiom-level disagreement over the legitimacy of consent-based vs. capacity-constrained vs. extraction-revealing interpretations of RBIO norms.').
 
 omega_variable(
     conditionality_coercion_boundary,
-    'Is IMF/World Bank conditionality a legitimate price for borrowing (lender''s right to terms) or coerced contract (creditor''s leverage over desperate states)?',
-    'Counterfactual: can Global South states obtain comparable financing elsewhere on substantially better terms? What happens to their policy autonomy if they exit the system entirely (isolation vs. alternative-financing network access)? Qualitative: do borrowing states report conditionality as negotiated or as imposed?',
-    'Legitimate terms: extractiveness is lower (transfer is compensation for risk and service). Coerced contract: extractiveness is high (transfer extracts beyond marginal cost; suppression is active because exit is costly and unavailable). This reading classifies conditionality as coercion.',
+    'At what point does loan conditionality become coercive extraction rather than legitimate contracting? The Global South reading places it near zero (any conditionality on loan receipt is coercion); the liberal reading places it at extreme invasiveness (only conditionality that violates human rights is coercive); the hegemonic extraction reading places it where the borrower has no real alternative and the lender exploits that dependency.',
+    'Compare conditions offered by multilateral institutions (IMF, World Bank) to conditions offered by alternative lenders (bilateral development banks, regional banks, private markets). If multilateral conditions are more invasive than market conditions, conditionality is extractive (using state power to impose harsher terms than the market would). If multilateral conditions match market conditions, they are contractual. If borrower alternatives exist and are costlier, coercion exists but is not unique to RBIO.',
+    'High: this determines whether structural adjustment itself is part of the extraction mechanism (as this reading holds) or a regrettable side effect of weak state capacity (liberal reading). If extractive, victims should include populations and the constraint is tangled_rope. If contractual, victims are limited to states that made poor deals, and the constraint shifts to rope or scaffold.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(conditionality_coercion_boundary, empirical, 'Whether IMF/World Bank conditionality is negotiated lending terms or coercive extraction.').
-
-omega_variable(
-    humanitarian_intervention_framing,
-    'Are humanitarian exceptions to non-interference legitimate (states have duties to prevent atrocities; intervention is authorized when consent fails) or pretexts for regime change (humanitarian framing legitimizes interventions that serve geopolitical/economic interests)?',
-    'Pattern analysis: do humanitarian authorizations correlate with P5/allied interests (Libya, Syria no-fly zones vs. Rwanda, Yemen inaction)? Documentary evidence on internal deliberation in Security Council debates. Comparative: do the same humanitarian criteria trigger intervention when the target is an ally?',
-    'Legitimate exception: extractiveness is lower (intervention serves a real coordination function — preventing atrocities). Pretext: extractiveness is high, suppression is active (humanitarian framing legitimizes selective enforcement that serves P5 interests). This reading reads humanitarian intervention as pretext.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(humanitarian_intervention_framing, empirical, 'Whether humanitarian intervention is a legitimate exception or a cover story for selective enforcement.').
-
-omega_variable(
-    theater_ratio_acceleration,
-    'Is the rising theater ratio (0.38 → 0.58 over the interval) a sign that the norms'' original coordination function has been largely displaced by performance and enforcement selectivity?',
-    'Content analysis of Security Council debates and UN documents: measure the ratio of invocations of RBIO norms that mobilize enforcement action vs. invocations that are ceremonial (reaffirming principles without action). Track whether enforcement actions increasingly cite non-RBIO justifications (geopolitical threat, great-power interest) rather than norm-based justifications.',
-    'Rising theater ratio suggests the constraint''s original coordination function has atrophied, leaving mostly performance. This is consistent with the hegemonic-extraction reading: the norms persist ceremonially while power determines outcomes.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(theater_ratio_acceleration, empirical, 'Whether rising theater ratio indicates functional atrophy of RBIO coordination.').
-
-omega_variable(
-    committer_reading_alternative,
-    'This story is one reading of the contested RBIO kernel. The liberal_institutional_reading reads the same norms as universal, revisable through legitimate procedure, and enforcement selectivity as a capacity problem. The sovereignty_maximalist_reading reads RBIO norms as inherently illegitimate when they override state consent and non-interference, and humanitarian exceptions as regime-change pretexts. Which reading is structurally correct?',
-    'This is not resolvable by data alone: the readings differ on what legitimacy means (P5 intent / universal procedure / sovereign will) and on which capacity constraint is binding (enforcement resources / veto authority / state autonomy). The readings coexist as live positions held by different institutional actors (P5 + liberal scholars vs. Global South states + critical scholars vs. sovereignty-first states). Empirical evidence (enforcement patterns, conditionality effects, institutional design history) can inform the debate but cannot resolve it.',
-    'The three readings instantiate different constraint types: liberal reading → rope (authentic coordination, capacity-limited enforcement); sovereignty reading → snare (humanitarian framing as pure extraction); hegemonic reading (this one) → tangled rope (real coordination function + asymmetric extraction via selective enforcement and veto lock-in). The engine computes metrics for this reading; the three readings together form a constraint family linked by network.affects_constraints.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(committer_reading_alternative, conceptual, 'This constraint is one reading of a contested kernel; the structural delta is resolved by which reading''s framing is adopted.').
+narrative_ontology:omega_variable(conditionality_coercion_boundary, empirical, 'Where the boundary lies between contractual conditionality and coercive extraction.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(rbio_practice_norm_complex__hegemonic_extraction_reading, 0, 35).
+narrative_ontology:interval(rbio_practice_norm_complex__hegemonic_extraction_reading, 1945, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(rbio_tr_t0, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 0, 0.38).
-narrative_ontology:measurement(rbio_tr_t5, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 5, 0.42).
-narrative_ontology:measurement(rbio_tr_t10, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 10, 0.48).
-narrative_ontology:measurement(rbio_tr_t15, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 15, 0.52).
-narrative_ontology:measurement(rbio_tr_t25, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 25, 0.56).
-narrative_ontology:measurement(rbio_tr_t35, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 35, 0.58).
+narrative_ontology:measurement(rbio_tr_t1945, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 1945, 0.1).
+narrative_ontology:measurement_basis(rbio_tr_t1945, projected).
+narrative_ontology:measurement(rbio_tr_t1970, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 1970, 0.25).
+narrative_ontology:measurement_basis(rbio_tr_t1970, observed).
+narrative_ontology:measurement(rbio_tr_t1990, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 1990, 0.45).
+narrative_ontology:measurement_basis(rbio_tr_t1990, observed).
+narrative_ontology:measurement(rbio_tr_t2005, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 2005, 0.55).
+narrative_ontology:measurement_basis(rbio_tr_t2005, observed).
+narrative_ontology:measurement(rbio_tr_t2015, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 2015, 0.59).
+narrative_ontology:measurement_basis(rbio_tr_t2015, observed).
+narrative_ontology:measurement(rbio_tr_t2024, rbio_practice_norm_complex__hegemonic_extraction_reading, theater_ratio, 2024, 0.61).
+narrative_ontology:measurement_basis(rbio_tr_t2024, observed).
 
 % Extraction over time
-narrative_ontology:measurement(rbio_be_t0, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 0, 0.62).
-narrative_ontology:measurement(rbio_be_t5, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 5, 0.66).
-narrative_ontology:measurement(rbio_be_t10, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 10, 0.71).
-narrative_ontology:measurement(rbio_be_t15, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 15, 0.74).
-narrative_ontology:measurement(rbio_be_t25, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 25, 0.77).
-narrative_ontology:measurement(rbio_be_t35, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 35, 0.79).
+narrative_ontology:measurement(rbio_be_t1945, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 1945, 0.15).
+narrative_ontology:measurement_basis(rbio_be_t1945, projected).
+narrative_ontology:measurement(rbio_be_t1970, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 1970, 0.35).
+narrative_ontology:measurement_basis(rbio_be_t1970, observed).
+narrative_ontology:measurement(rbio_be_t1990, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 1990, 0.58).
+narrative_ontology:measurement_basis(rbio_be_t1990, observed).
+narrative_ontology:measurement(rbio_be_t2005, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 2005, 0.68).
+narrative_ontology:measurement_basis(rbio_be_t2005, observed).
+narrative_ontology:measurement(rbio_be_t2015, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 2015, 0.74).
+narrative_ontology:measurement_basis(rbio_be_t2015, observed).
+narrative_ontology:measurement(rbio_be_t2024, rbio_practice_norm_complex__hegemonic_extraction_reading, base_extractiveness, 2024, 0.78).
+narrative_ontology:measurement_basis(rbio_be_t2024, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(rbio_su_t0, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 0, 0.54).
-narrative_ontology:measurement(rbio_su_t5, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 5, 0.58).
-narrative_ontology:measurement(rbio_su_t10, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 10, 0.63).
-narrative_ontology:measurement(rbio_su_t15, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 15, 0.66).
-narrative_ontology:measurement(rbio_su_t25, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 25, 0.69).
-narrative_ontology:measurement(rbio_su_t35, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 35, 0.71).
+narrative_ontology:measurement(rbio_su_t1945, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 1945, 0.25).
+narrative_ontology:measurement_basis(rbio_su_t1945, projected).
+narrative_ontology:measurement(rbio_su_t1970, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 1970, 0.42).
+narrative_ontology:measurement_basis(rbio_su_t1970, observed).
+narrative_ontology:measurement(rbio_su_t1990, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 1990, 0.61).
+narrative_ontology:measurement_basis(rbio_su_t1990, observed).
+narrative_ontology:measurement(rbio_su_t2005, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 2005, 0.68).
+narrative_ontology:measurement_basis(rbio_su_t2005, observed).
+narrative_ontology:measurement(rbio_su_t2015, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 2015, 0.7).
+narrative_ontology:measurement_basis(rbio_su_t2015, observed).
+narrative_ontology:measurement(rbio_su_t2024, rbio_practice_norm_complex__hegemonic_extraction_reading, suppression_requirement, 2024, 0.72).
+narrative_ontology:measurement_basis(rbio_su_t2024, observed).
 
 
 /* ==========================================================================
@@ -296,18 +375,21 @@ narrative_ontology:measurement(rbio_su_t35, rbio_practice_norm_complex__hegemoni
    ========================================================================== */
 
 narrative_ontology:coordination_type(rbio_practice_norm_complex__hegemonic_extraction_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.18).
-narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, rbio_practice_norm_complex__liberal_institutional_reading).
-narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, rbio_practice_norm_complex__sovereignty_maximalist_reading).
+narrative_ontology:boltzmann_floor_override(rbio_practice_norm_complex__hegemonic_extraction_reading, 0.25).
+narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, sovereignty_norm_institution).
+narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, humanitarian_intervention_legitimacy).
+narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, capital_controls_prohibition).
+narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, intellectual_property_enforcement).
+narrative_ontology:affects_constraint(rbio_practice_norm_complex__hegemonic_extraction_reading, structural_adjustment_conditionality).
 
 % DUAL FORMULATION NOTE:
-% The RBIO practice norm complex decomposes into three structurally distinct readings of the same contested kernel. The hegemonic_extraction_reading (this story) interprets selective enforcement and veto lock-in as evidence of extractive intent, yielding high ε (0.79) and classification as tangled_rope. The liberal_institutional_reading interprets the same norms as universal and revisable, treating enforcement selectivity as a capacity problem, yielding lower ε and classification as rope. The sovereignty_maximalist_reading interprets RBIO norms as inherently delegitimating state consent, treating humanitarian exceptions as pretexts, yielding different beneficiary/victim structures and possible snare classification. The three readings are linked by network edges: hegemonic→liberal (influences: the extraction reading creates pressure on the liberal reading to account for systematic enforcement patterns); hegemonic→sovereignty (coexists_with: both challenge the P5 legitimacy claim, but from different premises). All three stories share the same kernel (the RBIO formal commitment) but instantiate it via different axioms and reference frames per their distinct committer positions.
+% The RBIO kernel decomposes into at least three structurally distinct constraint readings. This file (hegemonic_extraction_reading) treats norms as extractive; see rbio_practice_norm_complex__liberal_institutional_reading (treats norms as universal-and-revisable) and rbio_practice_norm_complex__sovereignty_maximalist_reading (treats norms as legitimate only when protecting sovereignty). Sibling readings have different ε values, different beneficiary/victim structures, and different terminal types. The readings coexist as live positions held by different actors; they do not foreclose one another logically, though each claims the others are invalid. Network links here reflect the hegemonic extraction reading's structural influence on related constraints (sovereignty norms, humanitarian framing, capital rules, IP enforcement, conditionality) — all are reinterpreted as extraction mechanisms by this reading.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(rbio_practice_norm_complex__hegemonic_extraction_reading, organized, 0.72).
+constraint_indexing:directionality_override(rbio_practice_norm_complex__hegemonic_extraction_reading, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

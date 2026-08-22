@@ -2,259 +2,354 @@
   "header": {
     "constraint_id": "literacy_acquisition_kernel__structured_literacy_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "58420f3f-5d5f-4124-a312-6c1635635e5b"
+    "story_uid": "5bdaeb94-7982-4188-ad7c-6f5c8f3c809c",
+    "created_at": "2026-06-11T00:00:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.55,
+    "suppression": 0.72,
     "theater_ratio": 0.28,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.61,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "Structured Literacy Reading Acquisition (Orton-Gillingham Kernel Reading)",
+    "human_readable": "Structured Literacy Reading Instruction (Orton-Gillingham Kernel Reading)",
     "topic_domain": "educational_psychology/literacy_pedagogy/cognitive_science",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "students_with_dyslexia",
       "struggling_readers",
-      "students_with_specific_learning_disabilities"
+      "reading_specialists"
     ],
     "victims": [
       "general_education_teachers",
-      "underfunded_school_districts"
+      "school_districts"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "students_with_dyslexia",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Children identified with dyslexia or significant reading difficulties receive systematic, multi-component instruction in phonological awareness, phonics, fluency, vocabulary, and comprehension. The structured approach explicitly targets their neurological reading profile and provides cumulative scaffolding. Without this instruction, they face academic failure, shame, and exclusion from grade-level content. Their identity as 'struggling readers' is fused with their educational participation; exit is not a meaningful option."
+    },
+    {
+      "name": "struggling_readers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Students without diagnosed dyslexia but with significant reading lag benefit from the same explicit, systematic instruction. The constraint's universality claim extends the intervention beyond the clinical population. They receive cumulative, scaffolded instruction that addresses the five components explicitly rather than through incidental exposure."
+    },
+    {
+      "name": "reading_specialists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Special education teachers, literacy coaches, and reading intervention specialists gain professional legitimacy, employment, and research authority from the structured literacy framework. The Orton-Gillingham tradition codifies their expertise and creates a defined professional niche. They advocate for the approach and benefit from professional development revenue and prestige."
+    },
+    {
+      "name": "general_education_teachers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Grade-level classroom teachers who are NOT specialists face increased training burdens: many lack formal training in structured literacy instruction and must retrain or implement specialist-designed interventions. They bear the cost of professional development, curriculum change, and the administrative burden of differentiating instruction. Their existing pedagogical practices (balanced literacy, guided reading) are implicitly devalued by the structured literacy framing."
+    },
+    {
+      "name": "school_districts",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Districts adopting structured literacy frameworks must fund specialist training, curriculum adoption, assessment systems aligned to the five components, and often hiring of reading specialists. The implementation cost is substantial and the mandate (especially via special education law and increasingly via state literacy mandates) leaves little discretion to defer. Pressure to show outcomes creates compliance demands even where capacity is limited."
+    },
+    {
+      "name": "whole_language_educators",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Teachers and curriculum developers who built careers on meaning-first, text-engagement-first approaches find their frameworks discredited. They are excluded from the policy conversation and their approaches are increasingly treated as ineffective or harmful. They would contest the empirical claims and advocate for integration, but their voices are structurally excluded from the literacy policy conversation once the structured literacy kernel is adopted as foundational."
+    },
+    {
+      "name": "cognitive_neuroscience_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers in reading science, cognitive psychology, and neurolinguistics provide evidence for the five-component model and the specificity of phonological processing in dyslexia. They occupy an analytical seat: they generate the empirical claims that legitimize the constraint, but do not directly implement or administer the instruction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates reading acquisition around the five empirically validated components (phonological awareness, phonics, fluency, vocabulary, comprehension) rather than leaving the pathway implicit. Solves the coordination problem of what to teach, in what order, with what intensity, and how to diagnose reading failure — answers that were previously fragmented or missing. Addresses the specific neurological profile of dyslexia with cumulative, scaffolded instruction rather than expecting natural acquisition.",
+    "transfer_function": "Moves professional authority and prestige from general education teachers to reading specialists; shifts instructional time away from student-selected text engagement toward explicit skill instruction; concentrates certification and credentialing requirements on teachers; transfers financial resources from general education to special education and intervention programs.",
+    "absent_voices": "Whole-language and balanced literacy educators who built practice around meaning-first approaches are structurally excluded from the policy debate once the structured literacy kernel is adopted. Classroom teachers' concerns about implementation burden and curriculum time are not centered in the policy discussion. Student choice in reading material and engagement preferences are backgrounded by the focus on measured decoding skills.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint disappeared, reading instruction would revert to approaches less standardized and less dependent on specialist certification. Districts would retain flexibility in curriculum choice, general education teachers would have reduced training mandates, and reading intervention would be less systematized. The students with dyslexia would experience the largest harm: without the explicit, cumulative, five-component framework, they would lack the structured support their neurological reading profile requires and would continue experiencing high failure rates.",
+    "founding_problem": "Children with dyslexia and significant reading difficulty fail consistently under approaches that assume reading develops naturally through text exposure. The phonological processing deficit underlying dyslexia requires explicit, systematic instruction in phoneme-grapheme correspondence and cumulative scaffolding; this instruction was not being provided in general classrooms, and affected students were being failed or labeled as unmotivated.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Orton-Gillingham tradition (founded 1930s) attests the problem is live and persisting. Contemporary cognitive neuroscience, especially fMRI studies of dyslexic reading circuits and phonological processing deficits, corroborates from outside the reading-education field. The National Reading Panel (2000) and subsequent meta-analyses in cognitive psychology confirm the five-component model's empirical support. Whole-language advocates dispute this framing (see absent_voices), arguing that the problem was misdiagnosed and that structured decoding instruction is overspecified; that contest is unresolved."
+  },
   "interval": {
-    "start": 1970,
-    "end": 2025
+    "start": 0,
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1970,
-      "value": 0.25
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.35
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.48
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.61
+      "time_point": 15,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2018,
-      "value": 0.66
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.68
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1970,
-      "value": 0.05
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.12
+      "time_point": 5,
+      "value": 0.16,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.18
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.24
+      "time_point": 15,
+      "value": 0.23,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.27
+      "time_point": 25,
+      "value": 0.27,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.28
+      "time_point": 40,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1970,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.38
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.48
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2018,
-      "value": 0.52
+      "time_point": 25,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2025,
-      "value": 0.55
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "Structured literacy reading instruction—explicit, systematic, cumulative training in phonological awareness, phonics, fluency, vocabulary, and comprehension—originated in the Orton-Gillingham tradition and is now the dominant evidence-based framework for reading intervention in the United States. The constraint combines genuine coordination (solving the reading-acquisition problem for students with dyslexia) with asymmetric extraction (imposing specialized teacher-training requirements, curriculum adoption costs, and instructional authority shifts on general education). This reading (structured_literacy_reading) is one of four competing readings of the contested kernel literacy_acquisition_kernel, alongside balanced_literacy_reading, phonics_reading, and whole_language_reading. Each reading is a structurally distinct constraint: each has its own ε value, beneficiary/victim structure, and persistence mechanism. This reading is authored as its own constraint, with the kernel-reading structure recorded in cs_structure and omega variables.",
+    "narrative_context": "This constraint instantiates the structured literacy reading of the literacy acquisition kernel. The reading asserts that reading acquisition requires explicit, systematic, cumulative instruction in five empirically validated components: phonological awareness, phonics, fluency, vocabulary, and comprehension. Designed initially for students with dyslexia (Orton-Gillingham tradition, 1930s onward), the reading extends the claim universally—that all students benefit from explicit component instruction, not just struggling readers. This constraint competes with three sibling readings of the same kernel: phonics_reading (emphasizes decoding as foundational), balanced_literacy_reading (coordinates explicit phonics with meaningful text engagement as complementary), and whole_language_reading (meaning-first, phonics incidental). The kernel contest is live: different school systems, research communities, and teacher-training programs instantiate different readings, and the contest shapes policy, curriculum adoption, and teacher credentialing. This story models the structured literacy reading specifically—its extractiveness profile (high on teacher certification burden, beneficiary for dyslexic students), its enforcement structure (standardized curriculum, assessment alignment, specialist mandates), and its contested relationship to the alternative readings.",
     "key_agents": [
-      "students_with_dyslexia: powerless; trapped exit; beneficiary (intervention reduces failure); primary target of the constraint's coordination function.",
-      "general_education_teachers: moderate power; constrained exit; payer (required to implement or defer to specialists); carry the enforcement burden through professional development and instructional change.",
-      "literacy_specialists_and_interventionists: organized; mobile exit; agenda-setter + beneficiary (control instructional standards, design scope-and-sequence, secure employment); structural winners.",
-      "reading_science_research_community: powerful; arbitrage exit; beneficiary (prestige, funding, policy influence); control the legitimacy apparatus.",
-      "whole_language_educators: moderate; constrained exit; excluded (marginalized from policy, treated as outdated); would contest the constraint but lack institutional voice.",
-      "policy_makers: institutional; analytical exit; agenda_setter (enforce through standards, funding, special education law); operationalize the constraint.",
-      "dyslexia_advocacy_organizations: organized; mobile exit; agenda_setter (drove policy adoption, shape definitions of dyslexia and reading science); structural authors of the constraint."
+      "students_with_dyslexia: beneficiary of structured intervention; powerless; identity-locked to educational participation",
+      "struggling_readers: beneficiary of explicit, cumulative instruction; powerless; constrained exit",
+      "reading_specialists: beneficiary of professional legitimacy and employment; moderate power; mobile exit",
+      "general_education_teachers: payer of training burden and curriculum change; moderate power; constrained exit",
+      "school_districts: payer of implementation costs; organized power; constrained by mandate",
+      "whole_language_educators: excluded; their approaches are discredited by this reading",
+      "cognitive_neuroscience_community: observer; generates empirical legitimacy for the reading"
     ],
-    "logic_rationale": "Extractiveness rises from 0.25 (1970, niche specialty) to 0.68 (2025, dominant policy framework) because the constraint's scope expanded from specialized dyslexia intervention to universal reading instruction. The theater_ratio remains moderate (0.28) because the constraint has real pedagogical content—phonological awareness instruction does improve reading outcomes—but a growing share of enforcement activity defends the exclusion of alternative reading approaches and the authority of specialized literacy professionals, not the core phonological-awareness science itself. Suppression rises sharply (0.15→0.55) because enforcement against whole-language and balanced-literacy approaches intensified: policy mandates, curriculum adoption requirements, teacher-certification specifications, and research-funding priorities actively suppress alternative reading frameworks. Accessibility_collapse is high (0.72) because once systematic phonics is framed as 'science-based' and alternatives as 'unsupported,' teachers and districts perceive few legitimate alternatives; the closure is structural (policy-enforced certification requirements, funding leverage, adoption mandates) and epistemic (reading science frames alternatives as discredited). Resistance is moderate-high (0.61) because balanced-literacy advocates, whole-language educators, and some reading researchers actively resist structured-literacy dominance, though they lack institutional power to reverse it. The measurement series spans the interval [1970, 2025] on a single time grid to enable lifecycle analysis.",
-    "perspectival_gap": "From the dyslexia-advocacy, specialist, and research-science seats, the constraint is genuine coordination—a life-changing intervention for students who would otherwise face reading failure. From the general-education-teacher and underfunded-district seats, the same structure imposes a costly, non-negotiable obligation that displaces teacher autonomy and competes with other instructional priorities. From the whole-language-educator seat, the constraint is extractive suppression of a legitimate pedagogical alternative and a de-professionalization of teaching (replacing craft judgment with scripted, specialist-controlled curricula). The engine computes these divergent classifications from the structural data (beneficiary/victim declarations + power + exit options); the claim of 'tangled_rope' reflects genuine coordination for students with dyslexia, but the authored metrics and structural asymmetries (specialist control, teacher deskilling, alternative suppression) support the extraction half of the classification.",
-    "directionality_logic": "Students with dyslexia and struggling readers (beneficiaries, powerless, trapped exit) sit at the low-d end (near 0.0, subsidy/benefit end) because the constraint's operation subsidizes their reading outcomes relative to no intervention. Literacy specialists and researchers (beneficiaries, organized/powerful, mobile exit) sit near the low-d end nominally (they benefit) but experience the constraint as enabling their professional authority, so their effective directionality is mixed; they are better modeled as agenda-setters whose power and mobility amplify the constraint's persistence. General-education teachers (payers, moderate power, constrained exit) sit at the high-d end (near 1.0, extraction/target end) because they bear costs (training burden, curriculum constraints, authority loss) and cannot easily exit. Underfunded districts (payers, moderate power, constrained exit) sit at the high-d end because they must allocate scarce budgets to specialized instruction or accept reading-failure penalties. Whole-language educators (excluded, moderate power, constrained exit) sit at the high-d end because they are actively suppressed and carry professional costs. Directionality overrides are not required—the derivation from beneficiary/victim + power + exit produces accurate d values for each seat.",
-    "mandatrophy_analysis": "Structured literacy reading is NOT a mandatrophy candidate at the current interval end (2025), because the founding problem (reading failure in students with dyslexia) remains live and the constraint actively solves it (evidence-based effectiveness for the target population is real). However, a mandatrophy trajectory is forming: the constraint's scope has expanded from targeted intervention (students with diagnosed dyslexia) to universal reading instruction (all students, justified via 'universal design for learning'), and the constraint's enforcement increasingly suppresses alternative reading approaches regardless of their effectiveness for typically-developing readers. If the constraint continues to expand in scope while its coordinating function becomes decoupled from the original problem (serving only as a teacher-control mechanism or publisher revenue stream), a mandatrophy reclassification would be warranted. The omega variable addressing this trajectory is detailed below.",
-    "kernel_context": "This constraint instantiates the structured_literacy_reading READING of the contested literacy_acquisition_kernel. The kernel is the claim: 'Reading acquisition requires [method X].' Four readings are in play: (1) whole_language_reading: acquisition emerges from meaningful text engagement; phonics is unnecessary. (2) phonics_reading: acquisition requires explicit phoneme-grapheme instruction before connected text. (3) balanced_literacy_reading: acquisition requires BOTH systematic phonics AND authentic text engagement, balanced and complementary. (4) structured_literacy_reading (this reading): acquisition requires explicit, systematic, cumulative instruction in phonological awareness, phonics, fluency, vocabulary, and comprehension; designed for dyslexia but applicable universally. Each reading has a different ε value, beneficiary structure, and enforcement mechanism. This reading is the one currently ascendant in U.S. policy; it forecloses whole_language_reading and strongly influences balanced_literacy_reading. Phonics_reading is a closer sibling—they share explicit phonics emphasis but differ on comprehension-vocabulary emphasis and dyslexia-specific framing."
+    "logic_rationale": "Extractiveness rises from 0.45 to 0.68 over the interval because the structured literacy reading, once adopted at policy and curriculum level, concentrates professional authority on reading specialists and creates training/certification burdens on general education teachers. The five-component framework is presented as empirically grounded (and is supported by substantial cognitive neuroscience evidence), but implementation requires specialist oversight, standardized curriculum, and aligned assessment—all of which extract authority and resources from generalist classrooms. Suppression rises to 0.72 because the constraint's persistence depends on actively suppressing alternative framings (whole-language, balanced-literacy approaches) in policy, teacher-training, and curriculum adoption decisions. Theater ratio remains moderate (0.28) because the underlying coordination function (systematizing reading instruction for students with specific neurological profiles) is real and functional, but is increasingly supplemented by performative elements: districts adopt structured literacy frameworks partly for measured outcomes, partly because the reading has become the 'evidence-based' hegemonic position. Accessibility_collapse is high (0.71) because once the structured literacy reading becomes institutionalized in state standards and special education law, alternatives collapse for classroom teachers: they must implement it or face compliance pressure. Resistance is substantial (0.64) because educators trained in whole-language and balanced-literacy approaches actively resist, argue for integration, and defend their own frameworks—the reading does not face passive acceptance.",
+    "perspectival_gap": "The beneficiary seats (students with dyslexia, reading specialists) experience the constraint as enabling coordination—explicit, cumulative instruction solves a real learning problem. The payer seats (general education teachers, school districts) experience it as enforcement of specialist practice and training demands. The excluded seat (whole-language educators) experiences it as delegitimization of their professional framework. The engine computes these divergences from the structural data (beneficiary vs. payer; power; exit options); the authored claim does not reconcile them. What looks like coordination to a reading specialist looks like extraction of classroom autonomy to a generalist teacher.",
+    "directionality_logic": "Students with dyslexia are full beneficiaries (d near 0.0): the intervention directly addresses their neurological reading profile; they have no exit (identity-locked to educational participation); the constraint subsidizes them relative to general students. Reading specialists are partial beneficiaries (d near 0.2): they benefit from professional legitimacy, employment, and research authority; they have moderate exit (can move to other educational roles); they advocate for the reading and benefit from its adoption. General education teachers are partial targets (d near 0.65): they bear training costs, curriculum change, and implicitly devalued pedagogy; they have constrained exit (can leave teaching, but not without career cost). School districts are targets (d near 0.75): they bear implementation costs and face mandate compliance; their exit is constrained by special education law. Whole-language educators are excluded (not modeled in d directly); their exclusion IS the enforcement mechanism.",
+    "mandatrophy_analysis": "This constraint displays tangled-rope structure: genuine coordination (systematizing reading instruction for students with neurological reading difficulties) AND asymmetric extraction (specialist credentialing, teacher retraining, authority concentration). The founding problem (dyslexia's failure under implicit-phonics approaches) is live and empirically grounded, so the constraint is not a zombie—it solves a real problem. However, the universality claim (that all students need explicit, systematic component instruction, not just those with dyslexia) is contested. If the universality claim is false or overstated, the constraint contains extraction layered onto coordination: the specialist framework extracts authority and resources beyond what addressing dyslexia requires. The mandatrophy question is whether the current implementation scope (universal adoption, general teacher training requirements) is calibrated to the founding problem (students with specific neurological reading profiles) or has expanded to extract rents from general education.",
+    "kernel_context": "This constraint instantiates the 'structured_literacy_reading' of the 'literacy_acquisition_kernel'. The kernel is the persisting commitment that reading development follows some coherent pathway; four readings interpret that pathway differently. The structured literacy reading asserts the pathway is the five-component model (phonological awareness, phonics, fluency, vocabulary, comprehension), explicitly and systematically taught, with cumulative scaffolding. Sibling readings: phonics_reading (decoding first, via explicit phoneme-grapheme instruction; meaning follows); balanced_literacy_reading (explicit phonics AND meaningful text engagement, complementary not contradictory); whole_language_reading (meaning-first, phonics develops incidentally through context). The contest is not a difference of opinion—it is a structural contest about the legitimate kernel claim. Each reading codifies different teacher training, different curriculum structures, different assessment approaches, and different professional authority."
   },
   "omegas": [
     {
-      "id": "kernel_reading_disambiguation",
-      "question": "Is the structured_literacy_reading constraint a distinct reading of the literacy_acquisition_kernel, or is it a variant of the phonics_reading with added vocabulary-comprehension components?",
-      "resolution_mechanism": "Historical and textual analysis of the Orton-Gillingham tradition, phonics-revival movement (post-2000s 'science of reading'), and the claims made by structured-literacy advocates about what distinguishes their approach from pure phonics instruction. Determine whether the five-component model (phonological awareness, phonics, fluency, vocabulary, comprehension) is a fundamentally different reading or a refinement of phonics_reading.",
-      "impact": "If a distinct reading: this constraint's classification stands. If a variant of phonics_reading: the structured_literacy_reading story should be merged with phonics_reading or reclassified as a proxy reading with lower epistemic weight. The distinction is material for understanding the kernel contest—is it a four-way dispute or a three-way dispute with a refined variant?",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether structured literacy is a fourth independent reading or a variant of phonics."
-    },
-    {
-      "id": "universal_applicability_claim",
-      "question": "Is structured literacy reading instruction equally effective and necessary for typically-developing readers without dyslexia, or is it optimized for and necessary only for students with reading disabilities?",
-      "resolution_mechanism": "Meta-analysis of reading intervention studies comparing structured literacy vs. balanced or meaning-centered instruction for typically-developing readers. Examination of outcome data disaggregated by disability status. Cross-national comparative studies of reading systems and instruction methods that produce strong outcomes without structured-literacy frameworks.",
-      "impact": "If structured literacy is equally effective for all students: the constraint's claim of universal applicability is validated and the constraint's beneficiary set expands to all students. If structured literacy is optimal only for students with specific reading disabilities: the constraint's scope should be narrowed to targeted intervention, reducing the extraction on general-education teachers and underfunded districts. The universal claim is currently contested; clarifying it would shift the balance between coordination and extraction.",
+      "id": "kernel_universality_vs_specific_intervention",
+      "question": "Is the five-component structured literacy model a universal pathway for all reading acquisition, or a specialized intervention for students with dyslexia and significant phonological processing deficits?",
+      "resolution_mechanism": "Comparative efficacy trials on typical readers (no reading difficulty) receiving structured literacy instruction vs. balanced or whole-language instruction; measurement of reading outcomes, reading motivation, and long-term literacy engagement across approaches and student profiles.",
+      "impact": "If universal: the constraint's extractiveness is justified as coordination for all readers; teacher retraining and specialist authority are legitimate infrastructure costs. If specialized: the constraint contains substantial extraction layered onto coordination; applying specialist-designed intervention to general students extracts resources and autonomy without equal benefit.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether structured literacy is universally necessary or optimized for dyslexia intervention."
+      "description": "Whether structured literacy is universal best practice or dyslexia-specific intervention."
     },
     {
-      "id": "suppression_of_alternative_reading_frameworks",
-      "question": "Do policy implementations of structured literacy actively suppress scientifically-defensible alternative reading approaches (balanced literacy, meaning-centered instruction, language-experience approaches), or do they neutrally elevate structured literacy without denigrating alternatives?",
-      "resolution_mechanism": "Policy document analysis of state reading standards, curriculum adoption requirements, teacher-certification specifications, and funding mechanisms. Interview data from teachers and administrators about perceived latitude to use alternative methods. Comparison of research-funding streams and publication bias toward structured-literacy studies vs. alternatives.",
-      "impact": "If suppression is active and systematic: the constraint's suppression metric is justified and the constraint qualifies more strongly as snare-like (pure extraction riding on coordination cover). If suppression is minimal and alternatives remain available: the constraint is more defensible as tangled_rope (genuine coordination with asymmetric costs, but not coercive suppression). The current measurement reflects active suppression; if this is empirically wrong, the metric and type classification must be revised.",
+      "id": "reading_specialist_certification_gatekeeping",
+      "question": "Do reading specialist certifications and Orton-Gillingham training requirements reflect the minimum necessary expertise to teach struggling readers, or do they function partly as professional gatekeeping that concentrates authority and excludes capable general teachers?",
+      "resolution_mechanism": "Comparative data on outcomes from general-teacher-delivered structured literacy (with professional development) vs. specialist-delivered; analysis of labor market effects (wages, hiring, professional prestige) for reading specialists; qualitative interviews with teachers on training burden perception.",
+      "impact": "If gatekeeping is minimal: specialist certification is justified as expertise protection. If gatekeeping is substantial: the extractiveness from teachers is partly professional rent-extraction rather than necessary infrastructure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reading specialist credentialing requirements reflect necessary expertise or professional gatekeeping."
+    },
+    {
+      "id": "suppression_of_whole_language_educators",
+      "question": "Is the active exclusion of whole-language and balanced-literacy educators from policy conversations a necessary enforcement mechanism to implement the reading (because frameworks are incompatible), or a suppression mechanism to eliminate competing professional authority?",
+      "resolution_mechanism": "Institutional history: how did curriculum adoption decisions treat alternative approaches? Were they debated and integrated or actively suppressed? Did policy spaces close to alternative perspectives once structured literacy became dominant?",
+      "impact": "If necessary enforcement: the suppression is the structural cost of the coordination. If suppression mechanism: the constraint contains intentional foreclosure of alternatives, raising the extraction classification.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether structured literacy suppresses alternative reading instruction methods."
+      "type_class": "conceptual",
+      "description": "Whether excluding alternative readings is a necessary enforcement or intentional suppression."
     },
     {
-      "id": "mandatrophy_scope_expansion_trajectory",
-      "question": "Will the structured-literacy-reading constraint continue to expand in scope from targeted dyslexia intervention to universal reading instruction, and if so, will the constraint's coordinating function decay relative to its enforcement function?",
-      "resolution_mechanism": "Longitudinal tracking of state policy changes, teacher-certification requirements, curriculum adoption mandates, and funding allocations over the next 10–15 years. Tracking of outcome data for typically-developing readers under structured-literacy instruction vs. alternatives. Monitoring of specialist-profession expansion and the balance between phonological-awareness research and other reading-science topics.",
-      "impact": "If scope expands while coordination function decays: the constraint becomes a candidate for mandatrophy reclassification (constraint persists but founding problem is solved or scope-shifted; persistence is driven by specialist authority and policy inertia, not genuine coordination). If scope stabilizes at targeted intervention and coordination function remains strong: the constraint remains tangled_rope with live mandates. This trajectory is the most material uncertainty for the constraint's long-term classification.",
+      "id": "reading_kernel_sibling_relationship_contest",
+      "question": "Is the structured_literacy_reading a distinct reading of the literacy_acquisition_kernel, or is it a variant of the phonics_reading with additional components layered on?",
+      "resolution_mechanism": "Genealogical and intellectual history: trace the origins of structured literacy (Orton-Gillingham tradition) and the phonics reading (explicit phoneme-grapheme instruction). Do they represent different kernel interpretations or different levels of the same intervention?",
+      "impact": "If distinct readings: the constraint family includes four siblings with different implications for teacher training and curriculum design. If variant of phonics: the constraint may collapse into phonics_reading under alternative framings, reducing the contest to two main positions (phonics/structured vs. whole-language/balanced).",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether structured literacy will expand in scope while its coordinating function decays."
-    },
-    {
-      "id": "dyslexia_identity_lock_mechanism",
-      "question": "To what extent does the structured-literacy-reading constraint lock students with dyslexia into an identity as 'reading-disabled' requiring specialized (often segregated or resource-room based) instruction, rather than integrating them into general literacy development?",
-      "resolution_mechanism": "Longitudinal studies of student outcomes, self-concept, and educational trajectories comparing structured-literacy intervention in inclusive vs. pull-out settings. Qualitative interviews with students about how the constraint shapes their identity and self-perception. Measurement of attrition from specialized instruction and rates of reclassification to general education.",
-      "impact": "If identity lock is substantial: the constraint carries an internalization/suppression cost (post-exit trajectory) that is not captured in the suppression metric—the cost persists even after specialized instruction ends. If identity lock is minimal: the constraint operates primarily as an external structural mechanism. High identity lock would suggest the suppression metric understates the constraint's actual cost to beneficiaries and would support a higher suppression value and a snare-leaning classification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether structured literacy locks students with dyslexia into a disability identity."
+      "type_class": "conceptual",
+      "description": "Whether structured literacy is a distinct kernel reading or a phonics variant."
     }
   ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "literacy_acquisition_kernel__whole_language_reading",
-      "literacy_acquisition_kernel__balanced_literacy_reading",
       "literacy_acquisition_kernel__phonics_reading",
-      "special_education_referral_pipeline",
-      "teacher_training_and_certification"
+      "literacy_acquisition_kernel__balanced_literacy_reading",
+      "literacy_acquisition_kernel__whole_language_reading",
+      "teacher_training_specialization",
+      "special_education_resource_allocation"
     ],
-    "dual_formulation_note": "This constraint is one reading of the contested literacy_acquisition_kernel. The kernel-level claim is: 'Reading acquisition requires [method X].' This reading specifies structured, systematic, cumulative instruction in five components (phonological awareness, phonics, fluency, vocabulary, comprehension), designed for dyslexia but claimed as universally applicable. Sibling readings include whole_language_reading (meaning-emergence model), phonics_reading (decoding-first model), and balanced_literacy_reading (complementary-components model). Each reading is a structurally distinct constraint with its own ε, beneficiary/victim structure, and enforcement mechanism. The reading_relations in cs_structure.reading_relations document the structural relationships between this reading and each sibling. The axioms in cs_structure.axioms document the foundational normative claims distinguishing this reading from siblings."
+    "dual_formulation_note": "The literacy_acquisition_kernel has four structurally distinct readings: phonics_reading (decoding-first emphasis), balanced_literacy_reading (phonics + meaningful text as complementary), structured_literacy_reading (this story—five-component explicit, cumulative model), and whole_language_reading (meaning-first, incidental phonics). Each reading instantiates a different constraint with a different extractiveness profile, different beneficiary/victim structure, and different enforcement mechanisms. They are related by the shared kernel (the persisting commitment to a reading acquisition pathway) but are not variants of a single constraint. The network edges link them as a constraint family and document how policy adoption of one reading (e.g., structured literacy becoming hegemonic) affects the others (whole-language educators are excluded; phonics educators' claims are absorbed into the five-component model)."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ],
+  "gain_flow": "reading_specialists",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "expertise",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "literacy_acquisition_kernel__whole_language_reading",
-        "relation": "forecloses"
-      },
-      {
-        "sibling_id": "literacy_acquisition_kernel__phonics_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "literacy_acquisition_kernel__balanced_literacy_reading",
+        "sibling_id": "phonics_reading",
         "relation": "influences"
+      },
+      {
+        "sibling_id": "balanced_literacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "whole_language_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "phonological_awareness_necessary_foundational",
+        "atom": "five_component_explicit_instruction_universal",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "five_component_cumulative_model",
+        "atom": "phonological_processing_neurobiological_specificity",
         "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "dyslexia_requires_specialized_intervention",
-        "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "reading_science_phonological_basis",
+    "reference_frame": "orton_gillingham_cumulative_scaffolding",
     "drift_state": {
-      "moment": "contemporary_policy_universalization",
+      "moment": "contemporary_universal_adoption_pressure",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "literacy_acquisition_kernel__phonics_reading",
+      "teacher_training_specialization"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

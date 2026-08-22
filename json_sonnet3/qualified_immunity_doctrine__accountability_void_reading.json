@@ -1,0 +1,355 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity_doctrine__accountability_void_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "74e95ab6-2b1b-492d-8edd-1d5d014068bb"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.79,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Qualified Immunity as Systematic Impunity Extraction Mechanism",
+    "topic_domain": "constitutional_law/civil_rights/law_enforcement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "municipal_insurers_and_budgets",
+      "police_unions"
+    ],
+    "victims": [
+      "civil_rights_plaintiffs",
+      "excessive_force_victims",
+      "wrongfully_detained_individuals",
+      "families_of_decedents_in_police_encounters"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "civil_rights_plaintiffs",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Files a Section 1983 claim after suffering a constitutional violation at the hands of a government actor. Must clear the 'clearly established law' bar — a prior case with materially identical facts — before ever reaching the merits of whether their rights were violated. Bears the cost of the constitutional injury and the litigation itself, often unable to find counsel because the doctrine makes recovery so uncertain. Has no alternative forum; the federal claim is the only vehicle for this kind of relief."
+    },
+    {
+      "name": "excessive_force_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Suffers physical injury from an officer's use of force. Even where a court agrees the force was excessive, the case is routinely dismissed because no prior published decision addressed the precise combination of facts presented. Cannot choose which court decides, cannot select the officer who responds, cannot negotiate around the doctrine — it applies regardless of the severity of the violation."
+    },
+    {
+      "name": "wrongfully_detained_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Detained, searched, or arrested without lawful basis. Seeking damages requires proving both the violation and its clear prior establishment; the doctrine's granularity requirement (facts must match closely, not just legal principle) means novel or first-instance violations are functionally unwinnable regardless of merit."
+    },
+    {
+      "name": "families_of_decedents_in_police_encounters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Pursues wrongful-death claims after a fatal encounter. Faces the same clearly-established-law bar in cases with the highest stakes; the decedent cannot testify, and the doctrine's fact-specificity requirement makes precedent from even closely analogous fatal encounters insufficient if the details differ. Absorbs the loss with no path to accountability or systemic change through the courts."
+    },
+    {
+      "name": "law_enforcement_officers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Named individually in a civil rights suit but shielded from personal liability by the doctrine in the overwhelming majority of cases, regardless of the severity of the underlying conduct, as long as no sufficiently similar precedent existed beforehand. Faces no personal financial exposure even when a court finds a constitutional violation occurred, because the two questions (violation vs. clearly established) are decided separately and the second nearly always controls the outcome."
+    },
+    {
+      "name": "police_unions",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Lobbies aggressively to preserve and expand the doctrine, funds amicus briefs defending it before appellate courts, and opposes state and federal legislation that would narrow or eliminate it. Benefits from the doctrine's chilling effect on litigation, which reduces both individual member exposure and pressure for departmental reform."
+    },
+    {
+      "name": "municipal_insurers_and_budgets",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Municipalities and their insurers avoid the bulk of potential settlement and judgment costs because the doctrine screens out most claims before liability is ever assessed. This suppresses the fiscal signal that might otherwise drive departmental policy reform, training investment, or personnel accountability."
+    },
+    {
+      "name": "federal_and_state_appellate_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicates the 'clearly established law' standard case by case, deciding whether prior precedent was specific enough to have put the officer on notice. Courts frequently resolve cases on immunity grounds alone, declining to reach the constitutional merits — which itself prevents new precedent from ever becoming 'clearly established,' perpetuating the doctrine's bar in future cases."
+    },
+    {
+      "name": "civil_rights_bar_and_legal_aid_organizations",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Attorneys and advocacy organizations that would litigate more civil rights claims absent the doctrine's chilling effect on case viability and fee recovery. Their voice is present in briefing and legislative testimony but has no vote in the doctrine's judicial maintenance or elimination — that authority rests entirely with courts that benefit from docket reduction the doctrine provides."
+    },
+    {
+      "name": "state_legislatures_reform_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Some states have enacted statutory alternatives to qualified immunity for state-law claims, but these do not reach federal Section 1983 claims, which remain the primary vehicle for constitutional violations. Reform advocates are structurally excluded from altering the federal doctrine itself, which is judicially created and can only be undone by the Supreme Court or federal legislation neither has yet delivered."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In its stated form, the doctrine is meant to solve a genuine problem: without some liability shield, officers might hesitate in split-second, high-stakes situations for fear of personal financial ruin over legally ambiguous conduct. This reading does not deny that a coordination problem could exist in principle.",
+    "transfer_function": "The doctrine moves the cost of constitutional violations from the officers and municipalities that commit them to the individuals who suffer them. Plaintiffs absorb physical injury, wrongful detention, and death without compensation or acknowledgment of wrongdoing; officers and their employing institutions are relieved of both financial liability and, because merits are frequently unreached, of any formal finding that a violation occurred at all.",
+    "absent_voices": "Civil rights plaintiffs' bar and legal aid organizations are present in briefing but have no authority over the doctrine's maintenance. The individuals actually injured — dead, injured, or wrongfully detained — are, in the fatal cases, permanently unable to testify to their own encounter, and in all cases lack any institutional lever to alter the standard that dismissed their claim.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If qualified immunity vanished overnight, Section 1983 litigation would proceed to the merits far more often; officers and municipalities would face meaningfully increased financial exposure for constitutional violations; insurance costs and settlement practices would shift; and departments would likely see altered incentives toward training, use-of-force policy, and internal discipline. The volume of case law establishing what conduct violates the Constitution would also grow rapidly, since courts currently often skip that question.",
+    "founding_problem": "The doctrine originated to protect good-faith government officials from personal liability for reasonable, good-faith actions in performing discretionary duties, particularly where the law was genuinely unsettled.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Federal appellate judges across the ideological spectrum (including sitting circuit judges in published opinions and concurrences), the Cato Institute, the ACLU, and multiple bipartisan congressional reform proposals have documented that the doctrine as currently applied under the 'clearly established law' standard extends far beyond good-faith protection, foreclosing merits review even in cases of clear, serious misconduct. This corroboration comes from sources outside the beneficiary set: judges who apply the doctrine but publicly criticize its scope, and civil liberties organizations across the political spectrum."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 1982,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1982,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1982,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1982,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2001,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.79,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the accountability_void_reading of the qualified immunity kernel: the doctrine as it has operated since Harlow v. Fitzgerald (1982) reformulated qualified immunity around the 'clearly established law' standard. Under this reading, the doctrine is not a modest good-faith shield but a systematic extraction mechanism that transfers the cost of constitutional violations from officers and municipalities to victims, while insulating the actors who commit the violations from both financial liability and, frequently, any formal judicial finding of wrongdoing at all. The doctrine's 'clearly established law' requirement has hardened over four decades into what critics document as a near-absolute bar: because courts may dismiss on immunity grounds without reaching the merits, and because 'clearly established' requires closely analogous prior precedent, the doctrine reproduces its own scarcity of precedent — a self-reinforcing extraction loop. This is one of three readings of the qualified immunity kernel; it shares the kernel with constitutional_fidelity_reading (which argues the doctrine is illegitimate on separation-of-powers/textualist grounds regardless of policy outcome) and protective_scaffold_reading (which holds the doctrine is a necessary shield enabling effective policing). Each reading authors its own ε, beneficiary/victim structure, and classification; they are linked as siblings under the shared kernel, not merged into one story.",
+    "key_agents": [
+      "civil_rights_plaintiffs: powerless/trapped — bears the constitutional injury and the near-impossibility of judicial remedy",
+      "law_enforcement_officers: organized/arbitrage — shielded from personal liability regardless of severity of violation absent closely analogous precedent",
+      "police_unions: organized/arbitrage — actively lobbies to preserve and expand the doctrine",
+      "federal_and_state_appellate_courts: institutional/analytical — administers the standard and self-reinforces the precedent scarcity that sustains it",
+      "municipal_insurers_and_budgets: institutional/arbitrage — captures the fiscal benefit of suppressed liability exposure"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.88) because the doctrine's operation systematically transfers the cost of proven constitutional violations to those who suffered them, with officers and municipalities bearing minimal financial consequence in the overwhelming majority of cases. Suppression is authored high (0.79) and rising over the interval because the doctrine's enforcement mechanism — courts declining to reach the merits, thereby preventing new 'clearly established' precedent from forming — actively closes off the very channel (accumulated case law) that would loosen the bar over time. This is a self-reinforcing suppression ratchet, not a static barrier. Theater ratio is moderate (0.42): the doctrine retains some genuine good-faith-protection function in truly novel-law cases, but a growing share of its operation is invoked in cases involving conduct that is plainly and seriously wrongful, where the 'clearly established' framing functions as pretextual cover for foreclosing relief. Accessibility collapse is high (0.72) because once a plaintiff understands the doctrine, there is no practical alternative federal vehicle for the underlying constitutional claim. Resistance is high (0.68), reflecting sustained, well-organized reform efforts (bipartisan legislation, appellate judges' own published criticism, sustained advocacy) that have nonetheless failed to dislodge the doctrine federally.",
+    "directionality_logic": "Officers, police unions, and municipal insurers are coded as beneficiaries with arbitrage-level exit because the doctrine can be invoked repeatedly across cases without cost to the invoking party, and the entities that would bear liability absent the doctrine face no comparable structural exposure. Civil rights plaintiffs, excessive force victims, wrongfully detained individuals, and families of decedents are coded with trapped exit and powerless standing: they cannot select their circumstances, cannot negotiate around the doctrine, and have no forum substitute. The directionality derivation places the payer stakeholders near the full-target end of d and the beneficiary stakeholders near the full-beneficiary end — this is a direct read of the beneficiary/victim declarations, not an override.",
+    "perspectival_gap": "From the officer/beneficiary seat, the doctrine functions as protective infrastructure enabling confident performance of duties. From the payer seat, the identical structure functions as an accountability void with no remedy path. The appellate court seat experiences the doctrine as a docket-management tool that also, structurally, participates in its own perpetuation by declining to generate the precedent that would loosen it. The engine computes these divergent per-seat classifications from the same structural facts; this story does not average across the readings — it authors ONE reading (accountability_void) as its own ε-invariant constraint.",
+    "mandatrophy_analysis": "The founding problem — protecting good-faith discretionary action under genuinely unsettled law — is authored as dead under this reading: the doctrine now forecloses relief even where courts find clear and serious misconduct, because 'clearly established' has hardened into a fact-specific precedent-matching requirement that outpaces the rate at which precedent can accumulate (partly because courts skip the merits). The mismatch between founding_problem_status=dead and disappearance_verdict=world_rearranges is exactly the capture/zombie signature this reading asserts: an arrangement whose stated purpose no longer describes its operation, but whose removal would still visibly reorganize outcomes — because what it is currently doing (suppressing liability) is a real, ongoing function, just not the one it was built to perform.",
+    "kernel_context": "This constraint instantiates the accountability_void_reading of the qualified immunity kernel. Two sibling readings exist as separate constraint files: constitutional_fidelity_reading holds the doctrine illegitimate on textualist/separation-of-powers grounds independent of its policy consequences (a legitimacy-of-source argument that would apply even if the doctrine's outcomes were benign); protective_scaffold_reading holds the doctrine is necessary and net-beneficial infrastructure for effective policing (the officers' and departments' own framing, disputing this reading's characterization of ε and the beneficiary/victim structure entirely). All three readings share the same kernel — the qualified immunity doctrine as a persisting judicial commitment — but instantiate structurally distinct constraints with different ε, different stakeholders, and different classifications."
+  },
+  "omegas": [
+    {
+      "id": "coordination_extraction_ratio_unresolved",
+      "question": "What fraction of qualified immunity's current caseload involves genuinely novel legal questions (where a good-faith shield serves its stated function) versus cases of established, serious misconduct where 'clearly established' functions as pretextual bar?",
+      "resolution_mechanism": "Systematic empirical coding of dismissed Section 1983 cases distinguishing genuinely unsettled-law dismissals from cases where the underlying conduct was later or elsewhere recognized as clearly wrongful, absent the precedent-matching technicality.",
+      "impact": "A high ratio of genuine novel-law dismissals would support the protective_scaffold_reading's characterization of the same kernel; a low ratio (most dismissals involving conduct that is substantively wrongful but technically unprecedented) would corroborate this reading's extraction characterization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the doctrine's caseload is dominated by genuine novel-law protection or extraction-pattern dismissals of clear misconduct."
+    },
+    {
+      "id": "self_reinforcing_precedent_scarcity",
+      "question": "Is the doctrine's persistence causally dependent on courts declining to reach constitutional merits (thereby preventing new 'clearly established' precedent), making the doctrine self-perpetuating rather than merely persistent?",
+      "resolution_mechanism": "Longitudinal analysis of the rate at which courts reach the merits question versus dismiss on immunity grounds alone, correlated with the rate of new 'clearly established' precedent formation across circuits.",
+      "impact": "If confirmed, the doctrine is not merely extractive in outcome but structurally self-reinforcing — an extraction mechanism that actively forecloses its own future narrowing, which would sharpen the classification toward snare with mandatrophy characteristics rather than a stable tangled coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether merits-avoidance causally perpetuates the precedent scarcity that sustains the doctrine's bar."
+    },
+    {
+      "id": "reading_selection_conceptual_framing",
+      "question": "Is the choice to treat qualified immunity as fundamentally about extraction outcomes (this reading) versus fundamentally about judicial legitimacy of source (constitutional_fidelity_reading) itself a defensible single framing, or does the doctrine require both framings held simultaneously to be fully characterized?",
+      "resolution_mechanism": "This is not resolvable by further empirical data alone — it is a conceptual question about which structural feature of the doctrine (its outcomes vs. its judicial-legislative authorization) is the primary object of critique. Legal scholarship treats both as live, independent critiques.",
+      "impact": "If both framings are held as jointly necessary rather than alternative readings, that would argue for treating the two readings as strongly coupled (high inferred_coupling) rather than merely coexisting siblings — though the ε-invariance principle still requires them as separate constraint files.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the extraction-outcome framing and the judicial-legitimacy framing of the same kernel are independent or jointly necessary critiques."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_fidelity_reading",
+      "protective_scaffold_reading",
+      "section_1983_civil_rights_remedy",
+      "police_use_of_force_accountability"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the qualified immunity kernel. constitutional_fidelity_reading shares the same underlying doctrine but authors ε from a judicial-legitimacy-of-source lens rather than an outcome-extraction lens; protective_scaffold_reading authors ε near-zero, treating the doctrine as genuine coordination infrastructure with officers and departments as legitimate beneficiaries and no true victim class. All three are linked here per the ε-invariance decomposition principle — they are not merged, and no single ε value is claimed to represent 'the' qualified immunity doctrine."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "harlow_good_faith_shield_standard",
+    "drift_state": {
+      "moment": "contemporary_post_2020_reform_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "protective_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_fidelity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remedy_access_is_constitutive_of_the_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "clearly_established_standard_functions_as_de_facto_absolute_bar",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_sonnet3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

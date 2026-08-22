@@ -4,243 +4,377 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "3e5a5ecc-8d9f-4edc-9eb8-dbba179c15d3"
+    "story_uid": "a99ec41b-3ac2-4541-8b89-1cdf9e8f7406"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.58,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.72,
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.62,
     "resistance": 0.71,
     "claimed_type": "tangled_rope",
     "human_readable": "Judicial Supremacy in Constitutional Interpretation",
-    "topic_domain": "constitutional_law/political_theory",
+    "topic_domain": "constitutional_law/institutional_design/political_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "judiciary_institutional_authority",
-      "legal_professionals"
+      "judicial_institution"
     ],
     "victims": [
-      "legislative_majorities",
-      "electoral_losers_in_judicial_review"
+      "legislative_majority",
+      "electoral_majorities"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "judicial_institution",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts hold final interpretive authority over the constitution's meaning through specialized legal expertise, institutional independence (life tenure, salary protection), and insulation from electoral pressure. Judges elaborate constitutional doctrine, set precedent, and invalidate legislation deemed unconstitutional. The judicial monopoly on final interpretation consolidates institutional power and derives legitimacy from claims of neutral expertise and fidelity to foundational law."
+    },
+    {
+      "name": "legislative_majority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Elected representatives enact legislation within the interpreted boundaries the courts establish. When courts invalidate legislation as unconstitutional, the legislative process bears the cost of revisiting, reframing, or abandoning policy goals. Supermajority requirements to override judicial interpretation (e.g., constitutional amendment) create a structural asymmetry where legislative will requires higher consensus to override judicial judgment."
+    },
+    {
+      "name": "electoral_majorities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Voters elect representatives and expect their majorities to translate into enacted policy. When courts block legislation as unconstitutional, electoral majorities bear the frustration cost of gridlock. They cannot directly reverse judicial decisions through the legislative process alone; they must secure a supermajority or wait for generational shifts in court composition."
+    },
+    {
+      "name": "judicial_independence_doctrine",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The doctrine that judges must be insulated from electoral and political pressure to decide cases impartially. This reading vindicates the independence principle by treating it as foundational to legitimate constitutional interpretation."
+    },
+    {
+      "name": "legal_profession",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Attorneys and legal scholars gain professional authority and career advancement from the belief that law is a specialized domain requiring expert interpretation. Judicial supremacy elevates the status of legal expertise as the legitimate language of constitutional meaning."
+    },
+    {
+      "name": "counter_majoritarian_interests",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Individuals and groups whose interests would be defeated by electoral majorities (religious minorities, unpopular dissidents, property holders in redistributive contexts) benefit from a court system that can override majority will through constitutional interpretation. They gain veto power over certain majoritarian outcomes."
+    },
+    {
+      "name": "legislative_courts_boundary_contestant",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "A hypothetical alternative institutional voice — the premise that legislatures themselves possess interpretive authority and finality over constitutional meaning in their own domain — is structurally excluded by the reading. Parliaments that claim co-equal authority are treated as breaching constitutional hierarchy."
+    },
+    {
+      "name": "democratic_theorist_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Observers concerned with democratic legitimacy and majoritarian accountability measure the constraint's operation. They note the tension between democratic rule and counter-majoritarian judicial power, and track how judicial review affects legislative responsiveness."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Stabilizes constitutional meaning across changing electoral cycles and majoritarian pressures by vesting final interpretive authority in a body insulated from political pressure. Solves the coordination problem of 'who decides what the foundational law means' by naming courts as the authoritative resolver.",
+    "transfer_function": "Moves interpretive authority from elected legislatures and electoral majorities to appointed judges; transfers the cost of gridlock when courts invalidate legislation from the judicial institution to the legislative/electoral system; transfers the benefit of counter-majoritarian protection to minorities and dissidents.",
+    "absent_voices": "Legislatures claiming co-equal interpretive authority (parliamentary sovereignty reading) are structurally excluded from the judicial supremacy frame. Popular constitutionalism voices — those who believe constitutional meaning should emerge from ongoing democratic contestation rather than terminal judicial judgment — are also excluded.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If judicial supremacy disappeared overnight, constitutional authority would redistribute: legislatures would claim final interpretive power, electoral majorities could enact legislation without fear of judicial nullification, and the gridlock costs currently borne by the legislative system would vanish. Counter-majoritarian protections would depend on legislative forbearance rather than judicial veto. The structure of institutional power would shift fundamentally.",
+    "founding_problem": "In early constitutional systems, multiple institutions claimed authority to interpret foundational law, producing competing readings and institutional conflict. The founding problem was to establish a clear, stable mechanism for constitutional meaning that would not shift with every election or political passion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The judicial institution and legal professional class attest the founding problem persists: legislative incursion on judicial independence threatens the stability of constitutional meaning. Legislatures and popular constitutionalists attest the problem is solved and the arrangement persists as institutional power capture: they argue that legislatures themselves can reliably interpret constitutions and that electoral accountability is a superior legitimacy mechanism to judicial independence. Comparative constitutional scholars document wide variation in how democracies allocate interpretive authority (some vest it in legislatures, some in courts, some distribute it), suggesting the founding problem is contingent, not universal."
   },
   "interval": {
     "start": 0,
-    "end": 60
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.58
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.62
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 60,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.45
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.48
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.56
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 50,
-      "value": 0.58
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 60,
-      "value": 0.58
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.2
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.24
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.27
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.29
+      "value": 0.41,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.28
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.28
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "Judicial supremacy is one reading of a contested constitutional kernel: who holds final interpretive authority over what the constitution means? This reading claims that courts, through specialized legal expertise and independence from electoral pressure, should hold that authority. The constraint operates by courts reviewing legislation, striking down laws they deem unconstitutional, and instructing other institutions on how to comply with their reading of constitutional text and doctrine. The reading generates extraction: legislative majorities and electoral losers bear the cost of having their will displaced when courts exercise veto; the judiciary and legal professions benefit from authority and the gatekeeping role that specialization creates. The measurement series track how extractiveness and enforcement requirements have drifted from the constraint's founding justification (limiting arbitrary majorities) toward a more entrenched institutional authority structure.",
+    "narrative_context": "The judicial supremacy reading of basic law interpretive authority holds that courts possess final, binding interpretive power over constitutional meaning through institutional independence and specialized legal expertise. This reading is one of three structurally distinct claims about constitutional authority (the kernel). The competing readings—parliamentary sovereignty and popular constitutionalism—occupy different institutional positions and deploy different legitimacy narratives. Under judicial supremacy, the judiciary benefits from centralized authority and professional monopoly over constitutional language; legislatures and electoral majorities bear the cost of gridlock when courts block legislation. The reading claims the constraint is a tangled rope (genuine coordination function: stable constitutional meaning; asymmetric extraction: judicial power concentration). The measured metrics show extractiveness rising through the interval to 0.68 as judicial reach expands, suppression peaking at 0.72 as courts enforce their interpretive monopoly, and theater ratio rising moderately as legitimating rhetoric (fidelity to law, neutral expertise) replaces functional necessity. The claim/metric gap is intentional per the schema: the reading itself is authored independently of what the metrics measure.",
     "key_agents": [
-      "Judiciary as authority holder (institutional, agenda-setter) — exercises final interpretive power, sets terms for legislative action, claims apolitical expertise.",
-      "Legislative majorities (institutional, payer) — face veto when courts overturn their legislation; bear gridlock costs; excluded from final interpretation.",
-      "Electoral majorities and minorities (moderate power, payer) — experience their democratic will displaced; constrained exit; can attempt amendment or justicial replacement.",
-      "Legal professionals (organized, beneficiary) — careers and professional status depend on specialized constitutional expertise; gate-keeping role.",
-      "Minority rights advocates (moderate power, beneficiary) — benefit from courts protecting them against majoritarian legislation.",
-      "Competing institutional authorities (excluded seat) — parliaments, executives, and the people have no final say if courts hold supremacy; sibling readings give these actors authority.",
-      "Analytical observer (seat) — sees the full distribution of authority and cost."
+      "Judicial Institution: Chief beneficiary; holds and expands final interpretive authority; gains legitimacy and institutional power from the reading",
+      "Legislative Majority: Primary payer; elected representatives enact policy within judicially-defined bounds; bears gridlock cost when courts invalidate legislation",
+      "Electoral Majorities: Secondary payer; voters cannot override judicial interpretation through normal democratic process; faces supermajority amendment requirement to overturn judicial doctrine",
+      "Legal Profession: Secondary beneficiary; professional authority and status rise when law is treated as specialized expertise domain",
+      "Counter-Majoritarian Interests: Tertiary beneficiary; minorities and dissenters gain veto power over majoritarian legislation through judicial review",
+      "Parliamentary Sovereignty Doctrine: Excluded voice; claims legislatures possess co-equal interpretive authority; structurally incompatible with judicial supremacy framing"
     ],
-    "logic_rationale": "Extractiveness sits at 0.62 at interval end because the constraint systematically displaces the democratic will of electoral majorities when courts overturn legislation, and legal professionals benefit substantially from the specialization regime it creates. Suppression at 0.58 reflects that the constraint's persistence depends on courts actively defending their exclusive interpretive authority — overruling legislatures, resisting amendment, training new judges in the doctrine. Theater has risen modestly from 0.18 to 0.28 over the interval, suggesting that an increasing share of judicial activity is devoted to maintaining the supremacy claim itself (institutional defense, doctrinal refinement) rather than to genuine dispute resolution. The measurement series are authored on a single shared time grid: all three metrics appear at every examined time point so temporal alignment is preserved. The rhythm shows extractiveness rising steeply in the first 30 time units (as courts became more active in high-stakes political cases), then plateauing as institutional contestation stabilized — the courts are no longer expanding their reach, but maintaining the authority they established.",
-    "directionality_logic": "The judiciary benefits from the constraint: it confers authority, professional prestige, and the power to set terms. Their directionality is near the beneficiary end (d ≈ 0.15–0.25). Legislative majorities and electoral voters bear the cost of veto and gridlock; their directionality is near the target end (d ≈ 0.75–0.85). Legal professionals benefit from specialization but do not set the constraint themselves — their secondary role as beneficiary gives them d ≈ 0.35. Minority rights advocates sit near symmetric benefit: they benefit from judicial protection, but they also depend on the underlying democratic legitimacy that courts claim to constrain — if courts become fully delegitimized, their protection vanishes — so their d is near 0.45–0.55. The analytical observer has analytical exit and no structural stake; d = 0.5 (symmetric).",
-    "perspectival_gap": "From the judiciary's seat, this is genuine coordination it built and maintains: courts provide stability, predictability, and protection of constitutional principle against majoritarian impulse. From the legislative and electoral seats, the same constraint operates as forced deference to judges whose accountability runs through judicial ethics, not elections — a substitution of expert authority for democratic consent. The engine computes this divergence from the structural data. The judiciary will compute this constraint type as rope (coordination, minimal extraction) from its seat; legislative majorities will compute it as tangled_rope or snare (coordination function shadowed by extraction they bear). The authored claim at 0.62 extractiveness and 0.58 suppression means the constraint computes as tangled_rope overall, capturing the asymmetry.",
-    "mandatrophy_analysis": "The constraint risks mandatrophy if the founding problem (preventing majorities from treating ordinary law as constitutional law) becomes obsolete while the constraint persists. The founding_problem_status is authored as 'contested' to capture this: courts assert the problem is live (majorities still need checking), while parliamentary sovereigntists assert it is dead (legislatures can be trusted with interpretive authority). The measurements show extractiveness rising then plateauing — not a sign of deadness, but of maturation of the institutional capture: courts established their authority, now maintain it at a steady level. If courts began expanding their reach further (extractiveness rising in the 40–60 interval), or if theater_ratio surged (indicating mostly performance), mandatrophy would sharpen. As authored, the constraint sits at high-extraction equilibrium, not active mandatrophy — but the contested founding_problem_status flags the uncertainty.",
-    "kernel_context": "This constraint is one reading of the basic_law_interpretive_authority kernel. The reading instantiated here is judicial_supremacy_reading: courts hold final interpretive authority through specialized expertise and independence from political pressure. The sibling readings are parliamentary_sovereignty_reading (elected legislatures retain final authority through democratic mandate) and popular_constitutionalism_reading (constitutional meaning emerges from ongoing democratic contestation, not terminal institutional adjudication). This reading differs from its siblings in the location of beneficiary: here, the judiciary and legal professions benefit from specialization and authority; in the parliamentary reading, the legislature and electoral majorities benefit; in the popular reading, the people collectively benefit from ongoing contestation (though institutional actors might resist diffusion). The extractiveness profile differs across readings: judicial supremacy produces extraction from legislatures and electoral minorities; parliamentary supremacy might produce extraction from minorities unprotected by electoral majorities; popular constitutionalism might distribute costs across institutional actors competing for influence over meaning."
+    "logic_rationale": "Extractiveness is moderate-high (0.68 at interval end) because the constraint concentrates interpretive authority in judges, enabling institutional rent-seeking while justified as neutral expertise. The series shows slow accumulation from 0.45 to 0.68 over 40 time units, modeling the expansion of judicial reach as courts elaborate doctrine and extend interpretive scope (early period: courts restrained by institutional caution; later period: courts confident in their authority, applying doctrine expansively). Suppression is high (0.72) because the reading enforces judicial exclusivity by delegitimizing legislative and popular claims to interpretive authority. When courts say 'the Constitution means X,' the reading forecloses legislative revision of that meaning except through formal amendment—a high-cost, low-frequency exit. Theater ratio rises to 0.41, capturing increasing reliance on legitimating narratives (expertise, neutrality, fidelity to original meaning or living law) as active justification for judicial authority, particularly when courts face political pressure or criticism. Accessibility collapse is moderate (0.62): once the system is understood, alternative institutional arrangements (parliamentary interpretation, popular deliberation) are theoretically accessible but practically blocked by path-dependence and constitutional entrenchment. Resistance is high (0.71): legislatures resist judicial incursion, populist movements challenge judicial authority, and constitutional scholars debate the legitimacy of judicial review. The constraint persists because multiple constituencies benefit (courts, lawyers, counter-majoritarian minorities) and because changing it requires high-consensus constitutional amendment.",
+    "perspectival_gap": "The judicial institution and the legal profession experience this constraint as a rope—genuine coordination (stable constitutional meaning) enabling professional authority. The legislative majority experiences it as a snare—they pay the cost of gridlock without meaningful exit, while courts collect the benefit of authority. Electoral majorities experience it as a snare with a secondary benefit: when courts block majoritarian legislation, some voters welcome the protection (minorities, dissidents), while others resent their policy defeats. Comparative court position: a legislator from a parliamentary sovereignty system (Westminster model) would classify this as extraction; a judge socialized into judicial supremacy would classify it as coordination. The engine computes this divergence from power/exit/time_horizon data: an institutional payer (legislative majority) with high suppression and high exit cost sits near the target end (d near 1.0), while an institutional beneficiary (judges) with analytical exit and authority sits near the beneficiary end (d near 0.0).",
+    "directionality_logic": "Judicial institution: d ≈ 0.1 (full beneficiary, institutional power, exit_options=analytical, no cost exposure). Legislative majority: d ≈ 0.85 (target, institutional power but constrained by judicial veto, time_horizon=biographical, exit_options=constrained, bears gridlock cost). Electoral majorities: d ≈ 0.8 (near-target, organized power but constrained by supermajority amendment requirement, bear electoral frustration cost). Legal profession: d ≈ 0.2 (secondary beneficiary, powerful actors who gain professional authority and income from legal expertise specialization). Counter-majoritarian interests: d ≈ 0.15 (beneficiary, gain veto power over majoritarian legislation, powerful actors with mobile exit). The reading does not declare directionality_overrides; the structural derivation from beneficiary/victim + exit produces accurate directionality values.",
+    "mandatrophy_analysis": "The founding problem (stable constitutional meaning across electoral cycles) is contested in status: the judicial institution and constitutional law scholars attest it remains live and requires judicial independence; legislatures and popular constitutionalists attest it is solved (legislatures can interpret constitutively; electoral cycles are features, not bugs) and the arrangement persists as institutional power capture. The disappearance verdict is world_rearranges: if judicial supremacy vanished, constitutional authority would redistribute to legislatures and electoral processes. This mismatch (founding_problem_status=contested + disappearance_verdict=world_rearranges) flags potential mandatrophy: the constraint may have outlived its functional justification and now persists primarily because beneficiaries (judges, lawyers) maintain the legitimating narrative. The theater_ratio rising to 0.41 supports this: a growing share of enforcement activity is rhetorical (establishing expertise, claiming fidelity to law) rather than functional (preventing actual constitutional conflict through genuine coordination). However, the coordination function is not entirely atrophied: the constraint does stabilize constitutional meaning in some contexts (civil rights, First Amendment interpretation). The mandatrophy is partial, not complete—the constraint is a tangled rope (genuine coordination + asymmetric extraction) rather than a pure piton (atrophied function + theatrical maintenance).",
+    "kernel_context": "This constraint instantiates the judicial_supremacy_reading of the basic_law_interpretive_authority kernel. The kernel is the contested claim 'who holds final authority to interpret constitutional meaning.' The three sibling readings are: (1) parliamentary_sovereignty_reading—elected legislatures retain final interpretive authority through democratic mandate; (2) popular_constitutionalism_reading—constitutional meaning emerges from ongoing democratic contestation rather than terminal institutional judgment. This reading claims courts are the authoritative resolver through institutional independence and specialized expertise. The sibling readings claim legislatures or electoral processes are the legitimate resolvers. Decomposition rationale: the three readings have different beneficiary/victim structures, different ε values, and different classifications. The judicial supremacy reading treats the judiciary as a beneficiary (authority, institutional power) and legislatures/majorities as payers (gridlock cost, constrained exit). The parliamentary reading inverts this: legislatures are beneficiaries and courts are payers (loss of interpretive authority). The popular reading distributes authority across all democratic voices, with no concentrated beneficiary—a different structure entirely. These cannot be modeled as one constraint viewed from different angles; they are three distinct constraint families, each claiming the same kernel (constitutional authority) but instantiating it differently."
   },
   "omegas": [
     {
-      "id": "expertise_vs_legitimacy_boundary",
-      "question": "Does the judiciary's specialized legal expertise and apolitical structure actually constitute superior competence in constitutional interpretation, or does it create the appearance of neutrality that masks contested value choices?",
-      "resolution_mechanism": "Comparative study of judicial decisions across constitutional courts: do independent legal experts identify a coherent, principled methodology that judges follow consistently, or do outcomes cluster around the judges' political preferences? Analysis of how judges' prior positions (e.g., as lawyers for particular parties) predict their constitutional rulings.",
-      "impact": "If expertise is real and neutral, extraction is lower and the constraint genuinely coordinates on principle. If expertise is cover for value imposition, extraction is substantially higher and the constraint is closer to snare — judges impose their preferred constitutional reading while claiming neutrality.",
+      "id": "expertise_neutrality_vs_institutional_power",
+      "question": "Does judicial authority rest on genuine neutral expertise in constitutional law, or does it primarily consolidate institutional power under a legitimating expertise narrative?",
+      "resolution_mechanism": "Comparative analysis of judicial decision-making: if judges converge on constitutional meaning independent of political pressure and party affiliation, the expertise claim is grounded; if judicial opinions correlate strongly with appointing president's political alignment, the expertise narrative is cover for institutional power.",
+      "impact": "If expertise is genuine, the constraint is a rope (coordination justified by real functional cost). If expertise is rhetorical, the constraint is a snare (extraction dressed as coordination). The empirical record—documented partisan drift in constitutional doctrine—suggests the expertise claim is partial.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether judicial authority rests on specialized competence or institutional power capture"
+    },
+    {
+      "id": "amendment_difficulty_as_suppression",
+      "question": "Is the high cost of constitutional amendment (required to overturn judicial doctrine) a feature of the constitutional structure, or is it a suppressive mechanism that entrenches judicial power?",
+      "resolution_mechanism": "Historical analysis of amendment patterns: if supermajority requirement were necessary only for foundational amendments and easy amendment has historically occurred for corrective measures, then suppression is the design function. If the supermajority requirement is systematically used to prevent reversal of judicial doctrines the electoral majority opposes, then suppression is entrenching judicial power.",
+      "impact": "If suppression is structural design, the constraint is more rope-like (coordination justified by constitutional stability). If suppression primarily benefits judiciary by raising reversal costs, the constraint is more snare-like (extraction via trapped exit).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether judicial expertise and apoliticality are real or performative."
+      "description": "Whether amendment difficulty reflects constitutional principle or judicial entrenchment"
     },
     {
-      "id": "founding_problem_obsolescence",
-      "question": "Is the founding problem (preventing majorities from treating ordinary legislation as constitutional law) still live, or has it become obsolete in modern democracies where legislatures are educated in constitutional law and constitutional protections are multiply entrenched?",
-      "resolution_mechanism": "Historical case study: count instances in the last 50 years where elected legislatures attempted to override constitutional protections; compare instances where courts had to step in versus instances where constitutional procedures worked without judicial intervention. Survey of legislative behavior in Westminster systems that lack judicial review of legislation.",
-      "impact": "If the founding problem is dead, the constraint becomes a zombie — persisting authority without current justification, pure extraction. If the problem is live, the constraint is genuinely needed coordination. If contested, the constraint is being used by both sides (courts to justify their veto, legislatures to resist it).",
+      "id": "reading_foreclosure_parliamentary_sovereignty",
+      "question": "Is judicial supremacy logically compatible with parliamentary sovereignty within a single constitutional framework, or do the two readings foreclose each other?",
+      "resolution_mechanism": "Constitutional theory examination: if a framework can coherently assert 'courts have final interpretive authority AND legislatures have final interpretive authority in their own domain,' the readings coexist; if asserting both creates logical contradiction, they foreclose each other.",
+      "impact": "If readings coexist, they are alternative readings held by different parties. If they foreclose, this reading logically eliminates the parliamentary sovereignty reading as internally coherent—a stronger claim of structural priority. The 'judicial supremacy vs. parliamentary sovereignty' debate in constitutional theory (Marbury v. Madison vs. legislative supremacy models) hinges on this ambiguity.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the founding problem that justifies judicial supremacy is still a live issue."
+      "description": "Whether judicial supremacy and parliamentary sovereignty can coexist or necessarily exclude each other"
     },
     {
-      "id": "appointment_politics_capture",
-      "question": "Does the constraint's independence from electoral pressure actually reduce political influence on courts, or does it simply displace that influence into the appointment process where presidents and senators effectively select judges for their ideological positions?",
-      "resolution_mechanism": "Analysis of judicial appointment processes: how much variation in judicial outcomes correlates with the appointing president's political coalition? Do judicial decisions become more predictable based on appointment history than on legal principle? Comparison of appointment-influenced courts versus courts with mandatory retirement and non-partisan selection.",
-      "impact": "If appointment politics are weak, courts truly are independent and less extractive. If strong, then the constraint amounts to giving political power to judges appointed for their ideology, with the apolitical framing as cover — extraction rises, and the constraint becomes partly snare (suppression of alternative legislative readings).",
-      "confidence": "high",
+      "id": "counter_majoritarian_protection_legitimacy",
+      "question": "Does the counter-majoritarian function of judicial review constitute a legitimate coordination benefit (protecting constitutional minorities from majoritarian tyranny), or does it primarily enable institutional extraction (courts blocking majoritarian legislation using minority-protection rhetoric)?",
+      "resolution_mechanism": "Empirical study of judicial review patterns: if courts consistently protect vulnerable minorities and prevent majoritarian oppression of rights, the legitimacy claim holds. If courts use minority protection rhetoric to block majoritarian redistribution or regulation of concentrated wealth, the rhetorical cover is revealed.",
+      "impact": "If counter-majoritarian protection is genuine, the constraint's beneficiary set expands to include constitutional minorities, supporting the coordination framing. If it is primarily rhetoric, minorities are false beneficiaries and the constraint is more extractive.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether judicial independence is undermined by appointment politics."
-    },
-    {
-      "id": "reading_kernel_contest",
-      "question": "Is judicial supremacy the correct reading of the constitutional kernel, or do the sibling readings (parliamentary sovereignty or popular constitutionalism) better capture what authority structures actually sustain constitutional meaning?",
-      "resolution_mechanism": "Cross-national constitutional analysis: which institutional authority structure (courts, parliaments, continuous public contestation) best predicts constitutional stability, protection of rights, and amendment patterns? Genealogical investigation of which reading has actually won over time in different jurisdictions and what forces moved the outcome.",
-      "impact": "If parliamentary supremacy or popular constitutionalism better capture the actual kernel, then the judicial_supremacy reading is a false summit — a claim that courts hold authority that other institutions actually retain. If judicial supremacy is correct, then the other readings are misdiagnosing which institution actually holds interpretive power.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the judicial_supremacy reading correctly identifies which institutional authority actually holds final interpretive power over constitutional meaning."
-    },
-    {
-      "id": "access_and_standing_bias",
-      "question": "Does judicial review systematically favor certain groups (wealthy, organized, legal-expertise-rich) over others in their ability to challenge legislation as unconstitutional?",
-      "resolution_mechanism": "Empirical study of Supreme Court amicus participation, legal aid availability, and outcomes by party type: do wealthy institutions, repeat players, and ideological coalitions win at higher rates than individual plaintiffs or poorly-resourced groups? Does the constraint functionally protect minorities or primarily serve those with access to the courts?",
-      "impact": "If access bias is severe, the constraint redistributes power not to merit or principle but to legal resources — extraction rises, and beneficiaries are not minorities but well-resourced institutional actors (corporations, ideological movements). If access is equalized, the constraint is closer to its coordination framing.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether judicial review actually protects minorities or primarily serves well-resourced institutional actors."
+      "description": "Whether counter-majoritarian judicial review genuinely protects minorities or primarily enables institutional power"
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.14
   },
   "network": {
     "affects_constraints": [
       "basic_law_interpretive_authority__parliamentary_sovereignty_reading",
       "basic_law_interpretive_authority__popular_constitutionalism_reading"
     ],
-    "dual_formulation_note": "Judicial supremacy is one reading of the basic_law_interpretive_authority kernel. This reading claims courts hold final interpretive authority; sibling readings give final authority to parliaments or to continuous popular contestation. The ε-invariance principle requires three separate constraint stories because the beneficiary/victim structures differ fundamentally across readings. Judicial supremacy benefits the judiciary and legal professions; parliamentary sovereignty benefits elected legislatures; popular constitutionalism distributes authority across the political community. This story models judicial supremacy only — its measured extraction, suppression, and enforcement profile — without averaging or hedging across the other readings. The network links establish the kernel family."
+    "dual_formulation_note": "This constraint is one reading of the basic_law_interpretive_authority kernel. The sibling readings (parliamentary_sovereignty, popular_constitutionalism) are separate constraint stories with different beneficiary/victim structures and different ε values. All three readings compete for interpretive authority over the same foundational law; together they model the contested institutional arrangement. Links flow downstream from judicial supremacy (the most institutionally entrenched reading) to the alternative readings (which face suppression under the supremacy regime). Decomposition is necessary because a single constraint cannot encode three contradictory authority claims without fabricating a measurement."
   },
+  "directionality_overrides": [],
+  "gain_flow": "judicial_institution",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "constitutional_supremacy_through_judicial_review",
+    "reference_frame": "judicial_independence_and_expertise",
     "drift_state": {
-      "moment": "contemporary_appointment_politics_era",
+      "moment": "contemporary_institutional_contestation",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "basic_law_interpretive_authority__parliamentary_sovereignty_reading",
-        "relation": "forecloses"
+        "sibling_id": "parliamentary_sovereignty_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "basic_law_interpretive_authority__popular_constitutionalism_reading",
+        "sibling_id": "popular_constitutionalism_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "judicial_expertise_enables_neutral_interpretation",
+        "atom": "judicial_independence_necessary_for_neutral_interpretation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "democratic_legitimacy_requires_constitutional_constraint",
+        "atom": "expertise_basis_legitimate_authority",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
@@ -248,14 +382,15 @@
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

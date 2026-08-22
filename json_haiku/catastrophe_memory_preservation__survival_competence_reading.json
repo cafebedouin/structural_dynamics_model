@@ -4,17 +4,17 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "3aeb35f5-3d2e-4294-95e8-95a9c81126fd"
+    "story_uid": "cdd5d526-db13-40f0-b9c7-c564b3841d2f"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.45,
     "theater_ratio": 0.28,
-    "accessibility_collapse": 0.72,
+    "accessibility_collapse": 0.62,
     "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Ritual Catastrophe-Memory Preservation (Survival Competence Reading)",
-    "topic_domain": "religious/collective/behavioral",
+    "human_readable": "Catastrophe Memory Preservation via Mandatory Ritual Participation (Survival Competence Reading)",
+    "topic_domain": "religious/social/disaster_preparedness",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "future_generations"
@@ -22,6 +22,74 @@
     "victims": [
       "present_generation_participants"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "ritual_authority_elders",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Maintain and enforce the mandatory ritual cycle: reenactment of historical catastrophe, transmission of threat-recognition protocols, assertion that participation is non-negotiable for competent adulthood. Their authority derives from custodianship of the historical record and the claim that embodied practice is the only reliable knowledge transfer mechanism. They enforce participation through community sanctions and status withholding."
+    },
+    {
+      "name": "present_generation_participants",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Required to participate in annual/cyclical ritual reenactment: time investment, emotional labor (reliving catastrophe), constraint on alternative life paths during ritual seasons. They absorb the cost of maintaining intergenerational knowledge transfer while also receiving the benefit of learning threat-recognition protocols that may save their own lives. Exit means community expulsion or loss of cultural identity."
+    },
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Will inherit embodied threat-recognition capacity and historical memory that prevents catastrophic unpreparedness. They have no voice in the present participation decision and no alternative means of acquiring this knowledge if the ritual atrophies or is abandoned. Non-agent: future persons are not present to negotiate; the constraint's beneficiary function is indexed to a generational cohort not yet in the conversation."
+    },
+    {
+      "name": "competing_modernization_narratives",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Argue that written records, education systems, and disaster-preparedness training are superior knowledge-transfer mechanisms, making mandatory ritual participation obsolete or even harmful (imposing trauma on children, preventing youth mobility, consuming resources). They are systematically excluded from the ritual authority's decision structure about what counts as legitimate knowledge transfer."
+    },
+    {
+      "name": "disaster_response_specialists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Study whether embodied ritual reenactment produces demonstrably superior threat-recognition and survival decision-making relative to classroom training, simulation, or written protocols. They provide empirical assessment of whether the constraint's coordination function (knowledge transfer) justifies the extraction (mandatory participation cost)."
+    },
+    {
+      "name": "cultural_continuity_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Defend mandatory ritual participation as the core mechanism for maintaining cultural identity and collective memory, even independent of direct survival-competence outcomes. They argue that the ritual's extraction cost is justified by the coordination it provides for group coherence and historical consciousness."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Transfers operational threat-recognition protocols (recognition of warning signs, cascade-arrest decision trees, resource-management under constraint) from elder knowledge to younger cohorts through embodied reenactment rather than classroom instruction. The claim is that visceral, repeated practice embeds threat-recognition in muscle memory and emotional association in a way text-based instruction cannot achieve.",
+    "transfer_function": "Moves mandatory participation time, emotional labor, and constrained autonomy from the present-generation participants to the ritual authority (as administrators/custodians) and to future generations (as knowledge holders who will inherit the embodied competence without having to rebuild it from scratch).",
+    "absent_voices": "Modernization advocates and alternative-education proponents are structurally excluded from setting knowledge-transfer policy. They would argue for measured adoption of written, video, or simulation-based training alongside or instead of mandatory embodied ritual. Their exclusion is maintained by the ritual authority's control over legitimacy-definition: if you question the ritual's necessity, you are defined as outside the community of competent cultural agents.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If mandatory catastrophe-memory ritual disappeared overnight, the community would reorganize around alternative knowledge-transfer mechanisms (written protocols, formal education, professional disaster training). Threat-recognition capacity would remain transmissible but via different channels; the present generation would lose forced participation obligations but future generations would lack the embodied competence the elders claim is irreplaceable. The community's identity and preparedness posture would restructure.",
+    "founding_problem": "A community experienced a catastrophe that killed many and resulted from failure to recognize warning signs and manage cascading failures. Survivors observed that those with embodied memory of the threat pattern (who had lived through it) recognized the cascade and protected themselves or their households; those who learned the history only verbally or didactically did not. The ritual was established to encode threat-recognition protocols into embodied practice so that future generations would recognize the pattern and act decisively.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Ritual elders attest the founding problem is live: threat patterns recur and embodied recognition is still necessary. Disaster-response specialists and historians from outside the community attest that the historical catastrophe was real and that some survivors did respond better — but they dispute whether embodied ritual is the only or superior mechanism for maintaining that competence. Educational modernizers argue the founding problem (failure to transmit threat-recognition) is solvable through alternative means and no longer requires this specific extraction. No corroboration from future generations (they do not yet exist to testify). The dispute centers on whether the founding problem's solution requires mandatory embodied ritual or whether it can be solved through alternative mechanisms that impose lower extraction cost."
   },
   "interval": {
     "start": 0,
@@ -31,32 +99,32 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.58
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.61
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.64
+      "value": 0.59
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.66
+      "value": 0.63
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.67
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.68
+      "value": 0.67
     },
     {
       "metric": "base_extractiveness",
@@ -71,32 +139,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.2
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.23
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.25
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.27
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.28
+      "value": 0.27
     },
     {
       "metric": "theater_ratio",
@@ -126,12 +194,12 @@
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.43
+      "value": 0.44
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.44
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
@@ -151,57 +219,57 @@
   ],
   "omegas": [
     {
-      "id": "embodied_vs_explicit_knowledge_transfer",
-      "question": "Is the threat-recognition competence genuinely inseparable from embodied ritual performance, or can it be transmitted equally through explicit instruction, simulation, and formal training?",
-      "resolution_mechanism": "Controlled comparison: a cohort trained via modern disaster-response protocols + documentary transmission; another cohort via traditional ritual. Assess threat-pattern recognition speed, accuracy, stress-response coherence, and multi-generational retention in both groups over 20+ years.",
-      "impact": "If embodied transfer is necessary, the extraction cost is justified as coordination; if explicit transfer is equivalent, the ritual is pure extraction wearing a competence disguise. This is the core empirical question that separates tangled_rope from snare in this reading.",
+      "id": "embodied_vs_symbolic_transfer",
+      "question": "Does embodied ritual practice demonstrably produce superior threat-recognition and survival decision-making relative to written protocol, classroom instruction, or simulation training?",
+      "resolution_mechanism": "Comparative study of threat-recognition accuracy and decision speed across cohorts trained via ritual, classroom, written protocol, and simulation under controlled conditions. Longitudinal follow-up during actual threat events (or high-fidelity simulation of cascading disasters).",
+      "impact": "If ritual shows measurable superiority, the extraction (mandatory participation cost) is justified as the price of superior coordination. If alternatives are equivalent or superior, the extraction appears to persist as institutional inertia rather than functional necessity, shifting the classification toward snare. If ritual shows inferiority, the constraint becomes mandated obsolescence.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether embodied ritual transmission of survival competence is structurally necessary or merely traditional."
+      "description": "Whether the constraint's claimed coordination function (embodied threat-recognition transfer) is empirically superior to alternatives."
     },
     {
-      "id": "suppression_structural_vs_internalized",
-      "question": "Is the measured suppression (0.45) primarily structural (exit barriers, kinship costs, resource dependency) or internalized (participants believe they deserve the extraction, have been isolated from alternative framings)?",
-      "resolution_mechanism": "Post-exit trajectory: do participants who leave and access external knowledge-sources retain suppression behaviors, or does suppression decay when structural barriers are removed? Do youth who exit report relief or continued guilt/incompleteness?",
-      "impact": "Structural suppression means the constraint persists by external coercion and would collapse if barriers weakened; internalized suppression means the constraint carries forward even after exit, indicating deeper capture of self-concept through the ritual's framing.",
+      "id": "modernization_foreclosure_mechanism",
+      "question": "Is the constraint's persistence maintained by the functional claim (embodied transfer is necessary) or by institutional authority that excludes alternative knowledge-transfer frameworks from legitimacy?",
+      "resolution_mechanism": "Policy experiment: introduce alternative training pathways (classroom, written, simulation) as optional supplements, then measure (1) participation uptake, (2) threat-recognition outcomes for each pathway, (3) whether ritual authority retains legitimacy or loses participation. Track whether exclusion of alternatives is structural (embodied practice objectively necessary) or institutional (alternatives are suppressed from consideration).",
+      "impact": "If alternatives are voluntarily abandoned by participants who try them, the constraint's persistence is functional. If alternatives are excluded from even being considered legitimate, the constraint entangles coordination (real transfer need) with institutional domination (exclusion of competitors). This determines whether classification remains tangled_rope or shifts to snare-with-coordination-cover.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Mechanism of suppression in ritual participation."
+      "description": "Whether the constraint's suppression is structural (alternatives genuinely inferior) or institutional (competitors systematically excluded from legitimacy)."
     },
     {
-      "id": "reading_kernel_ambiguity",
-      "question": "Is this reading (survival competence) the correct instantiation of the catastrophe-memory-preservation kernel, or does the hybrid-atrophy reading better capture the empirical state?",
-      "resolution_mechanism": "Historical testimony from elders: do they describe the ritual as currently functioning survival-knowledge-transfer (supporting this reading), or as degraded practice that once did so but now mostly serves mourning/identity (supporting hybrid atrophy)? Functional assessment: do communities that maintain strong ritual performance actually demonstrate measurably higher threat-recognition competence in real emergencies?",
-      "impact": "If atrophy is the empirical state, this reading's core claim (that ritual preserves operational competence) is false, and the constraint should be reclassified to piton (theater persists, function atrophied). If survival-competence transfer remains live, this reading's tangled_rope classification stands.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether this reading's core premise (ritual preserves operational survival competence) is empirically true or a false claim about a degraded function."
-    },
-    {
-      "id": "future_generation_agency_deficit",
-      "question": "Can future generations meaningfully consent to the extraction imposed on their predecessors in the name of their benefit, or is the asymmetry (powerless beneficiary, powerless voice) a structural feature of this constraint that makes true coordination impossible?",
-      "resolution_mechanism": "Institutional reform: allow present-generation participants to opt-out and future generations to opt-in (formally consent to receive the knowledge via ritual once they come of age). If participation rates collapse, the extraction was not truly consensual.",
-      "impact": "If future consent cannot be secured, the constraint is not genuine coordination even if the knowledge transfer is operationally necessary — it is extraction justified by a constituency that cannot speak. The remedial implication is that knowledge must be preserved in ways that both generations consent to.",
+      "id": "intergenerational_consent_boundary",
+      "question": "Can present-generation extraction on behalf of future generations be justified through the ritual framework, or is it a fundamental asymmetry the constraint cannot resolve?",
+      "resolution_mechanism": "Philosophical/institutional analysis: does the community recognize any mechanism by which future generations could retroactively consent to or reject the extraction imposed on their behalf? Or is the constraint fundamentally paternalistic (present authority decides what future persons need, without their voice)?",
+      "impact": "If future-generation consent is treated as impossible-in-principle (they do not exist to consent), the constraint is fundamentally asymmetric extraction. If the community recognizes mechanisms by which adult future generations can assess whether the ritual was worthwhile and either continue or abandon it voluntarily, the extraction is constrained by an intergenerational consent gate. This affects whether the constraint sustains legitimacy or accumulates mandatrophy.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether asymmetric temporal benefit structure permits genuine coordination or necessitates reclassification."
+      "description": "Whether the constraint's intergenerational extraction structure can be resolved through consent mechanisms or remains fundamentally paternalistic."
+    },
+    {
+      "id": "kernel_reading_boundary",
+      "question": "Is this constraint a reading of the catastrophe-memory-preservation kernel that emphasizes operational survival competence, or is it simply one historical implementation that has been superseded by alternative readings?",
+      "resolution_mechanism": "Textual/historical analysis of ritual texts, elder testimony, and community disputes about the ritual's purpose. Map whether the survival-competence reading is explicitly articulated in authoritative ritual sources, or whether it is an inferred reading imposed by modern analysts. Track whether the community itself contests which reading (survival-competence vs. mourning-practice vs. hybrid-atrophy) is the correct understanding of the kernel.",
+      "impact": "If the survival-competence reading is an explicit, coherent articulation from the ritual tradition's own sources, it is a primary reading. If it is an analytical imposition by external observers, it is a secondary reading less grounded in the committing authority. This affects the reading's claim to represent authentic intergenerational knowledge, not just modern projection onto historical practice.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the survival-competence reading is an authentic articulation from the ritual tradition or an external analytical imposition."
     }
   ],
   "commentary": {
-    "narrative_context": "This reading interprets the catastrophe-memory-preservation kernel as a constraint that preserves operational, embodied threat-recognition capacity across generations. Communities maintain ritual practices encoding survival knowledge from historical catastrophes (famine, plague, natural disaster, invasion). The ritual demands costly participation: emotional labor, time, physical risk, and reproduction of traumatic narratives. Participants experience this as extraction — loss of autonomy, submission to custodian authority, inability to exit without severing community bonds. The beneficiary is future generations and the collective survival probability. The constraint is claimed as tangled_rope: it coordinates genuine survival-competence transfer while extracting heavily from present participants. The crucial question is whether this coordination cannot be achieved at lower cost through modern means (formal training, documentation, simulation). If embodied ritual is truly necessary, the extraction is coordination overhead; if not, the constraint is masking extraction in a survival-necessity frame.",
+    "narrative_context": "A community bearing historical memory of a catastrophic event (flood, famine, invasion, plague) maintains mandatory ritual reenactment to preserve threat-recognition protocols across generations. The survival-competence reading asserts that this ritual encodes operational survival knowledge (how to recognize warning signs, execute cascade arrest, manage scarce resources under threat) into embodied practice and emotional memory in a way that cannot be reliably transmitted through writing or classroom instruction. Participants are required to reenact the catastrophe annually or cyclically, absorbing emotional labor, time cost, and constraint on autonomy. This reading instantiates the constraint as tangled_rope: it coordinates a real knowledge-transfer function (future generations inherit embodied competence) while extracting mandatory participation from the present generation. The claim and metrics are intentionally divergent: the constraint is claimed as tangled_rope (mixed coordination + extraction); the authored metrics describe high extractiveness, moderate suppression, low theater. The engine computes per-seat type; the divergence is the measurement.",
     "key_agents": [
-      "ritual_custodians: Authorized transmitters who maintain the ritual knowledge and enforce participation standards. Identity locked to custodianship; benefit from authority but bear admin cost.",
-      "present_generation_participants: Carry the extraction directly — emotional labor, time cost, constrained exit. Lack voice in design.",
-      "future_generations: Powerless beneficiary; inherit competence but cannot consent to the cost imposed on their predecessors.",
-      "community_authorities: Institutional agenda-setter who believe catastrophe-competence is non-negotiable and ritual-only. Benefit from collective cohesion and survival preparation.",
-      "youth_with_exit_paths: Structurally excluded from authority but have real alternatives (migration, formal education). Experience ritual as obstacle; excluded from framing what counts as valid knowledge.",
-      "historical_catastrophe_survivors: Observers who testify that the threat-patterns embedded in ritual were validated under actual crisis conditions — the primary external corroboration of the founding problem."
+      "ritual_authority_elders: Custodians of the ritual and the historical record; maintain participation as non-negotiable for cultural competence; extract authority from knowledge-stewardship (organized power, identity-locked exit)",
+      "present_generation_participants: Absorb mandatory participation cost; receive threat-recognition knowledge but lose autonomy during ritual seasons; cannot exit without loss of identity and community status (moderate power, identity-locked exit)",
+      "future_generations: Non-agent beneficiary cohort; will inherit embodied competence; have no voice in present participation decision (powerless, trapped exit, civilizational horizon)",
+      "competing_modernization_narratives: Excluded from legitimacy; argue for alternative (written, classroom, simulation) knowledge-transfer mechanisms; would reshape the constraint if admitted to the decision structure (moderate power, constrained exit)",
+      "disaster_response_specialists: Observers; empirically assess whether ritual produces superior threat-recognition relative to alternatives (institutional power, analytical exit)",
+      "cultural_continuity_advocates: Defend the ritual as core to identity and collective memory, independent of survival-competence claims; support mandatory participation as justified by social continuity function (organized power, identity-locked exit)"
     ],
-    "logic_rationale": "Extractiveness is moderate-high (0.68) because the ritual imposes sustained, measurable costs on participants (embodied labor, emotional demand, time, constrained exit) to deliver a benefit that accrues primarily to future generations. The constraint is enforced: community social pressure, identity-fusion of the custodian role, and framing of exit as knowledge-loss all suppress alternatives. Theater ratio is low-moderate (0.28): the ritual does serve a coordination function (knowledge transmission), but a growing proportion of enforcement activity defends the ritual form itself rather than the underlying threat-competence — there is increasing documentary evidence, formal training, and external knowledge sources that could serve the stated function, yet the ritual persists and is actively defended even where alternatives would satisfy the coordination goal. Suppression is moderate (0.45): not all suppression is violent exclusion; much of it is identity-fusion and kinship embedding. The measurement series shows extractiveness rising slightly over time and plateauing (0.58→0.68), theater_ratio increasing (0.18→0.28) — both consistent with slow atrophy of the coordination function and increasing defensiveness of the ritual form. This reading treats the constraint as genuine coordination (tangled_rope) because I author the premise that embodied ritual transmission is operationally superior to alternatives; the hybrid-atrophy reading (sibling) would interpret the same data as evidence that function has degraded and only theater persists.",
-    "directionality_logic": "present_generation_participants: high d (near 1.0, target end) — they bear extraction costs, have constrained exits, and receive no direct benefit. ritual_custodians: moderate d (~0.4) — they set/enforce the arrangement and collect authority/identity benefits, but also bear administrative costs and are identity-locked to its maintenance. future_generations: reversed d (near 0.0, beneficiary end) — they receive the competence benefit, but are powerless and cannot consent. community_authorities: near-beneficiary d (~0.25) — they benefit from collective cohesion and survival preparation but bear enforcement costs and face growing pressure to justify the extraction. The directionality divergence between payers (high d, experience extraction) and agenda-setters (moderate d, experience coordination) is the structural seat divergence: the engine will compute tangled_rope from the payer perspective and rope or even mountain from the custodian perspective.",
-    "perspectival_gap": "The ritual_custodians and community_authorities sit in the coordinate-and-transmit seat: they experience the constraint as a genuine coordination challenge (how do you encode and transmit embodied knowledge?) whose solution is the ritual's demanding form. From their seat, the high participation cost is the price of fidelity; the alternative (written instruction, video, formal training) seems inadequate because it has failed in past catastrophes or because they have been trained to distrust non-embodied transmission. present_generation_participants sit in the extraction seat: they experience the constraint's cost (autonomy, emotional labor, exit bars) immediately and directly; the benefit (their children's survival competence) is future and abstract. They lack the authority-seat's epistemic certainty that the ritual is the only means. The engine computes these divergences from the structural data: beneficiary vs. victim declarations, power atoms, exit options. That divergence IS the phenomenon the corpus is designed to detect.",
-    "mandatrophy_analysis": "The founding problem is substantive (historical catastrophe validated the threat-patterns embedded in ritual), but the founding-problem status is contested. Present elders report the problem as live (new threats continually emerge); external observers argue the problem is largely solved by early-warning systems and formal emergency response. The measurement series shows slight theater-ratio increase over the 40-year interval (0.18→0.28), suggesting a small drift toward performative maintenance. However, the theater ratio remains well below 0.5, and the extractiveness plateaus rather than cascading upward, which is inconsistent with pure piton (theater-dominant). This reading authoritatively interprets the constraint as tangled_rope: the coordination function (transmitting embodied threat-competence) is genuine and operationally necessary, even if the extraction cost is asymmetric and high. The hybrid-atrophy reading (sibling) interprets the same data as evidence of function decay and would classify as piton. The divergence cannot be resolved by metrics alone; it depends on the contested empirical question of whether embodied ritual transmission is truly superior to alternatives.",
-    "kernel_context": "This constraint is one reading of a contested kernel: catastrophe_memory_preservation. Three readings instantiate different core premises: (1) SURVIVAL_COMPETENCE_READING (this file): Ritual preserves operational, embodied threat-recognition capacity necessary for collective survival under catastrophe. High extraction cost justified as coordination overhead. (2) MOURNING_PRACTICE_READING: Ritual preserves symbolic continuity and collective identity; the threat-recognition function is secondary or symbolic, not operationally transferred. Classification: snare (extraction masked as competence transfer). (3) HYBRID_ATROPHY_READING: Ritual once preserved survival-competence but has atrophied under modernity to mourning-practice; function is degraded, form persists by inertia. Classification: piton (theater without operational function). Each reading is a complete, self-contained constraint with its own ε, stakeholders, and classification. This reading treats the kernel (catastrophe-memory-preservation) as instantiating genuine coordination; the sibling readings treat it differently."
+    "logic_rationale": "Extractiveness is moderate-high (0.68 at interval end) because mandatory participation is costly (time, emotional labor, autonomy constraint) and is sustained by institutional authority that excludes alternatives from legitimacy consideration. It is not maximal because the coordination function is genuine and acknowledged even by skeptics — the question is whether the extraction cost is proportionate to the transfer benefit. Suppression is moderate (0.45) because the constraint operates primarily through identity-lock (exit means cultural expulsion) rather than coercive force; participants internalize the obligation as self-conceptually constitutive. Theater ratio is low-moderate (0.28): the ritual remains functionally oriented to threat-recognition drill rather than purely symbolic mourning, but rising theater over the interval suggests increasing proportion of performative activity that defends the ritual's necessity rather than actually transferring operational knowledge. Accessibility collapse is moderate (0.62): alternatives exist (classroom, written, simulation) but have been suppressed from legitimacy by ritual authority's framing of embodied practice as uniquely efficacious. Resistance is moderate-high (0.58): modernization advocates and younger participants contest mandatory participation, but resistance is constrained by identity-lock and community sanctions. The measurement series shows extractiveness rising and plateauing, theater ratio rising with decreasing slope (suggesting the ritual is becoming more performative over time, defending its institutional position rather than improving knowledge transfer), and suppression stabilizing (identity-lock remains constant across the interval). This trajectory is consistent with a constraint that coordinates a real function but exhibits rising institutional overhead relative to functional benefit.",
+    "perspectival_gap": "From the elder-authority seat, this constraint is essential coordination: it preserves knowledge that will save future lives and maintains cultural continuity. The extraction (mandatory participation) is justified as the price of that transmission. From the present-generation-participant seat, it is costly extraction (time, labor, autonomy) justified by an uncertain future benefit (will the threat recur? will the knowledge actually help?). From the future-generation seat (non-agent, but analytically), it is a benefit imposed without consent — they inherit competence but never chose to accept the extraction cost imposed on their parents. The ritual authority computes the constraint as justified tangled rope; modernizers compute it as camouflaged snare using survival-competence mythology to defend institutional authority; specialists await empirical verdict. The engine computes per-seat directionality from beneficiary/victim declarations and exit options: elders sit near the beneficiary end (they extract authority and maintain institutional position); present participants sit near the target end (mandatory participation cost, identity-locked exit making exit prohibitive); future cohorts sit as non-agent beneficiaries (receive competence but never participate in the decision). This asymmetry is structural to the constraint and should manifest in different type computations across seats.",
+    "directionality_logic": "Ritual elders (agenda_setter): d ≈ 0.2–0.3 (beneficiary seat: maintain institutional authority, extract custodian status, but also absorb enforcement costs and historical responsibility for knowledge transmission). Present-generation participants (payer): d ≈ 0.7–0.8 (target seat: mandatory participation cost, internalized obligation through identity-lock, constrained exit through community sanctions, no arbitrage option). Future generations (beneficiary, non-agent): d = 0.0 (no directionality computed for non-agents; they are the referent of benefit but not a structural seat). Competing modernizers (excluded): d ≈ 0.5–0.6 (symmetric-to-target: they lose legitimacy status and institutional voice but are not mandated to participate in the ritual itself; their extraction is institutional exclusion rather than direct participation cost). Disaster specialists (observer): d = analytical (analytical seat; compute only the mismatch between ritual authority's claims and empirical outcomes). The divergence between elder-seat computation and payer-seat computation should be sharp: elders compute the constraint as functional coordination with acceptable enforcement cost; payers compute it as asymmetric extraction defended by institutional authority. This is the per-seat classification divergence the engine measures; it is not a defect in the authored structure but the point of the measurement.",
+    "mandatrophy_analysis": "The founding problem (recognizing threat patterns and managing cascades to prevent catastrophe) is live in the ritual authority's framing but contested in modernizers' framing. The disappearance verdict is world_rearranges: if mandatory ritual vanished, the community would reorganize around alternative knowledge-transfer mechanisms; the world does not stay the same without the constraint. The founding_problem_status is contested: elders attest the threat patterns are still live; modernizers attest the founding problem is solvable through alternative means and no longer requires embodied ritual. The mismatch is (contested founding_problem_status, world_rearranges disappearance_verdict): the constraint's mandate is philosophically and empirically disputed. This is the entry condition for mandatrophy analysis. If rising theater_ratio indicates the ritual is increasingly performative (defending its institutional position rather than transferring operational knowledge), and if future empirical research shows alternatives are equivalent or superior, the constraint will accumulate evidence of mandate obsolescence while the institutional apparatus persists. This is the mandatrophy signature: (1) founding problem contested or dead, (2) world rearranges without constraint (arrangement is not natural law), (3) rising theater ratio (institutional activity defending the constraint's necessity rather than functional operation), (4) suppression stabilizing or rising (institutional effort to maintain participation against growing resistance). Currently the constraint exhibits partial mandatrophy indicators: rising theater, contested founding problem, institutional suppression of alternatives. The resolution will depend on empirical outcome of the embodied-vs-symbolic-transfer omega: if ritual proves superior, mandate is live; if alternatives are equivalent, mandate is dead and the constraint transitions to piton (institutional inertia maintaining a constraint whose function has atrophied).",
+    "kernel_context": "This constraint is one reading of the catastrophe-memory-preservation kernel. The kernel is the persisting community commitment to preserve historical memory and threat-recognition across generations, codified in ritual practice and maintained through institutional authority. Three readings contest what the kernel's primary function is: (1) survival-competence reading (THIS STORY): the kernel exists to transfer operational threat-recognition protocols; ritual is the mechanism because embodied practice embeds knowledge that text cannot. (2) mourning-practice reading: the kernel exists to process collective grief and maintain symbolic continuity; ritual functions primarily as mourning and identity-assertion, not operational knowledge transfer. (3) hybrid-atrophy reading: the kernel once preserved survival competence but has atrophied under modernity to pure mourning-practice; the institutional apparatus persists through inertia, not functional necessity. Each reading instantiates a different constraint with different ε values, beneficiary structures, and types. This story (survival-competence reading) carries high ε (extraction through mandatory participation), tangled-rope type (coordination + extraction), and focused beneficiary (future-generation competence). The mourning-practice reading would carry lower ε (optional participation framed as collective identity work, not mandatory protocol transfer), rope type (coordination without extraction), and different beneficiary (cultural continuity rather than operational survival). The hybrid-atrophy reading would carry high ε, theater_ratio, and piton type (institutional maintenance without functional output). The sibling readings are not alternative interpretations of THIS constraint; they are separate constraints of the same kernel, each with its own JSON file and network links."
   },
   "boltzmann": {
     "coordination_type": "attachment_coordination",
@@ -212,53 +280,64 @@
       "catastrophe_memory_preservation__mourning_practice_reading",
       "catastrophe_memory_preservation__hybrid_atrophy_reading"
     ],
-    "dual_formulation_note": "Three readings of a single kernel (catastrophe_memory_preservation) represent different structural interpretations of the same ritual practice. This reading (survival_competence) treats the ritual as coordinating genuinely necessary embodied knowledge transfer; mourning_practice reading treats the transfer claim as secondary/symbolic; hybrid_atrophy reading treats the function as degraded. All three are linked as constraint family members. The ε values diverge substantially (0.68 here; ~0.74+ in mourning/snare reading; ~0.65+ in atrophy/piton reading) because the readings attribute different functions and beneficiaries to the same ritual form. ε-invariance is maintained: each reading has one stable ε and one consistent structural story. The inter-reading divergence is the point: it captures the empirical indeterminacy of whether the ritual's core function is operational survival competence, symbolic mourning, or degraded performance."
+    "dual_formulation_note": "This constraint is one reading of the catastrophe-memory-preservation kernel. The survival-competence reading emphasizes operational knowledge transfer and threat-recognition as the primary coordination function; ritual is the necessary mechanism for embodying protocols. Sibling readings emphasize symbolic mourning (mourning_practice_reading) or institutional atrophy (hybrid_atrophy_reading) as the actual primary function. Each reading has its own constraint story with distinct ε values, beneficiary structures, and type classifications. The readings coexist as live positions held by different parties (elders vs. modernizers vs. institutional analysts); neither forecloses the others at the kernel level, though each reading's policy implications would constrain or reshape the others' operational freedom if adopted. Link these three stories via network.affects_constraints to model the family structure and enable family-level analysis of how contest resolution in one reading would propagate to the others."
   },
   "cs_structure": {
-    "kernel_codification": "distributed",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "embodied_threat_recognition_necessity",
+    "drift_state": {
+      "moment": "contemporary_modernization_pressure",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "catastrophe_memory_preservation__mourning_practice_reading",
-        "relation": "forecloses"
+        "sibling_id": "mourning_practice_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "catastrophe_memory_preservation__hybrid_atrophy_reading",
+        "sibling_id": "hybrid_atrophy_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "embodied_knowledge_operationally_necessary",
+        "atom": "embodied_protocol_transfer_empirically_necessary",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "ritual_form_inseparable_from_function",
-        "role": "foundational",
+        "atom": "ritual_exclusion_of_alternative_mechanisms",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "conventional"
       }
-    ],
-    "reference_frame": "ritual_as_operational_competence_transfer",
-    "drift_state": {
-      "moment": "contemporary_period",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
+  },
+  "gain_flow": "ritual_authority_elders",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "catastrophe_memory_preservation__mourning_practice_reading",
+      "catastrophe_memory_preservation__hybrid_atrophy_reading"
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

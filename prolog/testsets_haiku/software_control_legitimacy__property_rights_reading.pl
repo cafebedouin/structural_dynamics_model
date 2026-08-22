@@ -43,7 +43,13 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,31 +74,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: software_control_legitimacy__property_rights_reading
- *   human_readable: Software Control as Property Right and Commercial Legitimacy
+ *   human_readable: Software Control as Property Right (Intellectual Property Reading)
  *   domain: political_economy/intellectual_property/software_engineering
  *
  * SUMMARY:
- *   This constraint instantiates ONE READING of the contested kernel
- *   'software_control_legitimacy': the property-rights reading, which grounds
- *   software control in intellectual property doctrine and commercial
- *   legitimacy. Under this reading, creators have legitimate authority to
- *   restrict use, modification, and distribution to protect investment and
- *   enable commercial sustainability. The alternative readings (commons,
- *   freedom-imperative, pragmatic-openness) offer competing frames with
- *   different ε values and victim/beneficiary structures. This story models
- *   ONLY the property-rights reading as a structurally coherent constraint —
- *   generated independently per the ε-invariance principle, with its own
- *   metrics, stakeholders, and type classification. The sibling readings are
- *   other constraint stories, linked via network.affects_constraints.
+ *   The property-rights reading of software control holds that creators have
+ *   legitimate authority to restrict use, modification, and distribution to
+ *   protect their investment and enable commercial sustainability. This
+ *   reading generates extractiveness because it creates monopoly positions
+ *   and locks users and developers into vendor-controlled ecosystems. The
+ *   constraint exhibits both genuine coordination (investment incentives,
+ *   support infrastructure, licensing simplification for enterprise users)
+ *   and substantial asymmetric extraction (licensing fees, modification
+ *   restrictions, lock-in, and denial of labor value to FOSS contributors).
+ *   The reading is one of four contested readings of the broader kernel
+ *   'software control legitimacy,' competing with freedom-imperative,
+ *   pragmatic-openness, and commons-based readings. This story instantiates
+ *   ONLY the property-rights reading as a clean, ε-invariant constraint; the
+ *   sibling readings are separate constraint stories.
  *
  * KEY AGENTS:
- *   - commercial_software_vendors: institutional beneficiary and agenda-setter (set and enforce IP terms, collect license revenue; arbitrage exit options)
- *   - venture_capital_investors: institutional beneficiary (IP protection enables exit strategies and valuations; no direct enforcement role)
- *   - foss_advocates: moderate-power payer/excluded (denied return on investment they seek; restricted from setting legitimacy frame; constrained exit)
- *   - downstream_integrators: powerful-power payer (pay license fees, operate under restrictions; constrained exit)
- *   - security_researchers_under_restriction: moderate-power payer with identity-locked exit (professional identity in security research bound to vendor-controlled constraints)
- *   - end_users: organized-power beneficiary/payer (receive professional software + support; bear licensing costs and lock-in)
- *   - intellectual_property_regime: non-agent beneficiary (the legal/institutional doctrine this reading vindicates and depends on)
+ *   - proprietary_software_vendors: institutional agenda-setters collecting licensing revenue and controlling enforcement infrastructure (high power, arbitrage exit)
+ *   - institutional_investors_in_software: institutional beneficiaries capturing IP value appreciation and monopoly rents (high power, arbitrage exit)
+ *   - FOSS advocates and contributors: organized victims denied modification and monetization rights (moderate power, constrained exit — trapped within legal IP regime, identity-locked to open-source mission)
+ *   - users denied modification rights: powerless victims locked into vendor-provided functionality (powerless, constrained exit)
+ *   - commercial users bound to single vendor: moderate-power victims trapped by switching costs and sunk integration investment (moderate power, identity-locked)
+ *   - developing-world software users: powerless victims priced out or legally restricted from access (powerless, trapped)
+ *   - open-source alternative developers: excluded, organized competition structurally subordinated by IP law (organized power, constrained exit)
  */
 
 /* ==========================================================================
@@ -100,63 +109,128 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(software_control_legitimacy__property_rights_reading, 0.62).
-domain_priors:suppression_score(software_control_legitimacy__property_rights_reading, 0.71).
+domain_priors:suppression_score(software_control_legitimacy__property_rights_reading, 0.58).
 domain_priors:theater_ratio(software_control_legitimacy__property_rights_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, suppression_requirement, 0.58).
 narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(software_control_legitimacy__property_rights_reading, resistance, 0.64).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(software_control_legitimacy__property_rights_reading, tangled_rope).
-narrative_ontology:human_readable(software_control_legitimacy__property_rights_reading, "Software Control as Property Right and Commercial Legitimacy").
+narrative_ontology:human_readable(software_control_legitimacy__property_rights_reading, "Software Control as Property Right (Intellectual Property Reading)").
 narrative_ontology:topic_domain(software_control_legitimacy__property_rights_reading, "political_economy/intellectual_property/software_engineering").
 
 domain_priors:requires_active_enforcement(software_control_legitimacy__property_rights_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(software_control_legitimacy__property_rights_reading, 'd38ea962-f092-43d2-a2ca-6734896c2044').
-narrative_ontology:cs_kernel_codification('d38ea962-f092-43d2-a2ca-6734896c2044', fixed_text).
-narrative_ontology:cs_authority_grounding('d38ea962-f092-43d2-a2ca-6734896c2044', extraction).
-narrative_ontology:cs_interpretation_layer_present('d38ea962-f092-43d2-a2ca-6734896c2044').
-narrative_ontology:cs_reading_relation('d38ea962-f092-43d2-a2ca-6734896c2044', software_control_legitimacy__freedom_imperative_reading, forecloses).
-narrative_ontology:cs_reading_relation('d38ea962-f092-43d2-a2ca-6734896c2044', software_control_legitimacy__commons_reading, coexists_with).
-narrative_ontology:cs_reading_relation('d38ea962-f092-43d2-a2ca-6734896c2044', software_control_legitimacy__pragmatic_openness_reading, influences).
-narrative_ontology:cs_axiom('d38ea962-f092-43d2-a2ca-6734896c2044', foundational, software_is_intellectual_property).
-narrative_ontology:cs_axiom_status(software_is_intellectual_property, holdable).
-narrative_ontology:cs_axiom_grounding('d38ea962-f092-43d2-a2ca-6734896c2044', software_is_intellectual_property, conventional).
-narrative_ontology:cs_axiom('d38ea962-f092-43d2-a2ca-6734896c2044', foundational, vendor_authority_legitimate_through_property_rights).
-narrative_ontology:cs_axiom_status(vendor_authority_legitimate_through_property_rights, holdable).
-narrative_ontology:cs_axiom_grounding('d38ea962-f092-43d2-a2ca-6734896c2044', vendor_authority_legitimate_through_property_rights, deontological).
-narrative_ontology:cs_axiom('d38ea962-f092-43d2-a2ca-6734896c2044', secondary, restriction_of_use_justified_by_investment_protection).
-narrative_ontology:cs_axiom_status(restriction_of_use_justified_by_investment_protection, holdable).
-narrative_ontology:cs_axiom_grounding('d38ea962-f092-43d2-a2ca-6734896c2044', restriction_of_use_justified_by_investment_protection, instrumental).
-narrative_ontology:cs_reference_frame('d38ea962-f092-43d2-a2ca-6734896c2044', intellectual_property_doctrine_software_as_property).
-narrative_ontology:cs_drift_state('d38ea962-f092-43d2-a2ca-6734896c2044', contemporary_open_source_maturity, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('d38ea962-f092-43d2-a2ca-6734896c2044', '').
+narrative_ontology:cs_story_uid(software_control_legitimacy__property_rights_reading, 'f101e60d-6cad-4699-93a0-6878c0ebb027').
+narrative_ontology:cs_kernel_codification('f101e60d-6cad-4699-93a0-6878c0ebb027', fixed_text).
+narrative_ontology:cs_authority_grounding('f101e60d-6cad-4699-93a0-6878c0ebb027', extraction).
+narrative_ontology:cs_interpretation_layer_present('f101e60d-6cad-4699-93a0-6878c0ebb027').
+narrative_ontology:cs_reading_relation('f101e60d-6cad-4699-93a0-6878c0ebb027', software_control_legitimacy__freedom_imperative_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f101e60d-6cad-4699-93a0-6878c0ebb027', software_control_legitimacy__pragmatic_openness_reading, influences).
+narrative_ontology:cs_reading_relation('f101e60d-6cad-4699-93a0-6878c0ebb027', software_control_legitimacy__commons_reading, coexists_with).
+narrative_ontology:cs_axiom('f101e60d-6cad-4699-93a0-6878c0ebb027', foundational, software_as_property_right).
+narrative_ontology:cs_axiom_status(software_as_property_right, holdable).
+narrative_ontology:cs_axiom_grounding('f101e60d-6cad-4699-93a0-6878c0ebb027', software_as_property_right, conventional).
+narrative_ontology:cs_axiom('f101e60d-6cad-4699-93a0-6878c0ebb027', foundational, creator_authority_legitimate_to_restrict_modification_and_distribution).
+narrative_ontology:cs_axiom_status(creator_authority_legitimate_to_restrict_modification_and_distribution, holdable).
+narrative_ontology:cs_axiom_grounding('f101e60d-6cad-4699-93a0-6878c0ebb027', creator_authority_legitimate_to_restrict_modification_and_distribution, deontological).
+narrative_ontology:cs_reference_frame('f101e60d-6cad-4699-93a0-6878c0ebb027', creator_intellectual_property_authority).
+narrative_ontology:cs_drift_state('f101e60d-6cad-4699-93a0-6878c0ebb027', contemporary_2026, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('f101e60d-6cad-4699-93a0-6878c0ebb027', '').
 narrative_ontology:cs_kernel_id(software_control_legitimacy__property_rights_reading, software_control_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(software_control_legitimacy__property_rights_reading, commercial_software_vendors).
-narrative_ontology:constraint_beneficiary(software_control_legitimacy__property_rights_reading, venture_capital_investors).
-narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, foss_advocates).
-narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, downstream_integrators).
-narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, security_researchers_under_restriction).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__property_rights_reading, proprietary_software_vendors).
+narrative_ontology:constraint_beneficiary(software_control_legitimacy__property_rights_reading, institutional_investors_in_software).
+narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, foss_advocates_and_contributors).
+narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, users_denied_modification_rights).
+narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, commercial_users_bound_to_single_vendor).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, academic_researchers).
+narrative_ontology:constraint_victim(software_control_legitimacy__property_rights_reading, developing_world_software_users).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Set and enforce licensing terms that restrict use, modification, and redistribution. Collect revenue through licensing fees, support contracts, and vendor lock-in mechanisms. Justify restrictions as necessary to protect R&D investment and enable sustained commercial operations. Control the technical and legal infrastructure that enforces the property-right claim.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, proprietary_software_vendors, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Receive returns on capital invested in software development through licensing revenue and IP value appreciation. The property-right framing secures their investment thesis: restricted software generates monopoly rents and defensible market positions. Benefit from strong intellectual property law and enforcement.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, institutional_investors_in_software, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Denied the ability to modify, study, or redistribute proprietary software they use or contribute to. Their labor in competing open-source ecosystems is devalued by the property-right reading, which treats their work as non-commercial and subordinate. Face legal liability if they reverse-engineer or circumvent license restrictions. Operate within a regulatory and licensing regime they do not control.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, foss_advocates_and_contributors, payer,
+    organized, generational, constrained, global).
+
+% Cannot modify software to suit their needs, study how it works, or verify security and privacy properties. Locked into whatever the vendor provides or charges. Dependent on the vendor for security patches and feature updates. Cannot fork or adapt software to different hardware or use cases.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, users_denied_modification_rights, payer,
+    powerless, biographical, constrained, global).
+
+% Pay licensing fees, support costs, and upgrade obligations. Build their own systems and workflows on the vendor's controlled platform, creating switching costs and vendor dependence. Cannot negotiate license terms or redirect development roadmap without leaving their existing investment. Trapped by the sunk cost of integration and employee training.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, commercial_users_bound_to_single_vendor, payer,
+    moderate, biographical, identity_locked, global).
+
+% Often need to use proprietary software for research but face licensing costs and modification restrictions that impede replication and methodological transparency. Cannot legally modify algorithms or verify implementations. Excluded from developing derivative works. Some have access through academic site licenses, but these are restricted and temporary.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, academic_researchers, payer,
+    moderate, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(software_control_legitimacy__property_rights_reading, academic_researchers, excluded).
+
+% Cannot afford proprietary licensing costs and are legally restricted from using open alternatives that violate copyright in their jurisdiction. Lack technical capacity to audit or modify software for local conditions. Dependent on vendors willing to serve their market at affordable prices; often left behind.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, developing_world_software_users, payer,
+    powerless, biographical, trapped, global).
+
+% Develop and maintain free and open-source alternatives but operate in a framing that treats their work as lower-status and non-commercial. Compete with vendors who have legal monopolies on their code and can bundle or acquire competing projects. Structurally excluded from the licensing revenue and IP value appreciation that flow to proprietary vendors.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, open_source_alternative_developers, excluded,
+    organized, generational, constrained, global).
+
+% The apparatus of copyright law, patent law, trade secret protection, and DMCA-style anti-circumvention provisions that enforces software as property. Not an agent itself, but the enabling structure the property-right reading depends on. Governed by legislatures and courts.
+narrative_ontology:constraint_stakeholder(software_control_legitimacy__property_rights_reading, intellectual_property_legal_system, agenda_setter,
+    institutional, generational, analytical, global).
+narrative_ontology:stakeholder_non_agent(software_control_legitimacy__property_rights_reading, intellectual_property_legal_system).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(software_control_legitimacy__property_rights_reading, proprietary_software_vendors).
+narrative_ontology:fixing_cost_class(software_control_legitimacy__property_rights_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Software property rights coordinate investment incentives with market access: vendors invest in development with assurance they can capture returns through licensing; users and enterprises gain access to maintained, supported software; IP law provides the enforcement structure that makes vendor investment signals credible.
+% TRANSFER_FUNCTION: Moves value from software users and derivative developers to proprietary vendors and institutional investors: licensing fees, support contracts, switching costs, and monopoly rents flow upward. Restricts labor value creation for FOSS contributors and academic researchers who cannot monetize modifications or derivative work.
+% ABSENT_VOICES: FOSS developers, users who would prefer to modify and audit software, and developing-world users priced out by licensing costs are structurally excluded from the licensing negotiation. They can voice dissent through alternative development (open source) but cannot renegotiate the terms under which proprietary software operates.
+% DISAPPEARANCE_RATIONALE: If software property rights enforcement vanished overnight, proprietary vendors would lose licensing revenue and market-dominant positions; users would fork and modify existing code; FOSS ecosystems would expand into currently proprietary markets; software development would shift toward collective models and community contribution. The commercial software industry as currently structured would reorganize entirely.
+% FOUNDING_PROBLEM: Early software development was vulnerable to free-riding on expensive R&D investment: a vendor could invest heavily in development, and competitors could copy the work without bearing the cost. Without property-right protection, market incentives for continued investment were weak; venture capital and institutional funding for software development were unreliable.
+% FOUNDING_PROBLEM_CORROBORATION: Software vendors and venture capitalists attest the founding problem remains live and that property protection is necessary for commercial incentives. Open-source historians (Stallman, Raymond, Perens) and FOSS advocates attest the problem was solved by peer review and community reputation long before it required property protection; they cite successful large-scale FOSS projects (Linux, Apache, MySQL, PostgreSQL) funded through alternative mechanisms. Empirical evidence from the literature is mixed: high-growth FOSS ecosystems contradict the necessity claim; however, some major proprietary vendors credit property protection with enabling their scale. No consensus outside the benefiting parties.
+narrative_ontology:disappearance_verdict(software_control_legitimacy__property_rights_reading, world_rearranges).
+narrative_ontology:founding_problem_status(software_control_legitimacy__property_rights_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(software_control_legitimacy__property_rights_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(software_control_legitimacy__property_rights_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(software_control_legitimacy__property_rights_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(software_control_legitimacy__property_rights_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,16 +250,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.62) because the constraint solves a genuine problem (funding professional development) but does so by restricting freedoms that have measurable social value (code reuse, security auditing, modification for local needs). The measurement series shows extractiveness rising from 0.45 to 0.62 across the interval, driven by: (1) software becoming essential infrastructure where lock-in costs rise, (2) patent thickets in software increasing barriers to derivative work, (3) subscription models replacing one-time purchases, making the revenue extraction continuous. Suppression is higher (0.71) because enforcement requires active restriction of code access, reverse-engineering, interoperability, and license-term alternatives — vendors must actively police boundaries to maintain property claims. Theater is low-moderate (0.28) because the security/quality justification is real but an increasing share of enforcement activity defends market position rather than software quality. Accessibility-collapse (0.58) reflects that alternatives (open-source, forking, reimplementation) remain available but require substantial effort, so most users are functionally locked in even if not legally trapped. Resistance (0.72) is high because open-source communities actively contest the legitimacy of proprietary software; the constraint persists not because resistance is absent but because institutional and financial power outweighs it.
+ *   Extractiveness (0.62) is moderate-to-high because the constraint transfers substantial value from users and derivative developers to vendors and investors through licensing fees, modification restrictions, and monopoly positioning. It is not maximal because genuine coordination value exists: property protection does fund software development, and some users benefit from vendor support and bundled services. Suppression (0.58) is moderately high because the constraint requires active legal and technical enforcement (DMCA anti-circumvention, copyright prosecution, DRM) to prevent users from modifying or reverse-engineering software. Accessibility collapse (0.71) is high because alternatives to proprietary software are legally foreclosed in many jurisdictions and technically foreclosed through IP protection and DRM. Resistance (0.64) is high because FOSS communities mount sustained organizational opposition. Theater ratio (0.28) is low because the security and quality maintenance justifications, while real, do not account for the majority of enforcement activity — most enforcement defends modification restrictions and pricing power, not user safety. The temporal series show extractiveness rising from 1980 to ~2010 (when the property-right regime matured through DMCA, software patent expansion, and cloud/SaaS lock-in) and then plateauing despite FOSS expansion, indicating a stabilized but contested equilibrium. Suppression requirement rose sharply with legal infrastructure development (copyright takedowns, DMCA enforcement, patent litigation) and has remained stable. Theater ratio has risen gradually as vendors invest in open-source-adjacent projects (cloud platforms shipping with open components) while maintaining property-right boundaries — a marker of defensive reframing.
  *
  * PERSPECTIVAL GAP:
- *   The vendor/investor seats and the FOSS/researcher seats compute radically different types from the same structural data. Vendors see coordination (funding professional development, enabling liability, paying for security) and modest extraction (license fees are the cost of access to professional expertise). FOSS advocates see pure extraction (restricting freedoms that should be universal, denying return to decentralized developers, locking in users). Downstream integrators see Tangled Rope (they coordinate on standards and library ecosystems but pay asymmetrically high license fees for dependent software). Security researchers see a snare (denied access to audit code, forced to accept vendor definitions of acceptable vulnerability research, trapped by identity fusion). The engine computes per-seat classifications from the power, exit, and beneficiary/victim declarations; the perspectival gap emerges naturally from these structural asymmetries.
+ *   The property-rights reading's beneficiaries (vendors, investors) experience this constraint as coordination (investment protection enabling innovation and market stability). The payer seats (users, FOSS developers) experience it as extraction with legitimacy cover: modification restrictions are justified as security, but they function to maintain market power; pricing is justified as reflecting development cost, but it functions to extract surplus from inelastic demand. The FOSS advocates experience identity-locking: many are professionally committed to open-source models and face career/mission costs from the property-right framing even when they could individually exit by taking proprietary jobs. The engine should compute high divergence between the beneficiary seat (d near 0.0, low effective extraction) and the payer seats (d near 1.0, high effective extraction). Commercial users sit in an intermediate position: they benefit from vendor support and ecosystem stability (d moderate), but face vendor lock-in and rising licensing costs (pushing d higher).
  *
  * DIRECTIONALITY LOGIC:
- *   Commercial vendors are structural beneficiaries (d ≈ 0.05-0.15: collect license revenue, control supply, arbitrage exit means they can move resources freely). Venture investors are beneficiaries (d ≈ 0.10: benefit from IP protection, arbitrage exit, but don't directly enforce). End-users are symmetric-to-slight-beneficiary (d ≈ 0.45-0.55: receive professional software and support, but also bear lock-in and licensing costs). FOSS advocates are targets (d ≈ 0.75-0.85: denied the return model they seek, restricted from modifying, constrained exit because the constraint controls industry legitimacy). Downstream integrators are targets (d ≈ 0.65-0.75: pay license fees, operate under restrictions, constrained exit because major software stacks are proprietary). Security researchers are near-full targets (d ≈ 0.85: denied access, identity-locked so they cannot simply leave the profession, constrained by legal restrictions on disclosure). These directionalities derive directly from the beneficiary/victim declarations: vendors and investors are beneficiaries, FOSS advocates and researchers are victims; exit options vary by seat's institutional position.
+ *   Beneficiary directionality: proprietary software vendors and institutional investors operate with high power and arbitrage exit — they can shift between markets, technologies, and business models. The constraint directly subsidizes them through licensing revenue and IP monopoly rents. They structure and enforce the constraint, so d approaches 0.0 (full beneficiary). Victim directionality: users denied modification rights and FOSS advocates bear costs (modification restrictions, lock-in, legal liability for reverse-engineering) with limited exit. FOSS advocates carry identity-locking (professional commitment to open-source; exiting would require abandoning their mission or retraining into proprietary sectors). Commercial users carry identity-locking (sunk integration costs; switching requires operational disruption). Users generally are powerless; d approaches 1.0 (full target). The constraint's distributive effect: beneficiaries are institutional, high-power, and concentrated; victims are diffuse and include powerless individuals, organized advocates, and moderate-power enterprises. No override needed because the derivation chain (beneficiary/victim + exit + power) naturally produces the correct directionality profile.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint sits exactly at the boundary where mandatrophy becomes contestable. The founding problem (funding professional software development) is partially but not completely solved: open-source professionals exist and build enterprise-grade software (Linux, Kubernetes, Apache), but venture-capital-funded proprietary models remain the industry's default path and generate the most developer investment. The measurement series shows extractiveness plateauing around 0.62 after t=30, suggesting the constraint has reached equilibrium: license restrictions are not intensifying further, but neither are they declining despite decades of open-source alternatives proving viable. Theater is staying low (0.28), which argues AGAINST mandatrophy on the piton mechanism (theater would need to approach 0.5-0.7 to signal atrophied function maintained theatrically). The constraint persists because: (1) the funding coordination problem is real and vendors solve it, (2) venture capital and IP law are mutually reinforcing institutions, (3) institutional beneficiaries have power to maintain it. The constraint would satisfy a mandatrophy verdict only if extractiveness kept rising (rent-seeking) or if the founding problem became demonstrably solved (which it hasn't — professional software still requires large capital). Current state: live constraint with contested mandate, not mandatrophic.
+ *   This constraint's mandate was to secure investment incentives for software development. The founding problem (high R&D costs, free-riding risk) was real in 1980–1990. The problem status is NOW contested: FOSS ecosystems demonstrably fund large-scale software development (Linux, Apache, Kubernetes, PyTorch) with alternative incentive structures (peer review, reputation, corporate subsidies, government funding). The constraint persists despite the founding problem being substantially addressed by non-property mechanisms. The ticket that keeps property rights in place is: (1) institutional investors benefit from monopoly rents and will not release them, (2) the legal/technical regime (DMCA, patent law, copyright) has become self-reinforcing, (3) path-dependent switching costs lock users and enterprises into proprietary ecosystems. The theater_ratio rise (0.08 to 0.28) reflects growing performative investment: vendors adopt open-source aesthetics (releasing 'open-source components'), establish bug-bounty programs, and claim transparency while maintaining core property restrictions. This is classic mandatrophy: the original function (funding development) is alive but partially obsolete; the extraction function persists through institutional inertia and deliberate maintenance by beneficiaries. A constraint that was Rope (genuine coordination, low extraction) is drifting toward Snare territory (extraction, legitimacy cover) but sits currently in Tangled Rope (mixed coordination + active extraction requiring enforcement). The rising suppression_requirement and steady extractiveness indicate hardening enforcement infrastructure and stabilized redistribution, not a solution seeking.
  */
 
 /* ==========================================================================
@@ -193,115 +267,123 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    coordination_vs_extraction_decomposition,
-    'Is the software property-rights constraint primarily a solution to a genuine coordination problem (funding professional development) with extraction as a side-effect, or is the coordination function a cover story for extraction that would proceed regardless?',
-    'Empirical investigation: compare venture-funded proprietary software outcomes (R&D investment, support, security quality) with professional open-source outcomes (Linux kernel development, Apache ecosystem, Kubernetes) for equivalent functionality and market maturity. If open-source achieves equivalent or superior outcomes at lower extraction cost, the coordination function is separable from the extraction mechanism.',
-    'If coordination and extraction are entangled, the constraint is a genuine Tangled Rope (both functions necessary). If separable, the constraint transitions toward Snare (extraction mechanism riding on a solved coordination problem). This omega directly addresses whether the constraint persists because it solves a live problem or because institutional power maintains it.',
+    necessity_of_property_protection_for_investment,
+    'Is strong property protection (copyright, patents, DMCA) actually necessary to fund software development, or would venture capital and institutional funding flow to software development under alternative incentive structures (reputation, peer review, government funding, corporate subsidy)?',
+    'Comparative analysis of FOSS vs. proprietary development funding pathways; historical analysis of software funding pre- and post-DMCA; natural experiments from jurisdictions with weaker IP enforcement (e.g., China''s software development funded via state coordination + vendor lock-in rather than IP rents).',
+    'If property protection is not necessary, ε should be reclassified upward (from 0.62 toward 0.80+) as pure extraction rather than coordination. The founding problem would be overdetermined — solved by non-property mechanisms — and the constraint would drift from Tangled Rope toward Snare. Conversely, if property protection IS necessary, current ε is correctly calibrated as mixed coordination + extraction.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(coordination_vs_extraction_decomposition, empirical, 'Whether IP-based coordination is necessary for professional software development or whether it is a contingent institutional choice.').
+narrative_ontology:omega_variable(necessity_of_property_protection_for_investment, empirical, 'Whether intellectual property protection is structurally required for software investment incentives or whether alternative mechanisms suffice.').
 
 omega_variable(
-    property_concept_applicability_to_software,
-    'Does the property-rights metaphor accurately describe software, or does software''s copyability-without-loss and essential-infrastructure role require a different conceptual frame?',
-    'Philosophical and economic analysis: compare software to physical property (where scarcity is natural) and to information/knowledge (where scarcity is created and maintained). Examine whether patent doctrine (invented to describe physical mechanisms) adequately captures software''s dynamics.',
-    'If software is categorically different from physical property (no natural scarcity, economies of scale in copying), the property-rights legitimacy claim rests on a category mistake, and the constraint''s justification collapses into pure institutional choice (which grounds the constraint''s contestation across all sibling readings). If property framing is adequate, the framework stands.',
+    separability_of_property_and_support,
+    'Are property rights over software code structurally inseparable from vendor support, security updates, and professional services, or could users obtain bundled support for open-source software through alternative service models?',
+    'Empirical analysis of support-model diversity in FOSS ecosystems (Red Hat, Canonical, SUSE, etc.); market testing of open-source-software-as-a-service models; survey of enterprise adoption drivers for proprietary vs. open-source with comparable support.',
+    'If property rights are separable from support, the coordination function ε represents is smaller than authored (vendorized support is coordination, but it does not require property rights), and the pure extraction component is larger. This would shift ε upward (toward 0.70+) and the classification toward Snare. If inseparable, current calibration stands.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(property_concept_applicability_to_software, conceptual, 'Whether property-rights doctrine is the appropriate conceptual frame for software control.').
+narrative_ontology:omega_variable(separability_of_property_and_support, empirical, 'Whether the coordination value of vendor support could be achieved under open-source property models.').
 
 omega_variable(
-    vendor_exit_options_and_alternatives,
-    'If software vendors'' property rights were removed or severely restricted, would software development funding mechanisms exist (open-source foundations, government research, cooperative models), and if so, would they sustain comparable or superior outcomes?',
-    'Natural experiments from jurisdictions with mandatory interoperability (EU), enforced right-to-repair (France), or reduced patent scope (Australia). Observe: do alternative funding models emerge; is development quality sustained; does innovation rate change; do users benefit or suffer.',
-    'Evidence of viable alternatives weakens the ''property rights are necessary'' justification and suggests the constraint persists through institutional power rather than necessity. Evidence that alternatives produce inferior outcomes strengthens the coordination claim.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(vendor_exit_options_and_alternatives, empirical, 'Whether software property rights are necessary for professional development or contingent on institutional choices.').
-
-omega_variable(
-    security_researcher_suppression_mechanism,
-    'Is the measured suppression (0.71) primarily structural (legal barriers like CFAA, license terms) or internalized (researchers accept vendor definitions of acceptable research as legitimate)?',
-    'Post-restriction analysis: if researchers adopt open-source security auditing after restrictive vendor regimes relax or are bypassed, suppression was primarily structural. If researchers continue to defer to vendors even after legal barriers are removed, suppression is partially internalized.',
-    'If internalized, the constraint''s effective suppression is higher than structural measures suggest — researchers carry the suppression with them even when barriers are removed. This would argue for higher suppression values and greater entrenchment of the constraint''s power.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(security_researcher_suppression_mechanism, empirical, 'Structural vs. internalized suppression of security research in proprietary software regimes.').
-
-omega_variable(
-    kernel_reading_contention_locus,
-    'Where exactly does the contention between property-rights and freedom-imperative readings reside? At the level of axioms (software IS/IS NOT property), at the level of authority (vendors DO/DO NOT have legitimate authority), or at the level of value (restricting software access is GOOD/BAD)?',
-    'Discourse analysis of debate between property-rights advocates and freedom-imperative advocates: locate points of claimed disagreement. Identify what would settle each: empirical evidence (software development outcomes), axiomatic premises (category membership), or value commitments (freedom weight).',
-    'If disagreement is primarily axiomatic (category membership), only a conceptual/philosophical resolution path exists. If primarily empirical, data can resolve it. If primarily value-based, disagreement is structural and persists regardless of evidence. This omega routes the kernel''s contestation mechanics into visible structure.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(kernel_reading_contention_locus, conceptual, 'The locus of contention between property-rights and freedom-imperative kernel readings.').
-
-omega_variable(
-    downstream_integrator_exit_feasibility,
-    'For downstream integrators (companies building on proprietary software stacks), are alternative platforms and libraries truly available as functional exit options, or is exit only theoretical due to network effects and user lock-in?',
-    'Case study analysis: pick downstream-integrator companies in mature vendor-dependent positions (e.g., companies built on Microsoft .NET, AWS, Salesforce platforms). Assess actual costs and barriers to migrating to alternative stacks or building proprietary reimplementations.',
-    'If exit is theoretical but practically blocked, integrators are trapped targets and directionality is high (d ≈ 0.75+), strengthening Snare classification. If exit is costly but feasible, directionality is moderate (d ≈ 0.55-0.65), supporting Tangled Rope. If exit is easy, the constraint''s extraction is dampened.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(downstream_integrator_exit_feasibility, empirical, 'Whether downstream integrators have genuine exit options or are functionally trapped.').
-
-omega_variable(
-    commons_reading_coexistence_stability,
-    'Can property-rights and commons readings genuinely coexist long-term in separate institutional spheres, or does the dominance of proprietary software in venture capital and institutional procurement eventually exclude commons-based alternatives?',
-    'Longitudinal analysis: track market share, developer investment, and institutional legitimacy of proprietary vs. commons software over 20-30 year periods. Observe whether commons alternatives remain viable as primary development models or become relegated to niche or volunteer sectors.',
-    'If commons are structurally excluded from major investment flows and institutional procurement despite technical parity, the readings do not coexist — the property-rights reading dominates. This suggests a foreclosure dynamic rather than coexistence, requiring the cs_structure.reading_relations to shift from ''coexists_with'' to ''influences'' or ''forecloses''.',
+    property_right_vs_reading_legitimacy,
+    'Is the property-rights reading a descriptively accurate account of how software control actually functions, or does it serve a committer-frame legitimation function that obscures the constraint''s extractive character?',
+    'Discourse analysis of vendor framing and institutional IP law; cross-reading comparison with FOSS and freedom readings; stakeholder interview on perceived legitimacy and actual constraints (do users believe property restrictions serve them, or do they experience restrictions as limiting without corresponding benefit).',
+    'If the reading serves primarily legitimation, the constraint is closer to Snare than Tangled Rope, ε should rise, and theater_ratio should rise further as defensive reframing continues. The committer-frame signal (held by vendors and investors) differs materially from the empirical-reality signal (held by users and FOSS advocates). This is an omegas-level uncertainty because it resolves at the observer/interpretive level, not purely through empirical data.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(commons_reading_coexistence_stability, empirical, 'Whether property-rights and commons readings can sustainably coexist or whether one reading eventually dominates.').
+narrative_ontology:omega_variable(property_right_vs_reading_legitimacy, conceptual, 'Whether the property-rights framing captures real coordination value or primarily serves extractive interests.').
+
+omega_variable(
+    identity_locking_depth_in_foss_advocates,
+    'For FOSS advocates classified as identity_locked, how deep is the identity fusion with open-source principles? If the legal or market regime shifted, how many would remain committed to FOSS vs. exit into proprietary development?',
+    'Career-transition analysis of FOSS developers who shift into proprietary roles; survey of identity-commitment depth among FOSS contributors; economic analysis of wage premium for proprietary vs. FOSS development roles.',
+    'If identity-locking is deep (exit is psychologically costly despite wage opportunity), suppression is effectively higher than measured (internalized suppression persists after institutional barriers are removed). If shallow (identity is contingent on market opportunity), exit_options should reclassify from identity_locked toward constrained, and effective extraction is lower. This affects how the engine models the FOSS seat''s experience of the constraint.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_locking_depth_in_foss_advocates, empirical, 'Whether FOSS advocates'' exit constraint is structural (legal/economic) or internalized (identity/mission commitment).').
+
+omega_variable(
+    kernel_contention_location,
+    'The core disagreement among the four readings of the software_control_legitimacy kernel is whether software code is properly classified as property (with corresponding creator authority) or as a commons, user freedom, or development methodology choice. This is a classification dispute about the fundamental nature of software, not a disagreement about consequences. If one reading''s core premise is adopted (e.g., ''software IS property''), does it logically foreclose the others, or can multiple readings coexist as live positions in different institutional contexts?',
+    'Formal logical analysis of each reading''s foundational axioms and their contradictions; institutional analysis of whether readings coexist in practice (do they? courts, legislatures, and corporations do operate under different readings simultaneously) or whether one has achieved hegemonic dominance.',
+    'If readings logically foreclose each other, the reading_relations should use ''forecloses'' rather than ''coexists_with''. If they coexist (which appears empirically true — courts issue conflicting rulings, legislatures hedge, corporations use both proprietary and open models), the ''coexists_with'' relation stands. This affects how the engine models the kernel''s structural stability: a kernel with mutual foreclosures is fragile and subject to sudden flips; a kernel with coexistence is stable but contested.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_contention_location, conceptual, 'Whether the four readings of software control are logically incompatible or structurally coexistent.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(software_control_legitimacy__property_rights_reading, 0, 40).
+narrative_ontology:interval(software_control_legitimacy__property_rights_reading, 1980, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(soft_tr_t0, software_control_legitimacy__property_rights_reading, theater_ratio, 0, 0.12).
-narrative_ontology:measurement(soft_tr_t5, software_control_legitimacy__property_rights_reading, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(soft_tr_t10, software_control_legitimacy__property_rights_reading, theater_ratio, 10, 0.18).
-narrative_ontology:measurement(soft_tr_t15, software_control_legitimacy__property_rights_reading, theater_ratio, 15, 0.22).
-narrative_ontology:measurement(soft_tr_t20, software_control_legitimacy__property_rights_reading, theater_ratio, 20, 0.25).
-narrative_ontology:measurement(soft_tr_t25, software_control_legitimacy__property_rights_reading, theater_ratio, 25, 0.27).
-narrative_ontology:measurement(soft_tr_t30, software_control_legitimacy__property_rights_reading, theater_ratio, 30, 0.28).
-narrative_ontology:measurement(soft_tr_t40, software_control_legitimacy__property_rights_reading, theater_ratio, 40, 0.28).
+narrative_ontology:measurement(soft_tr_t1980, software_control_legitimacy__property_rights_reading, theater_ratio, 1980, 0.08).
+narrative_ontology:measurement(soft_tr_t1990, software_control_legitimacy__property_rights_reading, theater_ratio, 1990, 0.15).
+narrative_ontology:measurement(soft_tr_t2000, software_control_legitimacy__property_rights_reading, theater_ratio, 2000, 0.22).
+narrative_ontology:measurement(soft_tr_t2010, software_control_legitimacy__property_rights_reading, theater_ratio, 2010, 0.26).
+narrative_ontology:measurement(soft_tr_t2018, software_control_legitimacy__property_rights_reading, theater_ratio, 2018, 0.28).
+narrative_ontology:measurement(soft_tr_t2026, software_control_legitimacy__property_rights_reading, theater_ratio, 2026, 0.28).
 
 % Extraction over time
-narrative_ontology:measurement(soft_be_t0, software_control_legitimacy__property_rights_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(soft_be_t5, software_control_legitimacy__property_rights_reading, base_extractiveness, 5, 0.5).
-narrative_ontology:measurement(soft_be_t10, software_control_legitimacy__property_rights_reading, base_extractiveness, 10, 0.55).
-narrative_ontology:measurement(soft_be_t15, software_control_legitimacy__property_rights_reading, base_extractiveness, 15, 0.58).
-narrative_ontology:measurement(soft_be_t20, software_control_legitimacy__property_rights_reading, base_extractiveness, 20, 0.6).
-narrative_ontology:measurement(soft_be_t25, software_control_legitimacy__property_rights_reading, base_extractiveness, 25, 0.61).
-narrative_ontology:measurement(soft_be_t30, software_control_legitimacy__property_rights_reading, base_extractiveness, 30, 0.62).
-narrative_ontology:measurement(soft_be_t40, software_control_legitimacy__property_rights_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(soft_be_t1980, software_control_legitimacy__property_rights_reading, base_extractiveness, 1980, 0.35).
+narrative_ontology:measurement(soft_be_t1990, software_control_legitimacy__property_rights_reading, base_extractiveness, 1990, 0.48).
+narrative_ontology:measurement(soft_be_t2000, software_control_legitimacy__property_rights_reading, base_extractiveness, 2000, 0.55).
+narrative_ontology:measurement(soft_be_t2010, software_control_legitimacy__property_rights_reading, base_extractiveness, 2010, 0.61).
+narrative_ontology:measurement(soft_be_t2018, software_control_legitimacy__property_rights_reading, base_extractiveness, 2018, 0.62).
+narrative_ontology:measurement(soft_be_t2026, software_control_legitimacy__property_rights_reading, base_extractiveness, 2026, 0.62).
 
 % Suppression requirement over time
-narrative_ontology:measurement(soft_su_t0, software_control_legitimacy__property_rights_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(soft_su_t5, software_control_legitimacy__property_rights_reading, suppression_requirement, 5, 0.6).
-narrative_ontology:measurement(soft_su_t10, software_control_legitimacy__property_rights_reading, suppression_requirement, 10, 0.64).
-narrative_ontology:measurement(soft_su_t15, software_control_legitimacy__property_rights_reading, suppression_requirement, 15, 0.68).
-narrative_ontology:measurement(soft_su_t20, software_control_legitimacy__property_rights_reading, suppression_requirement, 20, 0.7).
-narrative_ontology:measurement(soft_su_t25, software_control_legitimacy__property_rights_reading, suppression_requirement, 25, 0.71).
-narrative_ontology:measurement(soft_su_t30, software_control_legitimacy__property_rights_reading, suppression_requirement, 30, 0.71).
-narrative_ontology:measurement(soft_su_t40, software_control_legitimacy__property_rights_reading, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement(soft_su_t1980, software_control_legitimacy__property_rights_reading, suppression_requirement, 1980, 0.25).
+narrative_ontology:measurement(soft_su_t1990, software_control_legitimacy__property_rights_reading, suppression_requirement, 1990, 0.42).
+narrative_ontology:measurement(soft_su_t2000, software_control_legitimacy__property_rights_reading, suppression_requirement, 2000, 0.55).
+narrative_ontology:measurement(soft_su_t2010, software_control_legitimacy__property_rights_reading, suppression_requirement, 2010, 0.58).
+narrative_ontology:measurement(soft_su_t2018, software_control_legitimacy__property_rights_reading, suppression_requirement, 2018, 0.58).
+narrative_ontology:measurement(soft_su_t2026, software_control_legitimacy__property_rights_reading, suppression_requirement, 2026, 0.58).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1980, tn=2026
+narrative_ontology:measurement(soft_grid_01, software_control_legitimacy__property_rights_reading, accessibility_collapse(class), 1980, 0.42).
+narrative_ontology:measurement(soft_grid_02, software_control_legitimacy__property_rights_reading, accessibility_collapse(class), 2026, 0.75).
+narrative_ontology:measurement(soft_grid_03, software_control_legitimacy__property_rights_reading, accessibility_collapse(individual), 1980, 0.45).
+narrative_ontology:measurement(soft_grid_04, software_control_legitimacy__property_rights_reading, accessibility_collapse(individual), 2026, 0.72).
+narrative_ontology:measurement(soft_grid_05, software_control_legitimacy__property_rights_reading, accessibility_collapse(organizational), 1980, 0.38).
+narrative_ontology:measurement(soft_grid_06, software_control_legitimacy__property_rights_reading, accessibility_collapse(organizational), 2026, 0.68).
+narrative_ontology:measurement(soft_grid_07, software_control_legitimacy__property_rights_reading, accessibility_collapse(structural), 1980, 0.35).
+narrative_ontology:measurement(soft_grid_08, software_control_legitimacy__property_rights_reading, accessibility_collapse(structural), 2026, 0.77).
+narrative_ontology:measurement(soft_grid_09, software_control_legitimacy__property_rights_reading, resistance(class), 1980, 0.48).
+narrative_ontology:measurement(soft_grid_10, software_control_legitimacy__property_rights_reading, resistance(class), 2026, 0.72).
+narrative_ontology:measurement(soft_grid_11, software_control_legitimacy__property_rights_reading, resistance(individual), 1980, 0.42).
+narrative_ontology:measurement(soft_grid_12, software_control_legitimacy__property_rights_reading, resistance(individual), 2026, 0.58).
+narrative_ontology:measurement(soft_grid_13, software_control_legitimacy__property_rights_reading, resistance(organizational), 1980, 0.52).
+narrative_ontology:measurement(soft_grid_14, software_control_legitimacy__property_rights_reading, resistance(organizational), 2026, 0.68).
+narrative_ontology:measurement(soft_grid_15, software_control_legitimacy__property_rights_reading, resistance(structural), 1980, 0.35).
+narrative_ontology:measurement(soft_grid_16, software_control_legitimacy__property_rights_reading, resistance(structural), 2026, 0.64).
+narrative_ontology:measurement(soft_grid_17, software_control_legitimacy__property_rights_reading, stakes_inflation(class), 1980, 0.25).
+narrative_ontology:measurement(soft_grid_18, software_control_legitimacy__property_rights_reading, stakes_inflation(class), 2026, 0.65).
+narrative_ontology:measurement(soft_grid_19, software_control_legitimacy__property_rights_reading, stakes_inflation(individual), 1980, 0.28).
+narrative_ontology:measurement(soft_grid_20, software_control_legitimacy__property_rights_reading, stakes_inflation(individual), 2026, 0.68).
+narrative_ontology:measurement(soft_grid_21, software_control_legitimacy__property_rights_reading, stakes_inflation(organizational), 1980, 0.32).
+narrative_ontology:measurement(soft_grid_22, software_control_legitimacy__property_rights_reading, stakes_inflation(organizational), 2026, 0.72).
+narrative_ontology:measurement(soft_grid_23, software_control_legitimacy__property_rights_reading, stakes_inflation(structural), 1980, 0.22).
+narrative_ontology:measurement(soft_grid_24, software_control_legitimacy__property_rights_reading, stakes_inflation(structural), 2026, 0.62).
+narrative_ontology:measurement(soft_grid_25, software_control_legitimacy__property_rights_reading, suppression(class), 1980, 0.28).
+narrative_ontology:measurement(soft_grid_26, software_control_legitimacy__property_rights_reading, suppression(class), 2026, 0.61).
+narrative_ontology:measurement(soft_grid_27, software_control_legitimacy__property_rights_reading, suppression(individual), 1980, 0.18).
+narrative_ontology:measurement(soft_grid_28, software_control_legitimacy__property_rights_reading, suppression(individual), 2026, 0.52).
+narrative_ontology:measurement(soft_grid_29, software_control_legitimacy__property_rights_reading, suppression(organizational), 1980, 0.22).
+narrative_ontology:measurement(soft_grid_30, software_control_legitimacy__property_rights_reading, suppression(organizational), 2026, 0.58).
+narrative_ontology:measurement(soft_grid_31, software_control_legitimacy__property_rights_reading, suppression(structural), 1980, 0.25).
+narrative_ontology:measurement(soft_grid_32, software_control_legitimacy__property_rights_reading, suppression(structural), 2026, 0.58).
 
 
 /* ==========================================================================
@@ -311,17 +393,15 @@ narrative_ontology:measurement(soft_su_t40, software_control_legitimacy__propert
 narrative_ontology:coordination_type(software_control_legitimacy__property_rights_reading, resource_allocation).
 narrative_ontology:boltzmann_floor_override(software_control_legitimacy__property_rights_reading, 0.18).
 narrative_ontology:affects_constraint(software_control_legitimacy__property_rights_reading, software_control_legitimacy__freedom_imperative_reading).
-narrative_ontology:affects_constraint(software_control_legitimacy__property_rights_reading, software_control_legitimacy__commons_reading).
 narrative_ontology:affects_constraint(software_control_legitimacy__property_rights_reading, software_control_legitimacy__pragmatic_openness_reading).
+narrative_ontology:affects_constraint(software_control_legitimacy__property_rights_reading, software_control_legitimacy__commons_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of a contested kernel (software_control_legitimacy). The four sibling readings decompose the kernel's legitimacy grounds: property-rights (this story) grounds authority in IP doctrine; freedom-imperative denies proprietary software legitimacy; commons grounds authority in collective governance; pragmatic-openness treats control as a methodology choice. Each reading instantiates a distinct constraint with distinct ε, distinct victim/beneficiary structures, and distinct political positions. They are not perspectives on one constraint — they are separate constraints that share a kernel. The property-rights reading's ε is moderate (0.62) because it solves a coordination problem but does so through extraction. The freedom-imperative reading's ε would be higher (extracting user freedoms). The commons reading's ε would be lower (solving coordination through negotiated management with lower extraction). The pragmatic reading treats open-source as better engineering, not a legitimacy question, so its ε depends on empirical outcomes, not on grounds of authority. Sibling readings are linked via network.affects_constraints from each file.
+% The software_control_legitimacy kernel decomposes into four structurally distinct constraints, one per reading. The property_rights_reading (this story) treats software control as a property right held by vendors and investors, generating extraction through modification restrictions and licensing monopolies. The freedom_imperative_reading (separate story) treats software control as fundamental user freedom, generating extraction from the denial of control. The pragmatic_openness_reading (separate story) treats software as a development methodology choice, generating only modest extraction. The commons_reading (separate story) treats software as collective resource governance, generating extraction from exclusion of voices in governance. Each reading has its own ε (measured from the standing arrangement under that reading's assessment), beneficiary/victim set, and classification. All four are linked by network.affects_constraints; upstream readings (property_rights and freedom_imperative) establish the terms within which the pragmatic and commons readings operate.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(software_control_legitimacy__property_rights_reading, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

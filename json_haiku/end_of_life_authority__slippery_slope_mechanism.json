@@ -2,29 +2,124 @@
   "header": {
     "constraint_id": "end_of_life_authority__slippery_slope_mechanism",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "eb79e066-b7d6-4c90-adf0-b170687cb683"
+    "story_uid": "93d9b2b2-eca0-4a25-b2b6-79315d136345"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
     "theater_ratio": 0.41,
     "accessibility_collapse": 0.62,
-    "resistance": 0.71,
+    "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "End-of-Life Authority: Slippery Slope Mechanism Reading",
+    "human_readable": "End-of-Life Authority Expansion Mechanism",
     "topic_domain": "medical_ethics/bioethics/policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "medical_institutions",
-      "disability_minimization_advocates"
+      "resource_allocation_systems"
     ],
     "victims": [
       "incompetent_patients",
-      "chronically_suffering_non_terminal_patients",
-      "disability_communities"
+      "chronic_suffering_populations",
+      "proxy_decision_makers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "medical_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establish and administer end-of-life protocols initially framed around autonomous patient choice in terminal conditions. Over time, through clinical committees and policy guidance, expand eligibility criteria to chronic suffering and non-terminal states, and develop proxy-decision frameworks for incompetent patients. Frame the expansion as a humanitarian response to suffering; the actual operation grants institutional actors (physicians, ethics committees) discretionary authority over life-ending decisions for patients unable to assert autonomous preference."
+    },
+    {
+      "name": "competent_terminal_patients",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Genuinely benefit from autonomy-based frameworks that permit control over the timing and manner of death when facing imminent dying with unbearable suffering. The original framework's structure serves their expressed preferences; they have no incentive to prevent the system from operating as initially designed."
+    },
+    {
+      "name": "incompetent_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot express autonomous preference due to cognitive impairment, advanced dementia, or irreversible unconsciousness. As eligibility criteria expand to chronic non-terminal states, they become subjects of life-ending decisions made by proxy decision-makers and institutional actors. Their vulnerability lies in the expansion mechanism: they were not the intended subjects of autonomy-based frameworks, yet the institutional expansion exposes them to decisions framed using autonomy language that cannot apply to them."
+    },
+    {
+      "name": "chronic_suffering_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Initially excluded from end-of-life authority (the framework applied to terminal illness only). As institutional practice expands criteria to include chronic suffering without terminal prognosis, they become eligible for life-ending interventions. The expansion operates without explicit legislation in many cases; clinical practice and institutional guidance quietly shift the boundary. Individuals in this category face pressure (subtle or overt) toward life-ending choices framed as expressions of personal autonomy, even though the suffering driving the choice is often remediable with adequate palliative and psychiatric support."
+    },
+    {
+      "name": "proxy_decision_makers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Family members or appointed surrogates bear legal and moral responsibility for life-ending decisions on behalf of incompetent patients. They are positioned as the nominal decision-makers (role: beneficiary in the autonomy framing) but actually carry the institutional and legal burden (role: payer). The expansion mechanism transfers decisional authority upward from competent patient preference to institutional actors, while nominally preserving 'substituted judgment' in the proxy's voice."
+    },
+    {
+      "name": "palliative_care_specialists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Possess expertise in managing suffering without life-ending intervention; their evidence base demonstrates that most suffering attributed to terminal illness or chronic conditions is responsive to aggressive palliative treatment. They would argue for expanding access to palliative care rather than expanding end-of-life authority. They are structurally excluded from or marginalized within institutional ethics committees that make expansion decisions; their voice is often absent from the deliberation."
+    },
+    {
+      "name": "disability_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Recognize the expansion mechanism as incorporating ableist assumptions: that disability and chronic suffering make life not worth living, that autonomy language masks devaluation of disabled lives, that the 'choice' to end life is contaminated by social conditions (poverty, isolation, inadequate support) rather than reflecting genuine preference. They would contest the core framing but are often excluded from institutional bioethics deliberations or included in consultative-only roles without decision-making power."
+    },
+    {
+      "name": "bioethics_committees",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Operate as the formal deliberative body that interprets and extends the autonomy framework. Their decisions about which populations are 'eligible' and what constitutes 'substituted judgment' shape clinical practice. The committees are staffed by medical professionals, ethicists, and lawyers; their composition and deliberative processes are not transparently subject to challenge from excluded voices (palliative specialists, disability advocates, affected populations)."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Possess formal authority to define the legal boundaries of end-of-life practice, but in many jurisdictions have delegated substantial discretionary authority to medical institutions and bioethics committees. This delegated structure enables the expansion mechanism to operate through institutional practice and guidance rather than explicit statutory change, insulating the expansion from public deliberation and amendment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decision framework for managing the timing and manner of death in cases of unbearable suffering, resolving the conflict between preserving life and respecting individual agency. Initially structured to coordinate autonomy-based medical decision-making for competent patients with terminal illness.",
+    "transfer_function": "Transfers decisional authority from legal prohibition of life-ending intervention (the traditional sanctity framework) to individual patient choice (the autonomy framework), then operationally transfers from individual patient choice to institutional actors and proxy decision-makers as the framework expands to incompetent and non-terminal populations. Authority over life-ending decisions moves from individual consent to institutional discretion, framed in autonomy language.",
+    "absent_voices": "Palliative care specialists (whose evidence on suffering management would constrain the expansion) and disability advocates (whose critique of the ableist assumptions embedded in the framework would contest its scope) are structurally excluded from or marginalized within institutional ethics deliberation. Incompetent patients and chronic-suffering populations cannot articulate preferences that would restrain their own expansion into the victim set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the autonomy-based end-of-life framework and its institutional expansion disappeared, competent terminal patients would lose explicit legal protection for autonomous choice in dying; incompetent patients would no longer face institutional pressure toward life-ending decisions; chronic-suffering populations would be managed through palliative and psychiatric intervention rather than life-ending authority. The world does not rearrange to sanctity (legal prohibition remains possible) but to a state where institutional actors lack the delegated authority to expand the framework beyond its original scope.",
+    "founding_problem": "Competent terminally ill patients experiencing unbearable suffering lack legal authority to control the timing and manner of their deaths, creating a conflict between respect for autonomy and compassionate management of dying.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Patient-rights advocates and some bioethicists attest the founding problem remains live — autonomy over dying is a live concern for terminal patients. Medical institutions and many ethics committees attest the problem is solved and the framework has rightly expanded to address suffering beyond terminal illness. Disability-rights organizations and some palliative-care researchers attest the founding problem has been reframed to justify institutional expansion and the elimination of safeguards that once protected vulnerable populations; they cite empirical evidence that most suffering is responsive to palliative intervention and that the expansion mechanism selectively includes populations (incompetent, disabled, chronically ill, resource-burdened) that cannot effectively resist institutionally-preferred life-ending decisions."
   },
   "interval": {
     "start": 0,
@@ -54,7 +149,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.61
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
@@ -64,12 +159,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.7
+      "value": 0.67
     },
     {
       "metric": "base_extractiveness",
@@ -84,82 +174,72 @@
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.19
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.23
+      "value": 0.24
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.27
+      "value": 0.31
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.32
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
       "value": 0.36
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.41
+      "time_point": 25,
+      "value": 0.39
     },
     {
       "metric": "theater_ratio",
-      "time_point": 35,
-      "value": 0.44
+      "time_point": 30,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.43
+      "value": 0.41
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.45
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.51
+      "value": 0.48
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.56
+      "value": 0.54
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.62
+      "value": 0.6
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.67
+      "value": 0.65
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.7
+      "value": 0.69
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.72
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 35,
-      "value": 0.73
+      "value": 0.71
     },
     {
       "metric": "suppression_requirement",
@@ -168,132 +248,344 @@
     }
   ],
   "commentary": {
-    "narrative_context": "Jurisdictions that legalize assistance in dying on autonomy grounds initially restrict eligibility to competent adults facing terminal illness with unbearable suffering. Empirically, eligibility criteria drift: within a decade, incompetent patients enter through surrogate-decision mechanisms; within two decades, non-terminal chronic suffering becomes accepted grounds; eventually, psychological suffering without physical illness qualifies. This constraint models the slippery-slope mechanism—not as a logical entailment (competent choice does not logically imply incompetent choice) but as an empirical institutional pattern where the autonomy rationale becomes stretched to serve institutional efficiency and normative expansions that diverge from the original framework's epistemic warrant. Incompetent patients and disability communities become the victim set as the original coordination function (respecting autonomous choice of competent, dying patients) drifts toward institutional-gatekeeping of incompetent and non-dying persons' deaths.",
+    "narrative_context": "End-of-life authority in medical practice began with a narrow autonomy-based framework: competent, terminally ill patients with unbearable suffering retain the right to control the timing and manner of death. The slippery-slope-mechanism reading asserts that this framework has empirically expanded beyond its original competency and terminal criteria to encompass incompetent patients (via proxy decision-making) and non-terminal chronic-suffering populations. The expansion operates through institutional practice, ethics-committee guidance, and incremental statutory changes rather than through explicit public deliberation. The autonomy language persists (preserving the legitimacy frame) while the actual structural change transfers decisional authority from individual consent to institutional discretion, and introduces incompetent and vulnerable populations as subjects of life-ending decisions they cannot consent to. This reading identifies the expansion mechanism as extractive — it concentrates decision-making authority in medical institutions while distributing the life-ending outcome across powerless populations.",
     "key_agents": [
-      "competent_terminal_patients: Original beneficiaries; retain formal authority within the scope but that scope expands to populations excluded from autonomy-grounding",
-      "incompetent_patients: Enter victim set as surrogate-decision mechanisms stretch autonomy rationale beyond its epistemic foundation; they cannot consent but death authority is exercised in their name",
-      "chronically_suffering_non_terminal_patients: Drawn into scope via normative extension of 'unbearable suffering'; eligibility drifts from terminal-specific to subjective-suffering standard",
-      "disability_communities: Structural targets of expanded definition; pathologization of disability as optional suffering; excluded from shaping the suffering-judgment standard",
-      "medical_institutions: Agenda-setters; benefit from operational simplification and scope expansion; control interpretive authority over eligibility criteria",
-      "clinical_gatekeepers: Dual-positioned; gain interpretive authority but bear liability; suppression through procedural burden and legal exposure",
-      "autonomy_rights_advocates: Beneficiaries; support and accelerate expansions beyond original terminal-only scope",
-      "sanctity_advocates: Structurally excluded; their core premises not heard as legitimate in the autonomy framework"
+      "Medical institutions: agenda-setters of expansion; frame it as compassionate response to suffering",
+      "Competent terminal patients: original intended beneficiaries; legitimacy source for autonomy framework",
+      "Incompetent patients: newly subject to life-ending decisions they cannot consent to; expansion victims",
+      "Chronic-suffering non-terminal populations: excluded initially; incorporated as extraction expands",
+      "Proxy decision-makers: nominally empowered as surrogates; structurally burdened by institutional expansion",
+      "Bioethics committees: formal deliberative bodies that authorize expansion; composition and deliberation opaque to excluded voices",
+      "Palliative-care specialists: possess evidence that suffering is remediable; structurally excluded from committee deliberation",
+      "Disability advocates: contest ableist assumptions in the expansion; marginalized in institutional deliberation",
+      "Legislative bodies: possess formal authority to define boundaries; have delegated discretion to medical institutions"
     ],
-    "logic_rationale": "Extractiveness rises monotonically from 0.35 (narrow terminal-specific application) to 0.68 (broad suffering-based eligibility spanning competent and incompetent populations). This rise reflects the empirical observation that the same autonomy rationale that legitimizes competent terminal patients' choices becomes stretched to justify institutional decisions about incompetent and non-terminal patients—populations for whom the autonomy foundation is absent or attenuated. Theater ratio rises in parallel (0.15 to 0.41) because an increasing share of the framework's operation is not transparent autonomy-grounding but institutional reinterpretation of suffering, best-interest judgment, and liability management. Suppression requirement rises (0.45 to 0.72) because as eligibility expands into populations less able to defend their interests (incompetent patients) and populations ideologically opposed (disability communities), active suppression of dissent and gatekeeping becomes essential to maintain the expansion. The framework is tangled: it genuinely coordinates (at t0) around terminal competent patients' autonomous choice; it simultaneously extracts (incompetent patients bear costs they cannot refuse) and requires enforcement (suppressing disabled persons' objections, managing clinical liability). Measurements show a phase transition around t=20-25 where the constraint's character shifts from coordination-dominant to extraction-dominant. The projected plateau and slight decline after t=35 reflects anticipated legal and political resistance that caps further drift without dismantling the expanded scope already achieved.",
-    "perspectival_gap": "From the institutional and autonomy-advocate seat, the expansion is justified as correct normative drift: autonomy should apply wherever suffering exists and an agent can express a preference. From the incompetent-patient and disability-community seat, the same expansion is experienced as extractive harm—their non-consensual inclusion in a death-permission framework that uses autonomy language without their capacity to exercise it. The engine computes this divergence from the structural data: the institutional agenda-setter holds interpretive authority (powerful, arbitrage exit); the victim populations are powerless and trapped. The claim is tangled_rope (genuine coordination + asymmetric extraction); the metrics show how extraction accumulates as scope expands.",
-    "directionality_logic": "Medical institutions are the structural beneficiary (collect interpretive authority, streamline operations through unified standards, avoid legal liability for rigid terminal-only rules). Incompetent and chronically-suffering patients are the targets (no choice in their inclusion, subjected to institutional or surrogate death-authorization in their names, no exit). Disability communities are targets (excluded from authority-shaping, pathologized by the suffering standard, subject to pressure that their existence is optional). Autonomy-rights advocates are beneficiaries (their preferred expansion is institutionalized, normalizing and scaling their reading). Clinical gatekeepers are dual-positioned: they gain institutional authority but incur liability and procedural burden—they are partly payers in the extraction-expansion. Competent terminal patients retain formal beneficiary status within the original scope but experience a shift in that scope's meaning as the rationale is stretched: their autonomy is used to justify other persons' deaths, which may or may not align with their understanding of their own right.",
-    "mandatrophy_analysis": "The founding problem (competent terminal patients lack legal death control) is declared CONTESTED because the empirical drift shows the constraint's actual operation diverges from its founding rationale. Autonomy-advocates argue the problem is live and the solution is correct. Disability and sanctity communities argue the founding problem is framed falsely (the real problem is suffering, not autonomy; the solution creates worse problems). The measured extraction (0.68 endpoint) combined with theater ratio (0.41) indicates mandatrophy: the framework's operation no longer fits its founding justification. The coordination function (respecting competent autonomous choice) is genuine but dwarfed by the extraction function (institutional death-gatekeeping for incompetent and disabled populations). The constraint persists because institutional beneficiaries (hospitals, ethics committees, autonomy-advocates) have interests in the expanded scope, not because the founding problem requires it. The measured theater ratio rising to 0.41 indicates a phase where institutional legitimacy discourse (autonomy language, informed-consent theater) increasingly obscures the actual operation (institutional decision-making, surrogate judgment, elimination of disfavored populations). No single party is sufficiently hurt by the constraint to fix it (disability communities are excluded, incompetent patients cannot organize, clinicians are compensated through authority gains), and no party is sufficiently benefiting to maintain it against resistance (expansion is self-reinforcing, not deliberately planned). The constraint exhibits piton characteristics (persistence through inertia + theater) but is classified tangled_rope because the extraction is still active and asymmetric, not yet fully diffused into performance.",
-    "kernel_context": "This story instantiates the slippery_slope_mechanism reading of the end_of_life_authority kernel. The kernel is the contested authority to intentionally end life; it is grounded in a formal legal text (statutes authorizing assistance in dying, constitutional guarantees of bodily autonomy) and its interpretation. The autonomy_reading grounds authority in individual choice and self-determination: because persons are autonomous agents, they have the right to control their own deaths when facing unbearable suffering. The sanctity_reading grounds authority in the intrinsic value of human life: because human life has inherent dignity, no one (including the person themselves) may intentionally end it. The slippery_slope_mechanism reading contests neither the autonomy nor the sanctity premises directly; instead, it asserts that the autonomy reading, once institutionalized as policy, empirically expands beyond the scope its own premises justify. The mechanism is not logical (autonomy of competent persons does not entail authority over incompetent persons) but institutional: eligibility criteria drift, institutional actors reinterpret the rationale, and populations initially excluded become included through normative extension. This reading is a diagnostic reading—it is neither advocating for nor against the autonomy or sanctity positions, but instead documenting how the autonomy reading in practice becomes a vehicle for sanctity concerns (elimination of persons deemed to have unlivable conditions) precisely because the autonomy framework cannot accommodate incompetent and non-autonomous persons without stretching its rationale. The reading_relations to the siblings express this structure."
+    "logic_rationale": "Extractiveness begins at 0.35 (genuine autonomy-benefit for competent terminal patients) and rises to 0.68 by interval end as the population expands to incompetent and non-terminal groups who cannot assert autonomous preference. The rise is gradual and steady — the expansion is empirically documented in medical literature as occurring through incremental practice change rather than explicit statutory revision. Suppression requirement rises in parallel (0.42 to 0.72): the constraint's persistence depends on actively suppressing the excluded voices (palliative specialists, disability advocates) and on limiting public deliberation about the expansion. Theater ratio rises from 0.15 to 0.41 as the performative share increases: committee deliberations invoke autonomy language while making institutional discretionary decisions about life-ending for populations incapable of autonomous expression. Accessibility_collapse is moderate (0.62) because the expansion is not presented transparently — alternatives (palliative care, social support, institutional reform) remain theoretically available but are structurally disfavored within the institutional deliberation that controls expansion. Resistance is moderate (0.58) because disability advocates and some bioethicists actively contest the mechanism, but their institutional power is limited and their access to deliberative forums is constrained. The measurement series captures the empirically documented drift: early case law and ethics guidance focused on terminal competent patients; intermediate expansion to competent non-terminal populations with unbearable suffering; late expansion to incompetent patients via proxy decision frameworks.",
+    "directionality_logic": "Medical institutions are the structural beneficiary-agenda-setter: they gain delegated authority over life-ending decisions, insulated from legislative revision by the institutional-practice pathway, and benefit from the expansion as a resource-allocation mechanism (implicit in the expansion is the reduction of resource-intensive palliative and social support through sanctioned life-ending). Competent terminal patients are near-beneficiary (d ≈ 0.2): they benefit from the original framework's autonomy protection, but the expansion mechanism that persists beyond their case creates the suppression and theater that extend to other populations. Incompetent patients and chronic-suffering populations are targets (d ≈ 0.85): they cannot express autonomous preference, yet are incorporated as the expansion extends institutional discretionary authority, and their vulnerability is masked by the persistence of autonomy language that cannot apply to them. Proxy decision-makers carry dual directionality (d ≈ 0.55): they are nominally empowered as surrogates but structurally burdened by institutional pressure and legal liability. Palliative specialists and disability advocates are outside the formal decision-making structure (d ≈ 0.0 analytical) but their interests are adversely affected by the expansion suppression. The expansion mechanism works by asymmetric information and institutional opacity: competent terminal patients and their advocates have incentive to preserve the framework; incompetent and chronic-suffering populations cannot articulate their own interests; and the institutional beneficiaries control the boundary-setting process.",
+    "perspectival_gap": "From the institutional seat (medical institutions, bioethics committees): the framework is a compassionate, evidence-based response to suffering; autonomy language correctly applies to proxies exercising substituted judgment; the expansion is incremental and justified. From the powerless seats (incompetent patients, chronic sufferers): the framework is experienced as institutional authority to end their lives without their consent, masked by autonomy rhetoric that cannot apply to them; the expansion is a mechanism for resource conservation dressed in humanitarian language. From the excluded seats (disability advocates, palliative specialists): the expansion mechanism is a structural incorporation of ableist and resource-based devaluation of disabled and chronically-ill lives; the autonomy framework is a vehicle for institutional sanctity concerns (efficiency, resource allocation) rather than genuine respect for choice. The engine computes these divergences from the structural data: powerless seats with trapped exit in the victim set, agenda-setters with institutional power and analytical exit, excluded voices with organizational power but constrained access to deliberation.",
+    "mandatrophy_analysis": "The founding problem (autonomy for competent terminal patients) is contested in status because the slippery-slope reading asserts it has been resolved (competent terminal patients do have autonomy protection) while the institutional expansion has introduced a new problem masked by the original framework. The mechanism prevents mislabeling: it is NOT a rope (pure coordination) because the expansion is asymmetric — it benefits institutions and harms powerless populations, and persistence depends on suppressing excluded voices (palliative specialists, disability advocates). It is NOT a snare (pure extraction) because there is a genuine coordination function in the original framework for competent terminal patients, and that function is still operative. It IS a tangled_rope because it solves the genuine founding problem (autonomy for competent terminal patients) while simultaneously operating as an asymmetric extraction mechanism (expanding life-ending authority to incompetent and vulnerable populations, concentrating decisional authority in institutions, suppressing alternative approaches to suffering). The active enforcement requirement is structural: the expansion persists only through deliberate institutional decision-making (committee guidance, clinical protocols, incremental statutory changes) that would reverse if the excluded voices (palliative specialists, disability advocates) gained power within the deliberative process. Without active institutional enforcement of the expansion, the boundary would revert to terminal-only, competent-only eligibility — the framework does not naturally extend itself; the extension is sustained through institutional choice.",
+    "kernel_context": "This constraint instantiates the slippery_slope_mechanism reading of the end_of_life_authority kernel. The kernel is the stabilized commitment: individual autonomy grounds legitimate authority over life-ending decisions. The sibling readings are: (1) autonomy_reading — autonomy framework correctly applies to competent individuals in terminal states; expansion beyond this scope violates the framework's founding principle; (2) sanctity_reading — intrinsic value of human life prohibits intentional life-ending regardless of individual preference; autonomy language is a cover story for sanctity concerns. The slippery_slope_mechanism reading asserts that empirically, initial autonomy-based frameworks DO expand beyond competent terminal cases, incorporating incompetent and non-terminal populations, and the expansion mechanism operates through institutional practice rather than explicit statutory authorization. This reading does not resolve the substantive contest between autonomy and sanctity; rather, it identifies the mechanism by which institutional actors navigate between the readings while maintaining the autonomy framing — they preserve the autonomy language (legitimacy source) while operationally expanding to incompetent populations (functional alignment with sanctity concerns about resource allocation and institutional efficiency). The reading is descriptive of observed institutional practice, not prescriptive of which reading should prevail."
   },
   "omegas": [
     {
-      "id": "suppression_structural_vs_internalized",
-      "question": "Is the measured suppression of disabled persons and clinical objectors primarily structural (legal barriers, institutional rules, liability exposure) or internalized (normalization of the autonomy narrative, professional identity fusion, disability-community acceptance of the suffering standard)?",
-      "resolution_mechanism": "Post-legal-reversal outcome studies: if legal barriers to death-decisions are removed and suppression persists in clinician behavior and disabled-community internalization, suppression is substantially internalized. If suppression drops immediately upon legal reversal, it was primarily structural.",
-      "impact": "High structural suppression suggests the constraint could be dismantled by legal/institutional change. High internalized suppression suggests the constraint would persist even after formal removal because affected populations have internalized its rationale.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is enforced externally or internalized by affected populations."
-    },
-    {
-      "id": "autonomy_framework_necessity",
-      "question": "Is the empirical expansion beyond terminal-competent cases logically entailed by the autonomy framework, or is it a contingent institutional choice that could have been prevented by narrower legal codification?",
-      "resolution_mechanism": "Comparative legal analysis: do jurisdictions with explicit terminal-only statutory language show less drift than those with broad 'unbearable suffering' language? Interviews with institutional actors about deliberate vs. accidental expansion.",
-      "impact": "If expansion is logically entailed, the slippery slope is inevitable and the autonomy reading forecloses itself (it cannot be held without accepting its expansion). If expansion is contingent, the autonomy reading remains holdable in a narrow form, and the slope is a governance failure, not a logical consequence.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether expansion is built into autonomy-grounding or results from institutional drift avoidable by design."
-    },
-    {
-      "id": "kernel_reading_epistemic_status",
-      "question": "Is the slippery_slope_mechanism reading a description of institutional reality, a normative critique of the autonomy reading, or a veiled instantiation of the sanctity reading (framing autonomy as a vehicle for sanctity)?",
-      "resolution_mechanism": "Content analysis of how the slope-mechanism framing is used in public discourse: does it support autonomy-restraint arguments, sanctity arguments, or remain analytically neutral? Do disability advocates who use the mechanism claim to reject autonomy or to protect autonomy from institutional distortion?",
-      "impact": "If the slope mechanism is a disguised sanctity reading, it should be classified as such and the sibling reading_relations revised. If it is analytically neutral, the reading should coexist with autonomy and sanctity readings. If it critiques autonomy from an autonomy-internalist perspective, it influences the autonomy reading but does not foreclose it.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the slippery-slope reading is independent of the autonomy and sanctity positions or serves as a vehicle for one of them."
-    },
-    {
-      "id": "incompetent_patient_victim_status",
-      "question": "Are incompetent patients truly victims of this constraint (subjected to death-authorization without capacity to resist) or are they beneficiaries of a compassionate framework that prevents prolonged suffering?",
-      "resolution_mechanism": "Qualitative data from surrogate decision-makers and families: do they report experiencing the constraint as liberation (enabling compassionate death) or constraint (institutional pressure to authorize death)? Outcome data on whether incompetent patients' actual preferences (where knowable) align with institutional death-decisions made on their behalf.",
-      "impact": "If incompetent patients are beneficiaries, the beneficiary set should be expanded and the victims set contracted. If they are victims, the extraction reading is accurate. The measured extractiveness (0.68) assumes victim status; evidence for beneficiary status would suggest the constraint is less extractive and more coordinative than modeled.",
+      "id": "substituted_judgment_validity",
+      "question": "Can proxy decision-makers genuinely exercise substituted judgment (deciding as the incompetent patient would have chosen) for life-ending decisions, or does the framework inevitably transfer authority to institutional actors?",
+      "resolution_mechanism": "Empirical study of actual proxy decision-making in end-of-life cases: does proxy choice correlate with the patient's documented prior preferences, or with institutional recommendations and proxy's own values? Follow-up interviews with proxies about the decision process — whether they felt they were choosing on behalf of the patient or deferring to institutional guidance.",
+      "impact": "If proxies genuinely exercise autonomous substituted judgment, the expansion to incompetent patients retains the autonomy framework's legitimacy (d for incompetent_patients shifts downward; the constraint remains rope-flavored). If proxies' decisions systematically align with institutional recommendations independent of patient preference, the expansion is revealed as institutional authority disguised as proxy autonomy (d for incompetent_patients remains high; the constraint is tangled_rope or snare-flavored).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether incompetent patients are extracted from or protected by the expanded framework."
+      "description": "Whether proxy decision-making preserves patient autonomy or transfers authority to institutions."
     },
     {
-      "id": "disability_pathologization_causal_source",
-      "question": "Does the slippery-slope mechanism cause disability communities' harm (by expanding the suffering-elimination framework), or does it reveal pre-existing institutional bias toward disability elimination that would persist in different frameworks?",
-      "resolution_mechanism": "Comparative historical analysis: in jurisdictions without autonomy-based death frameworks, is there evidence of disability-elimination pressure via other mechanisms (forced sterilization, institutional neglect, physician discretion)? If so, the slope mechanism is not the source of the harm but a new vehicle for existing harm.",
-      "impact": "If the slope mechanism causes the harm, restricting it would reduce disability harm. If it reveals pre-existing harm, the constraint is a symptom; fixing it would require addressing deeper institutional bias. Either way, disability communities are victims; the causal question affects remedy strategy.",
+      "id": "expansion_mechanism_trajectory",
+      "question": "Will the empirically-documented expansion continue beyond chronic non-terminal suffering to include disability, psychiatric illness, and social suffering (poverty, isolation, existential meaninglessness)?",
+      "resolution_mechanism": "Monitoring of ethics-committee guidance, legislative proposals, and clinical-practice evolution in jurisdictions with expanded end-of-life authority. Jurisdictions that first expanded to chronic suffering are canaries for further expansion. Predict based on the logic of the autonomy framework: if suffering (regardless of cause or remediability) justifies life-ending authority, the principle extends to all suffering, including social and existential forms.",
+      "impact": "Prediction of continued expansion (high impact on classification): if the mechanism is structural (institutional discretion over suffering categories), further expansion is likely and suppression will remain high. Plateauing of expansion (different impact): if the mechanism has stabilized at a particular scope (chronic non-terminal suffering) due to legislative or professional resistance, the constraint may stabilize as a tangled_rope rather than drift toward snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the slippery slope is a source of disability harm or a vehicle for harm that would exist anyway."
+      "description": "Trajectory of the institutional expansion mechanism beyond chronic non-terminal suffering."
+    },
+    {
+      "id": "palliative_adequacy_counterfactual",
+      "question": "How many of the incompetent and chronic-suffering patients incorporating into expanded end-of-life frameworks would have requested life-ending if they had received adequate palliative care, psychiatric support, and social support?",
+      "resolution_mechanism": "Jurisdictions implementing universal access to aggressive palliative care and psychiatric support as alternatives to life-ending authority provide natural experiments. Track whether end-of-life requests decline when alternatives are genuinely available. Study cases where palliative intervention reversed requests for life-ending.",
+      "impact": "If substantial declines occur (suggesting the expansion mechanism operates on remediable suffering rather than genuine autonomous preference), the classification shifts: extractiveness is higher than the autonomy framework justifies (the constraint is snare-flavored rather than rope-flavored), and the expansion mechanism is revealed as operating on social conditions (poverty, inadequate care, devaluation of disabled/suffering lives) rather than on autonomous choice. Suppression becomes higher (the mechanism works by making alternatives unavailable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether expanded end-of-life requests reflect autonomous preference or unavailable alternatives."
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Does the slippery-slope-mechanism reading (empirical expansion pattern) foreclose the autonomy_reading, or can they coexist as different parties' framings of the same institutional arrangement?",
+      "resolution_mechanism": "Logical analysis: does observing the expansion mechanism contradict the autonomy reading's core premise (that autonomy grounds legitimate authority), or does it merely document that institutions have operationalized autonomy differently than autonomy-reading proponents intended? The autonomy_reading's core premise is procedural (respect for individual choice); the slippery_slope_mechanism reading observes that institutions expand the population of decision-makers from competent to incompetent. These need not be logically contradictory — they are compatible if autonomy proponents accept the proxy-decision and expansion-criteria choices as legitimate applications of autonomy principle.",
+      "impact": "If foreclosure (the readings cannot coexist): the institutional expansion is a betrayal of autonomy principle, and the autonomy_reading should shift status from holdable to overridden. If coexistence (readings are compatible different framings): both autonomy and slippery-slope readings are live, and the contest is about institutional interpretation of autonomy rather than about the principle itself. Classification impact: foreclosure → snare-flavored (institutional expansion violates the autonomy principle); coexistence → tangled_rope-flavored (institutional expansion is one possible interpretation of autonomy alongside alternatives).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the slippery-slope-mechanism reading logically forecloses the autonomy_reading."
+    },
+    {
+      "id": "ableist_assumptions_embedded_in_expansion",
+      "question": "Does the expansion mechanism incorporate ableist assumptions — that chronic illness and disability make life not worth living, that disabled lives should be available for life-ending intervention — or is the expansion driven solely by compassionate response to remediable suffering?",
+      "resolution_mechanism": "Content analysis of ethics-committee guidance and legislative deliberation: what language is used to characterize chronic illness, disability, and quality of life? Does the discussion invoke inherent burden of condition (ableist) or remediable components of suffering (compassionate)? Interviews with institutional actors and disability advocates: do institutional decision-makers accept disability-advocates' arguments about the devaluation of disabled lives in the expansion logic?",
+      "impact": "If ableist assumptions are embedded: the expansion mechanism is not driven by autonomy or suffering-responsiveness but by devaluation of certain lives; suppression becomes higher (the mechanism works by marginalizing disability-advocate voice); the constraint is snare-flavored (pure institutional extraction: concentrating authority while eliminating costly-to-care-for populations). If no embedded ableism (expansion driven by suffering-responsiveness): the constraint may be rope-flavored (genuine coordination between compassion and autonomy) or remain tangled_rope (coordination + asymmetric authority distribution).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the expansion mechanism incorporates ableist devaluation of disabled lives."
     }
   ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.15
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.22
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.61
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.31
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.52
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.76
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.35
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.42
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.61
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.51
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.48
+      }
+    ]
+  },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "end_of_life_authority__autonomy_reading",
-      "end_of_life_authority__sanctity_reading"
+      "end_of_life_authority__sanctity_reading",
+      "palliative_care_access_constraint",
+      "disability_devaluation_mechanism"
     ],
-    "dual_formulation_note": "The end_of_life_authority kernel decomposes into three constraint readings: (1) autonomy_reading grounds authority in individual choice (Mountain or Rope, minimal extraction); (2) sanctity_reading grounds authority in intrinsic life value (Mountain, negligible extraction, entrenched); (3) slippery_slope_mechanism (this story) documents institutional drift where the autonomy reading expands to encompass incompetent and non-dying populations, becoming a vehicle for sanctity-like elimination concerns. The three readings are structurally distinct constraints with different epsilon values, beneficiary/victim structures, and classifications. Each story links to the other two via affects_constraints to show the kernel family structure. The autonomy reading influences (and may foreclose) the sanctity reading depending on how broadly autonomy-grounding is interpreted; the slippery-slope reading influences both by documenting how autonomy-grounding in practice converges toward sanctity outcomes without sanctity premises."
+    "dual_formulation_note": "The end_of_life_authority kernel decomposes into three constraint stories: (1) autonomy_reading (individual choice grounds legitimate authority), (2) sanctity_reading (intrinsic life value prohibits intentional ending), (3) slippery_slope_mechanism (institutional expansion beyond competent-terminal). Each reading instantiates a different constraint with different ε values, beneficiary/victim structures, and types. The three are linked by network edges: this story (slippery_slope_mechanism) describes the institutional path by which autonomy-reading frameworks operationally align with sanctity-reading outcomes (resource conservation through life-ending) while maintaining autonomy language. The slippery-slope mechanism shows HOW the institutional navigation between readings occurs — through scope expansion, not through explicit acknowledgment of sanctity rationale."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.72
+      "power_atom": "powerless",
+      "d_value": 0.88
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
     }
   ],
+  "gain_flow": "medical_institutions",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "autonomy_centered_terminal_care",
+    "drift_state": {
+      "moment": "contemporary_institutional_practice_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "end_of_life_authority__autonomy_reading",
+        "sibling_id": "autonomy_reading",
         "relation": "influences"
       },
       {
-        "sibling_id": "end_of_life_authority__sanctity_reading",
-        "relation": "influences"
+        "sibling_id": "sanctity_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "initial_scope_drift_empirically_documented",
+        "atom": "autonomy_framework_permits_scope_expansion",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "autonomy_framework_extends_beyond_epistemic_warrant",
+        "atom": "institutional_discretion_over_suffering_categories_legitimate",
         "role": "secondary",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "terminal_competent_only_eligibility",
-    "drift_state": {
-      "moment": "contemporary_post_two_decades_empirical_expansion",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

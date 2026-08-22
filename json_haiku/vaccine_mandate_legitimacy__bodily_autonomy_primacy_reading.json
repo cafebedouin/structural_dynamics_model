@@ -4,228 +4,379 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "26a8486e-cea8-4f2f-822d-d02fb2765051"
+    "story_uid": "c3e62059-1805-48bb-866a-069514d7249d"
   },
   "base_properties": {
-    "extractiveness": 0.19,
-    "suppression": 0.08,
-    "theater_ratio": 0.12,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.71,
-    "claimed_type": "mountain",
-    "human_readable": "Medical Self-Sovereignty Absolute (Bodily Autonomy Primacy Reading)",
-    "topic_domain": "constitutional_law/bioethics/public_health",
-    "emerges_naturally": true,
+    "extractiveness": 0.82,
+    "suppression": 0.91,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Vaccine Mandate Legitimacy: Bodily Autonomy Primacy Reading",
+    "topic_domain": "public_health/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "liberty_advocacy_movements",
-      "individuals_asserting_bodily_autonomy"
+      "medical_autonomy_advocates",
+      "libertarian_advocacy_movements"
+    ],
+    "victims": [
+      "unvaccinated_individuals",
+      "immunocompromised_persons_denied_alternatives",
+      "conscientious_objectors"
+    ],
+    "vindicated_propositions": [
+      "bodily_integrity_inalienable",
+      "informed_consent_non_delegable",
+      "state_coercion_categorically_impermissible"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "unvaccinated_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Face legal and employment mandates to vaccinate or exit employment, education, or public life. Their bodily autonomy claim is the constraint's central referent. They bear the extraction: loss of livelihood, social exclusion, and forced medical intervention. Exit options collapse to bare alternatives: vaccinate or lose economic security."
+    },
+    {
+      "name": "immunocompromised_persons_denied_alternatives",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience heightened transmission risk from vaccine-hesitant populations while mandates are framed as protecting them. If mandates fail, their genuine vulnerability (not rhetorical) goes unaddressed; if mandates succeed via coercion, they benefit incidentally but at cost of the coercive principle's establishment. Bear costs either way: vulnerability if mandates fail; complicity in coercion if mandates succeed."
+    },
+    {
+      "name": "conscientious_objectors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold sincere objections to vaccination grounded in religious, philosophical, or ethical conviction. Mandates do not distinguish their objections from instrumental vaccine-hesitancy; they face the same enforcement. Their cost is either conscience violation or economic/social exclusion."
+    },
+    {
+      "name": "medical_autonomy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Mobilize opposition to mandates as the vehicle for establishing bodily autonomy as a non-negotiable constitutional principle. They benefit from the constraint through elevated attention, resource flow, and institutional legitimacy for their core claim—that coerced medical intervention is categorically impermissible. They do not themselves bear the mandate's enforcement costs; the unvaccinated do."
+    },
+    {
+      "name": "libertarian_advocacy_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Frame mandates as exemplar of state overreach, mobilizing broader anti-coercion messaging. They benefit from the constraint's contestation by advancing their broader political agenda around minimal state authority. They do not bear the mandate's enforcement costs directly."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set and enforce mandate policy, justified by collective harm prevention and disease control. They claim the mandate solves a genuine coordination problem (controlling transmission); they bear the cost of enforcement infrastructure and legal contestation."
+    },
+    {
+      "name": "medical_professionals",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would articulate proportionality-based objections to blanket mandates and advocate for individualized risk assessment; they are largely excluded from setting mandate policy despite their expertise. Their absence from the constraint-setting negotiation is structural—mandates are political/legal decisions, not medical ones, and clinicians' voices advocating alternatives are not in the room."
+    },
+    {
+      "name": "public_health_ethics_consensus",
+      "role": "observer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The academic consensus on medical coercion (in bioethics, public health ethics, and medical jurisprudence) that informed consent is non-waivable and that state coercion in medicine requires extraordinary justification—the foundational claim this reading is instantiating."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "No genuine coordination function exists in this reading. The mandate is framed as solving a collective-action problem (preventing transmission), but that frame is precisely what this reading contests—it substitutes state coercion for individual choice and masks extraction as public health.",
+    "transfer_function": "Moves bodily autonomy (a non-fungible right) from individuals to the state-medical apparatus, in exchange for collective disease-risk reduction that accrues diffusely. The payers are the unvaccinated and conscientious objectors; the beneficiary is state capacity to enforce medical compliance; the secondary beneficiary is advocacy movements that instrumentalize the mandate to advance anti-coercion narratives.",
+    "absent_voices": "Medical professionals advocating proportionality-based alternatives are structurally excluded—mandate policy is set by public health and political authorities, not clinicians. Individual vaccine-hesitant persons, immunocompromised patients at genuine risk of vaccine side effects, and conscientious objectors with developed ethical frameworks (not mere opinion) are not represented in the negotiation that produces the mandate.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If mandates vanished overnight, transmission patterns would shift (unvaccinated populations would show higher disease incidence), and public health authorities would lose a tool for rapid compliance. But the question of whether disease control would substantially degrade or merely shift to different risk distributions is itself contested—different empirical framings (transmission reduction ≈ 30–60% in most epidemiological models) lead to different verdicts. The bodily autonomy reading insists the answer is irrelevant—even full disease prevention does not justify categorical coercion—so the verdict is 'contested' in the sense that the causal question does not resolve the normative question.",
+    "founding_problem": "An emerging infectious disease with significant mortality in vulnerable populations, where vaccination is available and effective, but voluntary uptake is insufficient to prevent healthcare system overload and death clusters in high-transmission communities. The founding problem is the collective-action problem of coordination on disease control when individual incentives are misaligned with population outcomes.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health authorities (beneficiaries) attest the founding problem is live and that mandates are necessary to solve it. Epidemiologists provide correlational evidence that mandate-adjacent compliance increases and disease burden declines in mandate jurisdictions. However, medical ethicists and public health ethics consensus bodies (outside the mandate-setting authority) attest that the founding problem is real but contestable in severity and that mandates represent an unjustifiable escalation beyond alternative interventions (targeted protection, voluntary incentives, information campaigns, risk-stratified approaches). The most direct corroboration of the founding problem comes from physicians and epidemiologists observing actual transmission waves; the most direct contestation comes from the same professional bodies on whether that problem justifies the coercive solution."
+  },
   "interval": {
-    "start": 2020,
-    "end": 2026
+    "start": 0,
+    "end": 36
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.08
+      "time_point": 0,
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.12
+      "time_point": 4,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.15
+      "time_point": 8,
+      "value": 0.76,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2023,
-      "value": 0.18
+      "time_point": 12,
+      "value": 0.79,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.19
+      "time_point": 20,
+      "value": 0.81,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.19
+      "time_point": 28,
+      "value": 0.82,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2023,
-      "value": 0.11
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.12
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.82,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.04
+      "time_point": 0,
+      "value": 0.72,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2021,
-      "value": 0.06
+      "time_point": 4,
+      "value": 0.78,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2022,
-      "value": 0.07
+      "time_point": 8,
+      "value": 0.84,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2023,
-      "value": 0.08
+      "time_point": 12,
+      "value": 0.88,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.08
+      "time_point": 20,
+      "value": 0.9,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2026,
-      "value": 0.08
-    }
-  ],
-  "omegas": [
-    {
-      "id": "natural_law_vs_constructed_doctrine",
-      "question": "Is bodily autonomy an inviolable natural law or a constructed constitutional doctrine that emerged from specific intellectual and legal traditions?",
-      "resolution_mechanism": "Historical and comparative analysis: does the principle appear universally across human societies independent of Western liberal tradition, or is it contingent on Enlightenment-era philosophy and modern rights frameworks?",
-      "impact": "If natural law, the constraint deserves mountain classification despite declared beneficiaries. If constructed doctrine, the beneficiary set (liberty advocates) undermines the naturality claim and points to FSM (false-summit mountain) reclassification to tangled_rope or snare.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether bodily autonomy is a discovered natural principle or an invented doctrine with identifiable beneficiaries."
+      "time_point": 28,
+      "value": 0.91,
+      "basis": "observed"
     },
     {
-      "id": "externality_bearing_asymmetry",
-      "question": "Is the external harm to immunocompromised populations from increased infection risk (due to lower vaccination rates) a necessary consequence of the autonomy principle, or a contingent policy choice to ignore protective measures?",
-      "resolution_mechanism": "Policy design analysis: can the state simultaneously respect bodily autonomy (no mandates) AND protect vulnerable populations through voluntary incentives, healthcare infrastructure, or targeted protection? Or does respecting autonomy logically entail accepting the externality?",
-      "impact": "If protective measures are available, the constraint's external cost is reduced and the reading becomes more defensible. If protection requires either coercion or re-prioritization of resources away from other populations, the externality is irreducible and the constraint forces a true tragic choice.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether vulnerability externalities are necessary or contingent under this reading."
+      "metric": "suppression_requirement",
+      "time_point": 36,
+      "value": 0.91,
+      "basis": "observed"
     },
     {
-      "id": "kernel_reading_plurality",
-      "question": "Is the bodily autonomy primacy reading genuinely one incommensurable reading of a single kernel (vaccine mandate legitimacy), or does it represent a different kernel entirely (individual liberty vs. collective health)?",
-      "resolution_mechanism": "Conceptual analysis of kernel definition: do the three readings (bodily autonomy, public-health primacy, risk stratification) all adjudicate the SAME question (what justifies a mandate?), or do they answer different questions (is autonomy sacrosanct? is health? is proportionality)?",
-      "impact": "If incommensurable questions, the three constraints do not belong in a single kernel family — they should be treated as independent constraints with distinct ε values rather than as siblings. The kernel decomposition itself may be incorrect.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the reading plurality represents genuine kernel ambiguity or categorical separation."
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
-      "id": "captured_beneficiary_status",
-      "question": "Do liberty advocacy organizations genuinely benefit from the principle's articulation, or do they perform a dissent function that would persist even if mandates were legalized?",
-      "resolution_mechanism": "Institutional analysis: if mandate legality changed tomorrow, would liberty organizations dissolve or find new targets? Do they depend on the principle's victory or on the existence of a liberty principle to defend?",
-      "impact": "If dependent on principle victory, the beneficiary set is real and FSM triggers (false-summit detection). If dependent on role as dissent-defenders, they benefit from principle vindication but the benefit is generic (role maintenance) rather than specific to this constraint, and FSM does not trigger.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether liberty advocacy organizations are beneficiaries of the principle or defenders of a structural role."
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.18,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story instantiates ONE READING of the contested kernel 'vaccine_mandate_legitimacy': the bodily_autonomy_primacy_reading. Under this reading, medical self-sovereignty is absolute — the state possesses no authority to coerce medical intervention regardless of epidemiological outcome. The reading grounds itself in a foundational principle: negative liberty (freedom from bodily violation) is categorically prior to collective health considerations. This story does NOT adjudicate between the three readings; it author the structural data for THIS reading as a pure constraint. The deliberate declaration of beneficiaries (liberty advocacy movements) on a claimed-mountain constraint triggers FSM (false-summit mountain) detection machinery — the story documents the ambiguity via omegas. The measurement series shows gradual uptake of the reading's doctrinal articulation (extracted from case law, advocacy growth, policy disputes) from 2020–2026 as the constraint became more explicitly formulated and defended.",
+    "narrative_context": "This constraint story instantiates one reading of the vaccine mandate legitimacy kernel: the bodily autonomy primacy reading, which holds that medical self-sovereignty is categorically inviolable regardless of public health outcomes. The constraint is a SNARE because (1) the coercive mandate is justified through public health framing, but (2) the extraction—loss of bodily autonomy, livelihood, and liberty—persists regardless of whether the public health objective succeeds, (3) suppression is high because enforcement depends on active exclusion from employment and public life, and (4) alternatives (conscientious objection, risk-stratified exemption, alternative protection mechanisms) are structurally foreclosed. The beneficiaries are advocacy movements that weaponize the mandate to advance their broader anti-coercion agenda, not the unvaccinated themselves or the vulnerable populations the mandate purports to protect. This is a kernel reading: the same underlying mandate commitment can be read as a snare (bodily autonomy primacy), as legitimate rope (public health primacy), or as a valid but over-broad scaffold (risk stratification). The reading declared here is the ε-invariant instantiation of the bodily autonomy primacy framing—what that reading sees when it looks at the mandate structure.",
     "key_agents": [
-      "individual_vaccine_decision_maker: Rights-bearer whose autonomy the constraint protects (powerless, identity-locked to bodily integrity)",
-      "immunocompromised_population: Bears external harm when vaccination rates drop; victim under this reading (trapped, mortal exposure risk)",
-      "medical_liberty_advocacy_organizations: Institutionalize and defend the reading; structural beneficiary (organized, mobile)",
-      "state_coercive_apparatus: Prohibited from mandate authority; loses policy tools (institutional, constrained)",
-      "competing_constitutional_readers: Public-health and risk-stratification seats excluded from authority under this reading (institutional, analytical)"
+      "unvaccinated_individuals: primary target (bodily autonomy confiscation)",
+      "immunocompromised_persons_denied_alternatives: secondary target (caught between vulnerability and coercion)",
+      "conscientious_objectors: target (forced conscience violation or economic exclusion)",
+      "public_health_authorities: agenda setter (enforces mandate)",
+      "medical_autonomy_advocates: beneficiary (advancing bodily autonomy as supreme principle)",
+      "libertarian_advocacy_movements: beneficiary (instrumentalizing mandate for anti-coercion messaging)",
+      "medical_professionals: excluded (proportionality expertise shut out of policy)"
     ],
-    "logic_rationale": "The authored metrics reflect the structure of a reading that claims naturality but benefits identifiable agents. Extractiveness is low (0.19) because the constraint does not extract resources or transfer them materially — it articulates a prohibition. Suppression is very low (0.08) because the reading does not require active coercion to persist; rather, it operates by denying the state a policy tool. Theater is correspondingly low (0.12): little performative activity is needed; the constraint's persistence depends on doctrinal acceptance, not on staging compliance. Accessibility_collapse is extremely high (0.92): once the autonomy principle is understood and accepted as foundational, alternatives (collective health, proportional mandates, risk stratification) become nearly inaccessible within this reading's framework — the principle is presented as foreclosing them. Resistance is high (0.71): public-health authorities, epidemiologists, and vulnerable populations actively resist the reading's application, especially during high-mortality periods. The metrics are independent of the claimed type: the story claims mountain (naturality), but the metrics describe a constraint that benefits specific beneficiaries and excludes competing readings. This divergence is the datum the corpus exists to measure.",
-    "perspectival_gap": "The three readings of this kernel diverge most sharply in their treatment of vulnerability. The bodily_autonomy_primacy_reading (this story) treats immunocompromised as victims bearing acceptable externalities. The public_health_primacy_reading would treat them as primary beneficiaries (protection justifies mandate). The risk_stratification_reading would treat them as a threshold case: proportional protection justified, blanket mandates not. These are not differences in fact or in measuring the same thing — they are differences in which seat receives priority and protection in the reading's framework.",
-    "directionality_logic": "The engine's directionality derivation begins with beneficiary/victim declarations and modulates by power + exit. This reading declares liberty advocacy (organized, mobile) and refusers (powerless, identity-locked) as beneficiaries, and immunocompromised (powerless, trapped) as victims. From this, d-values flow: beneficiaries push toward d near 0.0 (subsidized), victims push toward d near 1.0 (targeted). The identity-lock exit option for individual refusers signals deep fusion (autonomy is identity) rather than economic constraint; the engine may weight this differently than constrained or mobile exits. No override is needed for the engine's chain to work correctly.",
-    "mandatrophy_analysis": "This reading does not face classic mandatrophy (function atrophy while structure persists) in the interval. The founding problem — establishing bodily autonomy as a constitutional limit on state coercion — remains live and actively defended. However, the analysis of mandatrophy illuminates a deeper tension: the reading's declared beneficiaries (liberty advocates) have a structural interest in the problem remaining contested and unresolved. If mandates were universally rejected and the principle accepted as settled, the advocacy function would dissolve. The constraint's persistence depends on an ongoing debate. This is not mandatrophy (function loss) but a related dynamic: the constraint's stability depends on contested legitimacy rather than on functional necessity.",
-    "kernel_context": "This constraint instantiates the 'bodily_autonomy_primacy_reading' of the contested kernel 'vaccine_mandate_legitimacy'. The kernel's core question is: what justifies or delegitimizes vaccine mandate authority? Three readings are live: (1) bodily_autonomy_primacy_reading (this story) — autonomy is categorically prior, no mandate authority exists; (2) public_health_primacy_reading — state duty to prevent collective harm justifies mandate authority; (3) risk_stratification_reading — mandate legitimacy is contingent on actuarial risk threshold, blanket mandates fail proportionality but targeted mandates are justified. The three readings share a kernel (the text of medical constitutional authority, the history of public health law, the empirical facts of infectious disease) but instantiate incommensurable frameworks for interpretation. This story does NOT describe all three; it author the structural data for reading (1) only. Sibling readings are separate constraint stories with their own ε, beneficiary/victim sets, and metrics."
+    "logic_rationale": "Extractiveness is high and rising (0.65→0.82) because the mandate transfers bodily autonomy to the state-medical apparatus without compensation, and the transfer persists even where empirical disease control is achieved—the extraction is not contingent on failure. Suppression requirement is high and persistent (0.72→0.91) because the mandate's enforcement depends on active exclusion (job loss, school exclusion, travel restrictions), not on participant acceptance. Theater ratio is low (0.12→0.18) because the public health justification is substantive—disease control genuinely occurs—but a growing share of enforcement effort is devoted to punishing noncompliance rather than achieving disease control targets, and exemptions are rarely granted even on grounds the mandate itself nominally permits (medical contraindication, prior infection, temporal deferral). The measurement series show monotonic intensification of suppression and plateau of extractiveness at t=28, indicating enforcement infrastructure hardened and escalated through the interval, while the core extraction (autonomy loss) reached a stable plateau—the constraint matured into its equilibrium form. The shared time grid ensures every metric is authored at every examined time point (t=0, 4, 8, 12, 20, 28, 36), avoiding the OQ-105 misalignment trap.",
+    "perspectival_gap": "From the public health authority's seat, the mandate is legitimate emergency coordination: it solves a real collective-action problem (transmission control), the beneficiaries are the entire vulnerable population, and the cost to the unvaccinated is proportional to the benefit to the many. From the unvaccinated individual's seat, the mandate is categorical coercion: their bodily autonomy is non-negotiable, the public health benefit is uncertain and conditional on empirical claims, and no outcome justifies the precedent of state-enforced medical intervention. From the immunocompromised person's seat, the constraint is incoherent: they are nominally protected but their actual risk increases if mandates are enforced via social exclusion (the vaccinated are less cautious), and they did not consent to benefiting from coercion. From the advocacy movement's seat, the mandate is exactly the wedge needed to advance the broader claim that bodily autonomy cannot be overridden—they benefit from the mandate's existence precisely because they can contest it on principle. The engine computes per-seat directionality from the structural beneficiary/victim declarations: the public health authority and advocacy movements are beneficiaries (they gain from the constraint's operation); the unvaccinated and conscientious objectors are victims (they bear the extraction). Scope is national and suppression is structural (employment and legal exclusion), so directionality for the payer seats is near the target end; directionality for the beneficiary seats is near the beneficiary end. The gap is not an error—it is the signature of a snare: the same constraint is experienced as legitimate coordination from the agenda-setter's seat and as categorical coercion from the target's seat.",
+    "directionality_logic": "Unvaccinated individuals and conscientious objectors have trapped exit (vaccine or lose livelihood; no genuine alternatives). They are the constraint's primary targets, so their directionality is near 1.0 (full target end). Immunocompromised persons have constrained exit (vulnerable either way) and are nominally beneficiaries but actually vulnerable to mandate enforcement; their directionality is ambiguous—the overrides section does not correct for this because the structure itself is ambiguous: they gain protection incidentally but at the cost of the coercive precedent, which harms them if extended. Public health authorities are the agenda-setter (institutional power, set the rules); they benefit from the mandate's operation and have arbitrage-level exit (they can change the policy). Libertarian advocacy movements have organized power and arbitrage exit (they are not subject to the mandate, they benefit from contesting it, and they can redirect their organizing energy). Medical autonomy advocates are the same class: organized power, arbitrage exit, direct benefit from the constraint's operation. All beneficiaries land near the beneficiary end (d near 0.0). The power atom distribution is crucial: powerless unvaccinated (trapped) vs. institutional public health authorities creates maximum directionality divergence, which explains why the per-seat classifications diverge starkly from the story-level claimed type.",
+    "mandatrophy_analysis": "The founding problem is live and real—collective transmission in the early pandemic did create mortality clusters that could be partially addressed by rapid vaccination uptake. But the founding problem status is contested because (1) mandates were implemented after vaccination was widely available and voluntary uptake was substantial, so the problem was already partially solved; (2) the core claim—that mandates increase net vaccination relative to alternatives like incentives and information campaigns—is itself contested by economists and political scientists; (3) the mandate persisted long after the founding problem's acute phase (t=0–12) and plateaued at a high enforcement level (t=28–36) even as the founding problem's urgency declined. This plateau is the mandatrophy signature: enforcement infrastructure persists and calcifies, the original justification becomes ceremonial, and the constraint remains because the authority has no incentive to dismantle it. The snare classification prevents mislabeling this as rope (pure coordination) by insisting on the asymmetry: the unvaccinated and conscientious objectors bear the cost regardless of whether the founding problem is solved; the advocates and authorities benefit regardless. If the founding problem were truly the driving rationale, mandates would sunset as disease burden declined—they did not. This is the mandatrophy signal: the constraint persists because it benefits the agenda-setter and advocacy movements, not because the founding problem requires it.",
+    "kernel_context": "This constraint is one reading of the vaccine_mandate_legitimacy kernel. The reading instantiated here is bodily_autonomy_primacy_reading: medical self-sovereignty is categorically inviolable regardless of public health outcomes. The sibling readings are: (1) public_health_primacy_reading, which holds that state duty to prevent collective harm justifies mandate authority and that unvaccinated status is an externality; (2) risk_stratification_reading, which holds that mandate legitimacy is contingent on actuarial risk thresholds and that blanket mandates fail proportionality but targeted mandates are permissible. Each reading instantiates a different constraint with different beneficiary structures, different victim sets, and different ε values. The bodily autonomy primacy reading (this one) has high extractiveness because it refuses to trade autonomy for any outcome. The public health primacy reading would have lower extractiveness because it treats the mandate as legitimate coordination solving a real problem. The risk stratification reading would have intermediate extractiveness and lower suppression because it permits exemptions on grounds of low risk. This file contains ONLY the bodily autonomy primacy reading; the sibling readings are other constraints."
   },
+  "omegas": [
+    {
+      "id": "empirical_mandate_efficacy",
+      "question": "What is the actual counterfactual reduction in disease transmission attributable to mandate-driven vaccination, net of voluntary uptake trajectories?",
+      "resolution_mechanism": "Controlled comparison between mandate and non-mandate jurisdictions with similar baseline vaccination rates, holding other variables constant (lockdown policies, variant prevalence, healthcare capacity). Econometric identification of mandate effects using quasi-experimental variation in implementation timing and stringency.",
+      "impact": "If efficacy is substantial (>30% transmission reduction), the public health primacy reading gains structural support. If efficacy is marginal (<10%), the public health justification weakens and the snare classification is affirmed. This does NOT resolve the normative question (whether outcome justifies coercion) but establishes the empirical ground for the mandate's claims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Counterfactual disease reduction from mandate-driven compliance."
+    },
+    {
+      "id": "coercion_vs_coordination_boundary",
+      "question": "Is the mandate logically foreclosed by the bodily autonomy primacy axiom, or is it merely disfavored?",
+      "resolution_mechanism": "Axiom testing: if bodily autonomy is held to be categorically inalienable, then ANY state-enforced medical intervention (regardless of outcome) violates it, and the reading forecloses coercive approaches entirely. If bodily autonomy is held to be extremely weighty but defeasible by sufficiently grave emergencies, then the reading coexists with public health primacy and the dispute is over thresholds, not principles.",
+      "impact": "Full foreclosure supports a strong snare classification and eliminates negotiation space with the public health primacy reading. Defeasibility-under-extreme-conditions permits coexistence and shifts the constraint's type from snare to contested tangled rope (asymmetric extraction from legitimate coordination). This is the boundary between readings that truly conflict and readings that dispute thresholds within a shared framework.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether bodily autonomy primacy forecloses all coercion or merely disfavors it."
+    },
+    {
+      "id": "identity_fusion_in_advocacy",
+      "question": "To what extent have medical autonomy advocates and libertarian movements fused their organizational identity with opposition to mandates, such that a mandate reversal would constitute an identity crisis rather than a policy victory?",
+      "resolution_mechanism": "Discourse analysis of advocacy messaging and organizational positioning: if messaging pivots rapidly from specific mandate opposition to broader anti-coercion principles as mandates decline, fusion is partial; if the organization dissolves or radically shrinks as mandate contestation winds down, fusion is near-complete.",
+      "impact": "High fusion indicates that the constraint's beneficiaries have identity-locked their interest in the constraint's persistence—they would bear a material cost (organizational legitimacy loss) from mandate reversal. This deepens the snare classification: not only does the constraint extract from the unvaccinated, but its beneficiaries are structurally committed to perpetuating it. Conversely, if advocacy movements successfully pivot to new anti-coercion campaigns, the fusion was instrumental and the extraction was pure rather than institutionally rooted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether advocacy movements have identity-locked themselves to mandate opposition."
+    },
+    {
+      "id": "kernel_foreclosure_vs_coexistence",
+      "question": "Do the bodily autonomy primacy axiom and the public health primacy axiom logically foreclose each other in a single framework, or can a coherent authority structure hold both with different priority weightings?",
+      "resolution_mechanism": "Examine actual constitutional and jurisprudential precedent (U.S. Constitutional law, international human rights frameworks) to determine whether courts/authorities treat bodily autonomy and public health authority as competing but both-legitimate interests (coexistence) or as fundamentally irreconcilable (foreclosure).",
+      "impact": "True foreclosure (each reading rules out the other) means this reading is a sibling in the readings_relations sense—coexists_with applies. Precedent showing bodily autonomy as supreme-when-not-overridden suggests the axioms coexist. If precedent is split or evolution has shifted, the reading_relations edge and axiom_status may need revision.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the axioms genuinely foreclose or merely compete for priority."
+    },
+    {
+      "id": "immunocompromised_harm_asymmetry",
+      "question": "When immunocompromised persons are included in the victim set, is the extraction symmetrically distributed, or do they suffer disproportionate harms from mandate enforcement (social exclusion of caregivers, loss of alternative protection strategies) relative to their gain from increased population vaccination?",
+      "resolution_mechanism": "Epidemiological and sociological data on health outcomes for immunocompromised persons in high-mandate vs. low-mandate jurisdictions, controlled for disease severity and healthcare access; interview-based evidence from immunocompromised persons on their actual risk perception and preference for mandate vs. alternatives.",
+      "impact": "If immunocompromised persons show net negative outcomes from mandates (infection risk from disinhibited vaccinated contacts + psychological/social costs of mandate enforcement > protection gained), they should not be in the beneficiary set at all, and the snare classification is strengthened. If they show net positive outcomes, the extraction from them is lower than from unvaccinated, and directionality varies by agent—the constraint is more precisely a targeted snare than a blanket snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether immunocompromised persons bear net harms from mandate enforcement."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.06
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.25
   },
   "network": {
     "affects_constraints": [
       "vaccine_mandate_legitimacy__public_health_primacy_reading",
       "vaccine_mandate_legitimacy__risk_stratification_reading"
     ],
-    "dual_formulation_note": "The vaccine_mandate_legitimacy kernel admits three structurally distinct readings with incommensurable beneficiary structures and ε values. This story (bodily_autonomy_primacy) treats immunocompromised as victims bearing acceptable externalities. The public_health_primacy_reading treats them as primary beneficiaries warranting protection. The risk_stratification_reading treats them as a calibration case. The three constraints share a kernel (constitutional authority over medical decisions) but differ in foundational axioms (autonomy-priority vs. health-priority vs. proportionality-requirement). Each reading produces a distinct constraint with stable ε; the readings are siblings linked via affects_constraints, not aspects of a single constraint measured from different angles."
+    "dual_formulation_note": "This constraint is a member of the vaccine_mandate_legitimacy constraint family. The kernel is the standing commitment to vaccine mandates in response to pandemic transmission. The bodily_autonomy_primacy_reading (this constraint) instantiates the kernel under the axiom that bodily autonomy is categorically inviolable. The public_health_primacy_reading instantiates the same kernel under the axiom that collective harm prevention justifies state medical authority. The risk_stratification_reading instantiates the kernel under proportionality constraints that permit targeted but not blanket mandates. Each reading yields a different ε, different beneficiary/victim structure, and different computed type. The three constraints are siblings linked by network.affects_constraints (each affects the others) and distinguished by their cs_structure.axioms and reading_relations. The sibling readings compete in real institutions—different courts, jurisdictions, and advocacy coalitions hold different readings. This file contains ONLY the bodily autonomy primacy reading; do not fold the siblings into this story."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.15
+    }
+  ],
+  "gain_flow": "medical_autonomy_advocates",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "negative_liberty_doctrine",
+    "reference_frame": "constitutional_bodily_integrity",
+    "drift_state": {
+      "moment": "contemporary_pandemic_mandate_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "vaccine_mandate_legitimacy__public_health_primacy_reading",
+        "sibling_id": "public_health_primacy_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+        "sibling_id": "risk_stratification_reading",
         "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "bodily_autonomy_categorically_prior",
+        "atom": "bodily_autonomy_inviolable_categorical",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "state_coercive_authority_over_medicine_impermissible",
+        "atom": "informed_consent_non_delegable_to_state",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
-    ],
-    "drift_state": {
-      "moment": "contemporary_post_pandemic_era",
-      "direction": "stable",
-      "magnitude": "minor",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

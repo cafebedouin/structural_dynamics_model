@@ -2,230 +2,375 @@
   "header": {
     "constraint_id": "refugee_convention_text__procedural_integrity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "e53e48dd-97c7-4b62-bf54-ef05ccb78713"
+    "story_uid": "69c15a03-bf13-4aa5-8c96-be0ee31066e1"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.42,
-    "theater_ratio": 0.28,
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.22,
     "accessibility_collapse": 0.65,
-    "resistance": 0.72,
-    "claimed_type": "rope",
-    "human_readable": "1951 Refugee Convention as Procedural Integrity Safeguard",
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refugee Convention as Procedural Integrity Safeguard",
     "topic_domain": "international_law/migration/human_rights",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "asylum_seekers_with_procedural_access",
-      "international_rule_of_law_advocates"
+      "asylum_seekers_procedurally_protected",
+      "international_legal_order"
     ],
     "victims": [
-      "asylum_seekers_denied_procedural_access",
-      "offshore_processing_subjects"
+      "asylum_seekers_excluded_by_narrow_procedure",
+      "states_with_limited_processing_capacity"
+    ],
+    "vindicated_propositions": [
+      "procedural_due_process_as_foundational_right",
+      "individualized_assessment_non_waivable"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "asylum_seekers_procedurally_protected",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Receive binding access to fair, individualized assessment of their refugee claim before any refusal can stand. They are entitled to oral hearing, evidence presentation, reasoned decision, and appeal regardless of the claim's ultimate merit. They also bear the constraint's cost: processing delays, administrative burden, uncertainty during adjudication, and the continued exposure that lengthy procedures can impose."
+    },
+    {
+      "name": "states_with_processing_capacity",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Set and enforce procedural standards: they design interview protocols, evidence thresholds, appeal mechanisms, and determine what counts as 'well-founded fear' within the frame of individualized assessment. They benefit from the legitimacy the procedure confers on their refusals—a procedurally sound 'no' is harder to challenge than an arbitrary one. They bear the cost of running the machinery: trained adjudicators, legal review, appeals infrastructure, and the extended timelines these safeguards require."
+    },
+    {
+      "name": "states_with_limited_processing_capacity",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Face non-negotiable procedural requirements they lack capacity to meet: they cannot afford trained asylum adjudicators, written reasoned decisions, or meaningful appeal mechanisms, yet the reading permits no waiver of substantive review. They may narrow the definition of 'well-founded fear' or 'particular social group' within the procedural frame, but cannot skip the assessment itself. The constraint thus creates a capacity trap: meet the procedure or violate treaty obligations."
+    },
+    {
+      "name": "asylum_seekers_excluded_by_narrow_procedure",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "Receive full procedural access but in a system where states have legally narrowed the threshold—'well-founded fear' requires individualized persecution proof, 'particular social group' is restricted to immutable characteristics with state awareness—such that their claims fail at the substantive stage of the procedure. They get process but no protection; the reading's guarantee is procedural integrity, not outcome. They are in the victim set because the narrowing occurs within a procedurally-governed frame, making the exclusion formally lawful but substantively extractive."
+    },
+    {
+      "name": "regional_refugee_conferences",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Coordinate refugee burden-sharing on the basis of comparable procedural standards—states trust each other's procedures and can safely accept transfers and responsibility-sharing agreements. The procedural guarantee is what makes regional arrangements fungible; without it, states would refuse to accept transfers to neighbors with weak review capacity."
+    },
+    {
+      "name": "offshore_processing_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Operate processing centers outside the territory of the state accepting refugees, yet remain bound by full procedural requirements: interview, legal representation, evidence, reasoned decision, appeal. The reading permits geographic relocation of processing but not procedural downgrade. They must staff and fund the machinery regardless of location, and accept ongoing judicial review of their decisions."
+    },
+    {
+      "name": "humanitarian_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Argue the procedural reading is insufficient—procedure is meaningless if the substantive threshold (what counts as persecution) has been narrowed to near-zero by state definition. They would advocate for the broader humanitarian reading, which guarantees not just procedure but also an expansive scope (generalized violence, clan persecution, gender-based harm). They are excluded from the agenda-setting of procedural design; their objection is audible but does not reframe the constraint."
+    },
+    {
+      "name": "sovereignty_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Argue states should have discretion to waive procedure in emergencies or for security reasons, treating the Convention as a floor, not a ceiling. They would advocate for the restrictive reading, which permits states to narrow both definition and procedure. They oppose the procedural integrity claim as over-constraining state choice."
+    },
+    {
+      "name": "international_legal_order",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The system of treaties and dispute resolution that depends on procedural consistency. When states honor procedural commitments even when outcomes disfavor their interests, the legal order's credibility is reinforced. When states nominally comply but hollow out the procedure, the order erodes. The procedural integrity reading vindicates the non-waivable nature of due process as foundational to international legality itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a common, reciprocally-accepted procedure for refugee status determination that allows states to coordinate burden-sharing and trust each other's decisions. The shared procedure replaces the coordination cost of bilateral verification—state A can accept transfers from state B's processing centers because both follow identical procedural standards.",
+    "transfer_function": "Transfers the burden of refugee intake from states with high arrival volumes to states with greater capacity, and transfers the burden of procedural compliance from states with weak institutions to those with stronger ones, via responsibility-sharing and regional processing agreements—all predicated on procedural parity.",
+    "absent_voices": "Sovereignty-maximalist states that would prefer to retain unilateral discretion over refugee admissions and have no procedural obligation; humanitarian advocates who believe procedure without substantive protection is a cover story for exclusion; developing states with minimal state capacity who find the procedural requirement impossible to meet and who are not in the conversation when the reading is operationalized in high-income countries' policy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the procedural integrity constraint vanished, states would revert to unilateral refusal authority with no obligation to hear the applicant, provide reasons, or accept review. Asylum seekers would have no enforceable right to individualized assessment. Regional refugee conferences would collapse—state A would not trust state B's decisions without procedural guarantees. The international legal order would lose a core instance of binding procedural constraint on state action. The constraint's disappearance would be a major geopolitical rearrangement toward absolute state discretion in borders.",
+    "founding_problem": "Post-1951, states had no mutual assurance that refugee determination decisions were made fairly or consistently. One state's refusal was another state's potential refugee influx. The Convention's procedural requirement solved this by making 'fair assessment' the condition under which states would accept each other's decisions and coordinate refugee responsibility. Without procedure as the common standard, no interstate coordination was possible.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The International Court of Justice and the UN High Commissioner for Refugees attest to the continuing-live status of the procedure-as-coordination problem: states persistently seek to offshore processing while narrowing procedural safeguards, and the resulting disputes (Nairobi regional conferences, Australian offshore processing litigation, U.S. asylum rule changes) show states trying to escape the procedural constraint. The founding coordination problem remains live because the escape attempts persist. However, sovereignty advocates and developing-state governments attest the procedure is now a substantive burden impeding refugee intake, and humanitarian advocates attest the procedure is a hollow formality when states narrow the substantive threshold below meaningful protection. The dispute is over whether the founding problem persists or has inverted."
+  },
   "interval": {
-    "start": 1951,
-    "end": 2026
+    "start": 0,
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1951,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.22
+      "time_point": 5,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.32
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.38
+      "time_point": 15,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.38
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1951,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.26
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.28
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1951,
-      "value": 0.18
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.35
+      "time_point": 10,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.4
+      "time_point": 15,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2026,
-      "value": 0.42
-    }
-  ],
-  "omegas": [
-    {
-      "id": "kernel_contest_procedural_vs_substantive",
-      "question": "Is the Refugee Convention's primary mandate procedural (fair assessment of claims) or substantive (broad protection from specified harms)? Can a state discharge its Convention obligation by providing perfect procedure but narrow substantive eligibility?",
-      "resolution_mechanism": "International Court of Justice or treaty body interpretation; examination of travaux préparatoires and contemporary state practice to determine legislative intent. Empirical test: if states consistently narrow definitions while preserving procedure, and international bodies accept the narrow definitions as Convention-compliant, the procedural reading holds; if international bodies override procedures to reach substantive protection outcomes, the substantive reading holds.",
-      "impact": "This reading claims procedure is primary and outcome secondary. If the substantive reading is correct, this constraint is a disguised snare — apparent protection that permits substantive exclusion through procedural formality. If this reading is correct, the constraint genuinely coordinates on process and states retain legitimate scope for definition-narrowing.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The kernel contest: is the Convention primarily a procedural safeguard or a substantive protection mandate?"
+      "time_point": 20,
+      "value": 0.37,
+      "basis": "observed"
     },
     {
-      "id": "offshore_processing_procedural_feasibility",
-      "question": "Can offshore processing centers maintain full procedural guarantees (reasoned written decisions, appeal pathways, legal representation) equivalent to onshore review, or does offshore processing structurally degrade procedural integrity?",
-      "resolution_mechanism": "Empirical audit of offshore processing centers: coding of decision rationales, appeal rates, reversal rates, representation access, and comparison to onshore tribunals. If offshore centers achieve comparable procedural rigor and transparency, this reading permits them; if they show systematic procedural deficits, this reading prohibits them.",
-      "impact": "This reading declares procedure non-negotiable but permits location flexibility. If offshore processing can deliver equivalent procedure, the constraint allows cost-shifting; if procedural integrity is inherently compromised offshore, this reading mandates onshore processing for Convention compliance.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether offshore processing can maintain equivalent procedural guarantees."
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
-      "id": "reading_viability_with_restrictive_definitions",
-      "question": "Can this procedural reading coexist with the restrictive_sovereignty_reading's narrow substantive definitions of 'well-founded fear' and 'particular social group'? Or does this reading implicitly require broader substantive scope to avoid becoming an empty procedural shell?",
-      "resolution_mechanism": "Test case: apply this reading's procedural requirements to a state using the restrictive reading's definitions; assess whether procedurally fair application of narrow definitions satisfies Convention obligations. If yes, the readings genuinely coexist; if no, this reading implicitly forecloses the restrictive reading's core premise.",
-      "impact": "If the readings coexist, a state can be procedurally compliant while being substantively restrictive. If this reading forecloses restrictive substantive definitions, the kernel is not genuinely contested — one reading would be unstable.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether this procedural reading permits coexistence with restrictive substantive definitions."
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
     },
     {
-      "id": "individualized_assessment_cost_asymmetry",
-      "question": "Is individualized assessment a benefit for asylum seekers (procedural protection against mass rejection) or a cost imposed on receiving states (resource burden, slow processing)? Is the constraint fundamentally a procedural safeguard or a rationing device?",
-      "resolution_mechanism": "Comparative institutional analysis: examine states with high procedural rigor and high approval rates versus high procedural rigor and low approval rates. If high-rigor states show systematic differences in approval rates, procedure may be operating as a rationing device (producing outcome convergence regardless of rigor). If high-rigor states show wide approval-rate variance, procedure may be genuine safeguard.",
-      "impact": "If procedure is genuinely a safeguard, this reading's claim is vindicated. If procedure is a rationing device that produces similar outcomes regardless of rigor, this reading disguises a snare: the procedural appearance of protection without substantive protection (false summit of procedure).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether individualized assessment functions as procedural protection or as a rationing mechanism."
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.22,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The 1951 Refugee Convention is contested across three readings. This story instantiates the PROCEDURAL INTEGRITY READING: the Convention is a safeguard requiring fair individualized assessment of asylum claims (notice, hearing, reasoned decision, appeal). The protection threshold (who qualifies as a refugee) can be narrowly defined by receiving states, but the PROCESS of assessment is non-negotiable. Offshore processing is permitted only with full procedural guarantees. The reading prioritizes process integrity over substantive outcome — a state that grants asylum to 5% of applicants but via transparent, fair procedure is Convention-compliant under this reading, while a state that grants 80% via opaque, arbitrary process is in breach.",
+    "narrative_context": "The 1951 Refugee Convention establishes a binding procedural requirement: states must conduct fair, individualized assessment of asylum claims before refusing them, provide reasons for refusal, and permit appeal. This constraint embodies one reading of the Convention's text—the procedural integrity reading—which treats the Convention primarily as a safeguard ensuring process integrity and fair hearing, while permitting states considerable latitude in defining the substantive protection threshold ('well-founded fear,' 'particular social group'). The reading's core claim is that procedure is non-negotiable even when outcomes may be narrow. This differs from the expansive humanitarian reading (Convention as broad humanitarian mandate regardless of procedure) and the restrictive sovereignty reading (Convention as minimum floor, states retain discretion to narrow or suspend procedure). The constraint's extractiveness is moderate (0.42) because it both benefits asylum seekers with procedural access and extracts from them by permitting narrow substantive thresholds; it benefits high-capacity states that can afford procedural machinery and extracts from low-capacity states that cannot; it benefits the international legal order by enforcing constraint on state action while extracting legitimacy-cost from states that prefer discretion.",
     "key_agents": [
-      "asylum_seekers_with_procedural_access: receive fair assessment; their protection depends on state willingness to provide process",
-      "asylum_seekers_denied_procedural_access: intercepted offshore or returned without individualized review; visible as breach only under the procedural reading",
-      "receiving_states: agenda-setters; retain wide discretion on substantive definitions (who counts as refugee) but cannot eliminate procedural review",
-      "offshore_processing_authorities: constrained to maintain full procedural guarantees or create Convention violations",
-      "adjudicatory_bodies (UNHCR, regional courts, national tribunals): enforce procedural compliance; can overturn decisions lacking individualized assessment",
-      "restrictive_sovereignty_advocates (excluded): argue for maximum discretion and minimal procedure; outside the legitimacy framework of this reading",
-      "humanitarian_expansion_advocates (excluded): argue for broader substantive definitions and outcome priority; reject the procedural formalism of this reading"
+      "asylum_seekers_procedurally_protected: beneficiary of fair hearing right; trapped (cannot exit asylum seeking); zero alternative to seeking protection, must endure procedure",
+      "asylum_seekers_excluded_by_narrow_procedure: victim of substantive exclusion within the procedure; same trapped exit as protected group but receive 'no' at the threshold stage",
+      "states_with_processing_capacity: agenda-setter and partial beneficiary; they design the procedure and benefit from legitimacy their refusals gain; they bear the cost of machinery",
+      "states_with_limited_processing_capacity: victim; capacity-trapped, must comply with procedure they cannot afford or escape via treaty exit (constrained exit)",
+      "regional_refugee_conferences: beneficiary (coordination enabled by procedure); mobile exit (can choose to participate or withdraw from agreements)",
+      "offshore_processing_authorities: agenda-setter in location but payer in mandate (must run full procedure regardless of site)",
+      "international_legal_order: non-agent beneficiary; vindicated proposition (procedure as foundational right)"
     ],
-    "logic_rationale": "Extractiveness is moderate (0.38 at interval end) because the constraint genuinely solves a coordination problem (standardizing fair assessment across jurisdictions) while also imposing real costs on receiving states (procedural infrastructure, slower decisions). Suppression is moderate (0.42) because the constraint requires active enforcement — states have incentives to skip procedure for efficiency, and offshore processing creates structural temptation to bypass individualized assessment. Theater ratio is low-moderate (0.28) because procedural compliance can be performed (written decisions that are purely formulaic, hearings that are theatrical) without substantive scrutiny, and the interval shows rising theater as offshore processing proliferates. Accessibility_collapse is moderate-high (0.65) because once an asylum seeker is intercepted offshore or in non-procedure-compliant detention, alternatives to accepting their exclusion nearly vanish. Stakes_inflation is high (individual level 0.78 at 2026) because the cost of violating procedure is deportation to persecution. Suppression at individual level (0.48) is highest when offshore processing denies procedure access entirely. The measurement series show rising theater and suppression over 75 years, indicating the constraint has drifted from coordination toward enforced formalism. Individual-level resistance is persistently high (0.72 at 2026) because asylum seekers and advocacy organizations continuously contest procedure-denial.",
-    "perspectival_gap": "Receiving_states and offshore_processing_authorities experience this constraint as coordination with embedded cost (they set substantive definitions and execute process, both costly). Asylum_seekers_with_procedural_access experience it as genuine protection (the process is their only safeguard). Asylum_seekers_denied_procedural_access experience it as snare — the reading makes them visible as breach victims by making procedure mandatory. The procedural_integrity reading creates this gap structurally: process is the protection, so denial of process is the harm. The restrictive_sovereignty reading would not create this gap because it prioritizes state discretion over procedure. The engine should compute different directionalities for the offshore_processing_authorities seat under this reading versus the restrictive reading: here they are constrained payers (high d); under restrictive reading they are mobile beneficiaries (low d).",
-    "directionality_logic": "Asylum_seekers_with_procedural_access are beneficiaries (d low, toward 0.2): they receive fair process they could not demand unilaterally. International_rule_of_law_advocates are beneficiaries (d low, toward 0.15): the constraint vindicates procedural integrity doctrine. Asylum_seekers_denied_procedural_access are victims (d high, toward 0.85): they bear the cost of exclusion precisely because procedure is denied. Receiving_states are agenda-setters with moderate extraction (d toward 0.55): they benefit from procedural legitimacy (international acceptance of their decisions) but pay the cost of process infrastructure and procedural constraints on speed. Offshore_processing_authorities are payers (d high, toward 0.7): constrained to maintain equivalence to onshore procedure, they cannot simply intercept and return. Restrictive_sovereignty_advocates and humanitarian_expansion_advocates are excluded (they are out of the covenant, not seats within it). Adjudicatory_bodies are observers (d analytical): they police compliance but don't collect or pay.",
-    "mandatrophy_analysis": "The founding problem was post-WWII displacement: millions of refugees with no protection mechanism, need for coordinated assessment standard. The procedural reading claims the founding problem is LIVE (displacement and assessment complexity persist) and the procedure is the solution (standardize what fair assessment means across states). Alternative readings dispute both: restrictive reading says the founding problem is now border control (not displacement), and procedure is an obstacle; humanitarian reading says the founding problem is now generalized violence (not individual persecution), and procedure is too narrow. The measurement series show rising theater_ratio (procedural formalism without substantive scrutiny), which is the classic mandatrophy signal: the procedure performs but the function it was built for (fair assessment of borderline cases) atrophies as states narrow definitions and offshore processing limits meaningful review. The constraint drifts from coordination (shared standard for assessment) toward enforcement (procedure as rationing device). The mandatrophy question is whether this reading can survive the drift — if procedure becomes purely theatrical, does the constraint collapse into snare (procedure as legitimation of exclusion)? The omegas carry this: if offshore processing cannot maintain procedural equivalence, the constraint is already breached by major states. If procedure is a rationing mechanism (similar outcomes regardless of rigor), the constraint was always snare.",
-    "kernel_context": "This constraint instantiates the PROCEDURAL_INTEGRITY_READING of the refugee_convention_text kernel. The contested kernel is: what is the 1951 Refugee Convention's primary mandate? This reading answers: fair individualized assessment of claims. The sibling readings answer differently — restrictive_sovereignty_reading prioritizes state discretion over procedure; expansive_humanitarian_reading prioritizes broad substantive protection over narrow procedure. The procedural reading does not foreclose the other readings logically (states could theoretically enact procedure while holding restrictive definitions, or broad definitions with poor procedure), but it does foreclose certain combinations: a state cannot claim Convention compliance while denying procedure, even if it holds restrictive definitions. The foundational axiom distinguishing this reading is INDIVIDUALIZED_ASSESSMENT_NON_DELEGABLE: each asylum claim requires personal consideration and reasoned decision, not categorical screening or delegated offshore rejection. This axiom is HOLDABLE — the international courts and UNHCR endorse individualized assessment, even as states struggle to implement it. It coexists with the restrictive reading (both can require individualized assessment for narrow claim classes) and influences the humanitarian reading (which uses individualized assessment to find broader claim categories qualify)."
+    "logic_rationale": "Extractiveness rises from 0.28 to 0.42 over the interval because states progressively narrow the substantive threshold—'well-founded fear' becomes more demanding, 'particular social group' shrinks to immutable characteristics—while maintaining the procedural frame. The procedure becomes a gateway to an ever-narrower substantive gate. Suppression increases (0.22 to 0.38) because maintaining the procedural frame against the escape attempts of states and the objections of humanitarian advocates requires active enforcement: litigation against offshore processing without full procedure, rejection of 'safe country' expedited-refusal regimes, insistence on appellate review. Theater rises modestly (0.10 to 0.22) as procedural compliance becomes increasingly formal—states file reasoned decisions and appeal mechanisms but design them to maximize refusal within the legal frame. The measurements use one shared time grid: every metric is authored at every examined point (0, 5, 10, 15, 20, 25). The temporal story is one of progressive narrowing-within-procedure: the constraint holds its procedural core but the substantive protection it guarantees erodes as states exploit the reading's willingness to separate procedure from outcome.",
+    "directionality_logic": "The procedural integrity reading creates asymmetric extraction because it requires procedure (benefiting asylum seekers) but permits substantive narrowing (harming them at the threshold stage). From the agenda-setter seat (states with capacity), the constraint is largely beneficial—they can afford procedure and use it to legitimate refusals. From the victim seat (asylum seekers excluded by narrow procedure, capacity-constrained states), the constraint extracts: it requires machinery but permits the results to narrow to near-zero. The reading's structural claim—'procedure is non-negotiable, outcome is flexible'—means beneficiaries gain process but may lose protection; payers lose both resources (to run procedure) and substantive protection (because the procedure frames a narrowable outcome). Directionality for asylum_seekers is complex: beneficiary role (procedure guarantees hearing) and payer role (constrained by narrow threshold) coexist in the same agent. The engine's derivation should identify this: trapped exit makes them a high-d target despite procedural-access benefits; the exit-derived d (high) should dominate the beneficiary-derived d (low), resulting in net-target directionality.",
+    "mandatrophy_analysis": "The constraint avoids simple mandatrophy classification (mandate dead but arrangement persists) because the founding coordination problem—states need mutual assurance of fair assessment to coordinate burden-sharing—remains live. The procedural reading does not claim the founding problem has been solved; it claims procedure-as-coordination is the solution that remains valid even when states dispute its scope. However, the reading is vulnerable to a mandatrophy charge from the humanitarian critique: if the substantive protection threshold has narrowed to near-zero, the procedure may have become a stage set for predetermined refusal, and the 'coordination' may be coordination-in-refusal rather than genuine mutual burden-sharing. The resolution distinguishes between functional mandatrophy (the procedure no longer enables actual burden-sharing because substantive narrowing has foreclosed protection) and structural mandatrophy (the procedure is legally required but almost never invoked because states have found workarounds). Evidence for functional mandatrophy: developing countries' objection that procedure traps them, humanitarian advocates' claim that procedure-without-protection is theatricality. Evidence against functional mandatrophy: the ICJ continues to enforce procedural obligations, states continue to litigate over procedure (indicating it has real cost), and burden-sharing conferences continue to reference procedural parity as the basis for responsibility agreements. The theater_ratio trend (rising but staying below 0.25) supports the reading against mandatrophy: if the procedure were pure theater, theater_ratio should approach 0.5–0.7 (equal performance and function). At 0.22, procedure is still mostly doing real work, even as substantive narrowing erodes protection.",
+    "perspectival_gap": "The agenda-setter seat (states with capacity) should perceive this as rope or mild tangled_rope: they coordinate burden-sharing, run legitimate procedures, and can narrow outcomes within the legal frame. They see the extractiveness as moderate cost for legitimacy. The payer seats perceive it differently: capacity-constrained states see entrapment (procedure they cannot afford, narrowed outcomes anyway); asylum seekers excluded by procedure see the constraint as snare dressed in procedural language. The engine should compute per-seat type divergence: the same constraint looks like tangled_rope from the capacity-rich state seat and snare from the capacity-constrained seat, because their exit options and power atoms differ. The claim/metric gap is intentional: the constraint is CLAIMED as procedural-safeguard (emphasis on coordination, integrity, fairness) while the authored metrics emphasize the extractiveness of narrowed outcomes and the suppression required to maintain the procedural frame against escape attempts. This gap is where the measurement the constraint story exists to take occurs: does the procedural framing hide extraction, or does it genuinely enable coordination despite narrow outcomes?",
+    "kernel_context": "This constraint is one reading of the contested kernel: refugee_convention_text. The kernel is the Convention's actual text—a fixed, formally agreed document that different parties read as permitting different structural arrangements. The procedural_integrity_reading (this constraint) reads the Convention as establishing a procedural obligation (fair, individualized assessment non-waivable) while leaving substantive thresholds flexible and state-definable. Two sibling readings: the expansive_humanitarian_reading treats the Convention as a broad humanitarian mandate—'well-founded fear' and 'particular social group' are to be read expansively, procedure is presumed to serve substantive protection. The restrictive_sovereignty_reading treats the Convention as a minimum floor permitting maximum state discretion—states may narrow both definition and procedure as long as minimum process (some assessment) occurs. The disagreement is located in the kernel's meaning: does the Convention anchor protection in (a) procedure as the binding constraint with flexible outcome, (b) substantive scope as the binding constraint with required procedure, or (c) state discretion as primary with minimum procedure as floor? The committer structure (which reading one holds, what that entails for refugees and states) is routed through omega variables documenting the contested interpretation."
   },
+  "omegas": [
+    {
+      "id": "procedure_outcome_independence",
+      "question": "Can procedure be truly non-negotiable while outcome remains flexible? Is this a genuine distinction or a separation that collapses under pressure?",
+      "resolution_mechanism": "Examine cases where states maintain full procedure but narrow outcome to near-zero (e.g., gender-based persecution excluded from 'particular social group'). If asylum seekers appeal procedurally-compliant narrow refusals and courts overturn them on substantive grounds, procedure and outcome are not independent; if courts uphold them, they are separable.",
+      "impact": "If procedure and outcome are independent, the reading stands: procedure guarantees fair assessment even if result is refusal. If they collapse (narrow outcome reveals procedure as formalism), the reading collapses into snare-disguised-as-rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the procedural/outcome distinction holds under stress."
+    },
+    {
+      "id": "capacity_trap_versus_constraint",
+      "question": "Does the procedural requirement trap states with limited capacity into non-compliance, or does it function as a valid constraint they must meet?",
+      "resolution_mechanism": "Study implementation in low-capacity states: do they proportionately withdraw from the Convention, or do they attempt compliance with lower-quality procedures? Do international bodies accept 'we cannot afford full procedure' as a defense?",
+      "impact": "If capacity-trapped states are permitted to withdraw or use simplified procedure, the constraint is not actually non-negotiable—it becomes negotiable for the powerless. If they must comply or are forced to try, the constraint is genuinely non-negotiable but distributively unfair.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the procedural requirement is genuinely non-negotiable or negotiable under capacity constraints."
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Does the procedural_integrity_reading foreclose the expansive_humanitarian_reading, or do they coexist as competing interpretations?",
+      "resolution_mechanism": "Examine state practice: do states holding the procedural reading formally reject parties claiming the humanitarian reading, or do both readings remain available as live choices in different jurisdictions?",
+      "impact": "If foreclosed: the procedural reading is logically stronger and the humanitarian reading is defensible only by rejecting part of the kernel's authority. If coexisting: both remain live and the contestation is not resolvable by logic—it requires political choice.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the procedural and humanitarian readings are logically incompatible or merely different."
+    },
+    {
+      "id": "extraction_via_narrowed_threshold",
+      "question": "Is the rising extractiveness (0.28 to 0.42) due to procedural suppression of escape attempts, or to states' increasing use of narrow-threshold substantive gates within the procedural frame?",
+      "resolution_mechanism": "Decompose extractiveness measures: track separately (1) suppression cost (enforcement of procedure against state exit attempts) and (2) substantive-narrowing cost (asylum claims denied under stated procedure). If (2) dominates growth, extraction is outcome-driven not procedure-driven.",
+      "impact": "If procedure-driven: the constraint's extractiveness reflects the cost of maintaining fair process and may be justified as coordination cost. If outcome-driven: the constraint's extractiveness reflects states' success in using procedure to legitimize narrow refusal, and the reading is serving as cover for extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising extractiveness reflects procedural enforcement or substantive narrowing."
+    },
+    {
+      "id": "reading_kernel_authority_grounding",
+      "question": "What authority grounds the procedural_integrity_reading's claim to represent the Convention's true meaning—treaty text, state practice, international court interpretation, or humanitarian tradition?",
+      "resolution_mechanism": "Trace the genealogy of the reading: which states, courts, and scholarly traditions authored it? Does it rest on text-as-written, or on an interpretive tradition that may have overwritten the text?",
+      "impact": "If text-grounded: the reading is stable and contestation is about application. If tradition-grounded: the reading may be overridden by a shift in the interpretive community (e.g., courts shift to humanitarian reading, or states collectively endorse sovereignty reading).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What grounds the authority of the procedural interpretation."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
+      "refugee_convention_text__expansive_humanitarian_reading",
       "refugee_convention_text__restrictive_sovereignty_reading",
-      "refugee_convention_text__expansive_humanitarian_reading"
+      "refugee_status_determination_capacity",
+      "offshore_processing_governance"
     ],
-    "dual_formulation_note": "This constraint is one of three readings of the contested refugee_convention_text kernel. The three readings decompose the Convention into three structurally distinct claims: (1) procedural_integrity_reading (this file) — the Convention requires fair individualized assessment; procedure is non-negotiable, outcome secondary. (2) restrictive_sovereignty_reading — the Convention establishes a minimum floor permitting maximum state discretion; 'well-founded fear' requires proof, 'particular social group' is narrow. (3) expansive_humanitarian_reading — the Convention mandates broad protection; 'well-founded fear' includes generalized violence, 'particular social group' is capacious. Each reading has different ε, different victim/beneficiary structure, different enforcement dynamics. They are NOT one constraint viewed from different angles; they are three constraints instantiated by the same founding text. The kernel contest is which reading is the authoritative interpretation. The omegas carry the irreducible ambiguities: is the Convention primarily about procedure or substance, narrowness or breadth, state discretion or humanitarian mandate? Each reading claims to resolve these ambiguities; the corpus data is how we measure which reading's claims are structurally sound."
+    "dual_formulation_note": "The refugee_convention_text kernel decomposes into three constraint stories, one per sibling reading. The procedural_integrity_reading (this constraint) treats the Convention as anchoring procedural non-negotiability with flexible outcome. The expansive_humanitarian_reading anchors substantive scope with required procedure. The restrictive_sovereignty_reading anchors state discretion with minimum procedure as floor. These three constraints share a referent (the Convention text itself) but model different ε values because the readings attribute different structural weight to procedure, outcome, and state discretion. The three stories are linked via network.affects_constraints; a shift in the interpretive community toward one reading will alter the structural environment of the others (influences relation). No reading forecloses the others—they coexist as competing institutional choices held by different state coalitions."
   },
-  "directionality_overrides": [],
-  "uke_scope": {
-    "epsilon_bin": "medium",
-    "hypothesis": "rope",
-    "downstream_of": [
-      "refugee_convention_text__restrictive_sovereignty_reading",
-      "refugee_convention_text__expansive_humanitarian_reading"
-    ]
-  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ],
+  "gain_flow": "states_with_processing_capacity",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "refugee_convention_text__restrictive_sovereignty_reading",
+        "sibling_id": "expansive_humanitarian_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "refugee_convention_text__expansive_humanitarian_reading",
+        "sibling_id": "restrictive_sovereignty_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "individualized_assessment_non_delegable",
+        "atom": "procedural_integrity_non_negotiable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "procedural_integrity_prior_to_outcome",
+        "atom": "substantive_threshold_state_definable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "fair_individual_assessment_framework",
+    "reference_frame": "fair_individualized_assessment_requirement",
     "drift_state": {
-      "moment": "contemporary_offshore_processing_era",
+      "moment": "contemporary_narrowed_thresholds",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": true
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

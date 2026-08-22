@@ -4,28 +4,119 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_ai_alignment_safety_control",
-    "story_uid": "9ee28ca4-db3f-40d9-b62d-463c712af346"
+    "story_uid": "88bbcbfe-678e-48a8-b473-31a270fa03c6",
+    "created_at": "2026-06-12T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.71,
-    "theater_ratio": 0.52,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "AI Alignment as Catastrophic Control Prevention (Safety-Control Reading)",
-    "topic_domain": "technology/governance/existential_risk",
+    "human_readable": "AI Alignment as Catastrophic Loss-of-Control Prevention (Safety-Control Reading)",
+    "topic_domain": "technology/governance/risk",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "safety_research_institutions",
-      "future_generations_abstract"
+      "x_risk_research_establishment",
+      "control_focused_governance_frameworks"
     ],
     "victims": [
-      "present_harm_mitigation_advocates",
-      "marginalized_communities_current_bias_targets",
-      "short_term_resource_constrained_actors"
+      "present_day_harm_mitigation_efforts",
+      "near_term_ai_safety_practitioners",
+      "affected_communities"
+    ],
+    "vindicated_propositions": [
+      "instrumental_convergence_hypothesis",
+      "capability_alignment_decoupling_thesis",
+      "existential_risk_prioritization_principle"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "x_risk_research_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the research agenda for AI alignment by framing the problem as catastrophic loss-of-control prevention. Controls funding flows via foundations and grants toward x-risk focused work. Justifies the framing as necessary to prevent extinction-level harms. Derives legitimacy and resources from the catastrophic-loss narrative; dismissal of this framing would eliminate the justification for the allocation."
+    },
+    {
+      "name": "control_focused_governance_frameworks",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Policy and regulatory structures built around preventing uncontrolled AI systems: kill-switch requirements, interpretability mandates, training-data provenance tracking, compute governance. These frameworks operate on the assumption that control loss is the primary threat and coordinate around monitoring/containment mechanisms. Benefit from alignment being defined as control-problem-solving."
+    },
+    {
+      "name": "near_term_ai_safety_practitioners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "AI safety researchers working on bias mitigation, fairness, transparency, robustness to adversarial examples, and alignment with human values in deployed systems. They are constrained by funding prioritization toward x-risk work and by the narrative that near-term harms are secondary to catastrophic futures. Their research agenda is crowded out despite these problems affecting real deployed systems today."
+    },
+    {
+      "name": "affected_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Populations experiencing present-day AI harms: discriminatory hiring algorithms, surveillance systems, loan denial automation, criminal justice AI bias. They bear the costs of misaligned systems operating today while research and governance attention flows to speculative future catastrophes. They have no seat in the alignment-definition process and no recourse when systems harm them."
+    },
+    {
+      "name": "large_capability_labs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations building frontier AI systems. They benefit from alignment being defined narrowly as control-problem-solving because it defers present-day responsibility for bias, fairness, and social impact. They are simultaneously paying in terms of governance constraints (interpretability requirements, testing mandates) but these constraints are weaker than what a justice-focused alignment definition would demand. They can move operations or redefine problems to maintain autonomy."
+    },
+    {
+      "name": "future_generation_proxy",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Not a present-day agent but a claimed beneficiary of the safety-control reading: future humans protected from loss-of-control catastrophes. This is a non-agent entity included because the reading's legitimacy depends on the claim that future generations are the primary beneficiary set."
+    },
+    {
+      "name": "integrated_alignment_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers and advocates who argue that alignment must address both control problems AND justice/fairness problems simultaneously; they would object that the safety-control reading extracts authority from the problem-definition process by treating catastrophic scenarios as primary and present-day harms as secondary. They are excluded from agenda-setting in x-risk-dominated institutions."
+    },
+    {
+      "name": "competing_threat_models",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Security researchers, ML robustness researchers, and alignment-skeptical AI developers who question whether control loss is the most plausible failure mode or whether present-day deployment failures are higher-probability threats. They observe the resource/narrative allocation toward x-risk but do not have equal standing to contest the problem definition."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of directing limited AI safety research and governance resources toward their highest-impact allocation: prevents scenario where future catastrophic loss-of-control systems are built without adequate safeguards because attention was scattered across lower-order problems.",
+    "transfer_function": "Transfers research priority and funding from present-day AI safety problems (bias, fairness, deployment robustness, adversarial attacks) to speculative catastrophic-loss-of-control research. Moves governance authority from affected-community-responsive frameworks toward control-focused frameworks.",
+    "absent_voices": "Affected communities experiencing present-day AI harms are structurally excluded from alignment-definition processes. Justice-focused and integrated-alignment researchers are marginalized in x-risk-dominated institutions. This reading gains strength partly from the silence of those who would argue for different prioritization.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the safety-control reading vanished: some say governance would fragment around present-day harms and near-term safety, increasing catastrophic-loss risk (world rearranges toward worse outcomes). Others argue governance would finally address discrimination and fairness in deployed AI systems, shifting resources to where harms are measurable and preventable (world rearranges toward different justice outcomes). The parties dispute whether the reading's disappearance is catastrophic or liberating.",
+    "founding_problem": "Advanced AI systems might develop goal structures misaligned with human intentions, and once sufficiently capable, their misalignment could cause extinction-level loss of human control.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Cited by x-risk researchers and some capability-lab leadership as live and urgent. Disputed by ML safety researchers who argue present-day capability levels do not yet support the foundational assumptions (goals, agency, long-horizon planning) the founding problem presumes. No corroboration from affected communities experiencing present-day AI harms; the communities most affected by AI systems today do not attest this problem drives their experience. Academic security researchers point to alternative threat models (distribution shift, adversarial examples, model theft) as more probable near-term failure modes."
   },
   "interval": {
     "start": 0,
@@ -35,156 +126,173 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.55
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.62
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.66
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.67
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.68
+      "value": 0.68,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.42
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.46
+      "value": 0.34,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.49
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.51
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.52
+      "value": 0.42,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.58
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.63
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.67
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.7
+      "value": 0.7,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.71
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.71
+      "value": 0.72,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "The safety-control reading of AI alignment frames the central problem as preventing catastrophic loss of control over advanced AI systems. This reading prioritizes speculative future harms (systems pursuing unintended goals at scale) and treats them as the binding constraint on AI development and governance. It is one of three major readings of the contested 'alignment' kernel; the other readings emphasize present-day justice harms and integrated approaches. This JSON instantiates ONLY the safety-control reading as a structurally distinct constraint with its own ε, beneficiary/victim structure, and enforcement mechanisms. The reading is claimed as tangled_rope: it solves a real coordination problem (shared frame for AI safety research) while extracting from alternative problem framings (present-harm mitigation gets deprioritized). The measurement series shows extractiveness rising from 0.48 to 0.68 as the reading consolidated institutional authority (2018–2024), with theater_ratio rising in parallel, suggesting increasing performative dimensionality alongside core extraction.",
-    "logic_rationale": "Extractiveness begins moderate (0.48) when the safety-control reading competed with other framings for research attention and funding. It rises steeply (0.55→0.62 over five years) as major funding bodies (FTX Future Fund, OpenPhilanthropy) consolidated around the control frame, then plateaus (0.66→0.68) as the reading approached institutional dominance. Theater_ratio shows a parallel rise (0.38→0.52), indicating that increasing share of institutional activity involves legitimacy maintenance (conferences, position papers, normative claims) relative to technical capability-building. Suppression rises from 0.58 to 0.71, tracking the reading's active enforcement through: funding gatekeeping (alternative framings are harder to fund), publication capture (safety venues favor control framing), and institutional narrative power (universities hire into safety-control positions). The reading requires active enforcement because researchers who prioritize present-harm mitigation must actively argue against the reading's default authority; without enforcement, the allocation pressure would relax.",
-    "kernel_context": "This constraint instantiates the safety-control-reading of the contested ai_alignment_commitment kernel. The kernel is the shared concept 'alignment' — what it means for advanced AI systems to be aligned with human interests and values. Three structurally distinct readings of this kernel coexist: (1) ethics_justice_reading: alignment means preventing reproduction of present-day social bias and harms in AI systems; (2) safety_control_reading (THIS CONSTRAINT): alignment means preventing catastrophic loss of control over advanced capabilities; (3) integrated_reading: alignment requires simultaneous and non-subordinate attention to both control and justice problems. Each reading has different ε (extractiveness from resource allocation), different victim sets, and different time horizons. This JSON is the safety_control_reading only; the other readings are separate constraint stories linked via network.affects_constraints.",
-    "directionality_logic": "Safety-control institutions (safety research orgs, some alignment funders) sit at the beneficiary end of directionality (d ~0.15–0.25): they define the agenda, collect prestige and funding, and operate with high institutional authority. Their exit is mobile—they can shift to other research agendas if the reading lost authority. Present-harm mitigation advocates sit at the target end (d ~0.75–0.85): they lose funding allocation, institutional attention, and legitimacy for their work. Their exit is constrained—harm-mitigation work on present biases is structurally harder to fund in a control-dominant ecosystem. Marginalized communities experiencing algorithmic bias sit deeper in the target end (d ~0.90–0.95): their exit is identity_locked—they are the subjects of algorithmic systems they cannot leave, and the reading's deprioritization of bias mitigation extends this lock. Future generations (treated as beneficiary in the reading's own framing) have no structural power to exit or negotiate (d undefined—they lack agency in the present allocation decision).",
-    "perspectival_gap": "From the safety-control institution's perspective, the reading appears as legitimate urgency-multiplication: if speculative future harms are worse than present harms (by scale × probability), then resource reallocation is justified coordination. From the present-harm mitigation seat, the same constraint appears as narrative displacement: a competing reading has captured institutional authority and is using that authority to defund work addressing measurable suffering. The engine computes per-seat classification from the structural data: the safety institution's seat and the present-harm advocate's seat should produce different type classifications—the former may compute as rope (coordination with low asymmetry), the latter as snare (extraction with trapped victims). This divergence is THE measurement: the claim/metric independence rule ensures we state the control reading's framing and then author the structural facts independently.",
-    "mandatrophy_analysis": "The founding_problem of the safety-control reading is: 'how do we ensure advanced AI systems remain under control.' This problem is live in the reading's tradition (control risks are actively researched and remain open technical questions) but contested in the wider alignment field: ethics-justice researchers argue present bias problems are equally or more urgent and equally or more solvable. The reading's mandate is to prioritize control-risk prevention; the contest is whether control-risk prevention should be the binding constraint or co-equal with justice concerns. The constraint avoids pure mandatrophy because the founding problem (loss-of-control scenarios) remains actively researched and contested rather than abandoned. However, the high theater_ratio (0.52) and rising suppression (0.71) suggest performative maintenance of the reading's primacy against competing interpretations—a piton signature underlying the tangled_rope structure. If the integrated_reading gains institutional parity (equal funding, publication weight, hiring), the safety-control reading would face delegitimacy (mandatrophy: the founding problem becomes 'maintain the safety-control framing's authority' rather than 'prevent loss of control')."
+    "narrative_context": "The 'AI alignment as catastrophic loss-of-control prevention' reading frames the central alignment problem as preventing advanced AI systems from developing misaligned goals that cause extinction-level human loss of control. This reading instantiates one coherent structural interpretation of the contested kernel 'ai_alignment_commitment' and is NOT the only reading; it competes with an ethics_justice_reading (alignment means preventing reproduction of present-day bias and harm) and an integrated_reading (both problems matter equally). The safety-control reading coordinates a specific research agenda, governance framework, and resource allocation; it extracts resources from alternative framings by establishing speculative catastrophic scenarios as the primary victim set. The constraint's claimed type is tangled_rope: it solves the genuine coordination problem of directing scarce safety research toward highest-impact allocation (coordination function) while simultaneously concentrating research authority and funding toward x-risk-focused institutions at the expense of near-term safety and justice work (extraction function, paid by near-term practitioners and affected communities).",
+    "kernel_context": "This constraint instantiates the 'safety_control_reading' of the contested kernel 'ai_alignment_commitment'. The kernel is a stabilized commitment in AI governance and research: the term 'alignment' refers to ensuring advanced AI systems serve human values and do not escape human control. Three readings contest what this commitment means: (1) the safety_control_reading (this constraint): alignment centers on preventing catastrophic loss-of-control of superintelligent systems. (2) the ethics_justice_reading: alignment centers on preventing present-day reproduction of bias, fairness failures, and harm in deployed AI systems. (3) the integrated_reading: alignment must address both control problems and justice problems as structurally inseparable. Each reading instantiates a different constraint with different victim sets, different extractiveness profiles, and different governance implications. This constraint is the reading whose narrative prioritizes speculative catastrophic scenarios and treats affected communities experiencing present-day harms as secondary to the survival of humanity-as-whole.",
+    "key_agents": [
+      "x_risk_research_establishment: institutional agenda-setter, controls problem definition and resource flows",
+      "control_focused_governance_frameworks: institutional beneficiary, embodies and enforces the safety-control reading",
+      "near_term_ai_safety_practitioners: moderate-power payer, crowded out by x-risk prioritization",
+      "affected_communities: powerless payer, bearing present-day AI harms while resources flow to speculative futures",
+      "large_capability_labs: powerful, dual-positioned beneficiary and constrained payer",
+      "integrated_alignment_advocates: excluded moderate-power, would contest the problem definition"
+    ],
+    "logic_rationale": "Extractiveness of 0.68: The reading extracts from present-day safety research by establishing it as secondary to catastrophic-loss prevention. It extracts from affected communities by treating their present-day harms as lower-priority than speculative extinction scenarios. The extraction is justified by the claim that the future lives of humanity-as-whole are the true victim set. Suppression of 0.72: The reading's persistence depends on actively suppressing competing problem definitions (justice-focused readings, near-term-harm-focused frameworks). This suppression is structural: funding mechanisms, institutional prestige, publication venues, and policy attention all concentrate around x-risk framings; alternatives are marginalized not by overt coercion but by resource and attention allocation. Theater ratio of 0.42 (moderate-low): The research and governance activity is genuine—control research is real work—but a growing share of the activity is theatrical maintenance of the problem-definition authority rather than solving the stated problem. The inability of this reading to address present-day AI harms, and the continued arrival of new present-day harms despite the reading's dominance, suggests the narrative is doing work beyond problem-solving: it is protecting the agenda-setter's authority to define what alignment means. Accessibility collapse of 0.48 (moderate): Within the x-risk research ecosystem, the control-loss framing is nearly inevitable—researchers trained in the paradigm see the world through its lens. But for practitioners working on deployed systems and affected communities, the reading is not inevitable; they see alternative framings (present-day harm prevention) as equally or more pressing. The reading's collapse of accessibility is high within its institutional boundaries but low outside them. Resistance of 0.71 (high): The reading meets substantial resistance from integrated-alignment advocates, from ML safety researchers focused on robustness and near-term failures, from affected communities, and from governance frameworks oriented toward present-day harms. This resistance is not being suppressed entirely (theater_ratio is not higher); it is being marginalized through resource allocation and institutional hierarchy rather than eliminated.",
+    "perspectival_gap": "The x_risk_research_establishment and control_focused_governance_frameworks perceive this constraint as legitimate coordination (future humans need catastrophe prevention, and the constraint allocates resources to that goal). Near_term_ai_safety_practitioners perceive it as extraction (their research is crowded out despite present-day deployment failures). Affected_communities perceive it as injustice (their harms are treated as secondary). Large_capability_labs perceive it as partial constraint (control governance limits them but less than a justice-focused reading would). The engine computes these divergences from the power/exit/beneficiary structure; the authored claim (tangled_rope) aligns with the structural finding that both coordination (allocation of safety resources) and extraction (concentration of authority, crowding-out of alternatives) are present.",
+    "directionality_logic": "x_risk_research_establishment: d ≈ 0.1 (full beneficiary, controls the agenda, collects institutional legitimacy and funding). control_focused_governance_frameworks: d ≈ 0.15 (strong beneficiary, their frameworks become mandatory). near_term_ai_safety_practitioners: d ≈ 0.75 (strong target, constrained exit—can exit the field but at career cost; mobile within the field but crowded-out by priority shifts). affected_communities: d ≈ 0.95 (near-total target, trapped by having no seat in the process, no exit, no authority to redefine the problem). large_capability_labs: d ≈ 0.55 (symmetric to slightly targeted; they benefit from narrow alignment framing but pay modest costs in governance). integrated_alignment_advocates: d ≈ 0.70 (excluded, would-be targets if they had a seat). The engine derives these from the beneficiary set (x_risk_establishment, control_frameworks) and victim set (near-term practitioners, affected_communities) combined with each agent's power and exit options.",
+    "mandatrophy_analysis": "The founding problem (loss-of-control catastrophe) is contested between live and dead, and the disappearance verdict is contested between rearrangement and unchanged. This tension flags potential mandatrophy: if the founding problem is dead (present-day AI systems are not close to catastrophic loss-of-control capability) or if disappearance would improve rather than worsen outcomes (redirecting resources to present-day harms), then the constraint persists despite its mandate atrophying. The theater_ratio rise from 0.22 to 0.42 over the interval supports mandatrophy hypothesis: maintenance of the problem-definition authority is consuming an increasing share of activity, even as the founding problem's empirical support remains contested. The constraint classification remains tangled_rope (both coordination and extraction are present) but the extraction component is strengthening relative to the coordination component, consistent with mandatrophy drift toward snare."
   },
   "omegas": [
     {
-      "id": "speculative_harm_quantification",
-      "question": "What is the probability distribution of advanced AI systems achieving loss-of-control scenarios at scale, and how does it compare quantitatively to present-harm risk distributions from current algorithmic systems?",
-      "resolution_mechanism": "Formal risk modeling with empirically grounded priors; reference-class forecasting from analogous automation failures; structured expert elicitation; observational data as advanced systems deploy and either do or do not exhibit uncontrollable behavior.",
-      "impact": "If speculative control risks prove orders of magnitude more probable or severe than present harms, the safety-control reading's resource prioritization is justified. If they prove comparable or lower, resource allocation should reweight toward present harms, and the reading becomes less dominant.",
+      "id": "capability_timeline_divergence",
+      "question": "What is the plausible timeline for AI systems to develop the goal-alignment and long-horizon planning capabilities the founding problem assumes? Is it within the current interval or speculative beyond it?",
+      "resolution_mechanism": "Capability research progress: empirical measurement of capability emergence in current systems; formal analysis of scaling laws and capability thresholds; expert consensus forecasting from outside the x-risk establishment.",
+      "impact": "If catastrophic loss-of-control capability is decades away or never emerges at the assumed level, the founding problem moves from 'live' to 'dead', the victim set (future humanity) loses empirical grounding, and the constraint reclassifies toward snare (pure extraction). If near-term emergence is credible, mandatrophy analysis fails and the tangled_rope classification is sustained.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether speculative loss-of-control harms are quantifiably worse than present algorithmic bias harms."
+      "description": "The timeline for catastrophic capability emergence relative to the reading's resource allocation urgency."
     },
     {
-      "id": "control_justice_separability",
-      "question": "Are the technical problems of control (specification, interpretability, robustness) and the social problems of justice (bias, discrimination, consent) structurally separable, or does solving one require solving the other?",
-      "resolution_mechanism": "Technical and social analysis of systems where control is achieved but justice harms persist (or vice versa); examination of whether control-aligned systems can still reproduce bias; whether justice-aligned systems can remain robustly controllable.",
-      "impact": "If separable, the control reading's sequential framing (solve control first, justice second) is coherent. If inseparable, the integrated_reading's co-equal framing becomes structurally necessary, and the safety-control reading's extracted resources should be shared with justice work.",
+      "id": "problem_definition_authority_structure",
+      "question": "Is the concentration of alignment-definition authority in x-risk-focused institutions structural (they have expertise and resources that genuinely warrant problem-setting) or extractive (they capture authority through institutional advantage despite alternative definitions being equally or more justified)?",
+      "resolution_mechanism": "Comparative governance analysis: do institutions with equal expertise in different framings (present-day harm reduction, integrated approaches) have equal voice in problem-definition? Do integrated approaches meet measurable performance criteria that support the safety-control reading's priority claims? Do affected communities, whose expertise is in the harms, have any seat at the table?",
+      "impact": "If the concentration is structural (justified by comparative expertise and results), the extraction is coordinating-cost and the tangled_rope classification holds. If extractive (authority concentration despite equal or superior alternative expertise), the constraint reclassifies toward snare.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether control and justice problems are independent or require simultaneous resolution."
+      "description": "Whether the safety-control reading's institutional authority reflects genuine problem-solving advantage or captured problem-definition power."
     },
     {
-      "id": "identity_locked_exit_dynamics",
-      "question": "For marginalized communities experiencing present algorithmic harms, does the deprioritization of bias mitigation research constitute structural identity-locking, or can they exit through alternative institutional or technical channels?",
-      "resolution_mechanism": "Post-deprioritization outcome tracking: can harm-mitigation work continue at meaningful scale outside the mainstream funding ecosystem? Do alternative justice-focused research communities form and sustain? What percentage of at-risk communities have accessible alternatives?",
-      "impact": "If exit remains available (alternative funding, grassroots research, regulatory pressure), the constraint is tangled_rope with constrained exit. If exit becomes unavailable, the constraint approaches snare (trapped victims). This determines whether the constraint's extraction asymmetry is sustainable or generates instability pressure.",
+      "id": "integration_vs_substitution_framing",
+      "question": "Are the safety-control reading and the ethics_justice_reading substitutes (only one can be true; resources to one come at the expense of the other) or complements (both are necessary; resources to one should not crowd out the other)?",
+      "resolution_mechanism": "Comparative outcome analysis: do systems that receive only control-focused alignment work actually prevent present-day harms? Do systems that receive only justice-focused work actually address catastrophic-loss risks? Can integrated approaches achieve both?",
+      "impact": "If substitutes, the tangled_rope classification and extraction analysis hold as stated—the constraint genuinely trades near-term harm reduction for catastrophic-loss prevention. If complements, the extraction analysis shifts: the crowding-out of near-term work is a misallocation, not a necessary trade-off, and the constraint reclassifies toward snare (unnecessary extraction).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether marginalized communities subject to algorithmic bias can exit the resource-deprioritization or are identity-locked."
+      "description": "Whether safety-control and justice-focused alignment work are structurally interdependent or exclusive."
     },
     {
-      "id": "reading_incommensurability",
-      "question": "Are the safety-control and ethics-justice readings incommensurable (logically incompatible in a single framework), or is the appearance of incommensurability a function of institutional competition rather than conceptual structure?",
-      "resolution_mechanism": "Philosophical analysis of whether core axioms of each reading contradict or merely prioritize differently; institutional ethnography of whether researchers can occupy both framings simultaneously or are forced into exclusive camps.",
-      "impact": "If incommensurable, the readings will remain competitive and one must eventually displace the other—the current tangled_rope structure is unstable. If commensurable, the integrated_reading can become dominant, equalizing resource flows. This determines the constraint's long-term terminal state.",
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the suppression of alternative framings (justice-focused, integrated) structural (budget caps, institutional hierarchy, legal barriers) or internalized (researchers believe the safety-control reading is correct and suppress their own doubts about alternative framings)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: if researchers leave x-risk-focused institutions and adopt integrated or justice-focused frameworks, do they maintain the belief in safety-control prioritization? Survey and interview data from researchers about their genuine uncertainty regarding problem prioritization versus their institutional commitments.",
+      "impact": "If structural, the suppression persists only while the constraint is enforced; if internalized, researchers carry the suppression with them. Internalized suppression indicates higher effective extraction than the scalar measure suggests and affects robustness of the constraint to changes in institutional conditions.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the safety-control and justice readings can coexist in a single coherent commitment framework."
+      "type_class": "empirical",
+      "description": "Whether suppression of alternative framings is institutional or cognitive."
     },
     {
-      "id": "future_generation_representativeness",
-      "question": "Do the institutions claiming to represent future generations' interests in loss-of-control prevention actually pursue policies future generations would choose, or are they proxy-solving for present-day institutional preferences?",
-      "resolution_mechanism": "Philosophical and institutional analysis: what evidence would a future generation examine to verify the present reading made the right trade-offs between speculative control risks and present justice harms? Do current institutions' choices reflect future interests or present institutional incentives?",
-      "impact": "If institutions are genuinely future-representing, the beneficiary seat's normative claim is strong and the extraction of present resources is justified. If proxy-solving, the claim to represent future generations is a cover story for present institutional authority-building, and the reading moves closer to snare.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether future-generation beneficiary claims reflect genuine future interests or present institutional preferences."
-    },
-    {
-      "id": "kernel_reading_contest_closure",
-      "question": "Will the ai_alignment_commitment kernel ultimately produce one dominant reading, coexisting readings, or collapse into integrated reading, and what would force resolution?",
-      "resolution_mechanism": "Institutional power dynamics: whichever reading secures long-term funding, training pipelines, and publication authority dominates. Empirical falsification: if speculative harms fail to materialize or present harms prove structurally unsolvable without justice work, dominance shifts. Structural pressure: if integrated reading can demonstrate resource efficiency and research completeness, it may become the legitimate frame.",
-      "impact": "Resolution type determines the terminal state: if safety-control stays dominant, extraction from present-harm work continues; if ethics-justice dominates, resource reallocation reverses; if integrated dominates, both framings operate at equal priority. This is the root uncertainty for the constraint family's evolution.",
-      "confidence": "low",
+      "id": "kernel_reading_foreclosure",
+      "question": "Does the safety-control reading logically foreclose the ethics_justice_reading within a single institutional framework, or do they coexist as different priorities held by different parties?",
+      "resolution_mechanism": "Logical and institutional analysis: can an institution hold both that catastrophic loss-of-control prevention is important AND that present-day bias prevention is equally important? Are there institutions that do? Or does the commitment to safety-control necessarily exclude justice-focus?",
+      "impact": "If foreclosure: the readings are alternatives in the strict sense, and the choice between them is fundamental. If coexistence: the problem-definition structure is artificial—extracted authority, not fundamental incompatibility—and the constraint reclassifies.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "How the contested kernel will resolve and what forces will drive resolution."
+      "description": "Whether the safety-control and justice-focused readings are logically exclusive or institutionally competitive."
     }
   ],
   "boltzmann": {
@@ -194,63 +302,58 @@
   "network": {
     "affects_constraints": [
       "ai_alignment_commitment__ethics_justice_reading",
-      "ai_alignment_commitment__integrated_reading",
-      "algorithmic_bias_harm_allocation",
-      "ai_capability_governance_capture"
+      "ai_alignment_commitment__integrated_reading"
     ],
-    "dual_formulation_note": "The ai_alignment_commitment kernel decomposes into three structurally distinct constraints: safety_control_reading (this file) prioritizes speculative loss-of-control scenarios; ethics_justice_reading prioritizes present-day bias harms; integrated_reading treats both as co-equal. ε values diverge sharply: safety_control shows high extractiveness (0.68) from present-harm mitigation; ethics_justice shows moderate extractiveness (0.45) from capability research; integrated shows low extractiveness (0.32) by distributing resources across both. Each reading has different victim sets, different time horizons, and different institutional beneficiaries. They are NOT alternative measurements of one constraint—they are three separate constraints arising from one contested kernel. The safety_control_reading is upstream of the other two in institutional influence: its dominance affects what resources the others can access."
+    "dual_formulation_note": "This constraint is one reading of the kernel 'ai_alignment_commitment'. The kernel describes a stabilized commitment in AI governance to ensure AI systems serve human values and do not escape control. Three readings decompose the kernel into three distinct constraints with different extractiveness profiles and victim sets: the safety_control_reading (this constraint, prioritizes catastrophic loss-of-control), the ethics_justice_reading (prioritizes present-day bias and fairness), and the integrated_reading (addresses both simultaneously). The ε values diverge because the readings instantiate fundamentally different victim sets (future-only vs. present-only vs. both) and different resource-allocation structures. Each story is self-contained; the network links record the constraint family decomposition."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.22
-    }
-  ],
   "cs_structure": {
-    "kernel_codification": "distributed",
-    "authority_grounding": "expertise",
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "ai_alignment_commitment__ethics_justice_reading",
+        "sibling_id": "ethics_justice_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "ai_alignment_commitment__integrated_reading",
+        "sibling_id": "integrated_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "catastrophic_loss_of_control_is_binding_constraint",
+        "atom": "catastrophic_loss_of_control_existential_threat",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "control_and_justice_separable_in_time",
-        "role": "secondary",
+        "atom": "future_humanity_primary_victim_set",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "technical_specification_primacy",
+    "reference_frame": "alignment_as_control_prevention",
     "drift_state": {
-      "moment": "contemporary_institutional_consolidation",
-      "direction": "authority_erosion",
+      "moment": "contemporary_deployment_focused_period",
+      "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "gain_flow": "x_risk_research_establishment",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

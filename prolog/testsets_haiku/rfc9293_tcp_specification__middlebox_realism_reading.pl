@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +76,30 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: rfc9293_tcp_specification__middlebox_realism_reading
- *   human_readable: RFC 9293 TCP Specification vs. Middlebox-Shaped Reality
- *   domain: network_protocol_engineering/distributed_systems
+ *   human_readable: RFC 9293 TCP Specification Authority vs. Middlebox-Driven Reality
+ *   domain: network_protocol_engineering/internet_standards
  *
  * SUMMARY:
- *   RFC 9293 is the normative specification for TCP behavior, written as an
- *   invariant state machine and published as international standard. But the
- *   deployed internet contains hundreds of millions of middleboxes
- *   (firewalls, NATs, DPI devices, load balancers, state-reset proxies) that
- *   inspect and modify TCP packets for policy enforcement, surveillance,
- *   address translation, and load distribution. These modifications violate
- *   RFC 9293 in measurable ways: they reset connections, shorten timeouts,
- *   drop packets that comply with the specification, and rewrite state that
- *   the specification assumes is endpoint-owned. Endpoint implementations
- *   must choose between strict RFC compliance (which fails on paths with
- *   non-compliant middleboxes) and pragmatic adaptation (which violates the
- *   specification to work on the real network). Application developers invest
- *   in workarounds (application-level keepalives, connection retry, protocol
- *   tunneling) to compensate. This story instantiates the
- *   middlebox_realism_reading: the specification's authority is subordinate
- *   to what the deployed network actually does. Real TCP is path-dependent:
- *   behavior depends on which middleboxes a packet encounters, not on what
- *   RFC 9293 says. The coordination function (single interoperable transport
- *   semantics) is real, but the extraction function (middlebox control over
- *   endpoints) is the dominant structural fact.
+ *   RFC 9293 (TCP Specification) is contested as a specification artifact.
+ *   The middlebox_realism_reading understands the constraint as follows: RFC
+ *   9293 prescribes what TCP *should* be (an endpoint-to-endpoint,
+ *   specification-conformant protocol); deployed reality is that middleboxes
+ *   (ISPs, firewalls, state surveillance apparatus) modify TCP packets in
+ *   transit for policy enforcement, surveillance, and optimization,
+ *   effectively subordinating specification authority to de facto network
+ *   control. The constraint is the tension between normative (what RFC 9293
+ *   mandates) and operative (what middleboxes enforce). Endpoints are caught
+ *   between specification compliance and middlebox adaptation — specification
+ *   authority has become aspirational rather than enforceable. This reading
+ *   asserts that real TCP semantics are path-dependent and middlebox-shaped,
+ *   not specification-defined.
  *
  * KEY AGENTS:
- *   - rfc_editor_authority: Maintains the specification as normative; claims authority to define TCP. Power: institutional. Does not control deployed paths.
- *   - endpoint_implementers: Build TCP stacks; face the bind between spec compliance and middlebox reality. Power: powerful but constrained. Exit: must work around middleboxes.
- *   - middlebox_operators: Deploy state-enforcing network devices; extract control by unilateral packet modification. Power: institutional. Authority is de facto (what they do is what actually happens).
- *   - application_developers: Build apps that depend on TCP's spec; must compensate for middlebox interference. Power: moderate. Payer seat.
- *   - end_users: Use TCP through ISP/enterprise networks containing middleboxes; experience blocked connections, surveillance, throttling. Power: powerless. Trapped exit.
- *   - standards_body_researchers: Measure middlebox behavior empirically. Role: observer. Authority: analytical.
+ *   - RFC editors (IETF): authorship authority, no enforcement power
+ *   - Middlebox operators (ISPs, enterprises, state surveillance): de facto control of packet handling
+ *   - Endpoint implementers (OS kernels, application stacks): caught between specification conformance and middlebox reality
+ *   - Application developers: depend on specification semantics but must code defensively
+ *   - Academic researchers: measure and document the gap between RFC 9293 and deployed behavior
  */
 
 /* ==========================================================================
@@ -106,59 +107,121 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(rfc9293_tcp_specification__middlebox_realism_reading, 0.68).
-domain_priors:suppression_score(rfc9293_tcp_specification__middlebox_realism_reading, 0.71).
+domain_priors:base_extractiveness(rfc9293_tcp_specification__middlebox_realism_reading, 0.81).
+domain_priors:suppression_score(rfc9293_tcp_specification__middlebox_realism_reading, 0.76).
 domain_priors:theater_ratio(rfc9293_tcp_specification__middlebox_realism_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, extractiveness, 0.81).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 0.76).
 narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, resistance, 0.64).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(rfc9293_tcp_specification__middlebox_realism_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(rfc9293_tcp_specification__middlebox_realism_reading, tangled_rope).
-narrative_ontology:human_readable(rfc9293_tcp_specification__middlebox_realism_reading, "RFC 9293 TCP Specification vs. Middlebox-Shaped Reality").
-narrative_ontology:topic_domain(rfc9293_tcp_specification__middlebox_realism_reading, "network_protocol_engineering/distributed_systems").
+narrative_ontology:human_readable(rfc9293_tcp_specification__middlebox_realism_reading, "RFC 9293 TCP Specification Authority vs. Middlebox-Driven Reality").
+narrative_ontology:topic_domain(rfc9293_tcp_specification__middlebox_realism_reading, "network_protocol_engineering/internet_standards").
 
 domain_priors:requires_active_enforcement(rfc9293_tcp_specification__middlebox_realism_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(rfc9293_tcp_specification__middlebox_realism_reading, '65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6').
-narrative_ontology:cs_kernel_codification('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', fixed_text).
-narrative_ontology:cs_authority_grounding('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', extraction).
-narrative_ontology:cs_interpretation_layer_present('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6').
-narrative_ontology:cs_reading_relation('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', rfc9293_tcp_specification__strict_invariance_reading, forecloses).
-narrative_ontology:cs_reading_relation('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', rfc9293_tcp_specification__optimization_latitude_reading, influences).
-narrative_ontology:cs_axiom('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', foundational, deployed_middleboxes_define_de_facto_protocol).
-narrative_ontology:cs_axiom_status(deployed_middleboxes_define_de_facto_protocol, holdable).
-narrative_ontology:cs_axiom_grounding('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', deployed_middleboxes_define_de_facto_protocol, empirically_contingent).
-narrative_ontology:cs_axiom('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', foundational, endpoint_autonomy_subordinate_to_network_operator_control).
-narrative_ontology:cs_axiom_status(endpoint_autonomy_subordinate_to_network_operator_control, holdable).
-narrative_ontology:cs_axiom_grounding('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', endpoint_autonomy_subordinate_to_network_operator_control, deontological).
-narrative_ontology:cs_reference_frame('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', rfc_specification_as_normative_invariant).
-narrative_ontology:cs_drift_state('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', contemporary_deployed_middlebox_dominance, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('65f6fd88-e4c8-42ba-bd9c-5cc3c636d8b6', '').
+narrative_ontology:cs_story_uid(rfc9293_tcp_specification__middlebox_realism_reading, '364be616-12b8-4b09-9efc-cf7bc1496791').
+narrative_ontology:cs_kernel_codification('364be616-12b8-4b09-9efc-cf7bc1496791', fixed_text).
+narrative_ontology:cs_authority_grounding('364be616-12b8-4b09-9efc-cf7bc1496791', extraction).
+narrative_ontology:cs_interpretation_layer_present('364be616-12b8-4b09-9efc-cf7bc1496791').
+narrative_ontology:cs_reading_relation('364be616-12b8-4b09-9efc-cf7bc1496791', rfc9293_tcp_specification__strict_invariance_reading, coexists_with).
+narrative_ontology:cs_reading_relation('364be616-12b8-4b09-9efc-cf7bc1496791', rfc9293_tcp_specification__optimization_latitude_reading, influences).
+narrative_ontology:cs_axiom('364be616-12b8-4b09-9efc-cf7bc1496791', foundational, deployed_infrastructure_supremacy).
+narrative_ontology:cs_axiom_status(deployed_infrastructure_supremacy, holdable).
+narrative_ontology:cs_axiom_grounding('364be616-12b8-4b09-9efc-cf7bc1496791', deployed_infrastructure_supremacy, empirically_contingent).
+narrative_ontology:cs_axiom('364be616-12b8-4b09-9efc-cf7bc1496791', foundational, specification_authority_subordinate_to_network_control).
+narrative_ontology:cs_axiom_status(specification_authority_subordinate_to_network_control, holdable).
+narrative_ontology:cs_axiom_grounding('364be616-12b8-4b09-9efc-cf7bc1496791', specification_authority_subordinate_to_network_control, deontological).
+narrative_ontology:cs_reference_frame('364be616-12b8-4b09-9efc-cf7bc1496791', endpoint_autonomy_era).
+narrative_ontology:cs_drift_state('364be616-12b8-4b09-9efc-cf7bc1496791', contemporary_middlebox_ubiquity, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('364be616-12b8-4b09-9efc-cf7bc1496791', '2026-06-12T14:32:18Z').
 narrative_ontology:cs_kernel_id(rfc9293_tcp_specification__middlebox_realism_reading, rfc9293_tcp_specification).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__middlebox_realism_reading, middlebox_operators).
-narrative_ontology:constraint_victim(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_implementers).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__middlebox_realism_reading, surveillance_capable_state).
+narrative_ontology:constraint_victim(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_autonomy).
 narrative_ontology:constraint_victim(rfc9293_tcp_specification__middlebox_realism_reading, application_developers).
-narrative_ontology:constraint_victim(rfc9293_tcp_specification__middlebox_realism_reading, end_users_privacy_autonomy).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_implementers).
+narrative_ontology:constraint_beneficiary(rfc9293_tcp_specification__middlebox_realism_reading, content_distribution_networks).
+narrative_ontology:constraint_victim(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_implementers).
+narrative_ontology:constraint_vindicates(rfc9293_tcp_specification__middlebox_realism_reading, network_authority_de_facto_supremacy).
+narrative_ontology:constraint_vindicates(rfc9293_tcp_specification__middlebox_realism_reading, path_dependent_protocol_evolution).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Publish and maintain RFC 9293 as the authoritative TCP specification. Define the protocol's abstract state machine, define endpoint behavior, make normative claims about packet handling. They have no enforcement power over deployed middleboxes — their authority is purely textual. They can update the RFC based on implementation evidence, but lag behind actual network behavior by years.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, rfc_editors_ietf, agenda_setter,
+    institutional, civilizational, analytical, global).
+
+% Write TCP stacks in operating systems and applications. They benefit from having a clear specification to code against and to claim compliance with for interoperability assurance. They pay by needing to work around undocumented middlebox behaviors: they must detect and repair broken packets, add de-facto compatibility shims, handle non-standard middlebox timeouts and resets. The specification does not shield them from this cost.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_implementers, beneficiary,
+    organized, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_implementers, payer).
+
+% ISPs, enterprise firewalls, state surveillance apparatus, content-inspection vendors. They modify TCP packets in transit: reassemble streams, inject resets, hold connections open for inspection, rate-limit, block, or reroute flows. They operate outside the RFC 9293 authorization framework and answer to their own policies, not to IETF specifications. Their control is de facto absolute at their network vantage points.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, middlebox_operators, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Write client/server applications expecting RFC 9293 semantics. They must now code defensively against middlebox interference: detecting timeouts they didn't cause, handling packet reordering and drops middleboxes introduce, working around connection hijacks. The specification's promise of reliable in-order delivery is conditional on an invisible network layer that may not uphold it.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, application_developers, payer,
+    moderate, biographical, constrained, global).
+
+% Operate like middleboxes (modify, intercept, reroute TCP flows) but with legitimacy because they claim to serve end-user performance. They benefit from the specification's weakness: they can deviate from RFC 9293 semantics without triggering interoperability crises because many middleboxes already do. They extract performance control (they decide packet routing, caching, optimization) from the original endpoint-to-endpoint architecture.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, content_distribution_networks, beneficiary,
+    powerful, generational, arbitrage, global).
+
+% End consumers of applications built on TCP. They are not in the conversation about RFC 9293 compliance. They are affected by middlebox interference (broken applications, slow connections, surveillance of their traffic) but have no seat at standards discussions and no way to route around middleboxes. Their interests are structurally absent from the constraint's negotiation.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, endpoint_users, excluded,
+    powerless, immediate, trapped, global).
+
+% Measure TCP behavior in the wild via active probing, passive observation, and controlled experiments. They document the gap between RFC 9293 and reality: middleboxes that violate the spec, endpoint behaviors that deviate from it, implicit protocols emerging around middlebox expectations. They produce evidence that specification authority is de facto subordinate to middlebox control.
+narrative_ontology:constraint_stakeholder(rfc9293_tcp_specification__middlebox_realism_reading, academic_protocol_researchers, observer,
+    moderate, biographical, mobile, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(rfc9293_tcp_specification__middlebox_realism_reading, middlebox_operators).
+narrative_ontology:fixing_cost_class(rfc9293_tcp_specification__middlebox_realism_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: TCP specification (RFC 9293) solves the problem of defining a reliable, ordered byte-stream protocol that all implementations must follow to achieve interoperability. It provides a single, normative reference for endpoint behavior, enabling applications to make promises about delivery semantics without knowing the specific network path or other implementations in play.
+% TRANSFER_FUNCTION: Transfers control of packet handling from endpoint implementers (who could craft custom behaviors) to middlebox operators. Endpoints are bound to RFC 9293 semantics; middleboxes are not. Specification authority (the power to define what TCP means) moves from the IETF to the deployed infrastructure of ISPs, firewalls, and state actors. De facto control of protocol semantics migrates from standard-setters to network operators.
+% ABSENT_VOICES: End users are structurally absent — they experience middlebox interference but have no venue to contest it. Alternative protocol designers (QUIC, custom UDP-based protocols) are not in the TCP specification negotiation; they emerge only after the gap between specification and reality becomes unbearable. Endpoint implementers affected by middlebox costs are present but subordinate to both RFC editors and middlebox operators.
+% DISAPPEARANCE_RATIONALE: If RFC 9293 authority ceased (specification became merely descriptive rather than normative), endpoint implementations would diverge widely in ways middleboxes could not police. Applications would need to negotiate protocol variants with every network path. Interoperability would degrade unless middleboxes published their own behavior specs, which would make them de jure standard-setters. The constraint is what keeps the fiction of a single global TCP semantics alive despite middleboxes' de facto control.
+% FOUNDING_PROBLEM: TCP was designed for a specific topology (end-to-end, no intermediaries) and required a single authoritative specification to ensure that thousands of independent implementations across different OS kernels, networks, and organizations could interoperate without coordination. RFC 9293 is that specification.
+% FOUNDING_PROBLEM_CORROBORATION: The topology assumption failed: middleboxes are ubiquitous, not exceptional. Network researchers (Paxson, Padhye, Medina, et al.) document widespread middlebox interference as normal network behavior, not anomaly. RFC editors acknowledge in RFC 9293 preface that 'many TCP implementations have diverged from the specification' — an admission that the original problem (ensuring single authoritative semantics) is no longer being solved. Endpoint implementers testify in IETF meetings that coding to the spec alone is insufficient; they must detect and work around middlebox interference. The founding problem is solved *only* by middlebox operators enforcing their own protocol variants, not by RFC 9293.
+narrative_ontology:disappearance_verdict(rfc9293_tcp_specification__middlebox_realism_reading, world_rearranges).
+narrative_ontology:founding_problem_status(rfc9293_tcp_specification__middlebox_realism_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(rfc9293_tcp_specification__middlebox_realism_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(rfc9293_tcp_specification__middlebox_realism_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(rfc9293_tcp_specification__middlebox_realism_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(rfc9293_tcp_specification__middlebox_realism_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +241,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is 0.68 (high) because middleboxes unilaterally impose control on endpoints without negotiation or compensation. Endpoints pay by losing autonomy and bearing reliability costs. Suppression is 0.71 because the control is enforced physically (packets are modified or dropped) and endpoints cannot refuse without losing network connectivity. Theater is 0.42 (moderate) because middlebox policy enforcement is real (not purely performative) but a significant fraction of their activity is architectural theater — replaying RFC assertions while actually running a different protocol. Accessibility_collapse is 0.58 (moderate) because endpoints have constrained alternatives (QUIC and other protocols inherit the same middlebox problem; IPv6 is not yet dominant; switching networks does not avoid middleboxes) but encryption and tunneling provide some workaround capability. Resistance is 0.64 because endpoint implementers, application developers, and standards bodies actively push back (IETF standards for middlebox-aware TCP, TAPS work, encryption adoption), though the large installed base of middleboxes and the power of network operators limit the practical effect. The measurement series shows extractiveness rising from 0.45 to 0.68 over the interval, driven by accumulation of middlebox deployment and sophisticated policy enforcement (post-2010 DPI expansion, post-2015 encrypted traffic blocking). Theater_ratio rises from 0.18 to 0.42, indicating an increasing share of middlebox activity is devoted to defending the specification-vs-reality gap rather than performing the founding functions (NAT, basic firewall). Suppression_requirement rises from 0.48 to 0.71, indicating escalating effort required to suppress alternative routing (QUIC adoption, encrypted DNS, VPN use) that would bypass middleboxes.
+ *   Extractiveness is high (0.81) because middleboxes extract control over protocol semantics from endpoint implementers, who are bound by the specification but cannot enforce it. The extraction is asymmetric: endpoints must conform to RFC 9293, middleboxes must not. Suppression is substantial (0.76) because maintaining this arrangement requires that endpoint implementers not revolt and demand enforcement, and that applications continue to assume RFC 9293 semantics even when middleboxes violate them. Theater is moderate (0.42): the specification's performative function is real (it does coordinate expectations), but a growing share of RFC 9293's content is theater — the specification claims authority over middlebox behavior it cannot enforce, and middleboxes ignore clauses they find inconvenient. The measurement series shows both extractiveness and suppression rising over 26 time units (spanning approximately two decades of TCP evolution, from late 1990s through early 2020s), tracking the increasing ubiquity and sophistication of middlebox interference as the Internet infrastructure matured. Theater ratio rises more slowly, indicating that the specification's coordination function remains real even as its enforcement authority erodes.
  *
  * PERSPECTIVAL GAP:
- *   From the RFC editor seat: the specification is normative, deviations are implementation defects, and the authority structure (the IETF process) is legitimate because it is open and consensus-driven. From the middlebox operator seat: the specification is advisory, deployed network reality is law, and their authority to modify packets derives from control of the physical path. From the endpoint implementer seat: the specification is the goal but middlebox compatibility is the constraint — they must optimize both and the gap is painful. From the end-user seat: the specification is invisible; they experience blocked connections and surveillance, with no way to negotiate with the network. The engine computes these per-seat divergences from the structural data: rfc_editor is analytical (external authority), middlebox_operators and endpoint_implementers are both institutional but with opposite directionalities (beneficiary vs. payer), end_users are powerless and trapped. The computed type divergence — rope from the RFC seat, snare from the middlebox seat, tangled_rope from the implementer seat — is the measurement the framework exists to take.
+ *   RFC editors and endpoint implementers should compute as beneficiaries under the strict_invariance_reading (specification authority is their domain). Under this reading they compute as constrained targets: they must follow the specification while middleboxes do not. Middlebox operators compute as pure beneficiaries: they extract control without conforming. Application developers compute as targets: they pay the cost of the mismatch. The engine should compute these divergences from the structural data (who benefits, who pays, exit options). The authored claim is Tangled Rope (coordination function present, asymmetric extraction present, active enforcement present); if the engine computes Snare at any seat, that signals a constraint whose 'coordination' framing is a cover story for pure extraction.
  *
  * DIRECTIONALITY LOGIC:
- *   Middlebox_operators are beneficiaries (d near 0.0): they extract control, have arbitrage-level exit options (they can deploy alternative blocking mechanisms or cooperate with other network operators), and operate at institutional power. Endpoint_implementers are near full targets (d near 1.0): they pay by losing autonomy, are constrained by the need to interoperate, and bear the cost of implementing workarounds. The RFC editor authority is a beneficiary in a narrow sense (their authority is vindicated by the specification's acceptance) but analytically positioned (they do not collect rents). End_users are targets (d near 1.0): they are trapped, powerless, and experience the constraint as blocking and surveillance with no negotiation path. Application_developers are payers (d moderate-high): they pay by implementing workarounds but retain moderate power (they can adopt encryption, use QUIC, pressure vendors) and have some arbiting mobility (they can choose which applications to build). The directionality logic maps to effective extraction: the constraint extracts heavily from powerless end-users (d=1.0 → high χ), significantly from endpoint implementers (d=0.85 → high χ), moderately from app developers (d=0.65 → moderate χ), and captures the gains at middlebox operators and state surveillance agencies (d=0.0 → no χ, they collect).
+ *   Middlebox operators are structural beneficiaries: they extract control (d ≈ 0.1 on the beneficiary end). Endpoint implementers are structural targets: bound by specification, unable to enforce it against middleboxes, trapped between two authorities (d ≈ 0.85). RFC editors sit near symmetric (d ≈ 0.45): they author the specification but cannot enforce it, and must defer to what the network actually does. Application developers are targets: depend on a specification the network does not uphold (d ≈ 0.80). Academic researchers are observers (d = analytical, unchanged). Endpoint users are structurally absent (not modeled as stakeholders because they have no role in the constraint's negotiation, even though they are affected by it).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (address scarcity and firewall state management) is dead: IPv6 solves address scarcity, endpoint firewalls are mature, TLS is ubiquitous. Middleboxes persist because they provide benefits unrelated to the founding problem: ISPs use them for subscriber policy enforcement and revenue collection (traffic shaping, service-level differentiation), enterprises use them for access control and monitoring, state actors use them for surveillance. The constraint is mandatroph: the arrangement persists despite the founding problem being solved because the institutions that deployed middleboxes benefit from their continued operation and have the power to defend them. The specification (RFC 9293) has become theater: endpoints are told to implement it, but middleboxes silently enforce a different protocol, and the entire ecosystem has adapted to expect deviations. The classification as tangled_rope (rather than snare) rests on the genuine coordination function the specification provides (single interoperable semantics) plus the active enforcement required to suppress alternatives (blocking QUIC, encrypted DNS, VPNs, alternative routing). If the middleboxes were purely extractive with no coordination function, this would be snare. The presence of both functions makes it tangled_rope, though the balance has shifted significantly toward extraction over the interval.
+ *   The founding problem (ensuring interoperability via a single authoritative specification) is dead: middleboxes prove that a single specification cannot ensure interoperability when network infrastructure operates outside the specification's authorization. The constraint persists because (a) the specification still coordinates expectations (applications still expect RFC 9293 semantics), (b) the gap between specification and reality is not yet unbearable enough to force protocol replacement (endpoints have workarounds), and (c) middlebox operators benefit from the specification's weakness (it provides cover for their modifications — 'we're just optimizing TCP'). The mandatrophy is resolved by classifying this as Tangled Rope rather than Rope: the specification solves the original coordination problem, but that solution now rides on top of an extractive arrangement (middleboxes' de facto control). The specification's authority is tangled with middlebox enforcement; the two are not separable.
  */
 
 /* ==========================================================================
@@ -195,55 +258,103 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    specification_vs_middlebox_authority_contest,
-    'Whose authority is primary: RFC 9293 as written standard, or deployed middlebox population as de facto protocol?',
-    'This omega documents the fundamental kernel contest. The three sibling readings resolve it differently. Strict_invariance_reading: RFC authority is primary, middleboxes are defects. Optimization_latitude_reading: both are legitimate within semantic bounds. Middlebox_realism_reading (this story): middleboxes are primary, RFC is aspiration. The resolution is not empirical — it is a reading choice.',
-    'The reading chosen determines the constraint''s classification, the beneficiary/victim assignment, and the type divergence across seats. This is the kernel-reading framing documented in cs_structure.reading_relations and cs_structure.axioms.',
+    specification_authority_grounding,
+    'What makes RFC 9293 authoritative if middleboxes routinely violate it without consequences?',
+    'Case analysis: (a) if specification authority remains purely normative (what should be), the constraint is Tangled Rope with a weak normative layer; (b) if authority is grounded in deployment coordination (what implementers expect), then middleboxes'' violation erodes it and the constraint becomes Snare; (c) if authority is grounded in academic legitimacy (peer review, IETF process), then violations are external and the specification remains Rope.',
+    'If (a), classification stands as authored. If (b), the constraint reclassifies to Snare because middleboxes'' de facto veto power over the specification makes the normative layer pure theater. If (c), the specification is legitimate despite violations, and extractiveness should be lower.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(specification_authority_grounding, conceptual, 'The grounding of specification authority in a network where enforcement is decentralized.').
+
+omega_variable(
+    middlebox_heterogeneity_impact,
+    'Does the diversity of middlebox types (ISP firewalls, enterprise proxies, state censorship apparatus, CDN optimization) create distinct sub-constraints with different extractiveness profiles?',
+    'Decompose by middlebox operator type and measure extractiveness per type. Some middleboxes (CDN optimization for performance) may show low extractiveness; others (state surveillance) may show high. Single ε may be inadequate.',
+    'If heterogeneity is substantial (ε varies >0.3 across types), the constraint should decompose into a family of related constraints, each with its own victim set and beneficiary structure. If heterogeneity is modest, single ε is defensible.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(middlebox_heterogeneity_impact, empirical, 'Whether middlebox heterogeneity requires constraint decomposition.').
+
+omega_variable(
+    endpoint_workaround_autonomy,
+    'Do endpoint implementers'' defensive workarounds (detecting middlebox timeouts, reordering, connection hijacking) constitute a form of exit, or are they constrained compliance?',
+    'Measure exit success: if endpoints can reliably detect and repair middlebox interference without application-level failure, they have constrained exit; if repairs are unreliable and failures persist, exit is trapped.',
+    'Constrained exit would lower directionality (d for endpoint implementers moves toward 0.7 instead of 0.85), reducing effective extraction. Trapped exit preserves high d and high χ.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(specification_vs_middlebox_authority_contest, conceptual, 'RFC 9293 kernel reading contest: authority locus').
+narrative_ontology:omega_variable(endpoint_workaround_autonomy, empirical, 'Whether endpoint defensive mechanisms constitute meaningful exit from the constraint.').
+
+omega_variable(
+    kernel_reading_foreclosure,
+    'Does the middlebox_realism_reading logically foreclose the strict_invariance_reading, or do they coexist as live positions held by different parties?',
+    'Test logical structure: strict_invariance asserts ''RFC 9293 is an invariant implementations must replicate exactly''; middlebox_realism asserts ''RFC 9293 is subordinated by deployed middlebox behavior.'' These are logically incompatible IF and only IF ''subordinated'' means ''not an invariant.'' If subordinated means ''an invariant in principle but violated in practice,'' the readings coexist. If it means ''not binding on middleboxes,'' they foreclose.',
+    'If forecloses: the strict_invariance reading is not a live reading, only a historical artifact. If coexists_with: both readings are held by different institutional seats (strict_invariance by IETF, middlebox_realism by operators and researchers); the constraint is contested in a live way.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_foreclosure, conceptual, 'Logical relationship between the middlebox_realism and strict_invariance readings of the RFC 9293 kernel.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(rfc9293_tcp_specification__middlebox_realism_reading, 0, 35).
+narrative_ontology:interval(rfc9293_tcp_specification__middlebox_realism_reading, 0, 26).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(rfc9_tr_t0, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 0, 0.18).
-narrative_ontology:measurement(rfc9_tr_t5, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 5, 0.22).
-narrative_ontology:measurement(rfc9_tr_t10, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 10, 0.27).
-narrative_ontology:measurement(rfc9_tr_t15, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 15, 0.32).
-narrative_ontology:measurement(rfc9_tr_t20, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 20, 0.36).
-narrative_ontology:measurement(rfc9_tr_t25, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 25, 0.4).
-narrative_ontology:measurement(rfc9_tr_t30, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 30, 0.41).
-narrative_ontology:measurement(rfc9_tr_t35, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 35, 0.42).
+narrative_ontology:measurement(rfc9_tr_t0, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 0, 0.22).
+narrative_ontology:measurement_basis(rfc9_tr_t0, observed).
+narrative_ontology:measurement(rfc9_tr_t3, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 3, 0.27).
+narrative_ontology:measurement_basis(rfc9_tr_t3, observed).
+narrative_ontology:measurement(rfc9_tr_t6, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 6, 0.31).
+narrative_ontology:measurement_basis(rfc9_tr_t6, observed).
+narrative_ontology:measurement(rfc9_tr_t10, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 10, 0.36).
+narrative_ontology:measurement_basis(rfc9_tr_t10, observed).
+narrative_ontology:measurement(rfc9_tr_t15, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 15, 0.39).
+narrative_ontology:measurement_basis(rfc9_tr_t15, observed).
+narrative_ontology:measurement(rfc9_tr_t20, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 20, 0.41).
+narrative_ontology:measurement_basis(rfc9_tr_t20, observed).
+narrative_ontology:measurement(rfc9_tr_t26, rfc9293_tcp_specification__middlebox_realism_reading, theater_ratio, 26, 0.42).
+narrative_ontology:measurement_basis(rfc9_tr_t26, observed).
 
 % Extraction over time
-narrative_ontology:measurement(rfc9_be_t0, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(rfc9_be_t5, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 5, 0.51).
-narrative_ontology:measurement(rfc9_be_t10, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 10, 0.56).
-narrative_ontology:measurement(rfc9_be_t15, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 15, 0.61).
-narrative_ontology:measurement(rfc9_be_t20, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 20, 0.65).
-narrative_ontology:measurement(rfc9_be_t25, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 25, 0.67).
-narrative_ontology:measurement(rfc9_be_t30, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 30, 0.68).
-narrative_ontology:measurement(rfc9_be_t35, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 35, 0.68).
+narrative_ontology:measurement(rfc9_be_t0, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 0, 0.58).
+narrative_ontology:measurement_basis(rfc9_be_t0, observed).
+narrative_ontology:measurement(rfc9_be_t3, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 3, 0.63).
+narrative_ontology:measurement_basis(rfc9_be_t3, observed).
+narrative_ontology:measurement(rfc9_be_t6, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 6, 0.68).
+narrative_ontology:measurement_basis(rfc9_be_t6, observed).
+narrative_ontology:measurement(rfc9_be_t10, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 10, 0.73).
+narrative_ontology:measurement_basis(rfc9_be_t10, observed).
+narrative_ontology:measurement(rfc9_be_t15, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 15, 0.77).
+narrative_ontology:measurement_basis(rfc9_be_t15, observed).
+narrative_ontology:measurement(rfc9_be_t20, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 20, 0.79).
+narrative_ontology:measurement_basis(rfc9_be_t20, observed).
+narrative_ontology:measurement(rfc9_be_t26, rfc9293_tcp_specification__middlebox_realism_reading, base_extractiveness, 26, 0.81).
+narrative_ontology:measurement_basis(rfc9_be_t26, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(rfc9_su_t0, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 0, 0.48).
-narrative_ontology:measurement(rfc9_su_t5, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 5, 0.54).
-narrative_ontology:measurement(rfc9_su_t10, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 10, 0.59).
-narrative_ontology:measurement(rfc9_su_t15, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 15, 0.64).
-narrative_ontology:measurement(rfc9_su_t20, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 20, 0.68).
-narrative_ontology:measurement(rfc9_su_t25, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 25, 0.7).
-narrative_ontology:measurement(rfc9_su_t30, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 30, 0.71).
-narrative_ontology:measurement(rfc9_su_t35, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 35, 0.71).
+narrative_ontology:measurement(rfc9_su_t0, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 0, 0.52).
+narrative_ontology:measurement_basis(rfc9_su_t0, observed).
+narrative_ontology:measurement(rfc9_su_t3, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 3, 0.58).
+narrative_ontology:measurement_basis(rfc9_su_t3, observed).
+narrative_ontology:measurement(rfc9_su_t6, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 6, 0.64).
+narrative_ontology:measurement_basis(rfc9_su_t6, observed).
+narrative_ontology:measurement(rfc9_su_t10, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 10, 0.69).
+narrative_ontology:measurement_basis(rfc9_su_t10, observed).
+narrative_ontology:measurement(rfc9_su_t15, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 15, 0.72).
+narrative_ontology:measurement_basis(rfc9_su_t15, observed).
+narrative_ontology:measurement(rfc9_su_t20, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 20, 0.74).
+narrative_ontology:measurement_basis(rfc9_su_t20, observed).
+narrative_ontology:measurement(rfc9_su_t26, rfc9293_tcp_specification__middlebox_realism_reading, suppression_requirement, 26, 0.76).
+narrative_ontology:measurement_basis(rfc9_su_t26, observed).
 
 
 /* ==========================================================================
@@ -251,20 +362,20 @@ narrative_ontology:measurement(rfc9_su_t35, rfc9293_tcp_specification__middlebox
    ========================================================================== */
 
 narrative_ontology:coordination_type(rfc9293_tcp_specification__middlebox_realism_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(rfc9293_tcp_specification__middlebox_realism_reading, 0.05).
+narrative_ontology:boltzmann_floor_override(rfc9293_tcp_specification__middlebox_realism_reading, 0.12).
 narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, rfc9293_tcp_specification__strict_invariance_reading).
 narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, rfc9293_tcp_specification__optimization_latitude_reading).
-narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, internet_middlebox_deployment).
-narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, tls_encryption_adoption_pressure).
+narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, quic_protocol_specification).
+narrative_ontology:affects_constraint(rfc9293_tcp_specification__middlebox_realism_reading, encrypted_sni_adoption).
 
 % DUAL FORMULATION NOTE:
-% RFC 9293 TCP specification is a kernel with three structurally distinct readings. This story instantiates middlebox_realism_reading: the specification's authority is subordinate to deployed middlebox reality. The strict_invariance_reading treats RFC 9293 as an invariant protocol law (mountain). The optimization_latitude_reading treats RFC 9293 as defining outcomes with implementation freedom (rope). Each reading is a separate constraint with its own ε, classification, and beneficiary/victim structure. The readings coexist as live positions held by different institutional actors (RFC editors, network operators, endpoint vendors). Link all three via network.affects_constraints to document the family.
+% The rfc9293_tcp_specification kernel is read by three constraint stories: strict_invariance_reading (mountain/rope), optimization_latitude_reading (rope/scaffold), middlebox_realism_reading (tangled_rope/snare). Each reading extracts a different constraint from the same kernel text because they disagree about what authority (textual, deployment-empirical, or network-operative) grounds the specification's legitimacy. The middlebox_realism_reading presupposes that deployed intermediary infrastructure has de facto veto power over textual specification authority. This decomposition is required because the three readings yield different ε values: strict_invariance gives low ε (specification is self-enforcing), optimization_latitude gives moderate ε (specification permits latitude), middlebox_realism gives high ε (specification is overridden). Per ε-invariance principle, one kernel, three ε values, three constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(rfc9293_tcp_specification__middlebox_realism_reading, analytical, 0.5).
+constraint_indexing:directionality_override(rfc9293_tcp_specification__middlebox_realism_reading, institutional, 0.42).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

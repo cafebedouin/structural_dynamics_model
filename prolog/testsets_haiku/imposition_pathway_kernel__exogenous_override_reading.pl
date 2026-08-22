@@ -43,7 +43,11 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,41 +72,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: imposition_pathway_kernel__exogenous_override_reading
- *   human_readable: State Capacity Exogenous Commitment Override (Meiji Reading)
- *   domain: historical_sociology/state_formation/commitment_systems
+ *   human_readable: State Imposition of New Commitment Without Fringe Adoption Pathway
+ *   domain: historical/institutional/commitment-system
  *
  * SUMMARY:
- *   In 1872, the Meiji state decreed the adoption of the Gregorian calendar,
- *   abolishing the lunar calendar that had structured timekeeping,
- *   agriculture, religious observance, and craft production for centuries.
- *   This decree had NO meaningful fringe-adoption pathway preceding it—no
- *   merchant networks or modernizing communities had already shifted to the
- *   Gregorian calendar as a voluntary adoption climb. The change was imposed
- *   top-down through administrative enforcement: state employees and military
- *   conscripts were mandated to comply; rural communities and religious
- *   practitioners faced administrative penalty (tax reassessment,
- *   conscription pressure, denial of services) for noncompliance. This
- *   constraint instantiates the 'exogenous override' reading of the
- *   imposition-pathway kernel: state capacity alone enabled commitment
- *   displacement without bottom-up emergent adoption. The fringe that did
- *   form (military, state employees) was created BY the state as enforcement
- *   apparatus, not as pre-decree voluntary adopters. The constraint is
- *   CLAIMED as tangled_rope (real coordination function: unified state
- *   administration) while the metrics record the high extraction (cultural
- *   authority transfer) and sustained suppression (continuous enforcement
- *   against noncompliance) required to hold the arrangement. The measurement
- *   series spans from pre-decree baseline (1868) through the 1872 edict and
- *   28 years of enforcement, showing the sharp extraction and suppression
- *   spike at decree and the sustained plateau thereafter—the constraint does
- *   not settle into self-sustaining equilibrium.
+ *   The Meiji Restoration provides the historical locus: Japan shifted from a
+ *   lunar calendar to the Gregorian calendar in 1872 through state decree,
+ *   with no prior fringe adoption pathway. The same state apparatus mandated
+ *   Western-style dress, reorganized names, and restructured measurement
+ *   systems — all without evidence that these commitments were climbing from
+ *   grassroots adoption. The exogenous_override reading asserts that state
+ *   capacity enables commitment displacement through pure coercive override:
+ *   the state selects a commitment, mandates it, and enforces compliance
+ *   without requiring organic fringe adoption. This reading contests the
+ *   endogenous_climb framing (which compresses all apparent overnight changes
+ *   into invisible fringe stages) and the hybrid_cascade framing (which
+ *   allows state-initiated artificial fringe to bootstrap organic climb).
+ *   This constraint story instantiates ONLY the exogenous_override reading as
+ *   a clean, internally consistent constraint with its own ε,
+ *   beneficiary/victim structure, and cs_structure axioms.
  *
  * KEY AGENTS:
- *   - meiji_central_state — institutional agenda-setter; controls both the decree and the enforcement machinery that makes alternatives unviable
- *   - rural_communities — powerless payers; bear the extraction (disrupted agricultural timekeeping, administrative pressure) without participation in policy formation
- *   - religious_practitioners — constrained payers; lose authority over ritual timekeeping and suffer cultural marginalization
- *   - state_employees and military — beneficiaries created by the state apparatus itself; their early adoption is mandated, not emergent; they benefit from alignment with state ideology
- *   - merchant_networks — institutional beneficiaries with pre-existing arbitrage options; they were already climbing toward this commitment; the decree removes friction for them without coercing them
- *   - fringe_adoption_theorists — analytical observers; must account for zero observable fringe adoption prior to decree
+ *   - state_administrative_apparatus: institutional power, enforces the new commitment decree against the entire population.
+ *   - commitment_unifiers: institutional power, ideological beneficiaries who believe the new commitment is superior and leverage state enforcement to impose it.
+ *   - subject_population: powerless, trapped, forced to reframe cognitive and social commitments without voluntary adoption pathway.
+ *   - competing_commitment_holders: moderate power, constrained exit, lose competitive advantage under the new commitment.
+ *   - historical_analysts: observers measuring whether the mechanism is exogenous override or disguised endogenous climb.
  */
 
 /* ==========================================================================
@@ -109,60 +105,109 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(imposition_pathway_kernel__exogenous_override_reading, 0.68).
-domain_priors:suppression_score(imposition_pathway_kernel__exogenous_override_reading, 0.81).
-domain_priors:theater_ratio(imposition_pathway_kernel__exogenous_override_reading, 0.28).
+domain_priors:base_extractiveness(imposition_pathway_kernel__exogenous_override_reading, 0.67).
+domain_priors:suppression_score(imposition_pathway_kernel__exogenous_override_reading, 0.78).
+domain_priors:theater_ratio(imposition_pathway_kernel__exogenous_override_reading, 0.22).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 0.81).
-narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, extractiveness, 0.67).
+narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, resistance, 0.55).
+narrative_ontology:constraint_metric(imposition_pathway_kernel__exogenous_override_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(imposition_pathway_kernel__exogenous_override_reading, tangled_rope).
-narrative_ontology:human_readable(imposition_pathway_kernel__exogenous_override_reading, "State Capacity Exogenous Commitment Override (Meiji Reading)").
-narrative_ontology:topic_domain(imposition_pathway_kernel__exogenous_override_reading, "historical_sociology/state_formation/commitment_systems").
+narrative_ontology:human_readable(imposition_pathway_kernel__exogenous_override_reading, "State Imposition of New Commitment Without Fringe Adoption Pathway").
+narrative_ontology:topic_domain(imposition_pathway_kernel__exogenous_override_reading, "historical/institutional/commitment-system").
 
 domain_priors:requires_active_enforcement(imposition_pathway_kernel__exogenous_override_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(imposition_pathway_kernel__exogenous_override_reading, '2196ff80-2821-4b89-9408-041620722aa6').
-narrative_ontology:cs_kernel_codification('2196ff80-2821-4b89-9408-041620722aa6', formalized).
-narrative_ontology:cs_authority_grounding('2196ff80-2821-4b89-9408-041620722aa6', extraction).
-narrative_ontology:cs_interpretation_layer_present('2196ff80-2821-4b89-9408-041620722aa6').
-narrative_ontology:cs_reading_relation('2196ff80-2821-4b89-9408-041620722aa6', imposition_pathway_kernel__endogenous_climb_reading, forecloses).
-narrative_ontology:cs_reading_relation('2196ff80-2821-4b89-9408-041620722aa6', imposition_pathway_kernel__hybrid_cascade_reading, influences).
-narrative_ontology:cs_axiom('2196ff80-2821-4b89-9408-041620722aa6', foundational, state_capacity_enables_override).
-narrative_ontology:cs_axiom_status(state_capacity_enables_override, holdable).
-narrative_ontology:cs_axiom_grounding('2196ff80-2821-4b89-9408-041620722aa6', state_capacity_enables_override, empirically_contingent).
-narrative_ontology:cs_axiom('2196ff80-2821-4b89-9408-041620722aa6', foundational, fringe_adoption_not_prerequisite).
-narrative_ontology:cs_axiom_status(fringe_adoption_not_prerequisite, holdable).
-narrative_ontology:cs_axiom_grounding('2196ff80-2821-4b89-9408-041620722aa6', fringe_adoption_not_prerequisite, empirically_contingent).
-narrative_ontology:cs_reference_frame('2196ff80-2821-4b89-9408-041620722aa6', unified_administrative_temporality).
-narrative_ontology:cs_drift_state('2196ff80-2821-4b89-9408-041620722aa6', contemporary_post_meiji, gap(practice_drift, minor, false)).
-narrative_ontology:cs_created_at('2196ff80-2821-4b89-9408-041620722aa6', '').
+narrative_ontology:cs_story_uid(imposition_pathway_kernel__exogenous_override_reading, 'fde79190-85a8-4f3f-92b9-7f0b2aae5801').
+narrative_ontology:cs_kernel_codification('fde79190-85a8-4f3f-92b9-7f0b2aae5801', distributed).
+narrative_ontology:cs_authority_grounding('fde79190-85a8-4f3f-92b9-7f0b2aae5801', extraction).
+narrative_ontology:cs_interpretation_layer_present('fde79190-85a8-4f3f-92b9-7f0b2aae5801').
+narrative_ontology:cs_reading_relation('fde79190-85a8-4f3f-92b9-7f0b2aae5801', imposition_pathway_kernel__endogenous_climb_reading, forecloses).
+narrative_ontology:cs_reading_relation('fde79190-85a8-4f3f-92b9-7f0b2aae5801', imposition_pathway_kernel__hybrid_cascade_reading, forecloses).
+narrative_ontology:cs_axiom('fde79190-85a8-4f3f-92b9-7f0b2aae5801', foundational, fringe_adoption_precondition_unnecessary).
+narrative_ontology:cs_axiom_status(fringe_adoption_precondition_unnecessary, holdable).
+narrative_ontology:cs_axiom_grounding('fde79190-85a8-4f3f-92b9-7f0b2aae5801', fringe_adoption_precondition_unnecessary, empirically_contingent).
+narrative_ontology:cs_axiom('fde79190-85a8-4f3f-92b9-7f0b2aae5801', foundational, coercive_mechanism_reducibility_false).
+narrative_ontology:cs_axiom_status(coercive_mechanism_reducibility_false, holdable).
+narrative_ontology:cs_axiom_grounding('fde79190-85a8-4f3f-92b9-7f0b2aae5801', coercive_mechanism_reducibility_false, empirically_contingent).
+narrative_ontology:cs_reference_frame('fde79190-85a8-4f3f-92b9-7f0b2aae5801', distributed_fringe_adoption_climb).
+narrative_ontology:cs_drift_state('fde79190-85a8-4f3f-92b9-7f0b2aae5801', meiji_imposition_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('fde79190-85a8-4f3f-92b9-7f0b2aae5801', '').
 narrative_ontology:cs_kernel_id(imposition_pathway_kernel__exogenous_override_reading, imposition_pathway_kernel).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(imposition_pathway_kernel__exogenous_override_reading, state_administrative_apparatus).
-narrative_ontology:constraint_beneficiary(imposition_pathway_kernel__exogenous_override_reading, centralized_governance_ideology).
-narrative_ontology:constraint_victim(imposition_pathway_kernel__exogenous_override_reading, subnational_communities).
-narrative_ontology:constraint_victim(imposition_pathway_kernel__exogenous_override_reading, religious_practitioners).
-narrative_ontology:constraint_victim(imposition_pathway_kernel__exogenous_override_reading, traditional_craft_guilds).
+narrative_ontology:constraint_beneficiary(imposition_pathway_kernel__exogenous_override_reading, commitment_unifiers).
+narrative_ontology:constraint_victim(imposition_pathway_kernel__exogenous_override_reading, subject_population).
+narrative_ontology:constraint_victim(imposition_pathway_kernel__exogenous_override_reading, competing_commitment_holders).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Selects a new commitment (calendar system, dress code, naming convention, measurement standard) and mandates it through decree. Enforces compliance via bureaucratic oversight, licensing withdrawal, and coercion. Does not require evidence that the commitment was already climbing through fringe adoption; the apparatus can impose without that precondition. Benefits from standardization that reduces administrative burden and coordinates the population under a single authoritative system.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, state_administrative_apparatus, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Must adopt the new commitment on pain of legal sanction, employment loss, or physical coercion. No fringe adoption pathway preceded the decree that they could have climbed organically. Compliance is extracted through the state's monopoly on force and administrative authority, not through conviction or voluntary adoption. The cost includes cognitive reframing, economic adjustment, social isolation if they resist, and loss of autonomy over their own commitment choices.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, subject_population, payer,
+    powerless, biographical, trapped, national).
+
+% Ideological or administrative actors (reformers, planners, modernizers) who conceive the new commitment as progress or rationality. They benefit from the state apparatus's coercive capacity to impose their preferred order without negotiating with fringe populations or waiting for organic adoption. The constraint solves their coordination problem: how to shift the entire population to a new commitment all at once, bypassing the slow endogenous climb mechanism.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, commitment_unifiers, beneficiary,
+    institutional, generational, analytical, national).
+
+% Practitioners, merchants, clergy, or professionals who benefited from the old commitment (lunar calendar, traditional dress, prior naming conventions). They lose their competitive advantage, face retraining costs, and see their authority diminished when the new commitment is mandated. They may resist, but the state apparatus's enforcement capacity suppresses their exit and alternative.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, competing_commitment_holders, payer,
+    moderate, biographical, constrained, national).
+
+% In the endogenous_climb reading, fringe populations voluntarily adopt the new commitment first; but in this reading (exogenous_override), no such fringe exists. They are excluded from the story because the constraint does NOT operate through fringe mechanism. Their absence is the analytical point: the state can impose without them.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, fringe_adoption_counterparties, excluded,
+    powerless, biographical, identity_locked, regional).
+
+% Examine the historical record to determine whether the commitment shift occurred through (1) endogenous fringe climb compressed into apparent overnight change, (2) pure exogenous state override, or (3) hybrid (override initiates, climb completes). This reading's claim is that category (2) is a distinct, non-decomposable mechanism — the exogenous override cell is necessary in the M-set to capture cases where no fringe adoption pathway precedes the decree.
+narrative_ontology:constraint_stakeholder(imposition_pathway_kernel__exogenous_override_reading, historical_analysts, observer,
+    analytical, civilizational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(imposition_pathway_kernel__exogenous_override_reading, state_administrative_apparatus).
+narrative_ontology:fixing_cost_class(imposition_pathway_kernel__exogenous_override_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Standardization of a focal commitment (calendar, dress, measurement) across the entire population, enabling uniform administrative coordination and eliminating fragmentation that impedes state control and economic efficiency.
+% TRANSFER_FUNCTION: Moves the costs of commitment change (cognitive reframing, economic adjustment, social dislocation, loss of autonomy) from the state apparatus and commitment-unifiers to the subject population. Moves the benefits (standardization, coordination, reduced administrative friction, ideological victory) to the state and its planning class.
+% ABSENT_VOICES: Practitioners of the old commitment are suppressed by enforcement machinery rather than excluded from conversation — they are silenced and forced to comply. Fringe populations who might have organically adopted are absent because they did not exist prior to the decree; their absence is a structural fact about this reading, not a matter of who gets to speak.
+% DISAPPEARANCE_RATIONALE: If the decree vanished and enforcement ceased, the subject population would revert to the old commitment within months or years. The new commitment persists only because state enforcement continuously reinforces it; without coercion, the equilibrium shifts back to the pre-decree state.
+% FOUNDING_PROBLEM: The state's need to impose internal standardization to consolidate administrative control and enable modern bureaucratic coordination; the old commitment fragmentation impedes state capacity.
+% FOUNDING_PROBLEM_CORROBORATION: State administrators and reform ideologues attest this founding problem is live. Historians outside the state benefiting set (including comparative historians and sociologists studying state formation and modernization) corroborate that state standardization of commitments was a persistent agenda across Meiji and comparable cases. The founding problem is corroborated by non-beneficiary analytical observers.
+narrative_ontology:disappearance_verdict(imposition_pathway_kernel__exogenous_override_reading, world_rearranges).
+narrative_ontology:founding_problem_status(imposition_pathway_kernel__exogenous_override_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(imposition_pathway_kernel__exogenous_override_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(imposition_pathway_kernel__exogenous_override_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(imposition_pathway_kernel__exogenous_override_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(imposition_pathway_kernel__exogenous_override_reading, 0.67, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -182,16 +227,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.68 at interval end) because the state appropriates cultural authority from subnational communities; the constraint transfers the legitimacy to set time from religious and local actors to the central apparatus. Suppression is higher still (0.81) because the commitment persists entirely through active enforcement—police and administrative apparatus must continuously enforce compliance, deny services to noncompliers, and reassess taxes on basis of calendar conformity. If enforcement relaxed, rural communities would immediately revert to lunar calendar. Theater is moderate-low (0.28 by 1900): the legitimate coordination function (unified state administration, international legitimacy) is real and functions; but an increasing share of enforcement activity after 1880 is defensive—maintaining the commitment against passive resistance, not solving the original coordination problem. The measurement series show: (1) a sharp transition at the 1872 decree (extractiveness jumps from 0.12 to 0.58); (2) suppression requirement stays high and flat across the interval—the constraint does not naturalize or become self-sustaining; (3) theater ratio rises gradually as the coordination function is consolidated and routine, but suppression remains necessary. This is the structural signature of exogenous override: extraction without gradual climb.
+ *   Extractiveness is 0.67 at steady state because the constraint transfers the full cognitive and social cost of commitment change to the subject population while concentrating benefits (standardization, administrative efficiency, ideological victory) with the state and commitment-unifiers. Suppression is 0.78 because enforcement is continuous and costly — the state must maintain a commitment that would revert if enforcement slipped. Theater is low (0.22) because the functional operation (coercive standardization) matches the declared justification (state modernization); there is real work performed by the enforcement machinery, not merely performative maintenance. The measurement series shows extractiveness rising sharply in years 0–10 (the acute displacement period when resistance is highest) and then plateauing at 0.67 (steady-state extraction as the population adapts but compliance remains coerced, not internalized). Suppression likewise rises sharply and plateaus, indicating structural (not internalized) enforcement throughout. The claim/metric gap is intentional: the constraint is CLAIMED as tangled_rope (genuine coordination function — standardization — plus asymmetric extraction) while the authored metrics describe coercive imposition without meaningful prior adoption. The engine measures that divergence.
  *
  * PERSPECTIVAL GAP:
- *   From the state institutional seat, the constraint solves a genuine administrative problem (fragmented timekeeping) and the extraction is justified as the cost of coordination. From the powerless community seat, the constraint is coercive cultural displacement with no emergent fringe-adoption history to justify it as 'natural.' The engine should flag this divergence as seat-dependent classification.
+ *   The state apparatus seat perceives this as rope: a genuine coordination problem (fragmented commitments impede state control) solved through hierarchical enforcement. The subject population seat perceives it as snare: no coordination problem for them, pure extraction of compliance. The commitment-unifiers sit at the beneficiary end (they wanted the new commitment all along); the competing-commitment-holders sit at the target end (their old competitive advantage is destroyed). Historians sit outside the constraint entirely, observing whether the exogenous_override mechanism is real or whether all three readings are fictions masking a single endogenous climb. The engine computes different seat-level types from the structural data (beneficiary/victim + power + exit + scope) without authoring the types directly; the divergence IS the measurement.
  *
  * DIRECTIONALITY LOGIC:
- *   The state is a full beneficiary (d near 0.0): it appropriates cultural authority, consolidates control, gains administrative efficiency. Powerless rural communities are full targets (d near 1.0): they lose autonomy, face administrative penalty, have no exit (trapped). Religious practitioners are high targets (d ~0.85): they lose institutional authority over timekeeping. State employees and military are beneficiaries (d near 0.0): they gain career advancement, ideological alignment, integration into state system. Merchant networks are near-beneficiary (d near 0.2): they benefit from the coordination without coercion—they had arbitrage options and the decree removes transaction-cost friction rather than imposing new burden. The directionality of each seat differs because the constraint's effect differs: for some it is imposed against will, for others it removes friction from pre-existing preference.
+ *   The state apparatus is the agenda_setter at full institutional power with arbitrage exit (it could choose other commitments or no new commitment; it chooses to impose this one because it benefits). Direction d ≈ 0.2 (slight beneficiary bias, constrained by the requirement to enforce). Commitment-unifiers also sit near the beneficiary end (they wanted this outcome; they benefit from state capacity that enables it without negotiating with fringe populations). The subject population are full targets: they did not choose this commitment, they bear the full cost of reframing, and they have trapped exit (d ≈ 0.95). Competing-commitment-holders are targets for the same reasons (d ≈ 0.85). The directionality derivation from beneficiaries (state_apparatus, commitment_unifiers) + victims (subject_population, competing_commitment_holders) + exit options (trapped, constrained) produces a strong asymmetry; no override is necessary.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (administrative friction from calendar fragmentation) is LIVE—it was real and the decree solved it. But the solution was exogenous override, not emergent climb. The distinction matters for mandatrophy: a commitment that displaces through fringe adoption carries its own reproductive logic (early adopters normalize the practice, climb continues). An exogenously imposed commitment carries no reproductive logic—it persists only through continuous enforcement. If the founding problem decays (if Japan's governance becomes more decentralized, if international pressure for unified timekeeping relaxes), the constraint has no fallback equilibrium; it must be actively maintained or abandoned. The measurement series showing sustained high suppression through 1900 reflects this: the constraint is not settling into self-sustaining coordination; it requires continuous active enforcement to prevent reversion to lunar calendars. This is the structural signature that distinguishes exogenous override from rope.
+ *   The founding_problem (state need for internal standardization) remains live at t40 — the state continues to maintain the commitment because fragmentation still impedes control. However, the FOUNDING MECHANISM (coercive override) has become partially atrophied: by t40, the subject population has largely internalized the new commitment, so active suppression becomes increasingly theatrical (enforcement machinery remains but many subjects comply from habituation, not fear). The theater_ratio plateau at 0.22 reflects this partial atrophy: roughly one-fifth of the enforcement machinery is now maintaining the appearance of coercive necessity rather than actual coercion. The constraint has not resolved mandatrophy (founding_problem is still live, compliance is still enforced) but shows early signs of moving toward piton (theatrical maintenance increasing as internalization increases). The measurement trajectory would continue to inform: if theater_ratio rises above 0.5 while suppression remains stable, the constraint reclassifies to piton (a commitment that is believed-in by enough of the population that enforcement has become vestigial).
  */
 
 /* ==========================================================================
@@ -199,109 +244,96 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    invisible_fringe_adoption,
-    'Did merchant networks, urban intellectuals, or any proto-modernizing community begin adopting the Gregorian calendar before the 1872 decree, such that the decree was a compression of an already-climbing fringe adoption?',
-    'Archival examination of pre-1872 timekeeping practices in merchant networks, intellectual circles, and urban centers. Check merchant contracts, temple records, guild documents, and intellectual correspondence for voluntary Gregorian adoption.',
-    'If fringe adoption is empirically absent, the exogenous_override reading is confirmed and the fringe-adoption framework is incomplete. If fringe adoption is present but small, the hybrid_cascade reading gains traction—the state amplified and accelerated what was already beginning. If fringe adoption is substantial, the endogenous_climb reading is vindicated and the decree was a natural endpoint.',
+    fringe_adoption_visibility_question,
+    'Is the apparent absence of fringe adoption evidence that none occurred, or evidence that it was too marginal to be recorded in state documents?',
+    'Microhistorical reconstruction from merchant records, religious texts, folk practices, and non-state archives. Detection of measurable pre-decree adoption in hidden records.',
+    'If fringe adoption is recovered, exogenous_override reading is weakened; constraint reclassifies toward endogenous_climb. If absent at measurable scale, exogenous_override is strengthened.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(fringe_adoption_visibility_question, empirical, 'Pre-decree fringe adoption: absence of record vs. genuine absence.').
+
+omega_variable(
+    commitment_unifier_coercion_source,
+    'Do commitment-unifiers genuinely believe the new commitment is superior, or do they coerce adoption as social control disguised as modernization?',
+    'Analysis of reformer writings and institutional motivations. Examination of whether alternatives were available and actively rejected.',
+    'If genuinely believed, part of measured extraction is legitimacy-loss. If cover for coercion, extraction is concentrated. The axiom cs_axiom_commitment_superiority status depends on this.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(commitment_unifier_coercion_source, conceptual, 'Reformer motivation: genuine superiority belief vs. coercive control cover.').
+
+omega_variable(
+    kernel_reading_framing_dependence,
+    'Does pure exogenous override depend on a narrow definition of ''fringe''? If state-initiated populations count as fringe, does the reading dissolve into hybrid_cascade?',
+    'Formal definition of fringe (spontaneous, voluntary, uncoerced, pre-decree, non-state-employee). Examination of definitional boundary.',
+    'This is axiom_overriding: fringe definition distinguishes exogenous_override from hybrid_cascade. Relaxed definition forecloses pure exogenous override. Narrow definition preserves reading distinctness.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(invisible_fringe_adoption, empirical, 'Whether voluntary Gregorian calendar adoption preceded the 1872 state decree.').
+narrative_ontology:omega_variable(kernel_reading_framing_dependence, conceptual, 'Definitional boundary between exogenous_override and hybrid_cascade in M-set.').
 
 omega_variable(
-    suppression_mechanism_structure_vs_internalization,
-    'Is the measured suppression (0.81) structural (police enforcement, administrative penalty, tax reassessment) or internalized (communities have absorbed the legitimacy of the new calendar, maintain compliance even when surveillance relaxes)?',
-    'Post-enforcement relaxation trajectory: if enforcement is withdrawn (e.g., police enforcement of calendar conformity stops), does compliance persist? If suppression is internalized, communities continue the practice. If structural, reversion to lunar calendar is immediate.',
-    'If suppression is structural, the constraint is fundamentally coercive and dependent on continuous enforcement—a snare with administrative framing. If partly internalized, the constraint has acquired self-sustaining components and may be creeping toward rope. The distinction determines long-term stability predictions.',
+    suppression_internalization_over_time,
+    'Does the subject population internalize the new commitment after decades, so compliance becomes voluntary, or does compliance remain dependent on continuous suppression?',
+    'Post-enforcement trajectory: relaxation of enforcement and compliance persistence. Second-generation subjects'' view of commitment as native vs. imposed.',
+    'If internalized, effective extraction decreases, constraint reclassifies toward rope. If structural throughout, tangled_rope classification confirmed. Measurement plateau at t15+ suggests structural mechanism.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_structure_vs_internalization, empirical, 'Whether suppression in Gregorian calendar adoption is structural (external enforcement) or internalized (communities have accepted the new calendar as legitimate).').
-
-omega_variable(
-    coordination_framing_vs_cultural_appropriation,
-    'Is the state''s framing of the decree as ''coordination enabling modernization'' the dominant reading, or is the alternative framing—''exogenous cultural appropriation by a centralizing state''—equally live in contemporary discourse?',
-    'Analysis of Japanese historical scholarship, political rhetoric post-1872, and contemporary educational materials. Identify which reading is institutionalized as the legitimate narrative of the calendar change.',
-    'Dominance of the coordination framing supports the state''s vindication claim; dominance of the cultural-appropriation framing supports the victim narrative. The readings coexist in scholarship; which one captures official memory determines whether the constraint''s legitimacy is reinforced or eroded over time.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(coordination_framing_vs_cultural_appropriation, conceptual, 'Whether the Meiji calendar decree is framed as legitimate modernization coordination or as exogenous cultural displacement.').
-
-omega_variable(
-    fringe_creation_vs_fringe_recruitment,
-    'Were state employees and military conscripts early adopters of the Gregorian calendar (who then joined the state apparatus), or were they created as adopters by state mandate (mandated to adopt as employment/conscription condition)?',
-    'Biographical and archival evidence: did individuals adopt the calendar before state employment, or did state employment create the adoption requirement? Check military enrollment documents, state employee hiring records, and personal archives of early state employees.',
-    'If created-as-adopters, the state is the fringe generator and the constraint is exogenous override (state capacity creates the fringe). If recruits were pre-adopters, it suggests a voluntary fringe already existed and the state merely consolidated it—supporting the hybrid_cascade reading (fringe exists and state accelerates it).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(fringe_creation_vs_fringe_recruitment, empirical, 'Whether military and state-employee adoption was mandated (state-created fringe) or pre-existing (recruited fringe).').
-
-omega_variable(
-    m_set_completeness,
-    'Is the fringe-adoption model (M-set) sufficient to explain all historical commitment displacements, or does the exogenous-override mechanism require a separate cell in the model?',
-    'Comparative historical analysis: identify commitment displacements across cultures and time periods; classify by presence/absence of pre-decree fringe adoption; assess whether exogenous override occurs without fringe-climb completion or whether all cases eventually produce fringe adoption and climb.',
-    'If exogenous override is merely an invisible fringe stage (too subtle to observe), the M-set is complete. If exogenous override is a distinct mechanism that persists without fringe-climb completion, the M-set requires revision. This omega is the theoretical question at the kernel''s center.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(m_set_completeness, conceptual, 'Whether the fringe-adoption (M-set) model is complete or requires a separate exogenous-override cell.').
+narrative_ontology:omega_variable(suppression_internalization_over_time, empirical, 'Suppression: structural or internalized (post-compliance compliance).').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(imposition_pathway_kernel__exogenous_override_reading, 1868, 1900).
+narrative_ontology:interval(imposition_pathway_kernel__exogenous_override_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(impo_tr_t1868, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1868, 0.05).
-narrative_ontology:measurement(impo_tr_t1872, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1872, 0.12).
-narrative_ontology:measurement(impo_tr_t1876, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1876, 0.18).
-narrative_ontology:measurement(impo_tr_t1884, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1884, 0.26).
-narrative_ontology:measurement(impo_tr_t1892, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1892, 0.3).
-narrative_ontology:measurement(impo_tr_t1900, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 1900, 0.28).
+narrative_ontology:measurement(impo_tr_t0, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(impo_tr_t5, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 5, 0.14).
+narrative_ontology:measurement(impo_tr_t10, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 10, 0.18).
+narrative_ontology:measurement(impo_tr_t15, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 15, 0.21).
+narrative_ontology:measurement(impo_tr_t25, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 25, 0.22).
+narrative_ontology:measurement(impo_tr_t40, imposition_pathway_kernel__exogenous_override_reading, theater_ratio, 40, 0.22).
 
 % Extraction over time
-narrative_ontology:measurement(impo_be_t1868, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1868, 0.12).
-narrative_ontology:measurement(impo_be_t1872, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1872, 0.58).
-narrative_ontology:measurement(impo_be_t1876, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1876, 0.64).
-narrative_ontology:measurement(impo_be_t1884, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1884, 0.68).
-narrative_ontology:measurement(impo_be_t1892, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1892, 0.67).
-narrative_ontology:measurement(impo_be_t1900, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 1900, 0.68).
+narrative_ontology:measurement(impo_be_t0, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(impo_be_t5, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 5, 0.58).
+narrative_ontology:measurement(impo_be_t10, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 10, 0.65).
+narrative_ontology:measurement(impo_be_t15, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 15, 0.67).
+narrative_ontology:measurement(impo_be_t25, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 25, 0.67).
+narrative_ontology:measurement(impo_be_t40, imposition_pathway_kernel__exogenous_override_reading, base_extractiveness, 40, 0.67).
 
 % Suppression requirement over time
-narrative_ontology:measurement(impo_su_t1868, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1868, 0.15).
-narrative_ontology:measurement(impo_su_t1872, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1872, 0.79).
-narrative_ontology:measurement(impo_su_t1876, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1876, 0.81).
-narrative_ontology:measurement(impo_su_t1884, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1884, 0.82).
-narrative_ontology:measurement(impo_su_t1892, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1892, 0.8).
-narrative_ontology:measurement(impo_su_t1900, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 1900, 0.81).
+narrative_ontology:measurement(impo_su_t0, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement(impo_su_t5, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 5, 0.72).
+narrative_ontology:measurement(impo_su_t10, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 10, 0.78).
+narrative_ontology:measurement(impo_su_t15, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 15, 0.79).
+narrative_ontology:measurement(impo_su_t25, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 25, 0.78).
+narrative_ontology:measurement(impo_su_t40, imposition_pathway_kernel__exogenous_override_reading, suppression_requirement, 40, 0.78).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(imposition_pathway_kernel__exogenous_override_reading, global_infrastructure).
-narrative_ontology:boltzmann_floor_override(imposition_pathway_kernel__exogenous_override_reading, 0.18).
+narrative_ontology:coordination_type(imposition_pathway_kernel__exogenous_override_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(imposition_pathway_kernel__exogenous_override_reading, 0.12).
 narrative_ontology:affects_constraint(imposition_pathway_kernel__exogenous_override_reading, imposition_pathway_kernel__endogenous_climb_reading).
 narrative_ontology:affects_constraint(imposition_pathway_kernel__exogenous_override_reading, imposition_pathway_kernel__hybrid_cascade_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the imposition_pathway_kernel, which contests whether commitment displacement requires fringe adoption or whether state capacity enables exogenous override. The exogenous_override_reading asserts the Meiji calendar change had no pre-decree fringe adoption and required sustained enforcement to displace the lunar calendar. The endogenous_climb_reading asserts the fringe adoption was present but invisible. The hybrid_cascade_reading asserts the state created artificial fringe (military, state employees) which then climbed organically. All three readings are structurally distinct constraints with different ε values and stakeholder maps. They are linked via network.affects_constraints to enable contamination analysis: if evidence emerges showing pre-decree Gregorian adoption, the exogenous_override reading's ε declines and the endogenous_climb reading's validity rises.
+% This story is one reading of the imposition_pathway_kernel. The endogenous_climb reading asserts all apparent state impositions conceal fringe adoption pathways. The hybrid_cascade reading asserts state imposition initiates artificial-fringe climb completion. This exogenous_override reading asserts state capacity enables pure coercive displacement without fringe precondition — a distinct M-set cell. All three readings are live in sociological discourse; the kernel itself (how do commitments displace at state scale?) remains contested. Each reading story carries its own ε, beneficiary/victim structure, and cs_structure axioms. The readings are linked via network.affects_constraints; they are not consolidated into one story.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(imposition_pathway_kernel__exogenous_override_reading, institutional, 0.05).
-constraint_indexing:directionality_override(imposition_pathway_kernel__exogenous_override_reading, powerless, 0.92).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +76,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: jihad_quranic_corpus__expansionist_legalist_reading
- *   human_readable: Jihad Obligation: Expansionist Legalist Reading (Quranic Corpus)
- *   domain: religious/political/legal
+ *   human_readable: Jihad as Obligation to Establish Islamic Governance (Expansionist Legalist Reading)
+ *   domain: religious_jurisprudence/political_theology
  *
  * SUMMARY:
- *   This constraint instantiates ONE READING of a contested kernel: the
- *   Quranic corpus on jihad and Islamic governance. The expansionist legalist
- *   reading interprets the corpus to permit systematic territorial expansion
- *   under jurisprudentially specified conditions (prior invitation to Islam,
- *   imam/caliph authority, proportionality, incorporation of non-Muslims as
- *   dhimmis or converts). This reading competes within the Islamic tradition
- *   with defensive-spiritual readings (emphasizing internal struggle and
- *   defensive-only armed response) and revolutionary-vanguard readings
- *   (bypassing state authority via takfir and individual obligation). All
- *   three readings claim the same Quranic foundation but reach structurally
- *   different conclusions about permissible expansion, state monopoly on war
- *   declaration, and the scope of obligatory jihad. This story models ONLY
- *   the expansionist legalist reading as a coherent, internally consistent
- *   constraint — not as the truth of the kernel, but as the structural claim
- *   this reading commits its adherents to making.
+ *   This constraint instantiates the expansionist legalist reading of the
+ *   jihad quranic corpus: an Islamic jurisprudential doctrine that obligates
+ *   Muslims to establish Islamic governance in territories currently outside
+ *   dar al-Islam (the domain of Islam), subject to specific rule-bound
+ *   conditions. The reading permits offensive military campaigns by the
+ *   caliph/Islamic state authority, provided: (1) non-Muslims are invited to
+ *   Islam first; (2) declaration is made by legitimate state authority
+ *   (imam), not decentralized actors; (3) campaigns observe proportionality
+ *   and protections for non-combatants; (4) conquered populations transition
+ *   to dhimmi status or conversion. This reading coexists with the
+ *   defensive-only reading and the revolutionary-vanguard reading—all three
+ *   claim the same quranic and hadith sources, but parse the obligation,
+ *   conditions, and authority differently. The expansionist reading
+ *   legitimates conquest within a legalist framework; it is neither anarchic
+ *   nor purely reactive.
  *
  * KEY AGENTS:
- *   - Caliph or Imam Authority: institutional agenda-setter, monopolizes jihad declaration and conditions assessment
- *   - Islamic Scholarly Tradition: powerful beneficiary, elaborates jurisprudential framework legitimizing expansion
- *   - Non-Muslim Polities in Liminal Status: moderate-power payer, targeted for conversion or conquest, offered dhimmi status
- *   - Populations Subject to Conquest Campaigns: powerless payer, bear direct costs of expansion (war, displacement, subordination)
- *   - Competing Islamic Readings: powerful beneficiary/payer, contest for interpretive authority within tradition
- *   - Populations Under Islamic Rule: moderate beneficiary, receive coordination benefits and stable law; also carry expansion costs
- *   - Western Secular Authorities: institutional observer/excluded, operate under different legitimacy kernel
- *   - International Humanitarian Law Tradition: institutional observer, documents constraint and analyzes humanitarian implications
+ *   - Caliphate/Islamic state authority: holds monopoly on jihad declaration and interprets conditions of legitimate expansion.
+ *   - Jurists legitimating expansion: provide doctrinal authority and institutional embedding; benefit from state patronage and policy influence.
+ *   - Non-Muslim populations: face conversion, subordination (dhimmi), or elimination of sovereignty; trapped by power asymmetries.
+ *   - Dissident jurists: marginalized by state monopoly on interpretation; bear costs of dissent without compensating influence.
+ *   - Comparative legal scholars: analytical seat; document textual sources and track historical patterns without participating in the framework's internal legitimacy.
  */
 
 /* ==========================================================================
@@ -113,49 +119,117 @@ narrative_ontology:constraint_metric(jihad_quranic_corpus__expansionist_legalist
 narrative_ontology:constraint_metric(jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(jihad_quranic_corpus__expansionist_legalist_reading, accessibility_collapse, 0.58).
+narrative_ontology:constraint_metric(jihad_quranic_corpus__expansionist_legalist_reading, accessibility_collapse, 0.78).
 narrative_ontology:constraint_metric(jihad_quranic_corpus__expansionist_legalist_reading, resistance, 0.64).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(jihad_quranic_corpus__expansionist_legalist_reading, tangled_rope).
-narrative_ontology:human_readable(jihad_quranic_corpus__expansionist_legalist_reading, "Jihad Obligation: Expansionist Legalist Reading (Quranic Corpus)").
-narrative_ontology:topic_domain(jihad_quranic_corpus__expansionist_legalist_reading, "religious/political/legal").
+narrative_ontology:human_readable(jihad_quranic_corpus__expansionist_legalist_reading, "Jihad as Obligation to Establish Islamic Governance (Expansionist Legalist Reading)").
+narrative_ontology:topic_domain(jihad_quranic_corpus__expansionist_legalist_reading, "religious_jurisprudence/political_theology").
 
 domain_priors:requires_active_enforcement(jihad_quranic_corpus__expansionist_legalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(jihad_quranic_corpus__expansionist_legalist_reading, '845e276d-ed1c-4de9-9886-b3dd15007b92').
-narrative_ontology:cs_kernel_codification('845e276d-ed1c-4de9-9886-b3dd15007b92', fixed_text).
-narrative_ontology:cs_authority_grounding('845e276d-ed1c-4de9-9886-b3dd15007b92', lineage).
-narrative_ontology:cs_interpretation_layer_present('845e276d-ed1c-4de9-9886-b3dd15007b92').
-narrative_ontology:cs_reading_relation('845e276d-ed1c-4de9-9886-b3dd15007b92', jihad_quranic_corpus__defensive_spiritual_reading, coexists_with).
-narrative_ontology:cs_reading_relation('845e276d-ed1c-4de9-9886-b3dd15007b92', jihad_quranic_corpus__revolutionary_vanguard_reading, coexists_with).
-narrative_ontology:cs_axiom('845e276d-ed1c-4de9-9886-b3dd15007b92', foundational, offensive_expansion_lawful_under_conditions).
-narrative_ontology:cs_axiom_status(offensive_expansion_lawful_under_conditions, holdable).
-narrative_ontology:cs_axiom_grounding('845e276d-ed1c-4de9-9886-b3dd15007b92', offensive_expansion_lawful_under_conditions, deontological).
-narrative_ontology:cs_axiom('845e276d-ed1c-4de9-9886-b3dd15007b92', foundational, caliph_monopoly_on_jihad_declaration).
-narrative_ontology:cs_axiom_status(caliph_monopoly_on_jihad_declaration, holdable).
-narrative_ontology:cs_axiom_grounding('845e276d-ed1c-4de9-9886-b3dd15007b92', caliph_monopoly_on_jihad_declaration, conventional).
-narrative_ontology:cs_reference_frame('845e276d-ed1c-4de9-9886-b3dd15007b92', quranic_expansion_framework).
-narrative_ontology:cs_drift_state('845e276d-ed1c-4de9-9886-b3dd15007b92', contemporary_international_law_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('845e276d-ed1c-4de9-9886-b3dd15007b92', '').
+narrative_ontology:cs_story_uid(jihad_quranic_corpus__expansionist_legalist_reading, 'f3811ec3-a906-414f-bf85-abb1be590c80').
+narrative_ontology:cs_kernel_codification('f3811ec3-a906-414f-bf85-abb1be590c80', fixed_text).
+narrative_ontology:cs_authority_grounding('f3811ec3-a906-414f-bf85-abb1be590c80', lineage).
+narrative_ontology:cs_interpretation_layer_present('f3811ec3-a906-414f-bf85-abb1be590c80').
+narrative_ontology:cs_reading_relation('f3811ec3-a906-414f-bf85-abb1be590c80', jihad_quranic_corpus__defensive_spiritual_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f3811ec3-a906-414f-bf85-abb1be590c80', jihad_quranic_corpus__revolutionary_vanguard_reading, forecloses).
+narrative_ontology:cs_axiom('f3811ec3-a906-414f-bf85-abb1be590c80', foundational, imam_monopoly_on_jihad_declaration).
+narrative_ontology:cs_axiom_status(imam_monopoly_on_jihad_declaration, holdable).
+narrative_ontology:cs_axiom_grounding('f3811ec3-a906-414f-bf85-abb1be590c80', imam_monopoly_on_jihad_declaration, deontological).
+narrative_ontology:cs_axiom('f3811ec3-a906-414f-bf85-abb1be590c80', foundational, offensive_expansion_permissible_under_conditions).
+narrative_ontology:cs_axiom_status(offensive_expansion_permissible_under_conditions, holdable).
+narrative_ontology:cs_axiom_grounding('f3811ec3-a906-414f-bf85-abb1be590c80', offensive_expansion_permissible_under_conditions, conventional).
+narrative_ontology:cs_reference_frame('f3811ec3-a906-414f-bf85-abb1be590c80', quranic_textual_sufficiency).
+narrative_ontology:cs_drift_state('f3811ec3-a906-414f-bf85-abb1be590c80', contemporary_state_practice_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('f3811ec3-a906-414f-bf85-abb1be590c80', '').
 narrative_ontology:cs_kernel_id(jihad_quranic_corpus__expansionist_legalist_reading, jihad_quranic_corpus).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__expansionist_legalist_reading, islamic_state_apparatus).
-narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__expansionist_legalist_reading, caliph_or_imam_authority).
-narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, non_muslim_polities_in_liminal_status).
-narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, populations_subject_to_conquest_campaigns).
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__expansionist_legalist_reading, caliphate_or_islamic_state_authority).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, non_muslim_populations_outside_dar_islam).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, internal_dissenting_jurists).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__expansionist_legalist_reading, jurists_legitimating_expansion).
+narrative_ontology:constraint_beneficiary(jihad_quranic_corpus__expansionist_legalist_reading, conquered_muslim_populations).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, conquered_muslim_populations).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, dissident_jurists_defending_narrower_jihad).
+narrative_ontology:constraint_victim(jihad_quranic_corpus__expansionist_legalist_reading, rank_and_file_fighters).
+narrative_ontology:constraint_vindicates(jihad_quranic_corpus__expansionist_legalist_reading, quranic_supremacy_doctrine).
+narrative_ontology:constraint_vindicates(jihad_quranic_corpus__expansionist_legalist_reading, imam_monopoly_on_legitimate_force).
+narrative_ontology:constraint_vindicates(jihad_quranic_corpus__expansionist_legalist_reading, progressive_expansion_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Claims sole authority to declare jihad, interpret conditions of just warfare, and direct military campaigns to establish Islamic governance in territories deemed dar al-harb (domain of war). Administers the jurisprudential framework that legitimates offensive expansion under rule-bound conditions. The authority is bound by the conditions (invitation first, proportionality, imam declaration) but those conditions preserve the institutional monopoly itself — they do not permit decentralized or popular declaration.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, caliphate_or_islamic_state_authority, agenda_setter,
+    institutional, civilizational, trapped, universal).
+
+% Jurists who endorse the expansionist legalist reading gain interpretive authority, influence over state policy, and vindication of their doctrinal positions as campaigns proceed. Their reading becomes institutionalized in fatwa offices, military chaplaincies, and educational curricula. They benefit from the state's power while providing intellectual legitimacy.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, jurists_legitimating_expansion, beneficiary,
+    institutional, civilizational, constrained, universal).
+
+% Targeted populations face the choice of conversion, submission (dhimmi status with special taxes and restrictions), or armed resistance. The jurisprudential framework is structured so their only legal exits within the system are subordination or elimination of political independence. Geographic and military barriers trap them; the invitation-to-Islam requirement is formally inclusive but practically non-negotiable given power asymmetries.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, non_muslim_populations_outside_dar_islam, payer,
+    powerless, biographical, trapped, universal).
+
+% Populations brought into dar al-Islam through conquest gain formal membership in the Islamic community and access to Islamic law, but lose political independence and bear the costs of military campaigns and taxation to support further expansion. They are both targets of the campaigns and, after incorporation, stakeholders in the expanding state structure.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, conquered_muslim_populations, payer,
+    moderate, generational, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(jihad_quranic_corpus__expansionist_legalist_reading, conquered_muslim_populations, beneficiary).
+
+% Jurists who argue for defensive-only or purely spiritual jihad readings are suppressed through institutional authority, loss of patronage, or takfir accusations. They bear the cost of dissent without the power to redirect policy — their alternative readings are marginalized by the state's monopoly on legitimate interpretation and force.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, dissident_jurists_defending_narrower_jihad, payer,
+    moderate, generational, constrained, universal).
+
+% Conscripted or volunteer soldiers bear direct costs of campaigns (injury, death, displacement). They are bound by religious obligation (as framed by authority) and military law. Exit from the obligation is theologically costly (accusation of unfaith) and practically dangerous (desertion penalties).
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, rank_and_file_fighters, payer,
+    powerless, immediate, trapped, local).
+
+% Scholars and analysts from outside the Islamic jurisprudential tradition study the expansionist reading, document its textual sources, trace its historical application, and debate whether it accurately represents classical Islamic law or is a selective modern reconstruction. They occupy an analytical seat and feed evidence into historical and comparative analysis.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, comparative_legal_scholars, observer,
+    organized, generational, analytical, universal).
+
+% International law frameworks (UN Charter, laws of armed conflict) classify expansionist jihad campaigns as wars of conquest or aggression, not legitimate self-defense. These authorities are structurally excluded from the Islamic jurisprudential framework's internal legitimacy conversation — they operate under a competing authority structure and have no voice in how the expansionist reading's conditions are interpreted.
+narrative_ontology:constraint_stakeholder(jihad_quranic_corpus__expansionist_legalist_reading, international_legal_authorities, excluded,
+    institutional, generational, trapped, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(jihad_quranic_corpus__expansionist_legalist_reading, caliphate_or_islamic_state_authority).
+narrative_ontology:fixing_cost_class(jihad_quranic_corpus__expansionist_legalist_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Structures the use of force under Islamic authority by requiring state/caliph declaration, limiting campaigns to rule-bound conditions (invitation to Islam first, proportionality, treatment of captives), and integrating military expansion with legal and administrative incorporation into dar al-Islam. This solves the coordination problem of preventing uncontrolled violence and ensuring conquered territories receive Islamic governance rather than remaining stateless.
+% TRANSFER_FUNCTION: Moves political sovereignty, territorial control, and tax revenue from non-Muslim or competing Muslim authorities to the Islamic state/caliphate. In parallel, it moves interpretive authority and religio-political legitimacy from dispersed jurists to the institutional authority. Rank-and-file fighters transfer risk and life; dissident jurists transfer intellectual autonomy.
+% ABSENT_VOICES: Non-Muslim populations who would be conquered have no seat in the jurisprudential framework and cannot negotiate the conditions of the invitation-to-Islam phase. Jurists defending purely defensive jihad are suppressed by institutional monopoly. Secular and international-law frameworks are formally excluded from the conversation and cannot object from within the Islamic tradition.
+% DISAPPEARANCE_RATIONALE: If the expansionist legalist reading were repudiated and replaced by the defensive reading, Islamic state military doctrine would shift from offensive campaigns to defensive response. Territories currently under expansion pressure would retain independence or face only defensive fortification, not incorporation. The caliphate's territorial reach and tax base would shrink; jurists would lose institutional influence over foreign policy; the theological justification for military campaigns would vanish. The geopolitical and theological order would reorganize around a defensive rather than expansionist framework.
+% FOUNDING_PROBLEM: Early Islamic political theology confronted the problem of how to organize Muslim political community globally when Muslims lived under non-Muslim rule or alongside non-Muslim majorities. The expansionist reading answers: through graduated campaigns to establish Islamic governance, structured by jurisprudential conditions that prevent anarchic violence while permitting systematic state-sponsored expansion.
+% FOUNDING_PROBLEM_CORROBORATION: Islamic State and certain modern jihadist movements cite this reading as foundational to their campaigns. Mainstream contemporary Islamic states (Saudi Arabia, Egypt, Turkey, Iran) formally endorse Islamic law but do NOT currently pursue expansionist jihad campaigns, suggesting the founding problem (establishing global Islamic governance through coordinated expansion) is treated as superseded or postponed. Historical scholars document that the expansionist reading emerged prominently in classical jurisprudence (Shafi'i, Maliki schools) but coexisted with more restrictive readings. No external authority (comparative legal scholars, international law bodies) attests the founding problem as still-live in the form the expansionist reading addresses — the testimony for 'live' status comes only from jihadist movements themselves.
+narrative_ontology:disappearance_verdict(jihad_quranic_corpus__expansionist_legalist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(jihad_quranic_corpus__expansionist_legalist_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(jihad_quranic_corpus__expansionist_legalist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(jihad_quranic_corpus__expansionist_legalist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(jihad_quranic_corpus__expansionist_legalist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(jihad_quranic_corpus__expansionist_legalist_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +249,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high and rising (0.52→0.68 over interval) because the constraint vests authority to declare expansion and assess conditions in the caliph/imam apparatus, creating principal-agent separation between decision-maker and affected populations. Suppression is highest of all metrics (0.72 at end) because the constraint's persistence depends on preventing rival interpretations (defensive, revolutionary) from institutionalizing alternative jurisprudence — the caliph's monopoly must be maintained against both internal contestation and external secular frameworks. Theater is moderate-rising (0.28→0.41) because the jurisprudential conditions (da'wa, proportionality) are often performed rather than substantively applied — the formal framework legitimizes expansion even where conditions are honored minimally. Measurements run on a shared time grid: extractiveness rises as Islamic state apparatus consolidates, suppression hardens as competing readings gain popular appeal and require more institutional force to suppress, theater increases as more expansion is justified through the framework's conditions while external observers document routine non-compliance with those conditions. Accessibility collapse (0.58) reflects that alternatives to Islamic governance remain available to liminal polities but are narrowed by the framework's pressure; resistance (0.64) is substantial because targeted populations resist conquest and competing Islamic readings resist the monopoly on jurisprudential authority.
+ *   Extractiveness rises from 0.42 to 0.68 over the interval, asymptoting around point 40. Early extractiveness is moderate because the reading's legitimating conditions (invitation, proportionality, imam authority) are genuinely constraining and carry real legal weight in early institutional contexts. As campaigns proceed and the framework matures, extractiveness rises because: (1) the conditions become increasingly ritualistic—invitations are formulaic and rejected, proportionality claims expand to justify larger campaigns, imam authority is consolidated and less subject to internal dissent; (2) the suppression machinery hardens—dissident jurists face greater institutional pressure, alternative readings are pushed to margins, and captured legal scholars reinforce the expansion doctrine. Theater ratio shows similar rise (0.18→0.41), indicating that performative elements (ritual invitations, proportionality rhetoric) increase as the genuine constraints of the conditions erode. Suppression requirement stays consistently high (0.55→0.72) because the reading's persistence depends on actively suppressing alternative interpretations and preventing dissent from delegitimizing campaigns. The asymptote (extraction plateaus around 0.68) reflects equilibrium: further extraction requires either territorial saturation or institutional collapse; the reading stabilizes at a point where institutional capture is deep but still rationalizable within legal form.
  *
  * PERSPECTIVAL GAP:
- *   The most acute perspectival gap lies between the caliph/imam authority and the non-Muslim payer seats. From the institutional agenda-setter's perspective, the constraint solves a coordination problem: how to expand Islamic governance systematically while maintaining legal coherence and preventing arbitrary predation. The jurisprudential conditions (invitation first, proportionality, dhimmi incorporation) appear as genuine constraints on power. From the target population's perspective, the same framework is a legalistic cover for systematic expansion: the conditions are imposed on populations that did not agree to them, the caliph monopolizes their interpretation, and the escape routes (conversion, dhimmi status) are both constrained by the framework itself. The scholarly tradition experiences it as coordination within the tradition's intellectual ecosystem; competing readings experience it as suppression of alternative jurisprudence. The constraint's claimed type (tangled rope) reflects this: it combines genuine coordination function (for Islamic governance and the scholarly tradition) with asymmetric extraction (from non-Muslim populations and rival readings). A defensive-reading seat would perceive the same texts and framework as fundamentally misinterpreted — the constraint would compute as snare from that seat. A revolutionary-reading seat would perceive it as institutional capture of legitimate struggle — also snare. The engine captures this divergence through per-seat classification; do not reconcile these perspectives in the claim.
+ *   The agenda-setter (caliphate authority) and the beneficiary (legitimating jurists) experience this as genuine coordination with rule-bound constraints: they author and enforce the conditions, and those conditions prevent anarchic violence. They compute low extraction because they frame the extraction (territorial expansion, tax revenue, religio-political authority) as the legitimate fruit of lawful governance, not as outside benefit. The payer seats (non-Muslim populations, dissident jurists, rank-and-file fighters) experience high extraction because the conditions are presented as rule-bound but administered by the very authority that benefits from their violation. From the payer perspective, the framework legitimates what would otherwise be naked conquest; the conditions provide rhetorical cover rather than substantive constraint. The engine computes this divergence from the structural data: beneficiary seats with powerful institutional position and monopoly on interpretation derive low d (beneficiary end); payer seats with powerless or trapped exit derive high d (target end). The divergence is the structural point—the same constraint computed as coordination-like from one seat and extraction-like from another.
  *
  * DIRECTIONALITY LOGIC:
- *   Directional asymmetry is extreme and structural. The caliph/imam apparatus and Islamic scholarly tradition sit at the beneficiary end (d near 0.0-0.2): they collect interpretive authority, territorial expansion, revenues from incorporated populations, and political legitimacy. Non-Muslim polities and conquest-campaign populations sit at the target end (d near 0.8-1.0): they bear the costs of war, loss of sovereignty, subordinate legal status, and have minimal exit. Competing Islamic readings occupy a peculiar middle position (d near 0.4-0.6): they benefit from engaging with the tradition's intellectual resources but suffer suppression when institutional authority consolidates around the expansionist reading. Populations under Islamic rule are near symmetric (d near 0.5): genuine coordination benefits (stable law, legal security, state protection) offset by the constraint's expansion logic applied elsewhere and the subordinate status of non-Muslims within their own governance. The engine will compute divergent per-seat classifications from this structural data: the caliph seat computes as coordination (rope), the payer seats compute as extraction (snare or tangled rope depending on whether coordination benefits exist), the competing-reading seat computes as captured or suppressed depending on its power trajectory.
+ *   Caliphate authority: powerful, institutional, trapped (legitimacy is tied to the interpretation itself), benefits from institutional monopoly on interpretation → d near 0.1-0.2 (beneficiary end). Legitimating jurists: institutional, constrained (lose patronage if they dissent), gain influence and doctrinal vindication → d near 0.15-0.25. Non-Muslim populations: powerless, trapped (geographic/military barriers, power asymmetry), bear direct costs of conquest and subordination → d near 0.85-0.95 (full target end). Dissident jurists: moderate power (have scholarly standing), constrained (career risk, institutional pressure), bear costs of dissent without influence → d near 0.7-0.8. Rank-and-file fighters: powerless, trapped (religious obligation, military law), immediate horizon, bear direct risk → d near 0.9. The directionality profile is heavily skewed toward extraction: beneficiaries are few and institutionally consolidated; targets are many and dispersed.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint's mandatrophy dynamic is the inverse of simple obsolescence: the founding problem (how to systematize and legitimize territorial expansion under law) is NOT dead, nor has its function changed. Instead, the constraint exhibits what might be called 'problematic-function persistence': the framework successfully does what it was built to do (legitimize expansion within jurisprudential rules), but the expansion it systematizes is contested at the foundational level. The constraint persists not because no one wants to fix it (competitive readings explicitly want to replace it), but because the caliph/institutional apparatus has captured the authority to interpret the founding problem itself. Defensive readings reframe the founding problem as 'how to maintain Islamic community amid external threats' (solved by defense, not expansion). Revolutionary readings reframe it as 'how to establish Islamic governance against apostate rulers' (solved by internal vanguard action, not systematic state expansion). From the expansionist reading's own framework, there is no mandatrophy — the constraint is working as designed. But from outside the framework, the constraint exhibits mandate drift: it legitimizes actions (conquest campaigns against non-threatening populations, subordination of non-Muslims) that the original problem-statement may not have required. This is a case where mandatrophy resolution requires disputing the founding problem itself, not just its solution.
+ *   The founding problem—how to organize Muslim political community globally and establish Islamic governance where absent—is contested in its current live status. The reading claims the problem is still-live and urgent; mainstream contemporary Islamic states formally accept the reading but do not pursue active expansionist campaigns, suggesting either the problem is treated as dead (governance is established sufficiently) or the response is postponed. The expansionist reading is thus subject to mandatrophy risk: if the founding problem is declared dead (Islamic governance is adequately established regionally, global expansion is not the primary obligation), the reading's legitimacy collapses. The measurement trajectory shows extractiveness stabilizing around 0.68, not rising toward 1.0—this suggests the constraint is not pure Snare but Tangled Rope with a genuine (though increasingly ritualized) coordination component. If extractiveness were to rise further, it would indicate mandatrophy resolution (the coordination function has atrophied and pure extraction remains). The current reading sits in the contested zone: it claims coordination (rule-bound expansion) but is administered by a beneficiary with monopoly on interpretation, creating asymmetric extraction under the guise of coordination.
  */
 
 /* ==========================================================================
@@ -192,89 +266,107 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    expanding_vs_consolidating_state_incentive,
-    'Does the measured extractiveness (0.68) reflect genuine expansion-driving incentives of the caliph apparatus, or is the constraint increasingly performative — invoked to justify consolidation of already-conquered territories while actual territorial expansion slows?',
-    'Historical comparison of expansion rate (territory gained per decade) against institutionalization rate (state bureaucracy, taxation systems, legal codification). If expansion rate falls while extractiveness stays high, the constraint is increasingly theater-driven (internalizing justifications for holding rather than taking).',
-    'If consolidation-driven, the constraint is drifting toward piton (framework persists without primary function, theater ratio would eventually rise above 0.5). If expansion-driven, extractiveness reflects real asymmetric power and the constraint remains snare/tangled-rope for payer seats.',
+    invitation_performativity_ambiguity,
+    'Does the ''invitation to Islam'' requirement (the condition that non-Muslims be offered conversion/submission before combat) function as a genuine legal constraint on campaigns, or is it a ritualized prerequisite that has become purely performative and does not substantively alter the decision to proceed?',
+    'Comparative case study of historical and contemporary campaigns: examine instances where invitations were refused and the authority decided NOT to proceed, versus instances where invitations were made and ignored and campaigns proceeded anyway. Document the proportion of cases where refusal of the invitation altered the authority''s decision.',
+    'If invitations are purely performative (rarely refused, never alter decisions), extractiveness classification should rise toward pure Snare; the coordination function collapses and only extraction remains. If invitations are genuine constraints (authorities sometimes postpone or cancel campaigns when invitations are refused), the Tangled Rope classification holds and the coordination component persists.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(invitation_performativity_ambiguity, empirical, 'Whether the invitation-to-Islam condition is a genuine legal constraint or a ritualized cover.').
+
+omega_variable(
+    proportionality_specification_gap,
+    'The reading invokes proportionality as a constraint, but the jurisprudential texts do not specify operational measures of proportionality (number of casualties, damage to civilian infrastructure, territorial scope). Is proportionality a substantive constraint or a subjective principle interpreted by the authority that benefits from expansion?',
+    'Textual analysis of classical and modern Islamic jurisprudence tracing how proportionality is operationalized in fiqh. Survey of contemporary Islamic authorities'' actual judgments on proportionality in specific campaigns.',
+    'If proportionality is operationally empty (no measurable standards), it functions as rhetorical cover rather than constraint; extractiveness rises and the reading moves toward Snare. If measurable standards exist (codified limits on civilian casualties, geographic scope, duration), the coordination function is more robust and Tangled Rope classification is justified.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(expanding_vs_consolidating_state_incentive, empirical, 'Whether extractiveness measures ongoing expansion incentive or defensive consolidation dressed in expansionist language').
+narrative_ontology:omega_variable(proportionality_specification_gap, empirical, 'Whether proportionality is a substantive constraint or a subjective cover.').
 
 omega_variable(
-    internalized_vs_structural_suppression_of_rival_readings,
-    'Within Islamic scholarly tradition, is the dominance of the expansionist reading sustained by structural suppression (institutional exclusion of defensive and revolutionary readings from authority positions) or by genuine intellectual conviction that the expansionist reading is more coherent?',
-    'Post-suppression trajectory: if structural suppression is lifted (rival readings gain state patronage), do they rapidly gain adherents, or do they remain marginal? If marginal, the reading''s dominance is intellectual; if they surge, suppression was the primary constraint.',
-    'If structural, suppression is necessary to maintain the reading''s institutional dominance and the measured 0.72 suppression is real enforcement. If intellectual, suppression may be performative and the reading is more robust than the metrics suggest.',
-    confidence_without_resolution(low)
+    imam_monopoly_consolidation,
+    'Historically, has the ''imam monopoly'' on jihad declaration remained meaningful (decentralized actors regularly challenged it, authorities sometimes deferred to popular will), or has it consolidated into institutional lock-in (alternative declarations are suppressed, state authority is never overridden)?',
+    'Historical trajectory study: compare cases from early Islamic state period, classical era, Ottoman period, and modern state formations. Document instances of successful decentralized jihad declarations that rivaled state authority, and track when such instances ceased.',
+    'If monopoly has consolidated (alternatives are now suppressed by state power), the reading reflects Snare-like extraction: the imam authority forecloses alternatives through force, not through legitimacy. If the monopoly is contested (decentralized actors still successfully challenge it), the coordination function is real and Tangled Rope holds.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(internalized_vs_structural_suppression_of_rival_readings, empirical, 'Whether rival readings are suppressed or genuinely less persuasive within the tradition').
+narrative_ontology:omega_variable(imam_monopoly_consolidation, empirical, 'Whether the imam monopoly is genuine authority or consolidated power lock-in.').
 
 omega_variable(
-    reading_choice_structural_vs_theological,
-    'This constraint instantiates ONE reading of the Quranic corpus. Is the choice of this reading over defensive or revolutionary alternatives primarily STRUCTURAL (benefits the caliph apparatus, so it is institutionalized) or primarily THEOLOGICAL (the expansionist reading is the most coherent interpretation of the texts)?',
-    'Comparative analysis of Quranic exegesis across readings: do the readings differ in which Surahs they emphasize, or do they interpret the same Surahs differently? Are the differences resolvable by better scholarship, or are they built into the reading-choice itself (i.e., all three readings are defensible from the texts)? Does institutional support correlate with scholarly quality or with political utility?',
-    'If structural, the reading is a snare whose legitimacy rests on power, not on exegetical merit — the constraint''s persistence is vulnerable to power shifts. If theological, the reading''s coherence is independent of institutional support, making it more robust to political challenge. Hybrid: the reading may be both defensible AND strategically useful — in this case, both factors matter.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(reading_choice_structural_vs_theological, conceptual, 'Whether the expansionist reading''s dominance reflects its exegetical merit, its political utility, or both').
-
-omega_variable(
-    dhimmi_status_coordination_vs_subordination,
-    'The constraint offers non-Muslim populations incorporated into Islamic governance a legally specified status (dhimmi) with protections and obligations. Is dhimmi status a genuine coordination benefit (stable law, property rights, religious autonomy, predictability) that partially offsets extraction costs, or is it primarily a mechanism for subordination and revenue extraction?',
-    'Comparative study of non-Muslim populations under Islamic governance: do populations flourish (economically, culturally, intellectually) under dhimmi status compared to pre-incorporation alternatives, or do they stagnate? Do they choose to stay or emigrate when given the option? Do property rights and religious autonomy functionally constrain the state''s extraction?',
-    'If genuine coordination benefit, the constraint for non-Muslim populations is tangled rope (coordination + extraction) and they are legitimate beneficiaries alongside payers. If primarily subordination, it is snare (extraction with minimal coordination function). This determines whether the engine classifies non-Muslim populations as payers or dual-positioned.',
+    founding_problem_live_status_contestation,
+    'Is the founding problem—organizing Muslim political community globally and establishing Islamic governance where absent—still live (a current obligation) or dead (a historical project that has been substantially accomplished)?',
+    'Survey of contemporary Islamic jurisprudential consensus: do mainstream Islamic scholars, contemporary governments, and Islamic institutions treat the expansionist obligation as active, or as postponed/superseded? Compare ratios of expansionist vs. defensive readings endorsed in fatwa collections, educational curricula, and state military doctrines.',
+    'If consensus is that the founding problem is dead or sufficiently addressed, the reading should be reclassified as a historical artifact or a Piton (maintained theatrically by fringe actors). If expansionist obligation is still treated as live by mainstream authorities, the constraint remains active. This directly tests mandatrophy: has the reading''s justification outlived its function?',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(dhimmi_status_coordination_vs_subordination, empirical, 'Whether dhimmi status is coordination benefit or legalized subordination').
+narrative_ontology:omega_variable(founding_problem_live_status_contestation, empirical, 'Whether the expansionist jihad obligation is a live contemporary duty or a historical artifact.').
 
 omega_variable(
-    reading_foreclosure_relationship_to_defensive,
-    'This expansionist reading forecloses or coexists with the defensive-spiritual reading? The core premises diverge: expansionist permits offensive campaigns under conditions; defensive restricts to response and internal struggle. Can both be held within a single Islamic framework, or does accepting one require rejecting the other?',
-    'Textual analysis: are there Islamic legal scholars or frameworks that genuinely hold both readings simultaneously (selective application based on context), or do all coherent positions reduce to one or the other? Does institutional pluralism (multiple schools of Islamic law) permit simultaneous holding, or do positions always collapse to a single reading when pressed?',
-    'If forecloses: the readings are incompatible at the foundational level and institutional dominance of one reading blocks the other. The relationship is zero-sum competition. If coexists: both readings are live positions and institutional dominance prevents formal plurality without logical foreclosure. The relationship is suppression, not elimination.',
+    reading_foreclosure_ambiguity,
+    'Does the expansionist reading logically foreclose the revolutionary-vanguard reading (which denies state monopoly and treats individual judgment as sufficient jihad), or do they coexist as distinct framings that different actors hold simultaneously?',
+    'Analyze whether a single institutional actor (e.g., Islamic State, a particular jurist school) can coherently hold both the state-monopoly principle and the individual-judgment principle, or whether holding one necessarily rules out holding the other. If an actor has shifted from one reading to the other, document whether the shift was internal contradiction resolution or strategic reframing.',
+    'If the readings foreclose each other, they are genuinely competing frameworks and only one can be institutionally implemented. If they coexist (held by different factions simultaneously), they are readings of the same kernel occupied by different parties. This affects the network topology and classification of the sibling constraints.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_relationship_to_defensive, conceptual, 'Whether expansionist and defensive readings are logically incompatible or merely institutionally competing').
+narrative_ontology:omega_variable(reading_foreclosure_ambiguity, conceptual, 'Whether the expansionist and revolutionary readings are logically foreclosed or merely coexisting.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(jihad_quranic_corpus__expansionist_legalist_reading, 0, 40).
+narrative_ontology:interval(jihad_quranic_corpus__expansionist_legalist_reading, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(jiha_tr_t0, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(jiha_tr_t8, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 8, 0.33).
-narrative_ontology:measurement(jiha_tr_t16, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 16, 0.37).
-narrative_ontology:measurement(jiha_tr_t24, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 24, 0.39).
-narrative_ontology:measurement(jiha_tr_t32, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 32, 0.4).
+narrative_ontology:measurement(jiha_tr_t0, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement_basis(jiha_tr_t0, observed).
+narrative_ontology:measurement(jiha_tr_t10, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 10, 0.24).
+narrative_ontology:measurement_basis(jiha_tr_t10, observed).
+narrative_ontology:measurement(jiha_tr_t20, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 20, 0.32).
+narrative_ontology:measurement_basis(jiha_tr_t20, observed).
+narrative_ontology:measurement(jiha_tr_t30, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 30, 0.38).
+narrative_ontology:measurement_basis(jiha_tr_t30, observed).
 narrative_ontology:measurement(jiha_tr_t40, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 40, 0.41).
+narrative_ontology:measurement_basis(jiha_tr_t40, observed).
+narrative_ontology:measurement(jiha_tr_t50, jihad_quranic_corpus__expansionist_legalist_reading, theater_ratio, 50, 0.41).
+narrative_ontology:measurement_basis(jiha_tr_t50, observed).
 
 % Extraction over time
-narrative_ontology:measurement(jiha_be_t0, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 0, 0.52).
-narrative_ontology:measurement(jiha_be_t8, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 8, 0.58).
-narrative_ontology:measurement(jiha_be_t16, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 16, 0.63).
-narrative_ontology:measurement(jiha_be_t24, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 24, 0.66).
-narrative_ontology:measurement(jiha_be_t32, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 32, 0.67).
+narrative_ontology:measurement(jiha_be_t0, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement_basis(jiha_be_t0, observed).
+narrative_ontology:measurement(jiha_be_t10, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 10, 0.51).
+narrative_ontology:measurement_basis(jiha_be_t10, observed).
+narrative_ontology:measurement(jiha_be_t20, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 20, 0.61).
+narrative_ontology:measurement_basis(jiha_be_t20, observed).
+narrative_ontology:measurement(jiha_be_t30, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 30, 0.66).
+narrative_ontology:measurement_basis(jiha_be_t30, observed).
 narrative_ontology:measurement(jiha_be_t40, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement_basis(jiha_be_t40, observed).
+narrative_ontology:measurement(jiha_be_t50, jihad_quranic_corpus__expansionist_legalist_reading, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement_basis(jiha_be_t50, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(jiha_su_t0, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(jiha_su_t8, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 8, 0.64).
-narrative_ontology:measurement(jiha_su_t16, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 16, 0.69).
-narrative_ontology:measurement(jiha_su_t24, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 24, 0.71).
-narrative_ontology:measurement(jiha_su_t32, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 32, 0.71).
+narrative_ontology:measurement(jiha_su_t0, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement_basis(jiha_su_t0, observed).
+narrative_ontology:measurement(jiha_su_t10, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 10, 0.62).
+narrative_ontology:measurement_basis(jiha_su_t10, observed).
+narrative_ontology:measurement(jiha_su_t20, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 20, 0.68).
+narrative_ontology:measurement_basis(jiha_su_t20, observed).
+narrative_ontology:measurement(jiha_su_t30, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 30, 0.71).
+narrative_ontology:measurement_basis(jiha_su_t30, observed).
 narrative_ontology:measurement(jiha_su_t40, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 40, 0.72).
+narrative_ontology:measurement_basis(jiha_su_t40, observed).
+narrative_ontology:measurement(jiha_su_t50, jihad_quranic_corpus__expansionist_legalist_reading, suppression_requirement, 50, 0.72).
+narrative_ontology:measurement_basis(jiha_su_t50, observed).
 
 
 /* ==========================================================================
@@ -285,17 +377,15 @@ narrative_ontology:coordination_type(jihad_quranic_corpus__expansionist_legalist
 narrative_ontology:boltzmann_floor_override(jihad_quranic_corpus__expansionist_legalist_reading, 0.12).
 narrative_ontology:affects_constraint(jihad_quranic_corpus__expansionist_legalist_reading, jihad_quranic_corpus__defensive_spiritual_reading).
 narrative_ontology:affects_constraint(jihad_quranic_corpus__expansionist_legalist_reading, jihad_quranic_corpus__revolutionary_vanguard_reading).
-narrative_ontology:affects_constraint(jihad_quranic_corpus__expansionist_legalist_reading, dhimmi_legal_status_subordination).
-narrative_ontology:affects_constraint(jihad_quranic_corpus__expansionist_legalist_reading, islamic_state_monopoly_on_war_declaration).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the jihad_quranic_corpus kernel. The three readings (expansionist_legalist, defensive_spiritual, revolutionary_vanguard) are structurally distinct constraints with different ε values, victim/beneficiary structures, and institutional implications. All three claim the same Quranic foundation but instantiate different constraints through different interpretive choices. Each reading is authored separately (per ε-invariance principle); they are linked via network.affects_constraints to show family relationship. The expansionist reading influences (upstream pressure on) both defensive and revolutionary readings by institutionalizing the state monopoly on interpretation; if the expansionist reading gains institutional dominance, defensive and revolutionary readings are suppressed but not logically foreclosed. See commentary.kernel_context for framing details.
+% The jihad_quranic_corpus kernel decomposes into three structurally distinct constraints, each instantiating a different reading of the same textual corpus. The expansionist_legalist_reading is linked to its siblings defensive_spiritual_reading and revolutionary_vanguard_reading via the network.affects_constraints array. All three share the same referent (the quranic and hadith sources on jihad) but parse the obligation, authority structure, and scope of legitimate jihad differently. The ε-invariance principle applies: each reading has a distinct ε value (this reading: 0.68 at interval end; defensive reading would show lower extraction; revolutionary reading would show extraction concentrated on state authority rather than non-Muslim populations). Decomposition follows from the recognition that changing the interpretive reading changes the constraint's beneficiary/victim structure, administrative conditions, and classification, not merely the observer's perspective—thus, three separate constraints, three separate files, linked by network edges.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(jihad_quranic_corpus__expansionist_legalist_reading, powerful, 0.22).
+constraint_indexing:directionality_override(jihad_quranic_corpus__expansionist_legalist_reading, powerless, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

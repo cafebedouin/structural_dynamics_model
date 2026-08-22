@@ -2,247 +2,343 @@
   "header": {
     "constraint_id": "total_war_reachability_boundary__dropping_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "d814af92-1916-4991-86ec-7a77754bbf16"
+    "module_name_override": "constraint_total_war_reachability_boundary__dropping_reading",
+    "measurement_id_prefix": "twrb_drop",
+    "story_uid": "6c6c8e96-cb98-4f1f-8292-c8fa16b6344e"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.71,
     "theater_ratio": 0.42,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.58,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "Total War Reachability Under Deterrence Coordination (Dropping Reading)",
-    "topic_domain": "political/military/strategic",
+    "human_readable": "Total War Reachability Boundary (Dropping Reading)",
+    "topic_domain": "international_relations/strategic_deterrence",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "nuclear_armed_states",
-      "alliance_security_guarantors"
+      "deterrence_creditor_states",
+      "strategic_stability_beneficiaries"
     ],
     "victims": [
       "civilian_populations_under_threat",
-      "non_nuclear_states_dependent_on_deterrence"
+      "non_nuclear_states"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "deterrence_creditor_states",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Nuclear-armed states that maintain strategic deterrence doctrine and arsenals. They set the terms of the deterrence game by maintaining credible second-strike capability and communicating resolve. They benefit from the coordination equilibrium that keeps total war reachable but unlikely — the threat of mutual destruction creates stability that allows their non-military interests to pursue advantage at sub-total-war intensities. They cannot exit: abandoning nuclear capability shifts the strategic balance unpredictably."
+    },
+    {
+      "name": "civilian_populations_under_threat",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inhabitants of major population centers in nuclear-armed or allied states. They bear the existential extraction of the deterrence system: they are the implicit hostages whose vulnerability underwrites credible deterrence. Their exit options are zero — they cannot leave the jurisdiction or move out of range of nuclear weapons. The coordination benefit (strategic stability preventing conventional total war) flows to states and elites; the extraction (living under nuclear threat) is borne diffusely by populations."
+    },
+    {
+      "name": "strategic_stability_beneficiaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "International institutions, non-aligned states, and civilian populations that benefit from the reduction in great-power conventional warfare probability created by nuclear deterrence. They did not choose the system but gain from its coordination function: major interstate wars have become rare. They have modest exit options (changing international alignments, hedging strategies, arms development) but participate in the deterrence system without directly controlling it."
+    },
+    {
+      "name": "non_nuclear_states",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Countries without nuclear weapons that operate within the deterrence framework established by nuclear-armed states. They face extraction in two forms: (1) they are excluded from the coordination function and must accept nuclear-armed states as security guarantors or threats, and (2) their military options are constrained by the nuclear threshold — they cannot escalate to total war even if locally overwhelmed. Their exit options are limited: develop nuclear capability (difficult, costly, opposed by existing nuclear powers), align with a nuclear patron (accepts subordination), or develop asymmetric strategies (terrorism, insurgency, cyber — all inferior to conventional total war by military calculus)."
+    },
+    {
+      "name": "military_establishments",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Officer corps and defense establishments in nuclear-armed and aligned states. They have professional identity fused with deterrence doctrine — their careers, strategic doctrine, and institutional prestige ride on the credibility of nuclear deterrence. They benefit from the system's persistence: it justifies defense budgets, strategic planning, and institutional hierarchy. Exit is identity-locked: renouncing deterrence doctrine would dissolve the professional framework they inhabit."
+    },
+    {
+      "name": "arms_control_regimes",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International treaties and institutions (NPT, START, CTBT frameworks) that would regulate or reduce the reachability of total war. They are structurally excluded from the core deterrence decision — states retain sovereignty over strategic force posture. Their objections to reachability are subordinate to state security interests. They could reshape the constraint if states chose to bind themselves, but that choice depends on the credibility of alternatives to deterrence, which the deterrence system itself undermines."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "External analyst tracking the strategic structure. Observes that deterrence functions as a coordination game where mutual vulnerability creates an equilibrium favoring sub-total-war competition, but that equilibrium is unstable under perturbations (accident, miscalculation, regime change, emerging technologies). The reachability of total war is the residual risk the system generates."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a mutual vulnerability equilibrium that reduces the probability of great-power total war by making the cost of escalation to nuclear exchange unacceptable to all parties. Enables sub-total-war competition (proxy conflicts, economic rivalry, alliance posturing) within a strategic frame where direct conflict between nuclear powers carries mutual destruction risk. Solves the problem of how major powers can contest interests without triggering wars of annihilation.",
+    "transfer_function": "Moves existential risk from state elites (who make strategic decisions) to civilian populations (who inhabit the targeting zones). Nuclear deterrence shifts the basis of state power from military conquest to maintained capability to destroy adversaries' populations. Elites and strategic establishments gain stability and legitimacy; populations bear the continuous threat and latent extraction of hostage status.",
+    "absent_voices": "Populations under the nuclear umbrella are not represented in strategic doctrine formation or force-posture decisions. Non-nuclear states that depend on the nuclear umbrella for security guarantees are subordinated to decisions made by the nuclear-armed power. Future generations who will inherit or be destroyed by the system are not present in current strategic planning. Arms control advocates and peace movements object but are structurally outside deterrence decision-making (their exclusion is the excluded role in the stakeholder model).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the deterrence system and the reachability of total war vanished overnight — if states could credibly believe that total war was no longer possible and mutual vulnerability was broken — strategic incentives would restructure radically. States would recalculate conventional military strategies, alliance postures would shift as security guarantees lost their nuclear backing, and major-power conflict probability would increase substantially (though not necessarily to pre-nuclear levels, as conventional destructiveness alone might still deter). The world would rearrange itself around new assumptions about what conflicts are risked.",
+    "founding_problem": "After nuclear weapons emerged, states faced a coordination problem: how to manage great-power rivalry when direct conflict could trigger mutual annihilation. Total war (war of national survival, unlimited destruction) became strategically unreachable in the sense that no rational actor would initiate it; but it remained physically reachable — the capability to fight it, and the pathway to it through miscalculation or accident, persisted. The founding problem was to create a stable equilibrium where this reachability-but-improbability condition was maintained without requiring conscious restraint by all parties at every moment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Strategic theorists (Schelling, Waltz, Jervis) from outside any nuclear-armed state's defense establishment attest the coordination problem is ongoing. Doctrinal statements from all five permanent UN Security Council members acknowledge the deterrence rationale. Non-aligned movement states and arms-control advocates attest the problem is being managed but remains unsolved — reachability persists and could increase with technological change or regime instability. No party credibly attests that the founding problem has been solved; they dispute whether deterrence is the right solution."
   },
   "interval": {
     "start": 1945,
-    "end": 2024
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1945,
-      "value": 0.55
+      "value": 0.82,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1962,
-      "value": 0.62
+      "value": 0.78,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.68
+      "time_point": 1979,
+      "value": 0.72,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.67
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2012,
-      "value": 0.68
+      "time_point": 2015,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.68
+      "time_point": 2026,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1945,
-      "value": 0.25
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1962,
-      "value": 0.35
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.42
+      "time_point": 1979,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.4
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2012,
-      "value": 0.41
+      "time_point": 2015,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.42
+      "time_point": 2026,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1945,
-      "value": 0.55
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1962,
-      "value": 0.68
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.74
+      "time_point": 1979,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.71
+      "value": 0.7,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2012,
-      "value": 0.7
+      "time_point": 2015,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.71
+      "time_point": 2026,
+      "value": 0.71,
+      "basis": "observed"
     }
   ],
   "omegas": [
     {
-      "id": "deterrence_stability_permanence",
-      "question": "Is the deterrence equilibrium a stable attractor of strategic behavior, or a precarious coordination on a knife-edge that could shift with technological change or political will?",
-      "resolution_mechanism": "Longitudinal monitoring of crisis dynamics, near-miss incidents, and the trajectory of nuclear doctrine revision; observation of whether proliferation of nuclear capability strengthens or weakens the deterrence equilibrium.",
-      "impact": "If the equilibrium is stable, deterrence is a genuine rope (coordination function persists indefinitely). If it is precarious, the constraint is closer to a tangled_rope with high defection risk — suggesting that total war reachability is not a natural fact but a contingent commitment that could unravel.",
+      "id": "reachability_vs_rationality",
+      "question": "Is total war truly remaining 'reachable' (physically and logically possible) if all rational actors will refuse to initiate it, or does rational universality of non-initiation constitute a form of structural unreachability?",
+      "resolution_mechanism": "Philosophical/logical analysis of reachability definitions in game theory and strategic doctrine. Empirical observation of whether states invest in capabilities they will never rationally use (a positive finding would support physical reachability despite rational unreachability).",
+      "impact": "If rational actors define reachability (rationality unreachable = effectively unreachable), this reading shifts toward mountain-type stability; if physical capability defines reachability, the constraint remains extractive because populations remain hostages to low-probability, high-consequence events. This determines whether the coordination is genuine or illusory.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether reachability is defined by capability or by rational behavior under common knowledge."
+    },
+    {
+      "id": "deterrence_stability_fragility",
+      "question": "How fragile is the deterrence equilibrium under perturbations: regime change, technological disruption (hypersonic delivery, AI decision-making, space-based systems), or deliberate revisionism by an emerging nuclear power?",
+      "resolution_mechanism": "Scenario modeling from defense analysts and strategists; historical case studies of crisis stability breakdowns (Cuban Missile Crisis near-miss data, Cold War incidents); empirical observation of how new nuclear powers behave relative to equilibrium predictions.",
+      "impact": "A demonstrably fragile equilibrium (high sensitivity to perturbations) would increase the effective extraction experienced by civilian populations — they bear rising existential risk even as stated probability of war drops. A stable equilibrium supports the constraint's coordination framing. This feeds the suppression_requirement trajectory: if stability requires increasing enforcement overhead (more surveillance, more arms control verification, more strategic messaging), the constraint transitions toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical fragility of the mutual-vulnerability equilibrium under realistic perturbations."
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint instantiates ONE reading of the 'total_war_reachability_boundary' kernel. Does total war's reachability reflect a permanent structural feature (contraction_reading: nuclear weapons removed it from feasible set), an atrophied capability that could reverse (contingent_reachability_reading: piton maintained by current tech/doctrine), or a dropping but persistent coordinate of strategic space (this reading: tangled_rope coordination)?",
+      "resolution_mechanism": "Long-term observation of whether reachability remains constant, decreases monotonically, or exhibits reversals as technology and doctrine evolve. Cross-reference with the sibling readings' predictions: if contingent_reachability emerges true (reversals observed), this reading mischaracterized the kernel; if contraction is true (reachability provably impossible), this reading overstated persistence.",
+      "impact": "If this reading is correct and the kernel is validly described as a dropping but reachable coordination, then deterrence theory's framing as 'rope plus mutation risk' is accurate. If sibling readings prove superior, the constraint's classification shifts and the structural analysis of beneficiary/victim/extraction changes. This omega carries the epistemic weight of the kernel contest itself.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether deterrence coordination is a stable strategic equilibrium or a contingent commitment vulnerable to shifts in technology or political commitment."
+      "description": "Whether the total_war_reachability_boundary kernel's structure matches the dropping_reading characterization or favors a sibling reading."
     },
     {
-      "id": "reachability_vs_necessity",
-      "question": "Does the measured reachability of total war — its presence in the feasible strategy set — derive from a technological fact (weapons exist) or from strategic choice (powers retain the option)?",
-      "resolution_mechanism": "Counterfactual analysis of treaty regimes that eliminated reachability (e.g., comprehensive disarmament) vs. regimes that keep reachability while managing escalation risk (current deterrence). Assessment of whether reachability is a property of physics or of maintained capacity.",
-      "impact": "If reachability is maintained by choice, deterrence is structured as a coordination game where states could collectively shift the boundary — making the constraint an engineered tangled_rope, not a natural outcome. If reachability is forced by physics, deterrence is a response to an external constraint, making it more like a rope.",
+      "id": "suppression_internalization",
+      "question": "Is the suppression measured (0.71) primarily structural (enforcement of deterrence doctrine, military posture, nuclear force readiness) or internalized (civilian populations have incorporated the threat into their psychological baseline and no longer actively resist it)?",
+      "resolution_mechanism": "Post-deterrence transition scenario: if deterrence doctrine were abandoned, would suppression persist in populations? Measurement of active resistance to nuclear force posture (protest, defection from military, political pressure) versus passive acceptance.",
+      "impact": "If suppression is primarily internalized, civilian populations carry the constraint with them even if the institutional structure weakened — they have become habituated to existential threat. If primarily structural, removing enforcement would reduce suppression. The distinction determines whether the constraint's hold depends on active maintenance or on institutional-cum-psychological embedding.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether total war reachability is a technological fact or a strategic choice to maintain the option."
-    },
-    {
-      "id": "kernel_contest_reading_ambiguity",
-      "question": "This constraint instantiates the 'dropping_reading' of the total_war_reachability_boundary kernel. The sibling readings — contraction_reading and contingent_reachability_reading — offer different framings of the same underlying strategic situation. What evidence would favor one reading over another?",
-      "resolution_mechanism": "Observation of the rate of change of reachability over time (coercion_grid shows declining resistance to deterrence at structural and organizational levels, suggesting contraction pressures). Monitoring of technological developments that could expand reachability (hypersonic weapons, advanced AI, space-based systems). Assessment of political commitment to maintained arsenals vs. disarmament trends.",
-      "impact": "The dropping_reading assumes reachability persists but probability declines — a tangled_rope where deterrence coordination holds but the underlying strategic option remains. If the contraction_reading is correct, reachability is actually eliminated and the constraint becomes a mountain (total war is infeasible by nature). If contingent_reachability is correct, the constraint is a piton (reachability atrophies through non-use, not commitment).",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Ambiguity among sibling readings of the total_war_reachability_boundary kernel; evidence needed to disambiguate which reading best captures the strategic reality."
-    },
-    {
-      "id": "civilian_victimhood_mechanism",
-      "question": "Is the perpetual vulnerability of civilian populations under deterrence a necessary feature of the deterrence mechanism (credibility requires hostage populations) or an incidental cost that could be decoupled through alternative security arrangements?",
-      "resolution_mechanism": "Exploration of defenses that decouple civilian vulnerability from deterrent credibility (e.g., counter-force-only postures, automated retaliation systems that spare civilians). Assessment of whether deterrence would hold if civilian populations were shielded from retaliation threat.",
-      "impact": "If victimhood is necessary, deterrence intrinsically victimizes the powerless and the constraint is a snare dressed as a rope. If victimhood is incidental, the constraint's classification as tangled_rope holds — extraction can be reduced without eliminating coordination.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether civilian vulnerability is a necessary component of credible deterrence or a contingent cost that could be reduced through alternative mechanisms."
+      "type_class": "empirical",
+      "description": "Whether suppression is structural (external enforcement) or internalized (psychological habituation to threat)."
     }
   ],
   "commentary": {
-    "narrative_context": "Total war — simultaneous, unlimited military and economic conflict aimed at destroying the adversary's capacity to wage war — was once a coherent strategic goal (WW1, WW2). Nuclear weapons changed the calculus: total war now carries the risk of mutual annihilation. This constraint models deterrence as a coordination mechanism that keeps total war off the feasible set not because it is physically impossible, but because the strategic payoff is negative for all participants who follow the commitment to retaliate. The probability of total war has dropped (alliance disciplines, arms control treaties, established escalation norms all make conventional war less likely to escalate to the nuclear threshold). Yet reachability persists — the option remains available, and deterrence coordination must hold to prevent it. This is the 'dropping_reading' of the kernel: reachability is declining but not foreclosed. The constraint is not a natural law (mountain) but a coordination game (tangled_rope) with asymmetric costs: nuclear states and security guarantors benefit from the equilibrium; civilian populations under threat bear the cost without choice or benefit.",
+    "narrative_context": "This constraint instantiates the 'dropping_reading' of the contested kernel 'total_war_reachability_boundary.' The dropping reading characterizes total war as physically and strategically reachable (the capability persists, accident pathways exist) but with dramatically lowered probability due to mutual vulnerability equilibrium. Deterrence is framed as a rope-type coordination: genuine problem solved (great-power conventional total war made improbable), genuine beneficiaries (states that maintain deterrence credibility, populations that avoid major interstate wars), but also genuine extraction (civilian hostage status, existential risk borne by populations who did not choose the system). The claim/metric divergence is intentional: the constraint is claimed as tangled_rope (coordination plus asymmetric extraction) while the authored metrics describe a moderately extractive, actively enforced system with growing theatrical component (increasing theater_ratio from 1945 to present) — the engine measures whether this characterization is empirically defensible.",
     "key_agents": [
-      "nuclear_armed_states: Set deterrence posture, control retaliation credibility, agenda-setting power over escalation boundaries — powerful, institutionalized, trapped by their own arsenals",
-      "alliance_security_guarantors: Extend deterrent coverage to allied non-nuclear states; collect political deference in exchange for retaliation guarantees — powerful, constrained exit",
-      "civilian_populations_under_threat: Hostages to the deterrence mechanism; their vulnerability makes the threat credible; powerless, trapped, deriving no benefit",
-      "non_nuclear_states_dependent_on_deterrence: Bear military deference and subordination; benefit passively from prevented war; constrained exit, moderate power",
-      "potential_revisionist_powers: Locked out of the coordination conversation by identity (military ambition incompatible with deterrence); excluded voice that would challenge reachability assumptions",
-      "strategic_analysts: Analytical seat observing the equilibrium's stability and failure modes; neither enforcing nor victimized"
+      "Deterrence Creditor States (nuclear-armed powers): set doctrine, maintain arsenals, benefit from coordination equilibrium that keeps sub-total-war competition within bounds.",
+      "Civilian Populations: bear existential hostage status, extract zero coordination benefit, carry non-exit constraint.",
+      "Military Establishments: professional identity locked to deterrence doctrine; gate their own exit.",
+      "Non-Nuclear States: excluded from core coordination; constrained military options; forced alignment with nuclear patron or acceptance of vulnerability.",
+      "Arms Control Regimes: structurally excluded from deterrence decisions; advocating alternatives that undermine deterrence credibility."
     ],
-    "logic_rationale": "Extractiveness (0.68) reflects the asymmetry at the heart of deterrence: nuclear states extract the geopolitical benefit of deterrence without bearing proportional risk; civilian populations bear all the existential risk without choice or compensation. The metric is not at the snare level (0.85+) because deterrence genuinely solves a coordination problem — without it, conflicts would escalate more readily. Suppression (0.71) is high because maintaining the deterrence equilibrium requires active enforcement: arms race management, alliance discipline, restrictions on information about vulnerability, prevention of alternative security arrangements, and the constant signaling of commitment to retaliation (if commitment wanes, the threat becomes non-credible and extraction collapses). Theater ratio (0.42) is moderate-low: much of the enforcement activity is genuinely functional (maintaining arsenals, running drills, sustaining alliance relationships), but a growing share is theatrical — nuclear powers stage commitment even as the underlying belief in mutual rationality and the salience of deterrence has diminished. The coercion grid shows suppression intensifying over the 80-year interval, particularly at the structural and organizational levels, while individual-level resistance remains stable (individuals do not mount organized resistance to deterrence; their powerlessness is structural). The time series show extractiveness stabilizing after 1980, suggesting the deterrence equilibrium reached a steady state once proliferation fears were managed and alliance structures solidified. Accessibility collapse is highest at the individual level (0.63 by 2024) — civilians understand they cannot exit the deterrent threat structure — while organizational level accessibility remains lower (0.64), reflecting that states have more maneuvering room.",
-    "perspectival_gap": "From the seat of a nuclear-armed state (institutional power, trapped by its own arsenal), deterrence appears as the unavoidable logic of security in a multipolar world — a rope of coordination. From the seat of a civilian population in a target nation (powerless, trapped by geography), deterrence appears as a perpetual sword of Damocles — a snare where the state has taken hostages of its own citizens to make its retaliation threat credible. From the seat of a non-nuclear state dependent on deterrence (moderate power, constrained), the arrangement appears as enforced deference — you gain security through alignment but lose autonomy. The engine computes these divergences from the structural data: different power atoms, exit options, and beneficiary/victim positions yield different classification per seat. The agenda-setter and beneficiary seats should compute toward rope or tangled_rope; the victim seats should compute toward snare. The claim of tangled_rope captures the hybrid: genuine coordination function (deterrence prevents escalation) AND asymmetric extraction (victimhood is concentrated on the powerless).",
-    "directionality_logic": "Nuclear armed states: d near 0.15 (full beneficiary) — they set the rules, control the threat, collect the security benefit. Alliance security guarantors: d near 0.25 — they benefit from deterrence but at higher cost (must maintain credible commitment, risk retaliation if deterrence fails). Civilian populations: d near 0.88 (near-target) — they bear all existential risk, have no exit, no negotiating power, no benefit. Non-nuclear dependent states: d near 0.65 (toward target) — they pay military deference and accept vulnerability but do receive security benefit, so not full target. Revisionist powers (excluded): d undefined by the structure (they are not in the game; the constraint's beneficiary/victim structure does not have a seat for them). The overarching directionality is asymmetric extraction (high d for victims, low d for beneficiaries) coupled with genuine coordination (the low d beneficiaries would not gain if the coordination collapsed). This is the signature of tangled_rope.",
-    "mandatrophy_analysis": "Deterrence as a mandatrophy candidate: The founding mandate was to prevent nuclear war by making it too costly to be rational. That mandate is live (nuclear war remains the primary existential risk the constraint addresses). However, the enforcement mechanism is undergoing a theater-ratio increase (suppression_requirement holds steady at 0.71 even as the belief in mutual rationality, the salience of mutual vulnerability, and the disciplining effect of alliance commitments all show signs of erosion). The constraint has not yet entered the mandatrophy zone (where theater_ratio > 0.5 and extraction would continue without the original function), but the coercion grid shows structural suppression intensifying relative to resistance, suggesting the coordination is being held together more by enforcement and less by mutual interest as the interval progresses. The disappearance_verdict is contested precisely because mandatrophy is a live question: if deterrence is becoming theater, would the world rearrange if it vanished? The founding_problem_status is contested because contemporary actors disagree on whether deterrence prevents war (proving the mandate still lives) or merely delays it (suggesting the mandate is already dead and the constraint is now extractive inertia). The rising theater_ratio and the intensifying structural suppression flag the constraint as a candidate for future mandatrophy if the trend continues.",
-    "kernel_context": "This constraint is the 'dropping_reading' of the contested kernel total_war_reachability_boundary. The kernel is a stabilized commitment: the premise that total war (unlimited, mutual destruction) is a reachable outcome under contemporary strategic conditions. Three readings of this kernel are alive: (1) contraction_reading: nuclear weapons contracted the strategic space; winnable total war is no longer feasible — reachability is an artifact of old thinking, not a real option. (2) contingent_reachability_reading: reachability is technology-dependent; current contraction reflects temporary maturity of deterrence systems; future weapons (hypersonic, space-based, AI-driven) could expand reachability again, making the constraint a piton. (3) dropping_reading (this one): total war dropped in probability but remains reachable as a strategic option; deterrence is a coordination mechanism (rope/tangled_rope) that holds reachability off the operational path without eliminating it. Each reading instantiates a different constraint with different ε values, beneficiary structures, and classification. The dropping_reading assumes reachability is real (not contracted away) and declining (probability dropping, probability of reachability dropping). The distinction matters: if contraction_reading is correct, total war is a mountain (infeasible), and the constraint is not about deterrence but about a shifted feasible set. If contingent_reachability is correct, the constraint is a piton (reachability atrophies through non-use, could reverse with technology). The dropping_reading claims deterrence is an active coordination mechanism holding a live but deprioritized risk off the operational path."
+    "logic_rationale": "Extractiveness (0.68, rising from 0.82 in 1945, plateauing from 2000 onward) reflects the trajectory of deterrence credibility. Early in the nuclear era, extraction was higher because deterrence was novel and brittle — populations bore maximum existential risk under minimal institutional reassurance. As arms control regimes, crisis management protocols, and strategic doctrine matured, the probability of accidental war dropped, and extraction moderated. The plateauing from 2000–2026 suggests the system has stabilized at a lower-extraction equilibrium, though reachability remains. Suppression (0.71, rising from 0.55 in 1945) reflects increasing enforcement overhead: maintaining deterrence credibility requires continuous surveillance, doctrine refinement, force modernization, and political messaging. Theater_ratio (0.42, rising from 0.25 in 1945, plateauing from 2000 onward) indicates growing performative component — strategic messaging, exercises, doctrinal posturing consuming increasing share of enforcement activity relative to core deterrence function. The measurements are authored on a single shared time grid: every metric is assessed at 1945, 1962, 1979, 2000, 2015, and 2026, enabling temporal analysis of coupled drift.",
+    "perspectival_gap": "The agenda-setter (deterrence creditor states) seat should compute as strongly beneficiary-biased (low directionality toward target end) because the constraint's benefits accrue directly to the state apparatus maintaining it. The payer seats (civilian populations, non-nuclear states) should compute as strongly target-biased (high directionality toward target end) because extraction flows away from them without meaningful exit. The excluded seat (arms control regimes) should compute as low-power payer despite institutional framing. These divergences are structural: the same constraint looks like valuable coordination from the deterrence-maintaining seat and like imposed hostage status from the civilian-population seat. The engine derives directionality from beneficiary/victim declarations and exit_options; the authored structural data (agenda_setter role for deterrence creditor states, payer role for civilian populations, trapped exit for both) should produce per-seat type divergence automatically.",
+    "directionality_logic": "Deterrence creditor states: agenda_setter + institutional + trapped exit + beneficiary role → directionality strongly toward 0.0 (full beneficiary). They set the rules, extract benefits (strategic stability, arms sales, geopolitical leverage), and cannot exit without cascading security consequences. Civilian populations: powerless + payer role + trapped exit → directionality strongly toward 1.0 (full target). They bear extraction (existential threat, involuntary hostage status) with zero exit options. Non-nuclear states: powerful/organized + payer role + constrained exit → directionality moderately toward 1.0 (partial target). They pay through subordination to nuclear patron or vulnerability to nuclear-armed rivals; exit options exist (nuclear development, alignment change) but are costly and opposed. Military establishments: organized + beneficiary role + identity_locked exit → directionality near 0.5 (symmetric, biased toward beneficiary). They benefit from deterrence credibility but their professional identity is fused to the system, so they also bear extraction (if deterrence failed, their doctrine would be discredited). The identity lock prevents clean exit.",
+    "mandatrophy_analysis": "The constraint avoids misclassification as a pure snare (extraction without genuine coordination) by virtue of the authentic coordination function: deterrence reduces the probability of great-power conventional total war, which is a genuine coordination problem solved. However, it avoids pure classification as rope (coordination with minimal coercive overhead) because substantial active enforcement (military posture, doctrine refinement, surveillance, strategic messaging) is required to maintain credibility, and extraction flows asymmetrically to populations who did not consent and cannot exit. The tangled_rope classification captures this: genuine coordination function (rope) plus asymmetric extraction (snare-like), held together by active enforcement. Mandatrophy would be declared if the founding problem (how to manage great-power rivalry when mutual destruction is possible) became obsolete — e.g., if technological change made total war truly unreachable even to irrational actors, or if states achieved genuine disarmament. The measurement trajectory suggests no mandatrophy has occurred: the founding problem remains live (as attested in six_questions.founding_problem_status), and the constraint persists at lower extraction than initially but with stabilized enforcement overhead.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'total_war_reachability_boundary,' instantiating the 'dropping_reading' that characterizes total war as physically reachable but probabilistically dropping due to deterrence equilibrium. Sibling readings: (1) 'contraction_reading' — nuclear weapons removed total war from the feasible set entirely (it is structurally unreachable, a mountain-type constraint); (2) 'contingent_reachability_reading' — reachability is technology-dependent, current contraction is a piton maintained by Cold War doctrine that could reverse with technological change. The dropping_reading occupies the middle ground: reachability persists (contra contraction_reading) but is managed by active coordination equilibrium (contra contingent_reachability_reading's framing as unstable piton). The structural delta: dropping_reading characterizes deterrence as tangled_rope (genuine coordination plus extraction); contraction_reading would characterize the constraint as mountain or perhaps rope (genuine coordination without persistent extraction risk); contingent_reachability_reading would characterize it as piton (atrophied reachability maintained theatrically). The readings diverge on whether reachability is permanent structural feature (this reading, contraction_reading) or contingent on current technology/doctrine (contingent_reading); and on whether coordination is genuine and stable (this reading) or illusory/brittle (contraction argues it's genuine but doesn't need to coordinate around reachability; contingent argues it's fragile)."
   },
-  "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
-  },
-  "network": {
-    "affects_constraints": [
-      "total_war_reachability_boundary__contraction_reading",
-      "total_war_reachability_boundary__contingent_reachability_reading",
-      "nuclear_proliferation_escalation_risk",
-      "alliance_credibility_asymmetry"
-    ],
-    "dual_formulation_note": "The total_war_reachability_boundary kernel is contested across three readings. The dropping_reading treats reachability as a persistent feature of strategic space that deterrence coordination (tangled_rope) manages. The contraction_reading treats reachability as foreclosed by nuclear geometry (mountain). The contingent_reachability_reading treats reachability as contingent on technology maturity (piton with revival risk). These are not competing measurements of the same constraint — they are three structurally distinct constraints, each with different ε values. Shared beneficiaries (nuclear states, security guarantors) appear in all three, but the structural relationships differ: in dropping_reading, they maintain deterrence; in contraction_reading, they inherit a foreclosed world; in contingent_reachability, they manage a degrading constraint. The three constraints are linked via affects_constraints to preserve the kernel contest in the corpus."
-  },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerless",
-      "d_value": 0.88
-    },
-    {
-      "power_atom": "institutional",
-      "d_value": 0.12
-    }
-  ],
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "total_war_reachability_boundary__contraction_reading",
+        "sibling_id": "contraction_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "total_war_reachability_boundary__contingent_reachability_reading",
+        "sibling_id": "contingent_reachability_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "reachability_persistence_through_coordination",
+        "atom": "reachability_persistent_but_improbable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "deterrence_stability_as_rational_equilibrium",
+        "atom": "deterrence_equilibrium_genuine_coordination",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "mutual_assured_destruction_rational_commitment",
+    "reference_frame": "mutual_vulnerability_equilibrium_stable",
     "drift_state": {
-      "moment": "post_cold_war_deterrence_erosion",
-      "direction": "authority_erosion",
+      "moment": "contemporary_2026",
+      "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "total_war_reachability_boundary__contraction_reading",
+      "total_war_reachability_boundary__contingent_reachability_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel 'total_war_reachability_boundary.' The dropping_reading characterizes total war as persistent but probabilistically dropping due to deterrence equilibrium (tangled_rope type). Sibling readings characterize it as either structurally unreachable (contraction_reading, mountain-like) or as an atrophied but reversible capability (contingent_reachability_reading, piton). Each reading instantiates a different constraint with different ε, beneficiary/victim structures, and classifications. They are linked via this network field to enable contention analysis across the kernel's reading space."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "gain_flow": "deterrence_creditor_states",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

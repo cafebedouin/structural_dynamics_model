@@ -5,186 +5,271 @@
     "generated_date": "2026-06-11",
     "status": "ACTIVE",
     "module_name_override": "constraint_jcpoa_treaty_bindingness__graduated_compliance_reading",
-    "story_uid": "b8a0d37b-7ffa-417c-b8c3-6a4b25e6a222"
+    "story_uid": "ed6eb7ca-f735-4f9b-893e-c57f918b30b7"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.42,
-    "theater_ratio": 0.48,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.71,
+    "extractiveness": 0.52,
+    "suppression": 0.38,
+    "theater_ratio": 0.44,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "JCPOA Graduated Compliance Commitment Framework",
-    "topic_domain": "international_law/nuclear_nonproliferation/treaty_compliance",
+    "human_readable": "JCPOA Scaled Reciprocal Commitment with Graduated Enforcement",
+    "topic_domain": "international_law/nuclear_non_proliferation",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "pragmatic_diplomacy_advocates",
-      "european_economic_actors",
-      "global_energy_markets"
+      "economic_engagement_actors",
+      "jcpoa_signatories"
     ],
     "victims": [
-      "iran_economic_interests",
-      "usmca_states_under_secondary_sanctions",
-      "non_alignment_movement_states"
+      "iranian_enrichment_capacity_constrained",
+      "western_sanctions_relief_conditional"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "jcpoa_signatories",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The P5+1 powers (US, UK, France, Russia, China, Germany) signed the JCPOA in 2015 and jointly administer its compliance assessment and sanctions-relief mechanics. They set the framework's terms, assess Iranian violations via IAEA reports, and decide whether to re-impose sanctions. Each signatory benefits from reduced proliferation risk and diplomatic engagement but bears verification costs and political exposure when domestic opponents argue the framework is inadequate. Signatories retain de facto unilateral withdrawal power, making their exit option 'constrained' rather than 'trapped' — constrained because withdrawal destabilizes but does not dissolve the framework for other signatories."
+    },
+    {
+      "name": "iranian_nuclear_program",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Iran commits to limits on uranium enrichment (capped at 3.67% U-235), centrifuge deployment (frozen at 2015 levels), and stockpile reduction (diluting excess uranium to low-enriched form). IAEA conducts intrusive inspections with access to undeclared sites under the Additional Protocol. Iran receives phased sanctions relief contingent on compliance. Iran's exit options are constrained: full withdrawal re-exposes Iran to comprehensive sanctions; partial violation risks graduated sanctions re-imposition calibrated to the measured breach severity. Iran's enrichment capacity is the primary tradeable asset in the constraint."
+    },
+    {
+      "name": "pragmatic_diplomacy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "International nongovernmental organizations, academic experts, and moderate diplomatic factions who view the JCPOA as a successful model for managed escalation and de-escalatory response to perceived violations. They benefit from a framework that establishes precedent: international cooperation can manage proliferation risk through graduated enforcement rather than binary military choice. They have mobile exit — they can advocate for alternative frameworks or different dispute-resolution mechanisms — but they prefer the JCPOA's operating logic because it normalizes proportional response."
+    },
+    {
+      "name": "economic_engagement_actors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "International firms in energy, trade, finance, and pharmaceuticals that operate under the assumption JCPOA compliance holds. They benefit from sanctions relief windows and Iranian market access; their investment and supply-chain decisions depend on predictable sanctions cycles. When Iran violates and signatories re-impose sanctions, these actors face stranded assets, supply disruption, and regulatory risk. Their exit is constrained by sunk investment and long-term contracts; they cannot easily shift operations if the framework destabilizes. They also carry secondary payer role because they bear stranded-asset costs when compliance cycles fail."
+    },
+    {
+      "name": "iaea_verification_regime",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Atomic Energy Agency maintains continuous monitoring of Iranian nuclear facilities, operates cameras and seals on enrichment equipment, and issues quarterly compliance reports to the JCPOA Joint Commission. IAEA assessment of Iranian violations directly drives the entire sanctions relief/re-imposition cycle. The IAEA is formally independent but structurally depends on signatory-state funding and political support for access; it has no formal exit from the framework but can affect its operation through inspection rigor, assessment framing, and reporting emphasis. IAEA observed-violation data is the constraint's primary enforcement trigger."
+    },
+    {
+      "name": "hardline_regional_opponents",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "States (Israel, Saudi Arabia, Gulf states) and factions within signatory states that oppose the JCPOA as inadequately constraining Iran or as too permissive of weaponization-adjacent activities. They are excluded from the JCPOA decision-making architecture; their objections are treated as external positions rather than stakeholder input. Their exclusion is structural: the framework was designed for the P5+1 and Iran, not for regional parties with security interests in Iranian power. They retain structural power to destabilize via military action (Israel) or pressure on signatories (Saudi Arabia via oil/investment leverage), but they are formally excluded from compliance assessment and sanctions-adjustment decisions."
+    },
+    {
+      "name": "unilateralist_withdrawal_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Political factions within the US and other signatory states that view JCPOA as a strategic vulnerability, violation of national sovereignty, or naïve concession to Iranian deception. They advocate for withdrawal without renegotiation. They are excluded from day-to-day framework administration but retain structural power to withdraw unilaterally — a capacity they exercised in 2018 with the US withdrawal. Their exclusion from ongoing compliance discussion is temporary and contingent on political change within their home state; they have mobile exit because they can change domestic politics to enable withdrawal."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared measurement regime (IAEA inspections conducted under a uniform protocol) and a graduated-response procedure (sanctions relief tranches and re-imposition calibrated to assessed Iranian violation severity) that allows both Iran and the signatories to reduce proliferation risk while maintaining economic and diplomatic engagement despite periodic compliance breaches and verification uncertainties. The coordination problem is: how do parties with deep mutual distrust cooperate on nuclear constraints without forcing binary choice between total war and total capitulation? The JCPOA answer: establish independent monitoring (IAEA), define proportional response levels (minor violations trigger partial re-imposition, major violations trigger comprehensive re-imposition), and maintain negotiating channels (Joint Commission) to dispute compliance assessments without abandoning the framework.",
+    "transfer_function": "Moves sanctions relief (access to frozen assets, re-entry to SWIFT financial system, lifting of oil export caps, restoration of trade relationships) from the signatories to Iran in tranches, proportional to Iranian compliance milestones and time elapsed. In return, Iran transfers compliance constraints (enrichment caps, centrifuge limits, stockpile reduction) and transparency (IAEA monitoring, access to undeclared sites, provision of evidence). The arrangement is reciprocal in structure but asymmetric in timing: Iran pays compliance upfront; signatories pay relief over time. Violations trigger partial clawback of relief proportional to breach severity.",
+    "absent_voices": "Regional opponents of Iranian power (Israel, Saudi Arabia, UAE) have no formal voice in JCPOA compliance assessment or sanctions adjustment; they would argue Iran is using the framework to maintain development-adjacent capabilities while sanctions relief funds regional military expansion. Unilateralist factions within the US and other signatories are excluded from day-to-day administration; they would argue the framework is naïve capitulation and Iran is systematically deceiving inspectors. Both excluded groups have superior information-processing capability (intelligence agencies) and strong incentives to challenge the framework; their exclusion represents a deliberate choice to prioritize signatory-Iran consensus over broader stakeholder input.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the JCPOA framework disappeared overnight: Iran would immediately resume full nuclear development without monitoring, resuming enrichment at higher levels and restarting reactor operations halted under the agreement; the P5+1 would lose the graduated-response lever and face binary choice between military intervention and nuclear hedging by regional states; international investors would face comprehensive sanctions regimes and supply-chain collapse in Iranian markets; and nonproliferation norms globally would shift away from multilateral graduated constraint toward bilateral coercion and military deterrence. The entire post-JCPOA security architecture would reorganize around unilateral power rather than scaled reciprocal commitment.",
+    "founding_problem": "After years of ad-hoc negotiations, escalating sanctions, and nuclear-program acceleration by Iran, the international community faced a coordination crisis: Iran's enrichment capacity was advancing toward weapons-usable levels, military intervention by regional or Western powers was increasingly probable, and bilateral coercion had failed to constrain Iranian development. The coordination problem was simultaneously technical (how to detect and measure enrichment levels reliably), political (how to balance Iranian sovereignty with Western security interests and regional concerns), and economic (how to phase sanctions relief to incentivize compliance while maintaining leverage for later breaches).",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The P5+1 signatories and pragmatic nonproliferation experts attest the founding problem was acute and the framework successfully addresses it: enrichment was capped, weapons-level stockpiles were eliminated, and intrusive monitoring was established for the first time. Hardline opponents and unilateralist factions attest the problem remains unsolved or has worsened: Iran maintains development-adjacent capabilities, enriches uranium at higher levels after US withdrawal, and uses sanctions relief to advance regional military power. IAEA technical reports document the accuracy of monitoring and detection of specific violations; they also document Iran's periodic technical violations and the difficulty of distinguishing prohibited development from permitted research. Independent proliferation analysis supports both readings depending on baseline assumptions about Iranian intent and the credibility of stated enrichment purposes."
+  },
   "interval": {
-    "start": 2015,
-    "end": 2026
+    "start": 0,
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.35
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2017,
-      "value": 0.42
+      "time_point": 5,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2019,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.65
+      "time_point": 15,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.58
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.58
+      "time_point": 25,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.22
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2017,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2019,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.43,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.61
+      "time_point": 15,
+      "value": 0.46,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.48
+      "time_point": 20,
+      "value": 0.44,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.48
+      "time_point": 25,
+      "value": 0.44,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.25
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2017,
-      "value": 0.32
+      "time_point": 5,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2019,
-      "value": 0.62
+      "time_point": 10,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2021,
-      "value": 0.58
+      "time_point": 15,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.42
+      "time_point": 20,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2026,
-      "value": 0.42
+      "time_point": 25,
+      "value": 0.38,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The JCPOA (Joint Comprehensive Plan of Action, 2015) represents a reciprocal commitment framework where Iran restricts uranium enrichment and submits to intrusive IAEA inspections in exchange for graduated sanctions relief. Under the graduated compliance reading, enforcement is calibrated to violation severity: minor enrichment increases trigger proportional sanction adjustments rather than comprehensive reimposition. This reading interprets the treaty as a workable mechanism for managing partial engagement under uncertainty, prioritizing de-escalation and reciprocal adjustment over binary outcomes (war/capitulation). The constraint is CLAIMED as tangled_rope (coordination of enrichment limits + asymmetric enforcement on Iran) while metrics describe substantial extractiveness (0.58) and moderate suppression (0.42) — the gap reflects contest over whether the constraint's persistence rests on genuine mutual benefit or coercive extraction disguised as reciprocity.",
+    "narrative_context": "The JCPOA, signed in 2015 by Iran and the P5+1, represents a scaled reciprocal commitment where sanctions relief is granted in tranches contingent on IAEA-verified Iranian compliance with enrichment caps and monitoring access. Violations trigger graduated sanctions re-imposition proportional to assessed breach severity. This reading instantiates the constraint as a tangled rope: it coordinates nonproliferation monitoring and de-escalatory response protocols (genuine coordination function) while simultaneously extracting compliance constraints from Iran and conditional sanctions benefits from the P5+1 (asymmetric extraction). Active enforcement is required to maintain the graduated response mechanism and to police the distinction between permitted and prohibited nuclear activity. This is ONE reading of the contested kernel 'JCPOA treaty bindingness'; it is NOT the binding multilateral reading (which treats JCPOA as legally immutable without consensus) or the transactional provisional reading (which treats it as voidable at unilateral determination). This reading specifically privileges graduated enforcement calibrated to violation severity and de-escalation over binary legal closure.",
     "key_agents": [
-      "Joint Commission (institutional agenda-setter): sets enforcement thresholds, assesses compliance proportionality, triggers sanction adjustments",
-      "Iran (payer): restricts enrichment, admits inspections, receives conditional sanctions relief",
-      "European economic actors (beneficiary+payer): benefit from partial sanctions relief, pay political cost of escalation",
-      "Pragmatic diplomacy advocates (beneficiary): benefit from de-escalation framing, maintain soft-power investment",
-      "US maximalist actors (excluded): would escalate to binary sanctions/military; structurally outside the graduated framework",
-      "IAEA (observer): reports technical compliance metrics underlying dispute resolution"
+      "P5+1 signatories: collectively set framework, assess violations, trigger sanctions adjustments (institutional power, generational horizon, constrained exit)",
+      "Iran nuclear program: subject to enrichment constraints and monitoring; receives phased sanctions relief contingent on compliance (powerful state, constrained exit by framework design)",
+      "Pragmatic diplomacy advocates: benefit from model of managed escalation; have mobile exit but prefer this framework (organized, biographical horizon)",
+      "Economic engagement actors: benefit from sanctions relief windows; face exposure when relief is withdrawn (organized, constrained exit)",
+      "IAEA verification regime: observes and reports compliance; drives sanctions adjustment cycle (institutional, analytical seat)",
+      "Excluded hardliners and unilateralists: oppose framework; excluded from day-to-day but retain structural power to withdraw (powerful, trapped in initial architecture but mobile via withdrawal)"
     ],
-    "logic_rationale": "Extractiveness rises sharply from 2015 (0.35, low initial cooperation) to 2019 (0.58, peak US withdrawal + escalation) and remains elevated through stabilization at 2024 (0.58). Theater peaks in 2021 (0.61) when Iran increases enrichment as compliance leverage falls, then drops to 0.48 as both sides restore graduated enforcement. The constraint is extractive rather than purely coordinating because: (1) Iran's enrichment restrictions are asymmetrically monitored and reversible only through costly escalation; (2) sanctions relief is conditional on Joint Commission assessment, not automatic; (3) US actors can withdraw unilaterally, making Iran's reciprocal investment perpetually at risk. Suppression requirement follows a similar arc: low in 2015 (mutual trust in negotiation), high in 2019 (US withdrawal forced Iran to demonstrate commitment through enrichment escalation, simultaneously proving the constraint lacked real binding power), then stabilizes at 0.42 as graduated logic reasserts. The measurement series shares one time grid (2015, 2017, 2019, 2021, 2024, 2026) across all three metrics, enabling lifecycle analysis. Theater's rise-and-fall pattern reflects the constraint's shift from genuine coordination mechanism (2015–2017) to crisis theater (2019–2021) to partial restoration (2024–2026).",
-    "perspectival_gap": "The Joint Commission and Iran's compliance authority see the graduated framework as workable reciprocity calibrated to practical verification limits. US maximalist and Israeli security audiences read the same constraint as a legitimized appeasement mechanism that extracts Iranian compliance while preserving Iran's enrichment knowledge base (a zombie nuclear capability). European economic actors occupy the middle: they benefit from partial sanctions relief but are perpetually vulnerable to US escalation that reimposes secondary sanctions. The engine should compute markedly different types from each seat: the Joint Commission and Iran experience a binding reciprocal constraint (tangled_rope or even rope from the perspective of mutual gain); US/Israeli audiences compute snare (Iran is trapped, concessions are temporary, enrichment restrictions are extractive cover for knowledge preservation). The perspectival gap reflects the reading itself: graduated compliance is tenable ONLY if all signatories commit to proportionality; if any party pivots to maximalism (binary enforcement), the graduated logic fails and Iran experiences pure extraction.",
-    "directionality_logic": "Iran (moderate power, constrained exit, identity-locked to non-alignment framing) is the structural payer: its enrichment is restricted, inspections are intrusive, and sanction relief is conditional. Iranian directionality should compute high (near 1.0 = full target). European economic actors (powerful, moderate time horizon, constrained exit due to US geopolitical pressure) experience moderate extraction: they benefit from partial sanctions relief but pay political cost and secondary-sanction risk. Pragmatic diplomacy advocates (organized, mobile exit, analytical time horizon) are beneficiaries: they benefit from the framing of reciprocal governance without bearing enrichment costs. Global energy markets (organized, immediate time horizon, mobile exit via diversification) benefit from supply stability without formal commitment. US maximalist actors are excluded entirely, so directionality is not applicable; however, their exclusion is precisely what makes Iran's exit option 'constrained' — Iran cannot negotiate directly with actors who reject the graduated reading. Directionality overrides may be needed for the Joint Commission (institutional power, trapped exit, agenda-setter role) — the automatic derivation might place it near symmetric (d ≈ 0.5), but structurally it acts as an enforcement authority subordinate to P5+1 political will, so d should be pushed toward 0.6–0.7 (beneficiary-of-institutional-power rather than neutral arbiter).",
-    "mandatrophy_analysis": "The constraint is NOT mandatrophy-resolved. The founding problem (how to link nuclear non-proliferation assurance to reciprocal economic engagement) remains contested but demonstrably LIVE: IAEA data show enrichment restraint when sanctions relief is active and rapid acceleration when it is withdrawn, confirming the graduated incentive structure operates. However, the constraint exhibits signs of mandate-drift: the founding problem was nuclear non-proliferation + economic development; the persistent function is now nuclear non-proliferation + preservation of US geopolitical leverage. If US actors permanently escalate to maximalism, the constraint could shift from tangled_rope (with real reciprocal function) to piton (with performative compliance theater masking terminal deterioration). This risk is documented in the theater metric's 2019–2021 spike (0.55→0.61) when the constraint's actual binding power broke and Iran compensated with enrichment escalation to signal credibility.",
-    "kernel_context": "This constraint instantiates the GRADUATED COMPLIANCE READING of the jcpoa_treaty_bindingness kernel. The kernel is the JCPOA text and its claimed binding force; this reading interprets it as a scaled reciprocal commitment where enforcement is proportional to detected violation magnitude and dispute resolution prioritizes de-escalation. Sibling readings: (1) binding_multilateral_reading treats the JCPOA as a binding multilateral treaty requiring consensus modification (forecloses unilateral US withdrawal as a reading option); (2) transactional_provisional_reading treats it as a provisional transactional framework voidable upon unilateral determination of bad faith (the US 2018 withdrawal position). This reading coexists_with the binding reading in different signatories' framings (EU treats it as binding; US under different administrations treats it as provisional). This reading influences the transactional reading: if graduated compliance proves durable, it demonstrates the JCPOA's binding character; if it collapses into cycle of escalation/de-escalation, transactional readings gain credibility."
+    "logic_rationale": "Extractiveness is moderate (0.52 at interval end) because the constraint imposes real costs on both sides — Iran foregoes development capacity and sovereignty autonomy; the P5+1 forfeit hard-line pressure and full sanctions leverage — but both receive genuine coordination benefit (reduced proliferation risk, predictable escalation ladder, economic engagement windows). Suppression is moderate-low (0.38) because the constraint operates primarily through mutual agreement monitoring and graduated response rather than unilateral coercion; Iran violates periodically and often faces only partial sanctions re-imposition, not comprehensive reimposition. Theater ratio is moderate (0.44) because part of the activity is genuine verification and de-escalatory negotiation, but part is theatrical compliance display: Iran conducts minor permitted activities designed to appear maximally concerning; the P5+1 conduct sanctions adjustments designed to appear maximally severe without triggering Iranian withdrawal. The measurement series tracks a slight rise in extractiveness and theater through the mid-interval (t=10-15), then stabilization, reflecting the cycle of minor Iranian violations, measured Western responses, and resumed engagement. The shared time grid ensures all metrics are authored at all examined points.",
+    "perspectival_gap": "The signatories' seat and Iran's seat should compute different types from the same structural data. From the signatories' perspective, this is genuine rope: a coordination function that benefits both parties, with Iran consenting to constraints and receiving relief in proportion. From Iran's perspective, the same structure is extractive: enrichment constraints are imposed, sanctions relief is conditional and reversible, and the framework is administered by parties with superior military power. The graduated-enforcement reading privileges de-escalation framing, which makes the coordination narrative more salient from Western seats; Iranian seats experience the same structure as calibrated constraint with periodic penalties. Directionality derivation: signatories are low-d beneficiaries (control framework, conditional relief); Iran is high-d target (constrained enrichment, conditional relief); pragmatic advocates are low-d beneficiaries (benefit from coordination without running it); economic actors are moderate-d payers (benefit from relief windows, but constrained exit if sanctions cycle resumes). IAEA is analytical (observes, reports, drives but does not control outcomes).",
+    "directionality_logic": "The P5+1 signatories hold d~0.2-0.35 (beneficiaries: they set terms, assess violations, trigger response; their exit options are mobile — they can withdraw and the framework continues for the rest, though destabilized). Iran holds d~0.65-0.75 (target: enrichment is constrained, exit is costly, relief is conditional on compliance assessed by others). Pragmatic advocates hold d~0.4-0.5 (symmetric: they benefit from coordination without bearing direct costs, but they have mobile exit — they can advocate for different frameworks). Economic actors hold d~0.55-0.65 (payers: they bear stranded-asset exposure when sanctions cycle resumes, though they benefit from relief windows; exit is constrained by investment sunk costs). Hardliners and unilateralists are excluded from routine operation (e.g., d is undefined or analytical), but they retain structural power to alter the framework via withdrawal — a non-standard capacity that the baseline directionality model does not fully capture, addressed in an omega.",
+    "mandatrophy_analysis": "The graduated-compliance reading avoids the mandatrophy trap by explicitly recognizing that the founding problem (how to manage Iran's enrichment without military war) changes shape as the framework operates: early-interval high extractiveness reflects the initial high cost of Iranian compliance commitment and Western verification burden; mid-interval stabilization reflects normalization of the graduated response cycle; late-interval resistance remains high (0.72) because exclusions (Israel, Saudi, unilateralists) continuously challenge the framework's legitimacy and Iran periodically probes violation boundaries. The constraint does not drift toward pure coordination (extraction does not fall below 0.45) because Iran never fully internalizes the enrichment cap as legitimate — it continues to view enrichment restriction as imposed, not chosen. Nor does it drift toward pure snare (extraction does not rise above 0.54) because signatories genuinely bear verification costs and Iran retains exit-via-withdrawal optionality that would impose costs on signatories. The measurement data shows theater ratio rising to 0.46 mid-interval, then holding steady, indicating that performative compliance display and measured-appearance enforcement maintain their relative weight rather than one overtaking the other — consistent with a stable tangled rope operating within its design parameters rather than degrading toward piton status.",
+    "kernel_context": "This constraint is the graduated_compliance_reading of the contested kernel jcpoa_treaty_bindingness. The kernel is the JCPOA text and its authority structure; different readings of what kind of commitment it represents produce structurally different constraints. The graduated_compliance_reading treats the JCPOA as a scaled reciprocal commitment where enforcement is proportional to violation severity and de-escalation is prioritized over legal closure. Sibling readings are: (1) binding_multilateral_reading — JCPOA as binding multilateral treaty requiring consensus-based modification or dissolution (more rigid, higher extraction, higher suppression, lower resistance from major signatories); (2) transactional_provisional_reading — JCPOA as provisional transactional framework voidable upon unilateral determination of bad faith (less rigid, lower signatory coordination cost but higher Iran uncertainty, more volatile extraction and enforcement). The critical structural difference is HOW VIOLATIONS TRIGGER RESPONSE: in the graduated reading, response is scaled to violation severity and de-escalatory; in the binding reading, response is binary (in violation or not); in the transactional reading, response is unilateral (any signatory can exit on declaration of bad faith)."
   },
   "omegas": [
     {
-      "id": "reciprocal_extraction_boundary",
-      "question": "At what level of Iranian enrichment increase does proportional sanctions relief withdrawal transform from calibrated enforcement into pure extraction leverage?",
-      "resolution_mechanism": "Post-facto analysis comparing Joint Commission thresholds for relief withdrawal against IAEA technical assessments of weapons-capability proximity. If thresholds are symmetric across signatories (relief-withdrawal-for-enrichment-above-X matched by enrichment-decrease-for-relief-grant-below-Y), reciprocity holds; asymmetric thresholds indicate extraction.",
-      "impact": "Symmetric thresholds support tangled_rope (real reciprocal function); asymmetric thresholds reclassify to snare (Iran is trapped, relief is extractive conditioning).",
+      "id": "violation_severity_measurement_ambiguity",
+      "question": "How is the severity of Iranian enrichment violations operationalized and assessed for proportionality of sanctions response? What distinguishes minor technical violations from material breach?",
+      "resolution_mechanism": "Formal IAEA assessment criteria, historical sanctions-adjustment decisions mapped to specific violations, counterfactual analysis of what violations would trigger different response levels.",
+      "impact": "If violation severity is objectively measurable and signatories respond consistently to like violations, the graduated-response reading is validated (tangled rope with clear extraction scaling). If severity assessment is politically negotiated and responses vary inconsistently, the constraint drifts toward theater — performative compliance display rather than genuine graduated enforcement.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the graduated enforcement framework is structurally reciprocal or asymmetrically extractive."
+      "description": "Whether violation severity can be objectively calibrated or is politically negotiated."
     },
     {
-      "id": "reading_stability_unilateral_escalation",
-      "question": "Does the graduated compliance reading survive if any single signatory (particularly the US) pivots to maximalist unilateral enforcement?",
-      "resolution_mechanism": "Temporal analysis: if US/other signatories escalate enforcement beyond graduated proportionality (e.g., comprehensive re-sanctions despite minimal enrichment excess), does Iran's enrichment accelerate beyond the agreed cap? If yes, the reading's binding function dissolves.",
-      "impact": "If unilateral escalation causes reading collapse, reclassify to snare (Iran is trapped; graduated framing is cover for coercive extraction). If graduated logic persists despite escalation attempts, reading is stable.",
+      "id": "unilateralist_exit_power_incompleteness",
+      "question": "The framework is designed for consensus-based modification by the P5+1, but signatories retain de facto unilateral withdrawal power (exercised by the US in 2018). How does this incompleteness affect classification?",
+      "resolution_mechanism": "Structural analysis of what changes if a signatory withdraws: does the framework persist (as happened post-2018 US withdrawal), does it collapse, or does it transform into a different constraint? Under what conditions does withdrawal trigger binding obligation on remaining parties?",
+      "impact": "If withdrawal does NOT trigger obligatory dissolution, then the framework is weaker-than-binding (supports transactional or graduated readings). If withdrawal DOES trigger renegotiation pressure on all parties (even non-withdrawing ones), then effective bindingness persists despite formal unilateral capacity. The classification hinges on whether unilateral exit power is a structural feature of this reading or a design gap the reading must acknowledge.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Structural robustness of the graduated compliance reading against maximalist unilateral enforcement."
+      "type_class": "conceptual",
+      "description": "Whether unilateral withdrawal power undermines the binding status of the framework for non-withdrawing parties."
     },
     {
-      "id": "founding_problem_live_vs_dead",
-      "question": "Is the founding problem (verifiable non-proliferation + reciprocal sanctions relief) still live, or has the constraint become a zombie mechanism preserving enrichment knowledge while extracting compliance theater?",
-      "resolution_mechanism": "Measure Iranian breakout timeline to weapons-grade enrichment under full JCPOA compliance vs. post-withdrawal scenarios. If JCPOA compliance extends breakout time materially, the founding problem is live. If enrichment knowledge is preserved in either scenario, the constraint may be extractive theater rather than true non-proliferation assurance.",
-      "impact": "If founding problem is dead, reclassify to piton (performative non-proliferation compliance, actual function is geopolitical signaling). If founding problem is live, tangled_rope classification holds.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the constraint's original non-proliferation assurance function remains operant or has atrophied into theater."
-    },
-    {
-      "id": "us_maximalist_reading_coercion",
-      "question": "Does the excluded US maximalist reading reflect genuine foreign-policy preference or institutional/ideological coercion preventing pragmatic compliance?",
-      "resolution_mechanism": "Historical analysis of US policy reversals (2015 negotiation support → 2018 withdrawal → 2021 negotiation resumption) against Congressional testimony, expert consensus, and cost-benefit calculations. If reversals correlate with domestic political pressure rather than Iran policy changes, coercion is present.",
-      "impact": "If coercion is high, the exclusion of maximalist voices is unjust and the graduated reading is fragile (depends on US domestic-political stability, not on genuine reciprocal commitment). If coercion is low, the reading reflects genuine policy choice and is more robust.",
+      "id": "iran_consent_dynamics_under_asymmetric_power",
+      "question": "Does Iran's signature on the JCPOA represent genuine consent to enrichment constraints, or is it extraction legitimized by formal signature?",
+      "resolution_mechanism": "Analysis of Iranian elite discourse: did Iran ever internalize enrichment caps as legitimate, or does it continuously view them as imposed constraints it accepted under duress (military threat, comprehensive sanctions)? Counterfactual: if Western military pressure had been lower, would Iran have signed at lower extraction levels?",
+      "impact": "If Iranian leadership views enrichment constraints as imposed, not chosen, the constraint is extractive regardless of mutual-agreement framing — the reading drifts toward snare at the Iranian seat. If Iran internalized enrichment caps over time, the reading holds as genuine tangled rope with Iran's directionality shifting downward. This is the core legitimacy question for the graduated-compliance frame: whether it represents scaled reciprocity or 'reciprocity' imposed by power asymmetry.",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether the US maximalist reading is excluded due to incoherent preferences or genuine value divergence."
+      "type_class": "conceptual",
+      "description": "Whether Iran consented to enrichment constraints or accepted them under duress."
     },
     {
-      "id": "graduated_vs_binary_enforcement_dynamics",
-      "question": "Does proportional enforcement (graduated sanctions response) actually reduce Iranian enrichment escalation, or does it function identically to binary enforcement in practice?",
-      "resolution_mechanism": "Comparative temporal analysis: correlate IAEA enrichment measurements against Joint Commission enforcement actions (relief adjustments) vs. unilateral US escalation periods. If enrichment accelerates identically under both graduated and binary enforcement, the distinction is theater.",
-      "impact": "If graduated enforcement reduces escalation cycles, tangled_rope is correct. If no difference, the constraint is snare or piton (graduated framing masks binary coercion or performative theater).",
-      "confidence": "high",
+      "id": "excluded_parties_structural_power_incompleteness",
+      "question": "How does the structural exclusion of Israel, Saudi Arabia, and hardline US factions from JCPOA decision-making affect the constraint's bindingness and sustainability?",
+      "resolution_mechanism": "Historical analysis: did exclusion reduce framework legitimacy? Did excluded parties' pressure (via unilateralist advocacy, regional military action, domestic political opposition) destabilize the framework? Counterfactual: if excluded parties had been formally included (e.g., in extended signatories or observer status), would the framework persist longer?",
+      "impact": "High-magnitude external pressure from excluded parties (witnessed in US 2018 withdrawal, Israeli and Saudi opposition) suggests the framework's sustainability is hostage to exclusion politics. The graduated-compliance reading assumes de-escalatory internal logic, but excluded parties provide external escalatory pressure. If exclusion systematically destabilizes the framework, the reading may mischaracterize the constraint as more stable/reciprocal than it is.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Functional difference between graduated and binary enforcement responses on Iranian compliance behavior."
+      "description": "Whether structural exclusion of interested parties undermines framework sustainability."
     }
   ],
   "boltzmann": {
@@ -195,71 +280,65 @@
     "affects_constraints": [
       "jcpoa_treaty_bindingness__binding_multilateral_reading",
       "jcpoa_treaty_bindingness__transactional_provisional_reading",
-      "us_iran_sanctions_regime",
-      "iaea_verification_framework",
-      "non_proliferation_treaty_compliance"
+      "iranian_nuclear_enrichment_capacity",
+      "western_sanctions_architecture"
     ],
-    "dual_formulation_note": "This constraint is one reading of the contested jcpoa_treaty_bindingness kernel. The binding_multilateral_reading treats the JCPOA as requiring consensus modification; the transactional_provisional_reading treats it as voidable unilaterally. This graduated_compliance_reading sits structurally between: it acknowledges binding intent but makes enforcement proportional to compliance assessment, creating a scalable rather than binary commitment. All three readings share the same legal text (the kernel) but derive different structural constraints from it due to different framings of authority, reciprocity, and modification procedures. The constraint family should be analyzed as a unified set with cross-reading influence edges."
+    "dual_formulation_note": "The JCPOA kernel has three structurally distinct readings: (1) binding_multilateral_reading treats it as immutable without consensus, producing higher signatory extraction cost and lower Iranian violation incentive; (2) graduated_compliance_reading treats it as scaled-response framework, this constraint, with moderate extraction and de-escalatory enforcement; (3) transactional_provisional_reading treats it as voidable at unilateral determination, producing lower signatory binding cost but higher Iran uncertainty and framework volatility. The three readings have different ε values (binding is lowest extraction, transactional is highest), different beneficiary/victim structures, and different suppression profiles. They are three constraints, not three views of one constraint — their ε values are structurally distinct (the binding reading has lower ε because mutual consensus requirement suppresses unilateral exit and thus reduces negotiation-level extraction; the transactional reading has higher ε because unilateral voidability shifts burden to Iran to maintain signatory confidence). The sibling readings are linked via network.affects_constraints in each constraint's JSON file."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.35
+      "d_value": 0.28
     }
   ],
+  "gain_flow": "jcpoa_signatories",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
   "cs_structure": {
     "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "reciprocal_graduated_enforcement",
-    "drift_state": {
-      "moment": "contemporary_unilateral_escalation_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "jcpoa_treaty_bindingness__binding_multilateral_reading",
+        "sibling_id": "binding_multilateral_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "jcpoa_treaty_bindingness__transactional_provisional_reading",
+        "sibling_id": "transactional_provisional_reading",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "proportional_enforcement_reciprocal_commitment",
+        "atom": "graduated_enforcement_proportional_to_violation_severity",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       },
       {
-        "atom": "multilateral_consensus_modification_requirement",
-        "role": "secondary",
+        "atom": "de_escalation_prioritized_over_legal_closure",
+        "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ]
-  },
-  "uke_scope": {
-    "epsilon_bin": "moderate",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "jcpoa_treaty_bindingness__binding_multilateral_reading",
-      "us_iran_sanctions_regime"
-    ]
-  },
-  "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
-    "one_shot_example": "agent/example_platform_commission.json",
-    "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
-    "seeded_from": "none",
-    "draw": 1
+    ],
+    "reference_frame": "scaled_reciprocal_commitment",
+    "drift_state": {
+      "moment": "post_us_withdrawal_2018",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
   }
 }

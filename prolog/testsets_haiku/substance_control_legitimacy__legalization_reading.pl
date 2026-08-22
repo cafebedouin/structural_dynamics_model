@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,40 +75,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: substance_control_legitimacy__legalization_reading
- *   human_readable: Adult Autonomy with Third-Party Harm Prevention
+ *   human_readable: Adult Autonomy + Third-Party Harm Boundary (Legalization Reading)
  *   domain: public_health/criminal_justice/political_economy
  *
  * SUMMARY:
- *   This constraint models the legalization reading of substance control
- *   authority: competent adults hold autonomy over personal substance use;
- *   state authority derives legitimacy from preventing third-party harms
- *   (impaired driving, secondhand exposure, youth access, public health
- *   emergencies) rather than from criminalizing possession. This reading sits
- *   in a contested kernel alongside prohibition_reading (state authority
- *   grounded in moral duty to prevent all use through criminalization) and
- *   harm_reduction_reading (state authority grounded in minimizing aggregate
- *   harm through public health measures without criminalization). The
- *   legalization reading claims autonomy as foundational and locates the
- *   constraint's persistence in enforcement of harm-prevention boundaries.
- *   Key structural delta from prohibition: users move from victim to
- *   beneficiary set; third-party harm bearers become the primary victim set;
- *   legal market operators emerge as beneficiaries capturing economic rent;
- *   criminal justice apparatus experiences institutional identity crisis as
- *   caseload shifts from criminal enforcement to regulatory compliance. The
- *   constraint is claimed as tangled_rope (real coordination function +
- *   asymmetric extraction) and the metrics reflect both coordination benefits
- *   (decriminalization, product safety, market clarity) and extraction costs
- *   (market operator markup, regulatory burden, enforcement asymmetry
- *   favoring operators over harm-bearers).
+ *   The legalization reading of substance control legitimacy asserts that
+ *   competent adults have autonomy over their own substance use, and state
+ *   authority is justified only to prevent third-party harms — not to enforce
+ *   moral visions or constrain individual choice. Under this reading, the
+ *   constraint operates as a tangled rope: it genuinely solves a coordination
+ *   problem (where to draw the autonomy/harm boundary) while extracting costs
+ *   from victims of third-party harms (impaired drivers' victims,
+ *   secondhand-exposed populations) and from prohibited-market incumbents
+ *   (suppliers, enforcement bodies). Users exit the victim set because
+ *   autonomy is their benefit; the constraint's extractiveness derives from
+ *   inadequate third-party harm prevention and from regulatory capture by the
+ *   legal market operators. This reading sits in structural contest with the
+ *   prohibition reading (autonomy is illegitimate; state duty is moral
+ *   prevention) and the harm-reduction reading (substance use is a health
+ *   issue, not an autonomy issue; criminalization itself is the harm). The
+ *   claim/metric divergence is intentional: the reading claims tangled-rope
+ *   structure (genuine coordination + asymmetric extraction), and the metrics
+ *   track the specific extractiveness pattern of inadequate harm boundary
+ *   enforcement and legal-market rentier dynamics.
  *
  * KEY AGENTS:
- *   - adult_user_constituency: Moves from prohibition-era victim set to legalization-era beneficiary; gains legal access and elimination of criminalization risk, but subject to regulatory compliance and market pricing.
- *   - legal_market_operators: Primary beneficiaries; capture economic rents through licensed monopoly/oligopoly; shape regulatory boundaries through lobbying.
- *   - third_party_harm_bearers: Primary victims under legalization reading; bear costs of impaired driving, secondhand exposure, youth access enforcement, and public health burden without direct consumption benefit.
- *   - regulation_and_enforcement_apparatus: Agenda-setter; administers harm-prevention framework and compliance monitoring; carries significant operational burden that did not exist under prohibition.
- *   - criminal_justice_apparatus_remnant: Identity-locked payer; institutional legitimacy rooted in prohibition-era framing; experiences caseload reduction and authority erosion; cannot easily exit because career specialization and organizational culture remain prohibition-focused.
- *   - public_health_advocates: Constrained payer; must advocate within legalization framework against market operators' commercial incentives to expand use and potency.
- *   - prohibition_adherent_constituency: Structurally excluded from legalization reading; their moral-duty-grounded authority claim is foreclosed by the autonomy axiom.
+ *   - adults_with_autonomy_preference: beneficiary (exit victim set under legalization reading)
+ *   - legal_substance_market_operators: agenda_setter + beneficiary (capture regulatory rents)
+ *   - regulatory_authority: agenda_setter (enforces autonomy/harm boundary)
+ *   - impaired_driver_injury_victims: payer (bear third-party harm cost; not party to autonomy claim)
+ *   - secondhand_exposure_populations: payer (constrained exit; residual harm spillover)
+ *   - youth_and_adolescents: excluded (structurally outside autonomy framework; exposed to externalities)
+ *   - prohibited_substance_suppliers: payer + excluded (lose market to legalized competitors)
  */
 
 /* ==========================================================================
@@ -107,58 +114,129 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(substance_control_legitimacy__legalization_reading, 0.68).
-domain_priors:suppression_score(substance_control_legitimacy__legalization_reading, 0.52).
-domain_priors:theater_ratio(substance_control_legitimacy__legalization_reading, 0.41).
+domain_priors:base_extractiveness(substance_control_legitimacy__legalization_reading, 0.62).
+domain_priors:suppression_score(substance_control_legitimacy__legalization_reading, 0.41).
+domain_priors:theater_ratio(substance_control_legitimacy__legalization_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, suppression_requirement, 0.52).
-narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, extractiveness, 0.62).
+narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, suppression_requirement, 0.41).
+narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, accessibility_collapse, 0.48).
+narrative_ontology:constraint_metric(substance_control_legitimacy__legalization_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(substance_control_legitimacy__legalization_reading, tangled_rope).
-narrative_ontology:human_readable(substance_control_legitimacy__legalization_reading, "Adult Autonomy with Third-Party Harm Prevention").
+narrative_ontology:human_readable(substance_control_legitimacy__legalization_reading, "Adult Autonomy + Third-Party Harm Boundary (Legalization Reading)").
 narrative_ontology:topic_domain(substance_control_legitimacy__legalization_reading, "public_health/criminal_justice/political_economy").
 
 domain_priors:requires_active_enforcement(substance_control_legitimacy__legalization_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(substance_control_legitimacy__legalization_reading, '3d7effc1-4e03-44f5-bc4e-0897a34b17d3').
-narrative_ontology:cs_kernel_codification('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', formalized).
-narrative_ontology:cs_authority_grounding('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', distributed).
-narrative_ontology:cs_reading_relation('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', substance_control_legitimacy__prohibition_reading, coexists_with).
-narrative_ontology:cs_reading_relation('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', substance_control_legitimacy__harm_reduction_reading, influences).
-narrative_ontology:cs_axiom('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', foundational, adult_autonomy_over_personal_substance_use).
-narrative_ontology:cs_axiom_status(adult_autonomy_over_personal_substance_use, holdable).
-narrative_ontology:cs_axiom_grounding('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', adult_autonomy_over_personal_substance_use, deontological).
-narrative_ontology:cs_axiom('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', foundational, state_authority_limited_to_third_party_harm_prevention).
-narrative_ontology:cs_axiom_status(state_authority_limited_to_third_party_harm_prevention, holdable).
-narrative_ontology:cs_axiom_grounding('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', state_authority_limited_to_third_party_harm_prevention, deontological).
-narrative_ontology:cs_reference_frame('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', autonomous_adult_personal_choice_with_harm_boundaries).
-narrative_ontology:cs_drift_state('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', contemporary_market_consolidation_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('3d7effc1-4e03-44f5-bc4e-0897a34b17d3', '').
+narrative_ontology:cs_story_uid(substance_control_legitimacy__legalization_reading, '29246d91-4f8b-4829-804f-928dbc777b08').
+narrative_ontology:cs_kernel_codification('29246d91-4f8b-4829-804f-928dbc777b08', distributed).
+narrative_ontology:cs_authority_grounding('29246d91-4f8b-4829-804f-928dbc777b08', distributed).
+narrative_ontology:cs_reading_relation('29246d91-4f8b-4829-804f-928dbc777b08', substance_control_legitimacy__prohibition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('29246d91-4f8b-4829-804f-928dbc777b08', substance_control_legitimacy__harm_reduction_reading, influences).
+narrative_ontology:cs_axiom('29246d91-4f8b-4829-804f-928dbc777b08', foundational, competent_adult_autonomy_principle).
+narrative_ontology:cs_axiom_status(competent_adult_autonomy_principle, holdable).
+narrative_ontology:cs_axiom_grounding('29246d91-4f8b-4829-804f-928dbc777b08', competent_adult_autonomy_principle, deontological).
+narrative_ontology:cs_axiom('29246d91-4f8b-4829-804f-928dbc777b08', secondary, third_party_harm_boundary_legitimacy).
+narrative_ontology:cs_axiom_status(third_party_harm_boundary_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('29246d91-4f8b-4829-804f-928dbc777b08', third_party_harm_boundary_legitimacy, empirically_contingent).
+narrative_ontology:cs_reference_frame('29246d91-4f8b-4829-804f-928dbc777b08', autonomous_adult_substance_access).
+narrative_ontology:cs_drift_state('29246d91-4f8b-4829-804f-928dbc777b08', contemporary_regulatory_maturation, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('29246d91-4f8b-4829-804f-928dbc777b08', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(substance_control_legitimacy__legalization_reading, substance_control_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(substance_control_legitimacy__legalization_reading, legal_market_operators).
-narrative_ontology:constraint_beneficiary(substance_control_legitimacy__legalization_reading, adult_users_accessing_substance).
-narrative_ontology:constraint_victim(substance_control_legitimacy__legalization_reading, third_party_harm_bearers).
-narrative_ontology:constraint_victim(substance_control_legitimacy__legalization_reading, enforcement_personnel_burden).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__legalization_reading, legal_substance_market_operators).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__legalization_reading, adults_with_autonomy_preference).
+narrative_ontology:constraint_victim(substance_control_legitimacy__legalization_reading, impaired_driver_injury_victims).
+narrative_ontology:constraint_victim(substance_control_legitimacy__legalization_reading, secondhand_exposure_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__legalization_reading, workplace_and_transport_safety_bodies).
+narrative_ontology:constraint_victim(substance_control_legitimacy__legalization_reading, prohibited_substance_suppliers).
+narrative_ontology:constraint_vindicates(substance_control_legitimacy__legalization_reading, individual_autonomy_doctrine).
+narrative_ontology:constraint_vindicates(substance_control_legitimacy__legalization_reading, harm_principle_political_philosophy).
+narrative_ontology:constraint_vindicates(substance_control_legitimacy__legalization_reading, competent_adult_self_determination).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Gain legal access to substances of choice without criminal penalty, medical diagnosis pathway, or therapeutic framing. They can obtain, possess, and consume within the legalized market framework. Their main structural cost is regulation compliance (licensing, quality standards, consumption venue restrictions) and any taxation that applies. Exit is geographically bounded — they can relocate to jurisdictions with legalization but bear relocation costs.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, adults_with_autonomy_preference, beneficiary,
+    organized, biographical, mobile, national).
+
+% Operate regulated, licensed distribution and retail infrastructure for formerly prohibited substances (cannabis, potentially psychedelics, alcohol equivalents). They set market supply, pricing, product formulation, and marketing within regulatory bounds. They capture profits from the legalized market and have strong incentives to minimize enforcement (fewer barriers = higher sales). They also bear compliance and regulatory costs.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, legal_substance_market_operators, agenda_setter,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(substance_control_legitimacy__legalization_reading, legal_substance_market_operators, beneficiary).
+
+% Enforces the legalization boundary: permits adult consumption, prevents sales to minors, monitors for third-party harm (impaired driving, workplace safety, product contamination), revokes licenses for violations. They adjudicate contested cases (what counts as third-party harm, where drawing the boundary) and collect licensing revenue. Their legitimacy rests on the harm-principle boundary holding in practice.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, regulatory_authority, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Suffer injury, death, property damage, or trauma from accidents caused by drivers under the influence of now-legal substances. They did not consent to the consumption decision; they bear the medical, financial, and psychological costs of others' use. Their only structural recourse is post-hoc liability and crash prevention infrastructure (detection, prosecution, rehabilitation).
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, impaired_driver_injury_victims, payer,
+    powerless, immediate, trapped, local).
+
+% Experience secondhand exposure (cannabis smoke in shared housing, workplaces, public spaces; airborne drug particles; odor and discomfort). They negotiate venue restrictions (no-use zones, smoking bans) but bear residual exposure from drift, shared HVAC systems, or enforcement gaps. Their exit is constrained by geography and social/economic ties; their power is moderate (can advocate for restrictions but cannot unilaterally exclude exposure).
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, secondhand_exposure_populations, payer,
+    moderate, biographical, constrained, local).
+
+% Are structurally excluded from legal consumption (age-gating, sales restrictions) but exposed to market proliferation (increased availability, marketing, peer access, secondhand exposure). They would object to expanded access and aggressive marketing but are not parties to the legalization framework; adults made the autonomy-based claim on their behalf as a separate constituency.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, youth_and_adolescents, excluded,
+    powerless, biographical, trapped, local).
+
+% Study the outcomes of legalization: prevalence, consumption patterns, injury rates, long-term health trajectories, workplace safety, and gateway effects. They generate evidence the regulatory authority and courts use to adjudicate third-party harm claims and boundaries. They are not decision-makers but their empirical work reshapes what counts as a legitimate harm constraint.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, public_health_researchers, observer,
+    institutional, generational, analytical, global).
+
+% Lose market share and revenue as legalization redirects demand to regulated suppliers. They remain excluded from the legal framework (cannot obtain licenses, cannot undercut prices by avoiding compliance). They survive by serving unmet demand (purity, price, access speed) but face intensified law enforcement as the legal market establishes the permissible boundary.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, prohibited_substance_suppliers, payer,
+    powerful, biographical, mobile, global).
+narrative_ontology:stakeholder_secondary_role(substance_control_legitimacy__legalization_reading, prohibited_substance_suppliers, excluded).
+
+% Gain a legible, enforceable boundary (impairment is measurable and prosecutable at work/driving, not a question of moral judgment). They can rely on legal substance status for detection and remediation. They also bear costs of enforcement infrastructure (testing, training, liability rules) and must adjudicate difficult cases (residual metabolites, tolerance, medical necessity).
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__legalization_reading, workplace_and_transport_safety_bodies, beneficiary,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(substance_control_legitimacy__legalization_reading, legal_substance_market_operators).
+narrative_ontology:fixing_cost_class(substance_control_legitimacy__legalization_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a legal boundary between permissible adult autonomy (individual consumption choice) and constrained harm (third-party injury). Solves the coordination problem of how to honor adults' self-determination while maintaining public safety — achieved by delegating consumption decisions to individuals and reserving state authority for externalizable harms only.
+% TRANSFER_FUNCTION: Moves the extraction burden from criminalized users (criminal justice processing, incarceration, stigma, economic exclusion) to regulated market participants (licensing costs, taxation, compliance infrastructure) and to victims of third-party harms (injury, secondhand exposure, enforcement gaps). The legalization reading also transfers legitimacy authority from police/prosecutors to health regulators and civil liability courts.
+% ABSENT_VOICES: Youth and adolescents are structurally excluded — they cannot consent to the autonomy framework but live in its externalities (peer access, secondhand exposure, marketing). Prohibited-market suppliers are also excluded; they would argue the legalization boundary artificially favors state-licensed producers and excludes them from the rents. Low-income populations bear disproportionate exposure and enforcement costs but are not seated at the boundary-adjudication table.
+% DISAPPEARANCE_RATIONALE: If this legalization reading's boundary vanished overnight — if the autonomy claim were repealed and criminalization reinstated — criminal justice processing would resume for millions of users, clandestine markets would expand, and regulatory infrastructure would shift from health oversight to drug enforcement. The legitimacy structure that permits legalization would collapse; the constraint does not describe a natural equilibrium but an authored arrangement.
+% FOUNDING_PROBLEM: Criminalization of competent adults' substance use generates disproportionate carceral burden, disrupts livelihoods and families, creates perverse incentives for criminal organizations, and treats a public health problem as a moral failure. The legalization reading was built to solve the harms of prohibition itself.
+% FOUNDING_PROBLEM_CORROBORATION: Public health researchers, criminal justice reform advocates (outside the beneficiary set), and legalization jurisdictions' empirical records attest the carceral burden of prohibition is real and substantial. Prohibited-market operators and criminal-justice incumbents dispute that legalization solves the problem (they cite new harms: youth access, potency creep, traffic deaths); the founding problem's status is live but contested — the arrangement persists because beneficiaries prioritize autonomy-as-harm-reduction over alternative framings.
+narrative_ontology:disappearance_verdict(substance_control_legitimacy__legalization_reading, world_rearranges).
+narrative_ontology:founding_problem_status(substance_control_legitimacy__legalization_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(substance_control_legitimacy__legalization_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(substance_control_legitimacy__legalization_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(substance_control_legitimacy__legalization_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(substance_control_legitimacy__legalization_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +256,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.48 (at legalization onset, when coordination benefits dominate) to 0.68 (at interval end, as market operators consolidate pricing power and regulatory barriers entrench). The trajectory reflects market maturation: initial legalization establishes coordination gains (safety, decriminalization, predictability) but over 25 years, competitive consolidation and marketing escalation (higher potency, targeted advertising, youth-adjacent positioning) amplify extraction above coordination costs. Suppression_requirement rises modestly (0.38 to 0.52) because harm-prevention enforcement requires active investment in impaired-driving enforcement, youth-access monitoring, and compliance auditing — this is genuinely necessary suppression, not pure coercion. Theater_ratio rises (0.25 to 0.41) because regulatory agencies increasingly perform public-safety theater (potency-limit declarations, packaging warnings) that does not proportionally reduce harms as market operators find regulatory arbitrage. Accessibility_collapse is moderate (0.62): legalization opens the primary market but creates strong regulatory barriers and pricing that re-entrench alternatives (black markets for potent unregulated products, cross-border purchases). Resistance is high (0.71) because third-party harm bearers (families with youth access concerns, drivers affected by impaired operators, medical professionals treating addiction) mount continuous resistance through advocacy, litigation, and local enforcement — the constraint's persistence depends on active suppression of that resistance via regulatory preemption and commercial marketing.
+ *   Extractiveness rises from 0.38 to 0.62 over the interval because legal-market operators' pricing power consolidates (higher monopoly rents as clandestine competition fades) and because third-party harm boundary enforcement reveals gaps — regulatory capacity lags market proliferation, leaving residual harm externalized. Theater rises modestly (0.12 to 0.28) as regulatory messaging emphasizes consumer choice and safety while enforcement focuses on market control (protecting licensed suppliers from unlicensed competitors). Suppression falls sharply (0.68 to 0.41) because the legalization reading REDUCES coercive force against users — they are no longer the suppression target; suppression effort redirects to enforcing the boundary (age-gating, impaired-driving prosecution, licensing exclusivity). The metric series are authored on one shared time grid: every measurement point reports all three metrics' values contemporaneously, preventing false dating of type transitions.
  *
  * PERSPECTIVAL GAP:
- *   From the legal market operator and adult user seats: the arrangement is genuine coordination solving a real problem (decriminalization, product safety, market clarity) — they should compute a beneficiary reading, possibly rope-grade. From the third-party harm bearer and criminal-justice seats: the same arrangement is extraction — they bear concentrated costs (enforcement burden, harm exposure) while operators capture benefits (rent collection) — they should compute snare or high-extraction tangled_rope. The engine computes this from directionality: operators and users sit as beneficiaries (d near 0); harm bearers sit as victims (d near 1); regulation apparatus sits as beneficiary-agenda-setter with enforcement burden (d mid-range). The perspectival divergence is structural and reflects real seat conflict, not measurement error.
+ *   From the agenda-setter and autonomy-beneficiary seats, the legalization reading is genuine coordination with acceptable residual extraction (third-party harm is unavoidable and proportionate to autonomy gain). From the third-party-harm-victim seats, the same structure is a transfer of extraction burden from politically powerful users to powerless, non-consenting injury victims. The regulatory authority sits between: it captures real coordination credit (establishing a workable boundary) but also increasingly captures market-operator interests (licensing exclusivity, restriction of supply, price floors) — making it partly an agenda-setter and partly a market enforcer. The engine computes these divergences directly from power, time_horizon, exit_options, and the beneficiary/victim declarations.
  *
  * DIRECTIONALITY LOGIC:
- *   Legal market operators (institutional power, arbitrage exit): beneficiary directionality (d ~0.1), collect economic rent from legalization; beneficiary_agenda_setter role gives them high influence over regulatory shape, so d stays low despite enforcement requirements. Adult users (organized power, arbitrage exit): beneficiary directionality (d ~0.15), gain decriminalization and market access, can exit by relocating to other legalized jurisdictions; arbitrage exit significantly reduces target pressure. Third-party harm bearers (powerless, constrained exit): victim directionality (d ~0.9), bear enforcement burden and harm exposure with no corresponding benefit, cannot exit the shared environment where harms occur. Regulation apparatus (institutional power, analytical exit): mixed position (d ~0.45), agenda-setter role tempts toward lower d but enforcement burden and conflict with operators over harm-prevention stringency pulls toward victim directionality; analytical exit (could redesign the system) keeps d mid-range rather than high. Criminal-justice remnant (organized power, identity-locked exit): payer directionality (d ~0.75), bears caseload reduction and authority erosion; identity_locked exit means institutional identity is fused with prohibition-era authority and cannot easily shift; makes this seat a persistent victim.
+ *   The autonomy beneficiaries (organized adults) and the legal-market operators (institutional) sit near the beneficiary end of the directionality spectrum (low d → low/negative effective extraction from them). The third-party harm victims (powerless, trapped, immediate time horizon) sit near the target end (high d → high effective extraction). The regulatory authority carries dual positioning: it sets the agenda (d lower) but also enforces against violators (d higher when enforcement becomes asymmetric against marginalized populations). The key structural insight is that legalization RELOCATES who bears extraction: criminalized users (high d in prohibition reading) become low-d beneficiaries; third-party harms become the new extraction surface (high d), and their victims are powerless to exit. This reading's directionality structure differs radically from prohibition and harm-reduction readings because the victim set and beneficiary set are redefined by the autonomy claim.
  *
  * MANDATROPHY ANALYSIS:
- *   Founding problem (criminalization harms: incarceration, disparity, black markets) is contested whether it remains live or is substantially solved. If founding_problem_status = dead (harm substantially reduced), but disappearance_verdict = world_rearranges (the arrangement's persistence depends on active enforcement), the system exhibits mandatrophy: the authority that persists claims to solve a problem it no longer solves, and persists by rent collection instead. The mismatch (dead + world_rearranges) is a zombie indicator. Countervailing: if founding_problem_status = contested (which is the authored position), mandatrophy is not triggered — the framework permits both readings (problem is live, problem is substantially solved) to coexist without falsification. This reading stops short of asserting mandatrophy because the evidence genuinely supports both the harm-reduction claim and the market-extraction claim; they are not mutually exclusive in the legalization framework. The tension belongs in omega variables, not in a mandatrophy verdict.
+ *   The constraint resists mandatrophy because the autonomy foundation remains contestable: is individual choice over consumption a fundamental right (autonomy reading), a public health risk requiring intervention (harm-reduction reading), or a moral failure warranting prohibition (prohibition reading)? The three readings share a kernel but produce different victim sets and extraction profiles. This legalization reading avoids false summitry because it honestly authors suppression as declining (users are decriminalized, not suppressed) and extraction as shifting rather than disappearing. The third-party harm boundary is performative to some degree (regulatory messaging emphasizes safety while market captures rents), but the performance is not the entire constraint — real boundary adjudication happens in impaired-driving prosecution and youth-access enforcement, where the harm principle is genuinely operative. The mandatrophy question is episodic: does the autonomy claim retain legitimacy if third-party harm prevention systematically fails? That opens to the omega variable addressing harm-boundary enforcement.
  */
 
 /* ==========================================================================
@@ -195,64 +273,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    third_party_harm_measurability,
-    'Are the primary third-party harms (impaired driving, secondhand exposure, youth access, public health emergency load) measurable with sufficient precision to operationalize a harm-prevention boundary, or does ''harm'' remain essentially contested and subject to regulatory capture?',
-    'Longitudinal epidemiological data from legalization jurisdictions; rigorous measurement of impaired-driving incident rates, secondhand exposure exposure levels, youth-use trend data, and emergency-care burden; comparison to jurisdiction-specific harm-prevention enforcement capacity.',
-    'If harms are measurable and enforcement capacity tracks harm magnitude, the legalization constraint is sustainable as a genuine harm-prevention framework (moves toward rope). If harms are unmeasurable or enforcement capacity is decoupled from harm magnitude (regulatory capture or market pressure reducing enforcement stringency), the constraint drifts toward snare (operators extract while claiming harm prevention).',
+    third_party_harm_boundary_enforcement,
+    'Does the regulatory regime''s capacity to detect, prosecute, and remediate third-party harms (impaired driving, workplace contamination, secondhand exposure) keep pace with expanded legal availability?',
+    'Time-series data on impaired-driving arrest rates, traffic fatality attribution, workplace-safety incidents, and pollution measurements in legalization jurisdictions compared to control jurisdictions with comparable enforcement budgets.',
+    'If enforcement lags and harms accumulate undetected, the constraint drifts from tangled-rope (coordination + extraction) to snare (extraction disguised as coordination). If enforcement strengthens proportionally, the boundary holds and the tangled-rope classification persists. This gap determines whether the autonomy claim is authentic or performative.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(third_party_harm_measurability, empirical, 'Whether the harm-prevention boundary can be operationalized and maintained against market pressure.').
+narrative_ontology:omega_variable(third_party_harm_boundary_enforcement, empirical, 'Whether third-party harm boundary enforcement is adequate to sustain legalization''s structural legitimacy.').
 
 omega_variable(
-    third_party_harm_vs_personal_autonomy_conflict,
-    'When third-party harms and personal autonomy conflict (e.g., secondhand cannabis smoke in shared residential settings, high-potency products increasing emergency-room load), which value dominates in practice? Is the harm-prevention boundary enforced symmetrically or does it erode in favor of operator and user interests?',
-    'Case law and regulatory enforcement patterns; analysis of disputes between neighbors over secondhand exposure, between emergency-care providers and operators over potency limits, between youth-access advocates and commercial interests; measurement of regulatory agency budget allocation and enforcement frequency.',
-    'If harm-prevention boundary is maintained symmetrically, the constraint remains tangled_rope with genuine coordination. If enforcement erodes in favor of operators (potency limits unenforced, secondhand exposure unregulated, youth-access gaps tolerated), the constraint drifts toward snare — the autonomy axiom becomes cover for operator extraction.',
-    confidence_without_resolution(medium)
+    regulatory_capture_by_legal_operators,
+    'Do legal market operators influence regulatory standard-setting (potency limits, marketing restrictions, pricing floors) in ways that entrench market power rather than protect third-party harms?',
+    'Institutional analysis of regulatory agency funding, personnel overlap, and decision history: do regulations track harm evidence or operator interests? Comparison with jurisdictions using arm''s-length oversight (public health agencies independent of licensing revenue).',
+    'If operators systematically capture regulatory boundaries, the constraint''s extraction component becomes decoupled from genuine harm prevention and the constraint drifts toward snare (extraction justified by a harm-prevention boundary that operates in market operators'' favor). If regulatory independence holds, extraction remains bound to real third-party harm and tangled-rope classification stands.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(third_party_harm_vs_personal_autonomy_conflict, empirical, 'Whether the harm-prevention boundary is a genuine constraint or an asymmetric enforcement vector favoring operators.').
+narrative_ontology:omega_variable(regulatory_capture_by_legal_operators, empirical, 'Whether legalization''s regulatory framework is captured by market operators or maintains genuine harm-prevention independence.').
 
 omega_variable(
-    market_operator_consolidation_and_rent_capture,
-    'Does legalization enable dispersed small operators (craft producers, independent retailers) or does it consolidate into a few large operators extracting substantial economic rent through vertical integration and potency escalation?',
-    'Market structure data (Herfindahl index over time, price tracking, potency trends), operator profitability data, and regulatory capture analysis (regulatory board composition, campaign contributions, revolving-door employment patterns).',
-    'Consolidation with rent capture increases extractiveness above coordination costs (snare-drift). Dispersed competitive markets with price discipline and potency regulation maintain rope-grade equilibrium. The trajectory (0.48 → 0.68 extractiveness in the measurement series) suggests consolidation is occurring, but the mechanism is contested.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(market_operator_consolidation_and_rent_capture, empirical, 'Whether market structure maintains competition or consolidates extraction.').
-
-omega_variable(
-    criminal_justice_identity_lock_escape_velocity,
-    'Can criminal-justice-apparatus institutional actors exit identity-lock (institutional commitment to prohibition-era framing of their authority) and genuinely embrace regulatory-enforcement roles, or does institutional identity fusion create path-dependent resistance that undermines harm-prevention enforcement?',
-    'Observational study of jurisdiction transitions: do law enforcement agencies successfully retrain for compliance monitoring and impaired-driving enforcement, or do they resist regulatory work and lobby to restore criminal penalties? Track career pathways and organizational budget allocations.',
-    'If identity-lock can be overcome, the apparatus becomes a genuine regulatory partner with d dropping toward neutral (0.45). If identity-lock persists, the apparatus becomes a persistent victim/dissenting voice whose interests diverge from harm prevention, creating institutional conflict that destabilizes the constraint.',
+    autonomy_claim_reading_dependence,
+    'Is the autonomy principle an irreducible commitment of this reading, or would the constraint be restructured (become harm-reduction or prohibition) if empirical evidence shifted the autonomy claim''s perceived legitimacy?',
+    'Counterfactual reasoning: if evidence emerged showing substantial long-term cognitive effects on 18-25 year-old users, or if legalization produced unexpected potency escalation, would the autonomy reading''s endorsers shift to prohibition or harm-reduction framings?',
+    'If autonomy is foundational (axiom status = holdable), the reading persists even against contrary evidence; enforcement adapts but the underlying claim stands. If autonomy is contingent on empirical support, the reading is empirically_contingent and foreclosure is possible if evidence undermines competence assumptions.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(criminal_justice_identity_lock_escape_velocity, empirical, 'Whether institutional identity-lock prevents criminal-justice apparatus from genuinely transitioning to regulatory enforcement.').
+narrative_ontology:omega_variable(autonomy_claim_reading_dependence, conceptual, 'Whether autonomy is a foundational normative commitment or a contingent empirical claim for this reading.').
 
 omega_variable(
-    autonomy_axiom_cross_framework_contestation,
-    'The legalization reading grounds authority in autonomy principle (competent adults decide for themselves; state authority limited to third-party harm prevention). Can this axiom coexist with prohibition reading''s axiom (state authority derives from moral duty to prevent harm regardless of autonomy) in the same jurisdiction, or do they truly foreclose each other in practice?',
-    'Jurisdictional analysis: do legalization and prohibition coexist (federal vs. state, different jurisdictions, different substances) without fundamental contradiction, or does one inevitably try to eliminate the other? Examine legal/regulatory conflicts and institutional stability.',
-    'If axioms coexist peacefully, readings are genuinely coexisting_with (both live, different parties). If they conflict, one axiom forecloses the other and the readings are in logical conflict (not mere disagreement but mutual exclusion). This affects the kernel''s stability and whether legalization can sustainably coexist with prohibition in the same polity.',
+    suppression_mechanism_internalization,
+    'As suppression declines (criminal penalties lifted), do users internalize stigma or autonomy-reinforcing narratives? Does the lived experience of decriminalization reduce or entrench extraction from third-party-harm victims?',
+    'Post-decriminalization ethnographic and survey data tracking users'' self-narrative shifts, harm-mitigation behavior, and community attitudes. Comparison of pre/post decriminalization harm-reduction engagement (treatment seeking, harm-reduction technology adoption, peer accountability).',
+    'If decriminalization internalizes responsibility-taking (users self-regulate more, seek treatment, adopt harm-reduction), third-party harms decline and the constraint''s extraction from harm victims falls — tangled-rope becomes more balanced. If decriminalization internalizes entitlement (users externalize costs, reject mitigation), extraction intensifies and the constraint drifts toward snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(autonomy_axiom_cross_framework_contestation, conceptual, 'Whether autonomy and moral-duty axioms can coexist in a single authority framework.').
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether decriminalization shifts users'' internalized suppression to internalized responsibility or entitlement.').
 
 omega_variable(
-    suppression_mechanism_structural_vs_internalized,
-    'The suppression score (0.52) reflects enforcement of harm-prevention boundaries. Is this suppression structural (external barriers, regulatory penalties, enforcement costs) or partially internalized (users/operators internalize harm-prevention norms through education and regulatory legitimacy)?',
-    'Post-regulation shift analysis: do users and operators comply with harm-prevention rules because external enforcement is present, or because norms have shifted? Test by varying enforcement intensity or authority legitimacy and observing compliance patterns.',
-    'If suppression is structural, the constraint requires continuous enforcement investment; if internalized, suppression can gradually decrease as norms shift (more stable). If partially internalized, the breakdown ratio matters — a high structural component suggests extraction fragility.',
-    confidence_without_resolution(low)
+    sibling_reading_foreclosure,
+    'Is this legalization reading logically foreclosed by the prohibition reading''s moral-duty axiom, or do they coexist as genuinely contested commitments?',
+    'Jurisprudential analysis: can a single legal framework hold both autonomy and moral-prevention principles simultaneously, or does endorsing one require denying the other? Or do they persist as competing framings held by different parties?',
+    'If they foreclose each other, the kernel is not pluralistic but a zero-sum contest; legalization''s persistence requires suppressing prohibition reading''s authority. If they coexist, both readings remain live options and the kernel embeds genuine disagreement. This determines whether cs_structure.reading_relations = forecloses or coexists_with.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether suppression is structural enforcement or internalized norm adoption.').
+narrative_ontology:omega_variable(sibling_reading_foreclosure, conceptual, 'Whether legalization and prohibition readings logically foreclose or coexist.').
 
 
 /* ==========================================================================
@@ -266,28 +334,46 @@ narrative_ontology:interval(substance_control_legitimacy__legalization_reading, 
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(scl_leg_tr_t0, substance_control_legitimacy__legalization_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(scl_leg_tr_t5, substance_control_legitimacy__legalization_reading, theater_ratio, 5, 0.3).
-narrative_ontology:measurement(scl_leg_tr_t10, substance_control_legitimacy__legalization_reading, theater_ratio, 10, 0.36).
-narrative_ontology:measurement(scl_leg_tr_t15, substance_control_legitimacy__legalization_reading, theater_ratio, 15, 0.39).
-narrative_ontology:measurement(scl_leg_tr_t20, substance_control_legitimacy__legalization_reading, theater_ratio, 20, 0.4).
-narrative_ontology:measurement(scl_leg_tr_t25, substance_control_legitimacy__legalization_reading, theater_ratio, 25, 0.41).
+narrative_ontology:measurement(subs_tr_t0, substance_control_legitimacy__legalization_reading, theater_ratio, 0, 0.12).
+narrative_ontology:measurement_basis(subs_tr_t0, observed).
+narrative_ontology:measurement(subs_tr_t5, substance_control_legitimacy__legalization_reading, theater_ratio, 5, 0.16).
+narrative_ontology:measurement_basis(subs_tr_t5, observed).
+narrative_ontology:measurement(subs_tr_t10, substance_control_legitimacy__legalization_reading, theater_ratio, 10, 0.21).
+narrative_ontology:measurement_basis(subs_tr_t10, observed).
+narrative_ontology:measurement(subs_tr_t15, substance_control_legitimacy__legalization_reading, theater_ratio, 15, 0.25).
+narrative_ontology:measurement_basis(subs_tr_t15, observed).
+narrative_ontology:measurement(subs_tr_t20, substance_control_legitimacy__legalization_reading, theater_ratio, 20, 0.27).
+narrative_ontology:measurement_basis(subs_tr_t20, observed).
+narrative_ontology:measurement(subs_tr_t25, substance_control_legitimacy__legalization_reading, theater_ratio, 25, 0.28).
+narrative_ontology:measurement_basis(subs_tr_t25, observed).
 
 % Extraction over time
-narrative_ontology:measurement(scl_leg_be_t0, substance_control_legitimacy__legalization_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(scl_leg_be_t5, substance_control_legitimacy__legalization_reading, base_extractiveness, 5, 0.54).
-narrative_ontology:measurement(scl_leg_be_t10, substance_control_legitimacy__legalization_reading, base_extractiveness, 10, 0.61).
-narrative_ontology:measurement(scl_leg_be_t15, substance_control_legitimacy__legalization_reading, base_extractiveness, 15, 0.66).
-narrative_ontology:measurement(scl_leg_be_t20, substance_control_legitimacy__legalization_reading, base_extractiveness, 20, 0.67).
-narrative_ontology:measurement(scl_leg_be_t25, substance_control_legitimacy__legalization_reading, base_extractiveness, 25, 0.68).
+narrative_ontology:measurement(subs_be_t0, substance_control_legitimacy__legalization_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement_basis(subs_be_t0, observed).
+narrative_ontology:measurement(subs_be_t5, substance_control_legitimacy__legalization_reading, base_extractiveness, 5, 0.46).
+narrative_ontology:measurement_basis(subs_be_t5, observed).
+narrative_ontology:measurement(subs_be_t10, substance_control_legitimacy__legalization_reading, base_extractiveness, 10, 0.54).
+narrative_ontology:measurement_basis(subs_be_t10, observed).
+narrative_ontology:measurement(subs_be_t15, substance_control_legitimacy__legalization_reading, base_extractiveness, 15, 0.59).
+narrative_ontology:measurement_basis(subs_be_t15, observed).
+narrative_ontology:measurement(subs_be_t20, substance_control_legitimacy__legalization_reading, base_extractiveness, 20, 0.61).
+narrative_ontology:measurement_basis(subs_be_t20, observed).
+narrative_ontology:measurement(subs_be_t25, substance_control_legitimacy__legalization_reading, base_extractiveness, 25, 0.62).
+narrative_ontology:measurement_basis(subs_be_t25, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(scl_leg_su_t0, substance_control_legitimacy__legalization_reading, suppression_requirement, 0, 0.38).
-narrative_ontology:measurement(scl_leg_su_t5, substance_control_legitimacy__legalization_reading, suppression_requirement, 5, 0.42).
-narrative_ontology:measurement(scl_leg_su_t10, substance_control_legitimacy__legalization_reading, suppression_requirement, 10, 0.48).
-narrative_ontology:measurement(scl_leg_su_t15, substance_control_legitimacy__legalization_reading, suppression_requirement, 15, 0.51).
-narrative_ontology:measurement(scl_leg_su_t20, substance_control_legitimacy__legalization_reading, suppression_requirement, 20, 0.51).
-narrative_ontology:measurement(scl_leg_su_t25, substance_control_legitimacy__legalization_reading, suppression_requirement, 25, 0.52).
+narrative_ontology:measurement(subs_su_t0, substance_control_legitimacy__legalization_reading, suppression_requirement, 0, 0.68).
+narrative_ontology:measurement_basis(subs_su_t0, observed).
+narrative_ontology:measurement(subs_su_t5, substance_control_legitimacy__legalization_reading, suppression_requirement, 5, 0.62).
+narrative_ontology:measurement_basis(subs_su_t5, observed).
+narrative_ontology:measurement(subs_su_t10, substance_control_legitimacy__legalization_reading, suppression_requirement, 10, 0.55).
+narrative_ontology:measurement_basis(subs_su_t10, observed).
+narrative_ontology:measurement(subs_su_t15, substance_control_legitimacy__legalization_reading, suppression_requirement, 15, 0.48).
+narrative_ontology:measurement_basis(subs_su_t15, observed).
+narrative_ontology:measurement(subs_su_t20, substance_control_legitimacy__legalization_reading, suppression_requirement, 20, 0.44).
+narrative_ontology:measurement_basis(subs_su_t20, observed).
+narrative_ontology:measurement(subs_su_t25, substance_control_legitimacy__legalization_reading, suppression_requirement, 25, 0.41).
+narrative_ontology:measurement_basis(subs_su_t25, observed).
 
 
 /* ==========================================================================
@@ -300,13 +386,13 @@ narrative_ontology:affects_constraint(substance_control_legitimacy__legalization
 narrative_ontology:affects_constraint(substance_control_legitimacy__legalization_reading, substance_control_legitimacy__harm_reduction_reading).
 
 % DUAL FORMULATION NOTE:
-% substance_control_legitimacy is a contested kernel decomposing into three structurally distinct constraint stories with different ε values, beneficiary/victim structures, and authority-grounding claims. This story instantiates legalization_reading; sibling stories are prohibition_reading and harm_reduction_reading. All three readings coexist in public discourse across different jurisdictions and policy coalitions. The ε values differ substantially: legalization_reading (this one) has moderate-high extractiveness (0.68) due to market operator consolidation competing with genuine harm-prevention benefits; prohibition_reading has lower extractiveness (concentrated enforcement burden but no market operator extraction) but higher suppression (criminal penalties); harm_reduction_reading has moderate extractiveness (harm-prevention mechanisms without criminalization, but public-health bureaucracy builds rents). The readings are linked by network.affects_constraints because they share the same contested kernel and compete for institutional adoption — legalization influences harm_reduction by shifting authority grounding from moral duty to autonomy principle, and coexists with prohibition across different political coalitions.
+% substance_control_legitimacy is a contested kernel instantiated in three structurally distinct readings. The legalization reading relocates the victim set (users → third-party-harm populations), centers autonomy as the legitimacy principle, and exhibits tangled-rope extraction through inadequate harm-boundary enforcement and market-operator capture. The prohibition and harm-reduction readings produce different victim sets and directionality profiles from the same kernel. All three stories are linked as constraint family members; network edges establish that legalization's framings downstream-affect both sibling readings by redefining what counts as legitimate harm and who bears extraction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(substance_control_legitimacy__legalization_reading, organized, 0.75).
+constraint_indexing:directionality_override(substance_control_legitimacy__legalization_reading, moderate, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

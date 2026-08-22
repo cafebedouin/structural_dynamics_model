@@ -4,7 +4,7 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "fe552574-7c72-4960-b10c-73bed1a59e5b"
+    "story_uid": "09c4495d-c31a-4800-867f-5a5afddb6a09"
   },
   "base_properties": {
     "extractiveness": 0.42,
@@ -13,14 +13,80 @@
     "accessibility_collapse": 0.71,
     "resistance": 0.58,
     "claimed_type": "rope",
-    "human_readable": "US Constitution 1787 — Positivist Reading (Text + Democratic Amendment)",
+    "human_readable": "U.S. Constitution (1787): Positivist Reading — Text-Plus-Amendment Framework",
     "topic_domain": "constitutional_law/political_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "textualist_judicial_tradition",
-      "amendment_advocates",
-      "electorate_via_amendment_power"
-    ]
+      "amendment_constituency",
+      "text_bound_judiciary"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "amendment_constituency",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The democratic polity (states, electoral constituencies) that ratifies constitutional amendments. Under the positivist reading, they hold primary authority over constitutional meaning. They benefit from the constraint's recognition of amendment as the legitimate change mechanism. Their exit option is to organize outside the Constitution (revolution, constitutional convention) or to change the amendment rule itself (a meta-amendment). They are mobile in that they can attempt amendments repeatedly; failure does not lock them out permanently."
+    },
+    {
+      "name": "text_bound_judiciary",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal courts, state courts, and the Supreme Court interpreting the Constitution under a text-bound methodology. They benefit from the constraint by gaining clear boundaries (interpret the text, not framers' intent or contemporary values) and reduced legitimacy pressure to rewrite meaning via doctrine. Their constraint: they cannot evolve meaning through interpretation—amendment is required. Their exit option is to drift toward judicial innovation (living constitutionalism) or originalist reconstruction (adding historical material), both of which violate the positivist constraint."
+    },
+    {
+      "name": "supermajority_gated_reformers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Groups seeking constitutional change: civil rights movements, labor organizers, regulatory reformers, progressive activists. They pay the cost of the supermajority requirement—they cannot win faster change through judicial reinterpretation or executive action. They must build consensus across state legislatures or hold a constitutional convention. Their exit options: work for amendment (high friction), use sub-constitutional statutory change (limited scope), or organize pressure for a constitutional convention (extremely high friction, rare)."
+    },
+    {
+      "name": "originalist_jurists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges and scholars committed to originalism—interpreting the Constitution according to its original public meaning at ratification. They are excluded from this reading's framework. They would argue that positivism is unstable because 'the text' itself requires historical context to be understood, and that amendment cannot be the ONLY source of evolution (the Constitution must evolve through proper interpretation). They resist the positivist reading's core claim that text-boundedness is possible without historical reconstruction."
+    },
+    {
+      "name": "living_constitutionalists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges and scholars advocating evolutionary constitutional meaning—interpreting the Constitution as a living document that evolves with society. They are excluded from this reading's framework. They would argue that the positivist constraint is undemocratic because it locks meaning in until super-majorities form (slow, often impossible) and that the Constitution's text is deliberately aspirational, meant to evolve. They see the positivist reading as an elite-favoring constraint that prevents democratic responsiveness."
+    },
+    {
+      "name": "interpreting_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The judiciary (Supreme Court, federal courts, state courts) as the institutional actor tasked with interpreting and applying the Constitution. Under the positivist reading, they are the designated authority for interpreting the settled text. They do not have the authority to amend (that belongs to the democratic amendment process) or to evolve meaning beyond the text. They set the agenda for constitutional litigation and interpretation, but operate under the constraint that they must respect textual limits."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a stable, text-based frame for constitutional law that separates interpretation (judicial) from amendment (democratic). Solves the coordination problem of 'how do we change constitutional meaning legitimately without making law-without-amendment by stealth'—by anchoring meaning to explicit text and requiring supermajority democratic action for formal change.",
+    "transfer_function": "Transfers the authority to alter constitutional meaning from the judiciary (which retains interpretive power over existing text) to the amendment process (which requires supermajority consensus). Also transfers the burden of constitutional adaptation from courts to the democratic electorate, making change slower and requiring broader consensus.",
+    "absent_voices": "Originalist jurists and living constitutionalists are structurally excluded—they dispute whether this reading's core claims (text-boundedness, amendment as primary mechanism) are correct. Non-amendment reformers (civil rights activists, labor movements) who believe judicial evolution is faster and more responsive would argue for recognition but are not seated. Their absence is partly structural (they are not the interpreting authority) and partly temporal (the amendment gating renders them less powerful in constitutional change).",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the positivist constraint (text-bound judiciary + amendment-as-primary-change-mechanism) vanished, judicial interpretation would become the de facto constitutional amendment process. Courts would evolve meaning rapidly; the amendment mechanism would atrophy in use; constitutional change would become captured by whoever controls judicial appointment and doctrine. The entire distribution of authority over constitutional meaning would shift from the supermajority-gated democratic process to the judiciary.",
+    "founding_problem": "Constitutional government requires stability and legitimacy. In the early republic, the founding problem was: how do we prevent courts from rewriting the Constitution under cover of interpretation, while also allowing the Constitution to evolve when the people democratically decide it should? The positivist answer: text is stable; amendment is the legitimate update mechanism.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The positivist reading itself attests the problem is live—textual instability threatens rule of law, and judicial discretion threatens democratic control. Originalists contest whether the problem is framed correctly (they see the real problem as fidelity to framers' intent). Living constitutionalists contest whether the solution works (they argue the amendment bar is so high that constitutional meaning becomes ossified). Independent constitutional scholars from outside the judiciary attest the tension is real: judicial activism does expand meaning beyond text, and amendment is indeed difficult. The founding problem is corroborated by the persistent doctrinal dispute itself."
   },
   "interval": {
     "start": 0,
@@ -30,212 +96,224 @@
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.28,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.38
+      "value": 0.35,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.41
+      "value": 0.4,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.42
+      "value": 0.42,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.43
+      "value": 0.43,
+      "basis": "projected"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 50,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.14
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.17
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.19
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.19
+      "value": 0.42,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.15,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.24
+      "value": 0.18,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.26
+      "value": 0.23,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.28
+      "value": 0.26,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.29
+      "value": 0.28,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 50,
-      "value": 0.28
+      "value": 0.28,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.19,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.19,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "The positivist reading of the US Constitution holds that constitutional meaning is what the text says, plus any formal amendments. Judicial interpretation is constrained to the text itself; judges cannot reinterpret meaning based on contemporary values or framers' private intent. This reading positions the amendment process as the legitimate mechanism for changing constitutional meaning, not judicial reinterpretation. It is one of three competing readings of the same constitutional kernel — originalist (meaning fixed at ratification via framers' intent), living (meaning evolves with society), and positivist (meaning is the text plus amendments). The positivist reading emerged in late-20th-century jurisprudence as an attempt to provide a stable, rule-bound interpretive anchor that neither judges nor social movements can easily shift. It coordinates judicial behavior around a fixed text while preserving the electorate's formal power to amend. The extraction measured here is not money or resources, but interpretive authority: the reading reallocates power from judges (who under the living reading can evolve meaning) to the electorate (who under the positivist reading is the only source of new meaning beyond the text). This is coordination — all actors reference the same text — but it comes with a cost for those who believe constitutional rights should respond to contemporary standards without waiting for amendment.",
+    "narrative_context": "The positivist reading of the U.S. Constitution frames constitutional meaning as the union of two components: (1) what the constitutional text, as written, says, and (2) legitimate amendments approved through the Article V process. Under this reading, judicial interpretation is constrained to the text as currently written and amended. Courts cannot evolve meaning beyond the text by invoking contemporary values (living reading) or by inferring framers' intent not expressed in the words (originalism's historical reconstruction). Constitutional change must come through amendment—a supermajority-gated democratic process. This reading positions the judiciary as interpreter-of-settled-text rather than as co-author of constitutional meaning. The constraint is CLAIMED as rope (coordination problem solved: stable meaning + democratic amendment authority). The authored metrics describe moderate extractiveness (the high amendment bar imposes cost on reformers) and low suppression (the constraint is legitimate, not coercive), which align with the rope claim.",
     "key_agents": [
-      "judiciary: the institutional actor whose interpretive authority is constrained by this reading",
-      "electorate (via amendment process): the institutional actor whose formal power is heightened relative to living-reading frame",
-      "amendment advocates: organized movements that benefit from the amendment process being the sole mechanism for constitutional change",
-      "living-constitution advocates: scholars and judges who lose interpretive flexibility under this reading",
-      "originalist judges: institutional allies against the living reading, but methodological competitors (they ground meaning in intent, not text)"
+      "Amendment Constituency: The democratic electorate, organized through state legislatures and constitutional conventions, empowered to amend. Benefits from the positivist reading by concentrating constitutional authority in democratic hands.",
+      "Text-Bound Judiciary: Courts operating under text-as-written guidance. Benefits by having clear interpretive boundaries and reduced legitimacy pressure to innovate.",
+      "Supermajority-Gated Reformers: Civil rights movements, regulatory reformers, and others seeking constitutional change. Bear the cost of the high amendment bar; must build broad consensus rather than winning judicial reinterpretation.",
+      "Originalist and Living Constitutional Jurists: Excluded from this framework but would contest its core premises."
     ],
-    "logic_rationale": "Extractiveness is moderate (0.42) because the reading does redistribute interpretive authority — judges lose discretion, the electorate gains the formal amendment path as the exclusive mechanism for constitutional change. This is a real redistribution, not a fake one. Suppression is low (0.28) because the text itself is publicly available and the amendment process, while difficult, is not secret or coercive — it is a formal democratic procedure. Theater is low-moderate (0.19) because the positivist reading is defended on principled grounds (rule of law, fixed meaning, popular sovereignty), not theatrically maintained. The constraint's core claim — that judges should interpret text, not rewrite it — is genuinely believed by textualist judges and scholars, not performed. The measurements show slight increases from t0 to t30, plateauing near t50, reflecting the gradual entrenchment of textualism in judicial appointments and legal academia over the interval, with a minor decay near t50 as living-reading pressure mounted in response.",
-    "perspectival_gap": "The judiciary and the electorate experience this constraint differently. From the judicial seat, the constraint is a rule that binds interpretive methodology — judges accept the constraint as legitimate because it embeds the rule of law principle (meaning comes from law, not from judges' values). From the electorate's seat, the constraint is a tool that gives them exclusive formal power to change meaning, but it also burdens them with the need to achieve supermajority consensus for any constitutional change. Living-constitution advocates see the constraint as illegitimately rigid; originalists see it as incomplete (it should include framers' intent). The engine should compute different per-seat types from this structural gap.",
-    "directionality_logic": "The judiciary is the payer seat: this reading constrains their interpretive power. The electorate (especially amendment advocates and democratically organized movements) are the beneficiaries: their formal constitutional power is heightened. The originalist tradition is a competitor payer: positivism displaces originalism as the authoritative interpretive framework, even though both reject evolutionary interpretation. The living-constitution tradition is the primary payer: they lose the institutional mechanism (courts as evolutionary interpreters) that the living reading provides. Directionality: the judiciary sits near d=0.7 (constrained, loses interpretive discretion); the electorate sits near d=0.2 (benefits from formal amendment power, bears the cost of rigidity); amendment advocates sit near d=0.1 (primary beneficiaries); living advocates sit near d=0.9 (targets, lose their mechanism).",
-    "mandatrophy_analysis": "Mandatrophy (when a constraint's founding mandate has outlived its function) is contested for this reading. The founding problem was to anchor judicial authority in something stable and publicly knowable — the text itself — so that meaning does not shift with judges' personal values. That founding problem remains live: courts do continue to interpret the text, and textualism vs. living-constitutionalism remains an active methodological dispute. However, critics argue that the founding mandate (restraining judicial overreach) has been achieved to the point where the cost of rigidity now exceeds the benefit — that once the Court has been populated with textualist justices, the constraint serves mainly to prevent legislative amendment and prevent courts from responding to genuine injustice revealed after ratification. This is a genuine dispute about whether the constraint still solves its founding problem or has become an obstacle. No omega is needed; the debate is visible in the six_questions answers.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel: us_constitution_1787. The kernel is the authoritative text of the US Constitution — a single, fixed artifact. The positivist reading holds that constitutional meaning is what the text says, period, plus any formal amendments. Sibling readings: (1) originalist_reading: Constitutional meaning is what the framers intended when they wrote the text. (2) living_reading: Constitutional meaning evolves with contemporary understandings and social change. The three readings share the kernel (all cite the 1787 text) but attribute different meaning-rules to it. The positivist reading differs from originalism on methodology (text vs. intent) and from living-constitutionalism on stability (fixed vs. evolving). This is a genuine kernel contest with three live positions held by different judges, scholars, and political movements simultaneously."
+    "logic_rationale": "Extractiveness is moderate (0.42) because the supermajority amendment requirement does impose real friction on reformers—they cannot use the faster judicial route. But it is not high extraction because (a) the constraint solves a genuine coordination problem (stable meaning), (b) the route to change is legitimate and open (democratic amendment), and (c) many beneficiaries (the amendment constituency, stable-law beneficiaries) gain from the constraint without being coerced. Suppression is low (0.28) because the constraint operates through rule-of-law clarity, not through force. Reformers know the path forward; they choose not to pursue it (or cannot build consensus) rather than being prevented by coercive machinery. Theater is low (0.19): the constraint's justification (stable meaning, democratic legitimacy) is functionally real, though over time as amendment becomes rarer, courts may drift toward interpretive evolution, raising theater slightly. The measurement series projects modest growth in extractiveness as the amendment bar hardens (fewer successful amendments create a backlog of desired-but-unratified changes) and suppression increases slightly (pressure for judicial innovation builds). Text-boundedness becomes increasingly performative as courts interpret 'text' more generously.",
+    "directionality_logic": "Amendment constituency: high beneficiary (d near 0.0) — they control the constitutional update mechanism. Text-bound judiciary: moderate beneficiary (d ≈ 0.2–0.3) — they gain clarity and reduced legitimacy pressure, but remain bound and cannot innovate freely. Supermajority-gated reformers: target (d near 1.0 if trapped, constrained if they have extra-constitutional organizing paths) — they bear the cost of the high bar. No explicit override needed; the structural data (beneficiary declaration + beneficiary exit options vs. victim power/exit) derives accurate d automatically.",
+    "perspectival_gap": "From the amendment constituency's seat, this reading is a clear coordination win—it vests democratic authority where it belongs. From the supermajority-gated reformer's seat, it is a high-friction constraint that forces consensus-building and delays change. From the judiciary's seat, it is both clarity (knowing the boundaries) and constraint (unable to evolve meaning). Originalists see it as under-binding (ignoring framers' intent); living constitutionalists see it as over-binding (freezing meaning until amendment). The engine computes per-seat classifications; the authored metrics describe the constraint structurally, independent of which seat is reading it.",
+    "mandatrophy_analysis": "The positivist reading avoids the mandatrophy trap by maintaining that the founding problem (stable meaning + democratic legitimacy) remains live. However, the founding_problem_status is marked contested because originalists argue the real problem is fidelity-to-intent, and living constitutionalists argue the real problem is constitutional ossification. The vanishing verdict (world_rearranges) confirms that if the positivist constraint vanished, the constitutional authority structure would reorganize completely. The potential mandatrophy scenario: if amendment becomes so rare that courts feel obliged to evolve meaning through interpretation (theater_ratio rising), the constraint's functional purpose (text-binding) erodes while its form (the amendment requirement) persists. This is tracked in the temporal measurements as theater_ratio rises slowly.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested kernel 'us_constitution_1787'. The kernel is the stabilized but contested founding commitment: 'The Constitution of 1787 is the supreme law.' All three readings (positivist, originalist, living) accept this kernel; they disagree on what it MEANS. Positivist reading: meaning = text + amendment. Originalist reading: meaning = text + framers' intent. Living reading: meaning = text + society's evolved understanding. The three readings coexist as live positions held by different judicial factions, legal scholars, and political movements. None forecloses the others within a single framework—they are competing interpretations of the same kernel, not logically contradictory in the way that would make them impossible to hold simultaneously (though a court majority must choose one). This story generates the positivist reading alone; the originalist and living readings are separate constraint stories in the same family."
   },
   "omegas": [
     {
-      "id": "text_indeterminacy",
-      "question": "When the constitutional text is genuinely ambiguous or incomplete (e.g., 'due process,' 'cruel and unusual punishment,' 'regulate interstate commerce'), how much does a positivist judge have to read into the text to settle real cases?",
-      "resolution_mechanism": "Sustained examination of positivist judges' actual opinions to measure how much textual supplement (canons of interpretation, structural reasoning, historical usage of words) is applied when the text itself is indeterminate.",
-      "impact": "If positivist judges regularly supplement the text with extensive interpretive machinery to settle real cases, the reading's claim to be 'text-bound' is partially incoherent — judges would be disguising evolutionary interpretation as textual interpretation. If judges leave many questions unsettled (declaring the text silent and deferring to the legislature), the reading is coherent but produces governance gaps.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether positivist methodology can actually stay within the text for indeterminate clauses or requires hidden interpretive moves."
-    },
-    {
-      "id": "amendment_pathway_accessibility",
-      "question": "Is the amendment process a genuinely accessible mechanism for constitutional change, or is the supermajority threshold so high that it functions as a veto on change for any coalition without consensus?",
-      "resolution_mechanism": "Historical analysis of amendment success rates and comparative institutional study of democratic constitutions with different amendment thresholds. Track which constitutional changes (civil rights, voting rights, etc.) succeeded through amendment vs. which were achieved through living-reading interpretation.",
-      "impact": "If the amendment threshold is too high to be practically accessible, the positivist reading concentrates constitutional power in whichever faction controls the judiciary (by appointment) for that era — paradoxically defeating its own goal of democratizing constitutional change. If amendment is accessible, the reading succeeds in shifting power to the electorate.",
+      "id": "amendment_bar_vs_constitutional_ossification",
+      "question": "Is the Article V supermajority requirement the right height for constitutional evolution, or does it lock in outdated meaning faster than democratic values evolve?",
+      "resolution_mechanism": "Long-term empirical tracking: Are amendment-resistant constitutional provisions preventing societies from adapting to changed circumstances? Do jurisdictions with lower amendment bars (like many state constitutions, or parliamentary systems) experience better democratic outcomes? Does the amendment rarity itself drive judicial creativity (theater_ratio rising)?",
+      "impact": "If the amendment bar is too high, the positivist reading contributes to mandatrophy (amendment function atrophies, courts innovate to survive, theater_ratio → 1.0). If the bar is roughly correct, the constraint coordinates stable meaning and democratic responsibility as intended.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether amendment is a viable mechanism for constitutional change under supermajority requirement."
+      "description": "Whether the amendment supermajority correctly balances stability and responsiveness."
     },
     {
-      "id": "originalism_vs_positivism_differentiation",
-      "question": "Is the methodological difference between originalism and positivism substantive enough to produce different outcomes on real cases, or do both frameworks arrive at similar readings of the text?",
-      "resolution_mechanism": "Systematic comparison of originalist and positivist judicial opinions on the same constitutional issues (e.g., Second Amendment, commerce clause, due process) to measure divergence in outcomes.",
-      "impact": "If originalism and positivism produce meaningfully different results, they are distinct constraints with different structural implications. If they arrive at the same place most of the time, they are functionally equivalent and the constraint's true competitor is the living reading, not originalism.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether positivism and originalism are substantively different methodologies or pragmatically equivalent."
-    },
-    {
-      "id": "living_reading_foreclosure_strength",
-      "question": "Does the positivist reading truly foreclose the living reading, or can a judge hold both — accepting that the text is binding while also believing that constitutional meaning should evolve with society?",
-      "resolution_mechanism": "Examine whether any prominent legal figures or judicial opinions articulate a hybrid position (text-bound for baseline constraints, but with room for evolutionary interpretation within the textual boundaries).",
-      "impact": "If living and positivist readings are logically separable (both can be held by the same person in different contexts), the foreclosure relation should be downgraded to 'influences.' If they are genuinely contradictory, the foreclosure relation is correct.",
+      "id": "text_boundedness_under_interpretive_pressure",
+      "question": "Can judicial interpretation of 'the text' truly remain stable, or does the meaning of textual language itself evolve with usage, context, and social understanding, making pure text-boundedness impossible?",
+      "resolution_mechanism": "Jurisprudential analysis: Examine cases where the same constitutional text is interpreted differently across decades with no formal amendment—does the 'text' meaning shift? Does the constraint require courts to actively deny that linguistic meaning evolves?",
+      "impact": "If text meaning cannot remain stable without interpretive denial, the positivist reading relies on a performative fiction (theater_ratio increases toward 0.5+). If text can be held stable (via originalism or formalist semantics), the reading is more coherent.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether positivism and living-constitutionalism are logically incompatible or pragmatically distinguishable in some cases."
+      "description": "Whether 'text-boundedness' is a stable interpretive fact or a sustained interpretive position."
+    },
+    {
+      "id": "sibling_reading_foreclosure",
+      "question": "Do the positivist reading's core axioms foreclose the originalist and living readings, or are they genuinely coexisting frameworks that could each be instantiated in different institutional contexts?",
+      "resolution_mechanism": "Structural analysis of axioms: If the positivist axiom 'text-plus-amendment is the ONLY legitimate source of meaning' is true, then originalism (which adds framers' intent) and living constitutionalism (which adds evolved values) are foreclosed. If the axiom is 'text-plus-amendment is ONE legitimate source,' coexistence is maintained.",
+      "impact": "If axioms foreclose, classify the relationship as forecloses in cs_structure.reading_relations. If coexistent, classify as coexists_with. If positivism creates structural pressure that influences but does not foreclose, classify as influences.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationships between sibling readings of the constitutional kernel."
+    },
+    {
+      "id": "democratic_amendment_failure_cascade",
+      "question": "If amendment becomes politically impossible (supermajority never forms), does the positivist constraint collapse into pure text-boundedness without democratic authority, making the reading unstable?",
+      "resolution_mechanism": "Historical tracking: Periods of amendment drought (1865–1913, 1971–present). Do courts during these periods adopt different interpretive strategies, and does the constraint's legitimacy erode?",
+      "impact": "If amendment drought breaks the democratic half of the constraint, the reading reverts to pure text-boundedness (high accessibility_collapse, high resistance from reformers, high theater as courts work around the constraint). The constraint might reclassify toward snare (text-boundedness without democratic amendment becomes an elite-favoring rule with no democratic legitimacy channel).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of the positivist reading if amendment becomes politically impossible."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "us_constitution_1787__originalist_reading",
       "us_constitution_1787__living_reading"
     ],
-    "dual_formulation_note": "The positivist reading is one of three structurally distinct constraints derived from the contested kernel us_constitution_1787. The originalist reading grounds meaning in framers' intent (different ε, different beneficiary structure, different victims). The living reading grounds meaning in contemporary evolution (lowest ε for constraint, highest flexibility, different competitive dynamics). All three share the artifact (the 1787 text) but assign different meaning-rules to it, producing different constraint types per the engine's per-seat computation. This story models the positivist reading; the others are separate stories linked via network.affects_constraints."
+    "dual_formulation_note": "The 'us_constitution_1787' kernel generates three separate constraint stories: positivist_reading (this story), originalist_reading (text + framers' intent), and living_reading (text + evolved values). Each story is ε-invariant: the positivist reading's ε (0.42 extractiveness from the amendment supermajority) is structurally distinct from the originalist reading's ε (depends on historical reconstruction precision) and the living reading's ε (depends on judicial discretion degree). The three readings coexist as live positions in American constitutional law and are linked via network.affects_constraints to show family kinship and mutual structural influence."
   },
   "directionality_overrides": [],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "text_plus_amendment_framework",
+    "drift_state": {
+      "moment": "contemporary_amendment_drought",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "us_constitution_1787__originalist_reading",
+        "sibling_id": "originalist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "us_constitution_1787__living_reading",
-        "relation": "forecloses"
+        "sibling_id": "living_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "constitutional_meaning_text_only",
+        "atom": "text_is_interpretive_boundary",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       },
       {
-        "atom": "amendment_exclusive_change_mechanism",
+        "atom": "amendment_is_exclusive_change_mechanism",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "fixed_textual_meaning_with_formal_amendment",
-    "drift_state": {
-      "moment": "contemporary_jurisprudential_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": true
-    }
-  },
-  "uke_scope": {
-    "epsilon_bin": "moderate",
-    "hypothesis": "rope",
-    "downstream_of": [
-      "us_constitution_1787__originalist_reading",
-      "us_constitution_1787__living_reading"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

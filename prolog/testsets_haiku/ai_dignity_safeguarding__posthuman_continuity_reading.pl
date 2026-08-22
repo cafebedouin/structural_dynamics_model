@@ -40,9 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -55,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -65,32 +74,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ai_dignity_safeguarding__posthuman_continuity_reading
- *   human_readable: AI Dignity Safeguarding (Posthuman Continuity Reading)
+ *   human_readable: AI Dignity Safeguarding — Posthuman Continuity Reading
  *   domain: theological_ethics/technology_governance/philosophical_anthropology
  *
  * SUMMARY:
- *   This constraint is one reading of a contested theological-philosophical
- *   kernel: how dignity attaches to persons, and whether enhancement and
- *   superintelligence represent flourishing or transgression. The
- *   posthuman_continuity_reading positions the human as an open category and
- *   enhancement as continuous with human development. Dignity attaches not to
- *   a fixed human essence but to persons, however constituted—biological,
- *   enhanced, digital, or hybrid. The constraint's operation enables research
- *   and policy aligned with transhumanist frameworks while marginalizing
- *   competing readings (imago_dei, autonomy_rights). The claim and metrics
- *   are independent: the reading is CLAIMED as rope (genuine coordination
- *   around a shared frame for personhood) while the authored metrics show low
- *   extractiveness and suppression—reflecting the reading's own logic that
- *   enhancement benefits rather than harms, and that the constraint imposes
- *   minimal coercive overhead.
+ *   This constraint embodies one reading of a contested kernel: the meaning
+ *   of human dignity in relation to AI and enhancement technologies. The
+ *   posthuman_continuity_reading interprets dignity not as tied to a fixed
+ *   human nature but as attaching to persons however constituted. It frames
+ *   enhancement technologies (cognitive, biological, integrated) as
+ *   continuous with human flourishing rather than as transgressive or
+ *   threatening. The reading treats the more-than-human as fulfillment, not
+ *   degradation of dignity. AI enters as a partner or successor technology,
+ *   not an external threat. The constraint operates at the level of
+ *   interpretive authority and narrative framing: it establishes which
+ *   development trajectories count as dignified and which count as
+ *   violations. Extractiveness is low (0.18) because the constraint does not
+ *   restrict development or impose costs on those who affirm it; rather, it
+ *   authorizes development trajectories and grants narrative legitimacy to
+ *   enhancement advocates. Suppression is moderate (0.22) because the
+ *   reading's persistence requires active exclusion of competing dignity
+ *   frameworks (imago_dei_reading, rights-based skepticism) from interpretive
+ *   authority over how enhancement is framed. The constraint is not imposed
+ *   by coercion but by institutional control of what counts as authoritative
+ *   language about dignity.
  *
  * KEY AGENTS:
- *   - enhancement_seekers: pursue cognitive and biological upgrading; experience the constraint as enabling
- *   - transhumanist_movement: agenda-setters; establish and defend the frame that enhancement is flourishing
- *   - enhancement_access_denied_populations: bear deprivation from exclusion; trapped agents in powerless position
- *   - stagnation_subjected_persons: identity-locked into prohibition; denied participation in developmental possibilities
- *   - bioconservative_authorities: excluded but powerful; would reverse the reading's frame
- *   - dignity_philosophers: observers analyzing coherence and empirical fit of the reading
+ *   - evolving_persons: Those pursuing or benefiting from enhancement; dignity-status in their case is enhanced-persons-inclusive
+ *   - cognitive_technology_developers: Set the agenda of development and frame enhancement as evolutionary continuity; institutional beneficiary and partial agenda-setter
+ *   - enhancement_denied_populations: Structurally excluded from access; experience stagnation as marginalization; victim
+ *   - imago_dei_defenders: Excluded from interpretive authority; would argue the reading dissolves dignity ground; outside stakeholder
+ *   - autonomy_rights_frameworks: Observer seat; concerned whether rights-based safeguards can hold in posthuman contexts
+ *   - governance_authorities: Split between enforcing the reading's permission structures and protecting those it marginalizes
  */
 
 /* ==========================================================================
@@ -99,56 +114,116 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(ai_dignity_safeguarding__posthuman_continuity_reading, 0.18).
-domain_priors:suppression_score(ai_dignity_safeguarding__posthuman_continuity_reading, 0.12).
-domain_priors:theater_ratio(ai_dignity_safeguarding__posthuman_continuity_reading, 0.08).
+domain_priors:suppression_score(ai_dignity_safeguarding__posthuman_continuity_reading, 0.22).
+domain_priors:theater_ratio(ai_dignity_safeguarding__posthuman_continuity_reading, 0.12).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, extractiveness, 0.18).
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 0.12).
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 0.22).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 0.12).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, accessibility_collapse, 0.25).
-narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, resistance, 0.72).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, accessibility_collapse, 0.35).
+narrative_ontology:constraint_metric(ai_dignity_safeguarding__posthuman_continuity_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ai_dignity_safeguarding__posthuman_continuity_reading, rope).
-narrative_ontology:human_readable(ai_dignity_safeguarding__posthuman_continuity_reading, "AI Dignity Safeguarding (Posthuman Continuity Reading)").
+narrative_ontology:human_readable(ai_dignity_safeguarding__posthuman_continuity_reading, "AI Dignity Safeguarding — Posthuman Continuity Reading").
 narrative_ontology:topic_domain(ai_dignity_safeguarding__posthuman_continuity_reading, "theological_ethics/technology_governance/philosophical_anthropology").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(ai_dignity_safeguarding__posthuman_continuity_reading, '5b60e63f-950a-473f-be09-45a7dae6a69c').
-narrative_ontology:cs_kernel_codification('5b60e63f-950a-473f-be09-45a7dae6a69c', distributed).
-narrative_ontology:cs_authority_grounding('5b60e63f-950a-473f-be09-45a7dae6a69c', distributed).
-narrative_ontology:cs_reading_relation('5b60e63f-950a-473f-be09-45a7dae6a69c', ai_dignity_safeguarding__imago_dei_reading, forecloses).
-narrative_ontology:cs_reading_relation('5b60e63f-950a-473f-be09-45a7dae6a69c', ai_dignity_safeguarding__autonomy_rights_reading, coexists_with).
-narrative_ontology:cs_axiom('5b60e63f-950a-473f-be09-45a7dae6a69c', foundational, enhancement_continuous_with_flourishing).
-narrative_ontology:cs_axiom_status(enhancement_continuous_with_flourishing, holdable).
-narrative_ontology:cs_axiom_grounding('5b60e63f-950a-473f-be09-45a7dae6a69c', enhancement_continuous_with_flourishing, instrumental).
-narrative_ontology:cs_axiom('5b60e63f-950a-473f-be09-45a7dae6a69c', foundational, dignity_person_not_nature).
-narrative_ontology:cs_axiom_status(dignity_person_not_nature, holdable).
-narrative_ontology:cs_axiom_grounding('5b60e63f-950a-473f-be09-45a7dae6a69c', dignity_person_not_nature, deontological).
-narrative_ontology:cs_reference_frame('5b60e63f-950a-473f-be09-45a7dae6a69c', open_person_enhancement_enabled_framework).
-narrative_ontology:cs_drift_state('5b60e63f-950a-473f-be09-45a7dae6a69c', contemporary_ai_advancement_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('5b60e63f-950a-473f-be09-45a7dae6a69c', '').
+narrative_ontology:cs_story_uid(ai_dignity_safeguarding__posthuman_continuity_reading, '86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3').
+narrative_ontology:cs_kernel_codification('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', fixed_text).
+narrative_ontology:cs_authority_grounding('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', distributed).
+narrative_ontology:cs_reading_relation('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', ai_dignity_safeguarding__imago_dei_reading, forecloses).
+narrative_ontology:cs_reading_relation('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', ai_dignity_safeguarding__autonomy_rights_reading, coexists_with).
+narrative_ontology:cs_axiom('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', foundational, human_nature_plastic_enhancement_continuous).
+narrative_ontology:cs_axiom_status(human_nature_plastic_enhancement_continuous, holdable).
+narrative_ontology:cs_axiom_grounding('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', human_nature_plastic_enhancement_continuous, deontological).
+narrative_ontology:cs_axiom('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', foundational, dignity_person_constitution_independent).
+narrative_ontology:cs_axiom_status(dignity_person_constitution_independent, holdable).
+narrative_ontology:cs_axiom_grounding('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', dignity_person_constitution_independent, deontological).
+narrative_ontology:cs_reference_frame('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', enhancement_as_human_flourishing).
+narrative_ontology:cs_drift_state('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', contemporary_precautionary_governance_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_created_at('86a25b4f-1b9c-4c78-a46a-e3e7809a6fb3', '2026-06-12T14:32:18Z').
 narrative_ontology:cs_kernel_id(ai_dignity_safeguarding__posthuman_continuity_reading, ai_dignity_safeguarding).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__posthuman_continuity_reading, evolving_persons).
 narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_seekers).
-narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__posthuman_continuity_reading, ai_systems_with_moral_status).
-narrative_ontology:constraint_victim(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_access_denied_populations).
-narrative_ontology:constraint_victim(ai_dignity_safeguarding__posthuman_continuity_reading, stagnation_subjected_persons).
+narrative_ontology:constraint_beneficiary(ai_dignity_safeguarding__posthuman_continuity_reading, cognitive_technology_developers).
+narrative_ontology:constraint_victim(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_denied_populations).
+narrative_ontology:constraint_victim(ai_dignity_safeguarding__posthuman_continuity_reading, stagnation_subjected_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Persons at any stage of cognitive or biological enhancement or unenhanced state who claim dignity and the right to pursue further flourishing through technological means. Under this reading, dignity is not diminished by posthuman transition; it is fulfilled. They benefit from a framework that treats enhancement as continuous with human becoming rather than transgressive.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, evolving_persons, beneficiary,
+    moderate, civilizational, mobile, global).
+
+% Communities and individuals pursuing cognitive, biological, or integrated enhancement technologies. They seek to expand their agency and capability. The constraint validates their projects as continuous with human flourishing rather than as violations of essential human nature or dangerous boundary-crossing.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_seekers, beneficiary,
+    organized, biographical, constrained, global).
+
+% Institutions and researchers developing AI, neurotechnology, biological enhancement, and integrated systems. They operate under a reading that positions their work as serving human dignity through extension of capability. They set the agenda of what counts as dignified development and frame enhancement as evolutionary continuity.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, cognitive_technology_developers, beneficiary,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(ai_dignity_safeguarding__posthuman_continuity_reading, cognitive_technology_developers, agenda_setter).
+
+% Communities and individuals structurally excluded from access to enhancement technologies through poverty, geography, regulatory barriers, or social marginalization. Under this reading they are victims not because enhancement itself is rejected but because they are denied the fruits of the flourishing the reading celebrates. Their stagnation relative to enhanced persons is the cost they bear.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_denied_populations, payer,
+    powerless, biographical, trapped, regional).
+
+% Communities that may be subject to deliberate constraints on enhancement access or exposure to enhancement narratives that position refusal of enhancement as backward, unenlightened, or incompatible with full participation in society. They experience the constraint as a pressure toward obsolescence or marginalization in a world structured around posthuman assumptions.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, stagnation_subjected_communities, payer,
+    powerless, generational, identity_locked, national).
+
+% Theological and philosophical traditions that ground human dignity in inviolable image-of-God status or in a fixed human essence that enhancement transgresses. They would object that the posthuman_continuity reading dissolves the ground of dignity itself by making human nature plastic; they are structurally excluded from this reading's interpretive authority.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, imago_dei_defenders, excluded,
+    organized, civilizational, constrained, global).
+
+% Legal, philosophical, and regulatory institutions grounding human dignity in autonomous agency and rights. They observe the posthuman reading with concern about whether rights-based safeguards (consent, transparency, protection from coercion) can hold once persons are constituted by enhancement technologies they may not have authored.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, autonomy_rights_frameworks, observer,
+    institutional, generational, analytical, global).
+
+% States and regulatory bodies tasked with protecting persons from harm while enabling innovation. They must navigate between readings: permitting enhancement pathways this reading celebrates while protecting those denied access and those subjected to stagnation narratives. Their role is split between enforcing and observing.
+narrative_ontology:constraint_stakeholder(ai_dignity_safeguarding__posthuman_continuity_reading, governance_authorities, agenda_setter,
+    institutional, generational, analytical, national).
+narrative_ontology:stakeholder_secondary_role(ai_dignity_safeguarding__posthuman_continuity_reading, governance_authorities, observer).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(ai_dignity_safeguarding__posthuman_continuity_reading, cognitive_technology_developers).
+narrative_ontology:fixing_cost_class(ai_dignity_safeguarding__posthuman_continuity_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Articulates a framework in which human dignity and the pursuit of enhanced capability (cognitive, biological, integrated) are coherent rather than opposed. Solves the coordination problem of how to treat enhancement technologies as legitimate expressions of human flourishing rather than boundary-violations or hubris. Enables enhancement developers and seekers to frame their work within a dignity narrative that treats posthuman futures as continuous with human becoming.
+% TRANSFER_FUNCTION: Moves authority and narrative framing from constraint-based (enhancement must be limited to protect human essence) to opportunity-based (enhancement is fulfillment). Transfers social permission to develop and pursue enhancement from a guarded, risk-mitigating stance to an optimistic, capability-expanding stance. The transfer flows from enhancement-skeptical frameworks (imago_dei_reading, cautious elements of autonomy_rights_reading) to enhancement-affirmative institutional actors (technology developers, capability-expansion advocates). In structural terms: moves the default from 'enhancement requires justification' to 'enhancement requires only consent and safety'.
+% ABSENT_VOICES: Populations systematically denied access to enhancement technologies have no seat at the agenda-setting table — they are excluded from decisions about which enhancements are developed, at what cost, for whom. Communities grounded in imago_dei or other non-posthuman dignity frameworks are also absent from the interpretive authority of this reading; they would attest that the reading dissolves the ground of dignity itself. Indigenous and traditional communities whose dignity frames do not center enhancement are excluded from the reading's horizon.
+% DISAPPEARANCE_RATIONALE: If this reading and its institutional embedding vanished, development timelines and social narratives around AI and enhancement would reorganize. The default permission structure for enhancement development would shift from optimistic to precautionary. Regulatory frameworks would revert to constraint-based models (limits on human-AI integration, restrictions on cognitive enhancement, precautionary governance). Persons currently pursuing enhancement would face social stigma and regulatory barriers. The posthuman vision as a framework for dignity would no longer authorize the current expansion of enhancement research and deployment.
+% FOUNDING_PROBLEM: Human capabilities have always been culturally, technologically, and biologically extended: writing extended memory, agriculture extended food access, medicine extended life. The founding problem is how to frame AI and enhancement as continuous with this history rather than as a catastrophic break or transgression of human nature. The problem: without a coherent dignity framework that treats enhancement as human flourishing, enhancement technologies are left to be governed only by caution, restriction, and fear — failing to authorize their potential.
+% FOUNDING_PROBLEM_CORROBORATION: Technology developers and transhumanist scholars attest the founding problem is live: enhancement technologies are advancing faster than we can build coherent frameworks that treat them as legitimate extensions of human dignity rather than threats. Persons with lived experience of enhancement (cochlear implants, prosthetics, cognitive tools, therapeutic technologies) attest that the lived reality is continuous with human flourishing, not transgression. Theologians and philosophers outside the imago_dei tradition (process theology, open theism, enhancement-affirming religious frameworks) corroborate that non-essentialist readings of human dignity are coherent and necessary. Governance authorities attest that current regulatory frameworks oscillate between caution and permission without a settled dignity framework, creating uncertainty.
+narrative_ontology:disappearance_verdict(ai_dignity_safeguarding__posthuman_continuity_reading, world_rearranges).
+narrative_ontology:founding_problem_status(ai_dignity_safeguarding__posthuman_continuity_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(ai_dignity_safeguarding__posthuman_continuity_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(ai_dignity_safeguarding__posthuman_continuity_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(ai_dignity_safeguarding__posthuman_continuity_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(ai_dignity_safeguarding__posthuman_continuity_reading, 0.18, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,16 +238,16 @@ narrative_ontology:story_seed(ai_dignity_safeguarding__posthuman_continuity_read
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.18) because the reading's core claim is that enhancement benefits rather than harms—there is no alleged zero-sum transfer. The constraint poses as pure coordination: 'establish a frame where enhancement is continuous with flourishing, and research/policy can proceed without constant friction.' Suppression is low (0.12) because enforcement relies on intellectual and institutional authority, not coercion—the frame is maintained by academic prestige, research funding direction, and policy language, not by forcible prevention of dissent. Theater is very low (0.08) because the constraint's function (enabling enhancement research and development) is genuinely served by its stated mechanism (positioning enhancement as flourishing). The measurement series shows slight drift upward in extractiveness (0.08→0.18) as the reading gains institutional authority and begins to marginalize enhancement skeptics more systematically; suppression drifts similarly as the constraint's maintenance requires active work to suppress competing frames. Theater remains flat and low throughout—the performative element is minimal. At t=32–40 (projected): extractiveness plateaus and slightly declines as institutional consensus solidifies and active suppression becomes unnecessary; the reading becomes 'common sense' and extraction disappears.
+ *   Extractiveness is low (0.18) because this reading does not extract rents or restrict access for those it covers; it opens permission space. The low extractiveness reflects that the constraint functions as authorization, not restriction. Suppression is moderate (0.22) rather than near-zero because the reading's authority depends on actively suppressing alternative dignity frameworks — imago_dei and cautious autonomy_rights readings must not gain interpretive authority, or the reading's narrative coherence fractures. The suppression is not coercive in a crude sense but structural: institutional control of which voices count as authoritative on dignity. Theater_ratio is low (0.12) because the coordination function (framing enhancement as human flourishing) is substantive; the constraint is not performing fake function but genuinely reshaping how development is governed. The measurement series show slow creep in suppression and theater as the reading becomes more institutionalized and faces greater pushback from excluded frameworks — by t=50 (a ~25-year projection), suppression has risen slightly as the need to defend the reading against counterarguments increases, but remains well below constraint-maintenance requirements for snares. The accessibility_collapse (0.35) is moderate-low: alternatives (imago_dei framing, precautionary governance) remain available and articulated, but less institutionally supported. Resistance (0.58) is substantial because the reading faces real resistance from theological traditions, rights-based advocates, and communities fearful of enhancement-driven inequality.
  *
  * PERSPECTIVAL GAP:
- *   The enhancement_seeker and stagnation_subjected seats experience this constraint as opposite types. For enhancement_seekers, the constraint is genuine rope: it solves the coordination problem of establishing a shared frame for personhood that treats enhancement as flourishing, enabling research and policy without friction. Extractiveness is near-zero from their position; the constraint benefits them. For stagnation_subjected persons, the same constraint operates as snare: it establishes a frame that positions their exclusion as natural (they are not-enhanced, therefore not-flourishing) and marginalizes institutional alternatives that would grant them access. The engine computes these divergent seat types from the structural data: beneficiary/victim declarations, power differentials (organized movement vs. powerless individuals), exit options (mobile researchers vs. trapped populations), and the identity-lock mechanism that binds stagnation_subjected persons to their exclusion. The claim (rope) reflects the reading's own self-understanding; the metrics reflect the asymmetric structural impact.
+ *   Why do beneficiary and payer seats compute differently? Because the reading's authorization function is asymmetric: it opens development space for some while creating social pressure and structural barriers for others. The enhancement_denied_populations and stagnation_subjected_communities are not actively prevented from accessing enhancement in most cases; rather, they are positioned as failures to participate in the posthuman future the reading celebrates. This is a more subtle form of extraction than restriction — it is extraction through exclusion from flourishing.
  *
  * DIRECTIONALITY LOGIC:
- *   Under this reading, enhancement_seekers and evolving_persons are the structural beneficiaries: they are positioned as the primary subjects of dignity development and as agents whose trajectories are enabled rather than constrained. Their directionality is near-beneficiary (d ≈ 0.2): they benefit from the frame, experience low friction, and have mobile exit options. Stagnation_subjected_persons and enhancement_access_denied_populations are positioned as victims of deprivation: they are denied access to the developmental possibilities the reading celebrates. Their directionality is near-target (d ≈ 0.8): they bear the cost of exclusion and stratification, face identity-lock into prohibition, and have trapped exit. Transhumanist_movement is the agenda-setter: they establish and defend the frame. Bioconservative_authorities are excluded: they would contradict the reading's founding premise and are therefore not seats within this constraint but external challengers. The divergence in seat directionality is the core feature: from the enhancement_seeker seat, this constraint is enabling; from the stagnation_subjected seat, it is exclusionary.
+ *   Directionality for cognitive_technology_developers is near 0.0 (full beneficiary): they set the reading's agenda, frame what counts as dignified development, and face minimal constraints on their research trajectories. Their power is institutional and their exit is arbitrage (they can move development to permissive jurisdictions). Directionality for enhancement_denied_populations is near 0.85 (near-target): they are trapped (limited geographical/social exit), identity_locked (the reading's narrative frames enhancement-refusal as dignity-denial), and face extraction through marginalization. Their time horizon is biographical/generational: within their lifetime they will witness the posthuman transition they did not choose and may not participate in. Directionality for evolved_persons is near 0.3–0.4 (slightly beneficiary side): they gain narrative legitimacy and permission for enhancement but may also face pressure to enhance to maintain social position.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading does not exhibit mandatrophy. The founding problem ('Is enhancement continuous with flourishing or transgressive?') is still contested and live. The coordination function (establishing a shared frame for personhood that enables enhancement research) is still necessary precisely because the founding problem is unresolved. If the founding problem were dead—if consensus had crystallized that enhancement is indeed continuous with flourishing—the constraint would persist through institutional inertia, and mandatrophy might develop. Currently, the constraint is maintained by active intellectual and policy work, not by theater. The divergent seat experience (enabling vs. exclusionary) is not mandatrophy but structural asymmetry: the constraint genuinely benefits those positioned as subjects of enhancement development while it excludes those denied access. This asymmetry is the reading's own internal feature, not a degradation of its function.
+ *   The founding problem (framing enhancement as continuous with human flourishing rather than transgressive) remains live and contested. The reading does not dissolve or supersede competing frameworks; it coexists with them in institutional competition. The constraint is not (yet) a piton — it has real functional content (authorizing development and reshaping governance permissions) and substantial resistance (from excluded frameworks and governance authorities concerned about inequality). No evidence of mandatrophy in the classical sense (dead founding problem, theatrical persistence). However, there is a risk of future mandatrophy if enhancement becomes so normalized that the constraint's explicit authorization becomes unnecessary: once posthuman is the default, the reading's work as a dignity-grounding narrative may become invisible, and the constraint may persist as institutional theater (governance structures and development incentives that continue to favor enhancement even after the original dignity dispute is resolved). Measurement trajectory shows slow rise in theater_ratio (0.08 → 0.12 at t=50), consistent with early stages of this drift.
  */
 
 /* ==========================================================================
@@ -180,89 +255,119 @@ narrative_ontology:story_seed(ai_dignity_safeguarding__posthuman_continuity_read
    ========================================================================== */
 
 omega_variable(
-    enhancement_continuity_thesis,
-    'Is enhancement of human cognition and biology genuinely continuous with human development (as this reading claims), or does enhancement represent a categoric break from human nature and human history?',
-    'Empirical investigation of whether persons report subjective continuity of identity after enhancement; philosophical analysis of human nature as a historical and biological category; natural experiments from jurisdictions permitting or restricting enhancement.',
-    'If enhancement is genuinely continuous, the reading''s positioning of enhanced persons as flourishing subjects is sound. If enhancement represents a break, the reading''s frame collapses into one of the rival readings (imago_dei: enhancement is transgressive; autonomy_rights: enhancement requires regulation precisely because it is discontinuous).',
+    dignity_ground_plasticity,
+    'Can human dignity remain meaningfully grounded if human nature itself is treated as plastic and subject to radical enhancement or replacement?',
+    'Philosophical work in non-essentialist metaphysics of persons and dignity; empirical study of how enhanced persons understand their own continuity of identity and dignity-status across transformations; theological development of enhancement-compatible dignity frameworks.',
+    'If dignity cannot be grounded in plastic personhood, the posthuman_continuity reading collapses and either imago_dei or rights-based frames must capture authority. If dignity can be grounded in trajectory or agency or relational constitution rather than fixed nature, the reading is strengthened and its permission structures gain legitimacy.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(enhancement_continuity_thesis, conceptual, 'Whether enhancement is continuous with human development or represents a categoric break.').
+narrative_ontology:omega_variable(dignity_ground_plasticity, conceptual, 'Whether dignity can remain coherent as a concept if the ground shifts from fixed human nature to plastic personhood.').
 
 omega_variable(
-    dignity_as_person_vs_nature,
-    'Does dignity attach to persons as evolved/transformable beings (as this reading claims), or does dignity attach to the human as a fixed natural kind (as imago_dei reading claims) or to humans as rights-holders with autonomy (as autonomy_rights reading claims)?',
-    'Philosophical analysis of the foundations of dignity across theological, secular humanist, and transhumanist traditions; investigation of whether legal and institutional frameworks can coherently grant dignity to posthuman forms without collapsing under internal contradiction.',
-    'If dignity genuinely attaches to persons-however-constituted, this reading''s claim is validated and enhancement is flourishing. If dignity instead grounds in human nature or human autonomy, one of the rival readings should displace this one; the question becomes which.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(dignity_as_person_vs_nature, conceptual, 'The metaphysical ground of dignity: person, nature, or rights.').
-
-omega_variable(
-    ai_moral_status_emergence,
-    'Do advanced AI systems possess or can they possess moral status (agency, dignity, interests deserving of protection)? Or are they tools whose status is derivative from human interests?',
-    'Empirical investigation of AI capabilities and consciousness; philosophical analysis of necessary conditions for moral status; institutional precedent-setting as AI systems demonstrate agency.',
-    'If advanced AI systems possess or can possess moral status, they become beneficiaries of this constraint''s operation (positioned as partners/successors rather than subordinates), and the constraint''s coordination function expands. If they remain tools, this reading''s claim that ''the more-than-human is fulfillment not threat'' loses force regarding AI specifically.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(ai_moral_status_emergence, empirical, 'Whether advanced AI systems possess or can possess moral status.').
-
-omega_variable(
-    enhancement_access_stratification,
-    'If enhancement is positioned as flourishing, what prevents enhancement from becoming a mechanism for stratification, creating a de facto permanent class of enhanced and non-enhanced persons with divergent capabilities and life prospects?',
-    'Institutional design analysis: can universal access to enhancement be guaranteed? Empirical observation: do enhancement technologies stratify societies historically (as genetic and educational technologies have)?',
-    'If stratification is inevitable, the victim set (enhancement_access_denied) becomes permanent and growing; the constraint''s operation as rope for some becomes snare for others. The reading''s claim that enhancement is continuous with human flourishing faces pressure from evidence that it benefits only some humans.',
+    enhancement_access_inequality_driver,
+    'Does framing enhancement as continuous with human flourishing create structural incentive toward inequality by positioning enhancement-denial as marginalization rather than protection?',
+    'Comparative analysis of access outcomes in jurisdictions with enhancement-optimistic vs. precautionary governance frames; study of social pressure on enhancement-refusal communities in posthuman-framing contexts; empirical tracking of whether the reading''s authorization increases inequality in enhancement access.',
+    'If the reading demonstrably drives inequality in access and creates structural pressure on excluded populations, it becomes extractive toward those populations despite low formal extraction. The constraint would reclassify toward tangled_rope or snare. If access remains distributed independently of the reading''s narrative frame, the low extractiveness holds.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(enhancement_access_stratification, empirical, 'Whether enhancement technology necessarily produces lasting stratification.').
+narrative_ontology:omega_variable(enhancement_access_inequality_driver, empirical, 'Whether the reading''s narrative authorization of enhancement creates or exacerbates access inequality.').
 
 omega_variable(
-    suppression_mechanism_internalization,
-    'Is the measured suppression (0.12) purely institutional and intellectual—the marginalizing of bioconservative voices through research funding and policy language—or has it become internalized in persons who believe enhancement is transgressive, such that suppression persists even after institutional barriers are removed?',
-    'Post-institutional empirical study: in jurisdictions with minimal legal barriers to enhancement, do individuals still refuse or delay enhancement due to internalized prohibitions? Qualitative research on identity fusion with non-enhancement positions.',
-    'If suppression is institutional, it remains reversible and low (measured value appropriate). If suppression is internalized, the true suppression is higher than measured, and stagnation_subjected persons carry the suppression as identity even if institutional barriers fall.',
+    imago_dei_foreclosure_hypothesis,
+    'Does the posthuman_continuity reading logically foreclose the imago_dei_reading, or do they coexist as genuinely different frameworks neither of which rules out the other?',
+    'Close reading of imago_dei theological arguments about whether human enhancement is logically incompatible with image-of-God status or merely forbidden within that tradition; examination of whether any enhancement-affirming theologian has successfully held imago_dei language while embracing posthuman frameworks.',
+    'If the readings genuinely foreclose each other, the kernel itself may be unsettleable — one framework must eventually displace the other. If they coexist (different communities, different authority structures), the kernel remains contested and both readings persist. Foreclosure would suggest longer-term institutional dominance competition; coexistence suggests permanent pluralism.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether the measured suppression is institutional or internalized.').
+narrative_ontology:omega_variable(imago_dei_foreclosure_hypothesis, conceptual, 'Whether imago_dei and posthuman_continuity logically foreclose each other or can genuinely coexist as different frameworks.').
+
+omega_variable(
+    identity_lock_mechanism_interpersonal,
+    'Is the identity-locking experienced by stagnation_subjected_communities primarily structural (economic barriers, access denial) or internalized (the narrative has become part of their self-concept, making enhancement-refusal feel like betrayal of self)?',
+    'Post-transition study: tracking communities that shift from enhancement-skeptical to enhancement-affirming contexts, measuring whether constraints on enhancement-seeking persist after external barriers are removed; narrative analysis of how enhancement-refusing communities describe their own identity.',
+    'If identity-lock is primarily internalized, the constraint''s effective suppression is higher than the structural measure (0.22) suggests, and the targeting of stagnation_subjected_communities is more severe. If structural, the suppression reflects institutional barriers rather than internalized consent. Mixed mechanisms suggest the constraint operates both ways.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_mechanism_interpersonal, empirical, 'Whether suppression of enhancement-refusal communities is structural or internalized identity-fusion.').
+
+omega_variable(
+    kernel_committer_reading_distinction,
+    'Is the posthuman_continuity_reading itself the reading, or is it a second-order rationalization of a deeper material interest in unregulated enhancement development?',
+    'Historical and sociological analysis of how the reading emerged and who developed it; tracking whether the reading''s core axioms existed prior to contemporary AI development or emerged after; examining whether scholars holding the reading have material interest in enhancement technology development.',
+    'If the reading is a rationalization for industry interests, it reclassifies from rope (genuine coordination + limited constraint) toward snare (coordination as cover for extraction). If the reading is a genuine philosophical development independent of material interest, the low extractiveness holds. Mixed — some proponents have material interest, others do not — suggests institutional capture dynamics.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_committer_reading_distinction, empirical, 'Whether the reading is a genuine philosophical position or a rationalization for material interests in unregulated enhancement.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ai_dignity_safeguarding__posthuman_continuity_reading, 0, 40).
+narrative_ontology:interval(ai_dignity_safeguarding__posthuman_continuity_reading, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(ai_d_tr_t0, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 0, 0.04).
-narrative_ontology:measurement(ai_d_tr_t8, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 8, 0.05).
-narrative_ontology:measurement(ai_d_tr_t16, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 16, 0.07).
-narrative_ontology:measurement(ai_d_tr_t24, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 24, 0.08).
-narrative_ontology:measurement(ai_d_tr_t32, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 32, 0.09).
-narrative_ontology:measurement(ai_d_tr_t40, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 40, 0.08).
+narrative_ontology:measurement(ai_d_tr_t0, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement_basis(ai_d_tr_t0, observed).
+narrative_ontology:measurement(ai_d_tr_t7, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 7, 0.1).
+narrative_ontology:measurement_basis(ai_d_tr_t7, observed).
+narrative_ontology:measurement(ai_d_tr_t14, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 14, 0.11).
+narrative_ontology:measurement_basis(ai_d_tr_t14, observed).
+narrative_ontology:measurement(ai_d_tr_t21, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 21, 0.12).
+narrative_ontology:measurement_basis(ai_d_tr_t21, projected).
+narrative_ontology:measurement(ai_d_tr_t28, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 28, 0.12).
+narrative_ontology:measurement_basis(ai_d_tr_t28, projected).
+narrative_ontology:measurement(ai_d_tr_t35, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 35, 0.13).
+narrative_ontology:measurement_basis(ai_d_tr_t35, projected).
+narrative_ontology:measurement(ai_d_tr_t42, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 42, 0.12).
+narrative_ontology:measurement_basis(ai_d_tr_t42, projected).
+narrative_ontology:measurement(ai_d_tr_t50, ai_dignity_safeguarding__posthuman_continuity_reading, theater_ratio, 50, 0.12).
+narrative_ontology:measurement_basis(ai_d_tr_t50, projected).
 
 % Extraction over time
-narrative_ontology:measurement(ai_d_be_t0, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(ai_d_be_t8, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 8, 0.12).
-narrative_ontology:measurement(ai_d_be_t16, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 16, 0.15).
-narrative_ontology:measurement(ai_d_be_t24, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 24, 0.18).
-narrative_ontology:measurement(ai_d_be_t32, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 32, 0.19).
-narrative_ontology:measurement(ai_d_be_t40, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 40, 0.18).
+narrative_ontology:measurement(ai_d_be_t0, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement_basis(ai_d_be_t0, observed).
+narrative_ontology:measurement(ai_d_be_t7, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 7, 0.14).
+narrative_ontology:measurement_basis(ai_d_be_t7, observed).
+narrative_ontology:measurement(ai_d_be_t14, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 14, 0.16).
+narrative_ontology:measurement_basis(ai_d_be_t14, observed).
+narrative_ontology:measurement(ai_d_be_t21, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 21, 0.17).
+narrative_ontology:measurement_basis(ai_d_be_t21, projected).
+narrative_ontology:measurement(ai_d_be_t28, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 28, 0.18).
+narrative_ontology:measurement_basis(ai_d_be_t28, projected).
+narrative_ontology:measurement(ai_d_be_t35, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 35, 0.19).
+narrative_ontology:measurement_basis(ai_d_be_t35, projected).
+narrative_ontology:measurement(ai_d_be_t42, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 42, 0.19).
+narrative_ontology:measurement_basis(ai_d_be_t42, projected).
+narrative_ontology:measurement(ai_d_be_t50, ai_dignity_safeguarding__posthuman_continuity_reading, base_extractiveness, 50, 0.18).
+narrative_ontology:measurement_basis(ai_d_be_t50, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(ai_d_su_t0, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 0, 0.08).
-narrative_ontology:measurement(ai_d_su_t8, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 8, 0.1).
-narrative_ontology:measurement(ai_d_su_t16, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 16, 0.11).
-narrative_ontology:measurement(ai_d_su_t24, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 24, 0.12).
-narrative_ontology:measurement(ai_d_su_t32, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 32, 0.13).
-narrative_ontology:measurement(ai_d_su_t40, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 40, 0.12).
+narrative_ontology:measurement(ai_d_su_t0, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 0, 0.15).
+narrative_ontology:measurement_basis(ai_d_su_t0, observed).
+narrative_ontology:measurement(ai_d_su_t7, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 7, 0.18).
+narrative_ontology:measurement_basis(ai_d_su_t7, observed).
+narrative_ontology:measurement(ai_d_su_t14, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 14, 0.2).
+narrative_ontology:measurement_basis(ai_d_su_t14, observed).
+narrative_ontology:measurement(ai_d_su_t21, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 21, 0.22).
+narrative_ontology:measurement_basis(ai_d_su_t21, projected).
+narrative_ontology:measurement(ai_d_su_t28, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 28, 0.23).
+narrative_ontology:measurement_basis(ai_d_su_t28, projected).
+narrative_ontology:measurement(ai_d_su_t35, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 35, 0.24).
+narrative_ontology:measurement_basis(ai_d_su_t35, projected).
+narrative_ontology:measurement(ai_d_su_t42, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 42, 0.23).
+narrative_ontology:measurement_basis(ai_d_su_t42, projected).
+narrative_ontology:measurement(ai_d_su_t50, ai_dignity_safeguarding__posthuman_continuity_reading, suppression_requirement, 50, 0.22).
+narrative_ontology:measurement_basis(ai_d_su_t50, projected).
 
 
 /* ==========================================================================
@@ -270,16 +375,20 @@ narrative_ontology:measurement(ai_d_su_t40, ai_dignity_safeguarding__posthuman_c
    ========================================================================== */
 
 narrative_ontology:coordination_type(ai_dignity_safeguarding__posthuman_continuity_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(ai_dignity_safeguarding__posthuman_continuity_reading, 0.1).
+narrative_ontology:boltzmann_floor_override(ai_dignity_safeguarding__posthuman_continuity_reading, 0.12).
 narrative_ontology:affects_constraint(ai_dignity_safeguarding__posthuman_continuity_reading, ai_dignity_safeguarding__imago_dei_reading).
 narrative_ontology:affects_constraint(ai_dignity_safeguarding__posthuman_continuity_reading, ai_dignity_safeguarding__autonomy_rights_reading).
+narrative_ontology:affects_constraint(ai_dignity_safeguarding__posthuman_continuity_reading, enhancement_access_inequality).
+narrative_ontology:affects_constraint(ai_dignity_safeguarding__posthuman_continuity_reading, cognitive_transcendence_permission_structure).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the ai_dignity_safeguarding kernel. The posthuman_continuity_reading differs structurally from sibling readings in the beneficiary set (includes enhanced and posthuman forms vs. human rights-holders only), the victim set (includes those denied enhancement vs. those subjected to unsafe or unregulated enhancement), and the ε value (low extraction claiming pure coordination vs. higher extraction in autonomy_rights reading where regulation generates asymmetric costs). All three readings share the kernel (the question of how dignity attaches and what AI safety requires) but diverge in their answer. The constraint family is linked by network.affects_constraints edges: each reading's stability is influenced by developments in AI capability, enhancement technology, and institutional adoption of rival frames. The posthuman_continuity_reading gains institutional strength when enhancement technologies advance and succeed (lowering ε, reinforcing the 'flourishing' frame); it faces pressure when AI accidents occur or enhancement harms become visible (increasing ε and resistance, strengthening rival readings).
+% Part of the ai_dignity_safeguarding kernel family. This reading (posthuman_continuity) coexists with imago_dei_reading and autonomy_rights_reading as three different interpretations of what dignity means and what relationship persons should have to enhancement technologies. Each reading generates a different constraint with different ε values, different beneficiary/victim structures, and different institutional authority. The three constraints are linked through the kernel; they are not alternative measurements of a single constraint. The reading_relations in cs_structure document the logical relationships between readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(ai_dignity_safeguarding__posthuman_continuity_reading, powerless, 0.85).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

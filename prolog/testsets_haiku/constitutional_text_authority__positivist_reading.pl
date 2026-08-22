@@ -39,11 +39,17 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,33 +74,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: constitutional_text_authority__positivist_reading
- *   human_readable: Constitutional Validity via Procedural Enactment (Positivist Reading)
+ *   human_readable: Constitutional Authority via Procedural Positivism
  *   domain: constitutional_law/legal_theory
  *
  * SUMMARY:
- *   The positivist reading of constitutional authority claims that
- *   constitutional validity derives from formal enactment procedures
- *   (ratification, amendment mechanisms) and institutional sources
- *   (legislatures, courts functioning within their proper roles), not from
- *   moral content or justice principles. The law/morality distinction is
- *   maintained as a foundational divide: what makes something constitutional
- *   law is its source in formal procedure, not whether it is morally good.
- *   This reading competes with originalism (which anchors authority in
- *   historical public understanding at ratification) and living
- *   constitutionalism (which allows meaning to evolve with contemporary moral
- *   understanding). The positivist reading is instantiated here as a single
- *   constraint story capturing this one interpretive frame in isolation. The
- *   sibling readings are separate constraints linked via
- *   network.affects_constraints.
+ *   The positivist reading of constitutional authority asserts that the
+ *   Constitution's validity derives from its formal enactment via the
+ *   procedures specified in Article V and from its status as foundational
+ *   law, not from its moral content or alignment with natural law. Under this
+ *   reading, courts apply constitutional rules because they are validly
+ *   enacted law, not because they are just. This maintains a sharp
+ *   distinction between law and morality: an unjust rule can still be valid
+ *   constitutional law if properly enacted. The reading benefits
+ *   institutional judges (whose authority is grounded in formal position) and
+ *   textualist scholars (whose methodology is centered on statutory language
+ *   analysis) by decoupling validity from moral argument. It excludes natural
+ *   law theorists from the core validity conversation, though they remain
+ *   able to argue moral concerns about constitutional rules. The claim/metric
+ *   gap is intentional: positivism is CLAIMED as pure rope (genuine
+ *   coordination function: a decision procedure that allows diverse moral
+ *   communities to operate under shared validity criteria) while the
+ *   measurements capture modest extractive effects (institutional actors gain
+ *   interpretive authority, natural law voices lose standing in validity
+ *   discourse). The engine computes this divergence; do not reconcile.
  *
  * KEY AGENTS:
- *   - professional_judiciary: agenda-setter, institutional power — enforces the positivist frame by declaring moral arguments extra-constitutional
- *   - formalist_legal_doctrine: non-agent beneficiary — methodology that depends on text-and-procedure-centered interpretation
- *   - moral_reasoning_constituencies: payer, organized power — civil rights advocates, ethicists, reform movements excluded from authoritative constitutional voice
- *   - originalist_judges: observer seat with secondary benefit — collaborate on text-fidelity but diverge on grounding
- *   - living_constitutionalist_judges: excluded, institutional power — would argue for moral-content evolution but are kept from appellate authority
- *   - legislatures: observer with mobile exit — remain the legitimate forum for moral arguments
- *   - legal_academia: observer with mobile exit — teaches and critiques the positivist orthodoxy
+ *   - Institutional judiciary: sets the validity procedure via formal interpretation; beneficiary of the authority grounding; enforces the law/morality distinction through decisional practice
+ *   - Textualist legal scholars: benefit intellectually from text-fidelity framework; advance careers within positivist methodology; mobile within legal academia
+ *   - Natural law theorists: pay the cost of exclusion from validity arguments; must either adopt positivist framework or argue from within it; institutional power but limited standing in positivist discourse
+ *   - Moral philosophers: excluded from validity conversation but present in broader constitutional discourse; their objections are structural, not suppressive
+ *   - Originalist judges: neighboring framework with partial overlap; differ on authority grounding (historical public meaning vs. formal procedure); compute divergent directionality
+ *   - Living constitutionalist judges: competing reading that reintroduces morality as validity condition; contestation is direct on the core axiom
  */
 
 /* ==========================================================================
@@ -101,59 +112,110 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constitutional_text_authority__positivist_reading, 0.42).
-domain_priors:suppression_score(constitutional_text_authority__positivist_reading, 0.38).
-domain_priors:theater_ratio(constitutional_text_authority__positivist_reading, 0.28).
+domain_priors:base_extractiveness(constitutional_text_authority__positivist_reading, 0.38).
+domain_priors:suppression_score(constitutional_text_authority__positivist_reading, 0.22).
+domain_priors:theater_ratio(constitutional_text_authority__positivist_reading, 0.18).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, extractiveness, 0.42).
-narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, suppression_requirement, 0.38).
-narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, extractiveness, 0.38).
+narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, suppression_requirement, 0.22).
+narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, theater_ratio, 0.18).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, accessibility_collapse, 0.71).
-narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, resistance, 0.62).
+narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, accessibility_collapse, 0.65).
+narrative_ontology:constraint_metric(constitutional_text_authority__positivist_reading, resistance, 0.71).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(constitutional_text_authority__positivist_reading, tangled_rope).
-narrative_ontology:human_readable(constitutional_text_authority__positivist_reading, "Constitutional Validity via Procedural Enactment (Positivist Reading)").
+narrative_ontology:constraint_claim(constitutional_text_authority__positivist_reading, rope).
+narrative_ontology:human_readable(constitutional_text_authority__positivist_reading, "Constitutional Authority via Procedural Positivism").
 narrative_ontology:topic_domain(constitutional_text_authority__positivist_reading, "constitutional_law/legal_theory").
 
-domain_priors:requires_active_enforcement(constitutional_text_authority__positivist_reading).
-
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(constitutional_text_authority__positivist_reading, 'cf0b96e9-283c-4074-ba52-2b30a42d6a3a').
-narrative_ontology:cs_kernel_codification('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', formalized).
-narrative_ontology:cs_authority_grounding('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', extraction).
-narrative_ontology:cs_interpretation_layer_present('cf0b96e9-283c-4074-ba52-2b30a42d6a3a').
-narrative_ontology:cs_reading_relation('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', constitutional_text_authority__originalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', constitutional_text_authority__living_constitutionalist_reading, forecloses).
-narrative_ontology:cs_axiom('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', foundational, legal_positivism_supremacy).
-narrative_ontology:cs_axiom_status(legal_positivism_supremacy, holdable).
-narrative_ontology:cs_axiom_grounding('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', legal_positivism_supremacy, conventional).
-narrative_ontology:cs_axiom('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', foundational, law_morality_distinction_irreducible).
-narrative_ontology:cs_axiom_status(law_morality_distinction_irreducible, holdable).
-narrative_ontology:cs_axiom_grounding('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', law_morality_distinction_irreducible, deontological).
-narrative_ontology:cs_reference_frame('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', formal_enactment_procedure_authority).
-narrative_ontology:cs_drift_state('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', contemporary_moral_critique_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('cf0b96e9-283c-4074-ba52-2b30a42d6a3a', '').
+narrative_ontology:cs_story_uid(constitutional_text_authority__positivist_reading, '94089a86-7287-4a17-804c-951a5d87acdc').
+narrative_ontology:cs_kernel_codification('94089a86-7287-4a17-804c-951a5d87acdc', fixed_text).
+narrative_ontology:cs_authority_grounding('94089a86-7287-4a17-804c-951a5d87acdc', extraction).
+narrative_ontology:cs_interpretation_layer_present('94089a86-7287-4a17-804c-951a5d87acdc').
+narrative_ontology:cs_reading_relation('94089a86-7287-4a17-804c-951a5d87acdc', constitutional_text_authority__originalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('94089a86-7287-4a17-804c-951a5d87acdc', constitutional_text_authority__living_constitutionalist_reading, coexists_with).
+narrative_ontology:cs_axiom('94089a86-7287-4a17-804c-951a5d87acdc', foundational, formal_enactment_determines_validity).
+narrative_ontology:cs_axiom_status(formal_enactment_determines_validity, holdable).
+narrative_ontology:cs_axiom_grounding('94089a86-7287-4a17-804c-951a5d87acdc', formal_enactment_determines_validity, conventional).
+narrative_ontology:cs_axiom('94089a86-7287-4a17-804c-951a5d87acdc', foundational, law_morality_logical_distinction).
+narrative_ontology:cs_axiom_status(law_morality_logical_distinction, holdable).
+narrative_ontology:cs_axiom_grounding('94089a86-7287-4a17-804c-951a5d87acdc', law_morality_logical_distinction, deontological).
+narrative_ontology:cs_reference_frame('94089a86-7287-4a17-804c-951a5d87acdc', proceduralist_legal_positivism).
+narrative_ontology:cs_drift_state('94089a86-7287-4a17-804c-951a5d87acdc', contemporary_legal_realism_challenge, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('94089a86-7287-4a17-804c-951a5d87acdc', '').
 narrative_ontology:cs_kernel_id(constitutional_text_authority__positivist_reading, constitutional_text_authority).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(constitutional_text_authority__positivist_reading, professional_judiciary).
-narrative_ontology:constraint_beneficiary(constitutional_text_authority__positivist_reading, formalist_legal_doctrine).
-narrative_ontology:constraint_victim(constitutional_text_authority__positivist_reading, moral_reasoning_constituencies).
-narrative_ontology:constraint_victim(constitutional_text_authority__positivist_reading, extra_textual_reform_movements).
+narrative_ontology:constraint_beneficiary(constitutional_text_authority__positivist_reading, institutional_judiciary).
+narrative_ontology:constraint_beneficiary(constitutional_text_authority__positivist_reading, textualist_legal_scholars).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(constitutional_text_authority__positivist_reading, natural_law_theorists).
+narrative_ontology:constraint_vindicates(constitutional_text_authority__positivist_reading, law_morality_distinction).
+narrative_ontology:constraint_vindicates(constitutional_text_authority__positivist_reading, formal_enactment_authority).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets and applies the Constitution via formal adjudication. Under the positivist reading, their authority derives from their institutional position as the authorized interpreter of enacted law, not from their moral reasoning or policy preferences. They enforce the law/morality distinction by excluding moral argument from the validity condition and grounding decisions in procedural source rules.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, institutional_judiciary, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Benefit intellectually and professionally from the positivist reading's validation of textual analysis as a primary method. The reading privileges language-focused jurisprudence and makes moral philosophy contributions optional to legal argument. Their careers and publications advance within the positivist framework.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, textualist_legal_scholars, beneficiary,
+    institutional, generational, mobile, national).
+
+% Bear the intellectual cost of exclusion from validity arguments under positivism. Their core claim—that constitutional meaning is grounded in natural law or inherent moral principles—is ruled out as irrelevant to the question 'Is this law valid?' They must either adopt the positivist framework or argue from within it to recover natural law content.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, natural_law_theorists, payer,
+    institutional, generational, mobile, national).
+
+% Have standing in broader constitutional discourse but are structurally excluded from the positivist validity conversation. They can argue that a rule is unjust, but not that the injustice makes it invalid as constitutional law. Their exclusion is not coercive (they have alternatives in other frameworks) but is a structural boundary of the positivist reading.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, moral_philosophers, excluded,
+    institutional, generational, mobile, national).
+
+% Occupy a neighboring interpretive position with partial structural overlap to positivism (both text-centric) but grounded in a different authority source (historical public meaning rather than formal procedure). They compute divergent directionality depending on whether natural law foundations matter to the constitutional question.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, originalist_judges, observer,
+    institutional, generational, analytical, national).
+
+% Hold a competing reading that explicitly reintroduces moral principle as a validity condition, evolving with contemporary values. They see positivism as artificially constraining the Constitution's interpretive domain and argue the reading fails to capture how constitutional authority actually functions in practice.
+narrative_ontology:constraint_stakeholder(constitutional_text_authority__positivist_reading, living_constitutionalist_judges, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(constitutional_text_authority__positivist_reading, institutional_judiciary).
+narrative_ontology:fixing_cost_class(constitutional_text_authority__positivist_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a decision procedure for constitutional validity that is decoupled from moral argument, enabling courts and legal actors to apply the law without resolving contested philosophical questions. The formal/procedural grounding allows diverse constitutional communities to operate under shared validity criteria despite disagreeing on underlying moral foundations.
+% TRANSFER_FUNCTION: Moves interpretive authority away from natural law theorists and moral philosophers toward institutional actors (courts, legislature) operating through formal procedures. Moral argument becomes advisory rather than constitutive of validity; those whose authority derives from moral reasoning lose standing in the core validity question.
+% ABSENT_VOICES: Natural law theorists and moral philosophers who argue constitutional meaning derives from pre-legal moral principles are structurally excluded from the positivist validity conversation. They can object that the reading artificially severs law from morality, but positivism defines them out of the question at the outset. Legislative minorities and historical actors who believed constitutional authority grounded in natural right are also excluded: their moral convictions, even if widespread, do not generate validity under formal procedure rules.
+% DISAPPEARANCE_RATIONALE: If the positivist reading vanished and courts returned to mixed frameworks (text + morality + history), constitutional interpretation would reorganize around those mixed criteria; the change would be institutional, not world-rearranging. Some argue (living constitutionalists) that disappearance would restore what the Constitution actually requires; others (originalists) that it would introduce illegitimate moral reasoning; still others maintain the legal system already operates as a hybrid and the positivist claim never fully governed in practice. The disappearance would be more like a framework shift within jurisprudence than a collapse of material arrangements.
+% FOUNDING_PROBLEM: Constitutional interpretation requires a mechanism to distinguish valid constitutional law from invalid or non-law. Early positivists posed the problem as: 'How can we ground constitutional validity on formal enactment and institutional source without collapsing into moral relativism or natural law?' The procedure-based answer was: validity derives from the pedigree of the rule (enacted via Article V or recognized as foundational law), not from its content.
+% FOUNDING_PROBLEM_CORROBORATION: Legal positivist scholars (Hart, Raz, Green) and institutionalist judges consistently attest that the problem remains live: courts must apply law that participants may regard as unjust, and distinguishing 'valid law' from 'morally good law' remains a pressing interpretive problem. Living constitutionalists and natural law theorists dispute that this is the right problem to solve; they attest instead that the founding problem was misframed by excluding morality. Independent jurisprudential analysis confirms the problem is contested, not answered: no consensus exists on whether formal procedure alone suffices for constitutional validity.
+narrative_ontology:disappearance_verdict(constitutional_text_authority__positivist_reading, contested).
+narrative_ontology:founding_problem_status(constitutional_text_authority__positivist_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(constitutional_text_authority__positivist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(constitutional_text_authority__positivist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(constitutional_text_authority__positivist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(constitutional_text_authority__positivist_reading, 0.38, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -168,16 +230,16 @@ narrative_ontology:story_seed(constitutional_text_authority__positivist_reading,
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.42) because the constraint benefits institutional judges and formalist doctrine without producing obviously unfair outcomes—the extraction is the relocation of moral argument from courts to legislatures, a subtle institutional shift rather than overt coercion. Suppression is lower than extraction (0.38) because moral-reasoning constituencies retain legislative access and academic spaces; courts are not the only interpretive venue. Theater ratio is low (0.28) because the formal procedure claim is genuinely functional—positivist interpretation does produce predictable, rule-governed outcomes. Accessibility collapse is high (0.71) because once the positivist frame is established in law schools and courts, alternatives (moral reasoning, natural law, living constitutionalism) appear outside constitutional law proper—they seem unavailable within the legal frame. Resistance is substantial (0.62) because moral advocates, living constitutionalists, and scholars mount continuous, organized opposition to the positivist constraint. The measurement series show slow growth in extractiveness and suppression over 75 years: as the positivist frame became institutionalized, enforcement tightened and the cost to moral-reasoning advocates rose. Theater ratio climbed alongside, indicating increasing performativity in maintaining the law/morality distinction against sustained critique.
+ *   Extractiveness is moderate (0.38 endpoint) because the positivist reading does concentrate interpretive authority in institutions and excludes certain voices from the validity conversation, but this concentration is justified by a genuine coordination function (enabling legal actors with diverse moral views to apply law under shared criteria). The extraction is not suppressive in the classical sense—natural law theorists retain their institutional positions and can argue morality within a separate domain—but it is asymmetric in that institutional judges gain authority while natural law frameworks lose relevance to validity questions. Suppression is low (0.22) because the reading is sustained through formal institutional practice and intellectual argument, not through coercion; resistance is high (0.71) because living constitutionalists and natural law theorists actively contest the law/morality distinction and offer competing readings with substantial scholarly support. Theater ratio is low (0.18) because the reading's core function (providing a decision procedure decoupled from moral contest) is genuinely performed; the modest theater increase over the interval reflects growing emphasis on formalism as a rhetorical move to defend textualism against policy-motivated interpretation, but the underlying function persists. Accessibility collapse is moderate (0.65) because the positivist framework is intellectually accessible—the law/morality distinction is conceptually simple—but alternatives (originalism, living constitutionalism) remain available and intellectually sophisticated, so the positivist reading does not entirely collapse access to other interpretive paths.
  *
  * PERSPECTIVAL GAP:
- *   The judiciary seat and the moral-reasoning-constituencies seat compute radically differently. From the judiciary's position (institutional, constrained, beneficiary), the positivist constraint is a genuine coordination solution—it makes law predictable and shields judges from accusations of imposing their morality. From the moral-constituency position (organized, constrained, payer), the same constraint is extractive suppression—their reasoning is declared illegitimate and relocated to a forum where their voice is weaker. The originalist-judges observer seat shows a third perspective: they benefit from the text-fidelity enforcement but reject the positivist grounding, diverging on whether historical understanding or formal procedure is the true source. The engine computes each seat's type from the structural data (power, exit, beneficiary/victim role); the divergence between seats is the story's signal.
+ *   From the institutional judiciary's position, the positivist reading is a genuine coordination function that allows them to adjudicate without resolving contested moral questions, which is both intellectually honest and institutionally necessary. From the natural law theorist's position, the same reading is extractive because it defines their core concern (the moral foundation of law) as irrelevant to validity, which loses them standing in the most consequential constitutional conversation. The engine computes this divergence from the structural data: institutional power + access to validity procedures (judiciary directionality near beneficiary) vs. institutional power + exclusion from validity procedures (natural law theorists near symmetric or slight-target). The reading itself does not adjudicate which perspective is correct; it structures the asymmetry. Originalist judges occupy a third position: they can accept the formal-procedure authority grounding positivism endorses while rejecting positivism's indifference to natural law, computing a different directionality based on whether natural law moorings matter to the constitutional question.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries (judiciary, formalist doctrine) sit at d near the beneficiary end because they gain institutional authority and methodological stability from the constraint without bearing its costs. Victims (moral-reasoning constituencies) sit at d near the target end because they are suppressed (kept from authoritative voice in courts) and constrained (legislative access is their only resort, and legislatures have different incentives). Originalist judges occupy an unusual seat: they are beneficiary-proximate on text-fidelity (d~0.25, beneficiary-ish) but diverge on grounding—the engine will compute their d from the structural data (institutional power, constrained exit, observer role, secondary beneficiary designation) and may differ from the pure-beneficiary judiciary seat. Legislatures have mobile exit and benefit from moral-argument receptiveness, so they sit near symmetric or beneficiary (d~0.3). Living constitutionalist judges are excluded, which keeps them from seat-specific d assignment but marks them in the narrative as the would-be opposition.
+ *   Institutional judiciary: high institutional power + access to validity procedures + control over how the law/morality distinction is enforced in practice = directionality near beneficiary (d ≈ 0.2). They collect interpretive authority and can exclude moral argument from validity discourse. Textualist scholars: institutional power + methodological alignment with positivism + career advancement within the framework = mild beneficiary position (d ≈ 0.25). Natural law theorists: institutional power + mobile exit (can publish in non-positivist venues, argue for constitutional amendment, build alternative frameworks) but loss of standing in core validity conversation = symmetric to slight-target (d ≈ 0.45–0.55). The key asymmetry is not external suppression but structural exclusion from the validity domain. Moral philosophers: institutional power + complete exclusion from validity conversation + mobile exit (they have disciplinary homes outside law) = analytical observer position (d ≈ 0.5, they measure the constraint but are not contained by it). Originalist and living constitutionalist judges: institutional power + competing frameworks with real resources and adherents + active contestation = observer positions with residual measurement interest (they compute different directionalities in their own readings).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem was judicial discretion under ambiguous constitutional text. The positivist solution claims to eliminate discretion by anchoring authority in formal procedure rather than moral judgment. However, the constraint may exhibit mandatrophy dynamics: as the positivist frame became entrenched (1950–2025), it acquired defensive institutional interests (judges, law schools, professional doctrine) that benefit from its maintenance regardless of whether it solves the original discretion problem. The measured theater_ratio climb (0.08 to 0.28) suggests increasing performativity in maintaining the law/morality distinction. The suppression_requirement growth (0.20 to 0.38) indicates that enforcement machinery must intensify to keep alternative interpretive frames out as internal critique mounts. The founding problem may be dead (courts are now predictable, perhaps overly so), but the constraint persists because formalist institutional interests are vested in it. This is a candidate for mandatrophy: the constraint solved a real problem and persists by institutional inertia after the problem's salience faded. Commentary notes this; the engine will compute the type from structural data and metrics independently.
+ *   The founding problem (distinguishing valid constitutional law from invalid or non-law in a way that works across moral disagreement) remains live, but the positivist answer to it is actively contested by living constitutionalists, who argue the problem was misdefined by excluding morality from validity in the first place. The reading sustains itself through institutional practice and scholarly work, not through claims about what the founding problem requires. This is a case of stable structural disagreement, not mandatrophy: the positivist reading has not outlived its founding problem, but the question of whether it correctly solves the problem is what drives the ongoing contest with sibling readings. The measurement series show extractiveness plateauing at the endpoint (0.38 by time 40, stable at 50), indicating the reading has reached a stable state where institutional authority is consolidated and natural law theorists have adapted to operating under positivist constraints in public legal discourse (though privately maintaining their alternative frameworks). Theater ratio remains low and stable, suggesting the positivism-vs-morality distinction is genuinely performed rather than theatrically maintained.
  */
 
 /* ==========================================================================
@@ -185,79 +247,97 @@ narrative_ontology:story_seed(constitutional_text_authority__positivist_reading,
    ========================================================================== */
 
 omega_variable(
-    neutrality_vs_enforced_orthodoxy,
-    'Is the positivist constraint a genuinely neutral procedural frame, or is the claim of neutrality itself a moral/political choice that favors institutional actors who benefit from formal procedure?',
-    'Comparative jurisprudence: examine whether courts following non-positivist frameworks (natural law, living constitutionalism) exhibit less predictable or less fair outcomes. Philosophical analysis: articulate what work the law/morality distinction does and whom it serves.',
-    'If neutrality is genuine, the constraint solves judicial discretion without extractive cost. If the neutrality claim is itself contestable, the constraint is a moral-grounded institutional choice defended as procedure, elevating extraction classification.',
+    law_morality_distinction_coherence,
+    'Is the law/morality distinction sustainable within constitutional interpretation, or does constitutional practice inevitably reintroduce moral reasoning despite positivist claims to exclude it?',
+    'Empirical analysis of published constitutional opinions coded for presence/absence of moral argument in validity reasoning; meta-analysis of judicial citations and precedent patterns to detect whether ''validity'' determinations correlate with moral reasoning even when explicitly denied.',
+    'If moral argument is systematically present in validity determinations despite positivist claims to exclude it, the distinction is performative rather than structural, shifting the reading toward theater and reducing extractiveness. If the distinction holds in practice, positivism''s claim to a pure procedure-based validity is sustained.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(neutrality_vs_enforced_orthodoxy, conceptual, 'Whether positivism is a discovered neutral procedure or an enforced moral choice about authority.').
+narrative_ontology:omega_variable(law_morality_distinction_coherence, empirical, 'Whether courts actually exclude moral reasoning from constitutional validity or whether the distinction is maintained theatrically.').
 
 omega_variable(
-    natural_law_vs_procedural_authority,
-    'Does the positivist constraint foreclose natural law grounding of constitutional authority, or do the two coexist in practice as different rationales for the same text?',
-    'Doctrinal analysis: trace whether originalist judges (who accept positivism on text-fidelity) also invoke natural law or higher law reasoning. Institutional history: examine whether the constraint''s enforcement ever requires judges to explicitly reject natural law foundations.',
-    'If foreclosed: the positivist and originalist readings represent genuine logical alternatives. If coexisting: the readings differ in philosophical grounding but permit substantial convergence in practice, reducing the foreclosure relation to a rhetorical distinction.',
+    institutional_authority_vs_moral_grounding,
+    'Does the institutional judiciary''s authority to interpret the Constitution derive solely from its formal institutional position (positivist claim) or does it also depend on perceived legitimacy grounded in moral principles of justice and representation (alternative reading)?',
+    'Comparative legal analysis of public confidence in constitutional courts across jurisdictions; polling data on whether citizens view courts as legitimate because they are properly appointed (institutional) or because they reach morally just outcomes (moral); historical analysis of court legitimacy crises and their relationship to institutional procedure vs. moral judgment.',
+    'If institutional position alone confers legitimacy independent of moral reasoning, positivism''s grounding of judicial authority is vindicated. If legitimacy depends on perceived alignment with moral principles, the reading is partially undermined—institutional authority rides on moral credibility, not vice versa.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(institutional_authority_vs_moral_grounding, empirical, 'Whether institutional authority is independent of moral legitimacy or depends on it.').
+
+omega_variable(
+    natural_law_axiom_overriding,
+    'Has the natural law axiom (that constitutional meaning derives from or is constrained by pre-legal moral principles) been formally overridden within positivism''s own tradition, or is it simply excluded from the validity question?',
+    'Genealogical analysis of positivist jurisprudence to detect whether the axiom has been explicitly rejected as false (overridden) or merely defined out of scope (excluded from validity, but possibly true in the moral domain). Distinction turns on whether positivist theorists argue natural law is incoherent or merely irrelevant to law.',
+    'If overridden: the natural law reading has been defeated on its own terms; if excluded: the readings coexist in different domains. Overriding suggests the axiom is holdable but false; exclusion suggests it is holdable but orthogonal to validity.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_procedural_authority, empirical, 'Whether positivism forecloses or coexists with natural law constitutional reasoning.').
+narrative_ontology:omega_variable(natural_law_axiom_overriding, conceptual, 'Whether natural law axioms are overridden within positivist tradition or merely excluded from validity scope.').
 
 omega_variable(
-    suppression_structural_vs_internalized,
-    'Is the suppression of moral-reasoning constituencies structural (they are kept from courts by procedure and institutional capture) or internalized (they come to believe moral arguments are improper in constitutional law)?',
-    'Track whether moral-reasoning advocates in academia and activism maintain their voice undiminished outside the judiciary. Observe whether law-school graduates trained in positivism resist moral arguments reflexively or only when constrained by institutional rules.',
-    'If structural, the constraint is an institutional gate; if internalized, the suppression persists even when the external barrier is removed, indicating deeper capture.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether moral-argument suppression is structural or internalized in legal professionals.').
-
-omega_variable(
-    reading_foreclosure_vs_coexistence,
-    'Does the positivist reading logically foreclose living constitutionalism within a single framework, or do the two coexist as different parties'' incompatible but simultaneously-held positions?',
-    'Philosophical: examine whether a single judge or legal system could coherently hold both positivist and living-constitutionalist commitments. Institutional: trace whether the two interpretive schools occupy distinct court seats or represent genuine internal contradiction.',
-    'If foreclosed: the sibling reading_relations entry is ''forecloses''. If coexisting: the entry is ''coexists_with''. This determines the kernel''s internal logical structure.',
+    reading_relations_foreclosure_test,
+    'Does the positivist core axiom (formal enactment and institutional source determine validity) logically foreclose the originalist axiom (historical public meaning determines constitutional content), or do they coexist as distinct answers to different questions?',
+    'Logical analysis of the two axioms to detect contradiction: does accepting formal procedure + institutional authority require denying historical public meaning was determinative? Empirical test: can a judge consistently hold both positivist authority grounding and originalist methodology in actual constitutional reasoning?',
+    'If foreclosing: positivism should be marked as forecloses originalism in reading_relations (rare case). If coexisting: the current coexists_with marking is correct. The answer turns on whether procedure and meaning are independent axes or the same question.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_vs_coexistence, conceptual, 'Whether positivism and living constitutionalism are logically incompatible or simultaneously-held positions.').
+narrative_ontology:omega_variable(reading_relations_foreclosure_test, conceptual, 'Whether positivist and originalist readings logically foreclose each other or coexist on distinct axes.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(constitutional_text_authority__positivist_reading, 1950, 2025).
+narrative_ontology:interval(constitutional_text_authority__positivist_reading, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cons_tr_t1950, constitutional_text_authority__positivist_reading, theater_ratio, 1950, 0.08).
-narrative_ontology:measurement(cons_tr_t1975, constitutional_text_authority__positivist_reading, theater_ratio, 1975, 0.15).
-narrative_ontology:measurement(cons_tr_t1990, constitutional_text_authority__positivist_reading, theater_ratio, 1990, 0.22).
-narrative_ontology:measurement(cons_tr_t2005, constitutional_text_authority__positivist_reading, theater_ratio, 2005, 0.26).
-narrative_ontology:measurement(cons_tr_t2015, constitutional_text_authority__positivist_reading, theater_ratio, 2015, 0.27).
-narrative_ontology:measurement(cons_tr_t2025, constitutional_text_authority__positivist_reading, theater_ratio, 2025, 0.28).
+narrative_ontology:measurement(cons_tr_t0, constitutional_text_authority__positivist_reading, theater_ratio, 0, 0.1).
+narrative_ontology:measurement_basis(cons_tr_t0, observed).
+narrative_ontology:measurement(cons_tr_t10, constitutional_text_authority__positivist_reading, theater_ratio, 10, 0.12).
+narrative_ontology:measurement_basis(cons_tr_t10, observed).
+narrative_ontology:measurement(cons_tr_t20, constitutional_text_authority__positivist_reading, theater_ratio, 20, 0.15).
+narrative_ontology:measurement_basis(cons_tr_t20, observed).
+narrative_ontology:measurement(cons_tr_t30, constitutional_text_authority__positivist_reading, theater_ratio, 30, 0.17).
+narrative_ontology:measurement_basis(cons_tr_t30, observed).
+narrative_ontology:measurement(cons_tr_t40, constitutional_text_authority__positivist_reading, theater_ratio, 40, 0.18).
+narrative_ontology:measurement_basis(cons_tr_t40, observed).
+narrative_ontology:measurement(cons_tr_t50, constitutional_text_authority__positivist_reading, theater_ratio, 50, 0.18).
+narrative_ontology:measurement_basis(cons_tr_t50, observed).
 
 % Extraction over time
-narrative_ontology:measurement(cons_be_t1950, constitutional_text_authority__positivist_reading, base_extractiveness, 1950, 0.28).
-narrative_ontology:measurement(cons_be_t1975, constitutional_text_authority__positivist_reading, base_extractiveness, 1975, 0.35).
-narrative_ontology:measurement(cons_be_t1990, constitutional_text_authority__positivist_reading, base_extractiveness, 1990, 0.38).
-narrative_ontology:measurement(cons_be_t2005, constitutional_text_authority__positivist_reading, base_extractiveness, 2005, 0.4).
-narrative_ontology:measurement(cons_be_t2015, constitutional_text_authority__positivist_reading, base_extractiveness, 2015, 0.41).
-narrative_ontology:measurement(cons_be_t2025, constitutional_text_authority__positivist_reading, base_extractiveness, 2025, 0.42).
+narrative_ontology:measurement(cons_be_t0, constitutional_text_authority__positivist_reading, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement_basis(cons_be_t0, observed).
+narrative_ontology:measurement(cons_be_t10, constitutional_text_authority__positivist_reading, base_extractiveness, 10, 0.32).
+narrative_ontology:measurement_basis(cons_be_t10, observed).
+narrative_ontology:measurement(cons_be_t20, constitutional_text_authority__positivist_reading, base_extractiveness, 20, 0.36).
+narrative_ontology:measurement_basis(cons_be_t20, observed).
+narrative_ontology:measurement(cons_be_t30, constitutional_text_authority__positivist_reading, base_extractiveness, 30, 0.37).
+narrative_ontology:measurement_basis(cons_be_t30, observed).
+narrative_ontology:measurement(cons_be_t40, constitutional_text_authority__positivist_reading, base_extractiveness, 40, 0.38).
+narrative_ontology:measurement_basis(cons_be_t40, observed).
+narrative_ontology:measurement(cons_be_t50, constitutional_text_authority__positivist_reading, base_extractiveness, 50, 0.38).
+narrative_ontology:measurement_basis(cons_be_t50, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cons_su_t1950, constitutional_text_authority__positivist_reading, suppression_requirement, 1950, 0.2).
-narrative_ontology:measurement(cons_su_t1975, constitutional_text_authority__positivist_reading, suppression_requirement, 1975, 0.28).
-narrative_ontology:measurement(cons_su_t1990, constitutional_text_authority__positivist_reading, suppression_requirement, 1990, 0.32).
-narrative_ontology:measurement(cons_su_t2005, constitutional_text_authority__positivist_reading, suppression_requirement, 2005, 0.36).
-narrative_ontology:measurement(cons_su_t2015, constitutional_text_authority__positivist_reading, suppression_requirement, 2015, 0.37).
-narrative_ontology:measurement(cons_su_t2025, constitutional_text_authority__positivist_reading, suppression_requirement, 2025, 0.38).
+narrative_ontology:measurement(cons_su_t0, constitutional_text_authority__positivist_reading, suppression_requirement, 0, 0.12).
+narrative_ontology:measurement_basis(cons_su_t0, observed).
+narrative_ontology:measurement(cons_su_t10, constitutional_text_authority__positivist_reading, suppression_requirement, 10, 0.15).
+narrative_ontology:measurement_basis(cons_su_t10, observed).
+narrative_ontology:measurement(cons_su_t20, constitutional_text_authority__positivist_reading, suppression_requirement, 20, 0.18).
+narrative_ontology:measurement_basis(cons_su_t20, observed).
+narrative_ontology:measurement(cons_su_t30, constitutional_text_authority__positivist_reading, suppression_requirement, 30, 0.2).
+narrative_ontology:measurement_basis(cons_su_t30, observed).
+narrative_ontology:measurement(cons_su_t40, constitutional_text_authority__positivist_reading, suppression_requirement, 40, 0.21).
+narrative_ontology:measurement_basis(cons_su_t40, observed).
+narrative_ontology:measurement(cons_su_t50, constitutional_text_authority__positivist_reading, suppression_requirement, 50, 0.22).
+narrative_ontology:measurement_basis(cons_su_t50, observed).
 
 
 /* ==========================================================================
@@ -270,13 +350,11 @@ narrative_ontology:affects_constraint(constitutional_text_authority__positivist_
 narrative_ontology:affects_constraint(constitutional_text_authority__positivist_reading, constitutional_text_authority__living_constitutionalist_reading).
 
 % DUAL FORMULATION NOTE:
-% The kernel 'constitutional_text_authority' decomposes into three readings, each a distinct constraint with different ε values and structural properties. The positivist reading claims authority derives from formal procedure (procedural constraint, moderate extraction). The originalist reading claims authority derives from historical public understanding at ratification (historical-evidential constraint, low extraction if correctly applied, higher if used as pretense for preferred outcomes). The living-constitutionalist reading allows authority to track contemporary moral understanding (moral-reasoning constraint, higher extraction potential because moral reasoning is contestable). All three share the same kernel (the Constitution), but their ε values differ substantially: positivism relies on procedure stability (moderate extraction if the procedure is actually neutral), originalism relies on historical accuracy (extraction risk if historical evidence is contested or selective), living constitutionalism relies on moral consensus (high extraction risk because consensus is unstable). These are NOT the same constraint viewed from different angles; they are three structurally distinct claims about what grounds constitutional validity.
+% The kernel constitutional_text_authority instantiates as three separate constraint stories, one per reading: positivist (this story, authority via formal procedure), originalist (authority via historical public meaning), and living constitutionalist (authority via contemporary moral evolution). Each reading yields different beneficiaries, victims, and directionality structures. The positivist reading benefits institutional judiciary and textualist scholars; the originalist reading benefits historically-minded scholars and judges constrained to original public meaning; the living constitutionalist reading benefits moral philosophers and judges who value evolutionary interpretation. The three stories share a kernel (the Constitution itself as supreme law) but instantiate different structural relationships to that kernel's interpretation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(constitutional_text_authority__positivist_reading, institutional, 0.28).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

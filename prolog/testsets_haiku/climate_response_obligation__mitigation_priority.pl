@@ -44,11 +44,15 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,35 +76,32 @@
  *   domain: climate_policy/political_economy/intergenerational_ethics
  *
  * SUMMARY:
- *   The mitigation-priority reading frames rapid decarbonization as an
- *   ethical obligation grounded in intergenerational justice: current-era
- *   emissions create climate harms that accumulate for centuries, imposing
- *   risks on future generations who had no voice in the decision. Under this
- *   reading, current generations are obligated to reduce emissions sharply
- *   (to 1.5–2°C warming) even if the transition costs are substantial and
- *   concentrated. The constraint operates as tangled rope: it coordinates the
- *   solution to a genuine collective-action problem (atmospheric carbon
- *   externality) while enforcing highly asymmetric cost distribution —
- *   between current and future generations, between Global North industrial
- *   economies and Global South vulnerable populations, between fossil fuel
- *   workers and beneficiaries of low-carbon energy systems. The claim/metric
- *   gap is intentional: the constraint is CLAIMED as foundational ethical
- *   obligation (grounded in physics and justice), while the authored metrics
- *   describe substantially extractive operation with rising suppression — the
- *   engine measures whether the proclaimed ethical obligation actually
- *   operates as pure coordination or masks extraction.
+ *   Under the mitigation-priority reading of the climate-response kernel,
+ *   rapid decarbonization is framed as a moral and practical obligation
+ *   grounded in intergenerational justice: future generations (who cannot
+ *   consent to present decisions) are the primary beneficiaries of prevented
+ *   warming, while the current generation bears transition costs. The Global
+ *   North bears disproportionate mitigation burden due to historical
+ *   cumulative emissions. Fossil-fuel capital enters the victim set via
+ *   stranded assets — infrastructure rendered economically unviable by
+ *   policy-driven phase-outs. The constraint instantiates a real coordination
+ *   function (solving the collective-action problem of climate mitigation)
+ *   AND substantial asymmetric extraction (temporal: current pays for future
+ *   benefit; sectoral: carbon workers lose careers; geographic: Global South
+ *   adaptation costs underfunded). This reading COEXISTS with
+ *   adaptation-priority (accept 2-3°C and invest in resilience) and degrowth
+ *   (reduce material throughput) readings of the same kernel; sibling
+ *   readings differ on whether prevention is cost-justified, whether
+ *   growth-based transition is viable, and which parties are primary
+ *   beneficiaries.
  *
  * KEY AGENTS:
- *   - Future generations (primary beneficiaries, powerless, civilizational horizon): inherit a planet whose climate state is determined by current emissions; benefit from rapid decarbonization via reduced warming damage.
- *   - Climate-vulnerable populations (beneficiaries + constrained payers, organized, generational horizon): face current climate impacts; advocate for aggressive mitigation but lack political power to enforce their preferred timelines.
- *   - Current-generation fossil fuel workers (payers, identity-locked, biographical horizon): face job displacement, wage pressure, and community disruption during energy transition; their exit options are constrained by professional identity fusion with fossil sectors.
- *   - Fossil fuel industry (victims/payers, institutional, biographical horizon): faces stranded-asset writedowns, regulatory prohibition, and liability exposure; named as extraction target by the constraint.
- *   - Global North industrial base (payers, institutional, generational horizon): absorbs capital reallocation and infrastructure replacement costs; faces domestic political resistance to rapid transition.
- *   - Global South populations (beneficiaries + constrained payers, moderate power, generational horizon): benefit from reduced warming but face constrained development pathways and technology dependency.
- *   - Climate scientists & advocacy coalition (agenda-setters, analytical power): articulate and defend the mitigation-priority reading; command epistemic authority but limited direct enforcement power.
- *   - Nation-states & multilateral bodies (agenda-setters, institutional): enforce the constraint through climate agreements, regulations, and carbon pricing.
- *   - Adaptation-priority coalition (excluded): argues for accepting higher warming and investing in resilience; structurally excluded from mitigation-priority decision forums.
- *   - Degrowth coalition (excluded, trapped): argues that decarbonization within growth economics is impossible; politically infeasible within market economies.
+ *   - Future generations: powerless, trapped, civilizational time horizon — primary beneficiaries of prevented warming, no voice in policy formation.
+ *   - Fossil-fuel incumbents: powerful, constrained exit, biographical horizon — primary payers via stranded assets and phase-out losses.
+ *   - Current-generation workers in carbon sectors: moderate power, identity-locked exit, biographical horizon — face job loss and community dislocation; dual position as payers and (contested) long-term beneficiaries.
+ *   - Climate-vulnerable populations: organized but powerless, trapped exit, generational horizon — beneficiaries and advocacy voice, but excluded from binding policy setting.
+ *   - Agenda-setting governments and IPCC/UNFCCC bodies: institutional power, generational horizon — set and enforce decarbonization targets and phase-out timelines.
+ *   - Adaptation-priority advocates: excluded from binding policy in mitigation-priority jurisdictions; powerful economically but sidelined analytically.
  */
 
 /* ==========================================================================
@@ -107,18 +109,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(climate_response_obligation__mitigation_priority, 0.67).
-domain_priors:suppression_score(climate_response_obligation__mitigation_priority, 0.58).
-domain_priors:theater_ratio(climate_response_obligation__mitigation_priority, 0.42).
+domain_priors:base_extractiveness(climate_response_obligation__mitigation_priority, 0.68).
+domain_priors:suppression_score(climate_response_obligation__mitigation_priority, 0.72).
+domain_priors:theater_ratio(climate_response_obligation__mitigation_priority, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, extractiveness, 0.67).
-narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, theater_ratio, 0.42).
+narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, extractiveness, 0.68).
+narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, resistance, 0.71).
+narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, accessibility_collapse, 0.79).
+narrative_ontology:constraint_metric(climate_response_obligation__mitigation_priority, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(climate_response_obligation__mitigation_priority, tangled_rope).
@@ -128,39 +130,109 @@ narrative_ontology:topic_domain(climate_response_obligation__mitigation_priority
 domain_priors:requires_active_enforcement(climate_response_obligation__mitigation_priority).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(climate_response_obligation__mitigation_priority, '9a189273-f5ab-4eee-8a08-32263e14e931').
-narrative_ontology:cs_kernel_codification('9a189273-f5ab-4eee-8a08-32263e14e931', distributed).
-narrative_ontology:cs_authority_grounding('9a189273-f5ab-4eee-8a08-32263e14e931', expertise).
-narrative_ontology:cs_interpretation_layer_present('9a189273-f5ab-4eee-8a08-32263e14e931').
-narrative_ontology:cs_reading_relation('9a189273-f5ab-4eee-8a08-32263e14e931', climate_response_obligation__adaptation_priority, coexists_with).
-narrative_ontology:cs_reading_relation('9a189273-f5ab-4eee-8a08-32263e14e931', climate_response_obligation__degrowth_reading, influences).
-narrative_ontology:cs_axiom('9a189273-f5ab-4eee-8a08-32263e14e931', foundational, rapid_decarbonization_feasible_within_markets).
-narrative_ontology:cs_axiom_status(rapid_decarbonization_feasible_within_markets, holdable).
-narrative_ontology:cs_axiom_grounding('9a189273-f5ab-4eee-8a08-32263e14e931', rapid_decarbonization_feasible_within_markets, empirically_contingent).
-narrative_ontology:cs_axiom('9a189273-f5ab-4eee-8a08-32263e14e931', foundational, intergenerational_justice_prioritizes_warming_minimization).
-narrative_ontology:cs_axiom_status(intergenerational_justice_prioritizes_warming_minimization, holdable).
-narrative_ontology:cs_axiom_grounding('9a189273-f5ab-4eee-8a08-32263e14e931', intergenerational_justice_prioritizes_warming_minimization, deontological).
-narrative_ontology:cs_reference_frame('9a189273-f5ab-4eee-8a08-32263e14e931', pre_industrial_climate_stability).
-narrative_ontology:cs_drift_state('9a189273-f5ab-4eee-8a08-32263e14e931', contemporary_post_paris_era, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('9a189273-f5ab-4eee-8a08-32263e14e931', '').
+narrative_ontology:cs_story_uid(climate_response_obligation__mitigation_priority, '9d33d8c5-a726-4e63-bd0d-8a81a84f7d49').
+narrative_ontology:cs_kernel_codification('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', distributed).
+narrative_ontology:cs_authority_grounding('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', distributed).
+narrative_ontology:cs_reading_relation('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', climate_response_obligation__adaptation_priority, coexists_with).
+narrative_ontology:cs_reading_relation('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', climate_response_obligation__degrowth_reading, influences).
+narrative_ontology:cs_axiom('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', foundational, prevention_cost_lower_than_adaptation).
+narrative_ontology:cs_axiom_status(prevention_cost_lower_than_adaptation, holdable).
+narrative_ontology:cs_axiom_grounding('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', prevention_cost_lower_than_adaptation, empirically_contingent).
+narrative_ontology:cs_axiom('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', foundational, intergenerational_justice_requires_prevention).
+narrative_ontology:cs_axiom_status(intergenerational_justice_requires_prevention, holdable).
+narrative_ontology:cs_axiom_grounding('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', intergenerational_justice_requires_prevention, deontological).
+narrative_ontology:cs_reference_frame('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', intergenerational_justice_prevention_mandate).
+narrative_ontology:cs_drift_state('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', contemporary_2024_empirical_climate_moment, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('9d33d8c5-a726-4e63-bd0d-8a81a84f7d49', '').
 narrative_ontology:cs_kernel_id(climate_response_obligation__mitigation_priority, climate_response_obligation).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(climate_response_obligation__mitigation_priority, future_generations).
 narrative_ontology:constraint_beneficiary(climate_response_obligation__mitigation_priority, climate_vulnerable_populations).
-narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, current_generation_workers).
-narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, fossil_fuel_industry).
-narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, global_north_industrial_base).
+narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, fossil_fuel_incumbents).
+narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, current_generation_transition_bearers).
+narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, global_north_workers_in_carbon_sectors).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(climate_response_obligation__mitigation_priority, global_north_workers_in_carbon_sectors).
+narrative_ontology:constraint_beneficiary(climate_response_obligation__mitigation_priority, global_south_populations).
+narrative_ontology:constraint_beneficiary(climate_response_obligation__mitigation_priority, current_generation_beneficiaries).
+narrative_ontology:constraint_victim(climate_response_obligation__mitigation_priority, global_south_populations).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Cannot exit the constraint — they inherit the atmospheric state the current generation's choices lock in. Under the mitigation-priority reading, they are the primary beneficiaries: rapid decarbonization now minimizes warming they will experience. They have no voice in present policy formation and cannot advocate or consent. Their benefit is structural: lower warming threshold means lower adaptation costs, less ecosystem collapse, fewer climate refugee crises in their lifetime.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, future_generations, beneficiary,
+    powerless, civilizational, trapped, global).
+
+% Face stranded-asset losses as rapid decarbonization policy phases out coal, oil, and gas infrastructure before end-of-life recovery. Their accumulated capital — reserves, extraction equipment, power plants — becomes economically unviable. They bear the largest direct cost of the mitigation mandate and have invested heavily in delaying or blocking rapid-decarbonization policy.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, fossil_fuel_incumbents, payer,
+    powerful, biographical, constrained, global).
+
+% Experience transition costs: higher energy prices during infrastructure changeover, job displacement in carbon-intensive sectors, retraining burden, and investment costs for renewable-energy transition. They pay now for benefit that accrues primarily to future generations — a temporal asymmetry that defines the intergenerational justice frame. Their exit option is constrained: they cannot defer the energy transition.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, current_generation_transition_bearers, payer,
+    moderate, biographical, constrained, global).
+
+% Coal miners, oil-rig workers, auto-manufacturing workers in fossil-fuel-dependent regions. They carry dual position: as payers they face job loss and economic dislocation when decarbonization phases out their sectors; as beneficiaries they inherit lower-warming futures. Identity lock is strong — their professional identity, community stability, and regional economic dependence on carbon sectors bind them to the current arrangement even as policy pushes toward alternatives. Exit (retraining, relocation, sectoral shift) is framed as possible but carries psychosocial and economic friction that traps many in the constraint.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, global_north_workers_in_carbon_sectors, payer,
+    moderate, biographical, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(climate_response_obligation__mitigation_priority, global_north_workers_in_carbon_sectors, beneficiary).
+
+% Climate-vulnerable populations in low-emission-contributing regions (small island states, sub-Saharan Africa, South Asia). They benefit from rapid mitigation — lower warming reduces their disproportionate climate impact burden. They pay indirectly through adaptation-cost burden (the mitigation mandate does not fund adaptation; those costs fall on them) and through delayed development if rapid decarbonization constrains their access to cheap carbon energy for growth. They have minimal voice in setting the constraint.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, global_south_populations, beneficiary,
+    powerless, generational, trapped, global).
+narrative_ontology:stakeholder_secondary_role(climate_response_obligation__mitigation_priority, global_south_populations, payer).
+
+% Communities already experiencing climate impacts: Pacific Islanders facing sea-level rise, Sahel populations in drought, tropical coastal cities in hurricane paths. They are primary beneficiaries of rapid mitigation — every tenth of a degree prevented reduces their future harm. They have organized advocacy and claim intergenerational-justice standing, but their power to set policy is limited; their exclusion from binding policy formation is a structural feature of the constraint.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, climate_vulnerable_populations, beneficiary,
+    organized, generational, trapped, global).
+
+% Renewable-energy developers, climate-tech investors, progressive-policy advocates. They benefit from rapid-decarbonization mandates: policy creates markets, investment opportunities, professional careers, and political alignment with their stated values. Their exit option is mobile: they can shift capital and attention if decarbonization becomes unprofitable or deprioritized.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, current_generation_beneficiaries, beneficiary,
+    organized, biographical, mobile, global).
+
+% National governments and international bodies (IPCC, UNFCCC) that declare and enforce the mitigation-priority mandate. They set binding decarbonization targets, phase-out timelines, and enforcement mechanisms (carbon pricing, emissions standards, fossil-fuel-subsidy removal). Their exit option is constrained by political commitment and climate-science consensus; backtracking faces legitimacy costs.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, agenda_setting_governments, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Sibling-reading advocates who argue for acceptance of 2-3°C warming and investment in adaptation resilience rather than costly prevention. They are structurally excluded from binding policy formation in jurisdictions that adopt mitigation-priority frames; their economic and policy analysis is sidelined or reframed as harmful delay. Inclusion would redirect resources from mitigation to adaptation investment.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, adaptation_priority_advocates, excluded,
+    powerful, biographical, constrained, national).
+
+% Climate economists, ethicists, and policy analysts who measure the constraint's actual operation: comparing stated intergenerational-justice rationale against actual benefit/cost distribution, empirical decarbonization rates, and adaptation funding gaps. They observe whether the constraint's enforcement and beneficiary structure match the reading's declared ethical frame.
+narrative_ontology:constraint_stakeholder(climate_response_obligation__mitigation_priority, analytical_observer, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(climate_response_obligation__mitigation_priority, diffuse).
+narrative_ontology:fixing_cost_class(climate_response_obligation__mitigation_priority, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of climate mitigation: individual nations and firms have incentives to free-ride on others' decarbonization while capturing the benefits of a stable climate. A binding global decarbonization mandate (via treaties, domestic legislation, sectoral phase-outs) coordinates action that no market or voluntary mechanism achieves. Without it, each actor waits for others to bear transition costs.
+% TRANSFER_FUNCTION: Transfers massive capital investment and operational costs from future generations (who benefit from prevented warming) to the current generation (who pays transition costs and stranded-asset losses). Transfers also flow from Global South to Global North when adaptation funding lags mitigation funding, and from workers in carbon sectors to renewable-energy sectors and climate-tech investors.
+% ABSENT_VOICES: Adaptation-priority advocates (excluded from binding policy formation in mitigation-priority jurisdictions); degrowth-reading proponents (sidelined as economically infeasible); unborn future generations (cannot consent or object); workers in carbon-dependent regions (often consulted too late, after policy is set); Global South populations (have minimal voice in setting targets that constrain their development pathways).
+% DISAPPEARANCE_RATIONALE: If the rapid-decarbonization mandate vanished, fossil-fuel investment would resume at scale, adaptation priorities would shift resources toward resilience infrastructure, sectoral job loss would reverse (carbon sectors would expand), and atmospheric warming trajectory would accelerate. The entire global energy and industrial system would reorganize around continued fossil-carbon throughput.
+narrative_ontology:disappearance_verdict(climate_response_obligation__mitigation_priority, world_rearranges).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(climate_response_obligation__mitigation_priority, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(climate_response_obligation__mitigation_priority, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(climate_response_obligation__mitigation_priority, 'none', 1).
+narrative_ontology:epsilon_provenance(climate_response_obligation__mitigation_priority, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -180,16 +252,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness of 0.67 reflects the substantial current-era costs (transition burdens, stranded assets, foregone growth) borne by identified payers to generate benefits (reduced warming damage) that accrue to the future. The constraint is not pure coordination — the future generations who benefit most cannot participate in negotiating terms. Suppression of 0.58 reflects active regulatory enforcement (carbon pricing, emissions limits, technology mandates) required to suppress alternative energy pathways and restrict the fossil fuel industry's continued operation. Suppression is lower than extractiveness because the constraint's legitimacy rests on genuine environmental physics (carbon accumulation, warming trajectory) and genuine beneficiaries (the future, vulnerable populations today), not on pure coercion. Theater ratio of 0.42 reflects significant performative activity: countries announce climate targets they do not meet, corporates adopt net-zero pledges while expanding fossil fuel investments, and climate finance commitments are repeatedly delayed. The theater increases over time (0.25 → 0.45 over the first 30 years) as compliance becomes politically difficult and states substitute announcement for action. Accessibility collapse of 0.72 reflects that the constraint makes alternative energy pathways increasingly unavailable: regulatory prohibition closes fossil fuel investment routes, carbon pricing makes traditional energy expensive, and renewable deployment becomes mandatory. But alternatives are not completely collapsed — technological innovation, nuclear power, and adaptation remain possible, preventing the near-total collapse (0.85+) that would characterize a genuine natural law. Resistance of 0.71 reflects substantial opposition from fossil fuel interests, industrial workers, and nations fearing competitive disadvantage if they decarbonize faster than rivals. The temporal series show base_extractiveness rising through 2030 (peak transition phase) then stabilizing as the renewable infrastructure matures and transition costs decline; suppression_requirement follows a similar curve; theater_ratio stays elevated because the political difficulty of maintaining the constraint persists even as its functional justification strengthens. Measurements across the coercion grid differentiate that suppression intensity is highest at the structural level (global agreements, regulatory frameworks) and lower at the individual level (market-driven choices, voluntary adoption), while resistance is highest at the individual and organizational level (workers, incumbent industries) and lower at the structural level (no alternative global-commons regime is available).
+ *   Extractiveness (0.68 at interval end) is high because the constraint transfers massive costs from future generations (powerless, trapped, unborn) to current generation (moderate power, constrained exit), and concentrates sectoral losses (carbon workers, fossil capital) while dispersing sectoral gains (renewable investors, climate-tech developers). Suppression (0.72) is substantial because the mandate requires active enforcement — fossil-fuel-subsidy removal, emissions standards, sectoral phase-outs — to overcome incumbent resistance and prevent free-riding by nations and firms. Suppression is not merely structural (alternatives are economically constrained); it is active and intensifying as fossil incumbents litigate and lobby. Theater (0.41, moderate-low) reflects that decarbonization has real functional content (solving the coordination problem) but increasingly substantial performance: net-zero pledges without binding enforcement, carbon credits that offset rather than reduce, 'just transition' rhetoric without funding commensurate with dislocation costs. Measurement series tracks observed extractiveness and suppression through t=15 (policy hardening phase), then projects to t=35 (stabilization phase where extraction asymptote flattens as remaining high-emission sectors concentrate losses).
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter seats (climate scientists, nation-states) and the beneficiary seats (future generations, vulnerable populations) experience this constraint as ethically binding coordination: the only adequate response to known, accumulating physical risk. The payer seats (fossil fuel workers, industrial base, current generation broadly) experience the same constraint as asymmetric extraction: costs are immediate, concentrated, and certain, while benefits are distant, diffuse, and uncertain. From the powerless future-generation seat, the constraint is binding and insufficient — current mitigation efforts track well below the pace required by 1.5°C pathways. From the fossil-fuel-worker seat, the constraint is coercive and unjust — they are being sacrificed for risks they did not create and for benefits they will not receive. The engine computes these divergences from the structural data (power differentials, exit options, time horizons, directionality) without needing adjudication. The claim/metric independence is critical here: the constraint is claimed as ethically foundational, but it operates with measurably extractive, suppressive characteristics. That divergence is exactly where the Deferential Realism framework performs its diagnostic function.
+ *   Dramatic seat divergence: (1) Agenda-setters and climate-vulnerable advocates experience the constraint as legitimate coordination solving an existential collective-action problem — classification likely Rope or light Tangled Rope from their seats. (2) Fossil incumbents experience pure extraction: stranded assets, phase-out timelines they did not consent to, legal barriers to alternative business models — classification likely Snare from their seat. (3) Current-generation workers experience coercion + constrained exit + deferred benefit (they may not live to see warming prevented) — classification Snare or heavy Tangled Rope. (4) Future generations cannot experience it at all in present time; they inherit its outcome. The engine computes per-seat types from directionality (beneficiary vs. payer vs. symmetric) and power/exit; this story's structural asymmetry — beneficiary set is powerless and unborn, payer set is powerful incumbents and moderate workers — ensures the seat divergence is real and substantial. The coordination function is genuine (Q3); the extraction is real (high ε, active enforcement, temporal and sectoral asymmetry); the claim is Tangled Rope from the agenda-setter's seat.
  *
  * DIRECTIONALITY LOGIC:
- *   Future generations have d ≈ 0.0 (full beneficiaries): the constraint exists to reduce their climate exposure; they bear no costs of the transition; their exit options are zero (trapped — they cannot avoid the future they inherit). Climate-vulnerable populations have d ≈ 0.2–0.3 (net beneficiaries but with participation costs): they benefit from reduced warming but face constrained political voice and development-path restrictions. Current-generation workers in fossil sectors have d ≈ 0.85 (near full targets): they bear concentrated, immediate costs (job loss, wage pressure, identity disruption); the constraint enforces their transition without compensating them fully; their exit options are identity-locked (professional identity fused with fossil work). The fossil fuel industry has d ≈ 0.9 (full target): the constraint's enforcement machinery names them as the primary extraction object; stranded assets represent direct wealth loss; no compensatory mechanism exists. Global North industrial base has d ≈ 0.7 (strong target): capital reallocation and infrastructure replacement are mandatory; they have some exit flexibility (automation, outsourcing) but constrained choice. Green technology and finance sector has d ≈ 0.1 (beneficiary): they capture rents from renewable deployment; the constraint drives resources toward their solutions. The directionality derivation from beneficiary/victim declarations + exit options is unambiguous here — beneficiaries with trapped or constrained exit get low d; victims with constrained or identity-locked exit get high d; the temporal misalignment (future vs. present) is captured by the time-horizon axis.
+ *   Future generations: d ≈ 0.0 (full beneficiary pole). They benefit entirely from prevented warming; they bear no transition costs; they have zero exit options (trapped, identity-locked). The engine derives d from beneficiary status + trapped exit → very low d → negative or negligible effective extraction on their seat. Current-generation payers (workers, firms): d ≈ 0.7–0.8 (strong target pole). They are listed as victims; they pay transition costs and stranded-asset losses now; they have constrained or identity-locked exit (cannot refuse energy transition, cannot exit employment sector easily); their time horizon is biographical (benefits accrue to future generations, not them). The engine derives d from victim status + constrained exit → high d → high effective extraction on their seat. Fossil incumbents: d ≈ 0.85 (near-full target). They are payers; their capital is stranded; their exit option is legally constrained (fossil-fuel divestment mandates, subsidy removal, phase-out timelines); their power is powerful (they can resist), but structural barriers (policy lock-in, investor pressure, technological obsolescence) limit de facto exit. Agenda-setters and governments: d ≈ 0.5–0.55 (slight target bias). They enforce the constraint (bearing administrative cost and political friction); they are neither beneficiaries nor payers in the financial sense; they face reputational costs if they backtrack. Global South populations: d ≈ 0.6 (moderate target). They are listed as beneficiaries (lower warming from mitigation), but they also bear costs (constrained development pathways, adaptation funding gap, technology access barriers). The dual role yields moderate directionality.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is the atmospheric carbon externality: emissions accumulate on centennial timescales, deferring harms to the future. The founding problem is structurally live — atmospheric carbon is accumulating, warming is accelerating, and the harms are manifesting. The constraint prevents mandatrophy by keeping the founding problem front-and-center: any relaxation of mitigation efforts would directly increase future warming risk. However, mandatrophy could occur if: (1) adaptation technology advances so rapidly that future-generation welfare is nearly unaffected by warming (founding problem becomes moot), or (2) the constraint is maintained theatrically — countries announce targets but do not enforce them, and emissions continue on baseline trajectories, eventually making the constraint's stated purpose impossible to achieve. The measured theater_ratio rising to 0.45 signals some drift toward this second mode: enforcement is becoming performative relative to functional action. The vanishing point is t=50+ where theater_ratio stabilizes and suppression_requirement begins to decline — this projects a scenario where decarbonization is substantially achieved, the constraint's primary function (preventing dangerous warming) is accomplished, and the constraint begins to dematerialize into regulatory legacy and historical norm. This is not mandatrophy (the constraint successfully solved its problem) but rather obsolescence by success.
+ *   The constraint does NOT suffer from mandatrophy in the classical sense (founding problem dead, arrangement persists). The founding problem (warming threat) is CONTESTED but LIVE for most stakeholders; adaptation-priority and degrowth readings offer alternatives rather than denial. However, there is a secondary mandatrophy risk: the founding problem was framed as 'urgent coordination is needed because warming is unfolding faster than adaptation can keep pace.' If empirical climate science later shows (1) adaptation capacity is higher than modeled (populations and ecosystems more resilient), or (2) decarbonization is cheaper and faster than modeled (renewable cost curves and electrification pace surprise upward), the mandate's urgency framing becomes contestable. The constraint would not disappear, but its justification would shift. Currently, the mandate is held in place by science consensus and international political lock-in, not by institutional inertia — it is live coordination, not piton.
  */
 
 /* ==========================================================================
@@ -197,111 +269,116 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    intergenerational_discount_rate_ambiguity,
-    'What discount rate appropriately reflects the moral weight of future generations'' welfare relative to current costs? Does standard economic discounting (3–5% per annum) ethically undervalue future climate harm, or do empirical uncertainties about future technological capability justify moderate discounting?',
-    'Philosophical consensus on intergenerational justice principles; empirical evidence on technological decarbonization trajectories and adaptation feasibility; economic models that explicitly weight future welfare without standard discounting.',
-    'A zero or near-zero discount rate would justify even extremely costly current mitigation; high discount rates would support the adaptation-priority reading. The choice of discount rate determines whether rapid decarbonization is a binding moral obligation or one option among several.',
+    intergenerational_consent_paradox,
+    'Can future generations meaningfully consent to a constraint that transfers present costs in exchange for future benefits they cannot negotiate or refuse?',
+    'Philosophical and legal analysis of whether ''intergenerational justice'' can ground obligations without consent (analogue: parental obligations to children; trusteeship models). Empirical measure: whether present generation''s climate action aligns with what future generations would choose if given voice in present policy (inferred from stated preferences and burden distribution).',
+    'If the consent paradox cannot be resolved, the ''intergenerational justice'' framing collapses into present-generation moral choice, not binding obligation — which reframes the constraint from Tangled Rope (coordinating present beneficiaries with future ones) to Snare (present-generation imposition). If resolvable, the framing holds and classification remains Tangled Rope.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(intergenerational_discount_rate_ambiguity, preference, 'The normative weighting of future generations'' interests relative to current transition costs.').
+narrative_ontology:omega_variable(intergenerational_consent_paradox, conceptual, 'Whether intergenerational justice can ground a binding constraint without future consent.').
 
 omega_variable(
-    stranded_asset_liability_framing,
-    'Are fossil fuel industry losses (stranded assets, regulatory prohibition) a legitimate extraction target (payment for climate damage and historical emissions) or an unjust taking (penalty for lawful past activity)?',
-    'Legal precedent on retroactive liability; political resolution of climate reparations frameworks; empirical analysis of who bore the profits from historical emissions.',
-    'If framed as legitimate extraction, the constraint''s classification as tangled_rope (coordination + asymmetric extraction) holds and the fossil fuel industry properly occupies the victim set. If framed as unjust taking, the constraint would reclassify as snare (pure extraction justified by false coordination claims).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(stranded_asset_liability_framing, preference, 'Whether stranded-asset losses are compensation or punishment.').
-
-omega_variable(
-    carbon_budget_vs_adaptation_trade,
-    'At what warming level do marginal mitigation costs exceed marginal adaptation benefits? Is 1.5°C the appropriate carbon budget, or do higher warming levels (2°C, 2.5°C) offer a better cost-benefit trade-off?',
-    'Integrated assessment models with explicit cost-benefit analysis; real-world adaptation outcomes from current climate impacts; technological breakthroughs in adaptation infrastructure.',
-    'If 1.5°C is the correct threshold, rapid decarbonization is strictly necessary. If adaptation becomes cost-effective at 2–2.5°C, the adaptation-priority reading gains empirical ground and the mitigation mandate''s urgency diminishes.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(carbon_budget_vs_adaptation_trade, empirical, 'The optimal carbon budget under cost-benefit analysis.').
-
-omega_variable(
-    identity_lock_vs_structural_exit_ambiguity,
-    'For current-generation fossil fuel workers, is the measured identity_lock a psychological/cultural phenomenon that persists after job displacement, or a reflection of genuine structural inability to exit (regional economic dependence, credential specificity, geographic isolation)?',
-    'Post-transition outcome data from coal-mining regions and refinery communities; studies of occupational identity persistence after career disruption; analysis of actual geographic mobility and retraining success rates.',
-    'If identity_lock is primarily psychological, transition support and retraining are sufficient policy responses. If structural, the constraint''s suppression is higher than authored and the extraction weight on workers is more severe than the current directionality suggests.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(identity_lock_vs_structural_exit_ambiguity, empirical, 'Whether fossil fuel worker exit constraints are structural or internalized.').
-
-omega_variable(
-    reading_committer_frame,
-    'This constraint instantiates the MITIGATION_PRIORITY reading of the climate_response_obligation kernel, which contains three structurally distinct readings: mitigation_priority (this one), adaptation_priority, and degrowth_reading. Does the mitigation-priority framing of climate ethics (intergenerational justice via emissions reduction) foreclose the adaptation reading, or do they represent genuinely coexistent policy positions?',
-    'Analysis of whether the two readings'' core premises can coexist in a single commitment framework; examination of whether accepting ''some adaptation is necessary'' logically requires rejecting ''rapid mitigation is necessary.''',
-    'If mitigation forecloses adaptation, the mitigation reading is the unique ethically defensible position. If they coexist, the mitigation reading is one among live alternatives, and the constraint''s enforcement is contestable. If adaptation influences mitigation by constraining resource availability, both readings persist but the tradeoff becomes explicit.',
+    adaptation_cost_underfunding_extraction,
+    'Is the gap between mitigation funding and adaptation funding evidence that the constraint extracts from Global South by denying them resources to adapt, while Global North uses the same resources for domestic decarbonization?',
+    'Comparative funding analysis: global climate finance committed to mitigation vs. adaptation vs. loss-and-damage over a 10-year window. Attribution of funding gaps to policy priority vs. economic capacity constraints. Survey of Global South governments and climate-vulnerable populations on whether adaptation deficit is experienced as extraction.',
+    'High adaptation underfunding + asymmetric burden (Global North funds its own transition; Global South funds its own adaptation) would classify this reading as Snare from the Global South seat, not Tangled Rope. Low underfunding or evidence that it reflects capacity constraints rather than policy priority would support Tangled Rope classification.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_committer_frame, conceptual, 'Kernel committer structure: relationship between this reading and sibling readings.').
+narrative_ontology:omega_variable(adaptation_cost_underfunding_extraction, empirical, 'Whether the constraint''s enforcement structure creates hidden extraction via adaptation-funding asymmetry.').
+
+omega_variable(
+    stranded_asset_moral_boundary,
+    'What is the moral and legal status of stranded-asset losses imposed by decarbonization policy? Is rapid phase-out a legitimate response to climate emergency (asset holders accept climate cost), or illegitimate confiscation (asset holders are owed compensation)?',
+    'Legal and policy analysis of precedent (regulatory takings law, constitutional compensation doctrine). Empirical measure: whether national decarbonization policies include just-transition funds, worker retraining, and carbon-worker compensation at levels asset holders deem adequate. Survey of affected workers and firms on whether compensation is experienced as adequate or coercive.',
+    'If stranded-asset losses are treated as unjust confiscation, the constraint''s suppression (enforcement against incumbent resistance) escalates toward Snare-level coercion. If losses are treated as legitimate cost-bearing by capital that built on high-carbon premises, extraction is reframed as penalty rather than theft, and the constraint remains Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(stranded_asset_moral_boundary, preference, 'Whether stranded-asset losses are legitimate climate cost or unjust extraction.').
+
+omega_variable(
+    reading_coexistence_vs_foreclosure,
+    'Can mitigation-priority and adaptation-priority readings coexist in the same policy framework, or does choosing rapid mitigation foreclose meaningful adaptation investment?',
+    'Analysis of national climate budgets and policy mixing: do jurisdictions that adopt 1.5–2.0°C mitigation targets also fund adaptation at the scale climate impacts require? Natural experiment from jurisdictions that mandate both (e.g., EU adaptation strategy alongside decarbonization targets). Modeling of adaptation costs under 1.5°C vs. 3°C scenarios to test whether mitigation-priority reading''s claim (prevention is cheaper) holds.',
+    'If mitigation-priority and adaptation-priority are genuinely coexistent (both can be pursued; choice is policy, not logic), the reading_relations field marks coexists_with. If choosing mitigation forecloses adaptation (budget constraints, technology trade-offs), the relation should shift toward forecloses or influences. If neither, mitigation-priority remains the more cost-effective choice but not logically unique.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_coexistence_vs_foreclosure, empirical, 'Whether the sibling readings'' policy recommendations can coexist or whether one''s adoption structurally excludes the other.').
+
+omega_variable(
+    temporal_asymmetry_of_identity_lock,
+    'Do carbon-sector workers experience the constraint as extraction partly because their identity (professional, regional, family) is fused with the disappearing sector, making psychological/relational exit costs higher than economic exit costs?',
+    'Psychological and sociological study of post-transition-phase workers: do those who exit coal/oil sectors report persistent attachment to ''former worker'' identity? Do retraining and relocation fail at higher rates when alternative sectors lack cultural resonance or community? Interviews with workers on why identity-locked exit persists even when economic alternatives exist.',
+    'If suppression is primarily internalized (identity-locked, self-perpetuated even after barrier removal), the constraint operates more extractively from the workers'' seat than structural measures (economic retraining) alone suggest. If suppression is primarily structural (economic barriers), exit after barrier removal should be faster. This informs whether the identity-locked exit vector is accurate and guides omega_suppression_mechanism toward structural vs. internalized classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(temporal_asymmetry_of_identity_lock, empirical, 'Whether worker identity-lock in the constraint is structural (economic) or internalized (psychological).').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(climate_response_obligation__mitigation_priority, 0, 50).
+narrative_ontology:interval(climate_response_obligation__mitigation_priority, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(clim_tr_t0, climate_response_obligation__mitigation_priority, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(clim_tr_t6, climate_response_obligation__mitigation_priority, theater_ratio, 6, 0.31).
-narrative_ontology:measurement(clim_tr_t13, climate_response_obligation__mitigation_priority, theater_ratio, 13, 0.38).
-narrative_ontology:measurement(clim_tr_t20, climate_response_obligation__mitigation_priority, theater_ratio, 20, 0.43).
-narrative_ontology:measurement(clim_tr_t30, climate_response_obligation__mitigation_priority, theater_ratio, 30, 0.45).
-narrative_ontology:measurement(clim_tr_t40, climate_response_obligation__mitigation_priority, theater_ratio, 40, 0.44).
-narrative_ontology:measurement(clim_tr_t50, climate_response_obligation__mitigation_priority, theater_ratio, 50, 0.42).
+narrative_ontology:measurement(clim_tr_t0, climate_response_obligation__mitigation_priority, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(clim_tr_t5, climate_response_obligation__mitigation_priority, theater_ratio, 5, 0.33).
+narrative_ontology:measurement(clim_tr_t10, climate_response_obligation__mitigation_priority, theater_ratio, 10, 0.37).
+narrative_ontology:measurement(clim_tr_t15, climate_response_obligation__mitigation_priority, theater_ratio, 15, 0.39).
+narrative_ontology:measurement(clim_tr_t20, climate_response_obligation__mitigation_priority, theater_ratio, 20, 0.4).
+narrative_ontology:measurement(clim_tr_t25, climate_response_obligation__mitigation_priority, theater_ratio, 25, 0.41).
+narrative_ontology:measurement(clim_tr_t30, climate_response_obligation__mitigation_priority, theater_ratio, 30, 0.41).
+narrative_ontology:measurement(clim_tr_t35, climate_response_obligation__mitigation_priority, theater_ratio, 35, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(clim_be_t0, climate_response_obligation__mitigation_priority, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(clim_be_t6, climate_response_obligation__mitigation_priority, base_extractiveness, 6, 0.52).
-narrative_ontology:measurement(clim_be_t13, climate_response_obligation__mitigation_priority, base_extractiveness, 13, 0.61).
-narrative_ontology:measurement(clim_be_t20, climate_response_obligation__mitigation_priority, base_extractiveness, 20, 0.68).
-narrative_ontology:measurement(clim_be_t30, climate_response_obligation__mitigation_priority, base_extractiveness, 30, 0.72).
-narrative_ontology:measurement(clim_be_t40, climate_response_obligation__mitigation_priority, base_extractiveness, 40, 0.69).
-narrative_ontology:measurement(clim_be_t50, climate_response_obligation__mitigation_priority, base_extractiveness, 50, 0.67).
+narrative_ontology:measurement(clim_be_t0, climate_response_obligation__mitigation_priority, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(clim_be_t5, climate_response_obligation__mitigation_priority, base_extractiveness, 5, 0.54).
+narrative_ontology:measurement(clim_be_t10, climate_response_obligation__mitigation_priority, base_extractiveness, 10, 0.6).
+narrative_ontology:measurement(clim_be_t15, climate_response_obligation__mitigation_priority, base_extractiveness, 15, 0.64).
+narrative_ontology:measurement(clim_be_t20, climate_response_obligation__mitigation_priority, base_extractiveness, 20, 0.66).
+narrative_ontology:measurement(clim_be_t25, climate_response_obligation__mitigation_priority, base_extractiveness, 25, 0.67).
+narrative_ontology:measurement(clim_be_t30, climate_response_obligation__mitigation_priority, base_extractiveness, 30, 0.68).
+narrative_ontology:measurement(clim_be_t35, climate_response_obligation__mitigation_priority, base_extractiveness, 35, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(clim_su_t0, climate_response_obligation__mitigation_priority, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(clim_su_t6, climate_response_obligation__mitigation_priority, suppression_requirement, 6, 0.42).
-narrative_ontology:measurement(clim_su_t13, climate_response_obligation__mitigation_priority, suppression_requirement, 13, 0.51).
-narrative_ontology:measurement(clim_su_t20, climate_response_obligation__mitigation_priority, suppression_requirement, 20, 0.58).
-narrative_ontology:measurement(clim_su_t30, climate_response_obligation__mitigation_priority, suppression_requirement, 30, 0.62).
-narrative_ontology:measurement(clim_su_t40, climate_response_obligation__mitigation_priority, suppression_requirement, 40, 0.58).
-narrative_ontology:measurement(clim_su_t50, climate_response_obligation__mitigation_priority, suppression_requirement, 50, 0.52).
+narrative_ontology:measurement(clim_su_t0, climate_response_obligation__mitigation_priority, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement(clim_su_t5, climate_response_obligation__mitigation_priority, suppression_requirement, 5, 0.62).
+narrative_ontology:measurement(clim_su_t10, climate_response_obligation__mitigation_priority, suppression_requirement, 10, 0.66).
+narrative_ontology:measurement(clim_su_t15, climate_response_obligation__mitigation_priority, suppression_requirement, 15, 0.69).
+narrative_ontology:measurement(clim_su_t20, climate_response_obligation__mitigation_priority, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement(clim_su_t25, climate_response_obligation__mitigation_priority, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement(clim_su_t30, climate_response_obligation__mitigation_priority, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement(clim_su_t35, climate_response_obligation__mitigation_priority, suppression_requirement, 35, 0.72).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(climate_response_obligation__mitigation_priority, resource_allocation).
-narrative_ontology:boltzmann_floor_override(climate_response_obligation__mitigation_priority, 0.18).
+narrative_ontology:coordination_type(climate_response_obligation__mitigation_priority, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(climate_response_obligation__mitigation_priority, 0.12).
 narrative_ontology:affects_constraint(climate_response_obligation__mitigation_priority, climate_response_obligation__adaptation_priority).
 narrative_ontology:affects_constraint(climate_response_obligation__mitigation_priority, climate_response_obligation__degrowth_reading).
+narrative_ontology:affects_constraint(climate_response_obligation__mitigation_priority, stranded_assets_constraint).
+narrative_ontology:affects_constraint(climate_response_obligation__mitigation_priority, just_transition_funding_obligation).
 
 % DUAL FORMULATION NOTE:
-% The climate_response_obligation kernel decomposes into three structurally distinct constraint stories: mitigation_priority (this story, ε≈0.67, tangled_rope), adaptation_priority (acceptance of 2–3°C warming, ε≈0.45, rope-like coordination), and degrowth_reading (critique of growth economics, ε≈0.71, snare-like extraction). The ε values differ because the readings make different structural claims about what solves the founding problem and who bears costs. All three readings reference the same kernel (the climate-response-obligation commitment), but each instantiates a different constraint. Sibling stories must be linked via this network array.
+% This story is one reading (mitigation_priority) of the climate_response_obligation kernel. Sibling readings (adaptation_priority, degrowth_reading) instantiate the same kernel with different beneficiary structures, victim sets, and policy implications. Each reading has its own ε, classified independently; the kernel contest is routed to omega variables and cs_structure fields. The three stories together form a constraint family linked by the kernel and by network affects_constraints edges — each story names the siblings in its affects_constraints array.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(climate_response_obligation__mitigation_priority, analytical, 0.5).
+constraint_indexing:directionality_override(climate_response_obligation__mitigation_priority, institutional, 0.52).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

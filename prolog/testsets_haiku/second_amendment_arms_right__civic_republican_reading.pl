@@ -7,7 +7,7 @@
 % Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_second_amendment_civic_republican, []).
+:- module(constraint_second_amendment_arms_right__civic_republican_reading, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,39 +74,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: second_amendment_arms_right__civic_republican_reading
- *   human_readable: Second Amendment Civic Republican Reading: Armed Citizenship as Republican Prerequisite
- *   domain: constitutional/political
+ *   human_readable: Second Amendment Arms Right: Civic Republican Reading
+ *   domain: constitutional_law/political_philosophy
  *
  * SUMMARY:
- *   The Second Amendment reads: 'A well regulated Militia, being necessary to
- *   the security of a free State, the right of the people to keep and bear
- *   Arms, shall not be infringed.' The civic republican reading interprets
- *   this as protecting armed citizenship organized in militia context as a
- *   structural prerequisite for republican self-governance—neither purely
- *   individual right (severed from civic duty) nor state monopoly authority
- *   (the collective reading), but a conditional right tied to civic
- *   participation. Citizens gain the right to bear arms because and insofar
- *   as they participate in the armed defense of the republic; the right
- *   carries an embedded duty. Regulatory authority is not nullified but
- *   reframed: qualifications, training, and eligibility standards become
- *   constitutional permissible as enforcement of the civic prerequisite, not
- *   restrictions on a pre-political individual claim. Extraction emerges
- *   through exclusion—populations denied militia standing are denied the
- *   right, and the constraint's persistence depends on maintaining the
- *   boundary between those whose civic status qualifies them and those who
- *   are excluded. This is one of three structurally distinct readings of the
- *   contested kernel 'second_amendment_arms_right'; the other two
- *   (individual_right and collective_right) instantiate different ε,
- *   different beneficiary structures, and different regulatory implications.
+ *   The Second Amendment is a contested constitutional text that can be read
+ *   through at least three structurally distinct lenses. This story
+ *   instantiates the civic-republican reading: the Amendment protects armed
+ *   citizenship not as an individual pre-political right, but as a
+ *   prerequisite for republican self-governance — armed citizens maintain a
+ *   distributed check on tyranny through militia participation and civic
+ *   duty. The reading is neither libertarian individualism (which abandons
+ *   the civic frame) nor state collectivism (which makes the right depend on
+ *   the state militia). Instead, it treats bearing arms as a civic obligation
+ *   bound up with republican participation. The beneficiary is the armed
+ *   citizen-as-militia-member, and the cost is the extraction of civic
+ *   participation, training, and regulatory constraint embedded in that civic
+ *   framework. Exclusion from citizenship historically meant exclusion from
+ *   this right — a feature, not a bug, of the reading's logic.
  *
  * KEY AGENTS:
- *   - armed_citizens_militia_context: Citizens within militia standing gain constitutional protection and incur civic duty.
- *   - republican_governance_authority: Sets and enforces militia standards; authority is constrained by civic participation norm but not eliminated.
- *   - excluded_or_disqualified_populations: Barred from both the right and militia participation on grounds of civic status.
- *   - individual_liberty_advocates: Structurally excluded from this reading's framework; their pre-political rights language is not recognized.
- *   - state_monopoly_advocates: Structurally excluded; their collective reading is explicitly rejected by the civic republican framing.
- *   - historical_militia_institutions: Benefit from a reading that ties arms rights to their participation and legitimacy.
- *   - constitutional_courts: Interpret the boundary between permissible civic qualification and unconstitutional disarmament.
+ *   - armed_citizens_in_militia_tradition: Structural beneficiary (right + republican civic participation)
+ *   - regulatory_authority: Agenda setter (defines civic-participation requirements, training standards)
+ *   - those_excluded_from_civic_participation: Structural victims (barred by the reading's own logic)
+ *   - individual_liberty_advocates: Excluded seat (would reject the civic framing entirely)
+ *   - state_militia_authority_advocates: Excluded seat (would make the right state-dependent, not citizen-centered)
+ *   - courts_interpreting_the_text: Observer (must decide enforceability and scope)
  */
 
 /* ==========================================================================
@@ -109,56 +109,111 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(second_amendment_arms_right__civic_republican_reading, 0.38).
 domain_priors:suppression_score(second_amendment_arms_right__civic_republican_reading, 0.42).
-domain_priors:theater_ratio(second_amendment_arms_right__civic_republican_reading, 0.28).
+domain_priors:theater_ratio(second_amendment_arms_right__civic_republican_reading, 0.25).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, extractiveness, 0.38).
 narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, suppression_requirement, 0.42).
-narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, theater_ratio, 0.25).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, accessibility_collapse, 0.65).
-narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(second_amendment_arms_right__civic_republican_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(second_amendment_arms_right__civic_republican_reading, tangled_rope).
-narrative_ontology:human_readable(second_amendment_arms_right__civic_republican_reading, "Second Amendment Civic Republican Reading: Armed Citizenship as Republican Prerequisite").
-narrative_ontology:topic_domain(second_amendment_arms_right__civic_republican_reading, "constitutional/political").
+narrative_ontology:human_readable(second_amendment_arms_right__civic_republican_reading, "Second Amendment Arms Right: Civic Republican Reading").
+narrative_ontology:topic_domain(second_amendment_arms_right__civic_republican_reading, "constitutional_law/political_philosophy").
 
 domain_priors:requires_active_enforcement(second_amendment_arms_right__civic_republican_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(second_amendment_arms_right__civic_republican_reading, '474e227d-f892-4223-b30d-010fbd011559').
-narrative_ontology:cs_kernel_codification('474e227d-f892-4223-b30d-010fbd011559', fixed_text).
-narrative_ontology:cs_authority_grounding('474e227d-f892-4223-b30d-010fbd011559', lineage).
-narrative_ontology:cs_interpretation_layer_present('474e227d-f892-4223-b30d-010fbd011559').
-narrative_ontology:cs_reading_relation('474e227d-f892-4223-b30d-010fbd011559', second_amendment_arms_right__individual_right_reading, coexists_with).
-narrative_ontology:cs_reading_relation('474e227d-f892-4223-b30d-010fbd011559', second_amendment_arms_right__collective_right_reading, coexists_with).
-narrative_ontology:cs_axiom('474e227d-f892-4223-b30d-010fbd011559', foundational, armed_citizenship_prerequisite_for_republic).
-narrative_ontology:cs_axiom_status(armed_citizenship_prerequisite_for_republic, holdable).
-narrative_ontology:cs_axiom_grounding('474e227d-f892-4223-b30d-010fbd011559', armed_citizenship_prerequisite_for_republic, deontological).
-narrative_ontology:cs_axiom('474e227d-f892-4223-b30d-010fbd011559', foundational, civic_duty_inseparable_from_arms_right).
-narrative_ontology:cs_axiom_status(civic_duty_inseparable_from_arms_right, holdable).
-narrative_ontology:cs_axiom_grounding('474e227d-f892-4223-b30d-010fbd011559', civic_duty_inseparable_from_arms_right, deontological).
-narrative_ontology:cs_reference_frame('474e227d-f892-4223-b30d-010fbd011559', republican_militia_self_defense).
-narrative_ontology:cs_drift_state('474e227d-f892-4223-b30d-010fbd011559', contemporary_professional_militarization, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('474e227d-f892-4223-b30d-010fbd011559', '').
+narrative_ontology:cs_story_uid(second_amendment_arms_right__civic_republican_reading, '74c9aef7-8f9e-4969-afe6-a0650b611f34').
+narrative_ontology:cs_kernel_codification('74c9aef7-8f9e-4969-afe6-a0650b611f34', fixed_text).
+narrative_ontology:cs_authority_grounding('74c9aef7-8f9e-4969-afe6-a0650b611f34', lineage).
+narrative_ontology:cs_interpretation_layer_present('74c9aef7-8f9e-4969-afe6-a0650b611f34').
+narrative_ontology:cs_reading_relation('74c9aef7-8f9e-4969-afe6-a0650b611f34', second_amendment_arms_right__individual_right_reading, coexists_with).
+narrative_ontology:cs_reading_relation('74c9aef7-8f9e-4969-afe6-a0650b611f34', second_amendment_arms_right__collective_right_reading, coexists_with).
+narrative_ontology:cs_axiom('74c9aef7-8f9e-4969-afe6-a0650b611f34', foundational, armed_citizenship_constitutive_of_republic).
+narrative_ontology:cs_axiom_status(armed_citizenship_constitutive_of_republic, holdable).
+narrative_ontology:cs_axiom_grounding('74c9aef7-8f9e-4969-afe6-a0650b611f34', armed_citizenship_constitutive_of_republic, deontological).
+narrative_ontology:cs_axiom('74c9aef7-8f9e-4969-afe6-a0650b611f34', foundational, civic_participation_prerequisite_to_armament).
+narrative_ontology:cs_axiom_status(civic_participation_prerequisite_to_armament, holdable).
+narrative_ontology:cs_axiom_grounding('74c9aef7-8f9e-4969-afe6-a0650b611f34', civic_participation_prerequisite_to_armament, conventional).
+narrative_ontology:cs_reference_frame('74c9aef7-8f9e-4969-afe6-a0650b611f34', founding_era_republican_theory).
+narrative_ontology:cs_drift_state('74c9aef7-8f9e-4969-afe6-a0650b611f34', contemporary_professionalized_military, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('74c9aef7-8f9e-4969-afe6-a0650b611f34', '').
 narrative_ontology:cs_kernel_id(second_amendment_arms_right__civic_republican_reading, second_amendment_arms_right).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(second_amendment_arms_right__civic_republican_reading, armed_citizens_militia_context).
-narrative_ontology:constraint_beneficiary(second_amendment_arms_right__civic_republican_reading, republican_self_governance_system).
-narrative_ontology:constraint_victim(second_amendment_arms_right__civic_republican_reading, excluded_or_disqualified_populations).
+narrative_ontology:constraint_beneficiary(second_amendment_arms_right__civic_republican_reading, armed_citizens_in_militia_tradition).
+narrative_ontology:constraint_beneficiary(second_amendment_arms_right__civic_republican_reading, republican_self_governance_framework).
+narrative_ontology:constraint_victim(second_amendment_arms_right__civic_republican_reading, those_excluded_from_civic_participation).
+narrative_ontology:constraint_victim(second_amendment_arms_right__civic_republican_reading, regulatory_capacity_constrained_by_civic_norm).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(second_amendment_arms_right__civic_republican_reading, armed_citizens_in_militia_tradition).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Possess and bear arms as part of a civic duty to maintain republican self-governance against tyranny. They receive constitutional protection for armed preparedness tied to militia participation or readiness. They also bear the cost of training, qualification, and responsiveness to civic requirements — the reading does not grant them unrestricted armament independent of civic context.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, armed_citizens_in_militia_tradition, beneficiary,
+    organized, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(second_amendment_arms_right__civic_republican_reading, armed_citizens_in_militia_tradition, payer).
+
+% Sets and enforces rules defining who participates in the civic militia tradition and what training/qualification is prerequisite to armed citizenship. Acts as gatekeeper of the civic-participation framework. Under this reading, authority is constrained by the civic-republicanism norm: cannot disarm the population categorically or prevent genuine militia participation, but can require demonstrated capability and civic commitment.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, regulatory_authority, agenda_setter,
+    institutional, generational, mobile, national).
+
+% Historically and structurally: enslaved persons, women disenfranchised from political participation, non-citizens, those deemed unfit for civic trust (felons, the mentally ill by period standards). They bear the cost of being outside the civic-participation framework that the reading centers: they cannot claim arms rights because the right is predicated on membership in the civic body. Their exclusion is structural to the reading, not incidental.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, those_excluded_from_civic_participation, payer,
+    powerless, biographical, identity_locked, national).
+
+% Would argue that arms rights attach to individual persons independent of civic participation or militia duty — that the right is pre-political and cannot be conditioned on state-approved civic training. They are excluded from this reading's framing because the reading explicitly ties rights to republican civic participation, not individual autonomy.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, individual_liberty_advocates, excluded,
+    moderate, biographical, constrained, national).
+
+% Would argue that the right protects organized state militia alone, not armed citizenry outside formal military structure. They are excluded from this reading's framing because the reading treats citizenship and militia participation as inseparable from individual armed readiness — the right belongs to citizens-as-militia, not to the state apparatus.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, state_militia_authority_advocates, excluded,
+    institutional, generational, constrained, national).
+
+% Judicial seats that must decide what the Second Amendment permits. Under this reading, courts operate within the civic-republicanism frame: they cannot disarm citizens wholesale because that breaks the militia check, but they can require training and civic commitment as conditions of the right.
+narrative_ontology:constraint_stakeholder(second_amendment_arms_right__civic_republican_reading, courts_interpreting_the_text, observer,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(second_amendment_arms_right__civic_republican_reading, regulatory_authority).
+narrative_ontology:fixing_cost_class(second_amendment_arms_right__civic_republican_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Maintains a dispersed armed citizenry capable of resisting concentrated state tyranny through militia readiness. The coordination problem solved is: how does a republic preserve liberty without a standing army that itself becomes tyrannical? Answer: distribute arms to citizens and structure civic participation around militia duty.
+% TRANSFER_FUNCTION: Moves constitutional protection and civic authority from the state monopoly to the distributed body of armed citizens. In exchange, it extracts civic participation, training, qualification, and the obligation to remain armed and ready as a constraint on personal autonomy.
+% ABSENT_VOICES: Those excluded from citizenship and civic participation in the period of the Amendment's ratification — enslaved persons, women, non-property-holders, non-citizens. They would object that the right is structured on a civic framework that explicitly bars them from participation; their exclusion is not incidental to the reading but central to it.
+% DISAPPEARANCE_RATIONALE: If this particular constraint (the civic-republicanism reading) disappeared, the republican check on tyranny through militia readiness would dissolve — but the underlying constitutional text would not. The real question is whether citizens would reorganize under the individual-right reading or the collective-right reading, or establish some alternative framework. The civic frame itself is contestable.
+% FOUNDING_PROBLEM: How can a republic prevent tyranny without relying on a standing army that becomes tyrannical itself? The answer offered by this reading: an armed citizenry structured around militia participation and civic virtue, where bearing arms is a republican duty as well as a right.
+% FOUNDING_PROBLEM_CORROBORATION: The civic-republicanism reading draws support from historical scholarship on founding-era political thought (Pocock, Skinner on republican theory; Wood on the founding generation's fear of standing armies). It is contested by scholars who emphasize Locke's individualism and by those who stress the militia clauses as state-centered. No single authoritative source outside the benefiting community attests the founding problem in these terms; the reading itself is a historiographic claim within democratic discourse.
+narrative_ontology:disappearance_verdict(second_amendment_arms_right__civic_republican_reading, contested).
+narrative_ontology:founding_problem_status(second_amendment_arms_right__civic_republican_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(second_amendment_arms_right__civic_republican_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(second_amendment_arms_right__civic_republican_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(second_amendment_arms_right__civic_republican_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(second_amendment_arms_right__civic_republican_reading, 0.38, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +228,16 @@ narrative_ontology:story_seed(second_amendment_arms_right__civic_republican_read
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.38): the constraint coordinates genuine civic self-defense function but excludes populations from both right and duty on the basis of civic status, creating a tiered access regime. Extraction is not the primary driver—the coordination problem is real and the beneficiaries (armed citizens and republican governance) genuinely solve it—but the mechanism carries asymmetric burden (those excluded are permanently barred). Suppression is moderate (0.42): the constraint requires active enforcement to maintain militia participation norms and to exclude those deemed ineligible, but it does not depend on preventing alternatives through coercion (an armed citizenry is the stated alternative to state monopoly, not something hidden). Theater is moderate-low (0.28): the civic participation language is partly performative (modern militia capacity is technically transformed, and most citizens do not actually participate in militia), but the constraint's function is not entirely theatrical—state militias do exist and do train, and civic republican theory does motivate governance frameworks in some jurisdictions. Resistance is high (0.71): the constraint faces substantial push-back from both individual-rights advocates (who read the right as pre-civic) and from state-centered actors (who would prefer monopoly). The measurement series show modest extraction drift upward in the early interval (observed T0-T10, extractiveness 0.32 → 0.37) as court decisions narrow militia-participation language and broaden individual-right protections, then plateauing as the reading stabilizes around a moderate compromise position. Theater ratio rises slightly (0.20 → 0.29 T0-T20) as the constraint's civic rhetoric faces modern militia obsolescence. All metrics share one time grid; every time point includes all three series. Cyclical dynamics are not pronounced in this constraint—the drift is secular rather than oscillating.
+ *   Extractiveness is moderate (0.38 at interval end) because the reading embeds a genuine coordination function (militia check on tyranny) but also structural extraction: the right is conditioned on civic participation, training, and regulatory approval — a citizen cannot simply claim arms independent of state-evaluated civic fitness. The measurement trajectory shows a rise through the 19th and early 20th centuries (1934 National Firearms Act, 1968 Gun Control Act) as regulatory apparatus grew, peaking at mid-century, then declining as the individual-right reading gained judicial traction post-2008 (District of Columbia v. Heller). Theater is low-to-moderate (0.25), reflecting that the civic-republicanism frame is genuinely invoked in court opinions and scholarship, but increasingly competes with the individual-right reading for judicial adoption. Suppression mirrors extractiveness: the constraint requires active enforcement to define who counts as a civic participant and to exclude those deemed unfit. Accessibility collapse is moderate (0.65) because alternatives exist — the individual reading and the collective reading are live scholarly and judicial positions — but the civic-republican frame has deep historical and philosophical roots that make it hard to dismiss entirely.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter (republican governance authority) and the beneficiary (armed citizens in militia) should experience this constraint as coordination and duty—their d values should be mid-range (symmetric, around 0.5) because they both benefit from and bear costs for the armed-citizenship arrangement. The excluded populations should experience high d (near 1.0, targets) because they bear the cost of permanent exclusion with no benefit. Individual-rights advocates should experience the constraint differently from the militia-participants: the constraint limits their reading (d moderately high, ~0.6-0.7) because it binds the right to civic duty rather than releasing it as individual liberty. The engine derives d from beneficiary/victim declarations and exit options; the structural gap between militia-participants (beneficiaries with constrained exit due to civic obligation) and excluded populations (victims with trapped exit) drives the divergence.
+ *   From the armed citizen's perspective (constrained to the civic frame), the right is genuine and the duty of participation is a civic honor, not extraction. From the perspective of those excluded from civic participation by law or circumstance, the same frame is purely extractive: they are barred from the right because they are barred from citizenship. From a court's perspective, the reading constrains regulatory authority (cannot disarm citizens wholesale) but permits training and qualification requirements. From an individual-liberty advocate's perspective, the reading IS the extraction — it subordinates individual autonomy to the civic frame. The engine computes these divergences from the structural data; the authored claim (tangled_rope) does not adjudicate which seat's experience dominates.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries: armed_citizens_militia_context and republican_self_governance_system collect the coordination benefit (armed populace check on tyranny, collective self-defense capacity) and the normative satisfaction of civic duty. Their d values derive from their beneficiary status and moderate exit options—constrained by civic duty but not coerced into it (organized agents). Victims: excluded_or_disqualified_populations bear the cost of permanent exclusion from both right and civic participation. Their d values derive from victim status and trapped exit (no path to qualify out of exclusion). The structural asymmetry is not economic (money does not change hands) but status-based: civic standing is allocated unevenly, and the right follows the allocation. The secondary victimhood of disqualified populations who want to participate (e.g., women excluded from militia in many historical contexts, or those excluded for felony conviction) is central to the extraction story—the constraint uses civic status as a gating mechanism, and once you are outside the status boundary, exit is not available.
+ *   Armed citizens in militia tradition: d ≈ 0.35–0.45 (beneficiary of the right, but payer of civic obligation and training requirements — symmetry slightly toward benefit because they are the intended constitutional subject). Regulatory authority: d ≈ 0.55–0.65 (constrained by the civic norm but still sets the rules and enforces membership criteria — moderate institutional power, slightly toward target). Those excluded: d ≈ 0.85–0.95 (full targets — the reading's logic locks them out of the right by denying them civic participation; identity_locked exit because the exclusion is structural to the reading, not a practical barrier they could overcome). Courts: analytical position, not a party to extraction. Individual-liberty advocates and state-militia advocates: excluded from the frame entirely, so directionality is not computed (they reject the frame, not just their position within it).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (republic needs armed citizenry for self-defense against tyranny) was live in 1791 when militias were the primary armed force. By the 20th century, the founding problem is substantially dead: professional standing armies and national militaries have displaced citizen militias as the society's armed defense, making the civic-militia solution structurally obsolete. Modern state militias (National Guard) are integrated with federal control and trained for national service, not as a check on federal tyranny. Yet the Second Amendment's text persists, and the civic republican reading continues to be invoked, particularly when courts defend the militia-participation frame. This is a signature mandatrophy: the founding problem is gone, the regulation persists, and the constraint's legitimacy now rests on theater (invoking civic virtue language) and on the sunk cost of constitutional text rather than on the solution of a live problem. The classification as tangled_rope captures this: the constraint does coordinate armed participation (genuine function) and does extract through exclusion (asymmetric burden), and it requires active enforcement (militia training standards, eligibility criteria). But the extraction is increasingly visible as the coordination function decays—the theater rises and the genuine problem shrinks. An omega variable should document this obsolescence gap.
+ *   This reading carries moderate mandatrophy risk. The founding problem — preventing tyranny without a standing army — was live in 1791 and remained so through the 19th century. But by the late 20th century, several factors shifted the mandate's functional status: (1) The US developed a standing army and military-industrial complex, making the militia check structurally implausible. (2) Most citizens no longer identify with militia participation as a republican duty; the civic frame has atrophied. (3) The individual-right reading gained judicial ascendance (2008: Heller), fragmenting the consensus on the reading itself. The civic-republicanism frame persists in scholarship and some judicial opinions, but the mandate (the founding problem) is increasingly contested rather than live. The measurement trajectory reflects this: extractiveness rises into the early 20th century as regulatory capacity grows, peaks as the civic frame still carries authority, then stabilizes (rather than declining) because the reading persists as a live intellectual position even if its functional mandate has atrophied. Theater ratio rises modestly but does not dominate, because the reading is not purely theatrical — courts genuinely invoke it — but its practical grip on constitutional interpretation has loosened.
  */
 
 /* ==========================================================================
@@ -190,101 +245,98 @@ narrative_ontology:story_seed(second_amendment_arms_right__civic_republican_read
    ========================================================================== */
 
 omega_variable(
-    militia_participation_obsolescence,
-    'Is the founding problem—armed citizenry as check on government tyranny—still live, or has professional militarization rendered citizen militia structurally obsolete?',
-    'Historical analysis of militia function post-1950: are citizen militia systems actually deployed for self-defense against tyranny, or do they serve primarily ceremonial/support roles to professional militaries? Comparative institutional study of militia across democracies.',
-    'If militia function is obsolete, the constraint should be reclassified as piton (theater maintaining institutional forms without solving the founding problem). If militia still carries check-on-tyranny function (e.g., in contexts of democratic backsliding), the tangled_rope classification holds.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(militia_participation_obsolescence, empirical, 'Whether the civic republican founding problem remains live or has atrophied.').
-
-omega_variable(
-    civic_status_vs_rights_boundary,
-    'Is the civic status boundary (who qualifies for militia participation) a legitimate coordinate of the constitutional right, or is it an illegitimate restriction on a pre-political right?',
-    'Constitutional interpretation: does the Framers'' language (''the people'') include all persons or a subset defined by civic status? Can a right tied to civic participation be squared with post-civil-rights understandings of equal protection?',
-    'If civic status is a legitimate coordinate, the constraint''s exclusions are features of the regulation, not bugs. If civic status is illegitimate, the constraint should be reclassified as snare (extraction through status exclusion). This is a reading-vs.-reading divergence; different judicial philosophies will resolve it differently.',
+    founding_mandate_functional_atrophy,
+    'Is the founding problem (preventing tyranny through distributed militia readiness) still live, or has it atrophied with the professionalization of military force and the erosion of civic militia participation?',
+    'Historical-institutional analysis: track when militia participation became symbolic vs. functional; survey contemporary citizen identification with militia duty; examine whether distributed armament actually constrains government tyranny in the modern context or is theater maintained by the civic frame.',
+    'If the mandate has atrophied, the reading may no longer support extraction of civic participation and training requirements — the constraint would become a piton (theatrical maintenance of a degraded civic norm). If the mandate is still live, the reading retains justification for the moderate extractiveness authored.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(civic_status_vs_rights_boundary, conceptual, 'Whether rights can legitimately be conditioned on civic status.').
+narrative_ontology:omega_variable(founding_mandate_functional_atrophy, empirical, 'Whether the civic-republicanism reading''s founding mandate persists as functional or has become decorative.').
 
 omega_variable(
-    militia_interpretation_instability,
-    'What counts as ''well regulated militia'' under this reading, and is that interpretation stable across legal contexts?',
-    'Track court decisions defining militia (National Guard vs. state militia vs. unorganized militia) over time; compare across federal, state, and circuit courts. Test whether the definition remains coherent or drifts toward individual-right or collective-right interpretations.',
-    'If the militia definition drifts (particularly toward ''any able-bodied person'' or toward ''state military only''), the constraint''s classification would shift. Drift toward individual interpretation = movement toward rope (pure coordination). Drift toward collective interpretation = movement toward snare (extraction through state monopoly). A stable militia definition maintains tangled_rope.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(militia_interpretation_instability, empirical, 'Institutional stability of the militia interpretation.').
-
-omega_variable(
-    suppression_internalization_dynamics,
-    'Is the measured suppression (0.42) structural (legal barriers to disqualified populations) or internalized (those excluded have internalized their exclusion as legitimate)?',
-    'Post-policy-change observation: if legal barriers to militia participation are removed (e.g., women admitted, felony disenfranchisement reconsidered), do previously excluded populations attempt to participate, or do they remain absent due to internalized exclusion?',
-    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests—the excluded carry the suppression with them even after barriers fall. If structural, removal of legal barriers would lower suppression and potentially reclassify the constraint (lower suppression + lower extractiveness = rope rather than tangled_rope).',
+    civic_participation_exclusion_design,
+    'Is the exclusion of non-citizens and non-voting persons from the arms right a feature of the civic-republicanism reading (integral to the frame), or a historical artifact that the reading would discard if the frame were renewed?',
+    'Textual and historical analysis: can the civic-republicanism reading be extended to non-traditional participants (women, non-property-holders, non-citizens) while preserving the core logic of armed citizenship tied to republican participation? Or does the reading''s logic entail categorical exclusion?',
+    'If exclusion is integral, the reading perpetuates systematic injustice by design and the extraction is higher than authored (would shift extractiveness upward, suppression upward, and add a high-extraction class dimension). If exclusion is artifact, the reading could be reframed to include broader civic participation, lowering effective exclusion-based extraction.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(suppression_internalization_dynamics, empirical, 'Whether suppression is structural or internalized in the excluded population.').
+narrative_ontology:omega_variable(civic_participation_exclusion_design, conceptual, 'Whether the civic-republicanism reading''s exclusions are structural or contingent on historical circumstances.').
+
+omega_variable(
+    militia_check_structural_plausibility,
+    'In a modern state with professional standing armies, air forces, and nuclear weapons, can a distributed armed citizenry actually function as a check on tyranny, or is the militia-check narrative purely rhetorical?',
+    'Comparative institutional analysis: examine cases where armed citizenry has actually resisted state tyranny in the modern era; assess whether the restraint effect operates through direct military capacity or through political legitimacy and cost-raising for the state.',
+    'If plausible, the reading''s coordination function is genuine and the moderate extractiveness is justified. If purely rhetorical, the reading''s civic frame is theater, and the extractiveness should be reclassified as suppression (the constraint persists by maintaining a false narrative, not by delivering actual coordination).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(militia_check_structural_plausibility, empirical, 'Whether the civic-republicanism reading''s coordination claim (militia check on tyranny) is structurally viable in modernity.').
+
+omega_variable(
+    reading_foreclosure_test,
+    'Does the civic-republican reading logically foreclose the individual-right reading, or do both readings remain coherent within different normative frameworks?',
+    'Philosophical analysis: can a single party hold both that the right is individual (pre-political, inalienable) AND that it is conditioned on civic participation and republican duty? Or is this a genuine contradiction?',
+    'If the readings foreclose each other, the reading_relations should declare ''forecloses'' instead of ''coexists_with''. If both remain logically coherent (even if politically contested), ''coexists_with'' is correct and the contest is between live options, not between a true claim and a false one.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reading_foreclosure_test, conceptual, 'Whether the civic-republican and individual-right readings are logically incompatible or both coherent.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(second_amendment_arms_right__civic_republican_reading, 0, 30).
+narrative_ontology:interval(second_amendment_arms_right__civic_republican_reading, 1791, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(seco_tr_t0, second_amendment_arms_right__civic_republican_reading, theater_ratio, 0, 0.2).
-narrative_ontology:measurement(seco_tr_t5, second_amendment_arms_right__civic_republican_reading, theater_ratio, 5, 0.22).
-narrative_ontology:measurement(seco_tr_t10, second_amendment_arms_right__civic_republican_reading, theater_ratio, 10, 0.24).
-narrative_ontology:measurement(seco_tr_t15, second_amendment_arms_right__civic_republican_reading, theater_ratio, 15, 0.27).
-narrative_ontology:measurement(seco_tr_t20, second_amendment_arms_right__civic_republican_reading, theater_ratio, 20, 0.29).
-narrative_ontology:measurement(seco_tr_t25, second_amendment_arms_right__civic_republican_reading, theater_ratio, 25, 0.28).
-narrative_ontology:measurement(seco_tr_t30, second_amendment_arms_right__civic_republican_reading, theater_ratio, 30, 0.28).
+narrative_ontology:measurement(seco_tr_t1791, second_amendment_arms_right__civic_republican_reading, theater_ratio, 1791, 0.1).
+narrative_ontology:measurement(seco_tr_t1870, second_amendment_arms_right__civic_republican_reading, theater_ratio, 1870, 0.15).
+narrative_ontology:measurement(seco_tr_t1934, second_amendment_arms_right__civic_republican_reading, theater_ratio, 1934, 0.22).
+narrative_ontology:measurement(seco_tr_t1968, second_amendment_arms_right__civic_republican_reading, theater_ratio, 1968, 0.28).
+narrative_ontology:measurement(seco_tr_t2008, second_amendment_arms_right__civic_republican_reading, theater_ratio, 2008, 0.25).
+narrative_ontology:measurement(seco_tr_t2024, second_amendment_arms_right__civic_republican_reading, theater_ratio, 2024, 0.25).
 
 % Extraction over time
-narrative_ontology:measurement(seco_be_t0, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 0, 0.32).
-narrative_ontology:measurement(seco_be_t5, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(seco_be_t10, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 10, 0.37).
-narrative_ontology:measurement(seco_be_t15, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 15, 0.39).
-narrative_ontology:measurement(seco_be_t20, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 20, 0.38).
-narrative_ontology:measurement(seco_be_t25, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 25, 0.39).
-narrative_ontology:measurement(seco_be_t30, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 30, 0.38).
+narrative_ontology:measurement(seco_be_t1791, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 1791, 0.35).
+narrative_ontology:measurement(seco_be_t1870, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 1870, 0.42).
+narrative_ontology:measurement(seco_be_t1934, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 1934, 0.48).
+narrative_ontology:measurement(seco_be_t1968, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 1968, 0.52).
+narrative_ontology:measurement(seco_be_t2008, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 2008, 0.38).
+narrative_ontology:measurement(seco_be_t2024, second_amendment_arms_right__civic_republican_reading, base_extractiveness, 2024, 0.38).
 
 % Suppression requirement over time
-narrative_ontology:measurement(seco_su_t0, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 0, 0.38).
-narrative_ontology:measurement(seco_su_t5, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 5, 0.4).
-narrative_ontology:measurement(seco_su_t10, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 10, 0.41).
-narrative_ontology:measurement(seco_su_t15, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 15, 0.43).
-narrative_ontology:measurement(seco_su_t20, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 20, 0.42).
-narrative_ontology:measurement(seco_su_t25, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 25, 0.42).
-narrative_ontology:measurement(seco_su_t30, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 30, 0.42).
+narrative_ontology:measurement(seco_su_t1791, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 1791, 0.35).
+narrative_ontology:measurement(seco_su_t1870, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 1870, 0.38).
+narrative_ontology:measurement(seco_su_t1934, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 1934, 0.45).
+narrative_ontology:measurement(seco_su_t1968, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 1968, 0.48).
+narrative_ontology:measurement(seco_su_t2008, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 2008, 0.42).
+narrative_ontology:measurement(seco_su_t2024, second_amendment_arms_right__civic_republican_reading, suppression_requirement, 2024, 0.42).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(second_amendment_arms_right__civic_republican_reading, attachment_coordination).
+narrative_ontology:coordination_type(second_amendment_arms_right__civic_republican_reading, identity_coordination).
 narrative_ontology:boltzmann_floor_override(second_amendment_arms_right__civic_republican_reading, 0.12).
 narrative_ontology:affects_constraint(second_amendment_arms_right__civic_republican_reading, second_amendment_arms_right__individual_right_reading).
 narrative_ontology:affects_constraint(second_amendment_arms_right__civic_republican_reading, second_amendment_arms_right__collective_right_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the Second Amendment kernel 'second_amendment_arms_right'. All three readings interpret the same constitutional text but derive different constraints with different ε values, different beneficiary/victim structures, and different regulatory implications. The civic republican reading (this story) treats the right as tied to militia participation and civic duty (ε=0.38, tangled_rope). The individual reading treats the right as pre-political and not militia-dependent (higher ε, likely rope or snare depending on measurement). The collective reading treats the right as entirely state militia authority (different ε, likely snare or piton). Each reading is a separate constraint story linked via this network field. The readings coexist in contemporary constitutional dispute and influence one another—court decisions favoring one reading shift the operative environment for the others. This reading influences both siblings by defining the militia-participation alternative; a strong civic republican constitutional trend would constrain the individual reading and foreclose the pure-collective reading within a coherent single-framework commitment.
+% The Second Amendment is a kernel (fixed constitutional text) that admits multiple readings. This story is ONE reading (civic-republican). Sibling stories instantiate the individual-right reading and the collective-right reading. All three share the same constitutional text but author different ε values, different beneficiary/victim structures, and different exclusion logics. They are not alternative measurements of one constraint; they are structurally distinct constraints derived from the same kernel via different readings. The ε-invariance principle requires separate stories: a civic reading that centers republican duty and civic participation cannot have the same ε as an individual reading that treats arms as pre-political autonomy.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(second_amendment_arms_right__civic_republican_reading, powerless, 0.95).
+constraint_indexing:directionality_override(second_amendment_arms_right__civic_republican_reading, powerless, 0.9).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

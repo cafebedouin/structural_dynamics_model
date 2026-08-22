@@ -2,9 +2,9 @@
   "header": {
     "constraint_id": "turkish_graphemic_substrate__secular_nationalist_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-13",
     "status": "ACTIVE",
-    "story_uid": "225f9e44-026e-4eda-8e36-180e37afe658"
+    "story_uid": "bd2a9901-75f5-4887-8cc5-7f28912a15fb"
   },
   "base_properties": {
     "extractiveness": 0.68,
@@ -13,180 +13,463 @@
     "accessibility_collapse": 0.72,
     "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Turkish Graphemic Substrate (Secular Nationalist Reading)",
-    "topic_domain": "political_linguistics/state_formation",
+    "human_readable": "Turkish Latin Script Standardization (Secular-Nationalist Reading)",
+    "topic_domain": "political/linguistic/cultural",
     "requires_active_enforcement": true,
     "emerges_naturally": false,
     "beneficiaries": [
       "secular_nationalist_state",
-      "european_aligned_intelligentsia"
+      "european_aligned_intellectuals"
     ],
     "victims": [
-      "ottoman_educated_classes",
-      "religious_community_leaders",
-      "rural_populations"
+      "ottoman_educated_clergy",
+      "rural_arabic_literate_populations",
+      "historical_memory_keepers"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "secular_nationalist_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The Turkish state apparatus under Atatürk's reforms mandates Latin script adoption, bans teaching and publication in Arabic script in public institutions, and directs all education, administration, and legal documentation toward the new standard. The state claims this aligns Turkish linguistic identity with European modernity and breaks symbolic continuity with the Ottoman-Islamic past. Controls enforcement machinery including police, courts, education system, and print licensing."
+    },
+    {
+      "name": "european_aligned_intellectuals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Urban, educated class that advocates for and benefits from Latin script adoption. They frame it as necessary for Turkey's modernization and European integration. Their professional credibility and institutional positions depend on the reading being established as legitimate. They produce the interpretive apparatus justifying the shift and staff the education and bureaucratic systems implementing it."
+    },
+    {
+      "name": "ottoman_educated_clergy",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Islamic scholars, historians, and legal experts trained in Ottoman institutions where Arabic script literacy was the foundation of legitimacy and transmission of knowledge. The script mandate renders their accumulated expertise suddenly illegible to the next generation, delegitimizes their institutions, and cuts off their pipeline for successors trained in classical traditions. They cannot easily retrain or migrate; remaining in professional practice requires adopting the new standard."
+    },
+    {
+      "name": "rural_arabic_literate_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Communities where Arabic-script literacy was the dominant written tradition for religious, legal, and administrative purposes. They lose the ability to read documents produced before the transition and cannot access their own legal records, wills, deeds, or religious texts without intermediaries. Formal education is now conducted in the new script; remaining illiterate in the new standard means exclusion from state services and economic opportunities."
+    },
+    {
+      "name": "historical_memory_keepers",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "universal",
+      "situation": "Historians, poets, genealogists, and cultural custodians whose professional and identity practice depends on the ability to read and transmit pre-transition texts. The script transition requires them to either abandon continuity with pre-1928 literature and records or spend years relearning their own tradition in a new graphemic substrate. The collective memory of Ottoman intellectual life becomes inaccessible except through mediated translation."
+    },
+    {
+      "name": "gradual_transition_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Intellectuals and bureaucrats who argued for a managed transition period (5–15 years) to allow intergenerational knowledge transfer and reduce social disruption. This reading is excluded from institutional adoption by the speed and severity of the state's mandate; their alternative framing is never formally articulated in official policy despite its practical appeal."
+    },
+    {
+      "name": "ottoman_continuity_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Conservative intellectuals and Islamic scholars who affirm Turkish linguistic continuity with Ottoman civilization and argue Arabic script is inseparable from that identity. They are systematically marginalized from public discourse, their publications are restricted, and their institutional bases are dismantled or subordinated to the state apparatus."
+    },
+    {
+      "name": "international_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International scholars, UNESCO bodies, and historical analysts who examine whether the script transition was necessary for linguistic modernization or whether it functioned primarily as cultural erasure and state consolidation of power over Ottoman memory."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardizes written communication across a newly unified nation-state by establishing a single graphemic substrate independent of religious authority and tied to secular European identity. Solves the practical coordination problem of a multi-script administration inheriting Ottoman records in multiple systems; enables unified curricula in state schools.",
+    "transfer_function": "Transfers cultural-administrative authority from Ottoman institutional networks (clerical, Islamic legal, historical-literary establishments) to the secular nationalist state. Moves the legitimacy of literacy from religious mastery and classical knowledge transmission to state-certified literacy in the new standard. Moves the capacity to interpret historical identity from continuity-framing (Ottoman-Islamic) to rupture-framing (secular-European-modern).",
+    "absent_voices": "Gradual-transition advocates and Ottoman-continuity advocates are structurally excluded from institutional adoption and public policy formation. Their arguments for coexistence, managed transition, or continuity framing are never formally entertained in state education, administration, or official historiography. Rural populations with no representation in the secular-intellectual circles where the reading is debated are subjected to it without recourse.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mandate disappeared, Ottoman-tradition institutions would revive educational transmission in Arabic script, pre-1928 documents would be re-legitimized as primary sources, and the state's consolidation of symbolic power over national identity would weaken. The nation would not collapse, but the institutional landscape and the structure of cultural authority would reorganize around pluralist literacy regimes rather than unified state script control.",
+    "founding_problem": "The Ottoman Empire's administrative system used multiple scripts (Ottoman Turkish in Arabic script, Greek, Armenian, Hebrew in community contexts) creating friction in a newly centralized nation-state. Inter-regional administration required script conversion; literacy education was fragmented by religious/community affiliation rather than unified under state authority.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The secular-nationalist state attests the problem was acute and script unification solved it. International scholars document that the practical friction was real but moderate—comparable to multi-script administrative challenges in other post-imperial transitions (India, Indonesia). Ottoman continuity scholars attest the founding problem was overstated as a pretext for cultural erasure. European-modernization economists note that script change alone did not measurably accelerate economic or technical development."
+  },
   "interval": {
-    "start": 0,
-    "end": 25
+    "start": 1920,
+    "end": 1950
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 1920,
       "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.51
+      "time_point": 1924,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.58
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 12,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 18,
+      "time_point": 1928,
       "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
+      "time_point": 1933,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1940,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.18
+      "time_point": 1920,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.24
+      "time_point": 1924,
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.31
+      "time_point": 1928,
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.39
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 18,
+      "time_point": 1933,
       "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
+      "time_point": 1940,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
       "value": 0.42
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
+      "time_point": 1920,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1924,
       "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 3,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 6,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 12,
-      "value": 0.74
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 18,
+      "time_point": 1928,
       "value": 0.76
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
+      "time_point": 1933,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1940,
       "value": 0.76
-    }
-  ],
-  "omegas": [
-    {
-      "id": "modernization_necessity_vs_political_choice",
-      "question": "Is Latin script adoption structurally necessary for modernization and European integration, or is it a politically contingent choice that could have been paired with managed biliteracy during transition?",
-      "resolution_mechanism": "Comparative historical analysis: examine modernization trajectories in other post-Ottoman societies (Arabic-script nations that modernized while preserving script heritage, or European societies that adopted reforms without graphemic rupture). Assess whether technical/educational obstacles were genuine or manufactured.",
-      "impact": "If modernization is script-agnostic, the constraint is exposed as a political project dressed as necessity—reclassifying the reading from 'modernization requirement' to 'nationalist identity engineering' and shifting the ε interpretation from coordination cost to pure extraction. If modernization genuinely required Latin script, the constraint's coordination function is vindicated.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether Latin script adoption was structurally necessary or politically contingent."
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the measured suppression (0.76) primarily structural—legal enforcement, school curricula, institutional barriers—or has it become internalized such that Ottoman script is experienced as illegitimate even when barriers are removed?",
-      "resolution_mechanism": "Post-generation observation: if Ottoman script usage remains suppressed even in contexts where legal barriers have relaxed, and younger generations report internalized shame about Ottoman literacy, suppression is substantially internalized. If removal of formal barriers leads to rapid script revival, suppression is primarily structural.",
-      "impact": "If internalized, the constraint carries suppression beyond its formal enforcement—the target population perpetuates it themselves, enabling lighter-touch state enforcement. If structural, relaxing legal enforcement would enable script plurality. Internalization suggests the constraint has become more effective and more difficult to reverse.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is structural (external barriers) or internalized (cognitive/identity fusion)."
-    },
-    {
-      "id": "ottoman_continuity_vs_rupture_framing",
-      "question": "Is Turkish linguistic identity genuinely discontinuous with Ottoman heritage, or does the secular nationalist reading construct this discontinuity as a political positioning tactic while linguistic substrates remain historically continuous?",
-      "resolution_mechanism": "Linguistic analysis: examine whether Latin-script Turkish preserves Ottoman morphological, syntactic, and vocabulary structures despite the graphemic switch. If deep linguistic continuity persists, the 'rupture' is performative—the reading claims discontinuity that linguistic evidence contradicts.",
-      "impact": "Evidence of deep linguistic continuity would expose the secular nationalist reading's core axiom (fundamental rupture) as a foundational falsehood. The constraint would shift from 'implementing a genuine break' to 'performing a break that linguistic reality undermines.' This feeds the foreclosure question: can this reading coexist with the ottoman_continuity_reading, or does linguistic evidence foreclose one?",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the claimed civilizational rupture reflects actual linguistic discontinuity or is a performative political claim."
-    },
-    {
-      "id": "european_alignment_as_cover_story",
-      "question": "Is the constraint's justification as 'alignment with European modernity' the true motivation, or is it a cover story for nationalist state consolidation and erasure of Ottoman-Islamic identity?",
-      "resolution_mechanism": "Historical reconstruction: examine state documents, policy debates, and elite correspondence from the constraint's design phase. Assess whether European alignment was presented as means (to achieve it) or end (the goal was always state homogenization, and Europeanization was the cultural vehicle). Compare to the actual choices made: did the state adopt only those European practices that served nationalist consolidation, or did it systematically adopt European frameworks?",
-      "impact": "If Europeanization is the genuine goal, the constraint's framing is honest and the coordination function is real. If it is cover, the constraint is revealed as nationalist ethnic engineering using European identity as legitimating narrative—shifting the structure from 'coordination + transfer' to 'pure extraction dressed as modernization.' The ε interpretation and the reading's relationship to siblings would shift substantially.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether European alignment is the true motivation or a cover story for nationalist state consolidation."
-    },
-    {
-      "id": "reading_foreclosure_linguistic_evidence",
-      "question": "Does the secular nationalist reading's core axiom (fundamental civilizational rupture with Ottoman past) foreclose the ottoman_continuity_reading, or can both readings coexist as different interpretive frameworks of the same historical reality?",
-      "resolution_mechanism": "Examine whether linguistic and cultural evidence supports one reading's claim over the other, or whether the evidence is ambiguous enough to permit both readings. The foreclosure test: if linguistic continuity is demonstrable, can a party logically hold that discontinuity is real? If so, coexistence; if not, foreclosure.",
-      "impact": "Foreclosure would be rare and extreme—it would mean one reading's core premise logically eliminates the other within any coherent framework. Coexistence is more likely: both readings can claim the same historical facts, but interpret their meaning differently (rupture vs. continuation of form, discontinuity vs. deep structure preservation). Foreclosure/coexistence determines whether the kernel contest is ultimately resolvable or permanently ambiguous.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the secular nationalist reading structurally forecloses the ottoman_continuity reading or permits coexistence."
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.76
     }
   ],
   "commentary": {
-    "narrative_context": "In the early 20th century Turkish nation-state, following the collapse of the Ottoman Empire, the secular nationalist government (particularly under Atatürk's reforms, 1923–1938) mandated rapid abandonment of Arabic/Ottoman script in favor of Latin script for all public writing, education, and official documentation. This constraint embodies one reading of a contested kernel: the claim that Turkish linguistic identity is fundamentally distinct from Ottoman-Islamic civilization and that Latin script is the legitimate graphemic substrate aligned with European secular modernity. The constraint functions simultaneously as real coordination (unified national literacy system, access to European intellectual traditions) and as nationalist extraction (erasure of Ottoman cultural authority, suppression of religious scholarly traditions, generational rupture with inherited knowledge). The secular nationalist reading claims this break is historically necessary and civilizationally authentic; rival readings (ottoman_continuity_reading, gradual_transition_reading) contest the necessity and authenticity of the rupture. This is a pure committer-frame reading, not a neutral description—it instantiates one political position on what Turkish identity is and what alignment with modernity requires.",
+    "narrative_context": "The Turkish state under Atatürk implements a mandatory shift from Arabic to Latin script as the legitimized graphemic substrate for the nation. This reading frames the transition as necessary rupture: Turkish linguistic identity is severed from Ottoman-Islamic heritage and re-anchored to secular European modernity. The constraint operates as tangled_rope because it simultaneously coordinates unified national administration (genuine problem solved) while extracting cultural authority from Ottoman-tradition bearers and concentrating it in the secular state. The claim and metrics are intentionally divergent: the reading claims tangled_rope (coordination + enforcement); the metrics describe substantial extraction (0.68) and high suppression (0.76), reflecting the asymmetric impact on Ottoman-educated clergy and rural Arabic-literate populations who bear the costs while the state and European-aligned intellectuals collect the legitimacy gains.",
     "key_agents": [
-      "Secular nationalist state: agenda-setter, enforces Latin script adoption, controls education and official institutions",
-      "European-aligned intelligentsia: primary beneficiary, gains status through European literacy and Europeanized identity",
-      "Ottoman-educated classes (ulema, administrators, merchants): victim, loses professional authority and accumulated expertise",
-      "Religious community leaders: victim with identity-lock, severed from Arabic/Islamic textual traditions",
-      "Rural populations: victim, loses access to inherited knowledge networks and local literacy communities",
-      "Young generation students: ambiguous—beneficiary of access to modernity, payer of severed heritage",
-      "Other post-Ottoman states: excluded observers whose continued script choices make visible the political nature of Turkey's choice",
-      "European powers: analytical observers who reinforce the constraint's legitimacy as modernization signal"
+      "secular_nationalist_state: agenda-setter (institutional power, controls enforcement machinery)",
+      "european_aligned_intellectuals: beneficiary (organized, mobile, staff the interpretive and institutional apparatus)",
+      "ottoman_educated_clergy: payer (moderate power, identity-locked to classical traditions, constrained exit)",
+      "rural_arabic_literate_populations: payer (powerless, trapped, lose access to pre-transition documents and services)",
+      "historical_memory_keepers: payer (identity-locked to continuity, excluded from voice in policy formation)",
+      "gradual_transition_advocates: excluded (would argue for managed coexistence, never formally admitted to state policy)",
+      "ottoman_continuity_advocates: excluded (systematically marginalized, their reading suppressed)",
+      "international observers: analytical seat (assess whether coordination problem justified the extraction and cultural erasure)"
     ],
-    "logic_rationale": "Extractiveness measures 0.68 at interval end, rising from 0.42 at t=0: initial resistance is overcome through generational change, legal enforcement, and institutional embedding. By t=18 the metric plateaus, suggesting the constraint has achieved sufficient institutional lock that further enforcement is normalized rather than intensive. Suppression measures 0.76: the constraint requires active state enforcement of script in schools, legal proceedings, and official contexts; older Ottoman materials are progressively excluded from legitimacy; transition to Latin script is coerced rather than chosen. Theater ratio rises to 0.42 by t=6 and plateaus: early phases involve high performative activity (public script-burning, elaborate curriculum reform ceremonies, nationalist speeches about civilizational rebirth), but sustained enforcement becomes routinized. Accessibility_collapse at 0.72 reflects that alternatives (Ottoman script literacy, Arabic-Islamic knowledge networks) become increasingly inaccessible once the young generation is educated exclusively in Latin script and older texts become illegible to them. Resistance at 0.58 is substantial: religious scholars, Ottoman elites, and rural communities mount real opposition; the constraint persists because state power dominates, not because resistance is absent. The metrics run on a single shared time grid (0, 3, 6, 12, 18, 25) so the temporal picture is coherent: extractiveness and suppression both rise sharply in the first decade (t=0–6) when the policy is new and contested, then continue rising more slowly as institutional embedding deepens and generational turnover reduces the active resistance population.",
-    "perspectival_gap": "The state and European-aligned intelligentsia (high power, mobile exit or arbitrage) experience this as genuine modernization and cultural liberation—a necessary break with a backward past, opening the nation to European knowledge and secular governance. The Ottoman-educated classes and religious leaders (high-to-moderate power, constrained exit) experience it as cultural erasure and forced obsolescence—their lifetime expertise becomes professionally useless, their textual authority is invalidated, their identity is repositioned as 'backward.' Rural populations (powerless, trapped exit) experience it as sudden incomprehension of inherited knowledge and loss of connection to their parents' literacy. Young students (powerless, constrained exit) inherit a position where being modern means being severed from their own cultural past—they cannot easily access Ottoman sources without special training. The engine will compute different seat types from these structural facts: the state and intelligentsia seats likely compute as beneficiaries with low directionality (low χ), while the victim seats compute as targets with high directionality (high χ). This is the reading's perspectival asymmetry: it is experienced as liberation from above and as dispossession from below.",
-    "mandatrophy_analysis": "The founding problem (Ottoman linguistic fragmentation as modernization obstacle) is declared live by the secular nationalist reading but contested by rivals. The constraint persists at interval end with plateaued extractiveness and theater ratio, suggesting institutional maturity—the policy has become normalized and is sustained by generational lock-in rather than active enforcement intensity. However, the theater ratio is non-trivial (0.42): even after institutional embedding, significant performative activity continues (nationalist rhetoric about civilizational rebirth, school curricula emphasizing script change as patriotic duty). This mixture suggests the constraint is partly genuine coordination (unified literacy, access to European knowledge) and partly identity theater (the necessity of the break is continually reasserted to justify the costs to victim populations). The mismatch between founding_problem_status (contested) and disappearance_verdict (world_rearranges) confirms mandatrophy: the constraint persists despite the founding problem being contested, indicating it is sustained by institutional power and identity politics rather than genuine necessity. If the constraint disappeared and Ottoman script were re-legitimized, the world would substantially rearrange—Turkish education, law, and public communication would bifurcate, generational knowledge transfer would restore, and Turkey's symbolic relationship to Europe would shift. This rearrangement reveals that the constraint is essential to the secular nationalist state's power structure, not to functional modernization.",
-    "directionality_logic": "The secular nationalist state derives d near 0.0 (full beneficiary): the constraint's entire purpose is to consolidate state power through cultural homogenization, and the state captures the gains (authority over who counts as 'modern,' control over what counts as legitimate knowledge). It has arbitrage-grade exit (can maintain or drop the policy). European-aligned intelligentsia derive d near 0.15–0.25 (beneficiary, modestly scaled): they benefit from Latin-script fluency and European identity alignment, but they depend on the state to enforce the constraint—without enforcement, Ottoman literacy networks would persist and dilute their exclusive claim to modernity. Ottoman-educated classes derive d near 0.85 (near-full target): they bear the extraction (professional obsolescence, knowledge devaluation), have constrained exit (their expertise cannot easily transfer), and are locked into losing positions by their identity and accumulated knowledge. Religious community leaders derive d near 0.80 (near-full target) with identity-lock: they are structurally targeted, but their exit is deeper than mere constraint—their identity as Islamic scholars IS their relationship to the constraint; leaving Islam is not a viable exit. Rural populations derive d near 0.75 (target): trapped geographically and economically, they bear generational knowledge loss with no exit available. Young students derive d near 0.50 (symmetric): they gain access to modernity but pay through severance from their own heritage; the benefit and cost are genuinely balanced at the individual level, though the distribution across agents is asymmetric.",
-    "kernel_context": "This constraint instantiates the secular_nationalist_reading of the turkish_graphemic_substrate kernel. The kernel is the contested claim that Turkish identity has a legitimate graphemic substrate and that substrate is properly aligned with Ottoman-Islamic civilization, European secular modernity, or some intermediate position. Three readings occupy the kernel: (1) secular_nationalist_reading (this constraint)—Turkish identity is fundamentally distinct from Ottoman past; Latin script is legitimate and aligns Turkey with Europe; (2) ottoman_continuity_reading—Turkish identity is continuous with Ottoman heritage; Arabic script is legitimate and reflects authentic civilization; (3) gradual_transition_reading—Turkish identity involves both Ottoman and European elements; a managed transition period could preserve both scripts and enable knowledge transfer. These readings are not empirical disagreements about linguistic fact (though they interpret linguistic facts differently). They are commitments to what Turkish identity IS and what modernization requires. The secular nationalist reading claims a fundamental rupture; the ottoman_continuity reading claims deep continuity; the gradual_transition reading claims staged synthesis. Each reading instantiates a different constraint because each has a different beneficiary structure, a different founding problem, and a different relationship to enforcement. This file generates only the secular nationalist reading as a ε-invariant constraint; the sibling readings are other files."
+    "logic_rationale": "Extractiveness climbs from 0.42 (1920, pre-mandate ambiguity) to 0.68 (1928, mandate enforcement peak) as the state moves from debate to law and suppression mechanisms activate. It stabilizes at 0.68 from 1928–1950 because the mandatory phase is complete by 1928—the constraint becomes institutionalized, not sharper. Theater ratio rises from 0.15 to 0.42 because the state increasingly justifies the mandate through historical and modernization narratives that perform legitimacy rather than solve the original administrative friction. Suppression requirement mirrors extractiveness: low before the mandate (0.35, voluntary adoption plausible), then rises to 0.76 at enforcement peak (1928–1933) and remains elevated (0.76) because the alternative reading must be continuously suppressed to maintain the fiction that this is natural modernization, not state cultural engineering. The rural populations bear the highest suppression (trapped, no alternatives); the clergy face identity-locked suppression (their knowledge becomes illegible); the European-aligned beneficiaries face zero suppression (the constraint rewrites their status upward). This is a divergent-experience constraint—the same rule produces different extraction profiles by power and exit options.",
+    "perspectival_gap": "From the state's position: the constraint solves real coordination (unified administration, modern script, national identity). From Ottoman clergy: it erases their legitimacy and locks them out of succession. From rural populations: it creates sudden illiteracy in state services. From European-aligned intellectuals: it is progress and modernity. From gradual-transition advocates: it is unnecessary severity masquerading as necessity. The engine computes these divergences from the structural data (power atoms, exit options, beneficiary/victim declarations); the authored claim does not adjudicate which experience is correct. The per-seat classifications should diverge sharply: the state seat should compute as rope (genuine coordination), while the clergy and rural seats should compute as snare (pure extraction with coordination narrative as cover).",
+    "directionality_logic": "The secular_nationalist_state is the beneficiary and agenda-setter (d near 0.0: the constraint subsidizes its power, it controls its operation, it can exit by simply repealing the mandate—arbitrage-grade exit). European_aligned_intellectuals are secondary beneficiaries (d low: they gain professional status and institutional positions, exit is mobile because their credentials are portable to other modernizing projects). Ottoman_educated_clergy are targets (d high: they lose legitimacy, the constraint extracts their authority, identity-locked exit means they cannot leave without abandoning their identity). Rural_arabic_literate_populations are the deepest targets (d approaching 1.0: they are powerless, trapped, and bear the cost of state-imposed illiteracy). Historical_memory_keepers are similarly high-d targets (d high: identity-locked, forced choice between their practice and state compliance). Gradual_transition_advocates and ottoman_continuity_advocates are excluded (not in the structural directionality calculation because they are removed from decision-making; but if they were present and powerful, their d would be inverted—they would be targets of suppression for representing the alternative reading). The competitive divergence in d is the core signal: a constraint with d ranging from ~0.05 (agenda-setter) to ~0.95 (rural populations) is deeply asymmetric and should compute as snare-flavored from the payer seats, even if the state claims coordination.",
+    "mandatrophy_analysis": "The founding problem (multi-script Ottoman administration) was real but modest. The founding problem status is 'contested': the state claims it is still 'live' (administration requires unified script), but Ottoman continuity scholars and gradual-transition advocates attest it was 'dead' by 1950 (the problem was solved by the 1940s; the mandate's continuation is inertial enforcement, not problem-solving). The disappearance verdict is 'world_rearranges' (the state's consolidation of power would reverse if the mandate vanished). This produces the classic mandatrophy cell: founding_problem_status=dead + disappearance_verdict=world_rearranges is the signature of a constraint that persists because it benefits identifiable agents (the state, European-aligned elites), not because it solves the problem it was built for. Theater ratio rising from 0.15 to 0.42 is the behavioral signal of mandatrophy: the constraint begins solving a real problem (low theater, high functional content) and evolves into performing legitimacy (high theater, lower functional content as the problem shrinks). By 1950, the constraint's content is mostly institutional theater (preserving the state's monopoly on cultural identity) rather than practical solution (unified administration is solved; further suppression of Arabic script use serves no functional purpose). The Goodhart drift is visible: extractiveness stabilizes while theater rises, indicating the original success metric (unified administration) has been met but the constraint persists because a new metric (state monopoly on identity) has replaced it.",
+    "kernel_context": "This constraint is the SECULAR_NATIONALIST_READING of the contested kernel 'turkish_graphemic_substrate.' The reading instantiates one of three coherent framings of Turkish linguistic identity: (1) the secular-nationalist reading (this constraint) frames Turkish identity as a rupture from Ottoman-Islamic civilization, legitimate only through Latin script and European alignment; (2) the ottoman-continuity reading frames Turkish identity as continuous with Ottoman-Islamic heritage, with Arabic script as the legitimate substrate; (3) the gradual-transition reading frames both scripts as valid during a managed transition period. Each reading has a distinct ε (this reading's ε=0.68 is substantially extractive; the ottoman-continuity reading's ε is high for a different reason—it frames the state's Latin-script mandate as cultural violence; the gradual-transition reading's ε would be much lower because it proposes coexistence, not rupture). They share a single persisting kernel (Turkish linguistic identity and script choice) but disagree on its correct interpretation. The difference is NOT observable-dependent (not a measurement problem) but normative-structural: they differ in how they frame historical rupture vs. continuity and who has authority to define Turkish identity."
+  },
+  "omegas": [
+    {
+      "id": "coordination_necessity_vs_extraction_pretext",
+      "question": "Was rapid, mandatory Latin-script adoption necessary for coordinating a unified nation-state, or was a managed transition (5–15 years with bilingual administration) equally viable for coordination while preserving Ottoman-tradition transmission?",
+      "resolution_mechanism": "Historical comparison with other post-imperial linguistic transitions (India's multi-script coexistence under the Constitution, Indonesia's gradual-transition model, Ukraine's alphabet debates). If comparable states solved unified administration without mandating script rupture, the coordination claim is weakened and extraction becomes the dominant explanation for the Turkish pattern.",
+      "impact": "If transition could have been managed: the constraint reclassifies as snare (pure extraction with coordination narrative as cover); if rapid mandate was structurally necessary: the constraint remains tangled_rope (genuine coordination with asymmetric extraction cost). This is the core classification hinge.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination function required mandatory rupture or could have been achieved by gradual transition."
+    },
+    {
+      "id": "ottoman_continuity_suppression_mechanism",
+      "question": "Is the suppression of Ottoman-continuity reading structural (legal bans on Arabic-script education and publication, police enforcement) or internalized (Ottoman-educated populations gradually come to see their own tradition as backward or illegitimate)?",
+      "resolution_mechanism": "Post-mandate trajectory: if suppression persists after the legal bans are lifted (post-1950s reform or informal allowance of Arabic-script use), measure whether Ottoman-educated populations still regard their own literacy as stigmatized. If internalized, the constraint's effective suppression is higher than the structural measure suggests; targets carry the suppression with them even after the mandate weakens.",
+      "impact": "If primarily structural: reversing the law could restore Ottoman-tradition transmission relatively quickly; if internalized: the constraint has created generational damage to the transmission chain (younger generations cannot read classical texts even if allowed to learn); reversing the law alone is insufficient to restore the practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is external enforcement or internalized identity-fusion."
+    },
+    {
+      "id": "european_modernization_empirical_foundation",
+      "question": "Did Latin-script adoption measurably accelerate Turkey's technical, economic, or educational modernization relative to contemporaneous non-script-changing transitions (Greece, Iran, Japan)?",
+      "resolution_mechanism": "Comparative economic and literacy data: Turkey's growth rates, patent rates, educational outcomes vs. similar states 1920–1950. If Turkey outperformed: the reading's modernization claim has empirical support; if comparable or underperformed: the reading is performing modernization narrative without empirical grounding.",
+      "impact": "Weak empirical support would suggest the founding problem narrative is cover for cultural consolidation rather than solution-to-real-problem. It would support mandatrophy classification (the founding problem is dead; the constraint persists for political reasons, not functional ones).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's modernization claim is grounded in measurable outcomes or is performed legitimacy."
+    },
+    {
+      "id": "kernel_contest_framing_ambiguity",
+      "question": "Which reading of the kernel is correct: is Turkish linguistic identity fundamentally discontinuous with Ottoman heritage (secular-nationalist), fundamentally continuous (ottoman-continuity), or open to both interpretations during a transition period (gradual-transition)?",
+      "resolution_mechanism": "This is a conceptual question about how historical identity is defined and who has authority to define it. No empirical data can resolve it: it depends on the axioms (deontological claims about what Turkish identity is) that each reading holds. The question is irresolvable within any single framework; it requires recognizing that the readings are genuinely plural and incompatible commitments, not different assessments of a single fact.",
+      "impact": "If the secular-nationalist axiom (Turkish identity is rupture) is correct: Latin script is the legitimate substrate and Ottoman-continuity advocates are wrong. If the ottoman-continuity axiom (Turkish identity is continuous) is correct: the secular reading is cultural erasure. If the gradual-transition axiom (identity can coexist across a transition) is correct: both rapid implementations (rupture) and pure continuity (no change) are false. The classification of the constraint depends on which reading framework is adopted; the framework itself cannot be empirically falsified.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The irreducible plural interpretation of what Turkish identity is and which reading is legitimate."
+    },
+    {
+      "id": "state_power_concentration_on_identity_authority",
+      "question": "Is the state's monopoly on defining legitimate linguistic identity a necessary feature of modern nation-state formation, or is it a choice that could be relaxed to allow plural literacy regimes (Arabic and Latin coexisting in different institutional contexts)?",
+      "resolution_mechanism": "Comparative institutional analysis: states with plural official scripts (Switzerland, Belgium, India, Luxembourg) and their stability and functionality relative to single-script states. If plural scripts create persistent instability: the state's choice to concentrate authority is defensible; if plural scripts are stable and coordinate effectively: the concentration is a choice, not a necessity.",
+      "impact": "If concentration is not necessary: the constraint is revealed as serving state power consolidation rather than coordination; extraction becomes the dominant logic. If plural scripts do create instability: the state's consolidation is a genuine coordination function that imposes asymmetric costs on those invested in the displaced script.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state monopoly on identity is necessary or elective."
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1920,
+    "tn": 1950,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1950,
+        "value": 0.78
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1950,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1950,
+        "value": 0.82
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.45
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1950,
+        "value": 0.88
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1950,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1950,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1950,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1950,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.22
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1950,
+        "value": 0.81
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1950,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1950,
+        "value": 0.79
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.38
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1950,
+        "value": 0.76
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1920,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1950,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1920,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1950,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1920,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1950,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1920,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1950,
+        "value": 0.38
+      }
+    ]
   },
   "boltzmann": {
     "coordination_type": "identity_coordination",
@@ -195,76 +478,58 @@
   "network": {
     "affects_constraints": [
       "turkish_graphemic_substrate__ottoman_continuity_reading",
-      "turkish_graphemic_substrate__gradual_transition_reading",
-      "ottoman_educational_authority_suppression",
-      "islamic_scholarly_legitimacy_erasure"
+      "turkish_graphemic_substrate__gradual_transition_reading"
     ],
-    "dual_formulation_note": "This constraint is one reading of the turkish_graphemic_substrate kernel. The ottoman_continuity_reading and gradual_transition_reading are sibling constraints generated from the same kernel with different core axioms and different ε values. The secular_nationalist_reading claims graphemic rupture is necessary and authentic; the ottoman_continuity_reading claims rupture is false and destructive; the gradual_transition_reading claims rupture was unnecessary and politically costly. All three are generated independently as ε-invariant constraints. The network edges link them as co-instantiations of the same kernel dispute, enabling contamination analysis to track how evidence for/against one reading propagates to the others."
+    "dual_formulation_note": "This constraint is one reading of the kernel 'turkish_graphemic_substrate.' The ottoman_continuity_reading and gradual_transition_reading are sibling constraints instantiating alternative framings of the same kernel. All three stories share a referent (Turkish linguistic identity and script choice in the 1920–1950 period) but disagree on its correct interpretation. The secular-nationalist reading frames Turkish identity as a necessary rupture from Ottoman heritage; the ottoman-continuity reading frames it as a false rupture and cultural erasure; the gradual-transition reading frames the rupture as avoidably severe. Each reading has a distinct ε, beneficiary/victim structure, and normative axioms. The disagreement is not empirically resolvable—it depends on deontological and conceptual commitments about what historical continuity means and who has authority to define national identity. See omegas on kernel_contest_framing_ambiguity and ottoman_continuity_suppression_mechanism for resolution pathways."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerful",
-      "d_value": 0.2
-    }
-  ],
+  "gain_flow": "secular_nationalist_state",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "turkish_graphemic_substrate__ottoman_continuity_reading",
+        "sibling_id": "ottoman_continuity_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "turkish_graphemic_substrate__gradual_transition_reading",
-        "relation": "coexists_with"
+        "sibling_id": "gradual_transition_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "turkish_identity_fundamentally_distinct_from_ottoman_past",
+        "atom": "turkish_identity_requires_rupture_from_ottoman_past",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "latin_script_alignment_with_european_modernity_necessary_for_state_legitimacy",
+        "atom": "latin_script_is_obligate_for_european_modernity",
         "role": "foundational",
-        "status": "holdable",
+        "status": "overridden",
         "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "graphemic_rupture_is_civilizational_imperative_not_political_choice",
-        "role": "secondary",
-        "status": "holdable",
-        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "ottoman_islamic_civilization_as_illegitimate_substrate",
+    "reference_frame": "ottoman_multi_script_administrative_pluralism",
     "drift_state": {
-      "moment": "contemporary_post_interval_end",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
+      "moment": "post_1928_secular_nationalist_mandate",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
       "acknowledged": false
     }
   },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "ottoman_educational_authority_suppression"
-    ]
-  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

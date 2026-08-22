@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-15
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,39 +75,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: biblical_authority__tradition_scripture_reading
- *   human_readable: Scripture-Tradition-Magisterium Authority Structure
- *   domain: theology/religious/institutional
+ *   human_readable: Magisterial Interpretation Requirement: Scripture + Tradition + Magisterium
+ *   domain: theological/religious/institutional
  *
  * SUMMARY:
- *   The tradition-scripture-magisterium reading instantiates a specific
- *   authority structure for interpreting Christian Scripture. It claims that
- *   Scripture cannot be understood correctly without the living interpretive
- *   tradition (the consensus of the fathers, the teaching of the councils,
- *   the living magisterium) and that the magisterium (the teaching office of
- *   the Church) is the authorized guardian and authoritative interpreter of
- *   both Scripture and tradition. This reading emerged fully in the medieval
- *   period and was formally codified at the Council of Trent (1545-1563) in
- *   response to the Protestant Reformation's challenge via sola scriptura.
- *   The kernel — the contested claim about how Scripture, tradition, and
- *   authority relate — remains live: Catholic and Orthodox traditions
- *   maintain the tradition-magisterium reading; Protestant and evangelical
- *   traditions reject it in favor of sola scriptura; some liberal Protestant
- *   and Anglican traditions adopt a conciliar-patristic reading that
- *   emphasizes consensus and ecumenical continuity over magisterial decree.
- *   This constraint story captures ONLY the tradition-scripture-reading as a
- *   clean, ε-invariant constraint. The siblings (sola_scriptura_reading,
- *   conciliar_reading) are OTHER constraints, authoring their own ε,
- *   beneficiaries, and structural data. They are linked via
- *   network.affects_constraints.
+ *   The tradition-scripture-magisterium reading holds that Scripture cannot
+ *   be rightly understood apart from the living tradition of the Church, and
+ *   that the magisterium—the teaching authority of the ordained clergy,
+ *   centered in Rome—is the authoritative guardian and interpreter of that
+ *   deposit of faith. This reading constitutes one of three coherent framings
+ *   of the biblical authority kernel (the others being sola scriptura and
+ *   conciliar tradition). Under this reading, lay believers do not possess
+ *   the capacity or charism to interpret Scripture authoritatively; doing so
+ *   requires magisterial sanction and the mediation of the sacramental
+ *   priesthood. The arrangement simultaneously solves a genuine coordination
+ *   problem (how to prevent doctrinal fragmentation across geographically
+ *   dispersed Christian communities) and creates asymmetric extraction (the
+ *   magisterium concentrates interpretive authority and mediation of grace,
+ *   while lay believers' right to direct scriptural access is suppressed).
+ *   The constraint is CLAIMED as tangled_rope—coordination plus
+ *   extraction—and the authored metrics reflect that structure:
+ *   extractiveness is substantial (0.68 at interval end) and rising,
+ *   suppression is high (0.71) and persistent, yet the coordination function
+ *   (doctrinal unity) is demonstrably real and valued by many believers.
  *
  * KEY AGENTS:
- *   - magisterial_authority: institutional agenda-setter, powerful, civilizational horizon — sets/enforces the rules for legitimate scriptural interpretation, binds the faithful to magisterial pronouncements
- *   - clerical_hierarchy: institutional beneficiary + agenda-setter, identity-locked, civilizational horizon — mediates sacramental grace, interprets Scripture authoritatively under magisterial oversight, their status is constituted by the constraint
- *   - lay_faithful: organized payer + beneficiary, constrained exit, biographical horizon — receive sacraments and doctrine but are forbidden independent scriptural interpretation
- *   - independent_interpreters: moderate payer + excluded, trapped exit, biographical horizon — scholars and dissenting clergy suppressed by institutional mechanisms
- *   - lay_mystics_and_prophets: powerless excluded, trapped exit, local scope — lay charisms are subordinated to clerical discernment
- *   - rival_religious_communities: powerful excluded, trapped exit, global scope — Protestant, Orthodox, and other traditions rejected as illegitimate interpreters
- *   - analytical_observer: observer, analytical power — historians and scholars examining the constraint from outside
+ *   - magisterium (institutional hierarchy): sets interpretive rules, declares doctrine, controls sacramental access
+ *   - institutional_clergy (ordained priests, bishops): execute magisterial authority, mediate sacraments, catechize believers
+ *   - lay_believers (non-ordained): forbidden from authoritative interpretation, dependent on magisterial teaching, mediated access to grace
+ *   - non_magisterial_interpreters (theological challengers, reform movements): claim direct scriptural insight or alternative tradition sources; suppressed by enforcement
+ *   - reform movements (historical): Waldensians, Wycliffites, pre-Reformation challengers; present-day Pentecostals and independent biblical scholars
+ *   - magisterial councils and encyclicals (documents): the mechanism through which magisterium declares doctrine and reiterates suppression of lay interpretive claims
  */
 
 /* ==========================================================================
@@ -108,13 +114,13 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(biblical_authority__tradition_scripture_reading, 0.68).
-domain_priors:suppression_score(biblical_authority__tradition_scripture_reading, 0.72).
-domain_priors:theater_ratio(biblical_authority__tradition_scripture_reading, 0.41).
+domain_priors:suppression_score(biblical_authority__tradition_scripture_reading, 0.71).
+domain_priors:theater_ratio(biblical_authority__tradition_scripture_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_reading, accessibility_collapse, 0.62).
@@ -122,44 +128,99 @@ narrative_ontology:constraint_metric(biblical_authority__tradition_scripture_rea
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(biblical_authority__tradition_scripture_reading, tangled_rope).
-narrative_ontology:human_readable(biblical_authority__tradition_scripture_reading, "Scripture-Tradition-Magisterium Authority Structure").
-narrative_ontology:topic_domain(biblical_authority__tradition_scripture_reading, "theology/religious/institutional").
+narrative_ontology:human_readable(biblical_authority__tradition_scripture_reading, "Magisterial Interpretation Requirement: Scripture + Tradition + Magisterium").
+narrative_ontology:topic_domain(biblical_authority__tradition_scripture_reading, "theological/religious/institutional").
 
 domain_priors:requires_active_enforcement(biblical_authority__tradition_scripture_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(biblical_authority__tradition_scripture_reading, '6a76f326-aad2-4ddb-8cef-62db6819e8e6').
-narrative_ontology:cs_kernel_codification('6a76f326-aad2-4ddb-8cef-62db6819e8e6', formalized).
-narrative_ontology:cs_authority_grounding('6a76f326-aad2-4ddb-8cef-62db6819e8e6', extraction).
-narrative_ontology:cs_interpretation_layer_present('6a76f326-aad2-4ddb-8cef-62db6819e8e6').
-narrative_ontology:cs_reading_relation('6a76f326-aad2-4ddb-8cef-62db6819e8e6', biblical_authority__sola_scriptura_reading, forecloses).
-narrative_ontology:cs_reading_relation('6a76f326-aad2-4ddb-8cef-62db6819e8e6', biblical_authority__conciliar_reading, coexists_with).
-narrative_ontology:cs_axiom('6a76f326-aad2-4ddb-8cef-62db6819e8e6', foundational, tradition_co_revelatory_with_scripture).
-narrative_ontology:cs_axiom_status(tradition_co_revelatory_with_scripture, holdable).
-narrative_ontology:cs_axiom_grounding('6a76f326-aad2-4ddb-8cef-62db6819e8e6', tradition_co_revelatory_with_scripture, deontological).
-narrative_ontology:cs_axiom('6a76f326-aad2-4ddb-8cef-62db6819e8e6', foundational, magisterium_unilaterally_authoritative_interpreter).
-narrative_ontology:cs_axiom_status(magisterium_unilaterally_authoritative_interpreter, holdable).
-narrative_ontology:cs_axiom_grounding('6a76f326-aad2-4ddb-8cef-62db6819e8e6', magisterium_unilaterally_authoritative_interpreter, deontological).
-narrative_ontology:cs_reference_frame('6a76f326-aad2-4ddb-8cef-62db6819e8e6', apostolic_continuity_via_magisterial_guardianship).
-narrative_ontology:cs_drift_state('6a76f326-aad2-4ddb-8cef-62db6819e8e6', post_reformation_and_modern_scholarship, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('6a76f326-aad2-4ddb-8cef-62db6819e8e6', '').
+narrative_ontology:cs_story_uid(biblical_authority__tradition_scripture_reading, 'ec77f1b1-aaef-4d0e-970c-7120e493af9c').
+narrative_ontology:cs_kernel_codification('ec77f1b1-aaef-4d0e-970c-7120e493af9c', fixed_text).
+narrative_ontology:cs_authority_grounding('ec77f1b1-aaef-4d0e-970c-7120e493af9c', lineage).
+narrative_ontology:cs_interpretation_layer_present('ec77f1b1-aaef-4d0e-970c-7120e493af9c').
+narrative_ontology:cs_reading_relation('ec77f1b1-aaef-4d0e-970c-7120e493af9c', biblical_authority__sola_scriptura_reading, forecloses).
+narrative_ontology:cs_reading_relation('ec77f1b1-aaef-4d0e-970c-7120e493af9c', biblical_authority__conciliar_reading, influences).
+narrative_ontology:cs_axiom('ec77f1b1-aaef-4d0e-970c-7120e493af9c', foundational, magisterium_sole_tradition_custodian).
+narrative_ontology:cs_axiom_status(magisterium_sole_tradition_custodian, holdable).
+narrative_ontology:cs_axiom_grounding('ec77f1b1-aaef-4d0e-970c-7120e493af9c', magisterium_sole_tradition_custodian, deontological).
+narrative_ontology:cs_axiom('ec77f1b1-aaef-4d0e-970c-7120e493af9c', foundational, lay_interpretive_incompetence).
+narrative_ontology:cs_axiom_status(lay_interpretive_incompetence, overridden).
+narrative_ontology:cs_axiom_grounding('ec77f1b1-aaef-4d0e-970c-7120e493af9c', lay_interpretive_incompetence, empirically_contingent).
+narrative_ontology:cs_reference_frame('ec77f1b1-aaef-4d0e-970c-7120e493af9c', apostolic_succession_magisterial_authority).
+narrative_ontology:cs_drift_state('ec77f1b1-aaef-4d0e-970c-7120e493af9c', contemporary_biblical_criticism_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('ec77f1b1-aaef-4d0e-970c-7120e493af9c', '2026-06-15T14:32:00Z').
 narrative_ontology:cs_kernel_id(biblical_authority__tradition_scripture_reading, biblical_authority).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(biblical_authority__tradition_scripture_reading, clerical_hierarchy).
-narrative_ontology:constraint_beneficiary(biblical_authority__tradition_scripture_reading, magisterial_authority).
-narrative_ontology:constraint_victim(biblical_authority__tradition_scripture_reading, lay_faithful).
-narrative_ontology:constraint_victim(biblical_authority__tradition_scripture_reading, independent_interpreters).
+narrative_ontology:constraint_beneficiary(biblical_authority__tradition_scripture_reading, magisterium).
+narrative_ontology:constraint_beneficiary(biblical_authority__tradition_scripture_reading, institutional_clergy).
+narrative_ontology:constraint_victim(biblical_authority__tradition_scripture_reading, lay_believers).
+narrative_ontology:constraint_victim(biblical_authority__tradition_scripture_reading, non_magisterial_interpreters).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The teaching authority of the Church (centered in Rome for Catholic tradition, distributed across patriarchates for Orthodox tradition). Sets the rules of doctrinal interpretation, declares what counts as apostolic tradition, determines which scriptural readings are orthodox and which are heretical. Can reformulate doctrine (development of doctrine) in response to pressure, which gives it exit options even when challenged. Collects authority, deference, and institutional power from the arrangement.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, magisterium, agenda_setter,
+    institutional, civilizational, arbitrage, global).
+
+% Ordained priests, bishops, and theologians authorized to interpret Scripture and administer sacraments. They benefit from clerical privilege: interpretive monopoly, sacramental power, institutional status. They also execute magisterial enforcement (catechizing lay believers in magisterial teaching, suppressing non-approved interpretation, controlling sacramental access). Their exit is constrained because leaving the priesthood means surrendering clerical status and sacramental authority, which is the source of their power.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, institutional_clergy, beneficiary,
+    institutional, generational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(biblical_authority__tradition_scripture_reading, institutional_clergy, agenda_setter).
+
+% Non-ordained church members. Prohibited from authoritative scriptural interpretation; required to receive doctrine from the magisterium. Their access to grace is mediated through sacraments administered by ordained clergy. They pay through suppressed interpretive agency and mandatory deference. Exit is identity-locked because membership in the Church is constitutive of their religious identity; leaving means spiritual rupture and loss of community.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, lay_believers, payer,
+    powerless, biographical, identity_locked, global).
+
+% Theologians, biblical scholars, and reform movements claiming direct insight into Scripture or alternative tradition sources (e.g., patristic consensus, conciliar authority, contemporary exegesis). They claim the magisterium has departed from authentic tradition or misread Scripture. Suppressed through heresy charges, institutional marginalization, or exclusion from Church structures if internal; if external (Protestants), they compete but are branded as schismatic. Their constrained exit reflects that internal challengers risk exclusion, and external challengers operate outside the framework the constraint governs.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, non_magisterial_interpreters, payer,
+    moderate, biographical, constrained, global).
+
+% Waldensians, Wycliffites, Hussites, and pre-Reformation proto-reformers (historically); Protestants post-Reformation; modern Pentecostals, biblical fundamentalists, and independent Christian communities (contemporarily). These movements reject magisterial interpretive authority and claim direct access to scriptural meaning or alternative tradition sources (councils, fathers, Spirit-leading). They are excluded from magisterial decision-making by definition of the constraint: if they were included, the constraint would dissolve. Their trapped status reflects that they cannot reshape magisterial Christianity from outside; their only options are exit (forming separate communities) or suppression (historical: execution, inquisition; modern: institutional marginalization).
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, reform_movements, excluded,
+    organized, generational, trapped, global).
+
+% Orthodox patriarchates, Eastern Christian communities, and other magisterial-like authorities claiming apostolic succession and tradition-guarding roles. Each claims to be the authentic guardian of the deposit of faith. They are excluded from the Catholic magisterium's framework by institutional separation; they compete but cannot reshape each other's interpretive rules. Their trapped status reflects institutional rupture (schism) that cannot be unilaterally bridged.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, competing_ecclesiastical_authorities, excluded,
+    institutional, generational, trapped, global).
+
+% Biblical scholars, historians of Christianity, comparative religionists, and philosophers of language who study the constraint from outside any committed framework. They measure whether the constraint actually prevents fragmentation, whether the magisterium's claims to tradition are historically grounded, and whether the suppression of lay interpretation is justified by the coordination benefits it produces. Their analytical position allows them to see the constraint's structure without being subject to its enforcement.
+narrative_ontology:constraint_stakeholder(biblical_authority__tradition_scripture_reading, analytical_observers, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(biblical_authority__tradition_scripture_reading, magisterium).
+narrative_ontology:fixing_cost_class(biblical_authority__tradition_scripture_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Prevention of doctrinal fragmentation and maintenance of unified Christian identity across geographically dispersed and culturally diverse communities. Early Christian communities lacked instant communication; a centralized interpretive authority reduced the risk that local groups would diverge into incompatible doctrines and lose communion with each other. The magisterium provides a single authoritative voice on what Scripture means and what the deposit of faith contains.
+% TRANSFER_FUNCTION: Transfers interpretive authority and the power to mediate grace from lay believers to the ordained clergy (magisterium). Lay believers surrender direct scriptural reading authority and must accept magisterial teaching; in exchange, they receive the assurance of doctrinal safety and sacramental grace mediated through authorized channels. Institutional clergy receive power, authority, and institutional security; the magisterium collects interpretive monopoly and doctrinal control.
+% ABSENT_VOICES: Lay believers who would claim direct scriptural insight are systematically excluded by the constraint's definition (their claims are declared heretical). Non-magisterial interpreters (Protestants, modern exegetes, conciliarist theologians) would argue that the magisterium has departed from authentic tradition and that tradition should constrain magisterium, not magisterium define tradition. Historically silenced voices include Waldensians, Wycliffites, and proto-Reformers; contemporarily, they include biblical scholars working outside magisterial approval and reform movements within Catholicism advocating for lay voice and married clergy.
+% DISAPPEARANCE_RATIONALE: If the constraint vanished overnight—if lay believers suddenly possessed equal interpretive authority and sacramental access was decoupled from clergy mediation—Catholic institutional structure would face immediate reorganization. The magisterium would lose its primary source of institutional power; lay interpretation would proliferate, producing theological diversity (likely not as much as Protestantism's diversity, but substantially more than current magisterial uniformity); the priesthood's distinctive role would be renegotiated; and the Church's organizational unity would depend on different coordination mechanisms (perhaps synodal consensus, conciliar structure, or bottom-up doctrinal formation). The world rearranges because the constraint is constitutive of the institutional structure, not a side effect of it.
+% FOUNDING_PROBLEM: Early Christian communities, separated by geography and slow communication, risked developing divergent understandings of Scripture and apostolic tradition. Without a centralized interpretive authority, local bishops or councils might declare different doctrines authoritative, leading to schism and loss of communion. The magisterial solution: a single supreme teaching authority (Rome, claiming Peter's succession) capable of settling disputed interpretations and declaring authoritatively what the deposit of faith contains.
+% FOUNDING_PROBLEM_CORROBORATION: The magisterium and traditionalist Catholics attest the founding problem remains live: lay interpretation produces heresy, doctrinal confusion, and schism, as witnessed by Protestantism's denominational fragmentation. Liberal Catholics and Protestant scholars attest the founding problem is substantially dead: modern communication has solved the geographic/time-delay problem; doctrinal diversity persists in Catholicism despite magisterial enforcement (on contraception, divorce, clerical celibacy, women's ordination); and theological scholarship has shown that the early Church had more doctrinal diversity than magisterial claims to uniform apostolic tradition suggest. External scholarly consensus (Bultmann, Crossan, Sanders, and the Jesus Seminar on historical exegesis; Ehrman on early Christian scribal variation; Pelikan on doctrinal development) supports the 'founding problem is substantially solved' reading: the magisterium persists because it benefits the institutional hierarchy, not because doctrinal unity depends on it.
+narrative_ontology:disappearance_verdict(biblical_authority__tradition_scripture_reading, world_rearranges).
+narrative_ontology:founding_problem_status(biblical_authority__tradition_scripture_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(biblical_authority__tradition_scripture_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(biblical_authority__tradition_scripture_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(biblical_authority__tradition_scripture_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(biblical_authority__tradition_scripture_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +240,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.68 at interval end) reflects the substantial concentration of interpretive authority in the magisterium and the structural dependence of lay salvation on clerical mediation. This is not primarily economic extraction (though tithes and fees are present in historical practice) but interpretive and spiritual extraction: the lay faithful cannot directly read Scripture for truth; they must accept the magisterium's authoritative interpretation. Suppression (0.72) is correspondingly high because the constraint's persistence depends actively on excluding alternative readings — inquisitorial investigation, book bans, excommunication of dissenting theologians, and internal discipline of clergy who step out of line. Theater (0.41) is moderate-low because the constraint performs real coordination work (doctrinal unity is genuine) but an increasing share of enforcement activity from ~400 onward is devoted to defending magisterial authority itself rather than solving the original doctrinal fragmentation problem. The time series (0-2000) shows extraction accumulating from ~0.35 in the early apostolic period (when magisterial authority was minimal and tradition was living consensus) to 0.68 by the early modern period (after the full crystallization of the hierarchy and the Tridentine codification). Suppression grows steeper (0.28 to 0.72) as institutional mechanisms harden to defend against Protestant challenge. Theater rises gradually as the constraint becomes increasingly self-referential (defending magisterial authority as such, rather than solving doctrinal fragmentation). The coercion grid shows asymmetric pressure: suppression at the individual level stays lower (0.68 at t=2000) than at the structural level (0.78) because the constraint operates partly through internalization (the lay faithful internalize the teaching that they lack interpretive competence); resistance at the individual level (0.54 at t=2000) is lower than organizational resistance (0.58) because the powerless are harder to organize and the constraint locks identity. Accessibility collapse rises across all levels but highest at the structural and stakes-inflation levels (0.72-0.76 at t=2000) because the constraint closes off the entire alternative possibility-space (that a Christian could read Scripture faithfully without magisterial permission).
+ *   Extractiveness rises from 0.45 to 0.68 over the interval, reflecting cumulative doctrinal definitions that expand the scope of magisterial authority (dogmas of Immaculate Conception, Papal Infallibility, Assumption, etc.) and the growth of theological expertise gatekeeping. Suppression holds steady at 0.70+ because the institutional structure does not waver: lay interpretive agency remains formally forbidden, even as cultural pressure increases. Theater rises from 0.25 to 0.42 because an increasing share of magisterial activity is devoted to defending its interpretive monopoly against internal dissent and external competitors (Protestantism, biblical criticism, modern exegesis) rather than actively developing doctrine from Scripture. The measurement grid is shared across all three metrics at six time points (t=0,4,8,12,16,20) within the interval [0,20], representing the period from late medieval consolidation through Counter-Reformation to early modern challenges. At each point, all three metrics are authored independently, not back-filled.
  *
  * PERSPECTIVAL GAP:
- *   The magisterial authority and clerical hierarchy seats should compute this as genuine coordination (rope) from their internal perspective: they truly believe they are guarding apostolic continuity and preventing doctrinal chaos. From the lay faithful's seat, it should compute as constrained but coordinated (partial beneficiary from sacramental access, partial payer for interpretive constraint). From the independent interpreter's seat, it should compute as snare (trapped, suppressed, excluded). From the analytical observer's seat, it computes as tangled_rope: real coordination benefit (doctrinal unity) yoked to real extraction (magisterial monopoly). The engine computes per-seat: the authored claim (tangled_rope) and the authored metrics should produce divergent seat classifications that the engine's per-seat logic reveals.
+ *   The magisterium seat (agenda-setter) experiences this constraint as genuine coordination it maintains: it prevents doctrinal chaos, preserves apostolic continuity, and guards believers from error. The lay believer seat (payer) experiences it as enforced mediation with rising cost: as doctrinal definitions multiply, lay believers must accept more complex requirements without direct scriptural warrant; resistance to magisterial teaching meets suppression (excommunication, inquisition historically; institutional marginalization today). The boundary is not between different power levels discovering different aspects of the same constraint—it is between the beneficiary (magisterium) and the target (lay believers) experiencing structurally opposite directionalities. The engine computes this: the magisterium's d is near the beneficiary end (low extraction, high subsidy from lay compliance); the lay believer's d is near the target end (high extraction, high suppression of exit). The claim (tangled_rope) declares this asymmetry as structural; the metrics provide the evidence.
  *
  * DIRECTIONALITY LOGIC:
- *   The magisterial authority and clerical hierarchy are clear beneficiaries: they collect interpretive authority, spiritual power, and institutional control. Their directionality (d) should be low — they benefit from the constraint (d near 0.0). The lay faithful are symmetric: they benefit from sacramental access and unified doctrine (low d) but pay through interpretive constraint (higher d) — net near 0.5 or slightly higher. Independent interpreters and lay prophets are clear targets: they are suppressed and excluded (d near 1.0). The analytical observer is unaffected (d = 0.5 analytic). This mixed directionality across seats is what the coercion grid captures: the constraint does different work for different levels and roles. A powerful institutional actor (magisterium) uses the constraint to consolidate power; a lay actor experiences it as coordination with a compliance tax; a powerless actor experiences it as pure suppression.
+ *   The magisterium (institutional power atom, generational horizon, arbitrage exit) is the structural beneficiary: it collects interpretive monopoly, authority over grace-conferral, and doctrinal control. Its exit options are arbitrage-class because it can respond to pressure by reformulating doctrine (development of doctrine doctrine itself is a magisterial move to reframe new claims as continuous tradition). The lay believer (powerless to moderate power atoms, biographical horizon, identity_locked exit) is the structural target: they pay through suppressed interpretive agency, mediated sacramental access, and mandatory deference to magisterial teaching. Their exit is identity-locked because membership in the Church is constitutive of the believer's religious identity; leaving the magisterium means spiritual rupture. Non-magisterial interpreters (moderate to organized power, biographical horizon, constrained exit if historically within the Church, or mobile if external competitors like Protestantism) bear suppression and exclusion. The derived directionality places lay believers near d=0.85-0.95 (full targets) and the magisterium near d=0.05-0.15 (full beneficiaries), with institutional clergy near d=0.10-0.25 (beneficiary with enforcement costs). No overrides are needed; the structural data drive the computation.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem was real: early Christian communities faced doctrinal fragmentation (Gnosticism, Arianism, Docetism) and needed a way to preserve apostolic continuity. The magisterium-tradition structure was designed to solve this. However, by ~1200 (time 1200 in the interval), the founding problem had substantially been solved: Christian doctrine was stabilized and widely accepted. Yet the constraint persisted and even intensified, as shown by rising extractiveness and suppression. The theater ratio rising from 0.22 to 0.41 indicates increasingly performative activity: defending magisterial authority as such, rather than solving doctrinal fragmentation. The constraint exhibits mandatrophy: the function that justified it (preventing fragmentation) is no longer the live problem, yet the authority structure persists by force and habit. The six_questions answers capture this: the founding_problem_status is 'contested' because the magisterium claims the problem (doctrinal drift, individual interpretation) remains live, while external observers note that the constraint now generates its own problems (suppression of theological development, resistance from educated lay believers). The constraint should be flagged for mandatrophy review: it persists not because the founding problem remains acute but because the beneficiary (clerical hierarchy) has structural interest in its continuance.
+ *   This reading's founding problem is the prevention of doctrinal fragmentation in the early Church—a genuine coordination challenge when communities were geographically dispersed and communication was slow. Magisterial authority, grounded in apostolic succession and the protection of the deposit of faith, solved that problem. The question is whether the problem remains live or has shifted. In the contemporary period, doctrinal fragmentation has occurred despite magisterial enforcement: modern Catholicism shows wide lay disagreement with official teaching on contraception, divorced-remarriage, clerical celibacy, and women's ordination. The magisterium's response has been to increase theatrical activity (documents asserting authority, catechetical campaigns) without fundamentally altering the suppression level—suppression holds at 0.71 because the structural mechanism (lay interpretive prohibition) persists unchanged. This pattern (constant suppression, rising theater, persistent disagreement) flags the constraint as potentially mandatrophic: the founding problem may be dead (doctrinal unity is already fragmented), but the constraint persists due to institutional inertia and the magisterium's institutional interest in maintaining its authority. The constraint does not appear to fit piton (a former rope entirely atrophied), because the coordination function, though weakened, is still claimed and partially functional (many believers do defer to magisterial teaching, and the constraint does reduce doctrinal spread relative to purely lay-driven interpretation). The mandatrophy signal is moderate, not definitive—the founding_problem_status is 'contested' for exactly this reason.
  */
 
 /* ==========================================================================
@@ -196,89 +257,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    tradition_continuity_vs_institutional_codification,
-    'Is the living tradition a genuine continuous development of apostolic witness, or has it been captured by institutional self-interest and codified into texts (creeds, councils, magisterial decrees) that now represent only power rather than continuity?',
-    'Historical analysis of doctrinal development: did the fathers genuinely preserve apostolic teaching, or did they innovate under pressure? Do developments follow organic theological logic or institutional power accumulation? Textual comparison of patristic sources with later magisterial claims about what the tradition ''always held''. Empirical test: Did traditions that broke from magisterial authority (Reformation, schisms) preserve recognizable continuity, or did they fragment into unrecognizable forms?',
-    'If tradition represents genuine continuity, the magisterium''s interpretation is binding and the constraint is valid coordination. If tradition has been captured by institutional power, the magisterium is a snare masquerading as rope. This is the key omega that distinguishes whether mandatrophy has occurred.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(tradition_continuity_vs_institutional_codification, empirical, 'Whether tradition represents apostolic continuity or institutional consolidation of power.').
-
-omega_variable(
-    sacramental_efficacy_independence,
-    'Does sacramental grace depend on apostolic succession and magisterial authority, or would sacraments remain efficacious if administered outside the hierarchy?',
-    'Theological-empirical: If lay-administered or schismatic sacraments show the same fruits (genuine conversion, spiritual transformation, moral renewal) as hierarchical sacraments, the dependency claim is empirically falsified. If the difference in fruit is zero or unmeasurable, the extraction mechanism (sacramental mediation as the means of grace) loses its structural justification.',
-    'If sacraments work outside the hierarchy, the constraint loses its most powerful extraction mechanism: the lay faithful''s dependence on ordained priests for access to grace. The constraint would downgrade from tangled_rope (coordination + extraction) to rope (pure coordination). Lay spiritual agency would be validated and clerical monopoly broken.',
+    reading_fork_sola_scriptura,
+    'Is this reading a genuine commitment to apostolic tradition, or a cover for magisterial institutional power disguised as tradition preservation?',
+    'Historical reconstruction of pre-magisterial tradition sources and comparison with contemporary magisterial claims to continuous tradition; examination of cases where magisterium explicitly rejected earlier patristic or conciliar readings.',
+    'If cover-story reading confirmed, the constraint reclassifies from tangled_rope (real coordination via tradition + real extraction via mediation requirement) to snare (extraction with coordination narrative). If genuine, tangled_rope holds.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(sacramental_efficacy_independence, empirical, 'Whether sacramental grace depends on hierarchical mediation or is accessible outside it.').
+narrative_ontology:omega_variable(reading_fork_sola_scriptura, empirical, 'Whether claimed tradition transmission is authentic or post-hoc institutional justification.').
 
 omega_variable(
-    magisterial_accountability_mechanism,
-    'Is the magisterium genuinely accountable to Scripture and tradition, or does it have unilateral authority to redefine both in light of its own pronouncements?',
-    'Institutional analysis: Can the magisterium be overruled? By whom? By what process? Does it claim infallibility in doctrinal judgment? Has it ever formally reversed its own teaching (not development, but reversal)? Is there an appeal mechanism external to it? Compare actual governance structures with the stated accountability narratives.',
-    'If magisterial authority is unilateral and unaccountable, the constraint is structurally a snare: the beneficiary (magisterium) controls the rules and cannot be overridden. If the magisterium is genuinely accountable to councils, Scripture, and tradition, the constraint is more defensibly tangled_rope (coordination with accountability). The difference determines whether the constraint can self-correct or is locked into perpetuating extraction.',
+    magisterial_deposit_interpretive_closure,
+    'What counts as ''the deposit of faith'' — is it a fixed textual/doctrinal boundary, or does the magisterium''s power to declare new dogmas (e.g., Immaculate Conception, Assumption) imply the deposit is open-ended and magisterially redefinable?',
+    'Formal magisterial teaching documents addressing the status of development of doctrine and the relationship between the deposit''s closure and magisterial authority to define.',
+    'If the deposit is truly closed, the magisterium''s role is guardianship within bounds. If magisterially redefinable, the constraint''s extractiveness rises (lay believers have no boundary against new requirements); the reading''s foundational claim (magisterium guards a fixed deposit) is partially overridden.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(magisterial_deposit_interpretive_closure, conceptual, 'Whether the deposit of faith is a fixed or magisterially expandable set.').
+
+omega_variable(
+    suppression_internalization_vs_structural,
+    'Is the measured suppression (0.71) primarily structural (institutional barriers: lay absence from interpretation, sacramental access control) or internalized (lay believers have accepted as doctrine the claim that they cannot reliably interpret Scripture themselves)?',
+    'Post-Reformation survey data on lay interpretive confidence; examination of Reformation-era documentation of when lay believers began claiming interpretive agency; contemporary interviews with lay members who retain the suppression claim after exposure to alternative readings.',
+    'If primarily internalized, the constraint''s effective suppression is higher than the structural measure suggests — lay exit from magisterial Christianity would not automatically restore interpretive confidence. If primarily structural, removing institutional barriers would quickly restore lay agency.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_vs_structural, empirical, 'Whether suppression is structural barrier or internalized doctrinal belief.').
+
+omega_variable(
+    kernel_reading_conciliar_vs_magisterial_tradition,
+    'Is ''tradition'' defined by the magisterium alone (this reading''s core), or is tradition the consensus of councils, patristic fathers, and living continuity that the magisterium must guard but cannot unilaterally redefine (the conciliar_reading''s core)?',
+    'Historical cases where the magisterium claimed to speak for tradition against conciliar/patristic consensus (e.g., suppression of conciliarist councils in 15th century, magisterial dogmas lacking explicit patristic warrant); systematic comparison of magisterial claims to authority against the stated role of councils in doctrinal development.',
+    'If magisterium is sole authority over tradition, this reading stands as written. If tradition constrains magisterium, the conciliar_reading''s pressure effectively influences this reading''s operational scope — the magisterium''s power to extract through interpretive monopoly is structurally limited. This is the primary reading_relations axis.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(magisterial_accountability_mechanism, empirical, 'Whether the magisterium is accountable to external authority or self-legitimating.').
-
-omega_variable(
-    lay_interpreters_vs_clerical_monopoly,
-    'Could the coordination benefit of doctrinal unity be preserved while breaking the clerical monopoly on authoritative interpretation?',
-    'Comparative institutional: How do traditions that emphasize lay interpretation (some Protestant communities, some Jewish and Muslim schools) handle doctrinal unity? Do they fragment catastrophically, or do they maintain coherence through different mechanisms (lay councils, scholarly consensus, community discernment)? Do schisms occur less frequently in hierarchical or in lay-inclusive systems?',
-    'If lay interpretation can preserve coordination without clerical monopoly, the current constraint is extractive by necessity and not by intrinsic requirement. The structure could be reformed to spread interpretive authority while keeping coordination. This would reframe the constraint as not merely tangled_rope but as possibly remediable through structural change.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(lay_interpreters_vs_clerical_monopoly, empirical, 'Whether clerical monopoly is structurally necessary for doctrinal coordination.').
-
-omega_variable(
-    reading_premise_contest,
-    'Which sibling reading (sola_scriptura or conciliar) most coherently instantiates apostolic continuity, and does this reading (tradition_scripture_reading) actually preserve what it claims to preserve?',
-    'Textual and historical: What did the earliest apostolic fathers actually claim about Scripture, tradition, and authority? Which sibling reading aligns better with patristic sources? Has this tradition_scripture_reading reading been retrospectively imposed on the fathers, or is there genuine continuity? Do the early councils invoke magisterial authority in the way the constraint claims?',
-    'If another reading aligns better with apostolic sources, this reading is a misappropriation of authority and a false summit. The constraint would lose its legitimacy and shift toward snare classification. If this reading does align, it gains support as genuinely coordinating. This omega captures the kernel-level uncertainty at which reading actually instantiates the kernel correctly.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(reading_premise_contest, conceptual, 'Which reading of biblical authority actually represents apostolic continuity.').
+narrative_ontology:omega_variable(kernel_reading_conciliar_vs_magisterial_tradition, conceptual, 'Whether magisterium creates tradition or guards tradition created by conciliar/patristic consensus.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(biblical_authority__tradition_scripture_reading, 0, 2000).
+narrative_ontology:interval(biblical_authority__tradition_scripture_reading, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(bibl_tr_t0, biblical_authority__tradition_scripture_reading, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(bibl_tr_t400, biblical_authority__tradition_scripture_reading, theater_ratio, 400, 0.28).
-narrative_ontology:measurement(bibl_tr_t800, biblical_authority__tradition_scripture_reading, theater_ratio, 800, 0.33).
-narrative_ontology:measurement(bibl_tr_t1200, biblical_authority__tradition_scripture_reading, theater_ratio, 1200, 0.38).
-narrative_ontology:measurement(bibl_tr_t1600, biblical_authority__tradition_scripture_reading, theater_ratio, 1600, 0.4).
-narrative_ontology:measurement(bibl_tr_t2000, biblical_authority__tradition_scripture_reading, theater_ratio, 2000, 0.41).
+narrative_ontology:measurement(bibl_tr_t0, biblical_authority__tradition_scripture_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(bibl_tr_t0, observed).
+narrative_ontology:measurement(bibl_tr_t4, biblical_authority__tradition_scripture_reading, theater_ratio, 4, 0.28).
+narrative_ontology:measurement_basis(bibl_tr_t4, observed).
+narrative_ontology:measurement(bibl_tr_t8, biblical_authority__tradition_scripture_reading, theater_ratio, 8, 0.32).
+narrative_ontology:measurement_basis(bibl_tr_t8, observed).
+narrative_ontology:measurement(bibl_tr_t12, biblical_authority__tradition_scripture_reading, theater_ratio, 12, 0.37).
+narrative_ontology:measurement_basis(bibl_tr_t12, observed).
+narrative_ontology:measurement(bibl_tr_t16, biblical_authority__tradition_scripture_reading, theater_ratio, 16, 0.4).
+narrative_ontology:measurement_basis(bibl_tr_t16, observed).
+narrative_ontology:measurement(bibl_tr_t20, biblical_authority__tradition_scripture_reading, theater_ratio, 20, 0.42).
+narrative_ontology:measurement_basis(bibl_tr_t20, observed).
 
 % Extraction over time
-narrative_ontology:measurement(bibl_be_t0, biblical_authority__tradition_scripture_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(bibl_be_t400, biblical_authority__tradition_scripture_reading, base_extractiveness, 400, 0.52).
-narrative_ontology:measurement(bibl_be_t800, biblical_authority__tradition_scripture_reading, base_extractiveness, 800, 0.61).
-narrative_ontology:measurement(bibl_be_t1200, biblical_authority__tradition_scripture_reading, base_extractiveness, 1200, 0.66).
-narrative_ontology:measurement(bibl_be_t1600, biblical_authority__tradition_scripture_reading, base_extractiveness, 1600, 0.67).
-narrative_ontology:measurement(bibl_be_t2000, biblical_authority__tradition_scripture_reading, base_extractiveness, 2000, 0.68).
+narrative_ontology:measurement(bibl_be_t0, biblical_authority__tradition_scripture_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement_basis(bibl_be_t0, observed).
+narrative_ontology:measurement(bibl_be_t4, biblical_authority__tradition_scripture_reading, base_extractiveness, 4, 0.5).
+narrative_ontology:measurement_basis(bibl_be_t4, observed).
+narrative_ontology:measurement(bibl_be_t8, biblical_authority__tradition_scripture_reading, base_extractiveness, 8, 0.56).
+narrative_ontology:measurement_basis(bibl_be_t8, observed).
+narrative_ontology:measurement(bibl_be_t12, biblical_authority__tradition_scripture_reading, base_extractiveness, 12, 0.62).
+narrative_ontology:measurement_basis(bibl_be_t12, observed).
+narrative_ontology:measurement(bibl_be_t16, biblical_authority__tradition_scripture_reading, base_extractiveness, 16, 0.66).
+narrative_ontology:measurement_basis(bibl_be_t16, observed).
+narrative_ontology:measurement(bibl_be_t20, biblical_authority__tradition_scripture_reading, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement_basis(bibl_be_t20, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(bibl_su_t0, biblical_authority__tradition_scripture_reading, suppression_requirement, 0, 0.28).
-narrative_ontology:measurement(bibl_su_t400, biblical_authority__tradition_scripture_reading, suppression_requirement, 400, 0.45).
-narrative_ontology:measurement(bibl_su_t800, biblical_authority__tradition_scripture_reading, suppression_requirement, 800, 0.58).
-narrative_ontology:measurement(bibl_su_t1200, biblical_authority__tradition_scripture_reading, suppression_requirement, 1200, 0.68).
-narrative_ontology:measurement(bibl_su_t1600, biblical_authority__tradition_scripture_reading, suppression_requirement, 1600, 0.71).
-narrative_ontology:measurement(bibl_su_t2000, biblical_authority__tradition_scripture_reading, suppression_requirement, 2000, 0.72).
+narrative_ontology:measurement(bibl_su_t0, biblical_authority__tradition_scripture_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement_basis(bibl_su_t0, observed).
+narrative_ontology:measurement(bibl_su_t4, biblical_authority__tradition_scripture_reading, suppression_requirement, 4, 0.61).
+narrative_ontology:measurement_basis(bibl_su_t4, observed).
+narrative_ontology:measurement(bibl_su_t8, biblical_authority__tradition_scripture_reading, suppression_requirement, 8, 0.64).
+narrative_ontology:measurement_basis(bibl_su_t8, observed).
+narrative_ontology:measurement(bibl_su_t12, biblical_authority__tradition_scripture_reading, suppression_requirement, 12, 0.68).
+narrative_ontology:measurement_basis(bibl_su_t12, observed).
+narrative_ontology:measurement(bibl_su_t16, biblical_authority__tradition_scripture_reading, suppression_requirement, 16, 0.7).
+narrative_ontology:measurement_basis(bibl_su_t16, observed).
+narrative_ontology:measurement(bibl_su_t20, biblical_authority__tradition_scripture_reading, suppression_requirement, 20, 0.71).
+narrative_ontology:measurement_basis(bibl_su_t20, observed).
 
 
 /* ==========================================================================
@@ -286,21 +355,19 @@ narrative_ontology:measurement(bibl_su_t2000, biblical_authority__tradition_scri
    ========================================================================== */
 
 narrative_ontology:coordination_type(biblical_authority__tradition_scripture_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(biblical_authority__tradition_scripture_reading, 0.16).
+narrative_ontology:boltzmann_floor_override(biblical_authority__tradition_scripture_reading, 0.12).
 narrative_ontology:affects_constraint(biblical_authority__tradition_scripture_reading, biblical_authority__sola_scriptura_reading).
 narrative_ontology:affects_constraint(biblical_authority__tradition_scripture_reading, biblical_authority__conciliar_reading).
+narrative_ontology:affects_constraint(biblical_authority__tradition_scripture_reading, sacramental_mediation_grace_conferral).
 
 % DUAL FORMULATION NOTE:
-% The biblical_authority kernel is instantiated in three separate constraint stories, one per reading, rather than authoring 'biblical authority' as a single constraint with three measurement observables. Each reading has a structurally distinct ε value, beneficiary/victim set, and claim-metric profile. The tradition_scripture_reading (this story) features institutional beneficiaries (magisterium, clerical hierarchy) and lay victims (restricted interpretive agency). The sola_scriptura_reading features lay beneficiaries (interpretive agency) and clerical victims (authority loss). The conciliar_reading features diffuse beneficiaries (ecumenical consensus) and concentrated victims (magisterial unilateral authority). These are not perspectives on one constraint; they are different constraints instantiated from one contested kernel. All three are linked via affects_constraints to enable kernel-family analysis.
+% This constraint is one reading of the biblical_authority kernel. The sola_scriptura_reading and conciliar_reading are structurally distinct constraints with different ε values, different beneficiary/victim structures, and different types. They coexist as live positions in ongoing Reformation/Counter-Reformation dispute. The three stories form a constraint family linked by the kernel and by historical institutional competition. The network edges capture this: each reading influences and partly forecloses the others through institutional claims and doctrinal definitions.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(biblical_authority__tradition_scripture_reading, powerless, 0.92).
-constraint_indexing:directionality_override(biblical_authority__tradition_scripture_reading, moderate, 0.78).
-constraint_indexing:directionality_override(biblical_authority__tradition_scripture_reading, organized, 0.52).
-constraint_indexing:directionality_override(biblical_authority__tradition_scripture_reading, institutional, 0.15).
+constraint_indexing:directionality_override(biblical_authority__tradition_scripture_reading, institutional, 0.12).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

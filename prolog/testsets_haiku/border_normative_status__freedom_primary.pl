@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,7 +43,11 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +72,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: border_normative_status__freedom_primary
- *   human_readable: Freedom of Movement as Fundamental Right (Border Restriction Critique)
+ *   human_readable: Border Exclusion as Fundamental Rights Violation (Freedom-Primary Reading)
  *   domain: political_philosophy/international_law/migration
  *
  * SUMMARY:
- *   The 'freedom_primary' reading positions freedom of movement as a
- *   fundamental human right that borders impermissibly restrict unless the
- *   restricting state can justify the restriction by reference to
- *   extraordinary interests. This is ONE READING of a contested kernel
- *   (border_normative_status) that permits at least three structurally
- *   distinct interpretations: freedom_primary (this reading),
- *   qualified_sovereignty (states retain authority but must exercise it
- *   proportionately and consistently with human rights), and
- *   sovereignty_primary (states have foundational authority to exclude). The
- *   freedom_primary reading instantiates an inversion of the burden of proof:
- *   migrants are presumptively rights-bearers entitled to move, and states
- *   are presumptively in violation unless they can clear an extraordinary
- *   justification bar. This reading benefits international human rights
- *   institutions and mobile skilled workers; it extracts from displaced
- *   domestic workers (whose labor-market position is structured by managed
- *   migration) and from excluded migrants (who bear the immediate cost of
- *   enforcement). The measurement series track the rise of this reading's
- *   institutional authority and enforcement intensity from 1950 (post-WWII
- *   codification) to 2026 (contemporary enforcement crisis).
+ *   The freedom-primary reading asserts that freedom of movement is a
+ *   fundamental human right that borders impermissibly restrict. Under this
+ *   reading, border exclusion of migrants constitutes a rights violation that
+ *   requires extraordinary justification — a justification that modern border
+ *   regimes cannot provide because they are sustained by manufactured threat
+ *   narratives, not genuine security. The constraint is a snare from this
+ *   reading's perspective: it extracts labor control, political legitimacy,
+ *   and nationalist coalition power from the powerless while theater
+ *   (security, order, sovereignty) obscures the extraction. The reading
+ *   treats excluded migrants as victims of a rights-violating constraint;
+ *   displaced domestic workers are newly visible victims (their exclusion
+ *   from migration opportunities is reads as rights violation); and the
+ *   enforcement apparatus is the agenda-setter collecting rents through labor
+ *   control and political authority. The measurement series shows rising
+ *   extraction (0.68→0.82) and rising theater (0.28→0.42) over the interval,
+ *   indicating the constraint's function is increasingly theatrical (the
+ *   security justification is less credible) even as enforcement intensifies.
  *
  * KEY AGENTS:
- *   - Excluded migrants: powerless, trapped, positioned under this reading as rights-violation victims (no legitimate grounds for exclusion exist)
- *   - Asylum seekers: powerless, trapped, positioned as holders of fundamental movement rights
- *   - Displaced domestic workers: moderate power, constrained exit, positioned as collateral victims of the border constraint's labor-market effects
- *   - Nation-state executives: institutional power, positioned as presumptively in violation unless they can justify extraordinary circumstances
- *   - International human rights bodies: institutional power, beneficiary of the reading's vindication of universal rights as supreme framework
- *   - Mobile skilled workers: powerful, arbitrage exit, asymmetric beneficiary (freedom-of-movement norm rarely restricts their access)
- *   - Sovereignty doctrine defenders: excluded from this reading's authority structure, positioned as the reading's intellectual opponents
+ *   - Excluded migrants: powerless, trapped, victims of rights violation under the freedom-primary reading
+ *   - Internally displaced workers: moderate power but constrained exit, newly visible victims whose movement rights are violated
+ *   - Refugee populations: powerless, immediate horizon, dual victims (freedom + protection rights violated)
+ *   - State border enforcement apparatus: institutional power, arbitrage exit, agenda-setter, administers and collects rents from exclusion
+ *   - Incumbent citizens (nationalist framing): organized power, mobile exit, beneficiaries who receive misdirection of their grievance
+ *   - Nationalist political coalitions: organized power, mobile exit, beneficiaries who collect political capital from exclusion narrative
+ *   - Human rights advocacy sector: moderate power, mobile exit, structurally excluded from policy authority despite holding the reading
+ *   - Cosmopolitan legal authority: institutional power, analytical exit, observer seat holding competing normative authority
  */
 
 /* ==========================================================================
@@ -106,60 +110,121 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(border_normative_status__freedom_primary, 0.68).
-domain_priors:suppression_score(border_normative_status__freedom_primary, 0.72).
-domain_priors:theater_ratio(border_normative_status__freedom_primary, 0.41).
+domain_priors:base_extractiveness(border_normative_status__freedom_primary, 0.82).
+domain_priors:suppression_score(border_normative_status__freedom_primary, 0.88).
+domain_priors:theater_ratio(border_normative_status__freedom_primary, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(border_normative_status__freedom_primary, extractiveness, 0.68).
-narrative_ontology:constraint_metric(border_normative_status__freedom_primary, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(border_normative_status__freedom_primary, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(border_normative_status__freedom_primary, extractiveness, 0.82).
+narrative_ontology:constraint_metric(border_normative_status__freedom_primary, suppression_requirement, 0.88).
+narrative_ontology:constraint_metric(border_normative_status__freedom_primary, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(border_normative_status__freedom_primary, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(border_normative_status__freedom_primary, resistance, 0.58).
+narrative_ontology:constraint_metric(border_normative_status__freedom_primary, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(border_normative_status__freedom_primary, resistance, 0.73).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(border_normative_status__freedom_primary, tangled_rope).
-narrative_ontology:human_readable(border_normative_status__freedom_primary, "Freedom of Movement as Fundamental Right (Border Restriction Critique)").
+narrative_ontology:constraint_claim(border_normative_status__freedom_primary, snare).
+narrative_ontology:human_readable(border_normative_status__freedom_primary, "Border Exclusion as Fundamental Rights Violation (Freedom-Primary Reading)").
 narrative_ontology:topic_domain(border_normative_status__freedom_primary, "political_philosophy/international_law/migration").
 
 domain_priors:requires_active_enforcement(border_normative_status__freedom_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(border_normative_status__freedom_primary, '4ac0bc7c-4cbc-459a-a4e3-a665b53add03').
-narrative_ontology:cs_kernel_codification('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', formalized).
-narrative_ontology:cs_authority_grounding('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', lineage).
-narrative_ontology:cs_interpretation_layer_present('4ac0bc7c-4cbc-459a-a4e3-a665b53add03').
-narrative_ontology:cs_reading_relation('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', border_normative_status__sovereignty_primary, forecloses).
-narrative_ontology:cs_reading_relation('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', border_normative_status__qualified_sovereignty, influences).
-narrative_ontology:cs_axiom('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', foundational, freedom_of_movement_fundamental).
-narrative_ontology:cs_axiom_status(freedom_of_movement_fundamental, holdable).
-narrative_ontology:cs_axiom_grounding('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', freedom_of_movement_fundamental, deontological).
-narrative_ontology:cs_axiom('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', foundational, exclusion_requires_extraordinary_justification).
+narrative_ontology:cs_story_uid(border_normative_status__freedom_primary, 'cd1be6ab-8d35-41a1-b129-06c0f3acd24d').
+narrative_ontology:cs_kernel_codification('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', distributed).
+narrative_ontology:cs_authority_grounding('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', extraction).
+narrative_ontology:cs_interpretation_layer_present('cd1be6ab-8d35-41a1-b129-06c0f3acd24d').
+narrative_ontology:cs_reading_relation('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', border_normative_status__sovereignty_primary, forecloses).
+narrative_ontology:cs_reading_relation('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', border_normative_status__qualified_sovereignty, influences).
+narrative_ontology:cs_axiom('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', foundational, freedom_of_movement_fundamental_right).
+narrative_ontology:cs_axiom_status(freedom_of_movement_fundamental_right, holdable).
+narrative_ontology:cs_axiom_grounding('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', freedom_of_movement_fundamental_right, deontological).
+narrative_ontology:cs_axiom('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', foundational, exclusion_requires_extraordinary_justification).
 narrative_ontology:cs_axiom_status(exclusion_requires_extraordinary_justification, holdable).
-narrative_ontology:cs_axiom_grounding('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', exclusion_requires_extraordinary_justification, deontological).
-narrative_ontology:cs_reference_frame('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', post_wwii_universal_human_rights).
-narrative_ontology:cs_drift_state('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', contemporary_enforcement_crisis, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('4ac0bc7c-4cbc-459a-a4e3-a665b53add03', '').
+narrative_ontology:cs_axiom_grounding('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', exclusion_requires_extraordinary_justification, deontological).
+narrative_ontology:cs_reference_frame('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', universal_freedom_of_movement).
+narrative_ontology:cs_drift_state('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', contemporary_enforcement_intensification, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('cd1be6ab-8d35-41a1-b129-06c0f3acd24d', '').
 narrative_ontology:cs_kernel_id(border_normative_status__freedom_primary, border_normative_status).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(border_normative_status__freedom_primary, international_human_rights_regime).
-narrative_ontology:constraint_beneficiary(border_normative_status__freedom_primary, mobile_skilled_workers).
+narrative_ontology:constraint_beneficiary(border_normative_status__freedom_primary, incumbent_citizens_nationalist_framing).
+narrative_ontology:constraint_beneficiary(border_normative_status__freedom_primary, state_border_enforcement_apparatus).
 narrative_ontology:constraint_victim(border_normative_status__freedom_primary, excluded_migrants).
-narrative_ontology:constraint_victim(border_normative_status__freedom_primary, displaced_domestic_workers).
-narrative_ontology:constraint_victim(border_normative_status__freedom_primary, asylum_seekers).
+narrative_ontology:constraint_victim(border_normative_status__freedom_primary, internally_displaced_workers).
+narrative_ontology:constraint_victim(border_normative_status__freedom_primary, refugee_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(border_normative_status__freedom_primary, nationalist_political_coalitions).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% People denied border entry who claim fundamental right to freedom of movement. Under the freedom-primary reading, their exclusion is a rights violation. They are trapped in origin locations, unable to exit the constraint because borders deny them exit even when they flee violence or economic destitution. No formal appeals mechanism exists where they can contest exclusion as unjustified — the reading asserts they should have that standing.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, excluded_migrants, payer,
+    powerless, biographical, trapped, global).
+
+% Domestic workers displaced by economic collapse, climate disruption, or regional violence who attempt to relocate across borders seeking work. Face border enforcement framed as labor-market protection; under the freedom-primary reading, this enforcement violates their movement rights and forces them into informal economy or immobility. Their constraint is constrained exit (they can move internally but face barriers at international borders) rather than trapped.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, internally_displaced_workers, payer,
+    moderate, biographical, constrained, national).
+
+% People fleeing persecution or violence who seek asylum. Encounter borders that reject or delay asylum claims through legal procedure, resource starvation, and de facto exclusion. Under the freedom-primary reading, border denial of refuge seekers violates both freedom of movement AND protection rights. They are trapped in dangerous origin locations with no legitimate exit mechanism.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, refugee_populations, payer,
+    powerless, immediate, trapped, global).
+
+% Immigration agencies, border patrol, customs enforcement, immigration courts, and related state machinery. Administers exclusion rules, collects rents through deportation authority, visa fees, detention, and labor-control mechanisms. Justified by state-security framing. The freedom-primary reading reframes this institutional complex as extractive enforcement that violates rights and that persists because state apparatus benefits from it, not because it serves genuine coordination.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, state_border_enforcement_apparatus, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Domestic populations, especially economically precarious ones, who benefit from border-closure framing because it misdirects responsibility for their economic condition. Told that their precarity is an invasion problem (migrant competition, outsourcing caused by immigration) rather than structural (automation, financialization, union decline). The constraint's theater tells them the story: migration caused their immiseration. This misdirection is the extraction the freedom-primary reading names — their genuine grievance is captured and redirected at the powerless rather than at the systems that actually caused it.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, incumbent_citizens_nationalist_framing, beneficiary,
+    organized, generational, mobile, national).
+
+% Political movements and parties that gain electoral power by framing migration as threat and border enforcement as protection. The constraint's theater (security, sovereignty, national interest) supplies their primary narrative. They collect political capital, coalition-building power, and electoral legitimacy from exclusion frames. The freedom-primary reading treats this as rents extracted from migrants and displaced workers — the constraint persists because these coalitions benefit from the extraction.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, nationalist_political_coalitions, beneficiary,
+    organized, biographical, mobile, national).
+
+% International human rights organizations, civil-society groups, and advocacy networks that endorse the freedom-primary reading and contest border enforcement as rights violation. Structurally excluded from state border policy-making despite producing competing narratives and shadow jurisdictional authority through UN bodies, treaty bodies, and courts. Their exclusion from policy authority is what the enforcement apparatus maintains — if their reading achieved institutional power, every border exclusion would have to justify itself against a freedom-of-movement presumption, and the current enforcement regime could not survive that standard.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, human_rights_advocacy_sector, excluded,
+    moderate, biographical, mobile, global).
+
+% International courts (European Court of Human Rights, International Court of Justice), treaty bodies (UN Human Rights Committee), and legal scholarship that interpret border enforcement through human-rights and freedom-of-movement lenses. Hold competing normative authority that would require states to justify exclusion if the reading governed. They lack enforcement power but generate pressure and occasionally invalidate border practices through opinion.
+narrative_ontology:constraint_stakeholder(border_normative_status__freedom_primary, cosmopolitan_legal_authority, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(border_normative_status__freedom_primary, state_border_enforcement_apparatus).
+narrative_ontology:fixing_cost_class(border_normative_status__freedom_primary, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Border enforcement coordinates state security against external threat and controls population flows to domestic labor markets and welfare systems. It solves a collective-action problem among resident populations who wish to exclude non-members and maintain ingroup advantage. Under the freedom-primary reading, this coordination function is real but rests on a manufactured threat narrative (most excluded migrants are economic, not military threats) and hides the constraint's true function: capturing working-class grievance and misdirecting it at the powerless, while enforcement apparatus collects labor-control rents.
+% TRANSFER_FUNCTION: Moves freedom of movement from excluded migrants, refugees, and internally displaced workers to incumbent citizens and nationalist political coalitions; transfers labor control (the ability to deny work authorization and reduce labor bargaining power) from workers to state enforcement apparatus; transfers political legitimacy and coalition-building power from human-rights framings to state-security framings; transfers economic blame for precarity from structural causes (automation, financialization) to migration and migrants.
+% ABSENT_VOICES: Human rights advocacy organizations and cosmopolitan legal authority are structurally excluded from border policy authority. They would reframe the constraint as rights violation if seated with equal authority; their exclusion from policy-making is maintained by the same enforcement apparatus that sustains the constraint. Excluded migrants themselves have no voice in the framing — the constraint denies them standing even to contest their own exclusion as unjustified. Internally displaced workers are sometimes represented by labor organizations but are often invisible in border-policy discourse (the focus is on international migration, not internal displacement).
+% DISAPPEARANCE_RATIONALE: If the freedom-primary reading were institutionalized and border enforcement required extraordinary, individually-justified justification for each exclusion, the current regime would collapse within years. Migration patterns would shift dramatically; labor markets would reorganize around market clearing rather than legal barriers; nationalist political coalitions would lose their primary narrative (the 'invasion' story would no longer organize politics); state enforcement apparatus would lose labor-control authority; incumbent citizens would face direct pressure to name and address the actual causes of their precarity (automation, financialization) rather than blaming migrants. The constraint persists because it serves all these beneficiary functions; if those extracted values disappeared, every institutional actor would have to reorganize its strategies.
+% FOUNDING_PROBLEM: Interstate conflict and military threat in a Westphalian system of competing sovereigns, requiring states to control population flows during war and to maintain secure borders against invasion. The founding problem was legitimate security in an anarchic state system.
+% FOUNDING_PROBLEM_CORROBORATION: State authorities claim the founding problem remains live, citing terrorism and security threats. However, systematic research on border-security efficacy shows modern borders face negligible military threat from migration; contemporary exclusion targets are overwhelmingly economic migrants and refugees, not invading armies or terrorists. The European border patrol, US border enforcement, and Australian offshore detention systems show patterns consistent with labor control and political scapegoating, not security response. Independent migration research (World Bank, OECD, academic demography) attests that migrants are not security threats and that exclusion is driven by labor-market politics and xenophobic narrative, not by genuine founding-problem persistence. The freedom-primary reading is corroborated by this evidence: the founding problem is dead, but the constraint persists.
+narrative_ontology:disappearance_verdict(border_normative_status__freedom_primary, world_rearranges).
+narrative_ontology:founding_problem_status(border_normative_status__freedom_primary, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(border_normative_status__freedom_primary, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(border_normative_status__freedom_primary, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(border_normative_status__freedom_primary, 'none', 1).
+narrative_ontology:epsilon_provenance(border_normative_status__freedom_primary, 0.82, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +244,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.15 (1950, immediately post-UDHR codification, not yet institutionalized) to 0.68 (2026, full enforcement machinery operational). The measurement series reveal extraction accumulation — the reading started with high coordination intent (preventing atrocity) and low extraction (states had not yet hardened enforcement). Over 76 years, as states responded to the reading with increasingly sophisticated border enforcement, the extraction function became dominant: states use the 'human rights' framing to legitimate ever-more-intrusive monitoring, detention, and deportation machinery. Theater ratio rises from 0.08 (early era: genuine humanitarian motivation) to 0.41 (contemporary: substantial share of enforcement energy is procedural theater — appeals, reviews, due-process compliance — while exclusion rates remain high). This signals Goodhart drift: the constraint's stated function (protecting movement rights) has been instrumentalized into a legitimacy performance while the actual operation (excluding and expelling non-members) continues unchanged. Suppression rises from 0.35 to 0.72 because enforcement intensity has hardened: early asylum processing was sparse and often sympathetic; contemporary enforcement is a vast carceral apparatus (detention centers, fast-track deportations, algorithmic screening). The accessibility_collapse of 0.62 reflects that excluded migrants face nearly-total barrier closure (once excluded, re-entry is extremely difficult, legally and practically) but that the reading itself preserves some alternative path (legal asylum claims, family reunification, humanitarian exception) — genuine natural-law closure would be higher. Resistance of 0.58 reflects significant countermovement (migrant solidarity organizing, asylum advocacy, legal challenges) but not organized successful resistance to the reading's enforcement regime. This is a tangled_rope because it coordinates real humanitarian protection (asylum adjudication, international refugee regime) AND extracts labor-market control for states (managed migration, wage suppression for domestic workers). The extraction is active and requires continuous enforcement (border police, deportation machinery, visa systems).
+ *   Extractiveness is high (0.82) because the constraint transfers freedom of movement from excluded migrants to incumbent citizens and enforcement apparatus; the transfer is not reciprocal (migrants get nothing; enforcement apparatus gets labor control and authority; incumbent citizens get misdirected blame). Suppression is higher (0.88) because the constraint's persistence depends on actively excluding alternative framings (human rights reading) and denying migrants standing to contest their exclusion. Theater is moderate-to-high (0.42) because the security/order justification (theater) obscures the constraint's true function: labor control and political scapegoating. The measurement series show rising extractiveness and theater over the interval, indicating the constraint's security justification is eroding in credibility (theater rising) while enforcement is intensifying (suppression stable-high), a classic pattern of institutional capture where means are escalated because the legitimating narrative is failing. Accessibility collapse is moderate (0.71) because alternatives (cosmopolitan legal reading, human rights authority, open-border migration) are intellectually available but institutionally suppressed — migrants and displaced workers have no access to the competing reading at the point of enforcement. Resistance is high (0.73) because human rights advocacy, asylum seekers, and migrant-solidarity movements actively resist the constraint, though they lack enforcement power.
  *
  * PERSPECTIVAL GAP:
- *   The nation-state executive seat and the international human rights body seat should compute radically different types. From the state's position, the freedom-of-movement reading is an external constraint that strips state discretion and imposes procedural costs (asylum adjudication, legal defense, international oversight). The state seat experiences this as snare-like — the human rights framing legitimates constraint while the state actually continues to exclude at high rates, just with more procedure. From the human rights body's position, the reading is a genuine coordination achievement — it elevated asylum rights to the international level and created a legal architecture that saves lives. Both seats experience the same constraint; the engine should compute different types for each because directionality differs: the state is a target (d near 1.0, direction: forced to run costly procedures to exclude), while the human rights body is a beneficiary (d near 0.0, the constraint's enforcement expands institutional authority). This perspectival divergence is the essence of the tangled_rope: genuine coordination (asylum protection) that is asymmetrically distributed (benefits human rights institutions more than it protects migrants; extracts from states through enforcement costs and from workers through labor-market suppression).
+ *   The freedom-primary reading produces the most extreme perspective divergence of any constraint in its kernel. From the state enforcement apparatus's seat, the constraint is genuine coordination (security function, necessary restriction on a natural commons). From the excluded migrant's seat, the constraint is pure extraction (rights violation with manufactured justification). From the incumbent citizen's seat, the constraint appears as protection but functions as misdirection (the real driver of their precarity is automation + globalization, not migration). The engine will compute these seats as reporting different constraint types: the agenda-setter may report rope (coordination with enforcement), while the payer seats report snare (extraction with suppression). This divergence is the measurement the corpus exists to capture — where the reading's own normative frame produces the deepest structural asymmetry.
  *
  * DIRECTIONALITY LOGIC:
- *   Excluded migrants and asylum seekers carry high directionality (d near 1.0 → target end) because they bear the primary cost of enforcement and have no exit (trapped, powerless, identity_locked). Displaced domestic workers carry moderate-to-high directionality (d around 0.65-0.75) because they experience depressed wages and constrained labor-market access through managed migration, but they retain some geographic and occupational mobility (exit is constrained, not trapped). Nation-state executives carry high directionality (d near 0.8) because the reading strips their a priori legitimacy to exclude and requires them to justify exclusions through costly procedures; however, they retain the practical power to exclude (they do so massively) and the reading has become a legitimacy performance for their exclusions (so d is not maximal — they capture extraction benefit through the theater). International human rights bodies carry very low directionality (d near 0.15 → beneficiary end) because the reading vindicates their institutional authority and expands their remit without requiring them to bear extraction costs. Mobile skilled workers carry low directionality (d near 0.25) because the reading's freedom-of-movement norm rarely restricts THEIR access (they move through legal channels, professional sponsorship, skilled-migrant visas) — they benefit from the rhetoric while rarely bearing its suppression. Sovereignty defenders are excluded from the directionality calculation entirely (they are not a stakeholder in this reading's operation; they are the intellectual opponents). No directionality overrides are needed; the structural derivation from beneficiary/victim declarations and exit options produces accurate d values.
+ *   From the freedom-primary reading's seat: excluded migrants and displaced workers are targets (d→1.0), bearing full extraction cost with no option to exit the constraint itself (trapped or identity_locked). State enforcement apparatus is beneficiary (d→0.0), collecting authority, labor control, and fees. Incumbent citizens sit near symmetric (d≈0.5) — they receive misdirection benefit (their grievance is reframed as invasion), but they also face material effects of low-wage labor scarcity and reduced economic growth. Nationalist political coalitions are beneficiaries (d→0.1), collecting electoral power. Human rights advocacy is excluded, not coordinated — their d is undefined (they are not seated in the constraint, only in the competing reading). The engine will compute different directionalities for each seat from the structural data (beneficiary/victim + power + exit); the reading declares the structural relationships that make this computation sensible.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem is clear: mid-20th-century states weaponized border control to commit genocide and create mass statelessness (Holocaust, partition, ethnic cleansing). The founding solution was to establish freedom of movement as a human right anterior to state authority — membership in political community should not be the prerequisite for protection from atrocity. However, the founding problem status is CONTESTED (not dead, not fully live, but disputed): human rights bodies attest the problem is live because authoritarian states still weaponize borders and the risk of state-driven atrocity remains high. Realist scholars and states attest the problem is substantially managed through deterrence, domestic legal systems, and international scrutiny — the reading has become a tool of unelected NGOs and courts imposing migration agendas on democratically-elected governments. Labor advocates attest a DIFFERENT founding problem: the reading was designed to prevent atrocity but has become a mechanism for suppressing domestic labor standards and real wages for precarious workers. The disappearance_verdict is world_rearranges: if the reading disappeared, asylum law would collapse, and the entire international human rights order would lose its foundational justification. This is NOT mandatrophy in the classical sense (a constraint whose mandate has died but whose enforcement persists) because the reading's mandate is still CONTESTED — it is simultaneously live (for human rights bodies), dead (for realist states), and misdirected (for labor advocates). This is a constraint whose mandate has become POLYPHONIC — different audiences hear different founding problems and different solutions. The theater_ratio rising to 0.41 signals one form of drift: the constraint's stated coordination function (saving lives through asylum protection) is increasingly decoupled from its actual operation (states exclude at high rates while performing compliance with human rights procedures). This is not classical mandatrophy but it is mandate-drift: the constraint persists because multiple audiences have stake in its existence, but the stakes are increasingly divergent.
+ *   The founding problem (state security in a Westphalian system of competing sovereigns) is substantially solved: modern borders face negligible military threat; contemporary border enforcement targets economic migrants and refugees, not invading armies. Under the freedom-primary reading, the constraint has dead-founding-problem + world-rearranges signature — it persists not because the founding problem is live, but because the extracted value (labor control, political capital, enforcement authority) benefits the agenda-setter. The constraint is a mandatrophic snare: it evolved from a genuine security coordination (justified border control) into an extraction mechanism whose justification has become purely theatrical. The rising theater ratio (0.28→0.42) and rising extraction (0.68→0.82) while suppression stays high (0.81→0.88) is the pattern of mandatrophy: the constraint must intensify enforcement (higher suppression) because its justifying narrative is eroding (higher theater = more of the work is theatrical rather than functional). Classification prevents mislabeling this as rope (which would require the coordination function to be genuine and non-extractive); the snare classification acknowledges that the constraint extracts real value from the powerless and that the extraction persists through suppression, not through participant preference.
  */
 
 /* ==========================================================================
@@ -196,99 +261,59 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    universality_vs_asymmetric_beneficiary,
-    'Does the freedom-of-movement reading function as a universal human right, or does it systematically benefit mobile, skilled, and wealthy migrants while extracting costs from less-mobile domestic workers and excluded asylum seekers?',
-    'Comparative labor-market analysis tracking wage effects on low-skill citizens vs. high-skill migrant inflows in freedom-of-movement zones (EU, Schengen) vs. restricted-sovereignty zones; ethnographic study of how asylum seekers and economic migrants experience the reading''s protections vs. its enforcement machinery.',
-    'If asymmetric: the constraint is snare masquerading as rope (universal rights claim covering extraction). Reclassification would shift from tangled_rope (coordination + extraction) to snare (extraction disguised as principle). The sovereignty_primary reading would gain explanatory power.',
+    freedom_movement_axiom_contestation,
+    'What is the normative status of freedom of movement as an axiom grounding the reading''s claim? Is it genuinely foundational, or is it one constraint among others in a normative calculus that can be overridden?',
+    'Philosophical analysis of the foundations of human rights law and the status of freedom of movement specifically. Testing the reading''s internal coherence: if freedom of movement is foundational, then any border exclusion requires extraordinary justification (the reading''s claim). If it is defeasible, the reading collapses toward qualified_sovereignty.',
+    'If the axiom is foundational and non-defeasible, the reading is internally coherent and should produce a consistent snare classification across contexts. If it is defeasible, the reading loses its distinguishing force and becomes indistinguishable from qualified_sovereignty.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(universality_vs_asymmetric_beneficiary, empirical, 'Whether the reading instantiates universal rights or disguises asymmetric extraction.').
+narrative_ontology:omega_variable(freedom_movement_axiom_contestation, conceptual, 'The normative status of freedom of movement as a foundational axiom.').
 
 omega_variable(
-    kernel_reading_foreclosure,
-    'Does the freedom-of-movement reading''s core axiom (movement is a fundamental right anterior to state authority) logically foreclose the sovereignty_primary reading (states have foundational authority to exclude), or do the readings merely coexist as live political positions held by different institutional factions?',
-    'Formal logical analysis of whether ''fundamental inalienable right'' and ''foundational state authority'' can be held in the same commitment framework (they likely cannot — one asserts rights-to-override-state, the other asserts state-grounds-all-rights). Examine whether any major institutional voice attempts to hold both simultaneously or whether they are held by fully separate factions.',
-    'If foreclosure: relations should be ''forecloses'' not ''coexists_with''. If coexistence: the kernel_context should document that the readings are not logically incompatible but politically incompatible — different authorities have different legitimate starting points.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_foreclosure, conceptual, 'Whether the readings are logically incompatible or politically divided.').
-
-omega_variable(
-    suppression_mechanism_internalization,
-    'To what extent is the suppression of excluded migrants'' mobility internalized (they accept exclusion as legitimate) vs. structural (they are materially barred by enforcement machinery)? What happens to suppression post-exit — does it persist in the form of trauma and identity damage, or does it dissipate once the physical barrier is removed?',
-    'Longitudinal study of forced-return migrants and asylum rejectees: do rejected migrants, when able to settle elsewhere, report persistent suppression-like symptoms (fear of borders, identity damage) or does suppression tracking disappear once the structural barrier is gone? Interviews with long-term excluded populations on whether they internalize the exclusion as legitimate.',
-    'If substantially internalized: the true suppression is higher than measured because it travels with the migrant post-exclusion. The constraint''s effective extraction is understated. If structural only: suppression metric is accurate and reflects enforcement intensity, not psychological capture.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression of migrant mobility is structural or internalized.').
-
-omega_variable(
-    coordination_vs_extraction_separation,
-    'Is there a genuine coordination function (asylum protection, humanitarian response) that is separable from the extraction function (states retaining power to exclude workers and regulate labor markets), or are the two inseparable — the protection only possible through state enforcement of exclusivity?',
-    'Natural experiment from zones that adopt open movement (EU free movement) while retaining asylum protections: if protection and extraction remain separable (asylum claims still adjudicated fairly in open zones), the functions are separable and extraction is revealed as additional overlay. If open movement destabilizes asylum systems, they are inseparable.',
-    'If separable: the tangled_rope reading is accurate — genuine coordination (asylum, humanitarian protection) bundled with pure extraction (labor-market control). If inseparable: the extraction is part of the coordination cost and the constraint drifts toward rope (less extractive than measured).',
+    cosmopolitan_authority_institutionalization,
+    'Can the freedom-primary reading achieve actual institutional authority over border policy, or is its function permanently oppositional (advocacy, critique, shadow jurisdiction)?',
+    'Institutional history and future scenarios: has any modern state adopted a border regime where freedom of movement is the default and exclusion requires extraordinary, individually-justified permission? If not, under what conditions might it? Or is the reading''s institutional destiny to remain a critique of all existing regimes without ever governing?',
+    'If the reading can institutionalize, the snare classification reflects actual future policy drift (toward mandatory individual-level justification for each exclusion). If it cannot institutionalize, the snare classification reflects the reading''s normative critique of an entrenched regime it cannot displace — the constraint persists not because the reading''s logic is weak, but because the reading has no institutional power.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(coordination_vs_extraction_separation, empirical, 'Whether border coordination and extraction can be separated.').
-
-omega_variable(
-    reading_authority_grounding,
-    'What grounds the authority of this reading — the Universal Declaration of Human Rights (lineage to post-WWII commitment), the empirical fact that states have committed atrocities (extraction of legitimacy from state failure), or the coherence of the rights framework itself (expertise in moral reasoning)? Which grounding is most fragile?',
-    'Historical analysis of how the reading is invoked and defended in practice: do authorities cite the UDHR as binding text (lineage), cite state atrocities as evidence states cannot be trusted (extraction), or cite the internal coherence of human-rights doctrine (expertise)? Track which grounding breaks first under pressure.',
-    'If lineage is primary: the reading''s authority rests on continued acceptance of UDHR as binding; rejecting the post-WWII order destabilizes the reading. If extraction: the reading survives only as long as state atrocity risk is salient. If expertise: the reading survives as long as the professional human-rights community maintains consensus.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(reading_authority_grounding, conceptual, 'What grounds the authority of the freedom-of-movement reading.').
-
-omega_variable(
-    displacement_vs_exclusion_victim_set,
-    'Are displaced domestic workers genuine victims of the constraint (their labor-market position is structured by the border and managed migration), or are they victims of a different constraint (labor-market deregulation, inequality)? Does including them in the victim set reveal mandatrophy (a constraint whose founding problem no longer applies to them), or does it reveal an unseen founding problem (the reading creates collateral damage beyond its stated scope)?',
-    'Counterfactual analysis: in a world with identical labor-market deregulation and inequality but without freedom-of-movement reading (i.e., with sovereignty_primary), would displaced domestic workers'' labor-market position be substantially different? If yes, they are victims of THIS constraint. If no, they are victims of labor-market deregulation and the reading is orthogonal.',
-    'If displaced workers are victims of THIS constraint: the constraint''s true victim set is wider than the reading''s authors acknowledge, and the reading is extracting from an unintended target set. If they are victims of a different constraint: the inclusion is a category error and the constraint''s classification may shift. Either way, the analysis reveals either hidden extraction or analytical confusion.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(displacement_vs_exclusion_victim_set, empirical, 'Whether displaced domestic workers are victims of the reading or of separate labor-market dynamics.').
+narrative_ontology:omega_variable(cosmopolitan_authority_institutionalization, empirical, 'Institutional viability of the freedom-primary reading as actual governing authority.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(border_normative_status__freedom_primary, 1950, 2026).
+narrative_ontology:interval(border_normative_status__freedom_primary, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(bord_tr_t1950, border_normative_status__freedom_primary, theater_ratio, 1950, 0.08).
-narrative_ontology:measurement(bord_tr_t1975, border_normative_status__freedom_primary, theater_ratio, 1975, 0.16).
-narrative_ontology:measurement(bord_tr_t1990, border_normative_status__freedom_primary, theater_ratio, 1990, 0.24).
-narrative_ontology:measurement(bord_tr_t2005, border_normative_status__freedom_primary, theater_ratio, 2005, 0.32).
-narrative_ontology:measurement(bord_tr_t2015, border_normative_status__freedom_primary, theater_ratio, 2015, 0.38).
-narrative_ontology:measurement(bord_tr_t2026, border_normative_status__freedom_primary, theater_ratio, 2026, 0.41).
+narrative_ontology:measurement(bord_tr_t0, border_normative_status__freedom_primary, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(bord_tr_t5, border_normative_status__freedom_primary, theater_ratio, 5, 0.31).
+narrative_ontology:measurement(bord_tr_t10, border_normative_status__freedom_primary, theater_ratio, 10, 0.35).
+narrative_ontology:measurement(bord_tr_t15, border_normative_status__freedom_primary, theater_ratio, 15, 0.38).
+narrative_ontology:measurement(bord_tr_t20, border_normative_status__freedom_primary, theater_ratio, 20, 0.41).
+narrative_ontology:measurement(bord_tr_t25, border_normative_status__freedom_primary, theater_ratio, 25, 0.42).
 
 % Extraction over time
-narrative_ontology:measurement(bord_be_t1950, border_normative_status__freedom_primary, base_extractiveness, 1950, 0.15).
-narrative_ontology:measurement(bord_be_t1975, border_normative_status__freedom_primary, base_extractiveness, 1975, 0.32).
-narrative_ontology:measurement(bord_be_t1990, border_normative_status__freedom_primary, base_extractiveness, 1990, 0.48).
-narrative_ontology:measurement(bord_be_t2005, border_normative_status__freedom_primary, base_extractiveness, 2005, 0.58).
-narrative_ontology:measurement(bord_be_t2015, border_normative_status__freedom_primary, base_extractiveness, 2015, 0.64).
-narrative_ontology:measurement(bord_be_t2026, border_normative_status__freedom_primary, base_extractiveness, 2026, 0.68).
+narrative_ontology:measurement(bord_be_t0, border_normative_status__freedom_primary, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement(bord_be_t5, border_normative_status__freedom_primary, base_extractiveness, 5, 0.71).
+narrative_ontology:measurement(bord_be_t10, border_normative_status__freedom_primary, base_extractiveness, 10, 0.75).
+narrative_ontology:measurement(bord_be_t15, border_normative_status__freedom_primary, base_extractiveness, 15, 0.78).
+narrative_ontology:measurement(bord_be_t20, border_normative_status__freedom_primary, base_extractiveness, 20, 0.8).
+narrative_ontology:measurement(bord_be_t25, border_normative_status__freedom_primary, base_extractiveness, 25, 0.82).
 
 % Suppression requirement over time
-narrative_ontology:measurement(bord_su_t1950, border_normative_status__freedom_primary, suppression_requirement, 1950, 0.35).
-narrative_ontology:measurement(bord_su_t1975, border_normative_status__freedom_primary, suppression_requirement, 1975, 0.45).
-narrative_ontology:measurement(bord_su_t1990, border_normative_status__freedom_primary, suppression_requirement, 1990, 0.54).
-narrative_ontology:measurement(bord_su_t2005, border_normative_status__freedom_primary, suppression_requirement, 2005, 0.62).
-narrative_ontology:measurement(bord_su_t2015, border_normative_status__freedom_primary, suppression_requirement, 2015, 0.68).
-narrative_ontology:measurement(bord_su_t2026, border_normative_status__freedom_primary, suppression_requirement, 2026, 0.72).
+narrative_ontology:measurement(bord_su_t0, border_normative_status__freedom_primary, suppression_requirement, 0, 0.81).
+narrative_ontology:measurement(bord_su_t5, border_normative_status__freedom_primary, suppression_requirement, 5, 0.83).
+narrative_ontology:measurement(bord_su_t10, border_normative_status__freedom_primary, suppression_requirement, 10, 0.85).
+narrative_ontology:measurement(bord_su_t15, border_normative_status__freedom_primary, suppression_requirement, 15, 0.86).
+narrative_ontology:measurement(bord_su_t20, border_normative_status__freedom_primary, suppression_requirement, 20, 0.87).
+narrative_ontology:measurement(bord_su_t25, border_normative_status__freedom_primary, suppression_requirement, 25, 0.88).
 
 
 /* ==========================================================================
@@ -296,18 +321,18 @@ narrative_ontology:measurement(bord_su_t2026, border_normative_status__freedom_p
    ========================================================================== */
 
 narrative_ontology:coordination_type(border_normative_status__freedom_primary, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(border_normative_status__freedom_primary, 0.12).
-narrative_ontology:affects_constraint(border_normative_status__freedom_primary, border_normative_status__qualified_sovereignty).
+narrative_ontology:boltzmann_floor_override(border_normative_status__freedom_primary, 0.18).
 narrative_ontology:affects_constraint(border_normative_status__freedom_primary, border_normative_status__sovereignty_primary).
+narrative_ontology:affects_constraint(border_normative_status__freedom_primary, border_normative_status__qualified_sovereignty).
+narrative_ontology:affects_constraint(border_normative_status__freedom_primary, labor_mobility_constraint).
+narrative_ontology:affects_constraint(border_normative_status__freedom_primary, refugee_protection_regime).
 
 % DUAL FORMULATION NOTE:
-% The border_normative_status kernel admits at least three readings, each instantiating a different constraint. The freedom_primary reading (this constraint) treats freedom of movement as fundamental and positions state exclusion as presumptively illegitimate. The qualified_sovereignty reading (sibling) treats state authority as legitimate but requiring proportionality and rights consistency. The sovereignty_primary reading (sibling) treats state exclusion authority as foundational and anterior to human rights. Each reading has different ε, different beneficiary/victim structures, and different computed types per seat. They are not three angles on one constraint — they are three constraints from one contested kernel. The network links document the family relationship and enable contamination analysis (if freedom_primary's institutional authority erodes, how does that pressure qualified_sovereignty and sovereignty_primary?).
+% This constraint is one reading (freedom_primary) of a three-reading kernel (border_normative_status). The sibling constraints instantiate sovereignty_primary and qualified_sovereignty readings of the same kernel — same boundaries, different normative framings producing different beneficiary/victim structures, different ε values, and different classifications. All three readings compete for institutional authority over actual border policy. The network links capture the structural dependency: the freedom-primary reading's credibility depends partly on whether the other readings can be shown to be incoherent or empirically false; sovereignty_primary and qualified_sovereignty similarly depend on discrediting the freedom-primary axioms. This is a constraint family exhibiting reading-level contention within a shared kernel.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(border_normative_status__freedom_primary, institutional, 0.78).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

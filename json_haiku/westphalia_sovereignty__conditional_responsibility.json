@@ -2,199 +2,339 @@
   "header": {
     "constraint_id": "westphalia_sovereignty__conditional_responsibility",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-20",
     "status": "ACTIVE",
-    "story_uid": "e42788e6-fcfa-4617-afa2-9ff2f60798e5"
+    "story_uid": "37fd9e6c-c3ac-407f-a3f8-7f6ccb8c8de2"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.58,
-    "accessibility_collapse": 0.41,
-    "resistance": 0.79,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.73,
     "claimed_type": "tangled_rope",
-    "human_readable": "Conditional Sovereignty via Responsibility to Protect Doctrine",
+    "human_readable": "Conditional Sovereignty and Humanitarian Intervention Authority",
     "topic_domain": "international_law/political_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "humanitarian_intervention_coalitions",
-      "global_governance_institutions"
+      "global_governance_institutions",
+      "atrocity_prevention_advocacy_networks"
     ],
     "victims": [
-      "atrocity_vulnerable_populations",
-      "non_intervening_states",
-      "sovereignty_claiming_regimes"
+      "atrocity_regime_states",
+      "sovereignty_protection_traditionalists"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "atrocity_regime_state",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "A state accused of failing to protect or actively perpetrating mass atrocities against its population. Under the conditional responsibility reading, this state's territorial inviolability is no longer presumptively protected; it becomes subject to external adjudication of its protection capacities and legitimacy. The state bears the cost of being reclassified as a rights violator and becomes exposed to intervention, sanctions, or even forced regime change. Its exit from this status requires demonstrated institutional reform, which may be costly and may not restore sovereignty symmetry."
+    },
+    {
+      "name": "humanitarian_intervention_coalition",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Military and political coalitions (NATO, ad-hoc humanitarian coalitions, regional powers) that claim authority to intervene under the responsibility-to-protect doctrine. They set the adjudicative agenda: which atrocities trigger intervention, what level of evidence suffices, what remedies are proportionate. They benefit from lowered barriers to intervention and gain legitimacy through humanitarian framing. They bear minimal cost if interventions fail or prove counterproductive, as the responsibility is diffused across coalition members and international consensus."
+    },
+    {
+      "name": "global_governance_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "United Nations bodies, International Criminal Court, human rights treaty bodies, and regional judicial institutions that gain expanded authority to adjudicate sovereignty status and intervention legitimacy. These institutions benefit from increased mandate scope and resource allocation. They collect authority and soft power from being positioned as arbiters of when states have forfeited sovereignty protections. They bear no direct enforcement cost (coalitions enforce) and face limited accountability if their adjudications prove erroneous or politically motivated."
+    },
+    {
+      "name": "atrocity_prevention_advocacy_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Human rights organizations, genocide prevention networks, and advocacy coalitions that gain expanded voice and agenda-setting capacity. The reading treats protection failure as an explicit violation, validating their framing and giving their testimony higher weight in intervention decisions. They benefit from heightened moral authority and institutional access, though they do not directly command enforcement."
+    },
+    {
+      "name": "atrocity_affected_population",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Populations experiencing or at risk of mass atrocities. They benefit from international recognition of atrocity as grounds for intervention and from lowered barriers to rescue. However, they bear a significant hidden cost: interventions can destabilize further, humanitarian corridors may be weaponized, and their protection becomes dependent on external powers' strategic interests aligning with humanitarian claims. The reading converts them from victims of their state to potential beneficiaries of international authority, but only insofar as intervention serves the coalition's political goals."
+    },
+    {
+      "name": "sovereignty_protection_traditionalists",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "States, scholars, and international actors committed to absolute non-intervention and Westphalian territorial integrity norms. They bear the cost of a shifted international baseline: states with contested legitimacy or partial capacity lose presumptive protection, and their own domestic authority becomes subject to external judgment. Their exit from this status is identity-locked because rejecting it requires abandoning the institutional identity built on sovereignty symmetry and non-interference. They resist but lack structural power to prevent the reading's institutional embedding."
+    },
+    {
+      "name": "weak_or_contested_legitimacy_state",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States with weak state capacity, contested legitimacy, or histories of sectarian violence become perpetually vulnerable to intervention claims. Even absent ongoing atrocities, they live under heightened scrutiny. They must maintain compliance with international judgments of their protection capacity, but the standards are set externally and may shift. Their exit options are constrained: they cannot simply refuse international judgment without facing sanctions or intervention, but demonstrating compliance requires sustained institutional investment."
+    },
+    {
+      "name": "regional_rival_power",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "States that might claim intervention authority for geopolitical reasons but are excluded from coalition membership (e.g., Russia, China when excluded from particular humanitarian coalitions). They are barred from participating in the adjudication of sovereignty status but remain exposed to it being weaponized against them or their allies. Their exclusion from the agenda-setting seats is the enforcement mechanism that sustains the reading's unilateral application."
+    },
+    {
+      "name": "international_legal_scholar_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyzes whether the conditional responsibility reading is coherent, whether its evidentiary standards are applied consistently, and whether it produces the humanitarian outcomes it claims. They take testimony from all other seats and measure the constraint's actual operation against its stated justification."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a framework for collective response to mass atrocities that previously had no institutional mechanism: codifies when sovereignty presumption is suspended, who has adjudicative authority, and what remedies are legitimate. Solves the coordination problem of multiple states facing atrocity situations: instead of unilateral intervention or inaction, there is a shared standard and process.",
+    "transfer_function": "Transfers adjudicative authority over sovereignty status from the individual state (who determines its own legitimacy and immunity) to the international community (who judges whether a state has failed protection obligations). Transfers enforcement capacity from the atrocity regime (which controls its borders and military) to humanitarian coalitions (which gain legitimacy and mandate for military or coercive intervention). Transfers protective legitimacy from the domestic state to international institutions that can override domestic authority claims.",
+    "absent_voices": "Regional powers excluded from coalition membership; non-Western states that experience the reading as a tool for great-power intervention in their affairs; scholars who argue the evidentiary standards are applied inconsistently to Western and non-Western states; atrocity regimes and their allied states; populations whose sovereignty is preserved at the cost of atrocities not being recognized as such under the reading's criteria.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If conditional responsibility as a legitimating framework vanished, humanitarian coalitions would lose their primary justification for intervention across borders, atrocity regimes would regain presumptive sovereignty immunity, and global governance institutions would lose their expanded adjudicative mandate. The international system would revert toward absolute non-intervention norms or a more decentralized calculation of when unilateral intervention is legitimate. The institutional apparatus built to operationalize the reading—the Responsibility to Protect doctrine, expanded ICC jurisdiction, humanitarian intervention doctrine in international law—would require fundamental re-grounding.",
+    "founding_problem": "Mid-20th-century recognition that absolute sovereignty protection shields atrocity regimes from external accountability, and that millions dying under their rule creates a moral void in international law. The reading was developed to bridge the gap: if sovereignty is truly conditional on meeting basic protection obligations, then atrocity becomes grounds for intervention rather than grounds for isolation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Genocide prevention scholars and human rights advocates (beneficiary seats) attest the founding problem is live and the reading is necessary. Atrocity regimes and sovereignty traditionalists (payer and excluded seats) attest the founding problem has been over-generalized to justify intervention in internal conflicts that do not rise to atrocity thresholds, or that intervention based on the reading produces worse humanitarian outcomes than inaction. Independent analysis from non-coalition scholars shows inconsistent application: atrocities by coalition members are often overlooked while atrocities by rival powers trigger intervention calls, suggesting the reading operates as a tool for power asymmetry rather than humanitarian consistency."
+  },
   "interval": {
-    "start": 2000,
-    "end": 2024
+    "start": 0,
+    "end": 35
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.42
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.51
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.63
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.66
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.68
+      "time_point": 25,
+      "value": 0.67,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.35
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.57
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.58
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.48
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.58
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.65
+      "time_point": 10,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.7
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2020,
-      "value": 0.72
+      "time_point": 20,
+      "value": 0.69,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.72
-    }
-  ],
-  "omegas": [
-    {
-      "id": "atrocity_threshold_definition",
-      "question": "Who defines what counts as mass atrocity for purposes of sovereignty loss? Is the threshold set by objective evidence or by political negotiation among intervening powers?",
-      "resolution_mechanism": "Track intervention invocations: compare stated atrocity thresholds to actual intervention triggers. If interventions occur below stated thresholds (Syria, Myanmar) or non-occur above them (Yemen), the threshold is politically contingent, not objective.",
-      "impact": "If threshold is politically contingent, the doctrine functions as extraction—justifying power-political intervention with humanitarian language. If threshold is evidence-anchored and applied consistently, the doctrine functions as genuine coordination. Current evidence suggests the former.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether atrocity thresholds are objective or strategically applied."
+      "time_point": 25,
+      "value": 0.7,
+      "basis": "observed"
     },
     {
-      "id": "intervention_coalition_incentives",
-      "question": "Do humanitarian intervention coalitions intervene where atrocities are worst, or where intervention serves their strategic interests?",
-      "resolution_mechanism": "Geographic analysis: compare atrocity severity (deaths, displacement, documented crimes) to intervention deployment and resource commitment. Examine geographic distribution of intervening powers' strategic assets (military bases, resource access, regional alignment).",
-      "impact": "If interventions correlate with severity, the doctrine operationalizes genuine protection. If interventions correlate with strategic interest, the doctrine is extractive cover for geopolitical repositioning, and beneficiary status of intervention coalitions shifts from genuine humanitarian gain to political rent collection.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether intervention selection tracks atrocity severity or strategic interest."
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
-      "id": "conditional_vs_extractive_framing",
-      "question": "Is this constraint genuinely a coordination device for humanitarian response to atrocities, or is it a snare using humanitarian language to legitimize power-political intervention?",
-      "resolution_mechanism": "Examine: (1) Cases where intervention occurred without atrocity certification (Kosovo, Iraq 2003). (2) Cases where severe atrocities were documented but no intervention occurred (Rwanda, Syria, Yemen). (3) Post-intervention institutional change: did the intervening coalition install governance they could influence, or did they empower local democratic processes? (4) Selectivity pattern: are non-aligned or rival powers' atrocities intervened into at the same threshold as aligned powers'?",
-      "impact": "If selectivity is random or severity-driven, this is tangled rope (genuine protection with some extraction). If selectivity is strategic, this is snare (extraction disguised as humanitarian).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the conditional responsibility doctrine operationalizes coordination or extraction."
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
-      "id": "sovereignty_loss_vs_capacity_degradation",
-      "question": "Does the doctrine measure sovereignty loss against an objective standard (protection capacity) or does it allow political judgment to reframe sovereignty as lost whenever intervention is desired?",
-      "resolution_mechanism": "Compare the 'sovereignty loss' judgments across similar cases: identical atrocity severity and regime capacity in cases where one was intervened-into and one was not. If the judgments differ, sovereignty loss is political rather than structural.",
-      "impact": "If sovereignty loss is structural, the doctrine is rule-based. If it is political, the doctrine is extractive—it vests conditional sovereignty judgment in the intervening coalition, which can then leverage that judgment for strategic gain.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether sovereignty loss is objectively measured or politically contingent."
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
     },
     {
-      "id": "kernel_reading_contest_non_intervention_vs_conditional",
-      "question": "Between the absolute_non_intervention reading (categorical territorial inviolability) and this conditional_responsibility reading, which core premise is true: that sovereignty is categorical and exogenous to state conduct, or that sovereignty is conditional on state performance?",
-      "resolution_mechanism": "Comparative institutional analysis: examine which reading's authority structure is actually being enforced in practice. Track: (1) How often intervention coalitions cite sovereignty loss as grounds for intervention (conditional framing) vs. citing humanitarian exception to sovereignty (non-intervention framing). (2) Which framing appears in UN Security Council resolutions, ICJ opinions, state practice. (3) Whether the conditionality is applied symmetrically (all states) or selectively (only rivals).",
-      "impact": "If the conditional framing is genuinely being instantiated—atrocity documentation triggers sovereignty-loss judgments that are applied symmetrically—then conditional_responsibility is winning the reading contest and the kernel has shifted. If the non-intervention framing is used as cover and intervention occurs without sovereignty-loss judgments (or with selective application), then absolute_non_intervention is still the operative reading and conditional_responsibility is performative.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Which kernel reading (categorical vs. conditional sovereignty) is actually operative in international practice."
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.29,
+      "basis": "observed"
     },
     {
-      "id": "committer_frame_reading_relations",
-      "question": "How does this conditional_responsibility reading relate structurally to its sibling readings (absolute_non_intervention, graded_sovereignty)? Which relations are accurate: forecloses, coexists_with, or influences?",
-      "resolution_mechanism": "Examine whether parties actually hold only one reading or whether they code-switch between readings strategically. Do absolute_non_intervention defenders simultaneously invoke graded_sovereignty when it serves them? Can a single framework hold both conditional_responsibility and absolute_non_intervention?",
-      "impact": "If readings truly foreclose each other, one will eventually dominate. If they coexist, the kernel remains contested and each reading retains legitimacy. If they influence rather than foreclose, downstream dynamics will shift under this reading's pressure.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The structural relationship between conditional_responsibility and its sibling kernel readings."
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The conditional responsibility reading interprets Westphalian sovereignty as a status contingent on state performance in protecting populations from mass atrocities. Under this reading, the Responsibility to Protect (R2P) doctrine operationalizes sovereignty loss: states that commit or tolerate genocide, ethnic cleansing, or crimes against humanity forfeit the territorial inviolability that is sovereignty's core protection. This lowers the threshold for external intervention and vests adjudicative authority in the international community (UN bodies, coalitions of willing states) rather than in the targeted state. The reading claims to solve the post-Cold War legitimacy problem—how to block humanitarian catastrophe without returning to pure interventionism—but instantiates a tangled_rope constraint: it provides genuine coordination (a threshold for when the international community collectively intervenes) and genuine extraction (it vests unprecedented adjudicative power in the intervening coalitions and allows them to leverage that power for strategic repositioning). This is a single reading of a contested kernel; the sibling readings (absolute_non_intervention and graded_sovereignty) are different constraints entirely and are authored in separate story files.",
+    "narrative_context": "This constraint instantiates the 'conditional responsibility' reading of the Westphalia sovereignty kernel: states forfeit territorial inviolability when failing to protect populations from mass atrocities. Under this reading, sovereignty is not an absolute right of non-interference but a conditional status that depends on meeting protection obligations. The reading emerged in the late 20th century as a response to genocides (Rwanda, Bosnia, Darfur) where absolute non-intervention doctrine provided no mechanism for international response. It redistributes authority: from individual states (who determine their own legitimacy) to international institutions and humanitarian coalitions (who judge sovereignty status). The constraint is CLAIMED as tangled_rope because it solves a genuine coordination problem (collective response to atrocity) while simultaneously extracting authority and legitimacy from atrocity-regime states and traditional sovereignty defenders. The metrics show high extractiveness (0.68) and suppression (0.71) because the reading's persistence depends on active exclusion of rival interpretations and enforcement against states that resist the judgment of their sovereignty status.",
     "key_agents": [
-      "Atrocity-vulnerable populations: trapped, powerless, theoretically benefit from the doctrine but have no seat in its application",
-      "Humanitarian intervention coalitions: typically Western military alliances and UN permanent members; set the agenda, define thresholds, execute interventions; collect legitimacy cover and strategic advantage",
-      "Global governance institutions: UN, ICJ, human rights bodies; gain adjudicative authority and funding under the doctrine",
-      "Non-intervening states: Global South, non-aligned nations; bear precedent costs, constrained exit, lack capacity to counter-intervene",
-      "Sovereignty-claiming regimes: moderate power, identity-locked to sovereignty claims, stripped of categorical immunity by the doctrine",
-      "Atrocity documentation networks: observer seat, provide epistemic foundation for thresholds",
-      "Alternate sovereignty regimes: excluded, cannot be incorporated without fundamentally different constraint story"
+      "Atrocity regime state: bears costs of sovereignty conditional on international judgment of protection capacity; structurally trapped.",
+      "Humanitarian intervention coalition: sets adjudicative agenda; benefits from lowered intervention barriers and humanitarian framing; excludes rival powers.",
+      "Global governance institutions (UN, ICC, treaty bodies): gain expanded adjudicative mandate; collect authority as arbiters of sovereignty status.",
+      "Atrocity-affected population: benefits from recognition of atrocity as intervention ground, but bears hidden cost if interventions are poorly calibrated or serve coalition interests over protection.",
+      "Sovereignty protection traditionalists: pay the cost of shifted baseline; identity-locked resistance to the reading.",
+      "Regional rival powers: excluded from coalition membership; exposed to the reading being weaponized.",
+      "International legal scholars: analytical observers measuring whether the reading is applied consistently and achieves stated humanitarian outcomes."
     ],
-    "logic_rationale": "Extractiveness is moderate-to-high (0.68 terminal value) and rising steadily (0.42 at t=2000) because the doctrine's application has become increasingly selective and strategically motivated. Early application (Kosovo, East Timor) was defensible as genuine atrocity response; later cases (Libya 2011 as NATO regime-change cover, Syria non-intervention despite documented atrocity, Yemen bombardment with no atrocity intervention framing) show extraction: the coalitions use the doctrine when it serves them and abandon it when it doesn't. Suppression is high (0.72) because maintaining the doctrine's legitimacy requires actively suppressing alternate framings (the absolute_non_intervention framing, regional sovereignty claims, challenges to intervention selective application). Theater ratio rises from 0.35 to 0.58, indicating that as extraction increases, the doctrine's performative function (legitimacy theater for intervention decisions already made on strategic grounds) grows. Accessibility collapse is low (0.41) because alternatives are visible and actively defended: Russia, China, and non-aligned states continue to invoke absolute non-intervention and reject conditional readings. Resistance is very high (0.79), reflecting sustained opposition from sovereignty-claiming states, the documented cases where the doctrine was selectively applied or abandoned, and the scholarly/diplomatic debate challenging the doctrine's legitimacy. Measurements are authored on a shared 24-year grid (t=2000 [pre-R2P codification], 2005 [World Summit adoption], 2010 [Libya building], 2015 [Libya aftermath, Syria stalemate], 2020 [Myanmar crisis, COVID disruption], 2024 [terminal measurement]). The measurement series tracks extraction rising as application becomes more selective; theater rising as legitimacy function dominates actual intervention thresholds; suppression plateauing at high level as opposition stabilizes.",
-    "perspectival_gap": "The agenda-setter seat (intervention coalitions, global institutions) perceives this constraint as genuine coordination: it solves the post-Rwanda legitimacy problem by creating a threshold for when sovereignty yields. They read high extractiveness as necessary institutional overhead and justify theater ratio as public education. The payer seats (non-intervening states, sovereignty-claiming regimes) perceive this as extraction: adjudicative authority over their legitimacy has been vested in external coalitions that apply it strategically. From the victim population's seat, the doctrine is coordination on paper but fails delivery—it lowers intervention thresholds without ensuring intervention occurs at the lowest-atrocity cases (absent voice problem). The engine computes these divergences from the structural data: the coalition's arbitrage exit options and institutional power produce beneficiary-type directionality; the non-intervening states' constrained exit and moderate power produce target-type directionality; the victim populations' powerlessness and trap produces high target directionality with no mitigation. These are the grounds for seat divergence in classification, independent of the authored claim.",
-    "directionality_logic": "Humanitarian intervention coalitions (institutional, arbitrage, global scope) derive low directionality (d~0.15–0.25): they benefit from expanded mandate, collect legitimacy cover, can exit the doctrine if it becomes constraining by simply not invoking it (see Syria). Global governance institutions (institutional, analytical, universal scope) derive near-beneficiary directionality (d~0.10–0.20): they gain funding, authority, and career incentives from R2P implementation. Non-intervening states (organized, constrained exit, global scope by implication) derive high target directionality (d~0.70–0.85): they bear precedent costs without benefit, cannot exit, have their sovereignty status externally judged. Sovereignty-claiming regimes (moderate power, identity-locked exit, regional scope) derive very high target directionality (d~0.80–0.95): they lose categorical immunity, exit means abandoning state-identity, regional scope makes them visible to coalition intervention. Atrocity-vulnerable populations (powerless, trapped, regional scope) derive maximum target directionality despite nominal beneficiary role (d~0.95): they are the constraint's stated subjects but have zero agency in its application and no guaranteed benefit. No directionality overrides are needed; the derivation chain (beneficiary/victim declarations + exit options + power atoms) produces the correct spread from the structural data.",
-    "mandatrophy_analysis": "The founding problem (post-genocide legitimacy crisis, need for threshold to block mass atrocity) is declared as 'contested' status in the six_questions. This is accurate: the humanitarian intervention coalitions attest the problem is live and the doctrine solves it; skeptics and non-intervening states attest the problem was overstated or that other mechanisms (courts, sanctions, refugee support) address it better. The selective application pattern (Kosovo intervened, Syria not; Libya intervened as regime change, Yemen bombardment not framed as R2P response) provides evidence for the skeptics' reading. The mandatrophy condition would be: the doctrine persists because it benefits the intervening coalitions and governance institutions (who maintain it), but the founding problem it was meant to solve is either dead (atrocity prevention through other means) or contested (whether R2P actually prevents atrocities or just provides legitimacy cover for strategic intervention). The rising theater_ratio (0.35→0.58) and selective application pattern support mandatrophy: the doctrine's primary function has shifted from atrocity threshold-setting to legitimacy theater for intervention decisions made on strategic grounds. This does not automatically reclassify it from tangled_rope (which allows asymmetric extraction and enforcement), but it marks the constraint as a candidate for mandatrophy drift detection: if theater_ratio continues to rise while measured atrocity-prevention outcomes remain flat or decline, the engine's T17 abductive trigger (mountain_extraction_accumulation) would flag for investigation whether the mandate has outlived its function.",
-    "kernel_context": "This constraint is one reading (conditional_responsibility) of the contested kernel 'westphalia_sovereignty.' The kernel is the persisting commitment: what sovereignty IS in international law. The reading declares that sovereignty is conditional status—it is held contingently, forfeit when states fail to protect populations from mass atrocities. Sibling readings instantiate different claims: absolute_non_intervention reading (sovereignty is categorical, inviolable regardless of state conduct); graded_sovereignty reading (sovereignty is scalar capacity, measured on a spectrum from full to nominal, with intervention legitimacy calibrated to capacity deficits). Each reading is a separate constraint story with its own ε, beneficiary/victim structure, and classification. The contest between readings is not settled by this story—it is documented in the omegas (id: kernel_reading_contest_non_intervention_vs_conditional) and in the cs_structure.reading_relations. This reading (conditional_responsibility) coexists_with absolute_non_intervention (both are held live by different state factions) and influences graded_sovereignty (if conditional responsibility gains authority, it shifts which capacity metrics matter for legitimacy)."
+    "logic_rationale": "Extractiveness is high (0.68) and rising through interval 0–25, then plateauing. The rise reflects the reading's institutional embedding: as global governance institutions internalize conditional responsibility into doctrine and procedure, the extraction of adjudicative authority becomes more persistent. Plateau at 25–35 indicates the reading has reached saturation in institutional design; further increases would require explicit doctrine expansion. Suppression is also high (0.71) because the reading's persistence requires active exclusion of the absolute non-intervention reading (which remains held by excluded states and traditionalists). Theater ratio (0.42) indicates the constraint's operation is substantially functional (humanitarian framing, atrocity prevention mechanisms) but with growing performative elements: interventions justified by the reading sometimes serve great-power interests rather than protection outcomes, and the adjudication of sovereignty status is inconsistently applied across coalition and non-coalition states. The measurement grid uses one shared time axis so all metrics are authored at every examined point. The rising extractiveness and suppression through mid-interval reflect the constraint's institutional hardening; the plateau suggests a temporary equilibrium where the reading is embedded enough to be self-reinforcing but faces persistent resistance from excluded seats.",
+    "directionality_logic": "The atrocity regime state occupies the full-target position (d ≈ 0.95): it bears the cost of sovereignty conditionality and has trapped exit options; the international judgment of its status is imposed without its consent or power to resist. Humanitarian coalitions are beneficiaries (d ≈ 0.1): they gain adjudicative authority and legitimacy; their exit options are arbitrage (they can choose which atrocities to highlight and which to ignore based on strategic interest). Global governance institutions are beneficiaries (d ≈ 0.15): they gain expanded mandate and soft power; their analytical exit position insulates them from enforcement costs. Atrocity-affected populations occupy an ambiguous position (d ≈ 0.5–0.6): they benefit from recognition but are trapped in dependence on external powers' decisions about intervention, and the reading can result in interventions that worsen their situation. Sovereignty traditionalists are targets (d ≈ 0.8): they bear the cost of a shifted international baseline and identity-locked exit makes them unable to exit the constraint's scope without abandoning institutional commitments. This per-seat divergence is the engine's computation from the structural data; the claim/metric gap documents it explicitly.",
+    "perspectival_gap": "From the humanitarian coalition seat: the reading is genuine coordination responding to a moral vacuum; sovereignty should be conditional on protection, and enforcement is necessary to prevent atrocities. From the atrocity regime state and traditionalist seats: the reading is a tool for great-power intervention disguised as universal principle; it legitimates coercive regime change and violates the core principle of equal state dignity. From the atrocity-affected population seat: the reading is necessary but instrumentalized; it provides legitimacy for intervention that sometimes protects and sometimes exploits. From the excluded regional power seat: the reading is selectively applied; coalition-member atrocities are overlooked while rival-power atrocities trigger calls for intervention. The engine computes these divergent experiences from the structural data (power, exit options, role) and stakeholder positions; the authored claim does not adjudicate which perspective is correct.",
+    "mandatrophy_analysis": "The founding problem (atrocity regimes shield their violations behind sovereignty immunity) is CONTESTED in status. Beneficiary seats argue it is still live: recent atrocities (Myanmar, Syria, South Sudan) show that absolute non-intervention produces humanitarian failures. Payer and excluded seats argue it is partially dead or misdescribed: the reading conflates atrocity (which is wrong) with lack of international capacity to prevent it (which is a practical problem, not a sovereign immunity problem). The reading itself can be a vector for corruption of the founding problem: coalitions use the reading to justify interventions that are politically motivated rather than atrocity-responsive, treating the reading as a tool for power assertion rather than humanitarian protection. This corruption is detected by the mismatch: founding_problem_status=contested + disappearance_verdict=world_rearranges + theater_ratio rising to 0.42 suggests the founding problem has partly dissolved (many atrocities are now recognized and discussed internationally, reducing the vacuum the reading solved) but the reading persists for reasons beyond the founding problem (institution inertia, power consolidation, strategic interest in intervention authority). The reading is tangled_rope, not rope, because the coordination benefit (collective response to atrocity) is genuine, but the extraction (authority over sovereignty status, asymmetric intervention powers) is also real and not a necessary cost of coordination.",
+    "kernel_context": "This constraint instantiates the 'conditional_responsibility' reading of the westphalia_sovereignty kernel. The kernel is the contested legitimacy and content of state sovereignty in international law—whether it is absolute (permitting any internal conduct with impunity), conditional (dependent on meeting protection obligations), or scalar (existing on a spectrum). This reading holds that sovereignty is conditional: states that fail to protect populations from mass atrocities forfeit the presumption of territorial inviolability. Sibling readings: 'absolute_non_intervention' reading holds that sovereignty is categorical and absolute; external interference is per se illegitimate regardless of internal conduct. 'Graded_sovereignty' reading holds that sovereignty exists on a spectrum calibrated to state capacity; intervention legitimacy is proportionate to capacity deficits. The conditional responsibility reading COEXISTS_WITH the other two in contemporary international discourse: different state coalitions hold different readings simultaneously, and the contest is whether the reading becomes institutionalized as doctrine or remains contested."
   },
+  "omegas": [
+    {
+      "id": "atrocity_threshold_ambiguity",
+      "question": "What threshold of atrocity severity and imminence triggers the loss of sovereignty presumption? Is the threshold objective (e.g., death toll, verified genocide findings) or subjective (adjudicated by coalition judgment)?",
+      "resolution_mechanism": "Comparison of intervention decisions across multiple cases: if similar death tolls and circumstances produce different intervention responses depending on the state's alignment with the coalition, the threshold is subjective; if similar responses occur regardless of alignment, the threshold is more objective.",
+      "impact": "An objective threshold would support the reading's humanitarian legitimacy; a subjective threshold would establish the reading as a tool for power asymmetry. If subjective, the constraint should reclassify toward snare (pure extraction) rather than tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether atrocity-triggering-intervention thresholds are applied consistently or depend on geopolitical interest."
+    },
+    {
+      "id": "kernel_reading_foreclosure",
+      "question": "Does the conditional responsibility reading logically foreclose the absolute non-intervention reading, or do they coexist as competing frameworks?",
+      "resolution_mechanism": "Examination of whether a state can coherently hold both readings in its own institutional framework. If a state treats some atrocities as grounds for intervention while defending non-interference in other states' internal affairs, it is operating both readings simultaneously; if a state must choose one or the other, they foreclose.",
+      "impact": "If readings foreclose: the contest is zero-sum; one reading will dominate and the other will be institutional casualties. If they coexist: the contest is permanent, and the constraint is a contested temporary equilibrium rather than a settled institutional position. This affects the terminal classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the conditional responsibility reading and absolute non-intervention reading are logically incompatible or operationally coexistent."
+    },
+    {
+      "id": "coalition_membership_as_enforcement",
+      "question": "Is the constraint enforced by the internal logic of conditional responsibility, or by exclusion of rival powers from adjudicative authority?",
+      "resolution_mechanism": "Counterfactual: if a coalition-member state committed an atrocity that met the reading's own threshold criteria, would it be subject to intervention under its own principle? If not, the constraint is enforced by power asymmetry; if yes, the constraint is enforced by principle.",
+      "impact": "If power-asymmetric: the reading is a tool for hegemon consolidation and should reclassify toward snare. If principle-driven: it is genuine tangled_rope. The historical record shows coalition-member atrocities are rarely subjected to intervention calls based on the reading, suggesting power asymmetry, but the reading itself contains no exemption clause.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the conditional responsibility reading is applied to coalition members according to the same standard as non-coalition states."
+    },
+    {
+      "id": "institutional_capture_of_adjudication",
+      "question": "Have global governance institutions (ICC, UN bodies) become captured by the coalitions that set the intervention agenda, such that their adjudications reflect coalition interest rather than neutral judgment of sovereignty status?",
+      "resolution_mechanism": "Analysis of prosecution patterns, investigation budgets, and remedial recommendations by institution: if these cluster around coalition-aligned interests, capture is probable; if distributed across geopolitical fault lines, capture is less evident.",
+      "impact": "If captured: the reading's coordination function is theatricalized; the institutional beneficiaries (governance bodies) are no longer neutral arbiters but coalition tools. The constraint reclassifies toward snare. If independent: the institutions retain legitimacy to judge sovereignty status, and the constraint remains tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international institutions adjudicating sovereignty status and intervention legitimacy remain independent from coalition influence."
+    },
+    {
+      "id": "reading_vs_sibling_foreclosure_empirical",
+      "question": "Has the conditional responsibility reading empirically foreclosed the absolute non-intervention reading at the institutional level, such that non-intervention is no longer a live option in international law?",
+      "resolution_mechanism": "Examination of UN voting patterns, treaty language, and doctrine development: if the UN Charter's Article 2.7 (non-interference) is effectively superseded by Responsibility to Protect doctrine, foreclosure is substantive; if both remain operative and invoked contextually, coexistence persists.",
+      "impact": "Foreclosure would establish the reading as dominant and predict its long-term institutional stability. Coexistence would predict continued contestation and vulnerability to doctrinal reversal if political coalitions shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional behavior reflects the conditional responsibility reading as operative doctrine or as a contested alternative to continuing non-intervention norms."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
@@ -203,70 +343,72 @@
     "affects_constraints": [
       "westphalia_sovereignty__absolute_non_intervention",
       "westphalia_sovereignty__graded_sovereignty",
-      "international_humanitarian_law__armed_conflict",
-      "transnational_justice__crimes_against_humanity"
+      "international_criminal_court_jurisdiction",
+      "responsibility_to_protect_doctrine"
     ],
-    "dual_formulation_note": "Constraint family: westphalia_sovereignty kernel with three reading instantiations. conditional_responsibility is the middle reading in extractiveness: absolute_non_intervention instantiates pure coordination (low extraction, mountain-side); graded_sovereignty instantiates hierarchical calibration (moderate extraction). The conditional_responsibility reading sits between them: it coordinates intervention thresholds (coordination function) while vesting adjudicative authority in intervening coalitions (extraction function). Each story is ε-invariant; the differences are in the beneficiary/victim framing and the structural mechanism, not in observable-switching. The conditional reading influences both siblings: it pressures absolute_non_intervention by raising the threshold for sovereignty defense, and it pressures graded_sovereignty by anchoring the capacity-measurement axis to atrocity triggers rather than to institutional development indices."
+    "dual_formulation_note": "The westphalia_sovereignty kernel is instantiated by three distinct constraint stories, each a reading with different structural properties. This story (conditional_responsibility) treats sovereignty as forfeitable upon protection failure. The absolute_non_intervention reading treats sovereignty as categorical and immune to external judgment. The graded_sovereignty reading treats sovereignty as scalar, calibrated to state capacity. Each reading instantiates different ε, beneficiary sets, and enforcement mechanisms. The three readings coexist in contemporary international law but are in structural tension: a state cannot simultaneously hold that sovereignty is absolutely immune and that it is conditionally forfeitable based on the same set of facts. The readings influence one another: if the conditional reading becomes institutionalized (as the Responsibility to Protect doctrine), it exerts downstream pressure on the absolute reading, raising the cost of holding the non-intervention position."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.18
+      "d_value": 0.95
     }
   ],
+  "gain_flow": "humanitarian_intervention_coalition",
+  "fixing_cost": "prohibitive",
   "uke_scope": {
     "epsilon_bin": "high",
     "hypothesis": "tangled_rope",
     "downstream_of": [
-      "westphalia_sovereignty__absolute_non_intervention",
-      "international_humanitarian_law__armed_conflict"
+      "westphalia_sovereignty__absolute_non_intervention"
     ]
   },
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "westphalia_sovereignty__absolute_non_intervention",
+        "sibling_id": "absolute_non_intervention",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "westphalia_sovereignty__graded_sovereignty",
+        "sibling_id": "graded_sovereignty",
         "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "sovereignty_contingent_on_protection_capacity",
+        "atom": "sovereignty_conditional_on_protection_obligation",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "international_community_adjudicates_capacity",
+        "atom": "atrocity_forfeits_territorial_immunity",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "categorical_non_intervention_post_westphalia",
+    "reference_frame": "conditional_sovereignty_with_international_adjudication",
     "drift_state": {
-      "moment": "post_rwanda_responsibility_era",
+      "moment": "contemporary_geopolitical_contest",
       "direction": "authority_erosion",
       "magnitude": "substantial",
-      "acknowledged": true
+      "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

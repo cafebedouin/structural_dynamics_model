@@ -4,177 +4,453 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "35acaa15-c4a2-4ff6-ad6b-a9898540c9b1"
+    "story_uid": "976d0e8c-c96a-4b98-9366-81bf0d169564"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.78,
-    "theater_ratio": 0.41,
-    "accessibility_collapse": 0.68,
-    "resistance": 0.72,
+    "extractiveness": 0.68,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.64,
+    "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Honor Satisfaction Substrate (Composite Overdetermined Reading)",
-    "topic_domain": "social/legal/cultural",
+    "human_readable": "Honor Satisfaction Constraint (Composite Overdetermined Reading)",
+    "topic_domain": "social/cultural/legal",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "aristocratic_honor_culture"
+      "honor_code_custodians",
+      "status_hierarchy_maintainers"
     ],
     "victims": [
-      "duelists_trapped_by_honor_code",
-      "legal_authorities_enforcing_suppression"
+      "gentlemen_under_dueling_obligation",
+      "families_bearing_dueling_costs"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "honor_code_custodians",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Social authorities (upper gentry, military officers, clergy, cultural arbiters) who define and police the honor code. They maintain the framework that makes dueling intelligible as a satisfaction mechanism. They benefit from the deference dueling extracts — it enforces status hierarchy and validates their authority to judge masculine worth."
+    },
+    {
+      "name": "gentlemen_under_dueling_obligation",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Men of gentle birth and military/civil standing who face the obligation to defend honor through challenge and combat. They bear the direct extraction: risk of death, injury, legal jeopardy, and the psychological cost of participation. Yet they also benefit from the honor-code's legitimacy — accepting the dueling obligation is how they confirm their status as gentlemen rather than commoners. Exit is identity-locked: refusing a challenge means social death, loss of credibility, and exclusion from elite circles."
+    },
+    {
+      "name": "families_bearing_dueling_costs",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Wives, children, parents of dueling men. They bear secondary extraction: grief, economic disruption (loss of income or inheritance), social stigma if a family member is killed or imprisoned. They have constrained exit — they cannot leave the family or control the obligation, though they may pressure for desistance or attempt to mediate reconciliations."
+    },
+    {
+      "name": "state_enforcement_apparatus",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legal systems, police, prosecutors, courts imposing prohibitions on dueling, prosecuting violators, and enforcing sentences. They represent the exogenous suppression vector: legal barriers, criminal liability, imprisonment. They do not benefit from dueling itself but benefit from the state's monopoly on violence and rule of law authority."
+    },
+    {
+      "name": "enlightenment_cultural_authorities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Philosophers, clergy, publicists, and reform-minded elites who delegitimate the honor code on rational and moral grounds. They benefit from the constraint's decline because its erosion validates their worldview (rationality over honor, dignity over status, written law over custom). They actively shape the endogenous delegitimation by reframing honor itself."
+    },
+    {
+      "name": "commoners_excluded_from_dueling",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The vast majority, structurally barred from dueling by birth. They would benefit from the constraint's erosion (it reinforces the social boundary that keeps them subordinate), but they are not in the conversation. Their interests are voiced, if at all, by reform advocates who take up the equality argument."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The historical sociologist or legal historian examining the constraint's operation and decline. Positioned outside the active mechanisms to trace the causal pathways."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates masculine status hierarchy among gentlemen through a shared framework in which honor insults demand armed satisfaction. The dueling constraint solves the problem of enforcing deference to social rank without formal law: a gentleman who accepts an insult without challenge loses standing; a gentleman who receives satisfaction through combat retains it. The coordination function is the agreement on what honor means and what challenges require.",
+    "transfer_function": "Transfers authority to adjudicate masculine worth from formal institutions (courts, clergy) to peer-mediated combat. Transfers the psychological and physical burdens of status maintenance from the honor-code custodians to the gentlemen obligated to defend their standing through violence.",
+    "absent_voices": "Commoners are structurally excluded from the dueling conversation — they cannot issue or receive challenges and have no seat at the table. Women's voices are absent despite bearing substantial secondary extraction (widowhood, economic disruption, social stigma). Enlightenment critics exist as minority voices in early periods; their presence grows louder as decline accelerates, but they enter the conversation as external critics, not as parties initially.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If dueling and its obligation disappeared overnight, the status hierarchy it enforced would require alternative legitimating mechanisms. Immediate rearrangement: no challenge protocols, no satisfaction through combat, legal jeopardy removed. Deeper rearrangement: whether honor codes themselves could persist without dueling as their enforcement mechanism — the contested question between this reading and the cultural_contraction_reading. The composite reading expects both: the coordination function (status hierarchy maintenance) would find new forms, AND the honor substrate would undergo further delegitimation.",
+    "founding_problem": "How to adjudicate and enforce honor among peers when formal law and institutions are distant or powerless. The dueling constraint emerged as a solution: honor satisfaction through combat, mediated by codes of conduct that gentlemen agree bind them.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Military and gentry sources attest the founding problem was live during the rise of dueling (15th–16th century): distant courts, limited police capacity, honor insults that law could not remedy. By the 18th century, legal enforcement improves and state capacity rises, yet dueling persists — this divergence is precisely what invites contention. Reform advocates attest the founding problem is solved (courts are now proximate, law is effective, rational systems can adjudicate honor); traditionalists attest it persists (some insults remain beyond law's reach, peer judgment remains superior to magistrates). Historical scholars documenting the interval agree both readings were held simultaneously by different stakeholder seats."
+  },
   "interval": {
-    "start": 1650,
+    "start": 1500,
     "end": 1850
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1650,
-      "value": 0.45
+      "time_point": 1500,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1700,
-      "value": 0.48
+      "value": 0.64
     },
     {
       "metric": "base_extractiveness",
       "time_point": 1750,
-      "value": 0.55
+      "value": 0.71
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1800,
-      "value": 0.62
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1825,
-      "value": 0.67
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1850,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1650,
-      "value": 0.15
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1700,
-      "value": 0.22
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1750,
-      "value": 0.38
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1800,
       "value": 0.68
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.68
+    },
+    {
       "metric": "suppression_requirement",
-      "time_point": 1825,
-      "value": 0.77
+      "time_point": 1500,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1600,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1700,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1800,
+      "value": 0.71
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1850,
-      "value": 0.78
+      "value": 0.71
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1650,
-      "value": 0.08
+      "time_point": 1500,
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1700,
+      "time_point": 1600,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
+      "time_point": 1700,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 1750,
-      "value": 0.18
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 1800,
-      "value": 0.32
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1825,
-      "value": 0.39
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 1850,
-      "value": 0.41
+      "value": 0.42
     }
   ],
+  "coercion_grid": {
+    "t0": 1500,
+    "tn": 1850,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1850,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.68
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1850,
+        "value": 0.38
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1850,
+        "value": 0.44
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1850,
+        "value": 0.31
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1850,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.38
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1850,
+        "value": 0.74
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.35
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1850,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.42
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1850,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.08
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1850,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.12
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1850,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.11
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1850,
+        "value": 0.72
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1850,
+        "value": 0.74
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.22
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1850,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.18
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1850,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1850,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.28
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1850,
+        "value": 0.48
+      }
+    ]
+  },
   "commentary": {
-    "narrative_context": "This reading examines the decline of European dueling (roughly 1650–1850) as the product of TWO causally entangled mechanisms operating simultaneously: exogenous legal suppression (criminalization, institutional barriers, enforcement intensity) and endogenous delegitimation of the honor substrate itself (Enlightenment reframing of status, transformation from honor-based to dignity-based ethics, internalization of new masculinity norms). The reading claims that neither mechanism alone explains the constraint's collapse, and that the mechanisms are not independent — legal pressure delegitimized the code partly by making its enforcement costly, while cultural transformation made suppression increasingly effective because fewer people believed in the code's normative force. This is the composite_overdetermined_reading of the honor_satisfaction_substrate kernel. Sibling readings attribute the decline to EITHER exogenous suppression alone (practice_decline_reading) OR endogenous cultural transformation alone (cultural_contraction_reading).",
+    "narrative_context": "This reading instantiates the honor-satisfaction constraint as a tangled_rope subject to DUAL, causally-entangled decline mechanisms. The constraint operated to coordinate masculine status hierarchy (genuine coordination function) while extracting participation costs (death, legal jeopardy, psychological burden) from gentlemen obligated to defend honor through combat. Its decline exhibits BOTH rope-breaking (legal suppression, state enforcement) AND mountain erosion (delegitimation of the honor substrate itself via Enlightenment rationalism). Critically, these mechanisms are not independent: legal suppression worked BECAUSE the honor code itself was being delegitimated; delegitimation accelerated BECAUSE legal enforcement had begun; neither mechanism suffices alone to explain the historical trajectory. The composite reading asserts the interdependence; the sibling readings attribute causal primacy to one mechanism or the other.",
     "key_agents": [
-      "aristocratic_honor_culture: maintains the coordination apparatus (reputation networks, masculine identity norms, public challenge-response mechanisms) that makes dueling obligatory",
-      "duelists_trapped_by_honor_code: identity-locked into participation; death/prosecution risk is the cost of maintaining elite status in the eyes of peers",
-      "legal_authorities_enforcing_suppression: criminalize dueling and invest enforcement resources; bear the cost of sustained institutional pressure against cultural norms",
-      "enlightenment_intellectuals: provide the alternative cultural frame (dignity ethics, rationalism, domestic virtue) that makes the honor code appear constructed rather than natural",
-      "women_and_non_elite_men: excluded from the dueling apparatus but bear economic/social costs; their absence from the conversation is structural"
+      "Honor code custodians: social authorities (gentry, military, clergy) who define and police the constraint.",
+      "Gentlemen under obligation: moderate-power, identity-locked participants bearing extraction cost and identity benefit simultaneously.",
+      "Families bearing costs: secondary victims with constrained exit.",
+      "State enforcement apparatus: institutional actor imposing exogenous suppression (legal prohibition, criminal prosecution).",
+      "Enlightenment cultural authorities: organized beneficiaries of delegitimation who reshape the cultural frame.",
+      "Excluded commoners: structurally barred from participation, would benefit from constraint erosion but have no voice."
     ],
-    "logic_rationale": "Extractiveness starts low (0.45 at 1650) because dueling is coordinating genuine elite status disputes — participants genuinely believe the mechanism is legitimate and necessary. It rises to 0.62 by 1800 as legal suppression accelerates and cultural alternatives emerge; the constraint now persists partly through coercion and partly through cultural inertia, with fewer genuine believers in the code's necessity. It drops slightly by 1850 (0.62 → 0.62) because enforcement intensity has essentially destroyed the coordination mechanism entirely — the code persists theatrically among some elites but the material constraint (the binding obligation to duel) is broken. Suppression_requirement rises from 0.15 to 0.78 — at 1650, enforcement is minimal because the code is self-enforcing through peer pressure; by 1800, the state must actively criminalize and prosecute to maintain suppression; by 1850, enforcement remains high even as dueling rates fall (police, courts, reputation damage are all deployed). Theater_ratio rises from 0.08 to 0.41 — early on, dueling is functionally necessary to the status system; by 1850, dueling persists mainly as theatrical maintenance of an anachronistic code. The measurements track the entanglement: suppression_requirement rises BECAUSE cultural delegitimation makes the code optional; theater_ratio rises BECAUSE legal pressure makes functional coordination impossible; neither metric moves monotonically, because the two causal pathways interfere with each other.",
-    "perspectival_gap": "The duelist seat should compute as a complex mixed type: from inside the honor code, the constraint is genuinely coordinative (rope-ish) — a binding solution to the status problem. From the legal authority seat, it is a snare that must be suppressed — extractive and coercive. From the intellectual observer seat, it is a mountain being eroded — a natural law of honor yielding to a new natural law of dignity. The engine computes per-seat directionality from the structural data (beneficiary/victim + exit options); this story's claim is that the constraint's type CHANGES as you move seats, and the measurements track the intermediate period when both mechanisms (suppression and delegitimation) are active simultaneously.",
-    "directionality_logic": "Duelists are identity-locked (exit_options: identity_locked) — refusal to duel means social annihilation, loss of elite masculine identity. They are declared both victims (bear death/prosecution risk) and beneficiaries (gain status from honor system). This dual positioning is central to the reading: the same mechanism that extracts from them (forces them to duel at risk of death) also benefits them (allocates status). Extractiveness is high (0.62 end-state) because the constraint persists through coercion and cultural inertia, not through freely-given participation. Suppression is higher (0.78) because exit is not merely expensive but psychologically/socially unthinkable — the identity-lock is deep. Legal authorities are declared as agenda_setters + payers because they must actively maintain suppression while bearing the cost of enforcement. The honor culture is the beneficiary — it collects rents in the form of continued elite status allocation and maintains the apparatus that makes the code appear natural.",
-    "mandatrophy_analysis": "This reading explicitly embraces mandatrophy: the founding problem (elite status coordination without institutional arbiters) is dead by 1800 — modern states provide institutional arbitration and do not tolerate private violence. Yet the constraint persists until ~1850, and faintly beyond. The persistence is mandatropic — the code is maintained by institutional inertia, cultural pride among conservative elites, and the self-reinforcing nature of reputation networks, not by the solving of any live problem. Theater_ratio documents this: as the founding problem dies, the ratio of performative to functional activity rises from 0.08 to 0.41. The composite_overdetermined_reading claims that mandatrophy was ENABLED by the simultaneous operation of suppression and delegitimation — legal pressure made the code costly to maintain, cultural transformation made it feel optional, and together they produced the era (1800–1850) when dueling is mostly theater.",
-    "kernel_context": "This constraint is the composite_overdetermined_reading of the honor_satisfaction_substrate kernel. It claims dueling's decline resulted from both exogenous suppression (legal/institutional) AND endogenous delegitimation (honor code transformation) operating simultaneously with non-independent causal pathways. Sibling readings: (1) practice_decline_reading attributes the decline to exogenous enforcement alone — the code persists as normative substrate but dueling declined because legal barriers, institutional costs, and enforcement made participation too costly. (2) cultural_contraction_reading attributes the decline to endogenous transformation alone — honor codes themselves underwent foundational change (from honor-based to dignity-based ethics); dueling became unthinkable because the substrate it relied on ceased to exist. The composite_overdetermined_reading asserts both mechanisms were active and causally entangled — suppression delegitimized the code, delegitimation made suppression effective, neither alone accounts for the constraint's type change from rope (coordinate) to snare (coercive) to piton (theatrical)."
+    "logic_rationale": "Base extractiveness is measured at 0.68 (interval endpoint, t=1850). Early in the interval (t=1500), extraction is low (0.35) because dueling was emergent and not yet mandatory — alternatives existed and honor could be maintained through other means. Extraction peaks at t=1750 (0.71) when legal enforcement and participation expectation are both maximal. It then plateaus and declines slightly (0.68 at t=1850) as cultural practice fragmented — participation fell but those still honoring the code faced the same obligation. Suppression follows a steeper rise from 0.15 (t=1500, minimal state intervention) to 0.71 (t=1850, comprehensive legal prohibition and enforcement). Theater ratio rises more gradually (0.05 to 0.42): early dueling was functional; later dueling became increasingly ritualized and performative as the real status-maintenance function was overtaken by legal consequences. Accessibility collapse shows a divergent pattern: the structural and organizational barriers to exit remain high even at t=1850 (0.42–0.44), but individual-level exit options expanded (0.31) as legal alternatives (courts, written vindication, public apology) became available. This non-uniform pattern indicates the composite mechanism: legal alternatives reduced individual accessibility collapse, but identity lock and organizational status hierarchy kept the obligation live at higher levels. The shared time grid ensures every metric is authored at every interval point — no misalignment.",
+    "perspectival_gap": "The honor-code custodians (agenda-setter) compute the constraint as coordination: a shared frame enabling status maintenance without formal courts. Gentlemen under obligation compute it as extraction with identity lock: they must participate to maintain status, yet face legal jeopardy and death risk. The state enforcement apparatus computes it as violation of rule-of-law authority: private violence to be suppressed. Enlightenment critics compute it as irrational and immoral: the honor substrate itself is the problem to be dismantled. The engine computes per-seat directionality from the structural data: agenda-setters near d=0.2 (beneficiaries), obligated gentlemen near d=0.75 (targets), state apparatus at analytical d, critics at d=0.1 (beneficiaries of delegitimation). This divergence is constitutive of the composite reading.",
+    "directionality_logic": "Honor code custodians benefit from the constraint's operation (it validates their authority, enforces deference) and have mobile exit (they can shift the code's interpretation or enforcement). Directionality: low (beneficiary end, d≈0.15). Gentlemen under obligation bear substantial extraction costs (death, injury, legal liability) but also benefit from status confirmation that only participation provides. Their exit is identity-locked: refusing a challenge means social death. Directionality: high (target end, d≈0.72). Families bearing costs have constrained exit (cannot leave the family, limited ability to prevent dueling) and bear secondary extraction. Directionality: high (d≈0.68). State enforcement apparatus is the institutional imposer of exogenous suppression; its directionality is analytical (d=0.5, neither beneficiary nor target — it enforces monopoly on violence). Enlightenment critics have mobile exit and benefit from the constraint's delegitimation. Directionality: low (d≈0.12). Commoners are excluded and would benefit from erosion but have no structured relationship. Directionality: not applicable (excluded stakeholders do not feed metric derivation). The composite reading's key structural claim: the interdependence of exogenous suppression and endogenous delegitimation means the constraint cannot be classified solely from the agenda-setter's or a single payer's perspective — the classification must account for how state action AND cultural delegitimation reinforce each other at different levels (individual, organizational, class, structural).",
+    "mandatrophy_analysis": "This reading does NOT trigger mandatrophy resolution. The founding problem (how to adjudicate honor among peers when formal law is distant) remains CONTESTED, not dead. The composite reading acknowledges that the founding problem status diverges across the interval and across stakeholder seats. At t=1500–1600, the problem is live (courts are distant, honor satisfaction through combat is functional). By t=1750–1850, reformers declare it dead (courts are proximate, law is effective) while traditionalists insist it persists (some insults remain beyond law's reach, peer judgment is superior). This contestation is structural to the composite reading's claim: the constraint's decline is overdetermined BECAUSE the founding problem's status is disputed. No single seat unanimously recognizes the founding problem as dead, so no mandatrophy declaration is warranted. The theater ratio rising (0.05 to 0.42) indicates ritual maintenance increasing relative to functional maintenance, but theater alone does not establish mandatrophy — it establishes that enforcement is becoming more theatrical, not that the underlying problem has vanished.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'honor_satisfaction_substrate,' instantiating the 'composite_overdetermined_reading'. The kernel is the standing commitment that armed combat satisfies honor insults among peers — a commitment that different parties read differently as decline occurs. The composite reading holds that dueling's decline exhibits BOTH exogenous suppression (legal prohibition, state enforcement) AND endogenous delegitimation (honor substrate transformation, Enlightenment reframing) operating simultaneously with non-independent causal pathways. The sibling readings attribute causal primacy differently: the 'practice_decline_reading' attributes decline to exogenous enforcement (legal suppression overwhelms the coordination function); the 'cultural_contraction_reading' attributes decline to endogenous substrate transformation (the honor code itself became unthinkable as cultures of honor gave way to cultures of dignity). This reading asserts the interdependence — that suppression worked BECAUSE delegitimation was underway, and vice versa."
   },
   "omegas": [
     {
-      "id": "causal_entanglement_vs_independence",
-      "question": "Are the two decline mechanisms (exogenous suppression and endogenous delegitimation) causally independent, or do they constitute a single over-determined system where suppression and cultural transformation reinforce each other?",
-      "resolution_mechanism": "Counterfactual historical analysis: Did jurisdictions that suppressed dueling WITHOUT cultural delegitimation (e.g., Islamic law, Napoleonic code early adoption without Enlightenment frame) see sustained cultural persistence of the honor code despite enforcement? Did cultures that underwent dignity-transformation WITHOUT legal suppression (late 19th-century intellectual circles, bohemia) experience spontaneous abandonment of dueling or continued performance?",
-      "impact": "If mechanisms are independent, the constraint is additively composite (rope + mountain = complex mixed type, no single classification). If entangled, the constraint is a single unified system exhibiting phase-transition properties — the composite type emerges from the interaction, not the sum.",
+      "id": "suppression_internalization_mechanism",
+      "question": "Is the measured suppression structural (legal enforcement, external barriers) or internalized (the honor code's own authority, peer judgment, psychological internalization of obligation)?",
+      "resolution_mechanism": "Historical evidence from diaries, letters, legal proceedings: do declining duelers cite legal fear or loss of honor conviction? Do courts record self-enforced desistance or forced compliance? Do reformed ex-duelers testify to legal coercion or to changed values?",
+      "impact": "If structural: the constraint could theoretically be restored by eliminating legal suppression. If internalized: the constraint's erosion reflects genuine delegitimation and would persist even if legal barriers were removed. If both: the composite mechanism holds — legal suppression accelerated delegitimation because it made honor-satisfaction legally untenable, while delegitimation reduced individual resistance to legal enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is external or internally driven."
+    },
+    {
+      "id": "causal_independence_assumption",
+      "question": "Are exogenous suppression and endogenous delegitimation truly causally entangled (each accelerates the other) or merely concurrent (independently causing decline at different sites)?",
+      "resolution_mechanism": "Counterfactual analysis: would pure legal suppression (without Enlightenment philosophical challenge) have broken the constraint? Would pure delegitimation (without legal enforcement) have eroded dueling? Historical comparison with jurisdictions that suppressed earlier or delegitimated earlier without the other mechanism.",
+      "impact": "If independent: the constraint's decline can be modeled as two additive pressures; classification could treat suppression and delegitimation separately. If entangled: the constraint exhibits composite dynamics (tangled_rope with dual decline mechanisms) and cannot be reduced to either mechanism alone. If entangled, the composite_overdetermined_reading is correct; if independent, the sibling readings' single-mechanism focus may be more accurate.",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether suppression and cultural delegitimation are independent causal pathways or a single coupled system."
+      "type_class": "conceptual",
+      "description": "Whether the two decline mechanisms are causally independent or mutually reinforcing."
     },
     {
-      "id": "identity_lock_internalization_vs_structural",
-      "question": "Is the duelist's identity-lock to the honor code primarily structural (external barriers make exit costly) or internalized (the code has become constitutive of self-concept such that exit feels psychologically impossible)?",
-      "resolution_mechanism": "Post-suppression behavior: Among duelists who abandoned the code under legal pressure, did they experience persistent shame, identity confusion, or psychological distress suggesting internalized lock? Or did they straightforwardly adopt new status mechanisms, suggesting the lock was primarily structural and dissolved when barriers were removed?",
-      "impact": "If internalized, the suppression metrics understate the true constraint — the target carries suppression with them after exit. If structural, the measured suppression captures the true constraining force and exit becomes easier once legal pressure removes external barriers.",
+      "id": "honor_substrate_transformation_irreversibility",
+      "question": "Did the honor code itself undergo foundational, irreversible transformation, or did it merely lose institutional enforcement while remaining viable as an alternative frame?",
+      "resolution_mechanism": "Post-decline dueling events (19th century sporadic challenges, honor-code persistence among military and diplomatic elites): did participants invoke the original honor frame or a modified/nostalgic version? Can the honor code be reconstructed from first principles by contemporary actors, or has it become historically embedded and unrepeatable?",
+      "impact": "If irreversible: the cultural_contraction_reading is vindicated (the honor substrate is gone, not just suppressed). If reversible: the constraint could theoretically be restored if legal suppression were lifted. If partially reversible: the composite reading is supported (the substrate is transformed but not erased, making the constraint's decline path-dependent on both suppression and delegitimation).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether honor-code transformation is structural or contingent on enforcement."
+    },
+    {
+      "id": "kernel_reading_contest_framing",
+      "question": "Does this composite reading ('decline is overdetermined by dual, entangled mechanisms') correctly capture the structural contest between the three kernel readings, or does it misframe the sibling readings' claims?",
+      "resolution_mechanism": "Textual analysis of historical source materials (dueling treatises, legal statutes, Enlightenment critiques, military codes, courtroom testimony): which mechanism do primary sources emphasize? Do contemporaries describe decline as enforcement-driven or as value-driven? Do they recognize the entanglement or attribute causality unilaterally?",
+      "impact": "If this reading misframes the siblings: the cs_structure.reading_relations and axioms need recalibration. If this reading correctly captures the contest: the structural divergence between readings is genuine and the engine's per-seat classification should diverge significantly across seats.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Internalized vs. structural suppression in the duelist seat."
-    },
-    {
-      "id": "honor_substrate_transformation_scope",
-      "question": "Did the honor code undergo transformation only in legal/intellectual elites, or did the transformation penetrate to the broader population that the constraint governed?",
-      "resolution_mechanism": "Cultural analysis of 19th-century popular literature, correspondence, memoirs: did non-elite duelists (military officers, provincial gentry) internalize the dignity-ethics frame, or did they experience suppression as imposed external coercion from an elite that was itself abandoning the code's legitimacy?",
-      "impact": "If transformation penetrated broadly, delegitimation was an endogenous cultural shift affecting the entire governed population. If transformation was elite-only, the broad population experienced suppression without accompanying delegitimation, and the two mechanisms operated on different populations (non-independent in mechanism, but differentiated in scope).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether cultural transformation of honor code was population-wide or elite-restricted."
-    },
-    {
-      "id": "alternative_status_mechanisms_availability",
-      "question": "Did modern institutional status mechanisms (credentialing, professional licensing, legal authority) become available BEFORE or AFTER legal suppression of dueling began?",
-      "resolution_mechanism": "Historical timeline: when did universities, professional guilds, civil service exams, and courts begin allocating status and reputation in ways that competed with dueling as a status mechanism?",
-      "impact": "If alternatives emerged before suppression, duelists had a coordination exit option (redirect status-seeking to new channels) and suppression would be more effective. If alternatives emerged after suppression, legal pressure forced a transition to mechanisms that had no prior legitimacy, making the post-suppression period one of institutional improvisation rather than rational switching.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Temporal availability of alternative status-allocation mechanisms relative to legal suppression."
+      "type_class": "conceptual",
+      "description": "Whether the three readings genuinely instantiate different constraint structures or represent interpretive disagreement about a single constraint."
     }
   ],
   "boltzmann": {
-    "coordination_type": "attachment_coordination",
+    "coordination_type": "identity_coordination",
     "boltzmann_floor_override": 0.12
   },
   "network": {
@@ -182,67 +458,60 @@
       "honor_satisfaction_substrate__practice_decline_reading",
       "honor_satisfaction_substrate__cultural_contraction_reading"
     ],
-    "dual_formulation_note": "The honor_satisfaction_substrate kernel decomposes into three constraint stories, each instantiating a different causal reading of dueling's historical decline. The composite_overdetermined_reading (this story) claims both exogenous suppression and endogenous cultural transformation operated simultaneously with non-independent causal pathways. The practice_decline_reading attributes decline to suppression alone, with the honor code persisting as normative substrate. The cultural_contraction_reading attributes decline to cultural transformation alone, with the code undergoing foundational change from honor-based to dignity-based ethics. All three readings are ε-invariant: they differ in causal structure (which mechanism drove the constraint's collapse), not in measurement basis. Each produces a different ε and a different type classification. The network links document mutual structural influence: suppression delegitimizes the code (composite affects practice_decline), cultural transformation makes suppression more effective (composite affects practice_decline), and the availability of alternative status mechanisms determines whether either mechanism works (all three inherit from cultural_contraction's outcome)."
+    "dual_formulation_note": "The honor_satisfaction_substrate kernel decomposes into three constraint stories (readings) with structurally distinct ε values and causal claims. This reading (composite_overdetermined) claims ε ≈ 0.68 (extraction from dual mechanisms) and attributes decline to entangled suppression and delegitimation. The practice_decline reading claims exogenous suppression is primary and attributes decline to enforcement. The cultural_contraction reading claims endogenous delegitimation (honor substrate transformation) is primary. All three readings share the same referent (the honor-satisfaction mechanism in European dueling societies ~1500–1850) but interpret its decline differently. They are linked by network.affects_constraints to enable comparative analysis of how different framings produce different constraint classifications from the same historical situation."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerful",
+      "power_atom": "moderate",
       "d_value": 0.72
     }
   ],
   "cs_structure": {
-    "kernel_codification": "distributed",
-    "authority_grounding": "practice",
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "honor_satisfaction_substrate__practice_decline_reading",
+        "sibling_id": "practice_decline_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "honor_satisfaction_substrate__cultural_contraction_reading",
-        "relation": "coexists_with"
+        "sibling_id": "cultural_contraction_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "suppression_and_delegitimation_entangled",
+        "atom": "dual_causal_entanglement_mechanism",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "honor_code_transformation_simultaneous_with_suppression",
+        "atom": "honor_substrate_partially_reversible_under_enforcement",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "honor_as_coordinate_and_natural",
+    "reference_frame": "dual_rope_and_mountain_codification",
     "drift_state": {
-      "moment": "post_enlightenment_delegitimation",
+      "moment": "enlightenment_legal_modernization_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "honor_satisfaction_substrate__practice_decline_reading",
-      "honor_satisfaction_substrate__cultural_contraction_reading"
-    ]
-  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

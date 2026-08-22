@@ -4,178 +4,286 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "0c0eca39-7021-4fb2-ab63-9be9642d1e9a"
+    "story_uid": "d64b1397-c2b5-42f8-97b8-d2d8c89a1fca"
   },
   "base_properties": {
-    "extractiveness": 0.31,
-    "suppression": 0.18,
-    "theater_ratio": 0.22,
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
     "accessibility_collapse": 0.42,
-    "resistance": 0.67,
+    "resistance": 0.58,
     "claimed_type": "rope",
-    "human_readable": "Open Source as Superior Development Methodology (Pragmatic Reading)",
+    "human_readable": "Open Source Development Methodology Norm (Pragmatic Reading)",
     "topic_domain": "software_engineering/political_economy_of_technology",
     "requires_active_enforcement": false,
     "beneficiaries": [
-      "open_source_contributors",
-      "software_users_accessing_quality",
-      "innovation_ecosystem_participants"
+      "open_source_developers",
+      "software_users",
+      "downstream_integrators"
+    ],
+    "vindicated_propositions": [
+      "peer_review_improves_quality",
+      "transparency_reduces_bugs",
+      "collaborative_velocity_exceeds_closed_iteration"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "open_source_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Participate in projects where source code is visible and modifiable by peers. They benefit from collective problem-solving, reputation accumulation within technical communities, and the ability to fork or contribute to projects without gatekeeping. Entry barriers are low; they can build career capital and influence within open ecosystems."
+    },
+    {
+      "name": "software_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Depend on software tools and libraries for productivity and infrastructure. Under this reading they benefit from the transparency of open source: they can audit code for security, suggest fixes, and rely on distributed communities to catch problems faster than closed vendor support cycles. Exit is partly constrained by ecosystem lock-in, but choice between open and proprietary tools remains available."
+    },
+    {
+      "name": "downstream_integrators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build products and services that depend on open source foundations. They benefit from being able to inspect, modify, and integrate source code without license restrictions; they also depend on the peer-review function to ensure quality and security of upstream projects. Their ability to capture value is not constrained by source access."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Defend closed development models and proprietary licensing as legitimate. Under this reading they bear a structural cost: the norm that open source is methodologically superior creates institutional pressure to justify closed development, exposes proprietary software to legitimacy challenges, and narrows the market segments where closed source dominates. Their exit is constrained because abandoning proprietary models means abandoning their business model, yet the norm continuously requires them to defend the legitimacy of closure."
+    },
+    {
+      "name": "corporate_open_source_programs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Large corporations that maintain both proprietary and open source portfolios. They benefit from the peer review and innovation velocity gains from open projects while maintaining proprietary offerings for strategic assets. They also incur costs: funding and maintaining open source codebases, managing dual licensing complexity, and navigating the norm that openness is superior (which can constrain their ability to monetize proprietary components)."
+    },
+    {
+      "name": "software_freedom_activists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Advocate for software freedom as a fundamental ethical right, not merely an instrumental development advantage. This reading (pragmatic/developmental) does not extend to the freedom-imperative framing; it accepts permissive licensing and proprietary software as legitimate, locating the value of openness in quality and velocity rather than ethics. Activists in the freedom tradition are excluded from the core claim; they would object to the reduction of freedom to instrumentality."
+    },
+    {
+      "name": "intellectual_property_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the kernel from multiple readings: IP rights doctrine, welfare economics, pragmatic software engineering. They observe the contested kernel and the different readings claiming different legitimacy grounds. From this seat they can measure whether claims about peer review quality and innovation velocity hold empirically, and whether the constraint's persistence depends on evidence or on institutional capture."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of distributed quality assurance and rapid iteration in software development: peer visibility and contribution channels reduce latency between bug detection and fix, enable diverse security audits, and accelerate innovation by allowing downstream reuse and modification without vendor gatekeeping.",
+    "transfer_function": "Transfers time and attention from proprietary software vendors to open source ecosystems, and from proprietary licensing regimes to commons-based models. Proprietary vendors lose the ability to gatekeep modifications and capture all derivative value; open ecosystems gain the pool of contributions, audit capacity, and downstream innovation velocity.",
+    "absent_voices": "Software freedom activists arguing that the constraint instrumentalizes freedom rather than recognizing it as a fundamental right; property-rights advocates arguing that creators have legitimate moral entitlement to restrict access and modification; and utilitarian framings that would locate legitimacy in context-specific welfare maximization rather than methodological superiority.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this norm disappeared overnight (i.e., if open source development were no longer regarded as methodologically superior), institutional support for open projects would shift: corporate sponsorship would decline absent legitimacy pressure, peer-review volunteer communities would shrink, and the relative investment in proprietary development would rise. Market structure would reorganize around licensing models chosen purely on business utility rather than normative commitment. Software quality outcomes would measurably change (or not), enabling empirical testing of the coordination claim.",
+    "founding_problem": "Late 1980s-1990s: software development was siloed in vendor proprietary shops; bug reports traveled slowly through support channels; security vulnerabilities were discovered by vendors, competitors, or attackers with no distributed peer auditing; innovation velocity was constrained by single vendor's development cycle; downstream integrators could not modify components to suit their needs.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Security researchers, open source maintainers, and technology economists outside the benefiting parties attest that peer review catches vulnerabilities faster than closed vendor support and that transparent codebases enable faster innovation cycles. Comparative empirical studies (e.g., Linux security incident response vs. proprietary OS vendors, Apache vs. commercial web server velocity) from independent sources support the founding problem's continued salience. No dissent from these parties on the empirical claim — disagreement exists on whether the coordination benefit justifies the claimed reading's instrumental reduction of freedom, and on whether proprietary models might serve different contexts better."
+  },
   "interval": {
-    "start": 1990,
-    "end": 2026
+    "start": 0,
+    "end": 35
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.05
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.12
+      "time_point": 5,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.22
+      "time_point": 10,
+      "value": 0.34,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2016,
-      "value": 0.28
+      "time_point": 15,
+      "value": 0.37,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.3
+      "time_point": 20,
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.31
+      "time_point": 25,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.08
+      "time_point": 0,
+      "value": 0.09,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.12
+      "time_point": 5,
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.16
+      "time_point": 10,
+      "value": 0.14,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.19
+      "time_point": 15,
+      "value": 0.16,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.21
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.22
+      "time_point": 25,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.06
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.1
+      "time_point": 5,
+      "value": 0.17,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.14
+      "time_point": 10,
+      "value": 0.19,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2016,
-      "value": 0.16
+      "time_point": 15,
+      "value": 0.21,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2021,
-      "value": 0.17
+      "time_point": 20,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2026,
-      "value": 0.18
+      "time_point": 25,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.22,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reading_vs_freedom_imperative",
+      "question": "Is the pragmatic-development reading a genuine alternative framing that accepts proprietary software as legitimate, or is it a rhetorical move that instrumentalizes freedom to avoid the freedom_imperative reading's ethical demands?",
+      "resolution_mechanism": "Test consistency: Does this reading's proponents defend high-quality proprietary software on its merits? Do they apply the methodology-superiority claim neutrally, or do they selectively invoke it against proprietary software while ignoring open source quality failures? Do the same actors maintain this framing across different institutional contexts (professional, academic, advocacy)?",
+      "impact": "If the reading is genuinely pragmatic, it should be coherent when applied neutrally to counterexamples. If it proves to be instrumental cover for freedom-imperative commitments, the reading collapses into its sibling and the constraint's classification shifts. If it is consistently applied but only in contexts where openness dominates, it remains a live reading but requires a modifier (pragmatism-in-practice vs. pragmatism-as-principle).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading is genuinely pragmatic or rhetorically dependent on the freedom_imperative."
     }
   ],
   "commentary": {
-    "narrative_context": "The pragmatic reading instantiates one interpretation of the contested software-source-status kernel: open source is valued as a superior development methodology because transparency, peer review, and collaborative iteration produce higher-quality, more-secure, more-innovative software faster than proprietary closed development. This reading does NOT claim software freedom is an ethical imperative; it treats openness as instrumentally justified by quality outcomes. Proprietary software is not inherently illegitimate under this reading — it is methodologically disadvantaged and therefore increasingly displaced in domains where quality and security are competitive factors. The reading has become institutionalized in cloud infrastructure, systems software, security tooling, and academic computing, and it shapes investment and hiring narratives in technology organizations globally.",
+    "narrative_context": "This constraint is ONE READING of the contested kernel 'software_source_status.' The pragmatic-development reading frames open source as methodologically superior because peer review, transparency, and collaborative problem-solving produce higher quality, faster security response, and accelerated innovation velocity. It is distinct from the freedom-imperative reading (which locates value in ethics) and the property-rights reading (which defends creators' entitlement to restrict). This reading accepts permissive licensing and acknowledges that proprietary software is legitimate in contexts where closed development serves stakeholder interests well. The measurement series reflects the constraint's actual operation: relatively low extraction (0.38 at interval end) because the norm produces genuine coordination benefits and carries low active suppression (0.22), though proprietary vendors do bear a structural cost (legitimacy pressure). The theater ratio (0.18) reflects that implementation includes some performative elements (companies marketing open source credentials while maintaining proprietary core products) but remains grounded in real technical practices.",
     "key_agents": [
-      "open_source_contributors: gain reputation, code quality, collaborative problem-solving; stake in the reading's empirical claim that open development produces superior results",
-      "software_users: gain auditability, customization, security transparency; stake in reading validating their access to source code as a quality assurance mechanism",
-      "innovation_ecosystem: gains reusable foundations, interoperability, faster derivative development; stake in network effects that open-source architecture enables",
-      "proprietary_software_developers: face narrative pressure that their methodology is inferior; bear cost in recruitment, legitimacy, and market positioning when the reading holds sway",
-      "proprietary_licensing_advocates: bear cost to core legitimacy claim that intellectual property restriction is justified; must defend proprietary development on non-quality grounds",
-      "freedom_imperative_advocates: EXCLUDED from coordination story; their normative claim is sidelined by instrumentalist framing",
-      "regulators_and_policy_makers: use the reading to justify digital sovereignty, government adoption of open source, and security-audit requirements without endorsing the freedom-as-right claim"
+      "open_source_developers: Participate in visible, modifiable codebases; benefit from peer reputation and low gatekeeping barriers",
+      "software_users: Depend on the peer-review function and transparency for security assurance and rapid bug fixes",
+      "downstream_integrators: Benefit from being able to inspect, modify, and integrate source code without vendor gatekeeping",
+      "proprietary_software_vendors: Bear structural cost of legitimacy pressure and reduced market segments where closure is defensible",
+      "corporate_open_source_programs: Dual-positioned beneficiaries and payers — capture innovation velocity and peer review while maintaining proprietary portfolios under legitimacy pressure",
+      "software_freedom_activists: Excluded from the core claim; would object to reduction of freedom to instrumentality",
+      "IP scholars and independent security researchers: Analytical observers who can measure whether quality and velocity claims hold empirically"
     ],
-    "logic_rationale": "Extractiveness is LOW (0.31 at interval end) because the constraint's operation depends on voluntary contribution and genuine coordination benefit (quality), not coercion. Suppression is similarly LOW (0.18) because exit from open-source participation is available — contributors can choose proprietary work, different projects, or cessation. Theater is MODERATE-LOW (0.22) because the coordination function (peer review improving quality) is real and ongoing; the theater component grows as corporate open-source marketing and 'ethics washing' increase (performing commitment to the reading without substantive investment). MEASUREMENT TRAJECTORY: All three metrics show slow RISE from 1990 to 2026. Extractiveness rises because open source becomes institutionalized and mandatory in career paths, and because corporate control of major projects (GitHub, npm, container registries) introduces extractive layers (vendor lock-in on platforms, surveillance of development patterns, forced adoption of corporate governance). Suppression rises as developers face implicit pressure to open-source work for career advancement and reputation, and as proprietary development becomes stigmatized. Theater rises as corporate entities adopt open-source framing for legitimacy while centralizing control of popular projects. The constraint is EARLY in its extraction ratchet — the founding problem (quality through transparency) is still substantially real, so extractiveness and suppression remain low relative to snares or tangled ropes. The measurement grid is shared across all three metrics: every point appears in all three series.",
-    "directionality_logic": "Open-source contributors sit near the beneficiary end (d ~0.15): they gain reputation, code quality, collaborative benefits; their exit is mobile (they can work on other projects or proprietary software). Users and ecosystem actors sit near symmetric (d ~0.4–0.5): genuine coordination benefit (quality, innovation acceleration) balanced against the cost of voluntary dependency on commons maintenance. Proprietary developers are payers (d ~0.65): they bear narrative cost and market pressure as the reading delegitimizes their methodology, though their exit is constrained by market structure rather than absolute. Freedom advocates are STRUCTURALLY OUTSIDE the directionality calculation: they are excluded from the coordination story, so their d cannot be computed from the beneficiary/victim data that grounds this reading's structure.",
-    "perspectival_gap": "From the beneficiary seats (open-source contributors, ecosystem builders), the reading is a coordination achievement — the constraint captures genuine quality benefits and aligns incentives around transparency. From the payer seats (proprietary developers, proprietary advocates), the reading operates as delegitimization — their methodologies and business models are narratively displaced regardless of whether their quality or security outcomes are actually inferior. From the excluded seats (freedom advocates), the reading commits a deeper wrong: it instrumentalizes freedom as a means to quality, sidelining the ethical claim to freedom as an end. The engine should compute distinctly different classifications at each seat.",
-    "mandatrophy_analysis": "The pragmatic reading avoids the mandatrophy trap that threatens the freedom_imperative_reading. Freedom-as-right claims become outdated if social conditions change (e.g., software becomes so complex that proprietary closed review becomes empirically superior, or if freedom advocacy is captured by corporate interests). The pragmatic reading's mandate — transparency improves quality — remains live as long as code review and distributed auditing continue to catch bugs and vulnerabilities faster than proprietary review pipelines. The constraint's persistence is justified by ongoing empirical vindication of peer review, not by foundational rights claims that could atrophy. However, the reading is vulnerable to a different mandatrophy: if proprietary development produces equal or superior quality outcomes but remains closed due to vendor lock-in and market power (not methodology), the reading's justification persists as theater while the coordination function fades. The measurement trajectory hints at this: extractiveness and theater both rise while the founding problem remains live — a sign that institutional capture of open-source tooling may be introducing new extraction mechanisms that degrade the pure coordination story.",
-    "kernel_context": "This constraint instantiates the PRAGMATIC_DEVELOPMENT_READING of the software_source_status kernel. The kernel is the persisting commitment to 'what status should source code have' — a question that different parties read fundamentally differently. Four distinct readings are live: (1) freedom_imperative_reading treats software freedom as a fundamental right; (2) this reading (pragmatic_development_reading) treats open development as methodologically superior due to quality benefits; (3) property_rights_reading defends software as legitimate intellectual property; (4) utilitarian_hybrid_reading argues both models serve different contexts. These are not the same constraint viewed from different angles — they are structurally distinct constraints with different ε values, different beneficiary/victim structures, and different persistence justifications. The pragmatic reading claims extractiveness is LOW because it's grounded in genuine coordination; the freedom reading would show higher extractiveness (coercion of proprietary developers to adopt rights restrictions). The property reading shows extraction flowing the opposite direction (users paying for restricted access). The hybrid reading avoids extraction by treating both models as contextually valid. This file generates ONLY the pragmatic reading as a clean, ε-invariant constraint."
+    "logic_rationale": "The constraint sits between rope (genuine coordination function that benefits users and developers) and tangled rope (proprietary vendors face structural cost and suppression of their preferred business model). Extractiveness is moderate (0.38) because the coordination genuinely produces value — the benefits are not fictive. The beneficiary/victim split is asymmetric: open source developers, users, and downstream integrators benefit from the norm without bearing comparable costs; proprietary vendors pay (legitimacy pressure, market shrinkage, pressure to justify closure). Suppression is low (0.22) because the norm operates primarily through institutional legitimacy and technical choice rather than legal coercion or active interdiction — vendors can and do maintain proprietary software, though under pressure. Theater is modest (0.18): some corporate open source programs are partly performative (marketing open credentials while core revenue remains proprietary), but the underlying technical claim (peer review improves outcomes) remains substantive and tested. The measurement trajectory shows gentle increase in extraction and theater through the interval with stabilization after t=20, reflecting the norm maturing and vendor defensive positioning settling into sustainable equilibrium.",
+    "perspectival_gap": "From the open source developer and user seats, this constraint is enabling coordination with minimal downside — it expands their agency and technical choices. From the proprietary vendor seat, it is delegitimizing and extractive, narrowing the contexts where their business model is defensible. The agenda-setter seat is distributed across open source communities, corporate open source programs, and academic computer science — no single powerful agent controls the norm's evolution. The engine should compute the vendor seat as experiencing higher effective extraction (d closer to 1.0) because they are the structural target whose choices are being constrained, while developer and user seats should compute lower d (closer to 0.0-0.3) because they are being enabled rather than restricted.",
+    "directionality_logic": "Open source developers: beneficiary, moderate power, mobile exit (can fork projects, start new ones, work across organizations) — derives d ≈ 0.2-0.3 (low target pressure, high benefit). Software users: organized power, constrained exit (lock-in to ecosystems) but choice between open/proprietary tools available — derives d ≈ 0.4-0.5 (mild asymmetry; users benefit from norm but are not the norm's primary focus). Downstream integrators: moderate power, mobile exit — derives d ≈ 0.2-0.3 (beneficiaries of code reuse freedom). Proprietary vendors: institutional power, but constrained exit (cannot abandon business model without existential change) and identity-locked (corporate identity constituted around proprietary software) — derives d ≈ 0.6-0.7 (structural targets of the norm, even though no legal coercion exists). Corporate open source programs: powerful institutional actors, mobile exit in principle (can shift portfolios) but identity-locked in practice to both models — derives d ≈ 0.45-0.55 (genuinely dual-positioned; the secondary payer role reflects the legitimacy burden they carry for maintaining proprietary components).",
+    "mandatrophy_analysis": "The founding problem (slow vendor support, siloed innovation, downstream gatekeeping) was live and pressing in the 1980s-1990s. By 2025, the problem's status is contested: open source communities and security researchers attest it remains live (vulnerabilities still discovered slowly in proprietary systems, innovation velocity still constrained by single vendors); proprietary vendors and some enterprise software houses attest it is substantially resolved through professional support infrastructure and security practices. The disappearance verdict (world_rearranges) indicates the constraint is not a natural law but a constructed norm. However, the founding problem lives on in actual software development practice — the norm persists because the underlying coordination problem persists, not because of institutional inertia or theatrical maintenance. The constraint is NOT mandatrophied. If the founding problem became truly dead (if proprietary vendors matched open source quality and velocity) the constraint would lose justification, but empirical evidence does not yet support that outcome; the contest remains open.",
+    "kernel_context": "This constraint instantiates the pragmatic-development reading of the software_source_status kernel. The kernel is the contested ground of whether 'open source is superior to proprietary software.' Four distinct readings of this kernel exist as separate constraints: (1) pragmatic_development_reading (this file) — open source is superior because peer review improves quality and velocity; (2) freedom_imperative_reading — software freedom is a fundamental ethical right and proprietary software is unjust; (3) property_rights_reading — software is intellectual property and creators have legitimate entitlement to restrict; (4) utilitarian_hybrid_reading — both models serve different contexts and legitimacy should track welfare maximization. This reading does NOT claim that freedom is unimportant, only that it is instrumental to quality rather than foundational. It accepts that proprietary software can be high-quality and legitimate. The core distinguishing axiom is that transparency-and-collaboration methodologically outperforms closed development on the metrics that matter (security, velocity, long-term maintenance). Sibling readings disagree: freedom_imperative treats openness as moral requirement regardless of outcomes; property_rights treats creator entitlement as legitimacy ground regardless of outcomes; utilitarian_hybrid treats context-dependence as the legitimacy ground. Each reading has a different ε, different beneficiary/victim structure, and different classification from each seat."
   },
-  "omegas": [
-    {
-      "id": "quality_empirics_contestation",
-      "question": "Is the claimed quality superiority of open-source development empirically robust, or does it reflect selection bias (open source dominates quality-critical domains like security and infrastructure while proprietary software dominates user-facing domains where other factors matter more)?",
-      "resolution_mechanism": "Large-scale empirical studies comparing defect density, security vulnerability counts, and mean-time-to-fix across comparable open and proprietary codebases, controlling for domain, scale, and maintenance investment. Requires reproducible methodology and independent corroboration.",
-      "impact": "If the quality advantage is selection bias rather than inherent methodology: the reading's entire justification collapses, and the constraint becomes pure extraction masked by legitimacy narrative (reclassifies toward snare). If the quality advantage is real but domain-specific: the reading remains valid for quality-critical domains but loses universality, reclassifying toward rope-with-limited-scope.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether open development's apparent quality superiority is methodological or driven by domain selection bias."
-    },
-    {
-      "id": "freedom_vs_pragmatism_distinction",
-      "question": "Does instrumentalizing freedom (treating it as means to quality) represent a legitimate reading of the kernel, or does it commit a category error by subsetting a broader normative claim?",
-      "resolution_mechanism": "Genealogical and philosophical analysis of how freedom-as-right and freedom-as-method relate. Does the pragmatic reading leave room for freedom advocates' core claim, or does it foreclose it by reframing freedom as contingent on outcomes?",
-      "impact": "If the readings are logically independent: the pragmatic reading coexists legitimately with the freedom reading. If pragmatism forecloses freedom-as-right by making freedom contingent on quality: the relationship is foreclosure rather than coexistence, and the kernel contest is unresolvable within a single framework (true kernel contest, not just perspective difference).",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether pragmatic and freedom-imperative readings coexist or one forecloses the other."
-    },
-    {
-      "id": "institutional_capture_of_open_source",
-      "question": "As corporate entities (GitHub, npm, etc.) centralize control of major open-source projects and platforms, does open development remain a genuine coordination solution or become a captured extraction mechanism dressed in coordination language?",
-      "resolution_mechanism": "Monitor the extractiveness and theater_ratio trajectories: rising extractiveness with rising theater suggests capture (extraction increasing while coordination function degrades). Test by examining whether developers retain exit capability (can they fork projects, run alternative registries, build alternative platforms?) or whether platform switching costs are now prohibitive.",
-      "impact": "Evidence of capture would suggest the reading's coordinate function is atrophying while extraction mechanisms layer on top. The constraint would reclassify toward tangled_rope or snare as the founding-problem justification decays and mandatory open-source participation becomes enforced by market power rather than chosen for quality benefits.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether corporate platform centralization is capturing open source as an extraction mechanism."
-    },
-    {
-      "id": "kernel_reading_coexistence",
-      "question": "Can the pragmatic development reading coexist with the freedom imperative reading in a single normative framework, or do they logically foreclose each other?",
-      "resolution_mechanism": "Attempt to construct a coherent normative position that holds BOTH 'open development is methodologically superior' (pragmatic) AND 'software freedom is an ethical imperative independent of outcomes' (freedom). If the construction succeeds without contradiction, readings coexist. If it fails (one must be rejected for logical consistency), determine which reading forecloses which.",
-      "impact": "If they foreclose each other: the kernel contest is deep and unresolvable (true antagonism of first principles). If they coexist: different parties can hold both, and the contested kernel remains live across multiple readings. This affects how regulatory and policy resolution can proceed — foreclosure suggests winner-take-all dynamics; coexistence allows pluralist accommodation.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Logical relationship between pragmatic and freedom-imperative readings of the software source kernel."
-    }
-  ],
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.05
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
@@ -183,7 +291,7 @@
       "software_source_status__property_rights_reading",
       "software_source_status__utilitarian_hybrid_reading"
     ],
-    "dual_formulation_note": "The software_source_status kernel decomposes into four constraint stories, each representing a distinct reading of the contested question 'what status should source code have?' This reading (pragmatic_development) claims open development is superior because transparency and peer review produce higher-quality, more-secure, more-innovative software. Sibling readings treat source code as an ethical imperative (freedom), as legitimate intellectual property (property_rights), or as contextually variable (utilitarian_hybrid). The four stories are NOT alternative measurements of one constraint; they are structurally distinct constraints with different ε values, different beneficiary/victim structures, and different persistence mechanisms. Links via affects_constraints capture the kernel's unity while acknowledging reading-level independence."
+    "dual_formulation_note": "This constraint is one reading of the software_source_status kernel. The kernel-reading decomposition follows OQ-26 (ε-invariance principle): each reading instantiates a different constraint with distinct ε, beneficiary/victim structure, and narrative justification. All four readings (pragmatic_development, freedom_imperative, property_rights, utilitarian_hybrid) are linked via network.affects_constraints as a constraint family — each reading influences the others by creating competing institutional legitimacy grounds, resource allocation pressures, and policy arguments. The pragmatic_development reading (this file) influences downstream readings by establishing quality/velocity as a salient legitimacy basis; it coexists_with freedom_imperative (neither rules the other out; different parties hold both) and influences property_rights (by raising the bar for proprietary legitimacy justification)."
   },
   "cs_structure": {
     "kernel_codification": "distributed",
@@ -191,49 +299,52 @@
     "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "software_source_status__freedom_imperative_reading",
+        "sibling_id": "freedom_imperative_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "software_source_status__property_rights_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "software_source_status__utilitarian_hybrid_reading",
+        "sibling_id": "property_rights_reading",
         "relation": "influences"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "transparency_improves_quality",
+        "atom": "transparency_and_collaboration_methodology_superior",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "openness_instrumentally_justified",
+        "atom": "freedom_instrumental_to_quality_not_foundational_right",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "peer_review_quality_assurance",
+    "reference_frame": "development_methodology_as_legitimacy_ground",
     "drift_state": {
-      "moment": "contemporary_corporate_open_source_era",
+      "moment": "contemporary_corporate_capture_phase",
       "direction": "practice_drift",
       "magnitude": "substantial",
-      "acknowledged": false
+      "acknowledged": true
     }
   },
+  "gain_flow": "open_source_developers",
+  "fixing_cost": "prohibitive",
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

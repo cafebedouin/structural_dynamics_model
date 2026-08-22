@@ -2,137 +2,284 @@
   "header": {
     "constraint_id": "second_amendment_arms_right__collective_right_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_second_amendment_arms_right__collective_right_reading",
-    "story_uid": "ac18bc84-4c7f-462a-86a1-3b5a9ae79b9f"
+    "story_uid": "d07f7e8b-b4ab-45ef-b23d-d50c589ac490"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.25,
-    "theater_ratio": 0.22,
+    "extractiveness": 0.15,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
     "accessibility_collapse": 0.72,
     "resistance": 0.78,
-    "claimed_type": "mountain",
-    "human_readable": "Second Amendment: Collective Right Reading (State Militia Authority)",
+    "claimed_type": "rope",
+    "human_readable": "Second Amendment as State Militia Right (Collective Reading)",
     "topic_domain": "constitutional_law/political_philosophy",
-    "emerges_naturally": true,
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "state_governments",
-      "militia_regulation_doctrine"
+      "public_order_preservation"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "well_regulated_militia_necessity_doctrine",
+      "state_police_power_supremacy"
     ]
   },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "natural_law_vs_doctrinal_construction",
-      "question": "Is the collective-right reading a natural legal principle discoverable in the constitutional text and founding-era materials, or a constructed doctrinal interpretation that benefits state regulatory authority and federal prosecutorial uniformity?",
-      "resolution_mechanism": "Originalist textual analysis of the Second Amendment's prefatory clause ('A well regulated Militia, being necessary to the security of a free State'); historical record of ratification debates and founding-era usage patterns; comparison with how the same generation's founding documents treated other retained rights (Fourth Amendment, other Bill of Rights provisions).",
-      "impact": "If the reading is natural/discoverable, it stands as a legitimate constitutional constraint on federal power and individual liberty claims are structural misreadings. If constructed, the reading benefits a specific coalition (state administrators, federal law enforcement) and the constraint's extractiveness increases as beneficiary-driven reinterpretation rather than as constitutional principle.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the collective-right reading is a natural constitutional principle or a constructed doctrine that benefits state/federal regulatory authority."
+      "name": "state_governments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "State governments hold the right under this reading: to organize, train, and arm militia forces. They set firearms regulations, control militia structures (National Guard), and benefit from a constitutional framework that treats arms as a state prerogative. They administer the constraint and adjudicate its scope within state law."
     },
     {
-      "id": "founding_problem_obsolescence",
-      "question": "Was the Second Amendment's founding problem—state militia capacity as hedge against federal tyranny—addressed by the Militia Act statutory framework or by constitutional amendment, or does it remain live?",
-      "resolution_mechanism": "Historical analysis of the Militia Acts (1792, 1903, 20th-century developments); assessment of whether statutory militia authority satisfies the constitutional guarantee or whether the constitutional protection independently constrains federal militia regulation; examination of whether the founding problem (state capacity to resist federal encroachment) persists in modern federalism.",
-      "impact": "If the founding problem is satisfied by statute and modern federalism provides alternative checks, the collective-right reading becomes a degraded constraint (piton candidate) maintained for institutional continuity rather than active protection. If the problem remains live, the reading retains its functional role as a constitutional constraint on federal power.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the state-militia protection function is still necessary or has been superseded by statutory and structural change."
+      "name": "federal_government",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "The federal government is constrained from disarming state militias under this reading, but retains authority over federal firearms policy and individual civilian ownership outside militia contexts. The constraint limits federal militia-disarmament authority but does not expand federal regulatory authority over individual arms. The constraint is a modest constitutional bar, not a substantial extraction mechanism."
     },
     {
-      "id": "kernel_reading_sibling_divergence",
-      "question": "What structural differences in beneficiary/victim positioning and extraction mechanisms distinguish this collective-right reading from the individual-right and civic-republican readings of the same kernel?",
-      "resolution_mechanism": "Comparative constraint analysis: examine (1) who benefits from each reading's instantiation (state governments vs. armed citizens vs. republicanism-as-doctrine), (2) what extraction mechanisms each reading protects or enables, (3) what alternative readings are foreclosed vs. coexisting within each frame, (4) which reading's acceptance by courts and legislatures produces the empirically observed regulation patterns.",
-      "impact": "This omega is the committer-frame analysis: the three readings are three different constraints with three different ε values, three different beneficiary structures, and three different scope/enforcement profiles. Understanding the sibling divergence clarifies whether the collective-right reading is discovered constitutional law or constructed doctrine that benefits state administrative authority.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Kernel reading divergence: structural differences between collective, individual, and civic-republican readings."
+      "name": "individual_firearm_owners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individual civilians have no Second Amendment protection on this reading. They are subject to comprehensive state and federal firearms regulation without constitutional bar. They are excluded from the conversation about their own interests—the reading's logic treats their claims as outside the amendment's scope. This is the primary site of contestation: individual owners argue they are wrongly excluded; the collective-right reading excludes them by its core premise."
+    },
+    {
+      "name": "legal_scholars_collective_reading",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Scholars defending the collective-right reading (a minority position post-Heller but historically dominant in early-to-mid 20th century America) benefit from a textual interpretation they can defend in academic and legal forums. They research, publish, and litigate to preserve the reading's credibility. Their work maintains the reading's live-ness in legal discourse."
+    },
+    {
+      "name": "individual_right_scholars",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Scholars of the individual-right reading (dominant post-Heller; includes DC v. Heller majority opinion) are excluded from this reading's own framework. The collective reading denies their core textual claim by treating the militia clause as limiting rather than explanatory. They argue the reading misreads founding-era meaning and distorts the operative clause's scope."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal and state law enforcement, public health agencies, and regulatory bodies benefit from a constitutional reading that permits comprehensive firearms regulation (licensing, background checks, ownership restrictions) without constitutional bar. They regulate without facing a Second Amendment individual-liberty defense. Under the individual-right reading, they must defend such regulations against constitutional challenges; under this reading, no such challenge is cognizable."
+    },
+    {
+      "name": "gun_rights_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals claiming individual constitutional arms protections bear the cost of this reading: their constitutional claim is denied by the reading's own logic. They must argue against the reading in courts and public forums; they cannot rely on constitutional vindication and must operate through statutory exemptions and political contestation. Their organizational energy is consumed by fighting for doctrinal recognition."
+    },
+    {
+      "name": "originalist_interpreters",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Originalist constitutional scholars argue this reading ignores the founding-era understanding of 'the people,' 'bear arms,' and the militia clause's actual grammatical and functional role. They claim the reading was not the original meaning and was adopted primarily in 20th-century state supreme courts seeking regulatory latitude. They are excluded from this reading's evidentiary framework, which privileges post-ratification state practice and 20th-century precedent over original founding-era meaning."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Protects state authority to organize, train, and arm militia forces without federal constitutional interference. Solves the governance problem of ensuring states retain the capacity to defend themselves and maintain internal order through armed citizen service — a coordination solution between state militia-building and federal power constraints.",
+    "transfer_function": "Transfers constitutional authority over civilian arms regulation from the individual-rights domain to the state-governmental domain. Moves the legal burden of proof: individual owners must argue for constitutional protection of ownership (a difficult claim under this reading), rather than regulators arguing why they can restrict a protected liberty.",
+    "absent_voices": "Individual firearm owners who claim constitutional protection outside militia service are structurally excluded by this reading's definition of the right. Gun-rights scholars and originalists are excluded from the evidentiary framework, which privileges 20th-century state practice and post-ratification doctrinal development over original founding-era meaning. Second Amendment scholars of the individual-right tradition would object that the reading misreads the operative clause and distorts historical sources.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If this reading's constitutional authority vanished (e.g., the Supreme Court formally rejected it in doctrine), states would retain statutory authority to regulate firearms, but the constitutional structure would shift: individual owners would possess a recognized federal constitutional claim rather than relying on statutory exemptions and regulatory discretion. The world does not rearrange fundamentally, but the constitutional framing of authority over arms changes. The contest reflects disagreement about whether individual owners have pre-political rights or whether arms regulation is a matter of state discretion.",
+    "founding_problem": "The Second Amendment text needed interpretation to reconcile 'a well regulated Militia, being necessary to the security of a free State' (militia-protective language) with 'the right of the people to keep and bear Arms, shall not be infringed' (rights-protective language). The founding problem is: does the militia clause limit the right, or merely explain its purpose? Does 'the people' mean individuals or the political community organized as militia?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Scholars on both sides of the contest (individual-right and collective-right traditions) agree the text is ambiguous and has been read different ways across American history. The collective-right reading cites early state supreme court decisions (e.g., Bliss v. Commonwealth, 1822) and the post-Reconstruction narrative that the amendment was not incorporated against states until the 20th century. Individual-right scholars (Heller era, post-2008 doctrine) argue early state practice included individual militia participation and the operative clause was not limited by the militia clause. No consensus source corroborates the founding problem as 'solved' — the contest persists in contemporary jurisprudence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.14,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 40,
-      "value": 0.32
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 80,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 120,
-      "value": 0.38
+      "time_point": 50,
+      "value": 0.15,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.23,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.14
+      "value": 0.2,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 80,
-      "value": 0.18
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 120,
-      "value": 0.22
+      "time_point": 50,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.35,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.24,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 40,
-      "value": 0.18
+      "value": 0.23,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 80,
-      "value": 0.21
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 120,
-      "value": 0.25
+      "time_point": 50,
+      "value": 0.22,
+      "basis": "observed"
     }
   ],
-  "interval": {
-    "start": 0,
-    "end": 120
-  },
   "commentary": {
-    "narrative_context": "The collective-right reading of the Second Amendment interprets the constitutional text as protecting state governments' authority to maintain militia forces, not as protecting an individual's right to keep and bear arms outside the organized militia context. Under this reading, the prefatory clause ('A well regulated Militia, being necessary to the security of a free State') limits the operative clause ('the right of the people to keep and bear Arms, shall not be infringed') to militia-related contexts. Individual possession of firearms can be comprehensively regulated by states and the federal government absent militia service. This reading was the dominant judicial interpretation for most of the 20th century and remains the framing of choice for state regulatory authority and federal law enforcement coordination. The constraint operates as a natural constitutional limit on federal power—states retain plenary authority over individual arms within their borders—but this 'natural law' framing beneficiaries state administrative capacity and law enforcement uniformity. The measurement interval (0–120 years) tracks the reading's trajectory from near-universal acceptance (early 20th century) through rising contestation (late 20th century) to the present era where it coexists with stronger individual-right and civic-republican readings.",
+    "narrative_context": "This constraint story instantiates the collective-right reading of the Second Amendment: the right protects state militia authority, not individual ownership outside organized militia context. Under this reading, the prefatory militia clause ('a well regulated Militia, being necessary to the security of a free State') limits the operative clause ('the right of the people to keep and bear Arms, shall not be infringed'). The protected right is the state's capacity to arm and organize militia; individual civilians lack a Second Amendment bar to regulation. This reading was dominant in American law through much of the 20th century but has been challenged and substantially superseded by the individual-right reading (Heller, 2008). The constraint story models the collective-right reading as it was authoritatively held—a genuine interpretation of the constitutional text with identifiable beneficiaries (state governments, regulatory authorities) and excluded voices (individual-right advocates, originalists). Low extractiveness reflects that this reading protects legitimate state governance functions (militia organization, public order) rather than coercive rent-seeking; but suppression is real because the reading's viability depends on excluding and delegitimizing the individual-right interpretation in public discourse and judicial doctrine. Theater ratio is moderate-to-declining: the reading once commanded genuine constitutional authority, but the decline in its doctrinal status (post-Heller) means maintaining it now requires increasingly defensive scholarly and interpretive work rather than the living authority it once held.",
     "key_agents": [
-      "state_governments: primary institutional beneficiary; interpret the reading as constitutional protection of state militia authority and plenary regulatory power over individual arms",
-      "federal_law_enforcement: organizational beneficiary; benefits from uniform federal prosecution authority under reading-compatible statutes (National Firearms Act, Uniform Code of Military Justice)",
-      "courts_applying_collective_reading: institutional agents; interpret the amendment through the militia lens, upholding weapons regulations as constitutional outside militia context",
-      "gun_rights_advocates: excluded/contending seats; would dispute the limitation of the right to organized militia, contest the reading as doctrinal construction rather than constitutional principle",
-      "state_militias_national_guard: institutional beneficiary; derive exclusive constitutional protection from the reading's framing of state militia authority as the right's core object",
-      "constitutional_law_scholars_originalist_school: observer seats divided by reading; some defend collective reading as textually faithful, others argue it misreads founding intent"
+      "State governments: institutional beneficiaries holding the protected militia right; agenda-setters in militia organization and civilian arms regulation",
+      "Federal government: constrained from disarming state militias but not from regulating individual civilian arms ownership",
+      "Individual firearm owners: excluded from Second Amendment protection on this reading; subject to comprehensive state and federal regulation",
+      "Collective-right legal scholars: organizing around the reading's preservation and doctrinal defense in the post-Heller landscape",
+      "Individual-right scholars and advocates: excluded from this reading's evidentiary framework; the reading's internal logic denies their core constitutional claim",
+      "Regulatory authorities: beneficiaries of a constitutional reading that permits comprehensive firearms regulation",
+      "Originalist interpreters: excluded from this reading's genealogy, which privileges post-ratification state practice over founding-era meaning"
     ],
-    "logic_rationale": "Extractiveness is modest (0.38 at interval end) because the reading's primary function—protecting state regulatory authority—is presented as constitutional principle, not as extraction from individual gun owners. The constraint does not require those individuals to pay a fee or transfer resources; it constrains their available choices. Suppression (0.25) is low because the constraint operates through constitutional doctrine and judicial precedent rather than through active enforcement machinery—the suppression is structural (constitutional limitation on individual liberty) rather than coercive (police action against violators). Theater (0.22) is present because the reading's doctrinal maintenance increasingly involves performative constitutional reasoning as the individual-right reading gains judicial acceptance—emphasis on the prefatory clause, recitation of militia founding-problem language, and reaffirmation of state authority serve to maintain the reading's legitimacy even as its empirical grip on courts and public opinion weakens. The measurement series show rising extractiveness, theater, and suppression_requirement over the 120-year interval, indicating that the reading's doctrinal authority has required increasing performative maintenance as structural conditions (private arms ownership, weakening of state militia capacity, and individual-liberty jurisprudence) have drifted away from the reading's founding assumptions. Accessibility_collapse (0.72) is high because once the collective-right reading is understood as the constitutional framework, alternative individual-ownership claims appear legally foreclosed unless one rejects the reading itself entirely. Resistance (0.78) is high because the reading meets sustained intellectual and political challenge from individual-right advocates, militia theory advocates, and state-level constitutional provisions protecting broader arms rights.",
-    "directionality_logic": "The beneficiary structure reveals asymmetric directionality. State governments (the primary beneficiary—they retain plenary authority over individual arms outside militia contexts) sit at low d (around 0.15–0.25), receiving constitutional protection and regulatory power without bearing extraction costs. Federal law enforcement benefits from uniform authority to prosecute federal weapons violations without state-by-state variation; d for this organizational agent is also low. Gun owners who wish to possess arms outside organized militia contexts sit at high d (0.75–0.90): they bear the constraint of plenary state regulation, have no constitutional escape route under this reading, and cannot claim federal protection against state weapons bans. The reading extracts from them (constrains their choice set) in service of benefiting state regulatory authority. The measurement series show rising suppression_requirement, suggesting that maintaining the reading's doctrinal authority requires increasing enforcement effort (legislative affirmation of state weapons laws, judicial reaffirmation of militia framing, prosecution under compatible statutes) as structural pressure (gun ownership prevalence, individual-rights cultural movement) mounts against the reading's framework.",
-    "perspectival_gap": "The state government and federal law enforcement seats experience the constraint as a natural constitutional protection of their legitimate authority. From those seats, the reading is not extraction but constitutionally warranted state power. The gun-owner seats experience the constraint as a regulatory limitation imposed on their liberty, justified by a constitutional reading they contest. The divergence is structural: the reading allocates constitutional protection to state authority and regulatory power, not to individual liberty—so the seats benefiting from that allocation perceive it as just constitutional law, while the seats bearing the regulatory constraint perceive it as doctrinal construction serving state power. The engine's per-seat classification from structural data will capture this gap: beneficiary seats compute as different types from target seats.",
-    "mandatrophy_analysis": "The collective-right reading's founding problem—state militia capacity as a check on federal tyranny and a deterrent against federal disarmament—was functionally addressed by the Militia Acts (1792 onward) and by the evolution of the National Guard system, which gave states constitutional standing and statutory authority to maintain armed forces. The reading persists not because the founding problem remains live but because the doctrinal interpretation became institutionalized in constitutional law education, court precedent, and state regulatory practice. The rising theater_ratio in the measurement series (0.10 to 0.22 over 120 years) reflects this: increasingly, the collective-right reading's maintenance depends on reaffirming the militia framing and the state authority it protects, not on the reading's functional necessity. This does not immediately classify the constraint as a piton—the suppression_requirement remains modest and the reading still functions to allocate constitutional authority—but it flags the reading as a candidate for mandatrophy inspection: the founding problem may have become dead (state militias are now statutory creatures, not constitutional necessities), while the regulatory authority the reading protects persists as institutional inertia. The omitted fourth, individual_right_reading, offers an alternative that would dissolve the reading's extractiveness for gun owners; the fact that both readings coexist in contemporary jurisprudence (rather than one being completely displaced) suggests the reading's persistence is partly institutional and partly doctrinal contestation, not purely constitutional inevitability.",
-    "kernel_context": "This constraint is the collective-right reading of the Second Amendment kernel. The kernel is the constitutional text 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' The collective-right reading instantiates this kernel by interpreting the prefatory clause as limiting the operative clause to militia-related contexts: the right protects state militia authority and state regulatory capacity over individual arms, not individual ownership outside organized militia service. Sibling readings: (1) individual_right_reading—the right is an individual liberty pre-existing government, protected against federal and state infringement (forecloses the collective reading's limitation to militia contexts); (2) civic_republican_reading—the right protects armed citizenship as a prerequisite for republican self-governance, a position that sits between individual absolutism and state monopoly (coexists with both in contemporary discourse, influences the stakes in how each is interpreted). The collective-right reading coexists with both siblings in contemporary constitutional law: courts and scholars holding each reading produce different doctrinal outcomes and policy implications, but no single framework has triumphed to eliminate the others. The individual-right reading has gained substantial judicial acceptance since 2008 (District of Columbia v. Heller), which influences the collective reading by creating pressure to maintain doctrinal clarity about militia-centered limitation; the civic-republican reading provides a mediating position that both sides appeal to rhetorically."
+    "logic_rationale": "The extractiveness value (0.15 at interval end, starting at 0.08) is low and stable because the constraint protects legitimate state governance functions—militia organization, public order, regulatory authority over arms—rather than asymmetric rent extraction. There is no identifiable victim group bearing concentrated costs; instead, regulatory authorities and state governments benefit from expanded discretion. The suppression value (0.22 at interval end, declining from 0.35) reflects the reading's declining doctrinal status: in mid-20th-century America, suppression was higher because the reading held authoritative force and alternative interpretations were marginalized in mainstream constitutional discourse. The decline in suppression over the interval models the erosion of the reading's live-ness in constitutional law post-Heller: it is no longer the default interpretive frame, and defending it requires increasingly active work against the dominant individual-right reading. Theater ratio mirrors this: early in the interval (t0), defending the collective-right reading required significant performative work to maintain its plausibility against rising individual-right scholarship; by t50, the reading is marginalized enough that theater costs have declined (fewer parties still hold it as a live interpretation). The temporal series models a reading in doctrinal decline, not an extraction mechanism that has strengthened.",
+    "perspectival_gap": "The seat divergence is NOT between payer and beneficiary (there is no payer seat; state governments benefit cleanly). The divergence is between the reading's own internal frame and the excluded voices it denies. From the collective-right reading's own perspective, the constraint is pure coordination: states organize militia, individuals are subject to plenary regulation. From the excluded seats—individual-right scholars, gun-rights advocates, originalists—the reading is a misinterpretation that denies a pre-political constitutional right. This is a content disagreement, not a structural asymmetry between beneficiary and victim seats. The engine will compute the same type across all seats because the constraint has no extraction asymmetry; the disagreement is about whether the reading's core premise (militia clause limits the right) is valid.",
+    "directionality_logic": "Directionality is straightforward because there are no victims: state governments benefit from expanded regulatory authority (d near 0.0, full beneficiary). Individual owners are excluded rather than targeted; they occupy no stakeholder seat with a role within this reading's logic. Regulatory authorities benefit from constrained judicial review of firearms regulations (d near 0.0). Federal government is minimally constrained by the reading (d near 0.2, slight target status: the reading prevents federal disarmament of state militias, but this is a minor constraint given the modern National Guard's constitutional integration). No directionality override is needed; the structural derivation is clean.",
+    "mandatrophy_analysis": "This reading does NOT exhibit mandatrophy in the classical sense (a function that has been solved and the constraint should sunset). The founding problem—interpreting the militia clause—is live and contested; there is no consensus that the collective-right reading has become obsolete in principle. However, the reading does show what might be called 'doctrine-level obsolescence': the individual-right reading has become dominant in Supreme Court and mainstream legal scholarship, substantially displacing the collective-right reading from its formerly authoritative position. The mandatrophy question is whether the collective-right reading should persist as a live constitutional option or whether the individual-right reading has so decisively won the interpretive field that the collective reading is now merely a historical artifact. The theater_ratio decline over the interval models this: less performative work is needed to maintain the reading because fewer parties are trying to. Mandatrophy_resolved is false because the reading can still be advanced, defended, and litigated; but the reading's vitality is declining.",
+    "kernel_context": "This constraint instantiates the collective-right reading of the Second Amendment kernel (kernel_id: second_amendment_arms_right). The kernel is the text 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' Three sibling readings contest the meaning: (1) collective_right_reading (this constraint) — the militia clause limits the right to state militia authority; (2) individual_right_reading — the operative clause protects individual liberty, with militia clause merely explanatory; (3) civic_republican_reading — the right protects armed citizenship as a prerequisite for republican self-governance, neither purely individual nor state-centered. Each reading instantiates a different constraint with different ε, different beneficiary/victim structures, and different judicial implications. The collective reading declined from authoritative status (mid-20th century) to marginalized status post-Heller (2008), while the individual reading became dominant. This is a kernel where doctrinal authority has shifted decisively but the text remains the same."
   },
+  "omegas": [
+    {
+      "id": "militia_clause_limiting_vs_explanatory",
+      "question": "Does the prefatory militia clause ('a well regulated Militia, being necessary to the security of a free State') limit the operative clause to militia contexts, or is it merely explanatory of the operative clause's purpose?",
+      "resolution_mechanism": "Historical linguistic analysis (18th-century grammar and usage), examination of founding-era state constitutions and documents using similar prefatory structures, analysis of how such clauses functioned in contemporary legal texts.",
+      "impact": "If limiting: this reading is structurally sound; the operative clause applies only to militia service. If explanatory: the operative clause protects individual arms ownership regardless of militia status, and this reading misreads the text. The foundational axiom (militia_clause_is_limiting) stands or falls on this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the militia clause grammatically and functionally limits the operative clause."
+    },
+    {
+      "id": "the_people_collective_vs_individual",
+      "question": "In the Second Amendment text, does 'the people' refer to the political community (as in 'We, the people') or to individuals in their capacity as citizens?",
+      "resolution_mechanism": "Examination of 18th-century usage in founding-era documents (Declaration, Constitution, Federalist Papers, state documents), linguistic and legal analysis of the phrase across contemporary texts.",
+      "impact": "If collective: the right is a state-level or collective right, supporting this reading. If individual: the right is held by individuals, supporting the individual-right reading. This is the deepest structural disagreement between the readings.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether 'the people' in the Second Amendment denotes a collective or individual referent."
+    },
+    {
+      "id": "incorporation_and_doctrinal_supersession",
+      "question": "Has the dominance of the individual-right reading in contemporary Supreme Court doctrine and mainstream legal scholarship effectively superseded the collective-right reading, or does the collective reading retain structural viability as a defensible constitutional interpretation?",
+      "resolution_mechanism": "Monitoring Supreme Court doctrine (whether Heller and post-Heller cases foreclose the collective reading or merely reject it as less plausible); tracking appellate decisions and legal scholarship; assessing whether lower courts or state courts continue to cite collective-right interpretations as live options.",
+      "impact": "If superseded: this reading becomes a historical artifact rather than a live interpretation; its doctrinal authority is gone. If viable: it remains a minority but defensible reading in constitutional discourse. Current trajectory (post-2008) is toward supersession, but the reading is not formally foreclosed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the collective-right reading has been doctrinal superseded or remains a live constitutional option."
+    },
+    {
+      "id": "state_militia_vs_national_guard",
+      "question": "On the collective-right reading, does the militia right protect state authority to organize citizen militia independent of federal control, or does the incorporation of state militias into the National Guard satisfy the militia-protection function?",
+      "resolution_mechanism": "Examining whether the collective-right reading's proponents argue the National Guard (federally integrated) fulfills the militia purpose or whether they argue for a separate state militia independent of federal command structure.",
+      "impact": "If National Guard satisfies the function: the reading's rationale may be obsolete (states have federally-integrated militia forces). If independent militia is required: the reading implies a structural problem with modern National Guard integration, which few modern courts accept.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the modern National Guard structure fulfills the collective-right reading's militia-protection function."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
     "boltzmann_floor_override": 0.12
@@ -142,53 +289,57 @@
       "second_amendment_arms_right__individual_right_reading",
       "second_amendment_arms_right__civic_republican_reading"
     ],
-    "dual_formulation_note": "The Second Amendment kernel admits three structurally distinct constraint readings: collective-right (state militia authority), individual-right (individual liberty), and civic-republican (armed citizenship). Each reading has its own ε value, its own beneficiary/victim structure, its own scope and enforcement profile. The collective-right reading constrains federal power and protects state regulatory authority; the individual-right reading constrains state and federal power and protects individual liberty; the civic-republican reading constrains tyrannical governance and protects republicanism. These are not the same constraint viewed from different angles—they are three different constraints with three different extraction patterns. The kernel_context and cs_structure.reading_relations record the doctrinal contest and logical relationships between them."
+    "dual_formulation_note": "The Second Amendment kernel (second_amendment_arms_right) instantiates three structurally distinct constraints corresponding to three live readings: collective_right_reading (this story), individual_right_reading, and civic_republican_reading. Each reading produces a different constraint with different ε, different beneficiary structures, and different legal implications. The three stories are linked via network.affects_constraints because they compete for interpretive authority over the same text. The individual_right_reading superseded this collective_right_reading in mainstream Supreme Court doctrine post-Heller (2008), but all three readings remain live in legal scholarship and judicial debate. Each story must be authored separately with its own ε value (the collective reading sees low ε for legitimate militia-protection functions; the individual reading sees higher ε for the individual liberty claim; the civic reading produces a middle position). Do not merge the three readings into one constraint—they are incommensurable framings of a single kernel."
   },
+  "directionality_overrides": [],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "state_militia_constitutional_protection",
+    "reference_frame": "state_militia_protection_framework",
     "drift_state": {
-      "moment": "contemporary_individual_right_era",
+      "moment": "post_heller_doctrine",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "second_amendment_arms_right__individual_right_reading",
+        "sibling_id": "individual_right_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "second_amendment_arms_right__civic_republican_reading",
+        "sibling_id": "civic_republican_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "militia_authority_primary_right_object",
+        "atom": "militia_clause_is_limiting",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "state_plenary_regulatory_authority_outside_militia_context",
-        "role": "foundational",
+        "atom": "state_governments_are_rights_holders",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       }
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

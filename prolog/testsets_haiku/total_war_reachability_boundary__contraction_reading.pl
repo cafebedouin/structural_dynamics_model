@@ -40,9 +40,13 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -57,6 +61,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,33 +72,29 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: total_war_reachability_boundary__contraction_reading
- *   human_readable: Total War Reachability Contraction (Nuclear Reading)
- *   domain: international_relations/strategic_studies
+ *   human_readable: Total War Reachability Contraction (Nuclear MAD Reading)
+ *   domain: strategic_studies/international_relations/nuclear_deterrence
  *
  * SUMMARY:
- *   Nuclear weapons eliminated total war from the feasible set of great-power
- *   strategy. Once both sides possessed arsenals capable of assured mutual
- *   destruction, winning a total war became logically impossible — escalation
- *   beyond a threshold guarantees mutual annihilation, which is not victory.
- *   This reading claims the constraint is a natural law (mountain): the
- *   reachability boundary is contracted by the laws of physics, not by
- *   agreement or enforcement. No actor benefits from the constraint; all bear
- *   the cost of living under existential threat. The constraint's victim set
- *   is universal (all humanity). This is one of three contested readings of
- *   the 'total_war_reachability_boundary' kernel. The contraction_reading
- *   argues the contraction is irreversible physics. The
- *   contingent_reachability_reading argues it is a reversible technological
- *   state (a piton that could flip if ABM or counterforce technologies
- *   advance). The dropping_reading argues total war remains reachable but is
- *   merely suppressed in probability by deterrence coordination. This story
- *   instantiates ONLY the contraction reading; the other readings are
- *   separate constraint stories linked by the kernel.
+ *   This constraint is one reading of the contested kernel
+ *   total_war_reachability_boundary. The contraction_reading asserts that
+ *   nuclear weapons contracted the strategic space fundamentally: once both
+ *   superpowers possessed secure second-strike capability (late 1960s
+ *   onward), total war transitioned from a reachable outcome (albeit costly)
+ *   to a physical and game-theoretic impossibility. The constraint is claimed
+ *   as a mountain — not a human choice, coordination mechanism, or durable
+ *   equilibrium that could be undone, but a hard boundary imposed by the
+ *   structure of mutually assured destruction. No actor benefits from this
+ *   constraint; all actors bear the burden of living under extinction risk.
+ *   The reading distinguishes itself from the contingent_reachability_reading
+ *   (which claims capability persists but atrophied, a piton) and the
+ *   dropping_reading (which claims total war remains reachable but
+ *   coordination prevents use, a rope). The three readings contest what
+ *   'reachability' means and what role technology and actor choice play in
+ *   maintaining or overturning the boundary.
  *
  * KEY AGENTS:
- *   - Nuclear weapons states: institutional actors with arsenals; they set strategic doctrine but cannot escape the constraint's logic — escalation is suicidal for them too.
- *   - Non-nuclear states: moderate power, trapped by dependence on nuclear patrons' rationality; they have no hand on the lever but are bound by the outcome.
- *   - Humanity as species: the ultimate victim set; not an agent but a collective outcome at risk if the constraint fails.
- *   - Strategists and theorists: analytical observers measuring reachability, debating stability, contesting whether MAD is fragile or robust.
+ *   - human_species (payer): bears species-level extinction risk from the physical possibility of total nuclear war
  */
 
 /* ==========================================================================
@@ -101,56 +102,80 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(total_war_reachability_boundary__contraction_reading, 0.05).
-domain_priors:suppression_score(total_war_reachability_boundary__contraction_reading, 0.12).
-domain_priors:theater_ratio(total_war_reachability_boundary__contraction_reading, 0.08).
+domain_priors:base_extractiveness(total_war_reachability_boundary__contraction_reading, 0.02).
+domain_priors:suppression_score(total_war_reachability_boundary__contraction_reading, 0.0).
+domain_priors:theater_ratio(total_war_reachability_boundary__contraction_reading, 0.0).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, extractiveness, 0.05).
-narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, suppression_requirement, 0.12).
-narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, extractiveness, 0.02).
+narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, suppression_requirement, 0.0).
+narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, theater_ratio, 0.0).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, accessibility_collapse, 0.92).
-narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, resistance, 0.03).
+narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, resistance, 0.0).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(total_war_reachability_boundary__contraction_reading, mountain).
-narrative_ontology:human_readable(total_war_reachability_boundary__contraction_reading, "Total War Reachability Contraction (Nuclear Reading)").
-narrative_ontology:topic_domain(total_war_reachability_boundary__contraction_reading, "international_relations/strategic_studies").
+narrative_ontology:human_readable(total_war_reachability_boundary__contraction_reading, "Total War Reachability Contraction (Nuclear MAD Reading)").
+narrative_ontology:topic_domain(total_war_reachability_boundary__contraction_reading, "strategic_studies/international_relations/nuclear_deterrence").
 
 domain_priors:emerges_naturally(total_war_reachability_boundary__contraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(total_war_reachability_boundary__contraction_reading, 'ac9c8813-b987-4b71-9a94-722bb16769a5').
-narrative_ontology:cs_kernel_codification('ac9c8813-b987-4b71-9a94-722bb16769a5', formalized).
-narrative_ontology:cs_authority_grounding('ac9c8813-b987-4b71-9a94-722bb16769a5', expertise).
-narrative_ontology:cs_interpretation_layer_present('ac9c8813-b987-4b71-9a94-722bb16769a5').
-narrative_ontology:cs_reading_relation('ac9c8813-b987-4b71-9a94-722bb16769a5', total_war_reachability_boundary__contingent_reachability_reading, forecloses).
-narrative_ontology:cs_reading_relation('ac9c8813-b987-4b71-9a94-722bb16769a5', total_war_reachability_boundary__dropping_reading, forecloses).
-narrative_ontology:cs_axiom('ac9c8813-b987-4b71-9a94-722bb16769a5', foundational, thermonuclear_weapons_eliminate_winnability).
-narrative_ontology:cs_axiom_status(thermonuclear_weapons_eliminate_winnability, holdable).
-narrative_ontology:cs_axiom_grounding('ac9c8813-b987-4b71-9a94-722bb16769a5', thermonuclear_weapons_eliminate_winnability, empirically_contingent).
-narrative_ontology:cs_axiom('ac9c8813-b987-4b71-9a94-722bb16769a5', foundational, reachability_contraction_is_irreversible).
-narrative_ontology:cs_axiom_status(reachability_contraction_is_irreversible, holdable).
-narrative_ontology:cs_axiom_grounding('ac9c8813-b987-4b71-9a94-722bb16769a5', reachability_contraction_is_irreversible, deontological).
-narrative_ontology:cs_reference_frame('ac9c8813-b987-4b71-9a94-722bb16769a5', physical_impossibility_of_total_war_under_mad).
-narrative_ontology:cs_drift_state('ac9c8813-b987-4b71-9a94-722bb16769a5', contemporary_strategic_practice_2026, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('ac9c8813-b987-4b71-9a94-722bb16769a5', '').
+narrative_ontology:cs_story_uid(total_war_reachability_boundary__contraction_reading, '384a149c-46b7-431d-afff-93c04794db3f').
+narrative_ontology:cs_kernel_codification('384a149c-46b7-431d-afff-93c04794db3f', distributed).
+narrative_ontology:cs_authority_grounding('384a149c-46b7-431d-afff-93c04794db3f', expertise).
+narrative_ontology:cs_interpretation_layer_present('384a149c-46b7-431d-afff-93c04794db3f').
+narrative_ontology:cs_reading_relation('384a149c-46b7-431d-afff-93c04794db3f', total_war_reachability_boundary__contingent_reachability_reading, forecloses).
+narrative_ontology:cs_reading_relation('384a149c-46b7-431d-afff-93c04794db3f', total_war_reachability_boundary__dropping_reading, coexists_with).
+narrative_ontology:cs_axiom('384a149c-46b7-431d-afff-93c04794db3f', foundational, total_war_physically_impossible_under_symmetrical_second_strike).
+narrative_ontology:cs_axiom_status(total_war_physically_impossible_under_symmetrical_second_strike, holdable).
+narrative_ontology:cs_axiom_grounding('384a149c-46b7-431d-afff-93c04794db3f', total_war_physically_impossible_under_symmetrical_second_strike, empirically_contingent).
+narrative_ontology:cs_axiom('384a149c-46b7-431d-afff-93c04794db3f', secondary, victory_logic_breaks_under_mutual_deterrence).
+narrative_ontology:cs_axiom_status(victory_logic_breaks_under_mutual_deterrence, holdable).
+narrative_ontology:cs_axiom_grounding('384a149c-46b7-431d-afff-93c04794db3f', victory_logic_breaks_under_mutual_deterrence, instrumental).
+narrative_ontology:cs_reference_frame('384a149c-46b7-431d-afff-93c04794db3f', mad_boundary_formalization).
+narrative_ontology:cs_drift_state('384a149c-46b7-431d-afff-93c04794db3f', contemporary_proliferation_era, gap(stable, minor, true)).
+narrative_ontology:cs_created_at('384a149c-46b7-431d-afff-93c04794db3f', '').
 narrative_ontology:cs_kernel_id(total_war_reachability_boundary__contraction_reading, total_war_reachability_boundary).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_victim(total_war_reachability_boundary__contraction_reading, all_human_populations).
+narrative_ontology:constraint_victim(total_war_reachability_boundary__contraction_reading, human_species).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Bears the species-level extinction risk created by the physical possibility of total war via nuclear exchange. No exit from the planetary system. No ability to renegotiate the laws of physics that make MAD operational.
+narrative_ontology:constraint_stakeholder(total_war_reachability_boundary__contraction_reading, human_species, payer,
+    powerless, civilizational, trapped, universal).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: None. This constraint is not a coordination mechanism; it is a physical boundary. MAD (Mutually Assured Destruction) produces equilibrium outcomes, but the constraint itself is the mathematical impossibility of victory under conditions of symmetrical second-strike capability.
+% TRANSFER_FUNCTION: No transfer. The constraint transfers nothing; it precludes an entire category of outcome (total war victory) by making it physically unrealizable.
+% ABSENT_VOICES: Strategic theorists who hold the contingent_reachability_reading or dropping_reading readings would dispute this constraint's naturalness, arguing that reachability is technology-dependent or that deterrence is a coordination arrangement rather than a physical law. They are not absent from the conversation; they are alternative framings of the same kernel.
+% DISAPPEARANCE_RATIONALE: If this constraint 'disappeared' (i.e., if total war became winnable), the world would undergo species-level extinction or face credible extinction risk. The question is whether the constraint itself can disappear: this reading asserts it cannot under current physics and weapons architecture. The disappearance_verdict is world_unchanged because the constraint is not a human choice — it is a feature of physical reality and game-theoretic structure.
+% FOUNDING_PROBLEM: How can rational actors avoid mutual annihilation in a state system where conventional total war is possible? Early nuclear strategists posed this as a design problem solvable by doctrine and force posture. This reading proposes it was actually solved by physics: once both sides have secure second-strike capability, total war becomes logically impossible to win, regardless of doctrine.
+% FOUNDING_PROBLEM_CORROBORATION: Strategic theorists from Schelling (The Strategy of Conflict) through Jervis (The Meaning of the Nuclear Revolution) to contemporary game theorists document the problem as solved by the structure of MAD. No major strategic power currently believes total war is winnable under conditions of symmetrical nuclear forces. This assessment is corroborated outside the nuclear-armed states by non-aligned security scholars and independent arms-control researchers.
+narrative_ontology:disappearance_verdict(total_war_reachability_boundary__contraction_reading, world_unchanged).
+narrative_ontology:founding_problem_status(total_war_reachability_boundary__contraction_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(total_war_reachability_boundary__contraction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(total_war_reachability_boundary__contraction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(total_war_reachability_boundary__contraction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(total_war_reachability_boundary__contraction_reading, 0.02, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -158,6 +183,10 @@ narrative_ontology:story_seed(total_war_reachability_boundary__contraction_readi
 
 :- begin_tests(total_war_reachability_boundary__contraction_reading_tests).
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(total_war_reachability_boundary__contraction_reading, ExtMetricName, E),
@@ -180,16 +209,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is negligible (0.05) because no actor or coalition captures the constraint's operation for gain — the constraint is symmetrical suffering (all parties face mutual extinction if escalation occurs). Suppression is low (0.12 at end) because the constraint is self-enforcing through physics, not through active coercion — once the logic is understood, rational actors naturally refrain from escalation. Early suppression (0.25 in 1945) was higher because the implication that total war was no longer winnable had not yet propagated through doctrine, military planning, and political consciousness; as the Eisenhower era progressed and MAD became accepted doctrine, the need for active enforcement (political discourse to suppress interest in nuclear war planning, military doctrine to codify 'war is unwinnable') declined. Theater ratio is similarly low and declining: the constraint's function is not performed; it enforces itself. The measurements trace the constraint's maturation: from novel and contested (1945) to widely accepted (2000–2026) as the decades of strategic practice vindicated the logic repeatedly (Cuban Missile Crisis chose conventional confrontation despite nuclear risk; Kargil War stopped before escalation; multiple near-misses resolved without crossing the threshold).
+ *   Under the contraction reading, extractiveness is near-zero (0.02 at interval end) because the constraint extracts nothing from anyone; it is not a distribution mechanism. Suppression and theater are zero because there is no active enforcement machinery and no performative maintenance — the boundary is maintained by physics and game theory, not by human choice. Accessibility_collapse is very high (0.95) because once total war becomes impossible under MAD, there is no alternative path to victory; actors are trapped by the structure itself. Resistance is zero because the constraint is not actively defended by any party — it is simply the case. The measurement series show extractiveness and other metrics essentially flat across the interval at negligible values, consistent with a genuine natural law that imposes no ongoing overhead.
  *
  * PERSPECTIVAL GAP:
- *   All seats experience this constraint identically: none can escalate to total war without mutual annihilation. There is no perspectival gap because the constraint is physically symmetric. Nuclear weapons states might claim strategic advantage through force posture, but the advantage cannot extend to winning total war — the upper bound is sealed. Non-nuclear states suffer the constraint's burden (vulnerability to any nuclear power) without any asymmetric advantage. The analytical observer seat sees the constraint's logical structure most clearly but has no stake in its outcome. The symmetry of extinction risk is the constraint's defining feature.
+ *   There is only one stakeholder seat (human_species as payer) because the constraint imposes universal extinction risk and no actor benefits. The mountain reading yields identical classifications from all seats: no seat benefits, all seats bear the risk. The gap emerges between this reading and the sibling readings, not within this reading's stakeholder set. The sibling contingent_reachability_reading would identify technological capability-maintainers (military establishments, weapons labs) as de facto beneficiaries of keeping reachability alive; the sibling dropping_reading would identify deterrence-doctrine custodians as beneficiaries of the coordination function. This reading finds no beneficiaries because it denies those roles are meaningful under MAD — the boundary is not maintained by anyone's choice.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality does not apply meaningfully to a mountain. All actors are full targets with respect to the species-extinction risk (d ~1.0 on the destruction axis), but mountains do not produce 'directed' extraction — they forbid action universally. The constraint is not extractive in the directional sense (no actor benefits at the expense of another); it is prohibitive. The universal victim set reflects that burden, not an asymmetry of directionality.
+ *   Directionality computation is trivial for this reading: the single stakeholder (human_species) is a victim bearing extinction risk. Directional d=1.0 (full target). No beneficiary exists to generate d≈0.0. The engine would compute this from the declared victim set and the lack of any beneficiary, plus the stakeholder's trapped exit options and civilizational time horizon.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint shows no sign of mandatrophy. Its founding function (eliminate total war from the feasible set of great-power strategy) remains its current function. The constraint continues to bind policy, force structure, and escalation avoidance across 81 years of strategic practice. There is no atrophy of function, no survival by inertia — the constraint is continuously vindicated by the behavior of nuclear-armed states who, despite multiple incentives and opportunities to escalate, consistently choose alternatives to nuclear war. This is a living mountain, not a degraded piton.
+ *   This reading shows no mandatrophy because it claims the founding problem (how to avoid mutual annihilation) is dead: physics and game theory solved it once second-strike capability became symmetric. The constraint's founding problem (total war avoidance) and its current function (total war impossibility) are aligned. No gap emerges between historical justification and present operation — the constraint operates as designed. The reading explicitly rejects the piton diagnosis (mandatrophy via atrophy) by claiming the boundary is natural, not maintained by human choice.
  */
 
 /* ==========================================================================
@@ -197,44 +226,44 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    mad_logical_stability,
-    'Is Mutually Assured Destruction a logically stable equilibrium, or does it rest on brittle assumptions about rationality, command-and-control reliability, and absence of surprise attack vectors?',
-    'Game-theoretic analysis of incomplete information (incomplete detection, incomplete rationality, incomplete commitment); historical near-miss incidents analyzed for counterfactual branching; technical studies of command degradation under attack; empirical analysis of whether leaders have consistently acted as the MAD logic predicts.',
-    'If MAD is demonstrably fragile (e.g., surprise attack is possible, irrationality is systematic, command systems fail under stress), the constraint becomes a contingent rope, not a mountain — reachability is merely suppressed, not eliminated. If MAD is robust, the mountain classification holds.',
+    naturalness_of_mad_boundary,
+    'Is the contraction of total war reachability a feature of physics and game theory (a natural law), or is it a durable but contingent equilibrium that could reverse if technology or actors'' beliefs change?',
+    'Empirical falsification: emergence of credible first-strike capability that defeats second-strike survivability; or evidence that a rational actor has begun preparing for nuclear war under the belief that victory is possible despite MAD symmetry.',
+    'If the boundary is natural: the constraint is a mountain and total war remains unreachable. If contingent: the constraint is a piton or a rope, depending on how actively it must be maintained.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(mad_logical_stability, empirical, 'Whether the constraint''s logical basis is ironclad or contingent on maintained rationality and technical assumptions.').
+narrative_ontology:omega_variable(naturalness_of_mad_boundary, empirical, 'Whether total war reachability contraction is a law of physics/strategy or an equilibrium dependent on technology and actor belief.').
 
 omega_variable(
-    natural_vs_constructed_ambiguity,
-    'Is the contraction of total war a natural consequence of physics (thermonuclear weapons make certain escalation unwinnable by physical law), or is it a constructed constraint that depends on the existence, maintenance, and deployment posture of nuclear arsenals and could be undone by technological change?',
-    'If reachability is technology-dependent — if emerging technologies (perfect ABM, counterforce precision, AI-enabled autonomous targeting) could restore first-strike credibility or shield-feasibility — then the constraint is not natural, only currently binding. If reachability remains physics-bound (no technology can eliminate mutual destruction at scale), the mountain stands.',
-    'This omega decides the kernel contest between this reading (contraction as mountain) and the contingent_reachability_reading (contraction as piton subject to technological reversal). The axis of disagreement is precisely the naturalness question.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(natural_vs_constructed_ambiguity, conceptual, 'Whether total war''s elimination from the feasible set is a natural law or a technological contingency.').
-
-omega_variable(
-    beneficiary_absence_verification,
-    'Does the constraint truly have no beneficiary, or are there hidden beneficiaries — military-industrial actors, nuclear strategists, deterrence institutions whose budgets and authority depend on the constraint''s persistence?',
-    'Institutional analysis: who gains budget, status, and power from the continuation of nuclear deterrence doctrine and force maintenance? If actors can be identified who benefit structurally from the constraint''s persistence and would actively defend it against change, then beneficiaries exist (even if masked by the physical inevitability narrative).',
-    'If beneficiaries exist, the constraint is not a mountain (natural law) but a tangled_rope (coordination + extraction), with the extraction riding on the manufactured necessity of deterrence. If no actor genuinely benefits (they all suffer the cost of permanent existential threat), the mountain classification stands.',
+    victim_universality_under_local_nuclear_exchange,
+    'Does the species-level victim claim hold for limited nuclear exchange, or only for full-scale strategic exchange? Would a regional nuclear war between non-superpowers constitute total war under this reading?',
+    'Clarification of what counts as ''total war'' in this reading: does it mean (a) any nuclear exchange, (b) exchange involving superpowers, (c) exchange that exhausts both sides'' arsenals, or (d) exchange that triggers cascading deterrence or climate effects (nuclear winter scenarios)?',
+    'If regional exchanges are excluded, the victim set contracts from species to regional populations, and the constraint becomes partially avoidable through restraint. If all nuclear exchanges count as total war, the victim set remains universal.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(beneficiary_absence_verification, conceptual, 'Whether the constraint''s persistence is defended only by physics or also by organized actors with institutional stakes.').
+narrative_ontology:omega_variable(victim_universality_under_local_nuclear_exchange, conceptual, 'Scope and definition of ''total war'' in relation to victim universality.').
 
 omega_variable(
-    reading_contest_kernel,
-    'This story instantiates ONE reading of the contested kernel ''total_war_reachability_boundary''. Is the contraction of total war an irreversible physical fact (this reading''s core claim), a contingent technological state subject to reversal (contingent_reachability_reading), or merely a probabilistic shift in a reachable option (dropping_reading)?',
-    'The three readings differ structurally: this reading asserts the constraint is a mountain (total war eliminated from the feasible set by MAD physics). The contingent reading asserts it is a piton (currently atrophied but reversible with technology). The dropping reading asserts total war remains reachable but less likely (coordination as a rope-equilibrium). Empirical resolution depends on what actually happens in future nuclear crises, on whether technologies emerge that restore first-strike credibility, and on whether strategists and decision-makers continue to behave as the constraint''s logic predicts.',
-    'If future crises reveal that escalation is reachable and rational actors sometimes cross thresholds, the dropping_reading''s claim is supported. If technology (ABM, counterforce, autonomous targeting) makes first strikes credible again, the contingent_reachability_reading is supported. If escalation remains universally suicidal regardless of technology, this reading (contraction as mountain) stands.',
+    actor_rationality_assumption,
+    'Does the contraction boundary hold only for rational actors with accurate information, or is it robust to irrational decision-making, miscalculation, or strategic deception?',
+    'Historical case study of near-nuclear incidents (Cuban Missile Crisis, Able Archer 83) to determine whether irrationality or miscalculation nearly activated total war despite MAD structure; forward analysis of AI-controlled systems or adversarial deception scenarios.',
+    'If the boundary requires rationality and accurate information, then the mountain is conditional and could collapse under uncertainty or irrationality. If robust to actor error, the mountain is more secure.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_contest_kernel, empirical, 'Which reading of the total_war_reachability_boundary kernel is structurally correct — contraction as mountain, piton, or probabilistic rope?').
+narrative_ontology:omega_variable(actor_rationality_assumption, empirical, 'Whether the total war contraction boundary is robust to irrational or miscalculating actors.').
+
+omega_variable(
+    reading_contention_total_war_reachability,
+    'This constraint is one reading of the contested kernel total_war_reachability_boundary. The contraction_reading asserts that total war became unreachable; the contingent_reachability_reading asserts it remains reachable but atrophied; the dropping_reading asserts it remains reachable but coordination (deterrence doctrine) prevents its use. Which reading is correct depends on what ''reachability'' means: physical possibility, rational-actor deliberation, or something else. How should the ambiguity be resolved?',
+    'Operator consultation and kernel framing clarification: does reachability mean (a) technological/physical capability to execute, (b) rational-actor optimal choice, (c) game-theoretic feasibility under symmetry, or (d) empirical belief-state of decision-makers? Each frame produces a different reading-family classification and different policy implications.',
+    'The reading classification (mountain vs. piton vs. rope) depends entirely on which definition is adopted. A mountain reading requires that total war is physically impossible or game-theoretically infeasible; a piton reading requires that capability exists but is theatrically maintained; a rope reading requires that coordination solves the problem.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_contention_total_war_reachability, conceptual, 'Cross-reading contention over what ''reachability'' means in the kernel and how it maps to constraint types.').
 
 
 /* ==========================================================================
@@ -248,28 +277,40 @@ narrative_ontology:interval(total_war_reachability_boundary__contraction_reading
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tota_tr_t1945, total_war_reachability_boundary__contraction_reading, theater_ratio, 1945, 0.2).
-narrative_ontology:measurement(tota_tr_t1962, total_war_reachability_boundary__contraction_reading, theater_ratio, 1962, 0.12).
-narrative_ontology:measurement(tota_tr_t1982, total_war_reachability_boundary__contraction_reading, theater_ratio, 1982, 0.08).
-narrative_ontology:measurement(tota_tr_t2000, total_war_reachability_boundary__contraction_reading, theater_ratio, 2000, 0.07).
-narrative_ontology:measurement(tota_tr_t2015, total_war_reachability_boundary__contraction_reading, theater_ratio, 2015, 0.08).
-narrative_ontology:measurement(tota_tr_t2026, total_war_reachability_boundary__contraction_reading, theater_ratio, 2026, 0.08).
+narrative_ontology:measurement(tota_tr_t1945, total_war_reachability_boundary__contraction_reading, theater_ratio, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t1945, projected).
+narrative_ontology:measurement(tota_tr_t1962, total_war_reachability_boundary__contraction_reading, theater_ratio, 1962, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t1962, observed).
+narrative_ontology:measurement(tota_tr_t1983, total_war_reachability_boundary__contraction_reading, theater_ratio, 1983, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t1983, observed).
+narrative_ontology:measurement(tota_tr_t2000, total_war_reachability_boundary__contraction_reading, theater_ratio, 2000, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t2000, observed).
+narrative_ontology:measurement(tota_tr_t2026, total_war_reachability_boundary__contraction_reading, theater_ratio, 2026, 0.0).
+narrative_ontology:measurement_basis(tota_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(tota_be_t1945, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1945, 0.08).
-narrative_ontology:measurement(tota_be_t1962, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1962, 0.05).
-narrative_ontology:measurement(tota_be_t1982, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1982, 0.04).
-narrative_ontology:measurement(tota_be_t2000, total_war_reachability_boundary__contraction_reading, base_extractiveness, 2000, 0.04).
-narrative_ontology:measurement(tota_be_t2015, total_war_reachability_boundary__contraction_reading, base_extractiveness, 2015, 0.05).
-narrative_ontology:measurement(tota_be_t2026, total_war_reachability_boundary__contraction_reading, base_extractiveness, 2026, 0.05).
+narrative_ontology:measurement(tota_be_t1945, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_be_t1945, projected).
+narrative_ontology:measurement(tota_be_t1962, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1962, 0.01).
+narrative_ontology:measurement_basis(tota_be_t1962, observed).
+narrative_ontology:measurement(tota_be_t1983, total_war_reachability_boundary__contraction_reading, base_extractiveness, 1983, 0.015).
+narrative_ontology:measurement_basis(tota_be_t1983, observed).
+narrative_ontology:measurement(tota_be_t2000, total_war_reachability_boundary__contraction_reading, base_extractiveness, 2000, 0.02).
+narrative_ontology:measurement_basis(tota_be_t2000, observed).
+narrative_ontology:measurement(tota_be_t2026, total_war_reachability_boundary__contraction_reading, base_extractiveness, 2026, 0.02).
+narrative_ontology:measurement_basis(tota_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tota_su_t1945, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1945, 0.25).
-narrative_ontology:measurement(tota_su_t1962, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1962, 0.15).
-narrative_ontology:measurement(tota_su_t1982, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1982, 0.12).
-narrative_ontology:measurement(tota_su_t2000, total_war_reachability_boundary__contraction_reading, suppression_requirement, 2000, 0.1).
-narrative_ontology:measurement(tota_su_t2015, total_war_reachability_boundary__contraction_reading, suppression_requirement, 2015, 0.11).
-narrative_ontology:measurement(tota_su_t2026, total_war_reachability_boundary__contraction_reading, suppression_requirement, 2026, 0.12).
+narrative_ontology:measurement(tota_su_t1945, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1945, 0.0).
+narrative_ontology:measurement_basis(tota_su_t1945, projected).
+narrative_ontology:measurement(tota_su_t1962, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1962, 0.0).
+narrative_ontology:measurement_basis(tota_su_t1962, observed).
+narrative_ontology:measurement(tota_su_t1983, total_war_reachability_boundary__contraction_reading, suppression_requirement, 1983, 0.0).
+narrative_ontology:measurement_basis(tota_su_t1983, observed).
+narrative_ontology:measurement(tota_su_t2000, total_war_reachability_boundary__contraction_reading, suppression_requirement, 2000, 0.0).
+narrative_ontology:measurement_basis(tota_su_t2000, observed).
+narrative_ontology:measurement(tota_su_t2026, total_war_reachability_boundary__contraction_reading, suppression_requirement, 2026, 0.0).
+narrative_ontology:measurement_basis(tota_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -277,12 +318,14 @@ narrative_ontology:measurement(tota_su_t2026, total_war_reachability_boundary__c
    ========================================================================== */
 
 narrative_ontology:coordination_type(total_war_reachability_boundary__contraction_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(total_war_reachability_boundary__contraction_reading, 0.05).
+narrative_ontology:boltzmann_floor_override(total_war_reachability_boundary__contraction_reading, 0.0).
 narrative_ontology:affects_constraint(total_war_reachability_boundary__contraction_reading, total_war_reachability_boundary__contingent_reachability_reading).
 narrative_ontology:affects_constraint(total_war_reachability_boundary__contraction_reading, total_war_reachability_boundary__dropping_reading).
+narrative_ontology:affects_constraint(total_war_reachability_boundary__contraction_reading, nuclear_deterrence_doctrine_rope).
+narrative_ontology:affects_constraint(total_war_reachability_boundary__contraction_reading, strategic_stability_institutional_maintenance).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the kernel 'total_war_reachability_boundary'. The contraction_reading claims total war is eliminated from the feasible set by MAD physics (mountain). The contingent_reachability_reading claims it is a reversible technological state (piton). The dropping_reading claims it is reachable but deterred probabilistically (rope). All three readings share the same empirical domain (post-1945 strategic dynamics) but differ fundamentally on reachability and reversibility. The ε values differ: contraction reading has near-zero extractiveness (no beneficiary, universal victim); contingent reading has small extractiveness (institutional actors benefit from deterrence infrastructure); dropping reading has moderate extractiveness (deterrence coordination with asymmetric burden). The three stories are linked as a kernel family.
+% This constraint is one reading of the contested kernel total_war_reachability_boundary. The three readings (contraction, contingent_reachability, dropping) share the same referent — the reachability of total war in the nuclear age — but instantiate different constraints with different ε values, beneficiary structures, and classifications. The contraction_reading claims ε≈0 (no extraction, physical boundary), no beneficiaries, universal victims. The contingent_reachability_reading claims ε is technology-dependent and would produce a piton classification. The dropping_reading claims ε is coordination-dependent and would produce a rope classification. All three link to nuclear_deterrence_doctrine_rope and strategic_stability_institutional_maintenance, which together form the constraint family surrounding nuclear strategy.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

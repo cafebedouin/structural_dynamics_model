@@ -4,230 +4,359 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "36a0f947-75a9-4d8a-9bef-891665d96ce4"
+    "story_uid": "d189bb2f-afaa-4801-a4c8-dffde667b5de",
+    "created_at": "2026-06-12T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.28,
-    "suppression": 0.22,
-    "theater_ratio": 0.15,
-    "accessibility_collapse": 0.45,
-    "resistance": 0.68,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.65,
+    "resistance": 0.72,
     "claimed_type": "rope",
-    "human_readable": "Equal Protection Permits Race as Diversity Factor in University Admissions",
-    "topic_domain": "constitutional/political",
+    "human_readable": "Equal Protection: Diversity as Compelling State Interest (Diversity Reading)",
+    "topic_domain": "constitutional_law/social_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "universities"
+      "universities_mission_discretion",
+      "racially_underrepresented_applicants"
     ],
     "victims": [
-      "applicants_individually_disadvantaged_by_holistic_review"
+      "rejected_applicants_individual_claims_obscured",
+      "applicants_penalized_by_race_neutral_diversity_metrics"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "universities_mission_discretion",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gains explicit judicial authorization to consider race as one factor in holistic admissions review. This reading permits them to operationalize educational-diversity missions and defend admissions decisions against colorblind constitutional challenge. They set the institutional policy within the constraint's permission boundary; the constraint shields their discretionary authority from stricter scrutiny."
+    },
+    {
+      "name": "racially_underrepresented_applicants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit structurally from the reading's permission that race-conscious admissions improve their statistical likelihood of admission to competitive universities. The constraint treats their presence in a diverse student body as a compelling educational good, not as a departure from neutral merit."
+    },
+    {
+      "name": "rejected_applicants_individual_claims_obscured",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the extractive cost: when race is considered in holistic review, rejected applicants cannot definitively establish whether race played a role in their individual case (the 'holistic review' architecture obscures causation). They are unable to mount precise constitutional claims about their own treatment; the individual claim is structurally suppressed by the permissible opacity of multifactorial decisions."
+    },
+    {
+      "name": "applicants_penalized_by_race_neutral_diversity_metrics",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "May experience admission disadvantage when universities operationalize diversity goals through race-conscious preference, even if the policy is formally 'one factor among many.' They have no constitutionally protected individual claim to a race-neutral admissions process under this reading (colorblind doctrine is foreclosed); their remedy is collective political action to overturn the reading, not individual legal redress."
+    },
+    {
+      "name": "courts_reviewing_admissions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce the constraint by applying strict scrutiny to race-conscious admissions while accepting that the compelling-interest test can be satisfied by educational-diversity pedagogy. They adjudicate disputes but do not set university policy; they interpret the constitutional boundaries within which universities operate."
+    },
+    {
+      "name": "colorblind_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Would challenge any race-conscious admissions as unconstitutional; are structurally excluded from the diversity reading's normative framework (their foundational premise—that the Constitution forbids all state racial classification—is foreclosed by this reading). They operate outside the constraint as organized opposition."
+    },
+    {
+      "name": "remedial_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Would argue that equal protection requires active dismantling of caste-system subordination, not merely permitting diversity-motivated inclusion. They contest the diversity reading from the left, asserting it does not go far enough to remedy structural discrimination; the diversity reading does not authorize the stronger remedial measures they advocate."
+    },
+    {
+      "name": "legislative_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Could enact statutory restrictions on race-conscious admissions if they mobilize political will; they observe the constraint and can revise it by constitutional amendment or, within limits, by federal statute. They are not parties to the admissions decision but can alter the authorization framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of how universities can pursue institutionally coherent educational missions (including diversity goals) without being trapped by rigid colorblind rules that treat all race-conscious decisions as inherently irrational. Provides a legal framework within which mission-driven admissions can be defended as rational, not paternalistic.",
+    "transfer_function": "Moves institutional discretion FROM rigid colorblindness (which constrained admissions to proxy metrics) TO holistic, race-conscious review that universities can operationalize. Also moves statistical advantage toward racially underrepresented applicants and moves (diffusely) the ability to mount individual constitutional challenges away from rejected applicants whose rejection occurs within a permissibly multifactorial decision.",
+    "absent_voices": "Applicants penalized by the race-conscious discretion have no authorized voice—they cannot mount a constitutional challenge on grounds that race played a role (colorblind standing is foreclosed). Colorblind originalists and remedial-justice advocates are excluded from the diversity reading's normative framework entirely; they contest from outside.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading vanished and colorblind doctrine took its place, universities would lose discretion to consider race in admissions; educational-diversity initiatives would shift to race-neutral proxies (socioeconomic status, geography, identity-linked experience); the statistical outcome for underrepresented racial groups would change; and universities would operationalize different mission statements. The reading's absence is not a neutral reversion—it is a active legal reclassification that reshapes what admissions policies are constitutionally permissible.",
+    "founding_problem": "Equal protection doctrine needed a coherent framework for reconciling the constitutional commitment to equal protection with the educational and civic case that student-body diversity improves learning outcomes and serves the state's interest in developing a diverse, educated citizenry. The colorblind reading made this reconciliation impossible; the diversity reading attempts to hold both commitments.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Universities and education researchers attest that student-body diversity improves educational outcomes (amicus briefs, commissioned studies). Civil-rights organizations (outside the beneficiary set of universities) attest that colorblind doctrine obscures ongoing racial inequality in educational access. Colorblind advocates counter that the founding problem is illusory—equal protection simply forbids racial classification, period. The contest is live and unresolved by external corroboration."
+  },
   "interval": {
-    "start": 1978,
-    "end": 2023
+    "start": 0,
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1978,
+      "time_point": 0,
       "value": 0.18
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
+      "time_point": 4,
       "value": 0.22
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
+      "time_point": 8,
       "value": 0.26
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2016,
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
       "value": 0.29
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2023,
+      "time_point": 25,
       "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1978,
-      "value": 0.08
+      "time_point": 0,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
-      "value": 0.1
+      "time_point": 4,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.13
+      "time_point": 8,
+      "value": 0.37
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.15
+      "time_point": 12,
+      "value": 0.39
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2023,
-      "value": 0.15
+      "time_point": 16,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1978,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.38
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1995,
-      "value": 0.18
+      "time_point": 4,
+      "value": 0.4
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.2
+      "time_point": 8,
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2016,
-      "value": 0.23
+      "time_point": 12,
+      "value": 0.43
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2023,
-      "value": 0.22
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint embodies one reading of the equal protection clause: the permissibility of race as one factor among many in university admissions to achieve educational diversity. The diversity reading distinguishes itself from the colorblind reading (which forbids any racial classification) and the remedial reading (which frames race-consciousness as correcting caste subordination). Under the diversity reading, universities gain discretionary authority to factor race into holistic review without requirement to show prior discrimination. Individual applicants bear uncertainty about how race weighting affected their outcome. The constraint's persistence depends on active judicial enforcement—courts must continuously approve university frameworks and reject challenges. The measured extractiveness (0.28) reflects the procedural rather than substantive character of the constraint: it is less about direct resource transfer than about discretionary authority allocation and opacity in individual evaluation.",
+    "narrative_context": "The diversity reading of equal protection permits universities to consider race as one factor among many in admissions to achieve the compelling state interest of educational diversity. This is ONE reading of a contested constitutional kernel (equal protection's proper scope). The constraint is CLAIMED as rope (genuine coordination: universities gain discretion to operationalize missions, underrepresented applicants gain statistical admission advantage, and education benefits from diversity). The authored metrics reflect extractiveness at the low-moderate end (0.28) and moderate suppression (0.42) because the constraint is procedurally permissive rather than substantively redistributive—it grants discretion rather than mandates outcomes—but it does suppress individual applicants' ability to mount precise constitutional claims about their own rejection (holistic review obscures causation). Theater is moderate (0.38) because admissions discourse is genuinely about pedagogy and diversity outcomes, but a growing share of the institutional performance is devoted to defending the discretion itself against colorblind and remedial challenges, not to implementing diversity pedagogy. This story is the diversity reading only; the colorblind and remedial readings are separate constraints (sibling stories linked via network.affects_constraints).",
     "key_agents": [
-      "Universities: institutional beneficiary, set the diversity-weighted admissions criteria, defend the educational mission rationale",
-      "Applicants individually disadvantaged: payers in expectation, bear opacity about how race affected their individual outcome",
-      "Applicants structurally benefiting: beneficiaries of relaxed evaluation in light of underrepresentation",
-      "Competing applicant groups (Asian American, poor, rural): excluded from formal policy debate despite bearing variable effects",
-      "Courts: observers and enforcers, evaluate whether frameworks satisfy constitutional scrutiny",
-      "Legislatures: observers with structural power to alter the constraint"
+      "universities_mission_discretion: institutional beneficiary; gain discretion for race-conscious admissions within strict scrutiny",
+      "racially_underrepresented_applicants: moderate beneficiary; statistical likelihood of admission increases",
+      "rejected_applicants_individual_claims_obscured: moderate payer; unable to establish race's role in individual rejection",
+      "applicants_penalized_by_race_neutral_diversity_metrics: moderate payer; no constitutional claim to race-neutral process",
+      "courts_reviewing_admissions: agenda_setter (institutional); interpret strict scrutiny boundaries",
+      "colorblind_advocates: excluded opposition (foundational premise foreclosed by this reading)",
+      "remedial_advocates: excluded opposition (reading does not authorize strong remedial measures)",
+      "legislative_bodies: observer; could revise authorization by statute or amendment"
     ],
-    "logic_rationale": "Extractiveness is measured as low-moderate (0.28 endpoint) because the constraint grants discretionary authority rather than direct financial transfer. Universities gain the ability to weight race in admissions; this is extractive in the sense that applicants lose the benefit of race-blind evaluation, but it is not extraction in the sense of capturing rents or resources. The measured opacity (theater_ratio) rises modestly over time (0.08 to 0.15) as universities develop increasingly complex holistic frameworks where the weighting of race becomes harder for applicants to discern. Suppression requirement remains moderate (0.22) because colorblind advocates mounted sustained legal challenges; courts had to actively defend the reading against constitutional objections. Accessibility_collapse is below-median (0.45) because the constraint leaves alternative readings (colorblindness, remedial framing) as live constitutional claims that some institutions or states pursue. Resistance is elevated (0.68) because significant constituencies contest the constraint's legitimacy throughout the interval. The measurement series tracks one shared time grid (1978, 1995, 2010, 2016, 2023) so that every metric is authored at every examined point and drift can be assessed.",
-    "perspectival_gap": "Universities perceive this constraint as enabling their mission and enhancing educational quality for all students—they are near-beneficiary positions (d ≈ 0.2). Individual applicants who are disadvantaged by race weighting perceive opacity and lost race-neutral evaluation—they are near-target positions (d ≈ 0.75-0.85). Applicants who gain admission through the diversity reading perceive access that would be denied under colorblindness—they are near-beneficiary positions (d ≈ 0.15-0.25). Courts see their role as enforcing constitutional doctrine, neither benefiting nor paying directly, though their decisions materially affect university discretion and applicant outcomes—they are closest to symmetric (d ≈ 0.5). The engine computes these divergences from the structural data: beneficiary/victim declarations plus power level plus exit options. The authored claim (rope: genuine coordination with minimal extraction overhead) and the authored metrics (moderate extractiveness, sustained resistance, measured suppression) do not reconcile to each other—that divergence is the measurement the framework exists to take.",
-    "directionality_logic": "Universities are declared as the sole beneficiary because they gain discretionary authority and the institutional power to implement it without bearing the opacity cost. Applicants individually disadvantaged are declared as victims because they lose the certainty of race-blind evaluation and cannot easily determine how race weighting affected their outcome—their exit is to apply elsewhere, but that does not recover the original decision. The tension here is that the benefiting applicants (those who gain admission through diversity weighting) are also organized around the constraint but benefit from it; they are not declared as victims. From the structural perspective: universities (institutional power, mobile exit—can adjust criteria) are at low d; disadvantaged applicants (powerless, constrained exit—cannot know their outcome or change it) are at high d; benefiting applicants sit between (powerless, constrained exit, but access benefit cancels the disadvantage). No directionality overrides are necessary; the structural derivation captures the real relationships.",
-    "mandatrophy_analysis": "The founding problem (historical racial segregation, underrepresentation in higher education) is contested in status by the colorblind reading, which argues the problem has been substantially remedied by formal non-discrimination law. The diversity reading asserts the problem remains live because colorblindness alone has not produced diverse student bodies. The constraint persists because universities find it instrumentally valuable (diversity is claimed to improve education) AND because courts have affirmed its constitutionality. Mandatrophy would arise if courts revoked the constitutional permission—which occurred in 2023 with Students for Fair Admissions v. Harvard. That revocation is outside this interval endpoint but visible in the projection: the constraint's founding problem (need for diversity to cure segregation) is live from the diversity reading's perspective, but the constraint itself is now defunct at the institutional level in actual university practice. The measured theater_ratio plateau (0.15 in 2016 and 2023) suggests the constraint's performative element did not grow in the final years—universities continued to justify diversity as real educational benefit, not as theater. The subsequent revocation is a validity event, not a theater-driven degradation.",
-    "kernel_context": "This constraint instantiates the DIVERSITY READING of the contested EQUAL PROTECTION COMMITMENT kernel. The kernel is the constitutional text 'equal protection of the laws' and the foundational question of what equal protection requires regarding race. Three sibling readings compete: (1) COLORBLIND READING: equal protection forbids any state use of racial classification; the Constitution treats race as categorically forbidden (descendant of Harlan's Plessy dissent, modern Scalia/Thomas doctrine). (2) DIVERSITY READING (this one): equal protection permits race as one factor to achieve educational diversity as a compelling interest; permits institutional discretion in holistic review. (3) REMEDIAL READING: equal protection forbids perpetuation of caste subordination; permits race-conscious measures specifically to dismantle hierarchical racial systems. The three readings share the same constitutional text (the kernel) but differ in how they interpret what equal protection REQUIRES. The diversity reading treats equal protection as permissive on race-consciousness in service of institutional missions; the colorblind reading treats equal protection as categorically forbidding racial classification; the remedial reading treats equal protection as affirmatively demanding corrective measures against subordination. Each reading is a live position held by different coalitions (universities + some courts vs. colorblind advocates vs. critical race theorists + some civil rights organizations). None logically forecloses the others within a single institutional framework—but they do compete for judicial endorsement and legislative codification."
+    "logic_rationale": "Extractiveness is low-moderate (0.28 at interval end) because the constraint operates procedurally—it permits universities to act, does not mandate substantive outcomes, and the primary extraction is the suppression of individual applicants' ability to mount precise constitutional claims, not wealth or status transfer. Suppression is moderate (0.42) because rejected applicants face a real structural barrier (holistic-review opacity prevents them from establishing causation), but the barrier is architecturally embedded in permissible discretion, not imposed through coercive enforcement machinery. Theater is moderate-stable (~0.38 across interval) because admissions discourse is genuinely about educational mission and diversity pedagogy, but mounting institutional performance goes into defending the discretion itself against constitutional challenge—that defensive theater is intrinsic to the constraint's operation, not anomalous. The measurement series shows extractiveness and suppression rising slightly at the interval's opening (as the reading becomes more established and universities operationalize it), then stabilizing as legal and political equilibrium settles. Accessibility collapse is moderate (0.65): alternatives (colorblind admissions, race-neutral proxies, remedial-justice framing) remain live and contested; they are not foreclosed by the diversity reading's logic, only excluded from its normative framework. Resistance is high (0.72): colorblind advocates mount sustained constitutional and political challenge; remedial advocates contest from the opposite direction; rejected applicants face structural incentive to litigate. The diversity reading does not suppress resistance, only redirects its channels (individual claims are foreclosed; collective political action remains open).",
+    "perspectival_gap": "Universities experience the constraint as enabling (discretion, mission-driven authority) and protective (judicial approval of race-conscious review). Underrepresented applicants experience it as substantively beneficial (improved admission chances). Rejected applicants experience it as extractive and suppressive (obscured causation in their rejection, no individual constitutional claim). The diversity reading produces this seat divergence by design: it grants discretion to universities while suppressing individual redress for applicants disadvantaged by that discretion. The engine computes per-seat type from the structural data—the university seat should compute closer to 'rope' or 'mountain'; the rejected-applicant seat should compute closer to 'snare' or 'tangled_rope' (moderate extraction with substantial suppression, no exit from the holistic-review process once race is legally permitted as one factor).",
+    "directionality_logic": "Universities (institutional power, generational horizon, constrained exit to alternative constitutional frameworks) sit as clear beneficiaries (d near 0.0–0.15). Underrepresented applicants (moderate power, biographical horizon, constrained exit) are structural beneficiaries of the diversity permission (d near 0.1–0.2). Rejected applicants whose individual claims are obscured (moderate power, biographical horizon, trapped/constrained exit—they cannot choose to avoid the admission process) sit as clear targets of the suppression mechanism (d near 0.8–0.95). Applicants penalized by race-conscious diversity metrics (moderate power, biographical horizon, constrained exit—they also cannot avoid the process) sit as targets (d near 0.7–0.85). Colorblind and remedial advocates (organized power, generational horizon, analytical exit) are excluded from the constraint's authorization framework entirely—they do not sit within the diversity reading's structural space, only contest it from outside. This directionality structure is computed by the engine from the beneficiary/victim declarations and exit modulation; no override is required.",
+    "mandatrophy_analysis": "The diversity reading avoids conflating coordination with extraction by explicitly grounding the universities' discretion in a purported educational mission (diversity improves learning; diverse cohorts serve civic interests). The constraint is not merely a permission structure for universities to extract applicant-selection labor; it is justified as enabling a public good (educated diverse citizenry). However, mandatrophy surfaces here through the measurement series: as extractiveness stabilizes around 0.28 and theater rises, institutional performance devoted to defending the reading against constitutional and political challenge grows, while the underlying diversity-pedagogy function remains contested (some universities operationalize genuine diversity missions; others use the permission as cover for class-based or legacy-based selectivity). The founding-problem status is CONTESTED precisely because mandatrophy is live: colorblind advocates argue the founding problem (reconciling equal protection with diversity) is illusory and the reading is post-hoc justification; remedial advocates argue the founding problem is real but the diversity reading does not solve it—it manages the contradiction without resolving it. This reading permits the constraint's persistence without settling whether the constraint serves its stated purpose or merely legitimates it.",
+    "kernel_context": "This constraint instantiates the DIVERSITY READING of the equal_protection_commitment kernel. The kernel is the standing authorization to balance equal protection's command against state uses of racial classification. The diversity reading holds that equal protection PERMITS race-conscious admissions (within strict scrutiny) when universities articulate a compelling interest in educational diversity. Sibling readings: (1) colorblind_reading — equal protection FORBIDS any state use of racial classification; Constitution is 'color-blind'; (2) remedial_reading — equal protection REQUIRES active dismantling of caste-system subordination; permits race-conscious remedial measures. The readings do not correspond to different facts; they correspond to different normative commitments about what equal protection authorizes. This story is the diversity reading only; the other readings instantiate different constraints with different beneficiaries, victims, and ε values (the remedial reading has higher ε and more substantive redistribution; the colorblind reading has lower ε because it forbids the discretion rather than permitting it, but higher suppression of racial-justice voices). See network.affects_constraints and the cs_structure block for structural relationships."
   },
   "omegas": [
     {
-      "id": "diversity_as_educational_benefit",
-      "question": "Does student body racial diversity produce the educational benefits universities claim—improved critical thinking, reduced stereotype threat, better preparation for a diverse society?",
-      "resolution_mechanism": "Longitudinal empirical research on student outcomes (learning gains, critical thinking measures, post-graduation civic engagement) comparing cohorts in diverse vs. non-diverse student bodies, controlling for peer effects and selection bias.",
-      "impact": "If diversity produces measurable educational benefits, the constraint's coordination function is validated and extractiveness interpretation shifts toward genuine coordination. If no benefit is found, the diversity rationale becomes theater and the constraint reclassifies toward snare (extraction dressed in pedagogical language).",
+      "id": "holist_review_causation_suppression",
+      "question": "Is the opacity of holistic-review decision-making a necessary feature of the diversity commitment, or a contingent institutional practice that could be reformed?",
+      "resolution_mechanism": "Empirical pilot of transparent race-conscious admissions: if universities published explicit race-conscious criteria and rejected applicants' claims about their own race-based disadvantage did NOT rise, the opacity is not necessary. If such transparency provoked legal challenges that courts rejected on equal-protection grounds, the opacity would be revealed as contingent on institutional choice, not constitutional requirement.",
+      "impact": "If opacity is contingent, the diversity reading permits universities to operate more transparently, reducing the suppression score; if opacity is necessary to the reading's operation (because explicit racial preference triggers stricter scrutiny), the suppression is structurally embedded and the extraction floor rises.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether educational diversity produces measurable benefits to justify institutional discretion."
+      "description": "Whether holistic-review obscuration is necessary to the diversity reading or contingent on institutional practice."
     },
     {
-      "id": "race_factor_vs_proxy",
-      "question": "When universities use race as one factor in holistic review, is race operating as a direct marker of lived experience and perspective, or as a proxy for socioeconomic disadvantage that could be measured directly?",
-      "resolution_mechanism": "Comparative analysis of admissions outcomes under race-conscious vs. socioeconomic-conscious holistic review in jurisdictions where both have been tried; examination of how universities justify race weighting in internal policy documents.",
-      "impact": "If race is mainly a proxy for disadvantage, the constraint obscures a more transparent alternative (socioeconomic weighting); this supports reclassification as snare (extracting institutional discretion through misdirection). If race captures information about lived experience beyond class (identity-based discrimination, cultural knowledge), the constraint's informational role is substantive and the extraction interpretation is lower.",
+      "id": "diversity_outcome_vs_permission_structure",
+      "question": "Do the universities that invoke the diversity reading actually operationalize diversity pedagogy and achieve meaningful increases in underrepresented-group enrollment, or does the reading primarily function as permission to maintain historical selectivity patterns under new rhetoric?",
+      "resolution_mechanism": "Comparative analysis of admissions outcomes before and after adoption of explicit diversity-reading frameworks; interview evidence from admissions offices about whether diversity is an operative consideration or a legal compliance cover story.",
+      "impact": "If universities genuinely operationalize diversity, the coordination function is real and the ε is justified at 0.28. If the reading is primarily rhetorical cover for unchanged selectivity, the constraint slides toward 'piton' (inertial, performative, low actual coordination benefit) and ε should rise toward 0.40–0.50.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether race operates as direct information or as a proxy for class-based disadvantage."
+      "description": "Whether the diversity reading's stated coordination function matches actual institutional practice."
     },
     {
-      "id": "colorblind_vs_diversity_competing_readings",
-      "question": "Are the colorblind and diversity readings genuinely coexistent within equal protection doctrine, or does one logically foreclose the other?",
-      "resolution_mechanism": "Jurisprudential analysis of how courts frame the competing doctrines; analysis of whether a single institutional framework can coherently hold both. The 2023 Students for Fair Admissions decision empirically resolves this: the Supreme Court held that colorblindness FORECLOSES diversity weighting, treating them as incompatible within equal protection.",
-      "impact": "This omega is empirically resolved by the 2023 SCOTUS decision: the colorblind reading forecloses the diversity reading within current U.S. constitutional law. The relationship in cs_structure.reading_relations should reflect this foreclosure, not coexistence.",
-      "confidence": "high",
+      "id": "kernel_reading_underdetermination",
+      "question": "Is the diversity reading a coherent instantiation of equal protection principle, or does it represent an unprincipled middle ground that holds incompatible commitments (colorblindness and race-consciousness)?",
+      "resolution_mechanism": "Sustained philosophical and doctrinal analysis of whether the reading's distinction between individual colorblind rights and collective state-interest permissibility is logically coherent, or whether it smuggles in equivocation about what 'equal' means.",
+      "impact": "If the reading is coherent, it is a legitimate node in the kernel's solution space; if incoherent, it may be unstable (vulnerable to foreclosure by one of the sibling readings' more consistent premises). This would affect the confidence in the reading's persistence and the measured accessibility_collapse.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Logical relationship between colorblind and diversity readings of equal protection."
+      "description": "Whether the diversity reading's logical structure is coherent or represents unprincipled compromise between colorblind and remedial commitments."
     },
     {
-      "id": "institutional_opacity_and_fairness",
-      "question": "Does the permissibility of race as one factor among many inherently introduce opacity that violates fair-notice requirements, or can universities transparently communicate race weighting and remain within bounds of the diversity reading?",
-      "resolution_mechanism": "Empirical audit of university admissions policies: do they disclose race weighting explicitly, or is race-consciousness de facto but not formally stated? If transparency is achievable without triggering legal challenge, opacity is institutional choice, not structural necessity.",
-      "impact": "If opacity is structural (cannot disclose race weighting without inviting successful challenge), the constraint's extractiveness rises because unfair opacity is built in. If opacity is institutional choice, the constraint could be reformed toward transparency without abandoning the diversity reading, lowering extractiveness and theater_ratio.",
+      "id": "remedial_vs_diversity_boundary",
+      "question": "Where does the diversity reading's permission for race-conscious admissions END and a stronger remedial mandate BEGIN? Is there a principled distinction, or is the boundary drawn post-hoc to exclude stronger remedial measures?",
+      "resolution_mechanism": "Doctrinal analysis of how courts have drawn the line between permissible diversity consideration and impermissible quota or set-aside; examination of whether the line tracks a coherent principle or reflects political contingency.",
+      "impact": "If a principled boundary exists, the diversity reading is stable relative to the remedial reading (influences but does not foreclose). If the boundary is drawn ad-hoc, the remedial reading may eventually foreclose the diversity reading by establishing that equal protection REQUIRES stronger measures.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether race-factor opacity is structural to the diversity reading or an institutional choice."
-    },
-    {
-      "id": "kernel_reading_foreclosure_status",
-      "question": "Does the 2023 Students for Fair Admissions decision establish that colorblindness FORECLOSES the diversity reading (one reading logically rules out the other), or are they still coexistent as competing readings held by different parties?",
-      "resolution_mechanism": "The 2023 SCOTUS ruling directly addresses this: the majority opinion holds that equal protection requires colorblindness and forbids race-conscious admissions, treating the two readings as incompatible. This resolves the omega from 'open question' to 'empirically established foreclosure.'",
-      "impact": "If colorblind reading forecloses diversity reading: the reading_relations entry should change from coexists_with to forecloses, and the diversity reading becomes a historical but no longer operative interpretation. If the decision is overturned or the contest remains live: the relations remain open.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Relationship between colorblind and diversity readings resolved by 2023 constitutional decision."
+      "type_class": "conceptual",
+      "description": "Whether the diversity reading's boundary with remedial justice is principled or politically contingent."
     }
   ],
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "equal_protection_commitment__colorblind_reading",
       "equal_protection_commitment__remedial_reading"
     ],
-    "dual_formulation_note": "The equal protection commitment kernel is contested across three readings: colorblind (forbids racial classification), diversity (permits race as one factor for diversity), and remedial (permits race-conscious correction of subordination). Each reading is a separate constraint story with its own ε, beneficiary/victim structure, and type classification. They are linked via network.affects_constraints because they share the same constitutional foundation and compete for judicial endorsement and institutional implementation. The diversity reading (this story) treats race-consciousness as permissible in service of institutional diversity missions; the colorblind reading rejects all racial classification; the remedial reading reframes the constraint as affirmatively corrective rather than merely permissive. The three readings emit different constraint classifications because their structural features differ: diversity is procedural (discretionary authority), remedial is corrective (past-wrongs focused), colorblind is categorical (prohibition). All three inhabit equal protection jurisprudence; they are not the same constraint viewed from different angles—they are structurally distinct claims with different ε values, beneficiary/victim structures, and persistence mechanisms."
+    "dual_formulation_note": "The equal_protection_commitment kernel decomposes into three structurally distinct constraint stories: (1) diversity_reading (this story)—permits race-conscious admissions for educational diversity; low-moderate ε because procedural rather than substantive. (2) colorblind_reading—forbids any state use of racial classification; lower ε because constraint is permissive-void rather than discretion-granting; higher suppression of race-conscious voices. (3) remedial_reading—requires active dismantling of caste subordination; higher ε because substantive redistribution is authorized; beneficiary set is those subject to subordination, not institutional discretion-holders. Each reading instantiates a different constraint with different beneficiaries, victims, and extracted values. They coexist as live positions held by different parties (constitutional scholars, judges, advocates); neither forecloses the others from within a single framework, though each excludes the others' logic. The ε-invariance principle (DP-001) requires decomposition: a single constraint story cannot coherently author multiple readings with materially different ε values. Network links establish the kernel relationship."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerless",
-      "d_value": 0.8
+      "power_atom": "powerful",
+      "d_value": 0.75
     }
   ],
+  "gain_flow": "universities_mission_discretion",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "equal_protection_permits_race_consciousness_for_compelling_interests",
+    "reference_frame": "equal_protection_neutrality_with_remedial_capacity",
+    "drift_state": {
+      "moment": "contemporary_political_contestation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
     "reading_relations": [
       {
-        "sibling_id": "equal_protection_commitment__colorblind_reading",
-        "relation": "forecloses"
+        "sibling_id": "colorblind_reading",
+        "relation": "coexists_with"
       },
       {
-        "sibling_id": "equal_protection_commitment__remedial_reading",
-        "relation": "coexists_with"
+        "sibling_id": "remedial_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "institutional_discretion_in_diversity_pursuit",
+        "atom": "diversity_serves_compelling_state_interest",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "race_consciousness_compatible_with_equal_protection",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "race_as_permissible_educational_factor",
-        "role": "foundational",
-        "status": "overridden",
-        "grounding_type": "empirically_contingent"
+        "atom": "holistic_review_is_rational_admissions_practice",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
       }
-    ],
-    "drift_state": {
-      "moment": "post_students_for_fair_admissions_2023",
-      "direction": "authority_erosion",
-      "magnitude": "severe",
-      "acknowledged": true
-    }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "low_moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "equal_protection_commitment__colorblind_reading",
+      "equal_protection_commitment__remedial_reading"
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -7,7 +7,7 @@
 % Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_reformation_theological_fragmentation, []).
+:- module(constraint_reformation_composite__theological_fragmentation_reading, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -39,10 +39,20 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +66,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,34 +77,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: reformation_composite__theological_fragmentation_reading
- *   human_readable: Reformation Theological Fragmentation: Soteriological Incompatibility and Denominational Extraction
- *   domain: religious/epistemological/political
+ *   human_readable: Reformation Doctrinal Fragmentation (Theological Reading)
+ *   domain: historical_epistemology/religious_history
  *
  * SUMMARY:
- *   The Protestant Reformation is presented here as fundamentally a
- *   theological event driven by soteriological and ecclesiological
- *   incompatibilities. Luther's doctrine of sola fide, Calvin's
- *   predestination theology, and the Reformed assertion of sola scriptura
- *   create truth claims that cannot coexist with Catholic sacramental and
- *   hierarchical theology within a single coherent doctrinal system. The
- *   constraint is the fragmentation of Christian doctrine into
- *   denominationally bounded, mutually incompatible truth claims. This
- *   reading emphasizes doctrinal pluralism as the primary observable:
- *   confessional documents (Augsburg Confession, Heidelberg Catechism,
- *   Westminster Standards) formalize and crystallize the theological
- *   boundaries. Denominational leadership benefits from the fragmentation
- *   because their institutional legitimacy and authority depend on defending
- *   the theological distinctiveness they establish. The unified Catholic
- *   faithful and excluded radical reformers bear the costs of doctrinal
- *   enforcement without participating in the agenda-setting.
+ *   This story instantiates ONE reading of the contested Reformation kernel:
+ *   the theological fragmentation reading. The constraint is the structural
+ *   fragmentation of Christian soteriology and ecclesiology into
+ *   irreconcilably different doctrinal positions, each institutionalized in a
+ *   confessional community with its own authority structure. The reading
+ *   asserts that this fragmentation is FUNDAMENTALLY THEOLOGICAL — driven by
+ *   doctrinal incompatibility on salvific mechanism and church order — rather
+ *   than primarily political (nation-states asserting sovereignty) or
+ *   technological (printing press enabling mass dissemination). The
+ *   extraction arises because denominational leadership benefits from
+ *   fragmentary authority structures, lay Christians bear the cost of schism
+ *   and identity-locking, and unified Christendom's magisterial claim is
+ *   undermined. Sibling readings (political_realignment_reading,
+ *   technological_mediation_reading) offer competing frames for the same
+ *   historical Reformation; this story does not adjudicate between them but
+ *   articulates what the theological reading instantiates.
  *
  * KEY AGENTS:
- *   - Reformation denominational leadership (Luther, Calvin, Zwingli, Melanchthon, Beza) — agenda-setters, establish doctrinal boundaries and confessional documents
- *   - Reformed theological communities (Lutheran, Reformed, Anabaptist congregations) — beneficiaries of new soteriological frameworks, also bearers of schism costs
- *   - Unified Catholic faithful — payersexperiencing loss of doctrinal unity and institutional coherence
- *   - Radical reformers and dissident lay populations — excluded victims, suppressed from theological discourse
- *   - Roman Catholic institutional hierarchy — payer, loses monopoly on doctrinal authority
- *   - Secular political authorities (princes, nation-states) — excluded from doctrinal agenda-setting but enabled by theological fragmentation to assert sovereignty
+ *   - Reformed denominational leadership (organizers of confessional boundaries, beneficiary)
+ *   - Roman Curia and papal magisterium (defenders of unified authority, payer)
+ *   - Lay Christians navigating schism (identity-locked targets of doctrinal enforcement)
+ *   - Confessional theological authorities (beneficiaries of doctrinal work)
+ *   - Protestant reformers and theologians (beneficiary agenda-setters)
  */
 
 /* ==========================================================================
@@ -102,58 +112,128 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(reformation_composite__theological_fragmentation_reading, 0.68).
-domain_priors:suppression_score(reformation_composite__theological_fragmentation_reading, 0.72).
-domain_priors:theater_ratio(reformation_composite__theological_fragmentation_reading, 0.41).
+domain_priors:suppression_score(reformation_composite__theological_fragmentation_reading, 0.54).
+domain_priors:theater_ratio(reformation_composite__theological_fragmentation_reading, 0.22).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, suppression_requirement, 0.54).
+narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, accessibility_collapse, 0.58).
-narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, resistance, 0.62).
+narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(reformation_composite__theological_fragmentation_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(reformation_composite__theological_fragmentation_reading, tangled_rope).
-narrative_ontology:human_readable(reformation_composite__theological_fragmentation_reading, "Reformation Theological Fragmentation: Soteriological Incompatibility and Denominational Extraction").
-narrative_ontology:topic_domain(reformation_composite__theological_fragmentation_reading, "religious/epistemological/political").
+narrative_ontology:human_readable(reformation_composite__theological_fragmentation_reading, "Reformation Doctrinal Fragmentation (Theological Reading)").
+narrative_ontology:topic_domain(reformation_composite__theological_fragmentation_reading, "historical_epistemology/religious_history").
 
 domain_priors:requires_active_enforcement(reformation_composite__theological_fragmentation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(reformation_composite__theological_fragmentation_reading, '098b0c82-da90-4574-976c-45393b2634df').
-narrative_ontology:cs_kernel_codification('098b0c82-da90-4574-976c-45393b2634df', formalized).
-narrative_ontology:cs_authority_grounding('098b0c82-da90-4574-976c-45393b2634df', lineage).
-narrative_ontology:cs_interpretation_layer_present('098b0c82-da90-4574-976c-45393b2634df').
-narrative_ontology:cs_reading_relation('098b0c82-da90-4574-976c-45393b2634df', reformation_composite__reformation_political_realignment, influences).
-narrative_ontology:cs_reading_relation('098b0c82-da90-4574-976c-45393b2634df', reformation_composite__reformation_technological_mediation, influences).
-narrative_ontology:cs_axiom('098b0c82-da90-4574-976c-45393b2634df', foundational, soteriological_incompatibility_doctrine).
-narrative_ontology:cs_axiom_status(soteriological_incompatibility_doctrine, holdable).
-narrative_ontology:cs_axiom_grounding('098b0c82-da90-4574-976c-45393b2634df', soteriological_incompatibility_doctrine, deontological).
-narrative_ontology:cs_axiom('098b0c82-da90-4574-976c-45393b2634df', foundational, confessional_crystallization_necessity).
-narrative_ontology:cs_axiom_status(confessional_crystallization_necessity, holdable).
-narrative_ontology:cs_axiom_grounding('098b0c82-da90-4574-976c-45393b2634df', confessional_crystallization_necessity, instrumental).
-narrative_ontology:cs_reference_frame('098b0c82-da90-4574-976c-45393b2634df', unified_medieval_catholicism_framework).
-narrative_ontology:cs_drift_state('098b0c82-da90-4574-976c-45393b2634df', post_reformation_consolidation_1648, gap(codification_collapse, severe, true)).
-narrative_ontology:cs_created_at('098b0c82-da90-4574-976c-45393b2634df', '').
+narrative_ontology:cs_story_uid(reformation_composite__theological_fragmentation_reading, 'e7ebc0d6-8be6-4a28-93f5-28bff942b503').
+narrative_ontology:cs_kernel_codification('e7ebc0d6-8be6-4a28-93f5-28bff942b503', fixed_text).
+narrative_ontology:cs_authority_grounding('e7ebc0d6-8be6-4a28-93f5-28bff942b503', extraction).
+narrative_ontology:cs_interpretation_layer_present('e7ebc0d6-8be6-4a28-93f5-28bff942b503').
+narrative_ontology:cs_reading_relation('e7ebc0d6-8be6-4a28-93f5-28bff942b503', reformation_composite__political_realignment_reading, influences).
+narrative_ontology:cs_reading_relation('e7ebc0d6-8be6-4a28-93f5-28bff942b503', reformation_composite__technological_mediation_reading, influences).
+narrative_ontology:cs_axiom('e7ebc0d6-8be6-4a28-93f5-28bff942b503', foundational, doctrinal_incompatibility_primary).
+narrative_ontology:cs_axiom_status(doctrinal_incompatibility_primary, holdable).
+narrative_ontology:cs_axiom_grounding('e7ebc0d6-8be6-4a28-93f5-28bff942b503', doctrinal_incompatibility_primary, deontological).
+narrative_ontology:cs_axiom('e7ebc0d6-8be6-4a28-93f5-28bff942b503', foundational, denominational_pluralism_legitimate).
+narrative_ontology:cs_axiom_status(denominational_pluralism_legitimate, holdable).
+narrative_ontology:cs_axiom_grounding('e7ebc0d6-8be6-4a28-93f5-28bff942b503', denominational_pluralism_legitimate, deontological).
+narrative_ontology:cs_reference_frame('e7ebc0d6-8be6-4a28-93f5-28bff942b503', unified_catholic_christendom).
+narrative_ontology:cs_drift_state('e7ebc0d6-8be6-4a28-93f5-28bff942b503', confessional_settlement_stabilized, gap(codification_collapse, severe, true)).
+narrative_ontology:cs_created_at('e7ebc0d6-8be6-4a28-93f5-28bff942b503', '').
 narrative_ontology:cs_kernel_id(reformation_composite__theological_fragmentation_reading, reformation_composite).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, reformation_denominational_leadership).
-narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, reformed_theological_communities).
-narrative_ontology:constraint_victim(reformation_composite__theological_fragmentation_reading, unified_catholic_faithful).
-narrative_ontology:constraint_victim(reformation_composite__theological_fragmentation_reading, dissident_lay_populations_excluded_from_doctrine).
+narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, reformed_denominational_leadership).
+narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, confessional_theological_authorities).
+narrative_ontology:constraint_victim(reformation_composite__theological_fragmentation_reading, latin_christendom_unified_claim).
+narrative_ontology:constraint_victim(reformation_composite__theological_fragmentation_reading, lay_christians_navigating_schism).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, lay_christians_navigating_schism).
+narrative_ontology:constraint_beneficiary(reformation_composite__theological_fragmentation_reading, protestant_theologians_and_reformers).
+narrative_ontology:constraint_victim(reformation_composite__theological_fragmentation_reading, roman_curia_and_papal_magisterium).
+narrative_ontology:constraint_vindicates(reformation_composite__theological_fragmentation_reading, sola_scriptura_doctrine).
+narrative_ontology:constraint_vindicates(reformation_composite__theological_fragmentation_reading, justification_by_faith_alone).
+narrative_ontology:constraint_vindicates(reformation_composite__theological_fragmentation_reading, predestination_doctrine).
+narrative_ontology:constraint_vindicates(reformation_composite__theological_fragmentation_reading, episcopal_vs_congregational_polity_debate).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Denominational pastors, theologians, and synodal bodies (Lutheran, Calvinist, Reformed, Radical Reformation groups) articulate and enforce doctrinal boundaries through confessional documents (Augsburg Confession, Heidelberg Catechism, Trent decrees). They consolidate authority by distinguishing their soteriological claims from rivals and anchoring membership in doctrinal fidelity. They benefit from the fragmentation because it entrenches their leadership role as arbiter of orthodoxy within their confessional boundary.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, reformed_denominational_leadership, agenda_setter,
+    organized, generational, constrained, continental).
+
+% The Roman Church loses its claim to unified doctrinal authority over Latin Christendom. It must actively defend its own confessional position (Council of Trent, 1545-1563) against Protestant soteriological claims, dedicating resources to doctrinal refinement rather than coordination of a unified faith. The constraint forces the Curia to articulate what it believes rather than assume unity.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, roman_curia_and_papal_magisterium, payer,
+    institutional, civilizational, trapped, continental).
+
+% Laypeople must choose or are assigned a denominational affiliation based on doctrinal boundaries they often do not fully understand. The fragmentation into confessionally distinct churches means their identity as Christian becomes indexed to soteriological doctrine (saved by faith vs. works, predestined vs. free will). They carry the cost of schism (religious violence, confusion, community rupture) and a limited benefit (access to reformed worship/theology in some cases, but at the price of doctrinal conformity enforcement).
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, lay_christians_navigating_schism, payer,
+    powerless, biographical, identity_locked, local).
+narrative_ontology:stakeholder_secondary_role(reformation_composite__theological_fragmentation_reading, lay_christians_navigating_schism, beneficiary).
+
+% Theologians who write confessions and defend doctrinal positions gain status and institutional position. The fragmentation creates a field of theological work: competing systematizations of soteriology, ecclesiology, and biblical hermeneutics become the basis for academic and ecclesiastical authority. Universities and seminaries consolidate around confessional identity, creating institutional beneficiaries from the doctrinal divide.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, confessional_theological_authorities, beneficiary,
+    powerful, generational, mobile, continental).
+
+% The institutional and theological claim to a single unified Christian faith under one authority is fragmented and delegitimized. This is not an agent but a proposition that loses institutional force. The constraint undermines it by making doctrinal heterodoxy permanent and legitimate within distinct confessional spaces.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, unified_christendom_claim, payer,
+    analytical, civilizational, analytical, continental).
+narrative_ontology:stakeholder_non_agent(reformation_composite__theological_fragmentation_reading, unified_christendom_claim).
+
+% Luther, Calvin, Melanchthon, and successor theologians articulate soteriological and ecclesiological positions that become structural and rival to Rome. They benefit from the fragmentation by establishing themselves as authoritative voices, creating new institutional bases (universities, printing networks, ecclesiastical hierarchies) rooted in doctrinal distinctiveness. Their theological claims become enforceable by generating denominational communities organized around those claims.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, protestant_theologians_and_reformers, beneficiary,
+    organized, generational, mobile, continental).
+narrative_ontology:stakeholder_secondary_role(reformation_composite__theological_fragmentation_reading, protestant_theologians_and_reformers, agenda_setter).
+
+% Anabaptists, spiritualists, and sectarian groups are excluded from the mainstream confessional settlements (Lutheran, Reformed, Catholic). Their theological claims about baptism, church discipline, and religious violence do not fit the magisterial Reformation's political settlement. They remain marginal despite sharing some soteriological commitments with Protestants.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, radical_reformation_groups, excluded,
+    powerless, biographical, trapped, local).
+
+% Scholars analyze the Reformation as theological, political, or technological event; this reading instantiates the theological framing. They see the doctrinal boundaries and confessional documents as primary observables and interpret the fragmentation as driven by soteriological and ecclesiological irreconcilability rather than external politics or technology.
+narrative_ontology:constraint_stakeholder(reformation_composite__theological_fragmentation_reading, early_modern_historians, observer,
+    analytical, generational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(reformation_composite__theological_fragmentation_reading, reformed_denominational_leadership).
+narrative_ontology:fixing_cost_class(reformation_composite__theological_fragmentation_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a stable field of doctrinal differentiation: competing soteriological claims (justification mechanism, predestination, free will) and ecclesiological claims (polity, sacraments, authority structure) are articulated, bounded, and defended within distinct confessional communities. This solves the problem of legitimate theological pluralism by making the pluralism itself institutional and enforced rather than informal and contested.
+% TRANSFER_FUNCTION: Transfers authority over Christian identity from a unified magisterium (Rome) to multiple confessional authorities. Lay adherents transfer deference to a denominational magisterium (Lutheran, Reformed, Catholic reformed). Theological work and institutional resources flow to those who articulate and defend doctrinal boundaries.
+% ABSENT_VOICES: Radical Reformation groups, women theologians, indigenous Christian communities, and lay Christians who reject denominational categories are excluded from the mainstream confessional settlements. They would assert alternative soteriologies and church orders but are kept out by the institutional consolidation of magisterial confessions.
+% DISAPPEARANCE_RATIONALE: If the doctrinal fragmentation vanished overnight — if all Christians reverted to accepting unified magisterial authority — the institutional and intellectual structures of Protestantism, Catholicism, and Orthodox Christianity would dissolve. Denominational hierarchies, confessional seminaries, distinct worship practices, and theological traditions rooted in soteriological difference would reorganize. The world does not rearrange to unified Christianity, but it rearranges significantly from the post-Reformation plural structure.
+% FOUNDING_PROBLEM: Late medieval Christendom faced mounting theological contestation: questions about justification mechanism, papal authority, biblical hermeneutics, and sacramental efficacy generated competing answers that could not be adjudicated within a unified framework. The founding problem is: how can doctrinally incompatible claims about salvation and church order coexist within Christian faith?
+% FOUNDING_PROBLEM_CORROBORATION: Protestant reformers and Catholic Counter-Reformation theologians both attest that the founding problem is live: soteriology and ecclesiology remain systematically contested, and each confessional community claims its answer is correct. They disagree on whether the contestation is a problem (requiring unified resolution) or a feature (allowing legitimate pluralism). Historians of theology and comparative religion attest from outside the benefiting parties that the doctrinal claims are irreducibly incompatible on their own logical grounds.
+narrative_ontology:disappearance_verdict(reformation_composite__theological_fragmentation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(reformation_composite__theological_fragmentation_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(reformation_composite__theological_fragmentation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(reformation_composite__theological_fragmentation_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(reformation_composite__theological_fragmentation_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(reformation_composite__theological_fragmentation_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,16 +253,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness begins low (0.32 in 1517) because the theological incompatibilities are not yet crystallized into formal denominational boundaries and extraction mechanisms; they exist as intellectual and spiritual dissent. By 1530 (0.42), as confessional documents emerge and denominational leadership consolidates power, extractiveness rises — the constraint now actively enforces doctrinal boundaries and excludes alternative voices. The rise continues through 1545 (0.55, Council of Trent crystallizes Catholic response) and plateaus by 1600 (0.67) as the denominational system stabilizes and extraction becomes routine enforcement of doctrinal conformity. Theater ratio rises steadily (0.15 to 0.41) as the theological debate increasingly takes the form of scholastic performance, confessional polemic, and institutional theater rather than genuine doctrinal exploration — by 1648 (Peace of Westphalia), much of the constraint's operation is maintaining performative denominational boundaries rather than resolving theological questions. Suppression requirement rises sharply (0.42 to 0.72) because maintaining doctrinal incompatibility requires active enforcement: doctrinal discipline, excommunication, political alliance with secular powers to enforce religious conformity, and systematic exclusion of heterodox voices. All three metrics follow one shared time grid so no metric is missing from any examined time point.
+ *   Extractiveness measures how much the fragmentation extracts from those who expected or depended on unified Christian authority. It starts low (1500: 0.12) when the theological contest is emerging but not yet institutionalized. It rises steeply by 1530 (0.38) as Lutheran and Reformed confessions solidify and Rome mobilizes Counter-Reformation. It plateaus by 1600 (0.68) as the confessional settlement becomes stable and enforced — extractive but no longer accelerating. Suppression measures the active enforcement of doctrinal boundaries: the index rises as denominational hierarchies enforce orthodoxy, excommunicate deviants, and suppress alternative soteriologies (Radical Reformation). Theater ratio measures performative work that does not advance the core doctrinal function: it rises as confessional polemics become ritualized, but remains modest (0.22) because the doctrinal work itself is substantive — the constraint's function is not purely theatrical. Accessibility collapse measures how completely alternatives close once the theological framing is accepted: once you embrace the theological reading, rival doctrinal positions appear logically irreconcilable, making alternatives inaccessible (0.71). Resistance measures active pushback: many laypeople and radical reformers resist denominational identity-locking, generating persistent resistance (0.58).
  *
  * PERSPECTIVAL GAP:
- *   From the denominational leadership seat, the constraint appears as genuine theological coordination: the articulation of coherent truth claims about salvation and the Church, the formalization of those claims in confessional documents, the gathering of communities around shared doctrinal understanding. From the unified Catholic faithful and excluded radical reformer seats, the same structure operates as enforced doctrinal extraction: the imposition of theological truth claims without participation, the enforcement of boundaries through discipline and exclusion, the cost of schism imposed without choice. The divergence is structural, not a matter of perspective tuning — the leadership sets the agenda; the others bear the costs of whatever agenda emerges. The engine computes this seat-divergence from the authored structural data (roles, power, exit options); it is not predicted by the claimed type.
+ *   From the perspective of denominational leadership and theological authorities, the fragmentation is a legitimate response to irreconcilable doctrinal differences — a coordination mechanism that establishes stable confessional communities. From the perspective of the Roman Curia, the fragmentation is an extraction that undermines unified authority and forces defensive doctrinal work. From the perspective of lay Christians, the fragmentation imposes identity-lock (you must choose or be assigned a denomination) at the cost of schism and community rupture. These seats compute different types: beneficiary seats compute the constraint as a rope (coordination under shared theology); payer seats compute it as snare or tangled_rope (enforced fragmentation that extracts authority and imposes costs). The engine's per-seat classification captures this perspectival divergence from the structural data alone.
  *
  * DIRECTIONALITY LOGIC:
- *   Reformation denominational leadership occupies the beneficiary seat with organized power and identity-locked exit — they are fused with the denominational identity they establish and cannot exit without losing their role and authority. Their directionality is near 0.0 (full beneficiary). Reformed theological communities occupy a mixed seat: they are beneficiaries of the new soteriological frameworks (genuine coordination benefit) but payersof schism costs and ongoing enforcement; their directionality sits near 0.5 (symmetric). Unified Catholic faithful are payersof doctrinal fragmentation with powerless status and constrained exit — they experience the loss of doctrinal unity imposed without their participation. Their directionality is near 1.0 (full target). Dissident lay populations are trapped payersexcluded from agenda-setting; their directionality is 1.0 (full target). Secular authorities are excluded (not seated in the doctrinal exchange) but benefit from political side-effects; they are not targets of the theological extraction itself, and they sit outside the constraint's primary operation — their directionality for THIS constraint is not computed (they are excluded seats, not beneficiary or payer seats in the theological fragmentation).
+ *   The denominational leadership benefits from the fragmentation — they become authorities within their confessional space, and the fragmentation entrenches their role. Their directionality is low (d ~ 0.2), making them beneficiaries. The Roman Curia is a target — forced to defend its own doctrine and lose unified authority — with directionality high (d ~ 0.8). Lay Christians are trapped between benefit (access to reformed worship/theology) and cost (schism, forced denomination choice): their directionality is near symmetric (d ~ 0.5) reflecting the secondary_role split. The constraint's effective extraction is amplified for the Curia (institutional power, large scope) and modulated differently for lay Christians (powerless but identity-locked, local scope). Theological authorities sit near the beneficiary end because doctrinal fragmentation creates their institutional niche.
  *
  * MANDATROPHY ANALYSIS:
- *   The theological fragmentation constraint must be classified as tangled_rope (hybrid coordination/extraction) rather than pure snare, because a genuine coordination function is present: the denominations do solve a real problem (articulating coherent doctrine where unity became impossible), and the reformed communities do benefit from the new soteriological frameworks they adopt. However, the constraint is also substantially extractive because the denominational leadership enforces doctrinal boundaries, excludes heterodox voices, and collects institutional legitimacy from the fragmentation they establish. The tension between coordination and extraction is the mandatrophy: if the constraint were purely extractive (snare), the beneficiaries would derive no real coordination value from it, only rents. But reformed congregations do adopt the new doctrine voluntarily (in many cases) and experience genuine theological coordination alongside the schism costs. If the constraint were pure coordination (rope), there would be no identifiable victims — but the unified Catholic faithful and excluded radicals do bear real costs without participating in the agenda. The tangled_rope classification captures both: coordination function + asymmetric extraction + active enforcement to maintain both the coordination and the extraction boundary.
+ *   The founding problem (how can doctrinally incompatible claims coexist?) remains live and contested. The constraint does not solve it — it institutionalizes pluralism as the answer. The confessional settlement is NOT mandatrophic: it actively maintains its function by enforcing denominational boundaries and articulating doctrinal distinctions. The theatrical component (confessional polemic, ritualized doctrinal defense) is present but modest, suggesting the constraint still performs a real coordination function — establishing stable spaces for distinct theologies — rather than persisting as pure theater.
  */
 
 /* ==========================================================================
@@ -190,89 +270,101 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    theology_vs_politics_causal_primacy,
-    'Is the Reformation''s theological fragmentation the PRIMARY causal driver, or is it a rationalization of political realignment by emerging nation-states?',
-    'Counterfactual historical analysis: would theological incompatibilities have generated permanent denominational boundaries without the political support of princes and nation-states? Would political realignment have occurred without the theological justification the Reformation provided?',
-    'If theology is primary, the constraint is the incompatibility of soteriologies and ecclesiologies driving fragmentation; if politics is primary, theology is a secondary effect. The ε value and beneficiary structure change: theological reading has denominational leaders as beneficiaries; political reading has nation-states as beneficiaries. Classification type remains tangled_rope (extraction + coordination) under either, but with different extractive mechanisms.',
+    doctrinal_vs_contingent_causation,
+    'Are the doctrinal differences (soteriology, ecclesiology) the primary DRIVER of the Reformation''s fragmentation, or are they post-hoc RATIONALIZATION of political and economic causes?',
+    'Counterfactual analysis: if the same doctrinal disputes had arisen in a politically unified Christendom (no emerging nation-states), would they have generated institutionalized denominations? Conversely, if the same political and economic pressures existed without the theological disputes, would fragmentation have occurred?',
+    'If doctrines are primary, the theological reading holds; effective extraction is real and driven by doctrinal boundaries. If doctrines are rationalization, the constraint decomposes — the primary constraint is political or economic, and theology is its legitimation cover. The classification would shift from tangled_rope to snare (pure extraction rationalized theologically).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(theology_vs_politics_causal_primacy, conceptual, 'Whether doctrinal incompatibility or political realignment is the primary causal driver of denominational fragmentation.').
+narrative_ontology:omega_variable(doctrinal_vs_contingent_causation, conceptual, 'Whether doctrinal differences drive fragmentation or rationalize it.').
 
 omega_variable(
-    theology_vs_technology_diffusion_mechanism,
-    'Would soteriological incompatibilities have generated lasting denominational boundaries without the printing press enabling mass circulation of confessional documents and theological polemic?',
-    'Comparison to pre-print theological dissents (Wycliffe, Hus, Waldensian movements): did they generate sustained alternative denominations, or were they suppressed and reintegrated? Did post-Gutenberg confessional documents enable durability that pre-print dissent lacked?',
-    'If printing is essential to diffusion, the theological incompatibilities alone might have generated only ephemeral movements; the printing press amplifies theological dissent into structural fragmentation. If theology is sufficient, printing merely accelerates an inevitable process. The ε value for the theological constraint depends on whether the incompatibilities are intrinsic or require technological amplification to manifest extractively.',
+    incompatibility_claim_verification,
+    'Are the competing soteriological and ecclesiological claims logically irreconcilable on their own grounds, or could a unified theology accommodate them as legitimate internal plurality?',
+    'Systematic theological analysis of core doctrinal claims: can justification-by-faith-alone coexist with works-informed justification in one framework? Can congregational and episcopal polity coexist? Medieval Catholic theology before the Reformation did accommodate some plurality; the question is whether the Protestant claims are categorically incompatible or merely novel.',
+    'If incompatible, the fragmentation reflects real doctrinal impossibility and the constraint is coordination around pluralism. If compatible, the fragmentation is partly enforced by leadership preference for boundary-maintenance, raising the extraction measure and shifting classification toward snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(theology_vs_technology_diffusion_mechanism, empirical, 'Whether printing technology is necessary to convert theological incompatibilities into lasting denominational fragmentation.').
+narrative_ontology:omega_variable(incompatibility_claim_verification, empirical, 'Whether doctrinal claims are logically irreconcilable.').
 
 omega_variable(
-    doctrinal_incompatibility_metaphysical_vs_constructed,
-    'Are the soteriological and ecclesiological incompatibilities between reformed and Catholic theology METAPHYSICALLY real (one set of claims is objectively true; the other objectively false), or are they SOCIALLY CONSTRUCTED as incompatible through the act of denominational boundary-setting?',
-    'Logical analysis of the doctrinal claims: can sola fide and Catholic justification-through-sacraments both be true under some coherent metaphysical framework? If yes, the incompatibility is constructed; if no, it is intrinsic. Ecumenical theology attempts to show reconciliation paths (both Catholic-Lutheran Joint Declaration on Justification); does their success show constructed incompatibility or shallow resolution of deep division?',
-    'If intrinsic, the constraint arises from the objective structure of theological truth; the fragmentation is inevitable and natural. If constructed, the denominational leadership benefits from asserting incompatibility even where compromise might be possible. This affects whether the constraint should be classified as mountain (natural doctrinal limit) or tangled_rope (constructed extraction). Currently classified as tangled_rope assuming constructed incompatibility; if intrinsic, reclassify to mountain (natural theological incompatibility).',
+    lay_identity_lock_internalization,
+    'Is the identity-locking of lay Christians (forced denomination choice) structural (external enforcement) or internalized (adherents identify with denominational theology as constitutive of self)?',
+    'Post-Reformation historical analysis: when did laypeople internalize Protestant vs. Catholic identity as self-constitutive? Did internalization follow enforcement, or did voluntary theological commitment precede or exceed external coercion?',
+    'If internalized, the suppression measure understates the actual lock-in; the constraint''s effective suppression is higher because the target carries the constraint''s logic after external enforcement relaxes. If structural only, suppression properly reflects external coercion and post-Reformation enforcement decay would reverse the lock-in.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(doctrinal_incompatibility_metaphysical_vs_constructed, conceptual, 'Whether soteriological incompatibilities are metaphysically real or socially constructed through denominational boundary-setting.').
+narrative_ontology:omega_variable(lay_identity_lock_internalization, empirical, 'Whether lay denomination identity-lock is structural or internalized.').
 
 omega_variable(
-    radical_reformation_exclusion_mechanism,
-    'Is the exclusion and suppression of radical reformers (Anabaptists, Spiritualists, antitrinitarians) a necessary consequence of maintaining coherent denominational theology, or is it an arbitrary exercise of power by mainline Reformation leadership?',
-    'Doctrinal analysis: do radical theological positions (believer baptism, separation of church and state, antitrinitarianism) create genuine incompatibilities with Lutheran or Reformed theology that require exclusion? Or are they suppressed primarily for political stability reasons?',
-    'If necessary, the suppression is a cost of maintaining theological coherence; if arbitrary, it is pure coercive enforcement of ideological boundaries without doctrinal justification. This affects the magnitude of victimization (dissident_lay_populations) and whether the constraint''s extractiveness is justified by genuine coordination necessity or is pure rent-seeking.',
+    unified_christendom_naturalness,
+    'Was pre-Reformation unified Christendom a natural or constructed state? If constructed, how does that change the interpretation of its fragmentation?',
+    'Medieval history analysis: to what extent did pre-Reformation unity depend on enforcement mechanisms, exclusion of heterodox voices, or suppression of doctrinal contestation? Was unity a default or an achievement?',
+    'If unified Christendom was itself constructed through suppression, the fragmentation is not extraction but release from an imposed constraint — reversing the victim/beneficiary structure for lay Christians. The classification might shift from tangled_rope to rope (liberation into legitimate plurality) from certain perspectives.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(radical_reformation_exclusion_mechanism, conceptual, 'Whether radical-reformer exclusion is necessitated by doctrinal coherence or exercised as arbitrary power.').
+narrative_ontology:omega_variable(unified_christendom_naturalness, conceptual, 'Whether pre-Reformation unity was natural or constructed.').
 
 omega_variable(
-    committer_constraint_multiplicity,
-    'The Reformation is described by three distinct readings (theological, political, technological). Are these three readings of ONE constraint (one ε, three interpretive frames), or three DIFFERENT constraints (three distinct ε values, three distinct structural configurations)?',
-    'Apply ε-invariance principle: does measuring the Reformation''s theological fragmentation produce a different ε than measuring its political realignment function? If yes (different observable → different ε), the readings are separate constraints. If no (same ε regardless of observable), they are three interpretations of one constraint.',
-    'If separate constraints: author three JSON files (theological, political, technological), each with its own ε, beneficiary structure, and metrics; link via network.affects_constraints. If one constraint: author a single JSON with three interpretive frames (less likely given this prompt''s specification that the reading is ''theological fragmentation'' with expected structural delta of ''confessional documents as artifacts; denominational leadership as beneficiary''). DECISION: treating as three separate constraints based on structural delta specification; this JSON generates the theological reading only.',
+    reading_vs_sibling_foreclosure,
+    'Does the theological reading logically foreclose the political or technological readings, or do they coexist as alternative causal emphases on the same event?',
+    'Logical analysis: if you hold that doctrinal irreconcilability is the primary driver, does that require denying that political pressures and technology also played causal roles? Or can all three be live simultaneously with different agents prioritizing different causal streams?',
+    'If foreclosure obtains, the theological reading is the only defensible reading within a unified analytical framework — the political and technological readings are incoherent competitors. If coexistence obtains, the readings are complementary framings of multicausal change, and all three readings describe the same Reformation from different perspectives.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(committer_constraint_multiplicity, conceptual, 'Whether the three Reformation readings are interpretations of one constraint or separate constraints with different ε values.').
+narrative_ontology:omega_variable(reading_vs_sibling_foreclosure, conceptual, 'Whether the theological reading forecloses or coexists with political and technological readings.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(reformation_composite__theological_fragmentation_reading, 1517, 1648).
+narrative_ontology:interval(reformation_composite__theological_fragmentation_reading, 1500, 1650).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(reformation_theofrag_tr_t1517, reformation_composite__theological_fragmentation_reading, theater_ratio, 1517, 0.15).
-narrative_ontology:measurement(reformation_theofrag_tr_t1530, reformation_composite__theological_fragmentation_reading, theater_ratio, 1530, 0.22).
-narrative_ontology:measurement(reformation_theofrag_tr_t1545, reformation_composite__theological_fragmentation_reading, theater_ratio, 1545, 0.28).
-narrative_ontology:measurement(reformation_theofrag_tr_t1560, reformation_composite__theological_fragmentation_reading, theater_ratio, 1560, 0.33).
-narrative_ontology:measurement(reformation_theofrag_tr_t1600, reformation_composite__theological_fragmentation_reading, theater_ratio, 1600, 0.39).
-narrative_ontology:measurement(reformation_theofrag_tr_t1648, reformation_composite__theological_fragmentation_reading, theater_ratio, 1648, 0.41).
+narrative_ontology:measurement(refo_tr_t1500, reformation_composite__theological_fragmentation_reading, theater_ratio, 1500, 0.05).
+narrative_ontology:measurement_basis(refo_tr_t1500, observed).
+narrative_ontology:measurement(refo_tr_t1530, reformation_composite__theological_fragmentation_reading, theater_ratio, 1530, 0.12).
+narrative_ontology:measurement_basis(refo_tr_t1530, observed).
+narrative_ontology:measurement(refo_tr_t1560, reformation_composite__theological_fragmentation_reading, theater_ratio, 1560, 0.18).
+narrative_ontology:measurement_basis(refo_tr_t1560, observed).
+narrative_ontology:measurement(refo_tr_t1600, reformation_composite__theological_fragmentation_reading, theater_ratio, 1600, 0.22).
+narrative_ontology:measurement_basis(refo_tr_t1600, observed).
+narrative_ontology:measurement(refo_tr_t1650, reformation_composite__theological_fragmentation_reading, theater_ratio, 1650, 0.22).
+narrative_ontology:measurement_basis(refo_tr_t1650, observed).
 
 % Extraction over time
-narrative_ontology:measurement(reformation_theofrag_be_t1517, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1517, 0.32).
-narrative_ontology:measurement(reformation_theofrag_be_t1530, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1530, 0.42).
-narrative_ontology:measurement(reformation_theofrag_be_t1545, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1545, 0.55).
-narrative_ontology:measurement(reformation_theofrag_be_t1560, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1560, 0.61).
-narrative_ontology:measurement(reformation_theofrag_be_t1600, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1600, 0.67).
-narrative_ontology:measurement(reformation_theofrag_be_t1648, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1648, 0.68).
+narrative_ontology:measurement(refo_be_t1500, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1500, 0.12).
+narrative_ontology:measurement_basis(refo_be_t1500, observed).
+narrative_ontology:measurement(refo_be_t1530, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1530, 0.38).
+narrative_ontology:measurement_basis(refo_be_t1530, observed).
+narrative_ontology:measurement(refo_be_t1560, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1560, 0.62).
+narrative_ontology:measurement_basis(refo_be_t1560, observed).
+narrative_ontology:measurement(refo_be_t1600, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1600, 0.68).
+narrative_ontology:measurement_basis(refo_be_t1600, observed).
+narrative_ontology:measurement(refo_be_t1650, reformation_composite__theological_fragmentation_reading, base_extractiveness, 1650, 0.68).
+narrative_ontology:measurement_basis(refo_be_t1650, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(reformation_theofrag_su_t1517, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1517, 0.42).
-narrative_ontology:measurement(reformation_theofrag_su_t1530, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1530, 0.58).
-narrative_ontology:measurement(reformation_theofrag_su_t1545, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1545, 0.64).
-narrative_ontology:measurement(reformation_theofrag_su_t1560, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1560, 0.68).
-narrative_ontology:measurement(reformation_theofrag_su_t1600, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1600, 0.71).
-narrative_ontology:measurement(reformation_theofrag_su_t1648, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1648, 0.72).
+narrative_ontology:measurement(refo_su_t1500, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1500, 0.15).
+narrative_ontology:measurement_basis(refo_su_t1500, observed).
+narrative_ontology:measurement(refo_su_t1530, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1530, 0.38).
+narrative_ontology:measurement_basis(refo_su_t1530, observed).
+narrative_ontology:measurement(refo_su_t1560, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1560, 0.52).
+narrative_ontology:measurement_basis(refo_su_t1560, observed).
+narrative_ontology:measurement(refo_su_t1600, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1600, 0.54).
+narrative_ontology:measurement_basis(refo_su_t1600, observed).
+narrative_ontology:measurement(refo_su_t1650, reformation_composite__theological_fragmentation_reading, suppression_requirement, 1650, 0.54).
+narrative_ontology:measurement_basis(refo_su_t1650, observed).
 
 
 /* ==========================================================================
@@ -281,15 +373,17 @@ narrative_ontology:measurement(reformation_theofrag_su_t1648, reformation_compos
 
 narrative_ontology:coordination_type(reformation_composite__theological_fragmentation_reading, identity_coordination).
 narrative_ontology:boltzmann_floor_override(reformation_composite__theological_fragmentation_reading, 0.12).
-narrative_ontology:affects_constraint(reformation_composite__theological_fragmentation_reading, reformation_political_realignment).
-narrative_ontology:affects_constraint(reformation_composite__theological_fragmentation_reading, reformation_technological_mediation).
+narrative_ontology:affects_constraint(reformation_composite__theological_fragmentation_reading, reformation_composite__political_realignment_reading).
+narrative_ontology:affects_constraint(reformation_composite__theological_fragmentation_reading, reformation_composite__technological_mediation_reading).
 
 % DUAL FORMULATION NOTE:
-% The Reformation kernel admits three structurally distinct readings, each with a different primary observable and beneficiary structure. This constraint (theological_fragmentation_reading) emphasizes doctrinal pluralism and soteriological incompatibility as primary; it identifies denominational leadership and reformed communities as beneficiaries. The political_realignment_reading emphasizes sovereignty assertion and national differentiation; it identifies nation-states as primary beneficiaries. The technological_mediation_reading emphasizes printing infrastructure and mass communication; it identifies printers, publishers, and literate urban classes as beneficiaries. These are three distinct constraints (not three frames of one constraint) because the ε-invariance principle distinguishes them: measuring theological fragmentation yields a different ε than measuring political realignment or technological diffusion. Each constraint has its own beneficiary/victim structure, its own metrics, and its own classification. They are linked via this network.affects_constraints array because the Reformation's structural integrity depends on the interaction of all three: theology without politics might not crystallize into lasting denominations; politics without theology lacks legitimation; technology without both would merely multiply ephemeral texts. The three readings coexist in the historical record; no single reading is complete, but each reading is structurally coherent on its own.
+% The Reformation kernel decomposes into three constraint stories, each a different reading of the same historical event. The theological_fragmentation_reading (this story) anchors the primary observable in doctrinal incompatibility and denominational boundary maintenance. The political_realignment_reading anchors it in state sovereignty claims and institutional reconfigurations. The technological_mediation_reading anchors it in printing press transformation of information distribution. Each reading instantiates a different ε, beneficiary/victim set, and type. They are linked via network.affects_constraints to flag their shared kernel identity and enable kernel-level analysis. The theological reading does not foreclose the others — they coexist as live alternative causal emphases — but it does influence both: doctrinal articulation shapes what political realignment claims can be sustained, and theological texts are what get distributed via technology. All three readings are required to fully describe the Reformation; this story instantiates only the theological frame.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(reformation_composite__theological_fragmentation_reading, powerless, 0.65).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

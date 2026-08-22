@@ -40,9 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,38 +75,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: second_amendment_scope__individual_right_reading
- *   human_readable: Second Amendment Individual Right to Firearms
+ *   human_readable: Second Amendment Individual Right to Firearms (Unconnected to Militia Service)
  *   domain: constitutional_law/political_theory/rights_jurisprudence
  *
  * SUMMARY:
- *   This constraint story instantiates the INDIVIDUAL-RIGHT READING of the
- *   Second Amendment kernel. The reading asserts that the Second Amendment
- *   protects an individual right to own firearms for lawful purposes
- *   (self-defense, hunting, sport) that is not dependent on militia service
- *   or state authorization. This reading was established as Supreme Court
- *   doctrine in District of Columbia v. Heller (2008) and reaffirmed in
- *   McDonald v. City of Chicago (2010). It competes with two sibling
- *   readings: the collective-right reading (which locates the right in the
- *   state militia function only) and the civic-right reading (which
- *   conditions individual ownership on militia participation). This
- *   constraint story describes ONLY the individual-right reading—its
- *   beneficiary structure, extractive mechanisms, and enforcement dynamics.
- *   The sibling readings are separate constraint stories with different ε
- *   values and stakeholder configurations. The reading is NOT claimed to be
- *   natural law (emerges_naturally: false); it is a constructed
- *   constitutional commitment that grounds its legitimacy in originalist
- *   interpretation of 1791 meaning and historical redress for
- *   Reconstruction-era disarmament.
+ *   The Second Amendment protects an individual right to own firearms
+ *   unconnected to militia service. This reading, adopted by the Supreme
+ *   Court in District of Columbia v. Heller (2008) and expanded in New York
+ *   State Rifle & Pistol Association v. Bruen (2022), interprets the
+ *   Amendment as granting individuals a prerogative to possess firearms for
+ *   lawful purposes—self-defense, hunting, sport—without requirement of
+ *   militia participation or service. The constraint operates by applying
+ *   strict scrutiny to firearms regulations, making it difficult for states
+ *   and cities to impose categorical restrictions, comprehensive licensing,
+ *   or prohibition. This reading is one instantiation of a contested kernel
+ *   (the meaning of the Second Amendment); sibling readings include the
+ *   collective-militia reading (protecting state militia authority only) and
+ *   the civic-right reading (protecting an individual right conditioned on
+ *   civic participation). The constraint benefits individual firearms owners,
+ *   advocacy organizations, and manufacturers while constraining state
+ *   regulatory authority and public health constituencies. Claim and metrics
+ *   are deliberately misaligned: the constraint is CLAIMED as tangled_rope
+ *   (genuine coordination—clarifying a constitutional ambiguity—plus
+ *   asymmetric extraction—constraining state regulatory authority); the
+ *   metrics describe substantial extractiveness (0.68 at present) because the
+ *   individual-right reading broadly benefits one constituency while imposing
+ *   costs on another, with active legal enforcement required to maintain the
+ *   interpretation's scope.
  *
- * KEY AGENTS:
- *   - individual_firearm_owners: widespread beneficiaries whose ownership right is protected and validated
- *   - gun_rights_advocacy_organizations: institutional agenda-setter and beneficiary; maintains enforcement through litigation
- *   - firearms_manufacturers_and_dealers: powerful beneficiaries collecting rents from a protected market
- *   - communities_targeted_by_gun_violence: powerless victims trapped in high-violence neighborhoods; largely excluded from constitutional conversation
- *   - public_health_regulators: institutional payers bearing elevated review standards
- *   - state_legislatures: institutional payers whose police power is substantially curtailed
- *   - constitutional_originalists: analytical beneficiaries whose interpretive methodology is vindicated
- *   - collective_right_reading_adherents: excluded analytical observers whose competing reading is constitutionally foreclosed
  */
 
 /* ==========================================================================
@@ -106,60 +111,126 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(second_amendment_scope__individual_right_reading, 0.68).
-domain_priors:suppression_score(second_amendment_scope__individual_right_reading, 0.42).
+domain_priors:suppression_score(second_amendment_scope__individual_right_reading, 0.52).
 domain_priors:theater_ratio(second_amendment_scope__individual_right_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, suppression_requirement, 0.52).
 narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, accessibility_collapse, 0.71).
-narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, resistance, 0.76).
+narrative_ontology:constraint_metric(second_amendment_scope__individual_right_reading, resistance, 0.74).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(second_amendment_scope__individual_right_reading, rope).
-narrative_ontology:human_readable(second_amendment_scope__individual_right_reading, "Second Amendment Individual Right to Firearms").
+narrative_ontology:constraint_claim(second_amendment_scope__individual_right_reading, tangled_rope).
+narrative_ontology:human_readable(second_amendment_scope__individual_right_reading, "Second Amendment Individual Right to Firearms (Unconnected to Militia Service)").
 narrative_ontology:topic_domain(second_amendment_scope__individual_right_reading, "constitutional_law/political_theory/rights_jurisprudence").
 
 domain_priors:requires_active_enforcement(second_amendment_scope__individual_right_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(second_amendment_scope__individual_right_reading, 'ca45b6f8-30cf-41e7-8df1-fa24a535aeb0').
-narrative_ontology:cs_kernel_codification('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', fixed_text).
-narrative_ontology:cs_authority_grounding('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', lineage).
-narrative_ontology:cs_interpretation_layer_present('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0').
-narrative_ontology:cs_reading_relation('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', second_amendment_scope__collective_right_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', second_amendment_scope__civic_right_reading, influences).
-narrative_ontology:cs_axiom('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', foundational, individual_autonomy_natural_right).
-narrative_ontology:cs_axiom_status(individual_autonomy_natural_right, holdable).
-narrative_ontology:cs_axiom_grounding('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', individual_autonomy_natural_right, deontological).
-narrative_ontology:cs_axiom('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', foundational, militia_independence_unconnected).
-narrative_ontology:cs_axiom_status(militia_independence_unconnected, holdable).
-narrative_ontology:cs_axiom_grounding('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', militia_independence_unconnected, empirically_contingent).
-narrative_ontology:cs_reference_frame('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', individual_armed_autonomy_regime).
-narrative_ontology:cs_drift_state('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', contemporary_public_health_crisis, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('ca45b6f8-30cf-41e7-8df1-fa24a535aeb0', '').
+narrative_ontology:cs_story_uid(second_amendment_scope__individual_right_reading, 'e0f6fd87-c84e-4f39-bc19-829f921ff715').
+narrative_ontology:cs_kernel_codification('e0f6fd87-c84e-4f39-bc19-829f921ff715', fixed_text).
+narrative_ontology:cs_authority_grounding('e0f6fd87-c84e-4f39-bc19-829f921ff715', lineage).
+narrative_ontology:cs_interpretation_layer_present('e0f6fd87-c84e-4f39-bc19-829f921ff715').
+narrative_ontology:cs_reading_relation('e0f6fd87-c84e-4f39-bc19-829f921ff715', second_amendment_scope__collective_right_reading, forecloses).
+narrative_ontology:cs_reading_relation('e0f6fd87-c84e-4f39-bc19-829f921ff715', second_amendment_scope__civic_right_reading, influences).
+narrative_ontology:cs_axiom('e0f6fd87-c84e-4f39-bc19-829f921ff715', foundational, individual_prerogative_unconnected_to_militia).
+narrative_ontology:cs_axiom_status(individual_prerogative_unconnected_to_militia, holdable).
+narrative_ontology:cs_axiom_grounding('e0f6fd87-c84e-4f39-bc19-829f921ff715', individual_prerogative_unconnected_to_militia, empirically_contingent).
+narrative_ontology:cs_axiom('e0f6fd87-c84e-4f39-bc19-829f921ff715', secondary, strict_scrutiny_firearms_regulation).
+narrative_ontology:cs_axiom_status(strict_scrutiny_firearms_regulation, holdable).
+narrative_ontology:cs_axiom_grounding('e0f6fd87-c84e-4f39-bc19-829f921ff715', strict_scrutiny_firearms_regulation, deontological).
+narrative_ontology:cs_reference_frame('e0f6fd87-c84e-4f39-bc19-829f921ff715', original_public_meaning_individual_right).
+narrative_ontology:cs_drift_state('e0f6fd87-c84e-4f39-bc19-829f921ff715', contemporary_post_bruen_2022, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('e0f6fd87-c84e-4f39-bc19-829f921ff715', '').
 narrative_ontology:cs_kernel_id(second_amendment_scope__individual_right_reading, second_amendment_scope).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, individual_firearm_owners).
-narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, gun_rights_advocacy_organizations).
-narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, firearms_manufacturers_and_dealers).
-narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, communities_targeted_by_gun_violence).
-narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, assault_weapons_ban_advocates).
-narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, public_health_regulators).
+narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, individual_firearms_owners).
+narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, second_amendment_advocacy_organizations).
+narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, firearm_manufacturers).
+narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, state_regulatory_authority).
+narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, cities_with_restrictions).
+narrative_ontology:constraint_victim(second_amendment_scope__individual_right_reading, public_health_constituencies).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(second_amendment_scope__individual_right_reading, constitutional_originalists).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Individuals claiming the right to own firearms for self-defense, hunting, sport, and personal security without demonstrating militia service or membership. Under this reading, they are primary rights-holders; the constraint protects their prerogative against state restriction. Exit available through relocation to jurisdictions with less restrictive laws or through legal challenge.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, individual_firearms_owners, beneficiary,
+    moderate, biographical, mobile, national).
+
+% Organizations mobilize legal and political resources to defend and expand individual firearms rights. They litigate cases, lobby legislatures, and shape public discourse around the constraint's interpretation. They benefit from the individual-right reading by legitimizing their advocacy frame and constraining state authority to regulate.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, second_amendment_advocacy_organizations, beneficiary,
+    organized, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(second_amendment_scope__individual_right_reading, second_amendment_advocacy_organizations, agenda_setter).
+
+% Manufactures and sells firearms to the civilian market. Benefits from the individual-right reading by maintaining broad access to a large customer base and constraining states' ability to impose design regulations, sales restrictions, or prohibitions that would narrow the market. Can relocate operations or distribute through less-regulated channels if state laws tighten.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, firearm_manufacturers, beneficiary,
+    powerful, generational, arbitrage, national).
+
+% State legislatures, executives, and agencies attempting to regulate firearms through licensing, background checks, waiting periods, and category restrictions (e.g., assault weapons). Under this reading, their regulatory authority is sharply constrained by strict scrutiny applied to firearms regulations. They bear the cost of defending restrictions against constitutional challenge and lose authority over a domain they historically controlled.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, state_regulatory_authority, payer,
+    institutional, generational, constrained, national).
+
+% Municipal governments with local firearms ordinances (e.g., handgun bans, storage requirements, licensing schemes) face preemption and legal challenge under the individual-right reading. They bear the cost of litigation, the loss of local regulatory discretion, and the constraint on their ability to tailor firearms policy to local conditions and demographics.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, cities_with_restrictions, payer,
+    moderate, biographical, constrained, regional).
+
+% Public health researchers, medical associations, and gun violence prevention advocacy groups bear the cost that restrictive regulations are struck down on constitutional grounds. Their ability to implement evidence-based harm-reduction measures (background checks, waiting periods, red-flag laws) is constrained by strict scrutiny. They experience the constraint as blocking policy levers they identify as necessary for public health.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, public_health_constituencies, payer,
+    moderate, biographical, constrained, national).
+
+% Sets the constitutional interpretation through binding precedent (District of Columbia v. Heller, 2008; New York State Rifle & Pistol Association v. Bruen, 2022). Determines the scope of the individual right and the level of scrutiny applied to regulations. Enforces the interpretation through doctrinal authority and reversal of lower-court decisions.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, supreme_court, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Legal scholars and jurists interpreting the Constitution through original public meaning at the time of ratification. This reading aligns with their methodological commitments: the original meaning of 'the right of the people to keep and bear Arms' includes an individual right unconnected to militia service (to the extent the founding-era sources support it). They benefit from the individual-right reading as it vindicates their interpretive method.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, constitutional_originalists, beneficiary,
+    analytical, generational, analytical, universal).
+
+% Legal scholars and advocates arguing for the collective-militia reading of the Second Amendment (that it protects state authority to maintain militias, not individual ownership rights). They are excluded from the agenda-setting role under the individual-right reading; their interpretation is judicially foreclosed by Heller and Bruen. They would argue for a different constitutional meaning but have no institutional seat in the constraint as currently enforced.
+narrative_ontology:constraint_stakeholder(second_amendment_scope__individual_right_reading, collective_right_advocates, excluded,
+    analytical, generational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(second_amendment_scope__individual_right_reading, second_amendment_advocacy_organizations).
+narrative_ontology:fixing_cost_class(second_amendment_scope__individual_right_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Resolves the constitutional meaning of 'the right of the people to keep and bear Arms' by specifying that it protects individuals' prerogative to possess firearms for lawful purposes (self-defense, hunting, sport) independent of militia service. This coordination function creates legal certainty about the scope of the right and the types of regulations that survive constitutional review.
+% TRANSFER_FUNCTION: Transfers regulatory authority from state/local governments to individuals: individuals gain the prerogative to possess firearms subject only to narrow, constitutionally justified restrictions; states lose the authority to impose broad categorical restrictions, comprehensive licensing regimes, or prohibition without satisfying strict scrutiny. The flow of authority is from public bodies to private rights-holders.
+% ABSENT_VOICES: Collective-right advocates and civic-right advocates (those reading the Second Amendment as protecting a right conditioned on militia participation or as protecting only state authority, not individual ownership) are structurally excluded from the agenda-setting table. They would contest the individual-right reading's premise but are judicially foreclosed by binding precedent. Voices emphasizing public health constraints on the right are also marginalized: the constraint's strict scrutiny standard makes it difficult for them to prevail in court regardless of empirical evidence.
+% DISAPPEARANCE_RATIONALE: If this constitutional reading were suddenly reversed or abandoned, state and local governments would immediately reassert regulatory authority over firearms (licensing, registration, category restrictions, prohibition). The firearms industry would face significant new market constraints. Individual firearms owners would lose doctrinal protection against regulations they currently challenge successfully. The political and legal landscape around firearms regulation would shift dramatically toward public health and regulatory approaches currently blocked by strict scrutiny.
+% FOUNDING_PROBLEM: What does the Second Amendment mean? Specifically: does it protect an individual right to possess firearms independent of militia service, or does it protect only the state's authority to maintain militias, or does it protect an individual right conditioned on participation in civic militia structures?
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem remains live and contested: the Supreme Court has ruled (Heller, 2008) that the individual-right reading is correct, but lower courts, legislatures, and legal scholars continue to dispute the scope of the right and the appropriate level of constitutional scrutiny. Scholars outside the benefiting parties (originalist jurists, legal historians) corroborate that the founding-era sources are genuinely ambiguous on this question and that the individual-right reading is a defensible but contested interpretation of the historical record.
+narrative_ontology:disappearance_verdict(second_amendment_scope__individual_right_reading, world_rearranges).
+narrative_ontology:founding_problem_status(second_amendment_scope__individual_right_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(second_amendment_scope__individual_right_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(second_amendment_scope__individual_right_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(second_amendment_scope__individual_right_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(second_amendment_scope__individual_right_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +250,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness measures 0.68 at interval end because the individual-right reading creates a broad, constitutionally-protected entitlement that constrains state regulatory authority across the entire population of gun owners (high coverage) and establishes strict scrutiny as the review standard (high obstacle for regulation). The reading extracts regulatory capacity from legislatures and redistributes it to federal courts and individual rights-holders. The trajectory shows steady climb from 0.45 to plateau at 0.68 (t=25–40), reflecting the reading's gradual entrenchment after Heller: initial uncertainty and contestation (0–15 years) gave way to jurisprudential consolidation and broadened scope (15–25 years), with stabilization thereafter. Suppression (0.42) is lower than extractiveness because the constraint does NOT require massive coercive enforcement against the beneficiary set; it is self-maintaining through constitutional doctrine and individual exercise. Theater is low-to-moderate (0.28) because the enforcement is primarily doctrinal (courts striking down regulations) rather than performative, though public advocacy by gun-rights organizations carries theatrical elements. Accessibility collapse (0.71) reflects the reading's closure of the policy alternative (state-led comprehensive regulation) within the constitutional frame—but alternatives remain politically live (repeal, amendment, reframing), which prevents total collapse. Resistance (0.76) is high because many legislative bodies, public health advocates, and communities affected by gun violence actively resist the individual-right reading, mount counter-litigation, and push for constitutional amendment or re-reading. The measurements document baseline uncertainty (t=0) reflecting the pre-Heller era when the reading was not yet settled doctrine, consolidation and scope-expansion (t=5–25) as the reading defeated challenges and courts applied it broadly, and stabilization (t=25–40) as the reading became established constitutional baseline.
+ *   Extractiveness is high (0.68) because the individual-right reading creates a broad beneficiary class (all individuals) and concentrates costs on state regulatory authority and public health constituencies. The reading's ε is not determined by whether the interpretation is 'correct' in some absolute sense; it is determined by the structural asymmetry it creates: one group (individuals, manufacturers, advocacy organizations) gains a prerogative that was previously unclear or denied, while another group (state governments, public health bodies) loses authority they previously wielded. Suppression is moderate (0.52) because the constraint's persistence requires active judicial enforcement (strict scrutiny review of regulations) and political mobilization (advocacy organizations defending the reading against challenges and reinterpretation). Theater ratio is low-moderate (0.28): the security review function of the First Amendment is real (scrutiny is designed to separate legitimate from illegitimate restrictions), but a growing share of enforcement activity defends the breadth of the individual right against regulations that would otherwise be justified by public health or harm-reduction evidence. The temporal series models the historical arc: the individual-right reading was marginal (low extractiveness) before the Civil Rights era, gained force during the late 20th century (rising extractiveness), and crystallized into binding precedent with Heller (2008) and especially Bruen (2022), after which extractiveness plateaued. The measurement grid runs on a shared time axis (1791, 1900, 1970, 2008, 2022, 2026) so all metrics are authored at every point. Early values are projected; post-1900 values are observed.
  *
  * PERSPECTIVAL GAP:
- *   The gun-rights advocacy organizations and originalist constitutional scholars experience this reading as genuine coordination—a stable property right that protects individual autonomy against state overreach, grounded in historical redress and principled constitutional method. Public health regulators and communities experiencing gun violence experience it as enforced extraction—a reading that privileges manufacturer interests and individual gun ownership over their legitimate regulatory interests and their own constitutionally protected interests (life, liberty, property via due process). State legislatures experience a loss of authority rather than a gain in coordination. The engine computes per-seat classification: from the beneficiary seats (individual owners, manufacturers, advocacy organizations), the constraint should compute as rope or even positive coordination; from the payer seats (legislatures, public health authorities, victimized communities), it should compute as snare-adjacent or tangled-rope-extractive. The claimed_type (rope) reflects the beneficiary-seat framing; the authored metrics reflect the system-wide operation including extraction from the payer seats.
+ *   The agenda-setter seat (Supreme Court, originalist scholars, constitutional originalists) and the beneficiary seat (individual firearms owners, advocacy organizations) should compute the constraint as legitimate coordination—clarifying an ambiguous constitutional text. The payer seat (state regulatory authority, public health constituencies) should compute the constraint as extraction—losing authority to regulate in a domain where they can point to empirical harms (gun violence, mass shooting prevention) and democratic mandates for regulation. The engine computes this divergence from the structural data (beneficiary/victim, exit options, power). The high accessibility collapse (0.71) reflects that once the individual-right interpretation crystallizes into Supreme Court precedent, the alternatives (collective-militia, civic-right) become difficult for states and localities to adopt without federal constitutional amendment. Resistance is high (0.74) because public health bodies, gun violence prevention organizations, and many state/local officials actively contest the individual-right reading's scope and attempt to find regulations that survive strict scrutiny (e.g., age restrictions, background checks). The combination of high accessibility collapse and high resistance indicates a constraint where alternatives are constrained by law and doctrine but politically contested.
  *
  * DIRECTIONALITY LOGIC:
- *   Individual firearm owners sit at d ≈ 0.1–0.2 (beneficiary end): they gain a protected right, face no regulation as the default state, and have high exit mobility (can exercise the right in friendly jurisdictions or abstain). Gun-rights advocacy organizations sit near d ≈ 0.05 (strong beneficiary): they set the agenda, collect legitimacy from court victories, and face minimal regulatory cost—they could abandon litigation and still benefit from the reading. Firearms manufacturers sit at d ≈ 0.15–0.25 (beneficiary-leaning): they collect economic rents from a protected market and face regulatory obstacles, but they do bear litigation costs to defend the market. Public health regulators sit at d ≈ 0.75–0.85 (target end): they bear elevated review standards for any regulation, face repeated litigation losses, and have constrained exit (they cannot exit the regulatory domain without losing their institutional seat). State legislatures sit at d ≈ 0.70–0.80 (target): they lose regulatory authority and must justify any gun control under strict scrutiny; exit requires constitutional amendment (minimal available exit). Communities experiencing gun violence sit at d ≈ 0.85–0.95 (full target): they bear the direct costs of high firearm availability, are trapped in affected areas, and face institutional exclusion from the constitutional conversation—their interests are not recognized as constitutional interests but as policy preferences subject to the heightened review standard. No directionality_overrides are needed; the derived directionality from beneficiary/victim + exit aligns with the structural analysis.
+ *   Individual firearms owners sit at high directionality (d near 1.0, full target—wait, that's wrong; let me reconsider). Actually: Individual firearms owners are BENEFICIARIES, so d should be LOW (near 0.0, full beneficiary). They gain prerogatives under this reading. States lose authority, so they are PAYERS, and d is HIGH (near 1.0, full target). Second Amendment advocacy organizations are BENEFICIARIES (d low). Firearm manufacturers are BENEFICIARIES (d low). Public health constituencies are PAYERS (d high). This creates a substantial directionality spread: beneficiaries experience the constraint as protective (low d, subsidy-like in that it protects rather than extracts), while payers experience it as constraining and extractive (high d). The asymmetry is structural: the individual-right reading unilaterally shifts authority. No directionality override is needed; the structural derivation from beneficiary/victim + exit options + power captures the relationship accurately.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint avoids mandatrophy by maintaining a live founding problem. The founding problem (state-enabled disarmament of disfavored populations; Reconstruction-era gun confiscation targeting freedmen) remains politically live in debates about police violence, racial justice, and armed self-defense in communities distrusting state institutions. This gives the reading durability beyond narrow interest protection. However, there is a latent mandatrophy risk: if the founding problem (historical disarmament) becomes sufficiently resolved by changing state behavior (non-racial, content-neutral regulation), the individual-right reading may persist as inertia rather than as response to a live problem. The measurement series shows extractiveness stabilizing rather than rising after t=25, which suggests the reading has achieved its primary goal (establishing the right as constitutional doctrine) and is now maintained more by precedent and organized advocacy than by active solving of the founding problem. This is not yet pitonization (there is still real beneficiary mobilization and real regulatory contestation), but it is a warning sign: if public health regulation continues to face strict scrutiny while the founding problem (racial disarmament) fades from the discourse, the reading may degrade into theater-and-inertia.
+ *   The founding problem (what does the Second Amendment mean?) remains live: legal scholars continue to dispute whether the historical record supports the individual-right reading, and political actors continue to advocate for alternative interpretations. The constraint is NOT mandatrophic. However, mandatrophy pressure exists: if the empirical evidence on gun violence and regulation efficacy continues to accumulate, and if the individual-right reading is seen as blocking evidence-based policy, there will be increased pressure to adopt the civic-right or collective-militia reading as an alternative that would restore state authority. The current state of the constraint prevents that pressure from translating into doctrinal change, because strict-scrutiny judicial review makes it difficult to overturn the individual-right reading without explicit Supreme Court reversal or constitutional amendment. The theater ratio (0.28, low-moderate) suggests that the constraint is not yet performative (not a piton), but the gap between the founding problem (constitutional meaning) and the effect (constrained regulatory authority regardless of empirical evidence) creates a vulnerability to the argument that the constraint's function has shifted from coordination (clarifying the Constitution) to extraction (blocking evidence-based policy).
  */
 
 /* ==========================================================================
@@ -196,98 +267,107 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    originalist_methodology_contingency,
-    'Is the individual-right reading''s grounding in originalist constitutional method contingent on the specifics of that method, or would a different interpretive methodology (living constitution, progressive constitutionalism, public-meaning originalism) produce a different ε and beneficiary structure?',
-    'Genealogical analysis of how the individual-right reading would emerge under alternative methodologies; comparison of pre-Heller jurisprudence (which used different methods and produced the collective-right reading) to post-Heller originalist readings.',
-    'If the reading is contingent on originalist method, its ε depends partly on methodological authority—a shift in interpretive consensus could dislodge the reading without changing facts about firearm harm or state capacity. If the reading is robust to method, it is more deeply rooted. Currently, the evidence suggests heavy methodological contingency: the reading''s ascendance tracks the rise of originalism as a court-dominant method, not a change in underlying harm or capacity.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(originalist_methodology_contingency, conceptual, 'Whether the individual-right reading''s authority rests on originalist method or on substantive constitutional principle independent of method.').
-
-omega_variable(
-    founding_problem_scope_ambiguity,
-    'Is the founding problem that the individual-right reading addresses the specific history of Reconstruction-era racial disarmament, or the broader principle that individuals should retain armed capacity against tyranny (state or non-state)?',
-    'Historical scholarship on the Framers'' and Ratifiers'' intentions (Reconstruction Congress specifically); comparison of how contemporary gun-rights advocates invoke the founding problem (do they cite Reconstruction history or appeal to universal right to resistance?).',
-    'A narrow reading (Reconstruction-specific) means the founding problem may be resolved by modern civil rights law and integrated law enforcement, which would undermine mandatrophy and create room for regulation targeted at other problems (contemporary gun violence). A broad reading (universal resistance right) makes the founding problem perpetual and justifies maximal protection of gun ownership as permanent insurance against tyranny. The authorship of the founding problem feeds into whether the reading is a durable response to a live problem or a cover story for gun-industry interests.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(founding_problem_scope_ambiguity, conceptual, 'Whether the reading''s founding problem is historically specific or universally perpetual.').
-
-omega_variable(
-    strict_scrutiny_gatekeeping,
-    'Does strict scrutiny, as applied to gun regulations, function as a genuine heightened review standard testing actual means-fit-to-ends, or has it become a categorical bar that implicitly privileges gun ownership over other constitutional interests?',
-    'Empirical analysis of strict-scrutiny application post-Heller: what percentage of gun regulations survive strict scrutiny (and what are their characteristics) versus what percentage fail? Comparison to strict-scrutiny outcomes in other domains (speech, religion, equal protection).',
-    'If strict scrutiny is functioning as genuine high-level review, payers can craft regulations that pass (narrow, evidence-based, minimally restrictive). If it has become a bar, the constraint extracts more than the doctrine nominally permits—it forecloses entire categories of regulation regardless of fit or efficacy. Early post-Heller evidence suggests the latter; if confirmed, the ε should rise above 0.68 to account for categorical exclusion rather than high review standard.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(strict_scrutiny_gatekeeping, empirical, 'Whether strict scrutiny functions as high-level meaningful review or as categorical bar on gun regulations.').
-
-omega_variable(
-    competing_constitutional_interests,
-    'How should courts weigh the individual-right reading''s protection of gun ownership against the Fourteenth Amendment due-process and equal-protection interests of communities disproportionately harmed by gun violence, or the Eighth Amendment interests against cruel and unusual punishment where gun violence is weaponized by state actors?',
-    'Development of constitutional doctrine that elevates the harm-side constitutional interests to equivalent weight with the property right. State constitutional amendments protecting right to safety. Litigation in state courts that balance individual-right against collective-harm interests.',
-    'Currently, the individual-right reading operates with implicit constitutional primacy: individual property rights to guns are recognized; community interests in safety are treated as policy preferences subject to strict scrutiny. A doctrinal rebalancing would reduce ε by introducing a competing constitutional interest that could justify regulation even under heightened review. This is the domain where the reading faces the most organized resistance and where mandatrophy risk is sharpest (the founding problem is Reconstruction disarmament; the contemporary problem is gun homicide in communities—these are different problems with different solutions).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(competing_constitutional_interests, conceptual, 'Whether competing constitutional interests (community safety, due process, equal protection of vulnerable populations) should constrain the individual-right reading.').
-
-omega_variable(
-    kernel_reading_committer_structure,
-    'Is the individual-right reading one legitimate reading of a genuinely ambiguous kernel, or is it a committer-determined reading that assumes which interpretive methodology and authority structure are legitimate?',
-    'Genealogy of the reading''s adoption: did it emerge as discovery of the kernel''s true meaning, or as institutional choice to adopt originalism as the governing methodology? Analysis of which committer structure (originalist jurisprudence, gun-rights advocacy, judicial conservatism) drove the reading''s ascendance.',
-    'If the reading is a legitimate discovery, its ε reflects its actual constraints and structure. If it is a committer choice, then its ε is partly a function of which institutional actors have power to enforce the reading. The question does not change the ε calculation (the engine computes from the structural data), but it reframes the reading''s authority: is it finding constitutional truth or exercising constitutional power? The same structural data (beneficiaries, victims, enforcement mechanism) is interpreted differently depending on the answer.',
+    original_public_meaning_ambiguity,
+    'What was the original public meaning of ''the right of the people to keep and bear Arms'' at ratification in 1791? Did it include an individual right to possess firearms for personal use unconnected to militia service?',
+    'Historical scholarship on founding-era sources, state constitutions, militia practice, and common-law traditions. Textual analysis of period documents. Cross-jurisdictional comparison with other constitutional rights claims.',
+    'The originalist axiom of the individual-right reading rests on the claim that the historical record supports an individual right. If robust historical evidence demonstrated that the founding meaning was militia-only or civic-conditional, the originalist case for the individual-right reading would collapse, and the reading would need to rest on a living-constitution or purposivist ground (which would undermine the axiom and allow the civic-right or collective-right reading to compete on equal doctrinal footing).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_committer_structure, preference, 'Whether the individual-right reading reflects genuine kernel ambiguity or committer-determined institutional power.').
+narrative_ontology:omega_variable(original_public_meaning_ambiguity, empirical, 'Whether historical evidence supports the individual-right reading''s claim to originalist grounding.').
+
+omega_variable(
+    militia_clause_relationship,
+    'What is the logical and grammatical relationship between the prefatory militia clause and the operative right-to-bear-arms clause? Does the militia clause condition the operative clause (making the right contingent on militia service) or merely provide context (leaving the operative clause to stand independent)?',
+    'Grammatical and structural linguistic analysis. Comparison with other constitutional constructions (e.g., other prefatory clauses in founding-era documents). Originalist and living-constitution jurisprudence.',
+    'The individual-right reading treats the militia clause as prefatory context, not as a condition. The civic-right reading treats the militia clause as partially conditioning the right. If linguistic analysis established that the militia clause is genuinely conditional (not merely prefatory), the individual-right reading would weaken, and the civic-right reading would gain doctrinal force. This is not a minor textual question; it is the grammatical hinge the three readings turn on.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(militia_clause_relationship, empirical, 'Whether the prefatory clause conditions or merely contextualizes the operative clause.').
+
+omega_variable(
+    extraction_vs_coordination_boundary,
+    'Is the individual-right reading''s primary function to resolve a genuine constitutional ambiguity (coordination function), or to reallocate authority from collective bodies to individuals (extraction function)?',
+    'Post-Heller jurisprudential and policy analysis: if the individual-right reading is purely coordinative, we should observe state and local governments accepting the clarification and redesigning regulations to fit the new boundaries without systematic resistance. If it is primarily extractive, we should observe persistent political pressure to reinterpret or amend the Constitution, and systematic legal challenges to the reading''s scope. We should also observe whether the beneficiaries of the reading express satisfaction with the coordination or demand further expansion of the right.',
+    'If the reading is purely coordinative, it is a rope; if primarily extractive, it is a snare (or tangled_rope with strong asymmetry). The engine computes this from the structural data (beneficiary/victim, extraction metrics), but the political trajectory will clarify the reading''s true function: a reading that clarifies the Constitution should stabilize dispute; a reading that extracts authority should fuel continued contestation.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(extraction_vs_coordination_boundary, empirical, 'Whether the individual-right reading is primarily coordination or extraction.').
+
+omega_variable(
+    reading_foreclosure_vs_coexistence,
+    'Do the individual-right reading and the collective-right reading foreclose each other (such that no single constitutional framework can hold both), or do they coexist as live policy positions held by different factions?',
+    'Constitutional law analysis: if the readings are mutually exclusive at the textual level (both cannot be true of the same text), they foreclose. If the readings differ on policy outcomes (scope of regulation) while accepting a shared textual foundation, they coexist. Examine whether courts, legislatures, and scholars treat the readings as binary choices or as points on a continuum.',
+    'If they foreclose, the current dominance of the individual-right reading (via Heller/Bruen precedent) eliminates the collective-right reading as a constitutionally available option. If they coexist, the readings remain live alternatives at the level of political contestation, and reinterpretation is possible. This affects the constraint''s stability and its vulnerability to legal reversal.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reading_foreclosure_vs_coexistence, conceptual, 'Whether alternative readings of the Second Amendment''s scope are logically foreclosed or coexistent.').
+
+omega_variable(
+    strict_scrutiny_gatekeeping,
+    'Is strict scrutiny applied to Second Amendment regulations the correct level of review for this constitutional right, or should intermediate or rational-basis scrutiny apply?',
+    'Constitutional doctrine evolution. Compare the level of scrutiny applied to other constitutional rights (First Amendment speech, Fourth Amendment searches, Fourteenth Amendment equal protection) and examine whether the same doctrinal rationale supports strict scrutiny for the Second Amendment. Examine whether alternative levels of scrutiny would change which regulations survive review.',
+    'Strict scrutiny makes it difficult for regulations to survive (they must be narrowly tailored to a compelling state interest). Intermediate scrutiny (the level applied to gender discrimination and commercial speech) is more permissive. Rational-basis scrutiny (the minimal level) would allow almost any regulation to survive. If the appropriate level of scrutiny is lower than strict, state regulatory authority would expand substantially, and the individual-right reading''s extractive effect would diminish. This is the mechanism by which future constitutional interpretation could weaken (without overruling Heller/Bruen precedent) the constraint''s current scope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(strict_scrutiny_gatekeeping, conceptual, 'Whether strict scrutiny is the correct level of constitutional review for Second Amendment regulations.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(second_amendment_scope__individual_right_reading, 0, 40).
+narrative_ontology:interval(second_amendment_scope__individual_right_reading, 1791, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(seco_tr_t0, second_amendment_scope__individual_right_reading, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(seco_tr_t5, second_amendment_scope__individual_right_reading, theater_ratio, 5, 0.24).
-narrative_ontology:measurement(seco_tr_t10, second_amendment_scope__individual_right_reading, theater_ratio, 10, 0.25).
-narrative_ontology:measurement(seco_tr_t15, second_amendment_scope__individual_right_reading, theater_ratio, 15, 0.26).
-narrative_ontology:measurement(seco_tr_t20, second_amendment_scope__individual_right_reading, theater_ratio, 20, 0.27).
-narrative_ontology:measurement(seco_tr_t25, second_amendment_scope__individual_right_reading, theater_ratio, 25, 0.28).
-narrative_ontology:measurement(seco_tr_t30, second_amendment_scope__individual_right_reading, theater_ratio, 30, 0.28).
-narrative_ontology:measurement(seco_tr_t35, second_amendment_scope__individual_right_reading, theater_ratio, 35, 0.28).
-narrative_ontology:measurement(seco_tr_t40, second_amendment_scope__individual_right_reading, theater_ratio, 40, 0.28).
+narrative_ontology:measurement(seco_tr_t1791, second_amendment_scope__individual_right_reading, theater_ratio, 1791, 0.05).
+narrative_ontology:measurement_basis(seco_tr_t1791, projected).
+narrative_ontology:measurement(seco_tr_t1900, second_amendment_scope__individual_right_reading, theater_ratio, 1900, 0.12).
+narrative_ontology:measurement_basis(seco_tr_t1900, observed).
+narrative_ontology:measurement(seco_tr_t1970, second_amendment_scope__individual_right_reading, theater_ratio, 1970, 0.22).
+narrative_ontology:measurement_basis(seco_tr_t1970, observed).
+narrative_ontology:measurement(seco_tr_t2008, second_amendment_scope__individual_right_reading, theater_ratio, 2008, 0.26).
+narrative_ontology:measurement_basis(seco_tr_t2008, observed).
+narrative_ontology:measurement(seco_tr_t2022, second_amendment_scope__individual_right_reading, theater_ratio, 2022, 0.28).
+narrative_ontology:measurement_basis(seco_tr_t2022, observed).
+narrative_ontology:measurement(seco_tr_t2026, second_amendment_scope__individual_right_reading, theater_ratio, 2026, 0.28).
+narrative_ontology:measurement_basis(seco_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(seco_be_t0, second_amendment_scope__individual_right_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(seco_be_t5, second_amendment_scope__individual_right_reading, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(seco_be_t10, second_amendment_scope__individual_right_reading, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(seco_be_t15, second_amendment_scope__individual_right_reading, base_extractiveness, 15, 0.63).
-narrative_ontology:measurement(seco_be_t20, second_amendment_scope__individual_right_reading, base_extractiveness, 20, 0.66).
-narrative_ontology:measurement(seco_be_t25, second_amendment_scope__individual_right_reading, base_extractiveness, 25, 0.67).
-narrative_ontology:measurement(seco_be_t30, second_amendment_scope__individual_right_reading, base_extractiveness, 30, 0.68).
-narrative_ontology:measurement(seco_be_t35, second_amendment_scope__individual_right_reading, base_extractiveness, 35, 0.68).
-narrative_ontology:measurement(seco_be_t40, second_amendment_scope__individual_right_reading, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement(seco_be_t1791, second_amendment_scope__individual_right_reading, base_extractiveness, 1791, 0.35).
+narrative_ontology:measurement_basis(seco_be_t1791, projected).
+narrative_ontology:measurement(seco_be_t1900, second_amendment_scope__individual_right_reading, base_extractiveness, 1900, 0.28).
+narrative_ontology:measurement_basis(seco_be_t1900, observed).
+narrative_ontology:measurement(seco_be_t1970, second_amendment_scope__individual_right_reading, base_extractiveness, 1970, 0.45).
+narrative_ontology:measurement_basis(seco_be_t1970, observed).
+narrative_ontology:measurement(seco_be_t2008, second_amendment_scope__individual_right_reading, base_extractiveness, 2008, 0.62).
+narrative_ontology:measurement_basis(seco_be_t2008, observed).
+narrative_ontology:measurement(seco_be_t2022, second_amendment_scope__individual_right_reading, base_extractiveness, 2022, 0.68).
+narrative_ontology:measurement_basis(seco_be_t2022, observed).
+narrative_ontology:measurement(seco_be_t2026, second_amendment_scope__individual_right_reading, base_extractiveness, 2026, 0.68).
+narrative_ontology:measurement_basis(seco_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(seco_su_t0, second_amendment_scope__individual_right_reading, suppression_requirement, 0, 0.38).
-narrative_ontology:measurement(seco_su_t5, second_amendment_scope__individual_right_reading, suppression_requirement, 5, 0.39).
-narrative_ontology:measurement(seco_su_t10, second_amendment_scope__individual_right_reading, suppression_requirement, 10, 0.4).
-narrative_ontology:measurement(seco_su_t15, second_amendment_scope__individual_right_reading, suppression_requirement, 15, 0.41).
-narrative_ontology:measurement(seco_su_t20, second_amendment_scope__individual_right_reading, suppression_requirement, 20, 0.42).
-narrative_ontology:measurement(seco_su_t25, second_amendment_scope__individual_right_reading, suppression_requirement, 25, 0.42).
-narrative_ontology:measurement(seco_su_t30, second_amendment_scope__individual_right_reading, suppression_requirement, 30, 0.42).
-narrative_ontology:measurement(seco_su_t35, second_amendment_scope__individual_right_reading, suppression_requirement, 35, 0.42).
-narrative_ontology:measurement(seco_su_t40, second_amendment_scope__individual_right_reading, suppression_requirement, 40, 0.42).
+narrative_ontology:measurement(seco_su_t1791, second_amendment_scope__individual_right_reading, suppression_requirement, 1791, 0.2).
+narrative_ontology:measurement_basis(seco_su_t1791, projected).
+narrative_ontology:measurement(seco_su_t1900, second_amendment_scope__individual_right_reading, suppression_requirement, 1900, 0.25).
+narrative_ontology:measurement_basis(seco_su_t1900, observed).
+narrative_ontology:measurement(seco_su_t1970, second_amendment_scope__individual_right_reading, suppression_requirement, 1970, 0.38).
+narrative_ontology:measurement_basis(seco_su_t1970, observed).
+narrative_ontology:measurement(seco_su_t2008, second_amendment_scope__individual_right_reading, suppression_requirement, 2008, 0.48).
+narrative_ontology:measurement_basis(seco_su_t2008, observed).
+narrative_ontology:measurement(seco_su_t2022, second_amendment_scope__individual_right_reading, suppression_requirement, 2022, 0.52).
+narrative_ontology:measurement_basis(seco_su_t2022, observed).
+narrative_ontology:measurement(seco_su_t2026, second_amendment_scope__individual_right_reading, suppression_requirement, 2026, 0.52).
+narrative_ontology:measurement_basis(seco_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -298,15 +378,15 @@ narrative_ontology:coordination_type(second_amendment_scope__individual_right_re
 narrative_ontology:boltzmann_floor_override(second_amendment_scope__individual_right_reading, 0.12).
 narrative_ontology:affects_constraint(second_amendment_scope__individual_right_reading, second_amendment_scope__collective_right_reading).
 narrative_ontology:affects_constraint(second_amendment_scope__individual_right_reading, second_amendment_scope__civic_right_reading).
-narrative_ontology:affects_constraint(second_amendment_scope__individual_right_reading, fourteenth_amendment_state_action_doctrine).
-narrative_ontology:affects_constraint(second_amendment_scope__individual_right_reading, strict_scrutiny_review_standard).
 
 % DUAL FORMULATION NOTE:
-% The second_amendment_scope kernel decomposes into three constraint stories corresponding to three competing readings: individual_right_reading (this story), collective_right_reading (militia-protection reading), and civic_right_reading (conditioned-on-service reading). Each reading instantiates a different constraint with distinct ε values, beneficiary/victim sets, and enforcement mechanisms. They share a kernel (the Amendment's text and ratification history) but produce structurally different claims about what the text requires. The individual-right reading constrains state regulatory authority most severely and produces the broadest beneficiary set (all individuals). The collective-right reading constrains the reading itself by narrowing the beneficiary set to states and militias. The civic-right reading sits between, conditioning individual benefit on civic participation. These are not different measurements of the same constraint; they are different constraints that compete for institutional authority. This story links to both sibling readings via network.affects_constraints because the individual-right reading's institutional dominance crowds out (influences or coexists with) the other readings' policy space.
+% The second_amendment_scope kernel decomposes into three readings, each instantiating a distinct constraint with different beneficiary/victim structures, ε values, and directionality profiles. The individual_right_reading benefits individuals and constrains state authority (ε=0.68, high extractiveness due to broad beneficiary coverage and asymmetric authority shift). The collective_right_reading benefits state militia authority and constrains individual prerogative (inverse ε and directionality). The civic_right_reading occupies a middle position, conditioning individual rights on civic participation. These three constraints are related by the kernel they interpret but remain structurally distinct. The individual-right reading currently dominates binding precedent (Heller 2008, Bruen 2022), making the alternative readings judicially foreclosed but politically contested.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(second_amendment_scope__individual_right_reading, institutional, 0.85).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -2,189 +2,270 @@
   "header": {
     "constraint_id": "digital_money_origin__first_held_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "3ff167d2-752d-4667-935b-9e8543e47615"
+    "story_uid": "804dc158-0863-42cc-b5b8-64c727874916"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.71,
-    "theater_ratio": 0.28,
-    "accessibility_collapse": 0.45,
+    "extractiveness": 0.68,
+    "suppression": 0.45,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.62,
     "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Digital Money First Held: Implementation-Barrier Coordination and Access Extraction",
-    "topic_domain": "monetary_history/technology/institutional_economics",
+    "human_readable": "Digital Money Origin: First-Held Reading",
+    "topic_domain": "monetary/technological/institutional",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "early_adopters_with_infrastructure_access",
-      "payment_network_operators"
+      "early_adopters_with_infrastructure",
+      "technology_vendors",
+      "financial_intermediaries"
     ],
     "victims": [
-      "individuals_without_digital_access",
-      "lagging_adoption_populations"
+      "unbanked_populations",
+      "low_infrastructure_regions",
+      "legacy_currency_users"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "early_adopters_with_infrastructure",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Individuals with access to computers, internet connectivity, and financial education who can adopt digital monetary instruments early. They gain lower transaction costs, borderless transfer capability, and portfolio optionality unavailable to those without infrastructure. Their exit path is trivial—they can revert to physical currency at any time."
+    },
+    {
+      "name": "technology_vendors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies building wallets, exchanges, payment processors, and blockchain infrastructure. They capture transaction fees, data rents, and first-mover advantage in the ecosystem. They actively market adoption, shape technical standards, and define what counts as 'practical' digital money through their implementation choices."
+    },
+    {
+      "name": "financial_intermediaries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Banks and payment networks that integrate digital money into their services. Early participants gain market positioning and fee revenue; those entering late face coordination lock-in. They enforce interoperability standards and settlement rules that define the practical boundary of 'held' digital instruments."
+    },
+    {
+      "name": "unbanked_populations",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals without bank accounts or devices capable of holding digital money. The first-held reading excludes them by construction: they cannot hold what requires infrastructure they lack. They bear the opportunity cost of exclusion from lower-transaction-cost channels and network effects that accrue to those with access."
+    },
+    {
+      "name": "low_infrastructure_regions",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Geographic areas with spotty internet, limited power supply, or weak telecommunications backbone. The practical definition of 'first held' depends on implementation barriers these regions lack resources to overcome. They face either delayed inclusion (after infrastructure matures elsewhere) or vendor-mediated inclusion (at higher cost through satellite or expensive partnerships)."
+    },
+    {
+      "name": "legacy_currency_users",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals and institutions whose practice, identity, and institutional arrangements are built around physical currency and traditional banking. They do not choose to adopt digital money despite infrastructure availability; their 'non-adoption' is treated as non-participation in the first-held definition. They bear increasing friction costs as commerce migrates to digital rails."
+    },
+    {
+      "name": "monetary_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Central banks and financial regulators observe the transition from outside the coordination mechanism. They measure adoption rates, monitor stability risks, and deliberate whether to incorporate digital money into monetary aggregates (a choice that defines an alternative origin reading). Their authority matters because regulatory recognition can retroactively legitimize or invalidate the first-held boundary."
+    },
+    {
+      "name": "network_effects_mechanism",
+      "role": "beneficiary",
+      "power": "powerless",
+      "agent": false,
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The structural process by which digital money's value grows as more participants adopt it. This is a doctrinal entity, not an actor, but it is the mechanism through which early adopters benefit—the constraint's persistence rides on continued network expansion, which benefits those already inside."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of value transfer and storage without physical intermediation: enables bearer instruments, reduces transaction friction, and creates a secondary payments layer independent of traditional banking infrastructure. Coordination is achieved through technical interoperability (shared ledgers, cryptographic proofs, message protocols) and network effects (value accrues as participation grows).",
+    "transfer_function": "Moves opportunity for value accumulation and transactional advantage from those dependent on physical currency and traditional banking to those with infrastructure access and early-adoption timing. Moves transaction fees and data rents from users to technology vendors and intermediaries. Moves network effects (liquidity, price discovery, settlement speed) to early participants who benefit from adoption by later arrivals.",
+    "absent_voices": "Unbanked populations and low-infrastructure regions would object that the first-held boundary excludes them by construction; they would argue for infrastructure-contingent rather than practice-contingent origin dates. Legacy-bound institutions would object that the reading privileges a minority adoption pattern over embedded institutional practice. Monetary authorities would argue that the first-held reading pre-empts their authority to define what counts as money by making a technical/practical fact do regulatory work.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the first-held origin definition disappeared—replaced by became_thinkable or regulatory_recognition readings—the boundary of digital money's creation date would shift backward (shifting causality from practice to concept or forward to formal acknowledgment). The set of early beneficiaries would change, the allocation of first-mover rents would be redrawn, and the narrative of which populations 'participated' in the origin would be rewritten. The institutional clock on digital money's history would reset.",
+    "founding_problem": "Physical currency and traditional banking presented bottlenecks: transfer settlement took days, cross-border movement required intermediaries, individuals without bank accounts had no store of value. Digital technology made bearer instruments and instant settlement technically feasible.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Technology companies and early adopters attest the founding problem was real and urgent. Monetary authorities attest the problem was already being managed within existing frameworks and the new capability was luxury, not necessity. Unbanked populations would attest the problem persists despite digital money (for them)—corroboration from outside benefiting parties supports the reading that digital money solved problems for a subset, not a universal problem."
+  },
   "interval": {
-    "start": 1983,
-    "end": 2024
+    "start": 0,
+    "end": 25
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1983,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1995,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.41
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2012,
-      "value": 0.54
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2019,
-      "value": 0.59
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1983,
-      "value": 0.35
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1995,
+      "time_point": 3,
       "value": 0.48
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.58
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2012,
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
       "value": 0.66
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2019,
-      "value": 0.69
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.71
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1983,
+      "time_point": 0,
       "value": 0.08
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1995,
+      "time_point": 3,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.16
+      "time_point": 6,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2012,
+      "time_point": 12,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
       "value": 0.22
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2019,
-      "value": 0.26
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.28
-    }
-  ],
-  "omegas": [
-    {
-      "id": "kernel_reading_contest",
-      "question": "Which definition of 'emergence' is the structurally correct origin point for digital money: first conceived, first technically feasible, first held by individuals, or first formally recognized by monetary authorities?",
-      "resolution_mechanism": "This omega documents the kernel contest itself. The three readings (became_thinkable_reading, first_held_reading, regulatory_recognition_reading) each anchor emergence to a different event. No empirical evidence can resolve this: each reading is coherent, and the choice depends on what the questioner treats as the boundary of 'digital money' as a social fact.",
-      "impact": "Different readings produce different origin dates (conceptual feasibility: ~1970s cryptography; first held: ~1983 DigiCash; regulatory recognition: ~2008 Bitcoin or ~2020 central bank guidance). Each reading implies different victim/beneficiary structures, different suppression mechanisms, and different classification pathways. The kernel is the contested claim that 'digital money' has a single, intrinsic origin moment.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "The kernel contest: which definition of emergence grounds the origin of digital money?"
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.38
     },
     {
-      "id": "infrastructure_access_as_structural_barrier",
-      "question": "Is the measured suppression (0.71) a property of the digital money constraint itself, or a property of the unequal infrastructure distribution in the global economy that digital money happens to leverage?",
-      "resolution_mechanism": "A counterfactual comparison: if digital money technology were deployed in a society with universal infrastructure access, would suppression drop substantially? If yes, the suppression is infrastructure-dependent. If no, the suppression is intrinsic to digital money systems. Evidence: pilot studies of digital currency deployment in high-access and low-access communities.",
-      "impact": "If infrastructure-dependent, the constraint may be remediable by infrastructure investment without changing the digital money system itself. If intrinsic, digital money systems are structurally extractive toward the unconnected. The classification (tangled_rope vs. snare) depends on this distinction: tangled_rope requires genuine coordination function despite extraction; a purely infrastructure-extractive system might shift toward snare classification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether measured suppression is intrinsic to digital money or artifact of unequal infrastructure access."
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.41
     },
     {
-      "id": "identity_lock_mechanism_internalization",
-      "question": "Is the identity-lock suppression for lagging-adoption populations (the narrative framing of digital adoption as inevitable progress) structurally embedded in the digital money systems, or is it an internalized adoption of a cultural narrative that could persist even after barrier removal?",
-      "resolution_mechanism": "Post-barrier removal suppression trajectory: in communities where digital access is provided but adoption is voluntary, does the cultural narrative of digital inevitability persist? If yes, the identity-lock is partially internalized. If no, it was purely structural. Evidence: studies of post-infrastructure-investment adoption in previously unconnected communities.",
-      "impact": "If internalized, lagging-adoption populations carry the identity-lock forward even after infrastructure access, making the constraint's effective suppression higher than the structural measure suggests. If structural, providing infrastructure removes the suppression. The constraint's longevity depends on this distinction.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether identity-lock suppression in lagging populations is structurally intrinsic or culturally internalized."
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.43
     },
     {
-      "id": "regulatory_recognition_temporal_precedence",
-      "question": "Did this reading (first_held_reading, anchored to individual practical holdings) precede or follow the regulatory_recognition_reading in actual historical development?",
-      "resolution_mechanism": "Historical chronology of central bank monetary aggregates and regulatory treatment: when did central banks first measure digital asset holdings, relative to when individuals began holding digital instruments as practical stores of value? A tight temporal coupling would suggest the readings coevolved; a gap would establish precedence.",
-      "impact": "If first_held_reading preceded regulatory recognition by years/decades, the two readings represent genuinely distinct emergence events with different beneficiary structures. If regulatory recognition was nearly contemporaneous, the readings may be describing the same event from different analytical frames rather than truly separate constraint instantiations. This affects network.affects_constraints linkage and constraint family coherence.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Historical precedence ordering: which emergence event happened first?"
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.44
     },
     {
-      "id": "network_effects_boundary_between_coordination_and_extraction",
-      "question": "At what scale of adoption does the network-effect coordination function (digital money becomes more useful as more people hold it) transition into extractive lock-in (individuals are trapped because alternatives have lost viability)?",
-      "resolution_mechanism": "Adoption threshold analysis: measure switching costs and alternative-viability as a function of adoption percentage. At low adoption (10%), are alternatives still available and used? At medium (50%)? At high (90%)? The threshold where alternatives become economically unviable marks the transition.",
-      "impact": "If the transition occurs at low adoption, the constraint is extractive from early on; if at high adoption, the coordination function dominates for most of the interval and extraction emerges only at saturation. The measurement series (extractiveness rising from 0.15 to 0.62 over 41 years) tracks this transition. Understanding when it occurred clarifies how much of the 0.62 measured at interval end is coordination cost vs. extraction.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "When does network-effect coordination transition to extractive lock-in?"
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.45
     }
   ],
   "commentary": {
-    "narrative_context": "This reading anchors the emergence of digital money to a specific historical moment: when individuals first held non-physical monetary instruments (e.g., DigiCash in 1994, online bank accounts as practical stores of value in the mid-1990s) as practical, recurring alternatives to physical currency. The constraint emerges from the infrastructure barriers and network effects that structure who can hold digital money first and who lags. Early adopters with device and network access gain speed and optionality; those without access face exclusion and pressure to adopt systems they cannot yet access. Payment network operators set the rules and capture fees. The measured extraction rises monotonically from 1983 to 2024 as digital money transitions from novelty to near-ubiquity: early (low extraction, low suppression) because alternatives are available; late (high extraction, high suppression) because digital infrastructure becomes mandatory for economic participation in many contexts. This reading is structurally distinct from the became_thinkable_reading (which anchors emergence earlier, to theoretical feasibility) and the regulatory_recognition_reading (which anchors it later, to central bank incorporation).",
+    "narrative_context": "This constraint story instantiates the 'first-held reading' of contested kernel digital_money_origin. The reading asserts that digital money emerged when individuals first held non-physical monetary instruments as practical stores of value—a practice-contingent origin date. This reading is structurally distinct from became_thinkable_reading (which dates origin to technical/institutional conceivability) and regulatory_recognition_reading (which dates origin to formal incorporation into monetary aggregates). The first-held reading privileges implementation and practice over conceptualization or regulatory acknowledgment; it makes adoption behavior the temporal marker. This makes the origin date later than became_thinkable (by definition—thought precedes practice), but earlier than regulatory_recognition (formal money-supply incorporation lagged widespread private holdings). The extraction profile is tangled because the first-held boundary simultaneously enables genuine coordination (borderless transfer, faster settlement, bearer instruments) and asymmetrically benefits those with infrastructure access while excluding those without, and requires active enforcement of the boundary itself (what counts as 'practical,' who has 'held,' how long, at what scale).",
     "key_agents": [
-      "Early adopters with infrastructure access: benefit from speed, convenience, and early-mover advantage; mobile exit as alternatives remain available during transition",
-      "Payment network operators: agenda-setter role; set technical standards and access conditions; capture transaction fees and user data; institutional power and arbitrage exit",
-      "Unconnected and unbanked populations: powerless; structurally excluded from participation; trapped exit as digital infrastructure may become mandatory",
-      "Lagging-adoption populations: facing identity-lock through cultural narratives of progress and modernity; partial access, constrained exit, powerless structural position",
-      "Central banks and monetary authorities: observer role; initially measure digital holdings outside official money supply; later incorporate into regulatory frameworks (domain of regulatory_recognition_reading)"
+      "Early adopters with infrastructure access (beneficiaries, moderate power, mobile exit)",
+      "Technology vendors and exchanges (beneficiary-agenda-setters, institutional, arbitrage exit)",
+      "Financial intermediaries (beneficiary-gatekeepers, institutional, constrained exit)",
+      "Unbanked populations (victims, powerless, trapped exit)",
+      "Low-infrastructure regions (victims, organized, constrained exit)",
+      "Legacy-currency-bound institutions (victims-resistors, organized, identity-locked exit)",
+      "Monetary authorities (observers, institutional, analytical)"
     ],
-    "logic_rationale": "Extractiveness rises monotonically (0.15 → 0.62) because the coordination benefit (instant transfer, portfolio optionality) is real early on and valuable, but as adoption spreads, the network-effect lock-in replaces the coordination function: once most economic actors hold digital money, individuals become trapped not by barrier (all have access now) but by inevitability. Suppression requirement rises even faster (0.35 → 0.71) because maintaining digital money's centrality requires actively suppressing alternatives (enforcing digital-only accounts in some contexts, making cash less convenient, regulatory pressure on non-digital assets) and preventing exit for lagging populations (cultural pressure, infrastructure dependency). Theater ratio is lowest of the three (rising to only 0.28) because the actual coordination work (instant settlement, global transfer) is genuine, not purely performative, even as extraction accumulates. The measurement grid anchors to 1983 (DigiCash conception/first implementation barriers) and 2024 (near-ubiquity in developed economies). The time series captures the transition from coordination-dominated (early) to extraction-dominated (late) phase.",
-    "perspectival_gap": "The operator and early-adopter seats see genuine coordination and beneficial innovation; payment network operators justify fees as the cost of building and maintaining trust infrastructure. The unconnected and lagging seats see infrastructure-dependent exclusion and identity-fusion pressure. Central bank observers see a transition from alternative asset to monetary aggregate. The gap is structural: from the operator seat, the constraint is rope (genuine coordination, minimal enforcement needed for willing participants). From the unconnected seat, it is snare (mandatory system, trapped alternatives). The engine computes per-seat classification from the directionality and power atoms; the authored claim (tangled_rope) sits between these perspectives because the constraint genuinely coordinates (early phase) and genuinely extracts (late phase).",
-    "directionality_logic": "Early adopters with access sit near d=0.2 (beneficiaries: they gain speed without major burden); payment operators sit at d=0.05 (full beneficiaries: they set rules and collect fees). Unconnected populations sit near d=1.0 (full targets: structurally excluded, trapped). Lagging populations sit near d=0.85 (targets: partial access, identity-lock suppression). The beneficiary and victim declarations split the constraint across power atoms: moderate and institutional seats collect coordination benefits and extraction revenue; powerless seats bear the cost of exclusion and inclusion pressure.",
-    "mandatrophy_analysis": "The founding problem (speed and geographic reach of monetary transfer) remains live, attested by central banks adopting digital payment policy goals. The disappearance verdict is world_rearranges: if the first_held_reading never occurred, monetary infrastructure and global commerce would follow a different technology trajectory. The constraint avoids mandatrophy misclassification because its founding coordination function (instant digital settlement) persists alongside extraction. A snare classification would require the coordination to be pure cover; here, the coordination is real but has been layered with extraction as adoption scaled. Tangled_rope correctly captures this structure: genuine coordination + asymmetric extraction + active enforcement (preventing alternative systems, enforcing digital-only in some regulatory domains).",
-    "kernel_context": "This constraint is one reading of the contested kernel: digital_money_origin. The reading instantiated here is first_held_reading, anchoring emergence to when individuals first held non-physical monetary instruments as practical, recurring stores of value (~1983-1994 for early systems like DigiCash, scaling through 2000s-2020s). Sibling readings: became_thinkable_reading anchors to theoretical feasibility (~1970s cryptography, pre-implementation); regulatory_recognition_reading anchors to central bank incorporation (~2008-2020 when digital assets entered official monetary aggregates). This reading produces a later origin date than became_thinkable but earlier than regulatory_recognition. The constraint set includes implementation barriers (infrastructure access, device availability, digital literacy) and network effects. Beneficiary structure centers on early adopters and payment operators; victim structure centers on unconnected and lagging populations. Suppression mechanism is twofold: structural (infrastructure barriers) and cultural (identity-lock through progress narratives). The three readings coexist as live positions held by different analytical communities (technologists, monetary historians, central bankers) without logically foreclosing each other."
+    "logic_rationale": "Extractiveness is high (0.68) because the first-held reading creates a strict boundary: you either hold digital money or you do not, and holding requires infrastructure, knowledge, and often capital to acquire. Once the boundary is drawn, it becomes path-dependent—early adopters capture network effects, and later arrivals inherit the distribution of value that early adoption created. The extraction grows over the interval (0.38 → 0.68) because network effects compound: early adopters' holdings become more valuable as adoption spreads, and infrastructure vendors capture growing fee rents as the installed base expands. Suppression is moderate (0.45) because exclusion is partly technical (you cannot hold what infrastructure cannot support) and partly social (identity-locked users choose not to adopt despite access). Theater is low (0.22) because the coordination function (settlement speed, borderless transfer) is genuine and measurable; the performative component is moderate-sized marketing around the stability and legitimacy of instruments whose value depends on continued adoption. The temporal series shows the constraint hardening over time: as digital money becomes more embedded in financial plumbing, the first-held boundary becomes harder to revise retroactively. The rising theater_ratio reflects increasing focus on institutional legitimacy and regulatory narratives (central banks issuing press releases, compliance infrastructure expanding) as the constraint matures—a sign of institutionalization of what began as technical practice.",
+    "perspectival_gap": "Payer seats and agenda-setter seats diverge sharply because the reading makes practice the origin marker, which privileges the agenda-setter's agency. Technology vendors are agenda-setters: they define what is 'practical,' what counts as 'held,' what instruments are 'legitimate' by building the infrastructure and setting the standards. This gives them control over the origin boundary itself—they can retroactively claim to have created digital money by pointing to adoption they facilitated. Payer seats (unbanked, low-infrastructure, legacy-bound) have no such control; the boundary is imposed on them. The same constraint computes differently at each seat: at the vendor seat, it is a rope (genuine coordination, moderate enforcement, benefiting); at the unbanked seat, it is closer to snare (pure exclusion, high suppression, no exit).",
+    "directionality_logic": "Beneficiaries have low directionality (d ~ 0.2–0.3): early adopters and vendors benefit without being forced—they chose to adopt and shape the technology. Victims have high directionality (d ~ 0.7–0.9): unbanked populations are excluded by infrastructure they lack, low-infrastructure regions are excluded by geography and capital they do not control, legacy-bound users are trapped by institutional inertia and identity-lock even where infrastructure exists. The constraint's directionality is asymmetric by design: it enforces and perpetuates the advantage of those who adopted early over those who adopted late or cannot adopt. This asymmetry is what makes it tangled_rope rather than rope: genuine coordination is present (the technical layer solves real problems), but it is coupled to extractive asymmetry (the distribution of early-adoption advantage).",
+    "mandatrophy_analysis": "The first-held reading avoids mandatrophy by tethering the origin date to practice rather than to a founding problem. The founding problem (settlement friction, banking exclusion) persists in some forms and is contested—monetary authorities and traditional intermediaries attest it was already managed within existing systems. The reading does not claim to solve the founding problem permanently; it claims to mark when the solution became practical. This prevents the mandate from being obsolete at origin. However, the reading is vulnerable to a different mandatrophy pathway: if the first-held boundary becomes so institutionalized and regulatory frameworks incorporate digital money so thoroughly that the boundary becomes invisible (becomes natural law rather than constructed constraint), the mandate will have drifted from 'mark the origin' to 'define the boundary,' and the constraint will persist not because the boundary is useful but because it is embedded. The measurement series rising theater_ratio is a signal of this drift: as institutionalization increases, the constraint's function shifts from coordination to legitimacy-maintenance.",
+    "kernel_context": "This constraint instantiates the 'first-held reading' of the contested kernel digital_money_origin. The kernel is the question: 'When did digital money emerge?' Three readings compete: (1) became_thinkable_reading dates emergence to technical and institutional conceivability (earliest date); (2) first_held_reading (this one) dates emergence to when individuals first held non-physical monetary instruments as practical stores of value (intermediate date); (3) regulatory_recognition_reading dates emergence to formal incorporation into monetary aggregates and regulatory frameworks (latest date). The readings are not translations of each other—they have different referents and different causal implications. This reading privileges practice and adoption over concept or regulation; it makes the origin question an empirical question about when holding began, not a conceptual question about when the idea became thinkable or a regulatory question about when authorities acknowledged it. The sibling readings would produce different beneficiary sets, different extraction profiles, and different origin dates."
   },
+  "omegas": [
+    {
+      "id": "practical_holder_boundary",
+      "question": "What counts as 'first held' and 'practical'? Is it first transaction, minimum holdings, sustained holdings, or widespread holdings across a population?",
+      "resolution_mechanism": "Empirical: examine historical records of early adopter holdings (blockchain history, exchange records, survey data) and establish a threshold for 'practical' adoption. Conceptual: ask whether the reading endorses an ordinal threshold (first person to hold) or cardinal threshold (widespread enough to be useful).",
+      "impact": "An ordinal threshold makes the origin date extremely early (first Bitcoin wallet, ~2009) and makes the reader responsible for declaring which holding counts; a cardinal threshold pushes the date later (when holdings were common enough to support regular transactions) and distributes agency across the network. Different thresholds produce different victim sets and beneficiary concentrations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Where the boundary between 'holding digital money' and 'experimenting with it' lies."
+    },
+    {
+      "id": "infrastructure_access_asymmetry",
+      "question": "Is exclusion of unbanked and low-infrastructure populations structural (they literally cannot hold digital money without infrastructure) or policy-chosen (vendors could have built for low-bandwidth environments but chose not to)?",
+      "resolution_mechanism": "Empirical: examine which populations cannot participate due to technical inability vs. due to vendor design choices. Historical counterfactual: could vendors have prioritized low-bandwidth, low-power digital money from inception?",
+      "impact": "If structural, the constraint's suppression is partly inevitable and the classification remains tangled_rope (coordination + unavoidable asymmetry). If policy-chosen, the suppression becomes fully extractive and the constraint drifts toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusion is a technical necessity or a result of vendor prioritization."
+    },
+    {
+      "id": "network_effects_lock_in",
+      "question": "Do network effects in digital money create lock-in that prevents later adopters from capturing early-adopter rents, or do they distribute value broadly as adoption spreads?",
+      "resolution_mechanism": "Empirical: compare holding profiles and transaction volumes across cohorts of adopters (early vs. late) and measure whether late adopters' holdings appreciate similarly. Compare fee structures across time to see whether early adopters continue to enjoy lower costs than later arrivals.",
+      "impact": "Strong lock-in supports tangled_rope classification (early adopters capture durable advantage through coordination). Broad distribution would move the constraint toward rope (coordination benefits are passed on). Current evidence points to lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects lock in early-adopter advantage or diffuse it over time."
+    },
+    {
+      "id": "kernel_reading_underspecification",
+      "question": "Which of the three kernel readings is this constraint really instantiating—does the first-held reading actually differ from the became_thinkable reading, or is the boundary between them ambiguous?",
+      "resolution_mechanism": "Conceptual: examine whether 'conceivability' and 'practical holdings' can be separated temporally or whether early adopters were always already thinking-through-implementation, making the readings inseparable.",
+      "impact": "If separable, three distinct constraint stories with different beneficiaries and extraction profiles. If inseparable, the kernel has only two genuine readings and one is redundant.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the first-held reading is genuinely distinct from became_thinkable."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
+    "coordination_type": "global_infrastructure",
     "boltzmann_floor_override": 0.18
   },
   "network": {
@@ -192,59 +273,66 @@
       "digital_money_origin__became_thinkable_reading",
       "digital_money_origin__regulatory_recognition_reading"
     ],
-    "dual_formulation_note": "The digital_money_origin kernel contest decomposes into three structurally distinct constraints, each anchoring emergence to a different social event. The first_held_reading (this constraint) focuses on implementation barriers and network effects, with later origin date and infrastructure-dependent victims. The became_thinkable_reading anchors to theoretical feasibility and early cryptographic development. The regulatory_recognition_reading anchors to formal incorporation into central bank monetary aggregates. All three readings are live positions in monetary history; none logically forecloses the others. They coexist as analytical frames emphasizing different aspects of the same historical transition. Linkage via affects_constraints documents the conceptual kinship and shared kernel."
+    "dual_formulation_note": "This constraint is one reading of the contested kernel digital_money_origin. Sibling readings (became_thinkable_reading and regulatory_recognition_reading) are separate constraint stories with different origin dates, beneficiary sets, and extraction profiles. All three readings share the same core phenomenon (digital money exists) but disagree on when emergence occurred and what counts as evidence of emergence. Network effects: regulatory_recognition_reading influences this reading by retroactively legitimizing the holdings this reading identifies as origin; became_thinkable_reading influences this reading by providing the conceptual precondition without which 'first held' could not occur."
   },
   "directionality_overrides": [
     {
       "power_atom": "powerless",
-      "d_value": 0.88
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
     }
   ],
+  "gain_flow": "technology_vendors",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "distributed",
     "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "digital_money_origin__became_thinkable_reading",
-        "relation": "coexists_with"
+        "sibling_id": "became_thinkable_reading",
+        "relation": "influences"
       },
       {
-        "sibling_id": "digital_money_origin__regulatory_recognition_reading",
-        "relation": "influences"
+        "sibling_id": "regulatory_recognition_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "emergence_anchored_to_practical_holding",
+        "atom": "practice_precedes_policy",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       },
       {
-        "atom": "infrastructure_access_determines_participation",
+        "atom": "implementation_as_evidence",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "universal_physical_monetary_infrastructure",
+    "reference_frame": "inception_of_technical_feasibility",
     "drift_state": {
-      "moment": "post_digicash_adoption_era",
-      "direction": "practice_drift",
+      "moment": "contemporary_institutional_incorporation",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

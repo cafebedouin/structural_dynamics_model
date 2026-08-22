@@ -39,11 +39,17 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
+    narrative_ontology:measurement_basis/2,
     constraint_indexing:constraint_classification/3,
-    domain_priors:emerges_naturally/1,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +74,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: nuclear_impossibility_kernel__rational_dropout_reading
- *   human_readable: Nuclear Rational-Choice Dropout: War Remains Reachable but Irrational
- *   domain: strategic/military/international_relations
+ *   human_readable: Nuclear Weapons as Rational-Choice Dropout Constraint
+ *   domain: strategic_studies/international_relations
  *
  * SUMMARY:
- *   The rational-dropout reading instantiates one interpretation of the
- *   nuclear-weapons kernel. It claims that nuclear weapons created a
- *   constraint on war by making it rationally irrational: victory remains
- *   structurally possible (rational agents retain agency; war is in the
- *   feasible set), but costs exceed benefits by such a margin that rational
- *   choice theory predicts war will be abandoned even by actors with the
- *   power to wage it. This reading vindicates the rational-actor framework
- *   and expected-utility theory. It is distinct from the
- *   structural-impossibility reading (which claims war is
- *   physically/logically impossible) and the credibility-paradox reading
- *   (which claims deterrence is logically incoherent). This story models the
- *   rational-dropout reading as a mountain—a constraint that emerges from the
- *   structure of rational choice under conditions of mutual
- *   annihilation—while acknowledging beneficiaries (deterrence theorists,
- *   strategic-stability doctrine) who benefit from its persistence. The
- *   beneficiary listing triggers FSM evaluation; the omegas document the
- *   natural-law vs. constructed ambiguity.
+ *   This constraint instantiates the rational-dropout reading of the nuclear
+ *   impossibility kernel. The reading asserts that nuclear weapons created a
+ *   rational-choice problem: war between nuclear-armed states remains
+ *   structurally possible (victory could theoretically be achieved through
+ *   superior force application) but its costs (mutual destruction,
+ *   civilization-ending harm) exceed any conceivable benefit, making war
+ *   rational to avoid. This reading differs from the
+ *   structural_contraction_reading (which asserts victory is physically
+ *   impossible) and the credibility_paradox_reading (which asserts the
+ *   deterrent is inherently non-credible). The rational-dropout reading keeps
+ *   victory in the reachable set but drops it from the active choice set
+ *   through cost-benefit reasoning. Strategic behavior reflects this
+ *   constraint: peer nuclear powers refrain from direct large-scale conflict
+ *   not because war is impossible but because it is rationally dominated. The
+ *   constraint persists through active maintenance: doctrine refinement,
+ *   verification regimes, strategic signaling, and institutional enforcement
+ *   that keeps the cost-benefit framing stable.
  *
  * KEY AGENTS:
- *   - nuclear_armed_states: institutional power, trapped exit, generational horizon. Maintain deterrence doctrine and arsenals despite rational calculation that use is irrational.
- *   - deterrence_theorists: analytical power, analytical exit. Benefit from the rational-dropout reading because it resolves the paradox and vindicates their analytical framework.
- *   - nuclear_strategists_and_planners: powerful institutional actors, identity_locked into strategic roles. Face the dual bind of maintaining credible deterrence while knowing rational choice predicts non-use.
- *   - civilian_populations: powerless, trapped, generational horizon. Benefit from the constraint insofar as it stabilizes deterrence without logical paradox.
- *   - disarmament_advocates: moderate power, constrained exit, generational horizon. Excluded from strategic-stability consensus; would argue the constraint should lead to disarmament.
- *   - analytical_observer: sees the full structure and can measure the reading's persistence relative to its siblings.
+ *   - nuclear_weapons_states: institutional power; maintain the strategic framework; trapped by mutual vulnerability
+ *   - deterrence_doctrine_custodians: institutional power; provide legitimacy and professional authority for the rational-choice framing; beneficiaries of the constraint's persistence
+ *   - non_nuclear_states: organized power; excluded from doctrine-setting; pay the cost through strategic dependence
+ *   - civilian_populations: powerless; trapped; bear existential risk and psychological burden
+ *   - rising_peer_competitors: powerful but excluded; locked out of doctrine negotiation; would contest the framing's applicability to their situation
+ *   - disarmament_advocates: moderate power; excluded; challenge the cost-benefit framing itself rather than the numbers
+ *   - strategic_analysts: analytical seat; measure whether the constraint actually guides behavior
  */
 
 /* ==========================================================================
@@ -103,57 +111,119 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(nuclear_impossibility_kernel__rational_dropout_reading, 0.15).
-domain_priors:suppression_score(nuclear_impossibility_kernel__rational_dropout_reading, 0.22).
-domain_priors:theater_ratio(nuclear_impossibility_kernel__rational_dropout_reading, 0.41).
+domain_priors:base_extractiveness(nuclear_impossibility_kernel__rational_dropout_reading, 0.68).
+domain_priors:suppression_score(nuclear_impossibility_kernel__rational_dropout_reading, 0.72).
+domain_priors:theater_ratio(nuclear_impossibility_kernel__rational_dropout_reading, 0.44).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, extractiveness, 0.15).
-narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 0.22).
-narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 0.44).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse, 0.78).
+narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse, 0.71).
 narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, resistance, 0.58).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(nuclear_impossibility_kernel__rational_dropout_reading, mountain).
-narrative_ontology:human_readable(nuclear_impossibility_kernel__rational_dropout_reading, "Nuclear Rational-Choice Dropout: War Remains Reachable but Irrational").
-narrative_ontology:topic_domain(nuclear_impossibility_kernel__rational_dropout_reading, "strategic/military/international_relations").
+narrative_ontology:constraint_claim(nuclear_impossibility_kernel__rational_dropout_reading, tangled_rope).
+narrative_ontology:human_readable(nuclear_impossibility_kernel__rational_dropout_reading, "Nuclear Weapons as Rational-Choice Dropout Constraint").
+narrative_ontology:topic_domain(nuclear_impossibility_kernel__rational_dropout_reading, "strategic_studies/international_relations").
 
-domain_priors:emerges_naturally(nuclear_impossibility_kernel__rational_dropout_reading).
+domain_priors:requires_active_enforcement(nuclear_impossibility_kernel__rational_dropout_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(nuclear_impossibility_kernel__rational_dropout_reading, 'ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9').
-narrative_ontology:cs_kernel_codification('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', formalized).
-narrative_ontology:cs_authority_grounding('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', expertise).
-narrative_ontology:cs_interpretation_layer_present('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9').
-narrative_ontology:cs_reading_relation('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', nuclear_impossibility_kernel__credibility_paradox_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', nuclear_impossibility_kernel__structural_contraction_reading, coexists_with).
-narrative_ontology:cs_axiom('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', foundational, rational_actors_maximize_expected_utility).
-narrative_ontology:cs_axiom_status(rational_actors_maximize_expected_utility, holdable).
-narrative_ontology:cs_axiom_grounding('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', rational_actors_maximize_expected_utility, empirically_contingent).
-narrative_ontology:cs_axiom('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', foundational, war_remains_in_feasible_choice_set).
-narrative_ontology:cs_axiom_status(war_remains_in_feasible_choice_set, holdable).
-narrative_ontology:cs_axiom_grounding('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', war_remains_in_feasible_choice_set, empirically_contingent).
-narrative_ontology:cs_reference_frame('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', game_theoretic_rationality_framework).
-narrative_ontology:cs_drift_state('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', post_cold_war_nuclear_erosion, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('ce3b8fe2-d9c2-4535-ad6e-ba45d01572a9', '').
+narrative_ontology:cs_story_uid(nuclear_impossibility_kernel__rational_dropout_reading, 'fb8ac645-b03a-4b1f-829a-52fcfc356b95').
+narrative_ontology:cs_kernel_codification('fb8ac645-b03a-4b1f-829a-52fcfc356b95', distributed).
+narrative_ontology:cs_authority_grounding('fb8ac645-b03a-4b1f-829a-52fcfc356b95', extraction).
+narrative_ontology:cs_interpretation_layer_present('fb8ac645-b03a-4b1f-829a-52fcfc356b95').
+narrative_ontology:cs_reading_relation('fb8ac645-b03a-4b1f-829a-52fcfc356b95', nuclear_impossibility_kernel__structural_contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('fb8ac645-b03a-4b1f-829a-52fcfc356b95', nuclear_impossibility_kernel__credibility_paradox_reading, coexists_with).
+narrative_ontology:cs_axiom('fb8ac645-b03a-4b1f-829a-52fcfc356b95', foundational, victory_rationally_dominated_by_mutual_destruction).
+narrative_ontology:cs_axiom_status(victory_rationally_dominated_by_mutual_destruction, holdable).
+narrative_ontology:cs_axiom_grounding('fb8ac645-b03a-4b1f-829a-52fcfc356b95', victory_rationally_dominated_by_mutual_destruction, empirically_contingent).
+narrative_ontology:cs_axiom('fb8ac645-b03a-4b1f-829a-52fcfc356b95', foundational, rational_actor_deterrence_model).
+narrative_ontology:cs_axiom_status(rational_actor_deterrence_model, holdable).
+narrative_ontology:cs_axiom_grounding('fb8ac645-b03a-4b1f-829a-52fcfc356b95', rational_actor_deterrence_model, empirically_contingent).
+narrative_ontology:cs_reference_frame('fb8ac645-b03a-4b1f-829a-52fcfc356b95', rational_cost_benefit_deterrence).
+narrative_ontology:cs_drift_state('fb8ac645-b03a-4b1f-829a-52fcfc356b95', contemporary_proliferation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('fb8ac645-b03a-4b1f-829a-52fcfc356b95', '2026-06-12T14:32:00Z').
 narrative_ontology:cs_kernel_id(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_impossibility_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(nuclear_impossibility_kernel__rational_dropout_reading, strategic_stability_doctrine).
-narrative_ontology:constraint_beneficiary(nuclear_impossibility_kernel__rational_dropout_reading, deterrence_theorists).
+narrative_ontology:constraint_beneficiary(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_weapons_states).
+narrative_ontology:constraint_beneficiary(nuclear_impossibility_kernel__rational_dropout_reading, deterrence_doctrine_custodians).
+narrative_ontology:constraint_victim(nuclear_impossibility_kernel__rational_dropout_reading, non_nuclear_states).
+narrative_ontology:constraint_victim(nuclear_impossibility_kernel__rational_dropout_reading, civilian_populations_under_nuclear_umbrella).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(nuclear_impossibility_kernel__rational_dropout_reading, civilian_populations_under_nuclear_umbrella).
+narrative_ontology:constraint_vindicates(nuclear_impossibility_kernel__rational_dropout_reading, strategic_stability_through_mutual_vulnerability).
+narrative_ontology:constraint_vindicates(nuclear_impossibility_kernel__rational_dropout_reading, rational_actor_model_in_conflict).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Maintain nuclear arsenals and the deterrence doctrine that justifies them. They set the strategic framework by controlling verification regimes, doctrine development, and institutional legitimacy. They are trapped by mutual vulnerability: abandoning the arsenal would expose them to existential risk from peer competitors' arsenals. Their strategic authority depends on the rational-dropout framing — if victory became possible again, their deterrence narrative would collapse.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_weapons_states, agenda_setter,
+    institutional, generational, trapped, global).
+
+% Strategic analysts, military planners, policy intellectuals, and academic researchers whose professional authority and career advancement depend on the rational-choice framing. They produce doctrine, author strategy papers, brief policymakers, and provide intellectual legitimacy for nuclear postures. The constraint vindicates their framework; departure from the rational-dropout reading would require fundamental retraining and reputation recalibration.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, deterrence_doctrine_custodians, beneficiary,
+    institutional, generational, constrained, global).
+
+% Live within the security architecture established by the nuclear deterrent. They depend on extended deterrence from nuclear-armed allies or exist in mutual-deterrence relationships with peer non-nuclear states while nuclear powers overshadow the region. They pay through strategic dependence (cannot pursue independent security policies), resource transfer (military aid, security commitments), and reduced conventional deterrence (because nuclear powers allocate military resources to arsenals).
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, non_nuclear_states, payer,
+    organized, biographical, constrained, global).
+
+% Benefit from the rational-dropout constraint's prevention of large-scale conventional war between nuclear powers (which would devastate their territories and societies). They pay through psychological burden (knowledge of existential risk), resource opportunity cost (military spending at the expense of public goods), and vulnerability to any scenario where the deterrent fails or is perceived as non-credible. They have no voice in the strategic framework's maintenance or revision.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, civilian_populations_under_nuclear_umbrella, payer,
+    powerless, immediate, trapped, global).
+narrative_ontology:stakeholder_secondary_role(nuclear_impossibility_kernel__rational_dropout_reading, civilian_populations_under_nuclear_umbrella, beneficiary).
+
+% States with developing or emerging nuclear arsenals (e.g., India, Pakistan, Iran as aspirant) face the same rational-dropout logic but are excluded from doctrine-setting institutions. They would contest whether the rational-choice threshold applies to their security situation (arguing their arsenals are existential necessities, not deterrence luxuries). Their exclusion from strategic dialogue enforces the constraint by preventing alternative cost-benefit framings from gaining institutional voice.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, rising_peer_competitors, excluded,
+    powerful, generational, trapped, global).
+
+% Non-governmental organizations, academics, and activists arguing that nuclear weapons are categorically impermissible and that disarmament is the only moral and rational course. They are excluded from doctrine-setting institutions and treated as outside the strategic rationality frame. Their position challenges not just the cost-benefit numbers but the framing itself — they argue war with nuclear weapons is not a rational choice but a categorical wrong.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, disarmament_advocates, excluded,
+    moderate, generational, constrained, global).
+
+% External observers measuring whether the rational-choice framework actually predicts state behavior and whether alternative framings (structural contraction, credibility paradox) better fit the evidence. They claim epistemic authority but lack institutional power to set doctrine. Their role is to track the constraint's mechanism and test whether the rational-dropout reading is causally accurate.
+narrative_ontology:constraint_stakeholder(nuclear_impossibility_kernel__rational_dropout_reading, strategic_analysts, observer,
+    analytical, biographical, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_weapons_states).
+narrative_ontology:fixing_cost_class(nuclear_impossibility_kernel__rational_dropout_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates the strategic behavior of nuclear-armed states by establishing a shared cost-benefit framework: war between peer nuclear powers is structurally rational to avoid because its costs (mutual annihilation or unacceptable harm) exceed any benefit. Enables a stable equilibrium where states refrain from large-scale direct conflict without needing explicit agreements or trust.
+% TRANSFER_FUNCTION: Transfers strategic vulnerability from nuclear-armed states (who possess destructive capability but face mutual destruction) to non-nuclear states and populations (who depend on the deterrent holding and bear the burden of the doctrine's maintenance costs). Nuclear weapons states collect the benefit of perceived security; non-nuclear states pay through strategic dependence, military expenditure, and psychological exposure.
+% ABSENT_VOICES: Rising peer competitors with developing arsenals are excluded; they would contest whether the rational-dropout framework applies to their situation and argue for different cost-benefit accounting. Disarmament advocates are excluded; they challenge the cost-benefit framing itself and argue categorical impermissibility transcends calculation. Their absence from doctrine-setting institutions is enforced and maintained by the same powers whose security the constraint protects.
+% DISAPPEARANCE_RATIONALE: If nuclear weapons vanished or were rendered non-functional, the rational-dropout constraint would evaporate immediately. Large-scale conventional war between former nuclear powers would become structurally possible again (cost-benefit would favor it or make it a live option). Military postures would shift, alliances would reorganize, and regional powers would recalculate security strategies without the nuclear overhang. Strategic doctrine would require wholesale reinterpretation.
+% FOUNDING_PROBLEM: After nuclear weapons emerged and made mutual destruction possible, strategists faced the problem: how do you maintain deterrence and strategic stability when the cost of failure is civilization-ending? The rational-choice response: establish a framework where war itself becomes rational to avoid, independent of deterrent credibility or intentions.
+% FOUNDING_PROBLEM_CORROBORATION: Nuclear powers attest the founding problem is live and the rational-dropout framing is the solution that has kept them from major-power war for 80 years. Disarmament analysts attest the founding problem is mis-stated: the actual problem is that rationality cannot be trusted to prevent use, so categorical prohibition is necessary. Historians and military analysts outside the benefiting states attest the constraint's contribution to post-1945 peace is real but contested — alternative explanations (bipolarity itself, conventional deterrence, economic interdependence, reduced great-power contact) compete for credit.
+narrative_ontology:disappearance_verdict(nuclear_impossibility_kernel__rational_dropout_reading, world_rearranges).
+narrative_ontology:founding_problem_status(nuclear_impossibility_kernel__rational_dropout_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(nuclear_impossibility_kernel__rational_dropout_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(nuclear_impossibility_kernel__rational_dropout_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(nuclear_impossibility_kernel__rational_dropout_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(nuclear_impossibility_kernel__rational_dropout_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -161,19 +231,9 @@ narrative_ontology:story_seed(nuclear_impossibility_kernel__rational_dropout_rea
 
 :- begin_tests(nuclear_impossibility_kernel__rational_dropout_reading_tests).
 
-test(mountain_threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, ExtMetricName, E),
-    domain_priors:suppression_score(nuclear_impossibility_kernel__rational_dropout_reading, S),
-    E =< 0.25,
-    S =< 0.05.
-
-test(nl_profile_validation) :-
-    domain_priors:emerges_naturally(nuclear_impossibility_kernel__rational_dropout_reading),
-    narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(nuclear_impossibility_kernel__rational_dropout_reading, resistance, R),
-    AC >= 0.85,
-    R =< 0.15.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(nuclear_impossibility_kernel__rational_dropout_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(nuclear_impossibility_kernel__rational_dropout_reading_tests).
 
@@ -183,16 +243,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is low (0.15) because the constraint does not transfer resources or rents—it constrains choices based on rational calculation. Suppression is low (0.22) because the constraint relies on shared agreement about rationality rather than coercion; nuclear-armed states voluntarily accept the rational-choice framework. Theater_ratio is moderate-rising (0.41 at interval end, up from 0.25) because deterrence doctrine requires continuous performative maintenance—posturing, signaling, readiness displays—even though rational calculation predicts non-use. Accessibility_collapse is high (0.78) because once the rational-actor assumption is accepted, alternatives to the rational-dropout framing (paradox, structural impossibility, disarmament) collapse as less coherent explanations. Resistance is moderate (0.58) because disarmament advocates and paradox theorists maintain ongoing resistance; the rational-dropout reading does not silence its competitors, though it dominates strategic-policy consensus. The measurement series tracks rising theater_ratio over the interval, indicating increasing decoupling between rational-choice explanation and performative deterrence activity—a piton-drift signal. This divergence is noted in omega_id rational_choice_performance_decoupling.
+ *   Extractiveness (0.68 at interval end) reflects that nuclear-armed states extract strategic advantage and institutional authority from the rational-dropout framing. Non-nuclear states pay through dependence and constrained choice. Suppression (0.72) is high because the constraint requires active enforcement: doctrine custodians must suppress alternative framings (structural contraction, credibility paradox), rising powers must be kept from contesting the threshold, and disarmament advocates must be excluded from legitimacy. Theater_ratio (0.44 and rising) indicates that institutional maintenance activity (arms control negotiations, doctrine refinement, strategic signaling) increasingly performs an identity/legitimacy function alongside its real strategic role. Accessibility_collapse increases from 0.42 (structural, 1945) to 0.78 (structural, 2025) as the constraint becomes more deeply embedded in institutional practice — alternatives become harder to conceive within the dominant strategic vocabulary. The coercion grid shows that at the structural level, the constraint operates through hard institutions (deterrence doctrine, arsenal maintenance, verification); at the individual level, the suppression is more diffuse (psychological acceptance, narrative normalization). Rising resistance at the individual and class levels (0.45 and 0.58 in 2025) reflects disarmament movements and non-aligned-state skepticism, though resistance remains lower than at the structural level where it is actively suppressed by institutional machinery.
  *
  * PERSPECTIVAL GAP:
- *   The beneficiary seats (deterrence theorists, strategic-stability doctrine advocates) perceive the constraint as a genuine natural law of rational choice—a discovery about how rational agents must behave. The payer seats (nuclear-armed states, strategic planners) perceive it as both natural law and performative burden—they must maintain credibility while knowing use is irrational, which creates cognitive dissonance. Disarmament advocates and paradox theorists perceive the constraint as a constructed cover story for deterrence-by-inertia. The engine's per-seat classification will diverge: from the analytical seat the constraint is a clean mountain; from the strategic-policy seat it will show mixed signals as theater rises; from the disarmament seat it may compute as snare or piton depending on how theater is weighted. These divergences are predictions the framework exists to make.
+ *   From the nuclear-weapons-state seat, the constraint is a solution to an existential coordination problem: it enables peaceful coexistence with peer competitors despite mutual destructive capability. From the non-nuclear-state seat, the same constraint is a structure of dependence and vulnerability: their security depends on a framework they did not author and cannot exit. From the strategic-analyst seat, the constraint's necessity is itself contested — whether rational-choice dropout, structural impossibility, or credibility paradox better explains observed non-use is an open empirical question. The engine computes these divergences from the structural data (power, exit_options, beneficiary/victim status); the claim remains independent: this constraint is CLAIMED as tangled_rope (coordination function is real, asymmetric extraction is real, enforcement is active), and the metrics support that claim.
  *
  * DIRECTIONALITY LOGIC:
- *   Strategic-stability theorists are beneficiaries (d near 0.0): the constraint vindicates their analytical framework and their institutional position. Nuclear-armed states are payers (d near 0.9): they bear the cost of maintaining doctrines and arsenals for weapons rationality forbids using. However, they are also beneficiaries in a secondary sense: the rational-choice framework allows them to pursue deterrence without accepting either paradox (incoherence) or structural impossibility (fatalism). The directionality is therefore asymmetric: theorists collect the pure benefit; armed states pay to maintain the framework while also benefiting from the stability it provides. This asymmetry is structural, not a matter of debate, and does not require override.
+ *   Nuclear weapons states are agenda-setters (d near 1.0 on the target side, reversed: they set the terms but are also trapped by mutual vulnerability — d closer to 0.5 symmetric due to identity-lock). Deterrence custodians are beneficiaries (d near 0.0 beneficiary side). Non-nuclear states are payers (d near 1.0 target side, constrained exit). Civilian populations are dual-positioned: they benefit from the dropout logic (prevented from large-scale conventional war) but pay the cost of the arrangement (psychological burden, resource opportunity cost, existential risk). The identity-lock on nuclear weapons states is profound: their national security identity and institutional structures have fused with the deterrent logic; exit from the rational-dropout framework would require rethinking their entire security posture. This identity-fusion is documented in an omega variable below.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint's founding problem—how to make deterrence credible when mutual destruction is guaranteed—was live at t=0 (immediately post-WWII). At t=30 (present), the problem is contested: strategic theorists say rational-choice framework solved it; disarmament advocates say it merely reframed it; some strategists say the problem has degraded into pure theater as nuclear weapons have become less usable (constraints from public opinion, treaty limitations, cyber/drone alternatives). The rising theater_ratio supports the contested verdict: the constraint is not dead (deterrence doctrine remains active) but its founding problem's status is shifting from 'live' toward 'zombie function maintained by inertia.' This is a mandatrophy trajectory. It does not require a base_properties.mandatrophy_resolved flag yet, but the measurement series anticipates the possibility.
+ *   The founding problem (how to maintain deterrence and stability given mutual destruction capability) is contested in its status: nuclear powers attest it is live and being solved; disarmament advocates attest it is mis-stated (the real problem is that rationality cannot prevent use). The disappearance_verdict is world_rearranges: if the constraint vanished, strategic behavior would reorganize immediately. This is consistent with a tangled_rope: the coordination function (rational avoidance of mutually catastrophic war) is real, and the asymmetric extraction (nuclear powers collect strategic advantage, non-nuclear states pay through dependence) is also real. The constraint is not mandatropic: it serves both an active coordination function and an extractive function simultaneously, and the coordination function would not persist without enforcement (the asymmetric benefit to the nuclear powers). If the constraint became purely performative (coordination ceased, enforcement-only remained), it would transition to a snare or piton.
  */
 
 /* ==========================================================================
@@ -200,90 +260,160 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    rational_actor_assumption_contingency,
-    'Is the rational-dropout reading''s explanatory power grounded in a universal feature of how rational agents must behave, or does it depend on culturally contingent assumptions about how strategic actors decide (expected-utility maximization, narrow self-interest, state-level agency)?',
-    'Comparative analysis of non-Western strategic traditions, behavioral economics evidence on actual decision-making under existential uncertainty, and historical case studies of near-use incidents where actors violated expected-utility logic.',
-    'If the rational-actor framework is culturally contingent, the rational-dropout reading is a reading of the kernel specific to Western strategic theory, not a feature of the nuclear constraint itself. If universal, the reading grounds deterrence in a structural feature of rational choice. This distinction determines whether the constraint is a natural law or a theoretical construct.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(rational_actor_assumption_contingency, conceptual, 'Whether the rational-dropout reading rests on universal rationality or culturally specific assumptions.').
-
-omega_variable(
-    reachability_vs_rationality_boundary,
-    'When strategists declare war is ''irrational,'' do they mean it is removed from the feasible choice set (actors cannot choose it) or merely from the optimal choice set (actors can choose it but should not)? The rational-dropout reading requires the latter; the structural-impossibility reading requires the former.',
-    'Formal analysis of how actors treat ''reachable but irrational'' options in decision models, and empirical study of near-use incidents to determine whether restraint reflected rational calculation or constraint.',
-    'If war is truly reachable (in the feasible set), then deterrence depends on rationality persisting; if war is structurally unreachable, the constraint is physical/logical, not rational. This distinguishes the rational-dropout reading from its structural-impossibility sibling.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(reachability_vs_rationality_boundary, empirical, 'Whether nuclear war remains in the feasible choice set for rational actors or has been structurally removed.').
-
-omega_variable(
-    strategic_performance_vs_underlying_truth,
-    'The theater_ratio is 0.41 and rising. If deterrence performance becomes decoupled from rational calculation (actors maintain postures they themselves believe are irrational), does the constraint persist as a rational constraint or does it become pure theater?',
-    'Archival and interview evidence on whether nuclear planners genuinely believe their own rationality frameworks, and temporal measurement of whether theater_ratio rises as the coherence of rational-choice explanations erodes.',
-    'Rising theater with stable extraction would indicate the rational-dropout reading is becoming a cover story for deterrence-by-inertia; falling theater would indicate genuine belief in rational constraint is persisting. Classification would shift toward piton if theater comes to dominate.',
+    rational_actor_assumption,
+    'Do state actors in nuclear crises actually reason according to cost-benefit rational-choice logic, or do cognitive biases, signaling imperatives, and institutional inertia dominate decision-making?',
+    'Behavioral analysis of historical nuclear crises (Cuban Missile Crisis, Kargil, Taiwan Strait standoffs): do state decisions track the cost-benefit calculus or deviate systematically? Experimental and archival evidence on decision-maker cognition.',
+    'If states reason rationally as the constraint assumes, the rational-dropout framing is accurate and the constraint operates as described. If rational-choice reasoning is systematically displaced by bias and institutional factors, the constraint''s causal mechanism is misidentified — the actual mechanism might be structural contraction, path dependence, or other non-rational factors. Classification would shift from tangled_rope toward snare (institutional actors captured by doctrine) or piton (inertial non-use without rational foundation).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(strategic_performance_vs_underlying_truth, empirical, 'Whether the rational-dropout reading''s explanatory power persists or is becoming theatrical maintenance.').
+narrative_ontology:omega_variable(rational_actor_assumption, empirical, 'Whether nuclear-armed states actually use rational-choice reasoning in strategic decisions.').
 
 omega_variable(
-    natural_law_vs_beneficiary_construction,
-    'This constraint is authored as a mountain with declared beneficiaries (deterrence theorists, strategic-stability doctrine). Is rational-choice constraint on war a feature of reality independent of who benefits from the framing, or is it constructed to benefit the strategic-stability consensus?',
-    'Genealogical analysis of when and why the rational-choice framing emerged in strategic theory (post-WWII game theory adoption); comparison with pre-1945 strategic reasoning about existential weapons; and analysis of who benefits if this framing persists versus who benefits if it collapses.',
-    'If constructed, the constraint is a false summit and should reclassify as tangled rope or snare (the deterrence establishment extracts legitimacy and career value from the rational-choice frame). If genuinely natural, the beneficiary listing reflects vindication of true propositions rather than extraction. This is the FSM candidate: mountain with beneficiaries requires omega documentation of the ambiguity.',
+    structural_vs_rational_mechanism,
+    'Does non-use between nuclear powers result from the rational-dropout mechanism (cost-benefit reasoning) or from structural contraction (physical impossibility making war irrational at the margins)?',
+    'Hypothetical contingency: if military technology reduced the risk of mutual assured destruction (e.g., perfect missile defense), would states begin planning for large-scale nuclear war, or would they persist in non-use because of the rational-dropout frame? Alternatively: if a state acquired a first-strike-disarming capability, would the rational-dropout constraint fail?',
+    'If the constraint depends on rational-choice dropout, it is vulnerable to technological change that alters the cost-benefit calculus or to strategic innovations that reduce mutual vulnerability. If the constraint actually depends on structural impossibility (victory is categorically unavailable), it would persist even if the rational-choice framing failed. Classification implications: rational-dropout alone is extractive (asymmetric benefit to nuclear powers); combined with structural contraction, the constraint becomes more durable and less extractive.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(natural_law_vs_beneficiary_construction, conceptual, 'Whether the rational-choice constraint is a feature of nuclear reality or a theoretical construct that serves the interests of the strategic-stability establishment.').
+narrative_ontology:omega_variable(structural_vs_rational_mechanism, conceptual, 'Whether the mechanism of non-use is rational-choice dropout or structural impossibility.').
+
+omega_variable(
+    identity_lock_on_deterrence_doctrine,
+    'To what degree is the deterrence doctrine institutionally entrenched versus conceptually open to revision by the strategic community?',
+    'Post-signaling from disarmament advocates and alternative strategic frameworks (e.g., no-first-use, graduated deterrence, resilience-based security): are these treated as genuinely alternative framings or as categorically outside serious strategy? Institutional evolution in strategic studies: do new frameworks gain institutional foothold or remain marginalized?',
+    'High identity-lock means the constraint is increasingly performative and resistant to contestation (higher theater_ratio, suppression approaching 1.0). The suppression of alternative readings would escalate, and the constraint would trend toward snare or piton (power maintained by exclusion rather than active coordination). Low identity-lock would mean the rational-dropout framing is genuinely revisable if evidence shifts or new strategic circumstances emerge.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_on_deterrence_doctrine, empirical, 'Degree of institutional and cognitive entrenchment of the rational-dropout framing among strategic elites.').
+
+omega_variable(
+    kernel_alternative_framings,
+    'This reading instantiates rational-choice dropout; what if the actual mechanism of non-use between nuclear powers is one of the sibling readings — structural contraction (physical impossibility) or credibility paradox (the deterrent is non-credible)?',
+    'Empirical differentiation via strategic discourse analysis: which reading do policymakers and strategists invoke to justify non-use? Via behavioral analysis: do states behave as if victory is cost-prohibitive (rational-dropout) or as if it is impossible (structural-contraction)? Via institutional analysis: does doctrine treat nuclear war as strategically unthinkable (supports rational-dropout) or as categorically impermissible (supports credibility-paradox or structural-contraction readings)?',
+    'If structural-contraction is the actual mechanism, the constraint operates from a different causal foundation and is more robust to cost-benefit shifts. If credibility-paradox is operative, the constraint is fragile and depends on the perpetual non-credibility of threats. Classification shifts accordingly: rational-dropout tangled_rope → structural-contraction rope (genuine coordination, minimal extraction) or structural-contraction mountain (physical law, zero extraction); rational-dropout → credibility-paradox snare (extraction without real coordination, theater-dominant).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(kernel_alternative_framings, conceptual, 'Which kernel reading actually explains non-use: rational-dropout, structural-contraction, or credibility-paradox.').
+
+omega_variable(
+    suppression_mechanism,
+    'Is the suppression of alternative readings (structural contraction, credibility paradox, disarmament advocacy) structural (institutional exclusion, power imbalance, resource control) or internalized (strategic elites believe rational-dropout is the only coherent framework)?',
+    'Post-exit suppression trajectory: if institutional barriers to alternative framings were removed (e.g., funding diverted to disarmament research, doctrine-setting opened to non-aligned voices), would the rational-dropout reading persist in strategic discourse? If yes, suppression is partly internalized; if no, suppression is structural.',
+    'High structural suppression means the constraint''s persistence depends on active enforcement and power asymmetries; it would be categorized as snare-like or piton-like (maintained by exclusion). High internalized suppression means the constraint has absorbed into strategic cognition; exit from the framing is psychologically difficult even absent external barriers. This would make the constraint more extractive and more resistant to contestation.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism, empirical, 'Whether suppression of alternative readings is structural or internalized.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(nuclear_impossibility_kernel__rational_dropout_reading, 0, 30).
+narrative_ontology:interval(nuclear_impossibility_kernel__rational_dropout_reading, 1945, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(nucl_tr_t0, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(nucl_tr_t10, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 10, 0.31).
-narrative_ontology:measurement(nucl_tr_t20, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 20, 0.37).
-narrative_ontology:measurement(nucl_tr_t30, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 30, 0.41).
+narrative_ontology:measurement(nucl_tr_t1945, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 1945, 0.25).
+narrative_ontology:measurement_basis(nucl_tr_t1945, projected).
+narrative_ontology:measurement(nucl_tr_t1962, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 1962, 0.38).
+narrative_ontology:measurement_basis(nucl_tr_t1962, observed).
+narrative_ontology:measurement(nucl_tr_t1979, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 1979, 0.41).
+narrative_ontology:measurement_basis(nucl_tr_t1979, observed).
+narrative_ontology:measurement(nucl_tr_t1991, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 1991, 0.42).
+narrative_ontology:measurement_basis(nucl_tr_t1991, observed).
+narrative_ontology:measurement(nucl_tr_t2008, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 2008, 0.43).
+narrative_ontology:measurement_basis(nucl_tr_t2008, observed).
+narrative_ontology:measurement(nucl_tr_t2025, nuclear_impossibility_kernel__rational_dropout_reading, theater_ratio, 2025, 0.44).
+narrative_ontology:measurement_basis(nucl_tr_t2025, observed).
 
 % Extraction over time
-narrative_ontology:measurement(nucl_be_t0, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(nucl_be_t10, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 10, 0.11).
-narrative_ontology:measurement(nucl_be_t20, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 20, 0.14).
-narrative_ontology:measurement(nucl_be_t30, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 30, 0.15).
+narrative_ontology:measurement(nucl_be_t1945, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 1945, 0.35).
+narrative_ontology:measurement_basis(nucl_be_t1945, projected).
+narrative_ontology:measurement(nucl_be_t1962, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 1962, 0.58).
+narrative_ontology:measurement_basis(nucl_be_t1962, observed).
+narrative_ontology:measurement(nucl_be_t1979, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 1979, 0.64).
+narrative_ontology:measurement_basis(nucl_be_t1979, observed).
+narrative_ontology:measurement(nucl_be_t1991, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 1991, 0.61).
+narrative_ontology:measurement_basis(nucl_be_t1991, observed).
+narrative_ontology:measurement(nucl_be_t2008, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 2008, 0.66).
+narrative_ontology:measurement_basis(nucl_be_t2008, observed).
+narrative_ontology:measurement(nucl_be_t2025, nuclear_impossibility_kernel__rational_dropout_reading, base_extractiveness, 2025, 0.68).
+narrative_ontology:measurement_basis(nucl_be_t2025, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(nucl_su_t0, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 0, 0.18).
-narrative_ontology:measurement(nucl_su_t10, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 10, 0.19).
-narrative_ontology:measurement(nucl_su_t20, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 20, 0.21).
-narrative_ontology:measurement(nucl_su_t30, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 30, 0.22).
+narrative_ontology:measurement(nucl_su_t1945, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 1945, 0.45).
+narrative_ontology:measurement_basis(nucl_su_t1945, projected).
+narrative_ontology:measurement(nucl_su_t1962, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 1962, 0.68).
+narrative_ontology:measurement_basis(nucl_su_t1962, observed).
+narrative_ontology:measurement(nucl_su_t1979, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 1979, 0.71).
+narrative_ontology:measurement_basis(nucl_su_t1979, observed).
+narrative_ontology:measurement(nucl_su_t1991, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 1991, 0.69).
+narrative_ontology:measurement_basis(nucl_su_t1991, observed).
+narrative_ontology:measurement(nucl_su_t2008, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 2008, 0.7).
+narrative_ontology:measurement_basis(nucl_su_t2008, observed).
+narrative_ontology:measurement(nucl_su_t2025, nuclear_impossibility_kernel__rational_dropout_reading, suppression_requirement, 2025, 0.72).
+narrative_ontology:measurement_basis(nucl_su_t2025, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=1945, tn=2025
+narrative_ontology:measurement(nucl_grid_01, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(class), 1945, 0.28).
+narrative_ontology:measurement(nucl_grid_02, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(class), 2025, 0.68).
+narrative_ontology:measurement(nucl_grid_03, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(individual), 1945, 0.15).
+narrative_ontology:measurement(nucl_grid_04, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(individual), 2025, 0.62).
+narrative_ontology:measurement(nucl_grid_05, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(organizational), 1945, 0.38).
+narrative_ontology:measurement(nucl_grid_06, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(organizational), 2025, 0.72).
+narrative_ontology:measurement(nucl_grid_07, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(structural), 1945, 0.42).
+narrative_ontology:measurement(nucl_grid_08, nuclear_impossibility_kernel__rational_dropout_reading, accessibility_collapse(structural), 2025, 0.78).
+narrative_ontology:measurement(nucl_grid_09, nuclear_impossibility_kernel__rational_dropout_reading, resistance(class), 1945, 0.38).
+narrative_ontology:measurement(nucl_grid_10, nuclear_impossibility_kernel__rational_dropout_reading, resistance(class), 2025, 0.58).
+narrative_ontology:measurement(nucl_grid_11, nuclear_impossibility_kernel__rational_dropout_reading, resistance(individual), 1945, 0.22).
+narrative_ontology:measurement(nucl_grid_12, nuclear_impossibility_kernel__rational_dropout_reading, resistance(individual), 2025, 0.45).
+narrative_ontology:measurement(nucl_grid_13, nuclear_impossibility_kernel__rational_dropout_reading, resistance(organizational), 1945, 0.48).
+narrative_ontology:measurement(nucl_grid_14, nuclear_impossibility_kernel__rational_dropout_reading, resistance(organizational), 2025, 0.62).
+narrative_ontology:measurement(nucl_grid_15, nuclear_impossibility_kernel__rational_dropout_reading, resistance(structural), 1945, 0.42).
+narrative_ontology:measurement(nucl_grid_16, nuclear_impossibility_kernel__rational_dropout_reading, resistance(structural), 2025, 0.55).
+narrative_ontology:measurement(nucl_grid_17, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(class), 1945, 0.35).
+narrative_ontology:measurement(nucl_grid_18, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(class), 2025, 0.74).
+narrative_ontology:measurement(nucl_grid_19, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(individual), 1945, 0.22).
+narrative_ontology:measurement(nucl_grid_20, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(individual), 2025, 0.68).
+narrative_ontology:measurement(nucl_grid_21, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(organizational), 1945, 0.52).
+narrative_ontology:measurement(nucl_grid_22, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(organizational), 2025, 0.79).
+narrative_ontology:measurement(nucl_grid_23, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(structural), 1945, 0.48).
+narrative_ontology:measurement(nucl_grid_24, nuclear_impossibility_kernel__rational_dropout_reading, stakes_inflation(structural), 2025, 0.81).
+narrative_ontology:measurement(nucl_grid_25, nuclear_impossibility_kernel__rational_dropout_reading, suppression(class), 1945, 0.28).
+narrative_ontology:measurement(nucl_grid_26, nuclear_impossibility_kernel__rational_dropout_reading, suppression(class), 2025, 0.68).
+narrative_ontology:measurement(nucl_grid_27, nuclear_impossibility_kernel__rational_dropout_reading, suppression(individual), 1945, 0.18).
+narrative_ontology:measurement(nucl_grid_28, nuclear_impossibility_kernel__rational_dropout_reading, suppression(individual), 2025, 0.62).
+narrative_ontology:measurement(nucl_grid_29, nuclear_impossibility_kernel__rational_dropout_reading, suppression(organizational), 1945, 0.35).
+narrative_ontology:measurement(nucl_grid_30, nuclear_impossibility_kernel__rational_dropout_reading, suppression(organizational), 2025, 0.71).
+narrative_ontology:measurement(nucl_grid_31, nuclear_impossibility_kernel__rational_dropout_reading, suppression(structural), 1945, 0.38).
+narrative_ontology:measurement(nucl_grid_32, nuclear_impossibility_kernel__rational_dropout_reading, suppression(structural), 2025, 0.75).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(nuclear_impossibility_kernel__rational_dropout_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(nuclear_impossibility_kernel__rational_dropout_reading, 0.12).
-narrative_ontology:affects_constraint(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_impossibility_kernel__credibility_paradox_reading).
 narrative_ontology:affects_constraint(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_impossibility_kernel__structural_contraction_reading).
+narrative_ontology:affects_constraint(nuclear_impossibility_kernel__rational_dropout_reading, nuclear_impossibility_kernel__credibility_paradox_reading).
+narrative_ontology:affects_constraint(nuclear_impossibility_kernel__rational_dropout_reading, deterrence_stability_coordination).
+narrative_ontology:affects_constraint(nuclear_impossibility_kernel__rational_dropout_reading, arms_control_verification_regime).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the nuclear_impossibility_kernel. The sibling readings (credibility_paradox and structural_contraction) instantiate different interpretations of what nuclear weapons created. The rational_dropout_reading claims war is reachable but irrational (rational-choice constraint); the credibility_paradox_reading claims the deterrence threat is logically incredible; the structural_contraction_reading claims war is physically impossible. These readings have different ε values, different beneficiary structures, and different implications for deterrence policy. They are linked via network.affects_constraints to enable contamination-propagation analysis: if one reading's coherence degrades, the sibling readings will be affected differently (the paradox reading would gain credence if rationality assumptions collapse; the structural reading would be vindicated if irrational-actor behavior becomes empirically prevalent).
+% The nuclear_impossibility_kernel is a contested kernel with three readings, each structurally distinct in their causal mechanisms and classifications. This story instantiates the rational_dropout_reading: victory remains possible but is rational to avoid due to cost-benefit reasoning. Sibling readings (structural_contraction and credibility_paradox) instantiate alternative mechanisms with different ε values and classification outcomes. The three readings coexist in strategic discourse and are held by different factions of the strategic community. Decomposition was necessary because ε varies across readings: rational-dropout has moderate-high extractiveness (0.68) due to asymmetric benefit to nuclear powers; structural-contraction would have lower ε (physical law, not institutional arrangement); credibility-paradox would have higher ε (pure extraction without real coordination). Each reading forms its own constraint story; they are linked via network.affects_constraints to show the kernel family relationship.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(nuclear_impossibility_kernel__rational_dropout_reading, institutional, 0.52).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

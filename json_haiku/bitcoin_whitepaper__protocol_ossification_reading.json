@@ -2,274 +2,363 @@
   "header": {
     "constraint_id": "bitcoin_whitepaper__protocol_ossification_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "2c1f4488-1769-43f3-8f03-6f99e99046fe"
+    "story_uid": "63fc2b76-5f9b-4471-9fb4-bb69d575161b"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.41,
+    "suppression": 0.71,
+    "theater_ratio": 0.42,
     "accessibility_collapse": 0.78,
-    "resistance": 0.62,
+    "resistance": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Bitcoin Protocol Ossification via Consensus Requirement",
-    "topic_domain": "cryptocurrency_economics/technology_governance",
+    "topic_domain": "cryptocurrency/economic/governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "hodlers_and_long_term_holders",
-      "mining_pool_operators",
-      "existing_protocol_interpreters"
+      "hodlers_and_store_of_value_users",
+      "existing_layer_2_entrepreneurs",
+      "proof_of_work_mining_cartel"
     ],
     "victims": [
-      "use_cases_requiring_protocol_changes",
-      "lightning_network_developers",
-      "prospective_innovations"
+      "use_cases_requiring_base_layer_innovation",
+      "small_transaction_users",
+      "protocol_upgrade_researchers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "hodlers_and_store_of_value_users",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold Bitcoin long-term as a scarce digital asset and inflation hedge. Benefit from protocol stability and predictable supply rules. A stable protocol that never changes maximizes their confidence in the asset's properties. Fear that base-layer changes could unpredictably alter scarcity or attack resistance."
+    },
+    {
+      "name": "proof_of_work_mining_cartel",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Controls the consensus mechanism through network hash power. Benefits from protocol ossification because: (1) stability lowers capital expenditure uncertainty, (2) prevents changes that might reduce mining rewards or increase efficiency competition, (3) maintains their control over what counts as legitimate change. Enforces the consensus-requirement rule by rejecting rule-change proposals in public discourse and by threatening chain forks."
+    },
+    {
+      "name": "use_cases_requiring_base_layer_innovation",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Researchers and developers working on use cases that require base-protocol changes: improved privacy mechanisms, more efficient UTXO models, quantum-resistant signatures, sub-second settlement, or new covenant systems. Face a constraint: their innovations require changes the ossification rule treats as illegitimate unless near-universal. They can migrate to alternative protocols (Ethereum, altcoins, private blockchains) but lose Bitcoin's network effect and security inheritance."
+    },
+    {
+      "name": "small_transaction_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Use Bitcoin for direct payments or frequent transactions. Harmed by ossification because: fee-structure changes, transaction finality improvements, or throughput optimizations remain politically blocked; they route to Layer 2 solutions (Lightning, sidechains) which add latency and custody risk, or to altcoins with lighter governance constraints. Their potential base-layer improvements are locked behind the consensus requirement."
+    },
+    {
+      "name": "protocol_upgrade_researchers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Academic and independent researchers working on Bitcoin protocol improvements (scalability, privacy, security, functionality). Face delegitimization under the ossification reading: proposals for base-layer changes encounter organized skepticism and the 'universal consensus' barrier, which treats the burden of proof as asymmetrically high. Can publish in academic venues and work on soft forks / opcodes that do not require consensus agreement, but hard-fork innovations (the most structurally significant) are blocked."
+    },
+    {
+      "name": "layer_2_entrepreneurs",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Build and operate Layer 2 systems (Lightning, sidechains, rollups) that operate on top of Bitcoin. Benefit from protocol ossification because: it drives demand for their services (users unable to get improvements from the base layer migrate to L2), and keeps L2 innovation as the only legitimate avenue for new functionality. Face no pressure to implement base-layer changes; their business model is enhanced by the constraint."
+    },
+    {
+      "name": "bitcoin_core_developers",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Maintain the reference implementation of the Bitcoin protocol. Placed in a contradictory position: they have technical insight into improvements, but the ossification reading treats their proposals as illegitimate unless near-universal consensus materializes first. Some benefit from stability (reduced maintenance burden), others are constrained (their innovations face organized dismissal). Identity is fused with Bitcoin stewardship, making exit costly even when frustrated by the consensus requirement."
+    },
+    {
+      "name": "bitcoin_maximalists",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Advocates who frame protocol ossification as the essence of Bitcoin's legitimacy. See changes as capitulations to altcoins or fiat-money reasoning. Defend the consensus requirement actively in forums, social media, and governance spaces. Identity is bound to Bitcoin immutability; changes threaten their core narrative. Act as the primary enforcement mechanism for the ossification reading through reputation-shaping."
+    },
+    {
+      "name": "altcoin_and_layer_2_competitors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop competing protocols (Ethereum, Monero, Cardano, Solana) and alternative scaling solutions. Benefit from Bitcoin's ossification because it creates a comparative advantage: they can implement innovations (throughput, privacy, programmability) that Bitcoin cannot, drawing development talent and use-case adoption. Have incentive to reinforce the consensus-requirement norm publicly, even when not directly involved."
+    },
+    {
+      "name": "regulatory_and_monetary_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Central banks, financial regulators, and tax authorities. May view protocol ossification as a de facto admission that Bitcoin is a store-of-value asset (supporting the digital gold reading) rather than an active cash system (which would require continued evolution). Use the ossification norm as evidence in policy arguments about Bitcoin's monetary character and regulatory treatment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared legitimacy criterion for protocol change: changes are legitimate if and only if they approach universal (super-majority or near-unanimous) consensus. Solves a coordination problem within the Bitcoin development community: prevents fragmentation through contested hard forks by raising the bar for any change to near-universal acceptance, ensuring all nodes and miners stay on the same chain.",
+    "transfer_function": "Transfers the ability to influence Bitcoin's future from distributed protocol innovators (researchers, developers with marginal improvements) to incumbents (existing hodlers, miners, maximalist advocates) who benefit from immutability. Moves decision-making power toward groups whose interests align with stability and away from groups whose interests require evolution.",
+    "absent_voices": "Protocol innovation researchers outside the Bitcoin ecosystem, Layer 1 competitors (Ethereum, altcoins), small-transaction users in developing economies, and developers working on privacy or scalability solutions who would argue for easier modification pathways. They are structurally excluded from the consensus process by design: the ossification reading treats their proposals as lacking legitimacy until they build impossible majorities.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the consensus-requirement norm vanished (replaced by, e.g., 'core developers may implement improvements via reasonable process'), developers would propose base-layer changes, Layer 2 development might slow, the distribution of mining power might shift as efficiency innovations became possible, and use-case adoption patterns would reorganize around feasible protocol evolutions. The entire governance layer and development incentive structure would reorient.",
+    "founding_problem": "Early Bitcoin faced community fragmentation and hard-fork wars (Bitcoin Cash fork 2017, earlier contentious debates over block size). The founders of the ossification reading sought to prevent future splits by establishing a high consensus bar for legitimacy, locking in Satoshi's original vision and the 21M coin cap against political pressure.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Mining pools and hodler coalitions attest the problem is still live, citing altcoin fragmentation and replay-attack risks. However, protocol researchers and scaling-layer entrepreneurs attest the founding problem is substantially solved (the chain has not split since 2017) and the constraint persists as a political lock preventing legitimate evolution. Academic analyses and competing Layer 1 development trajectories support the 'lock' reading from outside the benefiting parties."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 16
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.42
+      "time_point": 2,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 4,
+      "value": 0.6,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.55
+      "time_point": 8,
+      "value": 0.65,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.62
+      "time_point": 12,
+      "value": 0.67,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.66
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.67
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.68
+      "time_point": 16,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.12
+      "value": 0.25,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.16
+      "time_point": 2,
+      "value": 0.3,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.22
+      "time_point": 4,
+      "value": 0.34,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.28
+      "time_point": 8,
+      "value": 0.4,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.35
+      "time_point": 12,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.39
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.41
+      "time_point": 16,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.57
+      "time_point": 2,
+      "value": 0.6,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.62
+      "time_point": 4,
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.66
+      "time_point": 8,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.69
+      "time_point": 12,
+      "value": 0.7,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.7
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.71
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.72
+      "time_point": 16,
+      "value": 0.71,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "Bitcoin's founding whitepaper asserts extreme protocol conservatism: changes are illegitimate unless approaching universal consensus, and stability is the primary virtue. This story instantiates ONE READING of the contested Bitcoin kernel—the protocol_ossification_reading. This reading emphasizes protocol immutability and treats the consensus requirement as the legitimate boundary condition for Bitcoin's social contract. Sibling readings—the p2p_cash_reading (emphasizing transactional capability and lower fees) and the digital_gold_reading (emphasizing store-of-value and scarcity)—focus on different aspects of the kernel and produce different victim sets. This reading is structurally distinct from its siblings: ossification sacrifices transactional expressiveness and use-case adaptability to preserve the asset's perceived stability and immutability. The constraint is CLAIMED as tangled_rope because it solves a genuine coordination problem (preventing unilateral protocol forks) while asymmetrically benefiting holders and existing interpreters at the cost of innovation and use-case expansion. The measurement series show extractiveness rising sharply in years 2-3 (the 2015-2017 period of block size and protocol expressiveness debates) as the constraint's asymmetric burden became visible, then plateauing as the constraint stabilized and community expectations adjusted.",
+    "narrative_context": "This constraint is ONE READING of the bitcoin_whitepaper kernel. The protocol_ossification_reading instantiates the claim that Bitcoin's legitimacy rests on protocol immutability and the requirement of near-universal consensus for any change. Under this reading, base-layer innovation is illegitimate unless commanding overwhelming agreement; this protects hodlers and miners (the constraint's beneficiaries) but blocks researchers and users requiring protocol evolution (the constraint's victims). The ossification reading coexists with two sibling readings: the p2p_cash_reading (which would prioritize transaction throughput and payment efficiency improvements, requiring base-layer changes) and the digital_gold_reading (which aligns with ossification by prioritizing store-of-value immutability). This story models only the ossification reading's constraint structure—NOT the contest between readings, which lives in omega variables and cs_structure fields.",
     "key_agents": [
-      "hodlers_and_long_term_holders: beneficiaries of stability, immutability preference, no enforcement cost",
-      "mining_pool_operators: beneficiaries of hardware durability, enforcement via hashpower loyalty",
-      "existing_protocol_interpreters: agenda_setters, grounding authority in Satoshi's stated intent and protocol history, identity-locked to the constraint",
-      "use_cases_requiring_protocol_changes: victims bearing layer-2 complexity costs, constrained exit",
-      "lightning_network_developers: dual-positioned, benefit from stable base but pay in constrained design space",
-      "prospective_innovations: powerless, structurally foreclosed by the constraint",
-      "alternative_blockchain_developers: excluded competitors who benefit indirectly from ossification"
+      "hodlers_and_store_of_value_users: primary beneficiaries (stability maximizes asset predictability; d near 0.0)",
+      "proof_of_work_mining_cartel: agenda-setter (enforces the consensus requirement; d near 1.0 toward beneficiary)",
+      "protocol_upgrade_researchers: victims (innovations blocked; d near 1.0 toward target)",
+      "small_transaction_users: victims (base-layer improvements inaccessible; d near 0.9 toward target)",
+      "bitcoin_core_developers: dual-positioned (maintain protocol, but identity-locked to ossification norm; d near 0.5)",
+      "bitcoin_maximalists: enforcement mechanism (reputation-defenders of the consensus norm; d near 0.1)"
     ],
-    "logic_rationale": "Extractiveness rises from 0.38 (early years when the constraint was informal and poorly tested) to 0.68 (current state where the consensus requirement is actively enforced and known to block improvements). The trajectory reflects the growing realization that the constraint blocks not just frivolous changes but legitimate technical progress. Theater rises from 0.12 to 0.41, indicating that as the core innovation-blocking function became visible, more of the enforcement activity is spent justifying the constraint (appeals to Satoshi's intent, immutability narratives, recursive claims about Bitcoin's virtue) rather than directly coordinating on shared rules. Suppression rises from 0.52 to 0.72, reflecting increasing enforcement intensity: developers who propose protocol changes now face organized opposition, social pressure, and fork-risk management. The measurement series are authored on a single shared time grid; every metric has a value at every measured time point.",
-    "perspectival_gap": "From the hodler's perspective, this is a working coordination solution—a way to prevent the protocol from being rewritten into something unrecognizable. From the innovation-blocked use-case perspective, it is a constraint that extracts the right to improve the system. From the mining pool operator's perspective, it is a guarantee that their capital investments remain durable. From the prospective-innovation perspective, it is a structural wall. The engine computes these divergent types from the stakeholder structural positions; the authored claim does not pre-adjudicate them.",
-    "directionality_logic": "Hodlers and mining operators: beneficiaries (low d, toward 0.0–0.2). They collect durability and wealth preservation without running the constraint. Use-case victims: high d (toward 0.8–1.0). They need protocol changes, pay in layer-2 complexity, have constrained exit options (leaving Bitcoin means losing network effects). Prospective innovations: highest d because they are trapped and identity-locked—they do not exist to represent themselves. Lightning developers sit near 0.5–0.6 because they benefit from stability but are partially victimized by inflexibility. The protocol interpreters sit near 0.3–0.4: they enforce the constraint, but their authority is grounded in claims about legitimacy that would dissolve if they unilaterally changed the rules—they are partially captured by the constraint itself.",
-    "mandatrophy_analysis": "The founding problem—preventing unilateral rewrites and fork fragmentation—was genuine and acute during 2010-2013 when alternative coins abounded and Satoshi's intentions were contested. By 2018-2020, the founding problem had substantially resolved: Bitcoin's network effects locked in a single canonical version; altcoins were clearly distinct systems; Satoshi's intent was well-documented. The constraint's persistence despite founding-problem resolution is the core mandatrophy signal. The constraint is now maintained primarily by beneficiary interests (hodlers, mining pools, interpreters) and by sunk-cost identity-lock (core developers invested in the constraint's legitimacy narrative). A constraint that was built to solve fork fragmentation now prevents adoption of improvements that would consolidate Bitcoin's utility role. This is classic mandatrophy: the legitimacy story (prevent chaos) has outlived the actual chaos; the constraint is now maintained as a form of wealth protection and interpretive authority defense.",
-    "kernel_context": "This constraint is the protocol_ossification_reading of the contested bitcoin_whitepaper kernel. The kernel is Satoshi's founding design principles, as instantiated in the actual protocol and early statements. The sibling readings are: (1) p2p_cash_reading—emphasizes the whitepaper's framing of Bitcoin as 'peer-to-peer electronic cash' and interprets the constraint as blocking necessary improvements to transaction speed and fees; (2) digital_gold_reading—emphasizes Bitcoin's scarcity and inflation-hedge properties and interprets the constraint as legitimately protective of asset stability. The three readings are held by different factions: ossification-readers are concentrated among large hodlers, mining pool operators, and early core developers; cash-readers are developers building payment-layer solutions; gold-readers are investors and fund managers. The readings coexist across different institutional actors; no single framework holds all three consistently. Where the readings diverge is on what counts as a legitimate protocol change and what should be optimized: ossification prioritizes immutability over functionality; cash prioritizes transactional capability; gold prioritizes asset properties."
+    "logic_rationale": "Extractiveness measures 0.68 at interval end because the constraint systematically transfers decision-making authority from distributed innovators to incumbent beneficiaries (hodlers, miners). The constraint is NOT just a coordination rule—it extracts by preventing certain parties (base-layer researchers) from advancing their interests, even when those interests do not conflict with other parties' interests. Suppression measures higher (0.71) because active enforcement occurs: maximalist advocates, mining pools, and community moderators actively delegitimize protocol-change proposals through reputation damage, dismissal in governance forums, and threat of chain abandonment. Theater measures 0.42 (moderate) because: the stability narrative is real and valued by some constituencies, but a growing share of enforcement activity consists of reputation management and preference-shaping rather than technical necessity. Accessibility_collapse is high (0.78) because, under this reading, alternatives to accepting the consensus requirement are severely constrained—one either accepts ossification, forks to create an alternative Bitcoin, or leaves the ecosystem entirely. Resistance is substantial (0.64) because protocol researchers continue to propose improvements and Layer 2 developers actively pursue innovations, showing ongoing friction against the constraint. The measurement series tracks extractiveness rising as the norm solidifies post-2020 (from earlier contentious periods), theater rising as enforcement becomes more sophisticated, and suppression rising as community consensus hardens around the maximum-stability narrative.",
+    "directionality_logic": "From the beneficiary seat (hodlers, miners): the constraint is experienced as natural law ('Bitcoin's essence is immutability'), low d, high subsidy. From the victim seat (researchers requiring base-layer changes): the constraint is experienced as imposed, high d, high extraction. Bitcoin Core developers occupy a structurally ambiguous position: they maintain the protocol (beneficiary narrative) but are identity-locked to a framework that delegitimizes their most interesting ideas (victim narrative). The engine computes this ambiguity from the structural data: moderate power, identity_locked exit, organizational time horizon, global scope, dual role (agenda-setter + payer). The directionality override is NOT used because the derivation captures the true position: they are partly beneficiaries (stability reduces maintenance burden), partly victims (their expertise is constrained).",
+    "perspectival_gap": "The beneficiary seats and victim seats should compute dramatically different types. From the miner/hodler perspective: this is Rope—genuine coordination solving a fragmentation problem with mutual benefit. From the researcher/small-user perspective: this is Snare—a coercive arrangement that prevents exit and suppresses alternatives. The engine computes these divergences directly from the authored structural data (power atoms, exit options, beneficiary/victim declarations) and reports them per seat. The claimed_type (tangled_rope) reflects the constraint's true structure: it CONTAINS a real coordination function (preventing hard-fork fragmentation) AND systematic extraction (blocking legitimate innovations). This is the canonical tangled_rope signature.",
+    "mandatrophy_analysis": "The founding_problem was real: Bitcoin faced actual fork risk and community fragmentation. The founding_problem_status is 'live' not 'dead' because forks and alternative versions remain possible and contested. However, the disappearance_verdict is 'world_rearranges', indicating that the constraint's persistence depends on active enforcement, not on the founding problem's ongoing necessity. This triggers mandatrophy consideration: the consensus requirement was legitimated as a solution to fragmentation, but the fragmentation problem has diminished (the chain has held since 2017) while the constraint persists. The mandatrophy signal indicates that the constraint has outlived its founding justification—it now primarily serves to extract from innovation-seeking constituencies rather than to solve the original problem. The theater_ratio rise over time supports this: enforcement increasingly consists of narrative management rather than technical necessity, the hallmark of an ossified mandatrophy.",
+    "kernel_context": "This constraint instantiates the protocol_ossification_reading of the bitcoin_whitepaper kernel. The kernel is Satoshi's original design, but interpretations diverge: (1) the digital_gold_reading treats Bitcoin as a scarce store of value, where ossification is virtuous; (2) the p2p_cash_reading treats Bitcoin as a medium of exchange, where innovation is necessary; (3) the protocol_ossification_reading (this one) treats protocol immutability as the primary legitimate principle. This reading's core premise is that protocol changes approaching universal consensus are the only legitimate form of evolution. The sibling readings hold different premises about what Bitcoin's founding problem requires."
   },
   "omegas": [
     {
-      "id": "founding_problem_obsolescence",
-      "question": "Has the founding problem of uncontrolled fork fragmentation and chaotic rewrites been substantially solved, making the consensus requirement functionally obsolete even if politically maintained?",
-      "resolution_mechanism": "Historical analysis of the actual fork landscape post-2015 combined with structured surveys of protocol-change proposals to measure the ratio of blocked improvements to prevented chaos. If blocked improvements substantially exceed prevented chaos by number and impact, founding problem is empirically resolved.",
-      "impact": "If resolved, the constraint is a mandatrophy victim rather than a legitimate coordination mechanism—the maintenance story (preventing chaos) explains the constraint's origin but not its current operation. This would shift the computed type from tangled_rope toward snare.",
+      "id": "consensus_requirement_empirical_validity",
+      "question": "Is the consensus-requirement norm empirically necessary to prevent hard-fork fragmentation, or does it prevent legitimate evolutions that would not cause fragmentation?",
+      "resolution_mechanism": "Natural experiments: observe outcomes when alternative protocols (Ethereum, altcoins) implement base-layer changes without super-majority requirements, or empirical comparison of fragmentation risk against voting-threshold changes.",
+      "impact": "If empirically unnecessary, the constraint is reclassified from tangled_rope (coordination + extraction) to snare (pure extraction with coordination cover story). If necessary, the coordination component is vindicated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consensus-requirement prevents fragmentation or merely prevents innovation."
+    },
+    {
+      "id": "layer_2_captured_alternative",
+      "question": "Does pushing innovation to Layer 2 actually solve the use cases, or does it systematically degrade functionality (latency, custody, capital efficiency) relative to base-layer solutions?",
+      "resolution_mechanism": "Comparative analysis of Layer 2 adoption rates by use case; measurement of technical friction and capital costs; user surveys on satisfaction-to-intended-use.",
+      "impact": "If Layer 2 solutions are demonstrably inferior for key use cases, the constraint victimizes those use cases more severely than the base_extractiveness metric captures. Classification remains snare/tangled_rope, but victim impact reassessed.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the constraint's founding coordination problem persists or has been solved."
+      "description": "Whether Layer 2 adequately substitutes for base-layer improvements."
     },
     {
-      "id": "identity_lock_mechanism",
-      "question": "To what extent is the protocol interpreters' enforcement of the consensus requirement driven by identity fusion (career, reputation, belief in Satoshi's intent) versus institutional incentive alignment (earning through fees, controlling the interpretive narrative)?",
-      "resolution_mechanism": "Qualitative analysis of interpreter positions in debates; tracking of interpreters who have switched sides (support for higher block sizes, taproot-like changes); measurement of the personal/ideological investment statements versus explicit revenue calculations.",
-      "impact": "High identity-lock would indicate the constraint is sustained by internalized suppression (interpreters cannot credibly reverse course without destroying their professional identity); low identity-lock would indicate it is purely institutional (changing the constraint would require realigning beneficiary interests). Identity-lock increases the constraint's stability but also signals potential brittleness (identity-fused commitments can shatter suddenly).",
-      "confidence": "medium",
+      "id": "identity_lock_mechanism_and_exit_cost",
+      "question": "For Bitcoin Core developers and maximalists, is the identity fusion with Bitcoin's immutability axiom an internalized suppression mechanism (the developer believes change is wrong) or a structural constraint (they face reputational cost for proposing changes)?",
+      "resolution_mechanism": "Post-exit trajectory studies: if developers who move to altcoin projects continue to advocate for protocol stability, the mechanism is internalized; if they implement innovations freely, it is structural suppression that left with them.",
+      "impact": "If internalized, the measured suppression is lower than the true effective suppression (victims carry suppression after departing). If structural, measured suppression tracks the active enforcement machinery accurately.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether enforcement is driven by identity fusion or institutional alignment."
+      "description": "Whether Bitcoin Core identity-lock is internalized belief or structural reputation cost."
     },
     {
-      "id": "reading_foreclosure_vs_coexistence",
-      "question": "Do the protocol_ossification_reading and the p2p_cash_reading logically foreclose each other in a single institutional framework, or do they coexist as different priorities held by different actors?",
-      "resolution_mechanism": "Examine whether any major Bitcoin institution has coherently endorsed both rapid protocol evolution for payment use cases AND maximal immutability for asset properties, or whether the two readings are held by mutually exclusive factional coalitions. Test whether a framework could be constructed that makes both legible as compatible priorities (impossible = foreclosure; possible = coexistence).",
-      "impact": "Foreclosure would indicate the kernel is genuinely split into incompatible readings; coexistence would indicate factions are simply prioritizing different aspects of a complex system. Coexistence suggests ossification is maintained by coalition politics, not logical necessity; foreclosure would suggest deeper structural incompatibility in the Bitcoin vision itself.",
+      "id": "sibling_reading_foreclosure_vs_coexistence",
+      "question": "Does the protocol_ossification_reading's core premise logically foreclose the p2p_cash_reading, or do they coexist as different parties' incommensurable commitments?",
+      "resolution_mechanism": "Examine whether a single actor (e.g., a protocol developer, a node operator) could hold both 'Bitcoin must be censorship-resistant for payments' (p2p_cash) and 'protocol changes require universal consensus' (ossification). If yes, they coexist; if no, foreclosure applies.",
+      "impact": "If foreclosure: the constraint's primary effect is to resolve this sibling-reading dispute in favor of the digital_gold reading, and the constraint should be reclassified as enforcing a kernel interpretation (commitment-system dynamics). If coexistence: different factions hold different readings, and the constraint is merely the winning faction's control mechanism.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether sibling readings are logically incompatible or factionally different."
-    },
-    {
-      "id": "layer_2_as_workaround_vs_incomplete",
-      "question": "Can all meaningful use cases that require protocol changes be adequately served by layer-2 and higher-layer solutions (Lightning, sidechains, rollups), or are there fundamental use-case classes that cannot be solved without protocol evolution?",
-      "resolution_mechanism": "Systematic cataloging of proposed protocol changes and analysis of whether each can be approximated via layer-2 (with cost/complexity trade-offs) or requires base-layer support. If >80% of proposed changes have layer-2 analogues, workaround covers most needs; if <60%, there are hard limits to the workaround strategy.",
-      "impact": "If layer-2 covers the space, the constraint's victim set is smaller (complexity costs but functions achieved); if there are hard limits, the constraint forecloses certain use-case classes entirely. This reshapes the extraction assessment: extraction includes not just layer-2 complexity costs but wholesale foreclosure of some Bitcoin use cases.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether protocol changes are truly necessary or approximate layer-2 workarounds exist."
+      "description": "Whether protocol_ossification forecloses or merely opposes the p2p_cash reading."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.14
   },
   "network": {
     "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
       "bitcoin_whitepaper__p2p_cash_reading",
-      "bitcoin_whitepaper__digital_gold_reading"
+      "layer_2_lock_in_mechanism",
+      "altcoin_competitive_advantage"
     ],
-    "dual_formulation_note": "The bitcoin_whitepaper kernel is instantiated as three separate constraint stories, each representing a different reading of Satoshi's founding design. The protocol_ossification_reading prioritizes immutability and consensus legitimacy; the p2p_cash_reading prioritizes transactional capability and fee efficiency; the digital_gold_reading prioritizes scarcity and store-of-value properties. These readings coexist as different institutional factions' interpretations of the same protocol. The ossification reading influences both sibling readings by constraining the solution space—cash improvements must route through layer-2, gold arguments must justify immutability benefits. Neither sibling reading forecloses ossification within a single party's framework; the readings coexist as different priorities across different actor coalitions."
+    "dual_formulation_note": "The bitcoin_whitepaper kernel decomposes into three constraint readings: (1) digital_gold_reading: Bitcoin as scarce store-of-value, low ε, mountain-adjacent; (2) p2p_cash_reading: Bitcoin as censorship-resistant payment medium, contested ε, requires base-layer innovation; (3) protocol_ossification_reading (this story): immutability as primary virtue, high ε, tangled_rope. Each reading has different ε values because the referent (the standing arrangement under contest) is interpreted differently: digital gold sees the arrangement as solved, p2p cash sees it as constrained, ossification sees it as protecting a legitimate core. The three stories are linked because a reading victory in one affects the others' validity. Ossification's enforcement success directly forecloses or influences the p2p_cash reading's feasibility."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.35
-    }
-  ],
+  "gain_flow": "hodlers_and_store_of_value_users",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "lineage",
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "bitcoin_whitepaper__p2p_cash_reading",
+        "sibling_id": "digital_gold_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "bitcoin_whitepaper__digital_gold_reading",
-        "relation": "coexists_with"
+        "sibling_id": "p2p_cash_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "protocol_immutability_virtue",
+        "atom": "protocol_immutability_primacy",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "deontological"
+        "grounding_type": "conventional"
       },
       {
-        "atom": "consensus_legitimacy_requirement",
+        "atom": "universal_consensus_legitimacy_gate",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
       }
     ],
-    "reference_frame": "satoshi_original_conservatism",
+    "reference_frame": "satoshi_original_protocol_preservation",
     "drift_state": {
-      "moment": "contemporary_protocol_paralysis",
+      "moment": "contemporary_post_2020_governance_hardening",
       "direction": "practice_drift",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

@@ -40,9 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,33 +73,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: imposition_mechanism_kernel__endogenous_climb_reading
- *   human_readable: Endogenous Norm Climb: Bottom-Up Legitimation Reading
- *   domain: social/historical/cultural
+ *   human_readable: Endogenous Norm Climb: Bottom-Up Adoption Then State Coordination
+ *   domain: historical_sociology/state_formation/cultural_authority
  *
  * SUMMARY:
- *   Under the endogenous-climb reading, a new norm achieves legitimacy
- *   through organic bottom-up adoption: early adopters find the norm solves
- *   practical or cultural problems; norm entrepreneurs actively promote it
- *   through modeling and teaching; the practice spreads through social
- *   networks and increasing returns to scale; the state eventually recognizes
- *   and formalizes the already-legitimated norm through law or official
- *   endorsement. The state's role is coordination and validation, not
- *   origination or coercion. This reading emphasizes voluntary adoption, low
- *   enforcement cost, rapid spread, and minimal resistance—the constraint
- *   operates as a rope (genuine coordination) rather than a snare (coercive
- *   extraction). The claim and metrics are independently authored: the
- *   constraint is CLAIMED as rope (genuine coordination function) and the
- *   metrics are authored to describe low extraction, low suppression, and
- *   minimal theater—a constraint whose operation matches its coordination
- *   framing.
+ *   This constraint embodies the endogenous-climb reading of a contested
+ *   kernel about how new norms gain legitimacy during historical transitions.
+ *   In this reading, norms achieve legitimacy through bottom-up voluntary
+ *   adoption by populations and cultural carriers before — and sometimes
+ *   independently of — state recognition. The state's role is coordination
+ *   and formalization, not imposition. Extractiveness is low (0.15) because
+ *   the constraint operates through alignment of incentives and cultural
+ *   logic, not through coercion. Suppression is minimal (0.12) because
+ *   adoption is self-reinforcing once critical mass is reached. Theater ratio
+ *   is very low (0.08) because the state's enforcement activity is genuine
+ *   coordination of an already-established practice, not theatrical
+ *   maintenance of a degraded function. This stands in contrast to the
+ *   exogenous-override reading (where state mandates precede adoption and
+ *   extraction is high) and the hybrid reading (where symbolic authority
+ *   transfer and institutional incentives combine).
  *
  * KEY AGENTS:
- *   - early_adopters: voluntary participants who discover practical benefit in the norm
- *   - norm_entrepreneurs: organized groups who actively teach and model the practice
- *   - state_coordination_apparatus: institutional seat that formalizes already-legitimated practice
- *   - late_adopters: face mounting social (not state) pressure as norm spreads
- *   - alternative_norm_holders: structurally excluded; their displacement appears voluntary from inside the norm's frame but coercive from their position
- *   - historical_observer: analytical seat tracking documentary evidence of causal order
+ *   - norm_beneficiary_populations: Early and broad adopters; genuine beneficiaries of coordination
+ *   - cultural_carriers: Status-bearing modelers whose adoption drives the climb
+ *   - state_administrative_apparatus: Ratifier and formalizer of emergent consensus
+ *   - marginal_dissenters: Structurally excluded holdouts
+ *   - historical_analyst: Observer of adoption timelines and causal order
  */
 
 /* ==========================================================================
@@ -100,56 +106,103 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(imposition_mechanism_kernel__endogenous_climb_reading, 0.18).
+domain_priors:base_extractiveness(imposition_mechanism_kernel__endogenous_climb_reading, 0.15).
 domain_priors:suppression_score(imposition_mechanism_kernel__endogenous_climb_reading, 0.12).
 domain_priors:theater_ratio(imposition_mechanism_kernel__endogenous_climb_reading, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, extractiveness, 0.18).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, extractiveness, 0.15).
 narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 0.12).
 narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, accessibility_collapse, 0.92).
-narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, resistance, 0.08).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, accessibility_collapse, 0.25).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__endogenous_climb_reading, resistance, 0.18).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(imposition_mechanism_kernel__endogenous_climb_reading, rope).
-narrative_ontology:human_readable(imposition_mechanism_kernel__endogenous_climb_reading, "Endogenous Norm Climb: Bottom-Up Legitimation Reading").
-narrative_ontology:topic_domain(imposition_mechanism_kernel__endogenous_climb_reading, "social/historical/cultural").
+narrative_ontology:human_readable(imposition_mechanism_kernel__endogenous_climb_reading, "Endogenous Norm Climb: Bottom-Up Adoption Then State Coordination").
+narrative_ontology:topic_domain(imposition_mechanism_kernel__endogenous_climb_reading, "historical_sociology/state_formation/cultural_authority").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(imposition_mechanism_kernel__endogenous_climb_reading, 'ea3d91ac-ad4c-4aca-8972-00996175560c').
-narrative_ontology:cs_kernel_codification('ea3d91ac-ad4c-4aca-8972-00996175560c', distributed).
-narrative_ontology:cs_authority_grounding('ea3d91ac-ad4c-4aca-8972-00996175560c', practice).
-narrative_ontology:cs_interpretation_layer_present('ea3d91ac-ad4c-4aca-8972-00996175560c').
-narrative_ontology:cs_reading_relation('ea3d91ac-ad4c-4aca-8972-00996175560c', imposition_mechanism_kernel__exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ea3d91ac-ad4c-4aca-8972-00996175560c', imposition_mechanism_kernel__hybrid_legitimation_reading, coexists_with).
-narrative_ontology:cs_axiom('ea3d91ac-ad4c-4aca-8972-00996175560c', foundational, endogenous_legitimacy_climbs_before_state_formalizes).
-narrative_ontology:cs_axiom_status(endogenous_legitimacy_climbs_before_state_formalizes, holdable).
-narrative_ontology:cs_axiom_grounding('ea3d91ac-ad4c-4aca-8972-00996175560c', endogenous_legitimacy_climbs_before_state_formalizes, empirically_contingent).
-narrative_ontology:cs_axiom('ea3d91ac-ad4c-4aca-8972-00996175560c', foundational, coordination_benefit_drives_early_adoption).
-narrative_ontology:cs_axiom_status(coordination_benefit_drives_early_adoption, holdable).
-narrative_ontology:cs_axiom_grounding('ea3d91ac-ad4c-4aca-8972-00996175560c', coordination_benefit_drives_early_adoption, empirically_contingent).
-narrative_ontology:cs_reference_frame('ea3d91ac-ad4c-4aca-8972-00996175560c', organic_practice_legitimacy).
-narrative_ontology:cs_drift_state('ea3d91ac-ad4c-4aca-8972-00996175560c', state_formalization_arrival, gap(stable, minor, true)).
-narrative_ontology:cs_created_at('ea3d91ac-ad4c-4aca-8972-00996175560c', '').
+narrative_ontology:cs_story_uid(imposition_mechanism_kernel__endogenous_climb_reading, 'a0f4a8c6-0147-4847-832a-3f0a13e5f238').
+narrative_ontology:cs_kernel_codification('a0f4a8c6-0147-4847-832a-3f0a13e5f238', distributed).
+narrative_ontology:cs_authority_grounding('a0f4a8c6-0147-4847-832a-3f0a13e5f238', practice).
+narrative_ontology:cs_interpretation_layer_present('a0f4a8c6-0147-4847-832a-3f0a13e5f238').
+narrative_ontology:cs_reading_relation('a0f4a8c6-0147-4847-832a-3f0a13e5f238', imposition_mechanism_kernel__exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a0f4a8c6-0147-4847-832a-3f0a13e5f238', imposition_mechanism_kernel__hybrid_legitimation_reading, coexists_with).
+narrative_ontology:cs_axiom('a0f4a8c6-0147-4847-832a-3f0a13e5f238', foundational, voluntary_adoption_precedes_state_mandate).
+narrative_ontology:cs_axiom_status(voluntary_adoption_precedes_state_mandate, holdable).
+narrative_ontology:cs_axiom_grounding('a0f4a8c6-0147-4847-832a-3f0a13e5f238', voluntary_adoption_precedes_state_mandate, empirically_contingent).
+narrative_ontology:cs_axiom('a0f4a8c6-0147-4847-832a-3f0a13e5f238', foundational, coordination_problem_solved_by_emergent_practice).
+narrative_ontology:cs_axiom_status(coordination_problem_solved_by_emergent_practice, holdable).
+narrative_ontology:cs_axiom_grounding('a0f4a8c6-0147-4847-832a-3f0a13e5f238', coordination_problem_solved_by_emergent_practice, empirically_contingent).
+narrative_ontology:cs_reference_frame('a0f4a8c6-0147-4847-832a-3f0a13e5f238', norm_emergence_without_state_enforcement).
+narrative_ontology:cs_drift_state('a0f4a8c6-0147-4847-832a-3f0a13e5f238', post_state_formalization_era, gap(practice_drift, minor, false)).
+narrative_ontology:cs_created_at('a0f4a8c6-0147-4847-832a-3f0a13e5f238', '2026-06-12T14:32:18Z').
 narrative_ontology:cs_kernel_id(imposition_mechanism_kernel__endogenous_climb_reading, imposition_mechanism_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__endogenous_climb_reading, early_adopters).
-narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__endogenous_climb_reading, norm_entrepreneurs).
-narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__endogenous_climb_reading, state_coordination_apparatus).
+narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__endogenous_climb_reading, norm_beneficiary_populations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__endogenous_climb_reading, cultural_carriers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Early adopters and the broad populations that voluntarily embrace new norms because they solve coordination problems or align with emergent values. They benefit from the norm's existence and participate in its spread. The state's later recognition formalizes and stabilizes what they have already chosen.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__endogenous_climb_reading, norm_beneficiary_populations, beneficiary,
+    organized, generational, mobile, national).
+
+% Intellectuals, merchants, clergy, and other status-bearing agents who model the new norm and influence peer adoption. They are neither coerced nor incentivized by the state; their adoption and advocacy drive the climb itself. They benefit from the norm's legitimacy and social prestige.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__endogenous_climb_reading, cultural_carriers, beneficiary,
+    moderate, generational, mobile, national).
+
+% Observes that a norm has already achieved broad adoption, recognizes its coordination value, and formally recognizes or codifies it into law or administrative practice. Acts as a coordinator and ratifier of emergent consensus rather than as an imposer or enforcer. Legitimacy flows from following popular practice, not from imposing from above.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__endogenous_climb_reading, state_administrative_apparatus, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Holdouts and communities that do not adopt the norm even after state recognition. They are not central to the constraint's operation; their non-adoption does not destabilize the norm because adoption was endogenous and remains voluntary for them. Their voices would object to universalization, but they are structurally marginalized in the legitimacy narrative.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__endogenous_climb_reading, marginal_dissenters, excluded,
+    powerless, biographical, constrained, local).
+
+% Examines the constraint from outside the historical moment: observes adoption timelines, measures resistance, reconstructs the causal order (climb before mandate or mandate before climb), and assesses whether state coordination followed cultural legitimacy or preceded it.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__endogenous_climb_reading, historical_analyst, observer,
+    analytical, civilizational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(imposition_mechanism_kernel__endogenous_climb_reading, diffuse).
+narrative_ontology:fixing_cost_class(imposition_mechanism_kernel__endogenous_climb_reading, cheap).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves a genuine collective-action problem by establishing a shared practice that coordinates behavior across a population. The norm reduces transaction costs, resolves ambiguity about acceptable conduct, or aligns individual incentives with group welfare. Populations voluntarily adopt because the coordination benefit is real and immediate.
+% TRANSFER_FUNCTION: No systematic transfer from losers to winners. Beneficiaries are those who adopt and benefit from coordination; the state formalizes what they have already chosen. The constraint itself does not move resources from one party to another — it stabilizes a practice that emerges endogenously and carries distributed gains.
+% ABSENT_VOICES: Marginal dissenters and communities whose practices conflict with the norm are excluded from the consensus narrative. They would object to characterizing the norm as universal; but their objection is not part of the legitimacy story because adoption outpaced them. Institutional competitors (rival authority structures, alternative norm-carriers) may also be absent from the formal record.
+% DISAPPEARANCE_RATIONALE: If the norm and its state recognition vanished, populations would likely re-establish it because the coordination problem it solved remains live. The state's formal codification accelerated stabilization and reduced recurrence costs, but the norm's deep roots are in endogenous adoption — removal of state recognition would not eliminate the practice, only its legal standing.
+% FOUNDING_PROBLEM: A coordination problem requiring shared practice — a boundary of acceptable conduct, a shared ritual, a common measure, or a behavioral standard that groups need to solve interaction problems at scale. The problem exists whether or not any single authority recognizes it.
+% FOUNDING_PROBLEM_CORROBORATION: Historical and ethnographic evidence confirms that the norm spread through voluntary adoption networks BEFORE state recognition (e.g., merchant adoption of a measure before metrication law, linguistic norm adoption before language policy, hygiene practice adoption before public health mandate). Scholars outside the state apparatus attest the climb preceded the mandate in multiple historical cases (Weber on authority types; Kuran on preference falsification; Sunstein on norm cascades in the absence of central enforcement).
+narrative_ontology:disappearance_verdict(imposition_mechanism_kernel__endogenous_climb_reading, world_rearranges).
+narrative_ontology:founding_problem_status(imposition_mechanism_kernel__endogenous_climb_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(imposition_mechanism_kernel__endogenous_climb_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(imposition_mechanism_kernel__endogenous_climb_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(imposition_mechanism_kernel__endogenous_climb_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(imposition_mechanism_kernel__endogenous_climb_reading, 0.15, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -164,16 +217,16 @@ narrative_ontology:story_seed(imposition_mechanism_kernel__endogenous_climb_read
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is very low (0.18 at interval end) because the constraint's persistence depends on genuine coordination benefit, not asymmetric transfer or coercion. The norm solves a real problem; communities adopt it because it reduces friction, not because they are forced. Suppression is also very low (0.12) because minimal active enforcement is required—the norm has social legitimacy and its violations carry social cost. Theater ratio is minimal (0.08) because the state's formalization role is straightforward documentation of already-accepted practice, not maintenance of a functionally degraded institution. Accessibility collapse is very high (0.92) because once a coordination problem is solved by a norm, alternatives effectively disappear—you cannot choose to use an incompatible measurement system, language feature, or ritual practice if everyone else has adopted the standard. But this high collapse reflects the logic of coordination, not suppression: alternatives collapse because they are mutually incompatible with the coordinated state, not because they are actively suppressed. Resistance is minimal (0.08) because people comply voluntarily—the norm already has legitimacy. Measurements show all three metrics rising very gradually over the interval as the state's formalization role becomes stronger (late/formal period), but the trajectory is shallow: even at the interval's end, extraction and suppression remain low. This reading's structural signature is low enforcement cost, rapid adoption, minimal resistance—exactly the pattern expected when a coordination problem is solved organically before state intervention.
+ *   Extractiveness remains low across the interval (0.08→0.15) because the norm's persistence depends on voluntary continued adoption, not on enforcement machinery. The constraint lacks the suppression signature of a snare (high suppression, high resistance) and the theater signature of a piton (high theater ratio, low resistance despite performance). Measurements show suppression rising slightly (0.06→0.12) as marginal dissenters experience pressure to conform, but this pressure is social rather than state-administered — it emerges from the coordinated behavior itself. Theater remains flat and minimal (0.04→0.08) because the state's formal recognition of the norm does not require ongoing performance; it is a one-time ratification. The small rise in extractiveness over time reflects modest enforcement costs as the state institutionalizes the norm (legal codification, administrative machinery) — costs that are low relative to snare/tangled-rope constraints and that beneficiaries absorb without serious resistance.
  *
  * PERSPECTIVAL GAP:
- *   Early adopters and norm entrepreneurs experience the constraint as coordination benefit and voluntary participation. The state experiences it as legitimacy amplification achieved by aligning official authority with cultural practice—a low-cost validation role. Late adopters and alternative-norm holders experience it very differently: as coercive displacement and marginalization, even if no state violence is applied, because the norm's spread leaves them without viable alternatives. The engine computes per-seat types from power, exit options, and beneficiary/victim declarations: early adopters (moderate power, mobile exit, beneficiary) compute as highly benefited; late adopters (powerless, constrained exit, facing social pressure) compute as bearing costs; the state (institutional power, agenda-setter role) computes as a coordinating beneficiary. The alternative-norm holders (excluded role, trapped exit) are structurally outside the arrangement and would compute as victims of displacement if included. This divergence is the measurement the framework exists to take: a reading that claims organic coordination but produces different outcomes at different power levels is exactly how false consensus is detected.
+ *   From the state's perspective, the constraint is pure coordination: it observes a norm that has already achieved social consensus and formalizes it to reduce transaction costs and stabilize expectations. From the perspective of marginal dissenters, the constraint is extractive — the state amplifies majority practice into universal law, overriding local alternatives. Cultural carriers see the state's formalization as validation of their own modeling; they experience low extraction. Early adopter populations see low extraction because they initiated the practice and benefit from its stabilization. The divergence is structural: the constraint carries different directionalities for different agents depending on whether they were early adopters (low d, low effective extraction) or late resisters (higher d, higher felt pressure). The engine's per-seat computation captures this.
  *
  * DIRECTIONALITY LOGIC:
- *   Under this reading, beneficiaries are: early_adopters (solve local coordination problems, mobile exit, voluntary participation), norm_entrepreneurs (gain authority from promoting the norm, organized power, can exit by ceasing promotion), and state_coordination_apparatus (gain legitimacy by validating already-accepted practice, institutional power, constrained exit). There are no clear victims in this reading because the assumption is that adoption is genuinely beneficial. The measurement metrics are authored on that assumption: low extractiveness (no asymmetric transfer), low suppression (no active coercion required), low theater (no performative maintenance). Late adopters and alternative-norm holders face costs, but under this reading those costs are attributed to social coordination and competitive displacement, not extraction—the reading's conceptual frame does not classify them as victims of the constraint but as participants in a norm shift whose alternative was less beneficial. This is precisely where the reading is contestable: whether the costs borne by those outside the norm are coordination costs or extraction costs depends on whether the norm genuinely solved a problem or displaced alternatives arbitrarily.
+ *   Norm-beneficiary populations: these are the primary beneficiaries. They initiated adoption (low d toward beneficiary end); their exit options are mobile (they could revert to non-norm conduct if it proved harmful, but rarely do after critical mass). Directionality is near the beneficiary end (~0.15-0.25). Cultural carriers: also beneficiaries; their status rises with adoption of the norm they model. Directionality near beneficiary end (~0.20-0.30). State apparatus: acts as coordinator and formalizer, not as the primary beneficiary. It collects modest legitimacy gains from recognizing consensus but bears administrative costs. Directionality near symmetric (~0.45-0.55). Marginal dissenters: bear the cost of universalization; their exit is constrained (identity-locked into rejected practices or geographically local, making exit costly). Directionality toward target end (~0.70-0.85), but their small number and peripheral status means the constraint's effective extraction measured globally remains low.
  *
  * MANDATROPHY ANALYSIS:
- *   This reading explicitly rejects the mandatrophy interpretation: the constraint's founding problem (coordination across distributed communities) is still live; the state's role is validation, not maintenance of a functionally degraded institution; theater remains minimal because the state's formalization role is straightforward. If the constraint were mandatrophic, we would expect high theater (performative maintenance of the norm despite loss of real function) and divergence between the norm's stated purpose and its actual operation. Under this reading, the stated purpose and actual operation align: the norm solves coordination problems and the state formalizes already-legitimated practice. The constraint stays classified as rope (genuine coordination) rather than piton (degraded into performance). Mandatrophy would signal a reading shift toward exogenous-override or hybrid-legitimation: if the state imposed the norm despite lack of organic adoption, or if the state's formalization is revealed to be coercive rather than validating, theater would rise and the constraint would reclassify.
+ *   This constraint shows no mandatrophy signature. The founding problem (need for coordination) remains live and the norm's formal recognition continues to solve it. The state's mandate followed rather than preceded popular acceptance, so there is no zombie-like persistence of a dead mandate. Theater ratio stays low, indicating the state's enforcement is functional coordination, not theatrical maintenance. A mandatrophy reading would emerge if the state continued to enforce the norm after it had lost voluntary adoption — if populations reverted to non-norm conduct but the state maintained legal penalties for this reversion. The measurement series would show extraction remaining high even as resistance fell (false enforcement of a dead norm). This constraint does not exhibit that pattern.
  */
 
 /* ==========================================================================
@@ -181,54 +234,44 @@ narrative_ontology:story_seed(imposition_mechanism_kernel__endogenous_climb_read
    ========================================================================== */
 
 omega_variable(
-    voluntary_vs_coerced_adoption_boundary,
-    'Is adoption in early periods genuinely voluntary (exit costless, genuine choice), or does social pressure from norm entrepreneurs constitute subtle coercion that makes ''voluntary'' adoption misleading?',
-    'Historical testimony from non-adopters and early resisters (if available); counterfactual analysis: what happened to agents who actively refused early adoption? Did they face state sanction, social exclusion, or were they left unmolested until mandate arrival?',
-    'If early adoption was genuinely voluntary and non-adopters faced no sanction until state mandate, the endogenous-climb reading holds. If social pressure from norm entrepreneurs functioned coercively (making exit costly even before state involvement), the boundary between bottom-up adoption and elite-directed legitimacy shifts—the hybrid or override readings become more plausible.',
+    causal_order_ambiguity,
+    'Did state recognition truly follow popular adoption, or did state promotion precede and drive adoption, with retrospective narratives misremembering the causal order?',
+    'Documentary evidence of adoption timelines: newspaper adoption, merchant record adoption, linguistic attestation, artifact production dates relative to legislation dates. Cross-cultural comparison of norm-adoption sequences in cases where documentary precision is high.',
+    'If documentation shows state action preceded adoption (even if the state framed it as ratification), this reading transforms into the hybrid or exogenous reading; effective extraction rises as the state''s role shifts from coordinator to initiator. If adoption predates state recognition by clear margins (years or decades), the endogenous-climb reading holds and extraction stays low.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(voluntary_vs_coerced_adoption_boundary, empirical, 'Whether early adoption is truly voluntary or coerced by social influence.').
+narrative_ontology:omega_variable(causal_order_ambiguity, empirical, 'Whether state recognition followed or preceded popular adoption.').
 
 omega_variable(
-    state_coordination_vs_state_imposition,
-    'Did the state recognize and formalize an already-legitimated norm (the reading''s claim), or did the state''s formalization carry coercive force that retroactively justified itself by claiming to validate existing practice?',
-    'Documentary evidence: do official sources describe the norm as ''recognizing established practice'' or as ''introducing new standards''? Timeline comparison: did adoption precede mandate by decades, suggesting independence, or was mandate nearly simultaneous with adoption, suggesting state leadership? Comparative cases: do jurisdictions with strong state capacity show different patterns from those with weak capacity?',
-    'If the state was a genuine validator of existing practice, extraction and suppression remain low and the reading holds as rope. If the state''s formalization actually created enforcement power that displaced alternatives, the constraint reclassifies as tangled_rope or snare and the override or hybrid readings become more accurate.',
+    voluntary_adoption_vs_cascading_conformity,
+    'Did populations adopt norms because they genuinely perceived coordination benefits, or because they conformally adopted them after seeing others adopt, with no independent benefit assessment?',
+    'Ethnographic work on adoption narratives; experiment data on preference falsification in threshold-cascade dynamics (Kuran''s work); analysis of adoption rate curves (S-curve cascades vs. flat slow adoption suggests different mechanisms).',
+    'Pure voluntary adoption for coordination benefit supports the endogenous-climb framing. Cascade dynamics with preference falsification (people adopt not because they prefer the norm but because they fear standing out) introduce coercive elements even in the absence of state enforcement — extractiveness rises from 0.15 toward 0.25-0.30. The constraint remains rope-classified but with higher suppression from internalized conformity pressure.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(state_coordination_vs_state_imposition, empirical, 'Whether the state validated existing norm or imposed new norm retroactively legitimated as existing.').
+narrative_ontology:omega_variable(voluntary_adoption_vs_cascading_conformity, empirical, 'Whether adoption was autonomous benefit-seeking or conformity cascade.').
 
 omega_variable(
-    alternative_norm_displacement_mechanism,
-    'Were alternative norms displaced by the climbing norm''s coordination benefits (competitive superiority) or by state prohibition and enforcement against alternatives?',
-    'Historical record of enforcement actions: were alternatives actively suppressed by the state, or did they disappear through voluntary switching as coordination benefits became clear? Jurisdiction comparison: did jurisdictions without state prohibition show different adoption patterns?',
-    'If alternatives were displaced by competitive superiority, the constraint operates as rope (genuine coordination). If alternatives were displaced by state suppression, extraction and suppression rise, suppression metrics were underestimated, and the constraint reclassifies toward snare or tangled_rope—the override reading becomes more plausible.',
+    reading_narrative_circularity,
+    'Is the endogenous-climb reading itself a committer narrative: a story historians and sociologists tell to emphasize agency and organic cultural change, possibly selected over exogenous narratives because it flatters modernization-as-progress ideology?',
+    'Historiographic critique: compare dominant narratives about the same norm across time periods and disciplinary traditions. Look for shifts in framing (exogenous 50 years ago, now endogenous) that track not the evidence but the discipline''s changing values. Examine whether specific cases are consistently coded as endogenous or exogenous across independent scholarship or whether the coding drifts with partisan/theoretical commitments.',
+    'If the endogenous-climb narrative is itself a reading (a preferred interpretation, not a discovered fact), then this constraint is explicitly a committer frame and the whole kernel remains contested indefinitely. Mandatrophy would manifest not in the constraint''s metrics but in the disciplinary commitment to the reading despite evidence to the contrary. This omega documents the reflexivity of the reading itself.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(alternative_norm_displacement_mechanism, empirical, 'Whether alternative-norm displacement was competitive or coercive.').
+narrative_ontology:omega_variable(reading_narrative_circularity, conceptual, 'Whether the endogenous-climb reading is a committer narrative shaped by disciplinary values.').
 
 omega_variable(
-    legitimacy_sequence_observability,
-    'Is the causal order (adoption precedes mandate) directly observable in primary sources, or is it a post-hoc reconstruction that cannot be falsified because mandate and adoption are temporally entangled?',
-    'Archival evidence: do sources from before the mandate describe the norm as already widespread? Do sources describe the mandate as ''recognizing'' or ''introducing''? Oral history: do practitioners describe learning the norm from community, tradition, or state? Linguistic/textual analysis: do linguistic or cultural features show gradual spread or sudden appearance coinciding with mandate?',
-    'If the sequence is directly observable and adoption clearly precedes mandate by substantial time, the reading is well-grounded. If the sources are ambiguous or the mandate and adoption are too closely timed to order, the readings are observationally equivalent and the distinction is interpretive rather than empirical.',
-    confidence_without_resolution(medium)
+    state_formalization_extraction_cost,
+    'What proportion of the measured extractiveness (0.15) is the cost of state formalization (law-writing, administrative machinery, enforcement of universal application) vs. the cost of suppressing competing norms?',
+    'Budget analysis of formalization costs; comparison of suppression spend on holdouts vs. administrative overhead for norm codification; measurement of conformity pressure before vs. after state formalization.',
+    'If formalization costs dominate (say, 0.10 of 0.15), the constraint remains rope: low-extraction coordination. If suppression of competing norms dominates (say, 0.09 of 0.15), the exogenous-override reading gains traction — the state is enforcing preference for one norm over alternatives, not merely formalizing consensus. High extraction would suggest the constraint is a snare or tangled-rope, not rope.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(legitimacy_sequence_observability, empirical, 'Whether adoption-precedes-mandate sequence is directly observable or post-hoc reconstruction.').
-
-omega_variable(
-    kernel_reading_identity_reading_specificity,
-    'This constraint is the endogenous_climb_reading of the imposition_mechanism_kernel. The kernel is contestable (different parties hold different readings). What features of THIS reading would be falsified if the exogenous_override_reading or hybrid_legitimation_reading were empirically correct?',
-    'Structural proof: if the override reading is correct (state coercion drives adoption), then suppression and extractiveness should be high, resistance should be lower than expected (suppressed), and theater should rise as formalization role develops (masking coercion with legitimation narrative). If the hybrid reading is correct (authority transfer creates cascading legitimacy), then suppression should be moderate, early adopters should show leadership-mimicry patterns, and the state''s role should be visible in documentary sources as an active legitimacy producer, not a validator.',
-    'This reading''s distinguishing axiom (endogenous_legitimacy_climbs_before_state_formalizes) would be falsified if the engine''s per-seat computation shows high extraction or high suppression, or if documentary evidence shows the state driving adoption rather than validating it. The reading remains live only if metrics stay low and temporal evidence supports adoption-precedes-mandate.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(kernel_reading_identity_reading_specificity, empirical, 'Structural falsification conditions for this reading.').
+narrative_ontology:omega_variable(state_formalization_extraction_cost, empirical, 'Whether measured extractiveness reflects formalization cost or suppression cost.').
 
 
 /* ==========================================================================
@@ -242,31 +285,46 @@ narrative_ontology:interval(imposition_mechanism_kernel__endogenous_climb_readin
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(impo_tr_t0, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 0, 0.02).
-narrative_ontology:measurement(impo_tr_t5, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 5, 0.03).
-narrative_ontology:measurement(impo_tr_t10, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 10, 0.04).
-narrative_ontology:measurement(impo_tr_t15, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 15, 0.05).
-narrative_ontology:measurement(impo_tr_t20, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 20, 0.06).
-narrative_ontology:measurement(impo_tr_t30, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 30, 0.07).
+narrative_ontology:measurement(impo_tr_t0, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 0, 0.04).
+narrative_ontology:measurement_basis(impo_tr_t0, projected).
+narrative_ontology:measurement(impo_tr_t5, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 5, 0.05).
+narrative_ontology:measurement_basis(impo_tr_t5, observed).
+narrative_ontology:measurement(impo_tr_t10, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 10, 0.06).
+narrative_ontology:measurement_basis(impo_tr_t10, observed).
+narrative_ontology:measurement(impo_tr_t20, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 20, 0.08).
+narrative_ontology:measurement_basis(impo_tr_t20, observed).
+narrative_ontology:measurement(impo_tr_t30, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 30, 0.08).
+narrative_ontology:measurement_basis(impo_tr_t30, observed).
 narrative_ontology:measurement(impo_tr_t40, imposition_mechanism_kernel__endogenous_climb_reading, theater_ratio, 40, 0.08).
+narrative_ontology:measurement_basis(impo_tr_t40, observed).
 
 % Extraction over time
 narrative_ontology:measurement(impo_be_t0, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 0, 0.08).
-narrative_ontology:measurement(impo_be_t5, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 5, 0.1).
-narrative_ontology:measurement(impo_be_t10, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 10, 0.12).
-narrative_ontology:measurement(impo_be_t15, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 15, 0.14).
-narrative_ontology:measurement(impo_be_t20, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 20, 0.16).
-narrative_ontology:measurement(impo_be_t30, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 30, 0.17).
-narrative_ontology:measurement(impo_be_t40, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 40, 0.18).
+narrative_ontology:measurement_basis(impo_be_t0, projected).
+narrative_ontology:measurement(impo_be_t5, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 5, 0.11).
+narrative_ontology:measurement_basis(impo_be_t5, observed).
+narrative_ontology:measurement(impo_be_t10, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 10, 0.13).
+narrative_ontology:measurement_basis(impo_be_t10, observed).
+narrative_ontology:measurement(impo_be_t20, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 20, 0.15).
+narrative_ontology:measurement_basis(impo_be_t20, observed).
+narrative_ontology:measurement(impo_be_t30, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 30, 0.16).
+narrative_ontology:measurement_basis(impo_be_t30, observed).
+narrative_ontology:measurement(impo_be_t40, imposition_mechanism_kernel__endogenous_climb_reading, base_extractiveness, 40, 0.15).
+narrative_ontology:measurement_basis(impo_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(impo_su_t0, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 0, 0.05).
-narrative_ontology:measurement(impo_su_t5, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 5, 0.06).
-narrative_ontology:measurement(impo_su_t10, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 10, 0.07).
-narrative_ontology:measurement(impo_su_t15, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 15, 0.08).
-narrative_ontology:measurement(impo_su_t20, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 20, 0.1).
-narrative_ontology:measurement(impo_su_t30, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 30, 0.11).
+narrative_ontology:measurement(impo_su_t0, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 0, 0.06).
+narrative_ontology:measurement_basis(impo_su_t0, projected).
+narrative_ontology:measurement(impo_su_t5, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 5, 0.08).
+narrative_ontology:measurement_basis(impo_su_t5, observed).
+narrative_ontology:measurement(impo_su_t10, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 10, 0.1).
+narrative_ontology:measurement_basis(impo_su_t10, observed).
+narrative_ontology:measurement(impo_su_t20, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 20, 0.12).
+narrative_ontology:measurement_basis(impo_su_t20, observed).
+narrative_ontology:measurement(impo_su_t30, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 30, 0.12).
+narrative_ontology:measurement_basis(impo_su_t30, observed).
 narrative_ontology:measurement(impo_su_t40, imposition_mechanism_kernel__endogenous_climb_reading, suppression_requirement, 40, 0.12).
+narrative_ontology:measurement_basis(impo_su_t40, observed).
 
 
 /* ==========================================================================
@@ -274,12 +332,12 @@ narrative_ontology:measurement(impo_su_t40, imposition_mechanism_kernel__endogen
    ========================================================================== */
 
 narrative_ontology:coordination_type(imposition_mechanism_kernel__endogenous_climb_reading, information_standard).
-narrative_ontology:boltzmann_floor_override(imposition_mechanism_kernel__endogenous_climb_reading, 0.04).
+narrative_ontology:boltzmann_floor_override(imposition_mechanism_kernel__endogenous_climb_reading, 0.08).
 narrative_ontology:affects_constraint(imposition_mechanism_kernel__endogenous_climb_reading, imposition_mechanism_kernel__exogenous_override_reading).
 narrative_ontology:affects_constraint(imposition_mechanism_kernel__endogenous_climb_reading, imposition_mechanism_kernel__hybrid_legitimation_reading).
 
 % DUAL FORMULATION NOTE:
-% The imposition_mechanism_kernel is decomposed into three constraint stories, each instantiating a different reading of how state norms achieve legitimacy. This file is the endogenous_climb_reading: norms achieve legitimacy through bottom-up adoption; state mandate follows. Sibling readings: exogenous_override_reading (state coercion drives adoption), hybrid_legitimation_reading (authority transfer creates cascading legitimacy). The readings are not measurements of the same constraint from different angles—each has a distinct ε value, beneficiary/victim structure, and enforcement pattern. They are connected through the shared kernel (the contested claim about norm legitimacy sequence) and the reading_relations and axioms in cs_structure.
+% This constraint is part of a constraint family decomposing the contested kernel 'imposition_mechanism_kernel' into three structurally distinct claims about how norms gain state legitimacy. Each reading instantiates a different constraint with its own ε, stakeholder structure, and beneficiary/victim declarations. The endogenous-climb reading (this file) asserts that norms achieve legitimacy through bottom-up adoption before state recognition; ε is low (0.15), extraction is minimal, and the state coordinates rather than coerces. The exogenous-override reading asserts that state coercion precedes adoption; ε would be high, suppression high, and the state enforces. The hybrid reading asserts that symbolic authority transfer and institutional incentives combine. The three readings are linked via network.affects_constraints to enable contamination analysis — if one reading's causal narrative is falsified, how does that alter the others?
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

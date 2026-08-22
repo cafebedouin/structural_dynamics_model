@@ -2,242 +2,572 @@
   "header": {
     "constraint_id": "tenure_contract__demographic_reproduction_reading",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-13",
     "status": "ACTIVE",
-    "story_uid": "689e9836-e744-49d4-b731-fad3e082a694"
+    "story_uid": "4d34c8a5-a16d-4c6e-a151-af6b9775823b",
+    "created_at": "2026-06-13T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.71,
-    "suppression": 0.78,
-    "theater_ratio": 0.48,
-    "accessibility_collapse": 0.62,
-    "resistance": 0.55,
+    "extractiveness": 0.81,
+    "suppression": 0.76,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.62,
     "claimed_type": "snare",
     "human_readable": "Tenure Peer Review as Demographic Gatekeeping",
     "topic_domain": "higher_education/labor_economics/institutional_theory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "demographic_majority_faculty"
+      "demographically_dominant_faculty"
     ],
     "victims": [
-      "underrepresented_demographic_candidates",
-      "early_career_contingent_faculty"
-    ]
+      "underrepresented_scholars",
+      "contingent_labor"
+    ],
+    "vindicated_propositions": []
+  },
+  "stakeholders": [
+    {
+      "name": "demographically_dominant_faculty",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Tenured scholars from majority demographics (historically white, male, and from privileged class backgrounds in many disciplines) control hiring committees and tenure review panels. They set evaluation criteria, interpret 'fit' and 'collegiality' in their own image, and sustain the composition resembling their own cohort. They use peer review mechanisms ostensibly designed for quality control to enforce conformity to departmental culture, methodological orthodoxy, and social reproduction."
+    },
+    {
+      "name": "underrepresented_scholars",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Early-career scholars from underrepresented demographic groups (women, scholars of color, scholars from lower-income backgrounds, LGBTQ+ researchers, disabled scholars, international scholars) face heightened scrutiny in tenure review on dimensions coded as 'fit' and 'collegiality' — criteria that carry implicit demographic preferences and are evaluated with higher subjective variance and lower transparency than research productivity measures. Their scholarly voice is read through a demographic filter: the same methodological risk-taking is 'innovative' for dominant-group scholars and 'not rigorous enough' for others. Exit means abandoning the profession they trained for, the fieldwork relationships they built, the research program they invested years developing. Identity fusion with the disciplinary role makes exit costly even where nominally possible."
+    },
+    {
+      "name": "contingent_labor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Non-tenure-track faculty, adjuncts, teaching-focused instructors, and postdoctoral researchers bear the downstream cost of tenure scarcity: as tenured seats persist and are rarely vacated, institutions substitute contingent precarious labor. They have no gatekeeping power, no long-term job security, no voice in departmental governance, and their labor directly subsidizes the tenure system by enabling departments to maintain tenure ratios while growing teaching loads. Trapped: the only option is leaving academia entirely, and many carry sunk costs in training specific to this field."
+    },
+    {
+      "name": "institutional_administration",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "University administration benefits from tenure gatekeeping by gaining stable control over departmental composition without the political cost of explicit demographic engineering. They defer to peer review and 'meritocracy' framing while the gatekeeping machinery reproduces predictable tenure cohorts. They also benefit from contingent labor substitution: contingent workers enable flexibility in enrollment downturns and funding changes while tenured seats remain constant."
+    },
+    {
+      "name": "research_productivity_metrics",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Publication counts, citation impact, grant funding, and other productivity measures are formally present in tenure files but are systematically subordinated in deliberation to subjective 'fit' and 'collegiality' assessments. Productivity metrics are not excluded entirely but are reinterpreted through demographic lenses when they conflict with gatekeeping intuitions."
+    },
+    {
+      "name": "academic_freedom_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocates for academic freedom and protection of dissenting voices would argue that if tenure review is primarily demographic gatekeeping unmoored from research merit, then it fails its own justificatory promise and should be reformed or abolished. They are structurally excluded from tenure deliberation because tenure committees are self-perpetuating and structured to protect existing gatekeeping authority."
+    },
+    {
+      "name": "diversity_and_equity_offices",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Campus equity offices document the demographic composition of tenure lines over time, conduct implicit bias training, issue recommendations on hiring and retention procedures. Their authority to alter tenure gatekeeping is structurally limited: they can recommend but not decide, can audit but not reform the criteria themselves. They observe the mechanism without possessing structural power to change it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Tenure review is presented as maintaining research quality and scholarly rigor by assembling committees of subject experts to assess candidates' contributions, fit, and capacity to sustain intellectual inquiry within a collegial community. Ostensibly, peer review allocates permanent positions to scholars whose work merits long-term institutional commitment.",
+    "transfer_function": "Moves permanent employment, prestige, departmental voice, governance rights, and access to institutional resources from a large candidate pool to a small cohort. Simultaneously channels contingent precarious labor to those filtered out. The constraint transfers demographic reproduction from one generation of faculty to the next: gatekeeping authority is self-perpetuating because the same demographic majority that controls review panels is the same demographic majority that benefits from the review criteria they set.",
+    "absent_voices": "Early-career scholars from underrepresented demographics who were rejected at earlier career stages; scholars who left academia after non-renewal of contingent positions; international scholars whose credentials were devalued; scholars whose research challenged disciplinary orthodoxy and were read as 'not a good fit'. These populations would attest that tenure review is a demographic filter, not a meritocratic one. Their absence from tenure committees ensures their exclusion from the deliberation itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If tenure gatekeeping and its demographic filtering disappeared overnight, departmental composition would become noticeably more diverse within 10–15 years; contingent labor markets would compress as permanent positions opened; research fields would diversify as methodological gatekeeping relaxed; the cost structure of academic institutions would shift as they could not rely on contingent labor substitution to maintain tenure ratios. The world rearranges because the constraint actively reproduces power.",
+    "founding_problem": "Academic inquiry requires researchers to pursue questions that may displease powerful interests (governments, corporations, ideological establishments) without fear of retaliation. Tenure was designed to decouple career survival from institutional or political displeasure, enabling high-risk truth-seeking.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Academic freedom advocates and the AAUP attest the founding problem is still live and tenure remains the primary defense. Simultaneously, scholars who have been denied tenure and equity researchers attest that tenure review has become primarily a demographic and ideological gatekeeping mechanism, not a truth-seeking protection. Empirical studies of tenure rejection rates and demographic composition show that the founding problem's solution has accumulated substantial gatekeeping function decoupled from the founding problem itself. No corroboration from outside the tenure-benefiting parties supports the unambiguous 'academic freedom protection' reading."
   },
   "interval": {
-    "start": 1970,
-    "end": 2026
+    "start": 0,
+    "end": 40
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1970,
-      "value": 0.45
+      "time_point": 0,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1985,
-      "value": 0.52
+      "time_point": 5,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.61
+      "time_point": 10,
+      "value": 0.74,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.66
+      "time_point": 15,
+      "value": 0.76,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2018,
-      "value": 0.69
+      "time_point": 20,
+      "value": 0.79,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.71
+      "time_point": 25,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1970,
-      "value": 0.25
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1985,
-      "value": 0.3
+      "time_point": 5,
+      "value": 0.46,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.38
+      "time_point": 10,
+      "value": 0.5,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.43
+      "time_point": 15,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.46
+      "time_point": 20,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.48
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1970,
-      "value": 0.55
+      "time_point": 0,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1985,
-      "value": 0.62
+      "time_point": 5,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2000,
-      "value": 0.68
+      "time_point": 10,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.73
+      "time_point": 15,
+      "value": 0.73,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2018,
-      "value": 0.76
+      "time_point": 20,
+      "value": 0.74,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2026,
-      "value": 0.78
+      "time_point": 25,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.76,
+      "basis": "observed"
     }
   ],
-  "commentary": {
-    "narrative_context": "Tenure peer review is nominally a meritocratic system in which experienced researchers evaluate candidates' scholarly contributions and ability to work within a discipline. This constraint reading frames tenure peer review as a mechanism for demographic gatekeeping: the 'fit' and 'collegiality' criteria deployed during peer review operate as cover stories for selective reproduction of dominant demographic groups. The reading does not claim that individual evaluators consciously discriminate; rather, that evaluation standards are interpreted through the unexamined norms of majority-group scholarship, communication, and professional networks. Candidates from underrepresented demographics face higher evidentiary burdens on research productivity while facing rejection on cultural grounds that are rarely made explicit or contestable. The measurement series spans 1970–2026, capturing both the post-civil rights integration of academia and the contemporary crisis of contingent labor.",
-    "kernel_context": "This constraint is one reading of the contested tenure_contract kernel. The reading instantiates: demographic_reproduction_reading. The sibling readings are: academic_freedom_reading (tenure decouples researcher survival from institutional backlash, enabling high-risk inquiry) and institutional_extraction_reading (tenure enables permanent rent extraction by early winners, loading costs onto contingent labor). The demographic_reproduction_reading frames tenure peer review as demographic closure: the same peer-review apparatus that can protect inquiry can also protect demographic preservation. The core premise distinguishing this reading from the others is that 'fit' and 'collegiality' criteria, when applied through majority-group norms, systematically exclude scholars whose background, methodology, and intellectual traditions diverge from the dominant group. The academic_freedom reading sees peer review as protecting inquiry; this reading sees it as protecting demographic composition. Where academic_freedom emphasizes the research output, demographic_reproduction emphasizes the researcher composition. These readings coexist as competing interpretations held by different institutional seats (faculty believe the freedom reading; excluded candidates and diversity officers observe the demographic-reproduction reading). The institutional_extraction reading is orthogonal: it addresses the employment-rigidity effects of tenure independent of demographic outcome.",
-    "logic_rationale": "Extractiveness is high and rising (0.45→0.71 across the interval). This rising trajectory reflects the strengthening of gatekeeping mechanisms over time: as diversity pressure has increased, the enforcement of 'fit' and 'collegiality' criteria has intensified to maintain demographic composition. Suppression is also high and rising (0.55→0.78), indicating both structural exclusion (institutional barriers) and internalized suppression (candidates internalizing rejection narratives about their 'fit'). Theater ratio is moderate and rising (0.25→0.48), indicating that an increasing share of peer-review activity is devoted to maintaining demographic stability rather than evaluating research. The coercion grid shows class-level suppression and stakes inflation rising most steeply: demographic class experiences the constraint as both higher material stakes (research productivity alone is insufficient to survive evaluation) and higher suppression (gatekeeping operates at the class level, not just individual case-by-case). Resistance at class and organizational levels is non-negligible (0.68 and 0.52 at t_n) but remains structurally constrained: candidates at the powerless individual level cannot organize resistance within the institutions that evaluate them.",
-    "perspectival_gap": "Majority-group faculty compute the constraint as rope or even mountain (natural meritocratic evaluation): from their position, 'fit' and 'collegiality' are obvious criteria for assessing scholarly quality and departmental functionality. Underrepresented candidates compute it as snare: 'fit' operates as a rejection criterion applied asymmetrically, and 'collegiality' is interpreted through majority-group norms they cannot conform to without abandoning their own intellectual traditions. The directive-chain effect: department hiring committees (institutional power, demographic majority, arbitrage exit) experience the constraint as meritocratic self-defense; underrepresented candidates (powerless, identity-locked exit) experience it as structural closure. Institutional administration observes both framings simultaneously but lacks enforcement mechanisms to alter evaluation standards without triggering academic freedom defense.",
-    "directionality_logic": "Majority-group faculty benefit from the constraint without bearing its costs; directionality approaches the beneficiary end (d ≈ 0.2–0.3). Underrepresented candidates bear the extraction cost (higher burden of proof, implicit rejection criteria, constrained exit to contingent positions) without benefiting from it; directionality approaches the target end (d ≈ 0.8–0.9). The suppression mechanism is partly structural (institutional barriers, legal constraints on hiring remedies) and partly internalized (candidates internalize 'not a fit' narratives, fuse identity with academic work while facing systematic rejection, remain in contingent positions that lack upward mobility). Contingent faculty occupy a dual position: they bear extraction (teaching loads, research with no tenure security) and are systematically excluded from the evaluation process itself (their voices are absent from hiring committees). Exit for both victim groups is severely constrained by professional identity fusion: candidates have spent years preparing for academic careers, have skills not easily transferable to other sectors, and face a labor market that devalues career interruption.",
-    "mandatrophy_analysis": "The classification prevents misreading the constraint as a rope or mountain. A rope reading would miss that peer review operates with asymmetric beneficiary/victim structure and active suppression of exit (rival hiring systems, alternative career paths). A mountain reading would falsely treat demographic closure as a natural outcome of meritocratic evaluation. The snare classification captures the core structure: tenure peer review persists because it benefits the majority-group beneficiaries (secure jobs, control of evaluation standards, demographic preservation) who have both power and exit options (can retire, can publish outside, can change institutions), while it extracts from the powerless victims (underrepresented candidates with identity-locked exit, contingent faculty with trapped exit) who cannot reorganize the system. The vindicated proposition (academic_freedom_doctrine) masks the mechanism: the defense of peer review as essential to academic freedom prevents scrutiny of how peer review operates as demographic closure. This is the false-summit signature: a doctrine that appears to protect inquiry in fact protects demographic composition."
-  },
+  "commentary": {},
   "omegas": [
     {
-      "id": "fit_collegiality_criterion_definition",
-      "question": "Are 'fit' and 'collegiality' criteria applied according to implicit, demographically-inflected norms, or according to explicit, research-productivity-based metrics that can be documented and audited?",
-      "resolution_mechanism": "Mandate transparent documentation of evaluation criteria and decision rationales on every tenure case (as some legal jurisdictions now require); audit whether criteria are applied identically across demographic groups; track whether research productivity is the actual decision driver or whether implicit cultural criteria overrule productivity differences.",
-      "impact": "If criteria are genuinely implicit and demographic-inflected, the constraint's extractiveness rises (from 0.71 to 0.80+) and snare classification is reinforced. If criteria are documented and applied consistently, extractiveness drops toward rope classification (0.40–0.50 range) and the demographic closure mechanism is disrupted.",
+      "id": "research_productivity_vs_fit_criteria",
+      "question": "Are 'fit' and 'collegiality' criteria genuinely proxies for research quality and sustainability, or are they mechanisms for enforcing cultural homogeneity decoupled from research productivity measures?",
+      "resolution_mechanism": "Controlled analysis of tenure rejection rates correlated with (1) research productivity metrics (publications, citations, grants, field impact) vs. (2) demographic characteristics and departmental diversity footprint. If rejection rates are higher for high-productivity researchers from underrepresented demographics than for lower-productivity researchers from dominant demographics, then 'fit' criteria are gatekeeping mechanisms, not quality proxies.",
+      "impact": "If criteria are gatekeeping mechanisms, the constraint is Snare (extraction of demographic authority). If criteria are genuine quality proxies, the constraint might be Rope or Tangled Rope (coordination with asymmetric costs justified by selection criteria). This omega determines whether the demographic reproduction is incidental to meritocratic selection or structural to the mechanism.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether peer-review criteria are applied as explicit research metrics or implicit demographic-alignment filters."
+      "description": "Whether 'fit' and 'collegiality' measure research quality or enforce demographic conformity."
     },
     {
-      "id": "structural_versus_internalized_suppression",
-      "question": "What portion of the measured suppression (0.78) is attributable to structural exclusion (institutional barriers, legal constraints, lack of alternative pathways) versus internalized suppression (candidates silencing their own intellectual traditions, internalizing rejection narratives)?",
-      "resolution_mechanism": "Post-exit interview studies: track whether scholars who leave academia experience suppression persistence after external barriers are removed; measure whether self-silencing and identity-fusion persist even when structural constraints are lifted. Contrast exit trajectories for contingent faculty (identity-locked) versus candidates who leave before tenure application (constrained exit).",
-      "impact": "If suppression is primarily structural, external policy intervention (transparency mandates, alternative hiring systems, legal enforcement) can disrupt the constraint. If suppression is primarily internalized, the constraint persists even after structural barriers are removed — the reproduction mechanism has been absorbed into candidates' self-perception. A finding of substantial internalized suppression would classify this as a deeper snare than structural suppression alone, with higher theatre_ratio (the performance is internalized; candidates police their own gatekeeping).",
+      "id": "founding_problem_persistence",
+      "question": "Is academic freedom under genuine threat at the institutional level in contemporary academia, or has it been substantially secured through multiple alternative mechanisms (legal precedent, professional association backing, public discourse norms) while tenure persists as gatekeeping?",
+      "resolution_mechanism": "Comparative study of academic persecution in tenured and non-tenured institutions and jurisdictions; tracking of academic freedom cases before and after tenure reform or abolition; documentation of whether researchers face retaliation for scholarly positions independent of tenure status.",
+      "impact": "If academic freedom is substantially secured independent of tenure, the founding problem is dead and the constraint has undergone mandatrophy: its justification has evaporated but it persists due to inertia and gatekeeping benefits. Reform or abolition becomes rationally warranted. If academic freedom remains under threat specifically from tenure loss, the founding problem is live.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Mechanism underlying the measured suppression: structural barriers or internalized identity fusion."
+      "description": "Whether the founding problem ('tenure protects against retaliation') is still generatively driving tenure persistence."
     },
     {
-      "id": "kernel_reading_contest_mechanism",
-      "question": "Within a single academic institution, can both the academic_freedom_reading and the demographic_reproduction_reading coexist as empirically valid framings of the same peer-review process, or does adopting one reading logically preclude the other?",
-      "resolution_mechanism": "Institutional case studies: document whether the same peer-review process that protects (or fails to protect) academic inquiry simultaneously operates as demographic gatekeeping. Can a single peer-review rubric satisfy both readings, or are they structurally incompatible within one institution's evaluation system?",
-      "impact": "If the readings coexist (both are empirically true of the same system), the constraint's classification depends on which stakeholder seat is being evaluated (majority-group faculty see academic freedom protection; underrepresented candidates see demographic gatekeeping). If the readings are incompatible, one reading is mischaracterizing the system — either peer review is protecting inquiry and not gatekeeping (academic_freedom_reading forecloses demographic_reproduction), or peer review is gatekeeping and the 'inquiry protection' claim is cover story (demographic_reproduction_reading forecloses academic_freedom). The engine's per-seat classification will flag this divergence; the omega documents whether the divergence is real structure or evaluator mischaracterization.",
+      "id": "identity_lock_vs_constrained_exit",
+      "question": "Is the high cost of exit for underrepresented scholars primarily structural (economic: no alternative career paths with equivalent income; geographic: concentrated in elite institutions that also gatekeep) or internalized (psychological: fused identity with the discipline; social: leaving means losing research community relationships and mentorship)?",
+      "resolution_mechanism": "Qualitative study of exit narratives from scholars denied tenure or who left academia: what barriers do they identify as primary? Follow-up study of scholars who successfully exited: what enabled their transition? Comparison with dominant-group scholars' exit costs.",
+      "impact": "If primarily structural, the constraint's suppression is structural and persists even after explicit gatekeeping disappears. If primarily internalized, the constraint could be disrupted by identity-reframing or community rebuilding outside academia. The suppression mechanism (structural vs. internalized) affects the classification stability and the design of remedies.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity-lock in academic careers is structural or internalized, determining suppression stability post-exit."
+    },
+    {
+      "id": "alternative_gatekeeping_mechanisms",
+      "question": "If tenure peer review were reformed or abolished, would demographic gatekeeping disappear, or would it migrate to alternative mechanisms (e.g., postdoctoral appointment gatekeeping, grant funding gatekeeping, journal editorial boards)?",
+      "resolution_mechanism": "Comparative study of demographic representation in tenured institutions with and without tenure; tracking of demographic gatekeeping in alternative career structures (grant funding, postdoctoral markets, contingent instructor hiring).",
+      "impact": "If gatekeeping migrates rather than disappears, tenure abolition would dismantle one gatekeeping site while leaving systemic demographic reproduction intact. This affects the design of reform: is tenure the target, or is tenure one manifestation of a broader gatekeeping system? If gatekeeping is systemic, reform of tenure alone is insufficient.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the academic_freedom and demographic_reproduction readings are empirically coexistent or logically incompatible interpretations of the same peer-review system."
+      "description": "Whether demographic gatekeeping is tenure-specific or a property of the broader academic career structure."
     },
     {
-      "id": "contingent_faculty_visibility_in_evaluation",
-      "question": "Are contingent faculty who perform research and mentoring within a department rendered structurally invisible in tenure peer-review processes (excluded from teaching load calculations, from graduate student mentoring credit, from research collaboration recognition)?",
-      "resolution_mechanism": "Departmental audit of tenure-evaluation rubrics: document whether contingent faculty contributions are listed, weighted, or accounted for in any form in tenure decisions. Interview tenure committees about whether contingent faculty productivity affects tenure candidates' demonstrated teaching or mentoring capacity.",
-      "impact": "If contingent faculty labor is rendered invisible, the cost extraction increases (contingent faculty bear costs; majority-group tenure-track faculty benefit from their labor being absorbed into department resources). The theatre_ratio rises (tenured faculty can appear to be doing all the teaching/mentoring when contingent faculty actually perform most of it). The constraint's classification strengthens toward snare (systematic invisibility is a suppression mechanism that prevents contingent faculty from claiming their contributions or organizing around their exclusion).",
-      "confidence": "high",
+      "id": "contingent_labor_as_intended_or_consequence",
+      "question": "Is the growth of contingent labor a deliberate mechanism to subsidize tenure gatekeeping, or an unintended consequence of tenure rigidity and enrollment volatility?",
+      "resolution_mechanism": "Historical analysis of administrative decision-making around contingent hiring: what were the stated rationales? Interview study with institution leaders: did they anticipate that maintaining tenure ratios would require contingent substitution? Compare institutions with different tenure/contingent ratios and ask whether institutions actively chose the trade-off.",
+      "impact": "If deliberate, the constraint includes institutional administration as a conscious beneficiary and the extraction is collective. If unintended consequence, the extraction is diffuse and the constraint might be reformed by architectural change (e.g., mandatory conversion of contingent positions to tenure lines) without confronting deliberate gatekeeping. This affects strategy for change.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether contingent faculty labor is systematically rendered invisible in tenure-evaluation systems."
+      "description": "Whether contingent labor growth is structural consequence or deliberate mechanism of tenure gatekeeping."
+    },
+    {
+      "id": "sibling_reading_contention",
+      "question": "Are the three readings of the tenure_contract kernel (academic_freedom, demographic_reproduction, institutional_extraction) held by different parties in genuine dispute, or do different parties hold overlapping readings sequentially (e.g., someone holds academic_freedom early in their career and shifts to institutional_extraction after becoming tenured)?",
+      "resolution_mechanism": "Qualitative study of tenure discourse: who advocates for each reading? Are advocacy coalitions stable across time or do individuals shift readings? Do the readings appear in the same texts (same author holding multiple readings) or different institutional sites (different constituencies advocating different readings)?",
+      "impact": "If parties genuinely coexist with different readings (coexists_with relation), the kernel is fundamentally contested and reform requires managing multiple legitimate framings. If individuals shift readings with tenure status, the readings are developmental rather than fundamentally contested and reform might focus on disrupting the individual trajectory (e.g., postdoctoral restructuring, alternative career paths).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three tenure readings are genuinely coexisting readings or developmental stages individuals pass through."
     }
   ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 40,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.74
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.67
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.62
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.71
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.73
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.78
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.81
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.72
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.76
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.74
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.64
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.66
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 40,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.48
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 40,
+        "value": 0.52
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.62
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 40,
+        "value": 0.66
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.44
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 40,
+        "value": 0.48
+      }
+    ]
+  },
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
       "tenure_contract__academic_freedom_reading",
       "tenure_contract__institutional_extraction_reading",
-      "contingent_faculty_labor_regime",
-      "doctoral_training_credentialism_lock"
+      "contingent_labor_precarity",
+      "academic_research_methodology_orthodoxy"
     ],
-    "dual_formulation_note": "This constraint is one reading of the contested tenure_contract kernel. The demographic_reproduction_reading frames tenure peer review as reproducing dominant group composition through implicit 'fit' criteria. The academic_freedom_reading frames tenure as decoupling researcher survival from institutional backlash. The institutional_extraction_reading frames tenure as enabling employment rigidity and cost-loading onto contingent labor. All three readings address the same institutional apparatus (peer-review tenure decisions) but instantiate different constraints with different beneficiary/victim structures and ε values. They coexist as competing interpretations held by different institutional seats. Each constraint story is ε-invariant: the ε for demographic reproduction (0.71) addresses the extraction of access/stability from underrepresented candidates; the ε for academic freedom would address the degree of researcher protection (likely lower, 0.2–0.3); the ε for institutional extraction would address employment rigidity costs (likely 0.60–0.70). The kernel contest is whether peer review's primary function is (a) protecting inquiry, (b) reproducing demographics, or (c) extracting rents — structurally distinct claims about the same apparatus."
+    "dual_formulation_note": "tenure_contract is a contested kernel with three active readings: academic_freedom_reading (tenure protects inquiry from retaliation), demographic_reproduction_reading (tenure peer review gates entry by demographic conformity), and institutional_extraction_reading (tenure creates rent-extraction and employment rigidity). Each reading is instantiated as a separate constraint with its own ε, beneficiary/victim structure, and classification. This file is the demographic_reproduction_reading. All three readings share the formal tenure contract and peer review practice but differ structurally in the identified primary extractive/coordinative mechanism. Links via network.affects_constraints enable the analysis to track how the three readings create downstream constraints (contingent labor precarity is affected by whichever reading dominates institutional practice; methodological gatekeeping is affected by how 'fit' is defined in each reading)."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.25
-    }
-  ],
+  "directionality_overrides": [],
+  "gain_flow": "demographically_dominant_faculty",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
-    "authority_grounding": "extraction",
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
     "interpretation_layer_present": true,
-    "reference_frame": "meritocratic_peer_review_evaluation",
+    "reference_frame": "meritocratic_peer_evaluation",
     "drift_state": {
-      "moment": "contemporary_diversity_awareness_era",
+      "moment": "contemporary_equity_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     },
     "reading_relations": [
       {
-        "sibling_id": "tenure_contract__academic_freedom_reading",
+        "sibling_id": "academic_freedom_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "tenure_contract__institutional_extraction_reading",
-        "relation": "coexists_with"
+        "sibling_id": "institutional_extraction_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "peer_review_criteria_demographic_inflected",
+        "atom": "peer_review_operates_meritocratically",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "collegiality_masks_demographic_gatekeeping",
+        "atom": "fit_and_collegiality_proxy_for_research_quality",
         "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
       }
     ]
   },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "snare",
-    "downstream_of": [
-      "tenure_contract__academic_freedom_reading",
-      "tenure_contract__institutional_extraction_reading"
-    ]
-  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

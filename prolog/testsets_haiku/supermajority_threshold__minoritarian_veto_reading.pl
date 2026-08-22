@@ -40,10 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,41 +74,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: supermajority_threshold__minoritarian_veto_reading
- *   human_readable: Supermajority Amendment Threshold as Minoritarian Veto Mechanism
- *   domain: constitutional/political
+ *   human_readable: Supermajority Amendment Threshold as Minoritarian Veto Lock-In
+ *   domain: constitutional/political_economy
  *
  * SUMMARY:
- *   The supermajority amendment threshold (typically requiring 66.7% of
- *   legislative votes to approve a constitutional amendment) is presented by
- *   institutional defenders as essential to constitutional stability—a
- *   mechanism ensuring that only changes backed by deep, broad consensus
- *   become permanent law. This minoritarian-veto reading contests that frame.
- *   It argues that the supermajority threshold functions primarily as a
- *   lock-in mechanism for historically entrenched power: those who benefit
- *   from the status quo (property-holders, regional majorities, sectional
- *   elites) can block any amendment by assembling 34% of votes, regardless of
- *   how overwhelming the popular and legislative majority for reform is. The
- *   threshold converts historical privilege into a permanent veto. As
- *   demographics and preferences shift, the threshold crystallizes obsolete
- *   constitutional law, widening the gap between formal constitution and
- *   lived reality. The constraint persists not because it solves a genuine
- *   coordination problem but because it protects entrenched beneficiaries
- *   from majoritarian redistribution. Contemporary majorities and
- *   historically excluded groups seeking recognition find their electoral
- *   mandates nullified by a barrier designed in a different era with
- *   different power distributions. The reading does NOT claim the threshold
- *   was created cynically; rather, it claims that the founding justification
- *   (preventing majoritarian tyranny) no longer matches the current
- *   structural function (protecting sectional power from majoritarian
- *   reform).
+ *   A constitutional framework (e.g., the U.S. Constitution) requires
+ *   supermajority approval (two-thirds of both chambers plus ratification by
+ *   three-fourths of states, or equivalent in other systems) to amend the
+ *   foundational text. This reading analyzes the supermajority threshold as a
+ *   mechanism that converts the structural position of geographically
+ *   dispersed or ideologically cohesive minorities into a permanent veto over
+ *   constitutional change. Historical beneficiaries of the original
+ *   arrangement (slaveholders at the Founding, Jim Crow majorities
+ *   post-Reconstruction, propertied classes resisting redistribution) used
+ *   the threshold to lock their privileges into place by blocking amendments
+ *   that later majorities demanded. The reading treats the threshold as a
+ *   snare: it is defended as a wisdom-safeguard (the sibling
+ *   consensus_safeguard reading), but operates as an entrenchment device that
+ *   transfers constitutional authority from electoral majorities to blocking
+ *   minorities. The measured extraction is high and rising because the
+ *   constraint's function has clarified over time: as more majorities
+ *   mobilize for reform and are blocked, the extractive function becomes
+ *   visible, and the theatrical justification (protection against passion)
+ *   wears thin.
  *
  * KEY AGENTS:
- *   - Entrenched status quo beneficiaries (institutional/biographical, arbitrage exit): hold constitutional privileges the majority would remove; use the supermajority requirement as structural veto.
- *   - Minority blocking coalitions (organized/biographical, constrained exit): legislative minorities whose power exceeds their population share; use the threshold to preserve their overrepresentation.
- *   - Constitutional inertia guardians (institutional/generational, arbitrage exit): courts, law schools, constitutional commissions whose authority depends on constitutional stability; benefit from a high threshold that makes interpretation de facto constitutional law.
- *   - Contemporary reform majorities (moderate/biographical, constrained exit): electorally empowered but constitutionally blocked; their mandates die at the supermajority bar.
- *   - Historically excluded groups (powerless/generational, identity_locked exit): seek formal constitutional recognition but find their claims nullified by the same veto that excluded them originally. Identity fusion with the national system makes exit unthinkable.
- *   - Future generations (powerless/civilizational, trapped exit): inherit constitutional deadlock they did not create and cannot escape.
+ *   - Status quo beneficiaries: holders of entrenched privileges (property, citizenship, federalism distributions) that majorities would restrict
+ *   - Blocking minorities: regionally or ideologically concentrated actors positioned to deny supermajority (e.g., small states in ratification, one chamber in bicameral systems)
+ *   - Contemporary majoritarian coalitions: electoral majorities seeking constitutional reform blocked by the threshold
+ *   - Reform constituencies: organized movements (suffragists, abolitionists, civil rights, labor) that mobilize majorities but cannot translate them to constitutional change
+ *   - Constitutional framers: historical authors of the threshold (analyzable as either wisdom-protecting or privilege-locking depending on reading)
+ *   - Future constituencies: unborn people whose constitutional status is foreclosed by the inability of current majorities to amend
  */
 
 /* ==========================================================================
@@ -110,60 +113,112 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(supermajority_threshold__minoritarian_veto_reading, 0.78).
-domain_priors:suppression_score(supermajority_threshold__minoritarian_veto_reading, 0.81).
+domain_priors:suppression_score(supermajority_threshold__minoritarian_veto_reading, 0.71).
 domain_priors:theater_ratio(supermajority_threshold__minoritarian_veto_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, extractiveness, 0.78).
-narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 0.81).
+narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 0.71).
 narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, resistance, 0.68).
+narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(supermajority_threshold__minoritarian_veto_reading, resistance, 0.62).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(supermajority_threshold__minoritarian_veto_reading, snare).
-narrative_ontology:human_readable(supermajority_threshold__minoritarian_veto_reading, "Supermajority Amendment Threshold as Minoritarian Veto Mechanism").
-narrative_ontology:topic_domain(supermajority_threshold__minoritarian_veto_reading, "constitutional/political").
+narrative_ontology:human_readable(supermajority_threshold__minoritarian_veto_reading, "Supermajority Amendment Threshold as Minoritarian Veto Lock-In").
+narrative_ontology:topic_domain(supermajority_threshold__minoritarian_veto_reading, "constitutional/political_economy").
 
 domain_priors:requires_active_enforcement(supermajority_threshold__minoritarian_veto_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(supermajority_threshold__minoritarian_veto_reading, '4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb').
-narrative_ontology:cs_kernel_codification('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', fixed_text).
-narrative_ontology:cs_authority_grounding('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', extraction).
-narrative_ontology:cs_interpretation_layer_present('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb').
-narrative_ontology:cs_reading_relation('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', supermajority_threshold__consensus_safeguard_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', supermajority_threshold__adaptive_gradient_reading, influences).
-narrative_ontology:cs_axiom('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', foundational, supermajority_blocking_minority_veto_inevitable).
-narrative_ontology:cs_axiom_status(supermajority_blocking_minority_veto_inevitable, holdable).
-narrative_ontology:cs_axiom_grounding('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', supermajority_blocking_minority_veto_inevitable, empirically_contingent).
-narrative_ontology:cs_axiom('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', foundational, constitutional_lock_in_becomes_privilege_entrenchment).
-narrative_ontology:cs_axiom_status(constitutional_lock_in_becomes_privilege_entrenchment, holdable).
-narrative_ontology:cs_axiom_grounding('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', constitutional_lock_in_becomes_privilege_entrenchment, deontological).
-narrative_ontology:cs_reference_frame('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', majoritarian_constitutional_amendment).
-narrative_ontology:cs_drift_state('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', contemporary_demographic_shift, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('4de6bee6-81e8-4e1c-99cb-d9cdbc6749cb', '').
+narrative_ontology:cs_story_uid(supermajority_threshold__minoritarian_veto_reading, '360fc748-cad6-428f-a806-d0e38ef40baa').
+narrative_ontology:cs_kernel_codification('360fc748-cad6-428f-a806-d0e38ef40baa', formalized).
+narrative_ontology:cs_authority_grounding('360fc748-cad6-428f-a806-d0e38ef40baa', lineage).
+narrative_ontology:cs_interpretation_layer_present('360fc748-cad6-428f-a806-d0e38ef40baa').
+narrative_ontology:cs_reading_relation('360fc748-cad6-428f-a806-d0e38ef40baa', supermajority_threshold__consensus_safeguard_reading, coexists_with).
+narrative_ontology:cs_reading_relation('360fc748-cad6-428f-a806-d0e38ef40baa', supermajority_threshold__adaptive_gradient_reading, influences).
+narrative_ontology:cs_axiom('360fc748-cad6-428f-a806-d0e38ef40baa', foundational, supermajority_requirement_entrenchment_mechanism).
+narrative_ontology:cs_axiom_status(supermajority_requirement_entrenchment_mechanism, holdable).
+narrative_ontology:cs_axiom_grounding('360fc748-cad6-428f-a806-d0e38ef40baa', supermajority_requirement_entrenchment_mechanism, empirically_contingent).
+narrative_ontology:cs_axiom('360fc748-cad6-428f-a806-d0e38ef40baa', foundational, majoritarianism_as_legitimacy_ground).
+narrative_ontology:cs_axiom_status(majoritarianism_as_legitimacy_ground, holdable).
+narrative_ontology:cs_axiom_grounding('360fc748-cad6-428f-a806-d0e38ef40baa', majoritarianism_as_legitimacy_ground, deontological).
+narrative_ontology:cs_reference_frame('360fc748-cad6-428f-a806-d0e38ef40baa', electoral_majority_rule_legitimacy).
+narrative_ontology:cs_drift_state('360fc748-cad6-428f-a806-d0e38ef40baa', contemporary_blocked_reform_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('360fc748-cad6-428f-a806-d0e38ef40baa', '').
 narrative_ontology:cs_kernel_id(supermajority_threshold__minoritarian_veto_reading, supermajority_threshold).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(supermajority_threshold__minoritarian_veto_reading, entrenched_status_quo_beneficiaries).
-narrative_ontology:constraint_beneficiary(supermajority_threshold__minoritarian_veto_reading, minority_blocking_coalitions).
-narrative_ontology:constraint_beneficiary(supermajority_threshold__minoritarian_veto_reading, constitutional_inertia_guardians).
-narrative_ontology:constraint_victim(supermajority_threshold__minoritarian_veto_reading, contemporary_reform_majorities).
-narrative_ontology:constraint_victim(supermajority_threshold__minoritarian_veto_reading, historically_excluded_groups_seeking_representation).
-narrative_ontology:constraint_victim(supermajority_threshold__minoritarian_veto_reading, future_generations_inheriting_obsolete_constraints).
+narrative_ontology:constraint_beneficiary(supermajority_threshold__minoritarian_veto_reading, status_quo_beneficiaries).
+narrative_ontology:constraint_beneficiary(supermajority_threshold__minoritarian_veto_reading, historical_privilege_holders).
+narrative_ontology:constraint_victim(supermajority_threshold__minoritarian_veto_reading, contemporary_majoritarian_coalitions).
+narrative_ontology:constraint_victim(supermajority_threshold__minoritarian_veto_reading, reform_constituencies).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Holders of entrenched constitutional privileges (property rights regimes, citizenship hierarchies, suffrage boundaries, federalist power distributions) that a contemporary majority would restrict or redistribute. The supermajority threshold locks their position in place by making constitutional amendment nearly impossible. They benefit from the immobility of the framework itself.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, status_quo_beneficiaries, beneficiary,
+    powerful, generational, trapped, national).
+
+% Regionally concentrated or ideologically cohesive factions positioned to deny the supermajority (in bicameral systems, minorities in one chamber or enough states to block ratification). They enforce the threshold by refusing consent to any amendment, converting their structural veto power into a governing tool. Their power derives entirely from the threshold's existence.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, blocking_minorities, agenda_setter,
+    organized, biographical, constrained, national).
+
+% Electoral majorities seeking constitutional reform (expanding suffrage, reapportioning districts, removing class-based privileges, clarifying dormant powers). They bear the cost of blocked reform: policy stagnation, unredressed injustice, and the erosion of faith in majoritarian legitimacy. Their exit is exit from the constitutional system itself, which carries civilizational cost. They remain identity-locked to the constitution as the source of their own legitimacy claims.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, contemporary_majoritarian_coalitions, payer,
+    powerful, biographical, identity_locked, national).
+
+% Social movements and organizing blocs (suffragists, abolitionists, civil rights advocates, labor organizers) that mobilize electoral majorities for constitutional change. They invest political capital in amendment campaigns only to be indefinitely blocked. Their costs are organizational attrition, delegitimation, and being permanently locked out of constitutional voice. They are identity-locked because their entire project is framed as the realization of constitutional promises.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, reform_constituencies, payer,
+    moderate, biographical, identity_locked, national).
+
+% The historical authors of the original framework (founding moment, Reconstruction, prior amendments). This reading treats their intent as contestable: did they author a supermajority threshold to protect against passing passions, or to entrench the privileges of the dominant coalition?
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, constitutional_framers, observer,
+    analytical, civilizational, analytical, national).
+
+% Unborn or disenfranchised people whose constitutional status and rights are foreclosed by the inability of the current majority to amend. They would object to being bound by defunct arrangements but are structurally absent from the amendment process itself.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, future_constituencies, excluded,
+    powerless, civilizational, trapped, national).
+
+% Other constitutional systems with different supermajority thresholds or amendment mechanisms. Their existence as empirical reference points makes the particular threshold choice visible as constructed rather than natural or inevitable.
+narrative_ontology:constraint_stakeholder(supermajority_threshold__minoritarian_veto_reading, comparative_democracies, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(supermajority_threshold__minoritarian_veto_reading, status_quo_beneficiaries).
+narrative_ontology:fixing_cost_class(supermajority_threshold__minoritarian_veto_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The threshold is framed as a mechanism to prevent constitutional amendments driven by transient electoral swings — it is intended to require deep, stable consensus before the foundational framework changes. But this reading locates the actual coordination problem: how to lock entrenched minorities into veto position despite majoritarian will.
+% TRANSFER_FUNCTION: Transfers power to alter the constitutional regime from any majority that can win electoral office to a supermajority (or super-coalition of blocking minorities) that must include geographically or ideologically dispersed actors. The transfer is from contemporary majorities to historical privilege holders and regionally dispersed minorities. The mechanism moves the ability to foreclose reform off the electoral arena and into the constitutional amendment machinery itself.
+% ABSENT_VOICES: Future constituencies and people disenfranchised at the time the threshold was authored are excluded from the amendment process itself. The reform constituencies that mobilize majorities are present in electoral politics but barred from translating electoral majorities into constitutional change. Comparative democracies with different thresholds are not in the conversation, so the particular threshold's contingency is invisible.
+% DISAPPEARANCE_RATIONALE: If the supermajority threshold disappeared overnight (replaced by simple majority, or abolished entirely), the constitutional regime would reorganize rapidly: blocked reforms would be enacted, entrenched privileges would face immediate reapportionment, and the electoral majority would finally translate into constitutional authority. The status quo beneficiaries would lose their veto; blocking minorities would lose their outsized power; reform constituencies would shift from indefinite campaigns to actual legislation.
+% FOUNDING_PROBLEM: The founding problem is framed by the consensus_safeguard reading as protection against constitutional amendments driven by temporary passions or narrow interests. This reading contests that framing: the 'founding problem' was how to lock the constitutional arrangement (slavery, property rights, limited suffrage, federalism) against the electoral majorities that would eventually mobilize to undo it.
+% FOUNDING_PROBLEM_CORROBORATION: The consensus_safeguard reading attests the original founding problem — volatility, mob passion — remains live. This reading cites historical record: supermajority thresholds were deployed after moments of majoritarian reform (Reconstruction, civil rights mobilization) specifically to prevent further majoritarian amendments. The blocking minorities and status quo beneficiaries attest to protecting against 'radical change'; reform constituencies and historical study of the amendment record (the 27th Amendment is a 202-year exception; the 19th, 24th, 26th were blocked repeatedly before supermajority approval) corroborate that the threshold functions as entrenchment, not consensus-protection.
+narrative_ontology:disappearance_verdict(supermajority_threshold__minoritarian_veto_reading, world_rearranges).
+narrative_ontology:founding_problem_status(supermajority_threshold__minoritarian_veto_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(supermajority_threshold__minoritarian_veto_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(supermajority_threshold__minoritarian_veto_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(supermajority_threshold__minoritarian_veto_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(supermajority_threshold__minoritarian_veto_reading, 0.78, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -183,16 +238,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.78) because the constraint transfers veto power from distributed majorities to concentrated blocking minorities, with no offsetting coordination benefit proportional to that extraction. The temporal series shows extractiveness rising from 0.62 to 0.78 over the interval: as demographics shift and the founding consensus that may have justified the threshold erodes, the constraint operates more purely as a lock-in mechanism for privilege, less as a consensus-safeguard. Theater is moderate (0.42): the constraint is performed as 'protecting constitutional stability,' and part of the enforcement activity is genuinely about constitutional interpretation. But a growing share is pure veto maintenance—defending the threshold itself against reform, using constitutional language to justify blocking majorities. The measurement grid shows suppression is highest at the class level (0.85 at endpoint)—entire classes of reform advocates find their majoritarian will systematically suppressed. Accessibility collapse is high across levels (0.75–0.80 at endpoint) because constitutional amendment is THE mechanism for large-scale institutional change; if it is locked, alternatives (statutory reform, executive action, judicial reinterpretation) are severely constrained. Resistance is lower (0.61–0.74) because the barrier is constitutional—opposing it requires either mounting sustained supermajority coalitions (high cost) or proposing extra-constitutional reform (higher reputational cost). Resistance exists but is structurally dampened by the threshold's own legitimacy narrative (people believe the constitution should be 'hard to change'). The claim/metric divergence is intentional: this reading CLAIMS snare (minoritarian veto lock-in) while acknowledging the institutional defenders' framing (coordination for stability). The engine computes which type the metrics support; the divergence is exactly the measurement the corpus exists to take.
+ *   Extractiveness (0.78 at interval end) is high because the supermajority threshold transfers constitutional authority away from electoral majorities and toward blocking minorities, and this transfer is decoupled from any coordination benefit to those minorities. They do not need protection from passing passion; they need protection from majoritarian will. Suppression (0.71) is substantial because the threshold actively suppresses majoritarian constitutional voice: it converts electoral victories into defeats, and the enforcement machinery (two-thirds votes, ratification canvassing) is designed and maintained specifically to deny power to majorities. Theater (0.42, rising) reflects growing performative justification: as blocking is exposed, defenders appeal more intensely to the wisdom-safeguard narrative, but the blocking function is increasingly transparent. The measurement series shows extractiveness and suppression both rising over the interval: this reflects both the accumulation of blocked reforms (more blocked amendments make the extractive function clearer) and the rising salience of the threshold as reform constituencies mobilize. Accessibility collapse (0.68) is moderate because alternatives do exist (constitutional convention, state nullification, de facto amendment through jurisprudence, civil conflict) but the threshold makes them costly and uncertain. Resistance (0.62) is substantial and rising because reform constituencies have mobilized repeatedly to break through the threshold, and their mobilization itself is a measured form of active resistance.
  *
  * PERSPECTIVAL GAP:
- *   The entrenched beneficiaries and constitutional inertia guardians perceive the threshold as genuine coordination—a mechanism ensuring constitutional changes rest on deep consensus. From their position, blocking majorities is protecting constitutional integrity. The contemporary reform majorities and historically excluded groups perceive the same structure as minoritarian veto and lock-in. From their position, the threshold is suppressing legitimate democratic claims. The engine computes per-seat types from the structural data. The beneficiary seats should compute as experiencing coordination (their veto power is genuinely coordinated and provides benefits without offsetting extraction). The payer seats should compute as experiencing extraction (they bear costs—blocked reforms, perpetuated exclusion—with no offsetting coordination benefit). This perspectival divergence is not an error in the authoring; it is structural reality. The same rule that coordinates for some (blocking minorities get stable veto) extracts from others (reform majorities get nullification). The threshold is a tangled rope FROM the beneficiary perspective and a snare FROM the payer perspective. This story instantiates the snare reading.
+ *   The payer seats (majoritarian coalitions, reform constituencies) and the beneficiary/agenda-setter seats (status quo beneficiaries, blocking minorities) compute radically different directionalities and types. From the beneficiary seats, the threshold is coordination (stabilizing the constitutional order against destabilizing majorities). From the payer seats, it is pure extraction (locking majorities out of constitutional voice). The engine should register this divergence and classify the same constraint as coordination-like on the beneficiary seats and snare-like on the payer seats — that divergence is the signal that a snare is operating: one party reads it as legitimate protection, the other as illegitimate lock-in.
  *
  * DIRECTIONALITY LOGIC:
- *   Entrenched beneficiaries: directionality~0.05–0.15 (full beneficiary). They collect the benefit of veto power without proportional cost. They have high power (institutional) and high exit options (arbitrage: if amendment reform threatened them in this jurisdiction, they could move wealth/influence elsewhere). The constraint subsidizes them. Minority blocking coalitions: directionality~0.1–0.25 (beneficiary-to-symmetric). They benefit from the threshold (it protects their overrepresentation) but bear some indirect cost (the legislature becomes gridlocked, making any legislation harder to pass, even for them). Constitutional inertia guardians: directionality~0.1–0.2 (beneficiary). Their authority depends on constitutional stability. Contemporary reform majorities: directionality~0.75–0.85 (target). They are blocked despite electoral mandate. They are identity-locked (they cannot 'leave' the constitutional system). Their exit options are severely constrained: statutory reform hits the judicial deference to the constitution; executive action is bounded by constitutional powers; extra-constitutional reform carries immense cost. The constraint extracts from them. Historically excluded groups: directionality~0.8–0.95 (full target). They seek constitutional recognition and face systematic veto from blocking minorities whose power structure depends on excluding them. They are identity-locked to the most extreme degree: their identity is constitutionally fused with the nation-state they seek to reform. Exit is unthinkable. The constraint extracts heavily from them. Future generations: directionality~0.85–0.95 (full target). They inherit the lock and cannot escape it except through extra-constitutional means. No overrides are needed; the derivation chain captures these directionalities accurately from the beneficiary/victim declarations and exit options.
+ *   Status quo beneficiaries hold power (powerful, trapped exit, entrenched position in the original constitutional bargain) and benefit directly from the threshold's immobility — d is near 0.0, subsidy side. Blocking minorities are positioned to deny supermajority and benefit from the blocking power the threshold grants them — d is near 0.0, subsidy side (they collect veto authority). Contemporary majoritarian coalitions have powerful electoral position but constrained constitutional exit; the threshold extracts their constitutional voice and locks them out — d is near 1.0, target side. Reform constituencies have moderate power but identity-locked commitment to the constitutional system (they cannot exit it without delegitimizing their own claims to justice within it) — d is near 1.0, target side, with high χ due to identity-lock. The blocking minorities anchor the snare: they have no interest in exiting the constitutional system itself, so the constraint persists indefinitely. Their power is structural, not numerical; the threshold converts their structural position into veto authority.
  *
  * MANDATROPHY ANALYSIS:
- *   The supermajority threshold's founding problem was to prevent tyranny-of-the-majority and ensure constitutional changes reflect deep consensus. The problem is CONTESTED in status: institutional defenders argue it is still live (majorities can still threaten constitutional stability); majorities and excluded groups argue the problem is dead or inverted (constitutional deadlock, not majoritarian excess, is the pathology). The disappearance verdict is WORLD_REARRANGES: if the threshold vanished and were replaced with simple majority or citizens' initiative, constitutional reform would accelerate, blocking minorities would lose veto power, and the system would reorganize around new reform coalitions. This mismatch (founding problem contested-or-dead + world would rearrange) is the canonical mandatrophy signal: the constraint persists not because the founding problem is live and real but because entrenched beneficiaries maintain it for extraction. A piton would show similar metrics but would lack identifiable beneficiaries—the constraint would be mostly performance with distributed costs and no concentrated gain. This constraint has clear beneficiaries (entrenched elites, blocking minorities, inertia guardians), so it is Snare, not Piton. The classification prevents mislabeling the constraint as 'just constitutional tradition' or 'coordination we all depend on.' It names the extraction and identifies who collects it.
+ *   The supermajority threshold presents a classic mandatrophy problem: the founding problem (protection against passionate majorities, safeguarding fundamental norms) is treated as permanently live by the consensus_safeguard reading. But the historical record shows the founding problem was solved and reframed once the identity of the majority changed. Early majorities (slaveholders, Jim Crow beneficiaries, propertied classes) supported the threshold as protective. Later majorities (abolitionists, civil rights movements, redistributionists) sought to break through it. The threshold's original function (tempering the early majorities' arbitrary use of power) became obsolete, but the mechanism persisted as a lock-in on later majorities' reform efforts. This is mandatrophy: the constraint's stated purpose outlived its actual necessity, and the mechanism became available for capture by whoever wanted to block majoritarian change. The snare classification captures this structure: the threshold was built for coordination (deep consensus formation) but now operates as extraction (minority veto), and the defense of it relies on conflating the dead founding problem with the live problem of blocking contemporary majorities.
  */
 
 /* ==========================================================================
@@ -200,54 +255,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    threshold_founding_intent_vs_lock_in_function,
-    'Was the supermajority threshold designed primarily to prevent tyranny-of-the-majority and ensure deep consensus, or was its primary function from the outset to entrench the power of blocking minorities and property holders?',
-    'Historical analysis of constitutional convention debates, recorded votes, and writings of framers regarding the threshold''s stated rationale vs. its actual structural effect on power distribution at the time of adoption. Separate the stated legitimacy claim from the empirical beneficiary distribution.',
-    'If the threshold''s true founding function was lock-in for property-owning minorities (the minoritarian-veto reading), the constraint''s legitimacy narrative collapses and it reclassifies from ''coordination for stability'' to ''coordinated extraction for privilege.'' If genuinely dual-functional, the reading must account for degradation of the consensus-formation function over time (as social composition changed).',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(threshold_founding_intent_vs_lock_in_function, empirical, 'Whether the supermajority threshold was designed as a minoritarian-veto lock-in from inception or descended into that function as demographics shifted.').
-
-omega_variable(
-    consensus_formation_rate_empirical_calibration,
-    'In the actual social system this constraint governs, what consensus-formation rate does the supermajority threshold achieve relative to real democratic consensus? Does it preserve genuine consensus or does it crystallize historical privilege as false consensus?',
-    'Survey and polling data comparing the supermajority threshold (66.7% of legislature) to public support for successful and failed amendments. Track whether amendments that pass the supermajority test are more stable and legitimate than those that fail despite majority support. Compare to sister democracies with lower thresholds to assess whether they show greater instability.',
-    'If the threshold enforces consensus better than lower alternatives (amendments that pass enjoy broad public durability), it retains coordination function. If it blocks amendments with supermajority public support and those amendments, once passed in other jurisdictions, prove stable, then the threshold is extractive — it enforces historical consensus, not present consensus.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(consensus_formation_rate_empirical_calibration, empirical, 'Whether the supermajority threshold calibrates to actual consensus formation or crystallizes historical power distribution as false consensus.').
-
-omega_variable(
-    structural_representation_distortion_role,
-    'To what degree does the supermajority requirement''s blocking power depend on pre-existing structural distortions in legislative representation (geographic overrepresentation, gerrymandering, voter-suppression effects) vs. operating as an independent veto mechanism?',
-    'Decompose blocking coalitions by whether they would retain veto power under a proportional or corrected apportionment. Model amendment passage rates under current representation vs. reapportioned legislatures. Track whether blocking minorities are the same groups that benefit from structural representation distortions.',
-    'If blocking minorities are the same groups that benefit from apportionment distortions, the supermajority threshold is compounding extraction via two mechanisms (over-representation + veto power). Reforming one without the other leaves the system extractive. If the threshold works independently of apportionment distortion, it is a separate lock-in mechanism requiring independent reform.',
+    founding_problem_identification,
+    'Was the supermajority threshold authored to protect against transient majoritarian passion, or to entrench the privileges of the dominant coalition that drafted it?',
+    'Historical analysis of founding documents, debates, and subsequent usage: if the threshold was praised by beneficiaries of the original arrangement (slaveholders, Jim Crow majorities) as protection against amendment, and attacked by reform constituencies as entrenchment, the entrenchment reading is supported. If the threshold was invoked equally to defend reform amendments against blocking minorities, the consensus reading is supported.',
+    'If the founding problem was entrenchment, the snare classification is confirmed. If the founding problem was genuinely protection against passion, the consensus_safeguard reading''s rope or mountain classification would be more appropriate. The mismatch between founding_problem_status (dead in this reading) and the continuing operation of the threshold is the diagnostic: if the problem is dead but the constraint persists, mandatrophy has occurred and the constraint is a snare, not a safeguard.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(structural_representation_distortion_role, empirical, 'Whether the supermajority veto amplifies or operates independently of structural legislative representation distortions.').
+narrative_ontology:omega_variable(founding_problem_identification, empirical, 'Whether the supermajority threshold was designed to protect against passion or to entrench privilege.').
 
 omega_variable(
-    kernel_reading_contestation_space,
-    'This constraint is one reading of the supermajority_threshold kernel. What are the material and epistemic differences between this minoritarian-veto reading and the consensus-safeguard reading and adaptive-gradient reading?',
-    'Each reading instantiates a different ε value, beneficiary set, and classification. This reading: high extraction (0.78), beneficiaries=entrenched elites/blocking minorities, type=snare. The consensus-safeguard reading: low extraction, beneficiaries=all participants in the consensus process, type=rope. The adaptive-gradient reading: medium extraction, beneficiaries=those calibrated to current consensus-rate, type=tangled-rope. The readings differ on what the threshold optimizes for (privilege preservation vs. consensus stability vs. evidence-based calibration) and on what counts as success. The network links show how this reading sits relative to siblings.',
-    'If the minoritarian-veto reading''s ε (0.78) is correct, then the constraint is substantially extractive and should trigger Snare classification with recommendations for threshold reduction. If the consensus-safeguard reading is correct, then extraction is lower and the constraint is coordination. The corpus needs both readings present to allow empirical adjudication of which ε is more descriptively accurate.',
-    confidence_without_resolution(high)
+    blocking_minorities_structural_position,
+    'Do blocking minorities benefit from the supermajority threshold, or is their blocking power incidental to a legitimate consensus-formation mechanism?',
+    'Comparative analysis: do smaller, regionally concentrated, ideologically cohesive minorities in constitutional systems with lower amendment thresholds report loss of veto power and subsequent constitutional reform? Do larger, geographically dispersed majorities in systems with supermajority thresholds report constitutional stagnation while their electoral majorities persist?',
+    'If blocking minorities systematically benefit from supermajority thresholds (gaining veto power they would not have under simple majority rules), the snare classification is confirmed — the threshold is engineered to grant them veto authority. If constitutional reform rates are uncorrelated with amendment thresholds, the consensus reading''s assumption (that thresholds protect against passion, not veto minorities) is supported.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contestation_space, conceptual, 'The kernel contest itself — whether supermajority thresholds are primarily minoritarian-veto locks-in or genuine consensus-safeguards.').
+narrative_ontology:omega_variable(blocking_minorities_structural_position, empirical, 'Whether the supermajority threshold structurally benefits blocking minorities or is incidental to consensus formation.').
 
 omega_variable(
-    identity_lock_mechanism_for_historically_excluded_groups,
-    'For historically excluded groups seeking constitutional recognition, is the identity lock (exit_options: identity_locked) structural (they are legally constitutionally bound and cannot exit the system) or internalized (they have absorbed the belief that they should not exit, or cannot imagine exit, due to how identity has fused with national membership)?',
-    'Distinguish structural exit barriers (legal penalties for secession, citizenship revocation, forcible reincorporation) from internalized barriers (identity fusion with the nation-state, belief in the possibility of eventual inclusion, fear of the unknown outside). Post-constitutional-reform movements in sister democracies provide natural experiments: when group identity shifts from ''locked-in member seeking recognition'' to ''excluded people entitled to self-determination,'' does exit become thinkable? Do constitutional reforms that grant formal recognition reduce identity lock?',
-    'If lock is primarily structural, the constraint operates through legal coercion and constitutional reform is the primary lever for change. If lock is internalized, even constitutional reform may not dissolve exit barriers; the group may require identity-political work and solidaristic movement-building to recover the agency to exit. This affects the classification''s suppression component: internalized suppression persists after the formal barrier is removed.',
+    alternative_consensus_mechanisms,
+    'Is a supermajority threshold the only mechanism that can protect against constitutional amendments driven by temporary passion, or could lower thresholds (simple majority, qualified majority) combined with temporal delays, supermajority ratification in only one chamber, or state-level variation achieve the same protective function?',
+    'Comparative constitutional design and simulation: do other democracies achieve similar stability with different amendment thresholds? Can the consensus-protection function be disaggregated from the veto-granting function?',
+    'If alternative mechanisms can provide consensus protection without supermajority requirements, the supermajority threshold is shown to be unnecessarily restrictive, and the snare classification is strengthened. If no alternative achieves equivalent protection, the consensus reading''s assumption that the supermajority threshold is necessary for wise governance is supported.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_consensus_mechanisms, conceptual, 'Whether supermajority thresholds are the only design capable of consensus formation, or whether the veto-function and consensus-function could be separated.').
+
+omega_variable(
+    majoritarianism_vs_constitutional_stability,
+    'Is the constraint''s core legitimacy anchored in democratic majoritarianism (one-person-one-vote, electoral majority translates to authority) or in constitutional permanence (fundamental law resists change even when majorities demand it)?',
+    'Normative inquiry into foundational commitments: does the constitutional order ground legitimacy in electoral will or in transcendent principles? Different framings produce different readings of the threshold''s legitimacy.',
+    'If legitimacy is grounded in majoritarianism, the threshold is exposed as anti-democratic and the snare classification is supported. If legitimacy is grounded in constitutional permanence, the threshold is protective wisdom and the consensus reading is supported. This is a preference-class omega with no empirical resolution, but it clarifies the normative frame on which the readings rest.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(identity_lock_mechanism_for_historically_excluded_groups, empirical, 'Whether identity lock is structural (legal barrier) or internalized (identity fusion) for historically excluded groups.').
+narrative_ontology:omega_variable(majoritarianism_vs_constitutional_stability, preference, 'Whether the constitutional order''s legitimacy rests on electoral majority rule or on constitutional permanence.').
+
+omega_variable(
+    suppression_internalization,
+    'Is the suppression of majoritarian constitutional voice exercised externally (the threshold''s institutional rules block majorities regardless of their willingness to fight) or partially internalized (majorities have internalized the norm that ''the Constitution can''t be changed'' and stopped trying)?',
+    'Behavioral analysis: do reform constituencies continue to mobilize for constitutional amendment despite repeated blocking, or have they shifted strategy away from amendment? Post-threshold reform patterns in jurisdictions that lowered thresholds (or abolished them) would show whether suppression persists after the mechanism is removed.',
+    'If suppression is structural (external), the measured suppression value (0.71) is accurate and the constraint''s enforcement is dependent on the institutional machinery. If suppression is substantially internalized, the effective suppression is higher than measured, because majorities carry the constraint with them even after institutional exit. The theta parameter for directionality would shift toward higher d for payer seats.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization, empirical, 'Whether suppression of majoritarian voice is structural or internalized.').
 
 
 /* ==========================================================================
@@ -262,36 +317,63 @@ narrative_ontology:interval(supermajority_threshold__minoritarian_veto_reading, 
 
 % Theater ratio over time
 narrative_ontology:measurement(supe_tr_t0, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(supe_tr_t0, observed).
 narrative_ontology:measurement(supe_tr_t5, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 5, 0.28).
-narrative_ontology:measurement(supe_tr_t10, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 10, 0.32).
-narrative_ontology:measurement(supe_tr_t15, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 15, 0.36).
-narrative_ontology:measurement(supe_tr_t20, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 20, 0.39).
-narrative_ontology:measurement(supe_tr_t25, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(supe_tr_t30, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 30, 0.42).
+narrative_ontology:measurement_basis(supe_tr_t5, observed).
+narrative_ontology:measurement(supe_tr_t10, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 10, 0.31).
+narrative_ontology:measurement_basis(supe_tr_t10, observed).
+narrative_ontology:measurement(supe_tr_t15, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 15, 0.35).
+narrative_ontology:measurement_basis(supe_tr_t15, observed).
+narrative_ontology:measurement(supe_tr_t20, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 20, 0.38).
+narrative_ontology:measurement_basis(supe_tr_t20, observed).
+narrative_ontology:measurement(supe_tr_t25, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 25, 0.4).
+narrative_ontology:measurement_basis(supe_tr_t25, observed).
+narrative_ontology:measurement(supe_tr_t30, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 30, 0.41).
+narrative_ontology:measurement_basis(supe_tr_t30, observed).
 narrative_ontology:measurement(supe_tr_t35, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 35, 0.42).
+narrative_ontology:measurement_basis(supe_tr_t35, observed).
 narrative_ontology:measurement(supe_tr_t40, supermajority_threshold__minoritarian_veto_reading, theater_ratio, 40, 0.42).
+narrative_ontology:measurement_basis(supe_tr_t40, observed).
 
 % Extraction over time
 narrative_ontology:measurement(supe_be_t0, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 0, 0.62).
+narrative_ontology:measurement_basis(supe_be_t0, observed).
 narrative_ontology:measurement(supe_be_t5, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(supe_be_t10, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 10, 0.69).
-narrative_ontology:measurement(supe_be_t15, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 15, 0.72).
-narrative_ontology:measurement(supe_be_t20, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 20, 0.75).
+narrative_ontology:measurement_basis(supe_be_t5, observed).
+narrative_ontology:measurement(supe_be_t10, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 10, 0.68).
+narrative_ontology:measurement_basis(supe_be_t10, observed).
+narrative_ontology:measurement(supe_be_t15, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 15, 0.71).
+narrative_ontology:measurement_basis(supe_be_t15, observed).
+narrative_ontology:measurement(supe_be_t20, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 20, 0.74).
+narrative_ontology:measurement_basis(supe_be_t20, observed).
 narrative_ontology:measurement(supe_be_t25, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 25, 0.76).
+narrative_ontology:measurement_basis(supe_be_t25, observed).
 narrative_ontology:measurement(supe_be_t30, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 30, 0.77).
+narrative_ontology:measurement_basis(supe_be_t30, observed).
 narrative_ontology:measurement(supe_be_t35, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 35, 0.78).
+narrative_ontology:measurement_basis(supe_be_t35, observed).
 narrative_ontology:measurement(supe_be_t40, supermajority_threshold__minoritarian_veto_reading, base_extractiveness, 40, 0.78).
+narrative_ontology:measurement_basis(supe_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(supe_su_t0, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 0, 0.7).
-narrative_ontology:measurement(supe_su_t5, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 5, 0.72).
-narrative_ontology:measurement(supe_su_t10, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 10, 0.75).
-narrative_ontology:measurement(supe_su_t15, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 15, 0.77).
-narrative_ontology:measurement(supe_su_t20, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 20, 0.79).
-narrative_ontology:measurement(supe_su_t25, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 25, 0.8).
-narrative_ontology:measurement(supe_su_t30, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 30, 0.81).
-narrative_ontology:measurement(supe_su_t35, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 35, 0.81).
-narrative_ontology:measurement(supe_su_t40, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 40, 0.81).
+narrative_ontology:measurement(supe_su_t0, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement_basis(supe_su_t0, observed).
+narrative_ontology:measurement(supe_su_t5, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 5, 0.61).
+narrative_ontology:measurement_basis(supe_su_t5, observed).
+narrative_ontology:measurement(supe_su_t10, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 10, 0.63).
+narrative_ontology:measurement_basis(supe_su_t10, observed).
+narrative_ontology:measurement(supe_su_t15, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 15, 0.65).
+narrative_ontology:measurement_basis(supe_su_t15, observed).
+narrative_ontology:measurement(supe_su_t20, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 20, 0.67).
+narrative_ontology:measurement_basis(supe_su_t20, observed).
+narrative_ontology:measurement(supe_su_t25, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 25, 0.69).
+narrative_ontology:measurement_basis(supe_su_t25, observed).
+narrative_ontology:measurement(supe_su_t30, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 30, 0.7).
+narrative_ontology:measurement_basis(supe_su_t30, observed).
+narrative_ontology:measurement(supe_su_t35, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 35, 0.71).
+narrative_ontology:measurement_basis(supe_su_t35, observed).
+narrative_ontology:measurement(supe_su_t40, supermajority_threshold__minoritarian_veto_reading, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement_basis(supe_su_t40, observed).
 
 
 /* ==========================================================================
@@ -304,13 +386,13 @@ narrative_ontology:affects_constraint(supermajority_threshold__minoritarian_veto
 narrative_ontology:affects_constraint(supermajority_threshold__minoritarian_veto_reading, supermajority_threshold__adaptive_gradient_reading).
 
 % DUAL FORMULATION NOTE:
-% The supermajority_threshold kernel decomposes into three constraint stories corresponding to three incommensurable readings: (1) minoritarian_veto_reading (this story)—threshold as snare locking in privilege; (2) consensus_safeguard_reading—threshold as rope ensuring deep consensus; (3) adaptive_gradient_reading—threshold as tangled rope whose legitimacy depends on empirical calibration. Each reading has its own ε value, beneficiary/victim structure, and classification. They are linked via network.affects_constraints to enable corpus-level tracking of which reading's metrics more accurately describe the constraint's operation. The minoritarian-veto reading INFLUENCES both siblings by establishing high-extraction baseline; the consensus-safeguard reading COEXISTS_WITH this reading (different parties hold both simultaneously); the adaptive-gradient reading INFLUENCES both by reframing the question from 'is consensus-seeking legitimate?' to 'is the consensus rate correctly calibrated?'
+% The supermajority_threshold kernel decomposes into three structurally distinct constraint stories: the consensus_safeguard reading (threshold as wisdom-protection, low extraction, coordination), the minoritarian_veto_reading (this story: threshold as entrenchment, high extraction, snare), and the adaptive_gradient reading (threshold as calibration problem). These are not three views of one constraint; they are three constraints grounded in three readings of the same constitutional text. ε-invariance requires separate stories because the readings instantiate different beneficiary/victim structures and different extraction profiles. The consensus reading treats all parties as coordination-beneficiaries (stabilizing the constitution). This reading treats status quo beneficiaries and blocking minorities as extractors and contemporary majorities as victims. These are incompatible structural accounts, not compatible measurements of the same constraint. The three readings coexist across different constitutional factions; none forecloses the others within a single party's framework, but this reading influences both siblings by reframing the threshold's legitimacy contest.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(supermajority_threshold__minoritarian_veto_reading, institutional, 0.08).
+constraint_indexing:directionality_override(supermajority_threshold__minoritarian_veto_reading, organized, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

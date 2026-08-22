@@ -4,27 +4,134 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "module_name_override": "constraint_commerce_clause_scope__intermediate_channels",
-    "story_uid": "bf30a24d-e26f-4707-891d-2138fb9d8cc0"
+    "story_uid": "f2311829-c907-4e0e-a06b-1f53db0a1d8c"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.42,
-    "theater_ratio": 0.31,
-    "accessibility_collapse": 0.64,
-    "resistance": 0.61,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "Commerce Clause Intermediate Channels Doctrine",
+    "human_readable": "Commerce Clause Intermediate Channels Reading",
     "topic_domain": "constitutional/federalism",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "federal_authority",
-      "state_authority_in_reserved_domains"
+      "federal_legislative_authority",
+      "national_uniform_commerce_regulation",
+      "state_autonomy_in_local_spheres"
     ],
     "victims": [
-      "local_non_economic_regulation",
-      "conceptual_coherence_of_limiting_principles"
+      "doctrinal_coherence",
+      "state_sovereignty_boundary"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "federal_legislative_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Congress exercises regulatory authority over channels of interstate commerce (highways, shipping routes, telecommunications networks), instrumentalities in use in interstate commerce (railroads, airlines, telecommunications carriers), and intrastate economic activities substantially affecting interstate commerce in the aggregate. Can regulate the economic activity itself but not non-economic local conduct without a jurisdictional nexus (e.g., cannot directly regulate school zone firearms possession without showing the activity substantially affects interstate commerce). Administers the doctrinal line between economic and non-economic activity, and determines what counts as substantially affecting interstate commerce."
+    },
+    {
+      "name": "state_regulatory_authority",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Retains police powers over family law, criminal law, local land use, education, and health/safety in traditional domains. Cannot regulate interstate commerce directly or discriminate against interstate commerce. Experiences federal preemption in economic spheres where Congress acts under Commerce Clause authority. Benefits from the categorical exclusion of non-economic local conduct (family law, criminal procedure, education curriculum) from federal reach, but pays the cost of excluded authority in economic and regulatory matters crossing state lines."
+    },
+    {
+      "name": "national_uniform_commerce_regulation",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The institutional goal of uniform national rules for economic activity crossing state lines. Benefits from the intermediate reading because it permits federal regulation of economic activities substantially affecting interstate commerce while respecting state autonomy over local non-economic conduct. The coordination function of the Commerce Clause doctrine is to enable national coordination on economic issues while preserving federalism space."
+    },
+    {
+      "name": "state_autonomy_in_local_spheres",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "The institutional goal of state authority over matters of local concern not substantially affecting interstate commerce. Benefits from the categorical exclusion of non-economic activity (family law, education, criminal procedure) from federal Commerce Clause reach, preserving federalism structure and subsidiarity."
+    },
+    {
+      "name": "doctrinal_coherence",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The constraint that doctrinal categories must track consistent principles across cases. The intermediate reading requires maintaining an economic/non-economic distinction and an aggregation principle that applies only to economic activity. These distinctions are unstable: whether an activity is economic depends on framing (is education economic? does it substantially affect interstate commerce?); the aggregation principle can be manipulated (low threshold for what counts as substantial effect). The doctrine bears the extraction cost of maintaining these unstable boundaries."
+    },
+    {
+      "name": "state_sovereignty_boundary",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The principle that states retain a domain of sovereignty separate from federal authority. The intermediate reading asserts this boundary exists via categorical limits (non-economic activity is excluded unless jurisdictional element present). But the boundary is manipulable: what counts as substantially affecting interstate commerce, whether aggregation is appropriate, and what degree of attenuation defeats the causal chain are judgment calls that can shift the boundary without changing the stated doctrine."
+    },
+    {
+      "name": "lower_federal_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Apply the intermediate reading in cases challenging federal regulatory authority. Must determine whether an activity is economic, whether it substantially affects interstate commerce, and whether the nexus is too attenuated. Produce the case-by-case body of law that interprets the limiting principles and applies them to novel regulatory claims."
+    },
+    {
+      "name": "supreme_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establishes and revises the intermediate reading through landmark decisions (Wickard, Raich, Morrison, Lopez). Clarifies the boundaries of federal power, refines what counts as economic/non-economic activity, and determines the degree of attenuation that defeats the substantial-effects test. The Court's doctrine-setting authority is the engine through which this reading is maintained and evolved."
+    },
+    {
+      "name": "congress_regulatory_overreach_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State governments, federalism advocates, and civil liberties organizations argue that Congress has used the substantial-effects test to regulate non-economic activity without genuine jurisdictional showing (school zone firearms, Violence Against Women Act gender-motivated crimes, drug possession in hospitals). They are excluded from the rule-making process but participate in litigation and lobbying to constrain the intermediate reading toward narrow originalism."
+    },
+    {
+      "name": "commerce_expansion_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Federal agencies, congressional committees, and civil rights advocates argue that federal regulatory authority should extend further—to non-economic activity with national spillovers (climate, gun violence, discrimination), and that the limiting principles (non-economic carve-out, aggregation limitation, attenuation doctrine) are inconsistent with the functional reach of interstate commerce. They argue for a broader reading but are constrained by Court doctrine."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a doctrinal framework enabling Congress to coordinate uniform national economic regulation while preserving state authority over local non-economic matters. Solves the coordination problem of how to permit national rules for interstate commerce without collapsing federalism: channels and instrumentalities have a direct interstate nexus (low coordination cost); economic activity is regulated if substantially affecting interstate commerce (moderate coordination cost via aggregation principle); non-economic activity is categorically excluded unless a specific jurisdictional element connects it to interstate commerce (preserves federalism boundary).",
+    "transfer_function": "Moves regulatory authority from states to Congress in economic spheres where interstate commerce is affected; preserves state authority in non-economic local spheres. States pay the cost of preemption in economic matters; Congress and national interests benefit from uniform national rules. The transfer is masked as categorical distinction (economic/non-economic) rather than acknowledged as a power allocation.",
+    "absent_voices": "State legislatures excluded from federal rule-making but can lobby and litigate; federalism advocates excluded from doctrinal design; civil rights advocates seeking to expand federal reach are constrained by Court doctrine; non-governmental entities affected by federal regulation (business, labor, environmental groups) participate through litigation and administrative comment but do not set the federal agenda.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the intermediate reading disappeared overnight, the world would rearrange: either Congress would operate under narrow originalism (federal power dramatically shrinks to direct channels and instrumentalities, states regain regulatory space) or under broad effects test (federal power dramatically expands to reach non-economic activity with spillovers, federalism collapses). The intermediate reading is the standing arrangement; its disappearance would force rapid reallocation of regulatory authority.",
+    "founding_problem": "The need to permit Congress to establish uniform national rules for interstate commerce (preventing balkanization, solving coordination failures on tariffs and trade barriers) while preserving federalism structure and state authority over local matters. The Commerce Clause must coordinate national economic regulation without swallowing all state sovereignty.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The intermediate reading is justified by citing Wickard's aggregation principle and the national market for agricultural commodities (1942), and by the necessity of federal coordination on interstate commerce and national economic policy. Critics argue the founding problem has been solved (balkanization is not a live threat given modern markets and the Supremacy Clause) and the doctrine now operates as cover for expansive federal power. Federalism scholars from outside the benefiting parties attest the founding problem was real in 1787–1942 but is now substantially solved; judicial decisions (Lopez, Morrison) from the Court itself suggest the founding problem's salience has declined."
   },
   "interval": {
     "start": 0,
@@ -49,27 +156,27 @@
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.55
+      "value": 0.56
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.57
+      "value": 0.59
     },
     {
       "metric": "base_extractiveness",
       "time_point": 25,
-      "value": 0.58
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.58
+      "value": 0.64
     },
     {
       "metric": "base_extractiveness",
       "time_point": 35,
-      "value": 0.58
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
@@ -79,32 +186,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.12
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.27
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.28
+      "value": 0.18
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.29
+      "value": 0.21
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.3
+      "value": 0.24
     },
     {
       "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.31
+      "value": 0.27
     },
     {
       "metric": "theater_ratio",
@@ -114,12 +221,12 @@
     {
       "metric": "theater_ratio",
       "time_point": 35,
-      "value": 0.31
+      "value": 0.34
     },
     {
       "metric": "theater_ratio",
       "time_point": 40,
-      "value": 0.31
+      "value": 0.28
     },
     {
       "metric": "suppression_requirement",
@@ -139,27 +246,27 @@
     {
       "metric": "suppression_requirement",
       "time_point": 15,
-      "value": 0.41
+      "value": 0.43
     },
     {
       "metric": "suppression_requirement",
       "time_point": 20,
-      "value": 0.42
+      "value": 0.45
     },
     {
       "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.42
+      "value": 0.47
     },
     {
       "metric": "suppression_requirement",
       "time_point": 30,
-      "value": 0.42
+      "value": 0.49
     },
     {
       "metric": "suppression_requirement",
       "time_point": 35,
-      "value": 0.42
+      "value": 0.51
     },
     {
       "metric": "suppression_requirement",
@@ -168,67 +275,56 @@
     }
   ],
   "commentary": {
-    "narrative_context": "The Commerce Clause grants Congress power to 'regulate Commerce . . . among the several States.' This constraint instantiates the intermediate-channels reading: federal power extends to (1) channels of interstate commerce, (2) instrumentalities and persons/things in interstate commerce, and (3) activities substantially affecting interstate commerce, but subject to limiting principles—non-economic activity requires a jurisdictional element, aggregation applies only to economic activity, and attenuation breaks the causal chain. This reading sits between the narrow originalist interpretation (commerce means interstate trade, not intrastate activity) and the broad effects-test reading (nearly all economic activity is reachable if it substantially affects interstate commerce in the aggregate). The intermediate-channels doctrine coordinates federal and state regulatory authority while claiming to preserve meaningful state police power. The measurement series track a constraint that accumulated extractiveness through case law expansion (1950s–1990s) and plateaued once the limiting principles were formally articulated, suggesting the constraint's function shifted from coordination to enforcement of a doctrinally settled but internally unstable boundary.",
+    "narrative_context": "The intermediate-channels reading of the Commerce Clause instantiates a doctrine that Federal power extends to (1) channels of interstate commerce, (2) instrumentalities and persons/things in interstate commerce, and (3) activities substantially affecting interstate commerce, subject to limiting principles: non-economic activity requires a jurisdictional element, aggregation applies only to economic activity, and excessively attenuated causal chains defeat the substantial-effects test. This reading sits between narrow originalism (commerce means direct interstate trade) and broad effects test (commerce includes any economic activity with spillovers). The intermediate reading coordinates national economic regulation with federalism by maintaining categorical boundaries: economic activities are regulable if substantially affecting interstate commerce; non-economic activities are excluded from federal reach unless connected to an interstate channel. These boundaries are doctrinally asserted to be stable limiting principles but are empirically unstable, creating extractive pressure on the principle of state sovereignty and doctrinal coherence.",
     "key_agents": [
-      "Federal authority: sets and administers the doctrine through Article III courts and Article I legislation; benefits from expansive reach within economic sphere; pays cost of maintaining limiting-principle rhetoric.",
-      "State authority (in reserved domains): beneficiary of categorical immunity from federal commerce regulation in family law, criminal law, education; pays cost of constant litigation testing whether state law 'substantially affects' interstate commerce.",
-      "Congress: agenda-setter framing findings of fact about interstate commerce; operates within nominally limiting doctrine but shapes scope through statutory language and empirical argument.",
-      "Supreme Court: interprets and enforces limiting principles; grants deference to congressional factfinding on 'substantially affects' while policing economic/non-economic boundary.",
-      "Local regulators: nominal beneficiaries of police power carve-out but constrained by preemption doctrine whenever local regulation touches interstate commerce.",
-      "Regulated economic actors: payers bearing federal regulatory burden under the 'substantially affects' prong; cannot exit interstate commerce without ceasing business.",
-      "Legal scholars: observers identifying instability in economic/non-economic distinction and manipulability of limiting principles."
+      "Federal legislative authority: sets the agenda, administers the economic/non-economic distinction, determines substantial-effects threshold",
+      "State regulatory authority: constrained by federal preemption in economic spheres, preserved in non-economic domains",
+      "Supreme Court: maintains the doctrine, refines boundaries through landmark decisions",
+      "Lower federal courts: apply limiting principles case-by-case",
+      "Doctrinal coherence and state sovereignty boundary: pay the extraction cost via manipulable distinctions"
     ],
-    "logic_rationale": "Extractiveness measures the federal authority's capacity to regulate behavior that was historically reserved to states, constrained by the three formal limits. At 0.58 (interval end), this reflects: (1) federal power reaches most economic activity with any interstate nexus or aggregate effect (high extractiveness base); (2) three enumerated limiting principles nominally exclude whole categories (non-economic activity without channel nexus, intrastate non-economic activity, attenuated causal chains). The net is moderate extraction—broader than narrow originalism would allow, narrower than broad effects-test would permit. Suppression (0.42) is lower than extraction because the doctrine operates primarily through argument and interpretation, not coercive force—federal courts persuade through constitutional reasoning rather than enforce through police power. Theater (0.31) is moderate: the limiting principles are real doctrinal rules, not pure performance, but their application involves interpretive discretion that federal interpreters control. The measurement trajectory shows extractiveness rising from 1950 (0.42) to 1990 (0.57) as case law broadly construed 'substantially affects,' then plateauing when Lopez (1995) and Morrison (2000) articulated non-economic carve-outs and required jurisdictional elements. The plateau reflects doctrinal settlement—the constraint stabilized at the intermediate level rather than either narrowing (originalist pressure) or broadening further (effects-test trajectory). Theater increased modestly (0.25→0.31) as interpretive work shifted from fact-elaboration to boundary-maintenance, suggesting the constraint's primary function became enforcing limiting principles rather than reaching new economic activity. Suppression remained relatively low because state actors operate within the constitutional system and accept Supreme Court interpretation as legitimate, even when contentious.",
-    "perspectival_gap": "Federal authority perceives the constraint as balanced coordination: it allocates jurisdiction, prevents market fragmentation, and preserves state autonomy in reserved domains—a genuine rope from the federal seat. State authority perceives it as constrained extraction: formal limits are rhetorically real but applied with federal interpretive discretion, and constant litigation testing boundaries imposes costs states cannot avoid. The engine should compute divergence in directionality: federal authority sits near 0.4 (beneficiary with broad reach but limited by its own rules), while state authority sits near 0.6 (target of potential preemption but protected by categorical carve-outs). Local regulators should compute closer to 0.7 (targets of preemption when their rules touch interstate commerce). The intermediate position of this reading should produce per-seat classifications that diverge—federal observers might see rope, state observers might see tangled_rope or snare, while the story-level claim (tangled_rope) reflects the structure's true nature: genuine coordination (national uniformity in commerce) yoked to asymmetric extraction (federal interpretive authority and state cost-bearing).",
-    "directionality_logic": "Federal authority: primary beneficiary—controls the doctrine's scope through interpretation, defines what counts as 'economic,' sets the 'substantially affects' threshold. Directionality near 0.35 (institutional beneficiary with some constraint from limiting principles). State authority: dual-positioned—beneficiary in reserved domains (family, criminal, education, non-economic local regulation), payer in domains where federal commerce power competes (economic regulation, activities with interstate effects). Directionality near 0.50 (symmetric: genuine coordination benefit + real cost-bearing from preemption threat). Congress: agenda-setter, near 0.25 (institutional beneficiary shaping the doctrine's scope through statutory language and findings). Supreme Court: agenda-setter/beneficiary near 0.30 (institutional authority controlling interpretation, limited by precedent). Local regulators: payers, near 0.65 (targets of preemption when regulations touch interstate commerce, no ability to exit). Regulated economic actors: payers, near 0.70 (trapped—cannot avoid interstate commerce without ceasing business; cannot negotiate exit). No directionality overrides are needed; the structural data (beneficiary/victim/exit) derive d values that reflect the true relationship.",
-    "mandatrophy_analysis": "The constraint's founding problem was preserving federalism: preventing states from fragmenting interstate commerce while maintaining meaningful state autonomy. At interval end (t=40, contemporary constitutional doctrine), the founding problem is contested. Federal authority argues the problem is live—states still impose regulations with local effects, and federal commerce power is necessary to maintain national markets. State authority argues the founding problem is dead or at least transformed—modern markets are self-integrating through private ordering and network effects; federal commerce power has expanded beyond preventing state discrimination into affirmative regulation of intrastate activity. Legal scholars identify a third position: the founding problem is dead but the constraint persists as a vehicle for federal authority (piton-adjacent, but more structured). The intermediate-channels reading resolves mandatrophy by maintaining that the constraint solves an active coordination problem (preventing regulatory fragmentation) while accepting that the limiting principles are manipulable (economic/non-economic distinction is contestable). This resolution prevents mislabeling: the constraint is not pure rope (coordination only) because the limiting principles are asymmetrically applied and favor federal interpretation; it is not pure snare (extraction only) because coordination is genuinely necessary and state police power carve-outs are functionally real in most cases. The tangled_rope classification captures: (1) genuine coordination function—uniform national rules for interstate commerce; (2) asymmetric extraction—federal interpretive authority and state cost-bearing from litigation risk; (3) active enforcement—the Supreme Court continually polices boundary lines, and Congress continually tests the perimeter through statute.",
-    "kernel_context": "This constraint is one reading of the contested kernel commerce_clause_scope. Three readings are live: (1) narrow_originalist—commerce means interstate trade crossing state lines, federal power limited to removing state-imposed barriers and ensuring uniform rules for interstate transactions (low extractiveness, federal power strictly limited); (2) intermediate_channels (this reading)—federal power reaches channels, instrumentalities, and substantially-affecting intrastate activity, but non-economic activity requires channel nexus, aggregation applies only to economic activity, attenuation breaks the chain (moderate extractiveness, federal power extensive within economic sphere but checked by limiting principles); (3) broad_effects_test—commerce includes any economic activity that substantially affects interstate commerce in the aggregate, federal power reaches to affirmative regulation of intrastate economic activity (high extractiveness, federal power nearly unlimited within economic sphere). These readings compete across Supreme Court coalitions (Rehnquist Court endorsed intermediate-channels with strong non-economic carve-outs; Warren and post-Rehnquist Courts endorsed broad effects-test; originalist revival has pushed toward narrow reading). The readings coexist as live jurisprudential positions held by different judges, lawmakers, and scholars—none logically forecloses the others within a single committed framework, because the text is genuinely ambiguous and each reading claims fidelity to the Framers' intent."
+    "logic_rationale": "Extractiveness is moderate (0.58) because the intermediate reading permits substantial federal regulatory reach in economic matters (high extraction in that domain) but preserves state authority in non-economic matters (low extraction in that domain). The mean reflects the hybrid structure. Suppression is moderate (0.42) because the limiting principles are judicially enforced (Some suppression of broader federal power) but Congress regularly tests the boundaries and lower courts allow federal jurisdiction to reach far into intrastate economic activity (suppression is not tight). Theater ratio is low-to-moderate (0.28) because the doctrinal machinery has real limiting function but a growing share of the discourse concerns whether the limits are meaningful—whether economic/non-economic distinction actually constrains federal power or merely provides rhetorical cover. The measurement series show extraction and theater rising from time 0 to 35 (expansion of federal reach under broad effects reasoning, increasing skepticism about whether limits bind) and then declining at time 40 (Lopez and Morrison decisions reverse the trend by striking down federal statutes as non-economic activity lacking jurisdictional element, reasserting the limiting principles). This cyclical pattern reflects the tension between doctrinal stability and functional reach: periods of expansion are followed by Court correction, which reasserts the categorical limits and temporarily stabilizes the doctrine.",
+    "directionality_logic": "Federal legislative authority is the agenda-setter: it benefits from expansive Commerce Clause authority and administers the limiting principles. State regulatory authority is the payer: constrained by preemption in economic spheres, benefits from categorical exclusion of non-economic activity. The apparent beneficiaries (national uniform commerce regulation, state autonomy in local spheres) are not agents but vindicated propositions—institutional goals the doctrine claims to serve. The true victims are doctrinal coherence and the state sovereignty boundary: they pay the cost of the unstable economic/non-economic distinction and the manipulable substantial-effects test. From the federal legislative perspective (d near 0.0, beneficiary end), this is a coordination mechanism enabling national economic policy. From the state perspective (d near 1.0 for preempted economic matters, lower d for preserved non-economic authority), the same structure is extractive in economic spheres and autonomy-preserving in others. The engine should compute different types per seat: federal sees rope or tangled-rope coordination; state sees snare in preempted economic matters, rope in preserved non-economic matters.",
+    "perspectival_gap": "The federal legislative seat and the state regulatory seat compute differently because they occupy opposite structural positions relative to the constraint. Congress administers the categorical distinctions and benefits from broad reach in economic matters; states are constrained by preemption in economic matters and preserved in non-economic matters. The intermediate reading's stability depends on maintaining the economic/non-economic distinction as a real limiting principle. If the distinction is stable and binding, the constraint is a genuine coordination mechanism (rope) with federalism safeguards. If the distinction is unstable and manipulable, the constraint is extractive (snare or tangled-rope) with theatrical limiting principles. The measurement series (extraction rising to t=35, then declining) suggests the distinction has been unstable and expanding, followed by Court correction at t=35+ (Lopez, Morrison) that reasserts the limits. This cyclical pattern is itself a signal of the gap: the doctrine oscillates between expansion and correction because the underlying categorical principle cannot hold steady.",
+    "mandatrophy_analysis": "The intermediate reading is susceptible to mandatrophy because the founding problem (enabling national economic regulation while preserving federalism) may be solved or functionally obsolete. The founding problem arose in 1787–1940 when state balkanization of commerce was a live threat and federal coordination was necessary for national markets. By 2026, balkanization is not a live threat (modern supply chains are integrated nationally; the Dormant Commerce Clause and Supremacy Clause already prevent discriminatory state regulation). The categorical limits are maintained theatrically rather than functionally: the Supreme Court occasionally strikes down federal statutes (Lopez, Morrison) to signal that limits exist, but Congress routinely stretches the substantial-effects test and lower courts permit jurisdiction to reach far into intrastate activity. The doctrine has not collapsed (it is still cited and followed) but the functional force of the limiting principles has atrophied. This is the hallmark of mandatrophy: a constraint maintained by periodic performance (Supreme Court decisions reasserting limits) rather than by structural necessity. The intermediate reading persists because the alternative readings (narrow originalism would require wholesale redesign of federal regulatory authority; broad effects test would formally eliminate federalism limits) are politically costly. So the intermediate reading persists by theater—occasional decisions striking down statutes, frequent doctrinal reaffirmations—while functional federal reach continues to expand.",
+    "kernel_context": "This constraint is one reading of the contested kernel commerce_clause_scope. The reading instantiated here is intermediate_channels: federal power extends to (1) channels of interstate commerce, (2) instrumentalities and persons/things in interstate commerce, (3) activities substantially affecting interstate commerce, subject to limiting principles (non-economic activity carve-out, aggregation limit, attenuation doctrine). The sibling readings are narrow_originalist (commerce = direct interstate trade only; federal power limited to removing state barriers) and broad_effects_test (commerce includes any economic activity substantially affecting interstate commerce; aggregation principle eliminates the non-economic carve-out). The intermediate reading stakes a middle ground: it permits federal regulation of most economic activity but asserts categorical limits. These limits are structurally unstable because the economic/non-economic distinction is unstable (is environmental regulation economic? is gun violence prevention?), the aggregation principle is manipulable (what threshold counts as substantial?), and the attenuation doctrine is case-specific (how many steps of causation are too many?). The instability is not a defect of this reading alone—it is inherent to the intermediate position itself, which must maintain a boundary while preventing the boundary from collapsing into broad effects test reasoning."
   },
   "omegas": [
     {
-      "id": "economic_noneconomic_boundary_stability",
-      "question": "Is the distinction between 'economic activity' (reachable under the substantially-affects prong) and 'non-economic activity' (excluded unless channel/instrumentality nexus exists) stable across contexts, or is it historically contingent and subject to redefinition?",
-      "resolution_mechanism": "Historical analysis of how 'economic' has been redefined (e.g., family law as economic in some modern readings, criminal procedure as non-economic in Lopez/Morrison). Comparative analysis across nations with similar federalism structures to determine whether the boundary is universal or jurisdiction-specific.",
-      "impact": "If stable, the limiting principle is real and preserves state police power. If contingent, the boundary is manipulable and federal authority can gradually redraw it—the constraint's effectiveness as a limit depends on how narrowly courts define 'economic.'",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the economic/non-economic distinction is an objective boundary or a contestable classification."
-    },
-    {
-      "id": "substantially_affects_factfinding_deference",
-      "question": "When Congress makes findings that an intrastate activity 'substantially affects' interstate commerce, does the Supreme Court genuinely defer to congressional judgment, or does it apply heightened scrutiny that effectively rejects congressional factfinding when the Court disagrees with the doctrine's breadth?",
-      "resolution_mechanism": "Empirical analysis of Supreme Court doctrine pre- and post-Lopez/Morrison: count cases in which the Court deferred to congressional findings vs. rejected them; measure the intensity of scrutiny applied to factfinding; analyze the text of opinions for language indicating deference or skepticism.",
-      "impact": "If genuine deference, the doctrine is closer to rope (Congress coordinates the reach, Court enforces limiting principles). If heightened scrutiny, the doctrine is closer to snare (the Court retains ultimate interpretive authority and Congress cannot expand federal reach beyond what the Court pre-approves).",
+      "id": "economic_noneconomic_stability",
+      "question": "Is the economic/non-economic distinction a stable limiting principle that reliably constrains federal authority, or is it a manipulable category whose boundaries shift with political pressure and doctrinal framing?",
+      "resolution_mechanism": "Longitudinal analysis of Commerce Clause cases: do courts consistently apply the economic/non-economic distinction, or do they reclassify activities (gun possession, healthcare mandates, environmental protection) as economic when Congress wishes to regulate them?",
+      "impact": "If stable, the intermediate reading is a genuine coordination mechanism with real federalism safeguards; if unstable, the categorical limit is theatrical and the constraint is extractive. Classification would shift from tangled-rope (hybrid coordination/extraction with limits that sometimes bind) to snare (extraction masked as categorical constraint).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether Congressional factfinding on 'substantially affects' is genuinely respected or subject to judicial override."
+      "description": "Whether the economic/non-economic distinction constrains federal power or provides rhetorical cover for expansive authority"
     },
     {
-      "id": "attenuated_causal_chain_principle_application",
-      "question": "How attenuated can the causal chain between an intrastate activity and interstate commerce effects be before federal regulation is foreclosed? The doctrine names 'attenuated causal chains' as a limiting principle but provides no metric for attenuation.",
-      "resolution_mechanism": "Case-law analysis identifying the chain lengths the Supreme Court has accepted (e.g., local gun violence → interstate commerce through some chain) vs. rejected (Brzonkala in Morrison). Determine whether the attenuation principle operates as a genuine limiting rule or serves as post-hoc rationalization for decisions made on other grounds.",
-      "impact": "If attenuation is applied consistently, it is a real limit. If applied inconsistently or as rationalization, it is performative—theater rather than substance. If theater is high, the constraint is closer to piton (limits are asserted but not enforced).",
+      "id": "founding_problem_obsolescence",
+      "question": "Is the founding problem (need for federal coordination on national markets while preserving federalism) still live, or has it been solved by modern markets, the Supremacy Clause, and the Dormant Commerce Clause?",
+      "resolution_mechanism": "Historical analysis: would eliminating the intermediate reading and reverting to narrow originalism cause detectable harms (state balkanization, tariff barriers, coordination failures) that require federal intervention? Or would modern institutional arrangements (integrated national supply chains, administrative coordination, international trade law) handle coordination without federal Commerce Clause authority?",
+      "impact": "If the founding problem is solved, the constraint meets mandatrophy: federal authority persists via periodic theater (Supreme Court decisions reasserting limits) rather than functional necessity. Classification would shift from tangled-rope to piton (degraded coordination maintained by inertia and performance).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the 'attenuated causal chain' limiting principle is applied with consistent standards or serves as post-hoc justification."
+      "description": "Whether the founding problem is still live or has been functionally solved"
     },
     {
-      "id": "federalism_reading_contest",
-      "question": "Does the intermediate-channels reading genuinely represent a mid-point between narrow originalism and broad effects-test, or does it function as a rhetorical frame that resolves in favor of one pole depending on doctrinal pressure?",
-      "resolution_mechanism": "Measure the trajectory of limiting-principle enforcement across different Supreme Court eras: when federal authority pressure is high (1960s–1990s), how strictly are the limits enforced? When federalism revival pressure is high (post-2000), how strictly? If the limits strengthen or weaken with political pressure, the reading is not genuinely intermediate—it is a vehicle for whoever controls the Court.",
-      "impact": "If the reading is genuinely intermediate and limits are consistently enforced, the constraint is tangled_rope (real coordination + real limits, even if asymmetric). If the limits are fluid and serve whoever controls the Court, the constraint is closer to snare (federal authority uses limiting-principle rhetoric as cover while maintaining effective power to override when desired).",
-      "confidence": "medium",
+      "id": "limiting_principle_manipulation",
+      "question": "Can Congress and lower courts manipulate the aggregation principle, attenuation doctrine, and jurisdictional element requirement to reach activities Congress wishes to regulate, while maintaining the appearance that limiting principles constrain federal authority?",
+      "resolution_mechanism": "Case-by-case analysis: does Congress regularly test the limits by making jurisdictional findings and aggregation arguments that courts accept? Or do courts reject federal authority when the limiting principles are genuinely exceeded?",
+      "impact": "If limiting principles are manipulable, the suppression metric understates actual federal reach (the constraint does not suppress federal authority as much as the measurement suggests). The theater ratio understates the performative maintenance of limits. Classification would shift toward snare (effective suppression is lower than measured; the limits are cover rather than constraint).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether intermediate-channels doctrine represents a stable mid-point or a rhetorical frame that resolves toward federal authority when political pressure allows."
+      "description": "Whether limiting principles are reliable constraints or manipulable covers for federal expansion"
     },
     {
-      "id": "committer_frame_sibling_readings",
-      "question": "Do the three readings (narrow_originalist, intermediate_channels, broad_effects_test) represent structurally distinct constraints with different ε values and beneficiary/victim structures, or are they interpretive positions within a single constraint that looks different from different seats?",
-      "resolution_mechanism": "Structural analysis: compute ε for each reading independently. Narrow reading should show low ε (federal power restricted, state autonomy preserved). Broad reading should show high ε (federal power expansive, state autonomy eroded). Intermediate reading should show moderate ε (this story). If ε values diverge significantly, they are separate constraints and should be three separate JSON stories. If they converge, they are readings of one constraint with per-seat divergence.",
-      "impact": "This omega documents the uncertainty in the constraint's decomposition itself: are we authoring one constraint (intermediate_channels) as one reading of a contested kernel, or are we authoring three separate constraints that coexist in the constitutional system?",
+      "id": "sibling_reading_coexistence",
+      "question": "Can the intermediate reading coexist as a live reading of the Commerce Clause kernel, or does it logically collapse into either narrow originalism or broad effects test under sufficient doctrinal pressure?",
+      "resolution_mechanism": "Constitutional theory: if the economic/non-economic distinction is unstable and the aggregation principle is manipulable, does the intermediate reading constitute a stable alternative, or is it a transitional position that eventually bifurcates into its sibling readings?",
+      "impact": "If coexistence is stable, the three readings represent genuinely different constitutional visions that can be held by different judges/scholars. If the intermediate reading is unstable, it may foreclose itself via its own internal contradictions, collapsing into one of the sibling readings (broad effects test) as the categorical limits erode under political pressure and case-by-case manipulation.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the three readings are separate constraints or interpretive positions within one constraint."
+      "description": "Whether the intermediate reading is a stable constitutional position or a transitional stance between the polar readings"
     }
   ],
   "boltzmann": {
@@ -237,67 +333,65 @@
   },
   "network": {
     "affects_constraints": [
-      "dormant_commerce_clause_state_discrimination",
-      "congressional_preemption_doctrine",
-      "state_police_power_limits"
+      "commerce_clause_scope__narrow_originalist",
+      "commerce_clause_scope__broad_effects_test",
+      "dormant_commerce_clause_state_sovereignty",
+      "federal_regulatory_preemption__economic_spheres"
     ],
-    "dual_formulation_note": "The intermediate-channels reading is part of a constraint family with narrow_originalist and broad_effects_test readings. Each reading instantiates a different ε value and beneficiary/victim structure from the same constitutional text. The three readings compete across Supreme Court coalitions and constitutional interpreters. The intermediate reading claims to preserve federalism through limiting principles but operates with moderate federal extractiveness because the limiting principles are manipulable (economic/non-economic boundary, attenuation standard, substantially-affects factfinding deference). The narrow reading would show low extractiveness (federal power strictly limited to interstate trade). The broad reading would show high extractiveness (federal power reaches nearly all economic activity with aggregate effects). Each story carries its own claimed_type and metrics; the engine computes per-seat classifications that will likely diverge from the story-level claim, revealing the constraint's true structure through classification mismatch."
+    "dual_formulation_note": "The commerce_clause_scope kernel has three readings: narrow_originalist (federal power confined to direct interstate trade channels), intermediate_channels (federal power extended to substantial effects on interstate commerce, subject to categorical limits), and broad_effects_test (federal power extended to any economic activity substantially affecting interstate commerce). Each reading instantiates a different constraint with different victim sets, different limiting principles, and different extractiveness. The intermediate reading (this file) is the standing doctrine as of 2026 but is unstable: the functional reach of federal authority continues to expand while categorical limits are periodically reasserted theatrically. The three readings are linked via network.affects_constraints because the Court's doctrine-setting moves between readings affect the constitutional structure available to all three."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.35
-    },
-    {
-      "power_atom": "organized",
-      "d_value": 0.65
+      "d_value": 0.25
     }
   ],
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
+    "reference_frame": "national_economic_coordination_federalism_balance",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
     "reading_relations": [
       {
         "sibling_id": "narrow_originalist",
-        "relation": "influences"
+        "relation": "coexists_with"
       },
       {
         "sibling_id": "broad_effects_test",
-        "relation": "influences"
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "federal_power_limited_by_channels_instrumentalities",
+        "atom": "categorical_limits_bind_federal_commerce_power",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "non_economic_activity_requires_jurisdictional_element",
+        "atom": "federalism_structure_preserved_via_non_economic_carve_out",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "conventional"
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "federalism_balance",
-    "drift_state": {
-      "moment": "contemporary_post_lopez_morrison",
-      "direction": "stable",
-      "magnitude": "substantial",
-      "acknowledged": true
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

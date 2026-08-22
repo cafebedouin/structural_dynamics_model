@@ -2,284 +2,343 @@
   "header": {
     "constraint_id": "acceptable_risk_for_energy__catastrophic_tail_dominant",
     "version": "1.0",
-    "generated_date": "2026-06-11",
+    "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "b7c81dfe-7b7e-4c3a-b917-7b8283e32865"
+    "module_name_override": "constraint_acceptable_risk_for_energy__catastrophic_tail_dominant",
+    "story_uid": "7a9012bb-bc3c-4776-9b3b-1e9ac104d1dd",
+    "created_at": "2026-06-12T14:32:18Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.79,
+    "suppression": 0.71,
     "theater_ratio": 0.42,
-    "accessibility_collapse": 0.71,
-    "resistance": 0.73,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Catastrophic-Tail-Risk Dominance in Energy Policy (Irreversibility Framing)",
-    "topic_domain": "risk_governance/energy_policy/public_safety",
+    "human_readable": "Catastrophic Tail Risk Dominance in Energy Governance",
+    "topic_domain": "energy_policy/risk_assessment/public_safety",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "zero_carbon_transition_advocates",
-      "climate_risk_reduction_constituency"
+      "fossil_fuel_incumbent_operators",
+      "short_term_economic_planners"
     ],
     "victims": [
-      "nuclear_host_communities",
-      "future_generations_waste_custodians",
-      "waste_management_workers"
+      "future_generations",
+      "nuclear_waste_repositories",
+      "site_dependent_populations"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "fossil_fuel_incumbent_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Burn coal, oil, and gas for energy generation under carbon accounting that discounts catastrophic climate tail (centuries of warming acceleration, sea-level rise) through probability weighting. The tail-risk dominant reading challenges this framing by assigning near-irreversible climate impacts a weight that dominates the probability × consequence calculus. Incumbent operators benefit from the suppression of tail-dominant reasoning because it allows continued operation under expected-value justification."
+    },
+    {
+      "name": "nuclear_energy_proponents",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate nuclear power as a low-carbon energy source. Under tail-risk dominant framing, they face a binding constraint: they must adopt the same catastrophic-outcome weighting their opponents apply to climate, which elevates millennial-timescale waste storage failures, reactor meltdowns under aging infrastructure, and terrorism to high-consequence scenarios that probabilistic discounting cannot ethically resolve. This asymmetric application of the reading suppresses nuclear advancement."
+    },
+    {
+      "name": "future_generations",
+      "role": "payer",
+      "agent": false,
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Inherit all energy infrastructure legacies: nuclear waste stored for millennia, climate forcing committed by historical carbon emissions, and the institutional arrangements that decided which risks to discount. They cannot opt out of the energy legacy or the risk profile. The reading elevates them as a constraint-bearing entity because irreversibility places their options under the constraint we impose today."
+    },
+    {
+      "name": "site_dependent_populations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live near energy infrastructure—coal plants, nuclear reactors, waste repositories, solar facilities on formerly agricultural land. They bear the local tail risks: reactor failures, tailings seepage, chronic exposure to air or water pollution. Tail-risk dominant framing argues their exposure to rare but catastrophic events should govern site decisions, overriding expected-value justifications that appear rational at the national scale."
+    },
+    {
+      "name": "regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce energy policy and set acceptable-risk thresholds through cost-benefit analysis, safety standards, and licensing. They are tasked with choosing which risk calculus (tail-dominant vs. expected-value) governs licensing and investment. Tail-risk dominant framing constrains their choice-set by elevating irreversible harms and intergenerational burdens above probabilistic discounting."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide data on climate tail risks (irreversible tipping points, sea-level rise acceleration, ecosystem collapse timescales). They document the high-consequence, low-probability nature of climate catastrophe but typically do NOT advocate that this tail structure should override expected-value analysis. Tail-dominant reading uses their data to constrain energy-policy debates by insisting tail-weight dominance apply symmetrically across all energy sources."
+    },
+    {
+      "name": "short_term_economic_planners",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Optimize energy systems on 10–40 year planning horizons for economic growth and current-generation welfare. Expected-value risk calculus aligns with their time horizon and incentives. Tail-risk dominant reading forces them to adopt longer time horizons and irreversibility-weighted budgets, which constrains near-term optimization and shifts investment away from lowest-immediate-cost sources."
+    },
+    {
+      "name": "waste_repository_operators",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Manage long-term waste storage facilities on thousand-year+ timescales. Tail-dominant reading elevates their operational constraints to the highest policy level, because waste containment failures become the binding tail-risk; yet they are typically excluded from energy-policy debates framed around power generation and consumption. Their irreducible tail-risk exposure is the reading's central object, but they have minimal voice in deciding acceptable-risk frameworks."
+    },
+    {
+      "name": "expected_value_risk_framework_proponents",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Use probability-weighted expected-value analysis to compare energy risks. They represent a rival reading (expected_value_dominant) within the contested kernel. They maintain that tail-dominant framing misallocates risk-aversion and leads to suboptimal energy mix decisions by over-weighting rare events and under-weighting near-certainty climate harm from delayed decarbonization."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared principle for comparing energy risks across time horizons and consequence magnitudes: by shifting dominance from probability-weighted expected value to absolute tail-consequence magnitude (irreversibility, intergenerational burden), the framework coordinates all energy policy around the same catastrophic-outcome weighting structure, creating a common language for regulatory decisions and public discourse.",
+    "transfer_function": "Transfers the burden of risk-bearing from current planners and fossil fuel operators (who benefit from expected-value discounting of tail events) to future generations and site-dependent populations (who inherit the irreversible consequences without choice or exit). It also transfers analytical legitimacy from quantitative cost-benefit frameworks to qualitative irreversibility arguments, shifting where policy authority sits.",
+    "absent_voices": "Engineers and systems planners who would argue for marginal risk-reduction (achieving safety through incremental design improvements) are structurally absent from a reading that prioritizes irreversibility over improvability. Waste-repository operators, who bear the civilization-scale tail risk directly, are excluded from energy-generation policy conversations. Climate economists who emphasize optimal-warming calculations (which incorporate tail risk but still apply expected-value math) are not party to these discussions. Their absence allows the reading to suppress probabilistic trade-off framing entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint—the requirement to weight irreversible, civilization-scale tail risks above expected-value optimization—vanished, energy policy would revert to lowest-immediate-cost and marginal-risk-reduction frameworks. Nuclear would re-enter serious consideration for baseload decarbonization; fossil fuels would be justified on climate-tail grounds (warming is probabilistically distant); waste storage would return to engineering problem status rather than binding constraint. The arrangement of authority, risk language, and policy timescales would reorganize around expected-value dominance.",
+    "founding_problem": "Energy systems require decisions on power generation, storage, and infrastructure on decades-long capital timescales, but the consequences—climate forcing, nuclear waste containment, local ecosystem damage—operate on century-to-millennial scales with low-probability catastrophic modes. Expected-value frameworks discount these rare tail events, leading planners to choose energy systems that appear safe on statistical grounds but impose irreversible burdens on entities (future generations, distant populations) who did not choose them. The founding problem is the mismatch between decision time horizon and consequence time horizon.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate science and long-term waste-storage research from academic and government sources (IPCC, National Academies, geological surveys) confirm the existence of low-probability, high-consequence modes in both climate and nuclear systems. However, whether these low-probability modes should DOMINATE risk calculus (the reading's core claim) is contested. Risk economists and energy planners argue expected-value analysis is the appropriate framework; environmental and indigenous advocates argue irreversibility should override probability weighting. The founding problem itself is acknowledged by all parties; the reading's assertion that tail-dominance is the proper response is NOT corroborated by expected-value proponents, making this a kernel reading split."
   },
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 50
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.52
+      "time_point": 8,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.58
+      "time_point": 16,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.63
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 25,
       "value": 0.66
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.67
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "time_point": 35,
       "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
+      "time_point": 50,
       "value": 0.68
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.52
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.25
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.58
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.3
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.65
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 25,
-      "value": 0.41
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.42
+      "value": 0.69
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.62
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.67
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 10,
+      "time_point": 35,
       "value": 0.71
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.74
+      "time_point": 50,
+      "value": 0.71
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 20,
-      "value": 0.76
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
     },
     {
-      "metric": "suppression_requirement",
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 25,
-      "value": 0.78
+      "value": 0.4
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.79
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.42
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.79
-    }
-  ],
-  "omegas": [
-    {
-      "id": "tail_risk_vs_expected_value_boundary",
-      "question": "Is low-probability high-consequence risk structurally incommensurable with expected-value optimization, or is it a special case of probabilistic weighting where the weight is non-linear in tail severity?",
-      "resolution_mechanism": "Formal decision theory analysis: show whether tail-risk dominance can be derived from a utility function without explicit irreversibility axioms (nonlinear utility), or whether it requires adding irreversibility as an independent criterion outside probabilistic frameworks.",
-      "impact": "If tail-risk is mathematically derivable from utility theory, the constraint's suppression of expected-value framing is Goodhart drift (pursuing one metric while disguising it as a different one). If truly independent, the constraint is a genuine conflict between incommensurable frameworks.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether catastrophic-tail dominance is a distinct decision criterion or a repackaging of nonlinear utility."
-    },
-    {
-      "id": "reading_specific_kernel_ambiguity",
-      "question": "Does the 'acceptable_risk_for_energy' kernel admit three genuinely distinct readings (catastrophic_tail_dominant, expected_value_dominant, comparative_risk_dominant), or are these readings of overlapping but distinct kernels (acceptable_risk? risk_comparison_metric? temporal_discounting_of_harm?)?",
-      "resolution_mechanism": "Examine whether all three readings share the SAME core commitment (what counts as acceptable energy-system risk) and differ only in the metric for acceptability. If they differ in the commitment itself—what acceptability means—they are readings of different kernels.",
-      "impact": "If truly sibling readings of one kernel, the constraint enforces one reading's metric against others that are reading the same kernel differently. If they are readings of different kernels, the suppression is across-kernel contamination and the whole network structure is different.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether catastrophic_tail_dominant is a reading of a single kernel or a distinct kernel."
-    },
-    {
-      "id": "intergenerational_voice_identity_lock",
-      "question": "Is the identity-locking of future-generations as custodians a form of structural suppression (they cannot exit), or an inescapable feature of temporal asymmetry (future people do not exist yet to negotiate terms)?",
-      "resolution_mechanism": "Examine proxy-representation mechanisms in energy policy: do future-generation advocates have decision-making authority equivalent to present parties, or are they perpetual passive victims of present choices? If authority is absent despite proxy advocacy, suppression is real. If authority is structurally impossible, the lock is ontological, not extractive.",
-      "impact": "If suppression is real, the constraint extracts burden from parties who cannot defend themselves. If ontological, the lock is not itself an extraction mechanism, though it enables extraction by making future interests non-negotiable.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether future-generation identity-lock is suppressive or ontological."
-    },
-    {
-      "id": "irreversibility_vs_reversibility_metrics",
-      "question": "What counts as 'irreversible' under this constraint? Is geological timescale (plutonium half-life 24,000 years) categorically irreversible, while climate-carbon-cycle timescales (centuries) reversible? Or are both irreversible from the perspective of human institution-building (centuries >> institutional stability)?",
-      "resolution_mechanism": "Examine how the constraint treats climate impacts (rising sea levels, permafrost thaw, ecosystem collapse): are these treated as reversible-in-principle (if we stop emissions), or irreversible-in-practice (committed warming, lag effects)? Consistency check reveals whether irreversibility is a threshold (yes/no) or a spectrum (timescale of reversal relative to human timescales).",
-      "impact": "If irreversibility is a spectrum, both nuclear and climate carry irreversible components on human timescales, which undermines the categorical distinction the constraint depends on.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether irreversibility is categorical or spectral."
-    },
-    {
-      "id": "suppression_mechanism_internalized_vs_structural",
-      "question": "Is the suppression of expected-value and comparative-risk framing structural (procedural rules, evidentiary standards, gatekeeping) or internalized (advocates of other frames internalize the tail-risk frame as axiomatically more ethical, so suppression persists post-decision)?",
-      "resolution_mechanism": "Test: would expected-value analysts continue to use tail-risk framing if procedural suppression were lifted? Post-suppression behavior: do communities that oppose siting based on tail-risk concerns maintain that framing if the tail-risk constraint is removed?",
-      "impact": "If structural, removing the procedural enforcement would allow alternative frames to re-emerge. If internalized, the constraint's extractive power persists through its victims' own judgment.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Suppression mechanism structural or internalized."
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "Energy policy in jurisdictions facing simultaneous climate urgency and nuclear waste stewardship must choose a risk metric: expected-value optimization (probability × consequence), comparative risk (coal deaths vs. nuclear accidents vs. climate catastrophe), or catastrophic-tail dominance (irreversibility and intergenerational burden override probabilistic discounting). This story instantiates the catastrophic-tail-dominant reading of the contested kernel 'acceptable_risk_for_energy.' Under this reading, nuclear waste becomes a multi-generational injustice regardless of accident probability, and fossil alternatives become less justifiable because carbon emissions are also irreversible on geological timescales—yet the tail-risk frame suppresses the claim that comparable irreversibility should apply to both. The constraint coordinates climate advocacy and intergenerational-ethics language while extracting burden (siting risk, waste stewardship, occupational exposure) from host communities, future generations, and workers who bear the named tail risks without participating in the framing choice.",
+    "narrative_context": "This constraint instantiates one reading of a contested kernel: acceptable_risk_for_energy. The reading asserts that low-probability, high-consequence events (reactor failure, waste containment collapse, climate tipping points) should dominate risk calculus, overriding expected-value optimization and shorter time horizons. Under this reading, nuclear waste storage becomes a binding constraint on energy policy (irreversible, civilization-timescale consequence) and fossil fuels lose justification on climate grounds (tail-risk dominance applies symmetrically). The constraint suppresses the probabilistic trade-off framing that incumbent operators use to justify continued operation. The measured extraction is high (0.68) because the reading restructures which risks are bearable and who bears them: it shifts burden from current planners to future generations and site-dependent populations, a transfer that appears justified by irreversibility but operates as institutional suppression of alternative risk frameworks. The claim (tangled_rope) reflects genuine coordination on irreversibility principles but coupled with asymmetric extraction: fossil operators and short-term planners benefit from the framing's suppression of expected-value defenses, while nuclear proponents and future entities bear the cost of tail-dominance applied to their preferred technologies and interests.",
     "key_agents": [
-      "zero_carbon_transition_advocates: Beneficiary and agenda-setter. Sets the tail-risk criterion; benefits from legitimacy and policy momentum. Uses catastrophic framing to justify nuclear expansion while constraining siting.",
-      "climate_risk_reduction_constituency: Beneficiary. Gains rhetorical parallel between climate and nuclear irreversibility; supports the tail-risk frame because it makes climate urgency sound as permanent as radionuclide hazard.",
-      "nuclear_host_communities: Payer and structurally excluded. Bear siting risk and reputational stigma. The tail-risk frame validates their concerns in rhetoric but not in decision-making—they remain trapped and voiceless.",
-      "future_generations_waste_custodians: Payer, identity-locked by temporal asymmetry. Named as primary victims of irreversibility; cannot participate in the risk trade-off. Inherit 24,000-year stewardship burden.",
-      "waste_management_workers: Payer, constrained exit. Operate repositories and reprocessing plants. Bear occupational exposure and institutional accountability for tail-risk prevention without additional authority or resources.",
-      "energy_policy_authorities: Agenda-setter. Enforce the tail-risk frame through licensing standards, siting procedures, multi-generational impact assessments. Suppress alternative frames (expected-value, comparative-risk) through procedural gatekeeping.",
-      "expected_value_risk_analysts: Excluded and systematically subordinated. Their voice is admitted but their framing is treated as incomplete; tail-risk analysis is required alongside probabilistic assessment and takes decision-precedence.",
-      "comparative_risk_advocates: Excluded and actively suppressed. Arguments that nuclear risk is acceptable relative to coal and climate are labeled reductive or insufficiently precautionary. Their framing is barred from decision-making forums.",
-      "repository_site_neighbors: Payer. Carry localized tail-risk (groundwater contamination, thermal effects, human intrusion). Beneficiaries of precautionary rhetoric; bear all concentrated costs without resources to monitor or relocate.",
-      "climate_scientists: Beneficiary and analytical observer. Use catastrophic-tail language for climate communication. Benefit from the rhetorical parallel without taking direct positions on nuclear-risk assessment."
+      "fossil_fuel_incumbent_operators: Beneficiary; institutional power. Benefit from suppression of tail-dominant framing against their low-tail-risk defense (fossil fuels emit carbon on certainty, not catastrophic tail).",
+      "nuclear_energy_proponents: Payer; powerful but constrained. Bear the cost of tail-dominance applied asymmetrically to nuclear (waste storage becomes binding constraint) while fossil fuels' tail-climate-risk is downplayed in expected-value frameworks.",
+      "future_generations: Payer (non-agent entity); powerless, civilizational horizon. Inherit irreversible consequences—waste storage burden, climate forcing—without choice.",
+      "site_dependent_populations: Payer; moderate power, local scope. Bear local tail risks (reactor failure, tailings seepage) under constraint that rare events dominate.",
+      "regulatory_agencies: Agenda-setter; institutional power. Must choose between risk calculi; tail-dominant reading constrains their legitimate choice-set.",
+      "expected_value_proponents: Observer; institutional power. Represent the rival reading (expected_value_dominant) and maintain that tail-dominance misallocates risk-aversion."
     ],
-    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the constraint transfers decision authority from probabilistic analysts to tail-risk framers, and concentrates burden on host communities and future generations who cannot negotiate the terms. The constraint is not pure extraction—it does coordinate a genuine problem (how to weigh irreversible harms)—but the coordination is asymmetric: beneficiaries include advocates who use the frame instrumentally while victims include future people who have no voice. Suppression is high (0.79) because the constraint's persistence requires active procedural gatekeeping to exclude expected-value and comparative-risk framings from decision forums. Theater is moderate (0.42) and rising: the tail-risk analysis is functionally real (licensing does take multi-generational impacts seriously), but a rising share of suppression effort goes to rhetorical management—framing debates about whether irreversibility is the right metric rather than merely applying it. Accessibility collapse is high (0.71): once host communities understand the tail-risk frame, the framing becomes nearly unavoidable in policy discourse, even when they disagree with it. The measurement series shows extractiveness rising steeply from 0-20 years (as the climate urgency and intergenerational-ethics language solidifies), then plateauing from 20-40 years (the frame is now institutionalized; suppression cost stabilizes). Theater ratio rises throughout, indicating increasing energy devoted to defending the frame against alternative metrics rather than merely applying it.",
-    "perspectival_gap": "The agenda-setter seat (energy policy authorities, zero-carbon advocates) and the payer seats (host communities, future generations) should compute dramatically different types from the same structural data. From the beneficiary side, the constraint solves the genuine problem of comparing irreversible harms and appropriately weights intergenerational burden. From the payer side, the constraint is extractive suppression masquerading as ethical precaution. From the excluded side (expected-value analysts, comparative-risk advocates), the constraint is a category error—treating one metric as axiomatically superior without justifying why other metrics should be abandoned. The engine computes these divergences from the structural asymmetries: beneficiaries have high d→low χ (they shape the frame and reap legitimacy); victims have high d→high χ (they bear concentrated burden); excluded have moderate d reflecting their admission but subordination. The authored claim (tangled_rope) reflects the constraint's genuine coordination function (weighing incomparable harms) while the metrics show its extractive operation (suppression of alternative frames, concentration of burden on voiceless parties).",
-    "directionality_logic": "Zero-carbon advocates and climate researchers benefit from the tail-risk frame: it gives them an irreversibility parallel to climate catastrophe and it constrains nuclear expansion in ways that force energy-system decarbonization through renewables and efficiency rather than nuclear expansion alone. Their directionality is low (beneficiaries, d ~0.2). Nuclear host communities, future-generation custodians, and waste workers are the constraint's named victims: they carry the tail risks without choosing the metric by which those risks became central. Their directionality is high (targets, d ~0.8–0.9). Energy policy authorities sit near the beneficiary end despite officially being neutral: they administer the frame and their institutional authority is reinforced by the complexity of multi-generational impact assessment. Expected-value and comparative-risk analysts are moderately high-d (0.55–0.65) because their framing is systematically subordinated in decision forums—they are not victims in the sense of bearing catastrophic tail risk, but their intellectual standing is extracted by requiring their work while suppressing its conclusions. Repository-site neighbors and waste workers have identity-locked exit (no relocation option, occupational identity fused with nuclear enterprise), which amplifies their effective d toward 0.9.",
-    "mandatrophy_analysis": "The founding problem was genuine: how to weigh low-probability catastrophe against climate catastrophe when both carry irreversible harms on different timescales. The catastrophic-tail-dominant constraint solves this by making irreversibility the primary decision criterion, which initially aligned coordination (everyone agrees nuclear waste is a multi-generational burden) with extraction (the framing enabled nuclear expansion while suppressing siting opposition). Over the 40-year interval, the founding problem has shifted status from 'live' to 'partially dead, partially zombie.' The founding problem of comparing incommensurable catastrophes remains live in climate science and intergenerational ethics. But the operating problem—whether tail-risk framing should dominate policy metrics—has become institutionalized in a way that resembles mandatrophy: the original decision rationale (irreversibility is important) has decoupled from the current operating function (suppressing alternative risk frames to enable nuclear expansion). Host communities that initially invoked the tail-risk frame to oppose siting now find the frame being used to force their acceptance of sites despite their objections. The constraint persists partly because dismantling it would require energy policy authorities to adopt explicit criteria for choosing between risk metrics—a politically difficult conversation that neither beneficiaries nor authorities want to have. The theater ratio's rise reflects this: more effort goes to defending the tail-risk frame as axiomatically ethical, less effort goes to applying it consistently across nuclear and climate decisions.",
-    "kernel_context": "This constraint is one reading of the contested kernel 'acceptable_risk_for_energy.' The kernel asks: what criteria should govern whether an energy technology (nuclear, coal, renewable + battery, etc.) is acceptable for large-scale deployment? Three competing readings have emerged: (1) catastrophic_tail_dominant [THIS STORY]: low-probability high-consequence events dominate risk calculus; irreversibility and intergenerational burden override expected-value optimization. (2) expected_value_dominant (SIBLING): annual expected costs and climate benefits determine acceptability; rare events weighted by probability × consequence product. (3) comparative_risk_dominant (SIBLING): nuclear risk is acceptable only relative to competing energy risks (coal emissions, climate catastrophe); no absolute threshold on tail risk, only relative comparison. These readings are not distinct kernels; they are competing interpretations of what 'acceptable risk' means in energy policy. The catastrophic_tail_dominant reading forecloses the pure expected_value_dominant reading (if irreversibility is axiomatically overriding, then expected value cannot be the decision metric), but it coexists with comparative_risk_dominant (one can believe both that irreversibility matters AND that comparative risk matters—you just apply irreversibility as a veto on options that are worse than alternatives). The catastrophic_tail_dominant reading influences the others by changing what counts as a relevant metric: it makes intergenerational burden a formal component of licensing, which creates pressure on comparative-risk advocates to also account for intergenerational justice, not just contemporaneous risk trade-offs."
+    "logic_rationale": "Extractiveness is high (0.68) because the constraint restructures power over risk discourse: it shifts authority from quantitative cost-benefit analysts (who have institutional power under expected-value framing) to qualitative irreversibility advocates (who have moral authority under tail-dominance framing). This is extraction because it concentrates decision power in the hands of those who benefit from the shift (fossil operators, who use tail-dominance to suppress nuclear; short-term planners, who avoid long-term irreversibility accounting). Suppression is high (0.71) because the constraint's persistence depends on actively excluding expected-value reasoning, not on participant preference—regulators would still use probabilistic trade-offs if not pressured to adopt tail-dominance language. Theater is moderate (0.42) because the reading has genuine content (irreversibility IS a meaningful constraint on risk-bearing), but a growing share of regulatory activity defends the tail-dominance frame against technical challenges rather than addressing substantive waste-storage or climate-tail empirics. The measurement series shows suppression and extractiveness rising as the reading consolidates institutional authority (t=0 to t=50), with theater ratio stabilizing after institutional adoption.",
+    "perspectival_gap": "Fossil fuel operators and short-term planners experience the constraint as a beneficial coordination mechanism (irreversibility is a real principle worthy of dominance); nuclear proponents and waste-repository operators experience it as asymmetric suppression (tail-dominance applied selectively to nuclear, not to climate-tail risks from fossil fuels). The engine should compute this divergence from the structural data: beneficiaries sit near d=0 (low extraction felt), payers near d=1 (high extraction felt). The agenda-setter (regulatory agencies) sits near d=0.5 but faces pressure from both directions: fossil interests use tail-dominance to block nuclear; climate interests use it to demand fossil phase-out. The perspectival gap is the reason the constraint is tangled_rope, not rope: there is real coordination (irreversibility matters), but the application is asymmetric and enforced.",
+    "directionality_logic": "Fossil operators benefit (d near 0.0) because tail-dominance suppresses the expected-value defense for nuclear without applying the same weight to climate tails from continued fossil use. Nuclear proponents pay (d near 1.0) because they must adopt the tail-dominance frame that makes waste storage a civilization-binding constraint. Future generations have no exit (d=1.0, trapped, identity_locked) because they inherit the irreversible consequences of today's choices. Site-dependent populations are constrained payers (d=0.6–0.7) because they can relocate but rarely do, so they bear local tail risks under the constraint's dominance. Regulatory agencies sit near d=0.5 but face asymmetric pressure: fossil interests benefit from tail-dominance framing, creating institutional drag that makes the constraint feel like extraction when authorities try to use expected-value analysis.",
+    "mandatrophy_analysis": "The founding problem is live: energy systems do require decisions on decades-long timescales with century-to-millennial consequences, and low-probability catastrophic modes exist in both climate and nuclear systems. The reading's response—elevating tail-dominance above expected-value optimization—is contested but coherent. The mandatrophy question is whether the reading's application is symmetric: does it apply tail-dominance to all energy sources equally, or does it suppress expected-value defenses for nuclear while leaving fossil-fuel climate risks under probabilistic discounting? The asymmetry is the tangled_rope signature: genuine coordination (irreversibility matters) coupled with asymmetric extraction (selective application favors incumbents). A rope reading would apply tail-dominance uniformly; a snare reading would suppress all probabilistic reasoning without coordinate function. This reading sits in the middle: it coordinates on irreversibility principle but extracts by controlling which sources the principle applies to.",
+    "kernel_context": "This constraint instantiates the catastrophic_tail_dominant reading of the contested kernel acceptable_risk_for_energy. The kernel contains three readings: (1) catastrophic_tail_dominant (this one): low-probability high-consequence events dominate, irreversibility outweighs probability; (2) expected_value_dominant: annual expected costs and climate benefits determine acceptability, probability × consequence; (3) comparative_risk_dominant: nuclear acceptable only relative to competing energy sources, no absolute threshold. The readings differ structurally in which risk calculus governs policy: tail-dominance treats climate and waste as civilization-binding constraints, expected-value treats them as probabilistically discounted costs, comparative-risk treats them as trade-offs between competing sources. The catastrophic_tail_dominant reading forecloses expected-value reasoning within its own framework (a commitment to tail-dominance cannot simultaneously use expected-value as the decision rule) but coexists with comparative-risk (a regulator might accept nuclear as the least-tail-risk option under tail-dominance framing). The reading's core axiom is that irreversibility and intergenerational burden override expected-value optimization; this axiom distinguishes it from the other two and grounds its structural authority."
   },
+  "omegas": [
+    {
+      "id": "tail_dominance_asymmetry",
+      "question": "Is tail-risk dominance applied symmetrically across all energy sources, or does the reading suppress expected-value defenses for nuclear while leaving fossil-fuel climate risks under probabilistic discounting?",
+      "resolution_mechanism": "Audit regulatory decisions and policy documents to measure how frequently tail-dominance framing is invoked against nuclear vs. fossil sources; compare the distribution of irreversibility language across domains.",
+      "impact": "If asymmetric (tail-dominance for nuclear, expected-value for fossil), the constraint is extractive and the reading's beneficiary structure holds. If symmetric, the constraint is more purely coordinative on irreversibility principle. Asymmetry proves the 'extraction via selective framing' mechanism; symmetry revises classification upward toward rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tail-dominance is a universal principle or a selective framing device."
+    },
+    {
+      "id": "waste_repository_time_horizon_fit",
+      "question": "Is the civilizational time-horizon assumption for waste repositories justified by actual containment science, or does it overstate the tail-risk magnitude and understate engineering capacity to maintain containment?",
+      "resolution_mechanism": "Review geological and engineering literature on waste containment timescales; compare repository performance data with failure-mode probability distributions over thousand-year horizons.",
+      "impact": "If the civilizational horizon is overstated, tail-dominance becomes unjustified and the constraint reclassifies toward snare (pure suppression of alternatives). If justified, the constraint's extractiveness is lower and the coordination logic is stronger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether waste storage risk justifies civilization-scale irreversibility claims."
+    },
+    {
+      "id": "kernel_reading_incommensurability",
+      "question": "Are the three readings of the acceptable_risk_for_energy kernel genuinely incommensurable (logically incompatible at the framework level), or do they represent different weightings of the same underlying risk metrics?",
+      "resolution_mechanism": "Formal analysis of whether each reading's core premise (tail-dominance, expected-value optimization, comparative trade-off) logically entails the rejection of the others' premises, or whether a single framework could in principle hold all three simultaneously.",
+      "impact": "If genuinely incommensurable, the readings constitute separate constraint stories with separate stakeholder structures (no family decomposition needed — they are alternative commitments). If compatible, they form a constraint family where the kernel is a single dispute over weighting, and each story should declare its weight-choice explicitly.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the kernel readings are logically incompatible or differently-weighted variants of the same calculus."
+    },
+    {
+      "id": "intergenerational_burden_bearer_identity",
+      "question": "Who bears the intergenerational burden: future generations as an abstract entity (non-agent, per the schema), or specific institutional actors (states, corporations, waste-repository operators) who are stewards for future generations and can be held accountable today?",
+      "resolution_mechanism": "Examine whether the reading's advocacy focuses on abstract moral burdens (treating future generations as a non-agent principal) or on concrete institutional stewardship obligations and liability structures.",
+      "impact": "If abstract, the reading lacks a clear payer seat and the constraint operates as deontological suppression (no identifiable agent bears the cost today). If institutional, the constraint's payer structure clarifies and the extraction mechanism becomes concrete. This affects whether the constraint is snare (pure suppression) or tangled_rope (extraction via institutional responsibility).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether intergenerational burden names a non-agent principle or concrete institutional accountability."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "global_infrastructure",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.14
   },
   "network": {
     "affects_constraints": [
       "acceptable_risk_for_energy__expected_value_dominant",
       "acceptable_risk_for_energy__comparative_risk_dominant",
-      "nuclear_waste_repository_siting",
-      "climate_catastrophe_risk_weighting"
+      "nuclear_waste_storage_permanence",
+      "climate_tail_risk_acknowledgment"
     ],
-    "dual_formulation_note": "This constraint (catastrophic_tail_dominant) is one reading of the kernel 'acceptable_risk_for_energy' alongside expected_value_dominant and comparative_risk_dominant. The three readings differ in what criterion determines acceptability: irreversibility and intergenerational burden (this reading), probabilistic expected value (sibling 1), or comparative risk relative to alternatives (sibling 2). All three readings address the same institutional problem (how to choose energy technologies in the face of multiple irreducible uncertainties) but arrive at incommensurable conclusions about what trade-offs are permissible. The catastrophic_tail_dominant reading structurally influences the other two by changing what counts as relevant evidence and by shifting procedural burden (now multi-generational impact assessment is mandatory). See acceptable_risk_for_energy__expected_value_dominant and acceptable_risk_for_energy__comparative_risk_dominant for the sibling readings and their respective directionality and extraction profiles."
+    "dual_formulation_note": "This constraint is one of three readings of the contested kernel acceptable_risk_for_energy. The catastrophic_tail_dominant reading elevates irreversibility and intergenerational burden above expected-value optimization. The sibling readings (expected_value_dominant, comparative_risk_dominant) are separate constraint stories with their own ε values, stakeholder structures, and measurements. All three affect each other through the shared kernel and policy-authority competition. The network edges point to downstream constraints that depend on the tail-dominance vs. expected-value choice: nuclear_waste_storage_permanence presupposes tail-dominance framing, while climate_tail_risk_acknowledgment is a vindicated proposition of this reading but contested in expected-value readings."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 1.0
+    }
+  ],
+  "gain_flow": "fossil_fuel_incumbent_operators",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "distributed",
     "authority_grounding": "distributed",
     "interpretation_layer_present": false,
+    "reference_frame": "irreversibility_primacy_framework",
+    "drift_state": {
+      "moment": "post_climate_tipping_point_awareness_2020s",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
     "reading_relations": [
       {
-        "sibling_id": "acceptable_risk_for_energy__expected_value_dominant",
+        "sibling_id": "expected_value_dominant",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "acceptable_risk_for_energy__comparative_risk_dominant",
+        "sibling_id": "comparative_risk_dominant",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "irreversibility_axiomatically_overrides_probability",
+        "atom": "irreversibility_dominates_probability",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "intergenerational_burden_principle",
+        "atom": "intergenerational_consent_constraint",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       }
     ]
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerless",
-      "d_value": 0.88
-    },
-    {
-      "power_atom": "moderate",
-      "d_value": 0.62
-    }
-  ],
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

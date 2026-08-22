@@ -2,28 +2,105 @@
   "header": {
     "constraint_id": "treaty_authority_cession__crown_cession_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-19",
     "status": "ACTIVE",
-    "story_uid": "6ddc4d93-50d9-4197-805c-5ed0aa0b4da9"
+    "story_uid": "28e6f5aa-27d1-471c-8a8e-dcb0258b119b",
+    "created_at": "2026-06-19T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.79,
-    "suppression": 0.71,
+    "extractiveness": 0.87,
+    "suppression": 0.79,
     "theater_ratio": 0.42,
-    "accessibility_collapse": 0.68,
-    "resistance": 0.58,
-    "claimed_type": "mountain",
-    "human_readable": "Treaty Cession of Sovereignty and Land (Crown Reading)",
-    "topic_domain": "constitutional/colonial/indigenous",
-    "emerges_naturally": true,
+    "accessibility_collapse": 0.72,
+    "resistance": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Treaty Authority Cession — Crown Sovereignty Reading",
+    "topic_domain": "constitutional/indigenous_rights/colonial_history",
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "british_crown",
-      "settler_colonists"
+      "crown_authority",
+      "settler_colonial_administration"
     ],
     "victims": [
-      "maori_iwi_chiefs",
-      "maori_iwi_populations"
+      "maori_iwi_leadership",
+      "maori_people"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "crown_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "The Crown administers the interpretation that 'kāwanatanga' in Article Two of the Treaty of Waitangi (1840) transfers full sovereignty and legislative supremacy to the British Crown. Enforces this reading through land courts, legislation, and constitutional doctrine. Sets and modifies the legal framework interpreting the treaty. Controls the official English-language version as the authoritative text."
+    },
+    {
+      "name": "settler_colonial_administration",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Land administration, legislative authority, and economic policy benefit from the reading that the Crown obtained absolute cession of territory and sovereignty. Land alienation legitimacy, absence of requirement for ongoing Māori consent to major policy, and uncontested legislative supremacy all flow from this reading's establishment."
+    },
+    {
+      "name": "maori_iwi_leadership",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Signed the Māori-language version of the treaty believing they were ceding 'kāwanatanga' (governance/authority) while retaining 'tino rangatiratanga' (absolute chieftainship/control of property) over their lands and taonga. Face a legal and constitutional framework that declares their understanding invalid and subordinates their customary authority to Crown sovereignty. Cannot exit the constraint without rejecting foundational Treaty-era agreements or abandoning their people's territorial claims."
+    },
+    {
+      "name": "maori_people",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Governed by legislation enacted without their consent under the Crown's claimed absolute legislative supremacy. Land alienated and sold under the reading that the Crown obtained full cession. Subject to policies (health, education, criminal justice) designed and implemented unilaterally by Crown authorities. Cannot withdraw from the constraint except through systemic constitutional change, which the constraint itself structurally impedes."
+    },
+    {
+      "name": "treaty_translation_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Linguistic analysis shows 'kāwanatanga' in 1840 Māori usage did not mean absolute sovereignty but rather governance authority and authority to make law — 'tino rangatiratanga' was the phrase used to mean full, absolute control. Historians and treaty scholars document the divergence between English and Māori texts and the chiefs' stated understanding of what they were signing."
+    },
+    {
+      "name": "contra_proferentem_doctrine",
+      "role": "excluded",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A legal principle (contra proferentem) holds that ambiguities in a contract are resolved against the drafter. If applied to the Treaty, ambiguities between the English and Māori texts would be read in favor of the Māori signatories (who did not draft the English version). This doctrine is structurally excluded from the treaty-interpretation framework that privileges the Crown's reading."
+    },
+    {
+      "name": "historical_scholarship",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Substantial academic work from outside the Crown's benefiting parties documents what chiefs understood they were signing, the linguistic divergence between texts, and the unequal negotiating power at the treaty table. This evidence is present in the discourse but structurally subordinated to the official Crown reading in constitutional and land law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The treaty reading creates a unified legal framework for property, governance, and sovereignty under a single Crown authority. This solves the coordination problem of establishing consistent law, property rights, and administration over a territory where previously multiple iwi held distributed authority. From the Crown's perspective, this is genuine coordination: one sovereign, one property law, predictable enforcement.",
+    "transfer_function": "Moves land title (from iwi to Crown and then to settlers), legislative authority (from distributed iwi/chief decision-making to Crown parliament), and customary decision-making power (from iwi to Crown courts and bureaucracy). The transfer is presented as consensual cession; the mechanism is the Crown's unilateral interpretation that 'kāwanatanga' meant absolute sovereignty, not shared governance or retained rangatiratanga.",
+    "absent_voices": "The voices of the Māori signatories—what they believed they understood the treaty to mean—are structurally excluded from the authoritative legal interpretation that creates this constraint. The Treaty Grounds themselves in 1840 recorded chiefs' statements that they were NOT ceding lands absolutely and that the Crown's authority was to be shared. These voices are present in historical records and contemporary Māori oral traditions but structurally subordinated in the legal framework (land courts, constitutional doctrine) that defines and enforces the Crown's reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the Crown conceded that the treaty did not cede absolute sovereignty—if the English text did not control, or 'kāwanatanga' meant shared governance rather than absolute sovereignty, or the Māori text's retained 'tino rangatiratanga' meant what the signatories understood it to mean—the entire structure of New Zealand property law, legislative supremacy, and constitutional authority would require wholesale renegotiation. Land titles, Crown land revenues, the legal basis for unilateral legislation affecting Māori, and the constitutional structure that subordinates Māori authority would all be thrown into fundamental uncertainty.",
+    "founding_problem": "The British colonial administration required unambiguous legal sovereignty over the territory (to exercise unified authority), the legal ability to alienate land to settlers (to fund the colony and attract immigration), and uncontested legislative supremacy (to impose British law and institutions). The treaty, if read as creating a partnership with retained Māori authority, would leave all three in doubt. The Crown's reading solved all three by declaring the treaty a complete cession of sovereignty and land to the Crown.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The Crown's own historical records (official correspondence, legislative debates, settler policy documents) from 1840 onward attest that colonial administrators believed they needed absolute sovereignty and land alienation rights to pursue settler colonization. By contrast, the signatories' understanding is attested in: (1) oral traditions and speeches recorded at the time (preserved by iwi), (2) contemporary letters from Māori leaders explicitly stating they were NOT ceding lands absolutely, (3) missionary accounts documenting chiefs' understanding, and (4) modern scholarship from historians, linguists, and legal scholars outside the benefiting parties. The founding problem (establishing unambiguous Crown sovereignty to enable administration and land settlement) is SOLVED as of 1890—Crown sovereignty is fully institutionalized, land alienation has transferred most arable land, and legislators operate under unchallenged supremacy. No administrator argues the Crown still needs to enforce the reading to maintain governance. The constraint persists not because the founding problem is live but because relinquishing the reading would require returning land, acknowledging Māori authority, and restructuring constitutional relationships—costs the beneficiaries of the current system refuse."
   },
   "interval": {
     "start": 1840,
@@ -33,62 +110,32 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1840,
-      "value": 0.65
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1880,
-      "value": 0.72
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1920,
+      "time_point": 1875,
       "value": 0.76
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1960,
-      "value": 0.78
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.79
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1840,
-      "value": 0.08
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1880,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 1920,
-      "value": 0.22
+      "value": 0.82
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1960,
-      "value": 0.32
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.85
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.4
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.84
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 2026,
-      "value": 0.42
+      "value": 0.87
     },
     {
       "metric": "suppression_requirement",
@@ -97,137 +144,149 @@
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1880,
-      "value": 0.63
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1920,
+      "time_point": 1875,
       "value": 0.68
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1960,
-      "value": 0.7
+      "time_point": 1920,
+      "value": 0.74
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.71
+      "time_point": 1975,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.77
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2026,
-      "value": 0.71
+      "value": 0.79
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1840,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1875,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.42
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint story instantiates ONE reading of the Treaty of Waitangi—the Crown cession reading, adopted in English law and Crown doctrine since 1840. In this reading, the English text controls interpretation; 'kāwanatanga' (governance/chieftainship in the Māori text) is translated and read as 'sovereignty'—a complete and permanent transfer of all legislative and executive authority to the British Crown. The Treaty is thus a completed legal act of cession, after which Māori iwi hold no independent authority; their land rights are subject to Crown alienation mechanisms; their people are subject to Crown law. This reading has been the official doctrine of the New Zealand Crown since 1840 and remains embedded in courts, legislation, and institutional practice. However, this reading competes with alternative readings (the Māori-text-controlled rangatiratanga retention reading, and the retrospective snare-exposure reading that treats the textual divergence itself as an extraction mechanism). This story ONLY models the Crown cession reading as a clean, ε-invariant constraint; it does not arbitrate the contest. The alternative readings are separate constraint stories linked via the network.",
+    "narrative_context": "The Treaty of Waitangi (1840) exists in two texts: an English version and a Māori-language version. This constraint story instantiates the Crown's reading: that the English text controls, 'kāwanatanga' (appearing in the Māori text) equals full sovereignty, and the treaty completed the legal cession of Aotearoa New Zealand to the British Crown. Under this reading, the Crown's legislative authority is absolute, Māori customary authority is subordinate or extinguished, and land alienation by the Crown is legitimate. This is ONE READING of the contested Treaty kernel. The sibling readings—the rangatiratanga retention reading and the retrospective snare exposure reading—instantiate different understandings of what the treaty means, what the signatories understood, and what text controls. This story generates ONLY the Crown cession reading as a structurally clean constraint; the measurement series and commentary explain why the Crown's reading, though textually grounded, operates as an extractive constraint when measured against what the Māori signatories understood and what contemporary scholarship attests.",
     "key_agents": [
-      "british_crown: institutional agenda-setter claiming absolute sovereignty over the territory and its peoples; collects political authority and institutional rents; maintains the reading through courts and precedent",
-      "settler_colonists: institutional beneficiary; acquire land, status, and wealth through Crown-validated property regimes; compounds over generations; never exit",
-      "maori_iwi_chiefs: powerful but trapped payers; signed the document believing in a different arrangement; lost political authority and faced land alienation; exit options limited to resistance or advocacy within Crown institutions",
-      "maori_iwi_populations: powerless trapped payers; carry multi-generational land loss and institutional exclusion; never parties to the original negotiation; exit via migration or cultural persistence outside Crown authority",
-      "rival_sovereignty_claimants: excluded but organized; legal scholars and Māori advocates arguing the Māori text means rangatiratanga was retained; their reading is systematically barred from official doctrine",
-      "crown_courts_and_judges: institutional agenda-setter with secondary observer role; interpret the Treaty through Crown legal framework; constrained from overturning the Crown's foundational reading; latterly acknowledge ambiguity but maintain jurisdictional supremacy",
-      "international_arbiters: analytical observers; UN human rights bodies and global legal scholars question the reading but lack enforcement power"
+      "Crown authority: Defines and enforces the English-text reading; controls the legal framework interpreting the treaty; sets agenda on what 'kāwanatanga' means",
+      "Settler colonial administration: Benefits from the reading that legitimizes land alienation, unilateral legislation, and legislative supremacy",
+      "Māori iwi leadership: Identity-locked bearers of customary claims that the Crown reading declares invalid; cannot exit without abandoning territorial foundation claims",
+      "Māori people: Powerless subjects of legislation enacted without their consent under the claimed absolute sovereignty",
+      "Treaty translation community / historians: Observers who document the textual divergence and the chiefs' stated understanding (evidence structurally excluded from the authoritative legal reading)"
     ],
-    "logic_rationale": "The extraction score (0.79) reflects that the constraint transfers enormous value—political authority, land, legislative power, taxation revenue—from Māori to Crown/settlers, decoupled from any service cost that justifies the transfer. The suppression score (0.71) reflects sustained enforcement machinery: land alienation laws (Native Land Court, Crown purchase mechanisms), exclusion of rival readings from courts, legislative override of Māori interests, and the constraint's embedding in institutional practice across 186 years. Theater ratio (0.42) rises over time as the original justifications (preventing French colonization, preventing intertribal warfare) become moot, yet the Crown increasingly invokes symbolic recognition and consultation (the Treaty Settlements process, the Waitangi Tribunal) while maintaining the foundational cession claim—the machinery of recognition performs respect while enforcement persists. Accessibility collapse (0.68) is moderate: the constraint was presented in 1840 as a treaty (suggesting mutual agreement and exit options), not unilateral conquest, yet the power imbalance was enormous and chiefs signing the Māori text did not understand they were signing away sovereignty under the English reading. Resistance (0.58) reflects substantial historical and ongoing Māori resistance: armed uprisings (1860s-1870s), political advocacy, land-rights movements, and contemporary legal challenges—real resistance that the constraint must continuously suppress. The measurement series tracks 186 years: extractiveness rises as land alienation mechanisms intensify and legislative override becomes routine (1840-1990), stabilizing as contestation rises (1990-2026). Theater ratio rises sharply in the late 20th century as Crown recognition and consultation mechanisms proliferate alongside the foundational cession claim's remaining unchallenged.",
-    "perspectival_gap": "The Crown and settler seats experience this constraint as settled law, legitimate authority, and the foundation of prosperity and order. The Māori payer seats experience it as a reading that conflicts with what the Māori text was understood to mean, justified by an English-text-priority rule imposed unilaterally, and enforced through mechanisms (land alienation, legislative override, court exclusion of rival readings) that benefit one party continuously. The judges sit between: they interpret within the Crown's framework (cannot rule the Crown's authority void) but increasingly acknowledge the textual ambiguity. The Crown's framing as a natural law ('this is simply what the Treaty accomplished') derives from the long institutional embedding and the court system's structural inability to overturn it. The alternative readings remain excluded from official doctrine but rise in salience as Māori advocacy and international human rights scrutiny increase. The engine should compute very different effective extraction (χ) for the Crown (near-zero, as the constraint subsidizes Crown authority) versus Māori payers (very high, as the constraint extracts from them), driven by the directionality (d) computation from beneficiary/victim and exit-option asymmetries.",
-    "directionality_logic": "The Crown (institutional, arbitrage exit) is the structural beneficiary—the constraint transfers authority and rents to it; d near 0.0 (full beneficiary). Settler colonists (institutional, arbitrage exit) benefit continuously; d near 0.1 (strong beneficiary, though not the agenda-setter). Māori iwi chiefs (powerful but identity-locked to chiefly authority they thought they retained) are victims—they believed they were ceding governance but not sovereignty, and the Crown reading extinguishes their political role; d near 0.95 (strong target). Māori iwi populations (powerless, trapped by law and land dependency) are victims bearing multi-generational extraction; d near 1.0 (full target). Crown judges (institutional, constrained exit) sit near 0.5 (symmetric)—they defend the Crown reading but are constrained by the framework they operate within. International observers (analytical exit) sit at 0.5 (analytical-neutral). Rival sovereignty claimants (organized, trapped) are excluded but would be targets if admitted (d would be ~0.85, as they challenge the extraction claim itself). The directionality overrides should not be necessary if the beneficiary/victim declarations and exit options are correctly authored.",
-    "mandatrophy_analysis": "The founding problem (preventing French colonization, unifying legal systems, preventing intertribal conflict) is DEAD in 2026. French colonization was never a material threat post-1840; legal unification has been achieved; the constraint's justification has evaporated. Yet the constraint persists with high extractiveness (0.79) and increasing theater (0.42 in 2026 vs 0.08 in 1840). This is the classic mandatrophy signature: a constraint whose mandate has outlived its function, maintained by the beneficiary institutions through doctrine, precedent, and suppression of alternative readings. The Crown Settlements process (Treaty Settlements, Waitangi Tribunal) and symbolic recognition (Māori language revival support, consultation processes) are the theater—they perform respect for the Treaty while the foundational cession reading remains enforced and extraction continues. The constraint is NOT a piton (theater ratio is only 0.42, not the 0.6+ that would indicate mostly-performative maintenance), nor is it a rope (extraction is too high and asymmetric, beneficiaries are concentrated). It reads as TANGLED ROPE at risk of classification drift toward SNARE as contestation rises and the founding problem's death becomes undeniable.",
-    "kernel_context": "This constraint instantiates ONE READING of the kernel: 'the Treaty of Waitangi's authority and scope.' The kernel is a written historical document (the Treaty, 1840) that exists in TWO LANGUAGE VERSIONS (English and Māori) with materially different vocabulary for the sovereignty transfer. This reading—the CROWN CESSION READING—adopts the English text as controlling, reads 'kāwanatanga' as 'sovereignty' (complete transfer), and treats the Treaty as a completed legal cession. SIBLING READINGS (other constraint stories, not this one): (1) rangatiratanga_retention_reading: reads the Māori text as controlling, 'kāwanatanga' as limited governance, 'tino rangatiratanga' as retained chiefly authority, and the Treaty as establishing a partnership requiring ongoing Māori consent. (2) retrospective_snare_exposure: treats the textual divergence ITSELF as an extraction mechanism—chiefs signing the Māori text could not have assented to the English text's sovereignty claim; the divergence is a mechanism of deception, and the constraint itself becomes visible as pure snare (the extraction IS the textual ambiguity enforced through courts and precedent). Each reading produces a different ε and different classification; they are NOT measured perspectives on a single constraint but DISTINCT constraints grounded in different kernels of the same historical text."
+    "logic_rationale": "Extractiveness is high (0.87 at 2026) and rose substantially from 1840 (0.68) because the Crown reading's enforcement machinery intensified: early enforcement relied partly on the chiefs' negotiated acceptance and continued diplomatic relations; by the late 19th century, the constraint operated through unilateral land confiscation, legislative prohibition on Māori customary authority, and constitutional doctrine that declared the Crown's reading canonically true. Suppression rose from 0.55 to 0.79 because suppression of Māori customary law, Māori language use, Māori authority in policy-making, and Māori voice in treaty interpretation was not present at the signing but became systematically institutionalized. Theater rose from 0.15 to 0.42 because early enforcement (land purchase, legislation) had a genuine coordination function for European settlement; modern enforcement largely performs the reading's legitimacy rather than solving a live coordination problem—the constraint persists by constitutional doctrine and institutional inertia more than by solving an ongoing governance problem. The measurement series reflects ENFORCEMENT INTENSIFICATION: the constraint started with some negotiated acceptance and localized application; it became a total framework of sovereignty and property control by the 20th century. All measurements use the same time grid (1840, 1875, 1920, 1975, 2000, 2026) so every metric is authored at every examined point.",
+    "directionality_logic": "The Crown's directionality (d ≈ 0.15) comes from: beneficiary status (collects sovereignty and land revenues), powerful/institutional power, arbitrage exit (can reinterpret, negotiate, amend the constitution), and large scope. Māori iwi leadership's directionality (d ≈ 0.92) comes from: victim status (bears loss of authority and land), organized but subordinate power, identity-locked exit (cannot abandon treaty-anchored claims without group dissolution), and national scope. Powerless Māori people's directionality (d ≈ 0.98) comes from: victim status, powerless power atom, trapped exit, and national scope. The asymmetry drives the computed extraction differently for each seat—the Crown experiences a low χ (favorable), Māori iwi experience a high χ (unfavorable).",
+    "perspectival_gap": "The Crown's seat and the Māori iwi leadership's seat compute completely different types from the same constraint. The Crown sees a rope (genuine coordination, mutual benefit in establishing unified authority, lawful cession). The Māori reading sees a tangled rope or snare (coordination story deployed to cover asymmetric extraction, benefit accrues entirely to the Crown, suppression of alternatives that would honor what they understood the treaty to mean). The engine computes this divergence from the structural data: the Crown has arbitrage-level exit (it can reinterpret the treaty or negotiate new arrangements as a sovereign); Māori iwi have identity-locked exit (they cannot abandon the territorial claims the treaty anchors without cease to exist as distinct peoples); the beneficiary/victim declarations show who collects and who pays. The perspectival gap is structural, not merely evaluative.",
+    "mandatrophy_analysis": "The founding problem (establishing unified Crown sovereignty over the territory to enable consistent administration and European settlement) was live and real in 1840. By 2026, this problem is fully solved and dead: Crown sovereignty is institutionalized, property law is uniform, and no administrator or legal scholar argues the Crown requires ongoing absolute dominion under the treaty to sustain governance. The constraint persists not because the problem it was built for still exists, but because the reading distributes massive benefit to Crown authority and settler property owners—land titles, legislative power, revenue streams, and national authority all depend on the reading that the treaty ceded absolute sovereignty and land. The rising theater_ratio (from 0.15 to 0.42) reflects this zombification: early enforcement (1840–1875) was against live Māori resistance and ongoing dispute about what the treaty meant; modern enforcement (1975–2026) is largely performative—the Crown reasserts the reading through legal precedent, constitutional doctrine, and institutional routine, not by solving any live coordination problem. This is classic mandatrophy: the founding problem is dead, the constraint persists by institutional inertia and beneficiary capture, and enforcement morphs from solving a real problem to performing legitimacy for an arrangement that would not survive explicit re-justification.",
+    "kernel_context": "This constraint instantiates the Crown's reading of the contested Treaty of Waitangi kernel. The kernel is the 1840 treaty document, which exists in two versions: an English text and a Māori-language text, with significant semantic divergence. The Crown's reading (this story) declares that the English text controls, 'kāwanatanga' means absolute sovereignty, and the treaty completed legal cession to the Crown. The rangatiratanga retention reading holds that the Māori text controls via contra proferentem (ambiguities read against the drafter), 'kāwanatanga' was limited to governance authority, 'tino rangatiratanga' (absolute chieftainship) was retained by the signatories, and the treaty established partnership requiring ongoing Māori consent. The retrospective snare exposure reading treats the textual divergence itself as the extraction mechanism: chiefs could not assent to the English sovereignty claim because they were signing the Māori text, which promised something different; land transfers and legislative override become visible as extraction operating under mistranslation. Each reading has a different ε, different beneficiary/victim structure, and different computed type. This story generates ONLY the Crown reading as a clean, ε-invariant constraint; the other readings are other constraint stories, linked via network.affects_constraints."
   },
   "omegas": [
     {
-      "id": "textual_translation_equivalence",
-      "question": "Did the Māori word 'kāwanatanga' (as used by chiefs in the Māori text) carry the same meaning as the English word 'sovereignty' (as used in the English text signed by the Crown)? Were they semantic equivalents in 1840 Māori and English legal thought?",
-      "resolution_mechanism": "Historical analysis of contemporary Māori usage, missionary records, chiefly testimony (Hobson's notes, letters from chiefs), and comparative linguistics. Analysis of what 'kāwanatanga' meant in Māori political discourse (governance, chieftainship, authority to manage affairs) versus what 'sovereignty' meant in English constitutional law (plenary, indivisible, permanent state authority).",
-      "impact": "If NOT equivalent (kāwanatanga = limited governance, sovereignty = plenary cession), the Crown reading fails as a matter of contract interpretation (contra proferentem favors the Māori text's narrower meaning, or mutual mistake doctrine applies). The entire property regime and legislative authority would become legally ambiguous. This omega routes directly to the rangatiratanga_retention_reading and the retrospective_snare_exposure readings.",
+      "id": "chiefs_understanding_reconstruction",
+      "question": "What did the chiefs who signed the treaty understand 'kāwanatanga' to mean at the time of signing?",
+      "resolution_mechanism": "Linguistic and historical analysis: 1840 Māori-language documents, oral histories from descendants, letters from Māori leaders, comparison with other treaty terms across iwi.",
+      "impact": "If chiefs understood themselves as ceding only kāwanatanga (governance, not absolute control) while retaining tino rangatiratanga, the Crown's reading operates as extraction via mistranslation. Computed type shifts toward snare for Māori seats.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether 'kāwanatanga' and 'sovereignty' were semantically equivalent in 1840, or carried divergent meanings."
+      "description": "Reconstructing signatories' understanding of treaty terms at signing."
     },
     {
-      "id": "natural_law_vs_constructed_reading",
-      "question": "Is the Crown cession reading a NATURAL FACT of what the Treaty says (emerges necessarily from the English text under standard interpretation rules), or is it a CONSTRUCTED READING (a particular interpretive choice, enforced by institutional power, that could be different)?",
-      "resolution_mechanism": "Comparative constitutional law analysis: how other jurisdictions interpret treaties with text divergences (Canada, USA, Australia with indigenous treaties; EU/national conflicts); whether English-text priority is a rule of interpretation or a rule of power. Analysis of whether contra proferentem (ambiguity construed against the drafter) would produce a different reading. Whether courts have ever considered the Māori text as potentially controlling.",
-      "impact": "If the reading is constructed (not natural), this constraint's claimed_type (mountain) is false; it is actually a SNARE or TANGLED ROPE whose persistence depends on institutional enforcement (court doctrine, legislative override) rather than logical necessity. The FSM (false summit) detection and institutional reinforcement analysis would reclassify the constraint. If natural, the mountain claim holds and the extraction is the price of legal clarity and coordination.",
+      "id": "textual_divergence_deliberate_vs_honest",
+      "question": "Is the English/Māori textual divergence a product of honest translation difficulty or deliberate strategic drafting to secure different meanings?",
+      "resolution_mechanism": "Historical analysis of text drafting process, linguistic comparison of translation intent, analysis of how British officials at the time understood 'kāwanatanga'.",
+      "impact": "If deliberate, extraction mechanism is engineered deception. If honest, extraction is real but ambiguity-based rather than deliberately orchestrated. Affects legal remedies and moral standing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether textual asymmetry arose from translation challenges or deliberate strategic drafting."
+    },
+    {
+      "id": "contra_proferentem_applicability",
+      "question": "Should contra proferentem (ambiguities resolved against drafter) apply to the Treaty, with Māori text controlling and English text as the drafter's version?",
+      "resolution_mechanism": "Legal analysis of international treaty law, assessment of who drafted which version and to whom it was presented, analysis of signatories' capacity to assent to English version.",
+      "impact": "If applicable, Crown's reading is legally wrong and Māori text controls. If not, Crown's interpretive authority persists despite linguistic asymmetry.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether Crown cession reading is a natural interpretation or an institutionally-enforced construction."
-    },
-    {
-      "id": "founding_mandate_obsolescence_timing",
-      "question": "At what point did the founding problem (preventing French colonization, unifying legal systems, preventing intertribal conflict) become SOLVED or OBSOLETE? Is it live, dead, or contestable?",
-      "resolution_mechanism": "Historical timeline: French colonization threat was minimal by ~1860; legal unification was substantially complete by 1900; intertribal warfare had been suppressed by 1870. The constraint persists with high extraction long after these problems are solved. Evidence of whether Crown institutions acknowledge the founding mandate as dead (they do not—courts still cite the original coordination justification).",
-      "impact": "A dead founding mandate + high extractiveness + increasing theater ratio = strong mandatrophy signal. If the mandate is dead, the constraint should be reclassified as PITON (inertial, mostly theater) or SNARE (extraction decoupled from function, defended by beneficiary institutional power). The timing of mandate death is critical to the timeline of when the constraint shifted from coordination to rent extraction.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "When the Treaty's founding justifications became obsolete, and whether the constraint persists as mandatroph."
+      "description": "Whether contract interpretation principles constrain the Crown's treaty-reading authority."
     },
     {
       "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the suppression of alternative readings (rangatiratanga_retention_reading, retrospective_snare_exposure) STRUCTURAL (legal doctrines and court rules exclude them) or INTERNALIZED (Māori have accepted the Crown reading as legitimate)? Or both?",
-      "resolution_mechanism": "Observation of Māori political advocacy, court challenges, academic discourse, and polling data. If suppression is structural, it persists even when Māori and allies articulate the alternative reading loudly (courts still reject it). If internalized, Māori themselves defend the Crown reading. Mixed case: structural suppression is necessary because the alternative reading remains contested and would gain traction without active exclusion.",
-      "impact": "If suppression is purely structural, removal of doctrinal barriers (courts accepting contra proferentem, legislative repeal of Crown-sovereignty-dependent laws) could shift the classification. If internalized, the suppression persists even without doctrinal enforcement. Evidence: contemporary Māori advocacy DOES articulate alternative readings; courts DO exclude them on doctrinal grounds—this suggests structural suppression is doing the work. The effective suppression is high because the structural barriers are strong.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether suppression of rival readings is structural or internalized in Māori acceptance."
-    },
-    {
-      "id": "reading_foreclosure_vs_coexistence",
-      "question": "Does the Crown cession reading LOGICALLY FORECLOSE the rangatiratanga retention reading within a single legal framework, or can both coexist as live contested positions?",
-      "resolution_mechanism": "Analysis of whether accepting one reading requires rejecting the other. If the Māori text is genuinely ambiguous (as modern courts increasingly acknowledge), both readings can coexist in the sense that a court could adopt one without logical contradiction. If the readings are mutually exclusive (one claims full cession, the other claims partial authority retention), they cannot coexist in a single legal determination of the Treaty's effect—though they CAN coexist as competing political positions held by different parties.",
-      "impact": "If readings logically FORECLOSE each other, the Crown reading must eliminate the rangatiratanga reading through institutional power (courts, legislation) to maintain itself. If they coexist, the persistence of the Crown reading despite acknowledged ambiguity becomes a question of power, legitimacy, and institutional inertia rather than logical necessity. This omega determines the reading_relations classification in cs_structure.",
+      "question": "Is the measured suppression (0.79) primarily structural (legal exclusion, institutional barriers) or partially internalized (absorbed legitimacy of Crown authority)?",
+      "resolution_mechanism": "Post-removal trajectory: if Māori voice emerges when barriers are removed, suppression was structural. If suppression persists after removal, it is internalized—carried by targets as cognitive/identity patterns.",
+      "impact": "Structural suppression requires legal/institutional remedies. Internalized suppression requires identity decolonization—slower, deeper, operates through cultural patterns after external mechanisms are removed.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether Crown and rangatiratanga readings logically foreclose each other or can coexist as contested positions."
+      "type_class": "empirical",
+      "description": "Suppression mechanism composition: external barriers vs. internal cognitive patterns."
     }
   ],
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.18
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "treaty_authority_cession__rangatiratanga_retention_reading",
       "treaty_authority_cession__retrospective_snare_exposure"
     ],
-    "dual_formulation_note": "The Treaty of Waitangi kernel divides into at least three structurally distinct constraint stories, each with its own ε and classification. This story (crown_cession_reading) reads the English text as controlling and the Treaty as completing a legal cession of sovereignty. The rangatiratanga_retention_reading reads the Māori text as controlling and the Treaty as establishing a partnership with Māori authority retained. The retrospective_snare_exposure reading treats the textual divergence itself as an extraction mechanism—the gap between the Māori text (which chiefs understood) and the English text (which the Crown asserted) becomes the machine of deception, and the constraint is reclassified as pure snare. Each reading produces different metrics, beneficiary/victim structures, and classifications. They are linked via network.affects_constraints because the adoption of one reading affects the credibility and institutional standing of the others. The Crown reading's persistence affects the availability of space for the rangatiratanga reading; the rangatiratanga reading's articulation threatens the Crown reading's naturalness; the retrospective_snare_exposure reading, if accepted, would collapse the Crown reading into an institutional illegitimacy claim. All three remain live constraint stories in the corpus; they are not perspectives on a single constraint but distinct instantiations of the same kernel under different readings."
+    "dual_formulation_note": "The Treaty of Waitangi kernel family decomposes into three structurally distinct constraint stories: the Crown cession reading (this story), the rangatiratanga retention reading, and the retrospective snare exposure reading. Each reading has a different ε, different beneficiary/victim structure, and different computed type. They are not three measurements of one constraint under different observables—they are three constraints with different referents (what counts as the 'standing arrangement under contest' in each reading). The Crown reading's ε (0.87) measures extraction under the Crown's interpretation; the rangatiratanga reading's ε measures extraction under the Māori interpretation; the snare reading's ε measures extraction under the reading that sees textual divergence as the mechanism itself. All three are readings of the same kernel (the Treaty text), but each instantiates a different constraint with different structural properties. They are linked via network.affects_constraints because changes to one reading's legitimacy affect the others—if historical evidence conclusively shows what the chiefs understood, it undermines the Crown reading and strengthens the rangatiratanga reading; if contra proferentem doctrine is applied, it changes the legal framework all three readings operate within."
   },
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "mountain",
-    "downstream_of": [
-      "colonial_settlement_regime",
-      "indigenous_land_dispossession_mechanism"
-    ]
-  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "gain_flow": "crown_authority",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "crown_absolute_sovereignty",
-    "drift_state": {
-      "moment": "contemporary_biculturalism_era",
-      "direction": "authority_erosion",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "treaty_authority_cession__rangatiratanga_retention_reading",
+        "sibling_id": "rangatiratanga_retention_reading",
         "relation": "forecloses"
       },
       {
         "sibling_id": "treaty_authority_cession__retrospective_snare_exposure",
-        "relation": "coexists_with"
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "english_text_controls_treaty_meaning",
+        "atom": "english_text_supremacy",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "conventional"
@@ -239,22 +298,30 @@
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "crown_cession_completes_legal_transfer",
+        "atom": "complete_legal_cession_accomplished",
         "role": "secondary",
         "status": "holdable",
         "grounding_type": "conventional"
       }
-    ]
+    ],
+    "reference_frame": "crown_sovereign_legal_supremacy",
+    "drift_state": {
+      "moment": "contemporary_post_treaty_settlement_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

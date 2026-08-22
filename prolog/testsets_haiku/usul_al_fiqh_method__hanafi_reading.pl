@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,7 +43,13 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,34 +74,34 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: usul_al_fiqh_method__hanafi_reading
- *   human_readable: Hanafi Jurisprudential Method: Expansive Analogical Reasoning with Jurist Preference
- *   domain: legal/theological
+ *   human_readable: Hanafi Usul al-Fiqh Jurisprudential Method
+ *   domain: legal/theological/epistemic
  *
  * SUMMARY:
- *   The Hanafi school of Islamic jurisprudence is one of four classical Sunni
- *   methodological traditions. Its distinguishing feature is the expansive
- *   scope granted to jurist-driven methods—qiyas (analogical reasoning from
- *   textual cases), ra'y (independent reasoned opinion), and istihsan
- *   (juristic preference to override analogy when public interest demands
- *   it). This reading instantiates the Hanafi approach as a constraint: the
- *   framework legally binds the reasoning methods available to jurists,
- *   legitimizes departures from textual literalism, and transfers authority
- *   from the text's surface to the jurist's rational judgment. The constraint
- *   coordinates the problem of legal lacunae while simultaneously extracting
- *   interpretive monopoly in favor of the rationalist ulama class. The Hanafi
- *   reading sits in structural tension with the Hanbali reading (which
- *   minimizes analogical reasoning and prefers textual narrowness) and
- *   coexists with Maliki and Shafi'i alternatives, each offering different
- *   solutions to the same founding problem.
+ *   This constraint instantiates the Hanafi reading of usul al-fiqh (Islamic
+ *   jurisprudential methodology), emphasizing expansive applicability of
+ *   qiyas (analogical reasoning), ra'y (reasoned opinion), and istihsan
+ *   (juristic preference) when textual sources are silent. The Hanafi method
+ *   establishes jurist reasoning as a primary, binding epistemic authority
+ *   alongside scriptural sources. This reading is one of four competing
+ *   schools of Islamic jurisprudence (Hanafi, Maliki, Shafi'i, Hanbali), each
+ *   with a distinct answer to the question: what is the proper hierarchy of
+ *   legal sources and the scope of jurist derivation? The Hanafi framework
+ *   benefits its practitioners—the trained jurist class—by granting them
+ *   maximum discretion in legal reasoning. It imposes costs on textualist
+ *   claims by systematically marginalizing them within Hanafi-dominant legal
+ *   systems. The constraint is claimed as tangled_rope (genuine coordination
+ *   function of systematic legal derivation plus asymmetric extraction
+ *   favoring rationalist jurists) and the metrics describe a moderately
+ *   extractive, actively enforced interpretive arrangement that has
+ *   strengthened over time as Hanafi institutional dominance crystallized.
  *
  * KEY AGENTS:
- *   - Hanafi jurists with rationalist training: institutional beneficiaries; set the boundaries of analogical reasoning and control application of ra'y and istihsan
- *   - Textualist legal schools (especially Hanbali): powerful payers; their methodological claims are systematically subordinated when rationalist principles take precedence
- *   - Literalist hadith interpreters: organized victims; explicit transmission is treated as secondary to analogical extension and jurist reasoning
- *   - Qadi administrators: institutional beneficiaries; gain structured discretion to resolve novel cases and adapt law to local conditions
- *   - Merchant networks: powerful beneficiaries; benefit from commercial law flexibility via analogical extension to new transactions
- *   - Theological conservatives: identity-locked payers; trapped between desire for textual fidelity and institutional pressure to accept rationalist methods
- *   - Textualist ulama observers: excluded; their objections are recorded but do not shape Hanafi-dominant jurisprudential deliberation
+ *   - Hanafi jurist class (institutional agenda-setter, identity-locked to the method, greatest beneficiary)
+ *   - Rationalist legal tradition (institutional beneficiary, vindicated by Hanafi validation of reason as source)
+ *   - Textualist interpretive claim (non-agent payer, constrained within Hanafi framework)
+ *   - Non-Hanafi legal communities (organized payer, structurally disadvantaged where Hanafi law is institutional default)
+ *   - Hanbali textualist school (excluded from the Hanafi methodological conversation, constrained in mixed jurisdictions)
  */
 
 /* ==========================================================================
@@ -103,58 +110,114 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(usul_al_fiqh_method__hanafi_reading, 0.68).
-domain_priors:suppression_score(usul_al_fiqh_method__hanafi_reading, 0.52).
+domain_priors:suppression_score(usul_al_fiqh_method__hanafi_reading, 0.55).
 domain_priors:theater_ratio(usul_al_fiqh_method__hanafi_reading, 0.28).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, suppression_requirement, 0.55).
 narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, theater_ratio, 0.28).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, accessibility_collapse, 0.62).
 narrative_ontology:constraint_metric(usul_al_fiqh_method__hanafi_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(usul_al_fiqh_method__hanafi_reading, tangled_rope).
-narrative_ontology:human_readable(usul_al_fiqh_method__hanafi_reading, "Hanafi Jurisprudential Method: Expansive Analogical Reasoning with Jurist Preference").
-narrative_ontology:topic_domain(usul_al_fiqh_method__hanafi_reading, "legal/theological").
+narrative_ontology:human_readable(usul_al_fiqh_method__hanafi_reading, "Hanafi Usul al-Fiqh Jurisprudential Method").
+narrative_ontology:topic_domain(usul_al_fiqh_method__hanafi_reading, "legal/theological/epistemic").
 
 domain_priors:requires_active_enforcement(usul_al_fiqh_method__hanafi_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(usul_al_fiqh_method__hanafi_reading, '0ed75b26-8759-4883-9c9a-5dd76b30e0ba').
-narrative_ontology:cs_kernel_codification('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', distributed).
-narrative_ontology:cs_authority_grounding('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', lineage).
-narrative_ontology:cs_interpretation_layer_present('0ed75b26-8759-4883-9c9a-5dd76b30e0ba').
-narrative_ontology:cs_reading_relation('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', usul_al_fiqh_method__hanbali_reading, coexists_with).
-narrative_ontology:cs_reading_relation('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', usul_al_fiqh_method__maliki_reading, coexists_with).
-narrative_ontology:cs_reading_relation('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', usul_al_fiqh_method__shafii_reading, coexists_with).
-narrative_ontology:cs_axiom('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', foundational, qiyas_and_reason_coordinate_with_text).
-narrative_ontology:cs_axiom_status(qiyas_and_reason_coordinate_with_text, holdable).
-narrative_ontology:cs_axiom_grounding('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', qiyas_and_reason_coordinate_with_text, deontological).
-narrative_ontology:cs_axiom('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', foundational, juristic_discretion_serves_public_interest).
-narrative_ontology:cs_axiom_status(juristic_discretion_serves_public_interest, holdable).
-narrative_ontology:cs_axiom_grounding('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', juristic_discretion_serves_public_interest, instrumental).
-narrative_ontology:cs_reference_frame('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', juristic_reasoning_as_coordinate_source).
-narrative_ontology:cs_drift_state('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', contemporary_rationalist_dominance, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('0ed75b26-8759-4883-9c9a-5dd76b30e0ba', '').
+narrative_ontology:cs_story_uid(usul_al_fiqh_method__hanafi_reading, 'b7a54161-4ef5-4066-b777-a60c4ccbaea8').
+narrative_ontology:cs_kernel_codification('b7a54161-4ef5-4066-b777-a60c4ccbaea8', formalized).
+narrative_ontology:cs_authority_grounding('b7a54161-4ef5-4066-b777-a60c4ccbaea8', lineage).
+narrative_ontology:cs_interpretation_layer_present('b7a54161-4ef5-4066-b777-a60c4ccbaea8').
+narrative_ontology:cs_reading_relation('b7a54161-4ef5-4066-b777-a60c4ccbaea8', usul_al_fiqh_method__hanbali_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b7a54161-4ef5-4066-b777-a60c4ccbaea8', usul_al_fiqh_method__maliki_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b7a54161-4ef5-4066-b777-a60c4ccbaea8', usul_al_fiqh_method__shafii_reading, coexists_with).
+narrative_ontology:cs_axiom('b7a54161-4ef5-4066-b777-a60c4ccbaea8', foundational, reason_as_independent_legal_source).
+narrative_ontology:cs_axiom_status(reason_as_independent_legal_source, holdable).
+narrative_ontology:cs_axiom_grounding('b7a54161-4ef5-4066-b777-a60c4ccbaea8', reason_as_independent_legal_source, deontological).
+narrative_ontology:cs_axiom('b7a54161-4ef5-4066-b777-a60c4ccbaea8', foundational, qiyas_permissible_upon_textual_silence).
+narrative_ontology:cs_axiom_status(qiyas_permissible_upon_textual_silence, holdable).
+narrative_ontology:cs_axiom_grounding('b7a54161-4ef5-4066-b777-a60c4ccbaea8', qiyas_permissible_upon_textual_silence, conventional).
+narrative_ontology:cs_axiom('b7a54161-4ef5-4066-b777-a60c4ccbaea8', secondary, istihsan_valid_for_public_interest).
+narrative_ontology:cs_axiom_status(istihsan_valid_for_public_interest, holdable).
+narrative_ontology:cs_axiom_grounding('b7a54161-4ef5-4066-b777-a60c4ccbaea8', istihsan_valid_for_public_interest, instrumental).
+narrative_ontology:cs_reference_frame('b7a54161-4ef5-4066-b777-a60c4ccbaea8', rationalist_jurisprudential_authority).
+narrative_ontology:cs_drift_state('b7a54161-4ef5-4066-b777-a60c4ccbaea8', contemporary_textual_challenge_era, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_created_at('b7a54161-4ef5-4066-b777-a60c4ccbaea8', '').
 narrative_ontology:cs_kernel_id(usul_al_fiqh_method__hanafi_reading, usul_al_fiqh_method).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(usul_al_fiqh_method__hanafi_reading, hanafi_jurists_with_rationalist_training).
-narrative_ontology:constraint_victim(usul_al_fiqh_method__hanafi_reading, textualist_legal_schools).
-narrative_ontology:constraint_victim(usul_al_fiqh_method__hanafi_reading, literalist_hadith_interpretations).
+narrative_ontology:constraint_beneficiary(usul_al_fiqh_method__hanafi_reading, hanafi_jurist_class).
+narrative_ontology:constraint_beneficiary(usul_al_fiqh_method__hanafi_reading, rationalist_legal_tradition).
+narrative_ontology:constraint_victim(usul_al_fiqh_method__hanafi_reading, textualist_interpretive_claim).
+narrative_ontology:constraint_victim(usul_al_fiqh_method__hanafi_reading, non_hanafi_legal_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Hanafi jurists set and defend the jurisprudential method permitting expansive qiyas, ra'y, and istihsan. They maintain the methodological framework through scholarly transmission, institutional training of successive generations, and adjudication of practical cases. They benefit from the expanded scope for rational derivation, which establishes their expertise as indispensable and their legal opinions as binding within the Hanafi madhhab. Their professional identity and intellectual authority are constituted through mastery of this particular usul framework.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, hanafi_jurist_class, agenda_setter,
+    institutional, civilizational, identity_locked, global).
+
+% The broader rationalist legal tradition within Islamic jurisprudence benefits from the Hanafi validation of reason ('aql) as a binding epistemic authority independent of textual constraint. This reading establishes that jurist reasoning is not merely supplementary to scriptural sources but constitutes a primary source of law. The tradition's intellectual prestige and institutional expansion depend on the Hanafi method's continued recognition.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, rationalist_legal_tradition, beneficiary,
+    institutional, civilizational, arbitrage, global).
+
+% The textualist claim—that scriptural sources (Quran and authenticated hadith) should be maximally restrictive and qiyas minimized—bears the cost of the Hanafi method's expansiveness. The textualist position is systematically constrained: where the Hanafi framework permits derivation by analogy and juristic preference, textualist legal claims are displaced or overridden. The textualist approach cannot advance its reading within Hanafi jurisprudence without fundamentally challenging the methodological foundations the Hanafi school has established.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, textualist_interpretive_claim, payer,
+    institutional, civilizational, constrained, global).
+narrative_ontology:stakeholder_non_agent(usul_al_fiqh_method__hanafi_reading, textualist_interpretive_claim).
+
+% Communities following other madhhabs (Maliki, Shafi'i, Hanbali) pay a competitive cost: within Hanafi-dominant legal systems and regions, their alternative methodologies are subordinated. Where Hanafi jurisprudence is the institutional default (Ottoman Empire, Mughal India, contemporary Turkey, parts of Egypt), practitioners of other schools operate at a structural disadvantage. They cannot freely apply their own methodological principles; they must either conform to Hanafi reasoning or accept institutional marginalization. Their exit is constrained by geographic location, institutional inheritance, and the difficulty of switching jurisprudential frameworks.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, non_hanafi_legal_communities, payer,
+    organized, civilizational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(usul_al_fiqh_method__hanafi_reading, non_hanafi_legal_communities, excluded).
+
+% The Hanbali school, which emphasizes textual restrictiveness and minimizes qiyas, is structurally excluded from the Hanafi methodological conversation. Where Hanafi jurisprudence dominates institutional settings, Hanbali reasoning is treated as overly rigid and impractical. Hanbali jurists can hold their textualist position, but they operate outside the framework that the Hanafi method establishes as authoritative within the institutions they inhabit.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, hanbali_textualist_school, excluded,
+    organized, civilizational, constrained, global).
+
+% Comparative Islamic legal scholarship examines the Hanafi method as one reading among four canonical school positions. Scholars analyze how the method's expansiveness in permitting qiyas, ra'y, and istihsan produces different legal outcomes than other schools, and how the historical dominance of Hanafi jurisprudence in certain regions reflected both theological coherence and political/institutional power.
+narrative_ontology:constraint_stakeholder(usul_al_fiqh_method__hanafi_reading, islamic_legal_scholarship, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(usul_al_fiqh_method__hanafi_reading, hanafi_jurist_class).
+narrative_ontology:fixing_cost_class(usul_al_fiqh_method__hanafi_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a stable, reproducible method for deriving law when scriptural sources are silent or insufficient. By systematizing qiyas (analogy), ra'y (reasoned judgment), and istihsan (juristic preference), the Hanafi method permits jurists across generations to reach consistent legal conclusions through rational application of fixed principles, rather than via ad-hoc innovation or unprincipled discretion.
+% TRANSFER_FUNCTION: Transfers authority from the strictest possible reading of texts to the combined authority of texts plus jurist reasoning. Hanafi jurisprudence moves the burden of proof: a textualist must show textual constraint is binding; the Hanafi jurist need only show the case is not clearly resolved by text to legitimize rational derivation. This redistributes interpretive power from textual closure to jurist expertise.
+% ABSENT_VOICES: Textualist jurists, particularly those within Hanbali and literalist traditions, would object that the method permits excessive innovation ('bid'a) and subordinates revealed sources to human reason. They are structurally absent from the internal Hanafi conversation because the Hanafi framework defines their concern as already-resolved: the method IS the authoritative framework, and textualism is its boundary condition, not its rival.
+% DISAPPEARANCE_RATIONALE: If the Hanafi method disappeared—replaced by pure textualism or another framework—the legal systems, training institutions, and jurisprudential literature that depend on it would require wholesale reorganization. Ottoman jurisprudence, Mughal legal practice, and contemporary Turkish law would need new methodological foundations. Thousands of legal conclusions derived through Hanafi reasoning would require re-examination under alternative principles.
+% FOUNDING_PROBLEM: Early Islamic legal communities faced cases for which scriptural sources were genuinely insufficient: matters of technology, commerce, and social practice that post-dated revelation or were never explicitly addressed. The founding problem was: how does a jurist legitimately derive law when the Quran and authenticated hadith are silent? The Hanafi method systematizes the answer: through rational analogy to textually grounded principles.
+% FOUNDING_PROBLEM_CORROBORATION: Hanafi jurists attest the founding problem is perpetually live: each generation encounters new cases requiring derivation beyond textual constraint. Textualist scholars (Hanbali, literalist) attest the founding problem has been misdiagnosed: they argue authentic hadith is far richer than rationalist readings acknowledge, and that cases truly silent in the sources should be deferred rather than resolved by reason. Contemporary Islamic legal scholarship confirms the disagreement is structural, not empirical: the contest is over whether scriptural silence is a gap to fill or a boundary to respect.
+narrative_ontology:disappearance_verdict(usul_al_fiqh_method__hanafi_reading, world_rearranges).
+narrative_ontology:founding_problem_status(usul_al_fiqh_method__hanafi_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(usul_al_fiqh_method__hanafi_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(usul_al_fiqh_method__hanafi_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(usul_al_fiqh_method__hanafi_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(usul_al_fiqh_method__hanafi_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +237,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is measured at 0.68 because the Hanafi framework systematically transfers interpretive authority from the text's explicit boundaries to the jurist's judgment, creating a durable rent for the rationalist scholar class. The extraction accumulates over the interval (0.45 → 0.68) as the Hanafi reading becomes institutionalized in major centers and jurists develop increasingly sophisticated arguments that qiyas, ra'y, and istihsan warrant ever-broader applications. Suppression is moderate (0.52) because textualist objections persist across centuries but are never permitted to reshape the framework—they are managed through subsidiary texts and minority positions rather than suppressed violently. Theater is low (0.28) because the Hanafi method remains functionally engaged with genuine legal problems (lacunae in the texts) throughout the interval; the performative element grows modestly as istihsan becomes a cover for preferences that override analogy without explicit principled justification, but the core function (analogical extension) remains primary. Accessibility of alternatives is moderate-low (0.45) because textualist methods remain available as theoretical positions but are institutionally foreclosed in Hanafi-dominant jurisdictions; a jurist can adopt Hanbali methodology, but only at cost of exile from rationalist centers. Resistance is substantial (0.71) because textualist and literalist schools mount principled objections across the entire interval, producing a sustained methodological debate that forces rationalist jurists to continuously justify their framework.
+ *   Extractiveness increases modestly over the interval (0.52 → 0.68) as Hanafi jurisprudence becomes institutionalized and its assumptions naturalized, making the textualist alternative appear less viable within the system. Theater remains modest (0.28) because the coordination function (systematic legal derivation) is genuine; the method actually solves the problem of case-by-case inconsistency. Suppression is moderate (0.55) because the constraint's persistence requires active defense: alternative schools must be kept at the institutional margins through training, institutional hierarchy, and the self-reinforcing nature of jurisprudential tradition (practicing within the system requires mastery of its principles). Accessibility collapse is moderate (0.62): alternatives exist (Hanbali, Shafi'i methods) and are intellectually coherent, but they are difficult to access once one is embedded in Hanafi training and practice. Resistance is high (0.71) because textualist scholars and communities actively resist the Hanafi expansion of jurist discretion; the contest between schools is not settled but perpetual. All measurements are shared on one time grid spanning 40 units (t0=0, tn=40).
  *
  * PERSPECTIVAL GAP:
- *   The textualist ulama would classify this constraint as snare or extractive piton—a reading that claims coordination (solving lacunae) but operates as pure monopoly capture by the rationalist class. The Hanafi jurists would classify it as genuine rope—coordination of legal development with minimal coercive overhead, justified by the necessity of analogical reasoning. The qadi administrators would classify it as beneficial tangled rope—coordination that also concentrates authority, but appropriately so because jurists have expertise textualists lack. The theological conservatives would classify it as false mountain—presented as natural jurisprudential necessity but actually a constructed choice that benefits identifiable parties. The engine, reading the structural data, will compute per-seat classifications that capture these divergences.
+ *   Hanafi jurists sit at a seat of institutional power: they author and transmit the method, train the next generation, and adjudicate disputes within it. Their exit is identity-locked—leaving the Hanafi framework means abandoning professional identity, scholarly authority, and institutional position. From their seat, the framework solves a genuine problem and does so rationally. Textualist jurists sit at a seat of institutional marginalization within Hanafi-dominant systems: their reasoning is treated as impractical and overly rigid. Their exit is constrained—they can hold textualist views but must operate outside mainstream institutions. From their seat, the Hanafi framework appears as a cover story for jurist discretion. The engine computes these divergent classifications from the structural data; explaining the divergence is the point of the constraint story.
  *
  * DIRECTIONALITY LOGIC:
- *   Hanafi jurists with rationalist training are the structural beneficiaries: they control the interpretive boundary, teach the method, and their reasoning capacity is the constraint's primary resource. Their directionality d ≈ 0.15 (near the beneficiary end) because the constraint subsidizes their professional authority and legitimizes their discretion. Textualist schools and literalist hadith interpreters are victims: their methodological claims are subordinated, and their exit options are severely constrained. Their d ≈ 0.85 (near the target end) because the constraint extracts interpretive authority from them. Qadi administrators and merchant classes are secondary beneficiaries: they benefit from the flexibility but do not control the boundary. Their d ≈ 0.35–0.45 (slightly beneficiary-leaning) because they gain practical utility without bearing the cost of defending the method. Theological conservatives are trapped victims: they identify with textual fidelity (high identity lock) but cannot exit the framework without abandoning scholarly standing. Their d ≈ 0.80 because they pay the cost of methodological subordination and have minimal exit. The constraint's effective extraction χ is highest for identity-locked textualists and lowest for mobile rationalist jurists.
+ *   The beneficiary/victim declaration drives directionality: beneficiaries (Hanafi jurists, rationalist tradition) sit near the beneficiary end of the directionality spectrum (d=0.0-0.2); victims (textualist claim, non-Hanafi communities) sit near the target end (d=0.8-1.0). Identity-locked exit for Hanafi jurists amplifies their beneficiary directionality—they cannot leave the framework without losing professional identity. Constrained exit for non-Hanafi communities amplifies their target directionality—they cannot freely apply their methods where Hanafi law dominates. The metrics (high extractiveness, moderate suppression) reflect an arrangement where the beneficiary seat exercises institutional control and the target seats must conform or accept marginalization.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (legal lacunae in the texts) remains live and well-attested by independent observers (Maliki and Shafi'i schools acknowledge the same problem, offering different solutions). The coordination function (analogical reasoning as a solution) is genuinely necessary and actively deployed. However, the extraction function (transferring interpretive monopoly to the rationalist jurist class) has accumulated over the interval: early Hanafi jurisprudence presents qiyas and ra'y as disciplined methods constrained by the text's underlying rationales, while later jurisprudence (especially under rationalist-dominant dynasties) presents istihsan as a principle that can override analogy when jurists deem public interest demands it. This drift—from 'justified by the text's logic' to 'justified by the jurist's judgment'—is captured in the rising base_extractiveness and theater_ratio over the interval. The constraint has NOT undergone mandatrophy (the founding problem has not died), but it has accumulated extraction layered atop its coordination function. The Hanafi reading remains defensible as coordination, but the measured extraction reveals how much of the constraint's operation now serves the jurist class's institutional interests rather than solving legal lacunae.
+ *   The constraint avoids misclassification as snare by the presence of genuine coordination function: when jurists in different times and places apply Hanafi usul, they reach consistent conclusions through systematic application of principles, not ad-hoc invention. The constraint avoids misclassification as rope by the asymmetric distribution of authority: a textualist jurist cannot advance textualist reasoning within Hanafi institutions; a Hanafi jurist can advance Hanafi reasoning throughout Hanafi-dominant systems. Tangled_rope is the correct type because both coordination and extraction are structural, neither is mere cover.
  */
 
 /* ==========================================================================
@@ -191,109 +254,107 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    illa_justification_drift,
-    'Does istihsan''s departure from strict analogy remain grounded in identifying the underlying ''illa (rationale) of the text, or has it drifted into pure jurist preference disconnected from textual reasoning?',
-    'Comparative analysis of early istihsan cases (al-Kasani, al-Sarakhsi) versus later practice (Ottoman-period fatwa collections) to measure whether stated justifications continue to reference textual rationales or increasingly invoke public interest as independent ground. Examination of textualist critiques and Hanafi responses over time.',
-    'If istihsan has drifted into pure preference, the constraint is more extractive than measured (the theater_ratio should be higher and base_extractiveness should rise further). If istihsan remains grounded in textual logic, the constraint is closer to genuine coordination than extracted authority. This divergence is the mandate-rot question: has the method evolved legitimately or been corrupted.',
+    textual_silence_construction,
+    'Is scriptural silence in Islamic sources a genuine gap requiring rational derivation, or a designed boundary that should be respected by deferring undecided questions to uncertainty?',
+    'Comparative analysis of Quranic and hadith scope across centuries of Islamic jurisprudence. Examine whether the frequency of cases genuinely outside textual constraint has remained constant or declined as scholarship deepened. Survey contemporary Islamic legal practice: do modern jurists encounter cases that no text addresses, or do they cite textual constraint for cases of ambiguity?',
+    'If silence is genuine and unavoidable, the Hanafi method''s coordination function is perpetually necessary, and extraction is the price of coordination. If cases of genuine silence are rare or shrinking, the method''s persistence becomes more theatrical, and mandatrophy risk rises.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(illa_justification_drift, empirical, 'Whether istihsan remains textually grounded or has become disconnected from revealed sources.').
+narrative_ontology:omega_variable(textual_silence_construction, conceptual, 'Whether the founding problem (scriptural silence as gap) is empirically persistent or has been misidentified.').
 
 omega_variable(
-    textual_lacunae_extent,
-    'How many novel legal situations actually require qiyas, ra''y, or istihsan because the texts are silent, versus how many invoke these methods where textual guidance exists but jurists prefer to override it?',
-    'Systematic classification of major istihsan cases from canonical Hanafi jurisprudence: (1) true lacunae where the text provides no rule; (2) cases where a textual rule exists but jurists override it via istihsan. Frequency distribution across the corpus.',
-    'If most cases are true lacunae, the extraction measure underestimates the real coordination function—the constraint is more legitimate than measured. If most cases override available textual rules, the extraction measure understates jurist monopoly—the constraint is more extractive than measured, and the theater_ratio is actually higher.',
+    suppression_mechanism_ambiguity,
+    'To what extent is the Hanafi method''s dominance sustained by structural institutional gatekeeping versus internalized acceptance of its axioms by non-Hanafi scholars?',
+    'Post-institutional suppression trajectory: examine whether textualist and non-Hanafi jurisprudential movements flourish when liberated from institutional gatekeeping (e.g., in contemporary contexts where multiple madhhabs coexist without state enforcement). If textualism revives when institutional suppression is removed, the suppression was structural; if textualism remains marginal despite institutional freedom, suppression is at least partially internalized.',
+    'If suppression is purely structural, alternatives could be liberated by removing institutional preference (low cost to fix). If internalized, the constraint carries its suppressive force even after institutional gates are opened, making it more difficult to remediate.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(textual_lacunae_extent, empirical, 'Whether the Hanafi method is primarily used to fill genuine textual gaps or to override available textual rules.').
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Whether suppression of alternative jurisprudential approaches is structural or internalized in Islamic legal communities.').
 
 omega_variable(
-    reading_contest_boundary,
-    'What specifically distinguishes the Hanafi reading from the Hanbali reading at the structural level? Is the contest about the EXTENT of analogical reasoning (Hanafi: expansive; Hanbali: minimal) or the LEGITIMACY of reason as a source (Hanafi: reason is coordinate with text; Hanbali: reason is subordinate)?',
-    'Analysis of foundational texts in each tradition (al-Usul by al-Sarakhsi for Hanafi; Ibn Qudama for Hanbali) to identify whether the disagreement is about scope of application or about the nature of authority itself. Examination of how each school responds to the other''s objections.',
-    'If the contest is scope-only, the readings COEXIST (each grants some role to qiyas, just differently). If it is about nature of authority, the readings FORECLOSE each other (one treats reason as inherently subordinate to text; the other does not). This affects how the engine computes the reading_relations: coexists_with vs. forecloses.',
-    confidence_without_resolution(high)
+    kernel_reading_indexation,
+    'Is the Hanafi reading of usul al-fiqh a discovered natural law of Islamic jurisprudence, or a constructed institutional choice that could have been otherwise?',
+    'Historical counterfactual: examine the early Islamic period when multiple methodologies competed (8th-9th centuries) and identify path-dependent moments where the Hanafi approach could have been displaced. Assess whether Hanafi jurisprudence''s eventual dominance reflects inherent methodological superiority or institutional/political contingencies (Ottoman patronage, bureaucratic adoption, religious authority alignment).',
+    'If discovered natural law, the constraint is closer to mountain classification and the beneficiary/victim structure reflects mere differential capacity rather than exploitation. If constructed choice, the beneficiary/victim structure reflects institutional capture of jurisprudential authority by the rationalist school.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_contest_boundary, conceptual, 'Whether the Hanafi-Hanbali contest is about the scope of analogical reasoning or the fundamental nature of juristic authority.').
+narrative_ontology:omega_variable(kernel_reading_indexation, conceptual, 'Whether the Hanafi reading is a canonical natural law or a contingent institutional choice that benefited particular actors.').
 
 omega_variable(
-    suppression_mechanism_structural_vs_internalized,
-    'Is the subordination of textualist claims in Hanafi-dominant regions structural (institutional displacement, lack of positions in teaching circles) or internalized (textualist jurists adopt rationalist frameworks, fusing their identity with the rationalist method)?',
-    'Examination of biographical trajectories of textualist-trained jurists in rationalist centers: do they maintain distinct methodological positions (structural suppression) or do they gradually internalize the rationalist framework (internalized suppression)? Analysis of fatwa collections to identify whether textualist positions are documented as live alternatives or are mentioned only to be dismissed.',
-    'If suppression is primarily structural, the constraint''s effective extraction is lower than measured because exit remains available (jurists can maintain a textualist position, though at institutional cost). If suppression is internalized, the constraint''s extraction is understated because textualist resistance has been psychologically incorporated—jurists no longer experience their position as suppressed but as superseded.',
+    kernel_commensurate_alternatives,
+    'For the sibling readings (Maliki, Shafi''i, Hanbali), do they instantiate genuinely incommensurable jurisprudential frameworks, or can they be reconciled within a single overarching Islamic legal principle?',
+    'Comparative reconstruction of each school''s foundational axioms and their relationship to Quranic/hadith sources. Determine whether the schools differ on empirical claims about what texts say (resolvable by scholarship) or on normative claims about what role reason should play (not resolvable by scholarship). If empirical, convergence is possible; if normative, the schools may be permanently incommensurable.',
+    'If incommensurable, the schools are genuinely competing positions and the Hanafi dominance is a constraint that subordinates alternatives. If resolvable, the Hanafi method might be correctible via better textual scholarship, and its dominance is temporary rather than structural.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(kernel_commensurate_alternatives, conceptual, 'Whether competing jurisprudential schools are incommensurable or could be reconciled through deeper analysis.').
+
+omega_variable(
+    rationalist_tradition_independence,
+    'Does the rationalist legal tradition constitute an independent agent benefiting from Hanafi jurisprudence, or is it merely a proxy for the interests of the Hanafi jurist class?',
+    'Examine historical instances where rationalist principles diverged from Hanafi institutional interests. Assess whether rationalist jurisprudential movements have maintained their independence when separated from Hanafi institutional power (e.g., in Mu''tazili theology, contemporary Islamic legal reform). Determine whether rationalism is the axiom beneficiaries defend, or merely the tool they deploy.',
+    'If independent, the extraction benefit is distributed across jurist class and rationalist tradition as distinct beneficiaries. If proxy, the extraction consolidates on the jurist class alone, and rationalist tradition is a beneficiary in name only.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether methodological subordination is structural or internalized in the Hanafi framework.').
-
-omega_variable(
-    rationalist_training_prerequisite_gatekeeping,
-    'Does access to rationalist jurisprudential authority require explicit training in Greek philosophical logic and the methods of analogical reasoning, or can it be acquired through immersion in jurisprudential texts alone?',
-    'Historical analysis of madrasah curricula in Hanafi-dominant centers; examination of biographical records of major Hanafi jurists to identify training pathways. Analysis of whether non-Greek-trained jurists have achieved prominent interpretive authority in the Hanafi tradition.',
-    'If rationalist training is a strict prerequisite, the beneficiary class is tightly gated and the constraint operates more as an elite monopoly on authority. If the methods can be acquired through jurisprudential immersion alone, the gate is more permeable and the constraint is less extractive. This affects the directionality computation for moderate-power jurists who lack philosophical training.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(rationalist_training_prerequisite_gatekeeping, empirical, 'Whether access to the Hanafi methodological framework is gated by formal rationalist training.').
+narrative_ontology:omega_variable(rationalist_tradition_independence, empirical, 'Whether rationalist legal tradition is an independent beneficiary or a proxy for jurist-class interests.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(usul_al_fiqh_method__hanafi_reading, 0, 50).
+narrative_ontology:interval(usul_al_fiqh_method__hanafi_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(usul_tr_t0, usul_al_fiqh_method__hanafi_reading, theater_ratio, 0, 0.08).
-narrative_ontology:measurement(usul_tr_t8, usul_al_fiqh_method__hanafi_reading, theater_ratio, 8, 0.12).
-narrative_ontology:measurement(usul_tr_t16, usul_al_fiqh_method__hanafi_reading, theater_ratio, 16, 0.16).
-narrative_ontology:measurement(usul_tr_t25, usul_al_fiqh_method__hanafi_reading, theater_ratio, 25, 0.22).
-narrative_ontology:measurement(usul_tr_t35, usul_al_fiqh_method__hanafi_reading, theater_ratio, 35, 0.26).
-narrative_ontology:measurement(usul_tr_t50, usul_al_fiqh_method__hanafi_reading, theater_ratio, 50, 0.28).
+narrative_ontology:measurement(usul_tr_t0, usul_al_fiqh_method__hanafi_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement(usul_tr_t5, usul_al_fiqh_method__hanafi_reading, theater_ratio, 5, 0.2).
+narrative_ontology:measurement(usul_tr_t10, usul_al_fiqh_method__hanafi_reading, theater_ratio, 10, 0.22).
+narrative_ontology:measurement(usul_tr_t15, usul_al_fiqh_method__hanafi_reading, theater_ratio, 15, 0.24).
+narrative_ontology:measurement(usul_tr_t25, usul_al_fiqh_method__hanafi_reading, theater_ratio, 25, 0.26).
+narrative_ontology:measurement(usul_tr_t40, usul_al_fiqh_method__hanafi_reading, theater_ratio, 40, 0.28).
 
 % Extraction over time
-narrative_ontology:measurement(usul_be_t0, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(usul_be_t8, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 8, 0.52).
-narrative_ontology:measurement(usul_be_t16, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 16, 0.58).
-narrative_ontology:measurement(usul_be_t25, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 25, 0.65).
-narrative_ontology:measurement(usul_be_t35, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 35, 0.67).
-narrative_ontology:measurement(usul_be_t50, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement(usul_be_t0, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 0, 0.52).
+narrative_ontology:measurement(usul_be_t5, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(usul_be_t10, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 10, 0.59).
+narrative_ontology:measurement(usul_be_t15, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 15, 0.62).
+narrative_ontology:measurement(usul_be_t25, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 25, 0.66).
+narrative_ontology:measurement(usul_be_t40, usul_al_fiqh_method__hanafi_reading, base_extractiveness, 40, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(usul_su_t0, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(usul_su_t8, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 8, 0.4).
-narrative_ontology:measurement(usul_su_t16, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 16, 0.44).
-narrative_ontology:measurement(usul_su_t25, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 25, 0.49).
-narrative_ontology:measurement(usul_su_t35, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 35, 0.51).
-narrative_ontology:measurement(usul_su_t50, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 50, 0.52).
+narrative_ontology:measurement(usul_su_t0, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 0, 0.42).
+narrative_ontology:measurement(usul_su_t5, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 5, 0.45).
+narrative_ontology:measurement(usul_su_t10, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 10, 0.48).
+narrative_ontology:measurement(usul_su_t15, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 15, 0.5).
+narrative_ontology:measurement(usul_su_t25, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 25, 0.53).
+narrative_ontology:measurement(usul_su_t40, usul_al_fiqh_method__hanafi_reading, suppression_requirement, 40, 0.55).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(usul_al_fiqh_method__hanafi_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(usul_al_fiqh_method__hanafi_reading, 0.18).
+narrative_ontology:coordination_type(usul_al_fiqh_method__hanafi_reading, identity_coordination).
+narrative_ontology:boltzmann_floor_override(usul_al_fiqh_method__hanafi_reading, 0.12).
 narrative_ontology:affects_constraint(usul_al_fiqh_method__hanafi_reading, usul_al_fiqh_method__hanbali_reading).
 narrative_ontology:affects_constraint(usul_al_fiqh_method__hanafi_reading, usul_al_fiqh_method__maliki_reading).
 narrative_ontology:affects_constraint(usul_al_fiqh_method__hanafi_reading, usul_al_fiqh_method__shafii_reading).
 
 % DUAL FORMULATION NOTE:
-% The constraint 'usul_al_fiqh_method__hanafi_reading' is one reading of the contested kernel 'usul_al_fiqh_method'. Four sibling readings (Hanbali, Maliki, Shafi'i) instantiate alternative methodological frameworks governing the same foundational problem: how to derive legal rules when textual sources are incomplete. Each reading has structurally distinct ε-values (Hanafi is highest-extraction, Hanbali is lowest, Maliki and Shafi'i are intermediate). They are networked via affects_constraints because changes in the institutional dominance of one reading (e.g., rationalist centers adopting Hanafi methods more aggressively) create pressure on the alternatives. The readings coexist across different regions and institutional contexts but do not share the same jurisprudential authority structure.
+% This constraint is one reading of the contested kernel usul_al_fiqh_method. The four canonical readings (Hanafi, Hanbali, Maliki, Shafi'i) are authored as separate constraints, each with its own ε-invariant metrics, beneficiary/victim structure, and cs_structure axioms. The Hanafi reading instantiates the rationalist end of the methodological spectrum; the Hanbali reading instantiates the textualist end. The Maliki and Shafi'i readings occupy middle positions with distinct axioms. All four readings coexist as live jurisprudential traditions within Islamic law; none forecloses the others across the full span of Islamic legal history, though in particular regional/institutional contexts (Ottoman, Mughal, contemporary) one reading may dominate the others. The network.affects_constraints links document this family structure; each story's cs_structure.reading_relations specify the structural relationships from that reading to its siblings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(usul_al_fiqh_method__hanafi_reading, organized, 0.78).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

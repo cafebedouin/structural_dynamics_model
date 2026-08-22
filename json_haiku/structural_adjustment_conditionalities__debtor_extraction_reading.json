@@ -2,31 +2,154 @@
   "header": {
     "constraint_id": "structural_adjustment_conditionalities__debtor_extraction_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "796eac2f-6bf8-41d4-890b-57aee2f61eff"
+    "module_name_override": "constraint_structural_adjustment_conditionalities__debtor_extraction_reading",
+    "story_uid": "59960e72-0fbe-45aa-8105-69772e8a4b4d"
   },
   "base_properties": {
     "extractiveness": 0.87,
-    "suppression": 0.91,
+    "suppression": 0.89,
     "theater_ratio": 0.62,
     "accessibility_collapse": 0.78,
-    "resistance": 0.72,
+    "resistance": 0.71,
     "claimed_type": "snare",
-    "human_readable": "Structural Adjustment Conditionalities as Debtor Extraction Regime",
-    "topic_domain": "economic/political/institutional",
+    "human_readable": "Structural Adjustment Conditionalities (Debtor Extraction Reading)",
+    "topic_domain": "international_political_economy/development_finance/institutional_economics",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "transnational_creditor_banks",
-      "global_financial_capital",
-      "commodity_extraction_interests"
+      "imf_world_bank_bureaucracy",
+      "foreign_investors",
+      "import_competing_domestic_elites"
     ],
     "victims": [
-      "debtor_country_populations",
+      "domestic_poor_and_working_classes",
       "public_sector_workers",
-      "rural_subsistence_communities",
-      "domestic_industries"
+      "small_farmers",
+      "debtor_state_populations"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "imf_world_bank_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Sets the conditionality framework, designs loan disbursement tranches keyed to specific policy reforms, and administers ongoing surveillance of compliance. Justifies conditionalities as technical requirements for fiscal sustainability and macroeconomic stability. Maintains discretionary authority over which governments face stringent conditions and which receive favorable treatment."
+    },
+    {
+      "name": "transnational_creditor_banks",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Recoup loans through IMF-backed restructuring that prioritizes debt service over domestic needs; pressure debtor states to liberalize markets, privatize public assets, and reduce labor protections — all of which create new profit opportunities for foreign firms. Operate outside the territory where costs are imposed; capital mobility permits exit from any single debtor relationship."
+    },
+    {
+      "name": "foreign_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gain access to privatized state assets (utilities, telecommunications, natural resources, water systems) at depressed prices; exploit labor market deregulation and currency devaluation to lower production costs; benefit from tariff reduction and capital account liberalization. Exit when conditions deteriorate; the debtor state bears the stranded asset cost."
+    },
+    {
+      "name": "import_competing_domestic_elites",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from trade liberalization by accessing cheaper imported inputs and foreign financing; accumulate local monopolies in liberalized sectors; collaborate with conditionality architects to entrench their market position at the expense of domestic producers and the poor. Can exit through capital flight or relocation when conditions shift."
+    },
+    {
+      "name": "domestic_poor_and_working_classes",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the immediate costs of privatization, subsidy cuts, public sector retrenchment, and labor market deregulation. Education, health, water, and transport services are dismantled or commodified; users shift from citizens to consumers. Wages fall as labor protections erode and unemployment rises; out-of-pocket costs for basic services spike while formal employment contracts disappear. Geographic and skill immobility prevent exit; citizenship ties them to the jurisdiction even as the state stops provisioning public goods."
+    },
+    {
+      "name": "public_sector_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Faced with public sector wage freezes, layoffs, and pension cuts mandated by conditionalities. Their employment is conditional on compliance; resistance invokes loan cancellation threats. Skills are often context-specific to public institutions; private-sector exit is difficult. Collective action (unions) is frequently criminalized as part of the conditionality package."
+    },
+    {
+      "name": "small_farmers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Lose access to subsidized inputs and credit; face land seizure by agribusiness as subsidy removal and devaluation reduce competitiveness; forced into debt-peonage relationships with agribusiness firms or moneylenders. Agricultural liberalization opens markets to dumped crops from OECD countries with export subsidies still in place; small-farm exit from agriculture is the only option, but urban informal-sector work offers no alternative income floor."
+    },
+    {
+      "name": "debtor_state_government",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Formally 'chooses' to accept conditionalities but faces capital flight, no alternative financing, and explicit threat of international isolation if it refuses. Implements reforms that undermine its own legitimacy and revenue base (privatization of revenue-generating state firms, erosion of tax base through capital flight); loses policy autonomy over domestic priorities. The government becomes an instrument for transferring wealth outward rather than a vehicle for social provisioning."
+    },
+    {
+      "name": "domestic_poor_organizers_civil_society",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Organize resistance to conditionalities and defend public services; criminalized, detained, or attacked by security forces (often funded by external donors as part of 'governance' conditionalities). Their presence in conditionality negotiation would be disruptive to the extraction regime; they are structurally excluded from loan negotiation by design."
+    },
+    {
+      "name": "alternative_lenders",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "China, regional development banks, and other sources of non-conditional financing are structurally excluded from mediation by the IMF/World Bank's institutional position. When alternative financing appears, conditionality regimes are attacked as 'watered down' and geopolitical leverage is mobilized to reassert the original framework."
+    },
+    {
+      "name": "creditor_governments_oecd",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Benefit from export opportunities created by market liberalization, privatization of state assets to their firms, and the disciplinary effect of conditionalities on labor organization globally. Control IMF/World Bank voting structures and set the institutional agenda; coordinate conditionality frameworks across jurisdictions to prevent regulatory escape."
+    },
+    {
+      "name": "analytical_observer",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Surveys the structural relationships and temporal dynamics to evaluate the extraction claim, the beneficiary/victim asymmetry, and the persistence mechanisms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Addresses the genuine creditor-coordination problem of loan default and currency flight: prevents individual creditors from racing to demand repayment first (the classic collective action problem in sovereign debt). But this coordination function is decoupled from the extraction architecture — the extraction persists even when the coordination problem is solved.",
+    "transfer_function": "Transfers wealth from domestic populations (via privatization revenue, import tariffs, public sector wage suppression, subsidy removal) to transnational creditors, foreign investors, and allied domestic elites. The transfer is mediated through mandatory policy reforms that commodify public goods, suppress wages, and suppress taxation of capital.",
+    "absent_voices": "Domestic poor and working classes, small farmers, public sector unions, and indigenous groups with land claims are structurally excluded from conditionality negotiation. Labor movements that organized resistance are criminalized. Alternative lenders (China, regional development banks) whose presence would offer exit options are diplomatically sidelined. Women disproportionately bear subsidy removal costs through unpaid care work; gender-disaggregated impact analysis is absent from conditionality design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conditionality framework vanished, debtor states would immediately reorient toward public provisioning, asset reacquisition, and labor reprotection; creditor banks would face actual default risk and lose the extraction channel; foreign investors would lose privatization opportunities and deregulated labor access; import-competing elites would lose their market position to domestic producers. The global distribution of income would shift; capital flight from debtor countries would decelerate. The regime's disappearance would be catastrophic for creditors and require their active defense.",
+    "founding_problem": "The 1980s debt crisis: borrowing countries faced simultaneous balance-of-payments collapse, currency depreciation, and sovereign default risk. Large private banks with exposure to developing-country debt sought a mechanism to enforce repayment and prevent contagion.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "IMF economists and creditor governments attest the problem is still live, citing persistent fiscal deficits and moral hazard. Independent economic analysis from Zambian, Sri Lankan, and Argentine governments; civil society organizations (Jubilee Debt Campaign, Oxfam); former IMF economist Dani Rodrik; and cross-national studies (Korpi, Teulings, IMF's own independent evaluation office reports) document that conditionalities persist long after the founding debt crisis, are applied selectively by geopolitical interest, and continue to extract even when debt ratios are sustainably lower. The founding problem has been superseded by an extraction mechanism dressed in a coordination costume."
   },
   "interval": {
     "start": 1980,
@@ -36,62 +159,32 @@
     {
       "metric": "base_extractiveness",
       "time_point": 1980,
-      "value": 0.45
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.78
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.83
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2018,
-      "value": 0.86
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.87
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 1980,
-      "value": 0.55
-    },
-    {
-      "metric": "suppression_requirement",
       "time_point": 1990,
       "value": 0.74
     },
     {
-      "metric": "suppression_requirement",
+      "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.82
+      "value": 0.81
     },
     {
-      "metric": "suppression_requirement",
+      "metric": "base_extractiveness",
       "time_point": 2010,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
       "value": 0.87
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 2018,
-      "value": 0.9
-    },
-    {
-      "metric": "suppression_requirement",
+      "metric": "base_extractiveness",
       "time_point": 2024,
-      "value": 0.91
+      "value": 0.87
     },
     {
       "metric": "theater_ratio",
@@ -101,7 +194,7 @@
     {
       "metric": "theater_ratio",
       "time_point": 1990,
-      "value": 0.38
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
@@ -111,85 +204,112 @@
     {
       "metric": "theater_ratio",
       "time_point": 2010,
-      "value": 0.55
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.61
+      "time_point": 2020,
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 2024,
       "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.89
     }
   ],
   "commentary": {
-    "narrative_context": "Structural adjustment conditionalities are requirements imposed by the International Monetary Fund and World Bank on debtor countries as conditions for loan disbursement and debt restructuring. The stated rationale is fiscal discipline, market confidence, and sustainable development. This constraint story instantiates the DEBTOR EXTRACTION READING: conditionalities function as a coercive extraction regime that violently dismantles domestic social contracts, redirects fiscal capacity toward transnational creditors and commodity extractors, and forecloses alternative development paths. The reading construes the constraint as a neo-colonial instrument: formal sovereignty masks binding external control, while the technical framing of conditionalities obscures the fact that populations bearing the costs have no voice in their design. The claim/metric gap is intentional: the constraint is CLAIMED as snare (extractive, coercive, with identifiable victims) and the metrics describe a high-extraction, high-suppression regime that has intensified over 44 years. This reading is ONE of three structurally distinct readings of the same kernel (structural_adjustment_conditionalities); the sibling readings (creditor_coordination, hybrid_selectivity) would generate different constraint stories with different ε values, beneficiary/victim sets, and suppression mechanisms. They coexist as live competing interpretations held by different institutional seats (creditors, heterodox economists, geopolitically variated debtors).",
+    "narrative_context": "Structural adjustment conditionalities are loan-disbursement requirements imposed by the IMF and World Bank on debtor governments, mandating privatization, subsidy cuts, trade liberalization, labor deregulation, and reduced public spending. This constraint represents ONE READING of the contested conditionality kernel: the debtor-extraction reading, which frames conditionalities as coercive mechanisms that transfer wealth from domestic populations to transnational creditors and foreign investors by dismantling public services, suppressing wages, and capturing state assets. The alternate readings (creditor-coordination reading, hybrid-selectivity reading) are distinct constraints with different beneficiary/victim structures and different ε values; they are not alternatives within this constraint but separate analyses. This constraint is authored from the structural position of debtor populations and their analysts who experience the regime as extraction enforced by capital flight threats, IMF loan cancellation, and international isolation.",
     "key_agents": [
-      "IMF/World Bank technocrats: institutional agenda-setters, design and enforce the policy menu without bearing its costs",
-      "Transnational creditor banks: institutional beneficiaries, collect repayment + interest enforced by conditionality discipline",
-      "Commodity extraction interests: beneficiaries, gain resource access and labor cost control through privatization and trade liberalization mandates",
-      "Debtor-country populations: powerless victims, trapped; bear direct costs through service cuts, subsidy removal, employment precarity",
-      "Public sector workers: organized victims, identity-locked; targeted by wage/hiring freezes and redundancy mandates",
-      "Rural subsistence communities: victims, doubly trapped (external: cannot immigrate; internal: resource dependence on enclosed commons)",
-      "Domestic industries: moderate-power victims, constrained; collapse under trade liberalization they cannot compete with",
-      "Debtor-country governments: moderate-power payers, constrained; structurally unable to reject conditions without triggering default cascade",
-      "Civil society, labor unions: excluded from design; would oppose but have no formal standing in state-to-creditor bilateral process",
-      "Alternative lenders (China, regional banks): excluded from rule-setting; constrained by creditor-dominated governance norms",
-      "Heterodox economists: analytical observers; document extraction logic and counterfactual welfare but lack institutional standing"
+      "IMF/World Bank leadership (agenda-setter, institutional power): sets loan conditions, administers tranches, maintains discretionary authority over stringency and selectivity",
+      "Transnational creditor banks (beneficiary, powerful): recoup loans through forced privatization, asset capture, and wage suppression; operate outside cost-bearing jurisdiction",
+      "Foreign investors (beneficiary, powerful): acquire state assets at distressed prices; exploit labor and environmental deregulation; exit when profitable",
+      "Domestic poor and working classes (victim, powerless): lose access to public goods, face wage cuts, unemployment, subsidy removal, and out-of-pocket service costs; geographic immobility traps them in cost-bearing jurisdiction",
+      "Public sector workers (victim, moderate power): face layoffs, wage freezes, pension cuts; lose job security and collective bargaining protections",
+      "Small farmers (victim, powerless): lose subsidy access, face land seizure, forced into debt-peonage; trapped in geography with no alternative income",
+      "Debtor state government (constrained payer/observer): formally 'chooses' conditionalities but faces capital flight threat and isolation if it refuses; becomes instrument for wealth transfer",
+      "Domestic poor organizers (excluded, powerless): criminalized, detained; their presence in negotiations would disrupt the extraction regime"
     ],
-    "logic_rationale": "Extractiveness at 0.87 reflects that conditionalities are designed to transfer fiscal capacity, resource access, and labor discipline from debtor populations to transnational beneficiaries. The measurement series shows extraction accumulation over 44 years: starting at 0.45 (acute crisis response) to 0.87 (mature extraction regime). Suppression at 0.91 is extremely high because the constraint persists through structural coercion, not voluntary participation: governments face binary choice (accept conditions or face default cascade); populations face identity-lock (public sector careers, subsistence dependence, immobility) that make exit impossible. Theater at 0.62 (rising from 0.25) reflects that the functional justification for conditionalities (crisis management, fiscal discipline) has been increasingly detached from practice (permanent austerity, resource extraction continuing despite stabilized fiscal positions). The suppression trajectory shows steady intensification: 1990 (0.74) through 2024 (0.91). This reflects two mechanisms: (1) enforcement hardening as creditors perfected the machinery (debt conditionality linkage, surveillance expansion, expanded scope of conditions); (2) resistance hardening (labor unrest, electoral rejection, social crisis) requiring greater enforcement effort. The theater ratio rise (0.25 to 0.62) suggests Goodhart drift: early conditions were genuinely tied to fiscal metrics; later conditions (governance restructuring, privatization mandates, labor flexibilization) are justified by appeal to 'market confidence' and 'best practice' rather than measurable sustainable finance. These are smoke screens for resource extraction.",
-    "perspectival_gap": "From the creditor institutional seat (IMF/World Bank), conditionalities are necessary coordination: they provide assurance to lenders and ensure policy consistency that makes lending possible. From the debtor-country government seat, conditions are constraining but rational: accepting them preserves access to refinancing and avoids default. From the debtor-population seats (powerless, trapped, identity-locked), the same structure is pure coercion: policies are imposed without consent, costs are borne involuntarily, and resistance is suppressed. The engine computes seat-specific directionality: creditor seats derive d near 0.0 (beneficiary, arbitrage exit, power to shape rules); government seats derive d near 0.5 (constrained, moderate power, mixed costs and stability benefits); population seats derive d near 1.0 (victims, trapped/identity-locked, no exit, no voice in design). This structural divergence is the point: the same constraint maps to different effective extractions depending on power, exit, and beneficiary status.",
-    "directionality_logic": "Beneficiaries (transnational banks, commodity interests) are declared on the structural fact that they collect from the arrangement: interest flows and principal payments go to lenders; resource rents and cheap labor go to commodity interests. They face no austerity, experience no service cuts, and bear zero enforcement cost. Victims are declared on the structural fact that they bear costs involuntarily: populations lose public services, subsistence commons, and employment security; domestic industries lose tariff protection and credit access; rural communities lose land and pastoral resources. The constraint persists because beneficiaries can externalize enforcement costs (IMF/World Bank do the coercion) while victims cannot exit. Directionality for each seat follows from power and exit: powerless + trapped/identity-locked + victim = d near 1.0 (full target). Institutional beneficiary + arbitrage exit + power to shape rules = d near 0.0 (full beneficiary). Moderate-power government + constrained exit + mixed roles = d around 0.5 (symmetric, pulled both ways by creditor pressure and constituent resistance).",
-    "mandatrophy_analysis": "Mandatrophy is resolved (founding_problem_status=dead): the 1982–1985 debt crisis triggered conditions meant as temporary shock therapy. By 2000, debt-to-export ratios had stabilized, financial markets had resumed access, and the founding problem (acute refinancing crisis) was solved. Yet conditionalities persisted and expanded in scope (governance, labor, resource sectors). This is classic mandatrophy: the mandate has outlived the function. Creditors continue to defend conditions as necessary for 'market confidence,' but this is post-hoc rationalization — the founding problem is gone, yet the constraint persists by institutional inertia and extracted benefit. The theatrical justification (conditions = fiscal discipline) masks the fact that conditions now function as permanent extraction (resource access, labor cost control, debt servicing priority). The theater ratio rise from 0.25 to 0.62 is diagnostic of this drift: the functional story (fiscal crisis response) has been replaced by performance (conditions are 'best practice,' 'market expectations,' 'good governance') while the actual mechanism is creditor-enforced resource extraction. This is mandatrophy detection: constraint persists after its founding rationale is dead.",
-    "kernel_context": "This constraint instantiates the DEBTOR_EXTRACTION_READING of the structural_adjustment_conditionalities kernel. The kernel is the contested commitment to 'fiscal discipline through external conditions': the question is whether conditions coordinate efficient borrowing (creditor_coordination_reading) or extract rents through coercion (this reading), or are selectively applied (hybrid_selectivity_reading). This reading construes conditions as neo-colonial extraction: formal sovereignty masks binding external control, the technical framing obscures distributional coercion, and the founding crisis rationale has been superseded by permanent extraction. The sibling readings (creditor_coordination, hybrid_selectivity) operate from the same kernel (the structural commitment to IMF/World Bank governance authority) but reach different conclusions about what that authority does and for whom. This reading differs from the creditor_coordination reading in core premise: this reading holds that creditor interest in extraction (not efficiency) drives condition persistence; the coordination reading holds that efficiency and market discipline drive persistence. This reading coexists with the hybrid_selectivity reading (both agree extraction occurs; they differ on whether it is applied universally or selectively by geopolitical standing). The three readings are live simultaneously across different institutional seats: creditors and IMF technocrats inhabit the coordination reading; heterodox economists and post-colonial scholars inhabit the extraction reading; policy analysts document the hybrid_selectivity reading."
+    "logic_rationale": "Extractiveness at 0.87 reflects that conditionalities operate primarily as a mechanism for wealth transfer rather than coordination. The founding coordination problem (sovereign default during the 1980s debt crisis) was genuine but is no longer the primary driver — the regime persists decades after debt ratios stabilized because the extraction machinery proved too valuable to dismantle. Suppression at 0.89 is extremely high because the regime's persistence depends entirely on active enforcement: capital flight threats, IMF loan cancellation, international isolation, and domestic security force control (often externally funded). Without continuous surveillance, threat issuance, and willingness to detonate economies that deviate, the regime would collapse — debtor populations have no reason to consent. Theater ratio at 0.62 and rising reflects that IMF/World Bank justifications have become increasingly divorced from functional necessity: 'growth-oriented adjustment' language persists even as decades of adjustment yield persistent poverty, deindustrialization, and social service collapse. The measurement series runs on a single shared time grid (44-year interval, sampled at 1980, 1990, 2000, 2010, 2020, 2024) so every metric is authored at every examined point. The rising trajectory of all three metrics reflects extraction accumulation: the regime tightened its grip over time, requiring ever more suppression and ever more theatrical justification as functional necessity eroded.",
+    "perspectival_gap": "The creditor/beneficiary seats and the victim seats compute radically different constraint types. From the IMF/World Bank institutional position the arrangement is technical necessity and coordination machinery that disciplines fiscal profligacy; from the debtor-population position it is coercive wealth transfer enforced by threat of financial starvation. The engine computes this divergence from the structural data (who benefits, who bears costs, who can exit, who faces suppression). The authored claim does not adjudicate the gap; the metrics and beneficiary/victim structure ground the computation.",
+    "directionality_logic": "Transnational creditor banks are full beneficiaries (d ≈ 0.0): they recoup loans, face no cost from conditionality implementation, and can exit any specific debtor relationship through capital mobility. Foreign investors similarly benefit without bearing costs (d ≈ 0.0). The debtor-state government faces a twisted structural position: formally a 'chooser' but genuinely trapped by capital flight threat and financing alternatives collapse (d ≈ 0.7). Domestic poor are full targets (d ≈ 1.0): they bear the entire cost burden (subsidy removal, service cuts, wage suppression), cannot exit their geography or income-dependence on services, and have zero structural exit options. Suppression compounds their extraction: they cannot organize resistance without facing criminalization; they cannot voice their interests because excluded from conditionality negotiation. Public sector workers sit at d ≈ 0.9: they face direct job loss, wage cuts, and pension erosion, with constrained but not trapped exit (education and context-specificity limit private-sector mobility).",
+    "mandatrophy_analysis": "The founding problem (1980s debt crisis) was a real collective-action failure: banks that had overlent to developing countries faced potential simultaneous default. Conditionality architecture solved this by giving the IMF enforcement authority over debtor-state policy. But the constraint has persisted through multiple regime shifts where the founding problem no longer drives the architecture. Structural adjustment conditionalities remain on countries whose debt is sustainable, whose growth rates are reasonable, and whose default risk is low — because the extraction is too valuable to release. The mandatrophy verdict is RESOLVED DEATH: the founding problem died (debt sustainability improved, default risk fell) but the extraction mechanism persists and has calcified. The theater-ratio trajectory confirms this: as the functional necessity eroded, the justificatory apparatus intensified (growth-oriented adjustment, poverty-reduction strategy papers, SDGs integration), suggesting the regime is now largely performative in legitimating what is structurally pure extraction. The constraint should be classified as dead-problem zombified extraction, and the mandatrophy resolution is ACTIVE.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'structural_adjustment_conditionalities'. The kernel is the standing IMF/World Bank loan-conditionality arrangement itself — a formalized commitment to impose policy requirements as conditions for financing. This reading (debtor_extraction_reading) instantiates the constraint as a Snare: coercive extraction enforced via capital flight threats and institutional isolation, benefiting transnational creditors and harming debtor populations. The sibling readings are: (1) creditor_coordination_reading — conditionalities as necessary mechanisms ensuring fiscal discipline and preventing moral hazard (Rope or Tangled Rope type); (2) hybrid_selectivity_reading — conditionalities as selectively applied discipline, enforced harshly on weak states, waived for geopolitically strategic debtors (Tangled Rope or Piton type, depending on whether the selectivity is recognized). The three readings share the same formal kernel (the IMF/World Bank's conditionality authority) but attribute fundamentally different functions to it and identify different beneficiaries. This reading's axiomatic core is that creditor-enforced austerity extracts from debtor populations; the contradictory reading asserts conditionality is efficiency-enhancing coordination. These are the same institutional arrangement read through opposed interpretive frames."
   },
   "omegas": [
     {
-      "id": "founding_problem_vs_persistence_gap",
-      "question": "The founding debt crisis (1982–1985) is solved; yet conditionality scope and intensity have increased. Is the constraint persisting due to institutional inertia/path dependence, or due to active extraction benefit capture?",
-      "resolution_mechanism": "Historical analysis of IMF/World Bank mandate evolution, personnel testimony, and internal documents (released through FOIA/information access laws) comparing crisis-response design to post-2000 condition imposition. Counterfactual analysis: what would conditionalities look like if designed for solved crisis (tapering, targeted) versus designed for permanent extraction (expansion, scope creep)?",
-      "impact": "If inertia dominates: the constraint is a Piton (degraded institution maintained theatrically). If extraction benefit dominates: the constraint is a Snare (active coercive extraction). The classification turns on this omega.",
+      "id": "internalized_vs_structural_suppression",
+      "question": "Is the measured suppression primarily structural (capital flight threats, financing collapse, direct state repression) or substantially internalized (debtor-state technocrats believe liberalization is necessary, not coerced)?",
+      "resolution_mechanism": "Counterfactual experiment: remove capital flight threats (capital controls) and alternative financing (China, regional banks) while keeping ideological opposition to liberalization. If compliance collapses, suppression is structural; if compliance persists, suppression is substantially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — populations carry the suppression internally even after coercive mechanisms are removed. This would support a classification shift toward Snare (internalized coercion is the purest form of extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is backed by material threats or by absorbed ideological necessity."
+    },
+    {
+      "id": "coordination_vs_extraction_decoupling",
+      "question": "Could the genuine coordination problem (preventing sovereign default races) be solved without the extraction architecture (privatization, subsidy cuts, wage suppression)?",
+      "resolution_mechanism": "Design thought experiment: a loan-restructuring regime that prevented default races but prohibited privatization mandates, did not require subsidy cuts or wage suppression, and allowed public reinvestment from the freed fiscal space. If such a regime could solve the coordination problem at substantially lower extractive cost, then the current extraction is decoupled from coordination necessity.",
+      "impact": "If decoupled, the extraction is pure rent-seeking rather than coordination overhead. The constraint would reclassify from Tangled Rope (hybrid) toward pure Snare if the coordination element is substantively eliminated by design alternatives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the measured extraction is the cost of coordination or is structurally separable from it."
+    },
+    {
+      "id": "beneficiary_saturation_and_accumulation",
+      "question": "Has the extraction accumulated to the point where further tightening produces diminishing returns for creditors and accelerating resistance costs?",
+      "resolution_mechanism": "Empirical analysis of debt service burdens, default rates, civil unrest, and creditor recovery rates across conditionality intensities. If creditors recover more from lighter touch arrangements (fewer defaults, lower political risk, faster growth) than from maximum tightening, the regime has entered a saturation region.",
+      "impact": "If saturation is present, the regime's persistence depends not on functional necessity but on institutional inertia and creditor status-quo preferences. This would support a Piton classification (degraded function, maintained by performance and institutional habit rather than continued value extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether conditionality intensity tracks value extraction or has become performative."
+    },
+    {
+      "id": "reading_committer_kernel_distinction",
+      "question": "Is the distinction between this reading and the creditor-coordination reading a difference in what the kernel DOES, or a difference in interpretation of the same institutional arrangement?",
+      "resolution_mechanism": "Textual analysis: do IMF/World Bank founding documents and policy manuals describe conditionality as coordinating creditor action or as enforcing debtors? The documents describe both — which suggests the readings are alternative interpretations layered over a single kernel, not discoveries of distinct constraints.",
+      "impact": "If the readings are interpretations of the same kernel rather than discoveries of structurally distinct constraints, then the Snare/Rope classification difference reflects a fundamental contestation about the institution's function, not an objective difference in what it does. This is the case documented by the 'kernel contest' framing.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading and the creditor-coordination reading are alternative framings of one institution or evidence of two structurally distinct constraints."
+    },
+    {
+      "id": "selective_enforcement_and_geopolitical_capture",
+      "question": "Are conditionalities enforced uniformly across debtors, or are they selectively waived for geopolitically strategic nations while harshly imposed on weak states?",
+      "resolution_mechanism": "Comparative case analysis: IMF/World Bank treatment of Egypt (US strategic ally), Pakistan (strategic to India containment), Ukraine (geopolitically contested), versus Zambia, Sri Lanka, or small Caribbean nations (low geopolitical value). Document the gap between stated conditionality requirements and actual enforcement.",
+      "impact": "If selectivity is present, the hybrid-selectivity reading (the third sibling) is descriptively accurate and this reading's universalist beneficiary/victim structure needs differentiation by geopolitical position. The Snare classification holds but is modulated by geopolitical interest rather than uniform extraction.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether post-crisis condition persistence is institutional inertia or active extraction benefit."
-    },
-    {
-      "id": "suppression_structural_vs_internalized",
-      "question": "Is the measured suppression (0.91) primarily structural (legal/institutional barriers, default cascade threat, immobility) or internalized (debtor governments and populations believe conditions are necessary, inevitable, or legitimate)?",
-      "resolution_mechanism": "Post-exit suppression trajectory: countries that exit (Argentina 2001 default, Iceland 2008, Jamaica conditional on alternative lenders) show whether suppression persists after escape from IMF machinery. Qualitative: belief surveys among debtor-country elites and populations before/after condition escape.",
-      "impact": "If structural: the constraint's effective suppression is the measured level. If internalized: populations carry the suppression with them even post-exit; the constraint's power exceeds the measured level and persists through internalized discipline (structural adjustment as ideology). Hybrid mechanism (both) would mean institutional + cognitive lock.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether suppression is structural coercion or internalized discipline."
-    },
-    {
-      "id": "alternative_development_pathways",
-      "question": "Are the policy alternatives to conditionalities (public investment, import substitution, capital controls, mixed economy) genuinely inferior to conditionality-mandated liberalization, or does the superiority claim depend on metrics controlled by creditors?",
-      "resolution_mechanism": "Comparative development analysis: growth, welfare, inequality, service provision, and resilience in conditionality-compliant versus non-compliant debtors matched on initial conditions. Analysis must use independent metrics (human development, Gini, health/education access) not just GDP growth and financial market access (which creditors measure success by).",
-      "impact": "If alternatives are genuinely inferior: conditionalities, while extractive, produce better material outcomes. If alternatives are superior: the constraint is purely extractive with no coordination benefit — the 'technical' justification is false. If outcomes are mixed/path-dependent: the constraint involves genuine trade-offs and alternative readings (creditor_coordination, hybrid_selectivity) gain weight.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether conditionality-mandated policies are developmentally superior or whether superiority is an artifact of creditor-controlled metrics."
-    },
-    {
-      "id": "coalition_capacity_of_debtor_populations",
-      "question": "Could debtor-country populations, if organized, mount sufficient resistance to compel condition reversal, or is the institutional/power asymmetry too large to overcome through domestic political action?",
-      "resolution_mechanism": "Historical case analysis of resistance episodes (IMF riots, labor-led government capture, electoral rejection of conditionality-supporting parties). Assessment of whether these produced condition relaxation or merely spectacle/theater before creditor enforcement resumed.",
-      "impact": "If coalition resistance can compel reversal: the constraint operates through suppression of actual latent power (high resistance potential, high enforcement needed). If institutional asymmetry prevents reversal: the constraint is a Snare with low contestability (high suppression, low active resistance because effort is futile). This affects the resistance metric calibration.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether debtor-country resistance capacity could translate to institutional reversal or is structurally foreclosed."
-    },
-    {
-      "id": "reading_contest_empirical_boundary",
-      "question": "What empirical evidence would adjudicate between the debtor_extraction_reading and the creditor_coordination_reading? What would disconfirm this reading's core premise?",
-      "resolution_mechanism": "This is a omega_c (conceptual) probe disguised as empirical: the two readings differ on the MOTIVE driving condition persistence (extraction vs. efficiency). Motive is empirically opaque. Disconfirming evidence would include: (1) demonstrable cases where conditions are relaxed on high-extraction debtors who pose no fiscal risk (contradicts extraction story); (2) cases where creditors maintain conditions despite clear welfare harm and political instability (supports extraction story); (3) counterfactual: conditions diverge sharply across geopolitically ranked debtors even controlling for fiscal metrics (supports hybrid_selectivity, suggests extraction).",
-      "impact": "The reading's claim is structural (conditions function as extraction machinery). The empirical boundary is thin: both extraction and coordination can coexist (conditions coordinate creditor expectations AND extract rents). The reading's unique claim is that extraction dominates the function. Evidence of selective application by geopolitical standing (hybrid_selectivity reading) would support this reading's contention that power and profit, not efficiency, drive the system.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Kernel contest: whether the operative motive driving condition persistence is creditor extraction or efficiency coordination."
+      "description": "Whether conditionality regime is uniform or selectively enforced by geopolitical interest."
     }
   ],
   "boltzmann": {
@@ -200,62 +320,72 @@
     "affects_constraints": [
       "structural_adjustment_conditionalities__creditor_coordination_reading",
       "structural_adjustment_conditionalities__hybrid_selectivity_reading",
-      "debt_trap_mechanism__asymmetric_repayment",
-      "resource_curse__extractive_commodity_export"
+      "sovereign_debt_collective_action",
+      "currency_devaluation_distributional_shock",
+      "import_tariff_elimination_domestic_production"
     ],
-    "dual_formulation_note": "This constraint is part of the structural_adjustment_conditionalities kernel family. Three structurally distinct readings instantiate different constraints from the same kernel: (1) debtor_extraction_reading (this story) — snare, high extraction (ε=0.87), coercive enforcement, neo-colonial framing; (2) creditor_coordination_reading — rope, moderate extraction (ε~0.45), coordination function dominates, efficiency/market discipline framing; (3) hybrid_selectivity_reading — tangled_rope, high extraction (ε~0.80) but applied selectively by geopolitical rank, suggesting power-based (not efficiency-based) differentiation. The ε values differ because the readings define different constraints: extraction-dominated versus efficiency-dominated versus selectively-applied. The family structure reflects the kernel contest: one commitment (IMF/World Bank governance authority over debtor fiscal policy) admits genuinely incommensurable readings depending on the interpreter's seat and empirical claims. This story (debtor_extraction) feeds the downstream constraints (debt_trap_mechanism, resource_curse) by establishing that conditionalities function as extraction infrastructure; those constraints are structurally downstream (condition-enforced debt service and resource privatization enable both debt-trap dynamics and commodity extraction)."
+    "dual_formulation_note": "This constraint is one of three readings of the contested kernel 'structural_adjustment_conditionalities'. The creditor_coordination_reading frames the same institutional arrangement as a Rope or Tangled Rope (genuine coordination with possible asymmetric extraction). The hybrid_selectivity_reading frames it as selectively applied — a Tangled Rope for geopolitically weak states, a Rope for strategic allies. All three readings share the same kernel (IMF/World Bank conditionality authority) but attribute different functions and different beneficiary structures. The debtor_extraction_reading has the highest measured extractiveness and the most victim-focused structure. The three readings together map the contested terrain of what structural adjustment actually does."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.72
     }
   ],
+  "gain_flow": "transnational_creditor_banks",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "creditor_collective_action_solving",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era_2024",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "structural_adjustment_conditionalities__creditor_coordination_reading",
+        "sibling_id": "creditor_coordination_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "structural_adjustment_conditionalities__hybrid_selectivity_reading",
+        "sibling_id": "hybrid_selectivity_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "conditionalities_function_as_extraction",
+        "atom": "debtor_populations_bear_adjustment_costs",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "founding_crisis_superseded_by_permanent_rent_capture",
+        "atom": "conditionality_extraction_decoupled_from_coordination",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "creditor_enforcement_via_financing_threat",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
       }
-    ],
-    "reference_frame": "crisis_response_fiscal_stabilization",
-    "drift_state": {
-      "moment": "contemporary_2024",
-      "direction": "axiom_overriding",
-      "magnitude": "severe",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

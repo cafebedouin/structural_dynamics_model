@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,36 +76,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: market_as_natural_default__hybrid_amnesia_reading
- *   human_readable: Market as Natural Default (Hybrid Amnesia Reading)
+ *   human_readable: Market-as-Natural-Default (Hybrid Amnesia Reading)
  *   domain: political_economy/ideology
  *
  * SUMMARY:
- *   Between 1930 and 1970, alternatives to market coordination (guild
- *   socialism, syndicalism, Soviet planning, cooperative commonwealth models)
- *   gradually faded from intellectual and political memory, not primarily
- *   through active suppression but through the success of market economies at
- *   capital accumulation, the prestige of neoclassical economics, and the
- *   displacement of radical intellectual movements by war and Cold War. From
- *   1980 onward, beneficiaries (incumbent economists, finance institutions,
- *   neoclassical departments) inherit this pre-existing amnesia and
- *   deliberately rationalize it, producing a narrative that markets are
- *   natural and inevitable rather than contingent and inherited through
- *   forgetting. The constraint operates in two stages: genuine historical
- *   lapse (1930-1970, extractiveness low because the forgetting was not yet
- *   weaponized) followed by defensive rationalization (1980-present,
- *   extractiveness rising as beneficiaries actively maintain the amnesia and
- *   suppress the counter-narrative that alternatives were deliberately closed
- *   off). This reading differs structurally from lapsed_alternative_reading
- *   (which treats the amnesia as passive residue) and
- *   beneficiary_maintained_reading (which treats beneficiary defense as
- *   primary rather than parasitic on pre-existing forgetting).
+ *   This constraint models the naturalization of market-based economic
+ *   organizing as a reading of a contested kernel: the standing arrangement
+ *   of market dominance in capitalist economies. The reading asserts a
+ *   specific historical mechanism: (1) genuine forgetting of Depression-era
+ *   alternatives and mid-century awareness of economic pluralism
+ *   (1930s-1970s, the amnesia phase), followed by (2) deliberate capture and
+ *   rhetorical weaponization by incumbent beneficiaries once amnesia began to
+ *   wane (1980s-present, the capture phase). The constraint's extractiveness
+ *   increases over this period as forgetting alone becomes insufficient to
+ *   maintain the arrangement's naturalness. This reading differs from
+ *   siblings: the lapsed_alternative_reading attributes market dominance to
+ *   forgetting alone (no active beneficiary capture), and the
+ *   beneficiary_maintained_reading attributes it to continuous post-hoc
+ *   defense from the beginning. The three readings are empirically
+ *   distinguishable through temporal patterns in suppression_requirement and
+ *   theater_ratio.
  *
  * KEY AGENTS:
- *   - Incumbent market beneficiaries (academic economists, finance): inherit amnesia, then actively maintain the forgetting post-1980
- *   - General economists post-1970: identity-locked into the market-natural framing; unable to exit without professional death
- *   - Policy makers: constrained not by force but by collapsed alternatives in the intellectual landscape
- *   - Alternative economy advocates: excluded not by censorship but by intellectual implausibility within the dominance frame
- *   - Historical scholars: possess the full record but are marginal in professional economics and policy discourse
+ *   - incumbent_market_beneficiaries: institutional, agenda-setting seat that shifts from passive beneficiary of ambient amnesia (pre-1980) to active defender and rhetorical manager (post-1980)
+ *   - neoclassical_economics_discipline: institutional, gatekeeping seat that perpetuates market naturalism through pedagogy, formalization, and disciplinary boundaries
+ *   - subordinated_economic_alternatives: powerless, trapped payer; structural foreclosure prevents testing and development of non-market forms
+ *   - mid_twentieth_century_reformers: excluded historical seat; their frameworks fell out of living memory and active deliberation
+ *   - development_economists_south: observer seat; periodic attempts to recover alternatives are epistemically subordinated
  */
 
 /* ==========================================================================
@@ -104,58 +110,107 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(market_as_natural_default__hybrid_amnesia_reading, 0.45).
-domain_priors:suppression_score(market_as_natural_default__hybrid_amnesia_reading, 0.62).
-domain_priors:theater_ratio(market_as_natural_default__hybrid_amnesia_reading, 0.58).
+domain_priors:base_extractiveness(market_as_natural_default__hybrid_amnesia_reading, 0.32).
+domain_priors:suppression_score(market_as_natural_default__hybrid_amnesia_reading, 0.58).
+domain_priors:theater_ratio(market_as_natural_default__hybrid_amnesia_reading, 0.62).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, extractiveness, 0.45).
-narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 0.62).
-narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 0.58).
+narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, extractiveness, 0.32).
+narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 0.62).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, accessibility_collapse, 0.71).
-narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, resistance, 0.48).
+narrative_ontology:constraint_metric(market_as_natural_default__hybrid_amnesia_reading, resistance, 0.43).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(market_as_natural_default__hybrid_amnesia_reading, tangled_rope).
-narrative_ontology:human_readable(market_as_natural_default__hybrid_amnesia_reading, "Market as Natural Default (Hybrid Amnesia Reading)").
+narrative_ontology:human_readable(market_as_natural_default__hybrid_amnesia_reading, "Market-as-Natural-Default (Hybrid Amnesia Reading)").
 narrative_ontology:topic_domain(market_as_natural_default__hybrid_amnesia_reading, "political_economy/ideology").
 
 domain_priors:requires_active_enforcement(market_as_natural_default__hybrid_amnesia_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(market_as_natural_default__hybrid_amnesia_reading, 'e3019ecb-22c9-4ad9-98a3-4d16e1171278').
-narrative_ontology:cs_kernel_codification('e3019ecb-22c9-4ad9-98a3-4d16e1171278', distributed).
-narrative_ontology:cs_authority_grounding('e3019ecb-22c9-4ad9-98a3-4d16e1171278', extraction).
-narrative_ontology:cs_interpretation_layer_present('e3019ecb-22c9-4ad9-98a3-4d16e1171278').
-narrative_ontology:cs_reading_relation('e3019ecb-22c9-4ad9-98a3-4d16e1171278', market_as_natural_default__lapsed_alternative_reading, influences).
-narrative_ontology:cs_reading_relation('e3019ecb-22c9-4ad9-98a3-4d16e1171278', market_as_natural_default__beneficiary_maintained_reading, coexists_with).
-narrative_ontology:cs_axiom('e3019ecb-22c9-4ad9-98a3-4d16e1171278', foundational, amnesia_enables_extraction).
-narrative_ontology:cs_axiom_status(amnesia_enables_extraction, holdable).
-narrative_ontology:cs_axiom_grounding('e3019ecb-22c9-4ad9-98a3-4d16e1171278', amnesia_enables_extraction, empirically_contingent).
-narrative_ontology:cs_axiom('e3019ecb-22c9-4ad9-98a3-4d16e1171278', secondary, coordination_function_justification_decayed).
-narrative_ontology:cs_axiom_status(coordination_function_justification_decayed, holdable).
-narrative_ontology:cs_axiom_grounding('e3019ecb-22c9-4ad9-98a3-4d16e1171278', coordination_function_justification_decayed, empirically_contingent).
-narrative_ontology:cs_reference_frame('e3019ecb-22c9-4ad9-98a3-4d16e1171278', market_as_inevitable_coordination).
-narrative_ontology:cs_drift_state('e3019ecb-22c9-4ad9-98a3-4d16e1171278', contemporary_2020, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('e3019ecb-22c9-4ad9-98a3-4d16e1171278', '').
+narrative_ontology:cs_story_uid(market_as_natural_default__hybrid_amnesia_reading, '450eb864-87ad-4f33-868a-41a179eeabf7').
+narrative_ontology:cs_kernel_codification('450eb864-87ad-4f33-868a-41a179eeabf7', distributed).
+narrative_ontology:cs_authority_grounding('450eb864-87ad-4f33-868a-41a179eeabf7', extraction).
+narrative_ontology:cs_interpretation_layer_present('450eb864-87ad-4f33-868a-41a179eeabf7').
+narrative_ontology:cs_reading_relation('450eb864-87ad-4f33-868a-41a179eeabf7', market_as_natural_default__lapsed_alternative_reading, influences).
+narrative_ontology:cs_reading_relation('450eb864-87ad-4f33-868a-41a179eeabf7', market_as_natural_default__beneficiary_maintained_reading, coexists_with).
+narrative_ontology:cs_axiom('450eb864-87ad-4f33-868a-41a179eeabf7', foundational, amnesia_precedes_capture).
+narrative_ontology:cs_axiom_status(amnesia_precedes_capture, holdable).
+narrative_ontology:cs_axiom_grounding('450eb864-87ad-4f33-868a-41a179eeabf7', amnesia_precedes_capture, empirically_contingent).
+narrative_ontology:cs_axiom('450eb864-87ad-4f33-868a-41a179eeabf7', secondary, alternatives_naturally_decay_without_institutional_support).
+narrative_ontology:cs_axiom_status(alternatives_naturally_decay_without_institutional_support, holdable).
+narrative_ontology:cs_axiom_grounding('450eb864-87ad-4f33-868a-41a179eeabf7', alternatives_naturally_decay_without_institutional_support, instrumental).
+narrative_ontology:cs_reference_frame('450eb864-87ad-4f33-868a-41a179eeabf7', post_depression_awareness_of_economic_pluralism).
+narrative_ontology:cs_drift_state('450eb864-87ad-4f33-868a-41a179eeabf7', contemporary_market_naturalism_hegemony, gap(axiom_overriding, severe, false)).
+narrative_ontology:cs_created_at('450eb864-87ad-4f33-868a-41a179eeabf7', '').
 narrative_ontology:cs_kernel_id(market_as_natural_default__hybrid_amnesia_reading, market_as_natural_default).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(market_as_natural_default__hybrid_amnesia_reading, incumbent_market_beneficiaries).
-narrative_ontology:constraint_victim(market_as_natural_default__hybrid_amnesia_reading, alternative_economy_proponents).
-narrative_ontology:constraint_victim(market_as_natural_default__hybrid_amnesia_reading, state_planning_advocates).
+narrative_ontology:constraint_beneficiary(market_as_natural_default__hybrid_amnesia_reading, neoclassical_economics_discipline).
+narrative_ontology:constraint_victim(market_as_natural_default__hybrid_amnesia_reading, subordinated_economic_alternatives).
+narrative_ontology:constraint_vindicates(market_as_natural_default__hybrid_amnesia_reading, market_efficiency_doctrine).
+narrative_ontology:constraint_vindicates(market_as_natural_default__hybrid_amnesia_reading, homo_economicus_universality).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Corporations and financial institutions that extract surplus through market structures. They benefit from the market-as-natural framing because it insulates market rules from contestation and reform. As the constraint weakened (1980s onward), they increasingly deployed explicit rhetorical defense rather than relying on ambient amnesia. Their situation is characterized by expanding defensive discourse — think tanks, media campaigns, policy capture — precisely because forgetting alone became insufficient.
+narrative_ontology:constraint_stakeholder(market_as_natural_default__hybrid_amnesia_reading, incumbent_market_beneficiaries, beneficiary,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(market_as_natural_default__hybrid_amnesia_reading, incumbent_market_beneficiaries, agenda_setter).
+
+% The academic discipline that vindicates market naturalism through formalization. Economists inherit and perpetuate the amnesia embedded in textbooks and methodological assumptions (general equilibrium theory, rational choice, supply-demand mechanics presented as universal laws). Their professional authority depends partly on market naturalism remaining unquestioned. The discipline's gatekeeping against heterodox alternatives reinforces the constraint.
+narrative_ontology:constraint_stakeholder(market_as_natural_default__hybrid_amnesia_reading, neoclassical_economics_discipline, beneficiary,
+    institutional, generational, constrained, global).
+
+% Cooperative, commons-based, command-economy, and gift-economy organizing principles that were historically viable but have been rendered invisible or illegible within the market-naturalized worldview. Their costs are borne in the form of foreclosed possibilities: they cannot be tried, tested, or developed because the ambient framework treats markets as the only coherent option. The trapped exit reflects structural foreclosure — alternatives lack institutional support, funding, or epistemic legitimacy.
+narrative_ontology:constraint_stakeholder(market_as_natural_default__hybrid_amnesia_reading, subordinated_economic_alternatives, payer,
+    powerless, biographical, trapped, global).
+
+% Historical actors (1930s-1960s progressives, labor movements, post-WWII planners, development theorists) who actively maintained awareness of economic alternatives and deployed them in policy. They are excluded from contemporary discourse not by conscious suppression but by historical amnesia — their frameworks and arguments have fallen out of living memory and are rarely taught, referenced, or engaged by current policymakers. Their exclusion is a structural fact, not an active gate.
+narrative_ontology:constraint_stakeholder(market_as_natural_default__hybrid_amnesia_reading, mid_twentieth_century_reformers, excluded,
+    powerful, biographical, trapped, national).
+
+% Scholars and policymakers in the Global South who periodically attempt to recover alternative development frameworks (heterodox models, dependency theory, dirigisme, commons-based governance). They sit in an observer seat because their challenges to market naturalism are epistemically subordinated — treated as 'local exceptions' or 'backward resistance' rather than coherent alternatives. Their analytical work documents the constraint's operation but they lack the institutional power to shift the ambient frame.
+narrative_ontology:constraint_stakeholder(market_as_natural_default__hybrid_amnesia_reading, development_economists_south, observer,
+    organized, generational, constrained, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(market_as_natural_default__hybrid_amnesia_reading, incumbent_market_beneficiaries).
+narrative_ontology:fixing_cost_class(market_as_natural_default__hybrid_amnesia_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the coordination problem of resource allocation via decentralized price signals, enabling complex division of labor without central planning. The market mechanism genuinely coordinates production and consumption across millions of agents. This function is real and valuable.
+% TRANSFER_FUNCTION: Moves economic rents and control rights to market-positioned actors (corporations, landlords, financial intermediaries) and away from subordinated alternatives (cooperative organizing, commons-based allocation, command-economy mechanisms, gift relations). The transfer is structured not through explicit coercion but through structural foreclosure: alternatives are made invisible and illegible, so the market appears to be the only option.
+% ABSENT_VOICES: Practitioners of subordinated economic forms (cooperatives, commons stewards, participatory planning advocates, gift-economy researchers) would object that market naturalism forecloses alternatives without empirical testing. Historical actors from the mid-twentieth century (Polanyi, Hirschman, development theorists, labor economists) would testify that market dominance resulted from forgetting, not from proof of superiority. These voices are excluded by time, by disciplinary gatekeeping, and by the ambient epistemic frame that treats market criticism as naive.
+% DISAPPEARANCE_RATIONALE: If market naturalism vanished—if the constraint weakened such that alternatives regained epistemic and institutional legitimacy—the world would substantially rearrange: policy space would open for cooperative development, commons governance, participatory planning, and hybrid models; labor organizing would gain intellectual cover; development policy would recover heterodox frameworks; corporate rents depending on market exclusivity would face immediate contestation. The institutional and rhetorical apparatus built atop market naturalism would collapse.
+% FOUNDING_PROBLEM: The Great Depression demonstrated both the coordination failure of unregulated markets and the viability of extensive state intervention and alternative organizing (public works, cooperative credit, planned production). Mid-twentieth century institutional economics, development theory, and labor economics maintained awareness of this historical lesson. Market orthodoxy was rebuilt after WWII not because markets had been proven superior, but because (a) Cold War ideology made state planning anathema, and (b) the lived memory of the Depression and its alternatives faded from public discourse.
+% FOUNDING_PROBLEM_CORROBORATION: Economic historians (Polanyi, Hirschman, Rodrik, Chang, Minsky) document the Depression era as a moment when multiple economic systems competed and market alternatives were actively deliberated. The founding problem—proving markets superior—was not solved; it was abandoned in favor of ideological assertion. The fading of this historical knowledge is attested to by the declining citation of institutional economists in mainstream pedagogy and the near-disappearance of development heterodoxy from elite universities.
+narrative_ontology:disappearance_verdict(market_as_natural_default__hybrid_amnesia_reading, world_rearranges).
+narrative_ontology:founding_problem_status(market_as_natural_default__hybrid_amnesia_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(market_as_natural_default__hybrid_amnesia_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(market_as_natural_default__hybrid_amnesia_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(market_as_natural_default__hybrid_amnesia_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(market_as_natural_default__hybrid_amnesia_reading, 0.32, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,16 +225,16 @@ narrative_ontology:story_seed(market_as_natural_default__hybrid_amnesia_reading,
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness starts low (0.20) in 1930 because the amnesia is genuine forgetting, not yet a strategic device — the constraint operates mostly as passive lapse. It rises steadily (0.45 by 2020) as beneficiaries inherit the amnesia and then weaponize it, deliberately defending market naturalism against revival of alternatives. Theater ratio rises sharply (0.15 to 0.58) because the constraint's function shifts from coordination (early) to legitimacy-defense (late). After 1980, economic justifications for markets become increasingly rhetorical (defending liberalization against alternatives that have been made intellectually impossible rather than empirically defeated). Suppression rises throughout because the constraint must actively prevent the counter-narrative (alternatives were viable and their closure was chosen) from becoming credible. Accessibility collapse is high (0.71) because once the amnesia is accepted, alternatives become literally unthinkable within the professional discourse — you cannot even conceive of what you have forgotten. Resistance is moderate (0.48) because beneficiaries do not need to use crude force; intellectual gatekeeping (peer review, hiring, textbook authority) accomplishes the suppression structurally.
+ *   The constraint is claimed as tangled_rope because it solves a real coordination problem (price signals for resource allocation across distributed agents) while simultaneously extracting rents and foreclosing alternatives. The distinction from a pure rope is that the extraction is structural and historically contingent: it rides on amnesia about alternatives, not on inherent necessity. The distinction from a snare is that the coordination function is genuine and valuable; the extraction is a byproduct, not the primary function. The measurement series shows (a) extractiveness rising from 0.20 to 0.45 over ~100 years, (b) theater_ratio rising from 0.25 to 0.62, documenting the shift from ambient forgetting to active defense, and (c) suppression_requirement rising from 0.35 to 0.58, tracking the cost of maintaining the constraint as alternatives become visible. The sharp accelerations post-1970 reflect the phase transition: when forgetting began to wane, beneficiaries had to deploy suppression (gatekeeping, media control, career penalties for heterodox work) to maintain the constraint. The temporal pattern is the signature of this reading and distinguishes it from the sibling readings.
  *
  * PERSPECTIVAL GAP:
- *   From the beneficiary seat (incumbent economists and finance), the constraint appears as legitimate intellectual leadership defending correct doctrine against unscientific alternatives. From the alternative-economy-advocates' seat, the same constraint appears as active intellectual capture: a closing of the space of legitimate discussion around pre-existing amnesia. The engine computes these divergent positions from the asymmetric exit (beneficiaries have arbitrage options and global institutional positions; advocates are constrained to regional, marginal platforms) and the asymmetric knowledge (beneficiaries inherit and rationalize forgetting; advocates try to document what was forgotten). The perspectival gap is structural, not a matter of disagreement about facts.
+ *   Beneficiary seats perceive the constraint as a natural fact (market efficiency is a law of nature) or at worst a minor distortion from an ideal framework; they have no incentive to recognize extraction and suppress awareness of alternatives. Payer seats (subordinated alternatives) perceive structural foreclosure but lack institutional power to name it; their resistance is epistemically subordinated as 'backward' or 'naive.' Observer seats (development economists) see the constraint clearly but are treated as irrelevant to legitimate economic discourse. The engine should compute divergent types: the beneficiary seat may compute as rope or even mountain (natural law); the payer seat computes as snare (extraction disguised as coordination); the observer seat computes as tangled rope (genuine coordination with real extraction). This perspectival gap is the point of the reading—different seats inhabit genuinely different epistemic worlds structured by the constraint.
  *
  * DIRECTIONALITY LOGIC:
- *   Incumbent beneficiaries sit at d ≈ 0.1 (full beneficiaries): they collect professional prestige, policy influence, and intellectual authority from the constraint's persistence; they have arbitrage options (they could acknowledge alternatives but choose not to). General economists sit at d ≈ 0.4 (mild target): they are fused with the doctrine through identity but are not the captorers of its benefits. Policy makers sit at d ≈ 0.75 (target): they cannot execute alternatives they have forgotten exist. Alternative advocates sit at d ≈ 0.9 (full target): they bear the extraction (exclusion from legitimate discourse) and have trapped/constrained exit (must argue within the frame that has declared them illegitimate). The constraint has genuinely asymmetric extraction: beneficiaries gain intellectual and material advantage; payers lose the ability to perceive and choose alternatives. This asymmetry is what makes it Tangled Rope (coordination function present, but riding on extraction) rather than pure Rope.
+ *   Incumbent_market_beneficiaries and the economics discipline are structural beneficiaries: they collect rents, authority, and epistemic legitimacy from market naturalism. Their directionality is low (near 0.0), making effective extraction negative or near-zero from their perspective—they see the constraint as subsidizing them. Subordinated alternatives are targets: foreclosed from institutional support, funding, pedagogy, and policy deployment. Their directionality is high (near 1.0), making effective extraction substantial—they bear the cost of invisibility and foreclosure. The beneficiary seat's power is institutional and global; the payer seat's power is powerless and trapped. Spatial scope is global for beneficiaries (their rents are extracted across all markets); it is trapped for alternatives (they cannot operate outside the market-naturalized frame). Exit options are arbitrage for beneficiaries (they can shift between market forms while maintaining dominance); they are trapped for alternatives (no exit exists within the market-naturalized world). This structural data feeds the engine's d derivation: beneficiaries get low d (they benefit), payers get high d (they are targets). The directionality divergence explains why the constraint appears benign from the beneficiary seat and extractive from the payer seat.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (post-1945 coordination without centralized planning) is dead by 2000 — computers, input-output analysis, and decentralized information technology made alternative coordination mechanisms feasible. Yet the intellectual settlement that markets are natural and inevitable persists. This is exactly the mandatrophy signature: the constraint was built to solve a live problem and still functions to coordinate, but that coordinating function no longer justifies the extraction it carries. The persistence of market naturalism after 1980 is not the persistence of a justified settlement but the inertial operation of an outdated intellectual apparatus kept alive by institutional beneficiaries. The constraint computes as Tangled Rope because it still carries a real coordination element (prices do signal and coordinate) but increasingly operates as enforced extraction (defending beneficiary authority against alternatives that could now work if they were thinkable). The mandatrophy trajectory is: necessary coordination (1945-1970) → increasingly surplus extraction (1970-2020). This is why theater_ratio rises sharply post-1980: the same institutional apparatus that once served genuine coordination now serves mostly to maintain beneficiary authority by defending against alternatives.
+ *   The founding problem (proving markets superior during the Depression) is dead: the Depression passed, alternatives were tried and abandoned for political/ideological reasons, and the comparison question was never resolved empirically. The disappearance verdict is world_rearranges: if market naturalism vanished, policy would immediately reopen space for heterodox alternatives and institutional support would shift. The mismatch (founding_problem_status=dead + disappearance_verdict=world_rearranges) is the classic mandatrophy pattern: the arrangement persists despite its founding mandate being obsolete. The theater_ratio rising from 0.25 to 0.62 documents the theatrical maintenance: as forgetting waned, beneficiaries deployed rhetoric, pedagogical control, and career gatekeeping to maintain an arrangement whose functional justification had evaporated. The constraint exhibits mandatrophy: it is held in place by active suppression of alternatives and institutional inertia, not by its original coordination function. The base_properties.mandatrophy_resolved field is not authored as true because the constraint has not been consciously resolved; it persists in a state of unacknowledged mandate death.
  */
 
 /* ==========================================================================
@@ -187,79 +242,97 @@ narrative_ontology:story_seed(market_as_natural_default__hybrid_amnesia_reading,
    ========================================================================== */
 
 omega_variable(
-    genuine_vs_strategic_amnesia_boundary,
-    'At what point did the amnesia about alternatives transition from genuine historical lapse to actively maintained strategic forgetting? Are there discrete events marking the transition, or is it a continuous drift?',
-    'Archival analysis of academic debates, policy advisory records, and textbook evolution from 1970-1980; interviews with economists who witnessed the shift; documentation of when alternative frameworks stopped being taught and defended.',
-    'If genuine lapse dominated until 1980, the constraint is less culpable in early period (natural intellectual drift) and only becomes extractive post-1980 (active suppression). If strategic maintenance began earlier, the entire constraint is more classifiable as intentional extraction. The transition point matters for assigning responsibility and calibrating remedies.',
+    genuine_forgetting_vs_active_suppression,
+    'Is the constraint''s persistence primarily due to genuine historical amnesia (the Depression-era alternatives literally fell out of living memory), or to active intellectual suppression by beneficiary-controlled institutions (deliberate gate-keeping, textbook revision, career penalties)?',
+    'Archival analysis of mid-century economic pedagogy and its revision; oral histories of economists during the Cold War period; reconstruction of intellectual networks that could have transmitted heterodox knowledge but did not; comparison with domains where heterodox alternatives persisted (e.g., anthropology, history) vs. where they were purged (economics).',
+    'If genuinely forgotten: the constraint is a tangled rope whose suppression is structural and historically contingent (amnesia weakens naturally as sources re-surface); beneficiary capture is secondary and rides on pre-existing amnesia. If actively suppressed: the constraint is a snare disguised as a rope; suppression is deliberate and will intensify as forgetting wanes and alternatives become visible again.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(genuine_vs_strategic_amnesia_boundary, empirical, 'The boundary between passive forgetting and active amnesia maintenance.').
+narrative_ontology:omega_variable(genuine_forgetting_vs_active_suppression, empirical, 'The degree to which the constraint persists through genuine historical amnesia vs. active institutional suppression.').
 
 omega_variable(
-    identity_lock_reversibility,
-    'Are economists identity-locked into market naturalism in a way that makes exit genuinely impossible for them, or is the lock primarily institutional (career risk, gatekeeping) rather than psychological (actually unable to conceive alternatives)?',
-    'Documented cases of economists who shifted away from market naturalism and their stated reasons; surveys of economists on whether they feel capable of considering non-market coordination; analysis of what would be required for an economist to switch frameworks without losing professional credibility.',
-    'If identity-lock is genuine (economists cannot think alternatives), the constraint has a mountain-like component of natural cognitive limit. If lock is primarily institutional (economists could think alternatives but will lose status), the constraint is purely extractive through gatekeeping. The distinction matters for whether education/deliberation alone can break the constraint or whether institutional restructuring (hiring, tenure, journal control) is necessary.',
-    confidence_without_resolution(low)
+    axiom_overriding_mechanism,
+    'If the constraint is reading-indexed as a kernel interpretation, what is the mechanism by which the amnesia itself became institutionalized—did the market naturalism axiom overrun its prior grounding (empirically contingent claims about Depression-era market vs. planning comparison), or was the axiom deliberately decoupled from that evidence?',
+    'Genealogy of the axioms declared in cs_structure.axioms: which propositions were treated as empirically falsifiable in mid-century, and when did they transition to unfalsifiable truths? At what institutional junctures (textbook revision, journal editorial shifts, funding patterns) did the transition occur?',
+    'If the axiom was overridden by evidence (as empirically_contingent status would suggest), the reading''s reference frame should show substantial drift and the constraint should be approaching foreclosure. If the axiom was deliberately insulated from evidence, the status should be ''holdable'' and the reading should show stable institutional support despite contradictory evidence.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_reversibility, empirical, 'Whether identity fusion is cognitive or institutional.').
+narrative_ontology:omega_variable(axiom_overriding_mechanism, conceptual, 'Whether the market-naturalism axiom underwent empirical overriding or institutional insulation from evidence.').
 
 omega_variable(
-    sibling_reading_foreclosure_asymmetry,
-    'Does this reading foreclose the beneficiary_maintained_reading by asserting a two-stage mechanism that the beneficiary reading denies? Or do the readings coexist as different valid frames of the same constraint?',
-    'If the stage transition (1930-1970 genuine lapse vs. 1980-present strategic defense) is real and documented, it forecloses the beneficiary reading''s claim that beneficiaries have been active all along. If both stages are real but the beneficiary reading simply emphasizes the second stage and de-emphasizes the first, then coexistence is possible — the readings emphasize different parts of the same process.',
-    'Foreclosure would mean only one reading can be true and policy should follow that one. Coexistence would mean the readings reflect genuinely different perspectives from different seats, and both warrant consideration in design of remedies. The field work above (empirical test on when strategic maintenance began) partially resolves this.',
+    post_1980s_beneficiary_weaponization,
+    'The measurement series shows theater_ratio and suppression_requirement rising sharply post-1970: is this because genuine forgetting was waning (alternatives becoming visible again) and beneficiaries had to deploy active rhetorical defense, or because beneficiaries recognized the constraint was becoming contested and chose to weaponize it?',
+    'Comparative timeline of (a) when critical heterodox scholarship re-emerged (Polanyi rediscovery, new institutional economics, development heterodoxy), (b) when beneficiary-funded intellectual infrastructure expanded (think tanks, policy shops, media capture), and (c) when defensive rhetoric about markets intensified. If (a) precedes (b), the reading is accurate; if (b) is anticipatory, beneficiaries were capturing preemptively.',
+    'If amnesia waned naturally, the constraint is weakening structurally and the measurement series documents a real transition. If beneficiaries captured preemptively, they arrested the waning and the theater/suppression rise is their success at maintaining the constraint despite its natural decay.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_foreclosure_asymmetry, conceptual, 'Whether the two-stage mechanism is a real structural difference or an emphasis difference.').
+narrative_ontology:omega_variable(post_1980s_beneficiary_weaponization, empirical, 'Whether post-1980s beneficiary capture was reactive to waning amnesia or anticipatory consolidation of a weakening constraint.').
 
 omega_variable(
-    accessibility_collapse_measurement,
-    'Is the high accessibility_collapse (0.71) measuring genuine cognitive impossibility (alternatives literally unthinkable within the frame) or institutional suppression (alternatives thinkable but excluded from legitimate discourse)?',
-    'Cognitive science experiments on economic reasoning, analysis of the conceptual apparatus required to even pose alternatives, documentation of what happened to alternative economic thought when it re-emerged (in heterodox economics, MMT, postcapitalism discourse) — was it technically possible for mainstream economists to engage, or did the frame prevent engagement?',
-    'If cognitive, the constraint has a mountain-like component (natural limit to what can be thought within a frame) and remedies require frame change. If institutional, the constraint is pure extraction through gatekeeping and remedies focus on opening discourse. The measurement value (0.71) suggests a mix — partial cognitive closure, not total.',
-    confidence_without_resolution(medium)
+    kernel_reading_empirical_distinguishability,
+    'This reading (hybrid amnesia) asserts a two-stage process (forgetting → capture) that structurally differs from the sibling readings: lapsed_alternative_reading claims forgetting alone explains market dominance, while beneficiary_maintained_reading claims active post-hoc defense. How do these readings relate—are they empirically distinguishable, or do they represent different interpretations of the same historical facts?',
+    'Examine the measurement series: does the theater_ratio rise (as this reading predicts) or remain flat? Does suppression_requirement follow or precede extractiveness rise? A flat theater ratio and suppression prior to 1980 would falsify this reading in favor of lapsed_alternative; a sharp rise in both after 1980 supports the hybrid reading; and early suppression/theater stability would favor beneficiary_maintained.',
+    'The readings are empirically distinguishable through temporal patterns. This reading claims the constraint shows a detectable phase transition (1970s→1980s) where amnesia begins to wane and beneficiary capture accelerates. The measurement series provided documents exactly this transition.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(accessibility_collapse_measurement, empirical, 'Nature of the collapse of alternatives: cognitive vs. institutional.').
+narrative_ontology:omega_variable(kernel_reading_empirical_distinguishability, empirical, 'Empirical distinguishability of the three sibling readings via temporal patterns in constraint operation.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(market_as_natural_default__hybrid_amnesia_reading, 1930, 2020).
+narrative_ontology:interval(market_as_natural_default__hybrid_amnesia_reading, 1930, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(mark_tr_t1930, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1930, 0.15).
-narrative_ontology:measurement(mark_tr_t1945, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1945, 0.18).
-narrative_ontology:measurement(mark_tr_t1970, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1970, 0.35).
-narrative_ontology:measurement(mark_tr_t1980, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1980, 0.48).
-narrative_ontology:measurement(mark_tr_t2000, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 2000, 0.55).
-narrative_ontology:measurement(mark_tr_t2020, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 2020, 0.58).
+narrative_ontology:measurement(mark_tr_t1930, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1930, 0.25).
+narrative_ontology:measurement_basis(mark_tr_t1930, observed).
+narrative_ontology:measurement(mark_tr_t1950, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1950, 0.35).
+narrative_ontology:measurement_basis(mark_tr_t1950, observed).
+narrative_ontology:measurement(mark_tr_t1970, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1970, 0.48).
+narrative_ontology:measurement_basis(mark_tr_t1970, observed).
+narrative_ontology:measurement(mark_tr_t1990, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 1990, 0.58).
+narrative_ontology:measurement_basis(mark_tr_t1990, observed).
+narrative_ontology:measurement(mark_tr_t2010, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 2010, 0.62).
+narrative_ontology:measurement_basis(mark_tr_t2010, observed).
+narrative_ontology:measurement(mark_tr_t2026, market_as_natural_default__hybrid_amnesia_reading, theater_ratio, 2026, 0.62).
+narrative_ontology:measurement_basis(mark_tr_t2026, observed).
 
 % Extraction over time
 narrative_ontology:measurement(mark_be_t1930, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1930, 0.2).
-narrative_ontology:measurement(mark_be_t1945, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1945, 0.22).
+narrative_ontology:measurement_basis(mark_be_t1930, observed).
+narrative_ontology:measurement(mark_be_t1950, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1950, 0.22).
+narrative_ontology:measurement_basis(mark_be_t1950, observed).
 narrative_ontology:measurement(mark_be_t1970, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1970, 0.28).
-narrative_ontology:measurement(mark_be_t1980, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1980, 0.35).
-narrative_ontology:measurement(mark_be_t2000, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 2000, 0.42).
-narrative_ontology:measurement(mark_be_t2020, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 2020, 0.45).
+narrative_ontology:measurement_basis(mark_be_t1970, observed).
+narrative_ontology:measurement(mark_be_t1990, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 1990, 0.38).
+narrative_ontology:measurement_basis(mark_be_t1990, observed).
+narrative_ontology:measurement(mark_be_t2010, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 2010, 0.42).
+narrative_ontology:measurement_basis(mark_be_t2010, observed).
+narrative_ontology:measurement(mark_be_t2026, market_as_natural_default__hybrid_amnesia_reading, base_extractiveness, 2026, 0.45).
+narrative_ontology:measurement_basis(mark_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(mark_su_t1930, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1930, 0.3).
-narrative_ontology:measurement(mark_su_t1945, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1945, 0.32).
-narrative_ontology:measurement(mark_su_t1970, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1970, 0.42).
-narrative_ontology:measurement(mark_su_t1980, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1980, 0.52).
-narrative_ontology:measurement(mark_su_t2000, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 2000, 0.58).
-narrative_ontology:measurement(mark_su_t2020, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 2020, 0.62).
+narrative_ontology:measurement(mark_su_t1930, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1930, 0.35).
+narrative_ontology:measurement_basis(mark_su_t1930, observed).
+narrative_ontology:measurement(mark_su_t1950, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1950, 0.42).
+narrative_ontology:measurement_basis(mark_su_t1950, observed).
+narrative_ontology:measurement(mark_su_t1970, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1970, 0.48).
+narrative_ontology:measurement_basis(mark_su_t1970, observed).
+narrative_ontology:measurement(mark_su_t1990, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 1990, 0.55).
+narrative_ontology:measurement_basis(mark_su_t1990, observed).
+narrative_ontology:measurement(mark_su_t2010, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 2010, 0.57).
+narrative_ontology:measurement_basis(mark_su_t2010, observed).
+narrative_ontology:measurement(mark_su_t2026, market_as_natural_default__hybrid_amnesia_reading, suppression_requirement, 2026, 0.58).
+narrative_ontology:measurement_basis(mark_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -268,19 +341,19 @@ narrative_ontology:measurement(mark_su_t2020, market_as_natural_default__hybrid_
 
 narrative_ontology:coordination_type(market_as_natural_default__hybrid_amnesia_reading, resource_allocation).
 narrative_ontology:boltzmann_floor_override(market_as_natural_default__hybrid_amnesia_reading, 0.18).
-narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, market_as_natural_default__lapsed_alternative_reading).
 narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, market_as_natural_default__beneficiary_maintained_reading).
-narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, neoclassical_economic_hegemony__textbook_gatekeeping).
-narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, policy_framework_narrowing__development_discourse).
+narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, market_as_natural_default__lapsed_alternative_reading).
+narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, neoclassical_economics_gatekeeping).
+narrative_ontology:affects_constraint(market_as_natural_default__hybrid_amnesia_reading, development_heterodoxy_suppression).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three readings of the kernel 'market_as_natural_default.' The sibling readings (lapsed_alternative_reading and beneficiary_maintained_reading) instantiate the same kernel through different causal mechanisms. This reading specifies a two-stage process where genuine forgetting (1930-1970) is inherited and weaponized by beneficiaries (1980-present). The divergence is structural (different causal chain), not observational (different measurement of the same chain). All three are linked via network.affects_constraints to enable corpus analysis of how the three readings cluster empirically.
+% This constraint is one of three readings of the kernel 'market_as_natural_default.' The kernel represents the standing fact of market dominance in contemporary capitalist economies. The three readings decompose the mechanism: hybrid_amnesia_reading asserts a two-stage process (forgetting → capture); lapsed_alternative_reading attributes dominance to forgetting alone; beneficiary_maintained_reading attributes it to continuous active defense. These readings have different epsilon values (0.20→0.45 for hybrid; ~0.15→0.25 for lapsed; ~0.40→0.50 for beneficiary-maintained) because they represent different causal mechanisms for the same standing arrangement. The network links document the structural relationships and allow comparative analysis of the three readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(market_as_natural_default__hybrid_amnesia_reading, organized, 0.4).
+constraint_indexing:directionality_override(market_as_natural_default__hybrid_amnesia_reading, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

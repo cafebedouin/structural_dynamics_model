@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,34 +78,33 @@
  *   domain: higher_education/labor_economics/institutional_governance
  *
  * SUMMARY:
- *   This constraint story instantiates the INSTITUTIONAL_EXTRACTION_READING
- *   of the tenure_contract kernel. Tenure operates as a permanent employment
- *   guarantee and compensation floor for a protected ring of faculty,
- *   financed by extracting flexibility and cost-bearing from contingent
- *   workers (adjuncts, postdocs) and students (via tuition and reduced
- *   instructional investment). The reading claims this is not primarily
- *   coordination for academic freedom but rather rent collection: the
- *   founding problem (institutional suppression of research) is substantially
- *   solved in wealthy research universities, yet the permanent employment
- *   claim persists, maintained by gatekeeping peer review and rhetorical
- *   defense. Three readings of this kernel coexist: (1)
- *   academic_freedom_reading holds tenure is essential to truth-seeking
- *   despite its costs; (2) demographic_reproduction_reading holds tenure
- *   gatekeeping reproduces dominant group composition; (3) this reading holds
- *   tenure is primarily extraction from early winners, loading costs onto
- *   later entrants and students. This story generates ONLY the extraction
- *   reading; the other readings are separate constraint stories linked via
- *   network.affects_constraints.
+ *   This constraint instantiates the institutional-extraction reading of the
+ *   tenure kernel. Tenure is presented (and often genuinely functions) as
+ *   stabilization of intellectual work against external pressure; this
+ *   reading focuses on how tenure operates in practice as a permanent income
+ *   claim by early winners, creating institutional rigidity that prevents
+ *   resource reallocation and concentrates flexibility costs onto contingent
+ *   labor. The constraint structures a two-tier faculty labor market: a small
+ *   protected class with near-universal job security, salary growth, research
+ *   time, and curricular control; and a large precarious class with
+ *   semester-to-semester contracts, minimal benefits, no research time, and
+ *   no institutional voice. Students pay tuition that subsidizes tenured
+ *   salaries locked into prior hiring decisions; contingent faculty absorb
+ *   the flexibility that tenure forecloses. The claim/metric gap is
+ *   intentional: tenure is claimed by the institution as a coordination
+ *   mechanism (academic freedom protection) and by tenured faculty as a
+ *   professional norm; the authored metrics describe substantially
+ *   extractive, actively enforced operation where the coordination function
+ *   is increasingly separable from the extraction. The engine will measure
+ *   this divergence across seats.
  *
  * KEY AGENTS:
- *   - tenured_faculty: permanent claim-holders, collective beneficiary, agenda-setters for hiring and promotion
- *   - contingent_faculty: victims bearing employment volatility and low compensation, structurally excluded from governance
- *   - students: cost-bearers via tuition hikes and reduced instructional availability
- *   - department chairs/provosts: agenda-setters administering the constraint while shifting costs onto contingent pools
- *   - university boards: agenda-setters with legal authority but practical constraints limiting reform
- *   - prospective academics: structurally absent from governance, bear the entry-barrier gatekeeping
- *   - academic freedom advocates: analytical observers defending tenure's necessity
- *   - labor economists: analytical observers documenting employment rigidity and inequality
+ *   - Tenured faculty: Primary beneficiary. Collects permanent income claim, research time, curricular authority, and freedom from termination. Organized seat with high power and exit options (arbitrage — can relocate to peer institutions, private industry, or retirement).
+ *   - Contingent faculty: Primary victim. Bears structural flexibility, low and variable compensation, no benefits, teaching-only load. Powerless seat with trapped exit (career path dependence within academia, no outside market for their specialized training).
+ *   - Students: Secondary victim. Pay tuition that funds tenured salary lines; receive reduced mentorship from tenured faculty who have reduced teaching load; face tuition growth driven by fixed tenure commitments.
+ *   - Administrators: Agenda-setter managing budget under tenured salary constraints. Enforce tenure rules procedurally while adapting to constraint through tuition increases and contingent hiring expansion.
+ *   - Emerging fields (interdisciplinary, data science, climate): Excluded from rapid reallocation of resources; compete against tenure-protected departmental territories for salary lines.
+ *   - State legislatures: Excluded institutional actor; possess statutory authority but face political opposition from organized tenured faculty and academic unions.
  */
 
 /* ==========================================================================
@@ -106,12 +112,12 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(tenure_contract__institutional_extraction_reading, 0.78).
+domain_priors:base_extractiveness(tenure_contract__institutional_extraction_reading, 0.81).
 domain_priors:suppression_score(tenure_contract__institutional_extraction_reading, 0.72).
 domain_priors:theater_ratio(tenure_contract__institutional_extraction_reading, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(tenure_contract__institutional_extraction_reading, extractiveness, 0.78).
+narrative_ontology:constraint_metric(tenure_contract__institutional_extraction_reading, extractiveness, 0.81).
 narrative_ontology:constraint_metric(tenure_contract__institutional_extraction_reading, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(tenure_contract__institutional_extraction_reading, theater_ratio, 0.48).
 
@@ -127,38 +133,92 @@ narrative_ontology:topic_domain(tenure_contract__institutional_extraction_readin
 domain_priors:requires_active_enforcement(tenure_contract__institutional_extraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(tenure_contract__institutional_extraction_reading, 'ff51d4c5-36fc-47e2-a35e-d240d9440177').
-narrative_ontology:cs_kernel_codification('ff51d4c5-36fc-47e2-a35e-d240d9440177', formalized).
-narrative_ontology:cs_authority_grounding('ff51d4c5-36fc-47e2-a35e-d240d9440177', extraction).
-narrative_ontology:cs_interpretation_layer_present('ff51d4c5-36fc-47e2-a35e-d240d9440177').
-narrative_ontology:cs_reading_relation('ff51d4c5-36fc-47e2-a35e-d240d9440177', tenure_contract__academic_freedom_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ff51d4c5-36fc-47e2-a35e-d240d9440177', tenure_contract__demographic_reproduction_reading, influences).
-narrative_ontology:cs_axiom('ff51d4c5-36fc-47e2-a35e-d240d9440177', foundational, tenure_as_permanent_rent_claim).
-narrative_ontology:cs_axiom_status(tenure_as_permanent_rent_claim, holdable).
-narrative_ontology:cs_axiom_grounding('ff51d4c5-36fc-47e2-a35e-d240d9440177', tenure_as_permanent_rent_claim, empirically_contingent).
-narrative_ontology:cs_axiom('ff51d4c5-36fc-47e2-a35e-d240d9440177', foundational, extraction_persists_through_rhetorical_naturalization).
-narrative_ontology:cs_axiom_status(extraction_persists_through_rhetorical_naturalization, holdable).
-narrative_ontology:cs_axiom_grounding('ff51d4c5-36fc-47e2-a35e-d240d9440177', extraction_persists_through_rhetorical_naturalization, deontological).
-narrative_ontology:cs_reference_frame('ff51d4c5-36fc-47e2-a35e-d240d9440177', tenure_as_institutional_safeguard).
-narrative_ontology:cs_drift_state('ff51d4c5-36fc-47e2-a35e-d240d9440177', contemporary_research_university_context, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('ff51d4c5-36fc-47e2-a35e-d240d9440177', '').
+narrative_ontology:cs_story_uid(tenure_contract__institutional_extraction_reading, '9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac').
+narrative_ontology:cs_kernel_codification('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', formalized).
+narrative_ontology:cs_authority_grounding('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', extraction).
+narrative_ontology:cs_interpretation_layer_present('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac').
+narrative_ontology:cs_reading_relation('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', tenure_contract__academic_freedom_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', tenure_contract__demographic_reproduction_reading, influences).
+narrative_ontology:cs_axiom('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', foundational, permanent_income_claim_is_rent).
+narrative_ontology:cs_axiom_status(permanent_income_claim_is_rent, holdable).
+narrative_ontology:cs_axiom_grounding('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', permanent_income_claim_is_rent, empirically_contingent).
+narrative_ontology:cs_axiom('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', foundational, allocation_rigidity_concentrates_costs_onto_precariat).
+narrative_ontology:cs_axiom_status(allocation_rigidity_concentrates_costs_onto_precariat, holdable).
+narrative_ontology:cs_axiom_grounding('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', allocation_rigidity_concentrates_costs_onto_precariat, empirically_contingent).
+narrative_ontology:cs_reference_frame('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', academic_independence_via_permanent_contract).
+narrative_ontology:cs_drift_state('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', contemporary_higher_ed_precarity_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('9f3dbbe9-b43b-4c55-b74d-6f83f3dfc2ac', '').
 narrative_ontology:cs_kernel_id(tenure_contract__institutional_extraction_reading, tenure_contract).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(tenure_contract__institutional_extraction_reading, tenured_faculty).
 narrative_ontology:constraint_victim(tenure_contract__institutional_extraction_reading, contingent_faculty).
-narrative_ontology:constraint_victim(tenure_contract__institutional_extraction_reading, adjuncts_and_postdocs).
 narrative_ontology:constraint_victim(tenure_contract__institutional_extraction_reading, students).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Hold permanent contracts with near-universal job security and reputational capture of institutional resources. Set curriculum priorities, hiring criteria, and departmental resource allocation; protect tenure status through collegial peer review that prioritizes cultural fit and seniority preservation. Collect stable compensation, research funding, and deference across their career span while institutional constraints prevent redeployment of their salary lines to emerging fields or contingent positions.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, tenured_faculty, beneficiary,
+    organized, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(tenure_contract__institutional_extraction_reading, tenured_faculty, agenda_setter).
+
+% Bear the structural flexibility that tenured positions foreclose: semester-to-semester contracts, no benefits, no research time, teaching-only loads with preparation across multiple courses. Absorb enrollment volatility and budget cuts that tenured budgets insulate. Generate the same instructional value as tenured faculty but accumulate no security, career continuity, or institutional voice. Exit options are constrained to adjunct networks within academia (low pay, geographic mobility required) or exit the profession entirely; the tenured structure actively prevents salary-line conversion to stable contingent positions.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, contingent_faculty, payer,
+    powerless, immediate, trapped, national).
+
+% Pay tuition that subsidizes tenured faculty salary lines held constant across enrollment cycles, receiving instruction from a two-tier faculty labor market in which the junior tier (contingent) carries pedagogical load while senior tier (tenured) controls curriculum, grading standards, and degree requirements. Receive less research mentorship than prior cohorts in fields where tenured faculty have reduced course load while retaining salary. Face tuition growth driven partly by fixed tenured compensation and partly by institutional expansion of administrative burden to manage the rigidity.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, students, payer,
+    moderate, biographical, constrained, national).
+
+% Manage the institutional budget subject to tenured salary commitments that cannot be reallocated without cause or consent. Respond to enrollment decline by increasing tuition or expanding contingent hiring (transferring flexibility burden to contingent tier) rather than adjusting tenured headcount. Enforce tenure rules through formal grievance and dismissal procedures that create legal and reputational risk if challenged. Must maintain the procedural legitimacy of tenure peer review even as its gatekeeping function diverges from merit.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, administrators, agenda_setter,
+    institutional, generational, constrained, national).
+
+% Fields requiring rapid intellectual reorientation (data science, climate adaptation, computational humanities) cannot recruit aggressively into tenure because existing tenure lines in slower-moving fields are locked. Interdisciplinary work competes for resources against tenure-protected departmental territories. Would benefit from flexible reallocation of salary lines across fields; this flexibility is structurally unavailable under tenure.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, emerging_fields_excluded, excluded,
+    moderate, biographical, constrained, national).
+
+% Face identical tenure constraints, producing isomorphic employment structures and institutional rigidity across the sector. Collectively, the peer set ratifies tenure norms through accreditation standards and hiring expectations, making individual exit costly; coordinated reform is blocked by collective action problems and the power of tenured faculty within each institution.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, peer_institutions, observer,
+    institutional, generational, analytical, national).
+
+% Have statutory authority to regulate tenure at public universities but face organized political opposition from tenured faculty and academic unions. Reduced appropriations force universities to increase tuition and shift costs to contingent labor; legislatures lack political capital to mandate tenure reform and instead allow institutional adaptation through contingentization.
+narrative_ontology:constraint_stakeholder(tenure_contract__institutional_extraction_reading, state_legislatures, excluded,
+    institutional, generational, constrained, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(tenure_contract__institutional_extraction_reading, tenured_faculty).
+narrative_ontology:fixing_cost_class(tenure_contract__institutional_extraction_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Tenure solves a coordination problem: insulating research and teaching from short-term political, market, or administrative pressure, enabling intellectual work to proceed on decade-scale timelines. A tenured scholar can undertake a ten-year research program without fear of termination for unpopular findings or methodological controversy.
+% TRANSFER_FUNCTION: Moves permanent employment status, seniority-weighted salary, research time, and curricular authority from the broader institutional budget to tenured faculty, extracting flexibility from contingent labor (who bear hiring/firing volatility) and from students (who pay tuition funding salary lines that cannot be redeployed). The transfer is defended as the price of academic freedom; it operates as a permanent first-mover advantage for early cohorts.
+% ABSENT_VOICES: Contingent faculty have minimal formal voice in tenure decisions and institutional governance; they participate in teaching committees but lack voting power on departmental budget or hiring. Students have voice through representation channels but no direct seat at tenure deliberation. Emerging fields lack institutional seats and compete for resources against tenure-protected departments. Prospective faculty who will never enter the institution (displaced by the salary structure) are absent entirely.
+% DISAPPEARANCE_RATIONALE: If tenure as a permanent contract disappeared, universities would reallocate salary lines across fields, shift compensation from flat-scale tenure to performance-modulated contracts, hire aggressively into growing fields, and reduce tuition pressure by deploying labor more flexibly. Contingent faculty would face even greater precarity in the short term (loss of tenure's institutional constraint on their working conditions) but would over time benefit from salary-line conversion; students would face lower tuition if institutions could reallocate rather than lock resources into protected salaries.
+% FOUNDING_PROBLEM: Before tenure became institutionalized (early-to-mid 20th century), scholars were dismissed for political speech, controversial research findings, or institutional displeasure; intellectual inquiry was subordinated to institutional or donor preference. Tenure was established to protect the scholar's independence from retaliation.
+% FOUNDING_PROBLEM_CORROBORATION: Tenured faculty and academic freedom advocates attest the founding problem remains live: institutional and political pressure on research continues globally, and tenure remains necessary protection. Contingent faculty, administrators, and economists attest the founding problem is substantially solved within the tenured tier but has been solved by shifting precarity to contingent faculty rather than by establishing universal employment security; legislative testimony and peer-reviewed labor economics research from outside the benefiting parties support that tenure's protective function could be separated from its permanent-contract form (e.g., multi-year renewable contracts with procedural dismissal protections achieve stability without permanent lock).
+narrative_ontology:disappearance_verdict(tenure_contract__institutional_extraction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(tenure_contract__institutional_extraction_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(tenure_contract__institutional_extraction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(tenure_contract__institutional_extraction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(tenure_contract__institutional_extraction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(tenure_contract__institutional_extraction_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +238,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.58 to 0.78 across the 40-year interval, driven by two mechanisms: (1) contingent faculty proportion grows (enrollment rises but tenure-track hiring stagnates), so the gap between permanent and precarious compensation widens; (2) tuition rises faster than general inflation, financing permanent salary commitments while reducing instructional investment. The rise plateaus after year 30 because institutions reach saturation on contingency (80%+ non-tenure-track hires in many departments) and tuition faces political resistance. Theater ratio rises from 0.22 to 0.48, indicating growing decoupling between the coordination narrative ('we need tenure to protect academic freedom') and actual enforcement object ('we need tenure gatekeeping to restrict supply and maintain compensation'). As alternative employment arrangements emerge (fixed-term research contracts, industry hiring), the constraint's necessity claim weakens, and enforcement becomes more explicitly rhetorical. Suppression requirement is high (0.55–0.72) because the constraint persists against empirical challenge and labor-market alternatives only through active governance machinery: peer review screening, gatekeeping narrative maintenance, institutional resistance to detenuring proposals, and exclusion of contingent voices from reform conversations. The measurements are authored on a single shared time grid (every metric at every time point) to avoid OQ-105-style misalignment artifacts.
+ *   Extractiveness is high (0.81) and rising over the interval because the constraint's primary function is now income protection rather than intellectual freedom protection. Early tenure adoption (1920s-1970s) served genuine coordination (protecting scholars from retaliation); as tenure became universal and competition for resources intensified, the constraint's function shifted to permanent income preservation regardless of research output or teaching quality. Suppression is substantial (0.72) because the constraint's persistence depends on actively excluding alternative employment forms: institutions maintain single-tier hiring bans, prevent conversion of tenured salary lines to multi-year renewable contracts or contingent positions, and enforce peer-review gatekeeping that privileges existing tenured faculty composition. Theater is moderate (0.48) and rising: the stated function is academic freedom, but empirical audits show tenure dismissal for cause is extraordinarily rare (~0.2% per year across all sectors), suggesting performative maintenance of the academic freedom rationale while extraction operates through income lock and gatekeeping. The measurement series show extractiveness rising sharply in the first 15 years (0.68→0.78, as enrollment stagnates and institutions adapt by increasing contingent hiring rather than tenure reallocation) then plateauing (0.78→0.81 over the final 20 years) — the system reaches an equilibrium where contingent hiring absorbs all adjustment pressure. Suppression rises in parallel (institutional enforcement of tenure rules increases as challenges mount) before plateauing. Theater rises throughout (rising ratio of stated rationale to actual function) and continues rising even after extractiveness plateaus, suggesting the constraint is becoming increasingly theatrical — the performance of academic freedom justification persists as the actual coordination function atrophies.
  *
  * PERSPECTIVAL GAP:
- *   From the tenured faculty seat, tenure is essential coordination protecting intellectual independence and long-term mentoring relationships. From the contingent faculty seat, it is a rigidity mechanism that rationalizes their precarity as a market necessity ('institutions must maintain flexibility') while permanent claims are defended as untouchable. From the student seat, it is an opaque cost loading (tuition covers permanent salaries, not expanded offerings). From the board seat, it is a constraint they administer but cannot change without faculty rebellion. These divergences are structural, not perceptual error — each seat has genuine claims about what the constraint does. The engine computes per-seat classifications from the structural data; the authored claim (tangled_rope) reflects this reading's analysis that genuine coordination occurs but is subordinated to extraction benefits for tenured faculty.
+ *   Tenured faculty and administrators perceive tenure as a settled institutional norm justified by academic freedom; from this seat, challenges to tenure are attacks on intellectual freedom itself. Contingent faculty perceive tenure as institutional theft of their labor flexibility and career stability, justified by cover stories about permanent commitment that do not apply to them. Students perceive tenure as opaque cost imposed through tuition, justified by institutional claims they cannot verify. The engine will compute different effective extraction (χ) for each seat: tenured faculty sit at d≈0.1 (full beneficiary) making χ highly negative (subsidy rather than extraction); contingent faculty sit at d≈0.95 (full target) making χ near maximal given the base ε; students sit at d≈0.65 (partial target) with moderate χ. Administrators sit near d≈0.5 (forced symmetric burden: they manage the constraint's ripple effects across the institution but do not capture its extraction). The divergence across seats is the structural story the constraint tells.
  *
  * DIRECTIONALITY LOGIC:
- *   Tenured faculty derive d near the beneficiary end (0.1–0.2): they collect permanent employment security and seniority-indexed compensation, face zero dismissal risk, and have arbitrage-level exit (voluntary departure, which almost never occurs due to golden-handcuff lock-in). Contingent faculty derive d near the target end (0.8–0.95): they bear all flexibility costs, receive 40–60% lower compensation for equivalent work, face dismissal at will, and are trapped in academic labor-market dependence (identity-locked: their PhD training created path dependence that makes exit into non-academic work costly). Students derive mid-range d (0.55–0.65): they benefit marginally from faculty stability for mentoring continuity but bear costs through tuition hikes and reduced instructional availability. The directionality overrides below capture the institutional agents (provosts, boards) whose power level suggests moderate-range d but whose structural relationship to the constraint's beneficiary ring places them partly as enforcers, partly as constrained administrators — they maintain the constraint despite having legal authority to reform it, which suggests their actual d is higher (toward target) than power alone would suggest.
+ *   Directionality derives from beneficiary/victim declarations plus power and exit differentiation. Tenured faculty benefit directly (they collect the permanent income claim, controlling its terms via peer review) and hold high power (organized institutional seat) and arbitrage exit (can move to other universities, retire, or leave academia entirely). This places them near d=0.0 (full beneficiary), making their effective extraction χ highly negative—they are subsidized by the constraint. Contingent faculty are declared victims: they bear the flexibility costs, hold low power (unorganized, distributed across institutions and precarious positions), and face trapped exit (specialized training, career path dependence, family location constraints). This places them near d=1.0 (full target), making their effective extraction χ close to the base ε. Students are secondary victims: they pay tuition funding the salary lock, hold moderate power (some collective voice through student representation, but limited institutional voting), and face constrained exit (geographic and financial factors limit switching between institutions mid-degree). This places them near d=0.65-0.75, producing moderate χ. Administrators are forced symmetric: they manage budget under constraints they do not set, facing pressure from both tenured faculty (who defend tenure) and students/contingent faculty (who bear costs); their power is institutional but their exit is constrained (administrative positions are tied to the institution and sensitive to faculty opposition). This places them near d≈0.50. The engine derives d automatically from these structural positions; the commentary documents the reasoning so the per-seat type computations are auditable.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (institutional suppression of inquiry) was real and pressing in the early 20th century and remains live in authoritarian and religiously conservative institutional contexts. In wealthy research universities in democratic societies, the founding problem is substantially solved: firing for research findings is nearly unknown, institutional suppression is limited, and employment is de facto stable. Yet the permanent tenure claim persists unchanged — it is no longer necessary to the function it was designed to protect. This is the mandatrophy signal. The constraint continues as rent collection by tenured faculty and administrative gatekeeping by department chairs, defended through rhetorical conflation ('tenure = academic freedom protection') that obscures the distinction between the founding problem's resolution and the constraint's ongoing extraction. Tangled_rope classification captures this: there is a genuine coordination function (stable employment does enable long-term mentoring and research planning) alongside asymmetric extraction (tenured faculty collect permanent security while contingent faculty and students bear costs). The theater_ratio rising to 0.48 indicates growing performative maintenance: institutional leadership publicly defends tenure's necessity while privately adapting through contingent hiring — the speech act maintains the legitimacy of the constraint while the actual employment system diverges from it.
+ *   The constraint satisfies the tangled_rope gate: it has beneficiaries (tenured faculty who collect directly), victims (contingent faculty and students who bear costs), and requires active enforcement (tenure peer review, salary-line protection, hiring bans). The coordination function (protecting intellectual work from short-term pressure) is real and remains live for the tenured tier, but the transfer function (permanent income lock) has become the primary extractive mechanism. Mandatrophy (gap between founding problem and current function) is substantial but not terminal: the founding problem (political retaliation against researchers) has been partially solved but not eliminated globally; it persists in some contexts (authoritarian regimes, politically captured institutions) while being solved in others (peer-review communities, professional associations with independence norms). The constraint persists in its original form even where the founding problem is solved, suggesting the form serves functions beyond the founding problem (income protection, demographic gatekeeping). The institutional-extraction reading prevents mislabeling this as pure rope (which it no longer is in most high-resource institutions) or as pure snare (the coordination function remains real for the tenured tier, distinguishing it from extraction mechanisms like debt peonage that lack coordination). Tangled rope correctly captures the hybrid: coordination in form, extraction in operation, requiring active enforcement to maintain the gatekeeping that prevents structural reallocation.
  */
 
 /* ==========================================================================
@@ -195,98 +255,89 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    founding_problem_live_or_dead,
-    'Is institutional suppression of academic inquiry still a significant threat in wealthy research universities, or has it been substantially solved?',
-    'Empirical history of dismissals and suppressions in US research universities (1980–present); comparative data from jurisdictions with different employment protections; interviews with faculty about institutional pressure they actually face.',
-    'If suppression is dead in research universities, tenure persists as rent collection without its justifying function, reclassifying as pure snare. If suppression remains live, the constraint''s coordination function is essential and validates extraction costs as necessary overhead.',
+    coordination_vs_extraction_separability,
+    'Is intellectual-freedom protection structurally inseparable from permanent employment contracts, or could multi-year renewable contracts with procedural dismissal protections provide equivalent stabilization without permanent lock?',
+    'Comparative institutional analysis: examine peer-review systems in non-tenure-track institutions (research institutes, European universities with renewable contracts) and measure research independence outcomes against tenured institutions.',
+    'If protection and permanence are separable, the measured extraction is partly the price of coordination (necessary) and partly pure rent-seeking (contingent on institutional choice). The constraint would decompose into two: a protection contract (lower extraction, genuine coordination) and an employment rigidity mechanism (higher extraction, pure lock). This reading would shift from tangled_rope toward snare.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(founding_problem_live_or_dead, empirical, 'Whether the founding problem (institutional suppression) that justified tenure is still live or has been solved.').
+narrative_ontology:omega_variable(coordination_vs_extraction_separability, empirical, 'Whether academic freedom requires permanent contracts or only procedural employment security.').
 
 omega_variable(
-    alternative_employment_arrangements_viability,
-    'Could fixed-term research contracts, annual renewal, or merit-based employment provide equivalent career stability and intellectual autonomy without permanent tenure?',
-    'Natural experiments from jurisdictions using non-tenure employment (Australian universities, UK contracts, industry research labs); comparative career outcomes and publication/mentoring quality across employment types.',
-    'If alternatives provide equivalent stability and autonomy, tenure is pure extraction; if tenure is uniquely enabling, it is necessary coordination cost. If alternatives exist but are suppressed by tenured faculty gatekeeping, that suppression is part of the extraction mechanism.',
+    suppression_structure_vs_internalization,
+    'How much of contingent faculty''s suppression is structural (economic dependency, hiring rules, geographic constraints) versus internalized (professional identity, aspiration to tenure, belief in temporary status)?',
+    'Post-exit interviews with contingent faculty who leave academia: does suppression persist after structural exit? Are career choices reorganized or do identity constraints remain?',
+    'If suppression is primarily structural, contingent faculty''s measured d approaches 1.0 (full target) from external constraint alone; if substantially internalized, the same d is reached through self-reinforcing belief patterns that persist even after structural exit. In the first case, structural reform (salary-line conversion, contract securitization) would yield rapid improvement; in the second, reform alone would not eliminate suppression from the population.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(alternative_employment_arrangements_viability, empirical, 'Whether tenure is structurally necessary or whether alternatives could provide equivalent stability without permanent contracts.').
+narrative_ontology:omega_variable(suppression_structure_vs_internalization, empirical, 'The composition of contingent faculty suppression between structural and internalized mechanisms.').
 
 omega_variable(
-    extraction_suppression_mechanism_internalized,
-    'Is contingent faculty''s acceptance of precarity structurally imposed (no exit alternatives exist due to PhD path-dependence) or internalized (they believe precarity is legitimate apprenticeship)?',
-    'Career-trajectory data tracking postdocs and adjuncts who exit academia; interviews with those who leave vs. those who stay; psychological assessment of identity-fusion (''am I a real academic?'' binds career to academia even without job security).',
-    'If suppression is purely structural, the constraint''s extraction declines if exit alternatives appear (different career paths). If internalized, the constraint carries the suppression forward even after exit from academia — contingent faculty bear the extraction perpetually, not just while employed.',
+    founding_problem_persistence_and_scope,
+    'For which institutional and geographic contexts is the founding problem (researcher retaliation for political or methodological speech) still live, and for which contexts is it substantially solved?',
+    'Audit of researcher protections across sectors and countries: measure political/administrative retaliation rates, legal remedies, and peer-review independence in contexts with and without tenure.',
+    'If the founding problem is solved in high-resource, peer-review-governed institutions but remains live in authoritarian or politically captured contexts, tenure''s justification map is context-dependent. The institutional_extraction reading would be most accurate for the solved contexts; the academic_freedom_reading would be most accurate for the unsolved contexts. This would imply tenure reform should be differentiated by institutional context, not universal.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(extraction_suppression_mechanism_internalized, empirical, 'Whether contingent faculty''s acceptance of precarity is structurally imposed or psychologically internalized through identity-fusion with academic identity.').
+narrative_ontology:omega_variable(founding_problem_persistence_and_scope, empirical, 'Geographic and sectoral variation in the persistence of tenure''s founding problem.').
 
 omega_variable(
-    reading_foreclosure_test,
-    'Does this institutional_extraction_reading logically foreclose the academic_freedom_reading, or do they coexist in different institutional contexts?',
-    'Institutional analysis: can an institution simultaneously hold that (a) tenure is essential to protect academic freedom AND (b) tenure persists primarily as rent collection? If yes, they coexist. If institutions must choose, one reading forecloses the other.',
-    'If readings coexist, they are different constraints. If this reading forecloses the freedom reading, many institutions claiming to support academic freedom are self-deceiving.',
-    confidence_without_resolution(high)
+    alternative_extraction_mechanisms,
+    'If tenure were abolished and replaced with renewable multi-year contracts, what extraction mechanisms would replace it? Would contingent labor costs simply shift from precarity to within-contract flexibility demands?',
+    'Natural experiment from jurisdictions that abolished tenure or transitioned to contract-based systems; measure labor precarity, wage stability, and resource allocation outcomes over 10-year windows.',
+    'If tenure abolition simply relocates extraction (from permanent lock to contract renegotiation vulnerability), the constraint is not so much removed as transformed. The institutional_extraction reading assumes permanent lock is the primary extraction mechanism; if lock were removed and extraction persisted through contracts, the reading would need refinement—the extraction would be shown as intrinsic to academic labor markets rather than contingent on tenure form.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reading_foreclosure_test, conceptual, 'Whether the extraction reading and the academic-freedom reading are logically compatible or logically exclusive.').
+narrative_ontology:omega_variable(alternative_extraction_mechanisms, empirical, 'Whether tenure abolition eliminates extraction or transforms its mechanism.').
 
 omega_variable(
-    demographic_gatekeeping_decoupling,
-    'Is tenure gatekeeping''s demographic reproduction effect an incidental outcome of peer review, or a structurally essential mechanism for the extraction reading?',
-    'If demographic reproduction could be addressed (diverse peer review, structured hiring criteria) without changing tenure permanence, then gatekeeping and extraction are separable mechanisms. If attempts to diversify peer review face organized resistance from tenured faculty, that resistance is part of the extraction mechanism.',
-    'If separable, the extraction reading and demographic_reproduction_reading are independent constraints. If inseparable, gatekeeping is part of how the extraction mechanism sustains itself — demographic reproduction is a side-effect that reinforces the beneficiary in-group.',
+    reading_contest_foreclosure,
+    'Does the institutional_extraction reading logically foreclose the academic_freedom_reading, or do they coexist as readings held by different institutional constituencies?',
+    'Discourse analysis: do institutional defenders of tenure read themselves as defending academic freedom, or do they acknowledge extraction and defend it anyway? Can both readings be held simultaneously by the same actor?',
+    'If readings foreclose each other (cannot both be held in one institution), then resolving which is true would require empirical adjudication and one would be vindicated. If they coexist (different constituencies hold different readings as live positions), then both are correct from their respective seats and conflict is fundamentally political rather than empirical. This affects whether the constraint is fundamentally contestable or fundamentally resolvable.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(demographic_gatekeeping_decoupling, empirical, 'Whether demographic gatekeeping is incidental to peer review or structurally essential to the extraction mechanism.').
+narrative_ontology:omega_variable(reading_contest_foreclosure, conceptual, 'Whether the institutional_extraction and academic_freedom readings are logically foreclosed or coexisting positions.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(tenure_contract__institutional_extraction_reading, 0, 40).
+narrative_ontology:interval(tenure_contract__institutional_extraction_reading, 0, 35).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tenu_tr_t0, tenure_contract__institutional_extraction_reading, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(tenu_tr_t5, tenure_contract__institutional_extraction_reading, theater_ratio, 5, 0.27).
-narrative_ontology:measurement(tenu_tr_t10, tenure_contract__institutional_extraction_reading, theater_ratio, 10, 0.33).
-narrative_ontology:measurement(tenu_tr_t15, tenure_contract__institutional_extraction_reading, theater_ratio, 15, 0.38).
-narrative_ontology:measurement(tenu_tr_t20, tenure_contract__institutional_extraction_reading, theater_ratio, 20, 0.42).
-narrative_ontology:measurement(tenu_tr_t25, tenure_contract__institutional_extraction_reading, theater_ratio, 25, 0.45).
-narrative_ontology:measurement(tenu_tr_t30, tenure_contract__institutional_extraction_reading, theater_ratio, 30, 0.46).
+narrative_ontology:measurement(tenu_tr_t0, tenure_contract__institutional_extraction_reading, theater_ratio, 0, 0.32).
+narrative_ontology:measurement(tenu_tr_t5, tenure_contract__institutional_extraction_reading, theater_ratio, 5, 0.36).
+narrative_ontology:measurement(tenu_tr_t10, tenure_contract__institutional_extraction_reading, theater_ratio, 10, 0.4).
+narrative_ontology:measurement(tenu_tr_t15, tenure_contract__institutional_extraction_reading, theater_ratio, 15, 0.43).
+narrative_ontology:measurement(tenu_tr_t25, tenure_contract__institutional_extraction_reading, theater_ratio, 25, 0.48).
 narrative_ontology:measurement(tenu_tr_t35, tenure_contract__institutional_extraction_reading, theater_ratio, 35, 0.48).
-narrative_ontology:measurement(tenu_tr_t40, tenure_contract__institutional_extraction_reading, theater_ratio, 40, 0.48).
 
 % Extraction over time
-narrative_ontology:measurement(tenu_be_t0, tenure_contract__institutional_extraction_reading, base_extractiveness, 0, 0.58).
-narrative_ontology:measurement(tenu_be_t5, tenure_contract__institutional_extraction_reading, base_extractiveness, 5, 0.61).
-narrative_ontology:measurement(tenu_be_t10, tenure_contract__institutional_extraction_reading, base_extractiveness, 10, 0.65).
-narrative_ontology:measurement(tenu_be_t15, tenure_contract__institutional_extraction_reading, base_extractiveness, 15, 0.7).
-narrative_ontology:measurement(tenu_be_t20, tenure_contract__institutional_extraction_reading, base_extractiveness, 20, 0.74).
-narrative_ontology:measurement(tenu_be_t25, tenure_contract__institutional_extraction_reading, base_extractiveness, 25, 0.76).
-narrative_ontology:measurement(tenu_be_t30, tenure_contract__institutional_extraction_reading, base_extractiveness, 30, 0.77).
-narrative_ontology:measurement(tenu_be_t35, tenure_contract__institutional_extraction_reading, base_extractiveness, 35, 0.78).
-narrative_ontology:measurement(tenu_be_t40, tenure_contract__institutional_extraction_reading, base_extractiveness, 40, 0.78).
+narrative_ontology:measurement(tenu_be_t0, tenure_contract__institutional_extraction_reading, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement(tenu_be_t5, tenure_contract__institutional_extraction_reading, base_extractiveness, 5, 0.71).
+narrative_ontology:measurement(tenu_be_t10, tenure_contract__institutional_extraction_reading, base_extractiveness, 10, 0.75).
+narrative_ontology:measurement(tenu_be_t15, tenure_contract__institutional_extraction_reading, base_extractiveness, 15, 0.78).
+narrative_ontology:measurement(tenu_be_t25, tenure_contract__institutional_extraction_reading, base_extractiveness, 25, 0.81).
+narrative_ontology:measurement(tenu_be_t35, tenure_contract__institutional_extraction_reading, base_extractiveness, 35, 0.81).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tenu_su_t0, tenure_contract__institutional_extraction_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(tenu_su_t5, tenure_contract__institutional_extraction_reading, suppression_requirement, 5, 0.59).
-narrative_ontology:measurement(tenu_su_t10, tenure_contract__institutional_extraction_reading, suppression_requirement, 10, 0.63).
-narrative_ontology:measurement(tenu_su_t15, tenure_contract__institutional_extraction_reading, suppression_requirement, 15, 0.67).
-narrative_ontology:measurement(tenu_su_t20, tenure_contract__institutional_extraction_reading, suppression_requirement, 20, 0.7).
-narrative_ontology:measurement(tenu_su_t25, tenure_contract__institutional_extraction_reading, suppression_requirement, 25, 0.71).
-narrative_ontology:measurement(tenu_su_t30, tenure_contract__institutional_extraction_reading, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement(tenu_su_t0, tenure_contract__institutional_extraction_reading, suppression_requirement, 0, 0.62).
+narrative_ontology:measurement(tenu_su_t5, tenure_contract__institutional_extraction_reading, suppression_requirement, 5, 0.65).
+narrative_ontology:measurement(tenu_su_t10, tenure_contract__institutional_extraction_reading, suppression_requirement, 10, 0.68).
+narrative_ontology:measurement(tenu_su_t15, tenure_contract__institutional_extraction_reading, suppression_requirement, 15, 0.7).
+narrative_ontology:measurement(tenu_su_t25, tenure_contract__institutional_extraction_reading, suppression_requirement, 25, 0.72).
 narrative_ontology:measurement(tenu_su_t35, tenure_contract__institutional_extraction_reading, suppression_requirement, 35, 0.72).
-narrative_ontology:measurement(tenu_su_t40, tenure_contract__institutional_extraction_reading, suppression_requirement, 40, 0.72).
 
 
 /* ==========================================================================
@@ -297,17 +348,17 @@ narrative_ontology:coordination_type(tenure_contract__institutional_extraction_r
 narrative_ontology:boltzmann_floor_override(tenure_contract__institutional_extraction_reading, 0.18).
 narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, tenure_contract__academic_freedom_reading).
 narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, tenure_contract__demographic_reproduction_reading).
-narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, contingent_faculty_precarity_system).
-narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, higher_education_cost_externalization).
+narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, contingent_labor_precarity__institutional_boundary).
+narrative_ontology:affects_constraint(tenure_contract__institutional_extraction_reading, tuition_cost_escalation__institutional_budget_lock).
 
 % DUAL FORMULATION NOTE:
-% The tenure_contract kernel admits three distinct readings: (1) academic_freedom_reading frames tenure as necessary protection against institutional suppression of inquiry; (2) demographic_reproduction_reading frames tenure peer-review gatekeeping as a mechanism reproducing dominant demographics; (3) institutional_extraction_reading (this constraint) frames tenure as permanent rent collection by early winners, financed by extraction from contingent labor and students. Each reading instantiates a different constraint with different ε profiles, beneficiary/victim structures, and type classifications. The readings coexist in real governance disputes — different institutional actors hold different readings. This story (extraction_reading) is linked to its siblings via network edges; together they form a constraint family covering the multiple structural interpretations of the same kernel text ('tenure protects academic faculty employment').
+% The tenure kernel decomposes into three constraint stories, each instantiating a different reading: academic_freedom_reading (coordination-dominant, low extraction), demographic_reproduction_reading (gatekeeping-dominant, asymmetric extraction), and institutional_extraction_reading (rent-extraction-dominant, high extraction). All three share the formal referent (the tenure contract) but have different ε values and beneficiary/victim structures. They are linked as siblings in a constraint family via network.affects_constraints edges. This story (institutional_extraction_reading) influences the sibling stories by establishing the resource-lock claim that both academic_freedom and demographic_reproduction readings must account for in their own ε derivations.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(tenure_contract__institutional_extraction_reading, institutional, 0.62).
+constraint_indexing:directionality_override(tenure_contract__institutional_extraction_reading, organized, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

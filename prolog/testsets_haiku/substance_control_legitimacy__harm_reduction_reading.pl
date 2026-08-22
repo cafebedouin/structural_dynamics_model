@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,42 +75,24 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: substance_control_legitimacy__harm_reduction_reading
- *   human_readable: Harm Reduction Public Health Authority
- *   domain: public health / criminal justice / political economy
+ *   human_readable: Harm Reduction Authority: Medicalization of Substance Use
+ *   domain: public_health/criminal_justice/political_economy
  *
  * SUMMARY:
- *   The harm reduction reading of substance control legitimacy frames drug
- *   use as a public health issue requiring medical intervention rather than
- *   criminal punishment. State authority is derived from a duty to minimize
- *   harm: overdose mortality, disease transmission, and incarceration costs.
- *   The constraint coordinates treatment access, harm reduction supply
- *   chains, and medical supervision while extracting compliance costs from
- *   users through mandates and monitoring. It exists in contest with two
- *   sibling readings: legalization (which grants autonomy over substance use
- *   and limits state authority to third-party harm) and prohibition (which
- *   treats substance use as inherently immoral and derives authority from
- *   duty to prevent it through criminalization). The harm reduction reading
- *   is distinct because it medicalizes use while maintaining state control of
- *   the terms of legitimacy. Extraction arises not from criminalization but
- *   from the imposition of a medicalization framework that users may not have
- *   chosen, coupled with selective access to treatment (treatment slots
- *   limited by public funding, compliance requirements gate access, informal
- *   supply alternatives are suppressed). The claim of tangled_rope reflects
- *   genuine coordination (treatment access improved, overdose kits
- *   distributed, disease surveillance improved) AND asymmetric extraction
- *   (users bear the cost of medicalization, informal suppliers are targeted,
- *   treatment becomes a condition of social legitimacy). The reading is
- *   contested: prohibition advocates claim harm reduction enables addiction;
- *   legalization advocates claim it preserves unnecessary state control.
+ *   The harm reduction reading locates substance control authority in public
+ *   health expertise and mandates medicalization of substance use: users are
+ *   offered treatment, harm reduction services, and decriminalization in
+ *   exchange for accepting surveillance, compliance monitoring, and the
+ *   patient identity. This reading claims to minimize harm without
+ *   criminalization. The constraint's actual operation combines genuine
+ *   coordination (treatment access improved, overdose deaths reduced) with
+ *   extraction (institutional authority over substance users, budgets
+ *   redirected to treatment providers, coercive treatment mandates, black
+ *   markets persist). The reading asserts that authority derives from duty to
+ *   minimize harm; the engine measures whether the constraint's operation
+ *   tracks that duty or whether extraction is substantial enough to
+ *   constitute a tangled rope or snare.
  *
- * KEY AGENTS:
- *   - public_health_authorities: institutional agenda-setter, derives authority from epidemiological evidence and public health mandate
- *   - substance_users_in_treatment_mandate: powerless payers/beneficiaries, trapped between treatment access (contingent on compliance) and informal autonomy (legally precarious)
- *   - treatment_infrastructure_providers: organized beneficiaries, economically dependent on sustained demand and public funding
- *   - informal_economy_participants: powerless payers, displaced by official harm reduction supply
- *   - communities_with_enforcement_density: organized payers, experience treatment as external imposition rather than community integration
- *   - criminal_justice_system_actors: excluded institutional actors, structurally delegitimized by the harm reduction frame
- *   - observer_epidemiologist: analytical seat, measures outcomes against alternatives
  */
 
 /* ==========================================================================
@@ -110,64 +100,136 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(substance_control_legitimacy__harm_reduction_reading, 0.52).
-domain_priors:suppression_score(substance_control_legitimacy__harm_reduction_reading, 0.41).
-domain_priors:theater_ratio(substance_control_legitimacy__harm_reduction_reading, 0.38).
+domain_priors:base_extractiveness(substance_control_legitimacy__harm_reduction_reading, 0.58).
+domain_priors:suppression_score(substance_control_legitimacy__harm_reduction_reading, 0.62).
+domain_priors:theater_ratio(substance_control_legitimacy__harm_reduction_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, extractiveness, 0.52).
-narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 0.41).
-narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, theater_ratio, 0.38).
+narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, accessibility_collapse, 0.48).
-narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, resistance, 0.56).
+narrative_ontology:constraint_metric(substance_control_legitimacy__harm_reduction_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(substance_control_legitimacy__harm_reduction_reading, tangled_rope).
-narrative_ontology:human_readable(substance_control_legitimacy__harm_reduction_reading, "Harm Reduction Public Health Authority").
-narrative_ontology:topic_domain(substance_control_legitimacy__harm_reduction_reading, "public health / criminal justice / political economy").
+narrative_ontology:human_readable(substance_control_legitimacy__harm_reduction_reading, "Harm Reduction Authority: Medicalization of Substance Use").
+narrative_ontology:topic_domain(substance_control_legitimacy__harm_reduction_reading, "public_health/criminal_justice/political_economy").
 
 domain_priors:requires_active_enforcement(substance_control_legitimacy__harm_reduction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(substance_control_legitimacy__harm_reduction_reading, '9b775e76-f1f1-41cc-b0d3-9d87e59c177c').
-narrative_ontology:cs_kernel_codification('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', fixed_text).
-narrative_ontology:cs_authority_grounding('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', extraction).
-narrative_ontology:cs_interpretation_layer_present('9b775e76-f1f1-41cc-b0d3-9d87e59c177c').
-narrative_ontology:cs_reading_relation('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', substance_control_legitimacy__prohibition_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', substance_control_legitimacy__legalization_reading, influences).
-narrative_ontology:cs_axiom('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', foundational, substance_use_is_medical_disorder).
-narrative_ontology:cs_axiom_status(substance_use_is_medical_disorder, holdable).
-narrative_ontology:cs_axiom_grounding('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', substance_use_is_medical_disorder, empirically_contingent).
-narrative_ontology:cs_axiom('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', foundational, state_authority_derived_from_harm_minimization_duty).
-narrative_ontology:cs_axiom_status(state_authority_derived_from_harm_minimization_duty, holdable).
-narrative_ontology:cs_axiom_grounding('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', state_authority_derived_from_harm_minimization_duty, deontological).
-narrative_ontology:cs_axiom('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', secondary, criminalization_is_counterproductive_to_harm_reduction).
-narrative_ontology:cs_axiom_status(criminalization_is_counterproductive_to_harm_reduction, holdable).
-narrative_ontology:cs_axiom_grounding('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', criminalization_is_counterproductive_to_harm_reduction, empirically_contingent).
-narrative_ontology:cs_reference_frame('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', epidemiologically_informed_harm_reduction_authority).
-narrative_ontology:cs_drift_state('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', contemporary_post_opioid_crisis_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('9b775e76-f1f1-41cc-b0d3-9d87e59c177c', '').
+narrative_ontology:cs_story_uid(substance_control_legitimacy__harm_reduction_reading, 'f4eec3ee-4d32-42e7-9f99-413205032394').
+narrative_ontology:cs_kernel_codification('f4eec3ee-4d32-42e7-9f99-413205032394', distributed).
+narrative_ontology:cs_authority_grounding('f4eec3ee-4d32-42e7-9f99-413205032394', expertise).
+narrative_ontology:cs_interpretation_layer_present('f4eec3ee-4d32-42e7-9f99-413205032394').
+narrative_ontology:cs_reading_relation('f4eec3ee-4d32-42e7-9f99-413205032394', substance_control_legitimacy__prohibition_reading, forecloses).
+narrative_ontology:cs_reading_relation('f4eec3ee-4d32-42e7-9f99-413205032394', substance_control_legitimacy__legalization_reading, coexists_with).
+narrative_ontology:cs_axiom('f4eec3ee-4d32-42e7-9f99-413205032394', foundational, substance_use_medicalized_public_health_issue).
+narrative_ontology:cs_axiom_status(substance_use_medicalized_public_health_issue, holdable).
+narrative_ontology:cs_axiom_grounding('f4eec3ee-4d32-42e7-9f99-413205032394', substance_use_medicalized_public_health_issue, empirically_contingent).
+narrative_ontology:cs_axiom('f4eec3ee-4d32-42e7-9f99-413205032394', foundational, state_authority_derives_from_harm_minimization_duty).
+narrative_ontology:cs_axiom_status(state_authority_derives_from_harm_minimization_duty, holdable).
+narrative_ontology:cs_axiom_grounding('f4eec3ee-4d32-42e7-9f99-413205032394', state_authority_derives_from_harm_minimization_duty, deontological).
+narrative_ontology:cs_axiom('f4eec3ee-4d32-42e7-9f99-413205032394', secondary, criminalization_is_ineffective_and_harmful).
+narrative_ontology:cs_axiom_status(criminalization_is_ineffective_and_harmful, holdable).
+narrative_ontology:cs_axiom_grounding('f4eec3ee-4d32-42e7-9f99-413205032394', criminalization_is_ineffective_and_harmful, empirically_contingent).
+narrative_ontology:cs_reference_frame('f4eec3ee-4d32-42e7-9f99-413205032394', public_health_expert_authority).
+narrative_ontology:cs_drift_state('f4eec3ee-4d32-42e7-9f99-413205032394', contemporary_resistance_expansion, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('f4eec3ee-4d32-42e7-9f99-413205032394', '').
 narrative_ontology:cs_kernel_id(substance_control_legitimacy__harm_reduction_reading, substance_control_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, public_health_authorities).
-narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, treatment_infrastructure_providers).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, public_health_institutions).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, treatment_providers).
 narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, harm_reduction_advocates).
-narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, substance_users_in_treatment_mandate).
-narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, informal_economy_participants).
-narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, communities_with_enforcement_density).
+narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, people_with_substance_use_disorder).
+narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, marginalized_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, people_with_substance_use_disorder).
+narrative_ontology:constraint_beneficiary(substance_control_legitimacy__harm_reduction_reading, community_members_substance_free).
+narrative_ontology:constraint_victim(substance_control_legitimacy__harm_reduction_reading, law_enforcement).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Declared as the primary public health concern and target of intervention. They are offered treatment, harm reduction services (needle exchanges, naloxone distribution, medication-assisted therapy), and decriminalization of possession—genuine improvements over pure prohibition. However, they are also subject to mandatory treatment conditions, surveillance through drug testing and compliance monitoring, stigmatization as public health subjects, and coercive pressure to accept medicalized identity. Their ability to refuse treatment or self-manage without state oversight is limited by public health law and the medicalization framework itself.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, people_with_substance_use_disorder, payer,
+    powerless, biographical, trapped, local).
+narrative_ontology:stakeholder_secondary_role(substance_control_legitimacy__harm_reduction_reading, people_with_substance_use_disorder, beneficiary).
+
+% Set the terms of substance control through public health authority rather than criminal law. They define what counts as 'harm,' what interventions are 'evidence-based,' and who gets mandatory versus voluntary treatment. They collect budgets, professional authority, and institutional legitimacy from managing the substance use population as a medical/public health problem. Their power derives from the reading that positions them as experts in harm minimization.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, public_health_institutions, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Expand their market, professional authority, and funding through the medicalization framework. Substance use treatment is a growth sector; harm reduction expands the treatment paradigm beyond abstinence-only models to include medication-assisted therapy, supervised consumption sites, and ongoing management. They benefit from both government contracts and the expansion of treatment as a normalized state intervention.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, treatment_providers, beneficiary,
+    powerful, biographical, mobile, national).
+
+% Gain institutional legitimacy and resources by framing substance use as a public health emergency requiring their expertise and intervention. They benefit from the shift away from pure criminalization and gain policy influence, funding for programs, and professional standing. However, their power is contingent on the continued medicalization frame and state authority over substance control.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, harm_reduction_advocates, beneficiary,
+    organized, biographical, mobile, national).
+
+% Disproportionately subject to enforcement of public health mandates due to segregated geography and policing patterns. Harm reduction and medicalization can reduce criminal penalties but increase surveillance, coercive treatment referrals, and intrusion into community institutions (schools, social services, housing programs). They bear the cost of the state apparatus even when it is framed as therapeutic rather than punitive.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, marginalized_communities, payer,
+    powerless, biographical, trapped, regional).
+
+% Displaced from primary substance control authority under this reading but retain enforcement of residual criminal statutes (drug trafficking, distribution, driving under influence). They experience the shift as a loss of jurisdictional control and budget allocation while still bearing costs of managing substance-related social disorder. They may resist harm reduction framing while cooperating with health agencies in enforcement.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, law_enforcement, payer,
+    institutional, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(substance_control_legitimacy__harm_reduction_reading, law_enforcement, observer).
+
+% Are not directly addressed by the harm reduction reading's framework. Those who prefer to access substances outside the medicalized system (because they reject the patient identity, distrust government, or prefer unregulated autonomy) have no legitimated voice. The persistence of black markets is treated as a failure of policy uptake rather than as an expression of excluded preferences.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, people_who_use_illegal_markets, excluded,
+    powerless, biographical, trapped, local).
+
+% Are structurally excluded from the harm reduction reading's authority framework. They argue that substance autonomy is a right, not a public health problem requiring expert management. The medicalization frame forecloses their reading by locating authority in public health expertise rather than individual autonomy, making their voice inaudible within the harm reduction institutional logic.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, legalization_advocates, excluded,
+    organized, biographical, mobile, national).
+
+% Benefit from reduced visible drug markets, decreased criminal violence associated with drug distribution, and the framing of substance use as a health problem rather than a moral failing. They gain cultural capital from the medicalization narrative (substance use is a disease, not a choice) and public order improvements. However, they may also experience increased surveillance and health policing in their neighborhoods.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, community_members_substance_free, beneficiary,
+    moderate, biographical, mobile, local).
+
+% Examines the structural gap between the harm reduction reading's legitimacy claims (minimizing harm without criminalization) and its operation (medicalization creating new forms of coercion, black markets persisting, surveillance intensifying). This seat observes whether the constraint achieves its stated coordination function or whether it is tangled rope masquerading as pure coordination.
+narrative_ontology:constraint_stakeholder(substance_control_legitimacy__harm_reduction_reading, observer_external_auditor, observer,
+    analytical, civilizational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(substance_control_legitimacy__harm_reduction_reading, public_health_institutions).
+narrative_ontology:fixing_cost_class(substance_control_legitimacy__harm_reduction_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Replaces criminalization with medical/public health authority: substance use is treated as a disease requiring evidence-based intervention (medication-assisted therapy, counseling, supervised consumption sites) rather than criminal punishment. The coordination problem solved is: how to reduce harms of substance use (overdose, infection, social disintegration) without the violence and inefficiency of criminal enforcement.
+% TRANSFER_FUNCTION: Moves authority, resources, and the capacity to define and manage substance users from criminal law to public health institutions. Substance users are transferred from penal subjects to medical subjects; budgets flow to treatment providers and harm reduction programs; the capacity to mandate intervention shifts from courts to public health agencies and treatment protocols.
+% ABSENT_VOICES: People who reject the patient/medical identity and prefer autonomy over managed use (legalization advocates); communities that distrust health institutions due to historical medical racism and do not consent to being managed as public health populations; people who use substances outside medicalized channels and benefit from black markets or prefer unregulated access. These voices are excluded by the reading's own framing, which locates authority in expertise rather than in affected parties' consent.
+% DISAPPEARANCE_RATIONALE: If harm reduction authority disappeared overnight, substance control would revert to other frames (pure criminalization, legalization, or unmanaged black markets). The institutional power and resource allocation built on the medicalization frame would collapse, treatment providers would lose funding, public health agencies would lose jurisdiction, and the substance-using population would face either criminal or unregulated management. The world depends on this constraint's persistence.
+% FOUNDING_PROBLEM: Criminalization of substance use produced mass incarceration, violent drug markets, police brutality, overdose epidemics, and treatment barriers for people seeking help. Harm reduction emerged as a response: treating substance use as a public health issue allows intervention without criminal punishment, making treatment more accessible and reducing some harms.
+% FOUNDING_PROBLEM_CORROBORATION: Public health institutions and harm reduction advocates attest the founding problem is live: criminalization persists in many jurisdictions and produces documented harms. Legalization advocates attest the problem is misframed: criminalization is the problem, but medicalization is also a form of control that creates different harms. Empirical researchers outside the benefiting parties document that harm reduction reduces some harms (overdose death, infection) while leaving others intact (black market violence, coercive treatment, surveillance). The problem is partially solved, partially replaced.
+narrative_ontology:disappearance_verdict(substance_control_legitimacy__harm_reduction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(substance_control_legitimacy__harm_reduction_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(substance_control_legitimacy__harm_reduction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(substance_control_legitimacy__harm_reduction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(substance_control_legitimacy__harm_reduction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(substance_control_legitimacy__harm_reduction_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -187,16 +249,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.52 at interval end, rising from 0.35 at t0) because the medicalization frame imposes real compliance costs on users (surveillance, mandatory treatment milestones, medication regimes, counseling sessions, periodic testing) that go beyond the genuine harm reduction benefit they receive. The rise over the interval reflects the tightening of treatment gate conditions and the normalization of medical monitoring as users become enrolled in systems. Suppression is moderate (0.41) because users retain some alternatives (informal use remains available, though legally precarious), but the suppression is rising as informal supply chains are disrupted by harm reduction initiatives and as incarceration risk remains a latent enforcement mechanism for non-compliance. Theater is rising (0.22 to 0.38) because an increasing share of enforcement activity goes to monitoring and compliance-checking rather than actual overdose response or disease prevention. The accessibility collapse (0.48) is below the mountain threshold because alternatives to medicalized treatment remain available, though costly and risky; resistance (0.56) is moderate-high because users who privilege autonomy and informal supply communities actively resist the medicalization frame. The measurements are authored on a shared grid so every metric is authored at every time point. The temporal pattern reflects the lifecycle of the harm reduction frame: early rapid rise as infrastructure scales up and treatment mandates tighten, then plateau as the system stabilizes and users adapt.
+ *   Extractiveness starts at 0.42 (the coordination genuinely improves access to treatment) and rises to 0.58 (as institutions consolidate authority and treatment becomes mandatory/conditional on compliance). Suppression is substantial (0.62 at end) because the constraint's persistence requires surveillance, drug testing, and coercive treatment referrals—the apparatus must continuously monitor users and enforce participation. Theater rises from 0.25 to 0.42: early enforcement focuses on genuine treatment provision, but as the system matures, more effort goes into compliance theater—documenting uptake, managing stigma, defending the medicalization frame against critique. Accessibility collapse is moderate (0.48): alternatives (unmanaged use, black markets, legalization) persist outside the medicalized system; they are not fully foreclosed. Resistance is high (0.71): people with substance use disorder, legalization advocates, and marginalized communities all resist medicalization, even when it improves some outcomes. The reading's legitimacy claim (harm reduction) is real but partial; the extraction component grows as the system becomes established.
  *
  * PERSPECTIVAL GAP:
- *   The public health authorities and the treatment infrastructure providers should compute as cooperatively benefiting from the constraint; the substance users in treatment mandate should compute as moderately extractive-paying seats despite the coordination benefit, because the extraction is the cost of accessing the benefit (gated access, monitoring, medicalization). The informal economy participants compute as pure targets with no offsetting benefit. Communities with enforcement density should compute as somewhat extractive depending on whether their local legitimacy structures accept or resist medical authority. The criminal justice exclusion is the reading-specific characteristic: in the prohibition reading, law enforcement is the agenda-setter; in the legalization reading, criminal justice is explicitly delegitimized as an enforcement mechanism; in the harm reduction reading, it is both delegitimized AND remains as a latent suppressive force (users can still be prosecuted for non-compliance, distribution, or informal use).
+ *   From the public health institutional seat, the constraint is coordination: a genuine improvement over criminalization, evidence-based, beneficial to health outcomes. From the people_with_substance_use_disorder seat, the constraint is tangled rope or snare: trading one form of control (criminal) for another (medical), with added surveillance and coercion, even if some outcomes improve. The engine computes these divergent classifications from the same structural data—the asymmetry is the point. The agenda-setter seat believes it is minimizing harm; the payer seats experience mandatory identity transformation.
  *
  * DIRECTIONALITY LOGIC:
- *   Public health authorities have low directionality (0.15–0.25): they benefit from the constraint by deriving authority, setting terms, and allocating resources. Treatment providers have similar low d (0.20–0.30): they collect rents from the treatment economy. Substance users have high directionality (0.65–0.75): they bear the extraction (compliance, surveillance, medicalization) even though they also benefit from harm reduction. This asymmetry is the tangled_rope signature. Informal suppliers have maximum d (0.85): pure targets, no coordination benefit. Criminal justice actors are excluded from the authority structure, so their d is derived from their latent enforcement role: they remain powerful enough to suppress deviation but are delegitimized, putting them in an ambiguous structural position—perhaps d = 0.70 (still enforcement power, but residual and contested). The derivation respects beneficiary/victim declarations and the identity_locked exit option for users (the medicalization frame becomes identity-fused once treatment is initiated; exit means losing legitimacy, social services, and medical access).
+ *   Public health institutions sit at the beneficiary end (d near 0.0–0.2): they set the frame, expand authority and budgets, and face no material extraction cost. Treatment providers sit near beneficiary (d ≈ 0.15–0.3): they collect funding and expanded markets. People with substance use disorder sit at the target end (d ≈ 0.75–0.85): they must accept the patient identity, comply with treatment, submit to monitoring, and lose autonomy in exchange for reduced criminalization. The constraint is asymmetric: beneficiaries (institutions, providers) define the problem and solution; payers (users, marginalized communities) bear the extraction cost in the form of coercive authority. Legalization advocates are excluded (d undefined): they have no seat at the table; the reading's authority framework forecloses their voice.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint has not (yet) experienced mandatrophy in the harm reduction reading, but it carries the risk of it. The founding problem (overdose mortality, disease transmission from criminalization) remains live, and the harm reduction frame directly addresses it. However, if alternative treatments or social structures were to emerge that reduced overdose and disease without medicalization, the treatment infrastructure might persist through inertia even as its founding mandate eroded. The measurement of theater_ratio rising from 0.22 to 0.38 is a signal of incipient mandatrophy: if the theater continues to rise toward 0.5+, it would indicate that compliance monitoring and surveillance have become decoupled from actual harm reduction outcomes. The legalization reading provides a structural threat to the mandate: if autonomy-based substance policy were adopted, the medical authority structure would lose its foundational justification. The present reading maintains mandate vitality by the empirical claim that medicalization reduces harm better than criminalization; the empirical contestability (prohibition advocates claim it enables addiction, some public health researchers question long-term outcomes of medication-assisted therapy compared to abstinence) is captured in the omegas rather than triggering mandatrophy classification.
+ *   The founding problem (criminalization produces harms) is partially solved (treatment access improves, overdose deaths decline) but not fully resolved (black markets persist, surveillance replaces incarceration). The constraint shows no signs of mandatrophy—the founding problem remains live, and institutions have strong incentive to maintain the medicalization frame. However, the theater_ratio rising from 0.25 to 0.42 suggests increasing performative maintenance: as the constraint matures and some harms persist despite intervention, institutions spend more effort justifying and defending the frame against critiques that it is coercive. This is not yet mandatrophy (the problem is still live) but a warning trajectory: if the founding problem dies (substance use becomes fully managed, or legalization is chosen) while the constraint persists, mandatrophy will be present.
  */
 
 /* ==========================================================================
@@ -204,118 +266,132 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    medicalization_as_internalized_suppression,
-    'To what extent is the suppression and compliance burden imposed by the medicalization framework structural (external monitoring, treatment slot scarcity, legal risk for non-compliance) versus internalized (users have absorbed the medicalized identity and no longer experience exit as a real option)?',
-    'Post-exit follow-up: if substance users who exit the formal treatment system report that suppression and self-monitoring persist (internalized) versus disappear (structural), the mechanism is revealed. Comparative jurisdictions with legalization could also show whether exit-stage suppression remains after legal criminalization is removed.',
-    'If suppression is primarily internalized, the effective extraction is higher than the structural measure suggests, and the constraint''s persistence depends on identity-fusion rather than enforcement capacity. This would move the classification toward snare (persistent extraction through internalized control) rather than tangled_rope (coordination with asymmetric extraction). If structural, the suppression is likely sustainable only as long as enforcement capacity is maintained.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(medicalization_as_internalized_suppression, empirical, 'Structural versus internalized suppression mechanism in medicalization framework').
-
-omega_variable(
-    founding_problem_empirical_contestability,
-    'Is harm reduction empirically more effective than prohibition at reducing overdose mortality and disease transmission, and how does this compare to legalization-framework outcomes where available?',
-    'Meta-analysis of outcome data from jurisdictions with different substance policy regimes: harm reduction (Portugal, Swiss Zurich, U.S. harm reduction cities), prohibition (traditional criminalization regimes), legalization (limited data; some U.S. cannabis legalization metrics available). Compare overdose mortality, disease incidence, incarceration rates, and quality-of-life measures.',
-    'If harm reduction empirically outperforms both prohibition and legalization on the public health metrics it claims to optimize, the founding problem remains live and the constraint retains mandate vitality. If legalization produces superior outcomes (lower overdose mortality, higher quality of life) while avoiding medicalization costs, the constraint would face mandatrophy risk: the problem is solved by a sibling reading, not by this one. If prohibition produces comparable outcomes with lower surveillance burden, the empirical foundation for this reading''s authority weakens.',
+    medicalization_as_coercion_boundary,
+    'Is the measured extraction (0.58) the cost of genuine public health coordination, or does medicalization constitute a form of coercive control structurally equivalent to criminalization, merely reframed?',
+    'Comparative study: measure health outcomes and subjective autonomy in harm reduction jurisdictions versus legalization jurisdictions and unregulated/black-market access. If autonomy and outcomes are similar across frames, medicalization is equivalent control; if outcomes diverge, medicalization has net benefit despite extraction cost.',
+    'If medicalization is equivalent control, the constraint is a snare masquerading as coordination—extraction is masked by the harm-reduction framing. If outcomes genuinely diverge, the extraction is the price of coordination, and the constraint is tangled rope as claimed.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(founding_problem_empirical_contestability, empirical, 'Comparative effectiveness of harm reduction versus sibling policy readings').
+narrative_ontology:omega_variable(medicalization_as_coercion_boundary, empirical, 'Whether medicalization is a true public health coordination or a repackaged form of coercive control.').
 
 omega_variable(
-    informal_supply_replacement_by_fentanyl,
-    'Does harm reduction suppress informal supply chains, or does it create a market niche into which high-potency drugs (fentanyl, xylazine) move, enabling more dangerous informal use?',
-    'Time-series analysis of drug-market composition before and after harm reduction implementation: track the share of pharmaceutical (prescribed methadone, buprenorphine) versus illicit supply; track the potency distribution of illicit drugs; conduct supply-chain ethnography to determine whether harm reduction supply channels (sterile equipment, naloxone, supervised consumption sites) substitute for or coexist with illicit supply.',
-    'If harm reduction substitutes for informal supply, the suppression is working and the extraction cost is primarily the medicalization burden. If informal supply adapts toward more dangerous products, the harm reduction frame may be misattributing harm causation (treating medicalization access as the harm-reduction input when the real input is the prevention of criminalization-driven supply escalation). This would affect the theoretical coherence of the constraint and suggest the sibling legalization reading might prevent the escalation better.',
+    black_market_persistence_mechanism,
+    'Why do black markets persist despite harm reduction services? Is it refusal of the patient identity, structural barriers to access, or profit incentives driving supply?',
+    'Qualitative research with people who use substances outside medicalized systems; economic analysis of price and supply in black markets; ethnographic study of preferences for unmedicated access.',
+    'If persistence is identity-refusal, the excluded voices are not absent but active; the reading forecloses them by denying legitimacy to unmedicated substance use. If persistence is access barriers, harm reduction is under-resourced. If supply-driven, medicalization fails to address root causes.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(informal_supply_replacement_by_fentanyl, empirical, 'Whether harm reduction suppresses or displaces informal drug markets').
+narrative_ontology:omega_variable(black_market_persistence_mechanism, empirical, 'Why the harm reduction reading does not eliminate alternative substance-use pathways.').
 
 omega_variable(
-    community_legitimacy_of_external_authority,
-    'In communities with high historical criminalization and enforcement density, does the medical authority structure gain legitimacy and consent, or is it experienced as replacement colonialism—different authority, same external imposition?',
-    'Community ethnography and surveys in jurisdictions with different substance policy histories: measure whether medical authority is experienced as legitimate, trusted, and helpful versus experienced as another form of state control targeting the same communities. Distinguish between explicit policy adoption (harm reduction framework) and community acceptance of the authority structure.',
-    'If medical authority gains legitimacy, the constraint''s extraction is lower because it is accepted voluntarily. If medical authority is experienced as replacement colonialism, the extraction is higher because it maintains external control while changing only the form of intervention. This would affect whether the constraint is sustainable and whether legalization or indigenous-authority-based models might be more effective.',
+    institutional_capture_risk,
+    'As harm reduction institutions consolidate authority and funding, do they develop incentive to maintain substance use as a managed population rather than eliminate the problem entirely?',
+    'Time-series analysis of institutional budgets and expansion; interview study of provider perspectives on problem resolution; policy analysis of institutional resistance to legalization or true decriminalization that would end the mandate.',
+    'If capture is real, the constraint''s extractiveness will continue rising even as genuine harm declines—theater ratio will increase. The constraint may transition from tangled rope to piton (theaters maintenance of an atrophied function).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(community_legitimacy_of_external_authority, empirical, 'Whether medicalization gains community legitimacy or is experienced as replacement colonialism').
+narrative_ontology:omega_variable(institutional_capture_risk, empirical, 'Whether public health institutions have structural incentive to perpetuate the substance-use problem they manage.').
 
 omega_variable(
-    autonomous_substance_use_outside_medicalization,
-    'Is there a significant population whose substance use is self-managed, low-harm (occasional, moderate dose, integrated with other life domains) and for whom the medicalization framework is misapplied?',
-    'Population surveys of substance use patterns: estimate the fraction of users who meet criteria for disorder (compulsive use, harm, loss of control) versus casual/recreational use. If a large fraction is non-disordered, this reading''s application of medical authority might be overbroad.',
-    'If most substance use is disordered and harmful, medicalization is correctly targeted. If a large fraction is autonomous, the extraction is higher because the medicalization frame is imposed on populations who do not need it, and the constraint becomes more snare-like (medicalization as suppression of autonomous choice, not just treatment access). This would strengthen the legalization reading''s case that state authority should be limited to third-party harm rather than applied universally.',
+    authority_frame_foreclosure,
+    'Does the harm reduction reading''s location of authority in public health expertise logically foreclose the legalization reading''s location of authority in individual autonomy, or do both readings coexist as live positions?',
+    'Philosophical analysis of axiom compatibility; empirical observation of whether jurisdictions that adopt harm reduction simultaneously block legalization advocacy, or whether both remain politically live.',
+    'If foreclosure is real, the reading relation to legalization is ''forecloses'' not ''coexists_with''; the harm reduction frame structurally prevents the autonomy frame from being heard. If coexistence is real, both readings remain live but in tension.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(autonomous_substance_use_outside_medicalization, empirical, 'Proportion of substance use that is autonomous versus disorder-level').
+narrative_ontology:omega_variable(authority_frame_foreclosure, conceptual, 'Whether medicalization authority and autonomy authority are logically incompatible or merely competing.').
 
 omega_variable(
-    constraint_reading_contest_mechanism,
-    'This constraint is one reading of a contested kernel (substance_control_legitimacy). The contest between harm_reduction, prohibition, and legalization readings depends on deep disagreements about whether substance use is fundamentally a moral failing (prohibition), a medical condition (harm reduction), or an autonomy right (legalization). Which of these readings, if empirically validated or defeated, would actually change political support for the constraint?',
-    'Policy history analysis: track whether empirical evidence (e.g., Portuguese harm reduction outcomes) actually shifted support, or whether support tracks other axes (cost, political coalition composition, international pressure). Track whether evidence against prohibition (e.g., high incarceration without reduced use) shifts advocates away from prohibition or whether they double down. Test whether actual legalization experience (cannabis legalization outcomes) shifts support for legalization reading.',
-    'If empirical evidence can shift the reading in use, the constraint is contestable and mandatrophy-vulnerable. If readings are sticky regardless of evidence (political coalition constraints, identity-fusion, ideological commitment), the constraint is more stable but its empirical claim is decoupled from its persistence. This affects whether the constraint should be analyzed as an empirical question (and thus subject to refutation) or as a political choice masked as empirical.',
-    confidence_without_resolution(low)
+    suppression_internalization,
+    'Is the measured suppression (0.62) structural (external surveillance, mandatory treatment, legal coercion) or internalized (people with substance use disorder adopt the patient identity and self-police, even after exit)?',
+    'Post-exit study: measure autonomy and decision-making patterns in people who exit medicalized systems (migrate to legalization jurisdictions, stop treatment participation). If suppression persists after structural exit, it is partly internalized.',
+    'If internalized, the constraint''s effective suppression is higher than 0.62; the target carries the suppression with them. The transition cost to alternative readings (legalization) is higher, making the constraint more durable.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(constraint_reading_contest_mechanism, conceptual, 'Whether substance control reading is empirically contestable or politically determinate').
+narrative_ontology:omega_variable(suppression_internalization, empirical, 'Whether medicalization suppression is structural or internalized through identity fusion.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(substance_control_legitimacy__harm_reduction_reading, 0, 25).
+narrative_ontology:interval(substance_control_legitimacy__harm_reduction_reading, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(subs_tr_t0, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(subs_tr_t5, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 5, 0.28).
-narrative_ontology:measurement(subs_tr_t10, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 10, 0.33).
-narrative_ontology:measurement(subs_tr_t15, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 15, 0.37).
-narrative_ontology:measurement(subs_tr_t20, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 20, 0.38).
-narrative_ontology:measurement(subs_tr_t25, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 25, 0.38).
+narrative_ontology:measurement(subs_tr_t0, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(subs_tr_t0, observed).
+narrative_ontology:measurement(subs_tr_t5, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 5, 0.31).
+narrative_ontology:measurement_basis(subs_tr_t5, observed).
+narrative_ontology:measurement(subs_tr_t10, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 10, 0.35).
+narrative_ontology:measurement_basis(subs_tr_t10, observed).
+narrative_ontology:measurement(subs_tr_t15, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 15, 0.39).
+narrative_ontology:measurement_basis(subs_tr_t15, observed).
+narrative_ontology:measurement(subs_tr_t20, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 20, 0.41).
+narrative_ontology:measurement_basis(subs_tr_t20, observed).
+narrative_ontology:measurement(subs_tr_t25, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 25, 0.42).
+narrative_ontology:measurement_basis(subs_tr_t25, observed).
+narrative_ontology:measurement(subs_tr_t30, substance_control_legitimacy__harm_reduction_reading, theater_ratio, 30, 0.42).
+narrative_ontology:measurement_basis(subs_tr_t30, observed).
 
 % Extraction over time
-narrative_ontology:measurement(subs_be_t0, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(subs_be_t5, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 5, 0.42).
-narrative_ontology:measurement(subs_be_t10, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 10, 0.48).
-narrative_ontology:measurement(subs_be_t15, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 15, 0.51).
-narrative_ontology:measurement(subs_be_t20, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 20, 0.52).
-narrative_ontology:measurement(subs_be_t25, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 25, 0.52).
+narrative_ontology:measurement(subs_be_t0, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement_basis(subs_be_t0, observed).
+narrative_ontology:measurement(subs_be_t5, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement_basis(subs_be_t5, observed).
+narrative_ontology:measurement(subs_be_t10, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 10, 0.52).
+narrative_ontology:measurement_basis(subs_be_t10, observed).
+narrative_ontology:measurement(subs_be_t15, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 15, 0.56).
+narrative_ontology:measurement_basis(subs_be_t15, observed).
+narrative_ontology:measurement(subs_be_t20, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 20, 0.57).
+narrative_ontology:measurement_basis(subs_be_t20, observed).
+narrative_ontology:measurement(subs_be_t25, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 25, 0.58).
+narrative_ontology:measurement_basis(subs_be_t25, observed).
+narrative_ontology:measurement(subs_be_t30, substance_control_legitimacy__harm_reduction_reading, base_extractiveness, 30, 0.58).
+narrative_ontology:measurement_basis(subs_be_t30, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(subs_su_t0, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 0, 0.28).
-narrative_ontology:measurement(subs_su_t5, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 5, 0.33).
-narrative_ontology:measurement(subs_su_t10, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 10, 0.37).
-narrative_ontology:measurement(subs_su_t15, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 15, 0.4).
-narrative_ontology:measurement(subs_su_t20, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 20, 0.41).
-narrative_ontology:measurement(subs_su_t25, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 25, 0.41).
+narrative_ontology:measurement(subs_su_t0, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement_basis(subs_su_t0, observed).
+narrative_ontology:measurement(subs_su_t5, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 5, 0.54).
+narrative_ontology:measurement_basis(subs_su_t5, observed).
+narrative_ontology:measurement(subs_su_t10, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 10, 0.58).
+narrative_ontology:measurement_basis(subs_su_t10, observed).
+narrative_ontology:measurement(subs_su_t15, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 15, 0.61).
+narrative_ontology:measurement_basis(subs_su_t15, observed).
+narrative_ontology:measurement(subs_su_t20, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 20, 0.62).
+narrative_ontology:measurement_basis(subs_su_t20, observed).
+narrative_ontology:measurement(subs_su_t25, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 25, 0.62).
+narrative_ontology:measurement_basis(subs_su_t25, observed).
+narrative_ontology:measurement(subs_su_t30, substance_control_legitimacy__harm_reduction_reading, suppression_requirement, 30, 0.62).
+narrative_ontology:measurement_basis(subs_su_t30, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(substance_control_legitimacy__harm_reduction_reading, resource_allocation).
-narrative_ontology:boltzmann_floor_override(substance_control_legitimacy__harm_reduction_reading, 0.12).
+narrative_ontology:coordination_type(substance_control_legitimacy__harm_reduction_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(substance_control_legitimacy__harm_reduction_reading, 0.18).
 narrative_ontology:affects_constraint(substance_control_legitimacy__harm_reduction_reading, substance_control_legitimacy__prohibition_reading).
 narrative_ontology:affects_constraint(substance_control_legitimacy__harm_reduction_reading, substance_control_legitimacy__legalization_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested kernel substance_control_legitimacy. The kernel is the state's authority to regulate substance use. Three readings decompose the kernel based on different foundational axioms: (1) harm_reduction_reading (this file) — state authority derives from duty to minimize harm via medicalization; (2) prohibition_reading — state authority derives from moral duty to prevent use via criminalization; (3) legalization_reading — state authority limited to preventing third-party harm; adults have autonomy. Each reading has a distinct ε-value: harm reduction has moderate extractiveness (0.52) because medicalization imposes compliance costs; prohibition has high extractiveness (0.75+) because criminalization extracts through incarceration and legal penalties; legalization has low extractiveness (0.20–0.30) because autonomy requires minimal state extraction beyond enforcement of third-party-harm boundaries. The ε-invariance principle requires separate constraints rather than one constraint with measurement-parameter freedom. Sibling readings are linked via network.affects_constraints. The shared founding problem (substance use harms) is instantiated differently in each reading, and the effectiveness contest between them is empirical (captured in omegas).
+% The substance_control_legitimacy kernel has three distinct constraint readings: harm_reduction_reading (this file, medicalization authority), prohibition_reading (criminalization authority), and legalization_reading (autonomy authority). Each reading instantiates a different constraint with different ε, beneficiary/victim structures, and stakeholder configurations. The three are linked via network.affects_constraints because they compete for institutional authority over the same problem domain. The readings are not measurements of one constraint from different angles—they are structurally distinct constraints grounded in incompatible authority claims.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(substance_control_legitimacy__harm_reduction_reading, institutional, 0.18).
+constraint_indexing:directionality_override(substance_control_legitimacy__harm_reduction_reading, analytical, 0.5).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

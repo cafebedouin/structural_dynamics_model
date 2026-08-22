@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-13
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,15 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -70,23 +76,6 @@
  *   human_readable: Tenure Peer Review as Demographic Gatekeeping
  *   domain: higher_education/labor_economics/institutional_theory
  *
- * SUMMARY:
- *   Tenure peer review is nominally a meritocratic system in which
- *   experienced researchers evaluate candidates' scholarly contributions and
- *   ability to work within a discipline. This constraint reading frames
- *   tenure peer review as a mechanism for demographic gatekeeping: the 'fit'
- *   and 'collegiality' criteria deployed during peer review operate as cover
- *   stories for selective reproduction of dominant demographic groups. The
- *   reading does not claim that individual evaluators consciously
- *   discriminate; rather, that evaluation standards are interpreted through
- *   the unexamined norms of majority-group scholarship, communication, and
- *   professional networks. Candidates from underrepresented demographics face
- *   higher evidentiary burdens on research productivity while facing
- *   rejection on cultural grounds that are rarely made explicit or
- *   contestable. The measurement series spans 1970–2026, capturing both the
- *   post-civil rights integration of academia and the contemporary crisis of
- *   contingent labor.
- *
  */
 
 /* ==========================================================================
@@ -94,18 +83,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(tenure_contract__demographic_reproduction_reading, 0.71).
-domain_priors:suppression_score(tenure_contract__demographic_reproduction_reading, 0.78).
-domain_priors:theater_ratio(tenure_contract__demographic_reproduction_reading, 0.48).
+domain_priors:base_extractiveness(tenure_contract__demographic_reproduction_reading, 0.81).
+domain_priors:suppression_score(tenure_contract__demographic_reproduction_reading, 0.76).
+domain_priors:theater_ratio(tenure_contract__demographic_reproduction_reading, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, extractiveness, 0.71).
-narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, suppression_requirement, 0.78).
-narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, theater_ratio, 0.48).
+narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, extractiveness, 0.81).
+narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, suppression_requirement, 0.76).
+narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, theater_ratio, 0.58).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, resistance, 0.55).
+narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(tenure_contract__demographic_reproduction_reading, resistance, 0.62).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(tenure_contract__demographic_reproduction_reading, snare).
@@ -115,37 +104,95 @@ narrative_ontology:topic_domain(tenure_contract__demographic_reproduction_readin
 domain_priors:requires_active_enforcement(tenure_contract__demographic_reproduction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(tenure_contract__demographic_reproduction_reading, '689e9836-e744-49d4-b731-fad3e082a694').
-narrative_ontology:cs_kernel_codification('689e9836-e744-49d4-b731-fad3e082a694', fixed_text).
-narrative_ontology:cs_authority_grounding('689e9836-e744-49d4-b731-fad3e082a694', extraction).
-narrative_ontology:cs_interpretation_layer_present('689e9836-e744-49d4-b731-fad3e082a694').
-narrative_ontology:cs_reading_relation('689e9836-e744-49d4-b731-fad3e082a694', tenure_contract__academic_freedom_reading, coexists_with).
-narrative_ontology:cs_reading_relation('689e9836-e744-49d4-b731-fad3e082a694', tenure_contract__institutional_extraction_reading, coexists_with).
-narrative_ontology:cs_axiom('689e9836-e744-49d4-b731-fad3e082a694', foundational, peer_review_criteria_demographic_inflected).
-narrative_ontology:cs_axiom_status(peer_review_criteria_demographic_inflected, holdable).
-narrative_ontology:cs_axiom_grounding('689e9836-e744-49d4-b731-fad3e082a694', peer_review_criteria_demographic_inflected, empirically_contingent).
-narrative_ontology:cs_axiom('689e9836-e744-49d4-b731-fad3e082a694', foundational, collegiality_masks_demographic_gatekeeping).
-narrative_ontology:cs_axiom_status(collegiality_masks_demographic_gatekeeping, holdable).
-narrative_ontology:cs_axiom_grounding('689e9836-e744-49d4-b731-fad3e082a694', collegiality_masks_demographic_gatekeeping, deontological).
-narrative_ontology:cs_reference_frame('689e9836-e744-49d4-b731-fad3e082a694', meritocratic_peer_review_evaluation).
-narrative_ontology:cs_drift_state('689e9836-e744-49d4-b731-fad3e082a694', contemporary_diversity_awareness_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('689e9836-e744-49d4-b731-fad3e082a694', '').
+narrative_ontology:cs_story_uid(tenure_contract__demographic_reproduction_reading, '4d34c8a5-a16d-4c6e-a151-af6b9775823b').
+narrative_ontology:cs_kernel_codification('4d34c8a5-a16d-4c6e-a151-af6b9775823b', formalized).
+narrative_ontology:cs_authority_grounding('4d34c8a5-a16d-4c6e-a151-af6b9775823b', expertise).
+narrative_ontology:cs_interpretation_layer_present('4d34c8a5-a16d-4c6e-a151-af6b9775823b').
+narrative_ontology:cs_reading_relation('4d34c8a5-a16d-4c6e-a151-af6b9775823b', tenure_contract__academic_freedom_reading, coexists_with).
+narrative_ontology:cs_reading_relation('4d34c8a5-a16d-4c6e-a151-af6b9775823b', tenure_contract__institutional_extraction_reading, influences).
+narrative_ontology:cs_axiom('4d34c8a5-a16d-4c6e-a151-af6b9775823b', foundational, peer_review_operates_meritocratically).
+narrative_ontology:cs_axiom_status(peer_review_operates_meritocratically, holdable).
+narrative_ontology:cs_axiom_grounding('4d34c8a5-a16d-4c6e-a151-af6b9775823b', peer_review_operates_meritocratically, empirically_contingent).
+narrative_ontology:cs_axiom('4d34c8a5-a16d-4c6e-a151-af6b9775823b', foundational, fit_and_collegiality_proxy_for_research_quality).
+narrative_ontology:cs_axiom_status(fit_and_collegiality_proxy_for_research_quality, overridden).
+narrative_ontology:cs_axiom_grounding('4d34c8a5-a16d-4c6e-a151-af6b9775823b', fit_and_collegiality_proxy_for_research_quality, empirically_contingent).
+narrative_ontology:cs_reference_frame('4d34c8a5-a16d-4c6e-a151-af6b9775823b', meritocratic_peer_evaluation).
+narrative_ontology:cs_drift_state('4d34c8a5-a16d-4c6e-a151-af6b9775823b', contemporary_equity_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('4d34c8a5-a16d-4c6e-a151-af6b9775823b', '2026-06-13T14:32:00Z').
 narrative_ontology:cs_kernel_id(tenure_contract__demographic_reproduction_reading, tenure_contract).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(tenure_contract__demographic_reproduction_reading, demographic_majority_faculty).
-narrative_ontology:constraint_victim(tenure_contract__demographic_reproduction_reading, underrepresented_demographic_candidates).
-narrative_ontology:constraint_victim(tenure_contract__demographic_reproduction_reading, early_career_contingent_faculty).
+narrative_ontology:constraint_beneficiary(tenure_contract__demographic_reproduction_reading, demographically_dominant_faculty).
+narrative_ontology:constraint_victim(tenure_contract__demographic_reproduction_reading, underrepresented_scholars).
+narrative_ontology:constraint_victim(tenure_contract__demographic_reproduction_reading, contingent_labor).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(tenure_contract__demographic_reproduction_reading, institutional_administration).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Tenured scholars from majority demographics (historically white, male, and from privileged class backgrounds in many disciplines) control hiring committees and tenure review panels. They set evaluation criteria, interpret 'fit' and 'collegiality' in their own image, and sustain the composition resembling their own cohort. They use peer review mechanisms ostensibly designed for quality control to enforce conformity to departmental culture, methodological orthodoxy, and social reproduction.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, demographically_dominant_faculty, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Early-career scholars from underrepresented demographic groups (women, scholars of color, scholars from lower-income backgrounds, LGBTQ+ researchers, disabled scholars, international scholars) face heightened scrutiny in tenure review on dimensions coded as 'fit' and 'collegiality' — criteria that carry implicit demographic preferences and are evaluated with higher subjective variance and lower transparency than research productivity measures. Their scholarly voice is read through a demographic filter: the same methodological risk-taking is 'innovative' for dominant-group scholars and 'not rigorous enough' for others. Exit means abandoning the profession they trained for, the fieldwork relationships they built, the research program they invested years developing. Identity fusion with the disciplinary role makes exit costly even where nominally possible.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, underrepresented_scholars, payer,
+    moderate, biographical, identity_locked, national).
+
+% Non-tenure-track faculty, adjuncts, teaching-focused instructors, and postdoctoral researchers bear the downstream cost of tenure scarcity: as tenured seats persist and are rarely vacated, institutions substitute contingent precarious labor. They have no gatekeeping power, no long-term job security, no voice in departmental governance, and their labor directly subsidizes the tenure system by enabling departments to maintain tenure ratios while growing teaching loads. Trapped: the only option is leaving academia entirely, and many carry sunk costs in training specific to this field.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, contingent_labor, payer,
+    powerless, immediate, trapped, national).
+
+% University administration benefits from tenure gatekeeping by gaining stable control over departmental composition without the political cost of explicit demographic engineering. They defer to peer review and 'meritocracy' framing while the gatekeeping machinery reproduces predictable tenure cohorts. They also benefit from contingent labor substitution: contingent workers enable flexibility in enrollment downturns and funding changes while tenured seats remain constant.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, institutional_administration, beneficiary,
+    powerful, generational, mobile, national).
+
+% Publication counts, citation impact, grant funding, and other productivity measures are formally present in tenure files but are systematically subordinated in deliberation to subjective 'fit' and 'collegiality' assessments. Productivity metrics are not excluded entirely but are reinterpreted through demographic lenses when they conflict with gatekeeping intuitions.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, research_productivity_metrics, excluded,
+    analytical, civilizational, analytical, universal).
+narrative_ontology:stakeholder_non_agent(tenure_contract__demographic_reproduction_reading, research_productivity_metrics).
+
+% Advocates for academic freedom and protection of dissenting voices would argue that if tenure review is primarily demographic gatekeeping unmoored from research merit, then it fails its own justificatory promise and should be reformed or abolished. They are structurally excluded from tenure deliberation because tenure committees are self-perpetuating and structured to protect existing gatekeeping authority.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, academic_freedom_advocates, excluded,
+    organized, generational, constrained, national).
+
+% Campus equity offices document the demographic composition of tenure lines over time, conduct implicit bias training, issue recommendations on hiring and retention procedures. Their authority to alter tenure gatekeeping is structurally limited: they can recommend but not decide, can audit but not reform the criteria themselves. They observe the mechanism without possessing structural power to change it.
+narrative_ontology:constraint_stakeholder(tenure_contract__demographic_reproduction_reading, diversity_and_equity_offices, observer,
+    moderate, generational, constrained, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(tenure_contract__demographic_reproduction_reading, demographically_dominant_faculty).
+narrative_ontology:fixing_cost_class(tenure_contract__demographic_reproduction_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Tenure review is presented as maintaining research quality and scholarly rigor by assembling committees of subject experts to assess candidates' contributions, fit, and capacity to sustain intellectual inquiry within a collegial community. Ostensibly, peer review allocates permanent positions to scholars whose work merits long-term institutional commitment.
+% TRANSFER_FUNCTION: Moves permanent employment, prestige, departmental voice, governance rights, and access to institutional resources from a large candidate pool to a small cohort. Simultaneously channels contingent precarious labor to those filtered out. The constraint transfers demographic reproduction from one generation of faculty to the next: gatekeeping authority is self-perpetuating because the same demographic majority that controls review panels is the same demographic majority that benefits from the review criteria they set.
+% ABSENT_VOICES: Early-career scholars from underrepresented demographics who were rejected at earlier career stages; scholars who left academia after non-renewal of contingent positions; international scholars whose credentials were devalued; scholars whose research challenged disciplinary orthodoxy and were read as 'not a good fit'. These populations would attest that tenure review is a demographic filter, not a meritocratic one. Their absence from tenure committees ensures their exclusion from the deliberation itself.
+% DISAPPEARANCE_RATIONALE: If tenure gatekeeping and its demographic filtering disappeared overnight, departmental composition would become noticeably more diverse within 10–15 years; contingent labor markets would compress as permanent positions opened; research fields would diversify as methodological gatekeeping relaxed; the cost structure of academic institutions would shift as they could not rely on contingent labor substitution to maintain tenure ratios. The world rearranges because the constraint actively reproduces power.
+% FOUNDING_PROBLEM: Academic inquiry requires researchers to pursue questions that may displease powerful interests (governments, corporations, ideological establishments) without fear of retaliation. Tenure was designed to decouple career survival from institutional or political displeasure, enabling high-risk truth-seeking.
+% FOUNDING_PROBLEM_CORROBORATION: Academic freedom advocates and the AAUP attest the founding problem is still live and tenure remains the primary defense. Simultaneously, scholars who have been denied tenure and equity researchers attest that tenure review has become primarily a demographic and ideological gatekeeping mechanism, not a truth-seeking protection. Empirical studies of tenure rejection rates and demographic composition show that the founding problem's solution has accumulated substantial gatekeeping function decoupled from the founding problem itself. No corroboration from outside the tenure-benefiting parties supports the unambiguous 'academic freedom protection' reading.
+narrative_ontology:disappearance_verdict(tenure_contract__demographic_reproduction_reading, world_rearranges).
+narrative_ontology:founding_problem_status(tenure_contract__demographic_reproduction_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(tenure_contract__demographic_reproduction_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(tenure_contract__demographic_reproduction_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(tenure_contract__demographic_reproduction_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(tenure_contract__demographic_reproduction_reading, 0.81, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,98 +210,169 @@ test(extraction_signature) :-
    5. GENERATIVE COMMENTARY
    ========================================================================== */
 
-/**
- * LOGIC RATIONALE:
- *   Extractiveness is high and rising (0.45→0.71 across the interval). This rising trajectory reflects the strengthening of gatekeeping mechanisms over time: as diversity pressure has increased, the enforcement of 'fit' and 'collegiality' criteria has intensified to maintain demographic composition. Suppression is also high and rising (0.55→0.78), indicating both structural exclusion (institutional barriers) and internalized suppression (candidates internalizing rejection narratives about their 'fit'). Theater ratio is moderate and rising (0.25→0.48), indicating that an increasing share of peer-review activity is devoted to maintaining demographic stability rather than evaluating research. The coercion grid shows class-level suppression and stakes inflation rising most steeply: demographic class experiences the constraint as both higher material stakes (research productivity alone is insufficient to survive evaluation) and higher suppression (gatekeeping operates at the class level, not just individual case-by-case). Resistance at class and organizational levels is non-negligible (0.68 and 0.52 at t_n) but remains structurally constrained: candidates at the powerless individual level cannot organize resistance within the institutions that evaluate them.
- *
- * PERSPECTIVAL GAP:
- *   Majority-group faculty compute the constraint as rope or even mountain (natural meritocratic evaluation): from their position, 'fit' and 'collegiality' are obvious criteria for assessing scholarly quality and departmental functionality. Underrepresented candidates compute it as snare: 'fit' operates as a rejection criterion applied asymmetrically, and 'collegiality' is interpreted through majority-group norms they cannot conform to without abandoning their own intellectual traditions. The directive-chain effect: department hiring committees (institutional power, demographic majority, arbitrage exit) experience the constraint as meritocratic self-defense; underrepresented candidates (powerless, identity-locked exit) experience it as structural closure. Institutional administration observes both framings simultaneously but lacks enforcement mechanisms to alter evaluation standards without triggering academic freedom defense.
- *
- * DIRECTIONALITY LOGIC:
- *   Majority-group faculty benefit from the constraint without bearing its costs; directionality approaches the beneficiary end (d ≈ 0.2–0.3). Underrepresented candidates bear the extraction cost (higher burden of proof, implicit rejection criteria, constrained exit to contingent positions) without benefiting from it; directionality approaches the target end (d ≈ 0.8–0.9). The suppression mechanism is partly structural (institutional barriers, legal constraints on hiring remedies) and partly internalized (candidates internalize 'not a fit' narratives, fuse identity with academic work while facing systematic rejection, remain in contingent positions that lack upward mobility). Contingent faculty occupy a dual position: they bear extraction (teaching loads, research with no tenure security) and are systematically excluded from the evaluation process itself (their voices are absent from hiring committees). Exit for both victim groups is severely constrained by professional identity fusion: candidates have spent years preparing for academic careers, have skills not easily transferable to other sectors, and face a labor market that devalues career interruption.
- *
- * MANDATROPHY ANALYSIS:
- *   The classification prevents misreading the constraint as a rope or mountain. A rope reading would miss that peer review operates with asymmetric beneficiary/victim structure and active suppression of exit (rival hiring systems, alternative career paths). A mountain reading would falsely treat demographic closure as a natural outcome of meritocratic evaluation. The snare classification captures the core structure: tenure peer review persists because it benefits the majority-group beneficiaries (secure jobs, control of evaluation standards, demographic preservation) who have both power and exit options (can retire, can publish outside, can change institutions), while it extracts from the powerless victims (underrepresented candidates with identity-locked exit, contingent faculty with trapped exit) who cannot reorganize the system. The vindicated proposition (academic_freedom_doctrine) masks the mechanism: the defense of peer review as essential to academic freedom prevents scrutiny of how peer review operates as demographic closure. This is the false-summit signature: a doctrine that appears to protect inquiry in fact protects demographic composition.
- */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
 omega_variable(
-    fit_collegiality_criterion_definition,
-    'Are ''fit'' and ''collegiality'' criteria applied according to implicit, demographically-inflected norms, or according to explicit, research-productivity-based metrics that can be documented and audited?',
-    'Mandate transparent documentation of evaluation criteria and decision rationales on every tenure case (as some legal jurisdictions now require); audit whether criteria are applied identically across demographic groups; track whether research productivity is the actual decision driver or whether implicit cultural criteria overrule productivity differences.',
-    'If criteria are genuinely implicit and demographic-inflected, the constraint''s extractiveness rises (from 0.71 to 0.80+) and snare classification is reinforced. If criteria are documented and applied consistently, extractiveness drops toward rope classification (0.40–0.50 range) and the demographic closure mechanism is disrupted.',
+    research_productivity_vs_fit_criteria,
+    'Are ''fit'' and ''collegiality'' criteria genuinely proxies for research quality and sustainability, or are they mechanisms for enforcing cultural homogeneity decoupled from research productivity measures?',
+    'Controlled analysis of tenure rejection rates correlated with (1) research productivity metrics (publications, citations, grants, field impact) vs. (2) demographic characteristics and departmental diversity footprint. If rejection rates are higher for high-productivity researchers from underrepresented demographics than for lower-productivity researchers from dominant demographics, then ''fit'' criteria are gatekeeping mechanisms, not quality proxies.',
+    'If criteria are gatekeeping mechanisms, the constraint is Snare (extraction of demographic authority). If criteria are genuine quality proxies, the constraint might be Rope or Tangled Rope (coordination with asymmetric costs justified by selection criteria). This omega determines whether the demographic reproduction is incidental to meritocratic selection or structural to the mechanism.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(fit_collegiality_criterion_definition, empirical, 'Whether peer-review criteria are applied as explicit research metrics or implicit demographic-alignment filters.').
+narrative_ontology:omega_variable(research_productivity_vs_fit_criteria, empirical, 'Whether ''fit'' and ''collegiality'' measure research quality or enforce demographic conformity.').
 
 omega_variable(
-    structural_versus_internalized_suppression,
-    'What portion of the measured suppression (0.78) is attributable to structural exclusion (institutional barriers, legal constraints, lack of alternative pathways) versus internalized suppression (candidates silencing their own intellectual traditions, internalizing rejection narratives)?',
-    'Post-exit interview studies: track whether scholars who leave academia experience suppression persistence after external barriers are removed; measure whether self-silencing and identity-fusion persist even when structural constraints are lifted. Contrast exit trajectories for contingent faculty (identity-locked) versus candidates who leave before tenure application (constrained exit).',
-    'If suppression is primarily structural, external policy intervention (transparency mandates, alternative hiring systems, legal enforcement) can disrupt the constraint. If suppression is primarily internalized, the constraint persists even after structural barriers are removed — the reproduction mechanism has been absorbed into candidates'' self-perception. A finding of substantial internalized suppression would classify this as a deeper snare than structural suppression alone, with higher theatre_ratio (the performance is internalized; candidates police their own gatekeeping).',
+    founding_problem_persistence,
+    'Is academic freedom under genuine threat at the institutional level in contemporary academia, or has it been substantially secured through multiple alternative mechanisms (legal precedent, professional association backing, public discourse norms) while tenure persists as gatekeeping?',
+    'Comparative study of academic persecution in tenured and non-tenured institutions and jurisdictions; tracking of academic freedom cases before and after tenure reform or abolition; documentation of whether researchers face retaliation for scholarly positions independent of tenure status.',
+    'If academic freedom is substantially secured independent of tenure, the founding problem is dead and the constraint has undergone mandatrophy: its justification has evaporated but it persists due to inertia and gatekeeping benefits. Reform or abolition becomes rationally warranted. If academic freedom remains under threat specifically from tenure loss, the founding problem is live.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(structural_versus_internalized_suppression, empirical, 'Mechanism underlying the measured suppression: structural barriers or internalized identity fusion.').
+narrative_ontology:omega_variable(founding_problem_persistence, empirical, 'Whether the founding problem (''tenure protects against retaliation'') is still generatively driving tenure persistence.').
 
 omega_variable(
-    kernel_reading_contest_mechanism,
-    'Within a single academic institution, can both the academic_freedom_reading and the demographic_reproduction_reading coexist as empirically valid framings of the same peer-review process, or does adopting one reading logically preclude the other?',
-    'Institutional case studies: document whether the same peer-review process that protects (or fails to protect) academic inquiry simultaneously operates as demographic gatekeeping. Can a single peer-review rubric satisfy both readings, or are they structurally incompatible within one institution''s evaluation system?',
-    'If the readings coexist (both are empirically true of the same system), the constraint''s classification depends on which stakeholder seat is being evaluated (majority-group faculty see academic freedom protection; underrepresented candidates see demographic gatekeeping). If the readings are incompatible, one reading is mischaracterizing the system — either peer review is protecting inquiry and not gatekeeping (academic_freedom_reading forecloses demographic_reproduction), or peer review is gatekeeping and the ''inquiry protection'' claim is cover story (demographic_reproduction_reading forecloses academic_freedom). The engine''s per-seat classification will flag this divergence; the omega documents whether the divergence is real structure or evaluator mischaracterization.',
+    identity_lock_vs_constrained_exit,
+    'Is the high cost of exit for underrepresented scholars primarily structural (economic: no alternative career paths with equivalent income; geographic: concentrated in elite institutions that also gatekeep) or internalized (psychological: fused identity with the discipline; social: leaving means losing research community relationships and mentorship)?',
+    'Qualitative study of exit narratives from scholars denied tenure or who left academia: what barriers do they identify as primary? Follow-up study of scholars who successfully exited: what enabled their transition? Comparison with dominant-group scholars'' exit costs.',
+    'If primarily structural, the constraint''s suppression is structural and persists even after explicit gatekeeping disappears. If primarily internalized, the constraint could be disrupted by identity-reframing or community rebuilding outside academia. The suppression mechanism (structural vs. internalized) affects the classification stability and the design of remedies.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest_mechanism, conceptual, 'Whether the academic_freedom and demographic_reproduction readings are empirically coexistent or logically incompatible interpretations of the same peer-review system.').
+narrative_ontology:omega_variable(identity_lock_vs_constrained_exit, empirical, 'Whether identity-lock in academic careers is structural or internalized, determining suppression stability post-exit.').
 
 omega_variable(
-    contingent_faculty_visibility_in_evaluation,
-    'Are contingent faculty who perform research and mentoring within a department rendered structurally invisible in tenure peer-review processes (excluded from teaching load calculations, from graduate student mentoring credit, from research collaboration recognition)?',
-    'Departmental audit of tenure-evaluation rubrics: document whether contingent faculty contributions are listed, weighted, or accounted for in any form in tenure decisions. Interview tenure committees about whether contingent faculty productivity affects tenure candidates'' demonstrated teaching or mentoring capacity.',
-    'If contingent faculty labor is rendered invisible, the cost extraction increases (contingent faculty bear costs; majority-group tenure-track faculty benefit from their labor being absorbed into department resources). The theatre_ratio rises (tenured faculty can appear to be doing all the teaching/mentoring when contingent faculty actually perform most of it). The constraint''s classification strengthens toward snare (systematic invisibility is a suppression mechanism that prevents contingent faculty from claiming their contributions or organizing around their exclusion).',
-    confidence_without_resolution(high)
+    alternative_gatekeeping_mechanisms,
+    'If tenure peer review were reformed or abolished, would demographic gatekeeping disappear, or would it migrate to alternative mechanisms (e.g., postdoctoral appointment gatekeeping, grant funding gatekeeping, journal editorial boards)?',
+    'Comparative study of demographic representation in tenured institutions with and without tenure; tracking of demographic gatekeeping in alternative career structures (grant funding, postdoctoral markets, contingent instructor hiring).',
+    'If gatekeeping migrates rather than disappears, tenure abolition would dismantle one gatekeeping site while leaving systemic demographic reproduction intact. This affects the design of reform: is tenure the target, or is tenure one manifestation of a broader gatekeeping system? If gatekeeping is systemic, reform of tenure alone is insufficient.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(contingent_faculty_visibility_in_evaluation, empirical, 'Whether contingent faculty labor is systematically rendered invisible in tenure-evaluation systems.').
+narrative_ontology:omega_variable(alternative_gatekeeping_mechanisms, conceptual, 'Whether demographic gatekeeping is tenure-specific or a property of the broader academic career structure.').
+
+omega_variable(
+    contingent_labor_as_intended_or_consequence,
+    'Is the growth of contingent labor a deliberate mechanism to subsidize tenure gatekeeping, or an unintended consequence of tenure rigidity and enrollment volatility?',
+    'Historical analysis of administrative decision-making around contingent hiring: what were the stated rationales? Interview study with institution leaders: did they anticipate that maintaining tenure ratios would require contingent substitution? Compare institutions with different tenure/contingent ratios and ask whether institutions actively chose the trade-off.',
+    'If deliberate, the constraint includes institutional administration as a conscious beneficiary and the extraction is collective. If unintended consequence, the extraction is diffuse and the constraint might be reformed by architectural change (e.g., mandatory conversion of contingent positions to tenure lines) without confronting deliberate gatekeeping. This affects strategy for change.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(contingent_labor_as_intended_or_consequence, empirical, 'Whether contingent labor growth is structural consequence or deliberate mechanism of tenure gatekeeping.').
+
+omega_variable(
+    sibling_reading_contention,
+    'Are the three readings of the tenure_contract kernel (academic_freedom, demographic_reproduction, institutional_extraction) held by different parties in genuine dispute, or do different parties hold overlapping readings sequentially (e.g., someone holds academic_freedom early in their career and shifts to institutional_extraction after becoming tenured)?',
+    'Qualitative study of tenure discourse: who advocates for each reading? Are advocacy coalitions stable across time or do individuals shift readings? Do the readings appear in the same texts (same author holding multiple readings) or different institutional sites (different constituencies advocating different readings)?',
+    'If parties genuinely coexist with different readings (coexists_with relation), the kernel is fundamentally contested and reform requires managing multiple legitimate framings. If individuals shift readings with tenure status, the readings are developmental rather than fundamentally contested and reform might focus on disrupting the individual trajectory (e.g., postdoctoral restructuring, alternative career paths).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(sibling_reading_contention, conceptual, 'Whether the three tenure readings are genuinely coexisting readings or developmental stages individuals pass through.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(tenure_contract__demographic_reproduction_reading, 1970, 2026).
+narrative_ontology:interval(tenure_contract__demographic_reproduction_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(tenu_tr_t1970, tenure_contract__demographic_reproduction_reading, theater_ratio, 1970, 0.25).
-narrative_ontology:measurement(tenu_tr_t1985, tenure_contract__demographic_reproduction_reading, theater_ratio, 1985, 0.3).
-narrative_ontology:measurement(tenu_tr_t2000, tenure_contract__demographic_reproduction_reading, theater_ratio, 2000, 0.38).
-narrative_ontology:measurement(tenu_tr_t2010, tenure_contract__demographic_reproduction_reading, theater_ratio, 2010, 0.43).
-narrative_ontology:measurement(tenu_tr_t2018, tenure_contract__demographic_reproduction_reading, theater_ratio, 2018, 0.46).
-narrative_ontology:measurement(tenu_tr_t2026, tenure_contract__demographic_reproduction_reading, theater_ratio, 2026, 0.48).
+narrative_ontology:measurement(tenu_tr_t0, tenure_contract__demographic_reproduction_reading, theater_ratio, 0, 0.42).
+narrative_ontology:measurement_basis(tenu_tr_t0, observed).
+narrative_ontology:measurement(tenu_tr_t5, tenure_contract__demographic_reproduction_reading, theater_ratio, 5, 0.46).
+narrative_ontology:measurement_basis(tenu_tr_t5, observed).
+narrative_ontology:measurement(tenu_tr_t10, tenure_contract__demographic_reproduction_reading, theater_ratio, 10, 0.5).
+narrative_ontology:measurement_basis(tenu_tr_t10, observed).
+narrative_ontology:measurement(tenu_tr_t15, tenure_contract__demographic_reproduction_reading, theater_ratio, 15, 0.54).
+narrative_ontology:measurement_basis(tenu_tr_t15, observed).
+narrative_ontology:measurement(tenu_tr_t20, tenure_contract__demographic_reproduction_reading, theater_ratio, 20, 0.56).
+narrative_ontology:measurement_basis(tenu_tr_t20, observed).
+narrative_ontology:measurement(tenu_tr_t25, tenure_contract__demographic_reproduction_reading, theater_ratio, 25, 0.58).
+narrative_ontology:measurement_basis(tenu_tr_t25, observed).
+narrative_ontology:measurement(tenu_tr_t30, tenure_contract__demographic_reproduction_reading, theater_ratio, 30, 0.58).
+narrative_ontology:measurement_basis(tenu_tr_t30, observed).
+narrative_ontology:measurement(tenu_tr_t40, tenure_contract__demographic_reproduction_reading, theater_ratio, 40, 0.58).
+narrative_ontology:measurement_basis(tenu_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(tenu_be_t1970, tenure_contract__demographic_reproduction_reading, base_extractiveness, 1970, 0.45).
-narrative_ontology:measurement(tenu_be_t1985, tenure_contract__demographic_reproduction_reading, base_extractiveness, 1985, 0.52).
-narrative_ontology:measurement(tenu_be_t2000, tenure_contract__demographic_reproduction_reading, base_extractiveness, 2000, 0.61).
-narrative_ontology:measurement(tenu_be_t2010, tenure_contract__demographic_reproduction_reading, base_extractiveness, 2010, 0.66).
-narrative_ontology:measurement(tenu_be_t2018, tenure_contract__demographic_reproduction_reading, base_extractiveness, 2018, 0.69).
-narrative_ontology:measurement(tenu_be_t2026, tenure_contract__demographic_reproduction_reading, base_extractiveness, 2026, 0.71).
+narrative_ontology:measurement(tenu_be_t0, tenure_contract__demographic_reproduction_reading, base_extractiveness, 0, 0.68).
+narrative_ontology:measurement_basis(tenu_be_t0, observed).
+narrative_ontology:measurement(tenu_be_t5, tenure_contract__demographic_reproduction_reading, base_extractiveness, 5, 0.71).
+narrative_ontology:measurement_basis(tenu_be_t5, observed).
+narrative_ontology:measurement(tenu_be_t10, tenure_contract__demographic_reproduction_reading, base_extractiveness, 10, 0.74).
+narrative_ontology:measurement_basis(tenu_be_t10, observed).
+narrative_ontology:measurement(tenu_be_t15, tenure_contract__demographic_reproduction_reading, base_extractiveness, 15, 0.76).
+narrative_ontology:measurement_basis(tenu_be_t15, observed).
+narrative_ontology:measurement(tenu_be_t20, tenure_contract__demographic_reproduction_reading, base_extractiveness, 20, 0.79).
+narrative_ontology:measurement_basis(tenu_be_t20, observed).
+narrative_ontology:measurement(tenu_be_t25, tenure_contract__demographic_reproduction_reading, base_extractiveness, 25, 0.8).
+narrative_ontology:measurement_basis(tenu_be_t25, observed).
+narrative_ontology:measurement(tenu_be_t30, tenure_contract__demographic_reproduction_reading, base_extractiveness, 30, 0.81).
+narrative_ontology:measurement_basis(tenu_be_t30, observed).
+narrative_ontology:measurement(tenu_be_t40, tenure_contract__demographic_reproduction_reading, base_extractiveness, 40, 0.81).
+narrative_ontology:measurement_basis(tenu_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(tenu_su_t1970, tenure_contract__demographic_reproduction_reading, suppression_requirement, 1970, 0.55).
-narrative_ontology:measurement(tenu_su_t1985, tenure_contract__demographic_reproduction_reading, suppression_requirement, 1985, 0.62).
-narrative_ontology:measurement(tenu_su_t2000, tenure_contract__demographic_reproduction_reading, suppression_requirement, 2000, 0.68).
-narrative_ontology:measurement(tenu_su_t2010, tenure_contract__demographic_reproduction_reading, suppression_requirement, 2010, 0.73).
-narrative_ontology:measurement(tenu_su_t2018, tenure_contract__demographic_reproduction_reading, suppression_requirement, 2018, 0.76).
-narrative_ontology:measurement(tenu_su_t2026, tenure_contract__demographic_reproduction_reading, suppression_requirement, 2026, 0.78).
+narrative_ontology:measurement(tenu_su_t0, tenure_contract__demographic_reproduction_reading, suppression_requirement, 0, 0.64).
+narrative_ontology:measurement_basis(tenu_su_t0, observed).
+narrative_ontology:measurement(tenu_su_t5, tenure_contract__demographic_reproduction_reading, suppression_requirement, 5, 0.68).
+narrative_ontology:measurement_basis(tenu_su_t5, observed).
+narrative_ontology:measurement(tenu_su_t10, tenure_contract__demographic_reproduction_reading, suppression_requirement, 10, 0.71).
+narrative_ontology:measurement_basis(tenu_su_t10, observed).
+narrative_ontology:measurement(tenu_su_t15, tenure_contract__demographic_reproduction_reading, suppression_requirement, 15, 0.73).
+narrative_ontology:measurement_basis(tenu_su_t15, observed).
+narrative_ontology:measurement(tenu_su_t20, tenure_contract__demographic_reproduction_reading, suppression_requirement, 20, 0.74).
+narrative_ontology:measurement_basis(tenu_su_t20, observed).
+narrative_ontology:measurement(tenu_su_t25, tenure_contract__demographic_reproduction_reading, suppression_requirement, 25, 0.75).
+narrative_ontology:measurement_basis(tenu_su_t25, observed).
+narrative_ontology:measurement(tenu_su_t30, tenure_contract__demographic_reproduction_reading, suppression_requirement, 30, 0.76).
+narrative_ontology:measurement_basis(tenu_su_t30, observed).
+narrative_ontology:measurement(tenu_su_t40, tenure_contract__demographic_reproduction_reading, suppression_requirement, 40, 0.76).
+narrative_ontology:measurement_basis(tenu_su_t40, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=0, tn=40
+narrative_ontology:measurement(tenu_grid_01, tenure_contract__demographic_reproduction_reading, accessibility_collapse(class), 0, 0.58).
+narrative_ontology:measurement(tenu_grid_02, tenure_contract__demographic_reproduction_reading, accessibility_collapse(class), 40, 0.62).
+narrative_ontology:measurement(tenu_grid_03, tenure_contract__demographic_reproduction_reading, accessibility_collapse(individual), 0, 0.72).
+narrative_ontology:measurement(tenu_grid_04, tenure_contract__demographic_reproduction_reading, accessibility_collapse(individual), 40, 0.74).
+narrative_ontology:measurement(tenu_grid_05, tenure_contract__demographic_reproduction_reading, accessibility_collapse(organizational), 0, 0.65).
+narrative_ontology:measurement(tenu_grid_06, tenure_contract__demographic_reproduction_reading, accessibility_collapse(organizational), 40, 0.67).
+narrative_ontology:measurement(tenu_grid_07, tenure_contract__demographic_reproduction_reading, accessibility_collapse(structural), 0, 0.71).
+narrative_ontology:measurement(tenu_grid_08, tenure_contract__demographic_reproduction_reading, accessibility_collapse(structural), 40, 0.73).
+narrative_ontology:measurement(tenu_grid_09, tenure_contract__demographic_reproduction_reading, resistance(class), 0, 0.62).
+narrative_ontology:measurement(tenu_grid_10, tenure_contract__demographic_reproduction_reading, resistance(class), 40, 0.66).
+narrative_ontology:measurement(tenu_grid_11, tenure_contract__demographic_reproduction_reading, resistance(individual), 0, 0.58).
+narrative_ontology:measurement(tenu_grid_12, tenure_contract__demographic_reproduction_reading, resistance(individual), 40, 0.64).
+narrative_ontology:measurement(tenu_grid_13, tenure_contract__demographic_reproduction_reading, resistance(organizational), 0, 0.48).
+narrative_ontology:measurement(tenu_grid_14, tenure_contract__demographic_reproduction_reading, resistance(organizational), 40, 0.52).
+narrative_ontology:measurement(tenu_grid_15, tenure_contract__demographic_reproduction_reading, resistance(structural), 0, 0.44).
+narrative_ontology:measurement(tenu_grid_16, tenure_contract__demographic_reproduction_reading, resistance(structural), 40, 0.48).
+narrative_ontology:measurement(tenu_grid_17, tenure_contract__demographic_reproduction_reading, stakes_inflation(class), 0, 0.72).
+narrative_ontology:measurement(tenu_grid_18, tenure_contract__demographic_reproduction_reading, stakes_inflation(class), 40, 0.76).
+narrative_ontology:measurement(tenu_grid_19, tenure_contract__demographic_reproduction_reading, stakes_inflation(individual), 0, 0.78).
+narrative_ontology:measurement(tenu_grid_20, tenure_contract__demographic_reproduction_reading, stakes_inflation(individual), 40, 0.81).
+narrative_ontology:measurement(tenu_grid_21, tenure_contract__demographic_reproduction_reading, stakes_inflation(organizational), 0, 0.64).
+narrative_ontology:measurement(tenu_grid_22, tenure_contract__demographic_reproduction_reading, stakes_inflation(organizational), 40, 0.68).
+narrative_ontology:measurement(tenu_grid_23, tenure_contract__demographic_reproduction_reading, stakes_inflation(structural), 0, 0.68).
+narrative_ontology:measurement(tenu_grid_24, tenure_contract__demographic_reproduction_reading, stakes_inflation(structural), 40, 0.71).
+narrative_ontology:measurement(tenu_grid_25, tenure_contract__demographic_reproduction_reading, suppression(class), 0, 0.68).
+narrative_ontology:measurement(tenu_grid_26, tenure_contract__demographic_reproduction_reading, suppression(class), 40, 0.71).
+narrative_ontology:measurement(tenu_grid_27, tenure_contract__demographic_reproduction_reading, suppression(individual), 0, 0.74).
+narrative_ontology:measurement(tenu_grid_28, tenure_contract__demographic_reproduction_reading, suppression(individual), 40, 0.78).
+narrative_ontology:measurement(tenu_grid_29, tenure_contract__demographic_reproduction_reading, suppression(organizational), 0, 0.62).
+narrative_ontology:measurement(tenu_grid_30, tenure_contract__demographic_reproduction_reading, suppression(organizational), 40, 0.64).
+narrative_ontology:measurement(tenu_grid_31, tenure_contract__demographic_reproduction_reading, suppression(structural), 0, 0.64).
+narrative_ontology:measurement(tenu_grid_32, tenure_contract__demographic_reproduction_reading, suppression(structural), 40, 0.66).
 
 
 /* ==========================================================================
@@ -262,20 +380,17 @@ narrative_ontology:measurement(tenu_su_t2026, tenure_contract__demographic_repro
    ========================================================================== */
 
 narrative_ontology:coordination_type(tenure_contract__demographic_reproduction_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(tenure_contract__demographic_reproduction_reading, 0.12).
 narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, tenure_contract__academic_freedom_reading).
 narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, tenure_contract__institutional_extraction_reading).
-narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, contingent_faculty_labor_regime).
-narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, doctoral_training_credentialism_lock).
+narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, contingent_labor_precarity).
+narrative_ontology:affects_constraint(tenure_contract__demographic_reproduction_reading, academic_research_methodology_orthodoxy).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested tenure_contract kernel. The demographic_reproduction_reading frames tenure peer review as reproducing dominant group composition through implicit 'fit' criteria. The academic_freedom_reading frames tenure as decoupling researcher survival from institutional backlash. The institutional_extraction_reading frames tenure as enabling employment rigidity and cost-loading onto contingent labor. All three readings address the same institutional apparatus (peer-review tenure decisions) but instantiate different constraints with different beneficiary/victim structures and ε values. They coexist as competing interpretations held by different institutional seats. Each constraint story is ε-invariant: the ε for demographic reproduction (0.71) addresses the extraction of access/stability from underrepresented candidates; the ε for academic freedom would address the degree of researcher protection (likely lower, 0.2–0.3); the ε for institutional extraction would address employment rigidity costs (likely 0.60–0.70). The kernel contest is whether peer review's primary function is (a) protecting inquiry, (b) reproducing demographics, or (c) extracting rents — structurally distinct claims about the same apparatus.
+% tenure_contract is a contested kernel with three active readings: academic_freedom_reading (tenure protects inquiry from retaliation), demographic_reproduction_reading (tenure peer review gates entry by demographic conformity), and institutional_extraction_reading (tenure creates rent-extraction and employment rigidity). Each reading is instantiated as a separate constraint with its own ε, beneficiary/victim structure, and classification. This file is the demographic_reproduction_reading. All three readings share the formal tenure contract and peer review practice but differ structurally in the identified primary extractive/coordinative mechanism. Links via network.affects_constraints enable the analysis to track how the three readings create downstream constraints (contingent labor precarity is affected by whichever reading dominates institutional practice; methodological gatekeeping is affected by how 'fit' is defined in each reading).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(tenure_contract__demographic_reproduction_reading, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

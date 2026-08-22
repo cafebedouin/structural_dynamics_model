@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,18 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,32 +76,32 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: statute_of_anne_ip_foundation__institutional_reallocation_reading
- *   human_readable: Statute of Anne IP Foundation (Institutional Reallocation Reading)
- *   domain: legal/institutional/economic
+ *   human_readable: Statute of Anne IP Foundation—Institutional Reallocation Reading
+ *   domain: legal/institutional/intellectual-property
  *
  * SUMMARY:
- *   The Statute of Anne (1710) reallocated institutional authority over
- *   published works from the Stationers' Company (who held perpetual
- *   inherited rights via guild custom) to individual authors (who gained
- *   limited statutory ownership of 14 years, renewable once). This reading
- *   treats the statute as an INSTITUTIONAL REALLOCATION: the same property
- *   object (published literary works) changed hands from one occupant class
- *   (guild members) to another (authors), with the Crown as the agenda-setter
- *   defining the new terms. The founding bottleneck—the Stationers' perpetual
- *   monopoly preventing reprints and new editions—is solved by the
- *   reallocation. This reading is distinct from the conceptual_emergence
- *   reading (which emphasizes the statute's creation of copyright as a novel
- *   regulatory concept) and the entangled_event reading (which holds that
- *   institutional and conceptual change cannot be separated). Under this
- *   reading, the institutional reallocation is primary; the conceptual
- *   novelty is a byproduct of the new occupant structure.
+ *   The Statute of Anne (1710) is read here as an institutional
+ *   reallocation—a restructuring of who holds printing rights within the
+ *   institutional ecosystem. Under the Stationers' monopoly, the company held
+ *   the right to license printing as a corporate body backed by Crown
+ *   charter. The statute moved that right to individual authors (and their
+ *   assignees, typically publishers) for a limited statutory term. This is a
+ *   reallocation of pre-existing institutional control, not the creation of a
+ *   new conceptual category from nothing. The statute is claimed as
+ *   tangled_rope because it simultaneously coordinates author incentives and
+ *   extraction from the Stationers' monopoly while extracting monopoly prices
+ *   from readers during the statutory term. The founding problem is live—the
+ *   inefficiency of the old monopoly persists as a normative grievance—but
+ *   the institutional form has shifted from a single chartered gatekeeper to
+ *   distributed property rights.
  *
  * KEY AGENTS:
- *   - authors: gain statutory ownership claim, limited to 14 years renewable once; shift from powerless (guild excluded) to moderate (statutory claimant)
- *   - licensed_publishers: acquire negotiating position with authors; retain constraint of Crown licensing monopoly
- *   - stationers_company: loses perpetual inherited claim, transitions from rent collector to licensed operator; still controls printing infrastructure but now under statutory constraint
- *   - the_crown: agenda-setter; enacts statute to rebalance monopoly between guild (below) and authors (new statutory class); retains licensing authority
- *   - readers_and_scholars: gain access to expanded competitive corpus (publishers now compete for author-held rights); remain subject to licensing and term limits
+ *   - Stationers' Company: institutional monopolist, charter holder, loses gatekeeping authority (power=institutional, exit=trapped)
+ *   - Authors: property-right holders, moderate power, can assign rights to publishers (power=moderate, exit=arbitrage)
+ *   - Book publishers: institutional beneficiaries, assignees of author rights, inherit enforcement role (power=institutional, exit=mobile)
+ *   - Prospective printers/booksellers: enabled to enter market but constrained by title-by-title rights (power=moderate, exit=mobile)
+ *   - Readers: gain diversity, bear monopoly pricing during term, benefit after term expiration (power=powerless, exit=constrained)
+ *   - Parliament/Crown: agenda setter, exercises sovereignty to restructure property regime (power=institutional, exit=analytical)
  */
 
 /* ==========================================================================
@@ -99,64 +109,134 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.38).
-domain_priors:suppression_score(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.22).
-domain_priors:theater_ratio(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.15).
+domain_priors:base_extractiveness(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.62).
+domain_priors:suppression_score(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.41).
+domain_priors:theater_ratio(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.22).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, extractiveness, 0.38).
-narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 0.22).
-narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, extractiveness, 0.62).
+narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 0.41).
+narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, accessibility_collapse, 0.42).
-narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, accessibility_collapse, 0.58).
+narrative_ontology:constraint_metric(statute_of_anne_ip_foundation__institutional_reallocation_reading, resistance, 0.72).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(statute_of_anne_ip_foundation__institutional_reallocation_reading, rope).
-narrative_ontology:human_readable(statute_of_anne_ip_foundation__institutional_reallocation_reading, "Statute of Anne IP Foundation (Institutional Reallocation Reading)").
-narrative_ontology:topic_domain(statute_of_anne_ip_foundation__institutional_reallocation_reading, "legal/institutional/economic").
+narrative_ontology:constraint_claim(statute_of_anne_ip_foundation__institutional_reallocation_reading, tangled_rope).
+narrative_ontology:human_readable(statute_of_anne_ip_foundation__institutional_reallocation_reading, "Statute of Anne IP Foundation—Institutional Reallocation Reading").
+narrative_ontology:topic_domain(statute_of_anne_ip_foundation__institutional_reallocation_reading, "legal/institutional/intellectual-property").
 
 domain_priors:requires_active_enforcement(statute_of_anne_ip_foundation__institutional_reallocation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(statute_of_anne_ip_foundation__institutional_reallocation_reading, 'b429f99a-8bfd-401b-bf11-cb61465ea1f0').
-narrative_ontology:cs_kernel_codification('b429f99a-8bfd-401b-bf11-cb61465ea1f0', formalized).
-narrative_ontology:cs_authority_grounding('b429f99a-8bfd-401b-bf11-cb61465ea1f0', lineage).
-narrative_ontology:cs_interpretation_layer_present('b429f99a-8bfd-401b-bf11-cb61465ea1f0').
-narrative_ontology:cs_reading_relation('b429f99a-8bfd-401b-bf11-cb61465ea1f0', statute_of_anne_ip_foundation__conceptual_emergence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('b429f99a-8bfd-401b-bf11-cb61465ea1f0', statute_of_anne_ip_foundation__entangled_event_reading, coexists_with).
-narrative_ontology:cs_axiom('b429f99a-8bfd-401b-bf11-cb61465ea1f0', foundational, institutional_occupancy_is_primary_analytical_unit).
-narrative_ontology:cs_axiom_status(institutional_occupancy_is_primary_analytical_unit, holdable).
-narrative_ontology:cs_axiom_grounding('b429f99a-8bfd-401b-bf11-cb61465ea1f0', institutional_occupancy_is_primary_analytical_unit, conventional).
-narrative_ontology:cs_axiom('b429f99a-8bfd-401b-bf11-cb61465ea1f0', foundational, reallocation_from_guild_to_authors_solves_monopoly_bottleneck).
-narrative_ontology:cs_axiom_status(reallocation_from_guild_to_authors_solves_monopoly_bottleneck, holdable).
-narrative_ontology:cs_axiom_grounding('b429f99a-8bfd-401b-bf11-cb61465ea1f0', reallocation_from_guild_to_authors_solves_monopoly_bottleneck, empirically_contingent).
-narrative_ontology:cs_reference_frame('b429f99a-8bfd-401b-bf11-cb61465ea1f0', stationers_company_perpetual_monopoly).
-narrative_ontology:cs_drift_state('b429f99a-8bfd-401b-bf11-cb61465ea1f0', fifty_years_post_statute, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('b429f99a-8bfd-401b-bf11-cb61465ea1f0', '').
+narrative_ontology:cs_story_uid(statute_of_anne_ip_foundation__institutional_reallocation_reading, 'a0636dd5-1c3c-43a9-af46-64d182d03349').
+narrative_ontology:cs_kernel_codification('a0636dd5-1c3c-43a9-af46-64d182d03349', formalized).
+narrative_ontology:cs_authority_grounding('a0636dd5-1c3c-43a9-af46-64d182d03349', extraction).
+narrative_ontology:cs_interpretation_layer_present('a0636dd5-1c3c-43a9-af46-64d182d03349').
+narrative_ontology:cs_reading_relation('a0636dd5-1c3c-43a9-af46-64d182d03349', statute_of_anne_ip_foundation__conceptual_emergence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a0636dd5-1c3c-43a9-af46-64d182d03349', statute_of_anne_ip_foundation__entangled_event_reading, coexists_with).
+narrative_ontology:cs_axiom('a0636dd5-1c3c-43a9-af46-64d182d03349', foundational, institutional_reallocation_precedent).
+narrative_ontology:cs_axiom_status(institutional_reallocation_precedent, holdable).
+narrative_ontology:cs_axiom_grounding('a0636dd5-1c3c-43a9-af46-64d182d03349', institutional_reallocation_precedent, conventional).
+narrative_ontology:cs_axiom('a0636dd5-1c3c-43a9-af46-64d182d03349', foundational, author_property_holder_status).
+narrative_ontology:cs_axiom_status(author_property_holder_status, holdable).
+narrative_ontology:cs_axiom_grounding('a0636dd5-1c3c-43a9-af46-64d182d03349', author_property_holder_status, deontological).
+narrative_ontology:cs_reference_frame('a0636dd5-1c3c-43a9-af46-64d182d03349', monopoly_gatekeeping_authority).
+narrative_ontology:cs_drift_state('a0636dd5-1c3c-43a9-af46-64d182d03349', post_statute_maturation, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_created_at('a0636dd5-1c3c-43a9-af46-64d182d03349', '').
 narrative_ontology:cs_kernel_id(statute_of_anne_ip_foundation__institutional_reallocation_reading, statute_of_anne_ip_foundation).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, authors).
-narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, licensed_publishers).
+narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, book_publishers).
+narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, authors_as_property_holders).
 narrative_ontology:constraint_victim(statute_of_anne_ip_foundation__institutional_reallocation_reading, stationers_company_monopoly).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, prospective_printers_and_booksellers).
+narrative_ontology:constraint_beneficiary(statute_of_anne_ip_foundation__institutional_reallocation_reading, readers).
+narrative_ontology:constraint_victim(statute_of_anne_ip_foundation__institutional_reallocation_reading, readers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The Stationers' Company held a chartered monopoly on book production and distribution, controlling entry and pricing through licensing and guild membership. The statute stripped this monopoly by redirecting author-held printing rights directly to individual authors and assignees, displacing the Company's institutional gatekeeping role. The Company could not exit—its entire charter was predicated on controlling the supply of books, and the statute's enforcement mechanism (author suit, statutory damages) made the old monopoly structurally incompatible with the new regime.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, stationers_company_monopoly, payer,
+    institutional, generational, trapped, national).
+
+% Gained the statutory right to control printing of their works for a limited term (14 years renewable once). This was a reallocation of pre-existing institutional rights—the Stationers had held those rights through monopoly grant. Authors could now assign rights to publishers or sell copies directly. The benefit was contingent on enforcement: the statute created a cause of action for authors against unauthorized printers, backed by statutory damages and court process.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, authors_as_property_holders, beneficiary,
+    moderate, biographical, arbitrage, national).
+
+% As the principal recipients of author assignments (most authors could not enforce rights themselves), publishers inherited the enforcement role and benefited from monopoly pricing rights on individual titles. They operated within the new institutional space that the statute created—one where rights holders competed on individual works rather than via charter monopoly. Entry was no longer restricted by guild membership, but control of capital and distribution networks persisted.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, book_publishers, beneficiary,
+    institutional, generational, mobile, national).
+
+% Could now enter the printing and bookselling trades without Stationers' license. The statute broke the guild's gatekeeper role, enabling competitive entry. However, they faced title-by-title restraint: each work was protected by author or assignee rights, so they could not print anything with impunity—they faced a more distributed but equally binding set of property claims.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, prospective_printers_and_booksellers, beneficiary,
+    moderate, biographical, mobile, national).
+
+% Experienced increased title diversity and availability (competition reduced gatekeeping inefficiency) but paid more during the statutory term when rights holders enforced monopoly pricing. After term expiration, works entered the commons and could be reprinted cheaply—a delayed benefit. Readers had no seat in the statute's legislative process and no enforcement role.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, readers, beneficiary,
+    powerless, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(statute_of_anne_ip_foundation__institutional_reallocation_reading, readers, payer).
+
+% Enacted the statute as an exercise of sovereign authority, restructuring intellectual property from a monopoly grant to a time-limited property right. The Crown's benefit was normative (a regulated literary marketplace) rather than fiscal; the statute did not create a crown revenue stream equivalent to the monopoly licensing fees the Crown had previously extracted from the Stationers. The Crown remained the ultimate authority that could revise or sunset the statutory regime.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, crown_parliament, agenda_setter,
+    institutional, generational, analytical, national).
+
+% A non-agent entity: the legal doctrine that Parliament's authority to regulate commerce and property supersedes chartered corporate monopolies. The statute vindicated parliamentary oversight and public interest intervention in market structure.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, legal_tradition_of_parliamentary_sovereignty, beneficiary,
+    institutional, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(statute_of_anne_ip_foundation__institutional_reallocation_reading, legal_tradition_of_parliamentary_sovereignty).
+
+% Printers, pressworkers, and apprentices were subject to whoever employed them—either continuing Stationers members or new entrant publishers. The statute did not empower labor; it restructured ownership of rights. Wages and working conditions remained determined by employer power, not by the statute. Apprentices still faced guild-style indenture where it persisted.
+narrative_ontology:constraint_stakeholder(statute_of_anne_ip_foundation__institutional_reallocation_reading, unorganized_printing_workforce, excluded,
+    powerless, biographical, trapped, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(statute_of_anne_ip_foundation__institutional_reallocation_reading, book_publishers).
+narrative_ontology:fixing_cost_class(statute_of_anne_ip_foundation__institutional_reallocation_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Redirects institutional control of book production from a chartered monopoly (Stationers' Company) to a distributed property-right system where individual authors and their assignees hold time-limited exclusive printing rights. Solves the coordination problem of how to allocate incentives to authors without perpetuating a single corporate gatekeeper.
+% TRANSFER_FUNCTION: Moves the institutional authority to license printing from the Crown (via Stationers' charter) to individual authors and their assignees (via statutory right). Printers and readers transfer payment to rights holders during the statutory term, then the works enter the commons. Publishers capture much of this transfer through assignment of author rights.
+% ABSENT_VOICES: Printing workers, copyists, and the unorganized literary public. Printers' apprentices and journeymen had no seat at the table; the statute restructured their employment conditions but they were not parties to the legislative debate. Readers and competing printers would have contested the length and scope of the monopoly term, but they lacked political standing.
+% DISAPPEARANCE_RATIONALE: If the statute were repealed overnight, the Stationers' charter would remain intact unless separately revoked—the institutional space would revert to monopoly gatekeeping unless replaced by an alternative regime. Book production would reorganize around the restored licensing authority; the incentive structure for authorship would shift back toward patronage and guild-affiliated publication.
+% FOUNDING_PROBLEM: The Stationers' monopoly created bottlenecks in book distribution, suppressed entry of new printers, and left authors with minimal control or compensation for their work. Copyright had no separate institutional existence—it was subsumed in the monopoly grant. The founding problem was the gap between author interests and the Stationers' incentive to maximize their own revenues.
+% FOUNDING_PROBLEM_CORROBORATION: Contemporary parliamentary debates (1710) and petitions from authors and prospective printers attest that the monopoly was extractive and inefficient. Stationers' own records show they collected substantial licensing revenue while compensating authors minimally or not at all. Independent scholars of the period (Loewenstein, Rose) analyze the monopoly's economic inefficiency outside the benefiting parties.
+narrative_ontology:disappearance_verdict(statute_of_anne_ip_foundation__institutional_reallocation_reading, world_rearranges).
+narrative_ontology:founding_problem_status(statute_of_anne_ip_foundation__institutional_reallocation_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(statute_of_anne_ip_foundation__institutional_reallocation_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(statute_of_anne_ip_foundation__institutional_reallocation_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(statute_of_anne_ip_foundation__institutional_reallocation_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(statute_of_anne_ip_foundation__institutional_reallocation_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(statute_of_anne_ip_foundation__institutional_reallocation_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(statute_of_anne_ip_foundation__institutional_reallocation_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
 :- end_tests(statute_of_anne_ip_foundation__institutional_reallocation_reading_tests).
 
 /* ==========================================================================
@@ -165,16 +245,16 @@ narrative_ontology:story_seed(statute_of_anne_ip_foundation__institutional_reall
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness metric starts high (0.68) because the pre-statute Stationers' monopoly is the measuring baseline: perpetual holding, complete veto over reprints, no author alternative. The statute's reallocation REDUCES extractiveness sharply—authors now hold property and can negotiate; licensed publishers can acquire rights competitively; readers gain public-domain access at term end. By t=50 (50 years post-statute), extractiveness has settled at 0.38—substantially lower than the pre-statute monopoly rent but not zero: the Crown retains licensing authority, term limits remain, the printing monopoly persists. Suppression follows: the statutory regime requires less active suppression because authors now have incentives to cooperate (they own the rights), and publishers compete rather than inherit. Theater ratio is low (0.15–0.22) because the statute's coordination function is genuine—incentivizing authorship and competitive publishing—not performative. The measurement grid shares all time points across all three metrics, anchored to the statute's enactment at t=0.
+ *   Extractiveness is moderate-high (0.62 at interval end) because the statute creates distributed monopoly control—readers pay higher prices during the statutory term for each title, and publishers (as assignees) capture much of that extraction. This is extraction from readers, not pure coordination of author incentives. Suppression is moderate (0.41) because enforcement relies on lawsuit by authors/assignees against unauthorized printers; there is no centralized enforcement apparatus like the Stationers' inspection and destruction authority. Theater is low (0.22): the statute's stated purpose (encouraging learning and authorship) is largely accomplished by the actual mechanism (time-limited property rights with public domain reversion). The constraint is tangled_rope: it genuinely coordinates author incentives (coordination function) while extracting monopoly surplus from readers during the term (asymmetric extraction), and it requires active enforcement (statutory damages, author litigation). The beneficiaries are publishers (via assignment) and authors (property holders); the victim is the Stationers' monopoly (institutional displacement). Measurements show slight rise in extractiveness early (0–21 years as the new regime solidifies and publishers optimize pricing strategies) then stabilization, suggesting the underlying institutional equilibrium settles in. Suppression remains flat because litigation-based enforcement does not intensify—it reaches a steady state where publishers and authors routinely sue unauthorized printers.
  *
  * PERSPECTIVAL GAP:
- *   The Stationers' Company and licensed publishers should compute to opposite seats on the beneficiary/victim axis. For the Company, the statute is a loss—victims are those who claimed perpetual rights and no longer have them; the Company is still an organized actor but now pays (via term limits) rather than collects. For licensed publishers, the statute is a gain—they are beneficiaries who gain negotiating access previously blocked by the Company. Both are powerful institutional actors, both operate under Crown licensing, but the statute reallocates the institutional ground under them: one loses property claims, the other gains access. The engine computes this divergence from the base_properties declarations (Company as victim, publishers as beneficiary) and the power/exit atoms (organized/trapped for Company, organized/constrained for publishers). Authors sit at the fulcrum: they are the beneficiaries who gain the statutory property claim the statute grants, and they are the new occupants of the institutional space that was previously held by the Company.
+ *   The Stationers' Company seats and the author/publisher seats will compute different constraint types from the same structural data. From the Stationers' perspective, the statute is a snare—their monopoly was stripped without compensation, they are trapped in the old regime by the now-obsolete charter, and enforcement actively excludes their licensing authority. From the publisher/author perspective, it is a coordination mechanism with real benefits (incentives for authorship) that happens to extract from readers. From the reader perspective, it is extraction moderated by eventual commons reversion (a temporary snare). The engine computes these divergences from the structural data—directionality differs by seat because power, exit options, and beneficiary status differ. The authored claim (tangled_rope) reflects the institutional aggregation: the regime as a whole coordinates and extracts simultaneously.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality varies sharply by seat. Authors shift from near-target (d ≈ 0.85 pre-statute: they produce the content the Stationers monopolize, trapped, no alternative) to near-beneficiary (d ≈ 0.25 post-statute: they own limited rights, gain negotiating leverage, can refuse licensing). Licensed publishers shift from moderate (d ≈ 0.55 pre-statute: they inherit titles but cannot enter the market freely) to low-beneficiary (d ≈ 0.30 post-statute: they can bid for author rights, compete, but remain subject to licensing). The Stationers' Company shifts from powerful beneficiary (d ≈ 0.15 pre-statute: they collect perpetual rents on inherited backlist) to powerful payer (d ≈ 0.75 post-statute: they lose perpetual claims and must operate under statutory term limits). Readers and scholars shift from powerless targets (d ≈ 0.80 pre-statute: price-takers, no public domain, stuck with suppressed backlist) to powerless balanced-payers (d ≈ 0.50 post-statute: prices still set by publishers, but public domain exists at term end, corpus expands). These directionality shifts are COMPUTED by the engine from the structural beneficiary/victim data and power/exit declarations; the authored claim (rope) and metrics (descending extractiveness) establish the framework but do not determine d per seat—the engine's derivation does.
+ *   The Stationers' Company (trapped, institutional power) is a high-d target (d near 1.0): they are structurally displaced, lose gatekeeping revenue, and cannot exit because their entire charter was predicated on printing control. Authors (moderate power, arbitrage exit) have low d: they gain property rights and can assign them, so they benefit. Publishers (institutional power, mobile exit) have low d: they can choose whether to acquire author rights and which titles to publish; they benefit from the new regime. New printers (moderate power, mobile exit) have moderate d: they gain entry rights but face title-by-title restraint, a more diffuse constraint than the monopoly but still limiting. Readers (powerless, constrained exit) have moderate-high d: they gain diversity but pay higher prices during the statutory term. The Crown/Parliament (analytical seat) sets the agenda and can exit by revising the statute—d near 0.0 (structural beneficiary of the coordination function, though not a direct financial beneficiary).
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy is not present. The statute's founding problem (Stationers' perpetual monopoly bottleneck) remains live 50 years post-statute: the statute's reallocation to authors continues to incentivize authorship and competitive publishing, solving the bottleneck it was built to address. The disappearance verdict is world_rearranges: if the statute vanished and the Stationers' perpetual claim reverted, the corpus would contract, authorship incentives would weaken, and the distribution chain would reorganize around guild control. The founding problem and its solution are coterminous; mandatrophy would signal if the constraint persisted without solving the problem it was built for, which is not the case here.
+ *   The founding problem (Stationers' monopoly inefficiency) remains live throughout the interval—the statute does not solve the problem, it displaces it. The new regime still creates monopoly pricing (now distributed across individual titles rather than centralized), so the inefficiency persists in a different form. The statutory sunset (14-year renewable term) is designed to manage this: works enter the commons after the term, limiting the duration of monopoly extraction. The statute's mandate—to encourage learning and authorship—is partially satisfied by the actual mechanism (time-limited property rights do create incentives), but the extraction component (monopoly pricing) is a side effect, not the mandate. This is a textbook tangled_rope: genuine coordination of incentives (mandate-aligned) entangled with structural extraction (unintended or justified as the price of incentive alignment). The classification prevents misreading it as pure extraction (snare) or pure coordination (rope).
  */
 
 /* ==========================================================================
@@ -182,44 +262,44 @@ narrative_ontology:story_seed(statute_of_anne_ip_foundation__institutional_reall
    ========================================================================== */
 
 omega_variable(
-    institutional_vs_conceptual_primacy,
-    'Does the institutional reallocation (who holds the right) cause the conceptual emergence (copyright as a novel category), or are the two aspects inseparably entangled?',
-    'Historical counterfactual analysis: if authors had been granted the same limited statutory right but the Stationers'' Company had been eliminated entirely (no guild monopoly replacement), would copyright emerge as a conceptual category? Alternatively, analyze whether the conceptual move (from perpetual property to limited regulatory right) is logically dependent on the institutional shift (from guild occupancy to author occupancy).',
-    'If institutional primacy is established, this reading''s framing holds and the sibling conceptual_emergence_reading is a downstream effect. If entanglement is established, the entangled_event_reading is more accurate, and this reading omits a necessary structural dimension. If conceptual primacy is established, this reading has inverted the causal direction.',
+    institutional_displacement_vs_conceptual_novelty,
+    'Is the statute primarily an institutional reallocation of pre-existing rights (from Stationers to authors/publishers) or did it instantiate a conceptually new category (limited-term copyright distinct from perpetual property)?',
+    'Genealogical textual analysis of the statute''s preamble, parliamentary debates, and legal reasoning by contemporary jurists. If the statute uses language of ''reallocation'' and ''authors'' rights'' (pre-existing category language) rather than ''invention'' and ''new property'' (conceptual novelty language), the institutional reading holds. If the text emphasizes learning, limited term, and public interest (regulatory novelty), the conceptual reading holds.',
+    'If reallocation, the constraint is primarily a restructuring of institutional actors and their relative power; extraction is a side effect of the new distribution. If conceptually novel, the constraint is the birth of a new regulatory form, and the institutional reallocation is instrumental to it. The classification would not change, but the narrative framing and the diagnosis of what the statute solves would shift.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(institutional_vs_conceptual_primacy, conceptual, 'Whether institutional reallocation is the primary change or a byproduct of conceptual emergence.').
+narrative_ontology:omega_variable(institutional_displacement_vs_conceptual_novelty, empirical, 'Whether the statute is institutional displacement or conceptual invention.').
 
 omega_variable(
-    crown_agenda_vs_parliamentary_compromise,
-    'Is the Statute of Anne the Crown''s deliberate reallocation strategy (institutional redesign from above), or a compromise outcome from Parliament''s mediation between the Stationers'' Company and author/publisher interests?',
-    'Analysis of parliamentary debate records, Crown correspondence, and the Stationers'' Company''s lobbying positions. Did the Crown propose the reallocation and impose it, or did Parliament negotiate it over the Company''s objections?',
-    'If Crown agenda, the reallocation is an exercise of centralized authority redesigning monopoly distribution. If compromise, the reallocation emerges from contention between three institutional actors (Crown, Company, Parliament) with different interests. This affects whether to classify the constraint''s enforcement as unilateral (Crown) or negotiated (Parliament mediating).',
-    confidence_without_resolution(high)
+    publisher_capture_of_author_rights,
+    'To what extent did publishers capture author-held rights through assignment, and was this capture a foreseen consequence or an emergent abuse of the statutory mechanism?',
+    'Historical record of author-publisher agreements, assignment practices, and litigation over terms. If most authors assigned rights voluntarily to publishers (low-power bargaining aside), and publishers used assignment as a standard practice, capture was foreseen and structural. If assignment emerged gradually and authors resisted, capture was emergent.',
+    'High capture means the statute''s principal beneficiary is institutional publishers, not individual authors, despite the text''s framing. This would suggest the constraint''s actual operation is closer to rent transfer (from monopoly to publishers) than incentive creation. Low capture means individual authors retained meaningful control, making the incentive story credible.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(crown_agenda_vs_parliamentary_compromise, empirical, 'Whether the statute represents Crown institutional design or parliamentary compromise.').
+narrative_ontology:omega_variable(publisher_capture_of_author_rights, empirical, 'Whether the statute''s author-rights provisions were co-opted by publishers.').
 
 omega_variable(
-    reallocation_completeness,
-    'Does the statute fully reallocate perpetual rights from the Stationers'' Company to authors, or does it allow the Company to retain inherited holdings in pre-1710 works?',
-    'Close reading of the statute''s grandfather clauses and exemptions. Historical records of Company holdings post-statute.',
-    'If the reallocation is incomplete (Company retains some perpetual holdings), then the institutional change is partial, not total, and the extractiveness decline should plateau at a level reflecting the Company''s retained monopoly rents. If complete, the decline to 0.38 reflects only the Crown''s licensing constraint, not lingering guild monopoly.',
-    confidence_without_resolution(high)
+    statutory_enforcement_realism,
+    'How effective was the statutory enforcement mechanism (author lawsuits, statutory damages) relative to the Stationers'' enforcement apparatus (inspections, seizures, guild discipline)?',
+    'Quantitative record of litigation cases, damage awards, and prosecution rates; comparison of enforcement burden on authors vs. the Stationers'' institutional resources.',
+    'Weak enforcement means the statutory mechanism is theatrical—the rights exist on paper but are not enforced, so extraction does not materialize and readers benefit from increased copying. Strong enforcement means extraction is real and suppression is higher than authored (0.41). The suppression metric assumes moderate enforcement; this omega tests whether that assumption holds.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(reallocation_completeness, empirical, 'The scope of the institutional reallocation: does it apply retroactively to all published works, or only prospectively to new works?').
+narrative_ontology:omega_variable(statutory_enforcement_realism, empirical, 'The credibility of statutory enforcement relative to institutional enforcement.').
 
 omega_variable(
-    author_property_vs_regulatory_license,
-    'Is the statute granting authors a true property right (transferable, defensible, inalienable) or a regulatory license revocable by the Crown?',
-    'Legal analysis of the statute''s language and subsequent case law. Can authors transfer their statutory right to heirs or assignees? Can the Crown revoke it? Are there conditions under which the right lapses?',
-    'If true property, authors become occupants of an institutionalized position (the reading''s frame). If regulatory license, authors hold a revocable grant from the Crown, and the institutional reallocation is conditional—the Crown remains the primary occupant. This affects whether to classify the beneficiary position of authors as secure or precarious.',
-    confidence_without_resolution(high)
+    stationers_exit_path_and_agency_loss,
+    'Could the Stationers'' Company have adapted to the new regime (e.g., by becoming a publishers'' guild or licensing collective) or were they structurally foreclosed by the statute''s design?',
+    'Historical record of what the Stationers actually attempted post-1710 and what legal/market barriers they faced. If they formed a publishers'' society or became prominent in the new market, exit was available. If they attempted adaptation and were blocked, exit was trapped.',
+    'Available exit means the Stationers'' role as victim is softer than authored (they could have transformed). Trapped exit (what the narrative suggests) means the victim role is sharp—institutional obsolescence is structural, not strategic. The classification remains tangled_rope either way, but the mandatrophy story shifts.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(author_property_vs_regulatory_license, empirical, 'Whether the statute creates transferable property or conditional regulatory permission.').
+narrative_ontology:omega_variable(stationers_exit_path_and_agency_loss, empirical, 'Whether the Stationers'' institutional collapse was inevitable or chosen.').
 
 
 /* ==========================================================================
@@ -233,28 +313,46 @@ narrative_ontology:interval(statute_of_anne_ip_foundation__institutional_realloc
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(statute_anne_theater_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(statute_anne_theater_t8, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 8, 0.19).
-narrative_ontology:measurement(statute_anne_theater_t16, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 16, 0.17).
-narrative_ontology:measurement(statute_anne_theater_t24, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 24, 0.16).
-narrative_ontology:measurement(statute_anne_theater_t32, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 32, 0.15).
-narrative_ontology:measurement(statute_anne_theater_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(stat_tr_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 0, 0.18).
+narrative_ontology:measurement_basis(stat_tr_t0, observed).
+narrative_ontology:measurement(stat_tr_t7, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 7, 0.19).
+narrative_ontology:measurement_basis(stat_tr_t7, observed).
+narrative_ontology:measurement(stat_tr_t14, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 14, 0.21).
+narrative_ontology:measurement_basis(stat_tr_t14, observed).
+narrative_ontology:measurement(stat_tr_t21, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 21, 0.23).
+narrative_ontology:measurement_basis(stat_tr_t21, observed).
+narrative_ontology:measurement(stat_tr_t35, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 35, 0.22).
+narrative_ontology:measurement_basis(stat_tr_t35, observed).
+narrative_ontology:measurement(stat_tr_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, theater_ratio, 50, 0.22).
+narrative_ontology:measurement_basis(stat_tr_t50, observed).
 
 % Extraction over time
-narrative_ontology:measurement(statute_anne_extractiveness_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 0, 0.68).
-narrative_ontology:measurement(statute_anne_extractiveness_t8, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 8, 0.61).
-narrative_ontology:measurement(statute_anne_extractiveness_t16, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 16, 0.48).
-narrative_ontology:measurement(statute_anne_extractiveness_t24, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 24, 0.42).
-narrative_ontology:measurement(statute_anne_extractiveness_t32, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 32, 0.39).
-narrative_ontology:measurement(statute_anne_extractiveness_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 50, 0.38).
+narrative_ontology:measurement(stat_be_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement_basis(stat_be_t0, observed).
+narrative_ontology:measurement(stat_be_t7, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 7, 0.58).
+narrative_ontology:measurement_basis(stat_be_t7, observed).
+narrative_ontology:measurement(stat_be_t14, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 14, 0.61).
+narrative_ontology:measurement_basis(stat_be_t14, observed).
+narrative_ontology:measurement(stat_be_t21, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 21, 0.63).
+narrative_ontology:measurement_basis(stat_be_t21, observed).
+narrative_ontology:measurement(stat_be_t35, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 35, 0.62).
+narrative_ontology:measurement_basis(stat_be_t35, observed).
+narrative_ontology:measurement(stat_be_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, base_extractiveness, 50, 0.62).
+narrative_ontology:measurement_basis(stat_be_t50, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(statute_anne_suppression_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(statute_anne_suppression_t8, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 8, 0.31).
-narrative_ontology:measurement(statute_anne_suppression_t16, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 16, 0.27).
-narrative_ontology:measurement(statute_anne_suppression_t24, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 24, 0.24).
-narrative_ontology:measurement(statute_anne_suppression_t32, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 32, 0.23).
-narrative_ontology:measurement(statute_anne_suppression_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 50, 0.22).
+narrative_ontology:measurement(stat_su_t0, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 0, 0.38).
+narrative_ontology:measurement_basis(stat_su_t0, observed).
+narrative_ontology:measurement(stat_su_t7, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 7, 0.4).
+narrative_ontology:measurement_basis(stat_su_t7, observed).
+narrative_ontology:measurement(stat_su_t14, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 14, 0.41).
+narrative_ontology:measurement_basis(stat_su_t14, observed).
+narrative_ontology:measurement(stat_su_t21, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 21, 0.42).
+narrative_ontology:measurement_basis(stat_su_t21, observed).
+narrative_ontology:measurement(stat_su_t35, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 35, 0.41).
+narrative_ontology:measurement_basis(stat_su_t35, observed).
+narrative_ontology:measurement(stat_su_t50, statute_of_anne_ip_foundation__institutional_reallocation_reading, suppression_requirement, 50, 0.41).
+narrative_ontology:measurement_basis(stat_su_t50, observed).
 
 
 /* ==========================================================================
@@ -267,11 +365,13 @@ narrative_ontology:affects_constraint(statute_of_anne_ip_foundation__institution
 narrative_ontology:affects_constraint(statute_of_anne_ip_foundation__institutional_reallocation_reading, statute_of_anne_ip_foundation__entangled_event_reading).
 
 % DUAL FORMULATION NOTE:
-% The statute_of_anne_ip_foundation kernel is instantiated by three constraint stories corresponding to three analytical readings: institutional_reallocation_reading (this story), conceptual_emergence_reading, and entangled_event_reading. Each reading has different ε, beneficiary structure, and founding problem interpretation. The institutional_reallocation reading emphasizes the occupancy shift (guild → authors). The conceptual_emergence reading emphasizes the emergence of limited copyright as a novel regulatory category. The entangled_event reading holds that institutional and conceptual change are inseparable. Each story should be authored independently with its own metrics and stakeholder analysis; the sibling constraints are linked via network.affects_constraints to enable corpus-level analysis of kernel contest representation.
+% This constraint is one reading of a contested kernel: the Statute of Anne's role in founding intellectual property. The institutional_reallocation_reading emphasizes the reallocation of control from Stationers to authors/publishers; the conceptual_emergence_reading emphasizes the birth of limited-term copyright as a regulatory category; the entangled_event_reading denies separability. All three share the same historical event but disagree on its structural meaning. ε values differ because the referent differs under each reading's own lights: institutional reallocation reading measures the extraction inherent in the new distribution; conceptual reading measures the conceptual innovation itself (lower extraction when the coordinate benefit is emphasized); entangled reading refutes the decomposition. Network edges link the readings as alternative framings of one kernel, not as causal dependencies.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(statute_of_anne_ip_foundation__institutional_reallocation_reading, institutional, 0.92).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -40,9 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,36 +75,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: westphalian_sovereignty__absolute_sovereignty
- *   human_readable: Absolute Westphalian Sovereignty Doctrine
+ *   human_readable: Absolute State Sovereignty and Non-Interference Doctrine
  *   domain: international_law/political_philosophy
  *
  * SUMMARY:
- *   The absolute sovereignty reading of Westphalian doctrine establishes that
- *   states possess unconditional authority over domestic affairs and that
- *   external interference — whether military, legal, or coercive — is
- *   categorically illegitimate under international law. This reading treats
- *   sovereignty as an irreducible right: states cannot be subject to external
- *   judgment or intervention based on internal governance. However, the
- *   constraint exhibits high extractiveness and substantial suppression
- *   because the doctrine operates asymmetrically (powerful states routinely
- *   violate it; weak states cannot) and serves to shield authoritarian
- *   regimes from accountability. Domestic populations under systematic
- *   repression become victims of a constraint that privileges state authority
- *   over human rights enforcement. The absolute sovereignty reading competes
- *   with two sibling readings: conditional sovereignty (which grounds
- *   intervention rights in human rights violations) and graduated sovereignty
- *   (which permits intervention or authority scaling based on state capacity
- *   and legitimacy). This story models the absolute reading alone, as a clean
- *   ε-invariant constraint; sibling readings are separate constraint stories
- *   in the family.
+ *   This constraint embodies the absolute sovereignty reading of the
+ *   contested Westphalian kernel: the doctrine that states possess
+ *   unconditional authority over their domestic affairs and external
+ *   interference is categorically illegitimate. The reading originated
+ *   post-1648 (Peace of Westphalia) as protection against religious/dynastic
+ *   intervention; it was formalized post-1945 (UN Charter Article 2(7)) as
+ *   protection against hegemonic intervention in the post-colonial order.
+ *   This reading asserts that sovereignty is binary (either absolute or not)
+ *   and that interference admits no legitimate exception. The constraint
+ *   benefits authoritarian regimes by providing a legal shield against
+ *   accountability; it extracts from populations trapped within those regimes
+ *   who have no legal recourse to external remedy. The constraint is claimed
+ *   as tangled rope (coordination function: preventing hegemonic
+ *   intervention; asymmetric extraction: authoritarian regimes benefit from
+ *   non-interference shield while repressed populations bear the costs). The
+ *   measurement series shows extractiveness and suppression rising from 1945
+ *   (founding) to 2010, then plateauing, reflecting the constraint's
+ *   increasing capture by authoritarian regimes and the emergence of
+ *   competing doctrines (Responsibility to Protect, humanitarian
+ *   intervention, conditional sovereignty) that have constrained but not
+ *   replaced the absolute sovereignty reading.
  *
  * KEY AGENTS:
- *   - Authoritarian regimes: Primary beneficiaries; invoke absolute sovereignty to shield repression from international legal challenge and intervention. They both benefit from and actively enforce this reading.
- *   - Liberal democratic states: Structural payers; constrained by the same non-interference principle they depend on for their own protection. They face moral compromise when confronting atrocities they cannot legally address.
- *   - Domestic populations under repression: Victims; lack recourse to international legal protection or intervention due to the sovereignty shield.
- *   - International legal establishment: Agenda-setters; operationalize and legitimize the doctrine through UN structures, treaty frameworks, and legal precedent.
- *   - Humanitarian organizations and diaspora communities: Payers; limited in advocacy effectiveness and intervention capability by the constraint.
- *   - Regional powers: Beneficiaries; use the doctrine to shield themselves and their client states from external pressure or intervention.
+ *   - Authoritarian state regimes: primary beneficiaries (d ≈ 0.1, nearly full beneficiary); institutional power, arbitrage exit options, global scope
+ *   - Populations under repressive regimes: primary victims (d ≈ 0.95, nearly full target); powerless, trapped exit, biographical horizon
+ *   - Liberal democratic states: agenda-setters (d ≈ 0.5, symmetric to slightly beneficiary); institutional power, arbitrage exit, global scope. Ambiguous: they endorse absolute sovereignty while conducting selective humanitarian intervention
+ *   - Human rights advocates & NGOs: excluded (would dispute the reading); moderate power, constrained exit, global scope
+ *   - Post-colonial states: secondary beneficiaries (d ≈ 0.35, moderate beneficiary); organized power, mobile exit, global scope. Benefit from non-interference shield against great-power domination but are also harmed when their own governments use the shield against accountability to their populations
+ *   - International law scholars: observers (analytical seat); moderate power, analytical exit
  */
 
 /* ==========================================================================
@@ -114,48 +126,106 @@ narrative_ontology:constraint_metric(westphalian_sovereignty__absolute_sovereign
 
 % --- NL Profile Metrics (required for mountain constraints) ---
 narrative_ontology:constraint_metric(westphalian_sovereignty__absolute_sovereignty, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(westphalian_sovereignty__absolute_sovereignty, resistance, 0.74).
+narrative_ontology:constraint_metric(westphalian_sovereignty__absolute_sovereignty, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(westphalian_sovereignty__absolute_sovereignty, tangled_rope).
-narrative_ontology:human_readable(westphalian_sovereignty__absolute_sovereignty, "Absolute Westphalian Sovereignty Doctrine").
+narrative_ontology:human_readable(westphalian_sovereignty__absolute_sovereignty, "Absolute State Sovereignty and Non-Interference Doctrine").
 narrative_ontology:topic_domain(westphalian_sovereignty__absolute_sovereignty, "international_law/political_philosophy").
 
 domain_priors:requires_active_enforcement(westphalian_sovereignty__absolute_sovereignty).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(westphalian_sovereignty__absolute_sovereignty, '94ef335e-23fa-43c1-8a72-71ef5394c158').
-narrative_ontology:cs_kernel_codification('94ef335e-23fa-43c1-8a72-71ef5394c158', formalized).
-narrative_ontology:cs_authority_grounding('94ef335e-23fa-43c1-8a72-71ef5394c158', extraction).
-narrative_ontology:cs_interpretation_layer_present('94ef335e-23fa-43c1-8a72-71ef5394c158').
-narrative_ontology:cs_reading_relation('94ef335e-23fa-43c1-8a72-71ef5394c158', westphalian_sovereignty__conditional_sovereignty, coexists_with).
-narrative_ontology:cs_reading_relation('94ef335e-23fa-43c1-8a72-71ef5394c158', westphalian_sovereignty__graduated_sovereignty, coexists_with).
-narrative_ontology:cs_axiom('94ef335e-23fa-43c1-8a72-71ef5394c158', foundational, sovereignty_unconditional_immunity).
-narrative_ontology:cs_axiom_status(sovereignty_unconditional_immunity, holdable).
-narrative_ontology:cs_axiom_grounding('94ef335e-23fa-43c1-8a72-71ef5394c158', sovereignty_unconditional_immunity, deontological).
-narrative_ontology:cs_axiom('94ef335e-23fa-43c1-8a72-71ef5394c158', foundational, non_interference_absolute_principle).
-narrative_ontology:cs_axiom_status(non_interference_absolute_principle, holdable).
-narrative_ontology:cs_axiom_grounding('94ef335e-23fa-43c1-8a72-71ef5394c158', non_interference_absolute_principle, conventional).
-narrative_ontology:cs_reference_frame('94ef335e-23fa-43c1-8a72-71ef5394c158', absolute_sovereignty_framework).
-narrative_ontology:cs_drift_state('94ef335e-23fa-43c1-8a72-71ef5394c158', contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('94ef335e-23fa-43c1-8a72-71ef5394c158', '').
+narrative_ontology:cs_story_uid(westphalian_sovereignty__absolute_sovereignty, 'a8b5a47b-e213-4086-a159-344b84f231ad').
+narrative_ontology:cs_kernel_codification('a8b5a47b-e213-4086-a159-344b84f231ad', fixed_text).
+narrative_ontology:cs_authority_grounding('a8b5a47b-e213-4086-a159-344b84f231ad', lineage).
+narrative_ontology:cs_interpretation_layer_present('a8b5a47b-e213-4086-a159-344b84f231ad').
+narrative_ontology:cs_reading_relation('a8b5a47b-e213-4086-a159-344b84f231ad', westphalian_sovereignty__conditional_sovereignty, coexists_with).
+narrative_ontology:cs_reading_relation('a8b5a47b-e213-4086-a159-344b84f231ad', westphalian_sovereignty__graduated_sovereignty, influences).
+narrative_ontology:cs_axiom('a8b5a47b-e213-4086-a159-344b84f231ad', foundational, sovereignty_is_binary_and_absolute).
+narrative_ontology:cs_axiom_status(sovereignty_is_binary_and_absolute, holdable).
+narrative_ontology:cs_axiom_grounding('a8b5a47b-e213-4086-a159-344b84f231ad', sovereignty_is_binary_and_absolute, deontological).
+narrative_ontology:cs_axiom('a8b5a47b-e213-4086-a159-344b84f231ad', foundational, non_interference_is_categorically_illegitimate).
+narrative_ontology:cs_axiom_status(non_interference_is_categorically_illegitimate, holdable).
+narrative_ontology:cs_axiom_grounding('a8b5a47b-e213-4086-a159-344b84f231ad', non_interference_is_categorically_illegitimate, conventional).
+narrative_ontology:cs_axiom('a8b5a47b-e213-4086-a159-344b84f231ad', secondary, state_consent_sole_gateway_to_international_accountability).
+narrative_ontology:cs_axiom_status(state_consent_sole_gateway_to_international_accountability, overridden).
+narrative_ontology:cs_axiom_grounding('a8b5a47b-e213-4086-a159-344b84f231ad', state_consent_sole_gateway_to_international_accountability, conventional).
+narrative_ontology:cs_reference_frame('a8b5a47b-e213-4086-a159-344b84f231ad', westphalian_non_interference_principle).
+narrative_ontology:cs_drift_state('a8b5a47b-e213-4086-a159-344b84f231ad', post_responsibility_to_protect_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('a8b5a47b-e213-4086-a159-344b84f231ad', '2026-06-12T14:37:22Z').
 narrative_ontology:cs_kernel_id(westphalian_sovereignty__absolute_sovereignty, westphalian_sovereignty).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, authoritarian_regimes).
-narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, state_system_as_such).
-narrative_ontology:constraint_victim(westphalian_sovereignty__absolute_sovereignty, domestic_populations_under_repression).
-narrative_ontology:constraint_victim(westphalian_sovereignty__absolute_sovereignty, cross_border_diaspora_communities).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, authoritarian_state_regimes).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, sovereignty_doctrine_adherents).
+narrative_ontology:constraint_victim(westphalian_sovereignty__absolute_sovereignty, populations_under_repressive_regimes).
+narrative_ontology:constraint_victim(westphalian_sovereignty__absolute_sovereignty, exile_and_diaspora_communities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, liberal_democratic_states).
+narrative_ontology:constraint_beneficiary(westphalian_sovereignty__absolute_sovereignty, unaligned_non_aligned_states).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Use the absolute sovereignty doctrine as a shield against external scrutiny and intervention. Invoke non-interference to prevent sanctions, ICC jurisdiction, humanitarian intervention, and human rights monitoring. The doctrine legitimates their claim that internal repression is categorically outside the international community's purview. They benefit from the constraint's suppression of alternatives (conditional sovereignty, humanitarian intervention doctrine).
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, authoritarian_state_regimes, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Bear the direct costs of state repression without access to international legal remedies, protection, or asylum pathways that might operate if sovereignty were conditional on rights-respecting governance. They are trapped: exit through internal flight is often impossible; international intervention is ruled categorically illegitimate by the absolute sovereignty doctrine they are subject to. Their domestic suffering is redefined as sovereign prerogative beyond external accountability.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, populations_under_repressive_regimes, payer,
+    powerless, biographical, trapped, global).
+
+% Formally endorse and enforce the absolute sovereignty doctrine through UN Charter Article 2(7) while simultaneously maintaining humanitarian intervention capacity as residual option. They set and enforce the constraint through diplomatic recognition, ICJ jurisdiction acceptance, and treaty frameworks that treat state consent as inviolable. They benefit from the constraint when it protects their own internal affairs from scrutiny (surveillance, colonial legacy, resource extraction) while reserving humanitarian intervention as exceptional prerogative for geopolitically strategic situations.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, liberal_democratic_states, agenda_setter,
+    institutional, generational, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(westphalian_sovereignty__absolute_sovereignty, liberal_democratic_states, beneficiary).
+
+% Are excluded from binding legal channels when they attempt to invoke international law against state-level atrocities. They can document, publicize, and advocate, but the absolute sovereignty doctrine forecloses the legal remedies their moral claims would activate under a conditional-sovereignty regime. They would dispute the reading and advocate for graduated or conditional sovereignty framings but lack the institutional power to reframe the doctrine unilaterally.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, human_rights_advocates_and_ngos, excluded,
+    moderate, biographical, constrained, global).
+
+% Produce competing readings of the UN Charter and customary international law. The absolute sovereignty reading is authoritative within mainstream IR and international law pedagogy, but scholars also articulate conditional and graduated alternatives. They observe the constraint's operation and the pressure from human rights advocates, technological surveillance, and transnational crises (pandemics, climate, migration) that strain its logic.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, international_law_scholars, observer,
+    moderate, biographical, analytical, global).
+
+% Benefit from absolute sovereignty as protection against great-power intervention. Post-colonial states invoke the doctrine to resist Western conditionality on aid and trade. However, they also experience its suppression of intervention capacity when neighboring states commit atrocities or when internal repression threatens their own populations; their benefit is conditional on not being themselves targeted by external pressure disguised as humanitarian concern.
+narrative_ontology:constraint_stakeholder(westphalian_sovereignty__absolute_sovereignty, unaligned_non_aligned_states, beneficiary,
+    organized, generational, mobile, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(westphalian_sovereignty__absolute_sovereignty, authoritarian_state_regimes).
+narrative_ontology:fixing_cost_class(westphalian_sovereignty__absolute_sovereignty, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates interstate non-interference by establishing that each state's internal governance is beyond the legitimate domain of external actors. Solves the collective-action problem: if every state retained the right to judge and intervene in others' domestic affairs, the international system would dissolve into constant intervention and no state's borders would be secure. Absolute sovereignty creates a stable non-intervention zone that all states can rely on.
+% TRANSFER_FUNCTION: Transfers immunity-from-scrutiny from the international legal system to repressive state regimes. It redistributes the cost of internal repression: instead of distributing accountability costs evenly across regimes (through conditional sovereignty frameworks), the doctrine concentrates the protective benefit on states willing to invoke it most aggressively (typically authoritarian regimes), while concentrating costs on populations unable to exit or appeal externally.
+% ABSENT_VOICES: Populations under repressive regimes are structurally excluded from the doctrine's framing — they are the sites of its application, not its authors. Their voices would reframe sovereignty as conditional on rights protection. Also excluded: future generations affected by path-dependent state decisions, ecosystems treated as sovereign property with no standing, and subnational peoples (minorities, indigenous groups, dissidents) whose claims are foreclosed by treating the state as the only legitimate international actor.
+% DISAPPEARANCE_RATIONALE: If absolute sovereignty vanished and conditional/graduated sovereignty replaced it, the international legal order would reorganize: humanitarian intervention would become legitimate under specified conditions, ICC jurisdiction would expand, state consent would no longer be the sole gateway to international accountability, aid and trade agreements would carry enforceable governance conditions, and asylum/protection regimes would shift as internal repression became actionable internationally. The cost-distribution would flip: regimes currently protected would face exposure; populations currently trapped would gain remedy channels.
+% FOUNDING_PROBLEM: Post-WWII and post-colonial international order needed a principle that would prevent great-power hegemony and protect newly sovereign states from external domination. Absolute sovereignty answered this: by treating the state as the ultimate legitimate authority and external interference as categorically illegitimate, the doctrine protects smaller and newly independent states from conquest, colonialism, and coercive regime change justified as humanitarian concern.
+% FOUNDING_PROBLEM_CORROBORATION: Mainstream international law and IR scholarship (Waltz, Jackson, Krasner) attest the founding problem — preventing hegemonic intervention — remains live. Post-colonial states and Global South leaders attest the non-interference shield remains essential to prevent re-colonization through conditional sovereignty framing. However, human rights advocates, liberal democracies conducting selective intervention, and scholars of humanitarian law attest the founding problem (preventing hegemony) has been progressively decoupled from the enforcement mechanism (absolute non-interference); the mechanism now protects authoritarian regimes more effectively than it protects smaller states from hegemony. The Responsibility to Protect doctrine (2005) represents systematic external corroboration that the founding problem has shifted: preventing genocide and mass atrocities is now asserted as higher-order than preventing intervention.
+narrative_ontology:disappearance_verdict(westphalian_sovereignty__absolute_sovereignty, world_rearranges).
+narrative_ontology:founding_problem_status(westphalian_sovereignty__absolute_sovereignty, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(westphalian_sovereignty__absolute_sovereignty, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(westphalian_sovereignty__absolute_sovereignty, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(westphalian_sovereignty__absolute_sovereignty, 'none', 1).
+narrative_ontology:epsilon_provenance(westphalian_sovereignty__absolute_sovereignty, 0.52, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +245,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness score (0.52) reflects the constraint's core asymmetry: it provides unconditional protection to state sovereignty regardless of internal legitimacy, which authoritarian regimes exploit to shield repression. The doctrine solves a genuine coordination problem (preventing ideological intervention), but the measured extraction represents the disproportionate benefit to illegitimate states and the cost to victims lacking recourse. Suppression is high (0.71) because maintaining the constraint requires active enforcement: states must prevent humanitarian intervention, block international legal processes (through veto, withdrawal from treaties, or non-compliance), and delegitimize external pressure as 'interference.' Theater is moderate-high (0.42) because significant effort goes into performing the principle's universality and neutrality while selectively enforcing it (powerful states breach it regularly; weak states cannot). The temporal measurement series documents the constraint's evolution: initially serving its coordination function well (1648-1815), but increasingly extractive as the doctrine became weaponized to shield mass atrocities (1945 onward, correlating with genocide documentation and human rights documentation systems). The suppression requirement rises as victims and advocates press for conditional intervention rights, requiring stronger defensive effort from regime-beneficiaries. Theater rises as states perform non-interference while violating it (NATO intervention in Kosovo, China's non-interference in Myanmar's genocide, etc.), making the constraint increasingly performative.
+ *   Extractiveness is moderate (0.52) because the constraint does provide genuine coordination value (prevents constant intervention by powerful states) but is substantially captured by authoritarian regimes to prevent accountability. Suppression is high (0.71) because the doctrine explicitly forecloses alternatives (humanitarian intervention doctrine, conditional sovereignty framing, ICC jurisdiction over domestic matters) and delegates enforcement to state consent — enforcement machinery must actively maintain the non-interference principle against competing doctrines. Theater is moderate (0.42) because significant enforcement activity is performative: liberal democracies invoke absolute sovereignty while conducting selective humanitarian intervention (Kosovo, Libya, Syria cases show the doctrine is invoked asymmetrically). Accessibility collapse is substantial (0.68): once the absolute sovereignty doctrine is understood, the alternatives are largely invisible — one must actively contest the doctrine to access conditional sovereignty framings. Resistance is moderate-to-high (0.58): human rights advocates, ICC prosecutors, and scholars of conditional sovereignty provide consistent resistance, but the institutional entrenchment of absolute sovereignty in UN Charter limits their effectiveness. The measurement series show extractiveness and suppression rising from 1945-2010 as authoritarian regimes increasingly wielded the doctrine against accountability pressure, then plateauing as competitive doctrines (R2P, ICC jurisdiction expansion, sanctions regimes) have prevented further centralization of the absolute reading but have not replaced it. Theater ratio rises in parallel, reflecting growing disconnect between stated commitment to non-interference and actual intervention practices.
  *
  * PERSPECTIVAL GAP:
- *   The authoritarian regime seat and the victim seat experience radically different constraint types from the same rule. From the regime's position: absolute sovereignty is genuine coordination that protects their legitimacy, which they depend on for internal control. From the victim's position: absolute sovereignty is pure extraction—a shield that prevents anyone from helping. The international legal establishment and liberal democratic states occupy intermediate positions: they benefit from sovereignty protection but experience the constraint as limiting their ability to act on their stated human rights commitments, creating internal cognitive dissonance that manifests as inconsistent enforcement. The engine will compute different types per seat based on these structural asymmetries.
+ *   From the authoritarian regime's seat: 'This is necessary coordination — without absolute sovereignty, powerful states would dominate smaller states and the international order would collapse into perpetual intervention.' From the repressed population's seat: 'This is protection of my oppressor — I am trapped, unheard, and this doctrine forecloses my access to international remedy.' From the liberal democracy's seat: 'This is legitimate coordination we helped design — and we can invoke humanitarian intervention exceptions when geopolitically necessary.' The engine computes these divergent classifications from the structural data; they are not reconcilable by further analysis. The gap IS the measurement the constraint corpus exists to take.
  *
  * DIRECTIONALITY LOGIC:
- *   Authoritarian regimes: d ≈ 0.1 (beneficiary end; they collect immunity and control the constraint's application). Liberal democracies: d ≈ 0.4-0.5 (near-symmetric; they depend on the principle for their own protection but bear costs from constrained intervention capacity). Domestic populations: d ≈ 0.95 (victim end; they are trapped, powerless, with zero voice in the framework that denies them protection). Regional powers: d ≈ 0.15 (beneficiary end; they use it to shield their sphere). Humanitarian organizations: d ≈ 0.65 (payer end; they pay in constrained advocacy and effectiveness). The derivation chain produces this directionality from beneficiary/victim declarations and exit options: regimes are declared beneficiaries with high power and arbitrage exit (they can choose to invoke or ignore the doctrine); populations are victims with powerless status and trapped exit (they have no choice). The overrides are not necessary; the derivation captures the structure.
+ *   Beneficiary directionality: Authoritarian regimes are declared beneficiaries because they directly collect the extraction (immunity from international accountability, suppression of intervention alternatives). d ≈ 0.1 (full beneficiary): institutional power, arbitrage exit options (can threaten to leave the international system or invoke counter-doctrines), global scope. Liberal democracies are secondary beneficiaries but with ambiguous directionality (d ≈ 0.5, symmetric): they benefit from the doctrine when it protects their own internal affairs but pay costs when it shields allies or competitors from accountability; they have arbitrage exit (can conduct selective intervention while formally invoking absolute sovereignty). Post-colonial states have moderate directionality (d ≈ 0.35, moderate beneficiary): they benefit from protection against hegemonic intervention but pay costs when the doctrine is used against accountability to their own populations. Victim directionality: Populations under repressive regimes are victims (d ≈ 0.95, full target): powerless, trapped exit (cannot leave the state or access international remedy), biographical time horizon, subject to the constraint's suppression. They pay the highest cost (suppression of remedy channels) with no benefit. The constraint's extraction concentrates on powerless, trapped agents (high d agents pay high χ); liberal democracies can arbitrage (formal commitment to non-interference while conducting selective intervention), reducing their effective d below what their beneficiary status might suggest.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy is central to this constraint's classification. The founding problem—preventing ideological intervention and religious war—is contested as to whether it remains 'live.' If the founding problem is dead (systematic atrocities are now a greater threat than ideological intervention), the constraint becomes a zombie: it persists because regimes depend on it, not because anyone is fixing the original problem. The measured extractiveness (0.52) and rising theater (0.08 to 0.42 over 376 years) support the zombie diagnosis: the constraint is performing its neutrality while being applied asymmetrically. The tangled-rope classification captures both the real coordination function (non-interference did solve something genuine) and the extractive operation (it now shields atrocities). If the founding problem is dead and the constraint persists mainly because authoritarian regimes and the powerful states that tolerate them benefit from it, this is a mandatrophy case. The engine should flag the (founding_problem_status=dead, disappearance_verdict=world_rearranges) mismatch for investigation.
+ *   The founding problem (preventing hegemonic intervention) is contested — some parties attest it remains live, others attest it has been progressively solved and the constraint now primarily protects authoritarian regimes rather than maintaining international order. The disappearance verdict is world_rearranges: if absolute sovereignty vanished, the international legal order would reorganize around conditional/graduated sovereignty, humanitarian intervention would become legitimate under specified conditions, ICC jurisdiction would expand, state consent would no longer be the sole gateway to international accountability. This mandatrophy structure (founding problem contested, disappearance impacts real) suggests the constraint is in the transition zone: it started as coordination (tangled rope protecting all states from hegemony) but has been progressively captured by authoritarian regimes to prevent accountability, shifting it toward snare characteristics. The theater ratio rising (performative non-interference while conducting selective intervention) signals degradation. The measurement plateau after 2010 suggests institutional inertia — the doctrine persists because it is codified in UN Charter but its functional justification is increasingly contested and selective intervention has created a performative exception. The constraint is not yet a full piton (it still coordinates non-interference for some states) but shows piton characteristics (theatrical maintenance, captured function, atrophied original justification).
  */
 
 /* ==========================================================================
@@ -192,89 +262,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    founding_problem_obsolescence,
-    'Has the founding problem (preventing ideological/religious intervention) been solved, or has it been replaced by a different problem (preventing atrocities) such that the constraint''s mandate is obsolete?',
-    'Historical assessment of intervention motives over time (are post-WWII interventions driven by ideological expansion or by humanitarian/human rights concerns?), and counterfactual analysis: if states could intervene on humanitarian grounds, would ideological wars increase? If not, the founding problem is dead.',
-    'If the founding problem is dead and the constraint persists only because regimes depend on it, this is mandatrophy: the constraint shifts from rope toward piton-like performance. The classification would remain tangled_rope (asymmetric extraction + real coordination) but the omega documents that the coordination function has atrophied relative to the extraction function.',
+    sovereignty_doctrine_reading_ambiguity,
+    'Is absolute sovereignty a structural feature of international law (a natural coordination principle), or a constructed doctrine benefiting powerful states and authoritarian regimes?',
+    'Historical analysis of doctrine''s origin and adoption: was it discovered as natural necessity or strategically promulgated by founding powers? Counterfactual: would a cooperative international order be possible under graduated or conditional sovereignty?',
+    'If constructed, the constraint is a tangled rope or snare favoring state elites; if natural, it is a mountain or rope coordinating legitimate non-interference. This reading asserts constructed status; sibling readings (conditional, graduated) challenge that assertion.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sovereignty_doctrine_reading_ambiguity, conceptual, 'Whether absolute sovereignty is a discovered natural principle or a constructed doctrine.').
+
+omega_variable(
+    humanitarian_intervention_foreclosure,
+    'Does absolute sovereignty logically foreclose humanitarian intervention and conditional sovereignty, or do they coexist through exception and residual prerogative?',
+    'Doctrinal analysis: can a state simultaneously endorse absolute sovereignty and Responsibility to Protect without internal contradiction? Practice analysis: do states that invoke Responsibility to Protect formally revise or abandon absolute sovereignty, or treat R2P as an ''exceptional'' exception that preserves the doctrine?',
+    'If foreclosed: this reading is a genuine mountain; if coexisting: the reading is complicit in a cover-story permitting selective intervention disguised as non-interference. Affects whether the constraint is tangled rope or snare.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(founding_problem_obsolescence, conceptual, 'Whether the founding problem (preventing ideological intervention) remains live or has become obsolete.').
+narrative_ontology:omega_variable(humanitarian_intervention_foreclosure, conceptual, 'Logical relationship between absolute sovereignty and humanitarian intervention doctrine.').
 
 omega_variable(
-    symmetry_vs_asymmetric_application,
-    'Is the measured extraction (0.52) a property of the absolute sovereignty principle itself, or of its asymmetric application (powerful states routinely violate it without consequences; weak states cannot)?',
-    'Test whether symmetric application would reduce extractiveness: if all states faced equal enforcement of non-interference, would the principle become genuine rope? This requires counterfactual (what if major powers faced intervention threats for sovereignty violations?). Alternatively: examine whether weaker states experience lower extraction when they apply absolute sovereignty symmetrically among themselves.',
-    'If the extraction is structural (inherent to the principle), the constraint is inherently tangled_rope favoring powerful actors. If the extraction is entirely from asymmetric application, a hypothetical symmetric enforcement regime might be genuine rope, and current extractiveness reflects power asymmetry rather than the principle itself.',
+    post_colonial_sovereignty_capture,
+    'Do post-colonial states that invoke absolute sovereignty benefit from the doctrine, or has the doctrine been captured by authoritarian regimes to neutralize post-colonial accountability to their own populations?',
+    'Survey of post-colonial state positions: do leaders invoke absolute sovereignty primarily to resist great-power intervention, or primarily to resist domestic accountability? Compare exit options for post-colonial states that endorse conditional sovereignty versus those that endorse absolute sovereignty.',
+    'If captured: authoritarian regimes are primary beneficiaries and post-colonial states are secondary beneficiaries in fragile coalition; if genuinely protective: post-colonial states are primary beneficiaries. Affects beneficiary/victim directionality and whether the constraint''s enforcement is symmetric or asymmetrically serves authoritarian regimes.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(symmetry_vs_asymmetric_application, empirical, 'Whether extraction is structural to absolute sovereignty or flows from asymmetric enforcement.').
+narrative_ontology:omega_variable(post_colonial_sovereignty_capture, empirical, 'Whether absolute sovereignty benefits post-colonial states equally or disproportionately protects authoritarian regimes.').
 
 omega_variable(
-    coordination_vs_cover_story,
-    'Is non-interference a genuine coordination solution that states actually want and depend on, or is it a cover story that powerful states use to shield their actions while weak states must comply?',
-    'Examine state behavior in closed diplomatic channels versus public statements. Do states want non-interference for themselves (seeking immunity for their actions) or do they want it universally? If powerful states consistently violate it and weak states protest, the principle is a cover story. If all states genuinely maintain non-interference practices, the principle is real coordination.',
-    'If non-interference is genuine coordination, the constraint is structurally tangled_rope (real coordination + some extraction). If it is primarily a cover story, it edges toward snare (the coordination function is performative; the real function is shielding powerful states from accountability). The engine will measure this through behavior analysis.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(coordination_vs_cover_story, empirical, 'Whether absolute sovereignty is genuine coordination or primarily a cover story for power asymmetry.').
-
-omega_variable(
-    universality_vs_selective_enforcement,
-    'Is absolute sovereignty universally applicable (all states equally protected) or selectively enforced (powerful states routinely violate it with impunity, weak states cannot)?',
-    'Empirical audit: track all major military interventions, sanctions, and coercive measures since 1945. Classify each by intervening state''s power and target state''s power. If power asymmetry predicts enforcement patterns (powerful states intervene freely; weak states intervene and face consequences), the principle is selectively enforced. If enforcement is uniform regardless of power, the principle is universal.',
-    'Selective enforcement amplifies the extractiveness and reduces the principle''s legitimacy as genuine coordination. It supports reclassification toward snare (coercive, benefiting powerful states) or piton (performative, maintained by powerful states while they violate it). A universal enforcement pattern would support tangled_rope classification (real coordination with legitimate asymmetries) or even rope (genuine mutual non-interference).',
+    competing_kernels_sibling_classification,
+    'Does this reading of westphalian_sovereignty foreclose conditional_sovereignty and graduated_sovereignty readings, or do all three coexist as live positions in the contemporary international system?',
+    'Doctrinal audit: UN practices, ICJ decisions, treaty language, and state practice over 1945-2026. If absolute sovereignty is routinely violated for humanitarian purposes (R2P invocations, ICC interventions, sanctions on rights-violating regimes), then foreclosure is partial and conditional/graduated readings coexist. If absolute sovereignty has successfully excluded conditional readings from formal doctrine, foreclosure is structural.',
+    'If coexists: this reading and its siblings are competing positions held by different power coalitions — relation is coexists_with. If foreclosed: this reading''s foundational axioms directly contradict the siblings — relation is forecloses (rare). Current evidence suggests coexistence through performative contradiction (states invoke absolute sovereignty while conducting selective intervention).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(universality_vs_selective_enforcement, empirical, 'Whether absolute sovereignty is applied uniformly or selectively enforced based on state power.').
-
-omega_variable(
-    victims_boundary_ambiguity,
-    'Who counts as a victim of this constraint? Only domestic populations under repressive regimes, or also humanitarian advocates, diaspora communities, and liberal democracies constrained in their values-based foreign policy?',
-    'Boundary definition from evidence: whose material welfare or freedom of action is restricted by this constraint? The direct victims are clearly populations under repression. Secondary victims include diaspora communities separated from aid/intervention. Tertiary payers include liberal democracies forced to tolerate atrocities they oppose. The boundary of who is harmed affects the measured extractiveness and the constraint''s classification.',
-    'If victims include only domestic populations, extractiveness measures their trapped condition. If victims expand to include advocates and diaspora, extractiveness rises (more people pay costs). If liberal democracies are victims of their own constraint, the payer set expands dramatically, potentially raising extractiveness further. The author declares beneficiaries/victims; the engine computes directionality from that. This omega documents the boundary uncertainty.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(victims_boundary_ambiguity, conceptual, 'The scope of who is victimized by the constraint: direct victims, secondary victims, or inclusive of systemic constraints on would-be interveners.').
+narrative_ontology:omega_variable(competing_kernels_sibling_classification, conceptual, 'Logical and institutional relationship between absolute sovereignty and sibling readings.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(westphalian_sovereignty__absolute_sovereignty, 1648, 2024).
+narrative_ontology:interval(westphalian_sovereignty__absolute_sovereignty, 1945, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(west_tr_t1648, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1648, 0.08).
-narrative_ontology:measurement(west_tr_t1815, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1815, 0.12).
 narrative_ontology:measurement(west_tr_t1945, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1945, 0.25).
-narrative_ontology:measurement(west_tr_t1975, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1975, 0.35).
-narrative_ontology:measurement(west_tr_t2000, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 2000, 0.42).
-narrative_ontology:measurement(west_tr_t2024, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 2024, 0.42).
+narrative_ontology:measurement_basis(west_tr_t1945, projected).
+narrative_ontology:measurement(west_tr_t1975, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1975, 0.32).
+narrative_ontology:measurement_basis(west_tr_t1975, observed).
+narrative_ontology:measurement(west_tr_t1995, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 1995, 0.38).
+narrative_ontology:measurement_basis(west_tr_t1995, observed).
+narrative_ontology:measurement(west_tr_t2010, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 2010, 0.41).
+narrative_ontology:measurement_basis(west_tr_t2010, observed).
+narrative_ontology:measurement(west_tr_t2020, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 2020, 0.42).
+narrative_ontology:measurement_basis(west_tr_t2020, observed).
+narrative_ontology:measurement(west_tr_t2026, westphalian_sovereignty__absolute_sovereignty, theater_ratio, 2026, 0.42).
+narrative_ontology:measurement_basis(west_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(west_be_t1648, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1648, 0.35).
-narrative_ontology:measurement(west_be_t1815, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1815, 0.38).
-narrative_ontology:measurement(west_be_t1945, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1945, 0.48).
-narrative_ontology:measurement(west_be_t1975, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1975, 0.51).
-narrative_ontology:measurement(west_be_t2000, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 2000, 0.5).
-narrative_ontology:measurement(west_be_t2024, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 2024, 0.52).
+narrative_ontology:measurement(west_be_t1945, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1945, 0.35).
+narrative_ontology:measurement_basis(west_be_t1945, projected).
+narrative_ontology:measurement(west_be_t1975, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1975, 0.41).
+narrative_ontology:measurement_basis(west_be_t1975, observed).
+narrative_ontology:measurement(west_be_t1995, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 1995, 0.48).
+narrative_ontology:measurement_basis(west_be_t1995, observed).
+narrative_ontology:measurement(west_be_t2010, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 2010, 0.5).
+narrative_ontology:measurement_basis(west_be_t2010, observed).
+narrative_ontology:measurement(west_be_t2020, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 2020, 0.51).
+narrative_ontology:measurement_basis(west_be_t2020, observed).
+narrative_ontology:measurement(west_be_t2026, westphalian_sovereignty__absolute_sovereignty, base_extractiveness, 2026, 0.52).
+narrative_ontology:measurement_basis(west_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(west_su_t1648, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1648, 0.45).
-narrative_ontology:measurement(west_su_t1815, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1815, 0.5).
-narrative_ontology:measurement(west_su_t1945, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1945, 0.62).
-narrative_ontology:measurement(west_su_t1975, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1975, 0.68).
-narrative_ontology:measurement(west_su_t2000, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 2000, 0.7).
-narrative_ontology:measurement(west_su_t2024, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 2024, 0.71).
+narrative_ontology:measurement(west_su_t1945, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1945, 0.55).
+narrative_ontology:measurement_basis(west_su_t1945, projected).
+narrative_ontology:measurement(west_su_t1975, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1975, 0.62).
+narrative_ontology:measurement_basis(west_su_t1975, observed).
+narrative_ontology:measurement(west_su_t1995, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 1995, 0.68).
+narrative_ontology:measurement_basis(west_su_t1995, observed).
+narrative_ontology:measurement(west_su_t2010, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 2010, 0.7).
+narrative_ontology:measurement_basis(west_su_t2010, observed).
+narrative_ontology:measurement(west_su_t2020, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 2020, 0.71).
+narrative_ontology:measurement_basis(west_su_t2020, observed).
+narrative_ontology:measurement(west_su_t2026, westphalian_sovereignty__absolute_sovereignty, suppression_requirement, 2026, 0.71).
+narrative_ontology:measurement_basis(west_su_t2026, observed).
 
 
 /* ==========================================================================
@@ -282,18 +360,21 @@ narrative_ontology:measurement(west_su_t2024, westphalian_sovereignty__absolute_
    ========================================================================== */
 
 narrative_ontology:coordination_type(westphalian_sovereignty__absolute_sovereignty, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(westphalian_sovereignty__absolute_sovereignty, 0.18).
+narrative_ontology:boltzmann_floor_override(westphalian_sovereignty__absolute_sovereignty, 0.12).
 narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, westphalian_sovereignty__conditional_sovereignty).
 narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, westphalian_sovereignty__graduated_sovereignty).
 narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, humanitarian_intervention_doctrine).
-narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, responsibility_to_protect_principle).
+narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, responsibility_to_protect).
+narrative_ontology:affects_constraint(westphalian_sovereignty__absolute_sovereignty, icc_jurisdiction_and_immunity).
 
 % DUAL FORMULATION NOTE:
-% The westphalian_sovereignty kernel decomposes into three structurally distinct constraint stories: absolute_sovereignty (this file, no conditions on state authority), conditional_sovereignty (intervention legitimate when human rights thresholds violated), and graduated_sovereignty (sovereignty scope varies with state legitimacy and capacity). Each reading instantiates a different constraint with different ε values, different beneficiary/victim structures, and different classifications. All three coexist in international law and practice, held by different state factions and legal traditions. They are linked via network.affects_constraints to enable contamination analysis: if one reading's legitimacy erodes (e.g., conditional_sovereignty gains acceptance), it exerts pressure on this reading's persistence.
+% Three readings of the westphalian_sovereignty kernel: absolute_sovereignty (this file, ε ≈ 0.52, tangled rope favoring authoritarian regimes), conditional_sovereignty (sibling, ε ≈ 0.48, tangled rope favoring human rights enforcement), and graduated_sovereignty (sibling, ε ≈ 0.42, rope/tangled rope with spectrum entry/exit). Each reading instantiates the same textual kernel (UN Charter Article 2(7)) but produces structurally distinct constraints with different extraction patterns, beneficiary/victim alignments, and enforcement mechanisms. The readings are related through genealogy (absolute sovereignty is the historically prior reading, formalized post-WWII; conditional and graduated sovereignty are contemporary challenges to absolute reading) and through institutional coexistence (liberal democracies formally endorse absolute sovereignty while conducting selective intervention based on conditional/graduated principles). Network edges flow from absolute (upstream, formally authoritative) to conditional and graduated (downstream, emergent challenges); from humanitarian intervention doctrine and R2P (which are descendants of conditional reading); and to ICC jurisdiction debates (which are downstream consequences of conditional/graduated readings).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(westphalian_sovereignty__absolute_sovereignty, organized, 0.38).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

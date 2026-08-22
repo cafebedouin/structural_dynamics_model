@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-12
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +75,40 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: marriage_authority_kernel__muslim_shariat_reading
- *   human_readable: Shariat-Based Marriage Authority via Personal Law Boards and Qazis
+ *   human_readable: Marriage Authority: Shariat-Based Interpretation by Muslim Personal Law Boards and Qazis
  *   domain: legal/constitutional/religious
  *
  * SUMMARY:
- *   In the Indian constitutional settlement, marriage and family law
- *   authority for Muslim citizens is granted to personal law jurisdiction,
- *   interpreted and administered by qazis and the All-India Muslim Personal
- *   Law Board. This constraint instantiates the Shariat-reading of the
- *   contested marriage-authority kernel — the claim that legitimate family
- *   law authority derives from religious tradition and community adjudication
- *   rather than secular state courts. The constraint coordinates Muslim
- *   community autonomy and religious self-governance; simultaneously, it
- *   enables and enforces gender-asymmetric rights (unilateral talaq,
- *   polygamy, differential inheritance) that fall disproportionately on women
- *   and dissidents. The founding problem — preserving Muslim community
- *   autonomy in a secular nation-state — was real in 1947 and remains
- *   contested today. The resolution mechanism (Shariat interpretation by
- *   qazis and boards) has evolved into a gatekeeping function that benefits
- *   institutional authorities and systematically excludes reform voices from
- *   within Islam. This story models the constraint from the Shariat-reading
- *   frame: the marriage authority derives legitimacy from religious text and
- *   tradition, not from state authorization or individual consent — that is
- *   the defining axiom of this reading.
+ *   In post-independence India, marriage and family law authority under this
+ *   reading derives from Shariat as interpreted by Muslim personal law boards
+ *   (such as the All India Muslim Personal Law Board, established 1973,
+ *   though informal shariat councils predate independence) and qazis (Islamic
+ *   judges). The constraint embodies a plural legal order: the Indian
+ *   Constitution recognizes minority communal law as legitimate (Article 29,
+ *   30), but increasingly subjects it to constitutional review on
+ *   gender-equity grounds (Articles 14, 15). This story captures one reading
+ *   of the contested kernel 'marriage authority' — specifically, the reading
+ *   that anchors authority in Quranic/hadith interpretation through communal
+ *   institutions. The reading is both a coordination mechanism (preserving
+ *   Islamic legal principles for a religious minority) and an extraction
+ *   mechanism (asymmetric power in marriage dissolution, inheritance,
+ *   guardianship flows to male household heads; adjudication power
+ *   concentrates in scholarly/institutional hands). The claim/metric
+ *   divergence is intentional: the constraint is CLAIMED as tangled_rope (it
+ *   has genuine coordination function AND asymmetric extraction), while the
+ *   authored metrics describe substantial extractiveness (0.68) and active
+ *   enforcement (suppression 0.61, requiring_active_enforcement: true) — the
+ *   engine measures whether the claim fits the structure.
  *
  * KEY AGENTS:
- *   - muslim_women: structurally targeted; identity-locked to jurisdiction; unequal divorce and inheritance rights
- *   - muslim_men: beneficiary; unilateral talaq, polygamy, inheritance advantage; constrained but advantaged within the system
- *   - qazi_institutional_authority: agenda-setter; interprets and enforces Shariat; controls adjudication monopoly
- *   - personal_law_board_authority: agenda-setter and beneficiary; negotiates state recognition; controls institutional interpretation
- *   - hindu_majority_state: observer; balances personal law autonomy against constitutional equality; unable to fully enforce its own equality commitments
- *   - reform_movements_within_islam: structurally excluded; denied standing in qazi authority and personal law board interpretation
- *   - secular_civil_code_advocates: excluded; challenging the constraint requires constitutional amendment or majoritarian politics
+ *   - Muslim personal law boards: agenda-setters, maintain institutional authority over family law interpretation and adjudication
+ *   - Islamic scholars (qazis): derive status and authority from interpretive monopoly, resist state judicial review
+ *   - Male household heads: structural beneficiaries of unilateral talaq, legal polygamy, default guardianship
+ *   - Muslim women: structural payers, subject to asymmetric divorce/inheritance/guardianship rules
+ *   - State judiciary: parallel authority, increasingly asserting constitutional jurisdiction over personal law
+ *   - Political majority: excluded from personal law boards, historically pushed for uniform civil code
+ *   - Muslim reform movements: excluded from orthodox boards, challenge interpretive monopoly
+ *   - Muslim diaspora community: benefits from communal autonomy preservation but contains internal conflicts
  */
 
 /* ==========================================================================
@@ -107,62 +117,131 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(marriage_authority_kernel__muslim_shariat_reading, 0.68).
-domain_priors:suppression_score(marriage_authority_kernel__muslim_shariat_reading, 0.71).
+domain_priors:suppression_score(marriage_authority_kernel__muslim_shariat_reading, 0.61).
 domain_priors:theater_ratio(marriage_authority_kernel__muslim_shariat_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 0.61).
 narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, accessibility_collapse, 0.72).
 narrative_ontology:constraint_metric(marriage_authority_kernel__muslim_shariat_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(marriage_authority_kernel__muslim_shariat_reading, tangled_rope).
-narrative_ontology:human_readable(marriage_authority_kernel__muslim_shariat_reading, "Shariat-Based Marriage Authority via Personal Law Boards and Qazis").
+narrative_ontology:human_readable(marriage_authority_kernel__muslim_shariat_reading, "Marriage Authority: Shariat-Based Interpretation by Muslim Personal Law Boards and Qazis").
 narrative_ontology:topic_domain(marriage_authority_kernel__muslim_shariat_reading, "legal/constitutional/religious").
 
 domain_priors:requires_active_enforcement(marriage_authority_kernel__muslim_shariat_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(marriage_authority_kernel__muslim_shariat_reading, '4d0039f4-3a25-4ce1-9195-be4f7054897f').
-narrative_ontology:cs_kernel_codification('4d0039f4-3a25-4ce1-9195-be4f7054897f', fixed_text).
-narrative_ontology:cs_authority_grounding('4d0039f4-3a25-4ce1-9195-be4f7054897f', extraction).
-narrative_ontology:cs_interpretation_layer_present('4d0039f4-3a25-4ce1-9195-be4f7054897f').
-narrative_ontology:cs_reading_relation('4d0039f4-3a25-4ce1-9195-be4f7054897f', marriage_authority_kernel__hindu_codified_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4d0039f4-3a25-4ce1-9195-be4f7054897f', marriage_authority_kernel__christian_canonical_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4d0039f4-3a25-4ce1-9195-be4f7054897f', marriage_authority_kernel__parsi_communal_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4d0039f4-3a25-4ce1-9195-be4f7054897f', marriage_authority_kernel__secular_civil_reading, influences).
-narrative_ontology:cs_axiom('4d0039f4-3a25-4ce1-9195-be4f7054897f', foundational, shariat_divine_immutability).
-narrative_ontology:cs_axiom_status(shariat_divine_immutability, holdable).
-narrative_ontology:cs_axiom_grounding('4d0039f4-3a25-4ce1-9195-be4f7054897f', shariat_divine_immutability, deontological).
-narrative_ontology:cs_axiom('4d0039f4-3a25-4ce1-9195-be4f7054897f', secondary, community_adjudication_authenticity).
-narrative_ontology:cs_axiom_status(community_adjudication_authenticity, holdable).
-narrative_ontology:cs_axiom_grounding('4d0039f4-3a25-4ce1-9195-be4f7054897f', community_adjudication_authenticity, conventional).
-narrative_ontology:cs_reference_frame('4d0039f4-3a25-4ce1-9195-be4f7054897f', shariat_grounded_community_autonomy).
-narrative_ontology:cs_drift_state('4d0039f4-3a25-4ce1-9195-be4f7054897f', contemporary_human_rights_contestation_era, gap(authority_erosion, substantial, false)).
-narrative_ontology:cs_created_at('4d0039f4-3a25-4ce1-9195-be4f7054897f', '').
+narrative_ontology:cs_story_uid(marriage_authority_kernel__muslim_shariat_reading, '8c7f2034-cc22-4151-84ee-058b5325179e').
+narrative_ontology:cs_kernel_codification('8c7f2034-cc22-4151-84ee-058b5325179e', fixed_text).
+narrative_ontology:cs_authority_grounding('8c7f2034-cc22-4151-84ee-058b5325179e', lineage).
+narrative_ontology:cs_interpretation_layer_present('8c7f2034-cc22-4151-84ee-058b5325179e').
+narrative_ontology:cs_reading_relation('8c7f2034-cc22-4151-84ee-058b5325179e', marriage_authority_kernel__hindu_codified_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8c7f2034-cc22-4151-84ee-058b5325179e', marriage_authority_kernel__christian_canonical_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8c7f2034-cc22-4151-84ee-058b5325179e', marriage_authority_kernel__parsi_communal_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8c7f2034-cc22-4151-84ee-058b5325179e', marriage_authority_kernel__secular_civil_reading, coexists_with).
+narrative_ontology:cs_axiom('8c7f2034-cc22-4151-84ee-058b5325179e', foundational, shariat_fidelity_grounding_authority).
+narrative_ontology:cs_axiom_status(shariat_fidelity_grounding_authority, holdable).
+narrative_ontology:cs_axiom_grounding('8c7f2034-cc22-4151-84ee-058b5325179e', shariat_fidelity_grounding_authority, theological).
+narrative_ontology:cs_axiom('8c7f2034-cc22-4151-84ee-058b5325179e', foundational, communal_autonomy_preservation).
+narrative_ontology:cs_axiom_status(communal_autonomy_preservation, holdable).
+narrative_ontology:cs_axiom_grounding('8c7f2034-cc22-4151-84ee-058b5325179e', communal_autonomy_preservation, conventional).
+narrative_ontology:cs_axiom('8c7f2034-cc22-4151-84ee-058b5325179e', secondary, gender_asymmetry_divinely_ordained).
+narrative_ontology:cs_axiom_status(gender_asymmetry_divinely_ordained, holdable).
+narrative_ontology:cs_axiom_grounding('8c7f2034-cc22-4151-84ee-058b5325179e', gender_asymmetry_divinely_ordained, theological).
+narrative_ontology:cs_reference_frame('8c7f2034-cc22-4151-84ee-058b5325179e', quranic_hadiths_as_immutable_authority).
+narrative_ontology:cs_drift_state('8c7f2034-cc22-4151-84ee-058b5325179e', contemporary_2025_constitutional_review_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('8c7f2034-cc22-4151-84ee-058b5325179e', '').
 narrative_ontology:cs_kernel_id(marriage_authority_kernel__muslim_shariat_reading, marriage_authority_kernel).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, muslim_men).
-narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, qazi_institutional_authority).
-narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, personal_law_board_authority).
+narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, muslim_personal_law_boards).
+narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, male_household_heads).
+narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, islamic_scholars_qazis).
 narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, muslim_women).
-narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, religious_minorities_within_community).
-narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, secular_justice_seekers).
+narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, religious_minorities_within_muslim_families).
+narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, children_without_inheritance_parity).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(marriage_authority_kernel__muslim_shariat_reading, muslim_diaspora_communities).
+narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, male_household_heads).
+narrative_ontology:constraint_victim(marriage_authority_kernel__muslim_shariat_reading, muslim_diaspora_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Parallel governance bodies that interpret and administer Shariat-based marriage, divorce, inheritance, and guardianship law. They maintain communal authority by claiming fidelity to Quranic and hadith principles, adjudicate family disputes without state interference, and resist state codification as cultural imperialism. Their institutional survival depends on maintaining jurisdictional boundaries against both civil courts and secular codification pressures.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, muslim_personal_law_boards, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Access unilateral talaq (oral divorce without cause or process), legal polygamy (up to four wives without wife consent), presumptive guardianship of children, and preferential inheritance shares. They also bear obligation of financial maintenance (nafaqah). Their exit options are constrained by community social cost of abandoning the framework; their structural position is asymmetrically favorable.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, male_household_heads, beneficiary,
+    moderate, biographical, constrained, national).
+narrative_ontology:stakeholder_secondary_role(marriage_authority_kernel__muslim_shariat_reading, male_household_heads, payer).
+
+% Subject to unilateral divorce initiation by husbands, restricted to divorce by consent or judicial grounds (higher burden), exclusion from guardianship of minor children post-divorce, lower inheritance shares (half of male equivalents), and restricted remarriage waiting periods. Exit mechanisms exist (judicial khul'a) but require male consent or proof of harm to a qazi, raising information and institutional barriers. Exit from the framework itself means community ostracism and identity rupture for many women who fuse religious identity with legal status.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, muslim_women, payer,
+    powerless, biographical, identity_locked, national).
+
+% Interpret Shariat texts, adjudicate disputes, legitimate the constraint through scholarly authority. Their institutional position depends on maintaining interpretive monopoly and resisting state judicial review. Some qazis collect fees for adjudication; all derive status and social influence from their role as textual authorities.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, islamic_scholars_qazis, agenda_setter,
+    powerful, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(marriage_authority_kernel__muslim_shariat_reading, islamic_scholars_qazis, beneficiary).
+
+% Civil courts operate parallel authority claiming constitutional jurisdiction over family matters. They hear appeals from personal law boards on jurisdictional grounds, review enforcement of talaq and maintenance orders, and increasingly adjudicate constitutional challenges (gender equity, right to equality) against personal law provisions. Their power is structural; their exit is constrained by constitutional text and political pressure from multiple religious communities.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, state_judiciary, observer,
+    institutional, generational, analytical, national).
+
+% Hindu and secular Indian political constituencies that have historically pushed for uniform civil code, viewing personal law systems as feudal remnants or obstacles to national integration. They are structurally excluded from personal law boards' authority (the boards are communal, not representative of the polity) but have leveraged state legislative power to limit board jurisdiction and impose judicial oversight.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, political_majority, excluded,
+    organized, generational, constrained, national).
+
+% Rely on personal law boards to preserve cultural identity and community coherence in a context where they are a religious minority. They frame the constraint as protecting communal self-determination against majoritarian law. Their structural position is asymmetric: they benefit from the framework as a preservation mechanism while some members (women, children) bear extractive costs within it.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, muslim_diaspora_communities, beneficiary,
+    organized, biographical, mobile, national).
+narrative_ontology:stakeholder_secondary_role(marriage_authority_kernel__muslim_shariat_reading, muslim_diaspora_communities, payer).
+
+% Muslim scholars and activists advocating for reformed interpretations (egalitarian talaq, equal inheritance, women's guardianship) are structurally excluded from orthodox personal law board adjudication. They challenge the interpretive monopoly but lack institutional power to shift the administered law. Their exclusion is active: boards reject reformist readings as un-Islamic.
+narrative_ontology:constraint_stakeholder(marriage_authority_kernel__muslim_shariat_reading, reform_movements_within_islam, excluded,
+    moderate, biographical, constrained, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(marriage_authority_kernel__muslim_shariat_reading, male_household_heads).
+narrative_ontology:fixing_cost_class(marriage_authority_kernel__muslim_shariat_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Coordinates family formation, dissolution, property division, and guardianship within a religious framework that preserves Islamic legal principles and communal autonomy. The arrangement centralizes marriage/divorce authority so participants know which law applies, derives legitimacy from Quranic and hadith texts, and allows communal adjudication without state apparatus.
+% TRANSFER_FUNCTION: Moves family law authority (adjudicative power, interpretive control) from the state to communal institutions; moves divorce initiation power asymmetrically to male household heads; moves inheritance distribution from equal partition to gender-differentiated shares; moves guardianship authority to male relatives by default. All transfers are justified as fidelity to Quranic principles; all are contested by reform movements and secular authorities as mechanisms of gender extraction.
+% ABSENT_VOICES: Reform-movement Muslim scholars, Muslim women's rights organizations, non-Muslim spouses in interfaith marriages, and children born to such unions are structurally absent from personal law board adjudication. Their exclusion is maintained by the boards' claim that reformed or secularized interpretations are un-Islamic and beyond the board's mandate. Their presence would argue for gender-equal interpretation, state oversight, and opt-in rather than communal-default authority.
+% DISAPPEARANCE_RATIONALE: Personal law board authority persists through institutional inertia, political stalemate (no majority supports abolition; Hindu majority resists uniform civil code that might constrain Hindu law), and communal organization around identity preservation. If it disappeared, the state would assume exclusive family law jurisdiction — a reorganization that would affect hundreds of millions of people. Whether this reorganization would benefit or harm Muslim women, families, and communal autonomy is contested: secular authorities claim state courts offer better gender protection; communal authorities claim state law would be culturally illegitimate and impose majoritarian norms.
+% FOUNDING_PROBLEM: Post-independence India faced competing claims: religious minorities demanded self-determination in personal law (constitutional protection of minority rights); secular/Hindu-majority constituencies demanded uniform national law (constitutional equality, national integration). The arrangement preserved both: minority personal laws continue with state recognition and constitutional protection, but subject to increasing judicial scrutiny on gender-equity grounds.
+% FOUNDING_PROBLEM_CORROBORATION: Personal law boards attest the founding problem (communal autonomy preservation) remains live: uniform civil code threats persist and cultural assimilation pressures continue. Constitutional courts, women's rights NGOs outside the boards, and some state legislatures attest the founding problem is contested: the gender inequity and inequality dimensions have become structurally more salient than the autonomy dimension, such that 'preserving communal authority' now primarily preserves male authority within families rather than Muslim community authority within the state. Religious reformists from within the Muslim community attest the current form of personal law no longer solves the stated founding problem — it now primarily functions to entrench patriarchal interpretations against reformed readings.
+narrative_ontology:disappearance_verdict(marriage_authority_kernel__muslim_shariat_reading, contested).
+narrative_ontology:founding_problem_status(marriage_authority_kernel__muslim_shariat_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(marriage_authority_kernel__muslim_shariat_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(marriage_authority_kernel__muslim_shariat_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(marriage_authority_kernel__muslim_shariat_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(marriage_authority_kernel__muslim_shariat_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -182,16 +261,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.45 to 0.68 over the interval (t=0 to t=70). The initial rise (t=0 to t=50) models the growing awareness of gender-asymmetric rights and the personal law board's increasing institutional capture of community voice. The plateau at t=50+ reflects stabilization: extractiveness is maintained at high level, but further accumulation is arrested by the political/constitutional stalemate — neither secular civil code nor major reform has dislodged personal law authority. Theater ratio rises from 0.25 to 0.42 and plateaus, reflecting increasing performative invocation of 'community protection' while the real function has shifted toward institutional authority maintenance and gender-asymmetric rights preservation. Suppression requirement follows extractiveness: it must rise actively to exclude reform voices and secular justice seekers from adjudication, and must be maintained high to prevent state courts from intervening. The constraint is claimed as tangled_rope because it has a genuine coordination function (Muslim community autonomy and religious self-governance) AND asymmetric extraction (gender-unequal rights, institutional gatekeeping). Both properties are necessary to the structure: remove the extraction and the coordination framing collapses; remove the coordination framing and the gender asymmetry stands naked as a snare.
+ *   Extractiveness is high (0.68 at 2025) because unilateral talaq, inheritance asymmetry, and guardianship defaults concentrate family law authority and property rights in male hands; these are justified as Islamic but systematically advantage men over women. The justification is sincere (boards frame it as fidelity to Quranic principles) but the result is asymmetric extraction from women and children. Suppression is moderate-high (0.61) because the constraint persists through institutional resistance to state oversight, active exclusion of reform voices, and community social enforcement (women and men face social costs for rejecting the framework). The suppression is partly structural (legal barriers to court access, informational barriers about khul'a rights) and partly internalized (women raised in the framework often accept unequal rules as religiously legitimate). Theater has increased from 0.25 (1950) to 0.42 (2025) because boards now spend significant effort defending their authority against judicial review — adjudication is increasingly theatrical performance of compliance with constitutional law rather than pure application of Shariat. The trajectory shows: (1) initial coordination function (1950s–1970s), (2) accumulating extraction as gendered asymmetries compound (1980s–2005), (3) theater increase as state judicial pressure mounts (2005–present). The plateau in extractiveness and suppression after 2015 reflects institutional stasis: boards have hardened resistance to reform, courts have stopped major doctrinal shifts (short of legislative change), and the conflict remains structurally unresolved.
  *
  * PERSPECTIVAL GAP:
- *   From the personal law board and qazi frame: this is a legitimate coordination mechanism protecting minority community autonomy and religious self-determination against secular majority imposition. From the muslim_women and reform_movement frame: this is an enforced extraction mechanism using religious authority as cover for gender inequality and institutional gatekeeping. From the state's frame: this is a constitutional compromise that has become a site of irreconcilable tension between two commitments (personal law autonomy and individual equality). The engine should compute sharply different type classifications at each seat: institutional beneficiaries (board/qazi) compute as rope or coordinator; women and reformists compute as snare; the state computes as torn between coordination and extraction depending on which seat it privileges. The stakeholder surface and the structural data (beneficiary/victim declarations) enable the engine to derive these seat-level divergences automatically.
+ *   From the agenda-setter perspective (personal law boards, Islamic scholars): the constraint is genuine coordination that preserves Islamic law and communal autonomy against majoritarian pressure. Shariat is framed as divinely ordained, not contingent or extractive. Exit from the framework is framed as apostasy or cultural surrender. From the payer perspective (Muslim women, especially those without economic independence): the constraint is enforced extraction masked as religious duty. Exit is possible (civil courts, khul'a) but carries severe information barriers, institutional friction, and community sanctions. From the observer perspective (state judiciary, constitutional scholars): the constraint is a contested kernel with two defensible readings: the communal-autonomy reading (boards are legitimate minority-rights guardians) and the rights-protection reading (all family law must satisfy constitutional equality, regardless of religion). The engine's per-seat classification should diverge: from the institutional beneficiary seat it may compute as rope (genuine coordination with modest extraction); from the powerless-payer seat it should compute as snare or tangled_rope (high extraction with structural suppression); from the observer seat it should compute as contested (the classification depends on which sibling reading you adopt). This divergence is the signal the story exists to capture.
  *
  * DIRECTIONALITY LOGIC:
- *   Muslim_women are targets (d near 1.0): subject to personal law jurisdiction involuntarily (identity-locked exit), bear costs of gender-unequal rights, receive no benefit from the institutional structure. Qazi and personal law board are beneficiaries (d near 0.0): collect authority, gatekeeping rents, institutional recognition. Muslim_men are intermediate (d ~0.4-0.5): constrained by community reputation and religious obligation, but receive clear advantages (talaq, polygamy, inheritance). Reform movements and secular advocates are excluded (d near 1.0): they bear the cost of being shut out of adjudication while targets of the constraint's enforcement. The state is analytical (d=0.5): torn between honoring personal law autonomy and enforcing constitutional equality. No directionality overrides needed; the structural data (identity-locked exit for women, arbitrary gatekeeping for reformists, institutional authority for boards/qazis) drives the correct d values from the derivation chain.
+ *   Muslim personal law boards and Islamic scholars sit near the beneficiary end (d ≈ 0.1–0.2): they set the agenda, collect authority and status, encounter minimal exit friction (their institutional position survives because the arrangement survives). Male household heads sit near the symmetric/modest-target end (d ≈ 0.4–0.5): they benefit from asymmetric family law rules but also bear maintenance obligations and increasingly face social pressure to reform. Muslim women (especially without economic independence) sit near the full-target end (d ≈ 0.8–0.9): the constraint's rules asymmetrically govern their life choices, their exit is structurally expensive (identity_locked: fusion of religious and legal identity makes exit feel like apostasy), and their alternatives are suppressed (courts' authority is contested, qazi discretion on khul'a is arbitrary, social sanctions for rejection are severe). The state judiciary sits at the observer end (d ≈ 0.5, analytical power atom): it has structural power but ambiguous directionality — judges both enforce and increasingly question the constraint's authority. This directionality profile justifies tangled_rope classification: the constraint genuinely coordinates (preserves Quranic principles, defines family formation) but extraction is asymmetric (male-beneficiary, female-payer structure) and enforced (boards actively exclude reform voices, women face suppression in exit).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem was genuine and live: Muslim community autonomy in a secular nation was real jeopardy under colonial and early-postcolonial law. The coordination solution was appropriate: reserve personal law to community authority. However, the mandate has become contested — is the constraint still necessary for community autonomy, or has it become a vehicle for institutional rent-collection by qazis and boards? The measurement series shows extractiveness and theater ratio rising and plateauing, which is consistent with mandatrophy at the institutional level (the boards/qazis have captured the coordination function for their own benefit) while the founding problem's status is contested (reformists say it is dead; traditionalists say it is live). The tangled_rope classification prevents misreading this as pure rope (coordination without extraction) or pure snare (extraction with false coordination cover); instead, it models the constraint as genuinely providing coordination AND genuinely extracting, with the extraction riding on the coordination function. The mandatrophy question ('is the founding problem still live or has the arrangement outlived its function?') cannot be resolved within the constraint story itself — it depends on political/constitutional choices about what Muslim community autonomy means in modern India, and those choices belong to the political system, not to the constraint analyst.
+ *   The founding problem (communal autonomy preservation) was live in 1950 — the Indian Constitution explicitly recognized minority personal laws and courts were deferential to religious communities. By 2025, the founding problem has become contested: (1) communal autonomy has been meaningfully constrained by constitutional review (courts now routinely examine personal law on gender-equity grounds, e.g., triple talaq bans, maintenance orders), and (2) the arrangement's primary effect now is preserving male authority within families, not Muslim communal authority within the state. The mandatrophy signal is: founding_problem_status = live (boards still claim the autonomy rationale) + disappearance_verdict = contested (courts and reformers disagree whether abolishing board jurisdiction would help or harm) + theater_ratio increase (0.25 → 0.42) = a constraint whose original mandate has partially atrophied but whose institutional form persists through inertia and political stalemate. A tangled_rope with atrophying coordination function and hardening extraction. Not quite a piton (the coordination function is still real and defended) but moving toward it. The constraint would resolve into a clearer type if: (1) courts abolished personal law board jurisdiction (would unmask as snare from the women-payer perspective), (2) boards reformed to gender-equal interpretation (would move toward rope), or (3) uniform civil code passed (would dissolve the kernel constraint entirely and replace it with secular law).
  */
 
 /* ==========================================================================
@@ -199,95 +278,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    shariat_interpretation_authenticity,
-    'What counts as authentic interpretation of Shariat? Are personal law boards and qazis the sole legitimate interpreters, or are reform movements within Islam (women''s rights advocates, modernist scholars) equally authentic interpreters of Shariat?',
-    'Empirical: survey Muslim scholars inside and outside the board on what interpretive methods and authorities they recognize as legitimate. Conceptual: the question depends on whether Shariat is treated as a fixed text (single interpretation) or as a living tradition (multiple interpretations). Does the constraint embody the reading''s true commitment to Shariat, or does it embody institutional gatekeeping disguised as religious authenticity?',
-    'If reform movements are deemed equally authentic interpreters, personal law board authority is delegitimized and qazi monopoly collapses — the constraint reclassifies from tangled_rope toward a contested multiplicity or toward snare (institutional gatekeeping without coordination). If boards/qazis hold sole authenticity, the constraint holds as tangled_rope.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(shariat_interpretation_authenticity, conceptual, 'Whether the constraint''s interpretation monopoly is essential to Shariat authenticity or an institutional capture mechanism.').
-
-omega_variable(
-    identity_lock_mechanism,
-    'Is the measured suppression of muslim_women a structural feature of the constraint (external barriers: state recognition of personal law jurisdiction, lack of secular remedy routes) or an internalized feature (women''s own identity fusion with Islam and family, making exit psychologically unavailable)?',
-    'Post-exit trajectory study: do women who exit the jurisdiction (migrate, change legal status) report suppression relief suggesting structural lock, or do suppression dynamics persist suggesting internalized identity lock? Does suppression abate after legal remedy access is expanded?',
-    'If structural: the constraint''s effective suppression is the state-recognized jurisdictional exclusion; expanding secular remedy access would reduce suppression. If internalized: the constraint has locked women into a religious identity that carries the suppression internally; remedy requires identity-level intervention (consciousness-raising, community reframing) that the constraint cannot address.',
+    shariat_authenticity_vs_constructed,
+    'Is the constraint a natural emergence of authentic Quranic/hadith principles, or a constructed institutional form that selects and freezes certain readings while suppressing alternatives (like egalitarian reinterpretations)?',
+    'Genealogical analysis of personal law board formation, their interpretive choices over time, and comparative study of how other Muslim-majority jurisdictions interpret the same texts differently. If boards suppress legitimate alternative readings and have concentrated authority historically in conservative factions, this suggests construction rather than authenticity.',
+    'If constructed, the constraint''s extraction is less justified by ''natural law'' and more visible as institutional exercise of power — shifts type from tangled_rope toward snare. If authentic in some principled sense, the extraction becomes a justified cost of fidelity to tradition rather than arbitrary power.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_lock_mechanism, empirical, 'Whether suppression of women is structural (jurisdictional) or internalized (identity-fused).').
+narrative_ontology:omega_variable(shariat_authenticity_vs_constructed, conceptual, 'Whether Shariat-based personal law is an authentic expression of Islamic principles or a constructed institutional form that privileges certain interpretations.').
 
 omega_variable(
-    secular_majority_imposition_risk,
-    'Is the founding problem (Muslim community subjection to secular majority law) genuinely live, or has the constraint become a vehicle for institutional gatekeeping that uses the threat of majority imposition as a cover story?',
-    'Institutional analysis: would a Uniform Civil Code, if enacted, be applied uniformly to all citizens or selectively to Muslims? Comparative: in secular nation-states with religious minorities, does uniform law entail cultural subjection or religious pluralism compatible with diverse internal practices? Interview Muslims outside institutional authority about whether they fear secular law or fear institutional gatekeeping by boards/qazis.',
-    'If majority imposition is real and live: the constraint''s coordination function is legitimate and essential; secular remedy would dissolve Muslim community. If institutional gatekeeping is the real threat: the constraint protects institutional power, not community autonomy; secular remedy would enable community autonomy by removing gatekeeping.',
+    suppression_mechanism_structural_vs_internalized,
+    'Is the measured suppression (0.61) primarily structural (legal barriers to court access, high khul''a burden, deficient state enforcement of women''s rights) or internalized (women accept unequal rules as religiously legitimate, have fused identity with legal status)?',
+    'Longitudinal study of women who exit the personal law system (convert to another faith, migrate to secular jurisdiction, successful khul''a): do they report suppression persists after exit (internalized) or dissipates (structural)? Compare suppression metrics between first-generation immigrants (high internalization) and diaspora second-generation (more secularized).',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — women carry it with them after exit, making reformation harder. If structural, removing legal barriers could substantially reduce suppression and enable exit. Affects whether the path to reform requires cultural change (internalization) or legal change (structure).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(secular_majority_imposition_risk, empirical, 'Whether the founding problem remains live or has been replaced by institutional gatekeeping as the actual threat.').
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether suppression in the constraint is structural (institutional barriers) or internalized (identity fusion, internalized religious legitimacy).').
 
 omega_variable(
-    gender_asymmetry_necessity,
-    'Are the gender-asymmetric rights (unilateral talaq, polygamy, inheritance inequality) essential to the Shariat-reading''s core identity, or are they contingent features that could be reformed without losing the reading''s integrity?',
-    'Interpretive: Islamic legal scholarship shows numerous gender-egalitarian reinterpretations of Shariat (e.g., talaq conditions, polygamy restrictions, inheritance equalization). Are these reinterpretations still Shariat-reading, or do they cross into secular_civil_reading territory? Empirical: survey Muslim practitioners: do they regard gender equality as incompatible with Shariat, or as a legitimate reinterpretation?',
-    'If gender asymmetry is essential: the constraint''s extraction component (gender-unequal rights) is inseparable from its coordination component (Shariat authority); reform would require abandoning the reading. If contingent: gender equity could be achieved within Shariat-reading by institutional reform; extraction could be reduced without eliminating the constraint.',
+    communal_autonomy_vs_patriarchal_entrenchment,
+    'Does personal law board authority primarily serve communal autonomy (protecting minority self-determination) or primarily preserve patriarchal entrenchment (maintaining male household authority that would erode under gender-equal state law)?',
+    'Comparative institutional analysis: (1) track whether boards'' primary institutional resistance targets state gender-equity reforms specifically or state jurisdiction generally; (2) examine whether boards would accept state codification of Shariat if it preserved gender asymmetries; (3) analyze whether boards'' resistance to reform movements is equal or concentrated on feminist reinterpretations.',
+    'If primarily patriarchal entrenchment, the ''communal autonomy'' framing is a cover story for extraction — classification leans toward snare. If genuinely about autonomy, the gender asymmetry is a side effect of preserving minority self-determination — classification remains tangled_rope (coordination + asymmetric extraction both real). This determines whether abolishing board authority would primarily benefit women (suggesting snare) or primarily impose majoritarian cultural dominance (suggesting legitimate minority protection).',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(gender_asymmetry_necessity, conceptual, 'Whether gender inequality is intrinsic to Shariat-reading or a contingent institutional interpretation.').
+narrative_ontology:omega_variable(communal_autonomy_vs_patriarchal_entrenchment, conceptual, 'Whether the constraint''s core function is communal autonomy preservation or patriarchal entrenchment (or both inseparably).').
 
 omega_variable(
-    kernel_reading_vs_plural_equilibrium,
-    'Is the five-reading kernel structure itself the constraint, or is the constraint only this Shariat-reading and its interaction with the other readings?',
-    'Analytical: a single constraint story models one reading in isolation. The plural equilibrium (all five readings coexisting) is a different constraint — the meta-constraint ''constitutional pluralism arrangement''. This omega is conceptual, not empirical: are we modeling the Shariat-reading''s internal structure, or the Shariat-reading''s role in a plural system?',
-    'If the Shariat-reading is the unit: the constraint models marriage authority grounded in Shariat and Shariat interpretation. If the plural system is the unit: the constraint models how the state manages multiple readings and distributes jurisdictional authority. The two have different beneficiary/victim structures and different classifications.',
-    confidence_without_resolution(high)
+    kernel_reading_contest_irreducible,
+    'Is the contest between this reading and its siblings (secular_civil_reading in particular) a clash of logically compatible frameworks that could coexist in one legal order (coexists_with), or does one reading logically foreclose the other within a single constitutional framework?',
+    'Examine whether a genuine plural legal order with competing authorities can persist or whether the Indian constitutional structure demands ultimate adjudicative supremacy (suggesting foreclosure). If courts can defer to personal law boards while also holding constitutional review power, coexistence is stable; if courts must ultimately adjudicate all constitutional questions, one reading forecloses the other.',
+    'If the readings coexist, the constraint persists as long as political stalemate holds (no majority sufficient to abolish personal law boards). If foreclosure is true, the constraint faces inevitable pressures toward one reading or the other — either boards lose authority to courts or courts recognize boards as supreme (unlikely). Affects whether the constraint is stable or inherently transitional.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_vs_plural_equilibrium, conceptual, 'Whether the constraint unit is a single reading or a plural kernel structure.').
+narrative_ontology:omega_variable(kernel_reading_contest_irreducible, conceptual, 'Whether the Shariat-based reading of marriage authority logically coexists with secular civil readings or one forecloses the other.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(marriage_authority_kernel__muslim_shariat_reading, 0, 70).
+narrative_ontology:interval(marriage_authority_kernel__muslim_shariat_reading, 1950, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(marr_tr_t0, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(marr_tr_t10, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 10, 0.28).
-narrative_ontology:measurement(marr_tr_t20, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 20, 0.32).
-narrative_ontology:measurement(marr_tr_t30, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 30, 0.37).
-narrative_ontology:measurement(marr_tr_t40, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 40, 0.4).
-narrative_ontology:measurement(marr_tr_t50, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 50, 0.42).
-narrative_ontology:measurement(marr_tr_t60, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 60, 0.42).
-narrative_ontology:measurement(marr_tr_t70, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 70, 0.42).
+narrative_ontology:measurement(marr_tr_t1950, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 1950, 0.25).
+narrative_ontology:measurement_basis(marr_tr_t1950, observed).
+narrative_ontology:measurement(marr_tr_t1975, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 1975, 0.3).
+narrative_ontology:measurement_basis(marr_tr_t1975, observed).
+narrative_ontology:measurement(marr_tr_t1990, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 1990, 0.35).
+narrative_ontology:measurement_basis(marr_tr_t1990, observed).
+narrative_ontology:measurement(marr_tr_t2005, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 2005, 0.4).
+narrative_ontology:measurement_basis(marr_tr_t2005, observed).
+narrative_ontology:measurement(marr_tr_t2015, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 2015, 0.42).
+narrative_ontology:measurement_basis(marr_tr_t2015, observed).
+narrative_ontology:measurement(marr_tr_t2025, marriage_authority_kernel__muslim_shariat_reading, theater_ratio, 2025, 0.42).
+narrative_ontology:measurement_basis(marr_tr_t2025, observed).
 
 % Extraction over time
-narrative_ontology:measurement(marr_be_t0, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(marr_be_t10, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 10, 0.51).
-narrative_ontology:measurement(marr_be_t20, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 20, 0.58).
-narrative_ontology:measurement(marr_be_t30, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 30, 0.63).
-narrative_ontology:measurement(marr_be_t40, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 40, 0.66).
-narrative_ontology:measurement(marr_be_t50, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 50, 0.68).
-narrative_ontology:measurement(marr_be_t60, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 60, 0.68).
-narrative_ontology:measurement(marr_be_t70, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 70, 0.68).
+narrative_ontology:measurement(marr_be_t1950, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 1950, 0.55).
+narrative_ontology:measurement_basis(marr_be_t1950, observed).
+narrative_ontology:measurement(marr_be_t1975, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 1975, 0.61).
+narrative_ontology:measurement_basis(marr_be_t1975, observed).
+narrative_ontology:measurement(marr_be_t1990, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 1990, 0.64).
+narrative_ontology:measurement_basis(marr_be_t1990, observed).
+narrative_ontology:measurement(marr_be_t2005, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 2005, 0.67).
+narrative_ontology:measurement_basis(marr_be_t2005, observed).
+narrative_ontology:measurement(marr_be_t2015, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 2015, 0.68).
+narrative_ontology:measurement_basis(marr_be_t2015, observed).
+narrative_ontology:measurement(marr_be_t2025, marriage_authority_kernel__muslim_shariat_reading, base_extractiveness, 2025, 0.68).
+narrative_ontology:measurement_basis(marr_be_t2025, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(marr_su_t0, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(marr_su_t10, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(marr_su_t20, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 20, 0.64).
-narrative_ontology:measurement(marr_su_t30, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 30, 0.67).
-narrative_ontology:measurement(marr_su_t40, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 40, 0.7).
-narrative_ontology:measurement(marr_su_t50, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 50, 0.71).
-narrative_ontology:measurement(marr_su_t60, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 60, 0.71).
-narrative_ontology:measurement(marr_su_t70, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 70, 0.71).
+narrative_ontology:measurement(marr_su_t1950, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 1950, 0.48).
+narrative_ontology:measurement_basis(marr_su_t1950, observed).
+narrative_ontology:measurement(marr_su_t1975, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 1975, 0.52).
+narrative_ontology:measurement_basis(marr_su_t1975, observed).
+narrative_ontology:measurement(marr_su_t1990, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 1990, 0.57).
+narrative_ontology:measurement_basis(marr_su_t1990, observed).
+narrative_ontology:measurement(marr_su_t2005, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 2005, 0.6).
+narrative_ontology:measurement_basis(marr_su_t2005, observed).
+narrative_ontology:measurement(marr_su_t2015, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 2015, 0.61).
+narrative_ontology:measurement_basis(marr_su_t2015, observed).
+narrative_ontology:measurement(marr_su_t2025, marriage_authority_kernel__muslim_shariat_reading, suppression_requirement, 2025, 0.61).
+narrative_ontology:measurement_basis(marr_su_t2025, observed).
 
 
 /* ==========================================================================
@@ -302,13 +383,13 @@ narrative_ontology:affects_constraint(marriage_authority_kernel__muslim_shariat_
 narrative_ontology:affects_constraint(marriage_authority_kernel__muslim_shariat_reading, marriage_authority_kernel__secular_civil_reading).
 
 % DUAL FORMULATION NOTE:
-% This story is one of five kernel readings of the marriage_authority_kernel. The kernel represents the constitutional settlement allocating authority over marriage and family law in India. This reading (Shariat-based, qazi-administered) coexists with four sibling readings, each grounding authority in a different source (Hindu codified law, Christian canon law, Parsi custom, secular civil code). The readings do not foreclose one another — different religious communities instantiate different readings simultaneously. The inter-reading relationships (coexists_with, influences) model how the readings interact in the plural system. Each reading has a distinct beneficiary/victim structure: this reading concentrates institutional authority in personal law boards and qazis, and concentrates gender-asymmetric rights benefits in men. The secular_civil_reading, by contrast, distributes authority to civil courts and equalizes gender rights. The two readings influence each other: pressure from the secular reading creates pressure on the Shariat reading to prove gender equity within Shariat; resistance from the Shariat reading creates constitutional precedent shielding community autonomy from secular law. The full constraint family enables the system to model plural legal authority and its distributional consequences.
+% This constraint is one reading of the contested marriage authority kernel in post-independence India. The kernel is the constitutional arrangement recognizing minority personal law authority. This reading anchors authority in Shariat interpretation by communal boards and qazis. Sibling readings decompose the same kernel into: hindu_codified_reading (state-codified Hindu law), christian_canonical_reading (canonical church law), parsi_communal_reading (communal custom), secular_civil_reading (constitutional civil code). Each reading produces a different constraint story with different ε values, beneficiary/victim structures, and types. The ε-invariance principle applies: these are NOT one constraint viewed from different angles, but multiple constraints sharing a common institutional kernel. Each story is ε-invariant internally; differences across readings reflect structural differences in authority grounding and extraction mechanisms, not measurement ambiguity.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(marriage_authority_kernel__muslim_shariat_reading, organized, 0.15).
+constraint_indexing:directionality_override(marriage_authority_kernel__muslim_shariat_reading, organized, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

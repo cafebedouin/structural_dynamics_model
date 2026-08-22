@@ -2,243 +2,363 @@
   "header": {
     "constraint_id": "trips_agreement_interpretive_kernel__strong_exclusivity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-13",
     "status": "ACTIVE",
-    "story_uid": "e68bfb78-505b-48b0-85d0-d7ff60d1cd48"
+    "story_uid": "fd77d8a6-4bc9-4ce5-8e3c-fd7cd96df9a7",
+    "created_at": "2026-06-13T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.78,
-    "suppression": 0.81,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "TRIPS Strong Patent Exclusivity Interpretive Reading",
+    "human_readable": "TRIPS Strong Exclusivity Reading: Patent Protection Mandate with Narrow Health Flexibilities",
     "topic_domain": "international_trade/intellectual_property/public_health",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
     "beneficiaries": [
-      "pharmaceutical_patent_holders",
-      "high_income_country_governments"
+      "multinational_pharmaceutical_corporations",
+      "patent_holder_institutions"
     ],
     "victims": [
-      "low_income_patient_populations",
-      "generic_drug_manufacturers",
-      "low_income_state_governments"
+      "low_income_countries",
+      "patients_in_developing_regions",
+      "generic_drug_manufacturers"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "multinational_pharmaceutical_corporations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Gain exclusive market rights under TRIPS to recover R&D investment across developed and developing markets simultaneously. Can charge uniform high prices globally during patent term because generic competitors are barred by the strong exclusivity interpretation. Extract substantial economic rents during the protection period; the interpretation secures their ability to use high-income market profits to cross-subsidize R&D that serves primarily high-income populations."
+    },
+    {
+      "name": "patent_holder_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Universities, biotech firms, and research institutes that license patents to manufacturers. Benefit from strong enforcement mechanisms that guarantee licensing fees and royalties flow reliably from manufacturers across all jurisdictions. The strong reading makes the licensing income stream predictable and globally enforceable."
+    },
+    {
+      "name": "low_income_countries",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Obligated by TRIPS to enforce the same patent protections as high-income countries despite vastly lower per-capita ability to pay and acute public health need for affordable medicines. The strong exclusivity reading narrows their compulsory licensing options through dispute panel interpretation that treats Article 31 as an exception to be narrowly construed. Cannot exit TRIPS without cascading trade sanctions and loss of market access for their own goods."
+    },
+    {
+      "name": "patients_in_developing_regions",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face patent-protected drug prices set for global markets (anchored by high-income demand and ability to pay) rather than local ability to pay. Generic alternatives that would cost 90% less are unavailable during patent term. Health systems cannot budget for the patented versions. No mechanism exists to voice their preference for access over innovation-incentive doctrine; their need is structurally invisible in TRIPS interpretation."
+    },
+    {
+      "name": "generic_drug_manufacturers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Barred from manufacturing low-cost versions during patent term under the strong exclusivity reading. Can manufacture only after patent expiry. Their productive capacity and willingness to supply low-cost medicines (typically 90% cheaper than originals) is activated only when the strong reading no longer applies — they are structurally excluded from the most critical period (patent term) when prices are highest and access is most constrained."
+    },
+    {
+      "name": "wto_dispute_panels",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Interpret TRIPS text through dispute settlement; their rulings bind member states and set precedent for how strongly the patent protections are enforced. Under this reading, panels consistently construe compulsory licensing narrowly (WT/DS114 India/US, WT/DS409 Brazil/US) and invalidate public-health-justified exceptions. They are the enforcement machinery that operationalizes the strong reading into actual constraints on generic manufacturing and pricing."
+    },
+    {
+      "name": "high_income_governments",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit indirectly through enhanced patent regimes that boost domestic pharmaceutical and biotech industries (major employers, innovation drivers, export revenue). Use WTO dispute machinery and bilateral trade pressure to enforce the strong reading globally. Their corporations dominate the beneficiary seats; their governments leverage trade rules to entrench the interpretation and threaten retaliation against countries that invoke compulsory licensing."
+    },
+    {
+      "name": "public_health_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are not formal parties to TRIPS interpretation; their voice appears in amicus briefs and political pressure outside dispute panels. Would argue that the strong exclusivity reading sacrifices millions of lives annually to pharmaceutical profits and that the text permits public-health-centered interpretation. Structurally excluded from the adjudication process; their evidence on mortality correlates with access constraints is inadmissible in the narrow dispute panel frame."
+    },
+    {
+      "name": "civil_society_organizations",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Monitor the constraint's operation and document health outcomes. Produce evidence that high prices correlate with access loss and preventable mortality in low-income regions. Their analysis feeds into the founding_problem_status debate and strengthens the public_health_flexibility_reading position, but carries no formal weight in dispute resolution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes uniform global patent protection that signals to pharmaceutical corporations they can recover R&D investment across all markets simultaneously, reducing country-by-country licensing negotiation and enabling single global pricing strategies. Solves a coordination problem for multinational firms: without TRIPS, a firm investing in a new drug would face 195 separate negotiation contexts, each claiming inability to pay or threatening price controls; TRIPS unifies the institutional framework so the firm can price uniformly.",
+    "transfer_function": "Moves the economic surplus from drug sales from consumers and health systems in low-income regions (who face monopoly prices during patent term) to patent holders and high-income pharmaceutical shareholders. Transfers decision-making authority over essential medicine access from elected health officials in low-income countries to patent holders via the WTO dispute mechanism (when countries try to use compulsory licensing, disputes arise). Transfers time value of innovation costs from high-income populations (who can afford high prices) to low-income populations (who cannot, and so forgo treatment).",
+    "absent_voices": "Patients in low-income countries cannot participate in TRIPS interpretation; they have no seat at the WTO table. Generic drug manufacturers from India and other developing regions have constrained voice (their governments can argue on their behalf but lack enforcement power). Public health ministries from low-income countries can formally participate in WTO but cannot match the legal resources of high-income trading blocs. Epidemiologists and global health researchers are excluded from dispute panels; their evidence on mortality correlates with access constraint is inadmissible in the narrow interpretive frame.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strong exclusivity reading dissolved and the public-health-flexibility reading became binding (or if TRIPS itself dissolved), governments would immediately invoke compulsory licensing to manufacture generic antiretrovirals, antibiotics, and cancer drugs; prices would collapse 85–95% within months; pharmaceutical corporations would repricing strategies toward high-income markets and reduce R&D pipeline for diseases affecting only low-income populations; the geographic cost-segregation that currently exists would break, forcing unified global pricing or tiered access schemes. The world would rearrange around generic access, not because the coordination problem disappears but because the strong reading's enforcement mechanism would no longer hold it in place.",
+    "founding_problem": "Pharmaceutical R&D is capital-intensive, high-risk, and requires recovery of sunk costs plus profit across all addressable markets. Without patent protection, a firm that invests in a new drug faces generic competition immediately upon entry, eliminating the pricing power needed to amortize R&D. Low-income countries have strong incentives to copy successful drugs at marginal cost once the original developer has borne the risk. Patent protection, applied globally and uniformly, solves the innovator's coordination problem: secure market exclusivity worldwide, enabling unified pricing and global profit aggregation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Pharmaceutical industry and USTR attest the founding problem remains live: generic entry upon patent expiry demonstrates the ongoing need for exclusivity; they cite R&D productivity metrics and pipeline data. Public health economists (Médecins Sans Frontières, Harvard, Oxford) and WTO critics attest the founding problem is partially solved (drug development has not ceased) and the strong reading persists because it serves extractive interests, not innovation incentives. Independent analysis from WHO and academic literature documents that price elasticity in low-income markets means high prices do not recover R&D meaningfully there; the strong reading persists because high-income markets anchor profits, not because low-income access drives innovation."
   },
   "interval": {
     "start": 1995,
-    "end": 2024
+    "end": 2025
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1995,
-      "value": 0.61
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2002,
-      "value": 0.67
+      "time_point": 2000,
+      "value": 0.66
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2009,
-      "value": 0.72
+      "time_point": 2005,
+      "value": 0.71
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2016,
-      "value": 0.75
+      "time_point": 2010,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.76
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2020,
-      "value": 0.77
+      "value": 0.78
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 2025,
       "value": 0.78
     },
     {
       "metric": "theater_ratio",
       "time_point": 1995,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
       "value": 0.18
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2002,
-      "value": 0.24
+      "time_point": 2010,
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2009,
-      "value": 0.31
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.37
+      "time_point": 2015,
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 2020,
-      "value": 0.4
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.42
+      "time_point": 2025,
+      "value": 0.3
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1995,
-      "value": 0.64
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2002,
-      "value": 0.7
+      "time_point": 2000,
+      "value": 0.62
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2009,
-      "value": 0.75
+      "time_point": 2005,
+      "value": 0.66
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2016,
-      "value": 0.78
+      "time_point": 2010,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.71
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2020,
-      "value": 0.8
+      "value": 0.72
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.81
+      "time_point": 2025,
+      "value": 0.72
     }
   ],
   "commentary": {
-    "narrative_context": "TRIPS Article 31 nominally permits compulsory licensing for public health emergencies, parallel imports, and other flexibilities. The strong exclusivity reading interprets these as narrow exceptions requiring prior negotiation attempts, full royalty payment, domestic-market limitation, and non-revocability protection. This reading instantiates one pole of a contested kernel: whether TRIPS text mandates high uniform patent protection with narrow flexibilities (strong exclusivity reading) or embeds broad compulsory licensing as a routine public health tool (public_health_flexibility_reading). This constraint models the strong reading's structural operation: it benefits pharmaceutical patent holders and high-income country governments; it extracts from low-income patient populations and generic manufacturers. The sibling public_health_flexibility_reading would flip beneficiary/victim roles and lower extractiveness by treating compulsory licensing as routine.",
+    "narrative_context": "The TRIPS Agreement (1995) embeds a contested kernel: a formal text that can be read to prioritize either strong patent protection to incentivize pharmaceutical innovation OR public health flexibilities (compulsory licensing, parallel importation) to ensure access. This story instantiates the strong exclusivity reading — the interpretation that has dominated WTO dispute settlement since 2000 and shapes actual practice: TRIPS mandates high uniform patent protections across all member states with narrow, difficult-to-invoke flexibilities. Patent holders benefit directly; low-income countries and patients bear high prices and constrained generic access. The reading persists through active enforcement by WTO dispute panels (the agenda-setter) backed by high-income governments' trade retaliation threat. The sibling public_health_flexibility_reading would authorize broad compulsory licensing and parallel importation; it remains a live position held by low-income countries and NGOs but loses consistently in dispute panels. This story describes the strong reading's structure and operation; it does NOT describe a natural settlement of the TRIPS text, but rather ONE reading among interpretively defensible alternatives.",
     "key_agents": [
-      "pharmaceutical_patent_holders: Primary beneficiaries; extract monopoly pricing power across global markets",
-      "high_income_country_governments: Agenda-setters; enforce the strong reading through WTO dispute panels and trade retaliation",
-      "low_income_patient_populations: Trapped victims; face high drug prices and cannot access generics",
-      "generic_drug_manufacturers: Structurally excluded from markets during patent term",
-      "low_income_state_governments: Constrained payers; bear health-system costs and face retaliation if they invoke compulsory licensing",
-      "WTO dispute panels: Operational authority; instantiate the reading through binding rulings"
+      "Multinational pharmaceutical corporations (beneficiaries, institutional power, global scope) — extract rents through patent exclusivity; their licensing revenue is globally enforceable",
+      "Patent holder institutions (beneficiaries, institutional power) — universities and biotech firms licensing to manufacturers, receiving reliable royalty flows",
+      "Low-income countries (payers, moderate-to-powerless power, constrained exit) — obligated to enforce the same patent rules as high-income countries; compulsory licensing narrowly construed and practically inaccessible",
+      "Patients in developing regions (payers, powerless, trapped exit, immediate time horizon) — face monopoly prices; generics unavailable during patent term; structurally excluded from TRIPS voice",
+      "WTO dispute panels (agenda-setter, institutional power) — operationalize the strong reading through binding interpretations that consistently narrow flexibilities and uphold patent enforcement",
+      "High-income governments (beneficiary + agenda-setter, powerful, arbitrage exit) — benefit through domestic pharma industries; use trade retaliation threat to enforce the strong reading globally"
     ],
-    "logic_rationale": "Extractiveness measures the degree to which the constraint transfers resources from low-income markets to patent holders and subsidizes high-income R&D investment via monopoly rents. At 0.78, this reflects high pricing power maintained across the interval despite mounting public health pressure. Suppression at 0.81 reflects active enforcement: WTO dispute panels enforce narrow interpretations, trade retaliation against compulsory licensing invokers (Canada's generic AIDS drugs exports, India's compulsory licensing), and technical barriers to generic scaling. Theater ratio rises from 0.18 to 0.42 over the interval because enforcement increasingly invokes 'innovation incentive' rhetoric while pharmaceutical price inflation in low-income markets accelerates, decoupling the stated rationale from the observable constraint operation. Accessibility collapse at 0.72 reflects that alternatives (generic access, compulsory licensing, parallel imports) exist nominally but are suppressed by enforcement cost and retaliation threat. Resistance at 0.68 reflects sustained public health advocacy, India's and Thailand's compulsory licensing stands, and periodic WTO TRIPS flexibilities declarations that never change enforcement practice — real resistance that does not dislodge the constraint.",
-    "directionality_logic": "Pharmaceutical patent holders compute near d=0.0 (full beneficiary): they set the rules through high-income government influence, capture the rents, and bear no cost from the constraint's operation. High-income country governments compute near d=0.1 (heavy beneficiary, light cost): they domestically benefit from innovation incentives and hold enforcement power; their nominal cost is reputational (public health criticism) which they can absorb. Low-income patient populations compute near d=1.0 (full target): they pay monopoly prices, have no alternatives, cannot exit the constraint (disease does not negotiate), and derive no benefit. Generic manufacturers compute at d=0.95 (near-full target): they are structurally excluded and bear the cost of market foreclosure. Low-income state governments compute at d=0.82 (heavy target, light benefit): they theoretically benefit from innovation but pay through constrained fiscal capacity; they bear the suppression cost (retaliation threat) when they attempt flexibilities. The asymmetry in directionality is the engine's per-seat classification entry point — the constraint will likely compute as snare from the payer seats and tangled_rope from the high-income setter seat.",
-    "perspectival_gap": "From the pharmaceutical patent holder and high-income government seats, the strong reading is genuine coordination: it solves a real problem (forum-shopping threatening innovation) and produces fair outcomes (uniform rules, market-clearing prices reflecting R&D cost). From the low-income patient and generic manufacturer seats, the same reading operates as pure extraction: monopoly pricing that has no legitimate basis in innovation cost for off-patent or generic-feasible drugs, enforced by asymmetric trade power. The gap is not resolvable by choosing better metrics — it is structural to the reading's operation. The engine's per-seat classification will capture this divergence.",
-    "mandatrophy_analysis": "The founding problem was over-statement: pre-TRIPS forum-shopping was real, but innovation in pharmaceuticals is driven primarily by market size and disease burden, not patent breadth alone. High-income markets provided sufficient incentive; low-income markets were never going to generate pharmaceutical R&D regardless of patent strength. The strong reading persists not because the founding problem is live but because high-income pharmaceutical interests and governments extract rents from the constraint's operation. The mandate (uniform high protection) has outlived its function (ensuring adequate innovation incentive) and now primarily serves extraction. Public health crises (HIV/AIDS, COVID-19) triggered circumvention attempts (compulsory licensing, TRIPS waiver negotiations) that exposed the reading's extractive core — the constraint's persistence despite these crises is theater: the innovation rationale is invoked but not the driver of enforcement.",
-    "kernel_context": "This constraint instantiates the strong_exclusivity_reading of the contested TRIPS interpretive kernel (kernel_id: trips_agreement_interpretive_kernel). The kernel itself is TRIPS Article 31 compulsory licensing and related flexibilities provisions — ambiguous text that different parties read as either narrow exceptions (strong exclusivity reading, this constraint) or routine tools (public_health_flexibility_reading, sibling constraint). The reading choice determines beneficiary/victim sets: strong reading benefits patent holders, public health reading benefits patients and generic manufacturers. A third reading, dispute_settlement_interpretive_authority, is a meta-reading about WHO interprets the kernel (WTO panels vs. national governments); that reading is orthogonal to the strong/public-health axis. This constraint models only the strong reading's structural operation; the sibling public_health_flexibility_reading is a separate constraint file with different ε, different beneficiary/victim structure, and different bases for claims about innovation incentives."
+    "logic_rationale": "Extractiveness is high (0.78 at interval end) because the strong reading enables patent holders to charge monopoly prices in markets where ability to pay is vastly constrained, and low-income countries cannot use compulsory licensing to override these prices without facing WTO disputes. The gap between actual cost and patent-protected price is the extraction; it is sustained by the reading's narrow construction of flexibilities (compulsory licensing for emergencies only, strict royalty requirements, long patent terms). Suppression is high (0.72) because the enforcement mechanism — WTO dispute panels with retaliation authority — deters low-income countries from invoking their formal flexibilities; India's compulsory license for Sofosbuvir (hepatitis C) faced legal challenge; Pakistan's generic ARV manufacturing faced trade pressure. Theater ratio is moderate (0.28) because the innovation-incentive justification is partially real (R&D does respond to patent protection) but an increasing share of enforcement effort goes to defending rents rather than funding new research (as drug prices rise faster than R&D productivity). The measurement series show extractiveness rising from 1995–2020 as dispute panels narrowed flexibilities and as pharmaceutical firms consolidated market power; suppression requirement rose as enforcement capacity was tested and hardened (India's generics challenged; countries learned they cannot safely invoke compulsory licensing without retaliation). Theater ratio rose because the constraint's stated function (reward innovation) is decoupling from its operation (defending existing monopolies on off-patent conditions).",
+    "perspectival_gap": "From the patent holder and high-income government seats, this reading appears as legitimate property protection and innovation incentive: the text says what it says; TRIPS is a contract freely entered; pharma R&D requires exclusivity; prices reflect value creation. From the low-income country and patient seats, the same reading appears as extractive colonialism: their governments did not freely choose TRIPS (it was a condition of WTO membership during asymmetric power-imbalance negotiation in 1995); the reading's narrow flexibilities were promised but made practically unusable through dispute panel interpretation; prices do not reflect what their economies can bear; the reading persists because high-income trading powers enforce it, not because it is legitimate. The WTO panels (analytical seat) compute a narrow legal reading of the TRIPS text as written, but do not address the distributional questions about who benefits and who bears costs — the panels' technical legal authority masks the underlying asymmetry of power and interest. The engine computes per-seat types from these structural relationships: from the beneficiary seat, the reading may compute as coordination or rope (genuine innovation incentive, parties participate); from the victim seat, as tangled_rope or snare (coordinating innovation for some while extracting from others).",
+    "directionality_logic": "Multinational pharma corporations (institutional power, arbitrage exit) have d near 0.0 (full beneficiaries): they set prices, enforce exclusivity globally, and can exit through alternative markets or licensing arrangements. Patent holder institutions (institutional power, arbitrage) have d near 0.1 (strong beneficiaries): they collect reliable royalties. Low-income countries (moderate power, constrained exit) have d near 0.85 (targets): they are obligated to enforce the same rules as high-income countries despite different capacity, and their attempt to use flexibilities faces dispute panel retaliation. Patients in developing regions (powerless, trapped) have d near 0.95 (full targets): they bear the cost (high prices, no generics, forgoing treatment) with no exit and no voice. Generic manufacturers (organized power, constrained exit) have d near 0.75 (targets): they are barred from operating during patent term, the highest-value period. High-income governments (powerful, arbitrage) have d near 0.2 (beneficiaries): they benefit indirectly through pharma industry advantage but do not directly pay the constraint's cost. The spread in d values across seats reflects the fundamental asymmetry: some seats benefit from the exact mechanism others are trapped in.",
+    "mandatrophy_analysis": "The strong exclusivity reading shows signs of mandate drift: the founding problem (incentivizing R&D in a world where generics would undermine profits) was live in 1995 when TRIPS was negotiated. By 2020, pharmaceutical R&D has been historically productive (over 450 new drugs approved annually in the U.S.), suggesting the founding problem no longer requires the level of protection being enforced. Yet the constraint persists and intensifies (extractiveness rising, enforcement hardening) — the reading is increasingly about defending profits on existing drugs rather than funding new research. The theater ratio rise (0.12 to 0.30) indicates performative maintenance: dispute panels invoke innovation-incentive language while consistently ruling against compulsory licensing even in emergencies (e.g., Thailand's generic ARV manufacturing for domestic public health faces legal challenge). The constraint shows piton-adjacent dynamics: administered by institutional machinery (WTO), persists partly by institutional inertia (dispute panels follow precedent), but is still actively enforced (not yet theatrical skeleton). The mandatrophy question is whether the strong reading persists because innovation incentive is genuine and necessary, or because it serves extractive interests independent of innovation benefits. The founding_problem_status (contested) and the divergence between stated function and measured operation support the mandatrophy frame: this is a reading that began as coordination (genuine problem-solving) and has drifted toward extraction (defending monopoly rents).",
+    "kernel_context": "This constraint instantiates the strong_exclusivity_reading of the trips_agreement_interpretive_kernel — a contested text that different parties read to authorize different constraint structures. The kernel is the TRIPS Agreement itself (fixed_text, codified in 1995). The strong reading emphasizes Article 28 (patent holder's exclusive right to prevent competition) and Article 30 (limitations on exclusive rights are exceptions), reading exceptions narrowly. The sibling public_health_flexibility_reading emphasizes Article 8 (member states may adopt measures to protect public health) and Article 31 (compulsory licensing conditions), reading them as authorization for broad access flexibility. Both readings claim fidelity to the same text; neither is textually foreclosed by the other. The difference is not semantic — it produces different victim/beneficiary structures, different extractiveness profiles, and different regulatory outcomes. WTO dispute panels have consistently adopted the strong reading (WT/DS114, WT/DS199, WT/DS409 line of cases); this is not inevitable but reflects the institutional power of pharmaceutical patent holders and high-income governments in dispute resolution. The public_health_flexibility_reading remains a live position (held by WTO member states, WHO, and NGOs) but is losing consistently in adjudication."
   },
   "omegas": [
     {
-      "id": "innovation_incentive_counterfactual",
-      "question": "Would pharmaceutical innovation for diseases prevalent in low-income countries differ if patent terms were shorter or compulsory licensing were routine?",
-      "resolution_mechanism": "Comparative analysis of R&D investment by indication-burden: diseases with large high-income markets (cardiovascular, obesity) vs. diseases endemic to low-income regions (malaria, TB) pre- and post-TRIPS. Economic modeling isolating patent strength from market-size effects.",
-      "impact": "If R&D patterns show that strong patents in low-income markets drive negligible additional investment for those markets' diseases, the innovation justification collapses and the constraint becomes pure extraction. If R&D is substantially sensitive to patent breadth across all markets, the coordination rationale holds.",
+      "id": "innovation_incentive_empirical_necessity",
+      "question": "Does pharmaceutical R&D productivity and investment genuinely require the level of patent protection mandated under the strong exclusivity reading, or would a moderate/shorter-term protection regime still generate sufficient innovation?",
+      "resolution_mechanism": "Comparative analysis of R&D productivity across patent regimes; historical trend analysis of drug approval rates vs. patent strength; natural experiments from jurisdictions that weakened patent protection (e.g., India's pre-2005 patent law, Taiwan's tiered approach); econometric modeling of R&D response to patent term changes.",
+      "impact": "If moderate protection suffices for innovation, the strong reading's justification is substantially weakened and the constraint reclassifies as pure extraction (snare) rather than coordination with extraction (tangled_rope). If strong protection is empirically necessary, the tangled_rope classification holds and the innovation-incentive frame is justified.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the strong reading's innovation incentive claim is structurally accurate for low-income-market diseases."
+      "description": "Whether the strong reading's patent requirements are empirically necessary for pharmaceutical R&D or excess beyond innovation incentive."
     },
     {
-      "id": "beneficiary_vs_natural_law_ambiguity",
-      "question": "Is the constraint a natural coordination solution to forum-shopping (hence its persistence is functional), or a constructed reading benefiting identifiable institutions (hence its persistence is extractive)?",
-      "resolution_mechanism": "Historical counterfactual: what would global pharmaceutical markets have done absent TRIPS if high-income countries had acted unilaterally to enforce patent protection? If unilateral enforcement would have occurred anyway, TRIPS is constructed beneficiary capture; if TRIPS coordination was genuinely necessary, it is functional.",
-      "impact": "If constructed, the constraint is a false-summit mountain — authored as natural law but instantiating a reading that benefits patent holders and high-income governments. If functional, it is genuine tangled_rope with real coordination alongside extraction.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the strong reading is a natural coordination solution or a constructed beneficiary capture."
-    },
-    {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the measured suppression (0.81) primarily structural — enforcement cost, retaliation threat, legal barriers to compulsory licensing invocation — or internalized — do low-income state governments accept the strong reading's legitimacy and thereby suppress themselves?",
-      "resolution_mechanism": "Post-suppression analysis: when low-income states invoke compulsory licensing (India 2013, Thailand 2007, 2008, 2013), what drives their choice? If driven by immediate crisis (epidemic emergency) overriding suppression, suppression is structural. If compliance resumes without crisis pressure, suppression is partially internalized.",
-      "impact": "If structural, the constraint's suppressive force degrades if high-income countries reduce retaliation threat. If internalized, suppression persists even after enforcement mechanisms weaken, and the constraint exhibits piton characteristics (maintained by institutional inertia).",
-      "confidence": "medium",
+      "id": "compulsory_licensing_practical_accessibility",
+      "question": "Are the Article 31 compulsory licensing flexibilities practically accessible to low-income countries, or have dispute panel interpretations narrowed them to unusability?",
+      "resolution_mechanism": "Audit of compulsory licensing attempts post-1995: count of invocations, success rate, time-to-resolution in dispute panels, de facto chilling effect on future attempts (measured by stated intent vs. actual filing). Post-COVID analysis of COVID-vaccine licensing negotiations (which bypassed dispute panel but revealed political barriers).",
+      "impact": "If flexibilities are practically inaccessible, the strong reading operationalizes as pure extraction without realistic escape valve; if accessible, it operationalizes as tangled_rope with genuinely available (if costly) remedies. This affects whether the constraint's enforcement appears as suppression or as structural coercion with negotiable boundaries.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether suppression is structural enforcement cost or internalized legitimacy acceptance."
+      "description": "Practical operability of TRIPS Article 31 compulsory licensing under the strong exclusivity reading."
     },
     {
-      "id": "reading_foreclosure_and_coexistence",
-      "question": "Does the strong exclusivity reading logically foreclose the public_health_flexibility_reading, or do both readings remain live positions that different parties hold simultaneously?",
-      "resolution_mechanism": "TRIPS text analysis: can a single institutional framework adopt both readings (narrow compulsory licensing as the rule, broad flexibilities as exceptions) without internal logical contradiction? Or does adoption of one reading's core premise make the other's core premise incoherent?",
-      "impact": "If readings foreclose each other, the kernel represents a genuine choice between incompatible frameworks. If readings coexist, the contest is empirical (which reading matches reality) or normative (which is better), not logical.",
+      "id": "reading_foreclosure_or_coexistence",
+      "question": "Does the strong exclusivity reading logically foreclose the public health flexibility reading, or do both readings remain live interpretive options of the same text?",
+      "resolution_mechanism": "Textual analysis: Are there TRIPS provisions that are literally incompatible with one reading or the other? (e.g., does Article 28 necessarily imply Article 31 is inaccessible, or are they logically separable?). Jurisprudential history: Have dispute panels treated the public health reading as logically impossible, or merely as disfavored and losing?",
+      "impact": "If the strong reading forecloses the sibling, the kernel has one defensible interpretation and the constraint's reading classification is determinate. If both remain live, the dispute is fundamentally about institutional power over interpretation, not textual meaning, and the engine's dispute-settlement-authority mechanism becomes the principal driver of the strong reading's persistence.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether the strong exclusivity and public health flexibility readings are logically incompatible or operationally coexistent."
+      "description": "Logical relationship between strong exclusivity and public health flexibility readings of the TRIPS text."
+    },
+    {
+      "id": "patient_benefit_vs_high_income_profit_orientation",
+      "question": "Does pharmaceutical innovation under the strong reading produce therapeutics that address low-income disease burden (e.g., TB, malaria, parasitic infections) proportional to that burden, or is innovation pipeline oriented toward high-income prevalence (e.g., oncology, cardiovascular)?",
+      "resolution_mechanism": "Drug approval audit: count of new drugs by indication; cross-index with disease burden by income level (WHO Global Burden of Disease); analyze licensing/pricing decisions by indication. If pipeline orientation is demonstrably toward high-income diseases despite global disease burden, innovation incentive is not equitably serving the populations bearing the extraction cost.",
+      "impact": "If innovation pipeline is demonstrably skewed away from low-income disease burden, the founding_problem frame (incentivizing research for global health) is contradicted by the constraint's actual operation — it incentivizes research for profitable (high-income) indications, and the strong reading's extraction falls on populations whose diseases are not being researched. This supports mandatrophy and snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Alignment between pharmaceutical innovation pipeline and low-income disease burden under the strong reading's incentive structure."
+    },
+    {
+      "id": "suppression_mechanism_enforcement_vs_internalized_acceptance",
+      "question": "Is suppression of low-income countries' compulsory licensing efforts structural (fear of WTO retaliation, legal costs, dispute resolution uncertainty) or internalized (low-income governments have accepted the TRIPS regime as legitimate and don't challenge it)?",
+      "resolution_mechanism": "Interviews and documentary evidence from low-income country health ministries and trade negotiators; analysis of stated reasons for not invoking compulsory licensing (legal risk, retaliation fear, or normative acceptance); natural experiment of countries that have challenged (India's generics, Thailand's licenses) vs. those that haven't; post-COVID policy shifts (did compulsory licensing become less suppressed after public health mobilization?).",
+      "impact": "If suppression is structural (external threat), the constraint's persistence depends on enforcement capability and could be disrupted by coalition-building among low-income countries or by shifting dispute panel composition. If suppression is internalized, the constraint carries its suppression with it even if external enforcement weakens — low-income countries will voluntarily comply. This affects whether the piton/snare classification is stable or vulnerable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression of low-income countries' access to TRIPS Article 31 compulsory licensing."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "trips_agreement_interpretive_kernel__public_health_flexibility_reading",
-      "trips_agreement_interpretive_kernel__dispute_settlement_interpretive_authority"
+      "dispute_settlement_interpretive_authority",
+      "pharmaceutical_patent_term_extension_mechanisms",
+      "hiv_aids_drug_access_constraint_sub_saharan_africa"
     ],
-    "dual_formulation_note": "This constraint is one reading of a contested kernel (TRIPS Article 31 compulsory licensing) shared with the public_health_flexibility_reading (sibling constraint). The two readings differ in ε (strong reading: 0.78 extractiveness, public health reading: estimated 0.42 extractiveness), beneficiary/victim structure (flipped across readings), and interpretation of text (narrow vs. broad flexibilities). They are NOT measurements of the same constraint from different angles — they are structurally distinct constraints instantiated from the same contested text. Each story carries its own ε, its own beneficiary set, its own six-questions answers. The sibling reading is a separate JSON file linked via this network edge."
+    "dual_formulation_note": "The TRIPS Agreement is a contested kernel with two structural interpretations: the strong_exclusivity_reading (this story) and the public_health_flexibility_reading (sibling). They read the same text but operationalize different constraint structures with different beneficiary/victim sets, different extractiveness profiles, and different dispute-panel precedent histories. Neither reading is textually foreclosed; the dispute is institutional (WTO panels have consistently adopted the strong reading since 2000). Both stories describe binding constraints on actual state behavior, but the public_health_flexibility_reading remains less operationalized in practice (dominated in disputes, less invoked by low-income countries due to suppression mechanisms). The two stories are linked via network.affects_constraints to flag their common kernel and their institutional competition."
   },
   "directionality_overrides": [
     {
       "power_atom": "moderate",
-      "d_value": 0.82
+      "d_value": 0.88
     }
   ],
+  "gain_flow": "multinational_pharmaceutical_corporations",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
-    "reference_frame": "uniform_high_patent_protection_mandate",
-    "drift_state": {
-      "moment": "contemporary_public_health_crisis_era",
-      "direction": "practice_drift",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
     "reading_relations": [
       {
-        "sibling_id": "trips_agreement_interpretive_kernel__public_health_flexibility_reading",
+        "sibling_id": "public_health_flexibility_reading",
         "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "trips_agreement_interpretive_kernel__dispute_settlement_interpretive_authority",
-        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "patent_exclusivity_primary_incentive",
+        "atom": "patent_protection_globally_uniform_and_strong",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "compulsory_licensing_exceptional_not_routine",
+        "atom": "compulsory_licensing_exception_not_the_rule",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "deontological"
       }
-    ]
+    ],
+    "reference_frame": "patent_holder_property_rights_framework",
+    "drift_state": {
+      "moment": "contemporary_2025",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

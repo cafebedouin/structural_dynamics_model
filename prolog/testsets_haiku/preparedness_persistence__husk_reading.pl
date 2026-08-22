@@ -40,11 +40,16 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:suppression_profile/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -58,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,38 +74,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: preparedness_persistence__husk_reading
- *   human_readable: Preparedness Husk: Ritualized Drills and Inspections as Memorial Performance
- *   domain: institutional/disaster_preparedness
+ *   human_readable: Preparedness Ritual Performance (Husk Reading)
+ *   domain: disaster_preparedness/institutional_memory/governance
  *
  * SUMMARY:
- *   A jurisdiction subject to recurring floods maintains a formal
- *   preparedness system: annual evacuation drills, annual structural
- *   inspections, compliance reports sent to supervisory authorities. The form
- *   persists: drills are conducted, inspections are completed, documents are
- *   filed. But institutional memory practitioners and independent
- *   emergency-response researchers have documented that actual evacuation
- *   coordination capability has atrophied over decades — the people
- *   conducting the drills lack hands-on experience with the coordination
- *   machinery, responders lack cross-training, critical information is no
- *   longer transmitted between senior and junior personnel during drill-time,
- *   and command structures exist in writing but not in muscle memory or
- *   real-time rehearsal. The constraint persists because the administrative
- *   hierarchy benefits from the appearance of preparedness (legitimacy with
- *   supervisory authority, public confidence, career advancement through
- *   visible compliance) while bearing none of the cost of failure. The
- *   flood-exposed population depends on evacuation capacity but has no seat
- *   in defining what preparedness means or evaluating whether it is real.
- *   This reading asserts the constraint is Piton: atrophied institutional
- *   function maintained theatrically because the cost of fixing it exceeds
- *   what any administrator bears alone, but the cost of not fixing it
- *   (population risk in a flood event) falls on the powerless and trapped.
+ *   This constraint is one reading of a contested kernel about disaster
+ *   preparedness: whether drills and inspections constitute live, exercised
+ *   knowledge (competence_reading) or memorial performance where form
+ *   persists while operational capacity atrophies (husk_reading). The husk
+ *   reading asserts that the apparatus persists not because it maintains
+ *   readiness, but because the institutional beneficiaries — bureaucratic
+ *   agencies, political leaders, inspection auditors — profit from the
+ *   appearance of preparedness without bearing the cost of failures. The
+ *   constraint operates through suppression: operational staff who see the
+ *   gap are muted by the institutional pressure to validate compliance;
+ *   flood-exposed populations lack information about actual readiness; senior
+ *   commanders' frank operational assessments are subordinated to compliance
+ *   metrics. The theater_ratio rises over the interval as the gap between
+ *   formal procedures and actual capacity grows and becomes normalized — the
+ *   performance becomes ever more elaborate (documentation, certification,
+ *   inter-agency coordination theater) while functional capacity degrades.
+ *   The measuring interval captures the post-founding-problem era when the
+ *   ritual became decoupled from live practice.
  *
  * KEY AGENTS:
- *   - administrative_hierarchy: agenda_setter with institutional power; defines and enforces the drill/inspection regime to satisfy upward accountability
- *   - emergency_management_personnel: moderate power, constrained exit; careers advance through ritual compliance, creating incentive alignment with the form over substance
- *   - flood_exposed_population: powerless, trapped; bear the ultimate cost if the constraint fails and evacuation is needed
- *   - supervisory_authority: institutional observer; accepts formal compliance reports without independent verification of actual readiness
- *   - institutional_memory_practitioners: excluded voices; would testify to atrophy but are not seated in preparedness evaluation
+ *   - emergency_management_bureaucracy: institutional agenda-setter; designs drills, receives compliance attestations, derives legitimacy from preparedness appearance.
+ *   - flood_exposed_populations: powerless victims; live in flood zones under assumption of readiness; trapped by economic/social ties; bear consequence of system failure.
+ *   - junior_operational_staff: moderate-power payers; see the gap between procedure and capacity; constrained exit; voice concerns but institutional structure incentivizes silence.
+ *   - senior_operation_commanders: institutionally placed but excluded from planning; know the actual state of readiness; constrained by pressure to validate official narrative.
+ *   - political_leadership: beneficiaries; gain plausible deniability through compliance documentation; no operational responsibility.
  */
 
 /* ==========================================================================
@@ -107,55 +110,114 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(preparedness_persistence__husk_reading, 0.62).
-domain_priors:suppression_score(preparedness_persistence__husk_reading, 0.58).
-domain_priors:theater_ratio(preparedness_persistence__husk_reading, 0.71).
+domain_priors:base_extractiveness(preparedness_persistence__husk_reading, 0.68).
+domain_priors:suppression_score(preparedness_persistence__husk_reading, 0.72).
+domain_priors:theater_ratio(preparedness_persistence__husk_reading, 0.79).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, theater_ratio, 0.71).
+narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, theater_ratio, 0.79).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, resistance, 0.42).
+narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, accessibility_collapse, 0.42).
+narrative_ontology:constraint_metric(preparedness_persistence__husk_reading, resistance, 0.51).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(preparedness_persistence__husk_reading, piton).
-narrative_ontology:human_readable(preparedness_persistence__husk_reading, "Preparedness Husk: Ritualized Drills and Inspections as Memorial Performance").
-narrative_ontology:topic_domain(preparedness_persistence__husk_reading, "institutional/disaster_preparedness").
+narrative_ontology:human_readable(preparedness_persistence__husk_reading, "Preparedness Ritual Performance (Husk Reading)").
+narrative_ontology:topic_domain(preparedness_persistence__husk_reading, "disaster_preparedness/institutional_memory/governance").
+
+domain_priors:requires_active_enforcement(preparedness_persistence__husk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(preparedness_persistence__husk_reading, '19f049c2-8712-476e-8a31-6392e7e82480').
-narrative_ontology:cs_kernel_codification('19f049c2-8712-476e-8a31-6392e7e82480', fixed_text).
-narrative_ontology:cs_authority_grounding('19f049c2-8712-476e-8a31-6392e7e82480', extraction).
-narrative_ontology:cs_interpretation_layer_present('19f049c2-8712-476e-8a31-6392e7e82480').
-narrative_ontology:cs_reading_relation('19f049c2-8712-476e-8a31-6392e7e82480', preparedness_persistence__competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation('19f049c2-8712-476e-8a31-6392e7e82480', preparedness_persistence__hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom('19f049c2-8712-476e-8a31-6392e7e82480', foundational, atrophy_is_real_and_measurable).
-narrative_ontology:cs_axiom_status(atrophy_is_real_and_measurable, holdable).
-narrative_ontology:cs_axiom_grounding('19f049c2-8712-476e-8a31-6392e7e82480', atrophy_is_real_and_measurable, empirically_contingent).
-narrative_ontology:cs_axiom('19f049c2-8712-476e-8a31-6392e7e82480', foundational, form_decoupled_from_function).
-narrative_ontology:cs_axiom_status(form_decoupled_from_function, holdable).
-narrative_ontology:cs_axiom_grounding('19f049c2-8712-476e-8a31-6392e7e82480', form_decoupled_from_function, empirically_contingent).
-narrative_ontology:cs_reference_frame('19f049c2-8712-476e-8a31-6392e7e82480', post_disaster_knowledge_preservation).
-narrative_ontology:cs_drift_state('19f049c2-8712-476e-8a31-6392e7e82480', contemporary_generational_atrophy, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('19f049c2-8712-476e-8a31-6392e7e82480', '').
+narrative_ontology:cs_story_uid(preparedness_persistence__husk_reading, 'aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2').
+narrative_ontology:cs_kernel_codification('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', formalized).
+narrative_ontology:cs_authority_grounding('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', extraction).
+narrative_ontology:cs_interpretation_layer_present('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2').
+narrative_ontology:cs_reading_relation('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', preparedness_persistence__competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', preparedness_persistence__hybrid_reading, influences).
+narrative_ontology:cs_axiom('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', foundational, drills_inspections_form_divorced_from_function).
+narrative_ontology:cs_axiom_status(drills_inspections_form_divorced_from_function, holdable).
+narrative_ontology:cs_axiom_grounding('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', drills_inspections_form_divorced_from_function, empirically_contingent).
+narrative_ontology:cs_axiom('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', foundational, institutional_beneficiary_perpetuates_theater).
+narrative_ontology:cs_axiom_status(institutional_beneficiary_perpetuates_theater, holdable).
+narrative_ontology:cs_axiom_grounding('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', institutional_beneficiary_perpetuates_theater, empirically_contingent).
+narrative_ontology:cs_reference_frame('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', post_founding_coordination_establishment).
+narrative_ontology:cs_drift_state('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', contemporary_25year_mark, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('aea9c7fa-8884-4fbe-b36e-7af6f1b6fff2', '').
 narrative_ontology:cs_kernel_id(preparedness_persistence__husk_reading, preparedness_persistence).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(preparedness_persistence__husk_reading, administrative_hierarchy).
-narrative_ontology:constraint_victim(preparedness_persistence__husk_reading, flood_exposed_population).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__husk_reading, emergency_management_bureaucracy).
+narrative_ontology:constraint_victim(preparedness_persistence__husk_reading, flood_exposed_populations).
+narrative_ontology:constraint_victim(preparedness_persistence__husk_reading, junior_operational_staff).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__husk_reading, drill_inspection_auditors).
+narrative_ontology:constraint_beneficiary(preparedness_persistence__husk_reading, political_leadership).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Designs and mandates drills and inspections; compiles compliance reports; maintains the institutional apparatus that attests readiness. Does not itself deploy into flood zones or coordinate first-response operations. Derives institutional legitimacy and budgetary justification from the appearance of preparedness. Has substantial discretion over what counts as 'successful' drill or 'passing' inspection — the metrics are internal to the apparatus.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, emergency_management_bureaucracy, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Live in flood-prone areas under the assumption that emergency management systems are operationally ready. Have no ability to test the actual competence of response systems before a flood occurs. Bear the consequence if the system fails — displacement, loss of property, loss of life. Cannot leave the region due to economic and social ties.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, flood_exposed_populations, payer,
+    powerless, biographical, trapped, regional).
+
+% Work as first responders, shelter operators, or evacuation coordinators. Participate in drills and inspections knowing the procedures have atrophied from practice. See the gap between the official training protocols and actual equipment, communication systems, and coordination capacity. Cannot exit without career cost; voice concerns but institutional structure incentivizes reporting compliance rather than operational gaps.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, junior_operational_staff, payer,
+    moderate, biographical, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(preparedness_persistence__husk_reading, junior_operational_staff, observer).
+
+% Conduct inspections and certify drills as 'passing.' Benefit from continued demand for their services by the institutional framework. Operate under directives that define success as procedural adherence rather than operational competence testing. Have professional incentive to validate the system rather than report critical gaps.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, drill_inspection_auditors, agenda_setter,
+    organized, biographical, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(preparedness_persistence__husk_reading, drill_inspection_auditors, beneficiary).
+
+% Can point to compliance with national preparedness standards and cite drill/inspection reports as evidence of readiness. If a flood occurs and response fails, the documentation provides plausible deniability: procedures were followed, drills were conducted, inspections were passed. Benefits from the appearance of preparedness without bearing operational responsibility.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, political_leadership, beneficiary,
+    institutional, biographical, mobile, regional).
+
+% Manage actual deployment in crisis. Would attest that equipment is degraded, communication networks are fragmented, coordination protocols are theoretical, and the organizational muscle memory for large-scale response has eroded. Their frank assessment is muted by institutional pressure to validate the official readiness narrative. They are partially excluded from the planning process; their operational insights compete with compliance metrics.
+narrative_ontology:constraint_stakeholder(preparedness_persistence__husk_reading, senior_operation_commanders, excluded,
+    institutional, biographical, constrained, regional).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(preparedness_persistence__husk_reading, emergency_management_bureaucracy).
+narrative_ontology:fixing_cost_class(preparedness_persistence__husk_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a common framework for what 'preparedness' means: standardized procedures, regular testing, documented capability baselines. Solves the coordination problem of aligning disparate regional emergency systems under national protocols.
+% TRANSFER_FUNCTION: Transfers institutional legitimacy from the bureaucratic apparatus to the state; transfers false confidence in operational readiness to the population at risk. Extracts deference and resources (funding, time, compliance labor) from operational staff and flood-exposed communities in exchange for the symbolic appearance of readiness, not demonstrable capacity.
+% ABSENT_VOICES: Senior operational commanders who understand the gap between official procedures and actual capability; flood-affected residents from the last major disaster who experienced the system's actual performance; independent emergency-management experts from outside the benefiting bureaucracy who could audit real readiness rather than procedural compliance.
+% DISAPPEARANCE_RATIONALE: If the drill-and-inspection apparatus vanished, the institutional basis for claiming preparedness would collapse. Regional governments would face pressure to conduct actual competence-based testing or genuine training refresh. Resources would shift from compliance theater to operational improvement. The population's implicit assumption of readiness would be shattered, likely triggering either real preparedness investment or public acknowledgment of the risk. The system would reorganize around demonstrable capacity rather than procedural attestation.
+% FOUNDING_PROBLEM: After major flood disasters revealed coordination gaps and communication failures, national governments established standardized emergency-management protocols and regular testing to ensure consistent readiness and inter-regional coordination.
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem — lack of coordination standards and testing infrastructure — is attested as solved by bureaucratic institutional actors. Senior operational commanders and emergency-management scholars outside the benefiting apparatus attest that the founding problem has been superseded: the real problem now is the gap between mandated procedures and actual operational capacity, which the ritual inspection apparatus actively obscures rather than solves. Flood-response after-action reports from recent events document the disparity.
+narrative_ontology:disappearance_verdict(preparedness_persistence__husk_reading, world_rearranges).
+narrative_ontology:founding_problem_status(preparedness_persistence__husk_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(preparedness_persistence__husk_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(preparedness_persistence__husk_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(preparedness_persistence__husk_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(preparedness_persistence__husk_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +237,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Theater_ratio of 0.71 at interval end (rising from 0.48) captures the constraint's defining feature: the constraint persists increasingly as performance rather than function. Extractiveness is high (0.62) because the administrative hierarchy extracts institutional legitimacy and political safety from the appearance of preparedness without bearing the cost of actual readiness — the extracted value is purely positional (being seen as prepared by supervisory authority and public) not operational (having an evacuation system that works). Suppression is moderate (0.58) because the constraint is maintained not through external coercion but through the structural architecture of incentives: career advancement through compliance, supervisory authority's acceptance of formal reports, and public confidence built on visible drills and signed inspection forms. Resistance is low (0.42) because the powerless flood-exposed population has no organized counter-position and institutional memory practitioners are excluded from the deliberative space where alternatives would be voiced. The measurements span 40 years and track the trajectory: extractiveness rises as administrative overhead grows and real competence investment stalls; theater_ratio rises as the functional link between drills and actual readiness weakens.
+ *   The husk reading declares this constraint a PITON: a former coordination function (establishing national preparedness standards) has atrophied into performative compliance. The theater_ratio trajectory (0.62 → 0.79) traces the growing disparity between formal drills/inspections (increasingly elaborate, well-documented, certified) and actual operational capacity (equipment degraded, communication fragmented, institutional memory eroded). The measured theater_ratio floor at 0.79 by interval end reflects a constraint operating almost entirely through procedural attestation rather than demonstrated competence. Suppression (0.72) is substantial because the apparatus actively mutes operational staff who report gaps — institutions redirect concerns into 'improvement plans' that generate more theater. Extractiveness (0.68) is high because the system extracts deference, resources, and false confidence from the population at risk in exchange for ceremonial readiness, not real preparedness. The accessibility_collapse (0.42) is moderate-low because alternatives EXIST and are visible to those inside the system — the junior staff and operational commanders know the procedures are theoretical; they could refuse to participate or blow the whistle, but the institutional cost is high and the beneficiary's suppression machinery makes exit costly. The resistance (0.51) is moderate: junior staff push back (generating 'improvement initiatives' that stay cosmetic), public concern after near-miss floods rises temporarily, but no sustained challenge breaks through because the bureaucratic apparatus absorbs criticism and reconstitutes the theater. The claimed type (piton) reflects that this is no longer a mountain (natural, irreplaceable) nor a functional rope (genuine coordination) — it is an institutional practice maintained by inertia and the concentrated benefit to the agenda-setter despite diffuse cost to the payer.
  *
  * PERSPECTIVAL GAP:
- *   From the administrative hierarchy's seat, the constraint is coordination: maintain public order, ensure disaster readiness within budget constraints, satisfy regulatory compliance. From the flood-exposed population's seat, the constraint is pure extraction: they bear the risk (trapped in flood zone, relying on evacuation capacity) and receive theater (drills that don't prepare responders, inspections that don't verify actual capability). From supervisory authority's seat, the constraint appears as genuine coordination (they receive reports of compliance and certify preparedness). The engine computes this divergence from the structural data: the hierarchy's beneficiary status, the population's victim status, and their divergent power and exit options drive d-values toward opposite ends of the spectrum, yielding different type-classifications at each seat.
+ *   From the bureaucratic agenda-setter's seat, the apparatus IS preparedness: procedures are in place, drills happen on schedule, inspections certify compliance. The theater appears as functional form. From the junior operational staff and flood-exposed population's seat, the apparatus IS the problem: form has decoupled from capability, resources go to certification rather than real training, the population's vulnerability is masked by false confidence. The engine will compute this divergence from the structural data: the beneficiary (bureaucracy) sits near d=0 (collects benefit, no exit cost); the payer (population, junior staff) sits near d=1.0 (bears cost, trapped or heavily constrained exit). The gap between seats' computed types is the measurement the framework exists to capture — a constraint CLAIMED as piton that computes differently across seats reveals the asymmetric extraction the husk reading exposes.
  *
  * DIRECTIONALITY LOGIC:
- *   Administrative hierarchy: beneficiary role (collects legitimacy) + institutional power + arbitrage exit (can change the system at will) → d near 0.1 (full beneficiary end). Flood-exposed population: payer role (bears the readiness risk) + powerless + trapped exit (geographic and economic immobility) → d near 0.95 (full target end). Emergency management personnel: mixed (benefit from career advancement through compliance, pay by being bound to a non-functional framework) + moderate power + constrained exit → d near 0.55 (symmetric). Supervisory authority: observer role, analytical power, analytical exit → d not computed (external seat). Institutional memory practitioners: excluded role, would be targets if seated, powerless + trapped → d would be near 0.90 if they had formal standing (the exclusion itself is structural suppression).
+ *   The agenda-setter (emergency_management_bureaucracy) benefits from the continuation of the apparatus without needing to improve actual capacity: d ≈ 0.1 (pure beneficiary, high institutional power, arbitrage exit if need be, can simply recalibrate what counts as readiness). The payer seats diverge: flood_exposed_populations are d ≈ 1.0 (trapped, powerless, receive no direct benefit, bear existential risk); junior_operational_staff are d ≈ 0.85 (constrained exit, moderate power, see the gap and bear responsibility for the gap's consequences without authority to fix it); political_leadership are d ≈ 0.25 (beneficiary from plausible deniability, but institutionally positioned so bear some reputational cost if catastrophic failure occurs — not a full target, but held by the apparatus). Senior_operation_commanders are d ≈ 0.65 (institutionally excluded, would be hit by failure consequences, constrained exit, but retain some professional status and information asymmetry advantage). The directionality derivation from victims (flood_exposed, junior_staff) + beneficiaries (bureaucracy, political_leadership) + power + exit_options produces this spectrum. Override: senior_operation_commanders nominally 'organized' institutional power, but their role is 'excluded' and their actual structural relationship is as a constrained target (they will bear operational responsibility for the system's failure in ways the agenda-setter will not) — no override needed because the structural data already specifies 'excluded,' but note the specification captures the constraint's asymmetry.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem was genuine: after the prior flood, knowledge preservation through coordinated drills and training prevented generational loss of evacuation expertise. That problem is now dead — the current system no longer addresses knowledge preservation and instead addresses the problem of demonstrating compliance with a formalized schedule to supervisory authority. The constraint meets all Piton criteria: (1) it persists through inertia and theatrical maintenance rather than genuine coordination or extraction of rents by a capturer; (2) no party benefits enough to maintain it if challenged (the hierarchy only benefits from continuity, not from the system's actual function); (3) no party bears enough concentrated cost to fix it alone (the population bears the risk but has no power; the hierarchy bears only legitimacy cost, not operational cost); (4) the cost to alter the system (retraining, immersive drill design, mentorship infrastructure) exceeds what any single administrator will invest. The divergence between claimed founding problem (knowledge preservation) and actual institutional function (compliance demonstration) is the canonical Piton signature.
+ *   The mandatrophy (mandate outliving function) is explicit in this reading. The founding mandate — establish national emergency-management standards to ensure coordination and readiness — is accomplished: standards exist, procedures are uniform, inter-agency coordination is formal. But the apparatus continues and THICKENS because the institutional beneficiaries profit from it without running the risk it was meant to manage. The constraint persists through theater because: (1) dismantling the apparatus would admit publicly that preparedness was theater, creating reputational cost for political leadership and budgetary cost for the bureaucratic agenda-setter; (2) the payers (populations, junior staff) lack the power to demand actual competence instead of ritual; (3) the suppression machinery (institutional pressure, career consequences, information asymmetry) mutes the operational actors who know the gap. The piton classification captures this precisely: the constraint is maintained not by its function (that is dead or atrophied) but by institutional inertia and the concentrated benefit to those who administer it.
  */
 
 /* ==========================================================================
@@ -192,64 +254,82 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    atrophy_vs_natural_drift,
-    'Is the measured decline in actual evacuation readiness the result of deliberate organizational non-investment in genuine competence, or a natural attrition of institutional knowledge over generational turnover?',
-    'Compare organizations where the founding problem (knowledge preservation after disaster) is actively resourced — mentorship programs, immersive training, simulation with real-scenario complexity — to those where drills are performed as scheduled ritual. If actively-resourced organizations maintain readiness while ritual-only organizations show uniform atrophy, atrophy is deliberate structure choice, not drift.',
-    'If deliberate: the constraint''s victim and beneficiary roles are clear (hierarchy benefits from low-cost legitimacy theater; population bears the readiness risk). If natural drift: the constraint might be tragic accident rather than structural extraction, shifting the type toward Piton-of-institutional-inertia rather than Piton-of-maintenance-capture.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(atrophy_vs_natural_drift, empirical, 'Whether atrophy is deliberate organizational choice or emergent knowledge loss.').
-
-omega_variable(
-    competing_readings_empirical_test,
-    'What would falsify each reading? If an actual flood event occurs and evacuation succeeds, does that support competence_reading? If it fails and reveals atrophy, does that support husk_reading?',
-    'Post-disaster assessment: measure actual evacuation outcomes against pre-disaster drill protocols and inspection certifications. Conduct forensic interviews with responders about their real-time knowledge, decision-making, and coordination under stress. Identify specific points where the drills did or did not prepare them.',
-    'A successful evacuation with revealed atrophy in non-critical subsystems would support hybrid_reading (stratified competence). A failed evacuation traceable to missing knowledge tested in no drill would support husk_reading. Successful evacuation with drill-to-reality correspondence would support competence_reading.',
+    actual_operational_capacity_unknown,
+    'What is the actual, tested operational capacity of this emergency management system under large-scale real-world flood conditions? How divergent is it from the capacity implied by passed inspections and successful drill performances?',
+    'Post-event analysis after the next major flood: compare actual system performance to pre-event certification records and drill results. Independent external audit of equipment state, communication network integrity, and coordination protocols using conditions that match real-world constraints (equipment failures, communication degradation, resource scarcity). Competence-based testing rather than procedural compliance testing.',
+    'If the gap is large (actual capacity substantially below certified capacity), the constraint shifts structurally from piton toward snare — the apparatus is actively deceiving the population rather than passively performing ritual. If the gap is small, the constraint may shift toward the hybrid_reading (some components competent, others ritualized). The size of the gap determines whether this reading or the competence_reading dominates empirically.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(competing_readings_empirical_test, empirical, 'Empirical test distinguishing readings through actual disaster response outcomes.').
+narrative_ontology:omega_variable(actual_operational_capacity_unknown, empirical, 'The unknown actual operational capacity of the preparedness apparatus, concealed by the theater of inspection.').
 
 omega_variable(
-    kernel_reading_committer_ambiguity,
-    'Is preparedness a single unified constraint (one kernel, three readings of the same thing) or three distinct constraints (competence, husk, hybrid are separate things evaluated under different observables)?',
-    'Test ε-invariance: does the measure of extractiveness change when the observable shifts from ''does the drill demonstrate current knowledge'' to ''does the protocol match actual organizational capability'' to ''are critical subsystems tested, others not''? If ε changes fundamentally with the observable choice, the readings instantiate different constraints, not different readings of one kernel.',
-    'If different constraints: decompose into three JSON files per the ε-invariance principle, linked via network.affects_constraints, not treated as readings of a single kernel. If one kernel: the reading-relations structure below is correct and the three readings coexist as competing legitimate frames of the same institutional commitment.',
+    institutional_incentive_structure_persistence,
+    'Are the beneficiary institutional actors (bureaucracy, political leadership, audit agencies) structurally locked into defending the theater, or could they transition to genuine competence-based assessment without career/budgetary cost?',
+    'Policy experiment: establish independent, competence-based assessment alongside or replacing compliance-based certification. Track whether institutional actors resist, redefine success, or reorganize. Analyze career consequences for those who advocate genuine competence testing. Historical analysis of past attempts at competence-based reform and what happened.',
+    'If actors are locked in (career cost for admission of gaps is high), the theater persists indefinitely — suppression remains high, extraction continues. If transition is possible but costly (requires reframing, admits past failure), the apparatus might shift toward hybrid_reading (some honest assessment mixed with retained theater). If transition is low-cost, the reading might shift toward competence_reading or disintegrate.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_committer_ambiguity, conceptual, 'Whether preparedness is one contested kernel or three distinct constraints.').
+narrative_ontology:omega_variable(institutional_incentive_structure_persistence, preference, 'Whether institutional beneficiaries can exit the theater without career/political cost, or are locked into defending it.').
+
+omega_variable(
+    suppression_mechanism_internalized_vs_structural,
+    'Is the suppression that keeps junior operational staff from reporting the gap between procedure and capacity STRUCTURAL (external institutional pressure, career consequences, authority hierarchies) or INTERNALIZED (staff have adopted the belief that procedures are adequate, or have identity-fused with the apparatus)?',
+    'Post-exit analysis: track junior staff who leave the system — do they continue believing the procedures are adequate, or do they revise? Anonymous reporting mechanisms that remove institutional pressure — what do staff report about actual capacity when not under observation? Interviews with staff who have experienced both inside and outside the system. Comparison with staff in hybrid systems that are more transparent about gaps.',
+    'If suppression is structural, removing institutional pressure (independent agency, whistleblower protection, transparent reporting) would shift the narrative quickly. If suppression is internalized, the constraint persists even after people leave the apparatus — they carry the belief with them. Internalized suppression suggests the apparatus has actively trained people to conflate form with function, requiring re-education alongside institutional reform.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Whether suppression is structural institutional pressure or internalized belief, with different remediation paths.').
+
+omega_variable(
+    kernel_reading_empirical_adjudication,
+    'Is the husk_reading or the competence_reading more empirically accurate about the actual state of this specific preparedness apparatus?',
+    'Post-event analysis from recent major disasters where this apparatus was deployed. Comparison of predicted vs. actual system performance. External audit of equipment, communication, coordination readiness by researchers outside the benefiting institution. Analysis of lesson-learned reports and how many lessons are actually implemented. Frequency of discovered failures in drills vs. operational deployments.',
+    'If competence_reading is accurate, the husk reading is a reading imposed by cynics/researchers and the constraint should compute toward competence-verified rope or mountain (genuine coordination). If husk_reading is accurate, the constraint is correctly classified as piton with high theater and should compute toward snare from the payer seats. The kernel contest is partly empirical — the readings make factual claims about the system''s actual operational state, not just normative claims about what matters.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(kernel_reading_empirical_adjudication, empirical, 'Whether the apparatus is actually competent (competence_reading) or actually atrophied (husk_reading) — an empirical question about real-world operational performance that only real deployment reveals.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(preparedness_persistence__husk_reading, 0, 40).
+narrative_ontology:interval(preparedness_persistence__husk_reading, 0, 25).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__husk_reading, theater_ratio, 0, 0.48).
-narrative_ontology:measurement(prep_tr_t8, preparedness_persistence__husk_reading, theater_ratio, 8, 0.55).
-narrative_ontology:measurement(prep_tr_t16, preparedness_persistence__husk_reading, theater_ratio, 16, 0.63).
-narrative_ontology:measurement(prep_tr_t24, preparedness_persistence__husk_reading, theater_ratio, 24, 0.68).
-narrative_ontology:measurement(prep_tr_t32, preparedness_persistence__husk_reading, theater_ratio, 32, 0.7).
-narrative_ontology:measurement(prep_tr_t40, preparedness_persistence__husk_reading, theater_ratio, 40, 0.71).
+narrative_ontology:measurement(prep_tr_t0, preparedness_persistence__husk_reading, theater_ratio, 0, 0.62).
+narrative_ontology:measurement(prep_tr_t3, preparedness_persistence__husk_reading, theater_ratio, 3, 0.67).
+narrative_ontology:measurement(prep_tr_t6, preparedness_persistence__husk_reading, theater_ratio, 6, 0.71).
+narrative_ontology:measurement(prep_tr_t10, preparedness_persistence__husk_reading, theater_ratio, 10, 0.75).
+narrative_ontology:measurement(prep_tr_t15, preparedness_persistence__husk_reading, theater_ratio, 15, 0.78).
+narrative_ontology:measurement(prep_tr_t20, preparedness_persistence__husk_reading, theater_ratio, 20, 0.81).
+narrative_ontology:measurement(prep_tr_t25, preparedness_persistence__husk_reading, theater_ratio, 25, 0.79).
 
 % Extraction over time
-narrative_ontology:measurement(prep_be_t0, preparedness_persistence__husk_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(prep_be_t8, preparedness_persistence__husk_reading, base_extractiveness, 8, 0.54).
-narrative_ontology:measurement(prep_be_t16, preparedness_persistence__husk_reading, base_extractiveness, 16, 0.59).
-narrative_ontology:measurement(prep_be_t24, preparedness_persistence__husk_reading, base_extractiveness, 24, 0.61).
-narrative_ontology:measurement(prep_be_t32, preparedness_persistence__husk_reading, base_extractiveness, 32, 0.62).
-narrative_ontology:measurement(prep_be_t40, preparedness_persistence__husk_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(prep_be_t0, preparedness_persistence__husk_reading, base_extractiveness, 0, 0.54).
+narrative_ontology:measurement(prep_be_t3, preparedness_persistence__husk_reading, base_extractiveness, 3, 0.58).
+narrative_ontology:measurement(prep_be_t6, preparedness_persistence__husk_reading, base_extractiveness, 6, 0.62).
+narrative_ontology:measurement(prep_be_t10, preparedness_persistence__husk_reading, base_extractiveness, 10, 0.65).
+narrative_ontology:measurement(prep_be_t15, preparedness_persistence__husk_reading, base_extractiveness, 15, 0.67).
+narrative_ontology:measurement(prep_be_t20, preparedness_persistence__husk_reading, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement(prep_be_t25, preparedness_persistence__husk_reading, base_extractiveness, 25, 0.68).
 
-% Suppression authored static: scalar-only by design, no temporal series
-narrative_ontology:suppression_profile(preparedness_persistence__husk_reading, static).
+% Suppression requirement over time
+narrative_ontology:measurement(prep_su_t0, preparedness_persistence__husk_reading, suppression_requirement, 0, 0.58).
+narrative_ontology:measurement(prep_su_t3, preparedness_persistence__husk_reading, suppression_requirement, 3, 0.62).
+narrative_ontology:measurement(prep_su_t6, preparedness_persistence__husk_reading, suppression_requirement, 6, 0.66).
+narrative_ontology:measurement(prep_su_t10, preparedness_persistence__husk_reading, suppression_requirement, 10, 0.7).
+narrative_ontology:measurement(prep_su_t15, preparedness_persistence__husk_reading, suppression_requirement, 15, 0.72).
+narrative_ontology:measurement(prep_su_t20, preparedness_persistence__husk_reading, suppression_requirement, 20, 0.73).
+narrative_ontology:measurement(prep_su_t25, preparedness_persistence__husk_reading, suppression_requirement, 25, 0.72).
 
 
 /* ==========================================================================
@@ -257,18 +337,18 @@ narrative_ontology:suppression_profile(preparedness_persistence__husk_reading, s
    ========================================================================== */
 
 narrative_ontology:coordination_type(preparedness_persistence__husk_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(preparedness_persistence__husk_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(preparedness_persistence__husk_reading, 0.18).
 narrative_ontology:affects_constraint(preparedness_persistence__husk_reading, preparedness_persistence__competence_reading).
 narrative_ontology:affects_constraint(preparedness_persistence__husk_reading, preparedness_persistence__hybrid_reading).
 
 % DUAL FORMULATION NOTE:
-% The preparedness_persistence kernel decomposes into three constraint stories representing three legitimate but contested readings of how to understand flood-disaster preparedness systems. Husk_reading asserts that form has decoupled from functional capacity and the system now persists as Piton (atrophied institutional function maintained theatrically). Competence_reading asserts that drills and inspections maintain real operational readiness (Rope or Tangled_Rope depending on how enforcement is measured). Hybrid_reading asserts that some subsystems remain genuinely competent while others have ritualized. Each reading instantiates a different constraint with potentially different ε, beneficiary/victim structures, and classifications. They are linked via network.affects_constraints to signal that they are readings of the same contested kernel, not independent constraints. The contest between them is not resolvable in a single constraint story; the corpus carries all three.
+% The preparedness_persistence kernel decomposes into three constraint stories, each instantiating a different reading of whether drills/inspections constitute live knowledge or memorial performance. Husk_reading (this story) asserts the apparatus is atrophied piton maintained by institutional beneficiaries; competence_reading asserts it is live rope; hybrid_reading asserts components diverge. The readings are not observables of one constraint — they are three different constraints authored by three different committer frames. Each has its own ε (husk: 0.68, high extraction), beneficiary structure (husk: bureaucracy + political leadership; competence: population + junior staff), and type (husk: piton; competence: rope). The network links them: husk_reading INFLUENCES both siblings by creating structural pressure that would dissolve them if widely believed. They COEXIST through different parties holding different readings. See preparedness_persistence__competence_reading.json and preparedness_persistence__hybrid_reading.json for the sibling readings.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(preparedness_persistence__husk_reading, powerless, 0.93).
+constraint_indexing:directionality_override(preparedness_persistence__husk_reading, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

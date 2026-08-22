@@ -4,176 +4,291 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "e0a3b86d-c881-4620-9d19-83299fce8bde"
+    "story_uid": "9d3ce4b8-4fdd-48d7-a9a9-7155b7b32a21",
+    "created_at": "2026-06-12T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.58,
+    "extractiveness": 0.68,
+    "suppression": 0.62,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.48,
+    "accessibility_collapse": 0.58,
     "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "First Amendment Categorical Balancing Doctrine (Judicial Gatekeeping)",
+    "human_readable": "First Amendment Categorical Balancing (Judicial Case-by-Case Reading)",
     "topic_domain": "constitutional_law/political_philosophy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "federal_judiciary",
-      "institutional_speech_governance_actors"
+      "federal_judiciary"
     ],
     "victims": [
-      "excluded_speech_categories",
-      "legal_certainty_seekers",
-      "minority_speakers_in_unprotected_categories"
+      "categories_deemed_unprotected",
+      "legal_predictability"
+    ],
+    "vindicated_propositions": [
+      "judicial_superintendence_of_speech_boundaries",
+      "balancing_test_legitimacy"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the First Amendment via case-by-case balancing, adjudicating which speech categories merit protection and which do not. Sets the boundaries of 'obscenity,' 'incitement,' 'true threats,' 'fighting words' through doctrine. Each ruling expands or contracts the protected set. Maintains authority over the meaning of the amendment through continuous reinterpretation."
+    },
+    {
+      "name": "speakers_in_protected_categories",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive protection from state suppression provided they stay within judicially-recognized protected categories (political speech, artistic expression, commercial speech where permitted). Benefit from predictable, if negotiated, boundaries. Cost: must constantly monitor judicial reinterpretation; cannot speak in ways the courts have not yet certified as protected."
+    },
+    {
+      "name": "categories_deemed_unprotected",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Speech within categories the judiciary has deemed unprotected (obscenity, incitement, true threats, fighting words) receives no First Amendment shield. Speakers in these categories bear the cost of the categorical regime: their speech can be criminalized or suppressed without constitutional constraint. The trapped position stems from the category definition, not individual choice—a speaker cannot 'exit' unprotected speech by personal effort if their expression falls within the category."
+    },
+    {
+      "name": "legal_predictability",
+      "role": "payer",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The balancing-test approach trades certainty for flexibility: each new case can redefine the boundaries of protected speech. This preserves judicial interpretive authority but imposes costs on parties trying to comply with speech law ex ante. Rules are not fixed; outcomes depend on judicial judgment about proportionality and harm."
+    },
+    {
+      "name": "state_legislatures",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Cannot freely regulate speech; must operate within the judicially-set boundaries of protected and unprotected categories. Can legislate only in unprotected zones. Would prefer fixed, negotiated boundaries or the power to redefine them; excluded from the conversation about where the lines are drawn."
+    },
+    {
+      "name": "minority_advocacy_groups",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Often occupy borderline categories where balancing tests produce unpredictable protection. Speech that challenges dominant norms may be characterized as incitement, fighting words, or true threats by state actors, leaving the judiciary to certify protection after suppression has occurred. Their exit is constrained: they cannot know ex ante whether their speech will be deemed protected."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes stable doctrinal categories (obscenity, incitement, true threats) that partition speech into protected and unprotected zones, creating a known boundary that speakers and state actors can reference. Solves the coordination problem: without categorical law, every speech act would trigger individualized judicial review, paralyzing both speakers and regulators.",
+    "transfer_function": "Transfers authority to define the protected/unprotected boundary from legislatures and communities to the federal judiciary. Moves predictability (from fixed rules) into discretionary balancing (case-by-case adjudication). Speakers conform to judicially-set categories in exchange for constitutional protection; states conform to judicial doctrine in exchange for having some regulatory space (unprotected categories).",
+    "absent_voices": "The speakers whose expression falls within unprotected categories have no seat at the table—their interests are adjudicated after suppression by parties (state actors, victims of speech-caused harm) who have incentive to keep categories narrow. Communities claiming injury from speech in 'protected' categories (e.g., hate speech communities) are structurally excluded from the balancing: they are not the recognized harm vector in First Amendment doctrine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the categorical balancing regime vanished, speech regulation would either revert to legislative rule-making (states independently criminalize speech categories, with no uniform constitutional ceiling—a fragmented landscape) or shift to absolutist protection (no judicially-recognized unprotected categories—a different constraint entirely). The current equilibrium would dissolve.",
+    "founding_problem": "Determined that the First Amendment, though written absolutely ('no law'), must have boundaries: some speech (incitement to imminent lawless action, true threats of violence) cannot be protected without enabling direct harm. The balancing test emerged as a judicial solution to define where the boundaries are, moving from blanket categorical exclusions (sedition, libel) toward a more speech-protective stance grounded in harm assessment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The judiciary attests the problem is live: speech can incite violence, threaten individuals, incur measurable harm. Civil rights advocates and scholars outside the judiciary attest that the founding problem (protecting speakers from state censorship) persists and that the categorical balancing approach has been underprotective: marginalized groups experience the unprotected categories as cover for suppression. Absolutist scholars argue the problem is solved by the text ('no law') and balancing is mission creep."
+  },
   "interval": {
-    "start": 1950,
-    "end": 2024
+    "start": 0,
+    "end": 75
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1950,
-      "value": 0.48
+      "time_point": 0,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1975,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.59
+      "time_point": 20,
+      "value": 0.55,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.61
+      "time_point": 30,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.62
+      "time_point": 45,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.62
+      "time_point": 60,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.68,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.22
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1975,
-      "value": 0.28
+      "time_point": 10,
+      "value": 0.26,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.35
+      "time_point": 20,
+      "value": 0.31,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.39
+      "time_point": 30,
+      "value": 0.36,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.41
+      "time_point": 45,
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.41
+      "time_point": 60,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1950,
-      "value": 0.42
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1975,
-      "value": 0.48
+      "time_point": 10,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1990,
-      "value": 0.53
+      "time_point": 20,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.57
+      "time_point": 30,
+      "value": 0.59,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.58
+      "time_point": 45,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.58
+      "time_point": 60,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.62,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The categorical balancing reading of the First Amendment holds that the judiciary has authority to define protected and unprotected speech categories by weighing the speech's constitutional value against the harms it causes. Obscenity, incitement to imminent lawless action, and true threats are excluded from protection; borderline cases are resolved through ad hoc balancing tests (strict scrutiny for content-based restrictions, intermediate scrutiny for content-neutral time/place/manner rules). The beneficiary is the federal judiciary, which maintains interpretive control and authority to refine categories. The victims are speakers in unprotected categories, who face legal unpredictability and disproportionate enforcement risk, and legal-risk-averse institutions that must absorb litigation costs. This reading COEXISTS with absolutist and harm-limited readings as live constitutional positions held by different judicial factions, scholars, and political movements — no single framework within American constitutionalism rules out the alternatives, though this reading's institutional dominance suppresses them from current doctrine.",
+    "narrative_context": "This constraint story instantiates the categorical balancing reading of the First Amendment kernel. The reading treats the First Amendment as creating a judicially-administered boundary between protected and unprotected speech categories, drawn via case-by-case balancing of speech value against demonstrable harm. The beneficiary of this reading is the institutional judiciary, which gains authority to continuously redefine the protected set through doctrine. The victims are: (1) speakers whose expression falls within unprotected categories, who receive no constitutional shield regardless of the actual harm caused by their specific utterances; (2) legal predictability itself, which is sacrificed to preserve judicial interpretive flexibility. The constraint is CLAIMED as tangled_rope (coordination via balancing function + asymmetric extraction via judicial authority maintenance) while the authored metrics describe moderate extractiveness and significant suppression—the engine computes per-seat divergence from this structural data.",
     "key_agents": [
-      "federal_judiciary: Maintains categorical framework and gatekeeping authority; defines what counts as protected speech through precedent and case-by-case balancing",
-      "excluded_speech_categories: Powerless speakers whose speech receives no First Amendment protection once classified; bear full legal liability",
-      "legal_certainty_seekers: Publishers, broadcasters, and institutional speech actors forced to absorb legal risk and litigation costs as they navigate uncertain category boundaries",
-      "minority_speakers_in_unprotected_categories: Identity-locked speakers (radical, obscene, harassing) face disproportionate legal risk because their speech is more likely to be classified as unprotected",
-      "absolutist_reading_advocates: Excluded from doctrine; contest the judiciary's categorical authority and argue 'no law' is textually limiting",
-      "harm_prevention_advocates: Excluded from doctrine; argue harm-thresholds should replace categorical balancing"
+      "federal_judiciary: institutional agenda-setter maintaining authority over speech boundaries via continuous reinterpretation",
+      "speakers_in_protected_categories: organized beneficiaries receiving predictable (if negotiated) protection",
+      "categories_deemed_unprotected: powerless victims trapped in categorical exclusions",
+      "state_legislatures: excluded parties constrained to operate within judicially-set zones",
+      "minority_advocacy_groups: constrained payers occupying borderline categories with unpredictable protection"
     ],
-    "logic_rationale": "Extractiveness (0.62) reflects the judicial authority to impose category boundaries on speakers without their consent; speakers must either obey (self-censor), litigate (bear legal costs), or violate law (face prosecution). Suppression (0.58) is moderately high because the constraint's persistence depends on judicial enforcement of category boundaries and prosecution of unprotected speech; but it is not overwhelming because absolutist and harm-based alternatives remain plausible constitutional readings. Theater ratio (0.41) indicates that some categorical maintenance is performative — the judiciary articulates balancing rationales that shift over time (e.g., obscenity doctrine's evolution from Roth to Miller to contemporary digital contexts) while the fundamental category structure persists. Accessibility_collapse (0.48) is below 0.5 because alternatives remain; speakers can exit to other jurisdictions (functionally constrained), absolutists can litigate (constrained), and harm-prevention advocates can lobby legislatively (constrained but present). Resistance (0.72) is high because absolutist scholars, civil libertarians, and harm-prevention advocates actively contest categorical balancing; the doctrine's continuation requires sustained judicial defense against competing constitutional readings. Measurement series show extractiveness and theater rising from 1950 to ~2005, then plateauing — the doctrine crystallized as the judiciary settled on current category definitions (Miller obscenity test, Brandenburg incitement test, Virginia true-threats test) and further extraction accrues through increasingly creative application rather than doctrinal expansion.",
-    "perspectival_gap": "From the judiciary's seat, categorical balancing is genuine coordination: it provides a stable framework enabling speech governance without suppressing protected speech. The judiciary sees categories as evolutionary, refined by case law, and subject to principled judicial review. From the speaker's seat, especially in unprotected or borderline categories, the same constraint operates as gatekeeping extraction: speakers must predict which side of an unstable category boundary they fall on, absorb litigation costs if they guess wrong, and accept that judicial reinterpretation can reclassify their speech retroactively. From the legal-certainty seeker's perspective, the constraint imposes costs (legal risk, compliance burdens) that would vanish under bright-line rules. The absolutist and harm-limited readings further diverge: absolutists see the categories as unconstitutional judicial overreach; harm-advocates see categories as insufficiently protective of harm victims. The engine should compute radically different directionalities from these seats.",
-    "directionality_logic": "Beneficiary: federal_judiciary (role=agenda_setter; they set category boundaries, maintain interpretive authority, collect doctrinal legitimacy, face near-zero legal risk). Victims: excluded_speech_categories (powerless; receive no protection once classified), legal_certainty_seekers (moderate power but constrained exit; forced to absorb litigation costs), minority_speakers_in_unprotected_categories (powerless + identity_locked; doubly constrained). The constraint extracts legal predictability and category sovereignty from speakers and transfers them to the judiciary. Institutional beneficiary (law enforcement, agencies) gains framework stability; legal-risk seekers pay costs. No directionality override is needed; the structural data (beneficiary/victim, power atoms, exit options) derives appropriate d values. Absolutists and harm-advocates are excluded from rule-setting, which is a structural fact captured by role=excluded, not overridden directionality.",
-    "mandatrophy_analysis": "The constraint's founding problem was genuine: early-20th-century doctrine offered no operational framework for distinguishing protected speech from suppressible speech, leaving the judiciary to decide ad hoc with no principled limits. Categorical balancing solved that: it provided a framework (identify categories, apply scrutiny). However, the founding problem's status is now contested. Absolutists (Justice Thomas, some originalists) argue the problem was illicit — no categories should exist and the solution (categorical balancing) is itself a violation. Harm-prevention advocates argue the founding problem persists (unprotected speech still causes harm) but categorical balancing fails to address it adequately. The current doctrine shows mandatrophy signals: the theater_ratio rose from 0.22 to 0.41 (performative maintenance increased as category boundaries ossified), and extractiveness plateaued (further gains come from application, not doctrinal expansion). The judiciary continues to articulate balancing rationales but is operating more conservatively, protecting institutional authority rather than refining categories. The constraint persists despite contested founding legitimacy because judicial gatekeeping power suppresses alternative readings from becoming law.",
-    "kernel_context": "This constraint instantiates the CATEGORICAL_BALANCING reading of the kernel first_amendment_speech_protection. The kernel is the foundational First Amendment commitment: the Constitution protects freedom of speech. The reading specifies that this protection is realized through judicial categories (obscenity, incitement, true threats excluded) refined via case-by-case balancing of speech value against harm. Sibling readings (absolutist_reading, harm_limited_reading) offer structurally distinct instantiations of the same kernel. The absolutist reading claims no categories should exist except narrow historical exclusions; the harm_limited reading claims harm to unconsented-to parties outweighs protection. These readings compete in doctrine and in public discourse; none is foreclosed by the others within the U.S. constitutional framework. The categorical_balancing reading's institutional dominance (it is current doctrine) creates the appearance of resolution, but the contest remains live in scholarly and political discourse. The committer structure routes through omegas and through cs_structure.reading_relations/axioms."
+    "logic_rationale": "Extractiveness measures 0.68 because the categorical balancing regime concentrates speech-boundary-setting authority in the judiciary, which uses this authority to narrow protected zones over time (a weak trend visible in measurements 0–60, then flattening). Suppression measures 0.62 because speakers in borderline categories face active suppression (state enforcement in unprotected zones) that can only be overturned if the judiciary later certifies protection—the burden of proof is on the speaker to convince judges their speech should move from unprotected to protected. Theater measures 0.41 (moderate) because the balancing test is partially performative: the rhetoric of 'balancing' speech value against harm suggests careful calibration, but the actual outcome is that the judiciary maintains interpretive authority regardless of how the balance is struck. The unprotected categories (obscenity, incitement, true threats) remain stable in name but drift in scope as doctrine evolves. Accessibility_collapse measures 0.58 because alternatives to the categorical balancing regime exist (absolutism, harm-limited approaches, legislative rule-making) but are institutionally suppressed by the judiciary's control of the authoritative reading. Resistance measures 0.72 because speakers, civil rights advocates, and absolutist scholars actively contest the balancing approach—but the judiciary retains power despite this resistance. The temporal measurements show extractiveness rising from t0 to t60 (judicial authority consolidating over decades) then flattening (the regime reaches an equilibrium), while theater rises slightly throughout (performative maintenance becoming more salient as the underlying coordination function stabilizes).",
+    "perspectival_gap": "The federal judiciary and speakers in protected categories should compute near the beneficiary end (d ≈ 0.1–0.3): the regime offers them stable, predictable boundaries and constitutional authority. Speakers in unprotected categories compute near the target end (d ≈ 0.8–1.0): they are trapped by the categorical regime and receive no protection regardless of the actual harm their speech causes. State legislatures compute near the middle-target end (d ≈ 0.6–0.7): they have some regulatory space in unprotected zones but are constrained by the judicially-set boundaries and cannot independently redefine them. This divergence reflects the structural asymmetry: the regime is built on an agreement between the judiciary and the protected-speech beneficiaries at the expense of unprotected-speech payers.",
+    "directionality_logic": "The federal judiciary is the primary beneficiary (maintains interpretive authority over speech boundaries, collects the 'rent' of public deference to judicial interpretations). Speakers in protected categories are secondary beneficiaries (receive predictable protection, though the protection depends on staying within judicially-recognized boundaries). Speakers in unprotected categories and legal predictability are the primary victims: speakers are trapped in categories the judiciary has defined, and legal predictability is sacrificed to preserve the judiciary's flexibility to rebalance. State legislatures and minority advocacy groups are excluded rather than directly victimized, but their exclusion serves the judicial beneficiary. Exit options differentiate the seats: the judiciary has analytical exit (can always reinterpret); speakers in protected categories have mobile exit (can shift to different kinds of speech if their current speech is threatened); speakers in unprotected categories have trapped exit (no individual choice can move them from an unprotected category); legal predictability has no exit (it is not an agent). This distribution of exit_options feeds the directionality computation: trapped victims anchor the target end, mobile beneficiaries sit at the beneficiary end.",
+    "mandatrophy_analysis": "The categorical balancing regime solves a genuine coordination problem (defining speech boundaries ex ante so speakers and regulators can plan) but that solution has been partially captured by the judiciary as a mechanism to preserve its own authority. The mandatrophy question: has the founding problem (the need to protect speech from state censorship without allowing speech that directly causes harm) been solved, or has it been substituted with a different problem (the need to preserve judicial control over speech boundaries)? The measurement series suggests the regime has plateaued: extractiveness rises to t60, then flattens at t75, suggesting the judicial authority has consolidated and the regime has reached equilibrium. Theater rises throughout, indicating that over time more of the regime's activity is performative maintenance (rhetoric of balancing) rather than functional problem-solving (actual calibration of speech protection). The mandatrophy-resolved flag should be set to true if this reading acknowledges that the founding problem (state censorship of dissent) has been substantially solved and the regime now primarily extracts judicial authority rather than protects speech. However, this reading does NOT acknowledge that: from the categorical balancing perspective, the founding problem remains live (speech can still cause harm; unprotected categories must remain narrow but must exist). The engine may compute mandatrophy divergence, but this reading authors it as unresolved.",
+    "kernel_context": "This constraint instantiates the categorical_balancing_reading of the first_amendment_speech_protection kernel. The kernel is the First Amendment text itself ('Congress shall make no law abridging the freedom of speech'). The categorical balancing reading interprets this as establishing judicially-administered categories: protected speech (political speech, artistic expression, commercial speech with limitations) and unprotected speech (obscenity, incitement, true threats, fighting words). Sibling readings: (1) absolutist_reading treats the text as categorical in itself—'no law' means no law, with only narrow historical exclusions (fraud, immediate incitement). (2) harm_limited_reading treats the text as protecting all speech except speech that causes demonstrable, unconsented-to harm to others. The categorical balancing reading sits between absolutism (broader protection than absolutism in theory, narrower in practice because the judiciary can expand unprotected categories) and harm-limitation (more protective because it does not require actual harm to have occurred, only the category's membership). The key structural delta: this reading concentrates authority over the protected/unprotected boundary in the judiciary, whereas absolutism would place authority with the text and harm-limitation would place it with causation assessments."
   },
   "omegas": [
     {
-      "id": "category_boundary_drift",
-      "question": "Are the category boundaries (obscenity, incitement, true threats) stable constitutional commitments, or doctrinal positions that shift with judicial composition and social values?",
-      "resolution_mechanism": "Historical analysis of category definition changes (Miller replacing Roth; Brandenburg replacing Schenck; developments in true-threats doctrine after social media). Qualitative: track whether boundaries are described as 'discovered' (stable, constitutional) or 'evolved' (shifting, contingent).",
-      "impact": "If boundaries drift with judicial politics, the constraint is an unstable extraction mechanism (targets bear predictability costs and disproportionate risk from doctrinal shifts). If boundaries are stable, the constraint is more coordinate — participants can rely on categorical framework. Current evidence favors drift: Miller replaced Roth, Brandenburg replaced Schenck, true-threats doctrine expanded post-internet.",
+      "id": "categorical_boundary_drift",
+      "question": "Do the judicially-defined categories (obscenity, incitement, true threats) have stable meanings across time and contexts, or do they drift in scope as doctrine evolves?",
+      "resolution_mechanism": "Longitudinal analysis of Supreme Court opinions defining each category across decades, coding for doctrinal expansion/contraction. Comparison of the scope of 'incitement' in Brandenburg (1969) vs. contemporary sedition cases; same for 'obscenity' under Miller (1973) and later applications.",
+      "impact": "If boundaries drift significantly, the constraint operates less as stable categorical law and more as discretionary balancing disguised in categorical language (theater_ratio should rise and accessibility_collapse should fall). If boundaries are stable, the categorical framing captures the actual operation.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether speech categories are stable constitutional commitments or shifting doctrinal positions."
+      "description": "Whether categorical boundaries are stable or drift over time"
     },
     {
-      "id": "suppression_mechanism_internalization",
-      "question": "Is measured suppression (0.58) primarily structural (judicial gatekeeping prevents alternative readings) or internalized (speakers have learned to self-censor and accept judicial authority)?",
-      "resolution_mechanism": "Post-doctrine suppression trajectory: if free-speech litigation increases (speakers test boundaries), suppression is structural and actively resisted. If speakers withdraw from risky speech categories even when legal barriers lower, suppression is internalized (targets carry learned constraint after formal barrier removal).",
-      "impact": "If structural, removing judicial gatekeeping (adopting absolutism or harm-limits) might liberate speech. If internalized, speakers would continue self-censoring after formal regime change because they have internalized the categorical framework. Current evidence: litigation remains high, suggesting structural suppression dominates, but some self-censoring persists (speakers in borderline categories withdraw preemptively).",
+      "id": "trapped_exit_mechanism",
+      "question": "For speakers whose expression falls within an unprotected category, what is the actual mechanism by which they might exit the category (move their speech to protected territory)? Is exit genuinely trapped, or are there paths speakers can take to reframe their speech as protected?",
+      "resolution_mechanism": "Case studies of speakers who attempted to reframe banned speech as protected (e.g., incitement vs. political advocacy; obscenity vs. artistic expression). Analysis of success rates and the costs speakers bear in reframing attempts.",
+      "impact": "If speakers have workable reframing paths, exit_options should be 'constrained' rather than 'trapped,' d should shift downward for this seat, and effective extraction should be lower. If reframing is blocked by the categorical definition itself (a speaker cannot frame unprotected speech as protected without changing the substance of their message), then trapped is correct and extraction remains high.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Structural vs. internalized suppression mechanism in speech regulation."
+      "description": "Whether trapped exit option is structurally accurate or overstates constraint"
     },
     {
-      "id": "kernel_reading_contingency",
-      "question": "Is categorical balancing the inevitable constitutional reading of the First Amendment, or a contingent choice among structurally distinct alternatives (absolutism, harm-limits)?",
-      "resolution_mechanism": "Comparative constitutional law: jurisdictions with different speech frameworks (EU hate-speech laws, Canadian harm-based thresholds, absolute protections in some democracies) demonstrate that alternative readings are institutionally viable. Logical analysis: text of 'no law' could support absolutism, and empirical harm arguments support harm-limits. Neither alternative is foreclosed by constitutional logic; both are held by credible constitutional scholars and some judges.",
-      "impact": "If categorical balancing is contingent, the constraint's type classification depends on which reading (and which parties' seats) we evaluate. From the judiciary's seat it is stable coordination; from absolutist and harm-based seats it is institutional extraction of constitutional authority. The engine's per-seat classification should reveal this divergence. If categorical balancing is inevitable, the classification should be more uniform across seats.",
-      "confidence": "high",
+      "id": "judicial_authority_preservation_motive",
+      "question": "Does the judiciary maintain the categorical balancing regime primarily because it solves a genuine coordination problem (defining speech boundaries ex ante), or primarily because it preserves judicial authority to redefine boundaries over time?",
+      "resolution_mechanism": "Analysis of judicial opinions: do they emphasize coordination/predictability benefits (forward-looking) or judicial flexibility/superintendence benefits (backward-looking)? Comparison of judicial rhetoric over time as the regime matures.",
+      "impact": "If the primary motive is coordination, the regime is less extractive than authored (beneficiary=all speakers, extractiveness should drop). If the primary motive is authority preservation, the regime is as extractive as authored (beneficiary=judiciary, extractiveness stands). This is located in the axis between mandatrophy-resolved (problem solved) and mandatrophy-live (problem persists in new form).",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether categorical balancing is the inevitable First Amendment reading or a contingent institutional choice."
+      "description": "Whether the regime is primarily coordination or primarily authority preservation"
     },
     {
-      "id": "speech_value_measurement_problem",
-      "question": "Can 'speech value' be measured in a principled way that justifies judicial balancing, or is judicial balancing an implicit assertion that some speech is worth less without principled grounds?",
-      "resolution_mechanism": "Examine balancing test applications: do courts articulate principled speech-value measures (e.g., contribution to public discourse, individual autonomy interest), or do value judgments vary with judge and context? Logical analysis: if different judges assign different speech values to the same speech (e.g., political satire vs. crude harassment), the value metric lacks objectivity.",
-      "impact": "If speech value is principled and measurable, balancing is a genuine coordination mechanism enabling judicial review of suppression claims. If unmeasurable, balancing is a cover story for judicial discretion to suppress disfavored speech. Current jurisprudence shows value assignments varying by judge and changing over time, suggesting the metric is unstable.",
+      "id": "reading_vs_absolutist_foreclosure_test",
+      "question": "Does the categorical balancing reading logically foreclose the absolutist reading within a single judicial framework, or can both readings coexist as live options?",
+      "resolution_mechanism": "Theoretical analysis: can a court hold that (1) the First Amendment provides categorical protection except for judicially-recognized unprotected categories, AND (2) the First Amendment text ('no law') means what it says absolutely? If the court must choose, they foreclose; if both can hold simultaneously, coexistence is correct.",
+      "impact": "If foreclosure is correct, reading_relations.relation should be 'forecloses' and the engine will compute type divergence between readings. If coexistence is correct, relation should be 'coexists_with' and readings are fully live alternatives.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether speech value can be measured in principled ways or serves as cover for judicial discretion."
+      "type_class": "conceptual",
+      "description": "Logical foreclosure vs. coexistence between categorical balancing and absolutist readings"
+    },
+    {
+      "id": "harm_limitation_vs_categorical_balancing_boundary",
+      "question": "What is the structural relationship between the categorical balancing reading and the harm_limited_reading? Does categorical balancing foreclose, coexist with, or influence harm-limitation?",
+      "resolution_mechanism": "Theoretical analysis: categorical balancing defines unprotected categories WITHOUT requiring proof of actual harm in the individual case (the category itself justifies suppression). Harm-limitation requires proof of actual harm. These approaches produce different case outcomes when a speaker in an unprotected category causes no actual harm: categorical balancing would allow suppression; harm-limitation would not. Can both approaches hold in one framework? Probably not—they foreclose on actual case outcomes.",
+      "impact": "If foreclosure is correct, reading_relations.relation to harm_limited_reading should be 'forecloses.' If the readings merely influence each other (harm-limitation creates pressure to make unprotected categories narrower), relation should be 'influences.'",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between categorical balancing and harm-limitation approaches"
     }
   ],
   "boltzmann": {
@@ -183,73 +298,66 @@
   "network": {
     "affects_constraints": [
       "first_amendment_speech_protection__absolutist_reading",
-      "first_amendment_speech_protection__harm_limited_reading",
-      "obscenity_doctrine_miller_test",
-      "incitement_doctrine_brandenburg_test",
-      "true_threats_doctrine_virginia_jurisprudence"
+      "first_amendment_speech_protection__harm_limited_reading"
     ],
-    "dual_formulation_note": "The categorical_balancing reading is one of three structurally distinct instantiations of the first_amendment_speech_protection kernel. Sibling readings (absolutist_reading, harm_limited_reading) have different ε values, beneficiary/victim structures, and type classifications. All three should be consulted together to see how the same constitutional text grounds different constraints. The categorical_balancing reading influences downstream doctrine in obscenity, incitement, and true-threats constraints — those constraints inherit the category framework and apply it to specific speech types. Decomposition is driven by ε-invariance: the absolutist reading prohibits categories entirely (near-zero extracted authority from speakers), while categorical balancing extracts interpretive authority (moderate extraction); harm-limited reading extracts authority to suppress based on empirical harm (moderate-to-high extraction). One kernel, three readings, three different ε values."
+    "dual_formulation_note": "The first_amendment_speech_protection kernel decomposes into three structurally distinct constraint stories: (1) absolutist_reading: text-based protection, near-zero extraction, mountain candidate. (2) categorical_balancing_reading (this story): judicially-administered categories, moderate-high extraction, tangled_rope. (3) harm_limited_reading: causation-based protection, harm-focused extraction. The three readings are sibling interpretations of the same constitutional text; they are not different framings of one constraint but genuinely different constraints with different ε values, different beneficiaries, and different victim structures. Each reading grounds itself in a different interpretation of what the First Amendment IS—what harm it prevents, what authority enforces it, what the protected set includes. The readings coexist institutionally (different judges, different eras, different jurisdictions adopt different readings) and logically constrain each other (a court that adopts categorical balancing has forecloses absolutism within its own framework for that specific case)."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerful",
-      "d_value": 0.68
-    }
-  ],
+  "directionality_overrides": [],
+  "gain_flow": "federal_judiciary",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "judicial_superintendence_of_speech_boundaries",
+    "drift_state": {
+      "moment": "contemporary_political_polarization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "first_amendment_speech_protection__absolutist_reading",
+        "sibling_id": "absolutist_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "first_amendment_speech_protection__harm_limited_reading",
-        "relation": "coexists_with"
+        "sibling_id": "harm_limited_reading",
+        "relation": "influences"
       }
     ],
     "axioms": [
       {
-        "atom": "speech_value_harm_balancing_is_constitutionally_permissible",
+        "atom": "judicial_categories_define_protection",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
       },
       {
-        "atom": "categorical_exclusions_do_not_violate_no_law_text",
+        "atom": "speech_value_harm_balancing_legitimate",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "conventional"
       }
-    ],
-    "reference_frame": "judicial_categorical_framework_for_speech_protection",
-    "drift_state": {
-      "moment": "contemporary_doctrinal_equilibrium_2020s",
-      "direction": "stable",
-      "magnitude": "minor",
-      "acknowledged": true
-    }
+    ]
   },
   "uke_scope": {
-    "epsilon_bin": "moderate_to_high",
+    "epsilon_bin": "high",
     "hypothesis": "tangled_rope",
     "downstream_of": [
-      "first_amendment_speech_protection__kernel",
-      "obscenity_doctrine_miller_test",
-      "incitement_doctrine_brandenburg_test"
+      "first_amendment_speech_protection"
     ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

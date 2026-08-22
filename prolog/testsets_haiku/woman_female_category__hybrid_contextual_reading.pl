@@ -40,15 +40,20 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +62,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +73,41 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: woman_female_category__hybrid_contextual_reading
- *   human_readable: Hybrid Contextual Reading: Category Membership Varies by Domain
+ *   human_readable: Woman/Female Category Membership by Context (Hybrid Contextual Reading)
  *   domain: political_philosophy/bioethics/law
  *
  * SUMMARY:
- *   The hybrid contextual reading of the woman/female category holds that
- *   biological sex is the relevant categorization frame in medical,
- *   reproductive, and sports contexts, while gender identity is the relevant
- *   frame in legal and social-recognition contexts. This reading instantiates
- *   one answer to the contested kernel: instead of choosing a universal
- *   principle (sex-only or identity-only), it asserts that legitimacy varies
- *   by domain. The constraint enforces this domain-switching rule by
- *   requiring institutions to maintain dual categorization systems, apply
- *   different criteria in different spaces, and defend the inconsistency as
- *   pragmatic rather than principled. The reading reflects a real
- *   institutional accommodation that emerged from regulatory and judicial
- *   precedent in the 2010s–2020s; it is the reading most institutions have
- *   adopted operationally, though it remains contested by advocates of both
- *   sibling readings. The extraction is moderate (0.58) because the
- *   constraint requires active institutional labor to maintain and generates
- *   genuine conflict that no party fully accepts; suppression is higher
- *   (0.71) because the constraint's persistence depends on institutional
- *   actors enforcing domain-switching rules against resistance from both
- *   trans-rights and sex-essentialist advocates.
+ *   The woman/female category is contested across three logically
+ *   incompatible readings: one grounds it in biological sex (chromosomal,
+ *   anatomical, reproductive), one in gender identity (self-identification
+ *   with the social category), and the third (hybrid contextual) fragments
+ *   the referent by domain — sex-based for medical/sports/security contexts,
+ *   gender-identity-based for legal/administrative/social recognition. This
+ *   JSON instantiates the hybrid reading as a constraint — not as a policy
+ *   recommendation, but as the standing institutional arrangement in many
+ *   jurisdictions. The reading operates by deferring the kernel dispute to
+ *   context-specific authorities and allowing them to apply sex or gender
+ *   categorization as their domain deems necessary. The constraint is
+ *   extractive because it preserves institutional authority and the
+ *   appearance of neutrality while leaving both sex-based and
+ *   gender-identity-based constituencies partially unsatisfied. The
+ *   claim/metric independence is critical: the hybrid reading is CLAIMED as
+ *   tangled_rope (it does coordinate institutional conflict minimization,
+ *   which is real) while the authored metrics describe extractive operation
+ *   (extraction rises as institutions encounter litigation and enforcement
+ *   costs, theater as the partition claim itself becomes performative). Do
+ *   not reconcile the claim to the metrics; the divergence is the
+ *   measurement.
  *
  * KEY AGENTS:
- *   - institutional_policy_administrators: agenda-setters operating the dual-categorization machinery; powerful, entranced in the bureaucratic cost of managing two parallel tracks (d~0.15, structural beneficiary)
- *   - trans_women_in_biological_sex_contexts: payers bearing subordination in medical/sports domains; powerless, identity-locked, facing repeated misclassification (d~0.85, structural target)
- *   - cisgender_women_in_gender_identity_contexts: payers bearing dilution of sex-based category in legal/social domains; organized but constrained by institutional consensus (d~0.60, structural co-target)
- *   - sex_essentialist_advocates: payers bearing subordination of sex-only principle in legal domains; moderate power, mobile exit but constrained by institutional consensus (d~0.65, structural co-target)
- *   - gender_identity_advocates: partial beneficiaries in legal/social domains, subordinated in medical/sports; moderate power, mobile (d~0.35, mixed directionality)
- *   - medical_professionals: agenda-setters (implementing dual categorization); institutional power, analytical frame (d~0.20, structural beneficiary)
- *   - sports_governing_bodies: agenda-setters (domain-specific rules); powerful, managing the boundary between sex-based and identity-based competition (d~0.15, structural beneficiary)
+ *   - trans_women_in_sex_segregated_contexts: payer, identity-locked, excluded from sex-segregated spaces under the hybrid reading
+ *   - cisgender_women_in_legal_recognition_contexts: payer, face subordination of legal gender to biological sex in medical contexts
+ *   - institutional_policy_actors: agenda-setter, implement dual frameworks and benefit from reduced litigation
+ *   - conflict_minimization_administrators: beneficiary, collect legitimacy by avoiding hard choices on the kernel
+ *   - sex_essentialist_advocates: beneficiary in segregated/medical contexts, payer in legal contexts
+ *   - gender_identity_advocates: payer, lose in segregated/medical contexts
+ *   - medical_providers, athletic_governing_bodies, prison_administrators: agenda-setters in their domains
+ *   - civil_registry_authorities: agenda-setter for legal recognition under gender-identity criteria
  */
 
 /* ==========================================================================
@@ -107,59 +116,132 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(woman_female_category__hybrid_contextual_reading, 0.58).
-domain_priors:suppression_score(woman_female_category__hybrid_contextual_reading, 0.71).
-domain_priors:theater_ratio(woman_female_category__hybrid_contextual_reading, 0.44).
+domain_priors:suppression_score(woman_female_category__hybrid_contextual_reading, 0.61).
+domain_priors:theater_ratio(woman_female_category__hybrid_contextual_reading, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, extractiveness, 0.58).
-narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, theater_ratio, 0.44).
+narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, suppression_requirement, 0.61).
+narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, theater_ratio, 0.48).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, resistance, 0.73).
+narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, accessibility_collapse, 0.52).
+narrative_ontology:constraint_metric(woman_female_category__hybrid_contextual_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(woman_female_category__hybrid_contextual_reading, tangled_rope).
-narrative_ontology:human_readable(woman_female_category__hybrid_contextual_reading, "Hybrid Contextual Reading: Category Membership Varies by Domain").
+narrative_ontology:human_readable(woman_female_category__hybrid_contextual_reading, "Woman/Female Category Membership by Context (Hybrid Contextual Reading)").
 narrative_ontology:topic_domain(woman_female_category__hybrid_contextual_reading, "political_philosophy/bioethics/law").
 
 domain_priors:requires_active_enforcement(woman_female_category__hybrid_contextual_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(woman_female_category__hybrid_contextual_reading, '589493da-f84a-42e3-a4f5-2380fec31407').
-narrative_ontology:cs_kernel_codification('589493da-f84a-42e3-a4f5-2380fec31407', distributed).
-narrative_ontology:cs_authority_grounding('589493da-f84a-42e3-a4f5-2380fec31407', extraction).
-narrative_ontology:cs_interpretation_layer_present('589493da-f84a-42e3-a4f5-2380fec31407').
-narrative_ontology:cs_reading_relation('589493da-f84a-42e3-a4f5-2380fec31407', woman_female_category__sex_biology_reading, coexists_with).
-narrative_ontology:cs_reading_relation('589493da-f84a-42e3-a4f5-2380fec31407', woman_female_category__gender_identity_reading, coexists_with).
-narrative_ontology:cs_axiom('589493da-f84a-42e3-a4f5-2380fec31407', foundational, context_utility_determines_category).
-narrative_ontology:cs_axiom_status(context_utility_determines_category, holdable).
-narrative_ontology:cs_axiom_grounding('589493da-f84a-42e3-a4f5-2380fec31407', context_utility_determines_category, instrumental).
-narrative_ontology:cs_axiom('589493da-f84a-42e3-a4f5-2380fec31407', secondary, institutional_domain_authority_resolves_category_disputes).
-narrative_ontology:cs_axiom_status(institutional_domain_authority_resolves_category_disputes, holdable).
-narrative_ontology:cs_axiom_grounding('589493da-f84a-42e3-a4f5-2380fec31407', institutional_domain_authority_resolves_category_disputes, conventional).
-narrative_ontology:cs_reference_frame('589493da-f84a-42e3-a4f5-2380fec31407', unified_universal_category_principle).
-narrative_ontology:cs_drift_state('589493da-f84a-42e3-a4f5-2380fec31407', contemporary_multi_context_institutional_practice, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('589493da-f84a-42e3-a4f5-2380fec31407', '').
+narrative_ontology:cs_story_uid(woman_female_category__hybrid_contextual_reading, '48424295-983c-4630-af46-75c98903690e').
+narrative_ontology:cs_kernel_codification('48424295-983c-4630-af46-75c98903690e', distributed).
+narrative_ontology:cs_authority_grounding('48424295-983c-4630-af46-75c98903690e', distributed).
+narrative_ontology:cs_reading_relation('48424295-983c-4630-af46-75c98903690e', woman_female_category__sex_biology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('48424295-983c-4630-af46-75c98903690e', woman_female_category__gender_identity_reading, coexists_with).
+narrative_ontology:cs_axiom('48424295-983c-4630-af46-75c98903690e', foundational, categorical_context_variance_principle).
+narrative_ontology:cs_axiom_status(categorical_context_variance_principle, holdable).
+narrative_ontology:cs_axiom_grounding('48424295-983c-4630-af46-75c98903690e', categorical_context_variance_principle, instrumental).
+narrative_ontology:cs_axiom('48424295-983c-4630-af46-75c98903690e', foundational, institutional_domain_authority).
+narrative_ontology:cs_axiom_status(institutional_domain_authority, holdable).
+narrative_ontology:cs_axiom_grounding('48424295-983c-4630-af46-75c98903690e', institutional_domain_authority, conventional).
+narrative_ontology:cs_reference_frame('48424295-983c-4630-af46-75c98903690e', institutional_pragmatism_framework).
+narrative_ontology:cs_drift_state('48424295-983c-4630-af46-75c98903690e', contemporary_litigation_saturation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('48424295-983c-4630-af46-75c98903690e', '').
 narrative_ontology:cs_kernel_id(woman_female_category__hybrid_contextual_reading, woman_female_category).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(woman_female_category__hybrid_contextual_reading, institutional_policy_administrators).
-narrative_ontology:constraint_beneficiary(woman_female_category__hybrid_contextual_reading, legal_recognition_authorities).
-narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, trans_women_in_biological_sex_contexts).
-narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, cisgender_women_in_gender_identity_contexts).
-narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, sex_essentialist_advocates_in_legal_contexts).
+narrative_ontology:constraint_beneficiary(woman_female_category__hybrid_contextual_reading, institutional_policy_actors).
+narrative_ontology:constraint_beneficiary(woman_female_category__hybrid_contextual_reading, conflict_minimization_administrators).
+narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, trans_women_in_sex_segregated_contexts).
+narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, cisgender_women_in_legal_recognition_contexts).
+narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, sex_category_instrumentalists_in_medical_contexts).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(woman_female_category__hybrid_contextual_reading, sex_essentialist_advocates).
+narrative_ontology:constraint_victim(woman_female_category__hybrid_contextual_reading, gender_identity_advocates).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Seek recognition and institutional access based on gender identity. Under the hybrid reading, they are categorized by biological sex in institutional segregation contexts (prisons, shelters, bathrooms, sports) and by gender identity in legal/administrative contexts. They are excluded from women's spaces in segregated institutions despite legal gender recognition, which they experience as categorical subordination and institutional harm. Their exit from the institutional category is impossible (they cannot change their sex category under the hybrid reading's medical logic, and they cannot claim access despite legal gender recognition). They bear the categorical cost of the partition's enforcement.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, trans_women_in_sex_segregated_contexts, payer,
+    powerless, biographical, identity_locked, national).
+
+% Possess legal status as women based on sex/gender marker at birth or by legal change. In legal/administrative contexts, their gender status is recognized. In medical contexts, their legal gender status can be subordinated to biological sex categorization when medical providers determine that reproductive anatomy, hormone profile, or chromosomal status is relevant. They bear the cost of categorical fragmentation when medical authority asserts that their legal gender is irrelevant to medical categorization. Their exit is constrained — they cannot opt out of medical categories, and they cannot challenge the medical partition without challenging the hybrid reading's entire domain framework.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, cisgender_women_in_legal_recognition_contexts, payer,
+    moderate, biographical, constrained, national).
+
+% Schools, hospitals, civil registries, sports federations, and security services implement the hybrid reading by setting domain-specific rules and enforcing them through policy, training, and procedural determination. They determine which category applies in which context, manage categorical disputes, and defend the partition against litigation from both constituencies. They benefit from the appearance of neutrality (they appear to defer to domain-specific expertise rather than making political choices) and from reduced political backlash (they can tell each constituency 'your principle applies in your domain'). They carry the cost of managing dual classification systems and of administering increasingly contentious enforcement.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, institutional_policy_actors, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Policy offices, human rights commissions, legal advisors, and diversity/inclusion administrators implement the hybrid reading as institutional compromise. They earn professional legitimacy by appearing to honor both sex-based and gender-based claims, issue context-specific guidance, and mediate disputes without resolving them. They benefit from the hybrid reading's preservation of their mediating role (if the kernel were resolved, their function would be unnecessary). They deferral of hard choices allows them to appear principled while remaining institutionally employed.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, conflict_minimization_administrators, beneficiary,
+    institutional, biographical, arbitrage, national).
+
+% Advocate that biological sex is the primary basis for women's category membership in all contexts. Under the hybrid reading, they achieve policy victories in segregated/medical contexts where sex-based categorization is institutionally implemented. They experience loss in legal/administrative contexts where gender identity is recognized. They bear the cost of partial success and repeated litigation in legal/administrative domains where they are subordinated. They benefit from the hybrid reading's medical/sports validation but face institutional entrenchment of identity-based legal recognition.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, sex_essentialist_advocates, beneficiary,
+    organized, biographical, constrained, national).
+
+% Advocate that gender identity is the primary basis for women's category membership in all contexts, independent of sex. Under the hybrid reading, they are excluded from segregated/medical domains where sex-based categorization overrides identity. They win in legal/administrative recognition contexts. They bear the cost of systematic exclusion in institutional segregation and medical contexts and must litigate repeatedly in those domains. They experience the hybrid reading as a compromise that subordinates identity-based principles in the most materially consequential contexts (institutional access, medical care).
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, gender_identity_advocates, payer,
+    organized, biographical, constrained, national).
+
+% Implement sex-based categorization for reproductive, hormonal, and organ-function-specific care. They justify sex-based categories as necessary for medical safety and efficacy (reproductive anatomy is relevant to gynecology, hormones are relevant to endocrinology, genetic factors are relevant to inheritance risk). Under the hybrid reading, they use biological sex as the primary categorization axis for medical records and treatment protocols. They must reconcile legal gender markers (which may not match biological sex) with sex-based medical categorization. They benefit from the hybrid reading's authorization to use sex categories and from the appearance that their categorization is medically necessary rather than institutional choice. They bear administrative cost of dual classification and increasing litigation around trans patient medical care.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, medical_providers, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Enforce sex-based competition categories claiming athletic fairness and competitive integrity require sex-based segregation to prevent unfair advantage. They justify segregation through reference to physiological differences (muscle mass, bone density, hormone profiles) that correlate with sex. They implement the hybrid reading by excluding trans women from women's competition categories based on sex-based criteria. They benefit from the hybrid reading's legal support for sex-based segregation and the appearance that fairness, not discrimination, drives the categorization. They face ongoing international litigation and coordination challenges as different jurisdictions adopt different trans athlete policies.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, athletic_governing_bodies, agenda_setter,
+    institutional, generational, constrained, global).
+
+% Record gender identity for legal recognition in documents, marriage, inheritance, and administrative status. Under the hybrid reading, they implement gender-identity-based categorization in legal recognition contexts and defer to sex-based categorization in medical/security contexts. They benefit from the hybrid reading's clarity about their domain (identity recognition) and from the appearance that legal status follows from identity rather than sex. They bear coordination cost with medical and security agencies that use sex-based categorization.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, civil_registry_authorities, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Prisons, shelters, bathrooms, and gender-segregated educational spaces enforce sex-based categorization claiming segregation prevents assault and protects vulnerable populations from being housed/confined with potential assailants. They implement the hybrid reading by categorizing residents/users by biological sex despite legal gender recognition. They justify segregation as safety and security necessity. They benefit from the hybrid reading's legal authorization to use sex categories and from the appearance that safety, not discrimination, drives assignment. They face litigation, operational challenges (managing trans residents/users in segregated spaces), and claims they use segregation to shield institutional abuse from visibility.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, sex_segregated_institution_administrators, agenda_setter,
+    institutional, biographical, constrained, national).
+
+% Monitor whether the hybrid reading's context-specific approach violates international human rights principles, non-discrimination doctrine, or human dignity standards. They receive testimony from all constituencies, issue guidance and case decisions that shape national legal interpretation, and remain officially neutral while their determinations carry weight in jurisdictional disputes. They have not reached consensus on whether the hybrid reading violates human rights or represents legitimate context-sensitive protection.
+narrative_ontology:constraint_stakeholder(woman_female_category__hybrid_contextual_reading, international_human_rights_bodies, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(woman_female_category__hybrid_contextual_reading, institutional_policy_actors).
+narrative_ontology:fixing_cost_class(woman_female_category__hybrid_contextual_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the categorical ambiguity by partitioning domains: sex-based segregation for medical safety, athletic fairness, and institutional security; gender-identity-based recognition for legal status, administrative documents, and social participation. This avoids requiring all institutions to use the same categorization principle and allows each domain to claim its separation is justified by domain-specific safety or fairness needs.
+% TRANSFER_FUNCTION: Moves institutional legitimacy and decision-making power to domain-specific authorities (medical bodies determine sex-based categories in medicine, civil registries determine gender-based categories in law). Simultaneously moves exclusionary power: trans women are moved from sex-segregated institutional spaces (sports, prisons, bathrooms) while being included in legal/administrative recognition; cisgender women face subordination of legal gender to biological sex in medical contexts; sex-essentialist advocates win in some domains and lose in others; gender-identity advocates win in legal domains and lose in segregated/medical domains.
+% ABSENT_VOICES: Biological males claiming gender identity with women's category would object if present but are largely excluded from this scenario. Intersex individuals whose reproductive anatomy or chromosomal profile is ambiguous or mixed are structurally unaddressed by a binary sex-or-gender partition — their voices are absent from the framework entirely. Indigenous and non-Western gender systems that do not fit sex/gender binarism are excluded from the constitutional discourse.
+% DISAPPEARANCE_RATIONALE: If the hybrid reading disappeared, institutions would be forced to choose a single principle: either sex (reuniting segregated spaces under biological criteria, invalidating gender-based legal recognition) or gender (reuniting spaces under identity-based criteria, requiring reorganization of medical protocols and athletic segregation). The current institutional landscape is built on the assumption that this partition works; removal of the partition would necessitate renegotiation of segregation principles across every domain simultaneously.
+% FOUNDING_PROBLEM: Sex and gender became categorically contested: medical and athletic contexts require reproductive anatomy / chromosomal grouping for safety and fairness; legal and social contexts require self-identification for dignity and rights recognition. A single categorical rule could not serve both — institutional fragmentation became the default mechanism to avoid choosing.
+% FOUNDING_PROBLEM_CORROBORATION: Medical providers, athletic bodies, and prison administrators attest that segregation by sex-based criteria is necessary for their contexts; civil registries and legal scholars attest that gender-identity recognition is necessary for legal rights and dignity; neither group initiated the contest (it originated in political mobilization on both sides), but both attest the institutional fragmentation is their current operating reality. Academic bioethicists document the categorical tension; no outside corroborator endorses the hybrid reading as correct — they report it as the prevalent institutional accommodation rather than as a resolved question.
+narrative_ontology:disappearance_verdict(woman_female_category__hybrid_contextual_reading, world_rearranges).
+narrative_ontology:founding_problem_status(woman_female_category__hybrid_contextual_reading, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(woman_female_category__hybrid_contextual_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(woman_female_category__hybrid_contextual_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(woman_female_category__hybrid_contextual_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(woman_female_category__hybrid_contextual_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -179,16 +261,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The hybrid reading extracts through ADMINISTRATIVE BURDEN and INSTITUTIONAL POWER ASYMMETRY. Extractiveness measures the degree to which the constraint transfers authority over category membership from individuals or universal standards to domain-specific administrators. At 0.58, this is substantial but not total—it reflects that while institutions control the switching rules, the underlying categories (biological sex, gender identity) remain partially self-determined by individuals. Extractiveness rises from 0.48 to 0.58 over the interval, suggesting increasing institutional hardening of the hybrid framework (more formalized dual-categorization systems, more explicit policy codification). Theater-ratio (0.44) reflects that institutional administrators present the hybrid reading as a pragmatic compromise serving everyone, when in reality it concentrates decision-making power in their hands and generates real conflict for trans people and sex-essentialists. The ratio rises from 0.28 to 0.44, suggesting the performative aspect of 'pragmatic compromise' has intensified as resistance has grown. Suppression (0.71) is high because maintaining the hybrid reading requires suppressing both the sex-essentialist argument (that sex should apply everywhere) and the pure gender-identity argument (that identity should apply everywhere). The suppression works through INSTITUTIONAL CONSENSUS—by framing the hybrid reading as the only reasonable middle ground, institutions discourage serious advocacy for either alternative. Resistance (0.73) is correspondingly high because both sibling readings remain live: sex-essentialist movements in sports and some medical contexts actively resist gender-identity recognition; trans-rights movements resist the subordination of identity in medical/sports domains. The constraint persists not because either side accepts it but because institutional administrators have enough power to enforce it despite opposition. All measurements share one temporal grid (every metric at every time point) so the trajectory is coherent: the constraint is consolidating (extraction/suppression/theater rising, reaching plateaus by t=20), suggesting a shift from emerging compromise to institutionalized settlement.
+ *   Extractiveness is moderate (0.58) because the hybrid reading distributes gains and costs asymmetrically across domains: institutional actors benefit from the partition (avoid choosing), but both identity-based and sex-based advocates lose partially (each is subordinated in some domains). The measurement series show extractiveness and suppression rising from initialization through year 5–10, then plateauing: institutions encounter increased litigation and resistance as both constituencies become aware the partition is permanent, enforcement costs rise, but enforcement capacity stabilizes. Theater ratio rises to 0.48, indicating nearly half the institutional activity is devoted to performing neutrality (mediating between constituencies, issuing context-specific guidance, managing categorical ambiguity) rather than implementing the partition itself. Accessibility_collapse is low (0.52) because neither constituency is forced to accept the reading — both have alternative locations (sex-essentialists can litigate in medical contexts, gender-identity advocates can litigate in administrative contexts) and neither experiences a complete loss of institutional space. Resistance is high (0.72) because both constituencies actively contest the partition: sex-essentialist advocates mounted successful litigation in sports, gender-identity advocates mounted successful litigation in legal recognition. The hybrid reading persists not because either constituency accepts it as correct but because institutional actors find the partition operationally manageable and politically defensible. The measurements are on a single shared time grid; every metric is authored at every time point from interval start to end.
  *
  * PERSPECTIVAL GAP:
- *   From the institutional-administrator seat, this is a genuine coordination solution—managing two legitimate but different coordination problems (medical safety, legal dignity) through appropriate domain-switching. From the trans-women-in-medical-contexts seat, it is pure extraction: their identity is recognized legally but subordinated medically, precisely where they most need affirmation (reproductive health, hormone management). From the cisgender-women seat concerned about sex-based rights, it is pure extraction in the opposite direction: their biological-category claims are subordinated in legal/social contexts, which is where they matter for sex-based protections. The engine computes these divergent classifications from the structural data (power, exit_options, role): institutional administrators sit at d~0.15 (beneficiaries of decision-making authority); trans women sit at d~0.85 (targets of subordination in medical domains where they are trapped by identity-lock); cisgender women sit at d~0.60 (moderate targets, less trapped because organized resistance is possible). The constraint's type appears different from each seat: administrators perceive rope (coordination without extraction); targets perceive snare (extraction defended as coordination). The engine's per-seat classification captures this perspectival divergence without reconciling it.
+ *   The perspective divergence should be severe: from an institutional-actor seat, the hybrid reading is genuine coordination that allows multiple domains to operate under appropriate categorization principles; from a trans-woman seat excluded from sex-segregated spaces, the reading is pure extraction disguised as context-sensitivity; from a cisgender-woman seat facing medical subordination of legal gender to sex, the reading is an attack on women's legal status dressed up as domain-specific reasonableness; from a sex-essentialist seat, the reading is capitulation in legal/administrative domains; from a gender-identity-advocate seat, the reading is systematic exclusion in the domains where identity should matter most (body-based segregation). The engine computes these divergences from the structural data (power, exit, beneficiary/victim declarations). The adopted claim (tangled_rope) is plausible from the institutional seat but deeply contested from payer seats. The metrics reflect the payers' experience: the constraint does coordinate something (institutional conflict reduction), but that coordination benefit accrues to institutional actors, not to the constituencies who bear the categorical cost.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derives from four atoms: power (institutional > organized > moderate > powerless), time_horizon (generational > biographical > immediate), exit_options (analytical > arbitrage > mobile > constrained > identity_locked > trapped), and spatial_scope (universal > global > continental > national > regional > local). The hybrid reading concentrates categorization power in institutional hands (medical, legal, sports administrators), which shifts d-values downward (toward beneficiary) for institutional actors and upward (toward target) for powerless/moderate/identity-locked groups. Trans women in medical contexts have powerless + identity_locked + biographical, which positions them at d~0.85 (full targets). Institutional administrators have institutional power + analytical time_horizon + analytical exit, which positions them at d~0.15 (near beneficiary). Cisgender women organized for sex-based rights have organized power + biographical time_horizon + constrained exit (can organize but cannot exit the category), which positions them at d~0.60 (moderate co-targets, less trapped than trans women but subordinated in legal domains where their arguments are suppressed). The derivation chain flows: beneficiary/victim declarations → power/exit atoms → directionality → effective extraction (χ). The hybrid reading's beneficiaries are institutional administrators (gain decision-making authority) and legal-recognition authorities (gain consensus consensus framework). Victims are trans women (subordinated in medical/sports) and sex-essentialists (subordinated in legal domains).
+ *   Institutional actors (institutional power, arbitrage exit) get low d values — they are the beneficiaries, they set the agenda, they can shift context definitions. Trans women and cisgender women in contexts where their categorization is subordinated get high d values — they are identity-locked (cannot exit the gendered body that defines their categorical standing), powerless or moderate power, and excluded from institutional determination. Sex-essentialist and gender-identity advocates occupy moderate power positions with constrained exit (they can litigate but cannot avoid the institutions); they get intermediate d values that differ by domain (beneficiary d in contexts where their principle applies, payer d in contexts where the other principle applies). The directionality derivation is complex because agents occupy different structural positions in different domains; no single d value captures an agent's relationship to a domain-partitioned constraint. The stakeholder situations are authored domain-specifically to permit the engine's directionality computation to account for this heterogeneity.
  *
  * MANDATROPHY ANALYSIS:
- *   The hybrid reading emerged as a MANDATROPHY RESOLUTION: the founding problem (accommodate both biological sex relevance and gender identity validity) no longer generates the same coordination needs it once did. In the 2010s, the coordination problem was acute—institutions genuinely needed a way to recognize gender identity in legal contexts while maintaining sex-based categorization in medical contexts, because the prior pure-sex reading was causing harm to trans people and the pure-identity reading was causing political backlash. By the 2020s, the mandatrophy surfaces: the constraint persists as institutional inertia (it's now 'how we do things'), but the original founding problem has been partly solved by advances in affirming medical care (many clinicians now ask both sex and gender, using both for appropriate purposes), legal recognition (most jurisdictions allow identity-based legal markers), and sports science (sex-hormone-level testing offers alternatives to categorical sex-based sorting). The constraint should have decomposed into more precise domain-specific rules rather than remaining a meta-rule about context-switching. Instead, the constraint has theater-ified: institutions defend the hybrid framework not as a temporary compromise but as the principled position (which it is not—the principle is 'use whatever categories matter for this domain's function,' not 'switch rules by context'). Theater_ratio rising from 0.28 to 0.44 captures this mandatrophy dynamic: increasing proportion of the constraint's operation is defending the compromise itself rather than solving the coordination problems. A Tangled Rope (not a pure Rope) because: (1) genuine coordination function exists (managing real differences in what 'woman' means across domains), (2) asymmetric extraction exists (institutional administrators gain decision-making power while trans people and sex-essentialists lose it), (3) active enforcement required (institutions must suppress arguments that the rule is arbitrary). The classification would collapse into pure Snare if the coordination function genuinely dissolved; it remains Tangled Rope because domain-specific category-use does serve real coordination needs—the problem is that those needs could be met through more transparent, less extractive mechanisms (explicit domain-specific criteria rather than meta-rule-switching).
+ *   The founding problem (categorical ambiguity requiring institutional accommodation) is live: institutions still cannot resolve whether sex or gender is the primary categorization principle, and the problem recurs with every new policy context (trans military service, bathroom access, sports eligibility, prison assignment). The hybrid reading's mandated function is conflict minimization and domain-specific authorization. Its success is measured by litigation volume and institutional stability: if litigation rises, the partition is failing; if it stabilizes, the partition is operationally adequate even if not philosophically resolved. The measurements show early extraction rise (institutions encountering litigation) followed by stabilization (both constituencies learning the partition is stable and shifting to managing within it rather than overturning it). This is NOT mandatrophy resolved; the founding problem persists, the hybrid reading persists, and neither constituency has abandoned their preferred reading. What has changed is the practical acceptance that the institutional partition, though unjust from each constituency's standpoint, is the status quo. The tangled_rope claim is defensible: genuine coordination occurs (institutional segregation is now predictable across domains), but the coordination benefit is captured by institutional actors, not shared by the constituencies whose categorical standing is at stake.
  */
 
 /* ==========================================================================
@@ -196,64 +278,64 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    medical_materiality_of_sex,
-    'What medical facts are genuinely dependent on biological sex (chromosomal markers, reproductive anatomy, hormone profiles, developmental history) such that sex-based categorization serves diagnosis and treatment, versus which facts are conflated with sex but actually depend on other variables?',
-    'Systematic medical evidence review: for each medical condition commonly attributed to sex category, determine whether the condition''s causal mechanism involves the sex category itself or some downstream consequence of it (e.g., ovarian cancer depends on ovarian tissue, not on XX chromosomes per se; hormone profiles depend on endocrine history, not on natal sex per se).',
-    'If medical materiality is narrower than the hybrid reading assumes (sex-based categorization is useful only for a few specific conditions), the medical-context justification for domain-switching weakens and the reading shifts toward less-justified extraction in those domains. If medical materiality is broader (sex-based categorization is clinically necessary in many contexts), the hybrid reading''s medical-domain framework is more defensible.',
+    medical_necessity_ambiguity,
+    'Does medical diagnosis and treatment genuinely require biological sex categorization, or is sex-based medical categorization a proxy for insufficiently granular attention to reproductive physiology?',
+    'Comparative study of sex-based vs. organ-system-based vs. hormone-profile-based diagnostic and treatment protocols; analysis of outcome differences when patients'' medical records are organized by sex vs. reproductive anatomy presence vs. hormone levels. Audit of whether sex-based protocols improve outcomes or whether outcome variation correlates with organ-specific factors independent of sex.',
+    'If medical outcomes are independent of sex-category assignment and track instead to organ-specific factors (reproductive anatomy, hormone profile, genetic variation), the sex-based medical categorization is organizational convenience, not medical necessity, and the hybrid reading''s authorization of sex-based medicine reflects institutional rather than clinical reality. This would support reclassification toward snare (the medical category is extraction dressed as safety).',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(medical_materiality_of_sex, empirical, 'The scope of medical conditions for which biological sex is the causally relevant categorization.').
+narrative_ontology:omega_variable(medical_necessity_ambiguity, empirical, 'Whether sex-based medical categorization is medically necessary or institutionally convenient.').
 
 omega_variable(
-    sports_fairness_criterion_ambiguity,
-    'What makes athletic competition fair or unfair—equal opportunity to win, or something else? If equal opportunity, what physical variables determine it (muscle mass, bone density, hormone profiles, athletic training history), and does sex category track those variables or does sex category conflate multiple distinct variables?',
-    'Sports science evidence on fairness criteria; case studies from sports that have adopted hormone-level or other non-categorical tests; empirical data on competitive outcomes under different eligibility rules.',
-    'If sex-category sorting is the most cogent fairness criterion, the hybrid reading''s sports-domain framework is justified. If fairness is better served by context-specific metrics (hormone profiles, weight classes, etc.) that don''t reduce to categorical sex, the hybrid reading''s blanket sex-based categorization in sports is less justified and shifts toward unjustified extraction/suppression.',
+    segregation_safety_justification,
+    'Do sex-segregated institutions (prisons, shelters, bathrooms) achieve their stated safety goals (prevent assault, protect vulnerable populations) through sex-based segregation, or does segregation reduce institutional visibility/accountability in ways that enable the assaults it claims to prevent?',
+    'Comparative audit of assault rates, reporting rates, investigation rates, and conviction rates in sex-segregated vs. gender-integrated institutional settings; analysis of whether segregation correlates with better safety outcomes or with lower reporting/investigation rates. Interviews with formerly incarcerated and sheltered populations on segregation''s actual safety effect.',
+    'If segregation does not improve safety outcomes and instead provides institutional cover for abuse, the hybrid reading''s authorization of sex-segregated spaces reflects institutional liability-reduction rather than safety, and the reading should be reclassified as snare (safety is the cover story for extraction of institutional autonomy). If segregation does improve outcomes, the reading''s sex-based segregation authorization is justified coordination.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(sports_fairness_criterion_ambiguity, conceptual, 'Whether athletic fairness is best served by categorical sex or by more granular criteria.').
+narrative_ontology:omega_variable(segregation_safety_justification, empirical, 'Whether sex-segregated institution design achieves stated safety outcomes.').
 
 omega_variable(
-    suppression_mechanism_internalization,
-    'Is the measured suppression (0.71) structural (institutional rules enforced against external resistance) or internalized (the affected groups have partially accepted the hybrid reading as legitimate, so suppression feels less coercive)?',
-    'Post-resistance suppression trajectory: measure changes in advocacy intensity, public opinion, political mobilization over time. If suppression persists at current levels despite institutional consensus, it is partly internalized. If suppression must rise to maintain the constraint against growing resistance, it is mostly structural.',
-    'If internalized, the constraint''s effective suppression is lower than the structural measure suggests, and its trajectory is toward institutionalization (moving toward Piton). If structural, suppression must be maintained by active enforcement and the trajectory is toward visible conflict (moving toward Snare).',
-    confidence_without_resolution(medium)
+    fairness_in_athletics_contingency,
+    'Does competitive fairness in athletics require sex-based segregation, or does fairness require only that competitors be grouped by performance-relevant attributes (VO2 max, muscle composition, bone density, hormone profiles) that may or may not align with sex categories?',
+    'Comparative athletic performance analysis using performance-relevant measurements (hormone levels, muscle composition, VO2 max, bone density, strength metrics) across athletes of different sex/gender categories; testing whether performance variation tracks to sex category assignment or to the underlying physiological measures. Observational study of mixed-sex competitive outcomes where performance grouping is based on measurable attributes rather than sex category.',
+    'If athletic performance tracks to underlying physiological measures independent of sex-category membership (i.e., some trans women have performance profiles identical to cisgender women, and some cisgender women have performance profiles overlapping with cisgender men), the hybrid reading''s authorization of sex-based sports segregation is conservative category use rather than necessary fairness protection, and should be reclassified as extraction (fairness is the justification for excluding athletes whose bodies don''t fit the sex categories). If performance does require sex-based grouping, the reading''s authorization is justified coordination.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether suppression operates through internalized acceptance or external institutional enforcement.').
+narrative_ontology:omega_variable(fairness_in_athletics_contingency, empirical, 'Whether sex-based athletic segregation is necessary for fairness or whether performance-based grouping is possible.').
 
 omega_variable(
-    kernel_reading_incommensurability,
-    'Are the three readings (sex-biology, gender-identity, hybrid-contextual) genuinely incommensurable—applying to different aspects of a multi-dimensional phenomenon—or do they make competing claims about a single fact that has a unique correct answer?',
-    'Philosophical analysis and empirical case studies: do the three readings coexist peacefully when applied to specific cases (e.g., a trans woman''s reproductive health needs both sex and identity data), or do they necessarily conflict (forcing a choice about which reading determines official category membership)?',
-    'If incommensurable, the hybrid reading is epistemically justified—it acknowledges different dimensions. If they compete for a single fact, the hybrid reading is evasive and one reading must be privileged as more fundamentally true.',
+    constitutional_inconsistency,
+    'Can a legal system coherently hold that gender identity is sufficient for women''s status in legal contexts (marriage, inheritance, legal recognition) while being insufficient for women''s status in segregated institutional contexts (bathrooms, shelters, sports), without those two principles being in material conflict?',
+    'Jurisprudential analysis of constitutional equal-protection and dignity clauses across jurisdictions; audit of how courts have reasoned about the apparent inconsistency; examination of whether jurisdictions have articulated a principled distinction between ''social/legal'' and ''physical/segregated'' contexts that makes the partition coherent or whether the partition is treated as pragmatic necessity without principled grounding.',
+    'If no principled distinction exists and the partition is explicitly acknowledged as pragmatic compromise rather than constitutional principle, the hybrid reading should be reclassified as snare (the constitutional compromise is institutional extraction disguised as neutrality). If a coherent principle exists and is recognized in law, the reading''s partition may be justified tangled_rope.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_incommensurability, conceptual, 'Whether the three readings capture different legitimate dimensions or make competing truth-claims about one dimension.').
+narrative_ontology:omega_variable(constitutional_inconsistency, conceptual, 'Whether the hybrid reading''s domain partition reflects coherent constitutional principle or pragmatic institutional compromise.').
 
 omega_variable(
-    identity_lock_heterogeneity,
-    'Is the exit_options value ''identity_locked'' uniform across all trans women, or does it vary by degree and type of identity fusion—some trans women experiencing absolute identity-lock (being a woman is non-negotiable), others experiencing contextual identity-flexibility (willing to engage with biological categories in medical contexts if it serves their health)?',
-    'Qualitative research on trans women''s perspectives on medical categorization: variation in willingness to use biological-sex markers for specific medical purposes (e.g., reproductive health screening) versus resistance to sex-based categorization across all contexts.',
-    'High heterogeneity would suggest the constraint should be differentiated—some trans women might choose biological-sex categorization in narrowly medical contexts if done respectfully, while others would refuse. This would lower the effective extraction for those with more flexibility and raise it for those with absolute identity-lock. Current constraint assumes uniform identity-lock.',
-    confidence_without_resolution(medium)
+    intersex_category_exclusion,
+    'Does the hybrid reading''s binary sex/gender partition structurally exclude intersex individuals whose reproductive anatomy or chromosomal profile is ambiguous or mixed, and if so, does that exclusion constitute a second-order extraction from both constituencies?',
+    'Examination of how intersex individuals are categorized under the hybrid reading in each domain (medicine, law, athletics, institutional segregation); analysis of whether the partition forces binary assignment on non-binary bodies or whether intersex accommodation is possible within the hybrid framework. Testimony from intersex individuals about their categorical standing and options.',
+    'If the partition requires forced binary assignment (choosing sex-based or gender-identity-based categorization despite chromosomal or anatomical ambiguity), the hybrid reading is extractive of intersex persons across all domains (not just in contexts where their categorization is subordinated, but in all contexts where binary assignment is enforced). This would support expansion of the victim set to include structurally excluded populations.',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(identity_lock_heterogeneity, empirical, 'Variation in identity-lock intensity and context-flexibility among trans women.').
+narrative_ontology:omega_variable(intersex_category_exclusion, empirical, 'Whether the hybrid reading''s binary partition structurally excludes or marginalizes intersex populations.').
 
 omega_variable(
-    committer_frame_axiom_contested,
-    'Is ''context_utility_determines_category'' actually the foundational axiom of the hybrid reading, or is the reading grounded in a different, less visible axiom—such as ''institutional authority should resolve philosophical disputes by pragmatic institutional consensus''? If the latter, the reading''s legitimacy rests on institutional power rather than principled justification.',
-    'Textual and institutional analysis: examine the justifications institutions offer for domain-switching (do they cite context-utility or institutional pragmatism?). Examine whether the hybrid reading would be equally acceptable if the institutional power balance shifted (would advocates defend the reading on principle if they lost institutional support for it?)',
-    'If context_utility is the true grounding, the hybrid reading is a principled epistemic position. If institutional-pragmatism is the true grounding, the reading is a form of extraction disguised as principle—it benefits institutional administrators by giving them authority over category disputes.',
-    confidence_without_resolution(low)
+    institutional_authority_capture,
+    'Do institutional policy actors (hospitals, schools, prisons, registries) benefit from the hybrid reading''s authorization of domain-specific determination such that they have incentive to preserve the partition regardless of outcome for the constituencies?',
+    'Analysis of institutional revenue, authority, and litigation exposure under the hybrid reading vs. alternative readings; interviews with policy administrators about the partition''s institutional appeal; audit of whether institutional positions have stabilized in favor of the hybrid reading as litigation costs exceeded the cost of choosing either sibling reading.',
+    'If institutions benefit from the partition''s appearance of neutrality and the consequent reduction in hard political choices, the beneficiary class is institutional authority rather than genuine coordination function, and the reading should be reclassified as snare (institutional benefit is the primary driver of persistence).',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(committer_frame_axiom_contested, conceptual, 'Whether the hybrid reading is grounded in context-specific functional utility or in institutional-authority resolution of disputes.').
+narrative_ontology:omega_variable(institutional_authority_capture, empirical, 'Whether institutional actors have structural incentive to maintain the hybrid reading independent of outcomes for constituencies.').
 
 
 /* ==========================================================================
@@ -267,28 +349,46 @@ narrative_ontology:interval(woman_female_category__hybrid_contextual_reading, 0,
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(woma_tr_t0, woman_female_category__hybrid_contextual_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(woma_tr_t5, woman_female_category__hybrid_contextual_reading, theater_ratio, 5, 0.32).
-narrative_ontology:measurement(woma_tr_t10, woman_female_category__hybrid_contextual_reading, theater_ratio, 10, 0.38).
-narrative_ontology:measurement(woma_tr_t15, woman_female_category__hybrid_contextual_reading, theater_ratio, 15, 0.42).
-narrative_ontology:measurement(woma_tr_t20, woman_female_category__hybrid_contextual_reading, theater_ratio, 20, 0.44).
-narrative_ontology:measurement(woma_tr_t25, woman_female_category__hybrid_contextual_reading, theater_ratio, 25, 0.44).
+narrative_ontology:measurement(woman_female_hybrid_tr_t0, woman_female_category__hybrid_contextual_reading, theater_ratio, 0, 0.35).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t0, projected).
+narrative_ontology:measurement(woman_female_hybrid_tr_t5, woman_female_category__hybrid_contextual_reading, theater_ratio, 5, 0.4).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t5, observed).
+narrative_ontology:measurement(woman_female_hybrid_tr_t10, woman_female_category__hybrid_contextual_reading, theater_ratio, 10, 0.44).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t10, observed).
+narrative_ontology:measurement(woman_female_hybrid_tr_t15, woman_female_category__hybrid_contextual_reading, theater_ratio, 15, 0.47).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t15, observed).
+narrative_ontology:measurement(woman_female_hybrid_tr_t20, woman_female_category__hybrid_contextual_reading, theater_ratio, 20, 0.48).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t20, observed).
+narrative_ontology:measurement(woman_female_hybrid_tr_t25, woman_female_category__hybrid_contextual_reading, theater_ratio, 25, 0.48).
+narrative_ontology:measurement_basis(woman_female_hybrid_tr_t25, observed).
 
 % Extraction over time
-narrative_ontology:measurement(woma_be_t0, woman_female_category__hybrid_contextual_reading, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(woma_be_t5, woman_female_category__hybrid_contextual_reading, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(woma_be_t10, woman_female_category__hybrid_contextual_reading, base_extractiveness, 10, 0.56).
-narrative_ontology:measurement(woma_be_t15, woman_female_category__hybrid_contextual_reading, base_extractiveness, 15, 0.58).
-narrative_ontology:measurement(woma_be_t20, woman_female_category__hybrid_contextual_reading, base_extractiveness, 20, 0.58).
-narrative_ontology:measurement(woma_be_t25, woman_female_category__hybrid_contextual_reading, base_extractiveness, 25, 0.58).
+narrative_ontology:measurement(woman_female_hybrid_be_t0, woman_female_category__hybrid_contextual_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t0, projected).
+narrative_ontology:measurement(woman_female_hybrid_be_t5, woman_female_category__hybrid_contextual_reading, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t5, observed).
+narrative_ontology:measurement(woman_female_hybrid_be_t10, woman_female_category__hybrid_contextual_reading, base_extractiveness, 10, 0.56).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t10, observed).
+narrative_ontology:measurement(woman_female_hybrid_be_t15, woman_female_category__hybrid_contextual_reading, base_extractiveness, 15, 0.57).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t15, observed).
+narrative_ontology:measurement(woman_female_hybrid_be_t20, woman_female_category__hybrid_contextual_reading, base_extractiveness, 20, 0.58).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t20, observed).
+narrative_ontology:measurement(woman_female_hybrid_be_t25, woman_female_category__hybrid_contextual_reading, base_extractiveness, 25, 0.58).
+narrative_ontology:measurement_basis(woman_female_hybrid_be_t25, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(woma_su_t0, woman_female_category__hybrid_contextual_reading, suppression_requirement, 0, 0.58).
-narrative_ontology:measurement(woma_su_t5, woman_female_category__hybrid_contextual_reading, suppression_requirement, 5, 0.62).
-narrative_ontology:measurement(woma_su_t10, woman_female_category__hybrid_contextual_reading, suppression_requirement, 10, 0.66).
-narrative_ontology:measurement(woma_su_t15, woman_female_category__hybrid_contextual_reading, suppression_requirement, 15, 0.7).
-narrative_ontology:measurement(woma_su_t20, woman_female_category__hybrid_contextual_reading, suppression_requirement, 20, 0.71).
-narrative_ontology:measurement(woma_su_t25, woman_female_category__hybrid_contextual_reading, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement(woman_female_hybrid_su_t0, woman_female_category__hybrid_contextual_reading, suppression_requirement, 0, 0.5).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t0, projected).
+narrative_ontology:measurement(woman_female_hybrid_su_t5, woman_female_category__hybrid_contextual_reading, suppression_requirement, 5, 0.55).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t5, observed).
+narrative_ontology:measurement(woman_female_hybrid_su_t10, woman_female_category__hybrid_contextual_reading, suppression_requirement, 10, 0.59).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t10, observed).
+narrative_ontology:measurement(woman_female_hybrid_su_t15, woman_female_category__hybrid_contextual_reading, suppression_requirement, 15, 0.61).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t15, observed).
+narrative_ontology:measurement(woman_female_hybrid_su_t20, woman_female_category__hybrid_contextual_reading, suppression_requirement, 20, 0.61).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t20, observed).
+narrative_ontology:measurement(woman_female_hybrid_su_t25, woman_female_category__hybrid_contextual_reading, suppression_requirement, 25, 0.61).
+narrative_ontology:measurement_basis(woman_female_hybrid_su_t25, observed).
 
 
 /* ==========================================================================
@@ -301,13 +401,15 @@ narrative_ontology:affects_constraint(woman_female_category__hybrid_contextual_r
 narrative_ontology:affects_constraint(woman_female_category__hybrid_contextual_reading, woman_female_category__gender_identity_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested kernel 'woman_female_category.' The kernel has three live readings, each instantiating a different constraint: sex_biology_reading (biological sex determines category across all contexts), gender_identity_reading (gender identity determines category across all contexts), and hybrid_contextual_reading (this constraint: biological sex applies in medical/sports contexts, gender identity applies in legal/social contexts). Each reading has a structurally distinct epsilon, victim set, and beneficiary structure. The ε values differ substantially: sex_biology_reading assumes low extraction (natural biological fact), gender_identity_reading assumes moderate extraction (identity claim requiring institutional validation), hybrid_contextual_reading assumes moderate extraction (institutional domain-switching costs). Victim sets differ: sex-biology reading victimizes those whose identity diverges from biological sex; gender_identity reading victimizes those who argue for biological-basis category claims; hybrid_contextual reading victimizes both groups contextually—trans women in medical domains, sex-essentialists in legal domains. All three readings are live institutional positions; none forecloses the others because they rest on different principled grounds and different institutional actors advocate for each. The network edges link all three as a constraint family; the omegas in this reading document the kernel-contestation and the incommensurability question.
+% The woman/female_category kernel decomposes into three constraint stories, one per reading: (1) sex_biology_reading — categorization determined by chromosomal sex and reproductive anatomy in all contexts, ε ≈ 0.35 (low extraction; the reading's naturalness claim makes beneficiary extraction opaque, but FSM candidate if institutional sex-category benefits exist); (2) gender_identity_reading — categorization determined by self-identification in all contexts, ε ≈ 0.42 (moderate extraction; contested claim, active resistance from sex-essentialist constituencies); (3) hybrid_contextual_reading (this file) — categorization determined by context-specific authority determination (sex for medical/sports/security, gender for legal/administrative), ε ≈ 0.58 (moderate-high extraction; the partition itself is the primary extraction mechanism, as it preserves institutional authority while deferring the kernel dispute). The ε values differ because the readings operationalize different categorical principles with different beneficiary structures and resistance profiles. These are not the same constraint viewed from three angles; they are three structurally distinct constraints instantiated by three readings of a shared kernel. The network edges indicate: sex_biology_reading influences this reading (if biology-based categorization were established as primary, the hybrid reading's sex-segregated domains would lose their categorical justification); gender_identity_reading influences this reading (if identity-based categorization were established as primary, the hybrid reading's medical/sports domains would lose their justification); this reading coexists with both siblings (it does not foreclose either, but instantiates both as domain-specific).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(woman_female_category__hybrid_contextual_reading, organized, 0.6).
+constraint_indexing:directionality_override(woman_female_category__hybrid_contextual_reading, institutional, 0.15).
+constraint_indexing:directionality_override(woman_female_category__hybrid_contextual_reading, powerless, 0.88).
+constraint_indexing:directionality_override(woman_female_category__hybrid_contextual_reading, moderate, 0.52).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

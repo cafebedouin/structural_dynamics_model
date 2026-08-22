@@ -4,236 +4,378 @@
     "version": "1.0",
     "generated_date": "2026-06-12",
     "status": "ACTIVE",
-    "story_uid": "49e08424-957c-4e68-a9b4-6dbdbf54ef8c"
+    "story_uid": "4e989363-7254-48ab-aaaa-569ba3949e8c"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.62,
+    "extractiveness": 0.62,
+    "suppression": 0.58,
     "theater_ratio": 0.41,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.68,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
     "claimed_type": "tangled_rope",
-    "human_readable": "Commerce Clause Substantial Effects Doctrine with Economic/Noneconomic Boundary",
-    "topic_domain": "constitutional_law/federalism",
+    "human_readable": "Commerce Clause Substantial Effects Doctrine with Jurisdictional Nexus Limit",
+    "topic_domain": "constitutional/federalism",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
     "beneficiaries": [
-      "federal_regulators",
-      "national_economic_integrationists"
+      "federal_regulatory_agencies",
+      "national_market_participants",
+      "centralized_standard_setting_bodies"
     ],
     "victims": [
-      "state_regulatory_autonomy",
-      "regulated_intrastate_actors"
+      "state_legislative_authority",
+      "local_regulatory_autonomy",
+      "non_economic_activity_sovereigns"
+    ],
+    "vindicated_propositions": [
+      "enumerated_federal_powers_supremacy",
+      "necessary_and_proper_clause_scope"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "federal_regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "EPA, OSHA, FDA, NLRB, FTC, and similar agencies enforce federal economic regulation by invoking the substantial effects doctrine. They set compliance standards for labor, environment, product safety, and finance, conduct enforcement, and defend their jurisdictional reach in litigation. Their authority depends on the doctrine's persistence and the courts' acceptance that the activities they regulate have substantial effects on interstate commerce."
+    },
+    {
+      "name": "state_legislative_authority",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "State legislatures cede authority over activities courts determine have substantial effects on interstate commerce. They retain power over intrastate activity courts classify as non-economic (family law, criminal justice, land use for local purposes) but must defend that classification against federal recharacterization. They cannot easily exit or redefine the boundary once courts establish it."
+    },
+    {
+      "name": "local_regulatory_autonomy",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Local communities (via county and city government) lose control over labor practices, environmental management, business licensing, and land use when courts classify those activities as having substantial effects on interstate commerce. Once federal jurisdiction attaches under the doctrine, local alternatives are preempted; they cannot negotiate, compromise, or opt out of federal standards."
+    },
+    {
+      "name": "national_market_participants",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "National and multinational firms benefit from uniform federal regulation that preempts 50 different state standards. They gain regulatory predictability, lower compliance costs relative to multi-state variation, and federal enforcement that eliminates state-level competitive divergence. They can lobby federal agencies directly, fund litigation, and relocate operations across state boundaries in response to regulatory change."
+    },
+    {
+      "name": "centralized_standard_setting_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Federal agencies and courts that interpret the Commerce Clause consolidate power to set national baselines for economic regulation. Their interpretations define what counts as 'economic' and what degree of effect is 'substantial' — the categories that determine their jurisdiction. They benefit from the doctrine's operation and expansion because it expands their institutional role and authority."
+    },
+    {
+      "name": "non_economic_activity_sovereigns",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "States and Native nations defending regulations rooted in non-economic purposes (family law, criminal justice, cultural sovereignty, health and welfare, environmental protection) face increasing pressure to prove those regulations do NOT substantially affect interstate commerce. The doctrine's economic/non-economic boundary determines whether they retain authority. Their identity as sovereign regulators of local social life is directly implicated; exit is ideologically incoherent and institutionally unthinkable."
+    },
+    {
+      "name": "originalist_interpreters",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Originalist judges and scholars argue the substantial effects doctrine extends federal power beyond the text's original scope, which they read as commerce among the states (boundary-crossing activity and interstate instrumentalities only). They would overrule the doctrine if they controlled the courts, but find their interpretation treated as minority/illegitimate even when they hold power on the bench. They are excluded from the substantial-effects reading's construction."
+    },
+    {
+      "name": "expansive_federal_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Policy advocates and scholars arguing for even broader federal authority (any economic activity with effects however indirect and diffuse, or even non-economic activity with sufficient aggregate spillovers) find the jurisdictional nexus requirement and non-pretextual regulation limits frustrating constraints. They influence the direction of doctrinal drift but are not at the table when the substantial-effects boundary is drawn."
+    },
+    {
+      "name": "courts_defining_boundary",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Federal courts (especially the Supreme Court) perform the boundary-policing function: they determine whether an activity is 'economic,' whether it has 'substantial effects,' whether there is jurisdictional nexus, and whether the regulation is pretextual. Their decisions define the operational content of the doctrine. They maintain the boundary by rejecting regulations framed as commerce regulation when the court determines non-economic purposes predominate, but their own institutional stake (authority to define boundaries) creates incentive pressure to preserve jurisdiction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables uniform national regulatory standards for genuinely economic activities whose effects cross state lines, solving the collective-action problem of 50 states imposing incompatible requirements on labor, environment, product safety, and finance. Permits federal agencies to internalize externalities (pollution, unsafe working conditions, unfair competition) that individual states cannot address without being economically undercut by regulatory arbitrage in neighboring jurisdictions.",
+    "transfer_function": "Moves regulatory authority from state legislatures and local government to federal agencies and federal courts. Extracts state capacity to define their own economic and social policy boundaries. States retain authority over activities determined to be non-economic (family law, criminal justice, land use for non-commercial purposes) but must defend that classification against federal recharacterization as activity with substantial effects on interstate commerce.",
+    "absent_voices": "Originalist judges and scholars who read the Commerce Clause as bounded by the text's historical meaning (commerce among the states = direct interstate trade and movement, not intrastate activity with aggregate effects) are excluded from this reading's construction. Expansive federal advocates arguing the doctrine should extend further, without jurisdictional nexus or non-pretextual limits, are also absent — their objection is that the constraints are unnecessary and should be abandoned.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the substantial effects doctrine and its enforcement disappeared overnight, federal regulatory authority would collapse to the originalist narrow scope (interstate instrumentalities only). Within weeks, state and local regulatory authority over labor standards, environmental protection, product safety, and financial markets would expand into the vacuum. Divergent state standards would fragment national markets; interstate commerce would face 50 different regulatory regimes; firms would intensify regulatory arbitrage by relocating production to low-regulation states; pollution and workplace hazards would cross state boundaries unchecked. The federal administrative state would cease to function in its current form.",
+    "founding_problem": "Before the New Deal, the Constitution's enumeration of federal commerce power was interpreted narrowly: Congress could regulate goods crossing state borders and the instrumentalities of interstate movement (railroads, ships), but not intrastate economic activity even if it had spillover effects on national markets. This created a regulatory gap: states could not unilaterally regulate their own economic activity if it created interstate spillovers (pollution, unfair labor competition); each state had incentive to hold standards low to attract business. The founding problem: how to authorize federal regulation of intrastate economic activity necessary to internalize interstate spillovers, without allowing federal government to regulate local activity under false commerce pretexts.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Federal agencies and courts defending the substantial effects doctrine attest the founding problem remains live: spillover dynamics persist, arbitrage pressures mount when state standards diverge, and national markets require national baseline standards to prevent competitive degradation. States and originalist interpreters attest the founding problem was substantially solved by the New Deal regulatory regime itself; the doctrine now enables federal regulation of genuinely local activity (gun possession near schools, family medical decisions, state land-use policy) through recharacterization as commercial. Economic research from independent sources (university economists, cross-partisan think tanks, international comparative studies) shows the founding spillover problem is addressed by current federal regulations and the doctrine now captures non-economic activity in its expansion."
   },
   "interval": {
     "start": 1937,
-    "end": 2024
+    "end": 2026
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 1937,
-      "value": 0.42
+      "value": 0.35,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1964,
-      "value": 0.52
+      "time_point": 1960,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1985,
-      "value": 0.55
+      "time_point": 1980,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2000,
-      "value": 0.57
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.58
+      "time_point": 2015,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.58
+      "time_point": 2026,
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 1937,
-      "value": 0.25
+      "value": 0.12,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1964,
-      "value": 0.32
+      "time_point": 1960,
+      "value": 0.18,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1985,
-      "value": 0.38
+      "time_point": 1980,
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 2000,
-      "value": 0.4
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.41
+      "time_point": 2015,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.41
+      "time_point": 2026,
+      "value": 0.41,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 1937,
-      "value": 0.45
+      "value": 0.32,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1964,
-      "value": 0.55
+      "time_point": 1960,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 1985,
-      "value": 0.6
+      "time_point": 1980,
+      "value": 0.51,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 2000,
-      "value": 0.62
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2010,
-      "value": 0.62
+      "time_point": 2015,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2024,
-      "value": 0.62
+      "time_point": 2026,
+      "value": 0.58,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "The Commerce Clause grants Congress power to regulate interstate commerce. The substantial effects doctrine allows federal regulation of intrastate economic activity when it substantially affects interstate commerce, but claims to preserve state police power by excluding noneconomic regulation (health, safety, morals) from federal reach via the Commerce Clause. This constraint is ONE READING of a contested kernel (the Commerce Clause text itself). The substantial_effects_limited_reading carves out a middle ground: federal authority is broad over genuinely economic intrastate activity, but the economic/noneconomic distinction serves as a boundary supposed to prevent federal police-power assertion disguised as commerce regulation. Three sibling readings contest this: the expansive_federal_reading treats all substantial-effects activity as federal domain; the originalist_narrow_reading confines interstate commerce to trade crossing borders and instrumentalities of interstate movement. The substantial_effects_limited_reading is instantiated here as a constraint because it describes a functioning interpretive doctrine that allocates authority, requires enforcement (litigation to police the boundary), and produces asymmetric extraction (state regulatory autonomy lost; federal authority gained; regulated actors face dual compliance). The constraint's extractiveness is moderate-high because the doctrine grants broad federal reach while the economic/noneconomic boundary is internally contested, creating opportunities for category manipulation and litigation costs.",
+    "narrative_context": "The substantial effects doctrine is one reading of the Commerce Clause kernel: federal power extends to intrastate activity when it substantially affects interstate commerce, but the reading insists on a jurisdictional nexus (the regulated activity or party must have a direct connection to interstate commerce) and a non-pretextual purpose (the regulation must be genuinely economic, not police power regulation disguised as commerce regulation). This reading sits between the originalist narrow reading (interstate commerce = trade crossing borders only) and the expansive federal reading (all economic activity with aggregate effects). The constraint's structure is a hybrid: it coordinates national standard-setting for genuinely economic activities while extracting state regulatory autonomy, and it polices its own boundary by requiring courts to prevent federal overreach into non-economic domains. The claim/metric gap is intentional: the reading is CLAIMED as tangled_rope (coordination + asymmetric extraction + active enforcement) while the authored metrics show substantial extraction, significant theater as the boundary-policing function becomes performative, and rising suppression as the doctrine encounters resistance from states and originalist interpreters defending the non-economic sphere.",
     "key_agents": [
-      "Supreme Court: enforces the economic/noneconomic boundary via case decisions; stewards the doctrine",
-      "Federal regulators: beneficiary — gain authority over intrastate economic activity; gain legitimacy from apparent constraint",
-      "National market integrationists: beneficiary — gain uniform regulation, collective-action solutions",
-      "States: victim — lose regulatory autonomy over intrastate economic affairs; police power nominally preserved but practically constrained",
-      "Regulated intrastate actors: victim — face federal regulation if classified as economic; litigation costs to contest classification",
-      "Originalist jurists & federalism advocates: excluded — cannot authoritative participate; remain a live alternative jurisdiction"
+      "Federal regulatory agencies (EPA, OSHA, FDA, NLRB, etc.): set and enforce economic standards under Commerce Clause authority; benefit from broad jurisdictional reach",
+      "State legislatures and local government: cede authority over activities classified as having substantial effects; trapped in shrinking regulatory space",
+      "National market participants (multinational firms, national commerce): benefit from uniform federal standards preempting 50 different state regimes",
+      "Courts defining the boundary: police the economic/non-economic distinction; institutional stake in maintaining jurisdiction",
+      "Originalist interpreters: excluded from the reading's construction; contest the jurisdictional scope",
+      "Non-economic activity sovereigns (states protecting family law, criminal justice, cultural sovereignty): pay the cost of boundary policing; identity-locked against exit"
     ],
-    "logic_rationale": "The extractiveness score (0.58) reflects the doctrine's grant of substantial federal reach while the economic/noneconomic boundary appears to constrain it. The boundary is the locus of extraction: it is claimed as a constraint but applied expansively (what counts as genuinely economic is settled via litigation favoring federal reach). Theater ratio (0.41) increases over time because the doctrine's performative function grows: the boundary policing appears to protect federalism but has become ritualized—the Court rarely strikes down federal commerce regulation on the grounds that it is noneconomic or lacks substantial effects (post-Lopez and Morrison, two rare boundary cases, the boundary reasserted itself as permissive). Suppression rises from 0.45 to 0.62 because maintaining the doctrine's coherence requires active judicial policing: the economic/noneconomic distinction must be enforced through precedent-setting, and alternative readings (expansive, originalist) must be contained. All measurements are on a single shared time grid (1937–2024) at six points spanning the doctrine's post-New Deal development.",
-    "directionality_logic": "Federal regulators sit at the beneficiary end (d near 0.0): they gain authority and legitimacy without needing to defend police-power assertions. National integrationists sit as moderate beneficiaries (d ~0.2–0.3): they gain coordination solutions but depend on federal regulatory will. States occupy the victim end (d ~0.75–0.85): they lose autonomy over intrastate economic affairs; the Tenth Amendment police-power reserve is nominally preserved but substantially eroded. Regulated intrastate actors sit at high-target end (d ~0.80): they face federal compliance costs and litigation risk without the exit options of states (cannot amend the Constitution; must litigate or comply). The Supreme Court stewards the doctrine and could revise the boundary, but its institutional position is to apply law as settled, not to question the foundational reading. No directionality overrides are necessary: the structural relationships derive cleanly from the beneficiary/victim declarations and exit constraints.",
-    "perspectival_gap": "The federal-regulator and state seats should compute very differently. From the federal seat, the doctrine is a necessary, modest expansion of enumerated power to reach genuine economic integration; restraint is visible in the economic/noneconomic boundary, and coordination problems justify the reach. From the state seat, the doctrine is a Tenth Amendment erosion disguised as boundary-policing; the economic/noneconomic line is incoherent (what counts as economic is determined by federal courts favoring federal reach) and theater obscures preemption. The engine computes these per-seat; the authored claim does not adjudicate them.",
-    "mandatrophy_analysis": "The founding problem (economic integration made pure intrastate regulation a fiction post-1937) is contested but widely acknowledged. The doctrine's function is to bridge constitutional contradiction: allow federal reach into integrated markets while preserving Tenth Amendment federalism language. The constraint is classified as tangled_rope (not snare) because there is a genuine coordination function: uniform national regulation of interstate-affecting activity solves real collective-action problems (race-to-bottom, supply-chain externalities). It is not pure extraction because the beneficiaries (federal regulators, national integrationists) are not solely extracting rent; they are solving coordination failures that states cannot. However, the mechanism is asymmetric: states lose discretion unilaterally; regulated actors face compliance costs and litigation uncertainty; the Supreme Court maintains the boundary through active enforcement. The economic/noneconomic distinction is the locus of both coordination (distinguishes genuine commerce from police-power overreach) and extraction (the boundary is applied expansively, favoring federal reach). This hybrid structure—real coordination function + asymmetric allocation of the coordination's benefits + active enforcement required to maintain the boundary against challenge—defines tangled_rope.",
-    "kernel_context": "This constraint is the substantial_effects_limited_reading of the commerce_clause_text kernel. The kernel is the constitutional text itself—'Congress shall have power to regulate commerce with foreign nations and among the several states.' Three readings contest the kernel's meaning: (1) expansive_federal_reading: interstate commerce encompasses all economic activity with substantial aggregate effects on national markets; (2) originalist_narrow_reading: interstate commerce limited to trade crossing state borders and instrumentalities of interstate movement; (3) substantial_effects_limited_reading (this constraint): Federal power extends to intrastate activity with substantial effects on interstate commerce but requires jurisdictional nexus and non-pretextual economic regulation. This reading sits between the other two: broader than originalist (includes intrastate activity) but narrower than expansive (economic/noneconomic boundary limits federal police power). The kernel is a formalized fixed text (the Constitution); the authority grounding is lineage (interpretation transmitted through legal tradition, case law, amendment history). The interpretation layer is present: the judiciary interprets and applies the doctrine, transmitting it across generations of cases. The substantial_effects_limited_reading is the operative doctrine from 1937 to present, with periodic contestation (López, Morrison, and contemporary debates about where the boundary lies)."
+    "logic_rationale": "Extractiveness rises from 0.35 (1937, newly established) to 0.62 (2026, mature doctrine) as federal agencies accumulate regulatory power and states adapt to shrinking authority. Theater rises from 0.12 to 0.41 as the doctrine's boundary-policing function becomes increasingly performative: courts must reject applications that recharacterize non-economic activity as commercial (Gonzales v. Raich for medical marijuana, United States v. Lopez for gun possession near schools), but the recharacterizations persist and the doctrine's categorization work grows without substantive limitation. Suppression requirement rises from 0.32 to 0.58 as resistance hardens: originalist judges resist the expansive reading, states defend non-economic regulatory domains, and legal scholarship contests whether the doctrine prevents the recharacterization problem it was designed to prevent. The measurements are authored on a single shared time grid (every metric at every examined year) to track the three dynamics: extraction accumulation (federal power grows), theater growth (categorical boundary work overtakes functional coordination), and suppression increase (defensive enforcement hardens as the boundary-policing work fails to contain scope).",
+    "perspectival_gap": "From the federal institutional seat, the doctrine enables necessary coordination: one national standard for labor, environment, product safety is more efficient than 50 divergent standards. From the state seat, the doctrine enables federal institutional expansion disguised as coordination: the 'economic/non-economic' distinction is the only boundary, and courts have shown they will recharacterize non-economic activity (gun possession, family medical decisions, land use) as economic when federal regulation is desired. From the originalist interpreter seat, the doctrine has already failed its core function: if it were constraining federal power, there would be fewer recharacterization cases and more rejections. The theater ratio's rise tracks this divergence: courts perform boundary maintenance (deny recharacterization, uphold the economic/non-economic distinction) while federal agencies accumulate regulatory authority anyway, and the constraint persists through formalism rather than functional limitation.",
+    "directionality_logic": "Directionality derives from the beneficiary/victim structure: federal agencies are beneficiaries (collect authority, face no exit, analytical power); states are victims (lose authority, trapped by jurisdictional attachment). National market participants are beneficiaries (gain from uniform standards, mobile, powerful). Non-economic sovereigns are victims (lose regulatory space, identity-locked, moderate power, trapped). Courts are dual-positioned: they are agenda-setters (define the boundary) and beneficiaries (authority to interpret 'economic' and 'substantial' expands their institutional role). Directionality for states: high d (near target) because they lose authority and are constrained. Directionality for national participants: low d (near beneficiary) because they gain and have arbitrage options. Directionality for non-economic sovereigns: highest d (full target) because they lose identity-constituting regulatory space and cannot exit ideologically.",
+    "mandatrophy_analysis": "The constraint sits between pure coordination (if the boundary held and prevented recharacterization) and pure extraction (if the boundary were purely performative). The tangled_rope classification depends on: (1) a real coordination function — federal standards do internalize spillovers from genuinely economic activity and reduce arbitrary variation; (2) asymmetric extraction — states and localities lose authority they cannot recover; (3) active enforcement — courts must continuously perform the economic/non-economic policing to prevent the doctrine's collapse into pure federal override. The theater_ratio rise (0.12 to 0.41) suggests the enforcement is increasingly theatrical: the recharacterization cases (Raich, Lopez, Gonzales) show courts rejecting applications while the doctrine's scope continues to expand, indicating the boundary is being defended performatively but not actually limiting federal reach. This is the mandatrophy signature: the founding problem (spillover internalization) is substantially solved; the doctrine now persists partly as institutional maintenance (courts need to define boundaries to justify their role) and partly as imperial overreach (federal agencies use 'economic' categorization to reach non-economic activity). The constraint is not yet a piton because the coordination function is real and the extraction remains bound by the doctrine's stated limits; but the rising theater and persistent recharacterization attempts suggest the constraint is drifting toward that state.",
+    "kernel_context": "This constraint is one reading of the Commerce Clause kernel — a fixed constitutional text whose legitimacy is grounded in formalized lineage authority (the Constitution and the Supreme Court's interpretation role). The reading instantiates the substantial effects doctrine with jurisdictional nexus and non-pretextual limits: Federal power extends to intrastate economic activity with substantial effects on interstate commerce, BUT federal jurisdiction requires a nexus between the regulated activity and interstate commerce, and the regulation must serve a genuinely economic purpose (not police power). The sibling readings are: (1) originalist_narrow_reading: Interstate commerce = trade crossing borders and interstate instrumentalities only; federal jurisdiction is limited to direct regulation of boundary-crossing activity. (2) expansive_federal_reading: Interstate commerce encompasses all economic activity with aggregate effects on national markets; jurisdictional nexus and non-pretextual limits are judicially-imposed constraints that exceed constitutional text and should be abandoned. This reading sits between, asserting that federal power is broad but bounded: the boundary is the economic/non-economic distinction plus the pretextuality test. The constraint's operation is the enforcement of that boundary by courts and the federal agencies' attempts to expand across it."
   },
   "omegas": [
     {
-      "id": "economic_noneconomic_coherence",
-      "question": "Is the economic/noneconomic distinction a coherent, text-grounded boundary, or is it a policy-driven category whose membership is determined by federal courts favoring federal reach?",
-      "resolution_mechanism": "Systematic analysis of boundary cases (López, Morrison, Gonzalez, contemporary litigation): do courts apply a consistent principled rule, or does the boundary shift to accommodate federal authority? Examination of what gets classified as genuinely economic when federal interest is high vs. low.",
-      "impact": "If incoherent and policy-driven, the doctrine's extractiveness and theater components are higher than authored (the boundary policing is performance, not constraint). If coherent, the doctrine is closer to a genuine coordination mechanism with negotiated constraints. This resolves the doctrine's legitimacy claim.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the economic/noneconomic boundary is principled or malleable."
-    },
-    {
-      "id": "substantial_effects_manipulation",
-      "question": "Can the substantial effects test be manipulated to reach noneconomic regulation by reclassifying the regulation's purpose as economic (e.g., claiming a gun-control law regulates 'economic activity' because possession affects insurance and commerce)?",
-      "resolution_mechanism": "Examination of post-López jurisprudence: did López and Morrison durably protect noneconomic regulation from federal Commerce Clause reach, or have lower courts found methods to extend substantial effects language into noneconomic domains?",
-      "impact": "If manipulation is possible, the doctrine provides weaker real constraint than claimed, and extraction is higher. If the boundary holds, the doctrine's coordination function is more robust.",
+      "id": "economic_non_economic_boundary_stability",
+      "question": "Is the economic/non-economic distinction a stable, justiciable boundary that actually constrains federal power, or is it a performative categorization that expands and contracts to accommodate whatever federal regulation is desired?",
+      "resolution_mechanism": "Audit the trajectory of recharacterization attempts: if courts increasingly reject recharacterizations and the federal power stabilizes at a fixed scope, the boundary is stable; if recharacterizations succeed despite performative rejections, and federal reach continues expanding, the boundary is performative.",
+      "impact": "If stable, the constraint is a genuine tangled_rope with effective boundary maintenance. If performative, the constraint is degrading toward piton: the coordination function is real, but the extraction persists through institutional inertia and the boundary-policing becomes theatrical.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the boundary actually protects noneconomic regulation from federal reach."
+      "description": "Whether the economic/non-economic boundary functions as a substantive constraint or merely a legitimating category."
     },
     {
-      "id": "federalism_doctrine_vs_text_divergence",
-      "question": "Does the substantial effects reading faithfully represent the original public meaning of the Commerce Clause text, or is it a mid-20th-century accommodation that privileges pragmatic integration over textual fidelity?",
-      "resolution_mechanism": "Originalist textual analysis of the Commerce Clause against the substantial effects doctrine. Comparison of originalist scholarship and dissenting opinions (Alito, Thomas) against the doctrine's foundational premises.",
-      "impact": "If text-divergent, this reading is a constructed constraint benefiting federal authority and integration, not an inevitable reading of constitutional law. It is one choice among live alternatives (expansive, originalist), not the only defensible reading. This supports the omega's existence and the three-reading kernel decomposition.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the doctrine's reading is texturally grounded or judicially constructed."
+      "id": "founding_problem_persistence",
+      "question": "Is the founding problem (interstate spillovers requiring federal internalization) still live, or has the federal regulatory regime substantially solved it, making the doctrine now serve only imperial expansion?",
+      "resolution_mechanism": "Compare spillover dynamics in regulated vs. unregulated domains: if regulated domains show stable spillover internalization and unregulated domains show significant competitive arbitrage, the founding problem is live; if both show similar patterns, the doctrine persists beyond functional necessity.",
+      "impact": "If foundational problem is live, the constraint is tangled_rope (coordination + extraction). If dead, the constraint is snare with mandatrophy (the founding justification is gone but enforcement persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal commerce regulation still solves a genuine coordination problem or persists for institutional reasons."
     },
     {
-      "id": "kernel_reading_alternative_dominance",
-      "question": "Within a single contemporary decision-making seat (e.g., the current Supreme Court), can all three readings (expansive, originalist, substantial_effects_limited) coexist, or does the institutional structure force selection of one dominant reading?",
-      "resolution_mechanism": "Analysis of majority coalitions on the current Court and recent constitutional litigation. Do judges apply the readings contextually (substantial effects for economic regulation, originalism for police power), or is there a pressure toward one unified reading?",
-      "impact": "If coexistence is possible, the three readings genuinely coexist (per the `coexists_with` relation). If institutional structure forces selection, the dominant reading will tend to foreclose or influence others over time. This affects the Long Maginot estimate for the doctrine.",
+      "id": "reading_contest_foreclosure",
+      "question": "Does the substantial effects reading foreclose the originalist reading, or do both remain live interpretative positions the courts could adopt?",
+      "resolution_mechanism": "Jurisprudential analysis: the substantial effects reading forecloses originalism if accepting originalism logically requires denying that the constitutional text grants federal power to regulate intrastate activity with effects on interstate commerce. The readings coexist if both can be held as coherent interpretations of the same text by different parties.",
+      "impact": "If foreclosed, the originalist reading is eliminated by the logic of this reading's core premise (federal power over intrastate activity with effects is textually granted). If coexisting, both readings remain live for different judicial coalitions and the kernel contest persists.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the three readings can coexist in practice or whether one tends to dominate."
+      "description": "Whether this reading's premise logically eliminates the originalist alternative."
+    },
+    {
+      "id": "jurisdictional_nexus_enforcement",
+      "question": "Is the jurisdictional nexus requirement actually enforced by courts, or is it a formal requirement that courts satisfy while permitting federal regulation even when nexus is tenuous or inferred?",
+      "resolution_mechanism": "Case audit: count rejections where lack of nexus was the decisive ground vs. cases where tenuous nexus was accepted. A high rejection rate shows enforcement; a low rate shows performativity.",
+      "impact": "If enforced, the nexus requirement is a real constraint on federal reach. If performative, it is a legitimating cover for federal expansion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the jurisdictional nexus requirement functions as a binding constraint or a formal requirement easily satisfied."
+    },
+    {
+      "id": "suppression_structural_vs_institutional",
+      "question": "Is the rising suppression requirement (0.32 to 0.58) structural (states cannot defend their regulatory space even when they try) or institutional (federal resistance has hardened but states retain legal and political tools to contest federal jurisdiction)?",
+      "resolution_mechanism": "Jurisdictional variation: if states attempting to defend non-economic regulatory space (family law, criminal justice) succeed in some contexts and fail in others, suppression is institutional. If federal preemption is near-universal regardless of state effort, suppression is structural.",
+      "impact": "If structural, the constraint is high-suppression snare (states cannot resist). If institutional, it is tangled rope with rising institutional pressure but remaining contestation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rising suppression reflects structural inability to resist or increased federal institutional power."
     }
   ],
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "commerce_clause_text__expansive_federal_reading",
       "commerce_clause_text__originalist_narrow_reading",
-      "dormant_commerce_clause_preemption",
-      "federalism_structural_reserve"
+      "commerce_clause_text__expansive_federal_reading",
+      "dormant_commerce_clause_constraint",
+      "state_police_power_boundary",
+      "federal_agency_jurisdictional_scope"
     ],
-    "dual_formulation_note": "The commerce_clause_text kernel decomposes into three constraint stories, one per reading. Each reading instantiates a different constraint with its own ε, beneficiary/victim structure, and type. The substantial_effects_limited_reading is the operative post-1937 doctrine. The expansive_federal_reading represents the outer boundary of federal reach (all substantially affecting activity = federal domain). The originalist_narrow_reading represents the alternative interpretation that would constrain federal reach most severely. These three stories form a constraint family linked by network.affects_constraints. The substantial_effects_limited_reading influences the other two because it is institutionally dominant and shapes what the alternatives must argue against."
+    "dual_formulation_note": "The Commerce Clause kernel generates three constraint stories: (1) originalist_narrow_reading — federal power limited to direct interstate commerce; (2) substantial_effects_limited_reading (this story) — federal power over intrastate economic activity with substantial effects, but bounded by jurisdictional nexus and non-pretextual limits; (3) expansive_federal_reading — all economic activity with aggregate effects on national commerce. These are not the same constraint viewed from different angles; they are three structurally distinct readings of the same constitutional text with different ε values, beneficiary structures, and enforcement mechanisms. The substantial_effects_limited_reading influences both siblings by establishing the jurisdictional nexus and non-pretextual limits as the middle ground; expansive_federal_reading pushes against these limits; originalist_narrow_reading argues the entire framework is an unauthorized expansion."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.85
+    }
+  ],
+  "gain_flow": "federal_regulatory_agencies",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "lineage",
     "interpretation_layer_present": true,
-    "reference_frame": "post_1937_integrated_commerce_settlement",
-    "drift_state": {
-      "moment": "contemporary_originalist_insurgency",
-      "direction": "authority_erosion",
-      "magnitude": "minor",
-      "acknowledged": true
-    },
     "reading_relations": [
       {
-        "sibling_id": "commerce_clause_text__expansive_federal_reading",
+        "sibling_id": "originalist_narrow_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "commerce_clause_text__originalist_narrow_reading",
+        "sibling_id": "expansive_federal_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "genuine_economic_activity_federally_reachable",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "empirically_contingent"
-      },
-      {
-        "atom": "noneconomic_regulation_state_reserved",
+        "atom": "intrastate_economic_activity_federally_regulable",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "deontological"
+      },
+      {
+        "atom": "jurisdictional_nexus_constrains_federal_reach",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_economic_regulatory_sovereignty_preserved",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
       }
-    ]
+    ],
+    "reference_frame": "new_deal_commerce_power_framework",
+    "drift_state": {
+      "moment": "contemporary_boundary_contestation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

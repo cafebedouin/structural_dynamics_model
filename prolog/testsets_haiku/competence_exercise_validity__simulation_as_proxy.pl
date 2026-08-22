@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +76,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: competence_exercise_validity__simulation_as_proxy
- *   human_readable: Simulation Validity as Proxy-Catastrophe Exercise
- *   domain: safety/organizational
+ *   human_readable: Simulation as Valid Competence Exercise and Regulatory Proxy
+ *   domain: safety_engineering/organizational_learning
  *
  * SUMMARY:
- *   In safety-critical industries, competence must be maintained for
- *   catastrophic scenarios that rarely occur in practice. The regulatory
- *   constraint 'simulation counts as valid exercise that keeps competence
- *   occupied' solves a coordination problem: how to validate competence
- *   without waiting for catastrophes? The rule standardizes drill metrics as
- *   the competence proxy. This is claimed as genuine coordination (benefits
- *   operators by obviating real-catastrophe risk, benefits organizations by
- *   allowing planned training). The constraint also extracts: it transfers
- *   the risk that simulation-validated competence does not predict
- *   real-competence onto operators, and it extracts from frontline personnel
- *   by validating their capability via a model they do not design. The
- *   theater-ratio measurement (0.67 at interval end) reflects the reality
- *   that drill performance is increasingly a proxy for regulatory compliance
- *   rather than actual safety capability — the function has drifted from
- *   'prove competence' to 'demonstrate administrative participation.' This
- *   story is one reading of the contested kernel
- *   competence_exercise_validity; it instantiates the simulation_as_proxy
- *   reading, which claims drills are adequate proxies for catastrophe.
- *   Sibling readings (real_catastrophe_only, continuous_refresh_hybrid) are
- *   separate constraint stories with different epsilon values and different
- *   stakeholder structures.
+ *   Safety-critical organizations (aviation, nuclear, maritime, emergency
+ *   response) validate crew competence through simulator drills that are
+ *   declared equivalent to real-world crisis exercise. This constraint
+ *   asserts that simulation is a valid proxy: passing simulator scenarios,
+ *   maintaining certification hours, and demonstrating drill-scenario
+ *   competence are sufficient to certify operational readiness. Regulatory
+ *   authorities, organization administrators, and simulator vendors benefit
+ *   from this proxy because it avoids the operational disruption and
+ *   logistical expense of real-world crisis drills while providing measurable
+ *   compliance data. Operational crews bear the time cost and the
+ *   identity-lock risk (career advancement depends on simulator
+ *   certification). The constraint persists because it is genuinely useful
+ *   (no other scalable competence proxy exists) AND extractive (it transfers
+ *   training burden from regulators/administrators to crews while validating
+ *   vendors and reducing operational costs). This story instantiates the
+ *   'simulation_as_proxy' reading of the contested kernel
+ *   'competence_exercise_validity': here, simulation counts as sufficient
+ *   exercise and drills are treated as proxy-catastrophe. Sibling readings
+ *   differ structurally on whether simulation alone suffices or whether real
+ *   catastrophe is the only authentic competence test.
  *
  * KEY AGENTS:
- *   - Regulatory authority: sets and enforces the rule; benefits from predictable, scheduled competence validation
- *   - Organization management: coordinates training schedules; benefits from the rule's administrativeibility; pays by accepting simulation-reality divergence
- *   - Frontline operators: carry the existential risk that drill competence does not predict real competence
- *   - Safety-critical personnel (powerless): trapped in the certification model; cannot demand alternative validation
- *   - Actual incident victims (excluded): bear the ground-truth test of the model; have no seat in its design
+ *   - regulatory_authorities: institutional power, analytical time horizon, analytical exit — they set the proxy standards and audit compliance but face no direct cost from simulation divergence
+ *   - organization_administrators: powerful, biographical horizon, arbitrage exit — they benefit from lower training costs and standardized metrics, coordinate with regulators
+ *   - operational_crews: moderate power, biographical horizon, identity-locked exit — required to maintain certification, career depends on proxy metrics, bear opportunity cost of simulator time
+ *   - catastrophe_survivors: powerless, biographical horizon, trapped exit — excluded from policy-setting, their real-crisis experience contradicts the proxy but is compartmentalized retrospectively
+ *   - simulation_vendors: organized power, biographical horizon, mobile exit — revenue scales with mandatory simulator hours
+ *   - safety_researchers: moderate power, generational horizon, analytical exit — generate data on simulator fidelity gaps but influence the framework slowly
  */
 
 /* ==========================================================================
@@ -106,59 +115,114 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(competence_exercise_validity__simulation_as_proxy, 0.58).
-domain_priors:suppression_score(competence_exercise_validity__simulation_as_proxy, 0.62).
-domain_priors:theater_ratio(competence_exercise_validity__simulation_as_proxy, 0.67).
+domain_priors:base_extractiveness(competence_exercise_validity__simulation_as_proxy, 0.68).
+domain_priors:suppression_score(competence_exercise_validity__simulation_as_proxy, 0.72).
+domain_priors:theater_ratio(competence_exercise_validity__simulation_as_proxy, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, extractiveness, 0.58).
-narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, suppression_requirement, 0.62).
-narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, theater_ratio, 0.67).
+narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, extractiveness, 0.68).
+narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, theater_ratio, 0.58).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, accessibility_collapse, 0.71).
-narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, resistance, 0.48).
+narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(competence_exercise_validity__simulation_as_proxy, resistance, 0.45).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(competence_exercise_validity__simulation_as_proxy, tangled_rope).
-narrative_ontology:human_readable(competence_exercise_validity__simulation_as_proxy, "Simulation Validity as Proxy-Catastrophe Exercise").
-narrative_ontology:topic_domain(competence_exercise_validity__simulation_as_proxy, "safety/organizational").
+narrative_ontology:constraint_claim(competence_exercise_validity__simulation_as_proxy, rope).
+narrative_ontology:human_readable(competence_exercise_validity__simulation_as_proxy, "Simulation as Valid Competence Exercise and Regulatory Proxy").
+narrative_ontology:topic_domain(competence_exercise_validity__simulation_as_proxy, "safety_engineering/organizational_learning").
 
 domain_priors:requires_active_enforcement(competence_exercise_validity__simulation_as_proxy).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(competence_exercise_validity__simulation_as_proxy, '146dcb5e-928c-4c7c-bca9-099287295969').
-narrative_ontology:cs_kernel_codification('146dcb5e-928c-4c7c-bca9-099287295969', formalized).
-narrative_ontology:cs_authority_grounding('146dcb5e-928c-4c7c-bca9-099287295969', extraction).
-narrative_ontology:cs_interpretation_layer_present('146dcb5e-928c-4c7c-bca9-099287295969').
-narrative_ontology:cs_reading_relation('146dcb5e-928c-4c7c-bca9-099287295969', competence_exercise_validity__real_catastrophe_only, coexists_with).
-narrative_ontology:cs_reading_relation('146dcb5e-928c-4c7c-bca9-099287295969', competence_exercise_validity__continuous_refresh_hybrid, influences).
-narrative_ontology:cs_axiom('146dcb5e-928c-4c7c-bca9-099287295969', foundational, simulation_metrics_predict_real_competence).
-narrative_ontology:cs_axiom_status(simulation_metrics_predict_real_competence, holdable).
-narrative_ontology:cs_axiom_grounding('146dcb5e-928c-4c7c-bca9-099287295969', simulation_metrics_predict_real_competence, empirically_contingent).
-narrative_ontology:cs_axiom('146dcb5e-928c-4c7c-bca9-099287295969', secondary, administrative_feasibility_justifies_model_choice).
-narrative_ontology:cs_axiom_status(administrative_feasibility_justifies_model_choice, holdable).
-narrative_ontology:cs_axiom_grounding('146dcb5e-928c-4c7c-bca9-099287295969', administrative_feasibility_justifies_model_choice, instrumental).
-narrative_ontology:cs_reference_frame('146dcb5e-928c-4c7c-bca9-099287295969', simulation_adequacy_for_competence_validation).
-narrative_ontology:cs_drift_state('146dcb5e-928c-4c7c-bca9-099287295969', contemporary_incident_analysis_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('146dcb5e-928c-4c7c-bca9-099287295969', '').
+narrative_ontology:cs_story_uid(competence_exercise_validity__simulation_as_proxy, '75d91da8-0e90-47f6-8c52-97ee677e2b7e').
+narrative_ontology:cs_kernel_codification('75d91da8-0e90-47f6-8c52-97ee677e2b7e', formalized).
+narrative_ontology:cs_authority_grounding('75d91da8-0e90-47f6-8c52-97ee677e2b7e', extraction).
+narrative_ontology:cs_interpretation_layer_present('75d91da8-0e90-47f6-8c52-97ee677e2b7e').
+narrative_ontology:cs_reading_relation('75d91da8-0e90-47f6-8c52-97ee677e2b7e', competence_exercise_validity__real_catastrophe_only, coexists_with).
+narrative_ontology:cs_reading_relation('75d91da8-0e90-47f6-8c52-97ee677e2b7e', competence_exercise_validity__continuous_refresh_hybrid, influences).
+narrative_ontology:cs_axiom('75d91da8-0e90-47f6-8c52-97ee677e2b7e', foundational, simulation_fidelity_sufficient_for_competence).
+narrative_ontology:cs_axiom_status(simulation_fidelity_sufficient_for_competence, holdable).
+narrative_ontology:cs_axiom_grounding('75d91da8-0e90-47f6-8c52-97ee677e2b7e', simulation_fidelity_sufficient_for_competence, empirically_contingent).
+narrative_ontology:cs_axiom('75d91da8-0e90-47f6-8c52-97ee677e2b7e', foundational, proxy_metrics_discharge_regulatory_commitment).
+narrative_ontology:cs_axiom_status(proxy_metrics_discharge_regulatory_commitment, holdable).
+narrative_ontology:cs_axiom_grounding('75d91da8-0e90-47f6-8c52-97ee677e2b7e', proxy_metrics_discharge_regulatory_commitment, conventional).
+narrative_ontology:cs_reference_frame('75d91da8-0e90-47f6-8c52-97ee677e2b7e', simulation_as_competence_validation).
+narrative_ontology:cs_drift_state('75d91da8-0e90-47f6-8c52-97ee677e2b7e', contemporary_post_incident_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('75d91da8-0e90-47f6-8c52-97ee677e2b7e', '2026-06-12T14:32:18Z').
 narrative_ontology:cs_kernel_id(competence_exercise_validity__simulation_as_proxy, competence_exercise_validity).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(competence_exercise_validity__simulation_as_proxy, regulatory_authority).
-narrative_ontology:constraint_beneficiary(competence_exercise_validity__simulation_as_proxy, organization_management).
-narrative_ontology:constraint_victim(competence_exercise_validity__simulation_as_proxy, frontline_operators).
-narrative_ontology:constraint_victim(competence_exercise_validity__simulation_as_proxy, safety_critical_personnel).
+narrative_ontology:constraint_beneficiary(competence_exercise_validity__simulation_as_proxy, regulatory_authorities).
+narrative_ontology:constraint_beneficiary(competence_exercise_validity__simulation_as_proxy, organization_administrators).
+narrative_ontology:constraint_victim(competence_exercise_validity__simulation_as_proxy, operational_crews).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(competence_exercise_validity__simulation_as_proxy, simulation_vendors).
+narrative_ontology:constraint_vindicates(competence_exercise_validity__simulation_as_proxy, simulation_fidelity_sufficient_for_competence_retention).
+narrative_ontology:constraint_vindicates(competence_exercise_validity__simulation_as_proxy, proxy_metrics_correlate_with_safety_outcomes).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Establish and enforce competence-retention standards through simulators and drills. They codify the acceptable proxy for real-world competence: crew must pass simulation scenarios quarterly, achieve defined drill metrics, and log simulator hours. They depend on this framework because real catastrophes are rare and regulatory capacity to evaluate on-the-job competence is limited. Auditing simulator participation is feasible; auditing true crisis readiness is not.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, regulatory_authorities, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Operate within the regulatory proxy framework and use it to reduce training costs while appearing compliant. Simulator-based competence avoids expensive real-world exercises that disrupt normal operations, pull crews from revenue-generating roles, and create real infrastructure stress. They argue simulation satisfies competence and frees resources for other priorities. They coordinate with regulators on what constitutes adequate simulator realism and pass rates.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, organization_administrators, beneficiary,
+    powerful, biographical, arbitrage, global).
+narrative_ontology:stakeholder_secondary_role(competence_exercise_validity__simulation_as_proxy, organization_administrators, agenda_setter).
+
+% Required to maintain simulator certifications and pass drill scenarios on the authority's schedule. They experience simulation as mandatory but often uncoupled from the decision-making pressures and real-time uncertainty of actual crises. They bear the opportunity cost of time in simulator training that might otherwise be spent on skill-building or rest. Career advancement depends on certification completion, creating identity-lock around the proxy metrics — their professional identity and credibility are constituted through maintaining simulator standing.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, operational_crews, payer,
+    moderate, biographical, identity_locked, global).
+
+% Crews who faced real catastrophe are not in the policy-making conversation about competence standards. Their experience that simulation differed substantially from reality, or that crew panic and fatigue factors that don't appear in drills shaped the outcome, is often retrospective and compartmentalized rather than generative input to the framework.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, catastrophe_survivors, excluded,
+    powerless, biographical, trapped, local).
+
+% Provide simulator hardware, scenario software, and certification tracking. Revenue scales with mandatory simulator hours; they benefit from the constraint that competence MUST be validated through simulation. They invest in fidelity improvements selectively — enough to maintain regulatory approval, not necessarily enough to capture the gap between simulation and real crisis.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, simulation_vendors, beneficiary,
+    organized, biographical, mobile, global).
+
+% Study competence retention, human factors under stress, and simulator-to-reality transfer. They generate empirical data on where simulation diverges from actual crisis response and whether simulator performance predicts real-world outcomes. Their findings feed into regulatory refinement but often take years to influence the proxy framework.
+narrative_ontology:constraint_stakeholder(competence_exercise_validity__simulation_as_proxy, safety_researchers, observer,
+    moderate, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(competence_exercise_validity__simulation_as_proxy, regulatory_authorities).
+narrative_ontology:fixing_cost_class(competence_exercise_validity__simulation_as_proxy, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the problem that real catastrophes are rare and cannot be used as training data: simulation provides a repeatable, measurable proxy for crisis competence that regulators can audit and organizations can standardize across fleets/facilities.
+% TRANSFER_FUNCTION: Moves crew time and attention from other activities to mandatory simulator training; moves revenue from organizations to simulator vendors; moves regulatory authority from post-incident investigation to pre-incident proxy certification.
+% ABSENT_VOICES: Crews from past real crises whose experience contradicts the proxy equivalence (low simulator fidelity, fatigue factors unmodeled, panic patterns not captured) are often not systematized into policy debate; their testimony appears in incident reports rather than in the ongoing framework-setting conversation. Maintenance crews and lower-seniority staff who carry disproportionate simulator burden for lower advancement payoff are diffusely underrepresented.
+% DISAPPEARANCE_RATIONALE: If simulation-as-proxy vanished, regulatory authorities would revert to historical/post-incident competence evaluation, organizations would optimize training toward real-world drills or efficiency metrics rather than simulator hours, and the incentive structure for simulator vendors would collapse — the ecosystem of competence validation would reorganize around measurable operational outcomes rather than proxy metrics.
+% FOUNDING_PROBLEM: Catastrophes are too rare to use as training events; regulatory capacity to assess competence on the job was limited; organizations had no standardized way to prove crews were ready for crisis.
+% FOUNDING_PROBLEM_CORROBORATION: Regulatory authorities and simulator vendors affirm the problem is live and their solution is adequate. Safety researchers publish findings of significant fidelity gaps and poor transfer from simulator to real crisis; incident investigators document failures attributable to crew factors that simulations did not model (fatigue accumulation, resource scarcity, chain-of-command breakdown under uncertainty). The problem persists but the proxy validity is contested by stakeholders outside the beneficiary set.
+narrative_ontology:disappearance_verdict(competence_exercise_validity__simulation_as_proxy, world_rearranges).
+narrative_ontology:founding_problem_status(competence_exercise_validity__simulation_as_proxy, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(competence_exercise_validity__simulation_as_proxy, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(competence_exercise_validity__simulation_as_proxy, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(competence_exercise_validity__simulation_as_proxy, 'none', 1).
+narrative_ontology:epsilon_provenance(competence_exercise_validity__simulation_as_proxy, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +242,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.42 to 0.58 over the interval (t=0 to t=40), plateauing around t=20. The rise reflects an accumulation of incident post-mortems showing competence-certified personnel failing in real catastrophe in ways their drill performance would not predict. As the model's predictive validity comes into question, the extraction becomes more visible: organizations are still certifying competence via drill metrics, but the regulatory value of those metrics has degraded. Theater ratio rises from 0.48 to 0.67 and plateaus, indicating that drills increasingly serve administrative (demonstrate compliance, maintain budget, satisfy audits) rather than functional (certify real competence) purposes. Suppression remains stable at 0.62 because the constraint continues to be enforced via regulatory requirement, audit penalties, and professional licensing — the external enforcement machinery does not weaken even as the model's validity becomes contested. Accessibility collapse at 0.71 reflects that operators have no realistic alternative to accepting the simulation model: they cannot refuse drills (competence violation), cannot demand real-catastrophe testing (unethical), cannot request alternative validation (outside regulatory framework). They are constrained not by lack of exit physically, but by institutional entrapment: the rule is the ONLY legitimate path to competence certification.
+ *   Extractiveness rises from 0.54 at t0 to 0.68 at t15, then plateaus (data projects stabilization). The rising trajectory reflects accumulating regulatory additions (higher fidelity requirements, longer certification cycles) that increase the simulator training burden without proportional refinement of the proxy validity — more enforcement to maintain the same bet. Theater_ratio rises from 0.42 to 0.58 over the same interval: regulatory emphasis increasingly shifts from validating the proxy's empirical link to safety (real discovery) to administering the proxy itself (compliance theater). By t15, more than half the simulator activity is performative maintenance of certification status rather than genuine competence building. Suppression_requirement stays higher (0.62–0.72) because the constraint requires active enforcement of mandatory participation and regulatory gatekeeping of simulator vendors. Accessibility_collapse at 0.62 reflects that alternatives (on-the-job competence assessment, real-world drills, hybrid validation) exist but are not permitted within the regulatory framework — the collapse is regulatory, not natural. Resistance at 0.45 is moderate: crews grumble but comply (career dependence); vendors have no resistance (they benefit); regulators face pushback only from safety researchers and incident investigators (low institutional power in the framework, deferred influence). The measurement grid is shared across all metrics at every time point; no metric is missing from any time point (first audited/2026-06-12).
  *
  * PERSPECTIVAL GAP:
- *   The regulatory authority sees the constraint as a coordination solution: 'We cannot wait for rare catastrophes; drills let us validate competence on schedule.' The organization sees it as administratively efficient: 'Drills are cheaper and more predictable than incident-based validation.' Frontline operators increasingly see it as a mismatch: 'Drills don't prepare me for the stress, cascade failures, and real uncertainty of actual catastrophe.' Safety researchers and incident investigators see it as model degradation: 'The metrics are validated against regulatory compliance, not against actual competence.' The payer seats (operators, safety-critical personnel) compute a higher directionality toward target (d near 0.85+) because they bear the risk transfer. The agenda-setter (regulatory authority) computes lower d (near 0.2) because it designed the rule. The beneficiary (organization management) sits between, paying some costs (must run drills) while collecting the convenience benefit. The engine will compute per-seat types from this structural divergence.
+ *   From the regulatory-authority and administrator seats, this is genuine coordination: a scalable solution to an unsolved competence-validation problem. From the operational-crew seat, it is enforced proxy-reliance: certification requirements that diverge from the competence the crews know they need, with career consequences for non-compliance. The engine computes both frames from the structural data (beneficiary vs. victim roles, exit constraints, power asymmetry) — the authored claim (rope: coordination-dominant) reflects the reading's own framing; the metrics (high extraction, rising theater, sustained suppression) report the constraint's actual operation as observed by the excluded parties and safety researchers.
  *
  * DIRECTIONALITY LOGIC:
- *   Regulatory authority: d = 0.1–0.2. Sets the rule, derives authority and predictability from it, faces minimal enforcement burden, experiences no real catastrophe risk (that sits with operators). Full beneficiary position. Frontline operators: d = 0.80–0.90. Required to participate in drills, certified on a model they do not control, carry the risk that the model is invalid, cannot refuse or demand alternatives without professional penalty. Trapped in the certification system. Organization management: d = 0.35–0.45. Pays the cost of running drills (time, resources), benefits from administrative certainty and avoided real-catastrophe litigation (if competence is certified and catastrophe occurs, they have paper). Asymmetric but moderate. Safety-critical personnel (powerless): d = 0.85–0.95. Identical to operators structurally but amplified: they are powerless, so even if they recognize the model is inadequate they cannot organize objection or seek alternative validation. The rule extracts by their entrapment.
+ *   Regulatory authorities are the structural agenda-setters (set the proxy standard, audit compliance) but sit as beneficiaries in extraction terms: they depend on the proxy to regulate at scale, not to verify real competence. Administrators are dual-positioned (beneficiary role, secondary as agenda-setter): they benefit from lower training costs and measurable compliance; they co-set the proxy with regulators through coordination. Operational crews are the targets (pay the time cost, identity-locked by career requirements, constrained exit). Simulation_vendors are beneficiaries (revenue scales with mandated hours). The directionality derivation places crews near d=0.8–0.9 (high target: payers with trapped/identity-locked exit); administrators and authorities near d=0.1–0.3 (beneficiaries with powerful exit, though authorities have analytical exit); vendors near d=0.2–0.4 (beneficiaries with organized power and mobile exit). No override needed; the structural data produces the correct d map.
  *
  * MANDATROPHY ANALYSIS:
- *   The constraint was built to solve: 'How do we validate catastrophe competence without waiting for catastrophes?' (founding problem, status=contested). The rule persists because regulatory compliance and organization administration depend on it. But the founding problem's status has shifted: operators and safety researchers increasingly attest that simulation-validated competence DOES NOT predict real competence in the necessary ways. The constraint extracts by continuing to certify competence via a model whose predictive validity is now contested. The theater ratio (0.67) reflects this mandatrophy: drills are increasingly maintained as ritual (satisfy audits, license requirements) rather than function (ensure actual safety capability). The constraint meets the mandatrophy test: (1) founding problem is contested/degraded; (2) constraint persists not because it solves the problem but because regulatory and organizational machinery depend on it; (3) the beneficiaries (regulatory authority, organization management) collect enough convenience/authority to resist reform; (4) the payers (operators, safety personnel) are dispersed enough and identity-locked enough that coalition resistance is difficult. This is not a pure piton (some beneficiaries do collect, unlike a piton's diffuse cost + no beneficiary pattern) — it is a tangled_rope with degraded function: coordination (schedule competence validation) is genuine, but extraction (transfer of unquantified risk to operators) is now visible.
+ *   The constraint is NOT mandatrophy. The founding problem is live (competence validation for rare-catastrophe organizations remains unsolved by pure real-world methods). The disappearance verdict is world_rearranges (regulatory frameworks would shift to other validation mechanisms). The classification as rope reflects the reading's own claim: simulation is presented as coordination that serves all parties (crews get clear standards, organizations get scalable validation, regulators get auditability). The metrics (high extraction, rising theater) reveal an extractive reality underneath the coordination claim, but this divergence does NOT make it piton: the constraint has an active agenda-setter (regulators) who maintains it intentionally for structural reasons (scalability), not out of institutional inertia. If the founding problem dies (crisis prediction becomes reliable, or in-situ competence assessment becomes feasible) and the constraint persists, it would become mandatrophy then. Currently it is a contested coordination-with-embedded-extraction, the tangled_rope pattern, though this reading's own framing claims rope.
  */
 
 /* ==========================================================================
@@ -195,98 +259,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    simulation_fidelity_validity,
-    'Does drill performance under simulation conditions predict actual competence under real catastrophic stress, with the same stressors (fatigue, real danger, institutional pressure, cascading failures)?',
-    'Post-incident analysis of personnel who were competence-certified via simulation, comparing their actual response performance to their simulation metrics. Longitudinal data from organizations comparing drill-certified cohorts to cohorts trained under alternative models.',
-    'If simulation predicts well, the constraint''s core assumption (proxy-catastrophe is valid) holds and the model is defensible. If prediction is poor or diverges systematically by stress condition, the competence model is invalid and the constraint extracts from operators by transferring unquantified risk to them.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(simulation_fidelity_validity, empirical, 'Whether simulation metrics predict real-catastrophe competence.').
-
-omega_variable(
-    epistemic_authority_of_model,
-    'Who decides what counts as adequate fidelity in simulation, and on what grounds? Is the model validated against empirical data, or is it validated against regulatory compliance and organizational convenience?',
-    'Audit of the technical decisions embedded in simulation design: which stressors are included/excluded, how are metrics weighted, what is the evidentiary basis for the fidelity choices? Compare to post-incident analysis of what actually determined performance.',
-    'If model validation is empirical and robust, the extraction is justifiable as the cost of coordination. If validation is regulatory/organizational (chosen for feasibility rather than accuracy), the constraint extracts by substituting administrative convenience for safety assurance.',
+    simulator_fidelity_vs_transfer,
+    'Does high-fidelity simulator performance predict real-crisis competence, or do simulation and real crisis test fundamentally different cognitive/emotional states that transfer poorly?',
+    'Post-incident analysis of crews who passed simulator certification but failed in real crisis; controlled study of simulator-to-crisis transfer using crews with both experiences; neurophysiological measurement of stress response in simulator vs. real incident.',
+    'If transfer is poor, the proxy validity is substantially compromised and the constraint becomes a false certification scheme. If transfer is strong, the simulation-as-proxy reading gains empirical support and mandated simulator hours are justified.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(epistemic_authority_of_model, conceptual, 'What epistemic standard the simulation model is held to.').
+narrative_ontology:omega_variable(simulator_fidelity_vs_transfer, empirical, 'Whether simulator performance predicts real-crisis crew competence.').
 
 omega_variable(
-    identity_fusion_in_competence_narrative,
-    'Does the constraint create identity fusion where operators internalize the competence model (their professional identity is ''someone who passes drills'') in a way that obscures the gap between simulation and reality?',
-    'Ethnographic study of operators'' own assessment of their competence; do they believe their drill certification reflects real catastrophe preparedness, or do they maintain separate models? Interview data from post-incident responses: what did operators know about the gap?',
-    'If fusion is high, operators are suppressed not only externally (the rule) but internalized (they believe the rule is valid). The measured suppression of 0.62 would be substantially internalized identity-lock rather than structural barriers. If fusion is low, suppression is purely structural enforcement and operators actively contest the model.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(identity_fusion_in_competence_narrative, empirical, 'Internalization of the competence proxy model by operators.').
-
-omega_variable(
-    dual_kernel_reading_constraint_frontier,
-    'Is the contestation between ''simulation_as_proxy'' and ''real_catastrophe_only'' logically a single kernel under dispute, or are they two genuinely distinct constraints with different epsilon values?',
-    'Structural analysis: do the two readings converge on the SAME institutional commitment (competence validation framework), just with different fidelity criteria? Or do they diverge on what counts as competence entirely (one is training-based, the other is incident-based)? If they''re the same kernel with different readings, ε is stable (the fidelity disagreement is parameter-level). If they''re different constraints, the real_catastrophe_only framing has a different ε (much higher extraction because it demands continuous incident exposure) and should be authored as a separate file.',
-    'If single kernel: reading_relations and axioms correctly decompose the dispute. If different constraints: the sibling_reading declarations are mislabeled and should be network links instead.',
+    foundational_proxy_vs_empirical_link,
+    'Is the equivalence between simulation and competence a foundational normative commitment (simulation DEFINES what competence means in this regulatory framework) or an empirical hypothesis (simulation happens to predict real crisis outcomes)?',
+    'Historical analysis of why regulatory authorities adopted simulation proxy: was it because evidence proved fidelity, or because no other scalable mechanism existed? If the latter, the commitment is foundational-pragmatic, not empirical, and empirical refutation would not necessarily change policy.',
+    'If foundational-normative, regulatory change would require renegotiating what ''competence'' means in the framework, a higher-friction process. If empirical-contingent, strong refutation data could reroute competence validation to real-world methods.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(dual_kernel_reading_constraint_frontier, conceptual, 'Whether the kernel contest is a single commitment with multiple readings or multiple constraints.').
+narrative_ontology:omega_variable(foundational_proxy_vs_empirical_link, conceptual, 'Whether simulator-proxy equivalence is definitional or evidential in the regulatory commitment.').
 
 omega_variable(
     suppression_mechanism_structural_vs_internalized,
-    'Is the suppression (0.62) maintained by external enforcement (the regulatory rule, penalties for non-compliance) or by internalized acceptance of the competence model (operators believe drills are adequate)?',
-    'Comparative analysis: in jurisdictions where regulatory enforcement of simulation-only competence is strict, do operators resist and demand alternatives (structural suppression)? In jurisdictions with lax enforcement, do operators voluntarily drill to the higher standard (internalized acceptance)?',
-    'If structural: the constraint could be lifted by regulatory change, though operators might resist losing the convenience of drills. If internalized: removing the rule would not change practice; the constraint carries post-exit suppression.',
+    'Is the suppression of alternative competence validation methods (real-world drills, job-embedded assessment) structurally enforced through regulatory gatekeeping, or do crews and organizations internalize the belief that simulation is sufficient?',
+    'If regulatory ban on non-approved drill methods were lifted, would organizations and crews voluntarily adopt simulator-only, or would they substitute real-world drills and reduce simulator hours? Do crews report genuine belief in simulator equivalence or grudging compliance?',
+    'If structural: removing the regulatory gate would dissolve the constraint quickly. If internalized: the constraint would persist even after regulatory change because crews and administrators have adopted the proxy as legitimate competence definition.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether suppression is structural enforcement or internalized model acceptance.').
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether suppression is regulatory enforcement or internalized acceptance of the proxy.').
+
+omega_variable(
+    rare_catastrophe_asymmetry,
+    'Does the rarity of real catastrophes make simulation the only scalable competence proxy, or does rarity mean real crisis should be treated as a separate phenomena from training (requiring different validation approaches)?',
+    'Regulatory review of whether catastrophe frequency is changing with infrastructure improvements (suggesting historical rarity may not persist); analysis of whether competence-for-rare-crisis requires different training than competence-for-frequent-operations.',
+    'If rare catastrophe means training MUST scale to proxy methods, the constraint is structurally necessary. If rarity is artifact and competence is unitary, then hybrid real-world/simulation methods become feasible.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(rare_catastrophe_asymmetry, conceptual, 'Whether catastrophe rarity necessitates or merely justifies simulation-as-proxy.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(competence_exercise_validity__simulation_as_proxy, 0, 40).
+narrative_ontology:interval(competence_exercise_validity__simulation_as_proxy, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(comp_tr_t0, competence_exercise_validity__simulation_as_proxy, theater_ratio, 0, 0.48).
-narrative_ontology:measurement(comp_tr_t5, competence_exercise_validity__simulation_as_proxy, theater_ratio, 5, 0.54).
-narrative_ontology:measurement(comp_tr_t10, competence_exercise_validity__simulation_as_proxy, theater_ratio, 10, 0.6).
-narrative_ontology:measurement(comp_tr_t15, competence_exercise_validity__simulation_as_proxy, theater_ratio, 15, 0.64).
-narrative_ontology:measurement(comp_tr_t20, competence_exercise_validity__simulation_as_proxy, theater_ratio, 20, 0.66).
-narrative_ontology:measurement(comp_tr_t25, competence_exercise_validity__simulation_as_proxy, theater_ratio, 25, 0.67).
-narrative_ontology:measurement(comp_tr_t30, competence_exercise_validity__simulation_as_proxy, theater_ratio, 30, 0.67).
-narrative_ontology:measurement(comp_tr_t35, competence_exercise_validity__simulation_as_proxy, theater_ratio, 35, 0.67).
-narrative_ontology:measurement(comp_tr_t40, competence_exercise_validity__simulation_as_proxy, theater_ratio, 40, 0.67).
+narrative_ontology:measurement(comp_tr_t0, competence_exercise_validity__simulation_as_proxy, theater_ratio, 0, 0.42).
+narrative_ontology:measurement_basis(comp_tr_t0, observed).
+narrative_ontology:measurement(comp_tr_t3, competence_exercise_validity__simulation_as_proxy, theater_ratio, 3, 0.45).
+narrative_ontology:measurement_basis(comp_tr_t3, observed).
+narrative_ontology:measurement(comp_tr_t6, competence_exercise_validity__simulation_as_proxy, theater_ratio, 6, 0.49).
+narrative_ontology:measurement_basis(comp_tr_t6, observed).
+narrative_ontology:measurement(comp_tr_t10, competence_exercise_validity__simulation_as_proxy, theater_ratio, 10, 0.54).
+narrative_ontology:measurement_basis(comp_tr_t10, observed).
+narrative_ontology:measurement(comp_tr_t15, competence_exercise_validity__simulation_as_proxy, theater_ratio, 15, 0.58).
+narrative_ontology:measurement_basis(comp_tr_t15, projected).
+narrative_ontology:measurement(comp_tr_t20, competence_exercise_validity__simulation_as_proxy, theater_ratio, 20, 0.58).
+narrative_ontology:measurement_basis(comp_tr_t20, projected).
 
 % Extraction over time
-narrative_ontology:measurement(comp_be_t0, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(comp_be_t5, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(comp_be_t10, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 10, 0.53).
-narrative_ontology:measurement(comp_be_t15, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 15, 0.56).
-narrative_ontology:measurement(comp_be_t20, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 20, 0.58).
-narrative_ontology:measurement(comp_be_t25, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 25, 0.59).
-narrative_ontology:measurement(comp_be_t30, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 30, 0.59).
-narrative_ontology:measurement(comp_be_t35, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 35, 0.58).
-narrative_ontology:measurement(comp_be_t40, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 40, 0.58).
+narrative_ontology:measurement(comp_be_t0, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 0, 0.54).
+narrative_ontology:measurement_basis(comp_be_t0, observed).
+narrative_ontology:measurement(comp_be_t3, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 3, 0.58).
+narrative_ontology:measurement_basis(comp_be_t3, observed).
+narrative_ontology:measurement(comp_be_t6, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 6, 0.62).
+narrative_ontology:measurement_basis(comp_be_t6, observed).
+narrative_ontology:measurement(comp_be_t10, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 10, 0.66).
+narrative_ontology:measurement_basis(comp_be_t10, observed).
+narrative_ontology:measurement(comp_be_t15, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 15, 0.68).
+narrative_ontology:measurement_basis(comp_be_t15, projected).
+narrative_ontology:measurement(comp_be_t20, competence_exercise_validity__simulation_as_proxy, base_extractiveness, 20, 0.68).
+narrative_ontology:measurement_basis(comp_be_t20, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(comp_su_t0, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(comp_su_t5, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 5, 0.58).
-narrative_ontology:measurement(comp_su_t10, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 10, 0.6).
-narrative_ontology:measurement(comp_su_t15, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 15, 0.62).
-narrative_ontology:measurement(comp_su_t20, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 20, 0.62).
-narrative_ontology:measurement(comp_su_t25, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 25, 0.62).
-narrative_ontology:measurement(comp_su_t30, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 30, 0.62).
-narrative_ontology:measurement(comp_su_t35, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 35, 0.62).
-narrative_ontology:measurement(comp_su_t40, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 40, 0.62).
+narrative_ontology:measurement(comp_su_t0, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 0, 0.62).
+narrative_ontology:measurement_basis(comp_su_t0, observed).
+narrative_ontology:measurement(comp_su_t3, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 3, 0.65).
+narrative_ontology:measurement_basis(comp_su_t3, observed).
+narrative_ontology:measurement(comp_su_t6, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 6, 0.68).
+narrative_ontology:measurement_basis(comp_su_t6, observed).
+narrative_ontology:measurement(comp_su_t10, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 10, 0.7).
+narrative_ontology:measurement_basis(comp_su_t10, observed).
+narrative_ontology:measurement(comp_su_t15, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 15, 0.72).
+narrative_ontology:measurement_basis(comp_su_t15, projected).
+narrative_ontology:measurement(comp_su_t20, competence_exercise_validity__simulation_as_proxy, suppression_requirement, 20, 0.72).
+narrative_ontology:measurement_basis(comp_su_t20, projected).
 
 
 /* ==========================================================================
@@ -299,13 +362,13 @@ narrative_ontology:affects_constraint(competence_exercise_validity__simulation_a
 narrative_ontology:affects_constraint(competence_exercise_validity__simulation_as_proxy, competence_exercise_validity__continuous_refresh_hybrid).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the kernel competence_exercise_validity. The sibling readings (real_catastrophe_only, continuous_refresh_hybrid) are separate constraint stories in the same family. The readings converge on the same institutional commitment (competence validation framework) but diverge on what counts as valid evidence: simulation metrics only vs. incident-based vs. continuous refresher cycles. The epsilon values differ across readings because the fidelity criteria and victim/beneficiary structures differ. simulation_as_proxy claims simulation is adequate and extracts by risk transfer to operators. real_catastrophe_only claims only real incident response validates competence and would extract from organizations (demand incident exposure). continuous_refresh_hybrid claims both simulation and periodic real-world revalidation are needed and would extract from both organizations (continuous cost) and operators (ongoing validation burden). All three readings are live positions held by different stakeholder coalitions (regulatory authority + organization management support simulation_as_proxy; safety researchers + operators increasingly support real_catastrophe_only or continuous_refresh_hybrid).
+% This constraint is one reading (simulation_as_proxy) of the contested kernel competence_exercise_validity. Two sibling readings exist in separate story files: real_catastrophe_only (only real crisis validates competence; simulation is insufficient) and continuous_refresh_hybrid (simulation necessary but not sufficient; competence requires continuous drill cycles). The three readings share the same referent (competence validation in safety-critical operations) but disagree on what constitutes proof. Each reading has its own epsilon, beneficiary/victim structure, and classification. They are linked via network.affects_constraints to enable contamination analysis — if one reading's claimed validity is undermined, all three face downstream pressure on their legitimacy.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(competence_exercise_validity__simulation_as_proxy, powerless, 0.92).
+constraint_indexing:directionality_override(competence_exercise_validity__simulation_as_proxy, powerless, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

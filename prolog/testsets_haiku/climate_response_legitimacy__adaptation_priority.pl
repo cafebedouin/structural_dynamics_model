@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,9 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,36 +75,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: climate_response_legitimacy__adaptation_priority
- *   human_readable: Climate Response: Adaptation-Priority Legitimacy Reading
- *   domain: climate_policy/political_economy/intergenerational_ethics
+ *   human_readable: Climate Response via Adaptation Priority Reading
+ *   domain: climate_policy/political_economy/intergenerational
  *
  * SUMMARY:
- *   Under the adaptation-priority reading of climate-response legitimacy,
- *   wealthy developed economies and climate-finance institutions have framed
- *   'pragmatic acceptance of inevitable warming' as the appropriate policy
- *   posture, prioritizing resilience infrastructure and technology transfer
- *   to vulnerable regions over aggressive emissions reduction. The reading
- *   presents the choice as realistic, cost-effective, and compassionate —
- *   adaptation prevents catastrophic impacts now while waiting for technology
- *   to enable painless mitigation. However, this reading carries high
- *   extractiveness: it defers intergenerational mitigation costs (compounded
- *   nonlinearly by higher warming), locks vulnerable regions into
- *   technology-dependent adaptation rather than structural transformation,
- *   and preserves the development model of wealthy economies that generated
- *   the crisis. The constraint is simultaneously a coordination mechanism
- *   (mobilizing adaptation finance) and an extraction mechanism (capturing
- *   the policy frame to avoid mitigation costs and structural economic
- *   change).
+ *   The adaptation-priority reading of legitimate climate response accepts
+ *   higher warming trajectories (2–3°C above pre-industrial) as inevitable
+ *   and frames the legitimate policy response as protecting vulnerable
+ *   populations through resilience infrastructure and adaptive capacity
+ *   rather than pursuing deep emissions reduction. Wealthy nations set the
+ *   policy frame, carbon-intensive industries benefit by preserving business
+ *   models, and low-income regions enter the victim set immediately via the
+ *   $350B annual adaptation finance gap. The constraint is a tangled rope: it
+ *   coordinates a wealthy-nation consensus on 'realistic' climate response
+ *   (genuine coordination function for wealthy-nation governments seeking
+ *   climate action without economic disruption) while extracting
+ *   intergenerational and geographic costs. The measurement series shows
+ *   rising extractiveness and theater_ratio over time: early phase (t=0–10)
+ *   shows extractiveness rising as adaptation-finance mechanisms are
+ *   formalized but gaps widen; plateau phase (t=20–40) shows theater_ratio
+ *   rising as performative adaptation commitments increase while core
+ *   mitigation stalls — indicating Goodhart drift where the adaptation frame
+ *   substitutes proxy goals (adaptation finance, resilience projects) for the
+ *   actual problem (emissions reduction and warming prevention).
  *
  * KEY AGENTS:
- *   - Wealthy developed economies (agenda_setter, institutional power) — set the adaptation-priority frame via UNFCCC, COP agreements, IPCC adaptation committees; preserve growth models; control climate finance conditions
- *   - Low-income vulnerable regions (payer, powerless) — bear immediate concentrated impacts; trapped in adaptation-dependency; $350B annual finance gap; cannot exit climate system or afford unilateral mitigation
- *   - Adaptation finance intermediaries (agenda_setter/beneficiary, institutional) — manage World Bank, IMF, bilateral flows; enforce the reading via policy conditions; benefit from expanding adaptation-finance asset bases
- *   - Technology exporters (beneficiary, powerful) — provide adaptation technologies (seeds, defenses, water, energy); capture licensing and IP rents; reading legitimizes endless technology purchasing
- *   - Future generations post-2080 (payer, powerless, civilizational time horizon) — inherit compounded warming and deferred mitigation costs; trapped; cannot participate in present negotiations
- *   - Climate scientists (observer, analytical) — document that adaptation-without-mitigation compounds future costs nonlinearly; model cost trajectories showing mitigation-now is cheaper; attest to tipping-point risks
- *   - Mitigation-priority and degrowth advocates (excluded, moderate power) — institutionally gatekept out of IPCC/COP processes; would argue for rapid emissions cessation and structural transformation
- *   - Indigenous and traditional knowledge systems (excluded, moderate power, identity-locked) — possess adaptive practice, excluded from adaptation planning; trapped to place even when adaptation fails
+ *   - Wealthy-nation governments: agenda-setters, primary beneficiaries; set the frame for what counts as legitimate response; preserve growth and carbon-intensive sectors.
+ *   - Carbon-intensive industries: beneficiaries; operate under a policy regime that defers deep emissions reductions; profit from resilience and adaptation markets.
+ *   - Low-income regions & small island states: primary victims; face impacts of warming they did not cause, constrained by $350B annual adaptation finance gap; exit is trapped (migration or state collapse).
+ *   - Subsistence communities: identity-locked victims; face coercive adaptation interventions; cultural extinction via technocratic transition programs.
+ *   - Future generations: structural victims; intergenerational costs defer mitigation and compound warming liability.
+ *   - Mitigation advocates & degrowth advocates: excluded voices; present in forums but their core claims are framed as economically unrealistic; their testimony is recorded but does not reshape the policy frame.
  */
 
 /* ==========================================================================
@@ -104,58 +114,133 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(climate_response_legitimacy__adaptation_priority, 0.68).
-domain_priors:suppression_score(climate_response_legitimacy__adaptation_priority, 0.71).
+domain_priors:suppression_score(climate_response_legitimacy__adaptation_priority, 0.72).
 domain_priors:theater_ratio(climate_response_legitimacy__adaptation_priority, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, extractiveness, 0.68).
-narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, suppression_requirement, 0.72).
 narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, accessibility_collapse, 0.52).
-narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, resistance, 0.73).
+narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, accessibility_collapse, 0.51).
+narrative_ontology:constraint_metric(climate_response_legitimacy__adaptation_priority, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(climate_response_legitimacy__adaptation_priority, tangled_rope).
-narrative_ontology:human_readable(climate_response_legitimacy__adaptation_priority, "Climate Response: Adaptation-Priority Legitimacy Reading").
-narrative_ontology:topic_domain(climate_response_legitimacy__adaptation_priority, "climate_policy/political_economy/intergenerational_ethics").
+narrative_ontology:human_readable(climate_response_legitimacy__adaptation_priority, "Climate Response via Adaptation Priority Reading").
+narrative_ontology:topic_domain(climate_response_legitimacy__adaptation_priority, "climate_policy/political_economy/intergenerational").
 
 domain_priors:requires_active_enforcement(climate_response_legitimacy__adaptation_priority).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(climate_response_legitimacy__adaptation_priority, '2d3a4938-6bb0-411d-a4bb-5bd203433ad2').
-narrative_ontology:cs_kernel_codification('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', distributed).
-narrative_ontology:cs_authority_grounding('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', extraction).
-narrative_ontology:cs_interpretation_layer_present('2d3a4938-6bb0-411d-a4bb-5bd203433ad2').
-narrative_ontology:cs_reading_relation('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', climate_response_legitimacy__mitigation_priority, coexists_with).
-narrative_ontology:cs_reading_relation('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', climate_response_legitimacy__degrowth_transformation, influences).
-narrative_ontology:cs_axiom('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', foundational, adaptation_sufficiency_hypothesis).
-narrative_ontology:cs_axiom_status(adaptation_sufficiency_hypothesis, holdable).
-narrative_ontology:cs_axiom_grounding('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', adaptation_sufficiency_hypothesis, empirically_contingent).
-narrative_ontology:cs_axiom('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', foundational, wealthy_economy_development_preservation).
-narrative_ontology:cs_axiom_status(wealthy_economy_development_preservation, holdable).
-narrative_ontology:cs_axiom_grounding('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', wealthy_economy_development_preservation, conventional).
-narrative_ontology:cs_reference_frame('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', post_2015_paris_agreement_adaptation_mainstreaming).
-narrative_ontology:cs_drift_state('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', contemporary_2024_high_impact_phase, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('2d3a4938-6bb0-411d-a4bb-5bd203433ad2', '').
+narrative_ontology:cs_story_uid(climate_response_legitimacy__adaptation_priority, '2377ce58-04e1-4776-8d3a-7439d40192a5').
+narrative_ontology:cs_kernel_codification('2377ce58-04e1-4776-8d3a-7439d40192a5', distributed).
+narrative_ontology:cs_authority_grounding('2377ce58-04e1-4776-8d3a-7439d40192a5', extraction).
+narrative_ontology:cs_interpretation_layer_present('2377ce58-04e1-4776-8d3a-7439d40192a5').
+narrative_ontology:cs_reading_relation('2377ce58-04e1-4776-8d3a-7439d40192a5', climate_response_legitimacy__mitigation_priority, coexists_with).
+narrative_ontology:cs_reading_relation('2377ce58-04e1-4776-8d3a-7439d40192a5', climate_response_legitimacy__degrowth_transformation, influences).
+narrative_ontology:cs_axiom('2377ce58-04e1-4776-8d3a-7439d40192a5', foundational, legitimate_response_accepts_warming_inevitability).
+narrative_ontology:cs_axiom_status(legitimate_response_accepts_warming_inevitability, holdable).
+narrative_ontology:cs_axiom_grounding('2377ce58-04e1-4776-8d3a-7439d40192a5', legitimate_response_accepts_warming_inevitability, empirically_contingent).
+narrative_ontology:cs_axiom('2377ce58-04e1-4776-8d3a-7439d40192a5', secondary, vulnerable_population_protection_subsumes_emissions_reduction).
+narrative_ontology:cs_axiom_status(vulnerable_population_protection_subsumes_emissions_reduction, holdable).
+narrative_ontology:cs_axiom_grounding('2377ce58-04e1-4776-8d3a-7439d40192a5', vulnerable_population_protection_subsumes_emissions_reduction, deontological).
+narrative_ontology:cs_reference_frame('2377ce58-04e1-4776-8d3a-7439d40192a5', pragmatic_climate_action_within_growth_preservation).
+narrative_ontology:cs_drift_state('2377ce58-04e1-4776-8d3a-7439d40192a5', post_ipc_ar6_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('2377ce58-04e1-4776-8d3a-7439d40192a5', '').
 narrative_ontology:cs_kernel_id(climate_response_legitimacy__adaptation_priority, climate_response_legitimacy).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, wealthy_developed_economies).
-narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, adaptation_finance_intermediaries).
-narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, low_income_vulnerable_regions).
-narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, future_generations_2100_onward).
+narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, wealthy_nations_development_model).
+narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, carbon_intensive_industries).
+narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, high_gdp_regions).
+narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, low_income_regions).
+narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, small_island_developing_states).
+narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, subsistence_communities).
+narrative_ontology:constraint_victim(climate_response_legitimacy__adaptation_priority, future_generations).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, wealthy_nations_governments).
+narrative_ontology:constraint_beneficiary(climate_response_legitimacy__adaptation_priority, wealthy_nation_constituencies).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Set climate policy framework accepting higher warming trajectories (2–3°C above pre-industrial baseline) while committing to adaptive capacity building in vulnerable regions. Frame adaptation as the legitimate response, framing mitigation-first approaches as economically disruptive and technologically uncertain. Preserve domestic development models and carbon-intensive sectors; direct adaptation finance toward developing regions while maintaining growth trajectories. Control the narrative of what constitutes legitimate climate response.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, wealthy_nations_governments, agenda_setter,
+    institutional, generational, arbitrage, continental).
+narrative_ontology:stakeholder_secondary_role(climate_response_legitimacy__adaptation_priority, wealthy_nations_governments, beneficiary).
+
+% Operate under a policy regime that defers deep emissions reductions in favor of adaptation spending. Adaptation finance requirements create markets for resilience infrastructure, insurance products, and climate-resilient agriculture in developing regions — profitable sectors where technological and institutional barriers to entry remain high. Their extraction capacity is protected by the focus on warming-as-fait-accompli and adaptation-as-primary-response, which leaves their business models intact and opens new revenue streams.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, carbon_intensive_industries, beneficiary,
+    powerful, biographical, constrained, global).
+
+% Face the impacts of warming they did not cause (cumulative historical responsibility lies with wealthy nations) while bearing the costs of adaptation infrastructure they cannot finance independently. The $350B annual adaptation finance gap reflects the structural fact: wealthy-nation policy accepts warming trajectories that impose accelerating climate risks on low-income regions, then frames adaptation as the regions' responsibility. Exit looks like migration or state collapse; no alternatives exist within the framework.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, low_income_regions, payer,
+    powerless, generational, trapped, local).
+narrative_ontology:stakeholder_secondary_role(climate_response_legitimacy__adaptation_priority, low_income_regions, excluded).
+
+% Face existential threats from sea-level rise driven by warming trajectories wealthy nations accept as inevitable. No adaptation infrastructure can solve territorial disappearance; their adaptation needs are not separable from their survival. The constraint forces them to invest in impossible adaptations while their core claim — that warming itself must be prevented — is dismissed as economically unrealistic.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, small_island_developing_states, payer,
+    powerless, generational, trapped, local).
+
+% Depend on climate-sensitive ecosystems (pastoralism, fishing, rain-fed agriculture) for livelihood and cultural identity. Adaptation in the wealthy-nation reading means technocratic interventions: dam construction, crop switching, livelihood transition. These interventions carry coercive logic: accept adaptation programs designed elsewhere or lose access to climate finance, international development support, and institutional legitimacy. Their identity and mode of life are framed as obstacles to adaptation rather than values to preserve.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, subsistence_communities, payer,
+    powerless, biographical, identity_locked, local).
+
+% Have no voice in present policy. Accepting higher warming trajectories defers mitigation costs to a time when warming is locked in and adaptation costs are orders of magnitude higher. Intergenerational extraction: present wealthy nations consume carbon budget; future generations inherit degraded climate. The adaptation-priority reading converts this temporal asymmetry into policy (delay mitigation; invest in adaptation) and calls it legitimate.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, future_generations, payer,
+    powerless, civilizational, trapped, global).
+
+% Argue that prioritizing adaptation over mitigation accepts warming as inevitable and locks in catastrophic outcomes; that deep emissions cuts are technically and economically feasible; that adaptation alone cannot address tipping-point thresholds. They are present in negotiating forums but their core claim — that mitigation must be primary — is framed as economically unrealistic within the adaptation-priority reading's authority structure.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, mitigation_advocates, excluded,
+    organized, generational, constrained, global).
+
+% Argue that adaptation-priority and mitigation-priority readings both preserve the growth imperative in wealthy nations; that genuine climate response requires dismantling carbon-intensive consumption and work patterns; that adaptation in a warming world is impossible at scale without economic transformation. They are structurally excluded from the dominant policy frame, which treats growth as a non-negotiable baseline.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, degrowth_advocates, excluded,
+    organized, generational, constrained, global).
+
+% Produces evidence on warming trajectories, tipping points, and adaptation limits. The adaptation-priority reading appropriates scientific consensus on warming inevitability while downplaying scientific consensus on tipping-point risks and adaptation adequacy gaps. Scientists testify but do not control how their evidence is framed; the policy reading interprets the evidence, not the reverse.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, climate_science_authority, observer,
+    institutional, generational, analytical, global).
+
+% Benefit from the constraint by preserving consumption patterns, employment in carbon-intensive industries, and asset values in high-carbon infrastructure. Adaptation-as-primary-response means costs are externalized to distant populations and deferred to future time periods; present constituencies bear only the adaptation finance commitment, which is politically diffuse and financially manageable. Exit would mean accepting mitigation costs now.
+narrative_ontology:constraint_stakeholder(climate_response_legitimacy__adaptation_priority, wealthy_nation_constituencies, beneficiary,
+    organized, biographical, mobile, continental).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(climate_response_legitimacy__adaptation_priority, wealthy_nations_governments).
+narrative_ontology:fixing_cost_class(climate_response_legitimacy__adaptation_priority, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a shared framework for legitimate climate response grounded in accepting warming as inevitable rather than preventable, allowing wealthy nations to coordinate on what counts as adequate action without dismantling growth or accepting deep mitigation costs. Solves the wealthy-nation coordination problem: how to appear responsive to climate risk while preserving economic models.
+% TRANSFER_FUNCTION: Transfers intergenerational climate risk from present to future; transfers adaptation costs from wealthy to low-income regions via the adequacy gap; transfers mitigation responsibility from high-emitting to low-emitting nations; transfers carbon budget consumption rights to wealthy-nation industries; transfers the framing authority (what constitutes legitimate response) from low-income nations and future generations to wealthy-nation policymakers.
+% ABSENT_VOICES: Low-income nations have representation in negotiating forums but their core claim — that mitigation must be primary because adaptation cannot address tipping points or territorial disappearance — is structurally inaudible within the adaptation-priority frame. Mitigation advocates are present but frame their position as economically naive. Degrowth advocates are excluded from the dominant policy conversation. Future generations have no voice at all. Small island states testify that adaptation is existentially insufficient but their testimony is recorded as a special case rather than a revision of the framework itself.
+% DISAPPEARANCE_RATIONALE: If this constraint (accepting warming as legitimate response trajectory) disappeared, wealthy nations would face pressure to commit to deep emissions reductions; carbon-intensive industries would face regulatory overhaul; intergenerational claims would enter present policy as binding rather than rhetorical; low-income regions would shift from adaptation-deficit finance recipients to mitigation-equity claimants. The global climate-response economy, policy narratives, and power distribution would reorganize around different assumptions about what counts as legitimate.
+% FOUNDING_PROBLEM: Early climate negotiations faced a coordination challenge: wealthy nations wanted to act on climate risk without dismantling their economic models or committing to the depth of mitigation the science indicated was necessary. Adaptation-priority framing offered a solution: accept warming as inevitable (removing the need to eliminate emissions), commit to helping vulnerable populations adapt (addressing humanitarian concerns), preserve growth and industrial structure (meeting wealthy-nation interests).
+% FOUNDING_PROBLEM_CORROBORATION: Wealthy-nation governments and fossil-fuel-aligned economists attest the founding problem is still live: mitigation at the depth the science requires is economically disruptive and technologically uncertain; adaptation is a pragmatic, immediately actionable response. Climate scientists, low-income nations, and small island delegations attest the founding problem has been resolved by evidence (renewable energy cost curves, IPCC scenarios): the problem was coordination to avoid deep action, not technical feasibility. The constraint persists as a power-consolidation mechanism, not as a solution to the founding problem.
+narrative_ontology:disappearance_verdict(climate_response_legitimacy__adaptation_priority, world_rearranges).
+narrative_ontology:founding_problem_status(climate_response_legitimacy__adaptation_priority, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(climate_response_legitimacy__adaptation_priority, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(climate_response_legitimacy__adaptation_priority, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(climate_response_legitimacy__adaptation_priority, 'none', 1).
+narrative_ontology:epsilon_provenance(climate_response_legitimacy__adaptation_priority, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +260,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is high (0.68 at interval end) because the reading transfers costs to vulnerable regions ($350B adaptation gap) and future generations (cumulative warming damage rises nonlinearly with every decade of deferred mitigation). The trajectory shows extractiveness rising from 0.45 to 0.68 as the reading becomes institutionally entrenched — the initial period (0–10) shows the reading gaining policy authority despite pushback; the middle period (10–25) shows extractiveness stabilizing as alternative readings are suppressed; the end (25–40) shows extractiveness plateauing at high level because the intergen­erational costs compound outside the policy window. Suppression is high (0.71 at interval end) because the reading requires continuous institutional gatekeeping: mitigation-priority and degrowth readings must be kept from policy voice, indigenous knowledge must be overwritten by technology narratives, and vulnerable-region skepticism must be managed through finance conditions and technology-lock-in. Theater rises early (0.28–0.41 from 0–20) as adaptation finance becomes performative (pledges unmet, projects delayed, but framing maintained), then plateaus (0.41 from 20–40) at moderate-high level — enough theater that the underlying extraction is visible to experts but obscured for general publics by the humanitarian adaptation narrative. Accessibility collapse is moderate (0.52) because alternatives (mitigation-priority, degrowth transformation) remain live in academic and activist discourse, even if institutionally suppressed — the reading does not have monopoly epistemic authority. Resistance is high (0.73) from scientists, climate-justice movements, vulnerable-region governments, and degrowth advocates challenging the reading's cost assumptions and inequality structure. The measurement series share one time grid (t=0,5,10,15,20,25,30,40) so every metric is authored at every shared point.
+ *   Extractiveness starts at 0.48 and rises to 0.68 (t=30) before plateauing. This trajectory reflects two phases: (1) formalization phase (t=0–15), where adaptation mechanisms are built, adaptation finance commitments are made, and low-income regions integrate into the adaptation-as-primary-response frame — extraction rises as the gap between committed finance and actual need widens and becomes structurally recognized. (2) Inertial phase (t=20–40), where the frame is locked in, theaters of adaptation activity proliferate, but deep extraction remains constant — new adaptation projects are funded but emissions continue rising, warming accelerates, and adaptation-adequacy gaps widen further. Suppression rises in tandem (0.54 to 0.74): early suppression comes from framing choice (adaptation as primary, mitigation as secondary); later suppression comes from institutional lock-in (adaptation mechanisms become bureaucratic, path-dependent; exiting requires explicit rejection of the frame, which triggers diplomatic and financial consequences). Theater_ratio rises gradually (0.22 to 0.42): the ratio of performative to functional activity increases as adaptation projects proliferate while their adequacy decreases — the constraint evolves toward Piton characteristics (maintained activity, declining function). The accessibility_collapse and resistance scores reflect the constraint's legitimacy foundation: alternatives (mitigation, degrowth) are not physically closed off but are framed as impossible within the wealthy-nation policy space; resistance comes from mitigation advocates and excluded communities, but their resistance lacks institutional power to reshape the frame.
  *
  * PERSPECTIVAL GAP:
- *   The gap between the reading's declared legitimacy (pragmatic, protective of vulnerable populations, cost-effective) and its structural operation (extraction from vulnerable regions and future generations, preservation of wealthy-economy growth models, suppression of systemic-change alternatives) is the core analytical content. Agenda-setter and intermediate-beneficiary seats should compute as rope or scaffold from their position (they experience coordination and transition); target seats should compute as snare or tangled rope (they experience extraction masked as protection). The engine's per-seat classification reveals this divergence; the authored metrics and beneficiary/victim declarations establish the structural asymmetry the computation reads.
+ *   Wealthy-nation governments and carbon-intensive industries perceive the constraint as genuine, pragmatic coordination (a real climate response that is politically feasible and economically manageable). Low-income regions, small island states, and future generations perceive it as enforced extraction (accepting warming they did not cause, financing adaptation they did not require, excluded from mitigation decisions). The engine should compute this perspectival divergence from the structural data: wealthy-nation agendas-setters derive d near 0.1 (beneficiary, low extraction burden); low-income victims derive d near 0.85 (target, high extraction burden, trapped exit). The mitigation and degrowth advocates who are excluded derive a different type (snare rather than rope) from their seat, because they are not coordinated — their exclusion from the frame is the constraint's primary function. The authored claim is tangled_rope (the reading's own framing: genuine coordination + asymmetric extraction), but seats on the payer side (low-income regions, future generations) compute as snare (pure extraction, no coordination benefit, trapped exit) — this divergence is the key analytic output.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derivation: (1) Wealthy developed economies are beneficiaries (collects deferred costs, control frame, preserve development model) + institutional power + arbitrage exit (can shift to mitigation if political pressure rises) → low d, near beneficiary end (~0.15–0.25). (2) Low-income vulnerable regions are victims (pay immediate costs, trapped adaptation-dependency, powerless) + powerless power + trapped exit (cannot leave climate system, cannot fund unilateral mitigation) → high d, near target end (~0.85–0.95). (3) Adaptation finance intermediaries are beneficiaries (expanding asset bases, policy authority) + institutional power + constrained exit (locked into the reading's institutional success) → low-moderate d (~0.30–0.40). (4) Technology exporters are beneficiaries + powerful power + mobile exit (can sell to any warming-adaptation scenario) → low d (~0.20–0.30). (5) Future generations are victims (inherit compounded costs) + powerless + trapped exit → very high d (~0.95). (6) Scientists and advocates are observers (analytical power, analytical exit) → d=0.5 by symmetry (neither collecting nor paying; measuring). No directionality overrides are needed — the structural derivation from beneficiary/victim + power + exit produces coherent d assignments across all seats.
+ *   Beneficiaries: wealthy-nation governments set the frame (d≈0.15, agenda-setter status, institutional power, mobile exit—they can exit by shifting to mitigation if growth preservation becomes impossible, though political costs are high); carbon-intensive industries (d≈0.2, powerful status, constrained exit—can lobby but cannot openly oppose climate action; preservation of business models rides on the frame; exit means accepting deep decarbonization). Victims: low-income regions (d≈0.85, powerless status, trapped exit—adaptation is the only option within the frame; exiting means rejecting the international climate architecture); small island states (d≈0.9, powerless status, trapped exit—adaptation cannot solve territorial disappearance; exit is extinction). Excluded voices: mitigation and degrowth advocates (d≈0.7–0.8 from the constraint's perspective—they are structurally opposed, ejected from the frame, bear the cost of their exclusion). Future generations (d≈1.0, powerless, civilizational time horizon, trapped exit—no voice, compounding liability). The directionality_overrides are not needed here; the derivation from beneficiary/victim + exit produces accurate d values. The asymmetry is structural, not observationally ambiguous.
  *
  * MANDATROPHY ANALYSIS:
- *   The adaptation-priority reading's founding problem — protecting vulnerable populations from inevitable climate impacts — is live and urgent (evidenced by $350B annual adaptation finance gap, observable impacts 2020–2024, vulnerable-region climate vulnerability indices). However, the reading's mandate has been stretched to encompass a secondary function: providing cover for wealthy-economy avoidance of rapid mitigation costs. The primary mandate (protecting vulnerable populations) could be achieved through any climate-response reading; the reading's persistence is partly due to the secondary extraction function (deferring mitigation costs). A mandatrophy signal would trigger if the reading begins to fail on its primary function despite institutional entrenchment — e.g., adaptation finance continues underfunded while the reading remains policy orthodoxy, or adaptation infrastructure proves insufficient at higher warming levels, or vulnerable regions reject the reading explicitly. The reading is not yet mandatrophic (the primary function is still live, though underfunded), but it is at risk of mandatrophy if the nonlinear cost escalation (omega 1) and adaptation saturation (omega 2) materialize as projected.
+ *   The constraint avoids mandatrophy diagnosis in early phase (t=0–10) because it is genuinely responsive to a founding problem (wealthy nations seeking climate legitimacy) and it does coordinate a real function (international consensus on climate response). By t=20–30, mandatrophy signals emerge: theater_ratio rises to 0.40+ while extractiveness plateaus, indicating that adaptation activity is increasingly performative; founding_problem_status enters contested (climate scientists and low-income nations attest the founding problem—'mitigation is economically unrealistic'—has been solved by technology cost curves; the constraint persists as power consolidation, not problem-solving). The theater trajectory and founding-problem-status mismatch are the key signals. If the constraint were genuinely solving the adaptation problem, extraction would decrease over time (as adaptive capacity increases, vulnerability decreases). Instead, extraction plateaus while theater rises, indicating the real function (wealth transfer, emissions deferral) is decoupled from the stated function (adaptation adequacy). This is the Piton signature: the constraint is increasingly maintained by institutional inertia and performance, not by solving the problem it claims to solve. A mandatrophy_analysis omega should note: by t=30, the constraint shows strong piton characteristics (theater rising, function declining, power consolidation stable) overlaid on the tangled_rope structure. The constraint is evolving toward degradation while maintaining institutional legitimacy.
  */
 
 /* ==========================================================================
@@ -192,54 +277,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    mitigation_deferral_cost_nonlinearity,
-    'What is the actual cumulative cost difference between pursuing mitigation now vs. adaptation-only to higher warming levels? Does the nonlinear tipping-point acceleration documented by climate models materialize in economic terms?',
-    'Integrated assessment models (IAMs) comparing mitigation-now pathways against adaptation-only pathways through 2100, with explicit tipping-point probability weighting and post-tipping impact costs. Cross-validation against observable climate response patterns (Amazon moisture feedback, ice-sheet acceleration, permafrost release) as the interval progresses.',
-    'If adaptation-only cumulative cost substantially exceeds mitigation-now cost, the reading''s economic justification (''adaptation is more cost-effective'') collapses; if costs are genuinely lower under adaptation-only, the reading''s framing is vindicated. The high-sensitivity case reshuffles the victim set to include wealthy economies via intergenerational extraction.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(mitigation_deferral_cost_nonlinearity, empirical, 'Cost trajectory comparison: mitigation-now vs. adaptation-to-higher-warming through tipping points').
-
-omega_variable(
-    adaptation_technology_sufficiency_boundary,
-    'At what warming level does adaptation technology saturate and can no longer absorb impacts? Is there a threshold (e.g., 2.5°C, 3.0°C) above which adaptation becomes physically or economically impossible?',
-    'Physical climate modeling combined with engineering feasibility studies: can coastal defenses hold at 2m sea-level rise? Can irrigation replace rainfall at continental scale? Can permafrost thaw be arrested? Observable evidence from the 2020–2040 decade as warming accelerates.',
-    'If a hard saturation threshold exists below 4°C, the reading''s assumption of ''unlimited adaptive capacity'' is false, and the constraint becomes a snare (promising protection that is structurally impossible). If no threshold exists, the reading''s technical optimism is supported.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(adaptation_technology_sufficiency_boundary, empirical, 'Physical and economic saturation of adaptation capacity at high warming levels').
-
-omega_variable(
-    kernel_reading_alternative_framing_contest,
-    'Is the climate response kernel fundamentally about choosing between mitigation-priority, adaptation-priority, and degrowth-transformation readings, or does the reading choice depend on unstated empirical claims about cost, feasibility, or equity that could be resolved by data?',
-    'The kernel contest itself is a preference/normative disagreement, but it rides on three empirical sub-claims: (1) mitigation technology cost trajectory (decoupling possible?), (2) adaptation capacity nonlinearity (cost multiplier as warming rises?), and (3) degrowth feasibility (can democracies sustain reduced consumption?). Resolve the empirical sub-questions; the preference-level disagreement persists independently.',
-    'This omega routes the committer-frame structure through the existing apparatus: the three readings coexist at the preference level, but they are not equivalent in empirical coherence. The adaptation-priority reading rests on high empirical confidence in technology sufficiency (omega 2, low-confidence) and low-warming-cost assumptions (omega 1, medium-confidence). If either fails, the reading''s epistemic foundation weakens relative to siblings.',
+    adaptation_adequacy_boundary,
+    'At what warming threshold do adaptation costs exceed the capacity of even wealthy regions to implement, and what happens to the legitimacy frame when that threshold is approached?',
+    'Empirical evidence from IPCC tipping-point assessments and regional adaptation-cost modeling; observation of whether policy frames shift when projections cross adequacy boundaries (3°C, 4°C, 5°C warming scenarios).',
+    'If adaptation is provably insufficient at projected warming levels, the legitimacy of the adaptation-priority reading collapses and the policy frame must shift toward mitigation or degrowth. If adaptation remains theoretically possible at high cost, the frame persists but extraction intensifies (higher costs borne by payers).',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_alternative_framing_contest, conceptual, 'Kernel readings as preference-plus-empirical-claim bundles; sibling reading coherence depends on resolution of empirical sub-questions').
+narrative_ontology:omega_variable(adaptation_adequacy_boundary, empirical, 'Empirical boundary where adaptation legitimacy claim fails.').
 
 omega_variable(
-    suppression_mechanism_internalized_vs_structural,
-    'Is the suppression of mitigation-priority and degrowth-transformation readings structural (gatekeeping by wealthy-economy institutions) or internalized (vulnerable regions have come to accept adaptation-only as realistic/inevitable)? Or both?',
-    'Post-suppression trajectory: if mitigation and degrowth advocates gain institutional voice (policy seats, funding access, UNFCCC standing), do vulnerable regions shift advocacy positions, or do they continue accepting adaptation-framing even when alternatives are present? Survey preference data before and after institutional opening.',
-    'If suppression is purely structural, removing it should shift policy consensus rapidly. If suppression is internalized (deprivation narratives, learned helplessness, identity-fusion to the adapted role), the constraint persists even after structural barriers fall. If both, fixing requires both institutional change and re-capacity-building.',
+    intergenerational_cost_accumulation,
+    'How do intergenerational costs compound under adaptation-priority vs. mitigation-priority pathways, and what is the threshold at which deferral becomes catastrophic for future generations?',
+    'Long-term cost modeling (50–100 year horizons); comparison of present-value calculations under different discount rates (which encode intergenerational equity assumptions); observation of whether future-generation representation enters policy frameworks in response to compounding-cost evidence.',
+    'High intergenerational cost accumulation would vindicate the degrowth reading''s claim that adaptation cannot address the structural problem. The constraint''s legitimacy depends partly on suppressing intergenerational accounting or using discount rates that minimize future costs.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Structural vs. internalized suppression of alternative climate response readings').
+narrative_ontology:omega_variable(intergenerational_cost_accumulation, empirical, 'Temporal asymmetry: who pays extraction now vs. later.').
 
 omega_variable(
-    beneficiary_identity_wealthy_economies_vs_adaptation_finance_capture,
-    'Do wealthy developed economies genuinely benefit from adaptation-priority (by deferring their own emissions reduction costs), or does the real beneficiary seat shift to adaptation finance intermediaries and technology exporters, with wealthy economies caught in a legitimacy-maintenance cost?',
-    'Trace the actual monetary flows of climate adaptation finance: who receives contracts, licensing fees, asset fees? Compare to GHG reduction commitments wealthy economies undertake under the reading vs. under mitigation-priority. If wealthy economies spend heavily on adaptation finance while evading emissions cuts, they benefit; if they spend heavily AND reduce emissions, they are partly targets bearing the cost of the reading''s legitimacy.',
-    'If beneficiary is actually the intermediate class (finance institutions, technology exporters) and wealthy economies are partly targets bearing legitimacy costs, the reading''s beneficiary set should be adjusted. The extraction pattern would be more complex — some wealthy-economy institutional actors benefit while others pay.',
+    mitigation_technical_feasibility_shift,
+    'If renewable energy and decarbonization technologies become dramatically cheaper or faster to deploy than current projections, does the legitimacy claim of adaptation-priority shift?',
+    'Observation of technology cost curves, deployment timelines, and policy response when technical barriers to mitigation fall. Does the adaptation-priority frame persist or is it abandoned once the ''economic realism'' argument no longer holds?',
+    'If mitigation becomes obviously cheaper than adaptation, the constraint''s core legitimacy claim (that adaptation is pragmatic given mitigation''s cost) is undercut. The frame persists only through explicit suppression of technical evidence or through power-consolidation mechanisms independent of pragmatism claims.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(beneficiary_identity_wealthy_economies_vs_adaptation_finance_capture, empirical, 'Actual beneficiary identification via cash flow and policy-cost analysis').
+narrative_ontology:omega_variable(mitigation_technical_feasibility_shift, empirical, 'Whether legitimacy claim is evidence-responsive or power-driven.').
+
+omega_variable(
+    growth_model_locked_in,
+    'Is the adaptation-priority reading structurally incompatible with any future transition away from growth? Does accepting higher warming while preserving growth lock in a trajectory that forecloses the degrowth reading?',
+    'Analysis of whether carbon-budget consumption and infrastructure lock-in create path dependence that rules out degrowth transformation. Observation of whether policy shifts toward growth reduction become politically feasible once adaptation-priority is institutionalized.',
+    'If adaptation-priority does foreclose degrowth transformation, the two readings have a genuine logical incompatibility, not just a political rivalry. This would upgrade the reading-relation to forecloses rather than influences.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(growth_model_locked_in, conceptual, 'Logical structure of competing climate-response kernels.').
+
+omega_variable(
+    low_income_region_coalition_power,
+    'Can low-income regions coalesce into a blocking coalition within climate negotiations, and does such a coalition change the power distribution of the constraint?',
+    'Observation of voting patterns in UNFCCC negotiations, formation of south-south alliances, and whether unified refusal to accept adaptation-only frameworks forces renegotiation of what counts as legitimate response.',
+    'Coalition power would shift directionality: currently powerless victims become organized payers with veto capacity. The constraint would require higher enforcement intensity or would collapse. This is a material test of whether the constraint''s persistence is grounded in the power atoms or in legitimacy narratives.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(low_income_region_coalition_power, empirical, 'Whether powerless victims can organize countervailing power.').
 
 
 /* ==========================================================================
@@ -253,34 +338,58 @@ narrative_ontology:interval(climate_response_legitimacy__adaptation_priority, 0,
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(clim_tr_t0, climate_response_legitimacy__adaptation_priority, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(clim_tr_t5, climate_response_legitimacy__adaptation_priority, theater_ratio, 5, 0.32).
-narrative_ontology:measurement(clim_tr_t10, climate_response_legitimacy__adaptation_priority, theater_ratio, 10, 0.36).
-narrative_ontology:measurement(clim_tr_t15, climate_response_legitimacy__adaptation_priority, theater_ratio, 15, 0.39).
-narrative_ontology:measurement(clim_tr_t20, climate_response_legitimacy__adaptation_priority, theater_ratio, 20, 0.41).
-narrative_ontology:measurement(clim_tr_t25, climate_response_legitimacy__adaptation_priority, theater_ratio, 25, 0.41).
+narrative_ontology:measurement(clim_tr_t0, climate_response_legitimacy__adaptation_priority, theater_ratio, 0, 0.22).
+narrative_ontology:measurement_basis(clim_tr_t0, observed).
+narrative_ontology:measurement(clim_tr_t5, climate_response_legitimacy__adaptation_priority, theater_ratio, 5, 0.26).
+narrative_ontology:measurement_basis(clim_tr_t5, observed).
+narrative_ontology:measurement(clim_tr_t10, climate_response_legitimacy__adaptation_priority, theater_ratio, 10, 0.31).
+narrative_ontology:measurement_basis(clim_tr_t10, observed).
+narrative_ontology:measurement(clim_tr_t15, climate_response_legitimacy__adaptation_priority, theater_ratio, 15, 0.36).
+narrative_ontology:measurement_basis(clim_tr_t15, observed).
+narrative_ontology:measurement(clim_tr_t20, climate_response_legitimacy__adaptation_priority, theater_ratio, 20, 0.39).
+narrative_ontology:measurement_basis(clim_tr_t20, observed).
+narrative_ontology:measurement(clim_tr_t25, climate_response_legitimacy__adaptation_priority, theater_ratio, 25, 0.4).
+narrative_ontology:measurement_basis(clim_tr_t25, observed).
 narrative_ontology:measurement(clim_tr_t30, climate_response_legitimacy__adaptation_priority, theater_ratio, 30, 0.41).
-narrative_ontology:measurement(clim_tr_t40, climate_response_legitimacy__adaptation_priority, theater_ratio, 40, 0.41).
+narrative_ontology:measurement_basis(clim_tr_t30, observed).
+narrative_ontology:measurement(clim_tr_t40, climate_response_legitimacy__adaptation_priority, theater_ratio, 40, 0.42).
+narrative_ontology:measurement_basis(clim_tr_t40, projected).
 
 % Extraction over time
-narrative_ontology:measurement(clim_be_t0, climate_response_legitimacy__adaptation_priority, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(clim_be_t5, climate_response_legitimacy__adaptation_priority, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(clim_be_t10, climate_response_legitimacy__adaptation_priority, base_extractiveness, 10, 0.58).
-narrative_ontology:measurement(clim_be_t15, climate_response_legitimacy__adaptation_priority, base_extractiveness, 15, 0.62).
-narrative_ontology:measurement(clim_be_t20, climate_response_legitimacy__adaptation_priority, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement(clim_be_t0, climate_response_legitimacy__adaptation_priority, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(clim_be_t0, observed).
+narrative_ontology:measurement(clim_be_t5, climate_response_legitimacy__adaptation_priority, base_extractiveness, 5, 0.54).
+narrative_ontology:measurement_basis(clim_be_t5, observed).
+narrative_ontology:measurement(clim_be_t10, climate_response_legitimacy__adaptation_priority, base_extractiveness, 10, 0.59).
+narrative_ontology:measurement_basis(clim_be_t10, observed).
+narrative_ontology:measurement(clim_be_t15, climate_response_legitimacy__adaptation_priority, base_extractiveness, 15, 0.63).
+narrative_ontology:measurement_basis(clim_be_t15, observed).
+narrative_ontology:measurement(clim_be_t20, climate_response_legitimacy__adaptation_priority, base_extractiveness, 20, 0.66).
+narrative_ontology:measurement_basis(clim_be_t20, observed).
 narrative_ontology:measurement(clim_be_t25, climate_response_legitimacy__adaptation_priority, base_extractiveness, 25, 0.67).
+narrative_ontology:measurement_basis(clim_be_t25, observed).
 narrative_ontology:measurement(clim_be_t30, climate_response_legitimacy__adaptation_priority, base_extractiveness, 30, 0.68).
+narrative_ontology:measurement_basis(clim_be_t30, observed).
 narrative_ontology:measurement(clim_be_t40, climate_response_legitimacy__adaptation_priority, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement_basis(clim_be_t40, projected).
 
 % Suppression requirement over time
-narrative_ontology:measurement(clim_su_t0, climate_response_legitimacy__adaptation_priority, suppression_requirement, 0, 0.55).
-narrative_ontology:measurement(clim_su_t5, climate_response_legitimacy__adaptation_priority, suppression_requirement, 5, 0.61).
-narrative_ontology:measurement(clim_su_t10, climate_response_legitimacy__adaptation_priority, suppression_requirement, 10, 0.66).
-narrative_ontology:measurement(clim_su_t15, climate_response_legitimacy__adaptation_priority, suppression_requirement, 15, 0.69).
-narrative_ontology:measurement(clim_su_t20, climate_response_legitimacy__adaptation_priority, suppression_requirement, 20, 0.71).
-narrative_ontology:measurement(clim_su_t25, climate_response_legitimacy__adaptation_priority, suppression_requirement, 25, 0.72).
-narrative_ontology:measurement(clim_su_t30, climate_response_legitimacy__adaptation_priority, suppression_requirement, 30, 0.71).
-narrative_ontology:measurement(clim_su_t40, climate_response_legitimacy__adaptation_priority, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement(clim_su_t0, climate_response_legitimacy__adaptation_priority, suppression_requirement, 0, 0.54).
+narrative_ontology:measurement_basis(clim_su_t0, observed).
+narrative_ontology:measurement(clim_su_t5, climate_response_legitimacy__adaptation_priority, suppression_requirement, 5, 0.6).
+narrative_ontology:measurement_basis(clim_su_t5, observed).
+narrative_ontology:measurement(clim_su_t10, climate_response_legitimacy__adaptation_priority, suppression_requirement, 10, 0.64).
+narrative_ontology:measurement_basis(clim_su_t10, observed).
+narrative_ontology:measurement(clim_su_t15, climate_response_legitimacy__adaptation_priority, suppression_requirement, 15, 0.68).
+narrative_ontology:measurement_basis(clim_su_t15, observed).
+narrative_ontology:measurement(clim_su_t20, climate_response_legitimacy__adaptation_priority, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement_basis(clim_su_t20, observed).
+narrative_ontology:measurement(clim_su_t25, climate_response_legitimacy__adaptation_priority, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement_basis(clim_su_t25, observed).
+narrative_ontology:measurement(clim_su_t30, climate_response_legitimacy__adaptation_priority, suppression_requirement, 30, 0.72).
+narrative_ontology:measurement_basis(clim_su_t30, observed).
+narrative_ontology:measurement(clim_su_t40, climate_response_legitimacy__adaptation_priority, suppression_requirement, 40, 0.74).
+narrative_ontology:measurement_basis(clim_su_t40, projected).
 
 
 /* ==========================================================================
@@ -293,11 +402,13 @@ narrative_ontology:affects_constraint(climate_response_legitimacy__adaptation_pr
 narrative_ontology:affects_constraint(climate_response_legitimacy__adaptation_priority, climate_response_legitimacy__degrowth_transformation).
 
 % DUAL FORMULATION NOTE:
-% The climate-response-legitimacy kernel decomposes into three constraint stories, each instantiating a different reading: adaptation_priority (this file) emphasizes inevitable warming + technology adaptation; mitigation_priority emphasizes decoupling + economic growth preservation; degrowth_transformation emphasizes structural economic change + consumption reduction. The three readings coexist as live policy positions held by different institutional and activist coalitions. Each story carries its own ε, beneficiary/victim structure, and type — they are not measurements of the same constraint under different frames, but three distinct structural instantiations of the contested kernel. Links between the stories are routed through cs_structure.reading_relations in each file.
+% This constraint is one reading of the climate_response_legitimacy kernel. The sibling readings (mitigation_priority, degrowth_transformation) are separate constraint stories linked via this network entry. The three stories share a fixed referent (the standing arrangements for climate policy) but author different ε values because each reading interprets the arrangement through different legitimacy lenses. The adaptation-priority reading authors ε as 0.68 (extraction is substantial because asymmetric costs are imposed on low-income regions and future generations while wealthy-nation growth is preserved). The mitigation-priority reading would author lower ε (framing deep emissions reduction as compatible with growth). The degrowth reading would author higher ε (framing growth preservation itself as extraction from future generations and lower-income populations). Decomposition is required by ε-invariance: a single constraint cannot simultaneously embody all three readings' ε values.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(climate_response_legitimacy__adaptation_priority, powerless, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

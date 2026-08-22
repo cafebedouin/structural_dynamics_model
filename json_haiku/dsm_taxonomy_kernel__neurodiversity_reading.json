@@ -2,190 +2,339 @@
   "header": {
     "constraint_id": "dsm_taxonomy_kernel__neurodiversity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-08-03",
     "status": "ACTIVE",
-    "story_uid": "931aed8d-d71e-4922-bf11-b60dbe6c241c"
+    "story_uid": "27472fb0-66a2-4faa-8e07-7a7e09717d68",
+    "created_at": "2026-08-03T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.79,
+    "extractiveness": 0.82,
     "suppression": 0.76,
     "theater_ratio": 0.58,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.68,
-    "claimed_type": "tangled_rope",
-    "human_readable": "DSM Pathologization of Neurodivergence (Neurodiversity Reading)",
-    "topic_domain": "medical_epistemology/psychiatric_taxonomy/social_construction",
+    "accessibility_collapse": 0.71,
+    "resistance": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "DSM Pathologization of Neurodiversity (Neurodiversity Reading)",
+    "topic_domain": "medical/psychiatric/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_conformity_systems",
-      "pharmaceutical_industry",
-      "psychiatric_diagnostic_authority"
+      "institutional_conformity_enforcers",
+      "pharmaceutical_manufacturers",
+      "diagnostic_credential_gatekeepers"
     ],
     "victims": [
       "neurodivergent_individuals",
-      "autism_community",
-      "adhd_community",
-      "dyslexia_community"
+      "children_assigned_pathological_status"
     ]
+  },
+  "stakeholders": [
+    {
+      "name": "neurodivergent_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Classified as disordered by DSM categories (ADHD, autism, dyslexia, etc.) despite their neurological variation being a natural expression of human cognitive diversity. Face coercive normalization pressure through schools, workplaces, and medical systems: medication, behavioral modification programs, exclusion from settings that don't accommodate their needs. Their neurodivergence is constitutive of identity; 'exiting' the DSM framework means accepting the pathological label or social ostracism. The constraint extracts compliance with neurotypical behavioral norms and denies recognition of their neurological self-determination."
+    },
+    {
+      "name": "children_assigned_pathological_status",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Subject to diagnostic labeling and institutional interventions (special education segregation, psychotropic medication, behavioral contingency systems) based on DSM categories applied to developmental variation. Have no choice in whether they are diagnosed; their parents and teachers make that choice. Experience the label as a permanent institutional mark that shapes educational placement, peer relationships, and self-concept. Cannot exit because they are minors and institutionally enmeshed."
+    },
+    {
+      "name": "institutional_conformity_enforcers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Schools, workplaces, military, carceral systems, and other institutions requiring behavioral conformity benefit from the DSM framework by outsourcing conformity enforcement to medical diagnosis. A neurodivergent student who cannot sit still is reframed as 'ADHD disorder' rather than a design failure of the institution. The institution avoids designing environments for cognitive diversity; it medicates or excludes the person instead. The DSM legitimizes institutional rigidity as medical necessity."
+    },
+    {
+      "name": "pharmaceutical_manufacturers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Profit directly from DSM category expansion: each new diagnosis creates a market for psychotropic interventions. ADHD diagnoses expanded 5-fold over 30 years; autism spectrum diagnoses expanded similarly. Manufacturers fund DSM revision processes (directly and through professional associations), sponsor diagnostic criteria development, and market treatments as medical solutions to what the reading frames as natural variation. The DSM framework converts diversity into disease markets."
+    },
+    {
+      "name": "diagnostic_credential_gatekeepers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Psychiatrists, psychologists, and allied diagnostic professionals gain authority, legitimacy, and economic rent from the DSM system. Their diagnostic power is what makes the classification binding on schools, workplaces, and insurance systems. Expanding DSM categories expands the diagnostic market and professional jurisdiction. Challenging the DSM framework threatens their epistemic authority and income streams."
+    },
+    {
+      "name": "biomedical_researchers_neurobiology_faction",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Research funding, publication venue, and career advancement flow to those investigating neurobiological mechanisms of DSM conditions. The DSM's disease framing generates a research agenda: 'What is broken in the brain of autistic people?' rather than 'How do autistic brains work?' Challenging the pathology premise would redirect research toward neurodiversity mechanisms, potentially reducing funding and prestige for pathology-focused neurobiology."
+    },
+    {
+      "name": "families_of_neurodivergent_persons",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pressured by institutions to seek DSM diagnosis and treatment for their children as the condition of receiving accommodation or avoiding institutional punishment. A parent may accept the diagnosis as a strategic move to access school services ('I don't believe my child has a disorder, but I need the label to get an IEP'). They bear the psychological burden of having a 'disordered' child while also protecting them from coercive normalization. The constraint forces a choice between accepting the pathological label or forgoing institutional support."
+    },
+    {
+      "name": "disability_rights_advocates",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate in structural contradiction: the DSM pathological label is what triggers legal protections (ADA, IEP rights, workplace accommodations), yet accepting the label reinforces the pathology premise. They work to secure accommodations using DSM diagnoses while simultaneously contesting the DSM framework. Their exit from DSM legitimacy would sacrifice the legal infrastructure protecting neurodivergent people."
+    },
+    {
+      "name": "alternative_neurodiversity_model_proponents",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Neuroscientists, clinicians, and advocates promoting a neurodiversity model (neurological variation as natural, not pathological) are systematically excluded from DSM revision processes, have difficulty publishing in mainstream psychiatric journals, and lack funding from institutions invested in the disease model. Their alternative framework is structurally suppressed by institutional gate-keeping tied to the DSM."
+    },
+    {
+      "name": "insurance_and_payment_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Require DSM diagnosis for any mental-health or developmental claim. The DSM is the billing and eligibility infrastructure; it controls what conditions trigger payment. Insurers benefit from the DSM's existence as a neutral-seeming classification system that outsources rationing decisions to 'medical necessity'—a diagnosis either is or isn't in the DSM, so insurers can deny claims outside that boundary."
+    },
+    {
+      "name": "neurodiversity_self_advocates",
+      "role": "observer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Autistic, ADHD, dyslexic, and other neurodivergent people organized in peer communities rejecting the pathology frame and asserting neurodiversity as identity and culture rather than disorder. They are the analytical seat that sees the full structure—how the DSM extracts self-determination, how institutions benefit from medicalized conformity, how the constraint persists because no single beneficiary group has an incentive to dissolve it. They have minimal institutional power but maximum clarity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The DSM provides a standardized diagnostic language that coordinates mental-health practice, research, insurance claims, and educational accommodations across systems. In principle, a shared taxonomy enables consistent case discussion and prevents idiosyncratic labeling.",
+    "transfer_function": "Transfers self-determination and bodily autonomy from neurodivergent individuals to institutional systems via the pathological classification. Neurodivergent people are required to accept a disease label (or be denied accommodations and face coercive pressure); institutions gain legitimate authority to enforce behavioral conformity; pharmaceutical and diagnostic industries gain a market and professional jurisdiction; schools and employers gain grounds to exclude or medicalize rather than accommodate difference.",
+    "absent_voices": "Alternative neurodiversity models, neurodivergent self-advocates (historically), non-Western conceptualizations of neurodiversity (many non-Western cultures recognize and accommodate different cognitive styles without pathologization), and the voices of those harmed by diagnostic labeling and forced medication who are not gatekeepers are structurally excluded from DSM revision processes. The processes are controlled by psychiatric professionals and pharmaceutical interests; the people classified are not voting members of the revision committees.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the DSM framework vanished overnight, institutional accommodation systems would need redesign—schools would have to accommodate cognitive diversity without diagnostic labels; insurance would need alternative eligibility logic; researchers would shift to studying neurodiversity rather than pathology; pharmaceutical markets for psychotropic treatments of DSM conditions would collapse; diagnostic professionals would lose jurisdiction and income. The absence would force institutional redesign toward accommodation and diversity rather than normalization and exclusion. The world would rearrange fundamentally around the principle that neurological difference is variation, not disease.",
+    "founding_problem": "Mid-20th-century psychiatry lacked a standardized diagnostic language; clinicians used idiosyncratic terms, making communication and research difficult. The DSM was created to provide a shared taxonomy so psychiatrists could reliably diagnose and discuss cases and conduct comparable research.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians of psychiatry (Shorter, Kirk, Kutchins) and contemporary DSM critics from within psychiatry (Szasz, Whitaker, Frances, the authors of the Tavistock critique) confirm that the founding problem of diagnostic standardization was solved by DSM-III in 1980. The problem is no longer live as a coordination need; what persists is the institutional infrastructure of the DSM, now expanded into markets and bureaucratic machinery. The psychiatric establishment attests the problem remains live in order to justify ongoing DSM expansion; critics attest the founding problem is solved and the constraint now operates as pure institutional extraction."
   },
   "interval": {
     "start": 0,
-    "end": 30
+    "end": 50
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.65
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.68
+      "time_point": 8,
+      "value": 0.64,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.72
+      "time_point": 16,
+      "value": 0.71,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.75
+      "time_point": 24,
+      "value": 0.76,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 22,
-      "value": 0.77
+      "time_point": 32,
+      "value": 0.8,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.79
+      "time_point": 40,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.82,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.38,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.46
+      "time_point": 8,
+      "value": 0.42,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.5
+      "time_point": 16,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.54
+      "time_point": 24,
+      "value": 0.53,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 22,
-      "value": 0.56
+      "time_point": 32,
+      "value": 0.56,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.58
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.68
+      "value": 0.62,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 5,
-      "value": 0.7
+      "time_point": 8,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.72
+      "time_point": 16,
+      "value": 0.7,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.74
+      "time_point": 24,
+      "value": 0.73,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 22,
-      "value": 0.75
+      "time_point": 32,
+      "value": 0.75,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 30,
-      "value": 0.76
+      "time_point": 40,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.76,
+      "basis": "observed"
     }
   ],
   "commentary": {
-    "narrative_context": "This story instantiates the neurodiversity reading of the contested DSM taxonomy kernel. The reading asserts that DSM categories pathologize natural human neurological variation (autism, ADHD, dyslexia, etc.) in order to enforce institutional behavioral conformity. Neurodivergent individuals are subjected to coercive normalization (behavioral modification, medication pressure, denial of accommodation) while beneficiary institutions (schools, employers, psychiatric authority, pharmaceutical industry, carceral systems) extract conformity compliance and economic value from the pathologization frame. The founding problem (psychiatry's search for medical legitimacy) is dead—the medical model's biological assumptions have not been empirically vindicated—yet the constraint persists because institutions depend on it. This is NOT the biomedical reading (which asserts DSM categories map to objective neurobiological disease) or the critical psychiatry reading (which asserts categories are reverse-engineered from pharmaceutical availability). This reading is specific: the constraint's function is to pathologize variation as deficiency so that institutions can demand conformity as treatment rather than accommodate difference. The claim/metric gap is deliberate: extractiveness is high (0.79) and theater is rising (0.58 at interval end) because the constraint's justification increasingly relies on performative science—DSM revision cycles driven by committee consensus, not discovery; the founding medical model unvalidated—while its actual function is normalization enforcement.",
-    "logic_rationale": "Extractiveness scores high (0.79 at interval end) because pathologization itself is a form of harm: the individual is told their neurology is disordered, requiring intervention, justifying denial of accommodation. The extraction is the forced choice between medication, behavioral modification, or institutional exclusion. Suppression is high (0.76) because the constraint persists through medical authority, institutional gatekeeping (diagnosis required for accommodations, services, and legal recognition), and internalized pathologization—neurodivergent people are taught to experience their own neurology as deficiency. Theater rising from 0.42 to 0.58 over the interval reflects the growing gap between the diagnostic system's scientific rhetoric (DSM revisions presented as empirical discovery) and the revealed reality of committee-driven category construction and pharmaceutical influence. Accessibility collapse is substantial (0.72): once someone is diagnosed, institutional pathways narrow to normalization or exclusion; alternatives (self-directed neurodiversity frameworks, accommodation models) are not available within institutional contexts. Resistance is substantial (0.68) from neurodiversity advocates and self-advocates, though they face systematic exclusion from diagnostic authority and their evidence is treated as activism, not science.",
-    "directionality_logic": "Neurodivergent individuals sit at the victim end of directionality (d near 1.0): they bear the costs of pathologization (coercive interventions, denial of accommodation, self-pathologization) and have identity-locked exit (their neurology is ineradicable; exit requires either hiding or institutional abandonment). Institutional beneficiaries (schools, employers, psychiatric authority, pharmaceutical industry) sit at the beneficiary end (d near 0.0): they extract conformity compliance and economic value without running the diagnostic apparatus themselves (psychiatrists maintain it, institutions use it). Parents and disability communities sit in the middle (d near 0.5): some benefit from diagnosis (access to services), others are harmed by it (their child is pathologized). The per-seat computation will show divergence: from the psychiatric authority's seat, the DSM is genuine coordination enabling scientific communication and treatment matching; from neurodivergent individuals' seats, it is coercive extraction enforcing conformity. This divergence is structural and should be computed by the engine; the commentary reflects the likely seats.",
-    "perspectival_gap": "The psychiatric authority and institutional beneficiaries (schools, employers) experience this constraint as genuine coordination with incidental extraction: the DSM enables better treatment matching, informs institutional accommodations, and provides scientific legitimacy to clinical practice. Neurodivergent individuals and advocates experience it as extraction masquerading as coordination: the pathology frame forecloses alternative readings (neurodiversity as variation, not disorder) and justifies coercive normalization. The constraint's persistence depends on authority asymmetry: psychiatry controls what counts as evidence and legitimate framework. From the authority's seat, resistance is noise; from the target's seat, it is truth-telling forbidden. The engine should compute this as a tangled_rope with substantial d divergence across seats.",
-    "mandatrophy_analysis": "This is NOT mandatrophy: the constraint's founding problem is dead (psychiatry's medical legitimacy is unvalidated), but the constraint persists because institutions depend on it to enforce conformity without explicitly negotiating behavioral demands. A true mandate obsolescence would mean the constraint serves no function; here it serves institutional interests very clearly. The theater ratio rising (0.42 to 0.58) suggests increasing performative maintenance—diagnostic revisions dressed as scientific discovery while actually reflecting field politics and pharmaceutical influence—but the performativity is supporting extraction, not replacing it. This is a tangled_rope that is becoming more theatrical, not a piton maintained by inertia.",
-    "kernel_context": "This constraint instantiates the neurodiversity reading of the contested DSM taxonomy kernel. The kernel is the Diagnostic and Statistical Manual of Mental Disorders and its authority to classify human neurological and behavioral variation as disease. The neurodiversity reading asserts: DSM categories pathologize natural human neurological variation that conflicts with institutional behavioral norms; the reading opposes the biomedical reading (categories map to objective biological disease) and the critical psychiatry reading (categories are reverse-engineered from pharmaceutical availability). The neurodiversity reading is unique in treating the normalization function as the extraction mechanism: institutional systems benefit from being able to demand conformity as medical treatment rather than as negotiated social norm. The sibling readings are separate constraint stories with their own ε values and beneficiary/victim structures."
+    "narrative_context": "The Diagnostic and Statistical Manual of Mental Disorders (DSM) classifies neurodivergent people—those with autism, ADHD, dyslexia, and related neurological variations—as having psychiatric disorders. The neurodiversity reading frames this taxonomy as a mechanism that pathologizes natural human neurological variation in order to enforce behavioral conformity on institutions that would otherwise have to accommodate cognitive diversity. The constraint extracts self-determination from neurodivergent individuals and channeled institutional and pharmaceutical profits. Its persistence depends on active suppression of alternative frameworks (neurodiversity model) and structural exclusion of neurodivergent voices from diagnostic revision processes. The reading deliberately instantiates high extractiveness and suppression; the founding problem is dead but the constraint persists as institutional machinery and pharmaceutical market.",
+    "key_agents": [
+      "Neurodivergent individuals: classified as disordered, subject to coercive normalization and denied self-determination in institutional settings (schools, workplaces). Identity-locked exit because neurodivergence is constitutive of cognitive self.",
+      "Children: most vulnerable payer group, trapped in institutions, diagnosed without consent, subject to medication and segregation.",
+      "Institutional conformity enforcers (schools, employers, carceral systems): beneficiaries who outsource conformity enforcement to medical diagnosis rather than redesigning for diversity.",
+      "Pharmaceutical manufacturers: beneficiaries who profit from market expansion tied to DSM category proliferation.",
+      "Diagnostic credential gatekeepers (psychiatrists, psychologists): beneficiaries who gain authority, jurisdiction, and income from DSM system.",
+      "Families of neurodivergent persons: forced to accept pathological label strategically to access accommodations, bearing psychological cost of having a 'disordered' child.",
+      "Neurodiversity self-advocates: observers who see the full structure and contest the pathology frame, but lack institutional power.",
+      "Alternative neurodiversity model proponents: excluded voices structurally suppressed from DSM revision and mainstream psychiatric discourse."
+    ],
+    "logic_rationale": "Extractiveness is high (0.82 at interval end) and rising across 50 years because: (1) DSM categories have expanded continuously, classifying more variation as pathology; (2) the market for psychotropic treatments has grown in lockstep with diagnostic expansion; (3) neurodivergent individuals face intensifying pressure to accept pathological labels for access to accommodations; (4) the founding coordination problem (standardized diagnostic language) was solved by DSM-III (1980), but the constraint persists and expands as institutional machinery and pharmaceutical market. Suppression is high (0.76) because: (1) institutional pressure forces acceptance of the diagnosis; (2) alternative frameworks are excluded from diagnostic processes; (3) neurodivergent self-advocates historically had no seat at DSM revision tables; (4) gatekeepers actively suppress neurodiversity framing in psychiatric literature and funding. Theater is moderate-to-high (0.58 at interval end, rising from 0.38) because: (1) the coordination function (standardized diagnostic language) is genuinely real and necessary; (2) but a growing share of DSM activity after 1980 is theatrical—defending category expansions and pharmaceutical markets rather than improving clinical communication; (3) the scientific legitimacy language around DSM revision masks market and jurisdictional interests. Accessibility collapse is moderate (0.71) because: (1) exit appears theoretically possible (reject the diagnosis, live undiagnosed), but in practice institutional pressure closes this off (get diagnosed or lose accommodations and face coercive intervention); (2) identity-lock is the deeper suppression—neurodivergence is constitutive, so 'exiting' means self-rejection. Resistance is substantial (0.64) because: (1) neurodiversity movements, disability rights advocates, critical psychiatry scholars, and peer-support communities actively contest the pathology frame; (2) but their power is dispersed and structurally excluded from DSM governance.",
+    "perspectival_gap": "The biomedical-reading seat and the neurodiversity-reading seat should compute entirely differently, per the kernel structure. A biomedical psychiatrist sees the DSM as a scientific classification discovering objective disease entities; extractiveness should be near zero (natural kinds, no extraction, mountain-candidate logic). A neurodiversity advocate sees the same DSM framework as institutional machinery extracting conformity and self-determination from neurodivergent people; extractiveness is high (snare logic). The engine will compute different types per seat because directionality is opposite: the biomedical reader is analyst-positioned (analytical power, views DSM as discovery tool, no personal extraction or victimization); the neurodivergent payer is identity-locked (trapped, self-constituted through the trait the DSM pathologizes, forced to accept harm or lose accommodations). The seated divergence is structural, not a measurement error.",
+    "directionality_logic": "Neurodivergent individuals are full targets (d near 1.0): identity-locked, powerless, forced to accept pathological labels, denied accommodation unless they accept the diagnosis, experience the constraint as self-harm. Institutional conformity enforcers are beneficiaries (d near 0.0): legitimacy to enforce conformity without redesigning institutions, institutionally powerful, arbitrage-level exit (can shift conformity enforcement strategy if constraint dissolved). Pharmaceutical manufacturers and diagnostic gatekeepers are beneficiaries (d near 0.0): direct profit/jurisdiction/income from constraint, institutional power, arbitrage exits. Families are near-symmetric targets becoming beneficiaries under pressure (d near 0.5 shifting toward 0.3): they experience the pathological label as painful (victim-side pressure) but also use the label strategically to access accommodations (beneficiary-side incentive). The key directionality driver is power + exit + identity-lock: neurodivergent people are powerless and identity-locked (d → 1.0); institutions are powerful with arbitrage exits (d → 0.0).",
+    "mandatrophy_analysis": "This constraint is a textbook mandatrophy case: the founding problem (standardized psychiatric diagnostic language for research and clinical communication) was solved by DSM-III in 1980, creating a genuine coordination function at that moment. Since 1980, the DSM has expanded continuously (3 to 5 to 7+ personality disorder subtypes, autism spectrum explosion, ADHD reclassification, new diagnoses added every revision). This expansion is not driven by solving residual coordination problems—it is driven by pharmaceutical marketing (new drugs require diagnoses to sell to) and institutional convenience (schools and employers use diagnosis to exclude rather than accommodate). The constraint persists and intensifies not because participants find it valuable for coordination (they don't—neurodivergent people actively exit if they can, institutions resist accommodation in favor of diagnosis), but because beneficiary interests (pharma, diagnosticians, institutional conformity enforcers) are concentrated and embedded in government, academia, and healthcare infrastructure. The founding mandate—'enable clinical communication through standardized language'—has given way to 'expand pathological categories to serve pharmaceutical and institutional interests.' The theater ratio rising from 0.38 to 0.58 is the signal: an increasing share of DSM activity is theater defending market and jurisdiction rather than improving communication. If neurodivergent people ceased accepting DSM labels, the constraint would dissolve overnight; its persistence is pure institutional inertia and concentrated beneficiary capture.",
+    "kernel_context": "This constraint instantiates the neurodiversity reading of the dsm_taxonomy_kernel. The kernel is the standing DSM classification system, a formalized text that psychiatric authority grounds itself in. Three readings of this kernel currently contend: (1) biomedical_reading—DSM categories map to objective disease entities discoverable through neurobiology research (the official psychiatric position); (2) critical_psychiatry_reading—DSM categories are reverse-engineered from available pharmaceutical treatments and constructed to create drug markets (Whitaker, Gotzsche, Frances critiques); (3) neurodiversity_reading (this one)—DSM categories pathologize natural neurological variation to enforce institutional conformity. The neurodiversity reading differs structurally from the biomedical reading in core premise: biomedicine treats the constraint as natural discovery (mountain-candidate, near-zero extraction from the discovery standpoint); neurodiversity treats the constraint as institutional machinery extracting conformity and denying self-determination (snare). The neurodiversity reading coexists with critical psychiatry: both see high extraction and active enforcement, but critical psychiatry attributes it to pharmaceutical market design while neurodiversity attributes it to institutional conformity enforcement (the mechanisms overlap—pharmaceurical markets ARE built into institutional conformity enforcement). The neurodiversity reading forecloses the biomedical reading only within the neurodiversity framework itself—if neurodiversity is true, biomedical disease discovery claims are false—but the readings coexist in actual practice because the biomedical and neurodiversity-critiquing communities are separate parties, neither of which can compel the other's framework."
   },
   "omegas": [
     {
-      "id": "structural_vs_internalized_suppression",
-      "question": "What proportion of the measured suppression (0.76) is structural (institutional gatekeeping, denial of alternatives, pharmaceutical/behavioral mandates) versus internalized (neurodivergent individuals' own internalized pathology narratives that persist after institutional pressure is removed)?",
-      "resolution_mechanism": "Longitudinal study of individuals who exit institutional contexts (leave school, change employers, decline medication) and measure whether suppression and self-pathologization persist. Comparison with individuals who adopt neurodiversity framings despite institutional pathologization.",
-      "impact": "If internalized suppression is substantial (>0.4), the constraint's effective suppression is higher than the structural measure suggests—the target carries pathologization with them after exit, requiring identity reconstruction work. This would suggest the constraint operates partly through identity capture, not just external enforcement.",
+      "id": "neurodiversity_vs_natural_kind",
+      "question": "Is neurodivergence (autism, ADHD, dyslexia, etc.) a natural kind of neurological variation that exists independent of institutional context, or is it constructed relationally—variation that becomes 'disordered' only when institutions demand conformity?",
+      "resolution_mechanism": "Cross-cultural empirical study: if non-Western societies with different institutional conformity demands recognize and accommodate the same neurological traits without pathologizing them, the trait is a natural kind; if the 'disorder' label follows institutional demand for conformity, it is constructed relationally.",
+      "impact": "If natural kind: the neurodiversity reading is approximately true and the DSM's pathology framing is imposing institutional values onto natural biology. If constructed relationally: neurodiversity and biomedical readings are both partially true—the trait exists naturally, but the 'disorder' status is institutional. The constraint would be understood as institutional conformity enforcement, not discovery of natural pathology.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether neurodivergent traits are natural kinds or relationally constructed through institutional context."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the suppression of neurodiversity framing and self-advocacy in DSM processes primarily structural (institutional barriers, gatekeeping, funding exclusion) or internalized (neurodivergent people have internalized the pathology frame, neuroscientists believe the biomedical paradigm is objectively true)?",
+      "resolution_mechanism": "Post-destigmatization trajectory: if neurodiversity framing gains institutional access and funding, does the scientific community shift toward neurodiversity paradigms, or do they defend biomedical frames against evidence? If the latter, suppression is internalized authority-belief rather than external gatekeeping.",
+      "impact": "If structural: removing gatekeeping (mandating neurodiversity representation on DSM committees) would shift the constraint type toward rope/coordination. If internalized: even with gatekeeping removed, the biomedical paradigm would persist because it is genuinely believed; the constraint would be a Piton (inertial, not extractive). Combined structural + internalized suppression is the current state; mapping the proportion matters for remedy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism in the exclusion of neurodiversity paradigms from psychiatric authority."
+    },
+    {
+      "id": "accommodation_vs_medication_institutional_preference",
+      "question": "Do institutions prefer medicalized conformity (diagnose, medicate, exclude) over accommodation (redesign environments, support neurodiversity) because medication is genuinely cheaper/more efficient, or because accommodation requires institutional change while medication offloads the problem onto individuals?",
+      "resolution_mechanism": "Cost accounting: compare lifetime institutional cost of accommodating a neurodivergent student (environmental redesign, support staff, flexible pacing) versus cost of diagnosis, medication, special education segregation, and remediation of exclusion-related harm.",
+      "impact": "If accommodation is cheaper: the preference for medication is extractive institutional convenience, not efficiency; the constraint is maintainable only by suppressing the economic analysis. If medication is cheaper: part of the extraction is justified by efficiency; the constraint would be Tangled Rope rather than Snare (genuine coordination benefit to institutional efficiency, alongside asymmetric extraction from individuals). Evidence strongly suggests accommodation is cheaper lifetime, making the constraint a pure snare.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Internalized pathology narrative persistence after institutional exit"
+      "description": "Comparative institutional cost of accommodation versus medication/exclusion in managing neurodiversity."
     },
     {
-      "id": "medical_model_biological_validity",
-      "question": "Do DSM diagnostic categories map to objective, discoverable neurobiological disease entities, or are they socially constructed categories that reflect institutional interests and field politics?",
-      "resolution_mechanism": "Meta-analysis of biological validity studies (twin studies, neuroimaging, genetic research, pharmacological treatment specificity) and analysis of DSM revision history (how categories were added, removed, expanded across editions; funding sources; committee composition).",
-      "impact": "If biological validity is low and revision driven by institutional/pharmaceutical interests (high confidence), the founding problem (psychiatry's medical legitimacy) is definitively dead and the constraint operates purely as normalization enforcement. If biological validity is defensible, the neurodiversity reading becomes weaker and the biomedical reading more plausible.",
+      "id": "kernel_reading_coexistence",
+      "question": "Can the biomedical reading and the neurodiversity reading coexist within a single institutional framework (e.g., 'DSM captures real disease entities AND pathologizes natural variation'), or does accepting neurodiversity logically foreclose the biomedical disease framing?",
+      "resolution_mechanism": "Theoretical analysis: if a trait is a natural human variation (neurodiversity), can it simultaneously be a disease entity (biomedical)? The answer depends on definitions of disease and disorder. Operational resolution: do practitioners actually hold both frames simultaneously (diagnostic disease language + accommodation of diversity), or do they polarize?",
+      "impact": "If compatible: both readings can coexist; the neurodiversity reading critiques institutional choice to use DSM pathologization rather than diversity accommodation, not the biomedical framework itself. If logically incompatible: this reading forecloses the biomedical reading, which is rare for committed-kernel readings and would require the relationships to shift from coexist_with to forecloses. Current evidence suggests they are operationally incompatible in practice (institutions choose medication + exclusion OR accommodation + diversity framing, not both) even if theoretically compatible.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether DSM categories have biological validity or are social constructs"
-    },
-    {
-      "id": "pharmaceutical_industry_dependency",
-      "question": "How much of the DSM's current form and revision trajectory is directly influenced by pharmaceutical industry funding, marketing priorities, and the therapeutic technologies available to treat various conditions?",
-      "resolution_mechanism": "Audit of funding sources for DSM-5 task force members, analysis of pharmaceutical marketing expenditure correlated with diagnostic expansion, comparison of pharmacological availability with category revision timelines.",
-      "impact": "If pharmaceutical influence is substantial, the constraint operates as a market-creation mechanism disguised as scientific taxonomy—supporting the critical psychiatry reading and strengthening the extraction narrative (pharmaceutical industry as primary beneficiary). If influence is minimal, the constraint is more defensible as genuine coordination.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Extent of pharmaceutical industry influence on DSM categories and revisions"
-    },
-    {
-      "id": "institutional_necessity_of_pathology_frame",
-      "question": "Do schools, employers, and social institutions require the pathology frame (neurodivergence-as-disorder) to function, or can they accommodate variation under alternative frames (neurodiversity-as-natural-difference)?",
-      "resolution_mechanism": "Natural experiments from organizations and institutions that have adopted neurodiversity-affirming practices (some tech companies, some autism-specialized schools, some disability-centered organizations): measure whether institutional function, productivity, and participant satisfaction improve, decline, or remain stable relative to pathology-framed peers.",
-      "impact": "If institutions can function and adapt under neurodiversity frames without loss of coordination, the pathology frame is unnecessary and the constraint operates purely as power maintenance by institutional beneficiaries. If institutions genuinely require the pathology frame (conformity demand is the only sustainable coordination mechanism), the extraction is a side effect of legitimate coordination.",
-      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether institutional function requires the pathology frame or whether alternatives are structurally viable"
+      "description": "Logical and operational compatibility between biomedical and neurodiversity readings of the DSM taxonomy kernel."
     },
     {
-      "id": "neurodiversity_self_determination_boundary",
-      "question": "Where is the line between accommodation (respecting neurodivergent self-determination in how they live and work) and medical treatment necessity (intervention required for genuine harm prevention)? Who decides this boundary and on what grounds?",
-      "resolution_mechanism": "Analysis of neurodivergent self-advocate testimony about what they experience as harmful vs. as difference, combined with examination of which DSM diagnoses have genuine harm-prevention rationales vs. which are primarily normalization tools.",
-      "impact": "If most DSM diagnoses lack clear harm-prevention rationales and operate primarily as normalization tools, the pathology frame is revealed as unnecessary coercion. If some diagnoses have defensible harm-prevention grounds (e.g., severe self-injury in autism), the boundary question becomes diagnostic: which categories are legitimate medical conditions, which are normalization enforcement?",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether DSM diagnoses target genuine harm or primarily target difference from norms"
-    },
-    {
-      "id": "kernel_reading_alternative_framings",
-      "question": "The neurodiversity reading treats DSM categories as pathologizing variation for institutional conformity. The biomedical reading treats them as mapping to objective disease. The critical psychiatry reading treats them as reverse-engineered from pharmaceutical availability. These three readings are not just different empirical claims—they instantiate different authority structures and different beneficiary sets. Which reading captures the actual structural function of the DSM?",
-      "resolution_mechanism": "Integrated analysis combining empirical evidence (biological validity, pharmaceutical influence, revision history), institutional analysis (who benefits from which frame, which frame enables which policies), and epistemic analysis (which frame is internally coherent with actual evidence and which requires evidentiary suppression).",
-      "impact": "This is the master omega: which reading the evidence supports determines the constraint's type and the appropriate policy response. Neurodiversity reading + high evidence = tangled_rope (genuine coordination function in nosology, but extraction through pathologization). Biomedical reading + high evidence = rope (legitimate medical taxonomy). Critical psychiatry reading + high evidence = snare (pharmaceutical market construction). The three readings may be partially true (some categories map to disease, some are pharmaceutical marketing), which would require decomposition into multiple constraints.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Which kernel reading (neurodiversity/biomedical/critical psychiatry) is the DSM actually instantiating"
+      "id": "pharmaceutical_causal_link",
+      "question": "Does pharmaceutical industry funding and marketing drive DSM category expansion, or does DSM category expansion follow improved neurobiological understanding that pharmaceutical companies then capitalize on?",
+      "resolution_mechanism": "Historical documentation: examine DSM revision timelines relative to pharmaceutical product launches; analyze pharmaceutical funding flows to DSM committees and advisory boards; study marketing budgets for psychotropic drugs relative to DSM category expansion timeline.",
+      "impact": "If pharma drives expansion: the constraint is a snare designed as a market for psychotropics, corroborating the critical psychiatry reading. If neurobiological understanding drives expansion, which pharma then markets: the constraint is still extractive but the motive is scientific progress plus market capture (Tangled Rope). Available evidence (Whitaker, Gotzsche, Angell) strongly suggests pharma was a primary driver post-1980, but the question remains open for this reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal direction of pharmaceutical influence on DSM category expansion."
     }
   ],
   "boltzmann": {
@@ -196,74 +345,77 @@
     "affects_constraints": [
       "dsm_taxonomy_kernel__biomedical_reading",
       "dsm_taxonomy_kernel__critical_psychiatry_reading",
-      "pharmaceutical_diagnostic_expansion",
-      "neurodiversity_self_advocacy_movement",
-      "special_education_eligibility_gate",
-      "psychiatric_medication_coercion"
+      "psychiatric_pharmaceutical_market_coupling",
+      "institutional_conformity_enforcement"
     ],
-    "dual_formulation_note": "The DSM taxonomy kernel admits at least three structurally distinct readings instantiating different constraints with different ε values, beneficiary/victim sets, and type classifications. This story (neurodiversity reading) asserts pathologization as the extraction mechanism and institutional conformity as the beneficiary function. Sibling stories (biomedical_reading, critical_psychiatry_reading) contest the structural function and would declare different victims, beneficiaries, and ε values. The three are linked via network.affects_constraints because each reading's empirical case affects the credibility and applicability of the others. Do not merge them into one constraint story—ε-invariance requires separate treatment."
+    "dual_formulation_note": "The DSM taxonomy kernel has three structurally distinct readings: biomedical (disease discovery), critical psychiatry (pharmaceutical market construction), and neurodiversity (institutional conformity enforcement). Each reading instantiates a different constraint with different ε values, beneficiary/victim structures, and types. This file is the neurodiversity reading. The biomedical and critical psychiatry readings are separate constraint stories linked via network.affects_constraints. The three readings coexist because different communities (biomedical psychiatrists, critical scholars, neurodiversity advocates) hold different frameworks; the kernel (the DSM text itself) is the same, but interpretations diverge fundamentally. Beneficiary and victim sets differ sharply across readings: biomedical reading has no identified victims (natural discovery); neurodiversity reading has neurodivergent people as victims; critical psychiatry reading emphasizes pharmaceutical industry beneficiaries. The three readings belong to the same constraint family because they share a kernel and interpretive disagreement; decomposition follows ε-invariance principle."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.15
+      "power_atom": "powerless",
+      "d_value": 0.95
     },
     {
-      "power_atom": "powerless",
-      "d_value": 0.92
+      "power_atom": "institutional",
+      "d_value": 0.02
     }
   ],
+  "gain_flow": "pharmaceutical_manufacturers",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "fixed_text",
+    "kernel_codification": "formalized",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "dsm_taxonomy_kernel__biomedical_reading",
+        "sibling_id": "biomedical_reading",
         "relation": "forecloses"
       },
       {
-        "sibling_id": "dsm_taxonomy_kernel__critical_psychiatry_reading",
+        "sibling_id": "critical_psychiatry_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "neurodivergence_is_natural_variation",
+        "atom": "neurodiversity_natural_human_variation",
         "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      },
-      {
-        "atom": "institutional_conformity_demands_unjustified",
-        "role": "foundational",
-        "status": "holdable",
-        "grounding_type": "deontological"
-      },
-      {
-        "atom": "medical_model_lacks_biological_validity",
-        "role": "secondary",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "institutional_conformity_extraction_from_variation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
       }
     ],
-    "reference_frame": "neurodiversity_self_determination_framework",
+    "reference_frame": "neurodiversity_accommodation_framework",
     "drift_state": {
-      "moment": "contemporary_neurodiversity_movement_era",
+      "moment": "contemporary_pharmaceutical_market_era",
       "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "dsm_taxonomy_kernel__biomedical_reading",
+      "psychiatric_pharmaceutical_market_coupling"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

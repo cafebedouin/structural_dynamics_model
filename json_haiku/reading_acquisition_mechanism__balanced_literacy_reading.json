@@ -2,246 +2,580 @@
   "header": {
     "constraint_id": "reading_acquisition_mechanism__balanced_literacy_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "6955b082-0d4c-41a1-8316-79289fcb3bc7"
+    "story_uid": "4d204be7-238a-411b-a8cc-b90448b0ba1b",
+    "created_at": "2026-06-11T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.62,
-    "theater_ratio": 0.48,
-    "accessibility_collapse": 0.65,
-    "resistance": 0.71,
+    "suppression": 0.64,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.62,
     "claimed_type": "tangled_rope",
-    "human_readable": "Balanced Literacy Reading Acquisition Framework",
-    "topic_domain": "educational_psychology/literacy_pedagogy/cognitive_science",
+    "human_readable": "Balanced Literacy Integrated Reading Instruction",
+    "topic_domain": "educational_psychology/literacy_pedagogy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "reading_education_researchers_balanced_camp",
-      "teacher_training_institutions",
-      "educational_publishing_conglomerates"
+      "balanced_literacy_curriculum_publishers",
+      "teacher_preparation_institutions_adopting_balance_framework",
+      "reading_researchers_in_balanced_literacy_tradition"
     ],
     "victims": [
       "struggling_early_readers",
-      "students_from_print_poor_backgrounds",
-      "classroom_teachers_resource_constrained"
+      "dyslexic_students",
+      "low_socioeconomic_status_students_with_limited_home_literacy"
     ]
   },
-  "interval": {
-    "start": 0,
-    "end": 25
-  },
-  "omegas": [
+  "stakeholders": [
     {
-      "id": "implementation_fidelity_collapse",
-      "question": "Does balanced literacy persist as a genuine integrated practice, or does it systematically collapse into whole-language practice in under-resourced schools, with phonics components remaining performative?",
-      "resolution_mechanism": "Classroom observation studies documenting time allocation to explicit phonics vs. authentic reading in schools claiming balanced literacy adoption; analysis of teacher practice by resource level.",
-      "impact": "If collapse occurs systematically, the constraint functions as an institutional disguise for whole-language practice, shifting classification toward snare. The framework extracts the legitimacy of phonics advocacy while delivering whole-language instruction.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether balanced literacy maintains integration fidelity or collapses to one component in practice."
+      "name": "balanced_literacy_curriculum_publishers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Produce and market integrated phonics-plus-literature curricula; position the framework as scientifically justified and pedagogically balanced. Derive revenue from textbook sales, professional development workshops, and assessment tools tied to the balanced literacy model. Set implementation standards and influence teacher adoption through curriculum adoption committees."
     },
     {
-      "id": "reading_science_foreclosure",
-      "question": "Does the current neuroscience and cognitive science evidence on reading acquisition structurally preclude the whole-language component, or do both components have defensible empirical grounding?",
-      "resolution_mechanism": "Meta-analytic synthesis of reading science literature by systematic review teams outside the balanced literacy establishment; brain imaging studies on decoding automaticity.",
-      "impact": "If reading science evidence forecloses whole-language instruction as ineffective, balanced literacy functions as a false compromise that suppresses phonics-first approaches in the name of integration. If both components remain empirically defensible, the framework is a genuine coordination solution.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether reading science evidence supports or forecloses the whole-language component of balanced literacy."
+      "name": "teacher_preparation_institutions_adopting_balance_framework",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Embed balanced literacy into pre-service teacher education programs as canonical approach. Benefit from alignment with state standards and accreditation expectations; face pushback from phonics-advocacy constituencies. Their adoption legitimizes the framework institutionally and creates path dependency for newly certified teachers."
     },
     {
-      "id": "phonics_intensity_sufficiency",
-      "question": "What level of explicit phonics instruction is necessary for struggling readers and students from print-poor backgrounds to achieve grade-level decoding? Does balanced literacy as typically implemented meet that threshold?",
-      "resolution_mechanism": "Intervention studies with randomized allocation to balanced literacy vs. intensive phonics; longitudinal tracking of reading outcomes by student demographic group and baseline decoding level.",
-      "impact": "If intensive phonics is necessary for some populations and balanced literacy delivers insufficient phonics intensity, the framework extracts from those most vulnerable. If balanced intensity is sufficient across populations, the framework is equitable.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether balanced literacy delivers sufficient phonics instruction for all populations."
+      "name": "reading_researchers_in_balanced_literacy_tradition",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Conduct research within the balanced literacy paradigm; career advancement and grant funding flow from publications affirming the framework's efficacy. Their research legitimizes the constraint and produces the metrics used to defend it against challenge. Shifting to alternative paradigms carries professional risk."
     },
     {
-      "id": "institutional_vs_empirical_grounding",
-      "question": "Is balanced literacy grounded primarily in empirical reading science findings, or has it become an institutional consensus position that benefits publishing and teacher training regardless of empirical support?",
-      "resolution_mechanism": "Citation analysis of balanced literacy literature: how often does it cite vs. dismiss phonics-first and whole-language evidence? Historical timeline analysis of framework adoption relative to research publication.",
-      "impact": "High institutional grounding relative to empirical grounding would indicate the framework functions partly as an extraction mechanism. Tight empirical grounding would support its legitimacy as a coordination device.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The epistemic basis for balanced literacy's continued adoption."
+      "name": "classroom_teachers",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Implement balanced literacy curriculum under mandated adoption policies. Report variable success with individual students; struggle to allocate instructional time between systematic phonics practice and authentic literature engagement. Cannot easily exit the framework without administrative approval and face evaluation penalties for non-compliance. Their day-to-day decisions reveal tension between the constraint's stated integration and its actual practice."
     },
     {
-      "id": "kernel_reading_ambiguity",
-      "question": "Does balanced literacy represent a genuine third position distinct from both phonics-first and whole-language, or is it a political compromise that suppresses both positions in the name of avoiding ideology?",
-      "resolution_mechanism": "Qualitative analysis of how researchers, teachers, and administrators describe balanced literacy: do they claim it as an integrated framework, or as a tool for avoiding disputes? Examine how phonics-first and whole-language advocates perceive balanced literacy.",
-      "impact": "If balanced literacy is perceived as a genuine integration, it coexists with its siblings. If perceived as a suppression mechanism, it forecloses or influences its siblings structurally rather than empirically.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The ontological status of balanced literacy as a reading of the contested kernel."
+      "name": "struggling_early_readers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive instruction under the balanced literacy framework regardless of their response profile. Students who respond well to systematic phonics but receive only incidental phonics embedded in literature suffer delayed foundational skill development; students who need extended authentic-text exposure get insufficient time in text. No exit: they are assigned to classrooms operating under the constraint."
+    },
+    {
+      "name": "dyslexic_students",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Require intensive, explicit, systematic phonological and phonics instruction to develop decoding skills; authentic literature exposure alone does not remediate their deficit. Under balanced literacy, they receive standard classroom instruction that may insufficient in phonics specificity and intensity, leading to cascading comprehension failure and learned helplessness. Remediation requires Special Education referral, which creates a de facto two-tier system."
+    },
+    {
+      "name": "low_socioeconomic_status_students_with_limited_home_literacy",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Cannot rely on family literacy support to compensate for gaps in classroom instruction. Balanced literacy assumes students will encounter texts and reading models outside school; when home literacy is scarce, the authentic-literature exposure component depends entirely on classroom time. Insufficient phonics explicitness in school instruction combines with lack of home reinforcement, producing compounding deficit."
+    },
+    {
+      "name": "phonics_advocacy_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for systematic phonics-first instruction based on converging cognitive science evidence; are systematically excluded from curriculum adoption processes and teacher professional development by institutions committed to balanced literacy. Their voices are present in scientific literature but absent from local adoption decisions. They cannot set the instructional default."
+    },
+    {
+      "name": "cognitive_science_researchers_studying_reading_mechanisms",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct empirical research on phonological processing, orthographic mapping, and the cognitive architecture of reading acquisition. Operate outside institutional education structures. Their findings constrain but do not determine policy adoption; integration fidelity varies widely across adopting districts."
+    },
+    {
+      "name": "state_education_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Issue curriculum standards and adoption guidance; in many states, balanced literacy remains the official framework despite emerging evidence supporting phonics emphasis. Resistance to framework revision is path-dependent: existing curricula, teacher training, and assessment systems are aligned with balanced literacy; changing the standard requires coordinated infrastructure revision."
     }
   ],
+  "six_questions": {
+    "coordination_function": "Attempts to solve the problem of integrating multiple cognitive learning mechanisms: balances students' need for explicit decoding skill instruction (phonological/orthographic components) with their need for meaningful engagement with authentic texts (comprehension, motivation, fluency development through real reading). A coordination solution hypothetically reduces the False Choice between two pedagogically valuable approaches.",
+    "transfer_function": "Moves instructional resources (time, materials, teacher focus) according to the balanced literacy allocation framework. Publishers extract revenue from curriculum adoption. Researchers extract career advancement and funding alignment. Teachers extract curricular guidance and professional legitimacy. Struggling readers bear the cost of integration fidelity variability: instruction may be neither sufficiently explicit in phonics nor sufficiently immersive in authentic text, depending on implementation.",
+    "absent_voices": "Phonics-advocacy constituencies (cognitive scientists, Special Education researchers, dyslexia advocates) whose evidence supports phonics-first or phonics-intensive approaches are excluded from adoption committees and curriculum selection processes. Their objections appear in academic literature but do not reach local implementation decisions. Students with dyslexia and reading disabilities who need intensive phonics are not represented in policy formation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If balanced literacy disappeared overnight, curricula would reorganize around either phonics-first or whole-language poles depending on regional adoption. Teacher preparation programs would shift their models. Publishers would rebrand materials toward whichever pole prevails. Struggling readers' outcomes would shift (likely bifurcating: phonics-first students with dyslexia would improve, whole-language students would experience a different failure profile). The instructional ecosystem is built around balanced literacy as a coordinating framework; its absence would force recommitment to an alternative framework.",
+    "founding_problem": "Late 20th-century reading wars produced polarized camps: pure phonics ignored motivation and comprehension; whole language ignored explicit decoding instruction. Students fell between the extremes. Balanced literacy was theorized as a synthesis: deliver systematic phonics plus meaningful literature exposure, letting both mechanisms operate in the same course of instruction.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Publishers and teacher education institutions attest the founding problem is live and balanced literacy solves it. Cognitive science researchers and Special Education specialists document that the implementation fidelity of balanced literacy varies widely; when phonics is insufficiently systematic, outcomes regress toward whole-language failure modes; when literature engagement is minimal, outcomes regress toward phonics-only narrowness. Longitudinal studies of balanced literacy implementation show substantial variation in student outcomes attributable to how 'balance' is locally calibrated — suggesting the founding problem's resolution depends on details not specified in the framework."
+  },
+  "interval": {
+    "start": 1990,
+    "end": 2024
+  },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.42
+      "time_point": 1990,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 1998,
       "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 2006,
       "value": 0.54
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
+      "time_point": 2014,
       "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.58
+      "time_point": 2019,
+      "value": 0.56
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
+      "time_point": 2024,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.35
+      "time_point": 1990,
+      "value": 0.15
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.38
+      "time_point": 1998,
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.42
+      "time_point": 2006,
+      "value": 0.41
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.46
+      "time_point": 2014,
+      "value": 0.49
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.48
+      "time_point": 2019,
+      "value": 0.51
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.48
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.45
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 5,
+      "time_point": 2024,
       "value": 0.52
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 10,
-      "value": 0.58
+      "time_point": 1990,
+      "value": 0.25
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 15,
-      "value": 0.61
+      "time_point": 1998,
+      "value": 0.42
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 20,
+      "time_point": 2006,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
       "value": 0.62
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 25,
-      "value": 0.62
+      "time_point": 2019,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.64
     }
   ],
-  "commentary": {
-    "narrative_context": "Balanced literacy is an institutional framework adopted in most U.S. states and many English-speaking countries that claims reading acquisition requires both explicit phonics instruction AND authentic literature engagement integrated into classroom practice. The framework emerged in the 1990s-2000s as a compromise between whole-language and phonics-first advocates, institutionalized through state standards, teacher training programs, and educational publishing. It is ONE READING of the contested kernel 'reading acquisition mechanism' — one of three structurally distinct claims about how children learn to read. This reading assumes both phonics and literature engagement are necessary and should be integrated. However, the framework exhibits substantial implementation fidelity collapse: in under-resourced schools, phonics components often remain performative while whole-language practice dominates, suggesting the framework functions partly as institutional cover for preferences it claims to balance.",
-    "key_agents": [
-      "reading_education_researchers_balanced_camp (institutional power, arbitrage exit): define the framework, maintain it in policy and practice, benefit from its continued adoption",
-      "teacher_training_institutions (organized power, constrained exit): commit to balanced literacy curricula, face costs if frameworks shift",
-      "educational_publishing_conglomerates (powerful, arbitrage exit): capture market share through aligned materials, maintain portfolio flexibility",
-      "classroom_teachers_resource_constrained (moderate power, identity-locked exit): implement mandated practice with insufficient resources, cannot easily exit teaching profession",
-      "struggling_early_readers & students_from_print_poor_backgrounds (powerless, trapped exit): subject to framework without voice in its design, experience insufficient phonics intensity",
-      "state_education_departments (institutional power, analytical exit): enforce framework through standards and adoption, maintain institutional distance from theory"
-    ],
-    "logic_rationale": "Extractiveness is moderate-to-high (0.58 at interval end) because the framework benefits institutional stakeholders (researchers, publishers, teacher trainers) while extracting implementation labor and instructional time from teachers and students. The framework claims to avoid ideological commitment while systematically privileging institutional stability over student outcomes — this is the asymmetric extraction. Suppression is high (0.62) because the framework suppresses competing positions (phonics-first and whole-language advocates) through institutional channels (state standards, adoption committees, teacher training curricula) without engaging their empirical arguments directly. Theater is substantial and rising (0.48 at interval end): phonics components are often performed (scripted lesson sequences, compliance artifacts) rather than delivered with sufficient intensity. The time series shows extraction and theater rising from 2000–2015 as the framework became institutionalized, then plateauing as it achieved dominance — the plateau indicates the constraint has reached steady-state extraction rather than continuing to expand. Suppression follows the same pattern: initial rise as institutional machinery was built, then stable maintenance at high level.",
-    "directionality_logic": "The beneficiary seats (researchers, publishers, teacher trainers) experience low directionality d (near 0.0): they benefit directly from the framework's adoption and have arbitrage exit options (can move to other frameworks if needed, maintain peer networks). The payer seats (teachers and students) experience high directionality d (near 1.0 for trapped students, 0.7 for constrained teachers): they bear the extraction (insufficient resources, compressed instructional time, misalignment between framework rhetoric and classroom reality) and have limited exit. The excluded seats (phonics advocates and whole-language advocates) have high d not because they pay directly but because the framework's enforcement explicitly suppresses their positions through institutional channels — they experience targeting of their legitimacy. Directionality overrides are unnecessary here; the structural derivation from beneficiary/victim declarations and exit options produces the right pattern.",
-    "perspectival_gap": "From the researcher/publisher perspective (agenda-setter seat), balanced literacy is a genuine coordination solution to a real problem: the reading science evidence genuinely does show support for both phonics and meaning-centered approaches, and the framework integrates them. From the struggling reader perspective (payer seat), the framework is an extraction mechanism: their need for intensive decoding support is subordinated to institutional consensus building, and they receive neither component with sufficient intensity. From the teacher perspective (constrained-payer seat), the framework operates as a compliance mandate that leaves them responsible for implementing integration they lack time and resources to deliver — they experience it as extraction of their professional judgment and labor. From the state department perspective (agenda-setter seat), the framework allows institutional avoidance of commitment: it satisfies various constituencies without forcing a choice. The engine computes these divergent types from the structural data; the authored claim does not adjudicate which perspective is 'right.'",
-    "mandatrophy_analysis": "Mandatrophy — the condition where a constraint's original mandate has become obsolete but the constraint persists — is a risk for balanced literacy if the founding problem (reading science evidence for both phonics and whole-language) is empirically resolved in favor of phonics-first frameworks. Recent meta-analyses and neuroscience evidence suggest the phonics component of reading science is substantially stronger than the whole-language component, which would mean the original compromise problem (equally valid competing claims) no longer exists as stated. If this is true, balanced literacy persists as institutional compromise even though the empirical problem it solves has shifted. However, this remains contested: some researchers defend whole-language components on grounds of motivation, comprehension, and engagement. Declaring mandatrophy here would require consensus that reading science has resolved the dispute in favor of phonics, which does not exist. The constraint is best classified as tangled-rope (genuine coordination function + asymmetric extraction) rather than piton (atrophied function + pure performance) because the coordination function (integrating phonics and literature) remains defensible even if implementation has degraded.",
-    "kernel_context": "This constraint is ONE READING of the contested kernel 'reading_acquisition_mechanism'. The kernel is the fundamental question: How does a child learn to read? Three major readings compete: (1) phonics_reading: reading acquisition requires explicit systematic instruction in grapheme-phoneme correspondence as foundational skill; (2) whole_language_reading: reading acquisition occurs through meaningful engagement with authentic texts, with decoding skills emerging implicitly from exposure; (3) balanced_literacy_reading (THIS CONSTRAINT): reading acquisition requires both explicit phonics and authentic literature exposure integrated into practice. These are not three observations of the same fact — they are three readings of what the kernel even IS. Balanced literacy claims to integrate the valid insights of both phonics and whole-language positions. Phonics advocates argue balanced literacy insufficiently emphasizes phonics systematicity. Whole-language advocates argue balanced literacy introduces unnecessary explicit instruction that interferes with natural acquisition. The kernel contest is about which empirical and normative claims ground legitimate reading instruction. This reading (balanced literacy) assumes integration is possible and necessary; it coexists with both siblings as different positions held by different institutional actors."
+  "coercion_grid": {
+    "t0": 1990,
+    "tn": 2024,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1990,
+        "value": 0.25
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.42
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1990,
+        "value": 0.35
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1990,
+        "value": 0.2
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.52
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1990,
+        "value": 0.28
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.48
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1990,
+        "value": 0.32
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1990,
+        "value": 0.28
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1990,
+        "value": 0.22
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1990,
+        "value": 0.25
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.59
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1990,
+        "value": 0.15
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.48
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1990,
+        "value": 0.32
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.71
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1990,
+        "value": 0.18
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1990,
+        "value": 0.25
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.64
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1990,
+        "value": 0.55
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 2024,
+        "value": 0.58
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1990,
+        "value": 0.42
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 2024,
+        "value": 0.65
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1990,
+        "value": 0.38
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 2024,
+        "value": 0.68
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1990,
+        "value": 0.32
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 2024,
+        "value": 0.62
+      }
+    ]
   },
+  "commentary": {
+    "narrative_context": "Balanced literacy reading is one of three competing readings of a fundamental contested kernel: the cognitive mechanisms and instructional conditions necessary for reading acquisition. This reading instantiates the claim that reading acquisition requires BOTH explicit phonics AND authentic literature exposure operating in integrated practice — neither alone suffices, and the two mechanisms reinforce each other when properly calibrated. The constraint story describes how this reading gets implemented, what it coordinates, what it extracts, and where its integrity fails. The core tension is implementation fidelity: the framework is theoretically sound but institutionally compromised — phonics often becomes incidental rather than explicit, literature engagement is sometimes shallow, and struggling readers fall through the gap between the two components.",
+    "key_agents": [
+      "balanced_literacy_curriculum_publishers: institutional beneficiary; set and defend the framework; extract revenue from adoption",
+      "teacher_preparation_institutions: institutional agenda-setter/beneficiary; embed the framework in pre-service training",
+      "reading_researchers_in_balanced_literacy_tradition: organized beneficiary; produce legitimating research; careers advance with framework adoption",
+      "classroom_teachers: moderate-power payer; implement under mandate; report variable success and time-allocation tension",
+      "struggling_early_readers: powerless payer; trapped in classrooms operating under the constraint; outcomes depend on implementation fidelity",
+      "dyslexic_students: powerless payer; require intensive phonics that balanced literacy may not deliver; create special-education referral cascade",
+      "low_SES_students_with_limited_home_literacy: powerless payer; cannot compensate for instructional gaps at home; depend on school implementation quality",
+      "phonics_advocacy_communities: excluded; their evidence is present in literature but absent from local adoption",
+      "cognitive_science_researchers: observer seat; conduct mechanism research; findings constrain but do not determine policy"
+    ],
+    "logic_rationale": "Extractiveness is moderate-high (0.58) and rising over the interval because the constraint systematically benefits publishers, teacher-education institutions, and researchers aligned with the framework while extracting costs from struggling readers and dyslexic students who need approaches different from the balanced model. The beneficiaries do not face meaningful pressure to exit (arbitrage options), while the payers — especially students with reading disabilities — have no exit. Suppression is high (0.64) and rising: active institutional machinery maintains the framework despite counterevidence (teacher adoption mandates, curriculum standardization, professional development mandates, resistance to alternative frameworks in adoption processes). Theater ratio is very high and rising (0.52 at interval end): the framework's public presentation emphasizes its theoretical integration, but measurement of implementation reveals substantial variability; classroom observation shows phonics often becomes incidental letter-sound practice rather than systematic instruction, literature engagement is often superficial (multiple disconnected texts rather than sustained immersion), and the integration is more strategic separation than genuine synthesis. The measurement series shows suppression intensifying (rising from 0.25 to 0.64) as institutional commitment to the framework hardened despite growing cognitive-science evidence favoring phonics emphasis. The coercion grid shows suppression at the organizational level (state education authorities, school districts, curriculum adoption committees) rising to 0.71 by 2024 — institutional machinery hardening — while suppression at the individual teacher level remains moderate (0.48) because teacher-level circumvention is widespread. Class-level resistance (powerless students and their families) rises to 0.68 despite having no institutional voice, reflecting the emergence of dyslexia-advocacy organizations and parent literacy groups.",
+    "perspectival_gap": "The agenda-setter seats (publishers, teacher-education institutions, state authorities) perceive balanced literacy as a genuine solution to the reading-wars problem, legitimized by research within the tradition, solving a real coordination problem. The payer seats (classroom teachers, struggling readers, dyslexic students) perceive the same constraint as a compromise that fully satisfies neither component: phonics is unsystematic, literature engagement is fragmented, and the integration lacks coherent implementation guidance. The phonics-excluded communities perceive it as a false synthesis that obscures phonics efficacy behind a rhetoric of balance. Teachers compute the constraint as requiring time-allocation trade-offs they would not accept if given free choice; struggling readers compute it as producing neither fluent decoding (which systematic phonics would provide) nor sustained reading fluency (which authentic-literature immersion would provide). The engine computes per-seat type from structural data; these divergences are predicted by the stakeholder analysis.",
+    "directionality_logic": "Publishers and teacher-education institutions have low d (near-beneficiary end) because they control the framework, extract rents from its adoption, and face no exit pressure (they can arbitrage to whatever framework next becomes dominant). Classroom teachers have moderate d (near-symmetric end) because they implement under mandate (constrained exit) but also gain curricular guidance and professional legitimacy; the cost-benefit is intermediate. Struggling readers, dyslexic students, and low-SES students have high d (near-target end) because they are trapped in classrooms operating under the constraint with no exit option, and the constraint's implementation variability directly determines whether they receive the instruction their reading profile needs. Phonics-advocacy communities have high d paradoxically not because they are trapped but because they are excluded — their d is identity-locked: commitment to phonics research creates professional identity friction with balanced-literacy-dominant institutions, making exit from the field professionally costly.",
+    "mandatrophy_analysis": "The founding problem (reading wars between phonics and whole language) is contested as to whether it remains live or has been superseded. Publishers and state authorities maintain it is live and balanced literacy solves it; cognitive scientists and Special Education specialists contend that the problem WAS solved by converging evidence on phonics efficacy (which emerged in the 2000s Scarborough model and subsequent meta-analyses), but adoption of that solution is impeded by institutional commitments to balanced literacy. The measured theater_ratio rising to 0.52 indicates that the framework's public performance (balanced, integrative, research-based) increasingly diverges from its functional reality (phonics often incidental, implementation variable, outcomes bifurcated by student profile). If the founding problem is dead but the constraint persists due to institutional inertia and revenue flows to beneficiaries who could change the constraint but do not, the classification should trend toward piton (inertial maintenance) rather than stay tangled_rope (active coordination with asymmetric extraction). The measurement trajectory supports this drift: suppression intensifying, theater rising, resistance rising, but no movement toward de-adoption — classic piton trajectory. The constraint was authored as tangled_rope (active enforcement to maintain coordination + asymmetric extraction from payers) because institutional machinery is still defending it, but the rising theater ratio and stable-despite-counterevidence persistence suggest it is transitioning toward piton.",
+    "kernel_context": "This story instantiates the BALANCED_LITERACY_READING of the reading_acquisition_mechanism kernel. The kernel is contested among three foundational readings: (1) phonics_reading claims phonics-first/intensive is the evidence-based standard; (2) whole_language_reading claims authentic-text engagement and implicit decoding-skill emergence are sufficient; (3) balanced_literacy_reading (this story) claims both are necessary in integrated practice. These are not empirical measurements of the same reading — they are three different epistemic claims about what reading acquisition requires. This story describes how balanced literacy is instantiated, enforced, and where it produces asymmetric extraction. The founding problem articulation — the late-20th-century reading wars — is the historical container, but the three readings dispute what that problem was actually about: was it a problem of polarization (balanced literacy's reading) or a problem of false eclecticism masking phonics' superior foundational importance (phonics reading)? Different readings would author different ε values for the same constraint if measured under different referents, but this story fixes the referent as the standing arrangement under contest — the balanced literacy constraint as it is actually practiced and institutionalized — assessed by this reading's own lights."
+  },
+  "omegas": [
+    {
+      "id": "implementation_fidelity_variability",
+      "question": "How much of the measured extractiveness is attributable to the balanced literacy reading's core theoretical claim, versus to variable, degraded implementation that collapses toward whole-language incidentalism?",
+      "resolution_mechanism": "Classroom observation protocols measuring phonics-systematicity, literature-immersion depth, and integration coherence across a representative sample of balanced-literacy-adopting classrooms. Comparison of outcomes between high-fidelity and low-fidelity implementations.",
+      "impact": "If low-fidelity implementation is causally responsible for poor outcomes in struggling readers, the constraint's core reading is separable from its extractive institutional form — the extraction is an implementation failure, not a structural necessity of balanced literacy itself. If even high-fidelity implementations produce the measured bifurcation (some students thriving, struggling readers still failing), the reading's theoretical claim is itself extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extractiveness is inherent to balanced literacy or contingent on implementation degradation."
+    },
+    {
+      "id": "phonics_systematicity_specification_gap",
+      "question": "The balanced literacy reading claims both explicit phonics and authentic literature are necessary. But what counts as 'explicit' and 'systematic' phonics instruction within balanced literacy? Is the specification sufficiently detailed to guide consistent implementation?",
+      "resolution_mechanism": "Content analysis of balanced literacy curriculum materials, comparison with explicit phonics curricula (Orton-Gillingham, Structured Literacy) on dimensions of systematicity, decodable-text frequency, cumulative skill-building, and intensive review. Observational comparison of phonics-instruction quality between balanced-literacy classrooms and phonics-first classrooms.",
+      "impact": "If balanced literacy curricula lack specification for phonics systematicity, the reading is underspecified as a constraint and its asymptotic form in practice will collapse toward the whole-language end of its own range. If specification exists but is not enforced in adoption or professional development, the constraint is theoretically sound but institutionally compromised, making extraction a function of implementation-failure rather than design.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy specifies phonics systematicity sufficiently to guide and constrain implementation."
+    },
+    {
+      "id": "dyslexia_mechanism_compatibility",
+      "question": "Is the balanced literacy reading compatible with evidence on dyslexic reading acquisition? Do students with phonological deficits benefit from simultaneous literature engagement, or does it dilute the phonological remediation intensity they require?",
+      "resolution_mechanism": "Randomized comparison: dyslexic students receiving balanced literacy versus intensive phonological-basis intervention (Structured Literacy) versus phonological intervention + authentic-text supplement. Measure decoding accuracy, fluency, and comprehension trajectories.",
+      "impact": "If dyslexic students show inferior outcomes under balanced literacy (compared to intensive phonics + literature supplement), the constraint is extractive specifically for dyslexic students — the reading's core claim is false for a substantial subpopulation. If outcomes are equivalent, the extraction is not from dyslexic students but from low-SES non-dyslexic readers whose home literacy cannot compensate for classroom implementation variability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy's integration is appropriate for dyslexic reading acquisition or contraindicated."
+    },
+    {
+      "id": "institutional_commitment_versus_foundational_problem_status",
+      "question": "The founding problem (reading wars) is institutionally treated as live and unsolved, justifying continued commitment to balanced literacy. But cognitive science convergence on phonics has emerged since 2000. Is the foundational problem actually dead, with institutional commitment persisting despite?",
+      "resolution_mechanism": "Meta-analysis of randomized controlled trials on phonics efficacy and whole-language efficacy since 2000. Comparison of contemporary cognitive-science position statements (International Dyslexia Association, National Association of Educational Psychology, etc.) on whether the reading-wars problem is resolved. Examine whether state adoption committees cite or ignore this convergence.",
+      "impact": "If the foundational problem is scientifically resolved but institutionally ignored, the constraint is a piton (inertial institutional maintenance) more than a tangled rope (active coordination of necessary functions). The extraction is then rent-seeking by beneficiaries unwilling to acknowledge that the coordination problem they claimed to solve has been solved by an alternative reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the reading-wars foundational problem is institutionally treated as live despite scientific resolution."
+    },
+    {
+      "id": "balanced_literacy_versus_phonics_first_in_same_cognitive_framework",
+      "question": "Theoretically: is the balanced literacy reading foreclosed by the phonics reading, or do they coexist as alternative empirical hypotheses about the same phenomenon? Can a single cognitive framework hold both, or does accepting phonics-first necessity logically rule out integrated balance?",
+      "resolution_mechanism": "Formal analysis of the theoretical commitments of each reading. Examine whether accepting 'phonics is necessary and foundational' logically entails denying 'authentic literature exposure is also necessary.' Distinguish between 'our empirical data support phonics-first' and 'the balanced reading is conceptually incoherent.'",
+      "impact": "If the readings coexist (both coherent, empirically contestable), the constraint is a live site of legitimate disagreement, and extraction is normal institutional competition. If the readings foreclose (one logically rules out the other within a single framework), the balanced reading is a false synthesis, and its institutional dominance is imposed maintenance of a theoretically defeated position.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether balanced literacy and phonics-first readings are logically coexistent or mutually foreclosing."
+    },
+    {
+      "id": "home_literacy_dependency_in_balanced_literacy",
+      "question": "The balanced literacy reading assumes students will encounter authentic texts and reading models outside school — in homes, libraries, communities. For low-SES students with limited home literacy, does the constraint's theoretical viability depend on a hidden structural assumption about home resources that the payers cannot satisfy?",
+      "resolution_mechanism": "Outcome comparison: balanced literacy in high-home-literacy vs. low-home-literacy student populations, controlled for classroom instruction quality. Measure whether gap is attributable to classroom instruction differences or home-literacy differences. Test whether reducing this gap requires school-intensive phonics rather than home-supplemented balance.",
+      "impact": "If outcomes diverge primarily on home-literacy dimension despite identical classroom instruction, the constraint is theoretically extractive for low-SES students — the reading assumes structural conditions these students lack and provides no remediation within the constraint's design. The extraction is then structural rather than institutional: the reading itself is inappropriate for the payer population.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether balanced literacy's theoretical viability depends on home-literacy resources unavailable to low-SES students."
+    }
+  ],
   "boltzmann": {
     "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "reading_acquisition_mechanism__phonics_reading",
-      "reading_acquisition_mechanism__whole_language_reading"
+      "reading_acquisition_mechanism__whole_language_reading",
+      "literacy_intervention_policy__dyslexia_screening_mandate",
+      "teacher_education_policy__literacy_methods_coursework"
     ],
-    "dual_formulation_note": "Balanced literacy is one reading of the contested kernel 'reading_acquisition_mechanism'. The phonics_reading and whole_language_reading constraints are sibling readings of the same kernel. All three readings share the empirical domain (reading science, child literacy development) but instantiate different structural constraints because they make different claims about what reading acquisition requires. Decomposition is necessary per epsilon-invariance: phonics_reading has a different epsilon (high extraction from whole-language advocates who dispute its claims, low extraction if it achieves evidence consensus), whole_language_reading has a different epsilon (lower extraction now as evidence moved against it, higher extraction historically), and balanced_literacy_reading has the epsilon authored here (moderate extraction disguised as institutional compromise). The epsilon difference is not observer-relative — it flows from different claims about what the kernel IS. Each reading gets its own constraint story with its own beneficiary/victim structure, its own directionality pattern, and its own classification."
+    "dual_formulation_note": "This constraint is one of three readings of the reading_acquisition_mechanism kernel. The balanced_literacy_reading claims both phonics and authentic-text engagement are necessary and coordinated. The phonics_reading claims phonics-first is foundational and sufficient (with reading emerging from phonics-basis). The whole_language_reading claims authentic engagement is sufficient and decoding emerges implicitly. These three constraints share a referent (reading acquisition) but author different ε values under different epistemic commitments. Decomposition avoids the trap of trying to model measurement-dependent ε within one story; each reading gets its own constraint with its own stakeholders, beneficiaries/victims, and classified type. Links via affects_constraints preserve the family structure."
   },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "balanced_literacy_curriculum_publishers",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "distributed",
-    "authority_grounding": "expertise",
-    "interpretation_layer_present": false,
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "reading_acquisition_mechanism__phonics_reading",
+        "sibling_id": "phonics_reading",
         "relation": "coexists_with"
       },
       {
-        "sibling_id": "reading_acquisition_mechanism__whole_language_reading",
+        "sibling_id": "whole_language_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "integration_necessity",
+        "atom": "both_mechanisms_necessary_for_reading_development",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "methodological_pluralism",
-        "role": "foundational",
+        "atom": "phonics_and_literature_engagement_reinforce_mutually",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "empirically_contingent"
       }
     ],
-    "reference_frame": "integrated_reading_instruction_framework",
+    "reference_frame": "reading_pedagogy_as_integration_of_mechanisms",
     "drift_state": {
-      "moment": "contemporary_reading_science_consensus",
-      "direction": "axiom_overriding",
+      "moment": "post_cognitive_science_convergence_2000_2024",
+      "direction": "authority_erosion",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "reading_acquisition_mechanism__phonics_reading",
+      "reading_acquisition_mechanism__whole_language_reading"
+    ]
+  },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

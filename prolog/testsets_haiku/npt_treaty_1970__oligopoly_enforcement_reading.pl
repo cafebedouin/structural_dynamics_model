@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-19
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -40,10 +40,17 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +64,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,37 +75,47 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: npt_treaty_1970__oligopoly_enforcement_reading
- *   human_readable: NPT Oligopoly Enforcement (Articles I-II Binding, Article VI Aspirational)
- *   domain: international_law/security
+ *   human_readable: NPT Articles I-II Oligopoly Enforcement (Horizontal Nonproliferation Asymmetry)
+ *   domain: international_law/security_regime
  *
  * SUMMARY:
- *   The Nuclear Non-Proliferation Treaty (entered into force 1970) is
- *   presented by its architects and the Nuclear Weapons States as a binding
- *   mutual obligation: NNWS renounce nuclear weapons development in exchange
- *   for NWS disarmament (Article VI) and access to peaceful nuclear
- *   technology (Article IV). This is the oligopoly enforcement reading, which
- *   instantiates a different structural claim: Articles I-II (prohibiting
- *   transfer to and receipt by NNWS) are binding and actively enforced,
- *   creating a two-tier regime where horizontal proliferation is policed
- *   while vertical proliferation (NWS arsenal development) remains unpoliced.
- *   Article VI functions as aspirational political language, indefinitely
- *   deferred and structurally unenforceable because the NWS control the
- *   Security Council and veto any enforcement mechanism. The founding bargain
- *   has atrophied into a liability imposed on threshold and developing states
- *   without reciprocal NWS obligation. This reading competes with two
- *   siblings: the reciprocal_disarmament_reading (Article VI as binding legal
- *   obligation with temporal urgency) and the withdrawal_sovereignty_reading
- *   (Article X as legitimizing exit from an inequitable bargain). These are
- *   not disagreements about facts; they are disagreements about which
- *   commitments the treaty actually embodies and which should be honored.
+ *   The Nuclear Nonproliferation Treaty, signed in 1970, binds 188
+ *   non-nuclear-weapon states to permanent renunciation of nuclear weapons
+ *   and submission to IAEA safeguards inspections. The P5 (US, USSR/Russia,
+ *   UK, France, China) retained the sole legal right to possess nuclear
+ *   weapons and committed themselves to negotiate disarmament (Article VI) —
+ *   a commitment that has remained essentially unexecuted for 56 years. This
+ *   constraint story instantiates the oligopoly-enforcement reading: Articles
+ *   I-II are treated as primary binding obligations (horizontal
+ *   nonproliferation is enforced), while Article VI (vertical disarmament) is
+ *   treated as contingent and aspirational. This reading transforms the NPT
+ *   into a tangled rope that coordinates horizontal nonproliferation while
+ *   extracting a permanent security disadvantage from threshold states and
+ *   NNWS, who bear inspection burdens and deterrent denial while the P5
+ *   retain and modernize arsenals. The structural asymmetry is this reading's
+ *   distinctive claim: enforcement effort is directed almost entirely at
+ *   preventing new proliferation, while disarmament obligations remain
+ *   rhetoric. This reading coexists with two sibling readings
+ *   (reciprocal_disarmament_reading, which treats Article VI as equally
+ *   binding, and withdrawal_sovereignty_reading, which treats Article X as a
+ *   trump card overriding the rest). The claim/metric gap is deliberate: the
+ *   oligopoly-enforcement reading claims the constraint is tangled_rope
+ *   (genuine coordination function in Articles I-II + asymmetric extraction
+ *   in enforcement asymmetry), while the authored extractiveness (0.68) and
+ *   suppression (0.71) reflect the measurable burden on NNWS and threshold
+ *   states. The engine's per-seat computation will diverge: from the P5 seat
+ *   the arrangement is genuine coordination that keeps proliferation in
+ *   check; from the threshold-state seat it is extractive enforcement with no
+ *   reciprocal obligation.
  *
  * KEY AGENTS:
- *   - nws_oligarchy: Institutional power, sets agenda, defines compliance, enforces horizontally while exempting vertically.
- *   - threshold_states: Powerful organizationally, high regional relevance, but trapped by inspection burden and denied the deterrent capability the NWS retain.
- *   - non_aligned_nnws: Moderate power, comply without security gain, represent plurality of states but lack enforcement voice.
- *   - developing_nnws: Powerless structurally, trapped by export controls and inspections despite zero proliferation capacity.
- *   - iaea_inspectorate: Institutionally constrained, audits only NNWS, bears operational burden without mandate authority.
- *   - treaty_review_conference: Organized observership, consensus-ruled into paralysis, functions theatrically.
+ *   - Permanent Security Council (P5): Agenda-setter; retains sole legal right to nuclear weapons; sets inspection protocols; benefits from monopoly on legitimate nuclear deterrent and on interpretation of treaty obligations.
+ *   - Non-nuclear-weapon states (188): Payers; submit to comprehensive safeguards; renounce deterrence; receive technical cooperation and non-binding security assurances.
+ *   - Threshold states (Iran, Egypt, Japan, South Korea, Brazil, etc.): Payers + excluded; face regional security threats but are barred by Articles I-II from pursuing nuclear deterrent; bear maximal inspection burden with zero security benefit from the treaty's Article V technology-sharing (which was conditional and never delivered); identity-locked into the treaty despite its asymmetry.
+ *   - IAEA Board and Secretariat: Enforcer; implements Articles I-II inspections under P5 direction; has no mandate to inspect NWS programs (only France and UK accepted limited, voluntary safeguards); operates structural bias toward finding violations in NNWS while lacking tools to verify NWS compliance.
+ *   - Nuclear exporters: Beneficiaries; trade civilian technology under NPT safeguards that constrain buyer nations to peaceful uses, capturing rents through supplier dependence and export restrictions.
+ *   - Disarmament advocates and non-aligned coalition: Excluded observers; document the asymmetry and call for binding Article VI enforcement; present at Review Conferences but lack voting power (amendment requires all NWS assent).
+ *   - Treaty-outside nuclear states (India, Pakistan, Israel, North Korea): Excluded; cannot participate in treaty governance; paradoxically demonstrate the treaty's failure (North Korea withdrew and weaponized; India and Pakistan acquired weapons outside the treaty and remain outside it; Israel maintains ambiguous arsenal).
  */
 
 /* ==========================================================================
@@ -107,58 +125,129 @@
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(npt_treaty_1970__oligopoly_enforcement_reading, 0.68).
 domain_priors:suppression_score(npt_treaty_1970__oligopoly_enforcement_reading, 0.71).
-domain_priors:theater_ratio(npt_treaty_1970__oligopoly_enforcement_reading, 0.52).
+domain_priors:theater_ratio(npt_treaty_1970__oligopoly_enforcement_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, extractiveness, 0.68).
 narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 0.52).
+narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, accessibility_collapse, 0.64).
+narrative_ontology:constraint_metric(npt_treaty_1970__oligopoly_enforcement_reading, resistance, 0.73).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(npt_treaty_1970__oligopoly_enforcement_reading, tangled_rope).
-narrative_ontology:human_readable(npt_treaty_1970__oligopoly_enforcement_reading, "NPT Oligopoly Enforcement (Articles I-II Binding, Article VI Aspirational)").
-narrative_ontology:topic_domain(npt_treaty_1970__oligopoly_enforcement_reading, "international_law/security").
+narrative_ontology:human_readable(npt_treaty_1970__oligopoly_enforcement_reading, "NPT Articles I-II Oligopoly Enforcement (Horizontal Nonproliferation Asymmetry)").
+narrative_ontology:topic_domain(npt_treaty_1970__oligopoly_enforcement_reading, "international_law/security_regime").
 
 domain_priors:requires_active_enforcement(npt_treaty_1970__oligopoly_enforcement_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(npt_treaty_1970__oligopoly_enforcement_reading, '595ccbff-113f-41a1-97ce-81e1b50f214d').
-narrative_ontology:cs_kernel_codification('595ccbff-113f-41a1-97ce-81e1b50f214d', fixed_text).
-narrative_ontology:cs_authority_grounding('595ccbff-113f-41a1-97ce-81e1b50f214d', extraction).
-narrative_ontology:cs_interpretation_layer_present('595ccbff-113f-41a1-97ce-81e1b50f214d').
-narrative_ontology:cs_reading_relation('595ccbff-113f-41a1-97ce-81e1b50f214d', npt_treaty_1970__reciprocal_disarmament_reading, forecloses).
-narrative_ontology:cs_reading_relation('595ccbff-113f-41a1-97ce-81e1b50f214d', npt_treaty_1970__withdrawal_sovereignty_reading, influences).
-narrative_ontology:cs_axiom('595ccbff-113f-41a1-97ce-81e1b50f214d', foundational, horizontal_proliferation_prohibition_primary_binding).
-narrative_ontology:cs_axiom_status(horizontal_proliferation_prohibition_primary_binding, holdable).
-narrative_ontology:cs_axiom_grounding('595ccbff-113f-41a1-97ce-81e1b50f214d', horizontal_proliferation_prohibition_primary_binding, conventional).
-narrative_ontology:cs_axiom('595ccbff-113f-41a1-97ce-81e1b50f214d', foundational, vertical_disarmament_obligation_indefinitely_deferrable).
-narrative_ontology:cs_axiom_status(vertical_disarmament_obligation_indefinitely_deferrable, holdable).
-narrative_ontology:cs_axiom_grounding('595ccbff-113f-41a1-97ce-81e1b50f214d', vertical_disarmament_obligation_indefinitely_deferrable, instrumental).
-narrative_ontology:cs_reference_frame('595ccbff-113f-41a1-97ce-81e1b50f214d', two_tier_enforcement_regime).
-narrative_ontology:cs_drift_state('595ccbff-113f-41a1-97ce-81e1b50f214d', contemporary_post_2015, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('595ccbff-113f-41a1-97ce-81e1b50f214d', '').
+narrative_ontology:cs_story_uid(npt_treaty_1970__oligopoly_enforcement_reading, '6bce5981-0add-4067-b1e6-c2f9bb8fc9a9').
+narrative_ontology:cs_kernel_codification('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', formalized).
+narrative_ontology:cs_authority_grounding('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', extraction).
+narrative_ontology:cs_interpretation_layer_present('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9').
+narrative_ontology:cs_reading_relation('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', npt_treaty_1970__reciprocal_disarmament_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', npt_treaty_1970__withdrawal_sovereignty_reading, coexists_with).
+narrative_ontology:cs_axiom('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', foundational, horizontal_nonproliferation_binding).
+narrative_ontology:cs_axiom_status(horizontal_nonproliferation_binding, holdable).
+narrative_ontology:cs_axiom_grounding('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', horizontal_nonproliferation_binding, conventional).
+narrative_ontology:cs_axiom('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', foundational, article_vi_disarmament_aspirational).
+narrative_ontology:cs_axiom_status(article_vi_disarmament_aspirational, overridden).
+narrative_ontology:cs_axiom_grounding('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', article_vi_disarmament_aspirational, empirically_contingent).
+narrative_ontology:cs_reference_frame('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', p5_nuclear_monopoly_legitimacy).
+narrative_ontology:cs_drift_state('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', contemporary_post_cold_war_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('6bce5981-0add-4067-b1e6-c2f9bb8fc9a9', '').
 narrative_ontology:cs_kernel_id(npt_treaty_1970__oligopoly_enforcement_reading, npt_treaty_1970).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(npt_treaty_1970__oligopoly_enforcement_reading, nws_oligarchy).
-narrative_ontology:constraint_beneficiary(npt_treaty_1970__oligopoly_enforcement_reading, nws_permanent_security_council).
+narrative_ontology:constraint_beneficiary(npt_treaty_1970__oligopoly_enforcement_reading, permanent_security_council_states).
+narrative_ontology:constraint_beneficiary(npt_treaty_1970__oligopoly_enforcement_reading, existing_nuclear_weapon_states).
+narrative_ontology:constraint_victim(npt_treaty_1970__oligopoly_enforcement_reading, non_nuclear_weapon_states).
 narrative_ontology:constraint_victim(npt_treaty_1970__oligopoly_enforcement_reading, threshold_states).
-narrative_ontology:constraint_victim(npt_treaty_1970__oligopoly_enforcement_reading, non_aligned_nnws).
-narrative_ontology:constraint_victim(npt_treaty_1970__oligopoly_enforcement_reading, developing_nnws).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(npt_treaty_1970__oligopoly_enforcement_reading, nuclear_exporters_cartel).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The P5 (US, USSR/Russia, UK, France, China) negotiated and ratified the NPT, retain the sole legal right to possess nuclear weapons under Article IX, and dominate the International Atomic Energy Agency's enforcement structure via their representation in the UN Security Council. They set inspection protocols, approve nuclear fuel cycles for non-nuclear states, and interpret the treaty's obligations. They benefit from the treaty's codification of their nuclear monopoly and the legitimacy it provides for preventing others from acquiring the same weapons that secured their own power.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, permanent_security_council_states, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% All five P5 members plus India, Pakistan, Israel, and North Korea (outside or post-withdrawal) enjoy the option to retain and modernize nuclear arsenals while binding others to abstention. They gain security assurance from the treaty's enforcement asymmetry: their weapons are normalized while threshold states face intrusive inspection and deterrent denial.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, existing_nuclear_weapon_states, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Comprise the 188 signatory states that renounce nuclear weapons. They submit to IAEA safeguards inspections of their entire nuclear fuel cycles, agree to full-scope inspections, and are prohibited from operating unsafeguarded nuclear facilities. In exchange they gain access to peaceful nuclear technology and receive security assurances from the P5 (though these assurances are non-binding under the NPT itself). Their exit is costlier than remaining: withdrawal invokes a 90-day notice period and international political pressure, while continued compliance yields technical cooperation and nominal security guarantees.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, non_nuclear_weapon_states, payer,
+    organized, biographical, constrained, global).
+
+% States with advanced nuclear fuel cycles (Iran, Egypt, Turkey, Japan, South Korea, Brazil, Argentina, and others) are bound by NNWS obligations but face regional security threats that nuclear deterrence might address. They are excluded from the Articles V and VI nuclear-sharing arrangements that NATO members access, cannot legally pursue deterrent capability even under Article X withdrawal, and bear maximal inspection burden while denied the security benefit the weapons themselves would provide. Their professional scientific and security communities are profoundly identity-locked into the NPT's legitimacy framework despite its asymmetry.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, threshold_states, payer,
+    moderate, biographical, identity_locked, regional).
+narrative_ontology:stakeholder_secondary_role(npt_treaty_1970__oligopoly_enforcement_reading, threshold_states, excluded).
+
+% Implements Articles I-II inspection protocols on behalf of the P5-dominated UN Security Council. Designs and executes safeguards regimes, reports compliance findings to the Board (which has P5 majority influence), and designates which states receive 'routine' versus 'special' inspections. Operates under structural pressure to find violations in NNWS fuel cycles while lacking mandate to inspect NWS programs (only France and the UK accepted limited IAEA safeguards; US, Russia, China rejected outside inspection). Acts as enforcement machinery while maintaining institutional fiction of neutrality.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, iaea_board_and_secretariat, agenda_setter,
+    institutional, generational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(npt_treaty_1970__oligopoly_enforcement_reading, iaea_board_and_secretariat, observer).
+
+% Countries and private firms exporting civilian nuclear technology (US, Russia, France, Germany, Canada, Japan, South Korea) benefit from the NPT's authorization of 'peaceful' nuclear technology transfer while the treaty's safeguards regime constrains buyer nations to uses that do not enable weapon development. Exporters capture rents from technology licensing while the NPT's inspection burden makes it unprofitable for purchasers to develop indigenous fuel-cycle capabilities — maintaining supplier dependence and export market control.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, nuclear_exporters_cartel, beneficiary,
+    organized, biographical, constrained, global).
+
+% States that have pursued or possess nuclear weapons outside the NPT framework (India, Pakistan, Israel, North Korea) are excluded from negotiations, cannot access Article V technology-sharing agreements, and face international sanctions and non-recognition of their weapons as legitimate. Yet they retain operational deterrents, demonstrating that NPT membership does not confer security and withdrawal does not prevent capability (North Korea). Their exclusion paradoxically proves the treaty's enforcement asymmetry: the NPT binds willing NNWS while outside-treaty weapons states operate unconstrained.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, treaty_challenger_states, excluded,
+    moderate, biographical, trapped, regional).
+
+% Civil society, non-aligned movement states, and humanitarian law advocates document the NPT's asymmetry and call for binding Article VI enforcement. They are excluded from treaty amendment (only NPCs can amend; a Review Conference cannot modify the text without all NWS assent). Their analysis forms a counternarrative to the official 'binding arms-control regime' framing but carries no institutional power to alter the treaty's operation.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, disarmament_advocacy_coalition, observer,
+    organized, biographical, constrained, global).
+narrative_ontology:stakeholder_secondary_role(npt_treaty_1970__oligopoly_enforcement_reading, disarmament_advocacy_coalition, excluded).
+
+% Strategic analysts and military planners in threshold states who recognize that the NPT denies them a security tool that the treaty ratifiers themselves retained. They argue (non-publicly, often) that the treaty imposes asymmetric constraint incompatible with regional power-balance equilibrium. Yet institutional capture, alliance pressure, and the costliness of withdrawal keep them bound.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, unaligned_security_communities, excluded,
+    moderate, generational, identity_locked, regional).
+
+% Measures the structural relationship between Articles I-II (horizontal nonproliferation as binding obligation) and Article VI (vertical disarmament as aspirational contingency), noting that this reading authorizes enforcement of the former while treating the latter as perpetually deferred.
+narrative_ontology:constraint_stakeholder(npt_treaty_1970__oligopoly_enforcement_reading, analytical_observer_seat, observer,
+    analytical, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(npt_treaty_1970__oligopoly_enforcement_reading, permanent_security_council_states).
+narrative_ontology:fixing_cost_class(npt_treaty_1970__oligopoly_enforcement_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Solves the collective-action problem of preventing horizontal proliferation (new states acquiring nuclear weapons) by establishing an inspectable, enforceable baseline of NNWS compliance. Eliminates the risk-race dynamic where each potential nuclear threshold state's acquisition would provoke others to follow. Creates a transparent, audited nuclear fuel cycle that is verifiable and constrained. Provides technical cooperation on peaceful nuclear energy to compensate NNWS for foregoing weapons.
+% TRANSFER_FUNCTION: Extracts a permanent security constraint from 188 NNWS and threshold states: renunciation of nuclear deterrent, submission to intrusive inspections, restricted fuel-cycle autonomy, and conditional dependence on nuclear exporters for technology. Transfers security and prestige benefits to the P5 (monopoly on legitimate weapons, veto over proliferation risk) and to nuclear exporters (captive markets, technological rent-capture through export restrictions). Transfers legitimacy to the NPT regime itself as an international law success, enabling the P5 to cast themselves as custodians of global order rather than as parties to an inequitable bargain.
+% ABSENT_VOICES: States that would benefit from nuclear deterrence but are bound by the NNWS obligation are structurally excluded from renegotiating the treaty's terms — amendment requires all NWS assent and P5 ratification, so threshold states cannot force a review of Articles I-II enforcement symmetry. Nuclear-armed states outside the treaty (India, Pakistan, Israel, North Korea) cannot participate in treaty governance. Disarmament advocates calling for binding Article VI enforcement are present at Review Conferences but lack voting power — the treaty's amendment structure ensures their voice is heard but overrideable.
+% DISAPPEARANCE_RATIONALE: If Articles I-II enforcement and the NNWS obligation disappeared, the global security landscape would reorganize rapidly: threshold states (Iran, Egypt, Japan, South Korea, Brazil) would face immediate domestic pressure to pursue deterrence; nuclear exporters would lose the NPT safeguards regime that justifies supplier authority; the P5 would lose their primary legitimacy claim for their own arsenals (that the treaty prevents others from acquiring them). Regional nuclear competitions would intensify. The NPT's collapse would be the single largest shift in international security architecture since its 1970 inception.
+% FOUNDING_PROBLEM: In the 1960s, Cold War proliferation risks accelerated: Britain, France, and China had acquired nuclear weapons; advanced industrial states (Japan, Germany, India, Brazil, Egypt) possessed the technical capability and faced security incentives to follow. The prospect of 20+ nuclear-armed states by 1980 was genuine. The founding problem was preventing a proliferation cascade that would destabilize regional balances, complicate deterrence, and increase the likelihood of nuclear use through accident or miscalculation.
+% FOUNDING_PROBLEM_CORROBORATION: The P5 attest the founding problem remains live, citing Iran's program, North Korea's withdrawal and weaponization, and continued proliferation risks. Non-aligned movement and disarmament advocates counter that the founding problem's core (cascade proliferation by security-motivated regional powers) has been substantially addressed by the NPT's success in keeping most NNWS non-nuclear. They argue the treaty now persists not to solve the original problem but to preserve the P5's monopoly. Independent security analysts are split: some cite the relative stability of the post-Cold-War period as evidence the problem is managed; others note that the treaty's asymmetry has driven three states (North Korea, India, Pakistan) to build weapons outside it, suggesting the original logic (provide security assurance so NNWS don't proliferate) has failed for those most threatened.
+narrative_ontology:disappearance_verdict(npt_treaty_1970__oligopoly_enforcement_reading, world_rearranges).
+narrative_ontology:founding_problem_status(npt_treaty_1970__oligopoly_enforcement_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(npt_treaty_1970__oligopoly_enforcement_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(npt_treaty_1970__oligopoly_enforcement_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(npt_treaty_1970__oligopoly_enforcement_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(npt_treaty_1970__oligopoly_enforcement_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +267,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is 0.68 and rising (from 0.45 in 1970) because the hidden transfer—sovereignty to inspect NNWS, technology denial, cost of compliance verification—flows outward while the reciprocal obligation (NWS disarmament) atrophies into unenforceable language. Suppression is 0.71 and stable at high level because the constraint requires active enforcement: NNWS inspection regimes, export control intelligence, diplomatic pressure on threshold states, and P5 veto on any enforcement mechanism that would apply to themselves. Theater is 0.52 and rising (from 0.15 in 1970) because Review Conferences theatrically demand Article VI compliance while NWS present 'disarmament commitments' that reset indefinitely without measurable reduction. The rising theater_ratio tracks the divergence between the founding bargain framing and the actual operation—inspections are real, disarmament is performative. Accessibility_collapse shows a four-level gradient: structural (0.76, highly constrained) >> organizational (0.71, constrained) > class (0.63, moderately constrained) > individual (0.52, some latitude within state compliance). Suppression similarly shows institutional gradient: structural suppression (0.81) is the veto-rule enforcement, organizational (0.74) is IAEA enforcement, class-level (0.68) is coalition pressure, individual (0.58) is domestic political room for maneuver within state leadership. Resistance (0.71 structural level, 0.52 individual) is mounted strongest at individual/civil-society level (abolition movements) and weakest at the structural level where the P5 consensus prevents any binding change.
+ *   The oligopoly-enforcement reading reads the NPT as a constraint whose primary function is horizontal nonproliferation (Articles I-II) enforced through IAEA safeguards, inspection protocols, and P5 veto authority. Article VI disarmament is authored into the treaty as a rhetorical commitment with no mechanism, no timeline, and no enforcement. This reading is distinct from the reciprocal-disarmament reading, which treats Articles I and VI as a binding bargain: NNWS renounce weapons in exchange for a genuine path to eventual NWS disarmament. The oligopoly-enforcement reading concedes no such reciprocity. Extractiveness rises from 0.52 (1970) to 0.68 (2026) because over the interval the IAEA safeguards regime has intensified (special inspections, environmental sampling, algorithmic detection methods) while Article VI obligations have receded further from any serious enforcement track. Theater ratio rises from 0.15 to 0.42 because an increasing share of treaty rhetoric (Review Conference commitments, subsidiary agreements) promises disarmament progress and technical cooperation that is not delivered, while the substantive machinery of enforcement focuses entirely on keeping NNWS non-nuclear. Suppression rises from 0.48 to 0.71 because the cost to NNWS of withdrawal has increased (political isolation, sanctions threats, technological disruption) and the identity-lock deepens (scientific/diplomatic communities internalize the treaty's legitimacy even while resenting its terms). The time grid is shared: every metric is authored at six time points (1970, 1985, 2000, 2010, 2020, 2026) so temporal analysis has complete data. The measurement series tracks extraction accumulation (Goodhart drift): the founding problem (preventing cascade proliferation) is substantially solved by 2000, but the enforcement apparatus persists and intensifies, now serving to maintain the P5 monopoly rather than solve the original problem. This is the signal of a constraint transitioning toward piton-like operation (function atrophied, enforcement maintained for other reasons) — but the oligopoly-enforcement reading stops short of that classification because the horizontal nonproliferation function is still live and meaningful; what is dead is the reciprocal vertical disarmament.
  *
  * PERSPECTIVAL GAP:
- *   The NWS agenda-setter seat and the threshold-state payer seats compute radically differently. From the NWS institutional seat: the NPT is a successful coordination mechanism that has prevented 15-20 additional weapons states and legitimized their deterrence posture. From the threshold-state organizational seat: the NPT is an asymmetric constraint that denies them the deterrent the NWS claim is necessary while refusing disarmament. The engine computes this as two per-seat classifications: the NWS seat may compute as rope (coordination with modest asymmetry) while the threshold-state seat computes as snare (pure extraction dressed as coordination). The gap is not a defect—it is the signal the oligopoly reading instantiates. The divergence IS the constraint.
+ *   The P5 and IAEA Board will compute this constraint as coordination with high legitimacy: the treaty has succeeded in keeping the number of nuclear-armed states relatively stable (only 9 recognized nuclear powers despite 50+ technically capable states). NNWS will compute it differently: the constraint enforces their renunciation while the P5 retain, modernize, and exercise veto. Threshold states will compute it as pure extraction — they bear inspection burden and deterrent denial with zero security payoff. The engine will produce these divergent types from the structural data: a beneficiary seat (P5) seeing low effective extraction; a payer seat (NNWS) seeing moderate extraction; a threshold-state seat (identity-locked, constrained exit) seeing high extraction. The gap between the claimed tangled_rope and the computed seat-types is where this reading's truth lives: a constraint can be genuinely coordinative for some seats (keeping proliferation down benefits everyone including NNWS) while being extractive for others (the cost falls unequally on threshold states denied deterrence). The tangled-rope claim admits this asymmetry; a rope claim would deny extraction; a snare claim would deny coordination.
  *
  * DIRECTIONALITY LOGIC:
- *   NWS are near d=0.0 (full beneficiary): they set the rules, enforce horizontally while exempting themselves vertically, benefit from the legitimacy of non-proliferation framing while bearing none of the costs of disarmament. Threshold states are near d=0.95 (near-full target): they bear inspection burden, technology denial, strategic vulnerability (denied deterrent while rivals acquire weapons), and cannot exit without severe costs. Non-aligned NNWS sit near d=0.80 (high target): they comply, incur verification costs, receive no security benefit, but their compliance threat is lower than threshold states. Developing NNWS are near d=0.88 (very high target): maximum compliance cost (inspections they cannot evade, export controls), zero proliferation capacity, cannot contribute to any resistance coalition. The IAEA sits near d=0.50 (symmetric): it coordinates inspection but is suppressed by lack of NWS access and constrained funding from the same states it cannot inspect. No overrides needed—the structural derivation from beneficiary/victim declarations and exit_options produces these values accurately.
+ *   P5 directionality (d ≈ 0.2): Beneficiary of the treaty's core function (they retain weapons while others renounce); powerful (institutional), arbitrage exit (can amend the treaty, can withdraw and retain weapons as proven by France). Their effective extraction is negative (they gain security subsidy). NNWS directionality (d ≈ 0.6): Modest payers; organized power; constrained exit (withdrawal invokes 90-day notice + international pressure, access to peaceful nuclear technology lost). They extract modest cost and extract modest benefit (security assurance, tech cooperation). Threshold-state directionality (d ≈ 0.85): Deep payers; moderate power; identity-locked exit (scientific/diplomatic professions internalize the treaty's legitimacy; withdrawal carries massive reputational cost in the security community even though it is legally permissible). They extract high cost (deterrent denial, inspection burden, export restrictions) with minimal tangible benefit (promised but not delivered technical cooperation under Article V). IAEA directionally (d ≈ 0.65): Structurally biased toward enforcement of Articles I-II over Article VI; constrained exit (operates under P5 mandate). The directionality derivation is straightforward from beneficiary/victim declarations + exit options + power, except for threshold states, where the identity-lock is critical: their exit is technically unconstrained (Article X permits withdrawal) but identity-locked because the scientific/security establishment of these states has fused with the NPT's legitimacy narrative ('we are a responsible nuclear state'). A directionality override is not needed here because identity_locked exit properly encodes this — but commentary must flag it.
  *
  * MANDATROPHY ANALYSIS:
- *   The oligopoly enforcement reading routes through a mandatrophy lens: the founding mandate ('mutual renunciation of weapons in exchange for disarmament by NWS') is dead—no NWS has disarmed in 56 years, and threshold states now view Article VI as a cover story. The constraint persists not because the mandate is live but because the extraction mechanism (inspections, export controls, Security Council veto on self-application) serves the beneficiaries (NWS oligarchy). A genuine Tangled Rope would show both coordination and asymmetric extraction as inseparable—the inspection regime genuinely contains horizontal proliferation AND extracts sovereignty costs from NNWS. But the rising theater_ratio (0.52) suggests the coordination function is atrophying relative to the extraction function. The mandatrophy verdict: this constraint has outlived its mandate. It persists as inertia + extraction, not as coordination. This is the piton classification risk (mostly performance, no living function) except for one detail: Articles I-II enforcement IS still functional and real—it does prevent horizontal proliferation (Indian, Pakistani, Israeli cases notwithstanding show the regime bends but holds). The classification is not piton but tangled_rope in mandatrophy—it is a genuine hybrid that has shifted from coordination-heavy to extraction-heavy as the reciprocal obligation (NWS disarmament) died.
+ *   The oligopoly-enforcement reading diagnoses mandatrophy in Article VI. The founding problem (preventing proliferation cascade in the 1960s and 1970s) was genuine. By 2000, that problem was substantially solved: the treaty had 187 signatories and the only states that weaponized outside it (India, Pakistan, North Korea) had already been excluded. Article VI was always the reciprocal obligation meant to justify NNWS compliance — but its mandate expired because the P5 found they could preserve their monopoly without disarming. The result is a constraint whose primary function (horizontal nonproliferation) persists while its reciprocal (vertical disarmament) has atrophied into theater. This reading avoids mislabeling the constraint as pure snare by acknowledging that Articles I-II still solve a real coordination problem (preventing new proliferation does benefit all states, including NNWS). But it names the mandatrophy clearly: the treaty persists as an extraction mechanism because the P5 benefit from maintaining a nuclear monopoly indefinitely, not because disarmament is being negotiated in good faith. The oligopoly-enforcement reading explicitly rejects the reciprocal-disarmament reading's framing that Article VI is a binding legal obligation — that rejection is the mandatrophy claim in one sentence: 'the treaty's reciprocal obligation is dead, but the constraint persists as enforcement of its extraction half.'
  */
 
 /* ==========================================================================
@@ -195,54 +284,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    article_vi_binding_status_ambiguity,
-    'Is Article VI a binding legal obligation with temporal force, or a political aspiration indefinitely deferrable by the NWS?',
-    'International Court of Justice advisory opinion on Article VI''s enforceability; or a binding NWS commitment to nuclear reduction with verification timeline (would resolve by action, not adjudication).',
-    'If binding: the NPT is a violated treaty and threshold states have justification to exit or demand remedies. If aspirational: the treaty is working as the oligopoly reading claims—horizontal proliferation contained, vertical proliferation unrestricted. This is THE structural question that distinguishes the oligopoly_enforcement_reading from reciprocal_disarmament_reading.',
+    article_vi_mandate_extinction,
+    'Is Article VI disarmament a dead mandate (the problem it was meant to solve is solved or abandoned) or a live obligation merely deferred indefinitely?',
+    'Historical analysis of P5 and Review Conference statements on disarmament timelines; econometric modeling of P5 nuclear stockpile trends (are stockpiles shrinking or stabilizing as a new baseline); comparison of P5 disarmament rhetoric to actual deployment and modernization spending. A sustained 20+ year period of stockpile stability at high numbers with no credible disarmament pathway would support mandate extinction; a documented roadmap with milestones would support deferral.',
+    'If mandate is extinct, the treaty is closer to a snare (pure extraction with coordination cover); if deferred, it remains tangled_rope (real coordination + asymmetric extraction). This distinction governs whether the constraint should be reclassified at a future Review Conference or reform cycle.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(article_vi_binding_status_ambiguity, conceptual, 'Whether Article VI imposes binding legal obligation on NWS or functions as aspirational political language.').
+narrative_ontology:omega_variable(article_vi_mandate_extinction, empirical, 'Whether Article VI disarmament is a dead mandate or merely long-deferred.').
 
 omega_variable(
-    horizontal_proliferation_containment_efficacy,
-    'Are Articles I-II inspection and enforcement regimes actually preventing horizontal proliferation, or merely obscuring threshold-state weapons programs?',
-    'Full forensic investigation of threshold-state programs (India, Pakistan, Israel, Iran) with access to classified intelligence; comparative analysis of proliferation trajectory with/without NPT regime (counterfactual modeling).',
-    'If Articles I-II are efficacious: the constraint''s coordination function is real and the extraction (NNWS compliance costs) is justified by security benefit. If regimes are obscured but not prevented: the constraint is extractive theater—NNWS pay compliance costs while threshold states acquire weapons anyway, and the NWS gain legitimacy without results. The high accessibility_collapse (0.76 structural level) assumes efficacy; efficacy failure would lower collapse and suggest the constraint is less structural than authored.',
+    threshold_state_identity_lock_mechanism,
+    'Is the suppression on threshold states (preventing Article X withdrawal and pursuit of deterrence) structural (external barriers: sanctions, technology denial, alliance pressure) or internalized (institutional identity fusion with the NPT''s legitimacy claim)?',
+    'Qualitative analysis of threshold-state governmental and scientific-community discourse: do they frame withdrawal as illegal/immoral (internalized) or merely costly/unwise (structural)? Post-exit behavior of states that do withdraw (North Korea, Iran if it withdrew) — does suppression persist after barrier removal? If suppression persists after exit, reclassify as partially internalized.',
+    'If internalized, the effective suppression on threshold states is higher than the structural measure suggests — they carry the suppression with them even if external barriers removed. This affects how pinned threshold states are to the constraint and whether reform can unlock their participation.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(horizontal_proliferation_containment_efficacy, empirical, 'Whether Articles I-II regimes prevent proliferation or merely document it asymmetrically.').
+narrative_ontology:omega_variable(threshold_state_identity_lock_mechanism, empirical, 'Whether threshold-state suppression is structural or internalized.').
 
 omega_variable(
-    threshold_state_deterrent_rationale,
-    'Do threshold states pursue weapons programs because the NPT denies them deterrent explicitly, or because regional security dilemmas exist independent of the treaty?',
-    'Counterfactual modeling: if the NPT had Article VI enforcement (NWS disarmed), would threshold-state weapons programs still emerge? Evidence from threshold-state strategic documents and threat perception analysis.',
-    'If NPT-denial is causal: the treaty actively creates the security dilemmas it claims to prevent (forced to choose between renounced deterrent and existential vulnerability). If dilemmas pre-exist: threshold-state weapons programs are security-rational independent of treaty structure, and the extraction borne by NNWS is merely the price of their security choice. This resolves the directionality logic: if NPT-denial is causal, threshold states are victims (forced into vulnerable position); if security dilemmas pre-exist, threshold states are rational actors, not victims, and the classification shifts.',
+    reciprocal_reading_empirical_refutation,
+    'Could the reciprocal-disarmament reading have been substantiated, or was the P5 asymmetry built into the treaty''s architecture from inception?',
+    'Historical archival analysis of NPT negotiation records (1965-1970): did the P5 commit to concrete disarmament timelines or only to negotiations? Did the draft treaties proposed by non-aligned states include binding Article VI provisions that the P5 rejected? Comparison with the LTBT (1963) disarmament language — was NPT Article VI intentionally weaker?',
+    'If the asymmetry was built in deliberately, the oligopoly-enforcement reading is the treaty''s true structural reading from inception. If the asymmetry emerged from post-treaty P5 defection on a genuine reciprocal commitment, the treaty was subverted rather than honestly instantiated. This is a conceptual question about what the treaty ''really is'' versus how it has been operated.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(threshold_state_deterrent_rationale, empirical, 'Whether NPT restriction of deterrent capability creates or merely responds to regional security dilemmas.').
+narrative_ontology:omega_variable(reciprocal_reading_empirical_refutation, conceptual, 'Whether the oligopoly-enforcement reading is the treaty''s intended structure or a post-hoc deviation from a reciprocal bargain.').
 
 omega_variable(
-    sibling_reading_foreclosure_structural_status,
-    'Can the oligopoly_enforcement_reading and the reciprocal_disarmament_reading coexist in a single institutional framework, or does accepting one logically rule out the other?',
-    'Textual analysis of the treaty language and legal interpretation: if the NWS explicitly hold the oligopoly interpretation (Articles I-II binding, Article VI aspirational) while NNWS hold the reciprocal interpretation (Articles inseparable, VI binding), do they occupy the same legal framework or different ones? Institutional question: can one framework embody both readings simultaneously?',
-    'If they coexist: the readings compete across parties but neither forecloses the other—a ''coexists_with'' relation holds. If they foreclose: one reading''s core premise logically rules out the other''s within any single legal system, and the treaty itself embodies an unresolved contradiction—a ''forecloses'' relation holds. This determines the cs_structure.reading_relations classification.',
-    confidence_without_resolution(high)
+    threshold_state_security_paradox,
+    'Do threshold states that remain bound by the NPT actually enjoy greater security than threshold states that withdrew (North Korea) or remained outside (India, Pakistan, Israel)?',
+    'Comparative security analysis: measure state security via military spending, alliance strength, conflict history, regional power balance, and deterrent credibility. Compare Iran (bound NNWS, maximum inspection burden) to India/Pakistan (outside treaty, weaponized, higher deterrent credibility in regional balance) and to North Korea (withdrew, weaponized, isolated but credibly deterred regional/global adversaries). Threshold states that remained bound should show higher security than those outside if the treaty''s security-assurance framing is true.',
+    'If bound threshold states show lower security than equivalent outside states, the NPT''s reciprocal logic collapses and the oligopoly-enforcement reading is confirmed. If security is equivalent or higher for bound states, the treaty''s coordination function may be real even without disarmament.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(sibling_reading_foreclosure_structural_status, conceptual, 'Whether the oligopoly and reciprocal readings are logically incompatible or merely represent different parties'' interpretations of an ambiguous text.').
+narrative_ontology:omega_variable(threshold_state_security_paradox, empirical, 'Whether NPT binding confers actual security benefits on threshold states.').
 
 omega_variable(
-    nws_security_council_veto_legitimacy,
-    'Does the P5''s use of Security Council veto to prevent binding enforcement of Article VI on themselves represent a legitimate safeguard of sovereignty, or a structural corruption of the treaty''s purpose?',
-    'No empirical resolution; this is a preference question. Preference stakes: if veto is legitimate, the oligopoly reading reflects proper institutional structure; if veto is corrupt, the oligopoly reading describes a broken system that should be reformed.',
-    'The interpretation shapes the classification''s normative standing but not its structural truth. Structurally, the veto IS the mechanism that makes extraction of Articles I-II from NNWS while exempting NWS from Article VI possible. Whether that mechanism is justified is a separate preference question.',
-    confidence_without_resolution(high)
+    reading_coexistence_stability,
+    'Can the oligopoly-enforcement reading and the reciprocal-disarmament reading coexist indefinitely in the same treaty framework, or does one reading''s dominance eventually exclude the other?',
+    'Monitoring of Review Conference outcomes: if successive Reviews call for binding Article VI enforcement, the reciprocal reading gains institutional purchase and pressure mounts on the oligopoly-enforcement interpretation. If Reviews settle into accepting Article VI as aspirational while strengthening Articles I-II enforcement, the oligopoly reading crystallizes. Measurement of P5 resistance to disarmament propositions across decades.',
+    'If readings cannot coexist, the treaty faces an institutional crisis where NNWS demand reciprocity or threaten withdrawal, forcing the P5 to choose between enforcing Articles I-II without reciprocity (snare classification) or negotiating real disarmament. This is the path-dependency question for whether the oligopoly reading becomes explicit and contested, or remains implicit in practice.',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(nws_security_council_veto_legitimacy, preference, 'Whether the P5''s Security Council veto on self-application of Article VI is a legitimate sovereignty safeguard or an institutional corruption of treaty purpose.').
+narrative_ontology:omega_variable(reading_coexistence_stability, conceptual, 'Whether the oligopoly-enforcement and reciprocal-disarmament readings can coexist as institutional equilibrium.').
 
 
 /* ==========================================================================
@@ -257,27 +346,45 @@ narrative_ontology:interval(npt_treaty_1970__oligopoly_enforcement_reading, 1970
 
 % Theater ratio over time
 narrative_ontology:measurement(npt__tr_t1970, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 1970, 0.15).
-narrative_ontology:measurement(npt__tr_t1985, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 1985, 0.25).
-narrative_ontology:measurement(npt__tr_t2000, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2000, 0.38).
-narrative_ontology:measurement(npt__tr_t2010, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2010, 0.45).
-narrative_ontology:measurement(npt__tr_t2020, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2020, 0.49).
-narrative_ontology:measurement(npt__tr_t2026, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2026, 0.52).
+narrative_ontology:measurement_basis(npt__tr_t1970, observed).
+narrative_ontology:measurement(npt__tr_t1985, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 1985, 0.22).
+narrative_ontology:measurement_basis(npt__tr_t1985, observed).
+narrative_ontology:measurement(npt__tr_t2000, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2000, 0.31).
+narrative_ontology:measurement_basis(npt__tr_t2000, observed).
+narrative_ontology:measurement(npt__tr_t2010, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2010, 0.38).
+narrative_ontology:measurement_basis(npt__tr_t2010, observed).
+narrative_ontology:measurement(npt__tr_t2020, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2020, 0.41).
+narrative_ontology:measurement_basis(npt__tr_t2020, observed).
+narrative_ontology:measurement(npt__tr_t2026, npt_treaty_1970__oligopoly_enforcement_reading, theater_ratio, 2026, 0.42).
+narrative_ontology:measurement_basis(npt__tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(npt__be_t1970, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 1970, 0.45).
-narrative_ontology:measurement(npt__be_t1985, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 1985, 0.52).
-narrative_ontology:measurement(npt__be_t2000, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2000, 0.61).
-narrative_ontology:measurement(npt__be_t2010, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2010, 0.65).
-narrative_ontology:measurement(npt__be_t2020, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2020, 0.67).
+narrative_ontology:measurement(npt__be_t1970, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 1970, 0.52).
+narrative_ontology:measurement_basis(npt__be_t1970, observed).
+narrative_ontology:measurement(npt__be_t1985, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 1985, 0.58).
+narrative_ontology:measurement_basis(npt__be_t1985, observed).
+narrative_ontology:measurement(npt__be_t2000, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2000, 0.64).
+narrative_ontology:measurement_basis(npt__be_t2000, observed).
+narrative_ontology:measurement(npt__be_t2010, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2010, 0.66).
+narrative_ontology:measurement_basis(npt__be_t2010, observed).
+narrative_ontology:measurement(npt__be_t2020, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2020, 0.68).
+narrative_ontology:measurement_basis(npt__be_t2020, observed).
 narrative_ontology:measurement(npt__be_t2026, npt_treaty_1970__oligopoly_enforcement_reading, base_extractiveness, 2026, 0.68).
+narrative_ontology:measurement_basis(npt__be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(npt__su_t1970, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 1970, 0.58).
-narrative_ontology:measurement(npt__su_t1985, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 1985, 0.63).
-narrative_ontology:measurement(npt__su_t2000, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2000, 0.67).
-narrative_ontology:measurement(npt__su_t2010, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2010, 0.69).
+narrative_ontology:measurement(npt__su_t1970, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 1970, 0.48).
+narrative_ontology:measurement_basis(npt__su_t1970, observed).
+narrative_ontology:measurement(npt__su_t1985, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 1985, 0.56).
+narrative_ontology:measurement_basis(npt__su_t1985, observed).
+narrative_ontology:measurement(npt__su_t2000, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2000, 0.64).
+narrative_ontology:measurement_basis(npt__su_t2000, observed).
+narrative_ontology:measurement(npt__su_t2010, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2010, 0.68).
+narrative_ontology:measurement_basis(npt__su_t2010, observed).
 narrative_ontology:measurement(npt__su_t2020, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2020, 0.7).
+narrative_ontology:measurement_basis(npt__su_t2020, observed).
 narrative_ontology:measurement(npt__su_t2026, npt_treaty_1970__oligopoly_enforcement_reading, suppression_requirement, 2026, 0.71).
+narrative_ontology:measurement_basis(npt__su_t2026, observed).
 
 
 /* ==========================================================================
@@ -288,17 +395,17 @@ narrative_ontology:coordination_type(npt_treaty_1970__oligopoly_enforcement_read
 narrative_ontology:boltzmann_floor_override(npt_treaty_1970__oligopoly_enforcement_reading, 0.12).
 narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, npt_treaty_1970__reciprocal_disarmament_reading).
 narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, npt_treaty_1970__withdrawal_sovereignty_reading).
-narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, nuclear_deterrence_asymmetry).
-narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, security_council_veto_power).
+narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, iaea_safeguards_regime__inspection_asymmetry).
+narrative_ontology:affects_constraint(npt_treaty_1970__oligopoly_enforcement_reading, fuel_cycle_export_control__supplier_dependence).
 
 % DUAL FORMULATION NOTE:
-% The npt_treaty_1970 kernel decomposes into three structurally distinct constraints corresponding to three readings of which articles are binding and which are aspirational. The oligopoly_enforcement_reading treats Articles I-II as binding and Article VI as aspirational, creating a two-tier regime. The reciprocal_disarmament_reading treats all three articles as inseparable and binding, creating a symmetrical obligation regime. The withdrawal_sovereignty_reading treats Article X as legitimizing exit. These are NOT alternate measurements of one constraint—they are different constraints instantiated by different interpretations of the same text. Each has its own epsilon, its own stakeholder asymmetries, and its own classification. The oligopoly reading's core claim is that the treaty's real structure is Articles I-II binding (and enforced) + Article VI aspirational (and indefinitely deferred), which makes the NWS beneficiaries of a two-tier regime that extracts sovereignty costs from NNWS without reciprocal disarmament. The reciprocal reading's core claim is that this interpretation betrays the founding bargain and violates Article VI's binding language. These are structurally distinct constraints linked by network causality.
+% The NPT kernel instantiates as three distinct constraint stories corresponding to three live readings held by different institutional factions: (1) oligopoly-enforcement reading (this story) — Articles I-II as primary binding obligation, Article VI as contingent; favored by P5 and IAEA; (2) reciprocal-disarmament reading — Article VI as equally binding legal obligation with temporal urgency; favored by non-aligned movement and disarmament advocates; (3) withdrawal-sovereignty reading — Article X exit right as legitimate exercise of sovereignty; held by threshold states and countries considering withdrawal. These readings share the same kernel (the NPT text) but differ in which articles are primary, which are binding, and what obligations flow from them. The oligopoly-enforcement reading treats Articles I-II enforcement and Article VI asymptote as the constraint's core. The ε value (0.68) is stable across readings but is reading-indexed: the oligopoly reader sees extraction via enforcement asymmetry; the reciprocal reader sees the same constraint as a snare (broken reciprocal bargain); the withdrawal reader sees it as a trap (exit rights on paper but identity-locked in practice). Sibling stories should be authored independently with their own ε values if they diverge. This family demonstrates ε-invariance principle: if different readings of the same kernel produce substantially different ε values under honest assessment, decompose to separate stories.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(npt_treaty_1970__oligopoly_enforcement_reading, institutional, 0.08).
+constraint_indexing:directionality_override(npt_treaty_1970__oligopoly_enforcement_reading, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

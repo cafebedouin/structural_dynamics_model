@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-19
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -43,6 +43,12 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,43 +74,35 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: quran_ontological_status__uncreated_reading
- *   human_readable: Qur'an Ontological Status: Uncreated Eternal Divine Speech
+ *   human_readable: Qur'an as Uncreated Eternal Divine Speech (kalām Allāh qadīm)
  *   domain: theological/political
  *
  * SUMMARY:
- *   The Qur'an's ontological status—whether it is created in time or
- *   uncreated and eternal—is among the most consequential doctrinal disputes
- *   in Islamic history. This constraint story instantiates THE UNCREATED
- *   READING: the position that the Qur'an is kalām Allāh qadīm (God's eternal
- *   speech), coeternal with the divine essence, not a created artifact in
- *   time. This reading privileges prophetic authority, literalist
- *   hermeneutics, and fixed textual meaning. It benefits traditional jurists,
- *   literalist communities, and anti-rationalist theological schools by
- *   grounding their hermeneutical and jurisprudential methods in ontology
- *   itself. It extracts from rational theologians, metaphorical interpreters,
- *   and reform movements by foreclosing their interpretive freedom: if the
- *   Qur'an is eternally fixed divine speech, reason cannot revise it and
- *   metaphorical interpretation cannot recontextualize it. The story treats
- *   this reading as ONE OF THREE constraints, siblings in a kernel contest:
- *   the created reading (makhlūq) and the state-enforced creation reading
- *   (mihna) are authored separately, linked via network.affects_constraints.
- *   This story claims mountain status (the uncreated reading presents itself
- *   as metaphysical fact); the authored metrics (high extractiveness, high
- *   suppression, rising over time) document a pattern that triggers
- *   false-summit detection—an institution benefits from treating a
- *   constructed constraint as natural law. The omegas and commentary expose
- *   the ambiguity: is this a genuine mountain or a doctrine maintained by
- *   institutional power?
+ *   This constraint instantiates the uncreated-Qur'an reading (kalām Allāh
+ *   qadīm) of the contested kernel quran_ontological_status. The doctrine
+ *   asserts that the Qur'an is uncreated, coeternal divine speech — a fact of
+ *   divine nature rather than a temporal artifact. This reading privileges
+ *   literalist hermeneutics, maximizes prophetic authority, and treats
+ *   textual meaning as fixed divine fact. The constraint benefits
+ *   traditionalist jurists and literalist theological schools while imposing
+ *   costs on rational theologians, metaphorical interpreters, and reform
+ *   movements seeking textual flexibility. The CLAIM (mountain — natural
+ *   ontological fact) diverges from the METRICS (extractiveness and
+ *   suppression both high): the constraint is authored as a claim to
+ *   naturality while the measurements show rising suppression and extraction
+ *   across its institutional history, particularly during periods of
+ *   enforcement (Abbasid al-Mutawakkil era, post-Saladin Sunni-revival
+ *   periods). This divergence is intentional: the engine measures whether the
+ *   constraint's natural-law claim is sustained by its actual operation or
+ *   whether the divergence signals false-summit structure.
  *
  * KEY AGENTS:
- *   - traditional_jurists: Institutional beneficiary; grounds jurisprudence in fixed textual meaning; identity-locked to literal hermeneutics.
- *   - literalist_communities: Organized beneficiary; reads the Qur'an directly, needing no rational mediation or metaphorical reinterpretation; identity-locked to textual literalism.
- *   - anti_rationalist_schools: Organized beneficiary; rejects Mu'tazilite rationalism; the uncreated reading privileges revelation over reason.
- *   - rational_theologians: Moderate payer; Mu'tazilite and Enlightenment tradition; constrained by the uncreated reading from applying reason to doctrine revision.
- *   - metaphorical_interpreters: Moderate payer; ta'wīl and allegorical traditions; constrained by fixed-meaning ontology from interpretive freedom.
- *   - reform_movements: Moderate payer, national scope; seeking to reconcile Islamic tradition with modernity; foreclosed from recontextualizing revelation.
- *   - state_enforcement_apparatus: Institutional agenda_setter; optional to this reading (but present in many contexts); enforces doctrinal adherence through institutional control.
- *   - mystical_interpreters: Partially excluded; Sufi esoteric traditions; structurally marginal under fixed-meaning ontology; not fully expelled but constrained.
+ *   - Traditionist jurists (institutional beneficiary) — maintain interpretive authority through the doctrine's fixing of textual meaning
+ *   - Literalist theological schools (organized beneficiary) — depend on uncreated status for their theological framework
+ *   - Rational theologians and Mu'tazilites (powerful but marginalized payer) — bear the cost of foreclosed philosophical reconciliation
+ *   - Reform movements (identity-locked payer) — cannot reinterpret law for new circumstances without rupturing Islamic identity
+ *   - Political authorities (institutional agenda-setter) — enforce the constraint through doctrinal enforcement and suppression of alternatives
+ *   - Scholarly analytical observer (observer) — measures the constraint's operation across 1200-year interval
  */
 
 /* ==========================================================================
@@ -121,51 +120,107 @@ narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading
 narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, theater_ratio, 0.41).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, accessibility_collapse, 0.78).
-narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, resistance, 0.62).
+narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, accessibility_collapse, 0.89).
+narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, resistance, 0.58).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(quran_ontological_status__uncreated_reading, mountain).
-narrative_ontology:human_readable(quran_ontological_status__uncreated_reading, "Qur'an Ontological Status: Uncreated Eternal Divine Speech").
+narrative_ontology:human_readable(quran_ontological_status__uncreated_reading, "Qur'an as Uncreated Eternal Divine Speech (kalām Allāh qadīm)").
 narrative_ontology:topic_domain(quran_ontological_status__uncreated_reading, "theological/political").
 
 domain_priors:emerges_naturally(quran_ontological_status__uncreated_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(quran_ontological_status__uncreated_reading, 'b5c3c002-0df6-4d80-8224-c1a0ef3433c0').
-narrative_ontology:cs_kernel_codification('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', fixed_text).
-narrative_ontology:cs_authority_grounding('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', lineage).
-narrative_ontology:cs_interpretation_layer_present('b5c3c002-0df6-4d80-8224-c1a0ef3433c0').
-narrative_ontology:cs_reading_relation('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', quran_ontological_status__created_reading, forecloses).
-narrative_ontology:cs_reading_relation('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', quran_ontological_status__state_enforced_creation_reading, forecloses).
-narrative_ontology:cs_axiom('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', foundational, quran_eternality_cosubstantial_with_divine_essence).
-narrative_ontology:cs_axiom_status(quran_eternality_cosubstantial_with_divine_essence, holdable).
-narrative_ontology:cs_axiom_grounding('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', quran_eternality_cosubstantial_with_divine_essence, deontological).
-narrative_ontology:cs_axiom('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', foundational, textual_meaning_fixed_immutable_interpretation).
-narrative_ontology:cs_axiom_status(textual_meaning_fixed_immutable_interpretation, holdable).
-narrative_ontology:cs_axiom_grounding('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', textual_meaning_fixed_immutable_interpretation, conventional).
-narrative_ontology:cs_reference_frame('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', quranic_eternality_framework).
-narrative_ontology:cs_drift_state('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', contemporary_institutional_enforcement_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('b5c3c002-0df6-4d80-8224-c1a0ef3433c0', '').
+narrative_ontology:cs_story_uid(quran_ontological_status__uncreated_reading, 'a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9').
+narrative_ontology:cs_kernel_codification('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', formalized).
+narrative_ontology:cs_authority_grounding('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', lineage).
+narrative_ontology:cs_interpretation_layer_present('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9').
+narrative_ontology:cs_reading_relation('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', quran_ontological_status__created_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', quran_ontological_status__state_enforced_creation_reading, coexists_with).
+narrative_ontology:cs_axiom('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', foundational, revelation_coeternal_with_divine_essence).
+narrative_ontology:cs_axiom_status(revelation_coeternal_with_divine_essence, holdable).
+narrative_ontology:cs_axiom_grounding('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', revelation_coeternal_with_divine_essence, deontological).
+narrative_ontology:cs_axiom('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', foundational, textual_meaning_fixed_divine_fact).
+narrative_ontology:cs_axiom_status(textual_meaning_fixed_divine_fact, holdable).
+narrative_ontology:cs_axiom_grounding('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', textual_meaning_fixed_divine_fact, conventional).
+narrative_ontology:cs_reference_frame('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', divine_revelation_coeternity).
+narrative_ontology:cs_drift_state('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', contemporary_institutional_practice_1200_years_post_institutionalization, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('a4a7a36e-c35d-4dce-b67c-d0ea671fb7f9', '').
 narrative_ontology:cs_kernel_id(quran_ontological_status__uncreated_reading, quran_ontological_status).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, traditional_jurists).
-narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, literalist_communities).
-narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, anti_rationalist_schools).
+narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, traditionist_jurists).
+narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, literalist_theological_schools).
+narrative_ontology:constraint_beneficiary(quran_ontological_status__uncreated_reading, anti_rationalist_movements).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
 narrative_ontology:constraint_victim(quran_ontological_status__uncreated_reading, rational_theologians).
 narrative_ontology:constraint_victim(quran_ontological_status__uncreated_reading, metaphorical_interpreters).
-narrative_ontology:constraint_victim(quran_ontological_status__uncreated_reading, reform_movements).
+narrative_ontology:constraint_victim(quran_ontological_status__uncreated_reading, reform_movements_seeking_textual_flexibility).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Benefit from the constraint's establishment of textual meaning as fixed divine fact rather than contingent artifact. This reading secures their interpretive authority as transmitters of unambiguous divine will. The uncreated status gives their jurisprudence the character of recovering pre-existing divine law rather than constructing new doctrine. Their exit option is toward rationalist reinterpretation, which would undermine their institutional standing.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, traditionist_jurists, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Their theological framework depends on the Qur'an's literal meaning being coeternal with God — a fixed reference point that cannot be dissolved into metaphor or historical contingency. The uncreated reading forecloses the rationalist move of interpreting anthropomorphic language (God's hand, face, throne) as metaphorical. Their exit toward created-speech readings would require wholesale philosophical reorientation.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, literalist_theological_schools, beneficiary,
+    organized, generational, constrained, global).
+
+% Bear the cost of the constraint's establishment: their philosophical project of reconciling revelation with rational inquiry is structurally constrained. The uncreated doctrine forecloses their favored interpretive moves (metaphorical reading, textual contingency, meaning-making as rational activity). Their exit is toward created-speech readings or toward secular philosophy, where the constraint does not apply. Historical pressure (Abbasid rationalism, modern Islamic modernism) shows they have attempted this exit repeatedly.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, rational_theologians, payer,
+    powerful, biographical, mobile, global).
+
+% Their hermeneutical practice is constrained by the fixed-meaning doctrine: passages that would benefit from metaphorical reading (anthropomorphisms, apparent contradictions, historically-contingent laws) must be reconciled to literal divine truth instead. The uncreated reading makes their interpretive flexibility structurally illegitimate. Their exit is toward minority theological schools or secular studies of religion, where they face institutional marginalization.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, metaphorical_interpreters, payer,
+    moderate, biographical, constrained, global).
+
+% Movements seeking to modernize Islamic law or ethics face the constraint's foreclosure of the textual flexibility they require. If the Qur'an is uncreated, eternally fixed in meaning, then reform movements cannot reinterpret it to address new circumstances or reject its apparent endorsement of slavery, patriarchal authority, or premodern governance. Their exit is into secular nationalism or theological heterodoxy, which involves rupture of identity as Muslims within the Islamic tradition.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, reform_movements_seeking_textual_flexibility, payer,
+    moderate, biographical, identity_locked, global).
+
+% Enforce the constraint by establishing literalist Qur'anic doctrine as the binding legal standard and suppressing rationalist reinterpretation. Historical example: the Abbasid caliphate initially promoted the created-speech reading to centralize hermeneutical authority under rational elites; later caliphates (post-Samanids) established the uncreated reading to secure legitimacy against reform movements. The constraint's enforcement machinery (inquisition, mihna; book burning; legal sanction against heterodox theology) is the source of the suppression metric.
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, political_authorities_citing_the_constraint, agenda_setter,
+    institutional, generational, arbitrage, national).
+
+% Observes the constraint's operation across historical and contemporary Islamic contexts. Measures whether the doctrine functions as fixed natural law (mountain) or as politically enforced doctrine (snare/tangled rope). Notes the divergence between the reading's claim to naturality (God coeternal with uncreated speech) and its historical contingency (the doctrine emerged in 8th-century polemic and was institutionalized through suppression of alternatives).
+narrative_ontology:constraint_stakeholder(quran_ontological_status__uncreated_reading, scholarly_analytical_observer, observer,
+    analytical, civilizational, analytical, universal).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(quran_ontological_status__uncreated_reading, traditionist_jurists).
+narrative_ontology:fixing_cost_class(quran_ontological_status__uncreated_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: The uncreated-Qur'an doctrine provides a stable reference point for Islamic jurisprudence: if all believers work from the same fixed-meaning text coeternal with God, their legal rulings derive from a common source rather than diverging into radically plural schools. This prevents the fragmentation that would occur if each rational theologian could reinterpret the text to suit their philosophical framework.
+% TRANSFER_FUNCTION: Transfers interpretive authority from philosophers and rational theologians (who would claim the right to metaphorical or contextual reading) to traditionalist jurists and literalist scholars (who claim the right to transmit uncreated meaning). Transfer is of institutional gatekeeping power and interpretive legitimacy: those certified in orthodox jurisprudence can adjudicate disputes; rational reinterpretations are excluded as heretical or ignorant.
+% ABSENT_VOICES: Rational philosophers and Mu'tazilite theologians are structurally excluded — after the reversal at t=150 (al-Mutawakkil), rationalist theology is marginalized from official discourse. Reform movements seeking to modernize Islamic ethics (abolition of slavery, women's rights, secular governance) are excluded because the fixed-meaning doctrine prevents reinterpretation of problematic passages. Secular Qur'anic scholars studying the text's historical composition are excluded because the doctrine forecloses historical-critical inquiry into the text's origins.
+% DISAPPEARANCE_RATIONALE: Defender perspective: if the uncreated doctrine vanished, Islamic law would collapse into relativism and heresy — each school would claim equal authority and Islam would fragment. Reformist perspective: Islamic law has already substantially diversified despite the doctrine (Hanafi, Maliki, Shafi'i, Hanbali schools all coexist; contemporary global Islam has generated countless interpretations); the doctrine now functions to suppress adaptive interpretation rather than prevent fragmentation, so its disappearance would enable modernization without causing collapse. Analytical perspective: the doctrine's disappearance would enable reform movements and rationalist schools to flourish; the world would rearrange toward greater hermeneutical pluralism within Islam.
+% FOUNDING_PROBLEM: In the 8th-9th centuries, Islamic scholars debated: how is God's eternal nature related to revelation? If revelation is created, it is contingent and temporal, potentially diminishing its absolute authority and God's transcendence. If revelation is uncreated and coeternal with God, it preserves God's perfection (nothing is created external to God except creation itself) and the Qur'an's unquestionable status.
+% FOUNDING_PROBLEM_CORROBORATION: Rationalist and modernist Islamic scholars attest that the founding problem has shifted: contemporary Islamic thought largely accepts both that revelation can be textually studied and that jurisprudence must adapt to new circumstances, indicating the original problem (preserving transcendence vs. fixing authority) has been substantially resolved in practice. Traditionalist scholars attest the problem is live and ever-recurring: each generation of rationalists threatens to dissolve the fixed standard, making the doctrine's protection essential. Historical-critical Qur'anic scholars from outside the benefiting traditionalist parties (non-Muslims studying the text's composition; secular Muslims; comparative-religion scholars) attest that the problem emerged through institutional politics and suppression, not from any deep conceptual necessity — the created and uncreated readings coexist logically and historically, and the uncreated reading's dominance results from al-Mutawakkil's backing rather than from rational victory.
+narrative_ontology:disappearance_verdict(quran_ontological_status__uncreated_reading, contested).
+narrative_ontology:founding_problem_status(quran_ontological_status__uncreated_reading, dead).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(quran_ontological_status__uncreated_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(quran_ontological_status__uncreated_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(quran_ontological_status__uncreated_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(quran_ontological_status__uncreated_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,6 +232,10 @@ test(extraction_signature) :-
     domain_priors:base_extractiveness(quran_ontological_status__uncreated_reading, E),
     E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
+% OQ-194: diagnostic probe, NOT a gate. Failure here means the authored
+% mountain claim diverges from the story's computed metrics (claim != actual
+% is the DR core) -- contested/extractive territory, not a regression. Bars
+% (E=<0.25, S=<0.05, AC>=0.85, R=<0.15) are hardcoded; recalibration -> OQ-48.
 test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(quran_ontological_status__uncreated_reading, ExtMetricName, E),
@@ -199,16 +258,16 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The authored metrics document extraction rising from 0.45 (early establishment, 7th–8th century) to 0.68 (modern enforcement apparatus mature, 20th–21st century). This trajectory is consistent with an institutional constraint: initial coordination value is high (solving genuine founding problem of doctrinal unity), but over time institutional beneficiaries extract increasing rent from the constraint's operation. Theater ratio rises from 0.12 to 0.41, indicating that performative maintenance (repetition of doctrinal affirmation, curriculum enforcement, formal fatwa authority) grows as a share of functional activity. This is a piton signature—a constraint that solved a real problem (7th–8th century) but persists increasingly by institutional inertia and suppression rather than genuine necessity. Suppression requirement rises from 0.35 to 0.72, documenting increased enforcement intensity: the state and institutional authority must actively suppress rational theology, metaphorical interpretation, and reformist readings to maintain the uncreated reading. This is inconsistent with a genuine mountain (which meets near-zero resistance and requires no suppression). The coercion grid documents that suppression intensifies more at the organizational and structural levels (0.72–0.81 at tn) than at the individual level (0.54 at tn), indicating that institutional authority and organized teaching institutions bear the suppression burden, while individual believers show more resistance and drift toward reinterpretive or created-reading positions. Accessibility collapse is high at all levels (0.72–0.86 at tn), indicating that once the uncreated reading is institutionalized, alternatives are genuinely hard to access for believers socialized into the constraint—but collapse rose more dramatically at structural and organizational levels (from 0.74 to 0.86 and 0.68 to 0.81) than at individual level (0.52 to 0.72), suggesting that individual believers retain more access to alternatives than institutional structures do. This pattern is the false-summit signature: a constraint presenting as natural law (high accessibility collapse) that is maintained by institutional power (rising suppression requirement, rising theater ratio) at the organizational and structural levels while individual-level alternatives persist.
+ *   The extractiveness series rises from 0.15 (early, pre-institutionalization) to 0.68 (stable at interval end), tracking the doctrine's institutionalization through suppression of alternatives. The suppression_requirement shows sharp rise at 150-year mark (al-Mutawakkil's reversal of the Mu'tazilite mihna, institutionalizing uncreated doctrine; suppression rises to 0.68 and stays high thereafter), indicating that the constraint's persistence depends increasingly on active enforcement rather than voluntary acceptance. Theater_ratio rises from 0.08 to 0.41, suggesting that an increasing share of enforcement activity defends the doctrine's authority rather than addressing genuine coordination problems — a signature of extraction riding on coordination. The plateau at 900-1200 years indicates institutional equilibrium: the doctrine is so thoroughly embedded in Islamic institutions that enforcement is routinized and theater ratio stabilizes. This is the inverse of decay: the constraint has become inertial, maintained by institutional theater and suppression rather than by the coordination problem it once solved. The measurement grid is aligned: all three metrics share the six time points (t=0, 150, 300, 600, 900, 1200).
  *
  * PERSPECTIVAL GAP:
- *   The beneficiary seats (traditional jurists, literalist communities, anti-rationalist schools) experience the uncreated reading as ontological truth grounding their legitimate hermeneutical practice—a mountain that was always there. From their position, the constraint is not enforced; it is recognized and lived. From the payer seats (rational theologians, metaphorical interpreters, reform movements), the same constraint is experienced as institutional suppression of legitimate intellectual work—a snare maintaining its power through curriculum control, legal exclusion, and institutional authority. The state enforcement apparatus occupies yet a third position: it uses the uncreated reading to justify institutional control over doctrine and education, treating it as a tool of governance rather than as metaphysical fact. The coercion grid captures this: beneficiaries experience low suppression and high accessibility collapse as natural constraint (the alternatives literally make no sense to them); payers experience high suppression despite high accessibility collapse (they can understand the constraint but are prevented from acting on alternatives); the state apparatus experiences it as a lever for institutional power. The engine computes per-seat directionality from this structural data: beneficiary seats sit near d=0.0 (full subsidy, no extraction); payer seats sit near d=1.0 (full target, high extraction); the state apparatus sits near d=0.5 for extractive enforcement (it both collects rents and bears suppression costs). These divergences are the measurement the story exists to take.
+ *   From the traditionalist-jurist seat, the constraint is a genuine mountain — divine speech is what it is, coeternal with God, and their duty is to transmit it faithfully. From the rational theologian's seat, the constraint is a snare — the doctrine forecloses their philosophical project through institutional suppression, not through logical necessity. From the reform-movement seat, the constraint is a tangled rope: the coordination it provides (fixing meaning) benefits them incidentally (their followers know the same text) while its extraction severely constrains them (cannot reinterpret for new circumstances). The engine should compute divergent types across these three seats from the structural data alone. The analytical observer seat (highest power, analytical time horizon) sees both the doctrine's coordination value (prevents total fragmentation of Islamic law) and its extraction value (enables institutional gatekeeping and prevents adaptive reinterpretation). This perspectival gap is exactly what per-seat classification should reveal.
  *
  * DIRECTIONALITY LOGIC:
- *   Traditional jurists and literalist communities are structural beneficiaries: the uncreated reading privileges their hermeneutics and grounds their institutional authority. Their directionality is near 0.0 (beneficiary end): they benefit from the constraint without bearing its costs. Their exit options are identity_locked—abandoning literalism and the uncreated reading would dissolve their professional identity and community membership. Their power is institutional (for jurists) or organized (for literalist communities), and their spatial scope is global (Islamic tradition) or generational/civilizational (time horizon). For these seats, d is derived as low beneficiary end, ~0.05–0.15. Rational theologians and metaphorical interpreters are payers: the uncreated reading forecloses their intellectual project. Their directionality is near 1.0 (target end): they bear the suppression cost and loss of hermeneutical freedom without direct benefit. Their exit options are constrained (they can leave the tradition or accept suppression) or identity_locked (some are committed to Islamic intellectual life and cannot leave without existential loss). Their power is moderate (they are scholars and intellectuals, not institutional bodies), and their spatial scope is regional or national (their influence is limited to specific communities or reform movements). For these seats, d is derived as high target end, ~0.75–0.85. Reform movements occupy a similar payer position: their social agenda requires reinterpretive freedom that the uncreated reading forecloses. d is ~0.70–0.80. The state enforcement apparatus is in an agenda-setter position: it uses the constraint to maintain institutional control. Its directionality is neither purely beneficiary nor purely target—it both collects rents (institutional authority, educational control) and bears suppression costs (must maintain enforcement machinery, handle resistance). For institutional agenda-setters engaged in extractive enforcement, d is typically ~0.45–0.60. No directionality overrides are required: the beneficiary/victim declarations and exit options feed the derivation cleanly.
+ *   Beneficiaries (traditionist jurists, literalist schools) experience low d toward this constraint — it subsidizes their interpretive authority and institutional standing. Payers (rational theologians, reform movements, metaphorical interpreters) experience high d — the constraint extracts their interpretive freedom and institutional legitimacy. Political authorities implementing enforcement experience moderate d with arbitrage exit (they can shift to created-speech reading if political incentives change, as happened historically), placing them nearer the beneficiary end despite their enforcement role. The constraint's directionality is NOT symmetric: those who benefit from fixed textual meaning are institutional and have arbitrage exits; those who bear the cost are either powerful (rational theologians with exit into secular philosophy) or identity-locked (reform movements that cannot leave Islam without ceasing to be Islamic). This structural asymmetry drives the high d divergence.
  *
  * MANDATROPHY ANALYSIS:
- *   The uncreated reading is claimed as mountain (emerges_naturally: true) but authored beneficiaries are declared (traditional_jurists, literalist_communities, anti_rationalist_schools) and victims are declared (rational_theologians, metaphorical_interpreters, reform_movements). This triggers the FSM (false-summit-mountain) signature: the constraint presents itself as natural law but identifiable institutional beneficiaries exist. The omegas document the irreducible ambiguity: is this a genuine mountain (metaphysical truth about the Qur'an's nature) or a constructed constraint maintained by institutional power (traditional jurisprudence, state enforcement, curriculum control)? The measurement series reveal mounting mandatrophy: extractiveness rises from 0.45 to 0.68, theater ratio rises from 0.12 to 0.41, suppression intensifies from 0.35 to 0.72, and resistance persists (0.48 to 0.62). These are the classic signals of a constraint whose founding problem has been solved (doctrinal coherence was achieved by ~9th century) but whose operation increasingly serves institutional extraction and inertia rather than coordination. The six_questions battery documents the mandatrophy explicitly: founding_problem_status='contested', disappearance_verdict='world_rearranges'. The mismatch (dead founding problem + world_rearranges) is the mandatrophy flag: the constraint persists not because the problem it was built for remains live, but because institutional beneficiaries extract rents from it and possess the power to maintain it. The coercion grid further supports mandatrophy: suppression and stakes_inflation intensify at structural and organizational levels (where institutions wield power) while individual-level metrics remain lower, indicating that the constraint is sustained more by institutional apparatus than by genuine inability to conceive alternatives. The false-summit reading is supported: an institution benefits from treating a constructed constraint as natural law.
+ *   The founding problem (9th-century debate: how to preserve God's transcendence while affirming revelation's authority) was live at t=0-300 and has become increasingly dead by t=1200. The constraint persists not because scholars are actively debating the founding problem (they largely accept it as settled) but because institutional gatekeeping and suppression of alternatives maintain it. This is the classic mandatrophy condition: mandate outdated, mechanism inertial. The theater_ratio rising from 0.08 to 0.41 while suppression stays high indicates that enforcement is increasingly performing the constraint's authority rather than solving any live coordination problem. The contemporary Islamic landscape shows that Islamic law has NOT fragmented into radical schools despite (or because of) reform movements and rationalist minority schools — the constraint's coordination value is real but modest, and its extraction value is substantial. The engine's classification at the analytical seat should show tangled-rope (residual coordination, heavy extraction) despite the doctrine's claim to mountain status.
  */
 
 /* ==========================================================================
@@ -216,106 +275,111 @@ test(nl_profile_validation) :-
    ========================================================================== */
 
 omega_variable(
-    mountain_vs_constructed_ambiguity,
-    'Is the Qur''an''s uncreated status a genuine metaphysical fact (mountain) or a constructed doctrine maintained by institutional power?',
-    'Epistemological analysis: does the claim rest on accessible metaphysical reasoning available to any rational agent, or does it require institutional endorsement and suppression of contrary reasoning to persist? Test: what happens to the reading''s persistence if institutional enforcement machinery (state law, curriculum control, fatwa authority) is removed?',
-    'If institutional removal causes widespread adoption of the created reading, the uncreated reading is a snare/tangled rope, not a mountain. If the reading persists or even strengthens absent institutional enforcement, it is a genuine mountain. Current data is ambiguous: historical periods of weak institutional enforcement (contemporary diaspora, secularized states) show both persistent literalist adherence AND adoption of created readings.',
-    confidence_without_resolution(low)
-).
-
-narrative_ontology:omega_variable(mountain_vs_constructed_ambiguity, conceptual, 'Whether the constraint''s persistence depends on institutional power or genuine metaphysical conviction.').
-
-omega_variable(
-    beneficiary_vs_vindicated_proposition,
-    'Do traditional jurists and literalist communities benefit FROM the uncreated reading, or does the uncreated reading VINDICATE commitments they held for independent reasons?',
-    'Historical analysis: trace when the uncreated reading was adopted (Abbasid period, 8th–9th century) against when literalist hermeneutics and traditional jurisprudence developed. If traditional jurisprudence predates or is independent of the uncreated reading, the reading vindicates rather than creates beneficiary positions. If the reading created new beneficiary positions (institutional authority, enforceability of jurisprudence), it is extractive.',
-    'If vindicating, the reading is a genuine coordination mechanism—it provides ontological ground for practices communities were already committed to. If extractive, it is an institutional innovation that benefited certain seats by constraining others. This shifts classification from mountain toward tangled rope.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(beneficiary_vs_vindicated_proposition, empirical, 'Whether the constraint captures benefits or vindicates pre-existing commitments.').
-
-omega_variable(
-    suppression_mechanism_internalized_vs_structural,
-    'Is the measured suppression of rational theology and metaphorical interpretation structural (legal prohibition, curriculum exclusion, institutional sanction) or internalized (practitioners believe the reading and accept its constraints voluntarily)?',
-    'Post-suppression trajectory: in contexts where institutional enforcement is removed (secular states, diaspora communities), do rational theologians and metaphorical interpreters continue to suppress their own practice, or do they openly revert to reinterpretive methods? If reversion is rapid, suppression was primarily structural; if suppression persists or takes internalized forms (shame, identity fusion with literalism), the suppression is partially internalized.',
-    'If internalized, the effective suppression is higher than the raw structural measure suggests—practitioners carry it with them even absent enforcement machinery. This would increase the constraint''s extractiveness from the payer seats'' perspective and support classification as snare or tangled rope rather than mountain.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(suppression_mechanism_internalized_vs_structural, empirical, 'Whether suppression of rational and metaphorical schools is structural or internalized.').
-
-omega_variable(
-    reading_kernel_identity,
-    'Is this constraint ONE READING of a contested kernel (the Qur''an''s ontological status), or is it a core article of faith that stands independently?',
-    'This is a structural feature of the committer frame: if other readings (created, state_enforced_creation) are live options held by authoritative parties within Islamic tradition, then this reading is a reading; if no live alternative exists within orthodoxy, then this is a core article, not a reading.',
-    'The constraint story is authored as a kernel reading (Rule 1: one reading only; Rule 2: committer structure routed to omegas). If the committer frame is incorrect and there is no live alternative, the story must be reorganized as a single-reading constraint without cross-reading edges.',
+    natural_law_vs_political_enforcement,
+    'Is the uncreated-Qur''an doctrine a genuine natural ontological fact (mountain), or is it a politically enforced doctrine whose claim to naturality is a cover story?',
+    'Historical contingency test: if the doctrine emerged through political suppression of alternatives and would not persist without institutional enforcement, it is constructed (snare/tangled-rope) rather than natural. Ethnographic test: do contemporary Muslims who have never encountered the institutional enforcement still accept the doctrine as natural, or do they adopt it through socialization within orthodox institutions?',
+    'If constructed, the constraint reclassifies from mountain to tangled-rope or snare at the analytical seat; the beneficiary identification becomes definitive (traditionalist-jurist institutional gatekeeping benefits from naturalization), and the mandate-obsolescence diagnosis strengthens (false summit candidate). If genuinely natural, the high suppression and extraction metrics indicate that the constraint''s operation is dramatically asymmetric — suppression protects a natural fact that needs no protection.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_kernel_identity, conceptual, 'Whether this constraint is one reading of a contested kernel or a standalone article of faith.').
+narrative_ontology:omega_variable(natural_law_vs_political_enforcement, conceptual, 'Whether the doctrine''s natural-law status is ontologically grounded or politically constructed.').
 
 omega_variable(
-    extracted_rents_vs_coordination_cost,
-    'How much of the measured extractiveness (0.68) represents coordination cost (necessary overhead for maintaining doctrinal coherence) versus pure monopoly rent?',
-    'Comparative analysis: in Islamic communities that adopt the created reading, do they achieve equivalent doctrinal coherence and jurisprudential stability at lower measured extraction cost? What is the minimum cost required to solve the founding problem (preservation of legal/doctrinal unity across expanding communities)?',
-    'If coordination cost is high (~0.4–0.5), much of the extraction is necessary cost and the constraint approaches rope classification. If rent is high and coordination cost is low (~0.15–0.25), the constraint is closer to snare. Current measurement places extractiveness at 0.68; if ~0.2 is coordination cost, ~0.48 is rent.',
+    suppression_structural_vs_internalized,
+    'Is the measured suppression (0.72) primarily structural (institutional penalties, exile, execution) or primarily internalized (scholars internalize the constraint''s authority and self-censor)?',
+    'Post-exit trajectory: if suppressed rational theologians and reform-movement scholars continue to resist the doctrine after institutional exit (writing in secular contexts, leading diaspora communities), suppression is partly internalized; if they accept it after exit, suppression is primarily structural. Institutional-exit ethnography: do scholars who leave orthodox institutions maintain their rationalist commitments or do they drift toward orthodoxy?',
+    'If primarily structural, the constraint''s effective suppression would drop significantly if institutional enforcement were removed, suggesting reclassification potential. If primarily internalized, the constraint persists even after institutional exit and represents deeper epistemic capture — effective suppression is higher than the structural measure alone suggests, and reform is harder.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(extracted_rents_vs_coordination_cost, empirical, 'The partition between coordination overhead and pure extraction.').
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Mechanism of suppression: structural barriers vs. internalized acceptance.').
+
+omega_variable(
+    coordination_function_persistent,
+    'Does the doctrine''s coordination function (preventing Islamic law from fragmenting into radically divergent schools) still operate at t=1200, or has it become vestigial theater while extraction persists?',
+    'Comparative-jurisprudence test: measure the diversity of Islamic legal schools, rulings, and interpretations at different times. If diversity remains low despite the doctrine''s mounting extraction (theater_ratio rising), coordination function persists and extraction is layered on top. If diversity rises while suppression stays constant, the coordination function is degrading and suppression is pure gatekeeping without coordination work.',
+    'If coordination persists, the constraint is tangled-rope (real coordination, real extraction). If coordination is vestigial, the constraint should reclassify toward piton (mostly performance and institutional inertia, not coordination problem-solving) or toward snare (pure extraction).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_function_persistent, empirical, 'Whether the doctrine''s coordination function remains active or has atrophied.').
+
+omega_variable(
+    reform_movement_identity_lock_mechanism,
+    'Why do reform movements seeking textual flexibility remain within Islamic identity frameworks rather than exit into secular modernism or heterodox religions? Is the identity lock genuine (the constraint is fused with Islamic identity and cannot be questioned without identity rupture) or strategic (exit is available but costly)?',
+    'Comparative exit analysis: if reform movements that exit Islam into secular contexts or heterodox faiths adopt similar hermeneutical flexibility and flourish, the exit is real and the lock is strategic (the constraint imposes cost but not logical impossibility). If they maintain versions of the same constraint even outside Islam, the lock is partially internalized.',
+    'If genuine identity lock, reform movements are trap-adjacent (not technically trapped but trapped-feeling due to identity fusion); their directionality should compute toward target (high d), amplifying the extraction metric. If strategic, they are constrained-exit (arbitrage possible at exit cost); their directionality is moderate, and extraction is real but not maximal.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(reform_movement_identity_lock_mechanism, empirical, 'Mechanism of identity-lock exit constraint on reform movements.').
+
+omega_variable(
+    sibling_reading_foreclosure_structure,
+    'Does this reading (uncreated) logically foreclose the created reading in a single coherent framework, or do they coexist as different institutional positions held by different factions?',
+    'Logical compatibility test: can a single theologian hold both that God is transcendent (essential to created-speech reading) and that revelation is coeternal with God (essential to uncreated reading) without internal contradiction? If yes, the readings coexist at the logical level and their institutional conflict is political, not conceptual. If no, they foreclose each other.',
+    'If logically foreclosing, cs_structure.reading_relations should declare forecloses rather than coexists_with. If coexisting logically but conflicting institutionally, coexists_with is correct and the sibling-reading conflict is explained by institutional competition, not conceptual incompatibility.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(sibling_reading_foreclosure_structure, conceptual, 'Whether this reading logically forecloses its siblings or coexists with them.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(quran_ontological_status__uncreated_reading, 0, 1400).
+narrative_ontology:interval(quran_ontological_status__uncreated_reading, 0, 1200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(qura_tr_t0, quran_ontological_status__uncreated_reading, theater_ratio, 0, 0.12).
-narrative_ontology:measurement(qura_tr_t200, quran_ontological_status__uncreated_reading, theater_ratio, 200, 0.18).
-narrative_ontology:measurement(qura_tr_t400, quran_ontological_status__uncreated_reading, theater_ratio, 400, 0.24).
-narrative_ontology:measurement(qura_tr_t800, quran_ontological_status__uncreated_reading, theater_ratio, 800, 0.35).
-narrative_ontology:measurement(qura_tr_t1200, quran_ontological_status__uncreated_reading, theater_ratio, 1200, 0.39).
-narrative_ontology:measurement(qura_tr_t1400, quran_ontological_status__uncreated_reading, theater_ratio, 1400, 0.41).
+narrative_ontology:measurement(qura_tr_t0, quran_ontological_status__uncreated_reading, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(qura_tr_t150, quran_ontological_status__uncreated_reading, theater_ratio, 150, 0.28).
+narrative_ontology:measurement(qura_tr_t300, quran_ontological_status__uncreated_reading, theater_ratio, 300, 0.35).
+narrative_ontology:measurement(qura_tr_t600, quran_ontological_status__uncreated_reading, theater_ratio, 600, 0.4).
+narrative_ontology:measurement(qura_tr_t900, quran_ontological_status__uncreated_reading, theater_ratio, 900, 0.41).
+narrative_ontology:measurement(qura_tr_t1200, quran_ontological_status__uncreated_reading, theater_ratio, 1200, 0.41).
 
 % Extraction over time
-narrative_ontology:measurement(qura_be_t0, quran_ontological_status__uncreated_reading, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(qura_be_t200, quran_ontological_status__uncreated_reading, base_extractiveness, 200, 0.52).
-narrative_ontology:measurement(qura_be_t400, quran_ontological_status__uncreated_reading, base_extractiveness, 400, 0.58).
-narrative_ontology:measurement(qura_be_t800, quran_ontological_status__uncreated_reading, base_extractiveness, 800, 0.64).
-narrative_ontology:measurement(qura_be_t1200, quran_ontological_status__uncreated_reading, base_extractiveness, 1200, 0.67).
-narrative_ontology:measurement(qura_be_t1400, quran_ontological_status__uncreated_reading, base_extractiveness, 1400, 0.68).
+narrative_ontology:measurement(qura_be_t0, quran_ontological_status__uncreated_reading, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(qura_be_t150, quran_ontological_status__uncreated_reading, base_extractiveness, 150, 0.42).
+narrative_ontology:measurement(qura_be_t300, quran_ontological_status__uncreated_reading, base_extractiveness, 300, 0.58).
+narrative_ontology:measurement(qura_be_t600, quran_ontological_status__uncreated_reading, base_extractiveness, 600, 0.65).
+narrative_ontology:measurement(qura_be_t900, quran_ontological_status__uncreated_reading, base_extractiveness, 900, 0.68).
+narrative_ontology:measurement(qura_be_t1200, quran_ontological_status__uncreated_reading, base_extractiveness, 1200, 0.68).
 
 % Suppression requirement over time
-narrative_ontology:measurement(qura_su_t0, quran_ontological_status__uncreated_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(qura_su_t200, quran_ontological_status__uncreated_reading, suppression_requirement, 200, 0.48).
-narrative_ontology:measurement(qura_su_t400, quran_ontological_status__uncreated_reading, suppression_requirement, 400, 0.55).
-narrative_ontology:measurement(qura_su_t800, quran_ontological_status__uncreated_reading, suppression_requirement, 800, 0.64).
-narrative_ontology:measurement(qura_su_t1200, quran_ontological_status__uncreated_reading, suppression_requirement, 1200, 0.7).
-narrative_ontology:measurement(qura_su_t1400, quran_ontological_status__uncreated_reading, suppression_requirement, 1400, 0.72).
+narrative_ontology:measurement(qura_su_t0, quran_ontological_status__uncreated_reading, suppression_requirement, 0, 0.2).
+narrative_ontology:measurement(qura_su_t150, quran_ontological_status__uncreated_reading, suppression_requirement, 150, 0.68).
+narrative_ontology:measurement(qura_su_t300, quran_ontological_status__uncreated_reading, suppression_requirement, 300, 0.75).
+narrative_ontology:measurement(qura_su_t600, quran_ontological_status__uncreated_reading, suppression_requirement, 600, 0.72).
+narrative_ontology:measurement(qura_su_t900, quran_ontological_status__uncreated_reading, suppression_requirement, 900, 0.72).
+narrative_ontology:measurement(qura_su_t1200, quran_ontological_status__uncreated_reading, suppression_requirement, 1200, 0.72).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(quran_ontological_status__uncreated_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(quran_ontological_status__uncreated_reading, 0.12).
+narrative_ontology:coordination_type(quran_ontological_status__uncreated_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(quran_ontological_status__uncreated_reading, 0.14).
 narrative_ontology:affects_constraint(quran_ontological_status__uncreated_reading, quran_ontological_status__created_reading).
 narrative_ontology:affects_constraint(quran_ontological_status__uncreated_reading, quran_ontological_status__state_enforced_creation_reading).
+narrative_ontology:affects_constraint(quran_ontological_status__uncreated_reading, prophetic_authority_maximization).
+narrative_ontology:affects_constraint(quran_ontological_status__uncreated_reading, literalist_hermeneutics_privilege).
+narrative_ontology:affects_constraint(quran_ontological_status__uncreated_reading, rationalist_theological_marginalization).
 
 % DUAL FORMULATION NOTE:
-% The Qur'an's ontological status is a contested kernel with three structurally distinct readings, each with different extractiveness, beneficiary structure, and classification. The uncreated reading (this story) treats the Qur'an as eternally fixed divine speech, privileging literalism and traditional jurisprudence; ε ≈ 0.68. The created reading treats the Qur'an as created artifact, enabling rational theology and reinterpretation; ε ≈ 0.35–0.45. The state-enforced creation reading adds institutional suppression machinery to the created position; ε ≈ 0.78 (higher because of enforcement cost). Each story must be authored independently with its own ε and metrics; the three are linked only by network edges. This decomposition respects the ε-invariance principle: each reading instantiates a single stable constraint with predictable classification.
+% The kernel quran_ontological_status decomposes into three structurally distinct constraints: the created_reading (ontologically distinct) claims the Qur'an is created speech, treating revelation as temporal artifact; the uncreated_reading (this constraint) claims the Qur'an is coeternal divine fact; the state_enforced_creation_reading (distinct institutional mechanism) layers Mu'tazilite political enforcement onto created-speech doctrine. All three share the same referent (the Qur'an's ontological status) but have different ε values: created_reading ε≈0.35 (modest coordination of rational theology, low extraction), uncreated_reading ε≈0.68 (this reading: residual coordination, substantial extraction via institutional gatekeeping), state_enforced_creation_reading ε≈0.82 (pure extraction through inquisition machinery). The ε divergence reflects different equilibria in the same theological space. This story instantiates only the uncreated_reading; the siblings are separate JSON files linked via network.affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(quran_ontological_status__uncreated_reading, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

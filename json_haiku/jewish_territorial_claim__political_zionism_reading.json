@@ -2,170 +2,349 @@
   "header": {
     "constraint_id": "jewish_territorial_claim__political_zionism_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "56e58001-4771-46a9-8b55-e54bc0be8f7a"
+    "story_uid": "21f1f5c4-3320-4af2-a850-7f0bea4c7c38",
+    "created_at": "2026-06-11T14:32:18Z"
   },
   "base_properties": {
-    "extractiveness": 0.78,
-    "suppression": 0.81,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.72,
-    "resistance": 0.68,
+    "extractiveness": 0.82,
+    "suppression": 0.76,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Political Zionism: Jewish Statehood Through Territorial Sovereignty and Demographic Majority",
-    "topic_domain": "political/historical/settler-colonial",
+    "human_readable": "Jewish Territorial Sovereignty and Demographic Majority (Political Zionism Reading)",
+    "topic_domain": "political_history/settler_colonialism/nationalism_studies",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "jewish_european_diaspora_persecuted",
-      "zionist_state_apparatus"
+      "jewish_diaspora_seeking_refuge",
+      "european_jewish_intelligentsia",
+      "zionist_political_leadership"
     ],
     "victims": [
-      "palestinian_arab_residents",
-      "palestinian_arab_diaspora"
+      "palestinian_arabs_in_territory",
+      "bedouin_pastoral_communities"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "jewish_diaspora_seeking_refuge",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Jewish communities facing persecution, pogroms, and legal discrimination across Europe and the Middle East seek a territorial refuge where they would have majority status and control over their political and legal institutions. They benefit from the constraint insofar as it promises a solution to antisemitism through sovereign statehood — a place where antisemitism would theoretically be impossible because Jews would hold power. Their exit from diaspora conditions is constrained by state citizenship laws, economic barriers, and the sheer scale of migration required."
+    },
+    {
+      "name": "zionist_political_leadership",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets and administers the political program of securing Palestinian territory for Jewish settlement and statehood. Defines the terms of 'Jewish majority' as a state prerequisite, determines what population transfers or restrictions are necessary to achieve it, and justifies displacement of existing inhabitants as subordinate to the Jewish national project. Controls institutions that coordinate settlement, enforce immigration restrictions, and manage political discourse around the constraint."
+    },
+    {
+      "name": "european_jewish_intelligentsia",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Intellectuals, journalists, and political organizers who articulate the ideological justification for territorial sovereignty and the necessity of Jewish demographic majority. They benefit by gaining voice, institutional platform, and political power through the Zionist movement — translating diaspora marginalization into state-building leadership. They can exit by withdrawing from the movement, but doing so costs them influence and communal standing."
+    },
+    {
+      "name": "palestinian_arabs_in_territory",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Indigenous agricultural and urban communities with several centuries of established settlement patterns, property rights, and political organization. Under the political Zionism reading, they are reframed as obstacles to Jewish majority status — the constraint operates directly to dispossess them of land, restrict their movement and settlement rights, and subordinate their political claims to Jewish statehood requirements. Their 'exit' would require displacement or forced assimilation; remaining means accepting permanent minority status in a state constitutionally defined as Jewish."
+    },
+    {
+      "name": "bedouin_pastoral_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Nomadic and semi-nomadic pastoralists whose territorial range spans the claimed territory. Territorial sovereignty with fixed Jewish settlement patterns directly undermines their pastoral economy. The constraint forces them to either settle (abandoning traditional livelihood), migrate out of the region, or face legal restrictions on movement. They have no institutional voice in defining the terms of Jewish majority."
+    },
+    {
+      "name": "ottoman_imperial_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The existing sovereign authority over Palestinian territory under the constraint's emergence. The Ottoman state is displaced by the Zionist project — the constraint operates to transfer sovereignty from Ottoman imperial law to Zionist state law. From this seat, the constraint is a direct challenge to state authority and territorial integrity."
+    },
+    {
+      "name": "arab_nationalist_leadership",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Emerging Arab nationalist movements would articulate competing territorial and majority claims if admitted to the governance conversation. Their exclusion is maintained by the constraint's enforcement machinery — they are structurally barred from negotiating the terms of 'Jewish majority' or the status of Arab populations. They would contest the entire framing of the constraint."
+    },
+    {
+      "name": "international_observer_powers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "European powers and later international bodies monitor and evaluate whether Jewish statehood claims are viable under international law. They examine whether the constraint complies with principles of self-determination and minority rights, and whether territorial sovereignty is achievable without violating standing international norms. Their observations feed into the contestation of the constraint's legitimacy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the diaspora Jewish coordination problem: uniting scattered Jewish communities under a single sovereign framework where they hold majority power and control institutions. Without territorial sovereignty and demographic majority, diaspora Jews remain politically and legally subordinate to host states; the constraint coordinates them into a unitary political body where antisemitism would be structurally impossible (as Jews would hold power).",
+    "transfer_function": "Transfers land, property, and political sovereignty from Palestinian Arab inhabitants and Ottoman imperial authority to Jewish settlers and a Zionist state. Moves Palestinian communities from majority inhabitants with property rights and local governance to minority status (or displacement) within a state defined as Jewish. Moves international legitimacy from Ottoman/Arab nationalist frameworks to Zionist state frameworks.",
+    "absent_voices": "Palestinian Arab communities and their nationalist leadership are structurally excluded from the conversation that defines 'Jewish majority' and its prerequisites. Arab pastoralists and small-holders have no institutional voice in determining what displacement or restriction is 'necessary.' International lawyers and observers outside the Zionist movement would contest whether territorial transfer and demographic engineering comply with emerging norms of self-determination and minority protection.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint—the requirement for Jewish territorial sovereignty with demographic majority—vanished overnight, Palestinian Arab communities would remain majority inhabitants, Ottoman sovereignty (or Arab nationalist governance) would persist or expand, and diaspora Jewish communities would continue seeking refuge through immigration and cultural-nationalist frameworks instead of state-building. The entire structure of Israel as a Jewish state would not exist; the region would reorganize under different sovereignty and demographic assumptions.",
+    "founding_problem": "Antisemitism is endemic and unsolvable in the diaspora. Jewish communities face perpetual legal discrimination, violence, and exclusion across Europe and the Middle East. The only structural solution is a territory where Jews hold majority power and can create institutions that protect Jewish collective interests—a Jewish state. Without statehood and majority status, Jews remain vulnerable to host-state persecution.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Zionist political leadership attests the founding problem is live and permanent. Some diaspora Jewish communities in crisis (fleeing pogroms, responding to Dreyfus crisis) attest to the urgency of refuge. However, non-Zionist Jewish leaders, international observers, and historians contest whether statehood with demographic majority is the only or best solution to antisemitism—pointing instead to legal reform, diaspora cultural nationalism, international human-rights frameworks, or integration. The corroboration is DIVIDED: the founding problem (antisemitism) is attested from many seats, but the causal claim (that it requires territorial majority statehood) is contested by significant constituencies outside the benefiting political leadership."
+  },
   "interval": {
-    "start": 1880,
-    "end": 1950
+    "start": 0,
+    "end": 50
   },
-  "measurements": [],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.41
+    }
+  ],
   "commentary": {
-    "narrative_context": "Political Zionism as a movement grounds Jewish statehood in the necessity of territorial sovereignty as the sole solution to European antisemitism and the historical 'Jewish Question.' This reading prioritizes state-building and demographic majority over cultural or spiritual renewal (distinguishing it from cultural zionism) and frames Arab residents of Palestine as a demographic obstacle rather than as a population with parallel claims. The constraint requires continuous enforcement: immigration law favoring Jews, land-purchase and legal frameworks preventing Arab property acquisition, settlement expansion into territory inhabited by Arabs, and military suppression of resistance. The political zionist reading treats the 'transfer' of Arab population (through displacement or exclusion) as a necessary mechanism to achieve the Jewish majority that makes statehood viable and secure. This is a kernel reading: the contested kernel is the Jewish territorial claim in Palestine; this reading instantiates one coherent framing (state first, majority necessary, transfer acceptable); sibling readings (cultural, labor, revisionist) instantiate different priorities and mechanisms within the same territorial and historical field.",
+    "narrative_context": "Political Zionism frames Jewish statehood as the structural solution to the 'Jewish Question'—the supposedly permanent problem of Jewish diaspora status and vulnerability to antisemitism. This reading prioritizes territorial sovereignty and demographic majority as prerequisites for Jewish security and self-determination. It treats Palestinian Arab inhabitants as obstacles to be managed through displacement, transfer, legal restriction, or subordination. The constraint's operation—settling Jewish immigrants, restricting Arab settlement and movement, defining the state as constitutionally Jewish—directly extracts from Palestinian communities and redistributes land and political power to Jewish settlers and Zionist institutions. The claim/metric gap is deliberate: the reading CLAIMS this as a solution to coordination (resolving diaspora Jewish insecurity through statehood), and the authored metrics describe high extraction, substantial suppression, and growing active enforcement—the engine's computation will measure how far this reading's coordination story aligns with its actual structural operation.",
     "key_agents": [
-      "jewish_european_diaspora_persecuted: powerless, trapped, seeking refuge and security through sovereign statehood; experience Palestinian presence as obstacle",
-      "zionist_state_apparatus: institutional, agenda-setter, enforces Jewish demographic majority through immigration law, settlement, legal redefinition of property",
-      "palestinian_arab_residents: powerless, trapped, bear direct cost of land expropriation, displacement, military occupation, political exclusion",
-      "palestinian_arab_diaspora: powerless, trapped, barred from return; excluded from conversation despite bearing consequences",
-      "british_mandate_authority: institutional, administered the territory but failed to enforce Arab rights protections; enabled zionist infrastructure-building",
-      "liberal_zionist_revisors: moderate, structurally excluded from political zionist agenda; envision binational state or cultural autonomy",
-      "international_powers_endorsing: powerful, benefit from Jewish state as strategic ally and solution to European 'Jewish Question'",
-      "arab_nationalist_states: powerful, excluded from zionist agenda; oppose on grounds of Palestinian self-determination"
+      "Jewish diaspora seeking refuge: powerless globally, trapped in host states, beneficiary from promised statehood and majority protection",
+      "Zionist political leadership: institutional power, sets and enforces the terms of territorial settlement and demographic majority",
+      "Palestinian Arabs in territory: powerless, trapped within claimed territory, structurally victimized by dispossession and subordination",
+      "Bedouin pastoral communities: powerless, trapped within pastoral range, economically undermined by settlement and sovereignty claims",
+      "Arab nationalist leadership: excluded, would contest the entire framing if voice were permitted",
+      "International observer powers: analytical seat, evaluating whether the constraint complies with emerging international norms"
     ],
-    "logic_rationale": "Extractiveness rises from 0.15 (1880, early settlement phase with minimal institutional power) to 0.78 (1950, established state with legal monopoly on territory and demographic control). The rise tracks the constraint's capacity to enforce: as zionist institutions consolidated, as the Mandate enabled legal and administrative infrastructure, as immigration accelerated post-Holocaust, the mechanism shifted from voluntary settlement and land purchase to legally codified exclusion and state apparatus control. Suppression requirement rises similarly (0.2 to 0.81), indicating that the constraint's persistence increasingly depends on active enforcement: Palestinian resistance grows as displacement intensifies; suppression must harden to maintain the demographic balance. Theater ratio rises more slowly (0.05 to 0.42), reflecting that the coordination function (refugee absorption, state-building) remains partly genuine even as extraction intensifies—but the performative dimension grows as the constraint's stated purpose (Jewish security) becomes decoupled from its mechanism (permanent occupation and demographic dominance). The coercion grid shows the suppression and stakes inflation hitting hardest at the structural level (system-level arrangement of territory and population), with individual and class resistance growing as the consequences of displacement and occupation accumulate. All measurements are authored on a single time grid (1880, 1900, 1920, 1935, 1945, 1950) so every metric is comparable across the interval.",
-    "perspectival_gap": "The beneficiary seat (jewish_european_diaspora) and the agenda-setter seat (zionist_state_apparatus) should compute differently from the payer seats (palestinian_arab_residents, diaspora). From the diaspora's perspective, the constraint is a genuine solution to existential threat—the coordination function is real, the extraction (loss of European home and status) feels preferable to statelessness and persecution, and the transfer is experienced as justified escape. From the zionist state's perspective, the constraint is both coordination (building a viable state) and power-consolidation (controlling territory and demographics); the apparatus benefits from both the coordination and the extraction. From the Palestinian payer seats, the constraint is pure extraction: they bear the direct cost (dispossession, displacement, occupation) without participation in the agenda or benefit from the state apparatus. The engine's per-seat computation will likely show the diaspora and state apparatus seats computing as rope or tangled_rope (genuine coordination with asymmetric benefits), while Palestinian seats compute as snare (coercion masquerading as coordination they never agreed to). This divergence is the story—it is not a defect in the classification.",
-    "directionality_logic": "The jewish_european_diaspora_persecuted sits near d=0.3 (beneficiary): they receive refuge, security, and statehood from the constraint's operation; they bear a cost (losing European homes, displacement to new territory) but frame it as preferable to persecution. The directionality is beneficiary-leaning because they are not trapped targets of extraction—they are voluntary participants seeking escape. However, the power atom is 'powerless' and time_horizon is generational, which moderates the beneficiary directionality slightly: they cannot exit the constraint once established and depend on institutions they do not fully control. The zionist_state_apparatus sits near d=0.1 (full beneficiary): it collects extraction (state power, territory, demographic control), sets the agenda, has arbitrage-level exit (can admit or exclude populations by law). The palestinian_arab_residents sit near d=0.95 (full target): they bear the direct extraction (land, home, freedom), are powerless and trapped, have no seat at the agenda-setting table. Their directionality is pulled fully toward target by the power asymmetry and trapped exit. The palestinian_arab_diaspora sits near d=0.92 (near-full target): rightless, barred from return by law, with only trapped exit. The british_mandate_authority sits near d=0.5 (symmetric): it enforces the territory's administration and benefits from order but is not the primary extractor; it is the frame within which extraction happens. The liberal_zionist_revisors sit near d=0.65 (mixed): they are partly coordinated into the state-building project but structurally excluded from agenda-setting and treated as obstacles; they have constrained exit but retain some intellectual/political autonomy. International powers sit near d=0.15 (beneficiary): they endorse and benefit from the arrangement (strategic ally, refugee absorption) without bearing its direct cost.",
-    "mandatrophy_analysis": "The constraint avoids collapsing into mandatrophy (founding problem outlived, function atrophied) by continuously redefining its mandate: the founding problem is European antisemitism and diaspora insecurity; by 1950, European antisemitism is discredited and many European Jews have secured refuge in the state. The constraint could logically dissolve: the founding problem is solved. But the institutional apparatus (state, military, settlement bureaucracy) develops extractive interests in permanent control, and redefines the mandate to permanent demographic dominance, territorial expansion, and security justifications that become decoupled from the original problem. The theater ratio's rise to 0.42 indicates this reframing: the constraint's stated function (Jewish security and refuge) increasingly becomes cover for extraction (territorial control, resource appropriation, domination). However, the constraint is not yet pure piton at 1950—the coordination function is still partly live (state institutions genuinely serve diaspora settlement and security), and the extraction is still partly justified by the founding problem's recency. The mandatrophy clock starts ticking after 1950 as the state consolidates and the founding problem recedes further into history; a later reading (1970–2000) would likely show mandatrophy advancing.",
-    "kernel_context": "This constraint is one reading of the contested kernel 'jewish_territorial_claim_in_palestine'. The kernel itself is under-specified and contested: it is a commitment to Jewish settlement and statehood, but the reading determines what kind of statehood, what relationship to Arab residents, what mechanisms of enforcement. The political_zionism_reading instantiates state-building prioritized over cultural content; Arab population treated as demographic obstacle; transfer considered necessary mechanism. Sibling readings—cultural_zionism_reading (Jewish spiritual center without necessarily political sovereignty or demographic majority), labor_zionism_reading (national regeneration through socialist transformation and 'conquest of labor'), revisionist_zionism_reading (maximalist territorial claim and 'Iron Wall' of military force)—occupy the same contested kernel but instantiate different priorities and mechanisms. The political zionist reading coexists_with the cultural and labor readings (held by different factions of the movement simultaneously, neither foreclosing the other within the zionist coalition) but influences the revisionist reading (creates structural pressure for territorial expansion and military force to maintain demographic majority). The foundational axiom distinguishing this reading is 'Jewish_statehood_requires_demographic_majority'—the claim that a Jewish state is impossible without a Jewish majority population, which logically entails that Arab residents are a problem to be solved through transfer, displacement, or denial of political participation. This axiom is 'holdable' (remains live in contemporary Israeli state ideology) and 'empirically_contingent' (grounded in testable claims about state security and demographic composition that can be challenged by alternative models of multicultural statehood or international protection)."
+    "logic_rationale": "Extractiveness rises from 0.58 to 0.82 across the interval, tracking the escalation of settlement intensity, land acquisition, and legal restrictions on Palestinian property and movement. At t=0 (early Zionist political organization) the extraction exists but is lower because settlement is still limited in scale and Palestinian Arab resistance is not yet forcefully organized. By t=20 (post-WWI British Mandate) extractiveness climbs sharply as settlement accelerates and land-purchase restrictions intensify. By t=50 (late 1940s statehood and war) extraction is at maximum because territorial transfer is fait accompli and suppression of Arab political claims is total. Suppression requirement follows a similar trajectory: at t=0, Palestinian Arab resistance is localized and unorganized; by t=50, sustained suppression of Arab nationalism, refugee repatriation claims, and residual Palestinian communities inside the state requires continuous institutional effort. Theater ratio remains moderate (0.28–0.41) because the settlement enterprise does involve genuine ideological and organizational work—it is not pure performance—but the gap between the rhetoric of Jewish security and the actual mechanism (land dispossession, population transfer) grows across the interval. At t=50, theater has risen because the founding problem (diaspora antisemitism) has been partly decoupled from the constraint's actual operation (maintaining Jewish state demographic majority and Arab subordination), making the security justification increasingly theatrical relative to the structural maintenance function. All measurements authored on a single shared time grid; all metrics present at every t.",
+    "directionality_logic": "Jewish diaspora refugees sit at low directionality (d ≈ 0.2–0.3): they benefit substantially from the promise of majority-status refuge and Jewish-controlled institutions. They bear some costs (labor migration, displacement from diaspora homes, military participation) but the net flow is toward them. Zionist political leadership sits at very low directionality (d ≈ 0.05–0.15): they control the constraint's definition and enforcement, collect institutional power and legitimacy, face minimal costs. Palestinian Arabs and Bedouins sit at very high directionality (d ≈ 0.85–0.95): the constraint's operation directly dispossesses them, restricts their freedom of movement and property ownership, subordinates them to a state they did not create and cannot democratically control. The asymmetry is extreme: one seat's benefit is another seat's extraction. This is the structural signature of a tangled rope with massive per-seat divergence—genuine coordination for the beneficiary seats (uniting diaspora Jews under sovereign protection), pure coercion for the victim seats (forced displacement and subordination). International observer powers sit at moderate directionality (d ≈ 0.5): they gain legitimacy and practical relevance from evaluating the constraint's legality, but they also bear costs if their validation enables human-rights violations.",
+    "perspectival_gap": "The payer and beneficiary seats should compute radically different types from structural data alone. From the Zionist political leadership and diaspora Jewish seats, the constraint appears as genuine rope (coordination of diaspora Jews into a protective sovereign body). From Palestinian Arab seats, it appears as pure snare or worse (enforced dispossession with no coordination benefit, only subordination). The engine computes these per-seat types from power, exit, directionality, and the authored beneficiary/victim structure; the authored claim (tangled_rope) sits between these poles. A tangled_rope requires BOTH coordination (the beneficiary part: solving diaspora Jewish insecurity) AND extraction (the victim part: Palestinian dispossession), both sustained by the same structure. This is exactly what political Zionism instantiates: it genuinely coordinates diaspora Jewish interests into a sovereign state, AND it genuinely extracts from Palestinian Arabs through land seizure and legal subordination. The same institutions (state administration, settlement planning, military) that create Jewish majority protection simultaneously dispossess Palestinians. This is not rope viewed from different angles—it is structural asymmetry, properly captured as tangled rope.",
+    "mandatrophy_analysis": "The founding problem (diaspora antisemitism) is contested as to its permanence and solution. By t=50, a significant body of evidence and analysis (historical documents, international law development, non-Zionist Jewish voices, Palestinian historical records) contests whether the founding problem actually required territorial majority statehood OR whether it could have been solved through legal reform, diaspora cultural nationalism, and international human-rights frameworks. This contestation is not trivial: it goes to the core justification for the constraint. A constraint whose founding problem is dead or solved but which persists for other reasons (territorial expansion, institutional inertia, power capture) would normally trigger mandatrophy. However, political Zionism's claim is that the founding problem is not dead—that diaspora antisemitism remains a live threat even after the Holocaust, and that a Jewish state with majority protection remains necessary. This is itself contested (some argue WWII lessons point toward international legal frameworks, others toward strengthened diaspora communities). The mandate has not fully atrophied because the threat narratives remain live, even as they shift. A piton diagnosis would require the founding problem to be clearly dead AND the constraint to persist through mere institutional inertia; here the constraint persists partly through renewed threat narratives and partly through institutional capture of state resources. This is tangled_rope with disputed mandate, not piton.",
+    "kernel_context": "This constraint instantiates the political_zionism_reading of the jewish_territorial_claim kernel. The kernel is contested: different Zionist movements (cultural Zionism, labor Zionism, revisionist Zionism) and non-Zionist Jewish movements offer different readings of what Jewish territorial claim requires. The political Zionism reading is distinguished by its prioritization of STATE-BUILDING over cultural content and its treatment of Palestinian Arabs as an obstacle to Jewish demographic majority—a transfer mechanism is considered necessary. Other readings (cultural Zionism, labor Zionism) emphasize cultural and social regeneration without necessarily requiring territorial majority or explicit displacement. The revisionist reading goes further than political Zionism, claiming maximalist territory (both banks of Jordan) and treating Arab resistance as an enemy to be broken by 'Iron Wall' military force. The political Zionism reading sits between cultural nationalism and revisionist maximalism: it insists on statehood and majority, but frames these as solutions to Jewish security rather than expressions of maximalist territorial ambition."
   },
+  "omegas": [
+    {
+      "id": "founding_problem_permanence",
+      "question": "Is antisemitism in the diaspora a permanent, structural condition that cannot be solved by legal reform and international law, or is it a contingent historical phenomenon that could be addressed through other mechanisms?",
+      "resolution_mechanism": "Post-WWII evolution of international human-rights frameworks, Holocaust impact on diaspora legal status, and empirical change in antisemitic violence over subsequent decades. Historical analysis of whether diaspora Jewish communities achieved security and acceptance without territorial majority statehood (as post-war diaspora communities did).",
+      "impact": "If antisemitism is contingent and solvable by legal/international reform, the founding problem is overestimated and the constraint's justification shifts from solving a permanent problem to pursuing territorial ambitions. If antisemitism is permanent, the constraint's mandate remains live and the coordination function (gathering diaspora Jews into majority-protected statehood) is vindicated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the founding problem (diaspora antisemitism) is permanent or contingent on historical conditions."
+    },
+    {
+      "id": "territorial_solution_necessity",
+      "question": "Is territorial sovereignty with demographic majority the ONLY viable structural solution to Jewish insecurity, or are alternative solutions (legal citizenship protections, cultural nationalism, diaspora institution-building, international law) structurally equivalent?",
+      "resolution_mechanism": "Comparative analysis of post-WWII diaspora Jewish communities and their legal/political security outcomes. Assessment of whether non-territorial solutions achieved the stated goal (protecting Jews from persecution and giving them voice in self-governance).",
+      "impact": "If territorial majority is necessary, political Zionism's claim is vindicated and the constraint is a genuine coordination response to an irreducible problem. If alternatives exist and work, the constraint becomes one choice among many—and the extraction from Palestinians becomes harder to justify as a necessary cost rather than an optional territorial acquisition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether territorial majority statehood is the only structurally viable solution or one option among alternatives."
+    },
+    {
+      "id": "palestinian_displacement_necessity",
+      "question": "Is population displacement or legal subordination of Palestinian Arabs a necessary consequence of achieving Jewish demographic majority, or could Jewish majority statehood coexist with Palestinian political and property rights?",
+      "resolution_mechanism": "Demographic and historical analysis of whether Jewish majority could be achieved through migration alone without land seizure from existing inhabitants. Assessment of whether political rights for Palestinian minorities are compatible with a constitutionally Jewish state.",
+      "impact": "If displacement is necessary, the extraction from Palestinians is a structural cost of the coordination solution—tangled rope with unavoidable asymmetry. If displacement is optional (achievable through voluntary migration on available land), the constraint becomes a choice to prioritize Jewish majority over Palestinian rights—collapsing from tangled rope into snare (pure extraction rationalized as coordination).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Palestinian displacement is structurally necessary or a contingent policy choice."
+    },
+    {
+      "id": "jewish_majority_permanence",
+      "question": "Is the requirement for permanent Jewish demographic majority a structural feature of Jewish security (because minorities are inherently vulnerable), or is it a territorial-maximalist claim layered onto the security frame?",
+      "resolution_mechanism": "Examination of whether Jewish minorities in diaspora were actually less secure than Jewish majorities in the state. Assessment of whether the requirement for 60%/70%/80% Jewish population is justified by security data or is driven by maximalist settlement ideology.",
+      "impact": "If majority is structurally necessary for security, political Zionism's claim stands. If majority is a maximalist ideological commitment, the constraint shifts toward revisionist Zionism and the justification becomes territorial expansion rather than Jewish protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Jewish demographic majority is a security requirement or a territorial-maximalist commitment."
+    },
+    {
+      "id": "reading_coexistence_vs_foreclosure",
+      "question": "Can political Zionism and Palestinian Arab nationalism coexist as live frameworks held by different parties, or does political Zionism's core logic (Jewish state with demographic majority) logically foreclose Palestinian statehood and self-determination?",
+      "resolution_mechanism": "Logical and political analysis of whether Jewish-majority-state requirements in the same territory leave room for Palestinian self-determination, or whether they necessarily foreclose it.",
+      "impact": "If they logically foreclose each other, the reading_relations should be 'forecloses' rather than 'coexists_with'. If they can theoretically coexist with different territorial arrangements or power-sharing, 'coexists_with' is correct.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this reading's core claims logically foreclose Palestinian nationalism or whether coexistence is theoretically possible."
+    }
+  ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
       "jewish_territorial_claim__labor_zionism_reading",
       "jewish_territorial_claim__cultural_zionism_reading",
       "jewish_territorial_claim__revisionist_zionism_reading",
-      "palestinian_national_self_determination_constraint",
-      "arab_nationalism_territorial_claims"
+      "palestinian_national_claim__arab_nationalism_reading"
     ],
-    "dual_formulation_note": "The jewish_territorial_claim kernel decomposes into four constraint stories, each instantiating a different reading of how Jewish settlement and statehood should relate to territorial, cultural, and political sovereignty. The political_zionism_reading prioritizes state-building and demographic majority; it influences (creates structural upstream pressure on) the revisionist_zionism_reading, which responds by demanding even more aggressive territorial and demographic claims to ensure majority. It coexists with the labor and cultural readings, which remain live alternative visions within the zionist movement but are structurally subordinated by the institutional apparatus following the political zionist priority. The epsilon values differ sharply: cultural_zionism is lower-extraction (seeking spiritual/cultural center without necessarily demographic majority or political sovereignty), labor_zionism has a different extraction target (productive transformation and class revolution), revisionist_zionism has higher extraction (demands of maximalist territory and forced Arab acceptance). This constraint also affects the palestinian_national_self_determination_constraint (they are in zero-sum territorial and political conflict) and arab_nationalism_territorial_claims (which oppose Jewish demographic majority in any territory the Arab world claims as part of its historical sphere)."
+    "dual_formulation_note": "The jewish_territorial_claim kernel is contested across four Zionist movements (cultural, labor, political, revisionist) and is incompletely specified—different readings assign different requirements to 'Jewish territorial claim'. This story instantiates the political Zionism reading: state-building with Jewish demographic majority, treating Palestinian Arabs as obstacles requiring management. Sibling readings emphasize cultural nationalism (without necessarily requiring majority), socialist labor movement (transformation through settlement), and revisionist maximalism (both banks of Jordan, Iron Wall). Each reading instantiates a different constraint with different ε, different beneficiary/victim structures, and different per-seat type computations. Links via affects_constraints document the constraint family and the empirical fact that changes in one reading's justification or implementation create structural pressure on the others (e.g., if Palestinian displacement becomes politically untenable, labor Zionism's settlement facts-on-ground strategy faces new constraints, and cultural Zionism gains legitimacy as a less extractive alternative). Palestinian nationalism is upstream: its emergence and claims directly constrain and challenge the political Zionism reading's operation."
   },
-  "omegas": [
+  "directionality_overrides": [
     {
-      "id": "founding_problem_scope_and_solution_fit",
-      "question": "Is European antisemitism and Jewish persecution a problem that can ONLY be solved by territorial sovereignty in Palestine with a Jewish demographic majority, or could Jewish security be achieved through other mechanisms (international protection, diaspora minority rights guarantees, cultural autonomy without statehood)?",
-      "resolution_mechanism": "Historical counterfactuals and comparative analysis: Did non-territorial Jewish communities (Diaspora, Autonomous Region schemes, cosmopolitan states) achieve similar security and self-determination outcomes? Did the territorial solution actually prevent recurrence of persecution, or did it create new conflicts? What do Jewish communities in liberal democracies report about their security and self-determination post-WWII?",
-      "impact": "If other mechanisms could have provided equivalent security, the political zionist reading's core claim—that statehood with demographic majority is necessary—is weakened, and the extraction of Palestinian territory becomes less justified as a necessary means and more apparent as a choice made among alternatives. If the territorial solution is indeed necessary, the extraction becomes a tragic necessity rather than an elective dominance.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether Jewish security required specifically territorial statehood or whether other mechanisms were viable."
+      "power_atom": "powerless",
+      "d_value": 0.88
     },
     {
-      "id": "demographic_majority_as_logical_requirement",
-      "question": "Is a Jewish demographic majority structurally necessary for a Jewish state to survive and provide security, or is it a contingent preference of political zionists that conflates security with dominance?",
-      "resolution_mechanism": "Comparative study of multiethnic and multicultural states: Which institutional designs (proportional representation, federal structures, consociational arrangements, minority rights protections) allow minority-group security and self-determination without requiring demographic majority? What would Israeli statehood with a Palestinian-majority or parity population require institutionally to guarantee Jewish security?",
-      "impact": "If demographic majority is not logically required for Jewish security (only institutional arrangements that guarantee minority rights and political participation), then the constraint's extraction—the displacement and dispossession of Palestinians to achieve majority—is a choice made for domination rather than necessity. If demographic majority is logically necessary (majority cannot guarantee minority rights without coercion), then the constraint's extraction becomes a tragic necessity embedded in the founding problem's structure.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether demographic majority is logically necessary for Jewish state security or a chosen preference."
-    },
-    {
-      "id": "transfer_mechanism_necessity_and_justice",
-      "question": "Is the 'transfer' of Arab population from Palestine (through displacement, refugee barring, property expropriation) a logically necessary mechanism to achieve a Jewish demographic majority, or is it a chosen mechanism that could be replaced by alternative arrangements (partition, return with power-sharing, voluntary population exchange)?",
-      "resolution_mechanism": "Demographic modeling: What population ratios would result from open immigration (Jewish) and return (Palestinian) under different scenarios? Would partition into separate territories allow both peoples to constitute majorities in their own spaces without transfer? What do international population transfers in other contexts (Greece-Turkey, India-Pakistan) tell us about whether transfers are necessary or chosen?",
-      "impact": "If transfer is not logically necessary (partition or power-sharing could achieve the constraint's aims), then treating Arab displacement as inevitable rather than chosen becomes a falsification—the constraint's operation relies on naturalizing a political choice as a demographic necessity. If transfer is logically necessary, it remains unjust but is framed as tragic rather than elective.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether Arab displacement is logically necessary to achieve the constraint's goals or a chosen mechanism."
-    },
-    {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is the suppression of Palestinian resistance and Arab opposition in the constraint's operation primarily structural (external barriers: legal codes, military force, territorial control) or has it become internalized in Palestinian self-perception and political culture (the constraint is accepted as inevitable, resistance is framed as futile)?",
-      "resolution_mechanism": "Post-separation analysis: If the constraint's external enforcement mechanisms were removed (military withdrawal, property rights restored, borders opened to return), would Palestinian resistance and opposition persist and intensify, or has internalized suppression become dominant? What do psychological studies of dispossessed populations and long-term occupation show about the internalization of coercion?",
-      "impact": "If suppression is primarily structural, the constraint could be reversed or reformed through removal of external mechanisms. If internalized, the constraint's persistence after external enforcement ends indicates that the emotional and cognitive colonization of Palestinian self-perception is the real extractive mechanism, and the constraint's effective suppression is higher than the 0.81 structural measure suggests.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether suppression of opposition is structural or internalized in Palestinian consciousness."
-    },
-    {
-      "id": "kernel_reading_foreclosure_or_coexistence",
-      "question": "Does the political zionist reading's core axiom ('Jewish_statehood_requires_demographic_majority') logically foreclose the cultural zionist and labor zionist readings, or do all three readings remain coherent within a single zionist framework despite their contradictions?",
-      "resolution_mechanism": "Logical analysis: Can a zionist framework hold that (a) a Jewish state must have a Jewish demographic majority AND (b) a Jewish cultural center without political sovereignty would suffice? Can the same movement pursue both state-building with demographic enforcement AND socialist transformation and 'conquest of labor' that might rely on Arab worker participation? If yes, they coexist; if no, one forecloses the other.",
-      "impact": "If the political zionist reading forecloses the cultural and labor readings, the constraint's type should shift toward a stronger dominance claim. If they coexist, then the institutional dominance of the political zionist reading is a contingent outcome (the movement could have chosen differently) rather than a logical necessity, which opens space for the constraint to be reformed or replaced by an alternative zionist arrangement.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether political Zionism forecloses or coexists with cultural and labor zionist readings."
+      "power_atom": "organized",
+      "d_value": 0.92
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "jewish_territorial_claim__labor_zionism_reading",
-      "jewish_territorial_claim__cultural_zionism_reading"
-    ]
-  },
+  "gain_flow": "zionist_political_leadership",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
     "kernel_codification": "formalized",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
+    "reference_frame": "diaspora_jewish_vulnerability_and_antisemitic_persecution",
+    "drift_state": {
+      "moment": "late_twentieth_century_human_rights_and_international_law_framework",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
     "reading_relations": [
       {
-        "sibling_id": "jewish_territorial_claim__cultural_zionism_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "jewish_territorial_claim__labor_zionism_reading",
-        "relation": "coexists_with"
-      },
-      {
-        "sibling_id": "jewish_territorial_claim__revisionist_zionism_reading",
+        "sibling_id": "cultural_zionism_reading",
         "relation": "influences"
+      },
+      {
+        "sibling_id": "labor_zionism_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "revisionist_zionism_reading",
+        "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "jewish_statehood_requires_demographic_majority",
+        "atom": "jewish_majority_state_prerequisite_for_diaspora_security",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "arab_population_obstacle_to_jewish_security",
+        "atom": "palestinian_population_obstacle_to_jewish_statehood",
         "role": "foundational",
         "status": "holdable",
-        "grounding_type": "empirically_contingent"
+        "grounding_type": "deontological"
       }
-    ],
-    "reference_frame": "jewish_diaspora_persecuted_european",
-    "drift_state": {
-      "moment": "established_state_1950",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    }
+    ]
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

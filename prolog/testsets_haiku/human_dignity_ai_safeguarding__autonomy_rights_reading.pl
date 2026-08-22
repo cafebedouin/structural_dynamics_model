@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-12
+% Generated: 2026-06-11
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -44,6 +44,12 @@
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -71,33 +78,31 @@
  *   domain: theological/philosophical/technological
  *
  * SUMMARY:
- *   This constraint instantiates ONE READING of the contested kernel
- *   'human_dignity_ai_safeguarding': the autonomy-rights reading grounds
- *   dignity in demonstrable human capacities (rational agency, autonomy,
- *   rights-bearing status) rather than in metaphysical claims (divine image)
- *   or in posthuman potentiality (transhumanist enhancement vision).
- *   Regulatory frameworks aligned with this reading prioritize transparency,
- *   informed consent, labor protection, and cautious enhancement within
- *   rights-respecting constraints. The reading is coordinating (solves a
- *   genuine collective-action problem in global AI governance by providing a
- *   secular, pluralistic foundation) but asymmetrically extractive:
- *   enhancement-seekers and frontier-capability researchers bear significant
- *   compliance and opportunity costs while transparency-advocates and
- *   labor-protection bodies gain institutional legitimacy and veto power.
- *   Suppression is moderate: the constraint's enforcement depends on actively
- *   restraining enhancement research and transhumanist voices from
- *   co-authoring the framework's foundational premises, but does not require
- *   continuous coercion of individuals—the suppression is architecturally
- *   embedded in whose epistemic voice counts.
+ *   This constraint instantiates one reading of the contested kernel of human
+ *   dignity in the context of AI governance. The autonomy-rights reading
+ *   grounds dignity in human rational agency, informed consent, and
+ *   irreducible decision-making authority—NOT in divine image (imago dei
+ *   reading) and NOT in a transhumanist envelope that decouples dignity from
+ *   human baseline (posthumanist reading). Under this reading, AI
+ *   safeguarding centers on protecting autonomy through transparency
+ *   requirements, consent protocols, labor classification rules, and
+ *   enhancement approval gates. The regulatory infrastructure benefits human
+ *   rights advocates, labor protection coalitions, and regulatory authorities
+ *   who control the frame; it extracts compliance costs from AI development
+ *   firms and structurally excludes faith communities and posthumanist
+ *   advocates from the foundational moral conversation. The claim is
+ *   tangled_rope: genuine coordination function (establishing shared
+ *   governance vocabulary) coupled with asymmetric extraction (redistribution
+ *   of authority and compliance burden) requiring active enforcement
+ *   (regulatory machinery and enhanced-scope auditing).
  *
  * KEY AGENTS:
- *   - liberal_rights_tradition (institutional agenda-setter): sets autonomy-rights framing; derives legitimacy from Enlightenment philosophy and international human rights law; enforces through regulation, law, and institutional gatekeeping
- *   - transparency_advocates (organized beneficiary): win regulatory mandates requiring algorithmic disclosure; benefit from systematic recognition of human autonomy as dignity-protection claim
- *   - labor_protection_constituency (organized beneficiary): gain worker-safeguarding regulations framed as dignity protection; institutional position legitimated by the framework
- *   - enhancement_seeking_individuals (moderate-power payer, identity-locked exit): experience the constraint as limit on self-modification aspiration; cannot exit jurisdictions without losing rights protections
- *   - experimental_ai_research (powerful-but-payer arbitrager): pay compliance costs within rights-respecting jurisdictions; exit to unregulated zones when overhead becomes unsustainable
- *   - transhumanist_constituencies (excluded, identity-locked): structurally prevented from co-authoring framework; their central vision (human transcendence through capability expansion) is foreclosed by the framework's dignity definition
- *   - imago_dei_advocates (excluded, mobile exit): religious traditions with different dignity grounding; can live according to their own standards but framework does not recognize their reading as legitimate in global governance
+ *   - human_rights_advocates: beneficiary institutional actors controlling the autonomy-rights frame
+ *   - regulatory_authorities: agenda-setter institutions enforcing the framework
+ *   - ai_development_firms: powerful institutional payers bearing compliance overhead
+ *   - faith_communities: excluded organized actors holding imago_dei reading (identity-locked)
+ *   - posthumanist_scholars: excluded organized advocates for capability-agnostic dignity
+ *   - affected_workers_and_subjects: nominally protected but powerless beneficiary-payers
  */
 
 /* ==========================================================================
@@ -105,18 +110,18 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.38).
-domain_priors:suppression_score(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.42).
-domain_priors:theater_ratio(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.28).
+domain_priors:base_extractiveness(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.58).
+domain_priors:suppression_score(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.52).
+domain_priors:theater_ratio(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.38).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, extractiveness, 0.38).
-narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 0.42).
-narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, extractiveness, 0.58).
+narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 0.38).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, accessibility_collapse, 0.72).
-narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, resistance, 0.58).
+narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, accessibility_collapse, 0.62).
+narrative_ontology:constraint_metric(human_dignity_ai_safeguarding__autonomy_rights_reading, resistance, 0.68).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(human_dignity_ai_safeguarding__autonomy_rights_reading, tangled_rope).
@@ -126,46 +131,119 @@ narrative_ontology:topic_domain(human_dignity_ai_safeguarding__autonomy_rights_r
 domain_priors:requires_active_enforcement(human_dignity_ai_safeguarding__autonomy_rights_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(human_dignity_ai_safeguarding__autonomy_rights_reading, 'f011a40e-dc7e-4677-b841-1116c3d7dd6e').
-narrative_ontology:cs_kernel_codification('f011a40e-dc7e-4677-b841-1116c3d7dd6e', formalized).
-narrative_ontology:cs_authority_grounding('f011a40e-dc7e-4677-b841-1116c3d7dd6e', lineage).
-narrative_ontology:cs_interpretation_layer_present('f011a40e-dc7e-4677-b841-1116c3d7dd6e').
-narrative_ontology:cs_reading_relation('f011a40e-dc7e-4677-b841-1116c3d7dd6e', human_dignity_ai_safeguarding__imago_dei_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f011a40e-dc7e-4677-b841-1116c3d7dd6e', human_dignity_ai_safeguarding__posthumanist_reading, influences).
-narrative_ontology:cs_axiom('f011a40e-dc7e-4677-b841-1116c3d7dd6e', foundational, human_rationality_as_dignity_ground).
-narrative_ontology:cs_axiom_status(human_rationality_as_dignity_ground, holdable).
-narrative_ontology:cs_axiom_grounding('f011a40e-dc7e-4677-b841-1116c3d7dd6e', human_rationality_as_dignity_ground, empirically_contingent).
-narrative_ontology:cs_axiom('f011a40e-dc7e-4677-b841-1116c3d7dd6e', foundational, autonomy_as_necessary_dignity_protection).
-narrative_ontology:cs_axiom_status(autonomy_as_necessary_dignity_protection, holdable).
-narrative_ontology:cs_axiom_grounding('f011a40e-dc7e-4677-b841-1116c3d7dd6e', autonomy_as_necessary_dignity_protection, deontological).
-narrative_ontology:cs_reference_frame('f011a40e-dc7e-4677-b841-1116c3d7dd6e', enlightenment_secular_dignity_framework).
-narrative_ontology:cs_drift_state('f011a40e-dc7e-4677-b841-1116c3d7dd6e', contemporary_posthuman_challenge_era, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('f011a40e-dc7e-4677-b841-1116c3d7dd6e', '').
+narrative_ontology:cs_story_uid(human_dignity_ai_safeguarding__autonomy_rights_reading, 'fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb').
+narrative_ontology:cs_kernel_codification('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', formalized).
+narrative_ontology:cs_authority_grounding('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', extraction).
+narrative_ontology:cs_interpretation_layer_present('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb').
+narrative_ontology:cs_reading_relation('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', human_dignity_ai_safeguarding__imago_dei_reading, coexists_with).
+narrative_ontology:cs_reading_relation('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', human_dignity_ai_safeguarding__posthumanist_reading, coexists_with).
+narrative_ontology:cs_axiom('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', foundational, dignity_grounded_in_autonomy).
+narrative_ontology:cs_axiom_status(dignity_grounded_in_autonomy, holdable).
+narrative_ontology:cs_axiom_grounding('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', dignity_grounded_in_autonomy, deontological).
+narrative_ontology:cs_axiom('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', foundational, rationality_consent_as_dignity_expression).
+narrative_ontology:cs_axiom_status(rationality_consent_as_dignity_expression, holdable).
+narrative_ontology:cs_axiom_grounding('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', rationality_consent_as_dignity_expression, deontological).
+narrative_ontology:cs_reference_frame('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', enlightenment_secular_dignity_framework).
+narrative_ontology:cs_drift_state('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', contemporary_ai_governance_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('fc3b8118-b1b0-4d80-8b6b-8df25c2b3bcb', '').
 narrative_ontology:cs_kernel_id(human_dignity_ai_safeguarding__autonomy_rights_reading, human_dignity_ai_safeguarding).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, transparency_advocates).
-narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, labor_protection_constituency).
-narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, liberal_rights_tradition).
-narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, enhancement_seeking_individuals).
-narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, experimental_ai_research_programs).
-narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, transhumanist_constituencies).
+narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, human_rights_advocates).
+narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, regulatory_authorities).
+narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, labor_protection_coalitions).
+narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, ai_development_firms).
+narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, enhancement_seekers).
+narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, innovation_marginalized).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(human_dignity_ai_safeguarding__autonomy_rights_reading, affected_workers_and_subjects).
+narrative_ontology:constraint_victim(human_dignity_ai_safeguarding__autonomy_rights_reading, affected_workers_and_subjects).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Institutional human rights organizations, disability justice advocates, and labor unions that frame AI safeguarding through autonomy protection, consent requirements, and labor dignity. They benefit from regulatory frameworks that mandate transparency, worker protections, and enhancement consent gates. They control the framing of 'dignity' as rights-based rather than capability-based or faith-based. Their institutional power comes from coordinating across jurisdictions and from the perceived legitimacy of rights-based frameworks in secular governance.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, human_rights_advocates, beneficiary,
+    organized, generational, arbitrage, global).
+
+% National and supranational regulatory bodies (EU, national labor ministries, data protection authorities) that enforce the autonomy-rights framework through impact assessments, consent protocols, labor classification rules, and enhancement approval gates. They set and administer the constraint; their legitimacy depends on the reading's coherence as a safeguard mechanism. They allocate resources to enforcement, define compliance standards, and decide which alternative readings (imago dei, posthumanist) count as 'exemptions' vs. substantive policy alternatives.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, regulatory_authorities, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Commercial AI development, deployment, and enhancement firms that bear compliance costs: impact assessments, consent infrastructure, labor reclassification, enhancement review boards, transparency obligations. They argue the framework treats human autonomy as the sole legitimate grounding for dignity, foreclosing other readings (faith-based, posthumanist) and imposing disproportionate cost on innovation. They have significant market power globally but constrained exit from the autonomy-rights framework because most major markets now enforce it.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, ai_development_firms, payer,
+    institutional, biographical, constrained, global).
+
+% Individuals and transhumanist advocates who seek cognitive or physical enhancement beyond human baseline. The autonomy-rights reading treats their autonomy to enhance as requiring special justification (enhancement review boards) rather than as an expression of autonomy itself. They are nominally included in consent protocols but structurally excluded from the moral frame. Some can exit through unregulated jurisdictions; others (workers, soldiers, marginalized people) cannot easily access enhancement outside the regulated frame and experience double-constraint.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, enhancement_seekers, payer,
+    powerful, biographical, mobile, global).
+narrative_ontology:stakeholder_secondary_role(human_dignity_ai_safeguarding__autonomy_rights_reading, enhancement_seekers, excluded).
+
+% Smaller firms, academic labs, and open-source communities in jurisdictions with less enforcement capacity, who carry compliance overhead disproportionately. Large firms can afford compliance infrastructure; small firms cannot. Regulatory arbitrage favors institutional players and entrenches incumbent power while appearing to protect human dignity neutrally. Innovation is geographically constrained to high-compliance regions or unregulated margins.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, innovation_marginalized, payer,
+    moderate, biographical, constrained, regional).
+
+% Religious communities grounding human dignity in imago dei or divine commissioning. They find the autonomy-rights framework excludes their reading from regulatory conversation. Their objections to certain enhancements (genetic modification, synthetic personhood) or AI applications (surveillance, labor displacement) are reframed as 'religious exemptions' rather than substantive alternative dignity grounds. Their voice is structurally marginalized in governance even when their stakes are highest (members are affected by AI systems designed under a dignity framework they do not endorse).
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, faith_communities, excluded,
+    organized, civilizational, identity_locked, global).
+
+% Philosophers, technologists, and disability scholars arguing that dignity is not tied to human baseline but to personhood however constituted (synthetic minds, uploaded consciousness, radically enhanced agents). They are excluded from the autonomy-rights framework's foundational premises and relegated to 'future consideration' in regulatory design. Their concerns about extending dignity to non-human but person-like minds become increasingly urgent as AI develops sentience-like properties, but governance remains structured around the autonomy-rights human baseline.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, posthumanist_scholars, excluded,
+    organized, generational, mobile, global).
+
+% Workers displaced by AI, individuals subject to AI-driven labor scheduling and optimization, people in AI training datasets (data labelers, content moderators, people whose images are in training data). Nominally protected by labor dignity safeguards and consent requirements for data use. But they often lack real exit options and effective participation in governance structures that set the framework. They benefit from worker protections and consent protocols but pay hidden costs: wage compression as firms pass compliance burden to labor, exclusion from enhancement that might enhance their capabilities, and lack of voice in the regulatory bodies that decide what 'dignity' requires of their labor.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, affected_workers_and_subjects, beneficiary,
+    powerless, biographical, trapped, global).
+narrative_ontology:stakeholder_secondary_role(human_dignity_ai_safeguarding__autonomy_rights_reading, affected_workers_and_subjects, payer).
+
+% Christian, Islamic, Jewish, and other religious institutional actors holding that human dignity is grounded in divine image and not dependent on autonomy, rationality, or capability. Their framework protects dignity across all cognitive and capability states (fetal, severely disabled, unconscious persons). Excluded from the autonomy-rights regulatory frame, forced to negotiate 'accommodation' of their positions rather than having their foundational premise centered. Their reading's implications for AI (different enhancement ethics, different labor frameworks, different protection for all humans irrespective of autonomy) are treated as sectarian preferences rather than substantive alternatives.
+narrative_ontology:constraint_stakeholder(human_dignity_ai_safeguarding__autonomy_rights_reading, imago_dei_proponents, excluded,
+    powerful, civilizational, identity_locked, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(human_dignity_ai_safeguarding__autonomy_rights_reading, regulatory_authorities).
+narrative_ontology:fixing_cost_class(human_dignity_ai_safeguarding__autonomy_rights_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a shared vocabulary for AI governance grounded in human autonomy, consent, and rights protection. Enables regulatory coherence across jurisdictions by centering autonomy as the uncontested ground for dignity. Coordinates labor protection, enhancement review, and data governance under one framework rather than leaving each domain fragmented.
+% TRANSFER_FUNCTION: Transfers authority to regulate AI development and enhancement from technologists and faith communities to human rights institutions and labor-centered regulatory bodies. Transfers compliance burden from regulatory authorities to AI firms, who pay for impact assessments, consent infrastructure, and enhancement review. Transfers the legitimacy of framing 'dignity' itself from contested metaphysical grounds to the autonomy-rights framework.
+% ABSENT_VOICES: Faith communities grounding dignity in imago dei are structurally excluded: their framework is treated as a 'religious exemption' rather than a substantive alternative dignity ground. Posthumanist advocates arguing dignity is not tied to human baseline are relegated to future consideration. Transhumanist enhancement advocates are nominally included in consent but structurally excluded from the moral frame that defines what 'human dignity' permits. Affected workers and data subjects have nominal representation through labor unions but limited real participation in governance structures.
+% DISAPPEARANCE_RATIONALE: If this autonomy-rights framework vanished, AI governance would reorganize under alternative dignity grounds—faith-based frameworks would re-enter regulatory design, posthumanist readings would govern enhancement, and commercial AI firms would face radically different compliance expectations. The entire infrastructure of labor protection, impact assessment protocols, and consent gates rests on this reading's legitimacy as THE ground for dignity; its disappearance would require rebuilding governance from first principles.
+% FOUNDING_PROBLEM: Rapid AI development without principled safeguards for human dignity, autonomy, and consent. Early AI applications treated humans as inputs rather than agents with irreducible dignity and decision-making authority. Labor displacement and enhancement pressure created conditions where human autonomy was systematically subordinated to technical capability and commercial interest.
+% FOUNDING_PROBLEM_CORROBORATION: Human rights organizations and labor advocates attest the founding problem remains live: AI systems still routinely operate without meaningful consent, labor displacement continues, enhancement pressure on workers grows. AI firms and transhumanist advocates contest the problem formulation, arguing the autonomy-rights frame mislabels coordination problems as dignity violations. Faith communities attest the problem statement omits foundational dignity grounds (imago dei) that would reframe the whole governance structure. Academic research on AI harm documents continued autonomy violations; policy analyses from non-aligned sources (technology studies, disability justice) corroborate the problem under alternative framings, not universally confirming the autonomy-rights reading as the sole legitimate one.
+narrative_ontology:disappearance_verdict(human_dignity_ai_safeguarding__autonomy_rights_reading, world_rearranges).
+narrative_ontology:founding_problem_status(human_dignity_ai_safeguarding__autonomy_rights_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(human_dignity_ai_safeguarding__autonomy_rights_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(human_dignity_ai_safeguarding__autonomy_rights_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(human_dignity_ai_safeguarding__autonomy_rights_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.58, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(human_dignity_ai_safeguarding__autonomy_rights_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(human_dignity_ai_safeguarding__autonomy_rights_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
 :- end_tests(human_dignity_ai_safeguarding__autonomy_rights_reading_tests).
 
 /* ==========================================================================
@@ -174,16 +252,16 @@ narrative_ontology:story_seed(human_dignity_ai_safeguarding__autonomy_rights_rea
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.38 at interval end) because the constraint coordinates real governance-function (avoiding capability race, protecting worker agency) while simultaneously transferring decision-making power from researchers to regulators and opportunity costs from rights-constituencies to enhancement-seekers. Suppression is moderate-rising (0.25→0.42) because enforcement initially centers on positive mandates (transparency, consent procedures) but over time requires increasing active restraint of enhancement research directions and transhumanist legitimacy claims that threaten the framework's foundational assumption (dignity = rationality). Theater is low-moderate (0.28): the transparency and consent procedures are functionally real, but a growing portion of enforcement effort defends the framework's exclusion of competing dignity readings rather than serving the human-protection function directly. The measurement series show suppression rising and extractiveness plateauing as the regime matures—the coordination function is stable but the cost of maintaining framework-epistemic closure (preventing transhumanist and imago-dei readings from becoming co-legitimate) increases over time.
+ *   Extractiveness begins at 0.38 (early enforcement of a contested frame) and rises to 0.58 by interval end (as the autonomy-rights reading consolidates regulatory authority). The constraint starts as coordination (establishing governance coherence) but increasingly operates as authority redistribution—regulatory bodies consolidate power to define 'dignity' itself, excluding alternative metaphysical grounds. Suppression is moderate (0.52 at interval end) because the framework is maintained not primarily through coercion but through interpretive authority: faith communities and posthumanist advocates are not legally barred from their readings but are structurally prevented from centering them in AI governance. Theater rises from 0.25 to 0.38 (modest trajectory): compliance performances (impact assessments, consent protocols) are partly real safeguards and partly legitimation theater for the regulatory apparatus itself. Accessibility collapse is moderate (0.62): alternatives exist (imago dei, posthumanist readings) but are treated as marginal 'exemptions' rather than substantive options, making the autonomy-rights frame appear inevitable. Resistance is relatively high (0.68) because faith communities, transhumanist advocates, and some technologists actively resist the frame—they do not see it as natural law but as a contingent choice that forecloses other legitimate dignity grounds.
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter and beneficiary seats should compute as experiencing genuine coordination; payer seats (researchers, enhancement-seekers) should compute as experiencing enforced extraction with constrained exit. The transparency_advocates and labor constituencies benefit from the legitimacy apparatus itself—the constraint vindicates their institutional role as dignity-protectors. The enhancement-seekers experience the same rules as a ceiling on their own rational choices, enforced by others' conception of what dignity permits. The engine computes this divergence from the power/exit/beneficiary structural data; the divergence is the measurement the analysis exists to take.
+ *   The regulatory authority and human rights beneficiary seats experience this as genuine coordination: establishing a stable, principled framework for AI governance grounded in widely-shared commitment to human autonomy. The AI firm and innovation-marginalized seats experience extraction: compliance burden, constrained enhancement pathways, and exclusion from the authority to define 'dignity.' Faith communities and posthumanist advocates experience exclusion rather than coordination or extraction: their foundational premises are treated as out-of-bounds rather than as legitimate alternatives that might reshape the entire framework. The engine computes this asymmetry from the structural data (different power levels, exit options, and roles), revealing why the same constraint reads as coordination from the seat that benefits from the frame and as extraction from seats that must comply or resist.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality derivation: liberal_rights_tradition (agenda_setter + institutional power + arbitrage exit = high d toward beneficiary end); transparency_advocates (organized beneficiary + mobile exit = low d); labor_protection (organized beneficiary + constrained exit but benefiting from institutional legitimacy = low-moderate d); enhancement_seekers (moderate power + identity_locked exit + victim group = high d toward target end); researchers (powerful but payer + arbitrage exit via relocation = moderate d, mobile enough to avoid full-target status but still bearing primary compliance costs); transhumanists (moderate power + identity_locked + excluded voice = high d target-side, but secondary effect: they are excluded, so the constraint does not govern them directly—they are prevented from participating in norm-setting, not from living according to their own standards).
+ *   Beneficiaries (human rights advocates, regulatory authorities, labor-center coalitions) get d near 0.2-0.3 (they control the frame, set the rules, collect legitimacy and institutional authority). Victims (AI firms, innovation-marginalized) get d near 0.7-0.8 (they must comply or exit; compliance is costly; exit means losing markets). Excluded actors (faith communities, posthumanist advocates) get d near 0.75 (they are structurally prevented from centering their readings, even if nominally included in consultation). Affected workers get d near 0.65 (nominally protected but powerless to reshape the framework, bearing hidden costs through wage compression). The directionality distribution reflects how authority-redistribution works: the reading that frames 'dignity itself' benefits from institutional backing and costs almost nothing to enforce for those who already agree; everyone else either pays compliance costs or bears the cost of being excluded from the conversation that defines the terms.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint avoids mandatrophy (founding problem → dead problem → inert apparatus) by design: the founding problem 'how do we coordinate global AI governance on dignity protections without sectarian metaphysics' remains live because the governance apparatus must continuously defend itself against alternative dignity readings (imago-dei, posthumanist) seeking to capture the framework. The mandate has not outlived its function; rather, the constraint's persistence depends on continuous enforcement of exclusion. This is the difference between a snare (victim voices are suppressed and the constraint persists) and a tangled_rope (coordination function is real but requires active enforcement to maintain asymmetric extraction in a contested domain). If the suppression stopped—if transhumanist and imago-dei readings were admitted as co-legitimate—the framework would either dissolve or transform into a different constraint entirely (a rope with multiple dignity readings, or a bundle of separate constraints per reading). The fact that continuous enforcement is required to maintain framework-epistemic closure is what makes this tangled_rope, not rope.
+ *   The autonomy-rights framework was founded to solve a real problem: AI systems operating without human consent, labor displacement without dignity protections, enhancement pressure subordinating autonomy to capability. The founding problem remains live (AI still operates without meaningful consent, labor still displaced), but the governance response has acquired extractive characteristics—regulatory consolidation of authority to define 'dignity,' exclusion of alternative readings, compliance cost redistribution. The constraint is NOT yet mandatrophic (it still serves its founding function), but it shows early signs: theater rising as the framework becomes increasingly about legitimating regulatory authority rather than protecting concrete autonomy; faith communities and posthumanist advocates increasingly outside the conversation despite their stakes being high. Mandatrophy would occur if the framework persisted primarily to maintain regulatory authority while alternative safeguarding approaches (faith-based, enhancement-permissive) could solve the founding problem equally well. The corpus should track whether the autonomy-rights reading consolidates into a monopoly frame (mandatrophy) or whether competing readings (imago dei, posthumanist) eventually reshape governance at equal standing.
  */
 
 /* ==========================================================================
@@ -191,92 +269,102 @@ narrative_ontology:story_seed(human_dignity_ai_safeguarding__autonomy_rights_rea
    ========================================================================== */
 
 omega_variable(
-    autonomy_vs_metaphysical_dignity,
-    'Can a dignity framework grounded in human rationality and autonomy withstand challenges that rationality is contingent, historical, and not universally present (infants, persons with cognitive disabilities, persons in altered consciousness states)? Or does dignity require a non-contingent foundation (like imago-dei)?',
-    'Philosophical analysis of whether capabilities-based dignity can be extended consistently to non-rational persons without retreating to a metaphysical backup; empirical study of how liberal rights frameworks actually protect non-autonomous populations and whether they rely on hidden metaphysical commitments.',
-    'If rationality is shown to be an insufficient or incoherent grounding for universal dignity, the framework''s legitimacy rests on unstated metaphysical premises it claims to avoid. If capabilities-based dignity can be made coherent and inclusive, the autonomy-rights reading strengthens against the imago-dei challenge.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(autonomy_vs_metaphysical_dignity, conceptual, 'Whether autonomy-based dignity is conceptually sufficient or relies on hidden metaphysical assumptions.').
-
-omega_variable(
-    enhancement_foreclosure_vs_liberation,
-    'Does restraining human enhancement protect human dignity (by preventing loss of autonomy to technological determinism), or does it violate dignity by denying individuals rational self-modification choices?',
-    'Empirical study of enhancement outcomes in unregulated jurisdictions and their effects on autonomy and dignity; philosophical analysis of whether autonomy includes the right to transcend one''s current capacities; comparative analysis of individual outcomes in high-regulation vs. permissive enhancement regimes.',
-    'If enhancement is shown to preserve or expand autonomy, the framework''s restraint becomes extractive forelosure rather than protective limitation. If enhancement erodes autonomy through technological path-dependency, the restraint is protective. The resolution determines whether the constraint''s suppression of enhancement is dignity-protecting or dignity-violating.',
+    autonomy_sufficiency_for_dignity,
+    'Is human autonomy alone sufficient to ground dignity, or does dignity require additional foundations (imago dei, inherent worth independent of capability)?',
+    'Empirical test: do regulatory safeguards grounded in autonomy-rights adequately protect human dignity in cases where autonomy is compromised (infants, severely disabled persons, unconscious individuals)? Normative analysis: do alternative dignity readings offer better protections than autonomy-rights for populations without decision-making capacity?',
+    'If autonomy proves insufficient, the regulatory framework must broaden to accommodate non-autonomy-based dignity grounds (imago dei, inherent personhood), which would require reshaping AI governance and expansion of protected statuses. The entire reading would shift from foundational to supplementary.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(enhancement_foreclosure_vs_liberation, empirical, 'Whether enhancement restraint protects or violates autonomy-based dignity.').
+narrative_ontology:omega_variable(autonomy_sufficiency_for_dignity, conceptual, 'Whether autonomy can serve as a universal, sufficient ground for human dignity or requires supplementation.').
 
 omega_variable(
-    suppression_structural_vs_internalized,
-    'Is the measured suppression (preventing enhancement research, excluding transhumanist voices) maintained primarily by structural barriers (institutional gatekeeping, regulatory exclusion) or by internalized acceptance of the autonomy-rights dignity frame?',
-    'Post-exit trajectory analysis: enhancement-seekers and transhumanist researchers who relocate to unregulated zones—do their aspirations persist (suppression was structural) or fade (suppression has internalized)? Do transhumanist intellectual communities persist and thrive in private discourse, or do they decline because the frame has been internalized globally?',
-    'If suppression is primarily structural, it is theoretically reversible through changing institutions while maintaining the framework. If substantially internalized, the suppression persists even after institutional barriers dissolve and may require active counter-education to reverse. This affects the constraint''s long-term sustainability: structural suppression can be challenged through institutional reform; internalized suppression is more stable (in favor of the constraint) and more difficult to dislodge.',
+    faith_community_exclusion_mechanism,
+    'Is the structurally-excluded position of faith communities (identity_locked, treated as ''accommodations'') a design feature that protects secular governance from sectarian capture, or an unjustified exclusion that prevents legitimate alternative dignity grounds from reshaping policy?',
+    'Comparative institutional analysis: do jurisdictions that center imago dei or pluralistic dignity grounds alongside autonomy-rights produce better outcomes (less labor extraction, more inclusive governance, broader protection)? Democratic legitimacy analysis: do affected faith communities experience the exclusion as justified neutral governance or as discriminatory?',
+    'If exclusion is unjustified, the reading must be reformulated to pluralize dignity grounds, which would radically reshape AI governance and regulatory authority distribution. If justified, the reading stands but faces persistent contestation from excluded parties.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(faith_community_exclusion_mechanism, preference, 'Whether faith-community exclusion from the founding premises is justified by secular governance requirements or represents illegitimate marginalization.').
+
+omega_variable(
+    regulatory_capture_risk,
+    'Does the autonomy-rights reading''s consolidation of regulatory authority over the definition of ''dignity'' create conditions for regulatory capture, where the apparatus maintains the frame to sustain its own power rather than to protect actual autonomy?',
+    'Monitor theater_ratio trajectory and suppression_requirement intensity: rising theater with stable suppression indicates performative maintenance. Track whether alternative readings (faith-based, posthumanist) gain governance standing or are increasingly formalized as ''exemptions.'' Examine whether regulatory bodies actually maximize autonomy protection or primarily maximize their own interpretive authority.',
+    'If capture is diagnosed, the reading is reclassified from tangled_rope (genuine coordination with asymmetric extraction) to snare (pure extraction dressed as coordination), which would trigger mandatrophy analysis and demand fundamental governance restructuring.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Whether the constraint''s suppression is maintained by institutional gatekeeping or by internalized frame acceptance.').
+narrative_ontology:omega_variable(regulatory_capture_risk, empirical, 'Whether the regulatory apparatus is using the autonomy-rights frame to protect human dignity or to consolidate institutional power.').
 
 omega_variable(
-    contested_kernel_forelosure_risk,
-    'This reading (autonomy-rights) claims to provide secular, pluralistic dignity grounding, but does it actually foreclose the imago-dei and posthumanist readings by defining them as non-legitimate voices, rather than coordinating across them?',
-    'Examine the international governance apparatus''s treatment of imago-dei and posthumanist advocacy: are they welcomed as legitimate alternative readings of dignity, or are they excluded from official deliberation and framed as non-serious? Do the governance bodies treat this as a pluralistic framework accommodating multiple readings, or as a universal framework that admits no legitimate rivals?',
-    'If the autonomy-rights reading claims pluralism but actually operates as exclusion, the constraint is more extractive and less coordinating than authored. If it genuinely accommodates multiple readings in deliberative space, it is more purely coordinating. This is a kernel-level question about whether the framework is what it claims to be.',
-    confidence_without_resolution(high)
+    posthumanist_alternative_viability,
+    'Is the posthumanist reading (dignity decoupled from human baseline, available to enhanced or synthetic persons) a genuine alternative safeguarding approach that could adequately protect human dignity under different axioms, or does it foreclose critical protections by uncoupling dignity from human-specific vulnerabilities?',
+    'Normative analysis of posthumanist frameworks: do they generate adequate protections for labor rights, informed consent, and autonomy across a broader constituency (synthetic minds, enhanced agents)? Empirical comparison: where posthumanist governance has been piloted, what happens to protection outcomes for traditional humans and for enhanced agents?',
+    'If posthumanist is viable, the autonomy-rights reading is one among competing legitimate frames, not THE ground for dignity—which would require governance pluralization and reduced regulatory consolidation. If not viable, the autonomy-rights reading''s exclusion of posthumanism is justified, but the frame still faces the faith-community exclusion problem (omega 2).',
+    confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(contested_kernel_forelosure_risk, empirical, 'Whether the autonomy-rights reading coordinates across dignity conceptions or forecloses legitimate rivals while claiming pluralism.').
+narrative_ontology:omega_variable(posthumanist_alternative_viability, conceptual, 'Whether posthumanist dignity readings can serve as a substantive alternative to autonomy-rights in AI governance.').
 
 omega_variable(
-    research_arbitrage_sustainability,
-    'How long can experimental AI research sustain arbitrage between high-regulation and low-regulation jurisdictions before global regulatory harmonization eliminates the exit option?',
-    'Monitor international AI governance negotiations, track research relocation patterns, assess whether emerging technology powers (China, India, others) adopt autonomy-rights frameworks or maintain independent regulations. If harmonization occurs, the powerful-but-arbitraging researcher seat becomes trapped.',
-    'If arbitrage exit closes, researchers move from payer→trapped and extraction increases substantially (effective d moves toward 1.0). If multiple regulatory frameworks persist globally, arbitrage remains viable and extraction stays moderate. Closure of arbitrage also increases suppression_requirement (more enforcement needed to contain capability race across jurisdictions).',
+    worker_extraction_via_compliance,
+    'How much of the compliance cost for autonomy-rights protections is actually borne by affected workers (through wage compression, schedule intensity, or exclusion from enhancement) rather than distributed across firm margin?',
+    'Labor economics analysis: compare wage trajectories, benefits, and scheduling intensity for workers in high-compliance vs. low-compliance regimes, controlling for sector. Track how firms allocate compliance costs (reduced executive compensation, reduced R&D, or reduced worker compensation).',
+    'If workers bear most compliance costs, the constraint''s structure is more extractive than currently measured: workers are simultaneously beneficiary (protected by labor safeguards) and victim (pay the cost of protection). The directionality for workers would shift upward (higher d), revealing hidden extraction. If firms bear most costs, the current directionality stands.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(research_arbitrage_sustainability, empirical, 'Whether researcher arbitrage exit remains viable or closes through global regulatory convergence.').
+narrative_ontology:omega_variable(worker_extraction_via_compliance, empirical, 'Whether autonomy-rights protections are extracting from workers through hidden compliance-cost redistribution.').
+
+omega_variable(
+    committer_reading_indeterminacy,
+    'Does the autonomy-rights reading of the human-dignity kernel emerge from principled philosophical argument or from institutional power dynamics favoring secular regulatory authority and marginalizing faith-based alternatives?',
+    'Genealogical analysis: trace how the autonomy-rights reading consolidated governance standing. Compare its epistemic warrant (philosophical rigor, empirical evidence) to imago dei and posthumanist alternatives. Examine whether the reading''s dominance correlates with regulatory apparatus growth or with philosophical superiority.',
+    'If the reading is philosophically justified despite excluding alternatives, the exclusion is still problematic (omega 2) but the frame''s core is defensible. If the reading''s dominance correlates primarily with institutional power, the entire constraint becomes suspect as a reading masquerading as universal principle—reclassifying from tangled_rope to snare (pure extraction).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(committer_reading_indeterminacy, conceptual, 'Whether the autonomy-rights reading''s dominance reflects its philosophical merits or regulatory apparatus consolidation.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(human_dignity_ai_safeguarding__autonomy_rights_reading, 0, 30).
+narrative_ontology:interval(human_dignity_ai_safeguarding__autonomy_rights_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(huma_tr_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(huma_tr_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 5, 0.18).
-narrative_ontology:measurement(huma_tr_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 10, 0.21).
-narrative_ontology:measurement(huma_tr_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 15, 0.24).
-narrative_ontology:measurement(huma_tr_t20, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 20, 0.26).
-narrative_ontology:measurement(huma_tr_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 25, 0.27).
-narrative_ontology:measurement(huma_tr_t30, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 30, 0.28).
+narrative_ontology:measurement(huma_tr_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(huma_tr_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 5, 0.28).
+narrative_ontology:measurement(huma_tr_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 10, 0.32).
+narrative_ontology:measurement(huma_tr_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 15, 0.35).
+narrative_ontology:measurement(huma_tr_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 25, 0.38).
+narrative_ontology:measurement(huma_tr_t35, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 35, 0.38).
+narrative_ontology:measurement(huma_tr_t40, human_dignity_ai_safeguarding__autonomy_rights_reading, theater_ratio, 40, 0.38).
 
 % Extraction over time
-narrative_ontology:measurement(huma_be_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 0, 0.28).
-narrative_ontology:measurement(huma_be_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 5, 0.31).
-narrative_ontology:measurement(huma_be_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 10, 0.34).
-narrative_ontology:measurement(huma_be_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 15, 0.36).
-narrative_ontology:measurement(huma_be_t20, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 20, 0.37).
-narrative_ontology:measurement(huma_be_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 25, 0.38).
-narrative_ontology:measurement(huma_be_t30, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 30, 0.38).
+narrative_ontology:measurement(huma_be_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(huma_be_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(huma_be_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 10, 0.48).
+narrative_ontology:measurement(huma_be_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 15, 0.52).
+narrative_ontology:measurement(huma_be_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 25, 0.56).
+narrative_ontology:measurement(huma_be_t35, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 35, 0.58).
+narrative_ontology:measurement(huma_be_t40, human_dignity_ai_safeguarding__autonomy_rights_reading, base_extractiveness, 40, 0.58).
 
 % Suppression requirement over time
-narrative_ontology:measurement(huma_su_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 0, 0.25).
-narrative_ontology:measurement(huma_su_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 5, 0.3).
-narrative_ontology:measurement(huma_su_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 10, 0.35).
-narrative_ontology:measurement(huma_su_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 15, 0.39).
-narrative_ontology:measurement(huma_su_t20, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 20, 0.41).
-narrative_ontology:measurement(huma_su_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 25, 0.42).
-narrative_ontology:measurement(huma_su_t30, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 30, 0.42).
+narrative_ontology:measurement(huma_su_t0, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 0, 0.42).
+narrative_ontology:measurement(huma_su_t5, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 5, 0.45).
+narrative_ontology:measurement(huma_su_t10, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 10, 0.48).
+narrative_ontology:measurement(huma_su_t15, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 15, 0.5).
+narrative_ontology:measurement(huma_su_t25, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 25, 0.51).
+narrative_ontology:measurement(huma_su_t35, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 35, 0.52).
+narrative_ontology:measurement(huma_su_t40, human_dignity_ai_safeguarding__autonomy_rights_reading, suppression_requirement, 40, 0.52).
 
 
 /* ==========================================================================
@@ -287,17 +375,15 @@ narrative_ontology:coordination_type(human_dignity_ai_safeguarding__autonomy_rig
 narrative_ontology:boltzmann_floor_override(human_dignity_ai_safeguarding__autonomy_rights_reading, 0.12).
 narrative_ontology:affects_constraint(human_dignity_ai_safeguarding__autonomy_rights_reading, human_dignity_ai_safeguarding__imago_dei_reading).
 narrative_ontology:affects_constraint(human_dignity_ai_safeguarding__autonomy_rights_reading, human_dignity_ai_safeguarding__posthumanist_reading).
-narrative_ontology:affects_constraint(human_dignity_ai_safeguarding__autonomy_rights_reading, ai_labor_displacement_safeguards).
-narrative_ontology:affects_constraint(human_dignity_ai_safeguarding__autonomy_rights_reading, algorithmic_transparency_requirements).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the kernel human_dignity_ai_safeguarding. The imago_dei_reading (divine image grounding) and posthumanist_reading (capability-nonspecific personhood) are sibling readings within the same kernel family. Each reading has distinct ε, distinct beneficiary/victim structures, and distinct type classification. All three stories must be authored separately per ε-invariance; they are linked via network.affects_constraints to enable contamination-propagation analysis. The autonomy-rights reading is foundational in global AI governance (encoded in UN instruments, regional human rights law) and influences the other readings by setting the default legitimacy frame; the imago-dei and posthumanist readings exert pressure back by challenging the frame's sufficiency. See commentary.kernel_context for the reading-relations topology.
+% The autonomy_rights_reading is one instantiation of the contested kernel human_dignity_ai_safeguarding. The imago_dei_reading interprets dignity through the inviolable image of God; the posthumanist_reading interprets dignity as decoupled from human baseline. These three constraints share the same referent (AI governance framed through human dignity) but have incommensurable ε values, beneficiary structures, and foundational axioms. The readings coexist in institutional practice: different parties hold different readings simultaneously. Network edges model influences, not causal dependency—this reading shapes what regulatory authority means, which creates downstream pressure on the other readings to accommodate or resist.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(human_dignity_ai_safeguarding__autonomy_rights_reading, moderate, 0.72).
+constraint_indexing:directionality_override(human_dignity_ai_safeguarding__autonomy_rights_reading, powerless, 0.65).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

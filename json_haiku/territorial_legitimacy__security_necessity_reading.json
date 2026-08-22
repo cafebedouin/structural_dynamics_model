@@ -2,237 +2,296 @@
   "header": {
     "constraint_id": "territorial_legitimacy__security_necessity_reading",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-15",
     "status": "ACTIVE",
-    "module_name_override": "constraint_territorial_legitimacy__security_necessity_reading",
-    "story_uid": "d51e478c-ab99-46dd-a215-84bc9bb8b2fc"
+    "story_uid": "c5250b33-adcc-4469-bb3d-672767df8fb1"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.76,
-    "theater_ratio": 0.52,
-    "accessibility_collapse": 0.41,
-    "resistance": 0.78,
+    "extractiveness": 0.82,
+    "suppression": 0.79,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.71,
     "claimed_type": "tangled_rope",
-    "human_readable": "Territorial Legitimacy via Security Necessity and Defensive Control",
-    "topic_domain": "political_theory/international_law/territorial_sovereignty",
+    "human_readable": "Territorial Legitimacy via Security Necessity and Defensive Control (1967 Borders Plus Strategic Depth)",
+    "topic_domain": "political/legal/territorial",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "israeli_state_security_apparatus"
+      "israeli_security_establishment",
+      "israeli_state_apparatus"
     ],
     "victims": [
       "palestinian_population_west_bank",
       "palestinian_population_gaza",
-      "displaced_palestinian_refugees"
+      "palestinian_diaspora"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "israeli_security_establishment",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Defines and enforces the territorial control regime, justifying it as necessary for state security against hostile neighbors and non-state actors. Controls checkpoints, settlement policy, resource allocation, and military deployment. Argues that 1948-1967 borders were indefensible and that strategic depth (control of the Jordan Valley, Golan Heights, high ground) is existentially necessary. Frames settlements as security infrastructure and civilian presence as deterrence."
+    },
+    {
+      "name": "israeli_state_apparatus",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Consolidates territorial control through administration, resource distribution, and international diplomatic legitimacy claims grounded in security necessity. Collects tax and resource rents from occupied territories, expands settlement infrastructure, and maintains legal structures that privilege Israeli presence. Claims the occupation is defensive and temporary (pending secure final-status agreement); maintains it indefinitely."
+    },
+    {
+      "name": "palestinian_population_west_bank",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Subject to military law, checkpoints, movement restrictions, and settlement expansion. Cannot vote in the political process that governs them. Bear costs through land loss, resource scarcity, economic dependency, administrative control of permits and travel, and military enforcement. Exit is territorially and legally blocked; exit to Gaza or diaspora is not a genuine option for most."
+    },
+    {
+      "name": "palestinian_population_gaza",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience control via blockade, military operations, and external administration of key utilities. Trapped in a small territory with no exit; survival depends on goods allowed through controlled corridors. Subject to periodic military enforcement when security threats are declared."
+    },
+    {
+      "name": "palestinian_diaspora",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Excluded from return to territories controlled under the security-necessity regime, justified by security and settlement demographics. Hold residual legal and historical claims but no mechanism to enforce them. Bear the cost of statelessness and legal limbo across refugee camps and neighboring states; many lack citizenship."
+    },
+    {
+      "name": "israeli_settler_population",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Benefit from subsidized housing, security provision, and territorial access justified as security settlements. Their presence is presented as deterrence and control infrastructure. Many have fused their identity with the territorial claim and view exit as abandonment of historical right; ideological commitment to the settlement project makes exit psychologically identity-shattering."
+    },
+    {
+      "name": "neighboring_arab_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Militarily excluded from the territories by Israeli control; their voices are entirely outside the internal governance of the constraint. Would argue for Palestinian self-determination and territorial integrity but are kept out by the military enforcement structure. Egypt and Jordan have treaty relationships that constrain their options; others lack direct leverage."
+    },
+    {
+      "name": "international_legal_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Examines the constraint under international humanitarian law and human rights law. UN bodies, human rights organizations, and legal scholars assess whether the security-necessity justification meets proportionality and necessity tests. Consensus is deeply divided; enforcement mechanisms (ICJ, ICC) are contested and asymmetrically deployed."
+    },
+    {
+      "name": "us_security_guarantor",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from regional military partnership, intelligence sharing, and a key strategic ally. Provides military aid, diplomatic cover, and security coordination that sustains the occupation regime. Has sufficient exit options (could withdraw support) but chooses to maintain the relationship, treating regional stability and Israeli security as aligned with its interests."
+    },
+    {
+      "name": "palestinian_national_authority",
+      "role": "payer",
+      "secondary_role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Nominally self-governing but with extremely limited authority (Area A only, ~3% of West Bank). Depends on Israeli permission for revenue collection, security operations, and territorial expansion. Faces impossible choice: accept security-necessity framing and negotiate reduced sovereignty, or reject it and lose whatever institutional capacity exists. Treated as both observer (analyzes the constraint) and payer (bears the costs of its constraints)."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes territorial control that the reading frames as necessary for state security: control of high ground, water resources, and strategic depth provides defense against hostile states and non-state actors. Claims to solve the problem of indefensible 1948 borders and the security threats that emerged from 1967 and after. Provides military, administrative, and settlement coordination under a unified security framework.",
+    "transfer_function": "Moves territorial control, resource access (water, arable land, minerals), settlement rights, and administrative authority from Palestinian populations to Israeli state and security apparatus. Transfers security costs to Palestinian subjects (surveillance, checkpoints, movement restrictions, military law) while Palestinian security interests remain subordinated to Israeli strategic interests. Transfers legitimacy narratives claiming occupation as defensive rather than expansionist.",
+    "absent_voices": "Palestinian voices are structurally excluded from the governance of the territories they inhabit (no voting in Israeli military administration, limited voice in Palestinian Authority under occupation). Neighboring Arab states are militarily excluded. International law critics exist but lack enforcement mechanisms. Voices that would argue for Palestinian territorial sovereignty and self-determination are kept outside the decision-making apparatus that justifies the constraint.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint and the security-necessity justification it rides on were abandoned overnight, territorial control would shift to Palestinian-majority governance (under current demographic and settlement patterns), settlement status would be legally contested, Israeli strategic doctrine would require fundamental revision, and the regional balance of power would reorganize. The constraint sustains a specific allocation of control; its removal triggers political reorganization.",
+    "founding_problem": "Israel faced military threats from neighboring states after 1948; the 1967 war and subsequent security incidents created the reading that pre-1967 borders were strategically indefensible and that control of the West Bank and Golan Heights was necessary for state survival. The founding problem is framed as existential: how to defend a small state surrounded by hostile neighbors when borders are militarily vulnerable.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Israeli security scholars and military analysts attest the founding problem is still live, citing persistent security threats and rocket attacks. Palestinian scholars and international human rights organizations attest the problem has been substantially transformed: modern military threats do not require civilian territorial occupation; settlements compound rather than reduce security risk; the constraint persists for territorial expansion and resource control, not defense. Empirical assessments of threat severity diverge sharply across the reading divide."
+  },
+  "omegas": [
+    {
+      "id": "security_necessity_vs_territorial_expansion",
+      "question": "Does the territorial control claimed as security necessity match the minimal geographic footprint required for military defense, or does the extent of control and settlement expansion exceed what military doctrine requires?",
+      "resolution_mechanism": "Military strategic analysis from independent defense experts comparing the declared security threats against the territorial extent of Israeli control; comparison with defensive security arrangements in other states facing similar threat profiles; analysis of settlement patterns and their military justification.",
+      "impact": "If control significantly exceeds military necessity, the constraint would reclassify toward snare (pure extraction) from tangled_rope (coordination with asymmetric extraction). If control aligns with military necessity, the tangled_rope reading (genuine security function plus extraction) holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether territorial extent matches security doctrine or exceeds it."
+    },
+    {
+      "id": "civilian_settlement_as_security_infrastructure",
+      "question": "Are Israeli civilian settlements actually security infrastructure, or does claiming them as such provide post-hoc legitimacy cover for territorial appropriation driven by ideological and resource motives?",
+      "resolution_mechanism": "Analysis of settlement placement relative to military defensive positions; military doctrine texts and strategic planning documents; comparison with security settlements in other occupation regimes; post-settlement security outcome data.",
+      "impact": "If settlements are primarily security infrastructure, they are part of the coordination-function cost; if they are primarily territorial appropriation legitimized as security, they shift the constraint toward snare. The boundary is empirically contestable but structurally determinative.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether settlements serve military strategy or ideological/resource territorial goals."
+    },
+    {
+      "id": "conditional_sovereignty_doctrine_enforceability",
+      "question": "The reading frames Palestinian sovereignty as conditional on demilitarization and security arrangements. Can such conditional sovereignty ever be enforced by the conditional party (Israel) fairly, or does the conditionality structure itself guarantee indefinite extension of the occupation?",
+      "resolution_mechanism": "Examination of historical conditional-sovereignty arrangements (demilitarization conditions that were lifted vs. indefinitely extended); analysis of incentive structure (what would cause Israeli security establishment to voluntarily cede territory); institutional mechanisms that would make the conditions verifiable and enforceable by Palestinians rather than unilaterally by Israel.",
+      "impact": "If conditions can be genuinely satisfied and lifted, the tangled_rope framing (temporary asymmetric extraction for security coordination) holds. If conditions are structurally irreversible once imposed, the constraint reclassifies toward indefinite snare. This is the central sustainability question for this reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether conditional sovereignty doctrine is genuine constraint or indefinite occupation cover."
+    },
+    {
+      "id": "reading_foreclosure_via_demographic_facts",
+      "question": "Does this reading's dependence on settlement expansion as security presence foreclose the indigenous_continuity_reading by creating irreversible demographic facts on the ground?",
+      "resolution_mechanism": "Examination of settlement growth rates and territorial takeover; analysis of whether demographic changes create facts-on-ground that Palestinian self-determination cannot accommodate; investigation of whether the security_necessity_reading actively uses settlement expansion as a tool to foreclose alternatives.",
+      "impact": "If settlement expansion is a tool to foreclose alternative readings, the reading_relations entry to indigenous_continuity should be forecloses, not coexists_with. If settlements are incidental to the reading's core claim, the relationship is coexists_with or influences.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether this reading's implementation strategy forecloses sibling readings."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is the measured suppression (0.79) primarily structural (military law, checkpoints, resource control) or partially internalized (Palestinian acceptance of subordination as natural or necessary)?",
+      "resolution_mechanism": "Post-occupation trajectory analysis: if suppression persists after military control is removed, it is partially internalized; if suppression drops sharply, it was structural. Survey data and qualitative testimony about perceived necessity and alternatives.",
+      "impact": "If suppression is partially internalized, the constraint's effective suppressive force is higher than the structural measure suggests, and the reading's claim to be coordination (even asymmetric) is undermined. If suppression is primarily structural, the reading's tangled_rope framing (real coordination function plus enforcement) is more defensible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in occupation."
+    }
+  ],
   "interval": {
-    "start": 0,
-    "end": 56
+    "start": 1967,
+    "end": 2024
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.38
+      "time_point": 1967,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.46
+      "time_point": 1980,
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
-      "value": 0.54
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 32,
-      "value": 0.66
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.67
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 48,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 56,
-      "value": 0.68
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.22
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.28
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.36
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.44
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.49
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.51
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 48,
-      "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 56,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 0,
-      "value": 0.52
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 8,
-      "value": 0.59
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 16,
-      "value": 0.65
-    },
-    {
-      "metric": "suppression_requirement",
-      "time_point": 24,
+      "time_point": 1995,
       "value": 0.71
     },
     {
-      "metric": "suppression_requirement",
-      "time_point": 32,
-      "value": 0.74
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.41
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 40,
-      "value": 0.75
+      "time_point": 1967,
+      "value": 0.58
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 48,
+      "time_point": 1980,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
       "value": 0.76
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 56,
-      "value": 0.76
-    }
-  ],
-  "omegas": [
-    {
-      "id": "security_necessity_threshold",
-      "question": "What objective measure would falsify the claim that 1967 borders are militarily indefensible and that territorial buffer is necessary for security?",
-      "resolution_mechanism": "Military capability assessment: can Israeli defensive systems (air force, antimissile architecture, cyberdefense) provide security equivalent to territorial depth? Comparative analysis with other states at similar threat levels (e.g., Taiwan, Singapore, Gulf states) that lack territorial buffers but maintain defensive capability through alternative means.",
-      "impact": "If defensive capability can be maintained without territorial buffer, the security-necessity framing becomes optional (not foundational), and the constraint reclassifies from coordination-with-extraction to pure extraction. If buffer is genuinely necessary, the constraint's coordination component is real, though asymmetric extraction may persist alongside it.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether territorial buffer is structurally necessary for Israeli security or alternative sufficient mechanisms exist."
+      "time_point": 2015,
+      "value": 0.78
     },
     {
-      "id": "alternative_security_arrangements",
-      "question": "Have demilitarized-zone arrangements, international peacekeeping guarantees, or technology-based monitoring been seriously proposed and rejected, or are they categorically unavailable?",
-      "resolution_mechanism": "Historical record of Israeli-Palestinian negotiations: Camp David (2000), Taba (2001), 2008 Abbas-Olmert talks, 2010-2014 Kerry mediation. Documentary analysis of what security proposals were offered, why they were rejected, and whether rejection was driven by genuine security insufficiency or by political preference for unilateral control.",
-      "impact": "If genuine alternatives were available and rejected, the security-necessity framing conceals a political choice for unilateral control (extraction via security discourse). If alternatives were categorically insufficient, the framing is honest about constraint structure. This determines whether the constraint is a false-summit mountain or genuine tangled rope.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether the constraint rests on necessity or on choice among available options."
-    },
-    {
-      "id": "settlement_security_function_vs_political_expansion",
-      "question": "Do Israeli settlements in the West Bank serve a genuine security early-warning function, or are they primarily vehicles for territorial expansion and political control disguised as security presence?",
-      "resolution_mechanism": "Analysis of settlement distribution relative to vulnerability corridors and threat vectors: are settlements placed at military-strategic chokepoints (early warning), or scattered across the territory in patterns that maximize land acquisition and population presence? Assessment of settlement governance: do they respond to military chain of command, or do they operate under civilian authority pursuing expansion? Comparison of settlement growth trajectory to threat assessment and security doctrine evolution.",
-      "impact": "If settlements are primarily security infrastructure, the extraction is justified as security necessity and the tangled_rope framing is honest. If settlements are primarily expansion using security as cover story, the constraint reclassifies as snare and the security-necessity reading becomes a false legitimacy claim. The core distinction is whether the beneficiary (settler population) serves the security function or exploits it.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether settlements are security infrastructure or territorial expansion justified through security discourse."
-    },
-    {
-      "id": "suppression_asymmetry_structural_vs_tactical",
-      "question": "Is the suppression of Palestinian resistance (checkpoint networks, resource control, movement restrictions) structurally necessary for security, or is it tactical control enabling political subjugation?",
-      "resolution_mechanism": "Comparative analysis: security checkpoints whose location and operation respond to threat assessment vs. those whose location enables resource control and political leverage. Assessment of whether suppression intensity varies with actual threat level or tracks political pressure (settlement expansion, negotiation stalling). Analysis of Palestinian security forces' capability: are they prevented from operating as an alternative security provider, or supported to provide equivalent security with less direct Israeli suppression?",
-      "impact": "If suppression is structurally necessary for security, the high suppression metric (0.76) reflects genuine coordination cost. If suppression is tactical and enables extraction, the constraint reclassifies toward snare and theater-ratio climbs (performative security justifying opportunistic control). This omega determines whether extraction is ineliminable or optional.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether measured suppression is structurally necessary for security or enables extraction."
-    },
-    {
-      "id": "kernel_reading_contest_structure",
-      "question": "Is the security-necessity reading a defensible position within a single international-law framework, or does commitment to this reading logically foreclose the indigenous-continuity and partition readings within the same framework?",
-      "resolution_mechanism": "Jurisprudential analysis: can a single state's commitment to security-based territorial legitimacy coexist with recognition of Palestinian self-determination and indigenous rights within one legal order, or does the security reading require denying the premises of the rival readings? Case-law examination: how have courts and international bodies handled conflicts between security and territorial integrity/self-determination claims?",
-      "impact": "If the readings coexist (can be held simultaneously by different parties), the constraint description is accurate and the rivalry is political, not logical. If the security reading forecloses the others within a single framework, the constraint's legitimacy in that framework is mutually exclusive with the rivals'. This determines whether the kernel is truly contested or whether one reading possesses structural dominance.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether this reading logically forecloses, coexists with, or influences its sibling readings."
-    },
-    {
-      "id": "mandate_obsolescence_occupation_decades",
-      "question": "Has the security-necessity frame outlived its founding problem? If the threat landscape has changed structurally (e.g., Palestinian state capacity remains limited, regional adversary states have normalized relations with Israel), does the original security justification still hold?",
-      "resolution_mechanism": "Threat assessment over time: Israeli intelligence estimates, military doctrine evolution, statement of strategic objectives. Comparison of threat vectors in 1967-1973 (existential military threat from state armies) vs. 2000-present (non-state actors, asymmetric threats, changed regional alignment with Abraham Accords). If threat has structurally changed but territorial control persists unchanged, the founding problem is dead and the constraint exhibits mandatrophy.",
-      "impact": "If founding problem is dead (threat no longer existential, regional alignment shifted, alternative security arrangements now viable), the constraint reclassifies as piton — maintained theatrically for political control after security function atrophied. This shifts the type from tangled_rope toward piton and the verdict from coordination-with-extraction to pure inertial extraction.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the security-necessity founding problem remains live or has become obsolete."
-    },
-    {
-      "id": "indigenous_continuity_reading_foreclosure",
-      "question": "Does the security-necessity reading logically foreclose the indigenous-continuity reading, or are they genuinely coexisting positions held by different parties?",
-      "resolution_mechanism": "Doctrinal analysis of security-based and indigenous-rights-based frameworks: can a state simultaneously recognize indigenous self-determination and claim security-based territorial legitimacy, or does one reading's core premise logically exclude the other? Examination of precedent (e.g., international attitudes toward indigenous land claims vs. security claims in other contexts).",
-      "impact": "If they foreclose each other (mutually exclusive in one framework), this is a true kernel contest where the readings cannot coexist. If they coexist as genuinely different readings held by different parties, the kernel is truly contested and the rivalry is political, not logical. This determines the reading_relations type: forecloses vs. coexists_with.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Logical relationship between security-necessity and indigenous-continuity readings within a single framework."
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.79
     }
   ],
   "commentary": {
-    "narrative_context": "This constraint is one reading of the contested kernel 'territorial_legitimacy' — specifically the security-necessity reading, which claims that Israeli control of the West Bank, Golan Heights, and (historically) Gaza is legitimate as a defensive buffer against existential security threats. Under this reading, Palestinian sovereignty is conditional on demilitarization and security coordination; settlements provide early-warning presence; territorial control is justified by the indefensibility of pre-1967 borders. The sibling readings (indigenous-continuity and partition) offer different legitimacy claims rooted in anti-colonial self-determination and international legal partition. This story instantiates ONLY the security-necessity reading as a structurally coherent constraint, with its own ε, beneficiary/victim structure, and institutional commitments. The rivalry with siblings is documented via omega variables and cs_structure, not embedded in the constraint itself.",
+    "narrative_context": "This constraint describes one reading of the contested territorial legitimacy kernel: the view that Israeli control of the West Bank, Gaza, and Golan Heights is legitimate as a security-necessity measure—that 1948 borders were militarily indefensible, that the 1967 war created a new security environment requiring strategic depth, and that Palestinian sovereignty must be conditional on demilitarization and acceptance of Israeli security arrangements. This reading is institutionalized in Israeli military doctrine, settlement policy, and diplomatic claims. The constraint is CLAIMED as tangled_rope (real coordination function—security provision—plus asymmetric extraction) while the authored metrics describe substantially extractive, actively suppressive operation with growing theater (performance masking the erosion of the original security rationale). The claim/metric gap is deliberate: the engine measures whether the coordination narrative survives the structural data.",
     "key_agents": [
-      "Israeli state security apparatus: administers territorial control, justifies it as security buffer, accrues control benefits, bears no extraction cost",
-      "Palestinian population (West Bank): subject to military law and resource control, subordinated under security framing, constrained exit (no effective voice)",
-      "Palestinian population (Gaza): subject to blockade justified as weapons containment, trapped exit (enclosed territory)",
-      "Displaced Palestinian refugees: held outside territory by right-of-return denial framed as security threat, identity-locked exclusion",
-      "Israeli settler population: benefits from land, subsidies, security narrative; identity-locked to settlement ideology; constrained exit",
-      "Israeli public security constituency: benefits from security narrative and early-warning presence; constrained exit (cognitive and political cost of abandoning security frame)",
-      "International legal/human-rights bodies: observers only, contest the necessity framing, document asymmetric extraction"
+      "Israeli security establishment (institutional): defines and enforces the control regime; claims security necessity",
+      "Israeli state apparatus (institutional): administers territories, expands settlements, collects rents",
+      "Palestinian population West Bank (powerless): subject to military law, checkpoints, land loss; trapped exit",
+      "Palestinian population Gaza (powerless): blockade-controlled; trapped exit",
+      "Palestinian diaspora (moderate): excluded from return; stateless limbo",
+      "Israeli settler population (moderate): identity-locked beneficiaries; settlements as security infrastructure",
+      "Neighboring Arab states (institutional): militarily excluded; would argue for Palestinian self-determination",
+      "International legal community (institutional, observer): divided on proportionality and necessity",
+      "US security guarantor (institutional): benefits from partnership; provides diplomatic and military support",
+      "Palestinian National Authority (moderate, observer/payer): nominally self-governing; constrained by occupation"
     ],
-    "logic_rationale": "Extractiveness (0.68) is high because territorial control, resource allocation (water, movement, building permits), and political subordination transfer asymmetrically from Palestinians to the Israeli state and settler population. The security-necessity framing is the legitimating cover; without it, the transfers would be transparently colonial. Suppression (0.76) is high because the constraint's persistence depends on actively preventing Palestinian self-governance, blocking alternative security arrangements, and enforcing checkpoints and settlement expansion. Theater ratio (0.52) is moderate-high because security justification is partially genuine (existential threat was real in 1967-1973) but increasingly performs political functions it originally did not serve (settlement expansion, resource extraction, political control). Accessibility collapse (0.41) is moderate-low: Palestinians have formulated alternatives (demilitarized zones, international guarantees, asymmetric military balancing) that are theoretically available but politically suppressed. Resistance (0.78) is high: sustained Palestinian armed and civil resistance to occupation demonstrates the constraint is not accepted as legitimate from the subordinated side. The measurement series shows: (1) extractiveness rose steeply from 1967-1995 (occupation consolidation), plateaued after 2000 (negotiation failures, barrier construction), suggesting the original security problem was displaced by political extraction; (2) theater ratio climbed from low (genuine security focus) to moderate-high (security narrative increasingly justifying land claims and political control); (3) suppression requirement rose steeply and remains high (actively preventing alternatives), indicating the constraint is held by enforcement, not by acceptance.",
-    "perspectival_gap": "The Israeli security apparatus and settler population perceive the constraint as genuine coordination against existential threat — they experience it as costly but necessary defense. Palestinians (West Bank, Gaza, refugees) perceive the same constraint as extraction and colonization justified by inflated threat claims. The engine should compute these seats as having radically different type classifications from the same structural data: agenda-setter (institutional power, trapped exit, no extraction cost) sits near rope or scaffold; targets (powerless, constrained/trapped exit, high asymmetric cost) sit near snare or tangled-rope-as-extraction. The divergence is not an error — it is the measurement the dual-reading apparatus exists to capture. The security-necessity reading privileges the beneficiary's framing; the indigenous-continuity reading privileges the victim's frame; the partition reading aims for neutral international law. This constraint, authored as written, is the Israeli security establishment's coherent articulation of its own position.",
-    "directionality_logic": "Israeli security apparatus: d ~ 0.15 (beneficiary, agenda-setter, trappped exit means they are locked to the constraint, not free to exit, but they are not targets — they benefit and control). Settler population: d ~ 0.20 (beneficiary, organized power, beneficiary role, but constrained exit by ideology and community ties reduces freedom and raises extraction intensity slightly). Israeli public security constituency: d ~ 0.25 (beneficiary, organized power, receives security narrative benefit, but constrained exit by internalized security frame). Palestinian West Bank population: d ~ 0.85 (target, powerless, constrained exit, victim of resource control and political subordination). Palestinian Gaza population: d ~ 0.95 (target, powerless, trapped exit, blockaded). Displaced refugees: d ~ 0.90 (target, powerless, identity-locked exit, excluded by right-of-return denial). International observers: d ~ 0.50 (analytical, no stakeholder benefit or cost, symmetric observation). Directionality is not symmetric because the constraint extracts from the powerless to benefit the institutional and settler seats. The constraint is claimed as coordination (security buffer) but the extraction asymmetry is substantial.",
-    "mandatrophy_analysis": "The founding problem (indefensible 1967 borders, existential threat from hostile state armies) was genuine in 1967-1973. However: (1) Israeli military capability evolved (air force dominance, antimissile systems, cyberwarfare) reducing dependence on territorial buffer; (2) Palestinian state threat remained limited (no independent military, constrained governance); (3) regional adversary threat shifted (Egypt-Israel peace 1979, Arabia-Israel normalization 2020s, Syria weakened post-civil war); (4) alternative security arrangements were proposed (Camp David, Taba, 2008 talks) but rejected, suggesting political preference for unilateral control over security necessity. The theater ratio's rise from 0.22 to 0.52 indicates the original security function is being displaced by political extraction (settlement expansion, resource control, political subordination). If the founding problem is dead (threat no longer existential, alternatives available, regional alignment changed), the constraint exhibits mandatrophy: the founding problem's resolution condition has been met or the problem has become obsolete, but the arrangement persists for reasons other than addressing the founding problem (political control, settler expansion, military habitus). This does NOT automatic-reclassify the type (engine computes from metrics and structure), but it flags the constraint as a candidate for piton or zombie-snare (extractive constraint maintained theatrically after its original function atrophied).",
-    "kernel_context": "This constraint instantiates the security-necessity reading of the contested kernel 'territorial_legitimacy'. The kernel is: what makes territorial control legitimate in the Israel-Palestine context? The sibling readings are: (1) indigenous-continuity reading (legitimacy via continuous Palestinian habitation and anti-colonial self-determination, 1948 as Nakba), (2) partition reading (legitimacy via international legal partition, UN Resolution 181, 1948 borders with negotiated modification). The security-necessity reading claims legitimacy flows from the structural necessity of territorial buffer against existential threat — the reading does not contest that Palestinians have historical presence or that partition occurred, but it subordinates those claims to security requirements. The readings are genuinely contested: they are held by different parties simultaneously (Israeli security establishment holds this reading; Palestinian civil/political leadership holds indigenous-continuity or partition readings), and within each party's framework, the reading is coherent. They are not logically foreclosed (a single framework could theoretically hold both security and indigenous rights), but in practice they compete and the security reading is weaponized to deny the others' legitimacy."
+    "logic_rationale": "Extractiveness is high and rising (0.55→0.82 over 57 years) because: (1) control and settlement expansion have progressively appropriated Palestinian land, water, and resource access far beyond what minimal military defense requires; (2) the cost transferred to Palestinian subjects (administrative control, checkpoint regimes, movement restrictions, dispossession) has grown as settlements have expanded; (3) the gap between stated security justification and actual territorial extent has widened. Suppression is high (0.79) and required actively: the constraint depends on military enforcement, administrative subordination, and resource denial to keep Palestinian populations from exercising territorial claims. The measured theater ratio (0.41 and rising) reflects the erosion of the original security rationale: when the constraint was imposed (1967), the security case was temporally plausible (weeks after an existential military threat). Decades later, with settlements deep in Palestinian territory, with civilian presence as the primary control mechanism, and with security incidents often triggered by settlement expansion itself, the theater ratio has risen—the performative maintenance of the security narrative has become more prominent relative to genuine security function. The time-series shows extraction accumulation (T17 trigger, mountain_extraction_accumulation): a constraint claimed as natural defense gradually reveals itself as constructed appropriation.",
+    "perspectival_gap": "The Israeli security establishment and state apparatus experience this as coordination (a legitimate security arrangement they built and maintain for defense). The Palestinian populations experience it as enforced extraction and dispossession. The engine should compute different types from these seats: the beneficiary seat should compute a weaker type (the coordination story they tell), while the victim seats compute a stronger extraction reading. This is not a defect in the constraint's classification—it is exactly the phenomenon tangled_rope is built to model: one arrangement, two incompatible situational readings, one holding power over the other through institutional control.",
+    "directionality_logic": "The Israeli security establishment (institutional, trapped exit, generational time horizon) benefits from control and collects the rents; they have substantial power but no way out without risking their security narrative. Directionality is high (d→0.9+) beneficiary ward: they benefit, they set the rules, they enforce them. The Palestinian populations (powerless, trapped exit) bear all the costs—administrative subordination, land loss, resource scarcity, surveillance, military law—with no exit and no voice in the governance. Directionality is high (d→0.9+) target ward. The settler population (moderate power, identity-locked exit) benefits from subsidized access and security provision but has fused identity with the territorial claim; exit is identity-shattering. Directionality for settlers is moderate beneficiary (d~0.2-0.3) because power is lower than institutions, but exit is as severe as trapped once identity is considered. The US security guarantor (institutional, mobile exit) benefits from the partnership and provides support, but could exit without existential cost; directionality is beneficiary-ward but with genuine alternatives (d~0.1-0.2). This stakeholder-level divergence is what the engine computes per-seat; the authored base_properties score reflects the dominant structural asymmetry (high extraction favoring institutional beneficiaries).",
+    "mandatrophy_analysis": "The founding problem (existential security threat from hostile neighbors with indefensible borders) had live status in 1967. By 2024, the founding problem is contested: Israeli security scholars argue it is still live (persistent rocket threats, terrorism risk); Palestinian scholars and international law critics argue it is dead (territorial occupation does not require civilian settlements; security concerns are now used to justify territorial appropriation; the constraint persists through institutional inertia and settlement investment, not ongoing security necessity). The constraint shows mandatrophy markers: theater ratio rising (0.12→0.41), suggesting performative maintenance has become dominant; extraction rising while the security rationale degrades; the apparatus of enforcement (settlements, checkpoints, military law) becoming more theatrical and less functionally tied to the original security problem. If the founding problem is classified as dead and the constraint persists by institutional inertia, this is a candidate for mandatrophy resolution. However, the status remains contested because both sides claim the security problem is still live. The tangled_rope classification reflects this: there IS a coordination function (security provision), but the asymmetry and extraction have grown far beyond what the coordination justifies.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'territorial_legitimacy.' This reading instantiates 'security_necessity_reading'—the view that territorial control is legitimate as defensive necessity and strategic depth. The sibling readings are 'indigenous_continuity_reading' (legitimacy via continuous Palestinian presence and anti-colonial self-determination, treating 1948 as Nakba) and 'partition_reading' (legitimacy via international partition and UN borders, treating 1948 as lawful state creation). All three readings claim the same kernel (what legitimates territorial authority and claims) but offer incompatible criteria (security necessity vs. indigenous rights vs. international legal partition). The security_necessity reading creates structural pressure on the partition_reading by arguing that 1948 borders were indefensible and that 1967 created a new security reality requiring different borders—it influences the partition reading's territorial assumptions. It potentially forecloses the indigenous_continuity_reading by using settlement expansion and demographic facts to create irreversible territorial changes, though this remains contested."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism",
@@ -240,73 +299,68 @@
   },
   "network": {
     "affects_constraints": [
-      "territorial_legitimacy__indigenous_continuity_reading",
       "territorial_legitimacy__partition_reading",
-      "settlement_expansion_legitimacy",
-      "palestinian_statehood_conditionality",
-      "right_of_return_denial"
+      "territorial_legitimacy__indigenous_continuity_reading",
+      "israeli_settlement_expansion_constraint",
+      "palestinian_resource_scarcity_constraint",
+      "checkpoint_regime_constraint"
     ],
-    "dual_formulation_note": "This constraint is one reading of a three-way kernel contest over territorial legitimacy. The security-necessity reading instantiates one coherent position within that contest; the indigenous-continuity and partition readings are separate constraint files, each with its own ε, stakeholder structure, and classification. All three are linked via network.affects_constraints because they are rival claims over the same territorial domain and beneficiary/victim sets. The ε-invariance principle requires separate files because the three readings would compute radically different ε values (security reading: high extraction justified by necessity; indigenous-continuity reading: extraction as colonial dispossession; partition reading: extraction as illegal settlement expansion). Readers should examine all three constraint files together to see how different readings of the same kernel instantiate different constraint types."
+    "dual_formulation_note": "This constraint is part of a three-story kernel family decomposing contested territorial legitimacy. The security_necessity_reading shares the same territorial referent with the partition_reading and indigenous_continuity_reading but grounds legitimacy in different axioms (military necessity vs. international law vs. indigenous rights). Each reading has its own ε and stakeholder structure because the beneficiaries and victims differ across readings. The readings coexist as live institutional and scholarly positions; this story models the security reading's structural logic, not the disputed empirical claims."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.18
+      "d_value": 0.15
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "territorial_legitimacy__partition_reading",
-      "territorial_legitimacy__indigenous_continuity_reading"
-    ]
-  },
+  "gain_flow": "israeli_state_apparatus",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
+    "kernel_codification": "fixed_text",
     "authority_grounding": "extraction",
     "interpretation_layer_present": true,
     "reading_relations": [
       {
-        "sibling_id": "territorial_legitimacy__indigenous_continuity_reading",
-        "relation": "coexists_with"
+        "sibling_id": "partition_reading",
+        "relation": "influences"
       },
       {
-        "sibling_id": "territorial_legitimacy__partition_reading",
-        "relation": "influences"
+        "sibling_id": "indigenous_continuity_reading",
+        "relation": "forecloses"
       }
     ],
     "axioms": [
       {
-        "atom": "security_necessity_territorial_buffer",
+        "atom": "strategic_depth_necessity",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "conditional_palestinian_sovereignty_demilitarization",
-        "role": "secondary",
+        "atom": "palestinian_sovereignty_demilitarization_conditionality",
+        "role": "foundational",
         "status": "holdable",
         "grounding_type": "instrumental"
       }
     ],
-    "reference_frame": "defensive_security_state_1967",
+    "reference_frame": "post_1967_indefensible_borders_paradigm",
     "drift_state": {
-      "moment": "contemporary_2020s",
+      "moment": "contemporary_settlement_infrastructure_era",
       "direction": "axiom_overriding",
       "magnitude": "substantial",
       "acknowledged": false
     }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

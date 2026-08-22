@@ -2,246 +2,406 @@
   "header": {
     "constraint_id": "climate_harm_prevention__mitigation_priority",
     "version": "1.0",
-    "generated_date": "2026-06-12",
+    "generated_date": "2026-06-11",
     "status": "ACTIVE",
-    "story_uid": "e79e949d-0a7a-41af-a78a-789a1f954f92"
+    "story_uid": "46f96560-325c-4be3-b7bc-4b93c2fb8d3c",
+    "created_at": "2026-06-11T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.61,
-    "theater_ratio": 0.42,
-    "accessibility_collapse": 0.72,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.52,
     "resistance": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Climate Mitigation-Priority Framework: Growth-Compatible Decarbonization via Technological Transition",
+    "human_readable": "Mitigation-Priority Climate Response: Emissions Reduction via Technological Transition",
     "topic_domain": "climate_policy/political_economy/intergenerational_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "future_generations",
-      "renewable_technology_producers",
-      "climate_finance_architects"
+      "low_lying_nations",
+      "renewable_energy_sector"
     ],
     "victims": [
-      "carbon_intensive_sectors",
-      "present_generation_workers",
-      "global_south_countries_lacking_capital"
+      "carbon_intensive_industries",
+      "fossil_fuel_workers",
+      "high_consumption_present_populations"
+    ],
+    "vindicated_propositions": [
+      "decarbonization_technologically_feasible",
+      "growth_compatible_decarbonization"
     ]
   },
+  "stakeholders": [
+    {
+      "name": "future_generations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Receive the primary benefit of emissions reduction: a climate system that has not crossed irreversible tipping points, lower warming trajectories, and intact agricultural and coastal systems. Their material interests are entirely dependent on present-generation emission choices; they have no voice in the policy formation and no exit from the inherited climate state."
+    },
+    {
+      "name": "low_lying_nations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Face existential risk from sea-level rise and increased storm intensity under high-warming scenarios; mitigation offers preservation of territorial sovereignty and economic viability. Their exit options are severely constrained—physical relocation is forced migration, not choice. They lobby for aggressive emissions targets but lack enforcement mechanisms."
+    },
+    {
+      "name": "renewable_energy_sector",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Grows economically and politically as decarbonization targets drive investment, subsidies, and regulatory preference. Their business model is aligned with the constraint's operation. They fund research, lobby for stronger targets, and benefit from technological transition rents."
+    },
+    {
+      "name": "carbon_intensive_industries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face mandated emissions reductions, stranded assets, regulatory compliance costs, and forced technology transition. Coal, oil, and high-emission manufacturing face value destruction on balance sheets and must retool production processes or exit markets. Their alternatives are absorbing the transition cost, relocating to looser jurisdictions (regulatory arbitrage), or litigation."
+    },
+    {
+      "name": "fossil_fuel_workers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Experience the most concentrated transition costs: job losses in coal mining, oil refining, gas extraction. Their professional identity, community structure, pension systems, and local economies are built on fossil fuel infrastructure. Retraining programs and transition support exist but are often inadequate relative to wage losses and place-attachment. They also inherit climate benefits but experience them as diffuse while costs are immediate and acute."
+    },
+    {
+      "name": "high_consumption_present_populations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "In high-income nations, face rising energy prices, carbon taxation, consumption restrictions, and behavioral demands (diet change, transport electrification, building retrofits). The constraint's enforcement manifests as higher costs on carbon-intensive goods and services. Their exit is partial: they can migrate to lower-regulation jurisdictions, reduce consumption, or lobby against the constraint."
+    },
+    {
+      "name": "global_north_governments",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "National governments, multilateral institutions, and regulatory bodies set and enforce emissions targets, allocate transition investment, design carbon pricing, and oversee the technological transition. They adjudicate the constraint's scope, pace, and distribution of costs. They justify it as protecting future interests while claiming the transition is growth-compatible."
+    },
+    {
+      "name": "climate_scientists",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Provide the empirical grounding for the mitigation-priority reading: evidence of warming trajectories, tipping-point thresholds, technological feasibility of decarbonization, and cost-of-inaction calculations. Their work is repeatedly cited to justify the constraint and to defend it against both adaptation-priority and degrowth alternatives."
+    },
+    {
+      "name": "adaptation_priority_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that mitigation targets are politically unachievable and economically irrational, and that resources should be redirected to climate resilience and managed adaptation. They are excluded from the consensus justifying the mitigation-priority reading because their core claim (mitigation infeasibility) is treated as empirically refuted by the reading. Their voice enters only as an alternative reading, not as a party to be coordinated."
+    },
+    {
+      "name": "degrowth_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that decarbonization within the growth framework is physically impossible and that the mitigation-priority reading's core axiom (growth-compatible decarbonization) is false. They claim the constraint is extractive cover for continued consumption by the Global North while deferring collapse. They are excluded from the consensus because their core claim directly contests the reading's foundational axiom."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared global commitment to emissions reduction targets, allocates transition investment across sectors and regions, coordinates technological development and knowledge-sharing for renewable infrastructure, and synchronizes national climate policies to prevent competitive regulatory arbitrage (where carbon-intensive industries migrate to low-regulation jurisdictions).",
+    "transfer_function": "Transfers emissions reduction costs from present high-consumption populations and carbon-intensive industries to future generations (as a reduction in their inherited climate liability) and from Global North fossil fuel workers and regions dependent on carbon industries to renewable energy sector workers and regions building clean infrastructure. It also transfers rents: transition investment flows to renewable energy companies, EV manufacturers, and grid modernization contractors.",
+    "absent_voices": "Adaptation-priority advocates (who would argue mitigation targets are unachievable and resources should redirect to resilience) and degrowth advocates (who would argue growth-compatible decarbonization is physically impossible) are excluded from consensus by the reading's foundational axioms, which treat their core claims as empirically refuted or normatively illegitimate. Workers in fossil fuel extraction and high-emission manufacturing have limited voice in policy design despite bearing concentrated costs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the mitigation-priority constraint vanished overnight, emissions reduction targets would collapse, investment in renewable infrastructure would halt or reverse, carbon prices would disappear, and fossil fuel industries would experience a massive asset revaluation and return to previous extraction rates. The global economy would immediately revert to higher-emissions trajectories. Future climate outcomes would be substantially worse; the winners (fossil fuel sectors, high-consumption present populations) would reorganize around renewed extraction; the losers (future generations, climate-vulnerable nations) would face locked-in warming.",
+    "founding_problem": "The climate system exhibits tipping-point dynamics and accumulating radiative forcing from anthropogenic greenhouse gas emissions. Without deliberate emissions reduction, warming will exceed adaptation capacity in many regions, causing ecosystem collapse, food system instability, mass migration, and civilizational disruption. The founding problem is: how to prevent crossing irreversible thresholds while maintaining economic growth and development.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Climate scientists and the IPCC attest the founding problem remains live: warming is accelerating, tipping points are approaching, and technological feasibility of decarbonization is established but political/economic will is insufficient. Adaptation advocates contest that mitigation at the scale required is politically and economically achievable; degrowth advocates contest that it is physically achievable within the growth framework. Independent economic modeling from outside the fossil fuel and renewable energy sectors supports that 1.5–2°C targets require rapid decarbonization, but dispute whether this is compatible with growth."
+  },
   "interval": {
-    "start": 2005,
-    "end": 2050
+    "start": 0,
+    "end": 30
   },
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.32
+      "time_point": 0,
+      "value": 0.52,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.48
+      "time_point": 5,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.62
+      "time_point": 10,
+      "value": 0.63,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2035,
-      "value": 0.7
+      "time_point": 15,
+      "value": 0.66,
+      "basis": "observed"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2050,
-      "value": 0.68
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "projected"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.18
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.33,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.38
+      "time_point": 10,
+      "value": 0.37,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2035,
-      "value": 0.45
+      "time_point": 15,
+      "value": 0.39,
+      "basis": "observed"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2050,
-      "value": 0.42
+      "time_point": 20,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.41,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.41,
+      "basis": "projected"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2005,
-      "value": 0.35
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2015,
-      "value": 0.48
+      "time_point": 5,
+      "value": 0.54,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2025,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.58,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2035,
-      "value": 0.62
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
     },
     {
       "metric": "suppression_requirement",
-      "time_point": 2050,
-      "value": 0.61
+      "time_point": 20,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "projected"
     }
   ],
   "commentary": {
-    "narrative_context": "The mitigation-priority reading of climate response frames legitimate climate action as rapid emissions reduction achieved through technological transition within existing growth paradigms. Future generations are the primary beneficiaries (constrained warming prevents catastrophic impacts on their living conditions); present carbon-intensive sectors and workers are the primary cost-bearers (stranded assets, job displacement, energy price changes); renewable technology producers capture policy-backed market expansion; wealthy-nation electorates benefit from diffuse climate risk reduction without apparent consumption change. The constraint is actively enforced through climate finance architecture, carbon pricing mechanisms, emissions targets, and scientific legitimacy (IPCC consensus framing). The reading competes with adaptation-priority (accepts higher warming, prioritizes resilience) and degrowth (contests the growth assumption itself) as alternative framings of the same foundational climate physics problem.",
+    "narrative_context": "This constraint instantiates the mitigation-priority reading of the contested climate harm prevention kernel. The reading asserts that legitimate climate response must prioritize greenhouse gas emissions reduction via technological transition (renewable energy, electrification, efficiency) operating within the growth framework—assuming that economic growth and decarbonization are compatible. Future generations and climate-vulnerable nations are the primary beneficiaries of avoided warming; present fossil-fuel-dependent industries and workers bear concentrated transition costs. The constraint is CLAIMED as tangled_rope (genuine coordination function on emissions reduction + asymmetric extraction of costs) while the authored metrics describe a moderately extractive, actively enforced arrangement. The engine will compute whether per-seat classifications diverge from this claim; divergence is the measurement we seek. This reading coexists with adaptation-priority and degrowth readings, which contest the same founding problem but disagree on mitigation feasibility and the growth assumption.",
     "key_agents": [
-      "Future generations: primary beneficiaries; zero voice in policy; infinite time horizon",
-      "Carbon-intensive sectors: institutional payers; high power but constrained by stranded-asset risk and transition mandates",
-      "Present-generation workers in carbon sectors: organized payers with constrained exit; face displacement but promised just-transition benefits that materialize later",
-      "Renewable technology producers: institutional beneficiaries; mobile; gain policy-backed market share expansion",
-      "Climate finance architects: agenda-setters; control target-setting, allocation flows, narrative legitimacy via science consensus",
-      "Global South developing nations: powerless payers; high climate vulnerability but minimal mitigation capital; energy development pathways prescribed from outside",
-      "Adaptation and degrowth advocates: excluded from mitigation-priority legitimacy apparatus; would challenge the growth assumption and timeline feasibility"
+      "Future generations: Powerless beneficiaries; inherit the climate state but have zero voice in present policy.",
+      "Low-lying nations (Marshall Islands, Bangladesh, small island states): Organized beneficiaries facing existential territorial risk; trapped exit; high political visibility but limited enforcement power.",
+      "Renewable energy sector: Institutional beneficiary; economically aligned with the constraint; grows as transition investment flows.",
+      "Carbon-intensive industries (coal, oil, gas, cement, steel): Institutional payers; face stranded assets, compliance costs, forced retooling; constrained exit via regulatory arbitrage.",
+      "Fossil fuel workers (miners, oil rig workers, power plant operators): Moderate-power payers with identity-locked exit; experience concentrated immediate costs while climate benefits are diffuse.",
+      "High-consumption present populations (Global North): Organized payers; face rising energy costs, carbon taxation, consumption restrictions; constrained but not trapped exit.",
+      "Global North governments and multilateral institutions: Agenda-setters; design emissions targets, allocate investment, enforce via regulation and carbon pricing.",
+      "Climate scientists: Observers; provide empirical grounding for the reading and its founding problem.",
+      "Adaptation-priority advocates: Excluded; their core claim (mitigation infeasible) is treated as empirically refuted.",
+      "Degrowth advocates: Excluded; their core claim (growth-compatible decarbonization impossible) directly contests this reading's foundational axiom."
     ],
-    "logic_rationale": "Extractiveness climbs from 0.32 (2005, when mitigation was still framed as optional) to 0.68 (2050, when the framework's costs on carbon-intensive sectors and just-transition-constrained workers are fully realized). Theater rises from 0.18 to 0.42 as the proportion of climate spending that goes to net-zero narrative and green-washing (corporate net-zero commitments, carbon offset markets) grows relative to actual emissions reduction. Suppression requirement rises from 0.35 to 0.61 as the framework must actively suppress alternative readings (adaptation does not work fast enough, degrowth is politically infeasible) and suppress the voices of fossil fuel workers who reject the transition timeline offered. The measurements track the constraint's lifecycle: early phase (2005–2015) shows it establishing legitimacy and beginning enforcement; mid-phase (2015–2025) shows extraction and suppression intensifying as the real costs land; late phase (2035–2050) shows theater rising as the framework's internal contradictions become visible (just-transition promises unfunded, Global South energy inequality deepening, wealthy-nation consumption unchanged) while suppression remains necessary to prevent acknowledged alternatives from entering policy space.",
-    "perspectival_gap": "The single largest gap is between the climate-finance-architect seat and the carbon-intensive-sector seat. The architect reads the constraint as genuine coordination (climate stability is a global public good) with legitimate cost-shifting (emitters pay for the harm they caused/cause). The sector reads the constraint as regulatory extraction (their capital is seized via stranded-asset rules; their workers are conscripted into transition; their cost is decoupled from any private benefit). Both readings are internally consistent. The engine's directionality computation surfaces this gap: architects get d near 0.5 (they benefit from authority but coordinate a real problem); sectors get d near 0.95 (they pay and constrained their exit).",
-    "directionality_logic": "Future generations: d → 0.0 (full beneficiary, but trapped powerless; the constraint exists to benefit them; they cannot exit). Carbon-intensive sectors: d → 0.95 (nearly full target; institutional power mitigates the mathematical d=1.0 maximum, but they are the named payers and face enforcement). Present-generation workers: d → 0.78 (high target; they pay in job displacement, but organized labor has some collective power and secondary beneficiary role from climate risk reduction). Renewable producers: d → 0.15 (beneficiary; mobile, institutional, gain policy capture). Climate finance architects: d → 0.52 (symmetric; they coordinate the arrangement, but they also enforce it, and they benefit from the structural authority that mitigation-priority framing grants them, and they are constrained by the political need to maintain growth narrative). Global South nations: d → 0.88 (high target; powerless, trapped, constrained energy pathways, but benefits accrue to future generations of wealthy nations). Wealthy-nation electorates: d → 0.25 (net beneficiary; organized, mobile, low perceived cost under growth assumptions). Adaptation advocates: excluded — no d value because they are not seated in the constraint, only marginalized by it.",
-    "mandatrophy_analysis": "The constraint avoids mandatrophy classification on three grounds: (1) it has a live founding problem (atmospheric CO2 rising, warming trajectory dangerous) attested outside the benefiting parties (IPCC); (2) it has real coordination function (align global incentives, prevent free-rider carbon dumping, set legitimate emission targets); (3) it has a temporal justification (the problem is urgent, the solution timeline is bounded, by 2050 the founding problem is either solved or the constraint is revealed as inadequate). However, the constraint carries mandatrophy-risk signals: the theater_ratio rising from 0.18 to 0.42 indicates that a growing portion of enforcement activity is performative rather than functional (green-washing, carbon offsets with dubious additionality, net-zero pledges decoupled from actual emissions cuts). The suppression_requirement remaining elevated (0.61 in 2050) indicates that the constraint continues to require active suppression of alternative framings (adaptation, degrowth) rather than commanding voluntary consensus. The most dangerous mandatrophy vector is the growth assumption itself: if technical decarbonization proves infeasible within growth constraints, the founding-problem status flips from 'live' to 'unsolvable-under-stated-assumptions,' and the constraint would become an inert performance lacking real function — a zombie.",
-    "kernel_context": "This constraint instantiates the MITIGATION-PRIORITY READING of the contested kernel 'climate_harm_prevention.' The kernel is the foundational commitment to preventing climate harm to future generations via emissions reduction. The mitigation-priority reading asserts: legitimate climate response is rapid technological transition to zero-carbon energy within growth-compatible economic frameworks, driven by carbon pricing and renewable subsidies, with future generations as primary beneficiaries and present carbon-intensive sectors as transition cost-bearers. Sibling readings: (1) ADAPTATION-PRIORITY — asserts that mitigation within political and economic constraints is infeasible; legitimate response emphasizes immediate resilience building, accepting higher warming; (2) DEGROWTH-READING — asserts that physical limits and rebound effects prevent growth-compatible decarbonization; legitimate response requires planned contraction of material throughput in wealthy economies. This reading COEXISTS-WITH both siblings (different parties hold different readings; none logically forecloses the others) but INFLUENCES them: if mitigation-priority decarbonization succeeds, adaptation is secondary; if it fails, the two siblings gain legitimacy. The contest turns on two empirical claims: (A) whether technical decarbonization can proceed fast enough within growth constraints; (B) whether the political economy of carbon-intensive sectors can be overcome via carbon pricing rather than requiring structural contraction. The reading carries irreducible uncertainty on both."
+    "logic_rationale": "Extractiveness is moderate-high (0.68 by interval end) because the constraint transfers substantial costs to present carbon-intensive sectors and workers while dispersing benefits across future generations and a global beneficiary set. The founding problem (climate tipping points) is real, but the reading's proposed solution assumes decarbonization within growth—a factual claim that degrowth critics dispute and that adaptation advocates treat as politically infeasible. Suppression is moderate (0.62) because the constraint requires active enforcement: carbon pricing to change incentives, regulation to exclude high-emission alternatives, and continuous political defense against adaptation-priority and degrowth alternatives that would collapse or redirect the constraint. Theater is moderate (0.41): the coordination function (emissions reduction targets, technology development, investment allocation) is real and functionally necessary; the theater component reflects greenwashing (where compliance is performative rather than functional), delayed implementation timelines, and the gap between stated targets and achieved emissions reductions. The measurement series show extractiveness and suppression increasing from t0 to t15 (as the transition accelerates and enforcement machinery hardens), then plateauing—modeling a transition that becomes entrenched and resistant to reversal. Theater-ratio rises with suppression, as the gap between stated targets and actual implementation becomes more visible and must be rhetorically defended. All three metrics share the single authorized time grid (t ∈ {0,5,10,15,20,25,30}) so that temporal analysis has coherent data.",
+    "perspectival_gap": "The constraint should compute very differently from the seats of fossil-fuel-dependent industries, workers, and adaptation advocates vs. the seats of renewable energy beneficiaries, climate scientists, and future-generation advocates. From the industry/worker/adaptation seats, the arrangement looks like coercive cost-transfer justified by a disputed factual claim (that growth-compatible decarbonization is feasible). From the beneficiary/scientist seats, it looks like genuine coordination solving a real collective problem. The engine computes this divergence from power levels, exit options, and beneficiary/victim declarations: carbon-intensive industries have institutional power but constrained exit; future generations have powerless status but maximally trapped exit; fossil-fuel workers have moderate power but identity-locked exit, which should produce different effective directionality than pure powerlessness. Agenda-setters (Global North governments) should compute differently still—they hold the enforcement machinery and the agenda, making their directionality asymmetric relative to payers.",
+    "directionality_logic": "Future generations: d near 1.0 (full target of extraction—they bear the climate liability if mitigation fails, but receive the primary benefit if it succeeds; however, they have zero voice and zero exit, so structurally they are maximal targets despite being intended beneficiaries). Low-lying nations: d around 0.7-0.8 (trapped beneficiaries; they benefit from mitigation but bear costs of inaction, and their exit is physical migration—not a choice). Renewable energy sector: d near 0.0-0.1 (full beneficiary; grows economically with the constraint; mobile exit). Carbon-intensive industries: d near 1.0 (full targets; costs imposed without consent; constrained exit via regulatory arbitrage). Fossil-fuel workers: d around 0.85-0.95 (targets, but with partial identity-lock that creates higher effective extraction than pure economic analysis suggests). High-consumption populations: d around 0.6-0.7 (mixed; they bear visible costs but also inherit climate benefits; constrained but not trapped exit). Global North governments: d around 0.4-0.5 (symmetric; they collect political legitimacy and investment opportunity but also bear enforcement costs and political blow-back). Adaptation and degrowth advocates: excluded, so d not computed; they would occupy different constraint spaces if their readings were instantiated separately.",
+    "mandatrophy_analysis": "The founding problem (climate tipping points) remains live and contested—the mitigation-priority reading ASSERTS that the problem is solvable via technological transition within growth, while adaptation and degrowth readings DISPUTE this claim. Mandatrophy (where the founding problem dies but the constraint persists) is NOT yet resolved because the dispute is open and the founding problem's status is genuinely contested. However, if technological decarbonization reaches maturity (t~30+) and deployment slows despite cost improvements, or if warming crosses stated tipping points despite mitigation efforts, the founding problem's status would shift from 'live' to 'dead' while the constraint persists as a zombie—that would resolve mandatrophy toward entrenched institutional inertia. The current measurement trajectory (extractiveness and suppression plateauing post-t15) is consistent with either successful stabilization or premature institutional lock-in; measurement at t30+ would disambiguate.",
+    "kernel_context": "This constraint instantiates the mitigation-priority reading of the contested climate_harm_prevention kernel. The reading asserts: 'Legitimate climate response prioritizes emissions reduction via technological transition within the growth framework.' The sibling readings are: (1) adaptation_priority: 'Legitimate climate response prioritizes near-term resilience as mitigation is politically/economically infeasible.' (2) degrowth_reading: 'Legitimate climate response requires planned economic contraction in the Global North; growth-compatible mitigation is physically impossible.' These readings coexist as live positions held by different parties in climate policy discourse. This reading influences both siblings by controlling investment flows (growth-compatible mitigation attracts capital, constraining adaptation and degrowth funding) but does not foreclose them. The foundational axiom distinguishing this reading is: growth-compatible decarbonization is both physically feasible (sufficient renewable/nuclear/efficiency technology exists) and politically viable (transition can be managed within market economies). Adaptation-priority reading rests on: mitigation infeasibility (empirical claim); degrowth reading rests on: growth-incompatibility of decarbonization (empirical claim). All three readings share the same founding problem (climate tipping points) but propose different solutions."
   },
   "omegas": [
     {
-      "id": "growth_compatibility_empirical",
-      "question": "Can global emissions be reduced to net-zero by 2050 while maintaining or growing per-capita material throughput in wealthy nations?",
-      "resolution_mechanism": "Post-2050 empirical observation of energy system and material consumption decoupling. Alternatively, detailed bottom-up energy-transition modeling accounting for rebound effects, cement/steel/aviation decarbonization constraints, and total life-cycle emissions.",
-      "impact": "If decoupling fails and emissions and material throughput remain coupled, the mitigation-priority reading's core assumption breaks, and degrowth reading's necessity claim is vindicated. The constraint would shift from tangled_rope (extractive but coordinating real problem) toward snare (extraction hiding unsolvable problem). Classification would flip at the economy-wide level.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Physical feasibility of growth-compatible decarbonization."
-    },
-    {
-      "id": "political_economy_of_carbon_sector",
-      "question": "Can carbon-intensive sectors' transition be achieved through carbon pricing and market incentives, or does their institutional power (lobbying, capital control, labor leverage) prevent market-driven decarbonization?",
-      "resolution_mechanism": "Comparative historical analysis of sector transitions that succeeded (e.g., refrigerant phase-out, lead paint removal) vs. those stalled (e.g., agricultural methane). Post-2030 assessment of whether carbon-intensive sectors' emissions reductions track pricing incentives or are merely delayed through lobbying and regulatory capture.",
-      "impact": "If carbon sectors successfully block or delay transition via political economy, the enforcement requirement would rise further (suppression would need to increase) and the constraint would become purely extractive rather than coordinating. Alternatively, if market incentives prove sufficient, the extraction component is lower than authored, and the constraint is more purely rope-like.",
+      "id": "growth_compatibility_boundary",
+      "question": "Is greenhouse-gas emissions reduction compatible with continued economic growth (measured as GDP expansion), or does the physical constraint on carbon intensity require planned contraction?",
+      "resolution_mechanism": "Decoupling hypothesis test: track total GDP growth vs. total emissions reduction over a 10–15 year interval; if emissions fall while GDP grows, the hypothesis is supported; if emissions fall only when GDP contracts, the reading's core axiom fails. Independent carbon accounting to prevent carbon accounting method variation from confounding the test.",
+      "impact": "If incompatible, the reading collapses into the degrowth reading, and the constraint's legitimacy shifts from coordination-with-asymmetric-costs to coercive-contraction-dressed-as-transition. If compatible, the reading's foundational axiom holds and the constraint's classification as tangled_rope (real coordination + asymmetric extraction) is supported.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether carbon sector transition is market-driven or politically blocked."
+      "description": "Whether decarbonization can occur within growth framework"
     },
     {
-      "id": "just_transition_funding_credibility",
-      "question": "Will wealthy nations actually fund just-transition support at the scale necessary to prevent mass worker displacement and maintain organized labor's political support for mitigation?",
-      "resolution_mechanism": "Tracking of actual climate finance flows dedicated to just-transition vs. pledged amounts (currently, pledges exceed realized funding by 3–5x). Post-2030 labor-market data on displaced fossil-fuel worker employment and wage outcomes in transition programs.",
-      "impact": "If just-transition funding fails, the constraint shifts from extracting 'fairly' (via social support) to extracting brutally (via mass joblessness). The present-generation-workers seat would flip from 'constrained payer with secondary beneficiary role' to 'victim.' Suppression would need to intensify to prevent labor-led opposition coalition. Classification risk: constraint becomes pure snare on that seat.",
-      "confidence": "high",
+      "id": "mitigation_feasibility_vs_political_will",
+      "question": "Is the constraint's slow implementation (theater_ratio rising, target timelines repeatedly delayed) due to technological barriers, political economy barriers, or the reading's claim being empirically false?",
+      "resolution_mechanism": "Counterfactual analysis: survey what would change if political will were maximal (no industry lobbying, no regulatory capture, no election cycles). If barriers remain high, technology is the constraint; if barriers mostly evaporate, politics is the real constraint and adaptation-priority advocates' claim (mitigation infeasible) gains credibility.",
+      "impact": "If political barriers are dominant, the reading remains live but suppression and theater increase. If technological barriers dominate, the reading's factual claim (feasibility) fails and classification shifts toward snare (pure extraction with unachievable coordination framing). If both are substantial, the constraint is hybrid extraction under a contested feasibility claim.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether just-transition is funded or merely promised."
+      "description": "Whether implementation delays are due to technical or political constraints"
     },
     {
-      "id": "adaptation_infeasibility_claim",
-      "question": "Is rapid emissions mitigation actually MORE feasible than massive-scale adaptation, or does the adaptation-priority reading's claim that mitigation is politically/economically infeasible hold?",
-      "resolution_mechanism": "Comparative cost analysis of adaptation (dike building, water infrastructure, coastal relocation, crop breeding) vs. decarbonization at various warming levels. Post-2035 political economy assessment: has mitigation actually accelerated globally, or have nations shifted resources to adaptation despite mitigation commitments?",
-      "impact": "If adaptation proves MORE feasible and mitigation stalls, the mitigation-priority reading's legitimacy collapses, and adaptation-priority reading becomes ascendant. The constraint would be reclassified as failed founding-problem-solving (mandatrophy), and the distribution of extraction would invert (wealthy nations that promised mitigation but funded adaptation would be exposed as free-riders).",
+      "id": "intergenerational_power_asymmetry",
+      "question": "How much of the constraint's extractiveness derives from the fact that future generations have zero political power and no exit, making them maximally capturable for cost-transfer regardless of whether the coordination function is real?",
+      "resolution_mechanism": "Structural analysis: decompose extractiveness into (a) coordination overhead (genuine cost of decarbonization), (b) rent capture (renewable energy windfall profits, transition winner capture), and (c) intergenerational power arbitrage (using future generations' powerlessness to justify present sacrifice). If (c) is substantial, the constraint is more extractive than the coordination function alone justifies.",
+      "impact": "If (c) is substantial, the reading becomes a cover for intergenerational rent transfer, and the classification shifts from tangled_rope toward snare. If (c) is minor, the reading's asymmetry is justifiable as the price of decarbonization necessity.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Relative feasibility of mitigation vs. adaptation strategies."
+      "description": "Whether future-generation powerlessness is structurally exploited"
     },
     {
-      "id": "kernel_reading_contestation",
-      "question": "Is the mitigation-priority reading a permanent legitimate reading of climate response, or is it merely a transitional compromise between adaptation and degrowth positions?",
-      "resolution_mechanism": "Institutional and academic landscape analysis: tracking whether adaptation-priority and degrowth readings gain policy credibility post-2030 or remain marginalized. If mitigation stalls post-2035, which reading becomes the institutional fallback?",
-      "impact": "If either sibling reading gains institutional credibility (shifts from excluded to seat-holding), the kernel's structure changes and the mitigation-priority reading becomes one of three coexisting readings rather than the dominant framing. The constraint's enforceability would depend on defending its reading against live competitors, not suppressing impossible alternatives.",
+      "id": "fossil_fuel_worker_exit_structure",
+      "question": "Is the measured identity-locked exit status for fossil-fuel workers structural (their skills and community have no alternative use) or performative (skills are transferable but identity investment makes exit psychologically costly)?",
+      "resolution_mechanism": "Post-exit trajectory study: track workers who exit coal/oil industries and measure whether suppression persists (internalized) or dissolves (structural). If persists, identity-lock is real and substantive; if dissolves, lock is performative and could be broken by strong enough policy support.",
+      "impact": "If structural, fossil-fuel workers are genuinely trapped and the constraint's extraction from them is maximal. If performative, suppression is internalized but could be reversed, and the extraction is conditional on ideology rather than structural.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether mitigation-priority reading is permanent or transitional kernel interpretation."
+      "type_class": "empirical",
+      "description": "Whether fossil-fuel worker identity-lock is structural or performative"
+    },
+    {
+      "id": "reading_contest_resolution",
+      "question": "Which reading (mitigation_priority, adaptation_priority, or degrowth) will be endorsed by empirical evidence and political institutions over the next 15 years? Will one reading foreclose the others, or will they continue coexisting?",
+      "resolution_mechanism": "Observational time-series: track deployed mitigation capacity, emissions trajectories, warming paths, adaptation investment, and policy emphasis shifts. If emissions reduction tracks to 1.5–2°C target timelines, mitigation_priority is vindicated. If mitigation stalls and adaptation spending rises sharply, adaptation_priority gains institutional weight. If GDP growth decouples sharply from any reasonable carbon budget, degrowth advocates' claim is vindicated.",
+      "impact": "This is the ultimate falsifiability test for the reading. If the reading's empirical predictions fail (warming continues, emissions don't decouple, growth doesn't accommodate decarbonization), the entire justification structure for the constraint collapses and the classification flips from coordination to pure extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Which kernel reading is empirically supported over 15-year time horizon"
     }
   ],
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
   },
   "network": {
     "affects_constraints": [
       "climate_harm_prevention__adaptation_priority",
-      "climate_harm_prevention__degrowth_reading"
+      "climate_harm_prevention__degrowth_reading",
+      "carbon_pricing_mechanism",
+      "renewable_energy_subsidy_architecture",
+      "fossil_fuel_phase_out_mandate"
     ],
-    "dual_formulation_note": "The climate_harm_prevention kernel contains three structurally distinct constraints, each with different ε values, beneficiary/victim structures, and type classifications. This file (mitigation_priority reading) asserts rapid technological transition is feasible; the adaptation_priority reading contests mitigation feasibility and reframes legitimacy around resilience; the degrowth_reading contests the growth assumption itself. All three share the same foundational climate physics (rising CO2, dangerous warming) but derive different policy-response structures from contested assumptions about political economy and technology. Link all three via affects_constraints to enable contamination analysis: if mitigation-priority decarbonization succeeds, adaptation and degrowth readings lose policy traction; if mitigation stalls, the sibling readings gain legitimacy and the kernel's active reading shifts."
+    "dual_formulation_note": "This constraint is one reading of the contested climate_harm_prevention kernel. The mitigation_priority reading instantiates the normative claim that emissions reduction via technological transition within growth is both feasible and legitimate. Two sibling readings decompose the same founding problem (climate tipping points) but propose different solutions: adaptation_priority assumes mitigation is politically infeasible and redirects to resilience; degrowth_reading contests the growth assumption itself. These readings are NOT the same constraint viewed from different angles—they have different ε values, different beneficiary/victim structures, and different empirical predictions. Each should be authored separately. This reading influences the others by controlling investment flows and institutional endorsement: if mitigation-priority constraints are successfully enforced, capital and political will are diverted from adaptation and degrowth funding paths."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.52
+      "power_atom": "powerless",
+      "d_value": 1.0
     }
   ],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "tangled_rope",
-    "downstream_of": [
-      "climate_harm_prevention__adaptation_priority",
-      "climate_harm_prevention__degrowth_reading"
-    ]
-  },
+  "gain_flow": "renewable_energy_sector",
+  "fixing_cost": "prohibitive",
   "cs_structure": {
-    "kernel_codification": "formalized",
-    "authority_grounding": "expertise",
-    "interpretation_layer_present": true,
-    "reference_frame": "technological_decarbonization_within_growth",
-    "drift_state": {
-      "moment": "post_2025_transition_acceleration",
-      "direction": "axiom_overriding",
-      "magnitude": "substantial",
-      "acknowledged": false
-    },
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
     "reading_relations": [
       {
-        "sibling_id": "climate_harm_prevention__adaptation_priority",
-        "relation": "coexists_with"
+        "sibling_id": "adaptation_priority",
+        "relation": "influences"
       },
       {
-        "sibling_id": "climate_harm_prevention__degrowth_reading",
+        "sibling_id": "degrowth_reading",
         "relation": "coexists_with"
       }
     ],
     "axioms": [
       {
-        "atom": "growth_compatible_decarbonization_feasible",
+        "atom": "growth_compatible_decarbonization",
         "role": "foundational",
         "status": "holdable",
         "grounding_type": "empirically_contingent"
       },
       {
-        "atom": "mitigation_prioritized_over_adaptation",
-        "role": "foundational",
+        "atom": "mitigation_technologically_feasible",
+        "role": "secondary",
         "status": "holdable",
-        "grounding_type": "instrumental"
+        "grounding_type": "empirically_contingent"
       }
-    ]
+    ],
+    "reference_frame": "pre_industrial_climate_state",
+    "drift_state": {
+      "moment": "contemporary_anthropocene",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
   },
   "provenance": {
-    "prompt_commit": "22843cdfd28a814d8f30c35778e75821452545bd",
-    "schema_commit": "2e9dff2fe8ce0cd758f85569a335a6c41ea42068",
-    "generated_date": "2026-06-13",
-    "source_essay": "no_scope_rebuild",
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku+stakeholder_backfill",
     "one_shot_example": "agent/example_platform_commission.json",
     "model": "claude-haiku-4-5-20251001",
-    "sampling_params": "max_tokens=16384,temperature=api_default",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
     "seeded_from": "none",
-    "draw": 1
+    "draw": 1,
+    "generation_run_id": "none"
   }
 }

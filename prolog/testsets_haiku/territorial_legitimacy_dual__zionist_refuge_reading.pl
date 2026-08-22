@@ -3,7 +3,7 @@
 % ============================================================================
 % Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-06-11
+% Generated: 2026-06-19
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,37 +77,42 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: territorial_legitimacy_dual__zionist_refuge_reading
  *   human_readable: Israeli Territorial Legitimacy (Zionist Refuge Reading)
- *   domain: political/territorial
+ *   domain: political_theory/international_relations
  *
  * SUMMARY:
- *   Israel's territorial legitimacy in this reading is grounded in three
- *   interconnected claims: (1) Jewish historical persecution, culminating in
- *   the Holocaust, creates an existential necessity for a sovereign Jewish
- *   refuge territory; (2) Divine covenant and religious tradition establish a
- *   rightful connection between Jewish peoplehood and the land of Israel; (3)
- *   UN General Assembly partition resolution 181 (1947) provided
- *   international legal endorsement for establishing a Jewish state in
- *   Palestine. This reading frames the 1948 establishment as legitimate and
- *   uncontested; the 1967 occupation and subsequent settlement expansion as
- *   security-necessitated extensions of that legitimacy; and Palestinian
- *   displacement as the consequence of Arab state rejection of partition
- *   rather than as a primary consequence of Israeli action. The constraint
- *   operates by enforcing territorial boundaries, restricting Palestinian
- *   return and political rights, justifying settlement expansion, and
- *   suppressing Palestinian counter-claims to the same territory. The reading
- *   is contested — Palestinian autochthony and two-state compromise readings
- *   offer structurally different legitimacy grounds — but within this
- *   reading's internal logic, it is coherent and self-justifying.
+ *   This constraint instantiates ONE reading of the contested kernel of
+ *   territorial legitimacy in the Levant. The zionist_refuge_reading grounds
+ *   Israeli territorial sovereignty in three pillars: (1) historical
+ *   persecution of Jews requiring a secure refuge, (2) divine promise
+ *   (covenant narrative), and (3) UN Partition authorization (1947). The
+ *   reading frames the 1948 establishment of the state as legitimate and
+ *   largely uncontested; the 1967 occupation and territorial expansion as
+ *   negotiable but justified by security imperatives and Palestinian
+ *   rejection of partition; and Palestinian displacement as a consequence of
+ *   Arab refusal to accept the partition, not as an inherent cost of the
+ *   constraint itself. This reading coexists with the
+ *   palestinian_autochthony_reading (which grounds Palestinian legitimacy in
+ *   continuous habitation and displacement trauma) and the
+ *   two_state_coexistence_reading (which seeks mutual recognition of both
+ *   claims). The claim/metric gap is deliberate: the reading claims
+ *   tangled_rope (genuine coordination function — refuge for a persecuted
+ *   people — plus asymmetric extraction — dispossession and occupation of
+ *   Palestinians); the authored metrics show the constraint operates with
+ *   high extractiveness, substantial suppression, and rising theater
+ *   (security framing increasingly performing rather than implementing
+ *   coordination). The measurement series tracks the constraint from its
+ *   ideological origins (1897 Herzl) through realization (1948) and expansion
+ *   (1967) to present, showing extraction rising after partition and theater
+ *   increasing after the Oslo Accords framework institutionalized the
+ *   occupation.
  *
  * KEY AGENTS:
- *   - Jewish diaspora communities: historically persecuted, seeking refuge and self-determination; identity-locked to the legitimacy narrative of persecution and survival.
- *   - Israeli state apparatus: agenda-setter; administers territory, citizenship, settlement, and security enforcement; collects the monopoly on political authority over the territory.
- *   - Palestinian displacement bearers: powerless payers; carry the tangible cost of territorial loss, refugee status, severed livelihoods; their displacement is framed within this reading as a consequence of Arab rejection rather than primary causation.
- *   - Palestinian territorial claimants: moderately powerful but structurally excluded from the legitimacy authorization; their counter-claims are framed as superseded by partition and security necessity; their voice is absent from the constraint's founding logic.
- *   - Settlement expansion constituencies: organized beneficiaries; interpret the divine covenant and persecution narratives as extending territorial claims beyond 1948 boundaries; identity-locked to territorial expansion.
- *   - International partition authorities (UN): observer seat invoked for 1948 legitimacy; ambiguous on post-1967 boundaries and settlement; the reading treats them as having authorized the establishment but not the expansion.
- *   - Arab state actors: excluded; would contest that partition was imposed without Palestinian consent and that Palestinian displacement was a consequence of dispossession rather than Arab rejection; their refusal to endorse partition is treated as settling the matter against them within this reading.
- *   - Security apparatus beneficiaries: institutional beneficiaries; gain power and budgetary allocation from the security justification of territorial control; benefit from the threat framing that perpetuates the constraint.
+ *   - Israeli state apparatus: administers and enforces the constraint through military and legal institutions; claims legitimacy from the reading's three pillars
+ *   - Jewish national movement and diaspora: articulates the reading's narrative; benefits from security umbrella and territorial refuge the reading provides
+ *   - Palestinian Arabs (1948 displaced, 1967 occupied): bear the constraint's costs; experience dispossession and military control; excluded from adjudicating the legitimacy question
+ *   - Western governments (US, EU): endorse the reading through diplomatic recognition and strategic support; benefit from aligned legitimacy framing
+ *   - Arab states and international bodies: contest or remain excluded from the reading; would voice Palestinian autochthony and right-of-return claims if given institutional power
+ *   - Conservative diaspora Jewish constituencies: benefit from refuge provision and security guarantees; maintain identity while outside the enforcement zone
  */
 
 /* ==========================================================================
@@ -107,65 +121,141 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(territorial_legitimacy_dual__zionist_refuge_reading, 0.68).
-domain_priors:suppression_score(territorial_legitimacy_dual__zionist_refuge_reading, 0.72).
-domain_priors:theater_ratio(territorial_legitimacy_dual__zionist_refuge_reading, 0.41).
+domain_priors:suppression_score(territorial_legitimacy_dual__zionist_refuge_reading, 0.71).
+domain_priors:theater_ratio(territorial_legitimacy_dual__zionist_refuge_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, extractiveness, 0.68).
-narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 0.72).
-narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, accessibility_collapse, 0.62).
-narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, resistance, 0.78).
+narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, accessibility_collapse, 0.63).
+narrative_ontology:constraint_metric(territorial_legitimacy_dual__zionist_refuge_reading, resistance, 0.79).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(territorial_legitimacy_dual__zionist_refuge_reading, tangled_rope).
 narrative_ontology:human_readable(territorial_legitimacy_dual__zionist_refuge_reading, "Israeli Territorial Legitimacy (Zionist Refuge Reading)").
-narrative_ontology:topic_domain(territorial_legitimacy_dual__zionist_refuge_reading, "political/territorial").
+narrative_ontology:topic_domain(territorial_legitimacy_dual__zionist_refuge_reading, "political_theory/international_relations").
 
 domain_priors:requires_active_enforcement(territorial_legitimacy_dual__zionist_refuge_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(territorial_legitimacy_dual__zionist_refuge_reading, '3f5db7cc-22ec-459f-80eb-1b639b3ef929').
-narrative_ontology:cs_kernel_codification('3f5db7cc-22ec-459f-80eb-1b639b3ef929', fixed_text).
-narrative_ontology:cs_authority_grounding('3f5db7cc-22ec-459f-80eb-1b639b3ef929', extraction).
-narrative_ontology:cs_interpretation_layer_present('3f5db7cc-22ec-459f-80eb-1b639b3ef929').
-narrative_ontology:cs_reading_relation('3f5db7cc-22ec-459f-80eb-1b639b3ef929', territorial_legitimacy_dual__palestinian_autochthony_reading, coexists_with).
-narrative_ontology:cs_reading_relation('3f5db7cc-22ec-459f-80eb-1b639b3ef929', territorial_legitimacy_dual__two_state_coexistence_reading, influences).
-narrative_ontology:cs_axiom('3f5db7cc-22ec-459f-80eb-1b639b3ef929', foundational, jewish_persecution_necessitates_territorial_refuge).
-narrative_ontology:cs_axiom_status(jewish_persecution_necessitates_territorial_refuge, holdable).
-narrative_ontology:cs_axiom_grounding('3f5db7cc-22ec-459f-80eb-1b639b3ef929', jewish_persecution_necessitates_territorial_refuge, empirically_contingent).
-narrative_ontology:cs_axiom('3f5db7cc-22ec-459f-80eb-1b639b3ef929', foundational, un_partition_authorizes_jewish_statehood).
-narrative_ontology:cs_axiom_status(un_partition_authorizes_jewish_statehood, holdable).
-narrative_ontology:cs_axiom_grounding('3f5db7cc-22ec-459f-80eb-1b639b3ef929', un_partition_authorizes_jewish_statehood, conventional).
-narrative_ontology:cs_axiom('3f5db7cc-22ec-459f-80eb-1b639b3ef929', secondary, divine_covenant_ground_territorial_claim).
-narrative_ontology:cs_axiom_status(divine_covenant_ground_territorial_claim, holdable).
-narrative_ontology:cs_axiom_grounding('3f5db7cc-22ec-459f-80eb-1b639b3ef929', divine_covenant_ground_territorial_claim, theological).
-narrative_ontology:cs_axiom('3f5db7cc-22ec-459f-80eb-1b639b3ef929', secondary, security_justifies_territorial_control_expansion).
-narrative_ontology:cs_axiom_status(security_justifies_territorial_control_expansion, holdable).
-narrative_ontology:cs_axiom_grounding('3f5db7cc-22ec-459f-80eb-1b639b3ef929', security_justifies_territorial_control_expansion, instrumental).
-narrative_ontology:cs_reference_frame('3f5db7cc-22ec-459f-80eb-1b639b3ef929', jewish_refuge_territorial_necessity).
-narrative_ontology:cs_drift_state('3f5db7cc-22ec-459f-80eb-1b639b3ef929', contemporary_security_era, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('3f5db7cc-22ec-459f-80eb-1b639b3ef929', '').
+narrative_ontology:cs_story_uid(territorial_legitimacy_dual__zionist_refuge_reading, 'e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f').
+narrative_ontology:cs_kernel_codification('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', fixed_text).
+narrative_ontology:cs_authority_grounding('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', lineage).
+narrative_ontology:cs_interpretation_layer_present('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f').
+narrative_ontology:cs_reading_relation('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', territorial_legitimacy_dual__palestinian_autochthony_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', territorial_legitimacy_dual__two_state_coexistence_reading, coexists_with).
+narrative_ontology:cs_axiom('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', foundational, jewish_historical_persecution_establishes_refuge_legitimacy).
+narrative_ontology:cs_axiom_status(jewish_historical_persecution_establishes_refuge_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', jewish_historical_persecution_establishes_refuge_legitimacy, empirically_contingent).
+narrative_ontology:cs_axiom('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', foundational, divine_covenant_claim_territorial_right).
+narrative_ontology:cs_axiom_status(divine_covenant_claim_territorial_right, holdable).
+narrative_ontology:cs_axiom_grounding('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', divine_covenant_claim_territorial_right, theological).
+narrative_ontology:cs_axiom('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', secondary, un_partition_international_authorization).
+narrative_ontology:cs_axiom_status(un_partition_international_authorization, holdable).
+narrative_ontology:cs_axiom_grounding('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', un_partition_international_authorization, conventional).
+narrative_ontology:cs_axiom('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', secondary, security_occupation_justified_by_arab_rejection).
+narrative_ontology:cs_axiom_status(security_occupation_justified_by_arab_rejection, holdable).
+narrative_ontology:cs_axiom_grounding('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', security_occupation_justified_by_arab_rejection, empirically_contingent).
+narrative_ontology:cs_reference_frame('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', jewish_refuge_covenant).
+narrative_ontology:cs_drift_state('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', post_oslo_accords_occupation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('e60cf61a-1bf2-4462-9bc2-1ec9c74bec5f', '').
 narrative_ontology:cs_kernel_id(territorial_legitimacy_dual__zionist_refuge_reading, territorial_legitimacy_dual).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, jewish_diaspora_refuge_seekers).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, jewish_diaspora_refugees).
 narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, israeli_state_apparatus).
-narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, settlement_expansion_constituencies).
-narrative_ontology:constraint_victim(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_displacement_bearers).
-narrative_ontology:constraint_victim(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_territorial_claimants).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, jewish_national_movement).
+narrative_ontology:constraint_victim(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_arabs_displaced_1948).
+narrative_ontology:constraint_victim(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_arabs_occupied_1967).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, western_governments_us_eu).
+narrative_ontology:constraint_beneficiary(territorial_legitimacy_dual__zionist_refuge_reading, conservative_jewish_diaspora).
+narrative_ontology:constraint_victim(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_national_authority).
+narrative_ontology:constraint_vindicates(territorial_legitimacy_dual__zionist_refuge_reading, jewish_historical_persecution_doctrine).
+narrative_ontology:constraint_vindicates(territorial_legitimacy_dual__zionist_refuge_reading, divine_promise_covenantal_claim).
+narrative_ontology:constraint_vindicates(territorial_legitimacy_dual__zionist_refuge_reading, un_partition_legitimacy_doctrine).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The global Jewish diaspora gains from the reading's provision of territorial refuge and security guarantees. They benefit from the historical narrative that frames their vulnerability as legitimate and requiring sovereign protection. The Law of Return provides exit option (they can immigrate to Israel) but most remain in diaspora while enjoying the security umbrella the state provides.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, jewish_diaspora_refugees, beneficiary,
+    powerful, civilizational, arbitrage, global).
+
+% Administers and enforces the constraint through military, legal, and institutional structures. The state's legitimacy claim depends on the reading: that Jewish historical vulnerability establishes the right to territorial sovereignty, that divine promise or UN partition authorizes the state, and that security imperatives justify territorial control. Without the reading, the state's sovereignty becomes negotiable with Palestinian claims.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, israeli_state_apparatus, agenda_setter,
+    institutional, civilizational, trapped, national).
+
+% The institutional apparatus (World Zionist Organization, institutional networks in Israel and diaspora) articulates and sustains the reading's narrative. The movement mobilizes constituencies around the historical persecution and refugee legitimacy framing and resists alternative readings as delegitimizing threats. Embedded in Israeli state institutions and diaspora Jewish civil society.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, jewish_national_movement, beneficiary,
+    institutional, civilizational, trapped, global).
+narrative_ontology:stakeholder_secondary_role(territorial_legitimacy_dual__zionist_refuge_reading, jewish_national_movement, agenda_setter).
+
+% Experienced dispossession from homes, land, and property upon establishment of the Israeli state. The reading frames their displacement as a consequence of Arab rejection of partition, not as a direct cost of the constraint. Their Palestinian identity is inseparable from the lost homeland; they cannot exit the constraint. They experience the reading as enforced narrative that justifies their loss.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_arabs_displaced_1948, payer,
+    powerless, generational, identity_locked, regional).
+
+% Live under military occupation justified by the reading's security framing. Movement is restricted, resources are appropriated, and governance is subordinated to Israeli security administration. The reading frames occupation as temporary pending final status negotiation; Palestinians experience it as indefinite territorial control. Their exit options are blocked by military administration and legal restrictions.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_arabs_occupied_1967, payer,
+    powerless, generational, constrained, regional).
+
+% UN institutions witness and adjudicate the constraint's operation. The reading appeals to UN Partition Plan 181 as authorizing legitimacy; UN bodies increasingly invoke Palestinian rights and occupation status as countervailing claims. The reading's legitimacy appeal remains contested within international institutions.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, international_community_un_bodies, observer,
+    institutional, generational, analytical, universal).
+
+% Benefit from the reading's legitimacy framework by endorsing Israeli statehood as grounded in post-WWII international law and Holocaust remembrance. They gain a strategic ally in a contested region. They have options to shift support to alternative readings but maintain this framing as the primary working basis for Middle East diplomacy.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, western_governments_us_eu, beneficiary,
+    institutional, generational, arbitrage, global).
+
+% Rejected the reading at its founding (1947 Partition Plan rejection) and remain structurally excluded from adjudicating the constraint's legitimacy within the international consensus. Their power is substantial regionally but constrained in the global legitimacy apparatus the reading appeals to. They would articulate alternative readings (Palestinian autochthony) if given institutional voice.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, arab_states_opposition, excluded,
+    powerful, generational, constrained, regional).
+
+% Administers limited autonomy under Israeli occupation (post-Oslo Accords framework) but is excluded from adjudicating the fundamental legitimacy question. Would articulate Palestinian autochthony reading if given full voice but lacks institutional power to contest the Zionist refuge reading at the global level. Bears the cost of limited sovereignty.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_national_authority, payer,
+    moderate, generational, constrained, regional).
+narrative_ontology:stakeholder_secondary_role(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_national_authority, excluded).
+
+% Maintains diaspora identity while benefiting from the constraint's provision of territorial refuge and national sovereignty. The reading vindicates their historical experience of vulnerability. They have the option to immigrate to Israel (Law of Return) or remain in diaspora, making their exit options more open than those trapped in the enforcement zone.
+narrative_ontology:constraint_stakeholder(territorial_legitimacy_dual__zionist_refuge_reading, conservative_jewish_diaspora, beneficiary,
+    organized, civilizational, mobile, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(territorial_legitimacy_dual__zionist_refuge_reading, israeli_state_apparatus).
+narrative_ontology:fixing_cost_class(territorial_legitimacy_dual__zionist_refuge_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Provides a territorial refuge and sovereign state structure for a historically persecuted diaspora (Jewish peoples) who lacked legal protection or territorial anchor during centuries of displacement. Solves the coordination problem of how a stateless people with dispersed global presence can establish collective security, legal standing, and cultural continuity.
+% TRANSFER_FUNCTION: Transfers territory, resources (land, water, property), and political authority from Palestinian Arabs to the Jewish state and its institutions. The reading frames this transfer as justified by Jewish historical claim, divine promise, and UN partition authorization. The gain accrues to the Israeli state apparatus, which administers the territory and collects rents from resource extraction and territorial control.
+% ABSENT_VOICES: Palestinian Arabs (the dispossessed and occupied) are present as payers but excluded from adjudicating the constraint's legitimacy. Arab states are excluded from the international legal consensus. Diaspora Jews who dissent from the reading (anti-Zionists, those questioning occupation legitimacy) are marginalized within institutional structures. International bodies that challenge the reading (UN General Assembly resolutions, human rights organizations) are framed as delegitimizing rather than co-adjudicators.
+% DISAPPEARANCE_RATIONALE: If the constraint (Israeli territorial legitimacy grounded in the zionist_refuge_reading) disappeared globally, the territorial order would reorganize: Palestinian governance would expand, refugee return and property restitution would become live questions, regional geopolitics would shift, and Western Middle East strategy would require fundamental reframing.
+% FOUNDING_PROBLEM: Jewish historical vulnerability: centuries of diaspora statelessness, persecution, pogroms, culminating in the Holocaust. The founding problem was how to establish a territorial sanctuary where Jewish self-determination and security could be guaranteed without dependence on the mercy of others.
+% FOUNDING_PROBLEM_CORROBORATION: The Israeli state apparatus, Jewish national movement, and Western governments attest the founding problem is foundational and remains live (antisemitism, security threats, need for refuge). Palestinian national authority and Arab states attest the founding problem, while serious, does not justify ongoing occupation. International human rights bodies affirm the founding problem but contest the territorial solution as disproportionate to the problem it solves. No corroboration exists from outside the benefiting parties (Israeli state, Western governments, Jewish institutional networks) that the specific territorial solution and ongoing occupation are justified by the founding problem.
+narrative_ontology:disappearance_verdict(territorial_legitimacy_dual__zionist_refuge_reading, world_rearranges).
+narrative_ontology:founding_problem_status(territorial_legitimacy_dual__zionist_refuge_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(territorial_legitimacy_dual__zionist_refuge_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(territorial_legitimacy_dual__zionist_refuge_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(territorial_legitimacy_dual__zionist_refuge_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(territorial_legitimacy_dual__zionist_refuge_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,16 +275,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is authored high (0.68 at interval end) because the reading involves forcibly moving territorial control and political rights from one population to another, irrespective of the reading's internal justification. Suppression is authored higher (0.72) because the persistence of the constraint depends not on Palestinian or Arab acceptance but on active military and institutional enforcement against Palestinian return and territorial claims. Theater ratio is moderate (0.41) because the reading genuinely coordinates a real security function and a real identity-solidarity function for diaspora and settler constituencies, but a growing share of the constraint's operation defends settlement expansion and displacement permanence rather than addressing the original persecution-refuge problem. Accessibility collapse is moderate (0.62) because Palestinians theoretically have the exit option of international legal challenge, armed resistance, or migration, but in practice they are trapped by military occupation, refugee-camp confinement, and the reading's framing that delegitimizes all their counter-claims. Resistance is high (0.78) because Palestinian resistance movements, international law scholarship, and Arab states actively contest this reading and advance alternatives; the constraint persists despite substantial organized opposition. The measurement series spans 1900–2024 to show the reading's crystallization: pre-1920 it barely exists; 1920–1948 it accumulates legitimacy claims and institutional infrastructure; 1948 it reaches its initial coherence; 1967 extractiveness jumps as territorial expansion occurs; 1967–2024 it stabilizes at high extraction with modest theater and suppression drift upward. This trajectory reflects the reading's functional change: originally motivated by refuge necessity, increasingly driven by settlement expansion and security justification.
+ *   Extractiveness rises from near-zero in 1897 (ideological stage, no enforcement) through 0.15 at 1947 (pre-state, framework-building) to 0.52 at 1948 (immediate displacement extraction upon state realization) and plateaus around 0.64-0.68 after 1967 (occupation extraction settles into a stable but asymmetric arrangement). The reading justifies the extraction by appeal to Jewish historical vulnerability and security necessity. Suppression is high and rising (0.58 at 1948, 0.71 by 2026) because the constraint's persistence depends on actively excluding alternative readings and suppressing Palestinian resistance to the territorial arrangement — alternatives (right of return, Palestinian sovereignty, equal rights) are framed as delegitimizing rather than as legitimate counterpositions. Theater rises from 0.15 at 1948 (when the security problem was more acute) to 0.42 by 2026, reflecting that security briefings increasingly serve to justify territorial control rather than to respond to changing threat assessments. The constraint exhibits tangled_rope structure: genuine coordination function (territorial refuge for a persecuted diaspora) paired with asymmetric extraction (Palestinian displacement and occupation). The measurement grid uses a shared time axis across all three metrics because the constraint's operation is a unitary process: extraction rises as the security enforcement apparatus becomes capable (1948-1967), theater rises as that apparatus becomes performative (1967-present), and suppression remains high and stable because alternative readings are always threatening to the legitimacy consensus.
  *
  * PERSPECTIVAL GAP:
- *   The zionist_refuge_reading and the palestinian_autochthony_reading are not different observations of the same constraint; they are genuinely different constraints sharing the same territory. From the Israeli institutional seat, this reading is legitimate coordination: the state provides refuge for persecuted Jews and security for Jewish self-determination, justified by historical necessity and international endorsement. From the Palestinian seat (especially the displacement bearers), the same structure operates as enforced extraction: dispossession of land, denial of return, confinement to occupied territories or diaspora, and a legitimacy narrative that does not acknowledge their own territorial claim. The engine computes per-seat types from structural data — the Israeli agenda-setter seat should compute this as rope or weak tangled_rope (coordination + some asymmetry), while the Palestinian payer seats should compute as snare (pure extraction with a suppressed counter-claim). This divergence is NOT an error; it is the measurement the system exists to take. The authored claim is deliberately zionist_refuge_reading (the reading's own framing) while the metrics describe a substantially extractive, actively enforced arrangement — the gap documents the reading's contested status.
+ *   The Israeli state apparatus and diaspora Jewish constituencies compute this constraint as a genuine coordination necessity with justifiable security enforcement — they see refuge for the persecuted as overriding extraction concerns. Palestinian victims and excluded Arab states compute it as pure extraction dressed in historical narrative — they see dispossession and occupation, with the security framing as post-hoc justification. Western governments occupy a middle seat: they endorse the legitimacy reading (beneficiary side) while expressing concern about occupation conduct (partial acknowledgment of extraction). The engine computes these divergences per-seat from the structural data. The perspectival gap is the reading itself — alternative readings (Palestinian autochthony, two-state coexistence) would produce different per-seat classifications.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality for the Israeli state apparatus sits near 0.0 (pure beneficiary): it collects territorial control, political authority, and security guarantees without running a coordination mechanism that constrains it. Exit is arbitrage-grade — Israel can reframe the justification (security, divine covenant, historical necessity) as circumstances change and maintain territorial claims across multiple legitimacy narratives. Directionality for diaspora refuge-seekers sits around 0.2 (high beneficiary): they gain institutional safety and collective self-determination without operating the state apparatus directly, but their identity is fused with the legitimacy narrative, making exit ideologically impossible (exit = abandoning the refuge claim = abandoning Jewish survival framing). Directionality for settlement expansion constituencies sits near 0.15 (beneficiary): they gain territorial acquisition, ideological vindication, and land rights grounded in divine covenant; like diaspora beneficiaries, their identity is fused with territorial claims (exit = abandoning religious Zionism). Directionality for Palestinian displacement bearers sits near 0.95 (full target): they bear all costs (displacement, territorial loss, refugee status, military occupation) with no voice in the legitimacy authorization and no exit except emigration or acceptance of permanent statelessness. Directionality for Palestinian territorial claimants sits near 0.85 (near-target): they claim the same territory but are framed as illegitimate by the reading and subject to enforcement that delegitimizes their claims. Their exit is constrained — remaining in the territory means accepting the reading's framing of their illegitimacy, while leaving means abandoning the territorial claim. Security apparatus beneficiaries sit near 0.2 (beneficiary): they gain power and resources from the constraint without direct accountability to the displaced; their exit is mobile (they can shift to other security roles) but their institutional interest aligns with the constraint's persistence. These directionalities are derived from the beneficiary/victim declarations and exit options; no overrides are required because the structural mapping is clear.
+ *   Israeli state apparatus: d near 0.0 (full beneficiary) — sets the rules, enforces them, collects legitimacy and territorial control. Jewish diaspora: d near 0.15 (beneficiary) — gains refuge and security umbrella without being in the enforcement zone. Palestinian victims: d near 1.0 (full target) — territorial control is enforced upon them, exit is blocked by military administration and identity lock. Western governments: d near 0.2 (partial beneficiary) — gain legitimacy framing and strategic ally without bearing enforcement costs. The reading's narrative (persecution, divine promise, UN partition) is authored as legitimate coordinative justification; the extraction it produces (displacement, occupation) is authored as justified by security imperatives and Palestinian rejection of partition. This directionality structure is what makes the constraint tangled_rope: beneficiaries (diaspora, state, Western powers) coordinate around the reading; victims (Palestinian Arabs) are extracted from without meaningful voice in the legitimacy consensus.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (Jewish persecution and genocide, existential vulnerability) is real and historically documented. The 1948 establishment (refuge + partition endorsement) addresses that problem coherently. However, the founding problem's status has shifted over the interval: by 1967, regional military threats remained (1967 war, ongoing border conflicts), but the primary threat to Jewish survival had shifted from European persecution to state-level security. By the 1990s, the founding problem's original character had substantially attenuated in historical significance, though security concerns persisted. By 2024, the founding problem as it was originally framed (Jewish diaspora vulnerability to genocide) is historical rather than live — present-day Jewish communities in most diaspora locations are secure, and internal threats within Israel have become the dominant security narrative. The constraint's justification has shifted from addressing persecution-refugee need to addressing security-territorial expansion. This is the signature of mandatrophy: the constraint was built to solve problem X; problem X is no longer live; the constraint persists by reframing its justification to address problem Y (security and settlement). The two-state compromise reading explicitly identifies this problem (founding problem dead, constraint still live) and proposes a boundary condition (1967 lines + mutual recognition). The zionist_refuge_reading does not resolve mandatrophy; instead, it preserves the original legitimacy claim while expanding the constraint's scope through supplementary justifications (security, divine covenant, settlement). The engine should flag this as potential mandatrophy: founding_problem_status='contested' (because Israel treats the security problem as functionally continuous with the original persecution problem, while critics argue the founding problem is obsolete) combined with disappearance_verdict='world_rearranges' (because if the constraint vanished, the territorial order would reorganize) and measurement trajectory showing theater ratio rising (increasing proportion of the constraint's operation devoted to defending settlement and security rather than addressing the original refugee need). This is precisely where false-summit detection and mandatrophy resolution interlock.
+ *   The founding problem (Jewish vulnerability requiring territorial refuge) is CONTESTED in status: Israeli institutions attest it is live; Palestinian and Arab authorities attest it is solved (a state exists) but does not justify ongoing occupation; international human rights bodies attest the security framing masks indefinite territorial control. The founding_problem_status is contested because the corroboration divides: benefiting parties (Israeli state, Western governments) attest the problem remains live; excluded parties (Palestinian authority, Arab states, international bodies) attest the problem is solved but does not license the current territorial solution. The reading avoids simple mandatrophy (where the founding problem is dead and the arrangement persists as pure theater) by maintaining that security threats remain live — the measurement series reflects this by keeping suppression_requirement stable and high even as theater rises, claiming that security imperatives remain binding even as the framing becomes increasingly theatrical. The omega variables document this contested status: is the founding problem actually live, or is the reading maintaining a threat narrative to justify permanent occupation?
  */
 
 /* ==========================================================================
@@ -202,124 +292,136 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    historical_persecution_justification_boundary,
-    'Does the historical persecution of European Jews create a legitimate territorial claim in Palestine, or does it create a legitimate claim to refuge status and protection without necessarily justifying displacement of an indigenous population that did not perpetrate the persecution?',
-    'Conceptual analysis of responsibility and redress: who bears the obligation to provide refuge for persecution victims, and can that obligation fall on third parties not responsible for the persecution? International law scholarship on collective self-determination rights vs. individual displacement claims.',
-    'If persecution justifies territorial claim only (not displacement): the reading''s scope narrows to 1948 boundaries with Palestinian return rights. If displacement is justified by security (the reading''s implicit answer): the full scope including settlement expansion remains coherent. The boundary question maps the reading''s logical coherence.',
+    founding_problem_live_vs_resolved,
+    'Is the Jewish historical vulnerability that the reading cites as founding problem still live, or has territorial statehood resolved it such that the ongoing occupation is no longer justified by security imperatives?',
+    'Empirical assessment of security threats to Israel and Jewish diaspora after the establishment of the state. Compare actual threat trajectories (terrorist incidents, international sanctions, war frequency) to the reading''s ongoing security justifications. Examine whether threat levels justify the maintenance of occupation and suppression of alternatives.',
+    'If the founding problem is dead (state is secure, threats are contained), the measurement of mandatrophy becomes critical: the constraint persists as an enforced extraction masked by security theater, shifting classification toward snare. If the founding problem is live, the tangled_rope classification holds — the extraction is justified by genuine security necessity.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(historical_persecution_justification_boundary, conceptual, 'Whether historical persecution can justify dispossessing third parties not responsible for the persecution.').
+narrative_ontology:omega_variable(founding_problem_live_vs_resolved, empirical, 'Whether Jewish historical vulnerability justifies ongoing territorial control.').
 
 omega_variable(
-    divine_promise_secularization,
-    'When divine covenant and religious land claims are translated into secular territorial sovereignty, what remains of the divine promise claim''s legitimacy in an international legal order that rests on consent and secular ground?',
-    'Historical analysis of how the Zionist movement itself navigated this transition (secular vs. religious Zionism debate); documentation of which legitimacy grounds Israel actually invokes in international forums (UN testimony, legal briefs) vs. which it emphasizes domestically to constituencies grounded in religious identity.',
-    'If divine promise loses force in translation to secular law: the reading''s legitimacy foundation rests entirely on historical persecution + UN partition, narrowing its scope. If divine promise grounds are preserved as supplementary legitimacy for religious constituencies: the reading fragments into secular and religious sub-readings with different scopes (1948 vs. settlement expansion). Affects whether the constraint can hold coherently across the secular/religious divide.',
+    divine_promise_legitimacy_status,
+    'Does appeal to divine promise (covenant narrative, religious claim to territory) constitute a legitimate basis for territorial claims in an international legal system grounded in secular sovereignty and self-determination?',
+    'Jurisprudential analysis of how international law (UN Charter, human rights treaties) treats territorial claims grounded in religious or historical-mythological narratives versus territorial claims grounded in self-determination and continuous habitation. Examine whether the reading''s reliance on divine promise is accepted by international adjudicators (International Court of Justice) or treated as non-legal.',
+    'If divine promise is accepted as legitimate legal ground, the reading''s three-pillar legitimacy holds. If it is treated as non-legal (as many international authorities treat it), the reading''s legitimacy rests on persecution history and UN partition alone — narrowing the ground. This affects whether the reading''s foundational axioms are holdable in contemporary international law or require reformulation.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(divine_promise_secularization, conceptual, 'Whether theological land claims translate into secular territorial rights or require separate legitimacy grounds.').
+narrative_ontology:omega_variable(divine_promise_legitimacy_status, conceptual, 'Whether religious/historical claims constitute legitimate territorial authority in secular international law.').
 
 omega_variable(
-    partition_endorsement_scope_creep,
-    'Does UN partition resolution 181 endorse only 1947-1948 boundaries, or does it authorize territorial expansion beyond partition lines if security conditions require it?',
-    'Textual analysis of UN resolution 181 and subsequent General Assembly statements; documentation of whether the UN partition plan''s legitimacy endorsement has been invoked to justify post-1967 territorial acquisition (which it has not been; all Israeli governments have treated 1967 as military conquest rather than UN-authorized expansion).',
-    'If partition endorses only 1948 boundaries: post-1967 territories require separate legitimacy grounds (security, divine covenant, or historical claim). If partition can be extended: the entire reading can rest on UN authority. The evidence shows Israel''s own legal position treats partition as 1948-specific, making this omega reflect the reading''s internal boundary maintenance — 1948 legitimacy is UN-secured; 1967+ requires supplementary justification (security and covenant claims).',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(partition_endorsement_scope_creep, empirical, 'Whether partition authorization extends to post-1967 territorial claims or stops at 1948 boundaries.').
-
-omega_variable(
-    arab_rejection_causal_attribution,
-    'Is Palestinian displacement the result of Arab state rejection of partition (the reading''s framing), or the result of Israeli territorial expansion and military strategy during the 1948 war and subsequent occupation?',
-    'Historical documentation from all sides: Israeli declassified documents (Benny Morris, Avi Shlaim), Palestinian archives, Arab state records. Analysis of causality: was displacement an inevitable consequence of partition rejection, or a strategic choice made by Israeli military and political leadership?',
-    'If displacement is primarily Arab-caused: the reading''s framing holds; Palestinians bear the cost of their own rejection. If displacement is primarily Israeli-caused: the reading''s ethical foundation narrows; it cannot claim to have merely defended partition but must acknowledge territorial expansion as causally primary. Affects whether victims are framed as bearing a cost imposed by third parties (Arab states) or by the reading itself.',
+    partition_consent_and_displacement,
+    'Does Arab rejection of the 1947 Partition Plan justify framing Palestinian displacement as a consequence of Arab rejection rather than as a direct cost of the constraint''s implementation?',
+    'Historical and causal analysis: examine the sequence of events during 1947-1949 (partition vote, Arab rejection, state establishment, forced displacement). Assess whether Palestinian displacement was: (a) a direct and predictable consequence of establishing a Jewish state in territory inhabited by Palestinian Arabs, or (b) a contingent consequence of Arab military rejection of the partition. Examine whether Palestinians (as opposed to Arab states) consented to or rejected partition, and whether their individual rejection justifies their dispossession.',
+    'If displacement is understood as a direct cost of the constraint (option a), the reading''s framing is a cover story — the extraction is inherent, not contingent. If displacement is contingent on Arab military rejection (option b), the reading''s causal framing holds — the constraint coordinates refuge without inherently requiring displacement. This affects the interpretation of 1948 as the founding moment: is it the moment extraction begins, or the moment coordination succeeds?',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(arab_rejection_causal_attribution, empirical, 'Whether Palestinian displacement is caused by Arab rejection or by Israeli strategy.').
+narrative_ontology:omega_variable(partition_consent_and_displacement, empirical, 'Whether Palestinian displacement is a direct cost of establishing the state or a contingent consequence of Arab rejection.').
 
 omega_variable(
-    security_justification_calibration,
-    'What level of Palestinian territorial control and self-determination is compatible with legitimate Israeli security concerns, and at what point does security justification become a perpetual veto on Palestinian political rights?',
-    'Security studies analysis of Israeli security threats (from neighboring states, from Palestinian armed groups) and assessment of how much territorial control and Palestinian statelessness is necessary to address those threats vs. how much exceeds the proportional boundary. Comparative analysis with other security situations where territorial occupation persists (Cyprus, Kashmir, Crimea) and their resolution outcomes.',
-    'If security justifies indefinite territorial control: the reading can accommodate permanent occupation and settlement expansion as security-necessitated. If security justification has limits: the reading''s scope narrows to reversible security measures (military presence, demilitarization agreements) rather than permanent territorial acquisition and settlement. Affects whether the constraint is temporally bounded or permanent.',
+    reading_vs_sibling_logical_structure,
+    'Are the zionist_refuge_reading, palestinian_autochthony_reading, and two_state_coexistence_reading logically incompatible in any single territorial framework, or do they represent genuinely coexisting positions held by different constituencies?',
+    'Examine whether the three readings could be held simultaneously by a single institutional actor (Israeli state, Palestinian authority, international community) or whether adopting one entails rejecting the others. Test whether a framework accepting mutual recognition (two-state coexistence) necessarily forecloses Palestinian full autochthony or Israeli full refuge. Examine whether the readings represent genuinely alternative legitimacy paradigms or merely different emphasis within a shared framework.',
+    'If the readings are logically incompatible, the constraint''s type diverges per-reading: one reading computes as legitimate coordination, another as pure extraction, depending on which legitimacy paradigm is adopted. If the readings coexist as alternative constituencies'' positions within a pluralistic frame, the constraint remains contested and tangled_rope across seats. This determines whether the engine should compute a single type or read per-reading divergence as the primary signal.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(security_justification_calibration, empirical, 'How much Palestinian statelessness and territorial control is necessary vs. excessive for Israeli security.').
+narrative_ontology:omega_variable(reading_vs_sibling_logical_structure, conceptual, 'Logical compatibility of sibling readings within a single territorial framework.').
 
 omega_variable(
-    reading_kernel_contest_location,
-    'This constraint instantiates the zionist_refuge_reading of the territorial_legitimacy_dual kernel. The contested kernel is a stabilized commitment (the territorial arrangement grounded in 1948 legitimacy) that different parties read differently. What specific structural elements of the kernel do the sibling readings contest, and are those contestations located in the legitimacy authorization or in the scope of territorial claims?',
-    'Comparative analysis of the three kernel readings: the zionist_refuge_reading (this constraint) grounds legitimacy in historical persecution + divine promise + UN partition; the palestinian_autochthony_reading grounds legitimacy in continuous habitation + indigenous presence + displacement trauma; the two_state_coexistence_reading grounds legitimacy in mutual recognition with 1967 boundaries as compromise. All three are readings of the SAME kernel — territorial sovereignty in Palestine — but they differ on who has the right to be there and what territory they have a right to control.',
-    'The kernel contest is real; the readings are not talking past each other but genuinely disagreeing about the legitimacy grounding and territorial scope. This omega documents that the contest is structural, not rhetorical — it affects how the engine should weight cross-reading contamination analysis.',
+    suppression_mechanism_structural_vs_internalized,
+    'Is the suppression of Palestinian resistance and alternative legitimacy readings (measured at 0.71) primarily structural (military occupation, legal restrictions, institutional barriers) or internalized (Palestinians'' adoption of the reading''s framing, loss of hope in alternatives)?',
+    'Post-occupation suppression trajectory: if occupation and suppression measures were removed, would Palestinian resistance and alternative readings immediately revive (structural suppression) or persist in attenuation (internalized suppression)? Examine historical cases where occupation ended (Golan Heights agreements, Camp David Accords) and track whether resistance and counter-readings revived or remained suppressed.',
+    'If suppression is primarily structural, removing enforcement machinery would restore alternatives; the constraint''s persistence depends on active coercion. If suppression is partially internalized, the reading has become naturalized in Palestinian consciousness and self-conception; exit remains constrained even after enforcement is removed. This affects the measurement of effective suppression: the scalar 0.71 does not distinguish mechanisms, but an omega reveals the deeper structural question.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_structural_vs_internalized, empirical, 'Whether Palestinian suppression is maintained by external military/legal force or by internalized acceptance of the reading''s framing.').
+
+omega_variable(
+    kernel_reading_committer_frame,
+    'Is this constraint best understood as a reading of a contested kernel (territorial legitimacy grounded in competing foundational narratives), or as an autonomous claim that Israeli statehood''s legitimacy is natural and uncontested?',
+    'Examine the constraint''s generation context: if the analysis assumes the reading is one among multiple legitimate alternatives, it is a kernel reading; if it assumes the reading is the only legitimate legitimacy narrative, it is autonomous. Check whether the analysis includes the sibling readings as live alternatives or as illegitimate challenges. The kernel reading frame requires symmetric treatment of siblings; the autonomous frame treats alternatives as mistakes or propaganda.',
+    'If kernel reading: the classification is reading-relative, and alternative readings generate different classifications; the engine computes per-reading divergence as the primary signal, and mandatrophy analysis focuses on the contested foundational premises. If autonomous: the classification is objective, alternatives are errors, and mandatrophy analysis focuses on institutional persistence. The difference affects how the constraint feeds into cross-reading coupling analysis and how the corpus interprets consent and legitimacy consensus.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(reading_kernel_contest_location, conceptual, 'The location of the kernel contest: legitimacy authorization vs. territorial scope vs. both.').
+narrative_ontology:omega_variable(kernel_reading_committer_frame, preference, 'Whether this constraint is one reading of a contested kernel or an autonomous legitimacy claim.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(territorial_legitimacy_dual__zionist_refuge_reading, 1900, 2024).
+narrative_ontology:interval(territorial_legitimacy_dual__zionist_refuge_reading, 1897, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(terr_tr_t1900, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1900, 0.0).
-narrative_ontology:measurement(terr_tr_t1920, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1920, 0.1).
-narrative_ontology:measurement(terr_tr_t1940, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1940, 0.18).
-narrative_ontology:measurement(terr_tr_t1948, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1948, 0.22).
-narrative_ontology:measurement(terr_tr_t1967, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1967, 0.35).
-narrative_ontology:measurement(terr_tr_t1990, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1990, 0.39).
-narrative_ontology:measurement(terr_tr_t2024, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 2024, 0.41).
+narrative_ontology:measurement(terr_tr_t1897, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1897, 0.0).
+narrative_ontology:measurement_basis(terr_tr_t1897, projected).
+narrative_ontology:measurement(terr_tr_t1947, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1947, 0.1).
+narrative_ontology:measurement_basis(terr_tr_t1947, observed).
+narrative_ontology:measurement(terr_tr_t1948, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1948, 0.15).
+narrative_ontology:measurement_basis(terr_tr_t1948, observed).
+narrative_ontology:measurement(terr_tr_t1967, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1967, 0.28).
+narrative_ontology:measurement_basis(terr_tr_t1967, observed).
+narrative_ontology:measurement(terr_tr_t1993, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 1993, 0.38).
+narrative_ontology:measurement_basis(terr_tr_t1993, observed).
+narrative_ontology:measurement(terr_tr_t2026, territorial_legitimacy_dual__zionist_refuge_reading, theater_ratio, 2026, 0.42).
+narrative_ontology:measurement_basis(terr_tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(terr_be_t1900, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1900, 0.0).
-narrative_ontology:measurement(terr_be_t1920, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1920, 0.15).
-narrative_ontology:measurement(terr_be_t1940, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1940, 0.38).
+narrative_ontology:measurement(terr_be_t1897, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1897, 0.0).
+narrative_ontology:measurement_basis(terr_be_t1897, projected).
+narrative_ontology:measurement(terr_be_t1947, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1947, 0.15).
+narrative_ontology:measurement_basis(terr_be_t1947, observed).
 narrative_ontology:measurement(terr_be_t1948, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1948, 0.52).
+narrative_ontology:measurement_basis(terr_be_t1948, observed).
 narrative_ontology:measurement(terr_be_t1967, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1967, 0.64).
-narrative_ontology:measurement(terr_be_t1990, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1990, 0.66).
-narrative_ontology:measurement(terr_be_t2024, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 2024, 0.68).
+narrative_ontology:measurement_basis(terr_be_t1967, observed).
+narrative_ontology:measurement(terr_be_t1993, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 1993, 0.66).
+narrative_ontology:measurement_basis(terr_be_t1993, observed).
+narrative_ontology:measurement(terr_be_t2026, territorial_legitimacy_dual__zionist_refuge_reading, base_extractiveness, 2026, 0.68).
+narrative_ontology:measurement_basis(terr_be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(terr_su_t1900, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1900, 0.0).
-narrative_ontology:measurement(terr_su_t1920, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1920, 0.35).
-narrative_ontology:measurement(terr_su_t1940, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1940, 0.48).
-narrative_ontology:measurement(terr_su_t1948, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1948, 0.61).
-narrative_ontology:measurement(terr_su_t1967, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1967, 0.71).
-narrative_ontology:measurement(terr_su_t1990, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1990, 0.71).
-narrative_ontology:measurement(terr_su_t2024, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 2024, 0.72).
+narrative_ontology:measurement(terr_su_t1897, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1897, 0.0).
+narrative_ontology:measurement_basis(terr_su_t1897, projected).
+narrative_ontology:measurement(terr_su_t1947, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1947, 0.22).
+narrative_ontology:measurement_basis(terr_su_t1947, observed).
+narrative_ontology:measurement(terr_su_t1948, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1948, 0.58).
+narrative_ontology:measurement_basis(terr_su_t1948, observed).
+narrative_ontology:measurement(terr_su_t1967, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1967, 0.68).
+narrative_ontology:measurement_basis(terr_su_t1967, observed).
+narrative_ontology:measurement(terr_su_t1993, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 1993, 0.7).
+narrative_ontology:measurement_basis(terr_su_t1993, observed).
+narrative_ontology:measurement(terr_su_t2026, territorial_legitimacy_dual__zionist_refuge_reading, suppression_requirement, 2026, 0.71).
+narrative_ontology:measurement_basis(terr_su_t2026, observed).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-narrative_ontology:coordination_type(territorial_legitimacy_dual__zionist_refuge_reading, identity_coordination).
-narrative_ontology:boltzmann_floor_override(territorial_legitimacy_dual__zionist_refuge_reading, 0.12).
+narrative_ontology:coordination_type(territorial_legitimacy_dual__zionist_refuge_reading, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(territorial_legitimacy_dual__zionist_refuge_reading, 0.18).
 narrative_ontology:affects_constraint(territorial_legitimacy_dual__zionist_refuge_reading, territorial_legitimacy_dual__palestinian_autochthony_reading).
 narrative_ontology:affects_constraint(territorial_legitimacy_dual__zionist_refuge_reading, territorial_legitimacy_dual__two_state_coexistence_reading).
-narrative_ontology:affects_constraint(territorial_legitimacy_dual__zionist_refuge_reading, palestinian_right_of_return_constraint).
-narrative_ontology:affects_constraint(territorial_legitimacy_dual__zionist_refuge_reading, israeli_security_doctrine_constraint).
-narrative_ontology:affects_constraint(territorial_legitimacy_dual__zionist_refuge_reading, settlement_expansion_legitimacy_constraint).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of three kernel readings decomposing the territorial_legitimacy_dual kernel. The zionist_refuge_reading grounds legitimacy in historical persecution, divine promise, and UN partition. The palestinian_autochthony_reading grounds legitimacy in continuous habitation, indigenous presence, and displacement trauma. The two_state_coexistence_reading treats both legitimacy claims as valid and proposes mutual recognition with 1967 boundaries as compromise framework. These are not alternative measurements of one constraint; they are genuinely different constraints grounded in incommensurable legitimacy claims about the same territory. The ε values differ substantially: zionist_refuge_reading shows moderate-to-high extractiveness (0.68) because territorial transfer and displacement are core to its operation; palestinian_autochthony_reading would show similarly high extractiveness from the opposite seat; two_state_coexistence_reading would show lower extractiveness because it attempts to distribute territorial claims symmetrically (though the actual distribution remains contested). All three stories link via network.affects_constraints to document their kinship and mutual contamination.
+% This constraint is one reading of the contested kernel territorial_legitimacy_dual. The zionist_refuge_reading grounds Israeli legitimacy in historical persecution, divine promise, and UN partition. Sibling readings (palestinian_autochthony_reading and two_state_coexistence_reading) ground legitimacy in Palestinian continuous habitation / displacement trauma and in negotiated mutual recognition respectively. The readings form a constraint family linked by network.affects_constraints: each reading influences the others' operational conditions and legitimacy consensus. The cluster demonstrates constraint decomposition per DP-001 (ε-invariance): a single natural-language concept (territorial legitimacy in the Levant) decomposes into three structurally distinct constraints with different ε values, different beneficiary/victim structures, and different measured types — the decomposition is not observable-dependent but reading-dependent (different normative framings produce different structural facts about what benefits whom and what is extracted).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(territorial_legitimacy_dual__zionist_refuge_reading, organized, 0.22).
+constraint_indexing:directionality_override(territorial_legitimacy_dual__zionist_refuge_reading, organized, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

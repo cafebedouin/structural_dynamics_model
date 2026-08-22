@@ -39,10 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -56,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -66,33 +76,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: constitutional_secularism__principled_intervention_reading
- *   human_readable: Principled State Intervention in Religious Affairs for Social Reform
- *   domain: constitutional_law/political_theory
+ *   human_readable: State Principled Intervention in Religious Affairs for Social Reform
+ *   domain: constitutional_law/political_theory/religious_governance
  *
  * SUMMARY:
- *   In many pluralist democracies, the constitution mandates equality and
- *   protection of fundamental rights while also protecting religious freedom
- *   and community autonomy. The principled intervention reading resolves this
- *   tension by permitting state intervention in religious governance when
- *   necessary to protect weaker sections from discrimination or oppression,
- *   but only on carefully reasoned grounds (not on majoritarian preference
- *   alone). The reading claims a middle path: not strict neutrality (which
- *   can leave vulnerable groups unprotected), not reformist supremacy (which
- *   can weaponize state power against minorities), but calibrated
- *   intervention guided by fundamental rights principles. This constraint
- *   story models that specific reading as a contentious claim about where
- *   state authority legitimately extends into religious domains. The sibling
- *   readings — strict neutrality and reformist supremacy — are structurally
- *   distinct constraints with different ε values and different extraction
- *   patterns; they are NOT alternative measurements of this same constraint.
+ *   This constraint instantiates the 'principled intervention' reading of the
+ *   constitutional secularism kernel—the claim that the state may
+ *   legitimately intervene in religious affairs when necessary to advance
+ *   social reform and protect weaker sections within religious communities.
+ *   This reading authorizes state courts to judge whether religious practices
+ *   cause 'harm' and to mandate reforms against community resistance,
+ *   provided the intervention is justified as protective of vulnerable
+ *   members. The reading differs from strict neutrality (state maintains
+ *   equal distance) and from reformism (state has affirmative duty to
+ *   eliminate oppression, subordinating religious autonomy entirely). The
+ *   principled-intervention reading attempts to occupy a middle ground:
+ *   intervention is permissible when reform-necessity is established, not
+ *   prohibited (strict neutrality) but not unconditionally mandated
+ *   (reformism). The constraint's extractiveness trajectory shows rising
+ *   intensity over 30 years as intervention authority expanded and deepened,
+ *   with plateau at high extraction (0.68) once judicial doctrine solidified;
+ *   resistance (0.72) remains high throughout because community authorities
+ *   contest the legitimacy of secular judgment over religious matters.
  *
  * KEY AGENTS:
- *   - constitutional_reform_authority (institutional, authoritative, sets the intervention doctrine)
- *   - marginalized_religious_minorities (powerless, trapped, benefit from state protection of fundamental rights)
- *   - majority_religious_establishment (powerful, constrained, lose self-determination over governance)
- *   - religious_autonomy_claimants (organized, constrained, argue state overreach)
- *   - liberal_reform_coalitions (organized, mobile, leverage state authority for reform objectives)
- *   - weaker_sections_internal_dissenters (powerless, trapped, excluded from debate despite stakes)
+ *   - State Judiciary: Interprets constitutional authority; sets intervention boundaries; decides 'harm' and 'reform necessity'
+ *   - Reform Advocates (organized civil society): Petitions courts; identifies targeted practices; legitimizes intervention as protective
+ *   - Marginalized Religious Minorities (women, lower castes, minorities-within-minorities): Vulnerable members seeking protection but absorbed into majoritarian court readings of their traditions
+ *   - Traditional Religious Authorities: Custodians of religious law whose interpretive monopoly is displaced by secular review
+ *   - Majoritarian Religious Coalitions: Numerically/politically dominant religions; less frequently targeted; selectively benefit from intervention against minorities
+ *   - Religious Dissidents (excluded): Internal reformers whose perspectives are structurally unavailable to courts
  */
 
 /* ==========================================================================
@@ -100,61 +113,125 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constitutional_secularism__principled_intervention_reading, 0.62).
-domain_priors:suppression_score(constitutional_secularism__principled_intervention_reading, 0.58).
-domain_priors:theater_ratio(constitutional_secularism__principled_intervention_reading, 0.41).
+domain_priors:base_extractiveness(constitutional_secularism__principled_intervention_reading, 0.68).
+domain_priors:suppression_score(constitutional_secularism__principled_intervention_reading, 0.71).
+domain_priors:theater_ratio(constitutional_secularism__principled_intervention_reading, 0.42).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, extractiveness, 0.62).
-narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, suppression_requirement, 0.71).
+narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, theater_ratio, 0.42).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, accessibility_collapse, 0.68).
-narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, resistance, 0.71).
+narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, accessibility_collapse, 0.64).
+narrative_ontology:constraint_metric(constitutional_secularism__principled_intervention_reading, resistance, 0.72).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(constitutional_secularism__principled_intervention_reading, tangled_rope).
-narrative_ontology:human_readable(constitutional_secularism__principled_intervention_reading, "Principled State Intervention in Religious Affairs for Social Reform").
-narrative_ontology:topic_domain(constitutional_secularism__principled_intervention_reading, "constitutional_law/political_theory").
+narrative_ontology:human_readable(constitutional_secularism__principled_intervention_reading, "State Principled Intervention in Religious Affairs for Social Reform").
+narrative_ontology:topic_domain(constitutional_secularism__principled_intervention_reading, "constitutional_law/political_theory/religious_governance").
 
 domain_priors:requires_active_enforcement(constitutional_secularism__principled_intervention_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(constitutional_secularism__principled_intervention_reading, 'a290636e-397e-4c0f-8f12-911c686f8b57').
-narrative_ontology:cs_kernel_codification('a290636e-397e-4c0f-8f12-911c686f8b57', formalized).
-narrative_ontology:cs_authority_grounding('a290636e-397e-4c0f-8f12-911c686f8b57', lineage).
-narrative_ontology:cs_interpretation_layer_present('a290636e-397e-4c0f-8f12-911c686f8b57').
-narrative_ontology:cs_reading_relation('a290636e-397e-4c0f-8f12-911c686f8b57', constitutional_secularism__strict_neutrality_reading, coexists_with).
-narrative_ontology:cs_reading_relation('a290636e-397e-4c0f-8f12-911c686f8b57', constitutional_secularism__reformist_reading, coexists_with).
-narrative_ontology:cs_axiom('a290636e-397e-4c0f-8f12-911c686f8b57', foundational, intervention_conditional_on_fundamental_rights).
-narrative_ontology:cs_axiom_status(intervention_conditional_on_fundamental_rights, holdable).
-narrative_ontology:cs_axiom_grounding('a290636e-397e-4c0f-8f12-911c686f8b57', intervention_conditional_on_fundamental_rights, deontological).
-narrative_ontology:cs_axiom('a290636e-397e-4c0f-8f12-911c686f8b57', foundational, internal_remedies_exhaustion_presumption).
-narrative_ontology:cs_axiom_status(internal_remedies_exhaustion_presumption, holdable).
-narrative_ontology:cs_axiom_grounding('a290636e-397e-4c0f-8f12-911c686f8b57', internal_remedies_exhaustion_presumption, deontological).
-narrative_ontology:cs_reference_frame('a290636e-397e-4c0f-8f12-911c686f8b57', equal_fundamental_rights_with_religious_autonomy_boundary).
-narrative_ontology:cs_drift_state('a290636e-397e-4c0f-8f12-911c686f8b57', contemporary_majoritarian_capture_phase, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('a290636e-397e-4c0f-8f12-911c686f8b57', '').
+narrative_ontology:cs_story_uid(constitutional_secularism__principled_intervention_reading, '9d3a3132-70f6-4eae-8ab1-0a4c78fec2da').
+narrative_ontology:cs_kernel_codification('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', formalized).
+narrative_ontology:cs_authority_grounding('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', extraction).
+narrative_ontology:cs_interpretation_layer_present('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da').
+narrative_ontology:cs_reading_relation('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', constitutional_secularism__strict_neutrality_reading, influences).
+narrative_ontology:cs_reading_relation('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', constitutional_secularism__reformist_reading, coexists_with).
+narrative_ontology:cs_axiom('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', foundational, protective_intervention_legitimate).
+narrative_ontology:cs_axiom_status(protective_intervention_legitimate, holdable).
+narrative_ontology:cs_axiom_grounding('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', protective_intervention_legitimate, deontological).
+narrative_ontology:cs_axiom('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', secondary, state_interpretive_authority_bounded).
+narrative_ontology:cs_axiom_status(state_interpretive_authority_bounded, holdable).
+narrative_ontology:cs_axiom_grounding('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', state_interpretive_authority_bounded, conventional).
+narrative_ontology:cs_reference_frame('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', protective_state_paternalism).
+narrative_ontology:cs_drift_state('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', contemporary_majoritarian_capture_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('9d3a3132-70f6-4eae-8ab1-0a4c78fec2da', '').
 narrative_ontology:cs_kernel_id(constitutional_secularism__principled_intervention_reading, constitutional_secularism).
 
 % --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(constitutional_secularism__principled_intervention_reading, reform_advocates).
 narrative_ontology:constraint_beneficiary(constitutional_secularism__principled_intervention_reading, marginalized_religious_minorities).
-narrative_ontology:constraint_beneficiary(constitutional_secularism__principled_intervention_reading, reform_oriented_state_institutions).
-narrative_ontology:constraint_beneficiary(constitutional_secularism__principled_intervention_reading, weaker_sections_within_communities).
-narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, religious_autonomy_claimants).
-narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, majority_religious_communities).
-narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, decentralized_religious_governance_structures).
+narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, traditional_religious_authorities).
+narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, majoritarian_religious_coalitions).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(constitutional_secularism__principled_intervention_reading, majoritarian_religious_coalitions).
+narrative_ontology:constraint_victim(constitutional_secularism__principled_intervention_reading, marginalized_religious_minorities).
+narrative_ontology:constraint_vindicates(constitutional_secularism__principled_intervention_reading, secular_state_doctrine).
+narrative_ontology:constraint_vindicates(constitutional_secularism__principled_intervention_reading, protective_paternalism_legitimacy).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Interprets the constitutional authority to intervene in religious affairs when deemed necessary for social reform. Sets the boundaries of acceptable intervention, decides which practices are oppressive, and enforces remedies. Justifies intervention as protecting vulnerable members within religious communities from harm. Sits outside the religious communities it regulates, claims expert standing on constitutional limits.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, state_judiciary, agenda_setter,
+    institutional, generational, analytical, national).
+
+% Civil-rights organizations, feminist groups, secular NGOs, and activist networks that seek state intervention to eliminate practices they identify as oppressive: widow immolation, child marriage, caste-based discrimination within temples, gender-segregated worship, religiously sanctioned domestic abuse. They frame intervention as protection of weaker sections and rely on state authority to override religious community resistance. Their power lies in advocacy capacity and ability to petition courts.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, reform_advocates, beneficiary,
+    organized, generational, mobile, national).
+
+% Members of religious communities—women, lower castes, religious minorities within minorities—whose interests diverge from community leadership. They may seek state intervention to escape practices they experience as coercive but lack standing to challenge internally. However, intervention also subjects them to majoritarian judicial interpretation of their own traditions and may undermine community institutions they depend on for identity and material support.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, marginalized_religious_minorities, beneficiary,
+    powerless, biographical, trapped, local).
+narrative_ontology:stakeholder_secondary_role(constitutional_secularism__principled_intervention_reading, marginalized_religious_minorities, payer).
+
+% Clergy, temple administrators, monastery heads, community elders whose authority derives from custodianship of religious law and tradition. State intervention erodes their interpretive monopoly, subjects their decisions to secular judicial review, and reframes practices they defend as sacred into objects of state reform. They experience the constraint as coercive displacement of legitimate religious governance by an outside power.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, traditional_religious_authorities, payer,
+    powerful, generational, constrained, regional).
+
+% Larger, politically dominant religious communities (Hinduism in India, Islam in Muslim-majority states) whose practices are less frequently targeted for intervention because their numerical and political power influences court composition and public opinion. They face the threat of intervention but also benefit when courts interpret intervention as legitimizing their traditions against minority religions or when intervention targets minorities. Bear suppression costs selectively.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, majoritarian_religious_coalitions, payer,
+    powerful, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(constitutional_secularism__principled_intervention_reading, majoritarian_religious_coalitions, beneficiary).
+
+% Enacts statutory constraints on religious practice (personal law reforms, anti-dowry statutes, scheduled-caste protections) and delegates boundary-drawing to courts. Sits at a remove from judicial intervention but shapes its scope through legislative definition of 'harm' and 'reform.' Can alter the constraint through statute but faces political costs from religious constituencies.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, state_legislature, observer,
+    institutional, generational, analytical, national).
+
+% Internal reformers within religious communities (modernist clergy, feminist theologians, heterodox practitioners) who share reform goals but are excluded from the state-intervener seat. Their perspectives could complicate the binary of 'state' vs. 'tradition,' but the intervention framework structures them out as either co-conspirators with state overreach or insufficiently committed to their own tradition's liberation.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, religious_dissidents, excluded,
+    moderate, biographical, constrained, local).
+
+% UN bodies, treaty monitoring committees, and transnational NGOs that apply universal human-rights standards to religious practices, often supporting state intervention against 'traditional oppression.' Frame intervention as obligation under international law and measure state compliance. Sit outside domestic religious-political contestation but influence legitimacy narratives.
+narrative_ontology:constraint_stakeholder(constitutional_secularism__principled_intervention_reading, international_human_rights_bodies, observer,
+    institutional, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(constitutional_secularism__principled_intervention_reading, state_judiciary).
+narrative_ontology:fixing_cost_class(constitutional_secularism__principled_intervention_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a secular authority—the state judiciary—as the arbiter of permissible religious practice when those practices harm or restrict members of religious communities. Solves the coordination problem of how to protect vulnerable individuals (women, lower castes, minorities) who cannot exit religious communities but whose interests are subordinated by community leadership. Creates a single authoritative voice on 'acceptable' religious conduct, reducing the need for individuals to negotiate with multiple authorities (internal and external).
+% TRANSFER_FUNCTION: Transfers interpretive authority over religious law and practice from decentralized community religious authorities to centralized state courts. Moves the power to define 'oppression,' 'harm,' and 'reform necessity' from religious communities to secular legal systems. Allocates enforcement resources (police, legal machinery, coercive power) to implement court-defined reforms against community resistance. The transfer is asymmetric: beneficiaries (reform advocates, marginalized members) receive judicial validation and coercive backing; payers (traditional authorities, reluctant community members) absorb erosion of autonomy and reputational harm.
+% ABSENT_VOICES: Religious dissidents and reformers within communities—voices advocating change from inside their own traditions—are systematically excluded because the constraint's structure positions them as either state co-conspirators (if they cooperate with judicial intervention) or as failures of their own tradition (if they challenge state authority). Strict-neutrality interpreters and those who believe reform must come from within communities by consent are structurally kept out of the intervention seat. Conservative religious minorities whose reform objectives differ from majoritarian courts' priorities are also excluded from effective voice.
+% DISAPPEARANCE_RATIONALE: If the principled-intervention authority vanished, vulnerable individuals within religious communities would lose access to state-backed remedies and would face a choice between enduring practices they experience as oppressive, attempting internal change with no institutional support, or exiting their communities entirely (a high cost). Religious communities would recentralize authority, and reform pressure would have to work through internal persuasion or exit rather than coercive law. The political economy of religious governance would shift back toward community autonomy, though power dynamics within communities might ossify without external accountability pressure.
+% FOUNDING_PROBLEM: Religious communities contain practices that cause measurable harm to their members—particularly women, lower castes, and minorities—and community authorities resist internal reform. Individuals trapped in these communities cannot exit without losing livelihood, family, social identity, and material security. The founding problem is the gap between vulnerable individuals' interests and community authorities' resistance to change, combined with the state's obligation to protect all citizens.
+% FOUNDING_PROBLEM_CORROBORATION: Reform advocates and human-rights organizations attest to documented harms: widows in extreme poverty, child brides, caste violence within temples, gender-segregated worship, religiously sanctioned domestic abuse. Some marginalized community members attest to these harms within their own experience. However, traditional religious authorities and conservative legal scholars attest that the founding problem has been substantially overstated, that harms are being reframed as 'traditional practice,' and that state intervention has become a tool of majoritarian religious politics rather than genuine protection. Competing empirical literatures show both documented harms and cases where intervention has destabilized protective community structures or has been weaponized against minorities.
+narrative_ontology:disappearance_verdict(constitutional_secularism__principled_intervention_reading, world_rearranges).
+narrative_ontology:founding_problem_status(constitutional_secularism__principled_intervention_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(constitutional_secularism__principled_intervention_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(constitutional_secularism__principled_intervention_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(constitutional_secularism__principled_intervention_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(constitutional_secularism__principled_intervention_reading, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,16 +251,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is claimed as TANGLED ROPE (not mountain, not pure rope, not snare in the authoring seat) because it combines genuine coordination benefits with asymmetric extraction. The coordination function is real: marginalized sections genuinely benefit from state-backed enforcement of equal rights against oppressive community norms — that solves a coordination problem (internal groups cannot overcome collective-action barriers to resist traditional hierarchy). But the extraction is asymmetric and substantial: religious autonomy holders lose self-determination authority, majority communities face unequal scrutiny, and the reform doctrine itself becomes subject to majoritarian capture. Extraction starts at 0.38 (early period: intervention cautious, boundaries contested) and rises to 0.62 (extraction stabilizes as institutional machinery hardens and creative reinterpretation expands intervention scope). Theater rises from 0.25 to 0.41: the constraint's public face emphasizes reform and protection of rights, but over time the enforcement machinery increasingly protects state authority itself (institutional turf, regulatory power, ideological vindication) relative to direct protection of weaker sections. Suppression rises from 0.35 to 0.58 because early resistance is uncoordinated; as the constraint hardens, suppression concentrates (religious autonomy claimants are delegitimized, internal dissenters are sidelined, exit becomes costlier). The measurement series shows the constraint stabilizing at t=25-40: extractiveness plateaus, theater ratio plateaus, suppression plateaus. The curve is not a classic exploitation-accumulation arc; it shows a coordination doctrine that initially served genuine reform hardening into an enforcement apparatus for state authority.
+ *   Extractiveness is high (0.68) because the constraint transfers interpretive authority from community religious figures to state courts and does so without requiring community consent or internal reform consensus. The justification is protective, but the mechanism is asymmetric transfer of power. Suppression is higher still (0.71) because the constraint requires active, ongoing enforcement against community resistance—courts must sustain intervention against religious authorities' non-compliance, social pressure, and political mobilization. Theater is moderate (0.42): the protective rationale is genuine (courts do prevent documented harms), but growing proportion of enforcement labor goes to defending the state's authority to intervene (doctrinal self-justification) rather than to the concrete remedies. The measurement series show extractiveness and suppression rising steeply for 20 years (judicial authority consolidating), then plateauing as doctrine stabilizes and community compliance patterns settle into low-intensity resistance. The time grid is shared across all three metrics; every metric is authored at every time point to ensure alignment.
  *
  * PERSPECTIVAL GAP:
- *   A key perspectival gap exists between the institutional reform authority and religious autonomy claimants. The authority sees the constraint as principled protection of rights — a successful coordination mechanism. Autonomy claimants see the same constraint as illegitimate state expansion. From the authority's institutional seat, extractiveness might be experienced as zero (legitimate exercise of constitutional authority); from the constrained religious seat, extractiveness is high (loss of self-determination). The engine computes this gap from the structural data: power (institutional vs. organized), exit options (analytical vs. constrained), and victim status (institution is not a victim). The computed types will diverge — the institutional seat should compute as rope or mountain (beneficiary or neutral), while the organized victim seat computes as tangled rope or snare (extracted from).
+ *   The payer seats (religious authorities, majoritarian coalitions) and the beneficiary seats (reform advocates, state judiciary) compute fundamentally different constraint types from the same structural data. From the beneficiary perspective: this is genuinely protective coordination—the state creates a last-resort mechanism for those trapped in oppressive structures. From the payer perspective: this is extractive displacement—the state weaponizes 'protection' narratives to centralize interpretive authority over religious life and to remake traditions in majoritarian (or secular-elite) image. The marginalized-minority seat is the hardest to classify because it is simultaneously beneficiary and victim: protected from some practices, but subject to externally-imposed interpretations of its traditions and stripped of internal remedial authority. The engine computes per-seat types from the structural data; the divergence is not error but the core finding—seats with opposed directionalities and power asymmetries perceive the same constraint as having opposite functions.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are marginalized sections and reform coalitions — they gain state protection and leverage. Victims are majority religious establishment and autonomy claimants — they lose self-determination and face enforcement scrutiny. The asymmetry is stark because the constraint redistributes AUTHORITY over religious governance from decentralized communities to state institutions; this is a directional power transfer. Marginalized sections gain protection but lose cultural autonomy (identity_locked exit: they cannot become non-religious without losing identity, so they remain under constraint); this makes their effective exit 'trapped' despite the nominal benefit. Autonomy claimants lose authority without gaining protection; their exit is 'constrained' (can litigate, can lobby, cannot fully exit a national constitutional order). Reform coalitions have 'mobile' exit (can shift to different parties, different jurisdictions, different reform strategies). The directionality derivation from beneficiary/victim + exit options should yield: marginalized (beneficiary + trapped) ~ 0.4 (low d, net subsidy despite identity-lock costs); reform coalitions (beneficiary + mobile) ~ 0.2 (arbitrage-grade mobility toward state authority); majority establishment (victim + constrained) ~ 0.8 (high d, targets); autonomy claimants (victim + constrained) ~ 0.75 (high d, targets). No overrides needed; structural derivation captures the asymmetry.
+ *   The state judiciary sits near the beneficiary end (d ≈ 0.10–0.25): it exercises authority, sets rules, and is insulated from the communities it regulates; it faces minimal exit cost (its authority is constitutionally anchored). Reform advocates sit near the beneficiary end (d ≈ 0.15–0.35): they access state machinery to override community resistance and rely on coercive backing; their exit from the constraint is easy (they can withdraw from advocacy). Marginalized community members sit near the target end (d ≈ 0.60–0.75): they are the ostensible beneficiaries of protective intervention, but they are also subject to majoritarian judicial interpretation of their traditions and lose access to community-internal remedies; their exit is constrained (abandoning community structures means losing material support and identity). Traditional authorities sit near the full-target end (d ≈ 0.80–0.95): they pay the extraction (loss of interpretive authority, reputational damage, costly compliance), face high suppression (courts override their decisions), and have constrained exit (they cannot withdraw from the communities they lead). The divergence between the payer and beneficiary seats is stark: from the judiciary and reform-advocate seats the constraint appears as protective coordination; from the traditional-authority seat it appears as displacement and domination.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (religious communities exclude weaker sections, no internal remedy) is CONTESTED in status because religious autonomy claimants argue the problem has been substantially mitigated by internal reform movements and by exit options (dissenters can join different communities, establish reform congregations, seek secular spaces). The reform authority argues the problem is still LIVE because oppressive practices persist in many communities despite internal reform efforts. The disappearance verdict is WORLD_REARRANGES because if the intervention doctrine vanished, weaker sections would face intensified retaliation and loss of state protection — the world would rearrange into higher internal hierarchy and lower formal equality. This is not a case of a dead founding problem where the constraint persists as theater (classic piton). Instead, it is a case where the founding problem is genuinely contested AND the constraint has begun to serve institutional interests (state authority expansion, judicial power, regulatory turf) alongside the original reform function. The theater ratio (0.41 at endpoint) is moderate, not high — the constraint is not mostly theater, but a growing share of enforcement energy defends the institutional apparatus itself rather than protecting weaker sections. Mandatrophy is NOT declared because the founding problem is not dead; it is contested, which means the constraint remains contestable as either principled coordination or majoritarian overreach depending on how the principal question (omega_majortarian_capture_risk) resolves.
+ *   The founding problem (vulnerable individuals trapped in oppressive religious structures) remains contested and may be partially dead (many harms have been reduced through prior interventions and social change), but the constraint persists and deepens (extractiveness rising for 30 years). This is exactly the mandatrophy signal: an intervention justified by a founding problem whose status is contested is sustained by the constraint's own operation and by organized beneficiary pressure, not by evidence that the problem is live. The remedy for mandatrophy would require either: (1) establishing unequivocally that the founding problem is live and that community authorities continue to resist reform (resolution through demonstration), or (2) accepting that the founding problem is substantially dead and that the constraint now operates primarily to enforce majoritarian interpretive preferences over religious communities (resolution through acknowledgment). The constraint cannot simultaneously claim 'founding problem is live and intervention is necessary' and 'we have successfully reformed these practices.' If the latter is true, intervention should narrow; if the former is true, resistance should drop. Instead, resistance plateaus high and extraction stabilizes, characteristic of a constraint whose legitimating justification has become decoupled from its actual operation.
  */
 
 /* ==========================================================================
@@ -191,54 +268,54 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    majortarian_capture_risk,
-    'Does the principled intervention doctrine operationalize as protection for weaker sections, or as cover for majoritarian religious imposition on minorities?',
-    'Pattern analysis of intervention targets over time: do courts/governments intervene equally in oppressive practices within majority and minority religions, or do they focus on minority practices while leaving majority-community oppression untouched? Comparative jurisprudence across jurisdictions.',
-    'If pattern is asymmetric (majority practices rarely intervened), the constraint''s extractiveness is higher and its classification shifts toward snare (pure majoritarian coercion) with the ''reform'' framing as theatrical cover. If symmetric, the tangled-rope classification (genuine coordination + unequal extraction) is supported.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(majortarian_capture_risk, empirical, 'Whether state intervention protects weaker sections neutrally or weaponizes the doctrine against minorities.').
-
-omega_variable(
-    autonomy_vs_equality_framability,
-    'Is the conflict between religious autonomy and constitutional equality framed as a genuine dilemma requiring principled trade-offs, or as a false dichotomy where autonomy is recast as oppression?',
-    'Jurisprudential analysis: do courts acknowledge the legitimacy of religious autonomy as a competing right and articulate a principled boundary, or do they treat autonomy claims as presumptively suspect? Do they engage with the internal reformist voices within religious communities who argue for self-transformation, or only with state-backed reformers?',
-    'If courts systematically delegitimize autonomy claims and sideline internal dissenters, the reading is less a principled coordination and more a majoritarian authority grab. This affects how the tangled-rope classification sits: is coordination genuine or illusory?',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(autonomy_vs_equality_framability, conceptual, 'Whether the constraint frames the autonomy-equality conflict as a genuine dilemma or a false binary.').
-
-omega_variable(
-    internal_dissent_suppression,
-    'Are weaker sections within communities who object to state intervention (preferring community self-determination over state-imposed reform) suppressed by state messaging, community pressure, or both?',
-    'Documentary evidence of how dissenting voices are treated in public debate and legal proceedings. Do courts hear from communities about their own preferences regarding reform pace and method, or do courts hear only from state advocates and human rights organizations?',
-    'If the constraint suppresses internal dissent from weaker sections themselves, the measured suppression (0.58) understates the true suppressive force — it captures suppression of religious autonomy claimants but misses suppression of weaker-section dissenters by state-backed reformers. The constraint''s structural suppressiveness is higher.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(internal_dissent_suppression, empirical, 'Whether state intervention suppresses dissenting voices among weaker sections themselves.').
-
-omega_variable(
-    reform_vs_coercion_boundary,
-    'What is the structural boundary between principled intervention (protecting fundamental rights) and coercive imposition (using state power to enforce one reading of religion on communities with alternative readings)?',
-    'Jurisprudential and philosophical analysis: where does principled intervention doctrine locate the boundary? Is it based on harm (intervention triggers if harm is established), on rights protection (intervention triggers if a fundamental right is at stake), on procedure (intervention requires community input), or on outcome (intervention is justified by equality outcomes)? Different boundaries generate different scope and extractiveness profiles.',
-    'The clarity and defensibility of this boundary determines whether the constraint is a genuine attempt at principled coordination or a framework that rationalizes majoritarian overreach. Vague or outcome-based boundaries enable mission creep and transformation to snare.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(reform_vs_coercion_boundary, conceptual, 'The epistemic and normative criteria that distinguish principled reform from majoritarian coercion.').
-
-omega_variable(
-    kernel_reading_contest,
-    'Does this principled intervention reading instantiate a coherent middle path between strict neutrality and reformist supremacy, or does it collapse under pressure toward one pole?',
-    'Historical observation and comparative jurisprudence: how do actual constitutional courts operationalize this reading? Do they maintain the principled balance or drift toward reformist authority expansion or strict neutrality reversion?',
-    'If the reading proves unstable (drifts to reformist pole), the constraint''s extractiveness will increase and it reclassifies toward snare. If it drifts to strict neutrality, extraction decreases and it reclassifies toward rope or mountain. The reading''s viability as a distinct constitutional position affects the constraint family''s stability.',
+    harm_vs_difference_ambiguity,
+    'What distinguishes a religious practice that causes ''harm'' (justifying intervention) from one that simply violates secular liberal values but is voluntarily maintained by community members?',
+    'Establish objective criteria for harm (measurable injury, lack of internal exit, coercion) and apply them consistently across religious traditions and classes of practice. Test whether harm determination tracks actual community-member reports or predominantly reflects secular-elite preferences. Compare harm prevalence before and after intervention to assess whether intervention reduced the reported harm or mainly changed legal status.',
+    'If ''harm'' is construed broadly to include practices that conflict with secular values (e.g., gender roles, modesty norms, dietary rules), the constraint becomes an instrument for imposing secular culture on religious communities, moving it toward snare classification. If ''harm'' is narrowly defined (tangible bodily injury, non-consensual participation, trapped members), the protective rationale holds and the constraint remains tangled rope (genuine protection plus asymmetric authority transfer). The omega is critical because secular judges have systematic incentive to read traditions they do not understand as harmful.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(kernel_reading_contest, conceptual, 'Whether the principled intervention reading is a stable constitutional position or an unstable midpoint between stronger poles.').
+narrative_ontology:omega_variable(harm_vs_difference_ambiguity, conceptual, 'Whether intervention targets measurable harm to individuals or reflects majoritarian aesthetic disapproval of religious difference.').
+
+omega_variable(
+    internal_vs_imposed_reform_split,
+    'To what extent do the reforms imposed by state intervention align with reforms that reformers within the religious community were already pursuing, versus imposing reforms from outside against internal dissent?',
+    'Compare the timing and substance of state-ordered reforms with documented internal reform movements in the same communities. Measure community-member acceptance (vs. coerced compliance) of reforms. Track whether marginalized members'' own reform priorities align with state intervention priorities or diverge. Interview reformed religious authorities to assess whether they view changes as legitimate internal evolution or as external imposition.',
+    'If state intervention accelerates internally-driven reform, the constraint functions as empowerment (tangled rope with lower victim-cost asymmetry). If state intervention imposes reforms against internal consensus or co-opts minority internal movements to legitimate majoritarian agendas, the constraint becomes more extractive and moves toward snare. This omega addresses the risk that state intervention becomes a vehicle for majoritarian religious or secular groups to impose their vision on minorities by claiming ''protection of the vulnerable.''',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(internal_vs_imposed_reform_split, empirical, 'Whether state reforms align with and accelerate internal community reform or impose external preferences.').
+
+omega_variable(
+    majoritarian_capture_risk,
+    'Do intervention decisions disproportionately target minority religions or lower-caste religious practices while treating majority-religion analogous practices as culturally acceptable?',
+    'Conduct systematic audit of court decisions: identify analogous practices in majority and minority traditions, compare intervention frequency and remedy severity. Track whether court composition (majority religion, caste) correlates with intervention targets. Measure time lag between identification of practice and court action for majority vs. minority religions. Survey community members'' perceptions of whether intervention protects or targets their tradition.',
+    'Evidence of systematic disparities (higher intervention rate against minorities, gentler treatment of majority practices) would indicate that the ''principled intervention'' framework has been captured by majoritarian religious politics, moving the constraint toward snare for minority communities. This would mean the protection function is real for some (marginalized members of majority religions) but the constraint simultaneously operates as majoritarian imposition on minorities. The constraint would remain tangled rope from the beneficiary seat but shift toward snare from the targeted-minority seat.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(majoritarian_capture_risk, empirical, 'Degree of majoritarian capture of intervention authority and differential targeting of minorities.').
+
+omega_variable(
+    reading_foreclosure_or_coexistence,
+    'Can the principled-intervention reading and the strict-neutrality reading coexist within a single constitutional framework, or does accepting one logically foreclose the other?',
+    'Examine constitutional jurisprudence to determine whether courts hold both readings live (applying different tests in different contexts) or whether one reading has logically displaced the other (courts consistently choose one framework). Assess whether a constitution could coherently hold: ''the state maintains distance from religion in general (neutrality) but may intervene when specific protective grounds are met (principled intervention).'' Test whether this joint framework produces inconsistent verdicts about the same practices.',
+    'If the readings coexist, the kernel supports both as live political positions and the constraint is contestable. If principled intervention logically forecloses strict neutrality (i.e., admitting intervention authority defeats neutrality), then no constitution can hold both and one reading has foreclosed the other—the constraint would appear as a resolution of a logical contradiction, not a choice among contestable positions. The finding would shift the reading_relations from ''coexists_with'' to ''forecloses'' and change how terminal stability is assessed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_foreclosure_or_coexistence, conceptual, 'Logical compatibility of intervention-based and neutrality-based readings of constitutional secularism.').
+
+omega_variable(
+    identity_lock_religious_exit,
+    'For marginalized community members seeking to exit oppressive religious structures via state intervention, is the identity-lock exit option genuine, or does state intervention substitute one form of identity capture for another (from religious to secular authority)?',
+    'Track individuals who used state remedies to exit religious authority relationships; measure their post-intervention attachment to secular legal identity, their sense of agency, and their ability to maintain community ties or cultural affiliation without community authority mediation. Distinguish between individuals who exit the community entirely (secular adoption) versus those who reform the community from inside (leveraging state backing for internal change) versus those who remain trapped in secular legal identity without genuine mobility.',
+    'If identity-lock persists post-intervention (individuals still cannot exit the identity frame, now located in secular legal status), then the constraint has transferred rather than removed identity-lock, making exit_options remain ''identity_locked'' or ''constrained'' rather than genuinely opening to ''mobile'' or ''arbitrage.'' This would increase the effective extraction on these stakeholders and move the constraint classification toward snare at their seat. If intervention genuinely opens exit (individuals can adopt new identity frames, secular or reformed-religious), the constraint functions as promised and extraction is lower.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(identity_lock_religious_exit, empirical, 'Whether state intervention removes identity-lock or transfers it from religious to secular authority.').
 
 
 /* ==========================================================================
@@ -252,34 +329,58 @@ narrative_ontology:interval(constitutional_secularism__principled_intervention_r
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(cons_tr_t0, constitutional_secularism__principled_intervention_reading, theater_ratio, 0, 0.25).
-narrative_ontology:measurement(cons_tr_t5, constitutional_secularism__principled_intervention_reading, theater_ratio, 5, 0.29).
-narrative_ontology:measurement(cons_tr_t10, constitutional_secularism__principled_intervention_reading, theater_ratio, 10, 0.33).
-narrative_ontology:measurement(cons_tr_t15, constitutional_secularism__principled_intervention_reading, theater_ratio, 15, 0.37).
-narrative_ontology:measurement(cons_tr_t20, constitutional_secularism__principled_intervention_reading, theater_ratio, 20, 0.4).
-narrative_ontology:measurement(cons_tr_t25, constitutional_secularism__principled_intervention_reading, theater_ratio, 25, 0.41).
-narrative_ontology:measurement(cons_tr_t30, constitutional_secularism__principled_intervention_reading, theater_ratio, 30, 0.41).
-narrative_ontology:measurement(cons_tr_t40, constitutional_secularism__principled_intervention_reading, theater_ratio, 40, 0.41).
+narrative_ontology:measurement(cons_tr_t0, constitutional_secularism__principled_intervention_reading, theater_ratio, 0, 0.28).
+narrative_ontology:measurement_basis(cons_tr_t0, observed).
+narrative_ontology:measurement(cons_tr_t5, constitutional_secularism__principled_intervention_reading, theater_ratio, 5, 0.32).
+narrative_ontology:measurement_basis(cons_tr_t5, observed).
+narrative_ontology:measurement(cons_tr_t10, constitutional_secularism__principled_intervention_reading, theater_ratio, 10, 0.36).
+narrative_ontology:measurement_basis(cons_tr_t10, observed).
+narrative_ontology:measurement(cons_tr_t15, constitutional_secularism__principled_intervention_reading, theater_ratio, 15, 0.39).
+narrative_ontology:measurement_basis(cons_tr_t15, observed).
+narrative_ontology:measurement(cons_tr_t20, constitutional_secularism__principled_intervention_reading, theater_ratio, 20, 0.41).
+narrative_ontology:measurement_basis(cons_tr_t20, observed).
+narrative_ontology:measurement(cons_tr_t25, constitutional_secularism__principled_intervention_reading, theater_ratio, 25, 0.42).
+narrative_ontology:measurement_basis(cons_tr_t25, observed).
+narrative_ontology:measurement(cons_tr_t30, constitutional_secularism__principled_intervention_reading, theater_ratio, 30, 0.42).
+narrative_ontology:measurement_basis(cons_tr_t30, observed).
+narrative_ontology:measurement(cons_tr_t40, constitutional_secularism__principled_intervention_reading, theater_ratio, 40, 0.42).
+narrative_ontology:measurement_basis(cons_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(cons_be_t0, constitutional_secularism__principled_intervention_reading, base_extractiveness, 0, 0.38).
-narrative_ontology:measurement(cons_be_t5, constitutional_secularism__principled_intervention_reading, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(cons_be_t10, constitutional_secularism__principled_intervention_reading, base_extractiveness, 10, 0.52).
-narrative_ontology:measurement(cons_be_t15, constitutional_secularism__principled_intervention_reading, base_extractiveness, 15, 0.58).
-narrative_ontology:measurement(cons_be_t20, constitutional_secularism__principled_intervention_reading, base_extractiveness, 20, 0.6).
-narrative_ontology:measurement(cons_be_t25, constitutional_secularism__principled_intervention_reading, base_extractiveness, 25, 0.62).
-narrative_ontology:measurement(cons_be_t30, constitutional_secularism__principled_intervention_reading, base_extractiveness, 30, 0.62).
-narrative_ontology:measurement(cons_be_t40, constitutional_secularism__principled_intervention_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement(cons_be_t0, constitutional_secularism__principled_intervention_reading, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement_basis(cons_be_t0, observed).
+narrative_ontology:measurement(cons_be_t5, constitutional_secularism__principled_intervention_reading, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement_basis(cons_be_t5, observed).
+narrative_ontology:measurement(cons_be_t10, constitutional_secularism__principled_intervention_reading, base_extractiveness, 10, 0.54).
+narrative_ontology:measurement_basis(cons_be_t10, observed).
+narrative_ontology:measurement(cons_be_t15, constitutional_secularism__principled_intervention_reading, base_extractiveness, 15, 0.61).
+narrative_ontology:measurement_basis(cons_be_t15, observed).
+narrative_ontology:measurement(cons_be_t20, constitutional_secularism__principled_intervention_reading, base_extractiveness, 20, 0.65).
+narrative_ontology:measurement_basis(cons_be_t20, observed).
+narrative_ontology:measurement(cons_be_t25, constitutional_secularism__principled_intervention_reading, base_extractiveness, 25, 0.67).
+narrative_ontology:measurement_basis(cons_be_t25, observed).
+narrative_ontology:measurement(cons_be_t30, constitutional_secularism__principled_intervention_reading, base_extractiveness, 30, 0.68).
+narrative_ontology:measurement_basis(cons_be_t30, observed).
+narrative_ontology:measurement(cons_be_t40, constitutional_secularism__principled_intervention_reading, base_extractiveness, 40, 0.68).
+narrative_ontology:measurement_basis(cons_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(cons_su_t0, constitutional_secularism__principled_intervention_reading, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(cons_su_t5, constitutional_secularism__principled_intervention_reading, suppression_requirement, 5, 0.41).
-narrative_ontology:measurement(cons_su_t10, constitutional_secularism__principled_intervention_reading, suppression_requirement, 10, 0.47).
-narrative_ontology:measurement(cons_su_t15, constitutional_secularism__principled_intervention_reading, suppression_requirement, 15, 0.52).
-narrative_ontology:measurement(cons_su_t20, constitutional_secularism__principled_intervention_reading, suppression_requirement, 20, 0.55).
-narrative_ontology:measurement(cons_su_t25, constitutional_secularism__principled_intervention_reading, suppression_requirement, 25, 0.57).
-narrative_ontology:measurement(cons_su_t30, constitutional_secularism__principled_intervention_reading, suppression_requirement, 30, 0.58).
-narrative_ontology:measurement(cons_su_t40, constitutional_secularism__principled_intervention_reading, suppression_requirement, 40, 0.58).
+narrative_ontology:measurement(cons_su_t0, constitutional_secularism__principled_intervention_reading, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement_basis(cons_su_t0, observed).
+narrative_ontology:measurement(cons_su_t5, constitutional_secularism__principled_intervention_reading, suppression_requirement, 5, 0.54).
+narrative_ontology:measurement_basis(cons_su_t5, observed).
+narrative_ontology:measurement(cons_su_t10, constitutional_secularism__principled_intervention_reading, suppression_requirement, 10, 0.61).
+narrative_ontology:measurement_basis(cons_su_t10, observed).
+narrative_ontology:measurement(cons_su_t15, constitutional_secularism__principled_intervention_reading, suppression_requirement, 15, 0.67).
+narrative_ontology:measurement_basis(cons_su_t15, observed).
+narrative_ontology:measurement(cons_su_t20, constitutional_secularism__principled_intervention_reading, suppression_requirement, 20, 0.7).
+narrative_ontology:measurement_basis(cons_su_t20, observed).
+narrative_ontology:measurement(cons_su_t25, constitutional_secularism__principled_intervention_reading, suppression_requirement, 25, 0.71).
+narrative_ontology:measurement_basis(cons_su_t25, observed).
+narrative_ontology:measurement(cons_su_t30, constitutional_secularism__principled_intervention_reading, suppression_requirement, 30, 0.71).
+narrative_ontology:measurement_basis(cons_su_t30, observed).
+narrative_ontology:measurement(cons_su_t40, constitutional_secularism__principled_intervention_reading, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement_basis(cons_su_t40, observed).
 
 
 /* ==========================================================================
@@ -287,18 +388,21 @@ narrative_ontology:measurement(cons_su_t40, constitutional_secularism__principle
    ========================================================================== */
 
 narrative_ontology:coordination_type(constitutional_secularism__principled_intervention_reading, enforcement_mechanism).
-narrative_ontology:boltzmann_floor_override(constitutional_secularism__principled_intervention_reading, 0.12).
+narrative_ontology:boltzmann_floor_override(constitutional_secularism__principled_intervention_reading, 0.18).
 narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, constitutional_secularism__strict_neutrality_reading).
 narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, constitutional_secularism__reformist_reading).
-narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, gender_equality_in_religious_law).
-narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, caste_discrimination_in_temples_and_mosques).
+narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, personal_law_autonomy__religious_community_governance).
+narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, caste_discrimination__temple_access_claims).
+narrative_ontology:affects_constraint(constitutional_secularism__principled_intervention_reading, gender_justice__religious_practice_reform).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of the contested kernel constitutional_secularism. The kernel_id is constitutional_secularism; this reading_id is principled_intervention_reading. Sibling readings include strict_neutrality_reading (state maintains equal distance from all religions) and reformist_reading (state has affirmative duty to eliminate oppressive practices). These are three structurally distinct constraints with different ε values: strict neutrality operates at low extractiveness (0.20-0.35, near-mountain for some seats) because it minimizes state power; reformist operates at high extractiveness (0.75-0.85, snare-adjacent) because state authority expands to override autonomy; principled intervention (this constraint) operates at moderate-high extractiveness (0.62 at plateau) because it attempts to balance coordination and autonomy but remains subject to capture. The three readings share the same kernel (the constitutional commitment to some church-state relationship) but produce different effective constraints for the same agent seats because the legitimacy conditions for state action differ radically. All three should be authored as separate constraint stories linked via network.affects_constraints.
+% This constraint is part of a three-member kernel family decomposed from 'constitutional secularism' under the ε-invariance principle. The kernel is the contested commitment that the state has some legitimate relationship to religion; the three readings advance structurally distinct claims about the nature and scope of that relationship. Strict neutrality and principled intervention have different ε values because they authorize fundamentally different state actions and create different beneficiary/victim structures. Principled intervention (this story) is substantially extractive from religious authorities (ε=0.68) because it transfers interpretive authority; strict neutrality is less extractive (null state action → lower extraction). All three readings are live in contemporary constitutional jurisprudence across different jurisdictions and judicial coalitions; no reading forecloses the others within the family. The family is linked bidirectionally: if principled intervention becomes doctrinally dominant, it influences the viability of strict neutrality by creating path-dependence in judicial authority (hard to recentralize once devolved). The readings occupy different institutional seats and represent different political coalitions; they coexist precisely because the kernel itself is contested.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(constitutional_secularism__principled_intervention_reading, powerless, 0.68).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

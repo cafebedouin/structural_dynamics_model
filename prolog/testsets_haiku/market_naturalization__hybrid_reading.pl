@@ -40,15 +40,21 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:stakeholder_non_agent/2,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
     narrative_ontology:cs_reading_relation/3,
     narrative_ontology:cs_axiom/3,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,35 +74,42 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: market_naturalization__hybrid_reading
- *   human_readable: Market Dominance as Hybrid Constraint: Lapsed Alternatives + Active Suppression
- *   domain: political_economy/institutional_analysis
+ *   human_readable: Market Dominance: Hybrid Lapsed-Maintained Closure
+ *   domain: political_economy
  *
  * SUMMARY:
- *   This constraint is ONE reading of a contested kernel about how market
- *   dominance persists. The kernel asks: 'Is market dominance a naturally
- *   lapsed alternative (requiring no defense), an actively maintained
- *   monopoly (requiring continuous suppression), or a hybrid of both (some
- *   alternatives lapsed, others suppressed)?' This story instantiates the
- *   hybrid reading: market dominance combines structural closure (knowledge
- *   atrophied, institutions disappeared, trust networks dissolved) with
- *   active maintenance (selective enforcement, regulatory capture, predatory
- *   pricing on specific alternatives). The hybrid reading claims moderate
- *   extractiveness (0.58) because the constraint operates partly through
- *   lapse (passive structural closure) and partly through active suppression.
- *   The alternative readings would classify this constraint as either
- *   mountain-like (lapsed, no active defense needed) or snare-like (actively
- *   defended extraction). This reading sits between: it is a Tangled Rope
- *   with genuine coordination benefits that have become decoupled from the
- *   persistent extraction, where incumbents selectively defend profitability
- *   while allowing some alternatives to disappear through inertia.
+ *   Market dominance—a single firm controls a large share of a market or
+ *   critical infrastructure—combines two distinct mechanisms: lapsed
+ *   alternatives (switching costs and network effects set in decades ago when
+ *   they were valuable; users are now locked in by momentum and psychology
+ *   more than by objective barriers) and active maintenance (incumbent firms
+ *   spend real resources on regulatory capture, technical lock-in deepening,
+ *   pricing strategies that prevent margin-eroding entry, and ecosystem
+ *   integration that raises switching costs for would-be defectors). The
+ *   hybrid reading holds that BOTH mechanisms operate simultaneously. Some
+ *   dominance persists because it would: switching costs are now endogenously
+ *   low but users believe they are high. Some persists because incumbents
+ *   defend it: they maintain technical barriers, lobby for regulatory
+ *   favoritism, price to prevent entry. The question is how much of each.
+ *   This reading instantiates one interpretation of the contested kernel
+ *   'market_naturalization': neither pure lapsed closure (which would require
+ *   no active defense) nor pure maintenance (which would attribute all
+ *   dominance to incumbent action), but a structurally mixed arrangement. The
+ *   claim/metric gap is intentional and substantive: the constraint is
+ *   CLAIMED as tangled_rope (coordination with asymmetric extraction), while
+ *   the metrics describe a situation where one actor (the incumbent)
+ *   benefits, others (excluded entrants, consumers via supernormal pricing)
+ *   bear costs, enforcement is moderately active (not yet intensive enough to
+ *   be flagged as snare-level), and a growing share of enforcement effort is
+ *   directed at maintaining lock-in rather than defending the original
+ *   coordination function.
  *
  * KEY AGENTS:
- *   - incumbent_capital_holders: institutional power, arbitrage exits, controls agenda — directly benefits from constraint
- *   - potential_market_entrants: powerless, identity-locked exits, face both structural barriers (lapsed knowledge) and active barriers (capital rationing)
- *   - labor_in_subordinate_positions: organized, constrained exits, resistance is real but constrained by absence of alternative production pathways
- *   - peripheral_producers: moderate power, constrained exits, receive coordination benefits but at extractive terms
- *   - cultural_memory_institutions: excluded from discourse, would preserve knowledge that alternatives existed
- *   - competition_authorities: analytical observers, struggle to distinguish active suppression from structural lapse
+ *   - incumbent_firms: institutional power, arbitrage-exit options, long time horizon — control the constraint structure and administer enforcement; primary beneficiaries
+ *   - excluded_entrants: moderate power, constrained exit, biographical horizon — face mixed barriers (partly lapsed, partly maintained); suffer extraction through denied market entry
+ *   - consumers: powerless, identity-locked exit, biographical horizon — benefit from coordination (ecosystem depth, reliability) but bear costs through supernormal pricing and reduced innovation; caught in a feedback loop where their own lock-in perception reinforces dominance
+ *   - regulatory_authorities: institutional power, analytical exit, generational horizon — disputed seat whose interpretation determines whether dominance is natural or abusive; the framing choice hinges on their reading
+ *   - potential_alternative_technologies: not agents, but structurally excluded by self-reinforcing economics (not authored as a payer because they are not real actors yet, only latent)
  */
 
 /* ==========================================================================
@@ -103,59 +117,118 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(market_naturalization__hybrid_reading, 0.58).
-domain_priors:suppression_score(market_naturalization__hybrid_reading, 0.52).
-domain_priors:theater_ratio(market_naturalization__hybrid_reading, 0.41).
+domain_priors:base_extractiveness(market_naturalization__hybrid_reading, 0.62).
+domain_priors:suppression_score(market_naturalization__hybrid_reading, 0.58).
+domain_priors:theater_ratio(market_naturalization__hybrid_reading, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, extractiveness, 0.58).
-narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, suppression_requirement, 0.52).
-narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, theater_ratio, 0.41).
+narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, extractiveness, 0.62).
+narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, theater_ratio, 0.48).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, accessibility_collapse, 0.63).
-narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, resistance, 0.48).
+narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, accessibility_collapse, 0.71).
+narrative_ontology:constraint_metric(market_naturalization__hybrid_reading, resistance, 0.54).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(market_naturalization__hybrid_reading, tangled_rope).
-narrative_ontology:human_readable(market_naturalization__hybrid_reading, "Market Dominance as Hybrid Constraint: Lapsed Alternatives + Active Suppression").
-narrative_ontology:topic_domain(market_naturalization__hybrid_reading, "political_economy/institutional_analysis").
+narrative_ontology:human_readable(market_naturalization__hybrid_reading, "Market Dominance: Hybrid Lapsed-Maintained Closure").
+narrative_ontology:topic_domain(market_naturalization__hybrid_reading, "political_economy").
 
 domain_priors:requires_active_enforcement(market_naturalization__hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(market_naturalization__hybrid_reading, 'bd70a8a9-a20f-4859-aadb-b9754ccd474d').
-narrative_ontology:cs_kernel_codification('bd70a8a9-a20f-4859-aadb-b9754ccd474d', implicit).
-narrative_ontology:cs_authority_grounding('bd70a8a9-a20f-4859-aadb-b9754ccd474d', practice).
-narrative_ontology:cs_interpretation_layer_present('bd70a8a9-a20f-4859-aadb-b9754ccd474d').
-narrative_ontology:cs_reading_relation('bd70a8a9-a20f-4859-aadb-b9754ccd474d', market_naturalization__lapsed_alternative_reading, coexists_with).
-narrative_ontology:cs_reading_relation('bd70a8a9-a20f-4859-aadb-b9754ccd474d', market_naturalization__beneficiary_maintained_reading, coexists_with).
-narrative_ontology:cs_axiom('bd70a8a9-a20f-4859-aadb-b9754ccd474d', foundational, market_dominance_dual_source).
-narrative_ontology:cs_axiom_status(market_dominance_dual_source, holdable).
-narrative_ontology:cs_axiom_grounding('bd70a8a9-a20f-4859-aadb-b9754ccd474d', market_dominance_dual_source, empirically_contingent).
-narrative_ontology:cs_axiom('bd70a8a9-a20f-4859-aadb-b9754ccd474d', foundational, coordination_extraction_decoupling).
-narrative_ontology:cs_axiom_status(coordination_extraction_decoupling, holdable).
-narrative_ontology:cs_axiom_grounding('bd70a8a9-a20f-4859-aadb-b9754ccd474d', coordination_extraction_decoupling, empirically_contingent).
-narrative_ontology:cs_reference_frame('bd70a8a9-a20f-4859-aadb-b9754ccd474d', market_coordination_dual_necessity).
-narrative_ontology:cs_drift_state('bd70a8a9-a20f-4859-aadb-b9754ccd474d', contemporary_resurrection_pressure, gap(axiom_overriding, substantial, false)).
-narrative_ontology:cs_created_at('bd70a8a9-a20f-4859-aadb-b9754ccd474d', '').
+narrative_ontology:cs_story_uid(market_naturalization__hybrid_reading, '7a903629-d62c-4338-8ff4-c472239c96a7').
+narrative_ontology:cs_kernel_codification('7a903629-d62c-4338-8ff4-c472239c96a7', distributed).
+narrative_ontology:cs_authority_grounding('7a903629-d62c-4338-8ff4-c472239c96a7', extraction).
+narrative_ontology:cs_reading_relation('7a903629-d62c-4338-8ff4-c472239c96a7', market_naturalization__lapsed_alternative_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7a903629-d62c-4338-8ff4-c472239c96a7', market_naturalization__beneficiary_maintained_reading, coexists_with).
+narrative_ontology:cs_axiom('7a903629-d62c-4338-8ff4-c472239c96a7', foundational, dominance_combines_lapsed_and_maintained).
+narrative_ontology:cs_axiom_status(dominance_combines_lapsed_and_maintained, holdable).
+narrative_ontology:cs_axiom_grounding('7a903629-d62c-4338-8ff4-c472239c96a7', dominance_combines_lapsed_and_maintained, empirically_contingent).
+narrative_ontology:cs_axiom('7a903629-d62c-4338-8ff4-c472239c96a7', foundational, founding_coordination_problem_contested).
+narrative_ontology:cs_axiom_status(founding_coordination_problem_contested, holdable).
+narrative_ontology:cs_axiom_grounding('7a903629-d62c-4338-8ff4-c472239c96a7', founding_coordination_problem_contested, instrumental).
+narrative_ontology:cs_reference_frame('7a903629-d62c-4338-8ff4-c472239c96a7', dual_mechanism_framework).
+narrative_ontology:cs_drift_state('7a903629-d62c-4338-8ff4-c472239c96a7', contemporary_market_discipline_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('7a903629-d62c-4338-8ff4-c472239c96a7', '').
 narrative_ontology:cs_kernel_id(market_naturalization__hybrid_reading, market_naturalization).
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(market_naturalization__hybrid_reading, incumbent_capital_holders).
-narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, potential_market_entrants).
-narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, labor_in_subordinate_positions).
-narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, peripheral_producers).
+narrative_ontology:constraint_beneficiary(market_naturalization__hybrid_reading, incumbent_firms).
+narrative_ontology:constraint_beneficiary(market_naturalization__hybrid_reading, rent_extractors).
+narrative_ontology:constraint_beneficiary(market_naturalization__hybrid_reading, path_dependent_lock_ins).
+narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, excluded_entrants).
+narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, consumer_surplus_claimants).
+narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, suppressed_alternatives).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(market_naturalization__hybrid_reading, consumers).
+narrative_ontology:constraint_victim(market_naturalization__hybrid_reading, consumers).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Dominate markets through a mix of inherited structural advantages (network effects locked in decades ago, switching costs now internalized by users, technical standards set when alternatives had no voice) and active defense (lobbying to raise regulatory barriers, pricing strategies that preserve margin while appearing competitive, R&D directed at deepening lock-in rather than competitive innovation). They collect supernormal returns and administer the constraint by resisting entry and maintaining enforcement.
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, incumbent_firms, agenda_setter,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(market_naturalization__hybrid_reading, incumbent_firms, beneficiary).
+
+% Face barriers to entry that partly dissolved naturally (original switching costs have eroded, user base is not locked in by physics) and partly persist by active enforcement (incumbents fund regulatory capture, set technical standards that favor them, use pricing power to deny margin to potential competitors). The barrier structure is ambiguous: unclear how much is inherited structural inertia versus active suppression.
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, excluded_entrants, payer,
+    moderate, biographical, constrained, national).
+
+% Enjoy the coordination benefits of a settled dominant firm: reliable service, ecosystem depth, consumer experience calibrated to the installed base. They also carry supernormal-pricing costs where the firm exploits its position. Exit is technically possible but psychologically fused with the ecosystem (social network, sunk content, workflow integration, identity as adopters of the 'standard').
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, consumers, beneficiary,
+    powerless, biographical, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(market_naturalization__hybrid_reading, consumers, payer).
+
+% Would represent genuine functional improvements or cost-effective alternatives if developed. They are not excluded by explicit policy but by the self-reinforcing economics: network effects and switching costs mean even superior alternatives cannot reach critical mass because the installed base is locked in. Partly this is lapsed natural closure; partly it is actively maintained by incumbent pricing and integration strategy.
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, potential_alternative_technologies, excluded,
+    powerless, civilizational, trapped, global).
+narrative_ontology:stakeholder_non_agent(market_naturalization__hybrid_reading, potential_alternative_technologies).
+
+% Monitor whether dominance is abusive or merely competitive. They dispute whether the barrier is natural (lapsed switching cost equilibrium) or maintained (abuse of dominance). Their enforcement power is high but contested—whether the constraint violates law depends on interpreting dominance persistence as natural entropy or as enforced exclusion.
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, regulatory_authorities, observer,
+    institutional, generational, analytical, national).
+
+% The structural feature that originally locked users in and gave incumbents competitive advantage. These costs partially lapsed as technology evolved and user sophistication grew, but the lapsing is asymmetric: users experience the costs as real even as objective barriers fell.
+narrative_ontology:constraint_stakeholder(market_naturalization__hybrid_reading, inherited_switching_costs, beneficiary,
+    powerless, civilizational, analytical, national).
+narrative_ontology:stakeholder_non_agent(market_naturalization__hybrid_reading, inherited_switching_costs).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(market_naturalization__hybrid_reading, incumbent_firms).
+narrative_ontology:fixing_cost_class(market_naturalization__hybrid_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Unified technical standard and ecosystem interoperability: single dominant platform solves network effects, eliminates interoperability friction, provides consumers with reliable ecosystem depth and developer certainty. The original founding problem (fragmented platforms, switching friction, ecosystem uncertainty) is substantially addressed by the unified structure.
+% TRANSFER_FUNCTION: Supernormal rents flow from excluded entrants (who cannot enter to compete away margins) and consumers (who pay higher prices than competitive entry would support) to the dominant incumbent; also flows effort from consumers and entrants toward defending/maintaining lock-in barriers rather than toward productive innovation.
+% ABSENT_VOICES: Excluded entrants and suppressed alternative technologies are structurally unable to testify; if they could, they would argue that inherited switching costs are lower than users believe and that active incumbent lock-in maintenance creates artificial barriers. Competing regulatory reading (held by competition authorities and consumer advocates) holds that dominance is abuse that harms consumer welfare and innovation.
+% DISAPPEARANCE_RATIONALE: Lapsed-alternative reading: if dominance vanished (incumbent was broken up), the market would not significantly reorganize because the coordination benefits would persist and users would drift back to a standard even without lock-in enforcement. Beneficiary-maintained reading: if dominance vanished, the market would rapidly fragment because without active incumbent maintenance, switching costs would collapse and entry would accelerate. Hybrid reading (this one): the market would partially reorganize—some users would switch and some entrants would enter (proving some lock-in was active), but the dominant incumbent would retain a large share (proving some dominance is genuinely lapsed and users do value the coordination).
+% FOUNDING_PROBLEM: In the constraint's founding period, switching costs were objectively high (incompatible platforms, data portability was technically difficult, ecosystems were fragmented and unreliable). Unified dominance around a single standard solved genuine coordination problems: users got reliability, developers got certainty about installed-base size, the ecosystem grew to serve both.
+% FOUNDING_PROBLEM_CORROBORATION: The incumbent attests the founding problem remains live: ecosystem fragmentation would return if dominance dissolved, platforms still need unified standards, network effects still reward scale. Technology historians and economic analysts attest the founding problem is substantially solved: switching costs have fallen dramatically, portable data, cross-platform interoperability, and user sophistication make fragmentation survivable. Regulatory authorities, competition advocates, and entrant testimony support the contested status: the founding coordination function was real, but has become partially unnecessary while dominance has become partially about extraction rather than coordination. No single non-benefiting authority attests unambiguously, which is itself signal—the fact of contestation is corroboration of contest.
+narrative_ontology:disappearance_verdict(market_naturalization__hybrid_reading, contested).
+narrative_ontology:founding_problem_status(market_naturalization__hybrid_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(market_naturalization__hybrid_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(market_naturalization__hybrid_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(market_naturalization__hybrid_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(market_naturalization__hybrid_reading, 0.62, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,16 +248,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness rises from 0.42 to 0.58 over the interval, indicating that while the constraint persists, the extractive component is increasing relative to the coordination component (the theater_ratio rises from 0.28 to 0.41, suggesting performative defense of coordination increases while actual coordination function may be declining). Suppression requirement rises from 0.38 to 0.52, indicating incumbents must invest more in active enforcement over time — this is diagnostic: if the constraint were purely lapsed (no active defense needed), suppression would decline as the lapsed closure self-perpetuates. Instead, suppression rises, showing incumbents are actively defending against resurgent alternatives or deteriorating coordination legitimacy. Accessibility collapse (0.63) is moderate-high: some alternatives have disappeared completely (cooperative banking, craft apprenticeship, federated production) making them inaccessible; others remain possible but actively defended against (alternative supply networks, worker ownership). Resistance (0.48) is moderate: organized labor mounts real resistance; entrants push against barriers; but the resistance is constrained by the structural closure that makes alternatives hard to conceive of, let alone organize toward.
+ *   Extractiveness is moderate-to-high (0.62) because the incumbent collects supernormal rents and the arrangement persists despite excluded entrants who would compete it away if barriers dissolved. Suppression is moderate (0.58) because some barriers are inherited and self-perpetuating (identity lock, sunk switching costs, user behavior momentum) while others require active incumbents defense (regulatory capture, technical standards favoring the incumbent, pricing strategies that preserve margin). Theater is rising but moderate (0.48): the constraint carries genuine coordination function (single standard, ecosystem depth, network effects are real), but a growing share of enforcement activity performs maintenance rather than delivering those functions—new switching costs are invented, interoperability is restricted, lock-in narratives are marketed. The temporal trajectory shows extraction and suppression rising through the interval: as inherited advantages naturally erode and user sophistication grows, incumbents must work harder to maintain dominance, so active maintenance increases relative to passive lapsing. The plateau by the end of the interval suggests a stable mixed equilibrium: the incumbent cannot raise extraction or suppression much further without triggering legislative intervention (the regulatory observer's power threshold), so dominance stabilizes at the enforced level. The coercion_grid shows level-resolved dynamics: suppression is highest at the organizational level (excluded entrants face the most active exclusion—incumbent lobbying, technical barriers, predatory pricing targeting rivals) and lowest at the structural level (the overall market structure does not require massive societal-scale coercion, just localized incumbent action). Resistance is highest at the organizational level (excluded entrants are attempting entry and organizing political pressure for remedies) and lowest at the structural level (no wholesale challenge to the market mechanism itself). Accessibility_collapse (how closed alternatives have become) is highest at the organizational level (entry is effectively barred) and lowest at the individual level (consumers technically could switch, but psychology and network effects make it costly).
  *
  * PERSPECTIVAL GAP:
- *   The agenda-setter (incumbent capital holders) experiences this constraint as natural market dominance they maintain through legitimate competitive advantage and selective regulation — they see active enforcement only against truly anti-competitive actors, not against legitimate alternatives. Potential entrants and subordinate labor experience it as a system where legitimate alternatives (cooperative ownership, federated supply) are structurally impossible (they lack knowledge and financing) or actively suppressed (regulatory barriers, predatory pricing). Peripheral producers experience genuine coordination benefits (access to capital, distribution, quality systems) but at extractive terms — they experience the constraint as partly coordination and partly extraction. This reading shows how these incompatible experiences are both structurally real: the coordination function exists and is valuable; the suppression of alternatives is also real and selective.
+ *   The incumbent and the beneficiary-maintained reader see dominance as requiring active defense against eroding competitive pressure: switching costs have naturally fallen, but the incumbent must continuously rebuild lock-in via ecosystem integration, technical standards, pricing strategy, and regulatory favors to maintain share. Excluded entrants and the lapsed-alternative reader see dominance as mostly self-perpetuating inertia: the inherited switching costs are endogenously low but users do not realize it; a small regulatory change or coordinated entrant push would dissolve dominance without incumbent action. Consumers and pragmatist observers see the hybrid picture: dominance is real, some of it is lapsed (user psychology, network effects that are no longer objectively binding), some is actively maintained (incumbent strategy), and the exact mix determines whether market discipline or regulatory intervention is the appropriate remedy. The engine computes each seat's experience of the constraint's type from the structural data—incumbent and regulatory observer will compute it differently, which is the point of the per-seat classification system.
  *
  * DIRECTIONALITY LOGIC:
- *   Incumbent capital holders: d ≈ 0.1 (full beneficiaries). They collect the rents directly, control the rules, have maximal exit options through arbitrage. Potential entrants: d ≈ 0.85 (near full targets). Trapped by both structural barriers (lapsed knowledge, no capital sources) and active barriers (regulatory capture, licensing tied to incumbent relationships). Identity-locked because professional legitimacy is mediated through incumbent institutions — they must become 'legitimate entrepreneurs' via incumbent pathways or face delegitimation. Labor: d ≈ 0.75. Organized but constrained by the absence of alternative production pathways. Resistance is real but cannot exit entirely because the alternatives that would enable exit have atrophied. Peripheral producers: d ≈ 0.55 (near symmetric). They genuinely benefit from the coordination function (capital access, distribution) but bear extractive costs (inflated input prices, margin compression). Without overrides, the derivation chain (beneficiary/victim + exit) would place them closer to d=0.3 (beneficiaries with constrained exit). The story's structural claim is that they sit near symmetric because the coordination they benefit from is inseparable from the extraction they bear — no override needed.
+ *   Incumbent firms sit at d near 1.0 (full target from the perspective of extraction, but full beneficiary from the perspective of the coordination function; the dual role creates ambiguity—the engine resolves this via power + exit + beneficiary/victim status, landing roughly at d ≈ 0.3 as beneficiary, meaning effective extraction χ is reduced by the beneficiary status). Excluded entrants sit at high d (near 0.8–0.9): they bear costs (denied entry), have constrained exit (cannot establish without breaking incumbent barriers), and are not benefiting from the coordination (they would disrupt incumbency if admitted). Consumers sit at d ≈ 0.5 (symmetric): they benefit from coordination (ecosystem, reliability, network effects), but they also pay via supernormal pricing and suppressed innovation; their identity lock means they cannot arbitrage, so exit is constrained, which increases d slightly, but the beneficiary role offsets it. The directionality override could be applied to incumbent_firms if the structural derivation wrongly classified them as targets rather than beneficiaries; in this story, the beneficiary/victim declarations are clear enough that no override is needed.
  *
  * MANDATROPHY ANALYSIS:
- *   This hybrid reading avoids a key falsification trap. If the constraint were purely lapsed (reading: lapsed_alternative_reading), we would expect suppression_requirement to decline over time as the lapsed closure self-perpetuates — no active defense needed. Instead, suppression_requirement rises (0.38 → 0.52), indicating incumbents are investing MORE in enforcement over the interval, not less. This contradicts pure-lapse and supports the hybrid reading: as alternatives begin to re-emerge (consciousness of alternatives spreading, new financing mechanisms developing, regulatory challenges mounting), incumbents must increase active suppression to maintain dominance. The theater_ratio rising (0.28 → 0.41) shows another mandatrophy signal: as the founding coordination problem becomes increasingly solved (supply chains mature, information asymmetries decline with digitalization), the constraint's legitimacy claim shifts from 'we solve a real problem' to 'we are the natural order.' This is classical theater escalation: the real function declines, the performed function increases. The hybrid reading captures this asymmetry: the constraint is real (it does provide coordination), but the persistence is increasingly about defending extraction against emerging alternatives rather than solving the original coordination problem.
+ *   The hybrid reading avoids a mandatrophy trap that ensnares both sibling readings. Lapsed_alternative_reading would claim that dominance requires no enforcement (it is natural lapsing), which would imply the constraint is a mountain—but mountains do not carry enforcers, and we observe active incumbent maintenance, so this reading's classification would fail. Beneficiary_maintained_reading would claim that dominance is pure incumbent extraction (a snare), but we observe real coordination benefits (ecosystem, network effects, single standard solved a genuine collective action problem), so this reading's classification would fail snare gates (snares have no genuine coordination). The hybrid reading instantiates tangled_rope: genuine coordination (the original problem was real, unified standards are valuable), asymmetric extraction (incumbent collects supernormal rents), and active enforcement (maintaining the lock-in barriers that preserve incumbency against entrant competition and consumer switching). The mandatrophy is avoided because the hybrid reading does not claim the coordination has disappeared—it claims the founding problem is contested (partly solved, partly still valuable, partly used as cover for extraction), which is consistent with tangled_rope's gate: a live coordination function with extractive overhead.
  */
 
 /* ==========================================================================
@@ -192,82 +265,143 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    lapsed_vs_suppressed_boundary,
-    'Which specific alternatives are structurally lapsed (knowledge atrophied, institutions dissolved, no actors remain to reconstruct them) versus actively suppressed (knowledge exists, actors want to pursue them, but face incumbent enforcement)? The boundary is blurred: some alternatives may be 80% lapsed and 20% suppressed; others the reverse.',
-    'Sectoral historical analysis: document, for each major market domain, which alternative institutional forms existed historically, which disappeared and when, and why (active suppression v. market displacement v. knowledge loss). Comparative study of domains where alternatives persist (cooperative banking in some countries, cooperative agriculture, worker ownership in some sectors) versus domains where they have nearly vanished (industrial agriculture, consumer technology platforms) to identify what sustained alternatives through the dominance period.',
-    'If the lapsed component is large (>70%), the constraint behaves more like a mountain: barriers are structural, not maintained; fixing would require institutional reconstruction, not just enforcement removal. If the suppressed component is large (>60%), the constraint behaves more like a snare: removing active enforcement would restore alternatives quickly. This reading assumes roughly balanced (40–60% / 40–60%), which positions type at tangled_rope; the boundary assessment would move type prediction.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(lapsed_vs_suppressed_boundary, empirical, 'The proportion of market dominance persistence attributable to structural lapse versus active suppression.').
-
-omega_variable(
-    identity_fusion_in_subordinate_seats,
-    'For labor and potential entrants classified as identity_locked, what is the mechanism of identity fusion? Is it professional socialization (legitimate entrepreneurship mediated through incumbent pathways, making alternative ownership structures seem illegitimate)? Relational identity (career identity constituted through the relationship to incumbent employers/capital sources)? Internalized ideology (belief that incumbent-mediated structure is the natural or only viable way)?',
-    'Interview and ethnographic study of labor in subordinate positions and potential entrants who attempted to exit via alternative pathways (cooperatives, informal production, federated networks): map the specific barriers they encountered (structural knowledge loss, financing collapse) against internalized beliefs (''alternatives don''t work,'' ''this is just how markets are''). Examine educational curricula and professional credentialing to assess whether alternative institutional forms are taught or presented as legitimate.',
-    'If identity fusion is primarily internalized ideology (easily reversible through education and exposure to alternatives), suppression_requirement could decline rapidly if alternatives re-emerged; the constraint would be vulnerable to consciousness shifts. If fusion is relational (career paths locked into incumbent institutions), recovery would be slower; removing active suppression wouldn''t immediately restore exit options because the career infrastructure for alternatives would need rebuilding. If fusion is socialization (legitimacy beliefs), intermediate: changed institutional examples would gradually shift what counted as legitimate, but generational turnover would be required.',
+    lapsed_vs_maintained_boundary,
+    'What proportion of current market dominance is due to lapsed natural switching costs (sunk, self-perpetuating by user behavior alone) versus actively maintained by incumbent strategy (lobbying, technical lock-in deepening, predatory pricing)?',
+    'Counterfactual analysis: regulatory removal of active-maintenance mechanisms (IP licensing restrictions, interoperability barriers, regulatory capture channels) while holding inherited switching costs in place. Measure entrant success and consumer welfare change.',
+    'If maintenance is small (< 20% of dominance), the constraint is closer to lapsed_alternative_reading and requires no active enforcement to persist. If maintenance is large (> 60%), the constraint is closer to beneficiary_maintained_reading and depends entirely on incumbent action. The hybrid reading (this one) sits in the middle: meaningful persistence from both channels.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(identity_fusion_in_subordinate_seats, empirical, 'The mechanism and reversibility of identity fusion in subordinate and target seats.').
+narrative_ontology:omega_variable(lapsed_vs_maintained_boundary, empirical, 'The decomposition of dominance into lapsed and actively-maintained components.').
 
 omega_variable(
-    reading_boundary_clarity,
-    'Does the hybrid reading''s claim (some lapsed, some suppressed, mixed beneficiary structure) remain empirically distinguishable from the sibling readings at the data resolution available? Or does the measurement ambiguity at sector/time-period level collapse the three readings into one indeterminate structure?',
-    'Temporal disaggregation: measure suppression_requirement, theater_ratio, and resistance separately for alternative institutional forms known to have been suppressed versus those known to have lapsed. If suppressed alternatives show high suppression and rising theater_ratio while lapsed alternatives show low enforcement and stable theater, the readings remain distinct. If both show identical patterns, the readings are observationally equivalent at this resolution.',
-    'If readings remain distinct, corpus builders can separate the kernel contest into three analytically pure stories. If they collapse into indeterminacy, the kernel itself requires refinement: the distinction between lapsed and suppressed may not be a property of the constraint but a labeling choice. The hybrid reading would then be the only defensible account because it avoids choosing between indistinguishable alternatives.',
+    identity_lock_persistence,
+    'Is the identity lock-in that keeps consumers from leaving (ecosystem identity, switching-cost psychology, social network effects) structurally genuine or a performance of dominance—would it dissolve if competitors offered equivalent switching costs?',
+    'Natural experiment: new entrant offering subsidized switching (free data migration, app ecosystem parity, ecosystem-transfer guarantees). Measure defection and consumer switching-cost reassessment.',
+    'If identity lock dissolves readily once barriers fall, consumer suppression is partly internalized (psychology of lapsed barriers) and partly structural (active incumbent action to reinforce the psychology). If identity lock persists even at parity, the lock is genuine and the constraint''s suppression is lower than the authored metrics. The hybrid reading assumes partial dissolution.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reading_boundary_clarity, conceptual, 'Whether the three readings of the market_naturalization kernel are empirically distinguishable or observationally equivalent.').
+narrative_ontology:omega_variable(identity_lock_persistence, empirical, 'Whether consumer identity lock-in is structural or a performance of enforcement.').
 
 omega_variable(
-    reconstruction_cost_of_lapsed_alternatives,
-    'For alternatives that have atrophied (knowledge networks, financing structures, legal frameworks), what is the cost and time horizon for reconstruction? Is it expensive but feasible (would require deliberate policy and institutional investment, 10–30 years) or prohibitively costly (would require fundamental rewiring of capital markets and legal systems, >50 years or impossible)?',
-    'Policy analysis and institutional economic modeling: estimate the cost of reconstructing cooperative banking, federated supply networks, craft apprenticeship systems, and worker ownership frameworks in a domain where they have lapsed. Compare against costs of reconstruction in domains where they have survived in attenuated form. Use historical precedent from countries that maintained or rebuilt such structures (Mondragon cooperatives, Swiss apprenticeship system, Nordic cooperative banking) to establish baseline reconstruction costs.',
-    'If reconstruction cost is low, the lapsed component is less structurally binding; alternatives could re-emerge quickly if suppression eased and reconstruction were attempted. If reconstruction cost is high, the lapsed component is sticky; the constraint persists partly through inertia that would be expensive to reverse. This affects the time horizon for mandatrophy resolution: if lapsed alternatives are cheap to rebuild, fixing the constraint requires enforcement removal + modest institutional investment. If they''re expensive to rebuild, fixing requires major policy and capital commitment, which changes the political feasibility landscape.',
-    confidence_without_resolution(low)
+    sibling_reading_empirical_signature,
+    'Which empirical facts would favor each sibling reading over this one? What would the temporal trajectory, level-resolved suppression, and theater ratio look like under each reading?',
+    'Measurement protocol: lapsed_alternative_reading predicts theater_ratio → 0 (enforcement maintenance drops to background); suppression plateaus or falls as incumbents stop active defense; entry barriers erode as inherited advantages decay. Beneficiary_maintained_reading predicts theater_ratio rising (more orchestrated performance to maintain dominance); suppression stable or rising (active defense intensifies as inherited advantages weaken); entry barriers maintained or heightened.',
+    'This hybrid reading predicts mixed signals: theater_ratio rising moderately to ~0.48 (active maintenance of some barriers, lapsed inattention to others); suppression rising moderately to ~0.58 (some barriers self-perpetuate, others need active defense); both trend lines plateauing by mid-interval as the mixed structure stabilizes. Which empirical signature materializes determines which reading is accurate.',
+    confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reconstruction_cost_of_lapsed_alternatives, empirical, 'The cost and feasibility of reconstructing atrophied alternative institutional forms.').
+narrative_ontology:omega_variable(sibling_reading_empirical_signature, empirical, 'Distinguishing the three kernel readings by their temporal and level-resolved signatures.').
+
+omega_variable(
+    kernel_framing_ambiguity,
+    'Is the boundary between lapsed coordination and active extraction itself a commitment (a frame choice) or an empirical fact? Does labeling inherited switching costs as ''lapsed'' depend on a normative choice about what dominance ''ought'' to look like?',
+    'Examine the discourse: beneficiary parties define lapsed barriers as ''natural market outcomes'' (deontological framing); entrant and consumer advocates define the same barriers as ''incumbent-engineered lock-in'' (instrumental framing). The disagreement is partly empirical (how much maintenance is needed) and partly framing (whether inherited advantage is legitimate). No pure empirical test dissolves the framing choice.',
+    'If the reading choice is partly framing, then this hybrid reading''s ''mixed'' characterization is itself a frame (acknowledging both legitimacy claims) rather than a discovery. The constraint''s actual character (lapsed or maintained) cannot be read off the data alone—it depends on which tradition you inhabit. The hybrid reading is coherent only within a pluralist frame that honors both interpretations.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_framing_ambiguity, conceptual, 'Whether the lapsed/maintained boundary is an empirical fact or a frame choice.').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(market_naturalization__hybrid_reading, 0, 50).
+narrative_ontology:interval(market_naturalization__hybrid_reading, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(mark_tr_t0, market_naturalization__hybrid_reading, theater_ratio, 0, 0.28).
-narrative_ontology:measurement(mark_tr_t5, market_naturalization__hybrid_reading, theater_ratio, 5, 0.31).
-narrative_ontology:measurement(mark_tr_t10, market_naturalization__hybrid_reading, theater_ratio, 10, 0.34).
-narrative_ontology:measurement(mark_tr_t15, market_naturalization__hybrid_reading, theater_ratio, 15, 0.37).
-narrative_ontology:measurement(mark_tr_t25, market_naturalization__hybrid_reading, theater_ratio, 25, 0.4).
-narrative_ontology:measurement(mark_tr_t35, market_naturalization__hybrid_reading, theater_ratio, 35, 0.42).
-narrative_ontology:measurement(mark_tr_t50, market_naturalization__hybrid_reading, theater_ratio, 50, 0.41).
+narrative_ontology:measurement(mark_tr_t0, market_naturalization__hybrid_reading, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(mark_tr_t0, observed).
+narrative_ontology:measurement(mark_tr_t5, market_naturalization__hybrid_reading, theater_ratio, 5, 0.3).
+narrative_ontology:measurement_basis(mark_tr_t5, observed).
+narrative_ontology:measurement(mark_tr_t10, market_naturalization__hybrid_reading, theater_ratio, 10, 0.36).
+narrative_ontology:measurement_basis(mark_tr_t10, observed).
+narrative_ontology:measurement(mark_tr_t15, market_naturalization__hybrid_reading, theater_ratio, 15, 0.42).
+narrative_ontology:measurement_basis(mark_tr_t15, observed).
+narrative_ontology:measurement(mark_tr_t20, market_naturalization__hybrid_reading, theater_ratio, 20, 0.46).
+narrative_ontology:measurement_basis(mark_tr_t20, observed).
+narrative_ontology:measurement(mark_tr_t25, market_naturalization__hybrid_reading, theater_ratio, 25, 0.48).
+narrative_ontology:measurement_basis(mark_tr_t25, observed).
+narrative_ontology:measurement(mark_tr_t30, market_naturalization__hybrid_reading, theater_ratio, 30, 0.48).
+narrative_ontology:measurement_basis(mark_tr_t30, observed).
+narrative_ontology:measurement(mark_tr_t40, market_naturalization__hybrid_reading, theater_ratio, 40, 0.48).
+narrative_ontology:measurement_basis(mark_tr_t40, observed).
 
 % Extraction over time
-narrative_ontology:measurement(mark_be_t0, market_naturalization__hybrid_reading, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(mark_be_t5, market_naturalization__hybrid_reading, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(mark_be_t10, market_naturalization__hybrid_reading, base_extractiveness, 10, 0.48).
-narrative_ontology:measurement(mark_be_t15, market_naturalization__hybrid_reading, base_extractiveness, 15, 0.52).
-narrative_ontology:measurement(mark_be_t25, market_naturalization__hybrid_reading, base_extractiveness, 25, 0.56).
-narrative_ontology:measurement(mark_be_t35, market_naturalization__hybrid_reading, base_extractiveness, 35, 0.59).
-narrative_ontology:measurement(mark_be_t50, market_naturalization__hybrid_reading, base_extractiveness, 50, 0.58).
+narrative_ontology:measurement(mark_be_t0, market_naturalization__hybrid_reading, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement_basis(mark_be_t0, observed).
+narrative_ontology:measurement(mark_be_t5, market_naturalization__hybrid_reading, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement_basis(mark_be_t5, observed).
+narrative_ontology:measurement(mark_be_t10, market_naturalization__hybrid_reading, base_extractiveness, 10, 0.56).
+narrative_ontology:measurement_basis(mark_be_t10, observed).
+narrative_ontology:measurement(mark_be_t15, market_naturalization__hybrid_reading, base_extractiveness, 15, 0.59).
+narrative_ontology:measurement_basis(mark_be_t15, observed).
+narrative_ontology:measurement(mark_be_t20, market_naturalization__hybrid_reading, base_extractiveness, 20, 0.61).
+narrative_ontology:measurement_basis(mark_be_t20, observed).
+narrative_ontology:measurement(mark_be_t25, market_naturalization__hybrid_reading, base_extractiveness, 25, 0.62).
+narrative_ontology:measurement_basis(mark_be_t25, observed).
+narrative_ontology:measurement(mark_be_t30, market_naturalization__hybrid_reading, base_extractiveness, 30, 0.62).
+narrative_ontology:measurement_basis(mark_be_t30, observed).
+narrative_ontology:measurement(mark_be_t40, market_naturalization__hybrid_reading, base_extractiveness, 40, 0.62).
+narrative_ontology:measurement_basis(mark_be_t40, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(mark_su_t0, market_naturalization__hybrid_reading, suppression_requirement, 0, 0.38).
-narrative_ontology:measurement(mark_su_t5, market_naturalization__hybrid_reading, suppression_requirement, 5, 0.41).
-narrative_ontology:measurement(mark_su_t10, market_naturalization__hybrid_reading, suppression_requirement, 10, 0.44).
-narrative_ontology:measurement(mark_su_t15, market_naturalization__hybrid_reading, suppression_requirement, 15, 0.47).
-narrative_ontology:measurement(mark_su_t25, market_naturalization__hybrid_reading, suppression_requirement, 25, 0.51).
-narrative_ontology:measurement(mark_su_t35, market_naturalization__hybrid_reading, suppression_requirement, 35, 0.53).
-narrative_ontology:measurement(mark_su_t50, market_naturalization__hybrid_reading, suppression_requirement, 50, 0.52).
+narrative_ontology:measurement(mark_su_t0, market_naturalization__hybrid_reading, suppression_requirement, 0, 0.35).
+narrative_ontology:measurement_basis(mark_su_t0, observed).
+narrative_ontology:measurement(mark_su_t5, market_naturalization__hybrid_reading, suppression_requirement, 5, 0.4).
+narrative_ontology:measurement_basis(mark_su_t5, observed).
+narrative_ontology:measurement(mark_su_t10, market_naturalization__hybrid_reading, suppression_requirement, 10, 0.45).
+narrative_ontology:measurement_basis(mark_su_t10, observed).
+narrative_ontology:measurement(mark_su_t15, market_naturalization__hybrid_reading, suppression_requirement, 15, 0.5).
+narrative_ontology:measurement_basis(mark_su_t15, observed).
+narrative_ontology:measurement(mark_su_t20, market_naturalization__hybrid_reading, suppression_requirement, 20, 0.54).
+narrative_ontology:measurement_basis(mark_su_t20, observed).
+narrative_ontology:measurement(mark_su_t25, market_naturalization__hybrid_reading, suppression_requirement, 25, 0.57).
+narrative_ontology:measurement_basis(mark_su_t25, observed).
+narrative_ontology:measurement(mark_su_t30, market_naturalization__hybrid_reading, suppression_requirement, 30, 0.58).
+narrative_ontology:measurement_basis(mark_su_t30, observed).
+narrative_ontology:measurement(mark_su_t40, market_naturalization__hybrid_reading, suppression_requirement, 40, 0.58).
+narrative_ontology:measurement_basis(mark_su_t40, observed).
+
+% Leveled coercion grid (OQ-93): 32/32 authored points at t0=0, tn=40
+narrative_ontology:measurement(mark_grid_01, market_naturalization__hybrid_reading, accessibility_collapse(class), 0, 0.68).
+narrative_ontology:measurement(mark_grid_02, market_naturalization__hybrid_reading, accessibility_collapse(class), 40, 0.74).
+narrative_ontology:measurement(mark_grid_03, market_naturalization__hybrid_reading, accessibility_collapse(individual), 0, 0.62).
+narrative_ontology:measurement(mark_grid_04, market_naturalization__hybrid_reading, accessibility_collapse(individual), 40, 0.68).
+narrative_ontology:measurement(mark_grid_05, market_naturalization__hybrid_reading, accessibility_collapse(organizational), 0, 0.75).
+narrative_ontology:measurement(mark_grid_06, market_naturalization__hybrid_reading, accessibility_collapse(organizational), 40, 0.82).
+narrative_ontology:measurement(mark_grid_07, market_naturalization__hybrid_reading, accessibility_collapse(structural), 0, 0.78).
+narrative_ontology:measurement(mark_grid_08, market_naturalization__hybrid_reading, accessibility_collapse(structural), 40, 0.8).
+narrative_ontology:measurement(mark_grid_09, market_naturalization__hybrid_reading, resistance(class), 0, 0.54).
+narrative_ontology:measurement(mark_grid_10, market_naturalization__hybrid_reading, resistance(class), 40, 0.58).
+narrative_ontology:measurement(mark_grid_11, market_naturalization__hybrid_reading, resistance(individual), 0, 0.42).
+narrative_ontology:measurement(mark_grid_12, market_naturalization__hybrid_reading, resistance(individual), 40, 0.39).
+narrative_ontology:measurement(mark_grid_13, market_naturalization__hybrid_reading, resistance(organizational), 0, 0.68).
+narrative_ontology:measurement(mark_grid_14, market_naturalization__hybrid_reading, resistance(organizational), 40, 0.72).
+narrative_ontology:measurement(mark_grid_15, market_naturalization__hybrid_reading, resistance(structural), 0, 0.35).
+narrative_ontology:measurement(mark_grid_16, market_naturalization__hybrid_reading, resistance(structural), 40, 0.38).
+narrative_ontology:measurement(mark_grid_17, market_naturalization__hybrid_reading, stakes_inflation(class), 0, 0.52).
+narrative_ontology:measurement(mark_grid_18, market_naturalization__hybrid_reading, stakes_inflation(class), 40, 0.58).
+narrative_ontology:measurement(mark_grid_19, market_naturalization__hybrid_reading, stakes_inflation(individual), 0, 0.44).
+narrative_ontology:measurement(mark_grid_20, market_naturalization__hybrid_reading, stakes_inflation(individual), 40, 0.48).
+narrative_ontology:measurement(mark_grid_21, market_naturalization__hybrid_reading, stakes_inflation(organizational), 0, 0.62).
+narrative_ontology:measurement(mark_grid_22, market_naturalization__hybrid_reading, stakes_inflation(organizational), 40, 0.71).
+narrative_ontology:measurement(mark_grid_23, market_naturalization__hybrid_reading, stakes_inflation(structural), 0, 0.41).
+narrative_ontology:measurement(mark_grid_24, market_naturalization__hybrid_reading, stakes_inflation(structural), 40, 0.42).
+narrative_ontology:measurement(mark_grid_25, market_naturalization__hybrid_reading, suppression(class), 0, 0.38).
+narrative_ontology:measurement(mark_grid_26, market_naturalization__hybrid_reading, suppression(class), 40, 0.44).
+narrative_ontology:measurement(mark_grid_27, market_naturalization__hybrid_reading, suppression(individual), 0, 0.28).
+narrative_ontology:measurement(mark_grid_28, market_naturalization__hybrid_reading, suppression(individual), 40, 0.32).
+narrative_ontology:measurement(mark_grid_29, market_naturalization__hybrid_reading, suppression(organizational), 0, 0.48).
+narrative_ontology:measurement(mark_grid_30, market_naturalization__hybrid_reading, suppression(organizational), 40, 0.64).
+narrative_ontology:measurement(mark_grid_31, market_naturalization__hybrid_reading, suppression(structural), 0, 0.22).
+narrative_ontology:measurement(mark_grid_32, market_naturalization__hybrid_reading, suppression(structural), 40, 0.24).
 
 
 /* ==========================================================================
@@ -280,14 +414,11 @@ narrative_ontology:affects_constraint(market_naturalization__hybrid_reading, mar
 narrative_ontology:affects_constraint(market_naturalization__hybrid_reading, market_naturalization__beneficiary_maintained_reading).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one reading of a contested kernel. The kernel 'market_naturalization' decomposes into three constraint stories, each representing a different theory of how market dominance persists: (1) lapsed_alternative_reading — market dominance is structurally self-perpetuating; alternatives have disappeared on merit and require no active suppression; (2) beneficiary_maintained_reading — market dominance is actively defended by incumbents; suppression is continuous and pervasive; (3) hybrid_reading (this story) — market dominance combines structural lapse (some alternatives atrophied) with active maintenance (some alternatives suppressed). Each reading instantiates a different constraint with different ε values, different beneficiary/victim structures, and different type predictions. All three are linked in network.affects_constraints as a constraint family. The ε values differ because the observables are different: the lapsed reading measures coordination cost as ε, treating suppression as negligible; the beneficiary-maintained reading measures rent extraction as ε, treating coordination as secondary; this hybrid reading measures the mixed observable (both coordination and extraction present, both lapse and suppression present) as ε ≈ 0.58 (between the other two). The three readings collectively test the kernel contest: if historical data shows suppression_requirement rising over time, the lapsed reading fails; if it shows suppression stable while alternatives re-emerge, the beneficiary-maintained reading fails. This reading's predictions match the observed data (suppression rising, theater rising, some alternatives atrophying while others are defended against) better than either sibling reading.
+% This constraint is part of the market_naturalization kernel family (three stories, one kernel, three readings). The hybrid_reading sits between the lapsed_alternative_reading (which attributes dominance to natural lapsing) and the beneficiary_maintained_reading (which attributes dominance to active incumbent extraction). The three stories share a referent (market dominance) but differ in how they frame the persistence mechanism. Decomposition is necessary because ε is different for each reading: the lapsed reading authorizes low ε (dominance requires no extraction effort, it is natural inertia), the maintained reading authorizes high ε (dominance is pure rent extraction with coordination cover story), and the hybrid reading (this one) authorizes moderate ε (mixed mechanisms, moderate extraction overlay on real coordination). All three readings affect each other: if the maintained reading is correct, the lapsed reading's claim of natural inertia is false cover story; if the lapsed reading is correct, the maintained reading over-attributes intentionality. The hybrid reading influences both by claiming their disagreement is partly empirical (how much maintenance is actually needed) and partly framing (what counts as legitimate coordination vs. extractive overhead).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(market_naturalization__hybrid_reading, powerless, 0.85).
-constraint_indexing:directionality_override(market_naturalization__hybrid_reading, organized, 0.75).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

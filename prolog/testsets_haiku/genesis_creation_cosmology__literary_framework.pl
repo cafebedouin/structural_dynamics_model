@@ -39,11 +39,19 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +65,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -67,38 +76,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: genesis_creation_cosmology__literary_framework
- *   human_readable: Genesis 1-2 Literary Framework (ANE Cosmological Schema Without Cosmological Claims)
+ *   human_readable: Genesis Creation Cosmology: Literary Framework Reading
  *   domain: religious_studies/theology/philosophy_of_science
  *
  * SUMMARY:
- *   Genesis 1-2 employs cosmological schema attested in Ancient Near Eastern
- *   literature (Enuma Elish, Atrahasis, others). The literary-framework
- *   reading asserts that Genesis borrows these literary forms without making
- *   empirical cosmological claims—it expresses theological commitments
- *   (divine agency, human dignity, cosmic order) through culturally available
- *   poetic forms. This reading benefits academic biblical scholarship
- *   (displaces fundamentalist authority, legitimates historical-critical
- *   methods) and science education (relocates Genesis to non-empirical
- *   domain, excludes creationism as category error). It suppresses
- *   fundamentalist and young-earth readings through institutional gatekeeping
- *   in universities and seminaries. The constraint is CLAIMED as tangled rope
- *   (genuine coordination + active enforcement + asymmetric impact) and the
- *   authored metrics support the claim: extractiveness is moderate-high
- *   (institutional authority redistributed), suppression is substantial
- *   (fundamentalist readings actively marginalized), theater is moderate
- *   (some genuine pedagogical benefit to domain-separation, but growing share
- *   of enforcement activity defends the reading's authority against resistant
- *   communities). The measurement series traces the reading's institutional
- *   strengthening over ~50 years of academic consensus-building.
+ *   The literary-framework reading of Genesis 1-2 holds that the creation
+ *   account employs Ancient Near Eastern cosmological schema (fixed cosmic
+ *   order, humanity's place in relation to divine decree, hierarchical
+ *   creation taxonomy) as a theological narrative device rather than as a
+ *   cosmological truth-claim. Under this reading, Genesis's cosmos is not a
+ *   statement about how the universe actually is, but a culturally-situated
+ *   articulation of divine sovereignty and human dignity. The reading has
+ *   become dominant in academic biblical scholarship since the mid-20th
+ *   century, displacing both young-earth literal readings and classical
+ *   theological authority structures that treated Genesis as normative
+ *   cosmology. This generates a tangled structure: the reading solves genuine
+ *   coordination problems (integrating theology with modern science,
+ *   establishing methodological unity across biblical studies) while
+ *   simultaneously extracting authority from communities whose theological
+ *   identity is built on cosmological literalism. The claim/metric gap is
+ *   intentional: we declare this reading as tangled_rope (coordination +
+ *   extraction) while younger-earth and theistic-evolution readings are other
+ *   constraints entirely, each with their own ε and stakeholder structures.
  *
  * KEY AGENTS:
- *   - Academic biblical scholarship: institutional beneficiary, agenda-setter (sets interpretive frame in universities and mainline seminaries)
- *   - Young-earth creationist movements: organized payer, identity-locked exit (literal reading fused with theological identity and community membership)
- *   - Fundamentalist communities: victim of interpretive delegitimation, constrained exit (alternative institutions available but socially isolating)
- *   - Science education institutions: institutional beneficiary (constraint provides cover for excluding creationism from science curriculum)
- *   - Theistic evolution advocates: intermediate position, observer (benefit from literalism displacement but hold different sibling reading)
- *   - Mainline progressive theology: co-agenda-setter with academic scholarship, institutional enforcer
- *   - Excluded young-earth scientists: would reframe contest as epistemological rather than hermeneutical
+ *   - academic_biblical_scholarship: institutional agenda-setter (controls methodological legitimacy)
+ *   - secular_institutional_authority: institutional beneficiary (gains by displacement of rival cosmological authority)
+ *   - young_earth_creationist_communities: moderate-power victims (identity-locked, excluded from credentialing)
+ *   - traditional_theological_authority: organized-power victims (loses epistemic standing over interpretation)
+ *   - theistic_evolution_advocates: powerful hybrid beneficiary-observer (benefit from ANE schema displacement, maintain theological authority)
+ *   - evolutionary_biology_establishment: institutional beneficiary (eliminates cosmological friction)
+ *   - conservative_denominational_institutions: moderate-power victims (internal coherence crisis)
+ *   - biblical_literalist_communities: powerless excluded (no seat at interpretation table)
  */
 
 /* ==========================================================================
@@ -106,59 +115,133 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(genesis_creation_cosmology__literary_framework, 0.61).
-domain_priors:suppression_score(genesis_creation_cosmology__literary_framework, 0.58).
-domain_priors:theater_ratio(genesis_creation_cosmology__literary_framework, 0.48).
+domain_priors:base_extractiveness(genesis_creation_cosmology__literary_framework, 0.68).
+domain_priors:suppression_score(genesis_creation_cosmology__literary_framework, 0.72).
+domain_priors:theater_ratio(genesis_creation_cosmology__literary_framework, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, extractiveness, 0.61).
-narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, suppression_requirement, 0.58).
-narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, theater_ratio, 0.48).
+narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, extractiveness, 0.68).
+narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, theater_ratio, 0.55).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, accessibility_collapse, 0.52).
-narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, resistance, 0.71).
+narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, accessibility_collapse, 0.65).
+narrative_ontology:constraint_metric(genesis_creation_cosmology__literary_framework, resistance, 0.78).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(genesis_creation_cosmology__literary_framework, tangled_rope).
-narrative_ontology:human_readable(genesis_creation_cosmology__literary_framework, "Genesis 1-2 Literary Framework (ANE Cosmological Schema Without Cosmological Claims)").
+narrative_ontology:human_readable(genesis_creation_cosmology__literary_framework, "Genesis Creation Cosmology: Literary Framework Reading").
 narrative_ontology:topic_domain(genesis_creation_cosmology__literary_framework, "religious_studies/theology/philosophy_of_science").
 
 domain_priors:requires_active_enforcement(genesis_creation_cosmology__literary_framework).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(genesis_creation_cosmology__literary_framework, '7968237c-aded-4066-af2b-b67131a12af5').
-narrative_ontology:cs_kernel_codification('7968237c-aded-4066-af2b-b67131a12af5', fixed_text).
-narrative_ontology:cs_authority_grounding('7968237c-aded-4066-af2b-b67131a12af5', extraction).
-narrative_ontology:cs_interpretation_layer_present('7968237c-aded-4066-af2b-b67131a12af5').
-narrative_ontology:cs_reading_relation('7968237c-aded-4066-af2b-b67131a12af5', genesis_creation_cosmology__young_earth_literal, forecloses).
-narrative_ontology:cs_reading_relation('7968237c-aded-4066-af2b-b67131a12af5', genesis_creation_cosmology__theistic_evolution, coexists_with).
-narrative_ontology:cs_axiom('7968237c-aded-4066-af2b-b67131a12af5', foundational, genre_determines_content_type).
-narrative_ontology:cs_axiom_status(genre_determines_content_type, holdable).
-narrative_ontology:cs_axiom_grounding('7968237c-aded-4066-af2b-b67131a12af5', genre_determines_content_type, conventional).
-narrative_ontology:cs_axiom('7968237c-aded-4066-af2b-b67131a12af5', foundational, theological_claim_independent_from_cosmological_claim).
-narrative_ontology:cs_axiom_status(theological_claim_independent_from_cosmological_claim, holdable).
-narrative_ontology:cs_axiom_grounding('7968237c-aded-4066-af2b-b67131a12af5', theological_claim_independent_from_cosmological_claim, deontological).
-narrative_ontology:cs_reference_frame('7968237c-aded-4066-af2b-b67131a12af5', text_as_cultural_artifact).
-narrative_ontology:cs_drift_state('7968237c-aded-4066-af2b-b67131a12af5', contemporary_academic_consensus, gap(practice_drift, substantial, false)).
-narrative_ontology:cs_created_at('7968237c-aded-4066-af2b-b67131a12af5', '').
+narrative_ontology:cs_story_uid(genesis_creation_cosmology__literary_framework, 'ad702622-2ce3-41f6-be59-b8d75f6cfeb6').
+narrative_ontology:cs_kernel_codification('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', fixed_text).
+narrative_ontology:cs_authority_grounding('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', extraction).
+narrative_ontology:cs_interpretation_layer_present('ad702622-2ce3-41f6-be59-b8d75f6cfeb6').
+narrative_ontology:cs_reading_relation('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', genesis_creation_cosmology__young_earth_literal, forecloses).
+narrative_ontology:cs_reading_relation('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', genesis_creation_cosmology__theistic_evolution, influences).
+narrative_ontology:cs_axiom('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', foundational, genesis_as_literary_device_not_cosmology).
+narrative_ontology:cs_axiom_status(genesis_as_literary_device_not_cosmology, holdable).
+narrative_ontology:cs_axiom_grounding('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', genesis_as_literary_device_not_cosmology, empirically_contingent).
+narrative_ontology:cs_axiom('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', foundational, form_critical_method_as_methodologically_sound).
+narrative_ontology:cs_axiom_status(form_critical_method_as_methodologically_sound, holdable).
+narrative_ontology:cs_axiom_grounding('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', form_critical_method_as_methodologically_sound, conventional).
+narrative_ontology:cs_axiom('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', secondary, ane_cosmological_schema_intertextuality).
+narrative_ontology:cs_axiom_status(ane_cosmological_schema_intertextuality, holdable).
+narrative_ontology:cs_axiom_grounding('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', ane_cosmological_schema_intertextuality, empirically_contingent).
+narrative_ontology:cs_reference_frame('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', genesis_theological_cosmology_pre_form_criticism).
+narrative_ontology:cs_drift_state('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', contemporary_scientific_consensus, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_created_at('ad702622-2ce3-41f6-be59-b8d75f6cfeb6', '').
 narrative_ontology:cs_kernel_id(genesis_creation_cosmology__literary_framework, genesis_creation_cosmology).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(genesis_creation_cosmology__literary_framework, academic_biblical_scholarship).
-narrative_ontology:constraint_beneficiary(genesis_creation_cosmology__literary_framework, science_education_institutions).
-narrative_ontology:constraint_victim(genesis_creation_cosmology__literary_framework, fundamentalist_communities).
-narrative_ontology:constraint_victim(genesis_creation_cosmology__literary_framework, young_earth_creationist_movements).
+narrative_ontology:constraint_beneficiary(genesis_creation_cosmology__literary_framework, secular_institutional_authority).
+narrative_ontology:constraint_victim(genesis_creation_cosmology__literary_framework, young_earth_creationist_communities).
+narrative_ontology:constraint_victim(genesis_creation_cosmology__literary_framework, traditional_theological_authority).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(genesis_creation_cosmology__literary_framework, theistic_evolution_advocates).
+narrative_ontology:constraint_beneficiary(genesis_creation_cosmology__literary_framework, evolutionary_biology_establishment).
+narrative_ontology:constraint_victim(genesis_creation_cosmology__literary_framework, conservative_denominational_institutions).
+narrative_ontology:constraint_vindicates(genesis_creation_cosmology__literary_framework, ancient_near_eastern_cosmological_continuity).
+narrative_ontology:constraint_vindicates(genesis_creation_cosmology__literary_framework, biblical_literary_form_theory).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Sets the interpretive framework for Genesis 1-2 within university divinity schools, seminaries, and peer-reviewed religious studies. Declares the text employs ANE cosmological schema as literary device, not cosmological claim. Controls what counts as valid exegesis, methodological legitimacy, and credentialing of theological interpreters. Enforces the framework through peer review, curriculum design, and institutional hiring.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, academic_biblical_scholarship, agenda_setter,
+    institutional, generational, arbitrage, global).
+
+% Benefits from the displacement of Genesis cosmology as a rival authority structure to modern physics and evolutionary biology. The literary-framework reading eliminates cosmological competition: Genesis becomes a historical artifact (studied ethnographically) rather than a normative constraint on the cosmos's actual structure. Science educators gain clarity that Genesis is not a competing model.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, secular_institutional_authority, beneficiary,
+    institutional, generational, mobile, global).
+
+% Bear the cost of institutional exclusion from theological academia: their literal-chronology readings are declared methodologically invalid, their exegetes are not hired into divinity schools, their theological frameworks are treated as pre-critical superstition rather than live interpretive positions. Exit means abandoning the identity frame that ties their faith commitment to historical literalism, which many experience as impossible.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, young_earth_creationist_communities, payer,
+    moderate, biographical, identity_locked, national).
+
+% Loses epistemic authority over biblical interpretation: claims grounded in patristic and medieval exegetical tradition are reframed as pre-modern literalism rather than as live theological readings. Institutional churches that cite Genesis as normative cosmology face pressure to adopt the literary-framework reading or lose credibility within secular institutions.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, traditional_theological_authority, payer,
+    organized, civilizational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(genesis_creation_cosmology__literary_framework, traditional_theological_authority, excluded).
+
+% Benefit from the literary-framework reading's removal of Genesis as a cosmological constraint, but maintain theological authority claims (God acted through evolution; the text conveys theological truth in non-literal forms). They occupy a hybrid institutional position: credible within academic theology AND within religious communities that accept evolution.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, theistic_evolution_advocates, beneficiary,
+    powerful, generational, mobile, global).
+narrative_ontology:stakeholder_secondary_role(genesis_creation_cosmology__literary_framework, theistic_evolution_advocates, observer).
+
+% Benefits from the displacement of cosmological competition: Genesis ceases to be cited as an alternative natural history. The reading reduces friction between biology instruction and religious objections by repositioning Genesis as literature rather than cosmology.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, evolutionary_biology_establishment, beneficiary,
+    institutional, generational, mobile, global).
+
+% Face internal pressure when their theologians adopt the literary-framework reading: the reading creates a gap between institutional teaching (Genesis as normative narrative) and credentialed expert interpretation (Genesis as cultural artifact). Denominational schools are torn between institutional legitimacy (adopting the reading) and congregational coherence (maintaining traditional authority).
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, conservative_denominational_institutions, payer,
+    moderate, biographical, constrained, national).
+
+% Observes the reading's effect on curriculum design: if Genesis is literature rather than cosmology, it can be taught in comparative literature and religious-studies contexts without triggering Establishment Clause concerns. The reading provides legal/institutional cover for religious content in public schools (as cultural context rather than truth claim).
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, secular_education_policy, observer,
+    institutional, generational, analytical, national).
+
+% Are structurally excluded from the institutional conversation: their reading practices (divine origin of the text, cosmological literal truth) are not admitted as valid exegetical alternatives. They experience the reading not as a scholarly proposal but as an institutional dismissal. Their churches have no seat at the table where academic theology is decided.
+narrative_ontology:constraint_stakeholder(genesis_creation_cosmology__literary_framework, biblical_literalist_communities, excluded,
+    powerless, biographical, trapped, local).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(genesis_creation_cosmology__literary_framework, academic_biblical_scholarship).
+narrative_ontology:fixing_cost_class(genesis_creation_cosmology__literary_framework, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a unified methodological framework for biblical scholarship by applying form-critical and source-critical analysis to Genesis. Solves the coordination problem: how do academic theology, scientific cosmology, and textual interpretation relate? Answer: texts are studied ethnographically; their cultural schema is the subject, not their cosmological truth-claims.
+% TRANSFER_FUNCTION: Transfers epistemic authority from Genesis-as-cosmology to Genesis-as-literature. Moves theological legitimacy away from cosmological literalism toward hermeneutical sophistication. Concentrates interpretive power in credentialed academic institutions; disperses it away from denominational and lay communities that hold literal readings.
+% ABSENT_VOICES: Young-earth creationist exegetes and conservative denominational theologians are excluded: their literal readings are treated as pre-critical rather than as live alternative interpretations. They would testify that Genesis conveys divine truth about creation's actual sequence, not merely ANE cultural borrowing; their exegetical tradition (patristic, medieval, Reformation commentaries) is declared methodologically obsolete rather than engaged as a rival position.
+% DISAPPEARANCE_RATIONALE: If the literary-framework reading vanished, Genesis would regain status as a potential cosmological constraint: young-earth chronologies would re-enter public education debates, theological institutions would maintain cosmological authority claims, and religious objections to evolutionary biology would frame Genesis not as cultural artifact but as alternative natural history.
+% FOUNDING_PROBLEM: Early modern biblical scholarship faced a methodological problem: Genesis contains cosmological claims (six days, creation order, fixed kinds) that contradict modern physics and evolutionary biology. How should theology relate to texts whose plain-sense cosmology is empirically false? The literary-framework reading solves it: Genesis is not a cosmological claim at all.
+% FOUNDING_PROBLEM_CORROBORATION: Form-critical scholarship (Gunkel onward) and ANE comparative literature (Walton, Longman, others) attest the problem is real and ongoing: comparative analysis shows Genesis shares structural patterns with Enuma Elish and other ANE texts. The problem persists because conservative theological communities still treat Genesis's literal cosmology as normatively true, creating institutional friction.
+narrative_ontology:disappearance_verdict(genesis_creation_cosmology__literary_framework, world_rearranges).
+narrative_ontology:founding_problem_status(genesis_creation_cosmology__literary_framework, live).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(genesis_creation_cosmology__literary_framework, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(genesis_creation_cosmology__literary_framework, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(genesis_creation_cosmology__literary_framework, 'none', 1).
+narrative_ontology:epsilon_provenance(genesis_creation_cosmology__literary_framework, 0.68, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -178,16 +261,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness begins moderate (0.42, early in consensus-building phase when literalist reading retained some institutional presence) and rises asymptotically to 0.61 (present, as academic consensus solidifies and mainstream denominational authority aligns). Suppression follows a similar trajectory (0.35→0.58): early suppression was selective (marginalizing in elite universities while fundamentalist institutions maintained parallel presence); contemporary suppression is more systematic (peer-review gatekeeping, seminary curriculum standardization, public education policy alignment). Theater ratio rises steadily (0.22→0.48): early institutional adoption of the literary framework had substantial pedagogical benefit (actually improved understanding of ANE context and resolved genuine tensions between scriptural interpretation and empirical knowledge); contemporary enforcement increasingly defends the reading's authority status against persistent objections, with more activity devoted to maintaining consensus than to teaching the substantive literary-framework analysis. The measurement series is shared across all three tracked metrics (one time grid, every metric authored at every point) to enable consistent temporal analysis.
+ *   Base extractiveness rises from 0.32 to 0.68 over the interval, tracking the reading's institutional consolidation: early on (0-8) it is one scholarly position among several; by interval midpoint (16-32) it dominates academic divinity training; by end of interval (40-50) it has become the unquestioned framework in credentialed theology, though institutional momentum (theater_ratio plateauing at 0.55) suggests the gain is now mostly performative. Suppression rises faster than extractiveness (0.35 to 0.72), indicating the constraint's persistence depends increasingly on actively excluding rival readings from credentialing rather than on participant preference. Theater rises steadily (0.25 to 0.55) because academic theology increasingly performs the methodological commitment without defending the founding problem: form-criticism is invoked as settled rather than argued. Accessibility collapse (0.65) indicates that once the ANE schema framework is internalized by seminarians and divinity students, alternatives (literal chronology, sustained theological cosmology) appear methodologically illiterate rather than contested. Resistance (0.78) is high because young-earth and conservative theological communities actively contest the framework, even as their institutional voice weakens. The measurement grid is shared across all three metrics, authored at the same seven time points to prevent temporal aliasing.
  *
  * PERSPECTIVAL GAP:
- *   The academic agenda-setter seat should compute differently from the fundamentalist payer seat. From the academic perspective: the constraint is genuine coordination (reconciling scripture with science, enabling educated faith). From the fundamentalist perspective: the constraint is enforcement of an alien hermeneutic (academic authority displacing scriptural authority). The engine computes this divergence from directionality and power atoms—academics hold institutional power with arbitrage exit (can adopt alternative interpretive methods or migrate between institutions), fundamentalists hold organized-power status with identity-locked exit (cannot abandon the reading without losing community and theological identity). The gap is not a defect in the story; it is the measurement the system takes.
+ *   The payer seats (young-earth communities, traditional authority) should compute a snare-like or near-snare classification from their position: high extraction, active suppression (methodological exclusion), and few exit options. Academic biblical scholarship should compute a rope-like classification from its position: genuine coordination (establishing methodological unity), beneficiary status, and the extraction as incidental to coordination function. Secular institutional authority should compute as pure beneficiary with minimal extraction from its seat (it collects authority displacement but does not bear the suppression cost). The engine's per-seat computation should reveal that this constraint is experienced as different types from different seats — that divergence IS what tangled_rope should show: coordination-plus-asymmetric-extraction, where the asymmetry is structural, not observational bias.
  *
  * DIRECTIONALITY LOGIC:
- *   Academic biblical scholarship and science education benefit from the constraint without paying its costs—they occupy the beneficiary end (low d, negative effective extraction χ when directionality is computed by the engine). Young-earth creationists and fundamentalists bear the costs (suppressed reading, institutional exclusion, identity strain) without benefiting—they occupy the target end (high d, high χ). Theistic evolution advocates occupy an intermediate position (they benefit from literalism's displacement but do not fully occupy the beneficiary role because their own reading is not identical to the literary-framework reading). The story declares both beneficiaries and victims; directionality_overrides are unnecessary because the structural derivation from beneficiary/victim + exit_options + power correctly captures the asymmetry.
+ *   Academic biblical scholarship sits at d ≈ 0.1 (beneficiary/agenda-setter, controls framework, high institutional power and arbitrage exit). Secular institutional authority sits at d ≈ 0.15 (beneficiary, collects authority displacement but does not actively enforce — mobile exit). Young-earth communities sit at d ≈ 0.85 (victims, identity-locked exit, institutional exclusion, no leverage). Traditional theological authority sits at d ≈ 0.8 (victims, constrained exit — cannot abandon theology, but cosmological authority is stripped). Theistic evolution sits at d ≈ 0.4 (hybrid: benefits from displacement of literalism, but retains theological authority by maintaining non-literal compatibility, mobile exit). The power atoms are calibrated to stakeholder roles: institutional agents (agenda_setter, beneficiary) get low-to-moderate directionalities; moderate-power payersget high directionalities; powerless excluded agents approach 1.0. The derived d values feed the engine's effective extraction (χ) computation under per-seat classification.
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (conflict between literalist reading and scientific cosmology) is CONTESTED in status: academic consensus asserts it is still live (biblical scholarship must keep reiterating the literary-framework argument because fundamentalist challenges persist), while young-earth movements assert the problem is ill-posed (there is no contradiction if the text-type is correctly understood). The disappearance verdict is CONTESTED: academic consensus asserts that eliminating the literary-framework reading would rearrange the world (literalism would re-dominate, creating educational chaos), while fundamentalists assert disappearance would rearrange the world toward truth (scriptural authority restored). This (founding_problem_status=contested, disappearance_verdict=contested) mismatch suggests the constraint's mandate is itself contested, not obsolete. Mandatrophy—where the founding problem is dead but the constraint persists—is not present here. Instead, the constraint exhibits what might be called 'contestatory persistence': all parties agree something is at stake, but they disagree on what problem is being solved. The theater-ratio rise (0.22→0.48) indicates some drift toward performative maintenance—defending the reading's authority status rather than teaching the substantive analysis—but theater is not yet dominant, so piton classification is not supported by the metrics.
+ *   The founding problem (how to integrate Genesis with modern science and establish methodological unity) is live and ongoing because conservative theological communities persist in treating Genesis as cosmologically normative. However, the constraint's persistence depends increasingly on suppression (exclusion from credentialing) rather than on ongoing problem-solving: by interval end, form-criticism is doctrine, not argued position. This creates a weak mandatrophy signal: the problem remains contested (so not dead mandate), but the enforcement machinery defends the framework rather than addressing the problem. The theater_ratio plateau (0.55 at end) indicates that academia is performing the methodological commitment more than problem-solving. If young-earth critiques were actually addressed rather than excluded, the extractiveness would drop or the suppression would fall. The fact that both hold steady (while resistance remains high) suggests the constraint persists partly by keeping the founding problem permanently unresolved rather than solved.
  */
 
 /* ==========================================================================
@@ -195,54 +278,44 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    anent_schema_borrowing_vs_revelation,
-    'Does Genesis''s use of ANE cosmological forms establish that it makes no cosmological claims, or is the constraint conflating literary form with content-emptiness?',
-    'Theological and hermeneutical analysis: if ANE form-borrowing is compatible with referential claims about actual creation (the forms express but do not negate the claims), the constraint''s logic fails; if form-borrowing implies content negotiability, the constraint stands.',
-    'If resolution favors form-independence from content, theistic evolution and young-earth readings both remain open; the constraint''s segregation of Genesis from cosmological discourse breaks. If form-borrowing does imply content negotiability, the literary-framework reading is vindicated.',
+    literary_device_vs_truth_embedded,
+    'Is the literary-framework reading''s distinction between ''ANE schema as literary device'' and ''cosmological truth-claim'' epistemically stable, or does treating Genesis as culturally-situated narrative necessarily embed truth-claims (about divine agency, creation''s meaningfulness, humanity''s place)?',
+    'Hermeneutical analysis of whether form-critical method can maintain the device/truth-claim distinction without collapsing into one or the other. Empirical test: do theology students who adopt the literary reading experience it as: (a) Genesis makes no cosmological claims (pure form), (b) Genesis makes theological claims about divine action using ANE schema, or (c) both simultaneously?',
+    'If the distinction collapses, the reading''s claim to remove Genesis as a normative constraint is undermined — it would remain extractive for different reasons. If the distinction holds, the reading''s Type classification as tangled_rope (coordination + extraction) is confirmed.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(literary_device_vs_truth_embedded, conceptual, 'Whether the literary/cosmological distinction is sustainable or whether accepting ANE literary form commits one implicitly to theological truth-claims.').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'Is the suppression of young-earth readings structural (external exclusion from credentialing) or internalized (the form-critical method genuinely shows literalism to be methodologically indefensible, not just institutionally disfavored)?',
+    'Post-exit observation: do young-earth exegetes who leave credentialed academia continue to hold their readings with the same confidence, or do they report internalized methodological doubt? Do academic theologians who adopt form-criticism report it as discovered truth or institutional pressure?',
+    'If structural, suppression depends on ongoing institutional enforcement and is inherently extractive (tangled_rope confirmed). If internalized, the suppression may be self-sustaining and the classification might shift toward snare. If mixed, the omega documents the balance.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(anent_schema_borrowing_vs_revelation, conceptual, 'Whether ANE literary form entails non-cosmological content or merely non-literalist expression.').
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Whether the reading''s suppressive force is external institutional control or internalized methodological conviction.').
 
 omega_variable(
-    theological_truth_without_cosmological_claim,
-    'Can a text make genuine theological claims (about God, creation, human nature) without making cosmological claims (about how the cosmos is structured)?',
-    'Theological and philosophical analysis of the boundary between metaphysical/theological discourse and empirical/cosmological discourse. Test cases: claims about God''s relationship to matter, the origin of human conscience, the nature of time.',
-    'If theological claims are separable from cosmological claims, the literary-framework reading preserves Genesis as theologically authoritative while accepting scientific cosmology. If the boundary collapses—if claims about divine creation entail claims about creation timing/mechanism—then the constraint''s domain-separation strategy is unstable.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(theological_truth_without_cosmological_claim, conceptual, 'Whether theological and cosmological claims can be cleanly separated in texts about creation.').
-
-omega_variable(
-    identity_lock_mechanism_in_fundamentalist_exit,
-    'Is the fundamentalist resistance to the literary-framework reading primarily structural (institutional gatekeeping, curriculum exclusion) or internalized (identity-fusion with literalist reading)?',
-    'Longitudinal study of exit trajectories: if fundamentalists who leave the communities maintain literalist reading, suppression is primarily structural; if exit from communities correlates with shift to literary-framework reading, suppression is partially internalized.',
-    'If suppression is primarily structural, removing academic/institutional gatekeeping would allow exit. If partially internalized, the constraint persists even when institutional barriers fall because the reading is fused with theological identity.',
-    confidence_without_resolution(medium)
-).
-
-narrative_ontology:omega_variable(identity_lock_mechanism_in_fundamentalist_exit, empirical, 'Locus of suppression in fundamentalist reading maintenance: structural institutional gatekeeping vs. internalized identity fusion.').
-
-omega_variable(
-    beneficiary_collusion_academic_science,
-    'Do academic biblical scholarship and science education genuinely coordinate around a shared commitment to the literary-framework reading, or does each benefit from the reading for independent reasons without genuine coordination?',
-    'Institutional analysis: examine funding flows, conference co-sponsorship, citation patterns, and policy alignment. If academic biblical scholars and science educators would benefit equally if the reading disappeared and their interests were severed, beneficiary status should be disaggregated.',
-    'Genuine coordination suggests the constraint solves a real collective-action problem and may be better classified as rope; disaggregated interests suggest each party collects extraction independently and the reading is more purely snare-like in structure.',
+    beneficiary_asymmetry_persistence,
+    'Does the reading''s extraction flow asymmetrically to academic institutions (agenda_setter) and secular authority (beneficiary), or do theistic_evolution advocates and progressive theological communities also benefit from the displacement of literalism?',
+    'Institutional audit: who gains from the reading becoming dominant? Who loses status? Are benefits concentrated in secular academia + evolution teaching, or distributed across multiple beneficiary constituencies?',
+    'Concentrated beneficiary structure strengthens the snare reading (pure extraction with few beneficiaries); distributed benefits strengthen the tangled_rope reading (coordination + unequal extraction). The answer affects whether young-earth communities are victims of pure extraction or of an asymmetrically beneficial coordination.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(beneficiary_collusion_academic_science, empirical, 'Whether academic biblical scholarship and science education form a genuine coalition or merely overlap in beneficiary status.').
+narrative_ontology:omega_variable(beneficiary_asymmetry_persistence, empirical, 'Whether extraction is concentrated in the agenda-setter or distributed across multiple beneficiaries.').
 
 omega_variable(
-    kernel_displacement_authority,
-    'Which authority framework determines the reading of Genesis—the theological tradition''s own interpretive lineage, the academic historical-critical discipline, or the scientific community''s factual claims?',
-    'Examination of which authority structure (if any) can override the others. Can theological tradition reject the literary-framework reading and reinstall literalism? Can science settle hermeneutical questions? Can academic scholarship override both?',
-    'If theological authority can override academic reading, the constraint''s enforcement weakens. If academic authority is intrinsically superior, the constraint is stable. If science can settle the matter, the constraint becomes dependent on scientific consensus rather than on the reading''s internal logic.',
-    confidence_without_resolution(low)
+    reading_foreclose_chain,
+    'Does the literary-framework reading logically foreclose young-earth literalism, or do they represent genuinely coexistent interpretive options that different communities hold simultaneously?',
+    'Logical analysis: if one adopts the literary-framework reading''s axioms (ANE cosmological schema is device, form-critical method is methodologically sound, Genesis is not making cosmological claims), is young-earth literalism still coherent? Or does literalism require denial of those axioms?',
+    'If foreclosed, the readings are mutually exclusive and the engine''s foreclosure computation should fire (inferred from axiom contradiction). If coexistent, the reading_relations should declare coexists_with. The answer affects whether this reading''s persistence depends on competitive suppression (coexist) or on proven epistemic superiority (forecast).',
+    confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(kernel_displacement_authority, conceptual, 'Which authority structure (theological lineage, academic scholarship, or empirical science) is ultimately decisive for the reading''s legitimacy.').
+narrative_ontology:omega_variable(reading_foreclose_chain, conceptual, 'Whether the axioms of literary-framework reading logically exclude young-earth literalism or whether both can be held simultaneously.').
 
 
 /* ==========================================================================
@@ -256,31 +329,52 @@ narrative_ontology:interval(genesis_creation_cosmology__literary_framework, 0, 5
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(gene_tr_t0, genesis_creation_cosmology__literary_framework, theater_ratio, 0, 0.22).
-narrative_ontology:measurement(gene_tr_t8, genesis_creation_cosmology__literary_framework, theater_ratio, 8, 0.28).
-narrative_ontology:measurement(gene_tr_t16, genesis_creation_cosmology__literary_framework, theater_ratio, 16, 0.35).
-narrative_ontology:measurement(gene_tr_t24, genesis_creation_cosmology__literary_framework, theater_ratio, 24, 0.41).
-narrative_ontology:measurement(gene_tr_t32, genesis_creation_cosmology__literary_framework, theater_ratio, 32, 0.45).
-narrative_ontology:measurement(gene_tr_t40, genesis_creation_cosmology__literary_framework, theater_ratio, 40, 0.47).
-narrative_ontology:measurement(gene_tr_t50, genesis_creation_cosmology__literary_framework, theater_ratio, 50, 0.48).
+narrative_ontology:measurement(gene_tr_t0, genesis_creation_cosmology__literary_framework, theater_ratio, 0, 0.25).
+narrative_ontology:measurement_basis(gene_tr_t0, observed).
+narrative_ontology:measurement(gene_tr_t8, genesis_creation_cosmology__literary_framework, theater_ratio, 8, 0.32).
+narrative_ontology:measurement_basis(gene_tr_t8, observed).
+narrative_ontology:measurement(gene_tr_t16, genesis_creation_cosmology__literary_framework, theater_ratio, 16, 0.42).
+narrative_ontology:measurement_basis(gene_tr_t16, observed).
+narrative_ontology:measurement(gene_tr_t24, genesis_creation_cosmology__literary_framework, theater_ratio, 24, 0.48).
+narrative_ontology:measurement_basis(gene_tr_t24, observed).
+narrative_ontology:measurement(gene_tr_t32, genesis_creation_cosmology__literary_framework, theater_ratio, 32, 0.52).
+narrative_ontology:measurement_basis(gene_tr_t32, observed).
+narrative_ontology:measurement(gene_tr_t40, genesis_creation_cosmology__literary_framework, theater_ratio, 40, 0.54).
+narrative_ontology:measurement_basis(gene_tr_t40, observed).
+narrative_ontology:measurement(gene_tr_t50, genesis_creation_cosmology__literary_framework, theater_ratio, 50, 0.55).
+narrative_ontology:measurement_basis(gene_tr_t50, observed).
 
 % Extraction over time
-narrative_ontology:measurement(gene_be_t0, genesis_creation_cosmology__literary_framework, base_extractiveness, 0, 0.42).
-narrative_ontology:measurement(gene_be_t8, genesis_creation_cosmology__literary_framework, base_extractiveness, 8, 0.48).
+narrative_ontology:measurement(gene_be_t0, genesis_creation_cosmology__literary_framework, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement_basis(gene_be_t0, observed).
+narrative_ontology:measurement(gene_be_t8, genesis_creation_cosmology__literary_framework, base_extractiveness, 8, 0.42).
+narrative_ontology:measurement_basis(gene_be_t8, observed).
 narrative_ontology:measurement(gene_be_t16, genesis_creation_cosmology__literary_framework, base_extractiveness, 16, 0.54).
-narrative_ontology:measurement(gene_be_t24, genesis_creation_cosmology__literary_framework, base_extractiveness, 24, 0.58).
-narrative_ontology:measurement(gene_be_t32, genesis_creation_cosmology__literary_framework, base_extractiveness, 32, 0.6).
-narrative_ontology:measurement(gene_be_t40, genesis_creation_cosmology__literary_framework, base_extractiveness, 40, 0.61).
-narrative_ontology:measurement(gene_be_t50, genesis_creation_cosmology__literary_framework, base_extractiveness, 50, 0.61).
+narrative_ontology:measurement_basis(gene_be_t16, observed).
+narrative_ontology:measurement(gene_be_t24, genesis_creation_cosmology__literary_framework, base_extractiveness, 24, 0.62).
+narrative_ontology:measurement_basis(gene_be_t24, observed).
+narrative_ontology:measurement(gene_be_t32, genesis_creation_cosmology__literary_framework, base_extractiveness, 32, 0.66).
+narrative_ontology:measurement_basis(gene_be_t32, observed).
+narrative_ontology:measurement(gene_be_t40, genesis_creation_cosmology__literary_framework, base_extractiveness, 40, 0.67).
+narrative_ontology:measurement_basis(gene_be_t40, observed).
+narrative_ontology:measurement(gene_be_t50, genesis_creation_cosmology__literary_framework, base_extractiveness, 50, 0.68).
+narrative_ontology:measurement_basis(gene_be_t50, observed).
 
 % Suppression requirement over time
 narrative_ontology:measurement(gene_su_t0, genesis_creation_cosmology__literary_framework, suppression_requirement, 0, 0.35).
-narrative_ontology:measurement(gene_su_t8, genesis_creation_cosmology__literary_framework, suppression_requirement, 8, 0.41).
-narrative_ontology:measurement(gene_su_t16, genesis_creation_cosmology__literary_framework, suppression_requirement, 16, 0.47).
-narrative_ontology:measurement(gene_su_t24, genesis_creation_cosmology__literary_framework, suppression_requirement, 24, 0.52).
-narrative_ontology:measurement(gene_su_t32, genesis_creation_cosmology__literary_framework, suppression_requirement, 32, 0.55).
-narrative_ontology:measurement(gene_su_t40, genesis_creation_cosmology__literary_framework, suppression_requirement, 40, 0.57).
-narrative_ontology:measurement(gene_su_t50, genesis_creation_cosmology__literary_framework, suppression_requirement, 50, 0.58).
+narrative_ontology:measurement_basis(gene_su_t0, observed).
+narrative_ontology:measurement(gene_su_t8, genesis_creation_cosmology__literary_framework, suppression_requirement, 8, 0.48).
+narrative_ontology:measurement_basis(gene_su_t8, observed).
+narrative_ontology:measurement(gene_su_t16, genesis_creation_cosmology__literary_framework, suppression_requirement, 16, 0.58).
+narrative_ontology:measurement_basis(gene_su_t16, observed).
+narrative_ontology:measurement(gene_su_t24, genesis_creation_cosmology__literary_framework, suppression_requirement, 24, 0.66).
+narrative_ontology:measurement_basis(gene_su_t24, observed).
+narrative_ontology:measurement(gene_su_t32, genesis_creation_cosmology__literary_framework, suppression_requirement, 32, 0.7).
+narrative_ontology:measurement_basis(gene_su_t32, observed).
+narrative_ontology:measurement(gene_su_t40, genesis_creation_cosmology__literary_framework, suppression_requirement, 40, 0.71).
+narrative_ontology:measurement_basis(gene_su_t40, observed).
+narrative_ontology:measurement(gene_su_t50, genesis_creation_cosmology__literary_framework, suppression_requirement, 50, 0.72).
+narrative_ontology:measurement_basis(gene_su_t50, observed).
 
 
 /* ==========================================================================
@@ -291,18 +385,15 @@ narrative_ontology:coordination_type(genesis_creation_cosmology__literary_framew
 narrative_ontology:boltzmann_floor_override(genesis_creation_cosmology__literary_framework, 0.12).
 narrative_ontology:affects_constraint(genesis_creation_cosmology__literary_framework, genesis_creation_cosmology__young_earth_literal).
 narrative_ontology:affects_constraint(genesis_creation_cosmology__literary_framework, genesis_creation_cosmology__theistic_evolution).
-narrative_ontology:affects_constraint(genesis_creation_cosmology__literary_framework, science_curriculum_gatekeeping).
-narrative_ontology:affects_constraint(genesis_creation_cosmology__literary_framework, biblical_inerrancy_doctrine).
-narrative_ontology:affects_constraint(genesis_creation_cosmology__literary_framework, theistic_evolution_legitimacy).
 
 % DUAL FORMULATION NOTE:
-% The genesis_creation_cosmology kernel decomposes into three constraint families corresponding to three readings: (1) literary_framework (this story) claims Genesis uses ANE forms without cosmological content; (2) young_earth_literal claims Genesis makes empirical creation claims; (3) theistic_evolution claims Genesis expresses theological truth via non-literal forms compatible with evolution. Each reading instantiates a different constraint with different beneficiaries, different ε values, and different suppression mechanisms. The readings form a constraint family because they contest a shared kernel (Genesis's authority and meaning) and because the institutional victory of any one reading would alter the configuration of the others. Literary-framework → young_earth_literal via suppression (literalism is actively marginalized). Literary-framework → theistic_evolution via domain-separation (both reject literalism but differ on cosmological compatibility). Young-earth_literal and theistic_evolution coexist_with each other (both rejected by the academic consensus, but for different reasons). The network edges model how institutional outcomes in one reading reshape the landscape for the others.
+% The genesis_creation_cosmology kernel decomposes into three structurally distinct constraints, one per reading. Each reading instantiates a different ε, beneficiary/victim structure, and type. The literary-framework reading (this constraint) displaces traditional theological authority by treating Genesis as cultural artifact; young-earth reading maintains Genesis as normative cosmology; theistic-evolution reading seeks to preserve theological authority within evolutionary framework. The three readings coexist across different communities but are mutually exclusive within any single interpretive framework. Network links enable contamination propagation analysis: if the literary-framework reading's institutional dominance weakens, young-earth and theistic-evolution constraints should see pressure changes in tangled_rope components (founding problem status shifts).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(genesis_creation_cosmology__literary_framework, organized, 0.75).
+constraint_indexing:directionality_override(genesis_creation_cosmology__literary_framework, moderate, 0.82).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

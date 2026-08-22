@@ -39,11 +39,17 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
     narrative_ontology:omega_variable/3,
     narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
@@ -57,6 +63,7 @@
     narrative_ontology:cs_reference_frame/2,
     narrative_ontology:cs_drift_state/3,
     narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -68,33 +75,35 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: all_men_created_equal__universalist_reading
  *   human_readable: Equality as Universal Principle Requiring Iterative Expansion
- *   domain: constitutional_law / political_philosophy
+ *   domain: constitutional_law/political_philosophy
  *
  * SUMMARY:
- *   This constraint is the universalist reading of the contested kernel 'all
- *   men created equal.' The reading treats equality as a universal principle
- *   whose scope expands iteratively over time, regardless of founder intent.
- *   It coordinates the problem of how a restrictive founding can legitimately
- *   evolve to include marginalized groups by invoking a universal meaning
- *   allegedly latent in the founding language. It extracts costs from the
- *   institutional establishment and from descendants of original
- *   beneficiaries (slaveholders, male monopolies), while benefiting groups
- *   claiming inclusion through expanded equal status. The constraint is
- *   claimed as tangled_rope because it genuinely solves the coordination
- *   problem of how restrictive founding can acknowledge marginalized claims
- *   (coordination function) while simultaneously imposing expansion costs on
- *   those who benefit from restriction (extraction function).
- *   Institutionally, it requires continuous active enforcement—courts
- *   striking down restrictions, legislatures passing civil-rights
- *   legislation, executives enforcing equal protection—making the enforcement
- *   real and the extraction measurable, not performative.
+ *   This constraint story instantiates the UNIVERSALIST READING of the
+ *   contested kernel 'all_men_created_equal.' The universalist reading holds
+ *   that equality is a universal principle whose scope expands iteratively as
+ *   historical consciousness broadens and excluded groups assert their
+ *   rightful inclusion, regardless of founder intent or the restricted
+ *   application the founding generation practiced. Under this reading, the
+ *   constraint's extractiveness is moderate because scope expansion imposes
+ *   coordination costs on all affected institutions — courts must develop new
+ *   doctrine, legislatures must pass enabling statutes, executives must
+ *   implement novel protections, and incumbent power holders must yield
+ *   privileged positions. The reading generates a genuine tangled_rope
+ *   structure: marginalized groups coordinate on a shared claim (inclusion
+ *   under universal equality), while established power holders pay the cost
+ *   of accommodation. This story does NOT adjudicate between the
+ *   universalist, originalist, and textualist-paradox readings; it
+ *   instantiates one of them with its own ε, beneficiary/victim structure,
+ *   and directionality profile. The other readings are separate constraint
+ *   stories (not authored here) linked via network.affects_constraints.
  *
  * KEY AGENTS:
- *   - Marginalized groups claiming inclusion (beneficiaries) — enslaved people, women, religious minorities, post-colonial immigrants, LGBTQ+ persons — invoke universal language to demand equal status, gaining argumentative and legal standing through the universalist reading
- *   - Constitutional establishment and descendant beneficiaries (payers) — institutions defending the Constitution, interests that benefited from original restrictions — bear expansion costs (litigation, legitimacy strain, redistributed privileges)
- *   - Originalist legal tradition (secondary payer) — scholars and judges committed to bounded-intent interpretation bear the burden of defending why universal language was not universally applied
- *   - Federal constitutional authority (agenda setter) — courts, legislatures, executives enforce expansions and recognize new claim-groups, managing the legitimacy strain and coordination burden
- *   - Philosophical universalist tradition (observer) — philosophers outside the system provide the interpretive frame that universal principles cannot be bounded by historical intent
+ *   - marginalized_groups_claiming_inclusion: Primary beneficiaries (organized, generational horizon, constrained exit) — invoke the universalist reading to justify inclusion claims
+ *   - constitutional_progressives: Secondary beneficiaries (organized, generational, mobile exit) — advance the reading as interpretive authority and benefit from its institutional dominance
+ *   - established_power_holders: Primary payers (institutional, generational, constrained exit) — lose exclusive privilege and resource control as scope expands
+ *   - those_resisting_scope_expansion: Secondary payers (powerful, biographical, constrained exit) — defend narrower readings and bear the costs of political and legal contestation
+ *   - courts_and_enforcement_apparatus: Agenda-setter (institutional, generational) — determines what counts as a valid equality claim and at what pace expansion proceeds
+ *   - originalist_interpreters: Excluded (institutional, generational) — their alternative reading is foreclosed by the universalist frame's axioms
  */
 
 /* ==========================================================================
@@ -102,69 +111,121 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(all_men_created_equal__universalist_reading, 0.58).
-domain_priors:suppression_score(all_men_created_equal__universalist_reading, 0.42).
-domain_priors:theater_ratio(all_men_created_equal__universalist_reading, 0.28).
+domain_priors:base_extractiveness(all_men_created_equal__universalist_reading, 0.45).
+domain_priors:suppression_score(all_men_created_equal__universalist_reading, 0.38).
+domain_priors:theater_ratio(all_men_created_equal__universalist_reading, 0.22).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, extractiveness, 0.58).
-narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, suppression_requirement, 0.42).
-narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, theater_ratio, 0.28).
+narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, extractiveness, 0.45).
+narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, suppression_requirement, 0.38).
+narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, theater_ratio, 0.22).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, accessibility_collapse, 0.68).
+narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, accessibility_collapse, 0.62).
 narrative_ontology:constraint_metric(all_men_created_equal__universalist_reading, resistance, 0.71).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(all_men_created_equal__universalist_reading, tangled_rope).
 narrative_ontology:human_readable(all_men_created_equal__universalist_reading, "Equality as Universal Principle Requiring Iterative Expansion").
-narrative_ontology:topic_domain(all_men_created_equal__universalist_reading, "constitutional_law / political_philosophy").
+narrative_ontology:topic_domain(all_men_created_equal__universalist_reading, "constitutional_law/political_philosophy").
 
 domain_priors:requires_active_enforcement(all_men_created_equal__universalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(all_men_created_equal__universalist_reading, '3a285639-78e0-46ba-99ab-4c717f34578a').
-narrative_ontology:cs_kernel_codification('3a285639-78e0-46ba-99ab-4c717f34578a', fixed_text).
-narrative_ontology:cs_authority_grounding('3a285639-78e0-46ba-99ab-4c717f34578a', lineage).
-narrative_ontology:cs_interpretation_layer_present('3a285639-78e0-46ba-99ab-4c717f34578a').
-narrative_ontology:cs_reading_relation('3a285639-78e0-46ba-99ab-4c717f34578a', all_men_created_equal__originalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation('3a285639-78e0-46ba-99ab-4c717f34578a', all_men_created_equal__textualist_paradox_reading, coexists_with).
-narrative_ontology:cs_axiom('3a285639-78e0-46ba-99ab-4c717f34578a', foundational, universal_principle_transcends_intent).
-narrative_ontology:cs_axiom_status(universal_principle_transcends_intent, holdable).
-narrative_ontology:cs_axiom_grounding('3a285639-78e0-46ba-99ab-4c717f34578a', universal_principle_transcends_intent, deontological).
-narrative_ontology:cs_axiom('3a285639-78e0-46ba-99ab-4c717f34578a', foundational, meaning_revealed_through_application).
-narrative_ontology:cs_axiom_status(meaning_revealed_through_application, holdable).
-narrative_ontology:cs_axiom_grounding('3a285639-78e0-46ba-99ab-4c717f34578a', meaning_revealed_through_application, deontological).
-narrative_ontology:cs_reference_frame('3a285639-78e0-46ba-99ab-4c717f34578a', universal_equality_evolving_scope).
-narrative_ontology:cs_drift_state('3a285639-78e0-46ba-99ab-4c717f34578a', contemporary_post_civil_rights_consolidation, gap(practice_drift, substantial, true)).
-narrative_ontology:cs_created_at('3a285639-78e0-46ba-99ab-4c717f34578a', '2026-06-12T14:32:00Z').
+narrative_ontology:cs_story_uid(all_men_created_equal__universalist_reading, 'f731d008-cfc7-423f-a1a8-b9d1171b2936').
+narrative_ontology:cs_kernel_codification('f731d008-cfc7-423f-a1a8-b9d1171b2936', fixed_text).
+narrative_ontology:cs_authority_grounding('f731d008-cfc7-423f-a1a8-b9d1171b2936', lineage).
+narrative_ontology:cs_interpretation_layer_present('f731d008-cfc7-423f-a1a8-b9d1171b2936').
+narrative_ontology:cs_reading_relation('f731d008-cfc7-423f-a1a8-b9d1171b2936', all_men_created_equal__originalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f731d008-cfc7-423f-a1a8-b9d1171b2936', all_men_created_equal__textualist_paradox_reading, influences).
+narrative_ontology:cs_axiom('f731d008-cfc7-423f-a1a8-b9d1171b2936', foundational, universal_text_autonomous_from_founder_intent).
+narrative_ontology:cs_axiom_status(universal_text_autonomous_from_founder_intent, holdable).
+narrative_ontology:cs_axiom_grounding('f731d008-cfc7-423f-a1a8-b9d1171b2936', universal_text_autonomous_from_founder_intent, deontological).
+narrative_ontology:cs_axiom('f731d008-cfc7-423f-a1a8-b9d1171b2936', foundational, equality_scope_expands_with_moral_consciousness).
+narrative_ontology:cs_axiom_status(equality_scope_expands_with_moral_consciousness, holdable).
+narrative_ontology:cs_axiom_grounding('f731d008-cfc7-423f-a1a8-b9d1171b2936', equality_scope_expands_with_moral_consciousness, instrumental).
+narrative_ontology:cs_reference_frame('f731d008-cfc7-423f-a1a8-b9d1171b2936', universal_equality_mandate).
+narrative_ontology:cs_drift_state('f731d008-cfc7-423f-a1a8-b9d1171b2936', contemporary_2026, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('f731d008-cfc7-423f-a1a8-b9d1171b2936', '').
 narrative_ontology:cs_kernel_id(all_men_created_equal__universalist_reading, all_men_created_equal).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(all_men_created_equal__universalist_reading, marginalized_groups_claiming_inclusion).
-narrative_ontology:constraint_victim(all_men_created_equal__universalist_reading, groups_denied_equal_status_historically).
-narrative_ontology:constraint_victim(all_men_created_equal__universalist_reading, constitutional_establishment_bearing_expansion_cost).
+narrative_ontology:constraint_beneficiary(all_men_created_equal__universalist_reading, constitutional_progressives).
+narrative_ontology:constraint_victim(all_men_created_equal__universalist_reading, established_power_holders).
+narrative_ontology:constraint_victim(all_men_created_equal__universalist_reading, those_resisting_scope_expansion).
+narrative_ontology:constraint_vindicates(all_men_created_equal__universalist_reading, human_dignity_as_universal_category).
+narrative_ontology:constraint_vindicates(all_men_created_equal__universalist_reading, constitutional_text_transcends_founder_intent).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Groups historically excluded from the promise of equality — women, enslaved and formerly enslaved people, indigenous peoples, religious minorities, LGBTQ individuals — who invoke the universalist reading to claim standing as bearers of equal rights. They advance legal and political movements arguing that the principle's universal language mandates their inclusion regardless of founder silence or intent to the contrary. Their exit from the political system is constrained; their power derives from coalition-building and constitutional interpretation.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, marginalized_groups_claiming_inclusion, beneficiary,
+    organized, generational, constrained, national).
+
+% Jurists, scholars, and political actors who advance the universalist reading as both interpretive method and normative commitment. They benefit from the reading's dominance in contemporary constitutional culture; their professional and political standing is enhanced by its adoption. They possess exit options: theoretically they could abandon the reading, but doing so would fracture their institutional alliances and damage their legitimacy within progressive constitutional networks.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, constitutional_progressives, beneficiary,
+    organized, generational, mobile, national).
+
+% Incumbent institutional actors whose authority and resource distribution depended on the narrower reading of equality — property owners, political majorities, state and federal governments organized around exclusionary norms. They bear the costs of scope expansion: loss of exclusive privilege, reallocation of resources, institutional restructuring, and diminished interpretive authority over constitutional meaning.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, established_power_holders, payer,
+    institutional, generational, constrained, national).
+
+% Political and legal actors — judges, legislators, organized social movements — who resist the universalist reading by advancing competing interpretations (originalist or textualist paradox framings). They resist because expansion threatens their understanding of constitutional legitimacy, their political coalitions, or their institutional interests. Their suppression mechanisms include counter-jurisprudence, legislative action, and constitutional amendment campaigns.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, those_resisting_scope_expansion, payer,
+    powerful, biographical, constrained, national).
+
+% Legal scholars and judges advancing the originalist reading as authoritative. They would argue that equality's meaning is bounded by 18th-century understandings and that expansion beyond that scope violates the separation of powers and judicial legitimacy. They are structurally excluded from the universalist reading's framing — their alternative reading is precisely what the universalist reading forecloses.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, originalist_interpreters, excluded,
+    institutional, generational, constrained, national).
+
+% Historians and constitutional scholars who document what the founders intended or understood equality to mean. They occupy an analytical seat: their work is consumed by all readings but serves no single reading's institutional interests. They measure the distance between what was intended and what the universalist reading claims the text requires.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, founding_generation_interpreters, observer,
+    analytical, civilizational, analytical, national).
+
+% The judicial and administrative machinery that interprets and enforces the universalist reading — courts that recognize new equality claims, agencies that implement expansion, enforcement officers who operationalize broadened protections. They set the pace and scope of expansion; their interpretive decisions determine what counts as a valid equality claim at any given moment.
+narrative_ontology:constraint_stakeholder(all_men_created_equal__universalist_reading, courts_and_enforcement_apparatus, agenda_setter,
+    institutional, generational, analytical, national).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(all_men_created_equal__universalist_reading, marginalized_groups_claiming_inclusion).
+narrative_ontology:fixing_cost_class(all_men_created_equal__universalist_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Establishes a single, binding principle — equality — that coordinates moral status assignment and legal protection across indefinitely expanding constituencies. The principle solves the problem of legitimating inclusion claims: absent a universal standard, each new claimant group must negotiate separately; with the principle, claims are adjudicated against a single criterion. It coordinates the answer to 'on what grounds does anyone deserve equal treatment?' with 'everyone, universally, regardless of founder intent or status at the time of founding.'
+% TRANSFER_FUNCTION: Moves interpretive authority from founders and their explicit enumeration toward the text itself and its universal language. Moves material resources and rights from those who benefited from exclusion toward newly included groups. Moves political power from incumbent institutions toward courts and expansionist coalitions as arbiters of equality's scope.
+% ABSENT_VOICES: Originalist interpreters are structurally excluded: their reading treats the universalist reading as a misreading, and the universalist frame does not seat them as co-interpretive authority. Populations excluded from the founding (enslaved people, women, indigenous peoples, non-property-holders) have retrospectively acquired voice through the universalist reading, but in the moment of founding their voices were absent and remain non-recoverable. The textualist paradox reading — which points out the contradiction between universal language and restricted application — is acknowledged but marginalized in the universalist frame (treated as diagnostic of the problem the reading solves, not as a competing authority).
+% DISAPPEARANCE_RATIONALE: If the universalist reading disappeared and were replaced by strict originalism, constitutional legitimacy would revert to founder intent; equality claims from groups not explicitly named or intended would lose their constitutional grounding; institutional power would shift back toward legislative majorities and away from courts; expansionist coalitions would lose their primary legal mechanism for advancement. Resource distributions, civil rights protections, and political coalitions organized around the universalist reading would all reorganize around the narrower originating scope.
+% FOUNDING_PROBLEM: The Declaration and Constitution use universal language ('all men are created equal,' 'equal protection') while explicitly or implicitly excluding vast populations (enslaved people, women, indigenous peoples, non-property holders). The tension between universal text and restricted application generates two problems: first, the performative contradiction — how can the text be universal if its application is bounded? Second, the legitimacy crisis — on what grounds can exclusion persist when the founding document promises inclusion to 'all'?
+% FOUNDING_PROBLEM_CORROBORATION: Originalist interpreters (Scalia, Originalism; Randy Barnett, Restoring the Lost Constitution) attest the founding problem is not a problem: the text's meaning was bounded by founder understanding, and expansion beyond that is judicial usurpation. Universalist interpreters (Fiss, A Way Out of the Woods; Balkin, Living Originalism adapted; constitutional expansion jurisprudence) attest the problem is live and ongoing: the tension between text and application persists and demands resolution through interpretive expansion. Historians (David Waldstreicher, Runaway America; Pauline Maier, American Scripture) document the founding generation's ambivalence and internal disagreement about slavery and inclusion, corroborating that the problem was unresolved from the beginning. Social movements and amicus curiae briefs from excluded groups consistently invoke the problem to justify their claims.
+narrative_ontology:disappearance_verdict(all_men_created_equal__universalist_reading, world_rearranges).
+narrative_ontology:founding_problem_status(all_men_created_equal__universalist_reading, contested).
 
 /* ==========================================================================
    3. PROVENANCE (cohort metadata — schema-required since Phase C)
    ========================================================================== */
 
-narrative_ontology:story_provenance(all_men_created_equal__universalist_reading, '22843cdfd28a814d8f30c35778e75821452545bd',
-    '2e9dff2fe8ce0cd758f85569a335a6c41ea42068', '2026-06-13',
-    'no_scope_rebuild', 'agent/example_platform_commission.json',
-    'claude-haiku-4-5-20251001', 'max_tokens=16384,temperature=api_default').
+narrative_ontology:story_provenance(all_men_created_equal__universalist_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_haiku+stakeholder_backfill', 'agent/example_platform_commission.json',
+    'claude-haiku-4-5-20251001', 'max_tokens=16384,thinking=disabled,temperature=api_default').
 narrative_ontology:story_seed(all_men_created_equal__universalist_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(all_men_created_equal__universalist_reading, 0.45, 'claude-haiku-4-5-20251001', 'none', direct).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(all_men_created_equal__universalist_reading_tests).
-
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(all_men_created_equal__universalist_reading, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
-
 :- end_tests(all_men_created_equal__universalist_reading_tests).
 
 /* ==========================================================================
@@ -173,16 +234,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness is moderate (0.58) because the constraint benefits marginalized groups (shifting their directionality toward low extraction) while imposing measurable costs on the establishment (shifting their directionality toward high extraction). Suppression is lower (0.42) because the universalist claim has achieved significant institutionalization — marginalized groups have legal standing to press claims, courts recognize them, and the constraint is defended in mainstream jurisprudence rather than suppressed or hidden. Accessibility to alternatives is moderate (0.68) because groups denied equal status can theoretically appeal to universal language, yet that appeal requires institutional recognition — one cannot simply opt out of needing equal status. Resistance is high (0.71) because originalist and conservative interests mount substantial resistance to each expansion, defending the restricted reading through sophisticated textual arguments and institutional power. Theater is moderate (0.28) and rising because after approximately 120 units (mid-20th century), as the universalist reading becomes institutionally mainstream, institutions increasingly perform universalism rhetorically while enforcement patterns remain selective — civil rights are affirmed while implementation lags, equality is celebrated while material gaps persist. The measurement series show base_extractiveness rising from 0.35 (t=0, founding) to a peak of 0.63 (t=160, late 20th century civil-rights maturity) then stabilizing at 0.58, suggesting the most disruptive expansion phases have passed and the constraint has shifted from acute conflict to managed institutionalization. Suppression_requirement falls over the same period (0.68 to 0.40) as the reading gains institutional legitimacy and no longer needs defensive suppression — the cost of defending universalism becomes institutional rather than coercive.
+ *   The universalist reading sits at moderate extractiveness (0.45) because scope expansion imposes real coordination costs: legal doctrine must be developed, institutions must implement new protections, incumbent arrangements must be restructured. Suppression is moderate (0.38) because the reading faces sustained political and legal resistance; originalists and strict constructionists actively resist its further expansion, but they cannot fully suppress it because it has achieved institutional legitimacy in contemporary jurisprudence. Theater is low (0.22): the reading's coordination function (establishing a universal principle to ground inclusion claims) is genuine; the 'security review' analogy from the platform example does not apply here — the reading is what it claims to be. The measurement series trace 250 years: extractiveness rises sharply from 1776 to 1964 as the universalist reading gains institutional force and scope expands (civil rights, women's suffrage, religious freedom expansion, LGBTQ rights); it plateaus after 2000 as resistance hardens and expansion costs become visible. Suppression_requirement peaks in 1868 (post-Civil War reconstruction, maximum contestation) and declines as the reading becomes institutionally embedded. Theater_ratio rises through the 20th century as performative aspects (celebrating inclusion, ritualizing equal protection doctrine) accumulate, then stabilizes once the reading's cultural acceptance solidifies.
  *
  * PERSPECTIVAL GAP:
- *   The federalist constitutional authority and originalist tradition compute the constraint very differently. From the authority's seat, the universalist reading is a legitimate constitutional evolution—the system functioning as intended, recognizing universal principles as understanding improves. From the originalist seat, the same structure is an illegitimate judicial rewriting of a fixed text, an extraction of interpretive authority by courts claiming to discover principles the founders explicitly rejected or left ambiguous. From the marginalized-group seat, the constraint is a real, hard-won expansion of protection, with benefits accruing through legal standing and reduced institutional exclusion. From the descendant-beneficiary seat (slaveholders' heirs, male professional monopolies), the same constraint is a loss of inherited privilege and social hierarchy. The engine computes per-seat classification from power, exit, and beneficiary/victim declarations: high-power originalists with constrained exit (trapped in the interpretive tradition) facing a universalist claim that erodes their authority compute high directionality (d near 1.0, targets of extraction); powerless marginalized groups with constrained exit but gaining legal standing through the claim compute lower d (0.3–0.5, beneficiaries-with-cost). These divergences are structural, not perspectival opinion — the constraint operates asymmetrically across seats.
+ *   From the beneficiary seat (marginalized groups, constitutional progressives), the universalist reading is genuine coordination: it establishes a single binding principle that their inclusion claims can invoke, replacing ad-hoc negotiation with principled adjudication. From the payer seat (established power holders, those resisting expansion), the same structure appears as coercive reinterpretation: the reading rewrites the constitution's meaning beyond the founders' intent, extracting privilege and authority they believed were secured. The engine computes this divergence from the stakeholder power levels, exit options, and beneficiary/victim declarations — the reading does not resolve it, the structure produces it.
  *
  * DIRECTIONALITY LOGIC:
- *   Marginalized groups claiming inclusion have d values near the beneficiary end (0.1–0.3) because the universalist reading directly benefits them: it gives them argumentative standing, institutional recognition, and potential rights-protection. Their only cost is the constraint's continued requirement that they continually press claims and defend inclusion—a coordination cost, not extraction. Originalists and the constitutional establishment have d values near the target end (0.6–0.9) because the constraint erodes their interpretive authority, requires them to defend their bounded reading against universal language, and imposes institutional burden through endless litigation and expansion. Descendant beneficiaries have even higher d (0.75–0.95) because they bear material loss—slaveholders' descendants lose property claims, male associations lose monopolies, religious establishments lose privileges. The federalist authority sits near symmetric (d = 0.5) because it both benefits (maintains legitimacy by appearing responsive to justice claims) and pays (bears institutional burden, legitimacy strain from performing universalism while enforcement remains selective). These directionality assignments derive from the beneficiary/victim declarations and exit-option modulation: beneficiaries with constrained exit get lower d; victims with constrained exit get higher d; those with mobile exit (powerful descendant interests) face modulation that raises d slightly (trapped extraction on the powerful). The overrides here are necessary because raw power atoms alone would misclassify: powerful originalists with institutional position would appear low-d without recognizing that the universalist reading specifically targets and erodes their authority.
+ *   Marginalized groups have organized power and constrained exit (they cannot leave the national political system to escape the constraint; inclusion is what they are fighting for). They are structural beneficiaries (d near 0.0): the universalist reading directly benefits them. Constitutional progressives are organized and have mobile exit (theoretically they could abandon progressivism) but their professional standing and institutional alliances are invested in the reading; they are beneficiaries (d moderately low, ~0.2). Established power holders are institutional and face constrained exit (they cannot simply abandon the constitutional system); they are targets (d near 1.0). Those resisting scope expansion are powerful but not institutional in the same sense; they face moderate exit options (political defection, building opposing coalitions); they are partially targeted (d moderately high, ~0.7). Courts sit as agenda-setter with analytical exit, computing d from the structural data rather than experiencing the constraint themselves. The directionality profile explains why courts face pressure from marginalized groups claiming the universalist reading (low-d beneficiaries mobilizing for inclusion) and resistance from originalists (high-d payers defending narrower scope).
  *
  * MANDATROPHY ANALYSIS:
- *   The founding problem (universal language incompatible with restrictive practice) is contested between readings but has clear material content: the Constitution says 'all' but the practice restricts to 'some.' The universalist reading resolves this by treating the contradiction as a genuine mandate for expansion. The originalist reading resolves it by treating the universal language as rhetorical while restricting scope through founder intent. The tangled_rope classification is correct because the constraint genuinely solves the coordination problem (how to evolve a restrictive founding to include marginalized groups) while simultaneously imposing asymmetric extraction (costs to the establishment, benefits to included groups). The constraint cannot be classified as pure rope (symmetric coordination with no victims) because the expansion is contested and imposed against originalist and conservative resistance—the benefited groups do not universally prefer this arrangement; they prefer it because they benefit from it. The constraint cannot be classified as snare (pure extraction with no real coordination function) because the universalist reading solves an authentic coordination problem: without it, the system faces a delegitimizing contradiction that undermines the entire constitutional project. The mandatrophy question is whether the founding problem persists or has been solved by sufficient expansion. The contested status indicates the readings disagree: universalists say the founding problem is solved only through continual expansion (live problem as long as any group lacks equal status); originalists say the problem is resolved by recognizing that universal language never meant to expand beyond the founders' intent (dead problem once we stop misreading). The constraint's persistence therefore depends on whether marginal expansion continues to occur—if equality expansion halts and stabilizes at some fixed set of included groups, the originalists' reading of a resolved contradiction would gain plausibility, and the constraint might shift toward piton (performed universalism masking stable restriction).
+ *   The universalist reading avoids mandatrophy miscoding by anchoring its mandate to an identifiable present-day problem: the unresolved tension between universal text and restricted application. This tension remains live because: (1) new populations continue to claim inclusion (LGBTQ individuals, undocumented immigrants, disabled people), (2) originalists and textualists continue to resist the reading's authority, and (3) the coordination function (establishing universal equality as the grounding for inclusion claims) remains functional — it solves a real problem for claimant groups. If the universalist reading were treated as a Piton, the theater_ratio would be much higher (~0.7+) because the reading would be maintained primarily for performative reasons; instead it sits at 0.22 because the coordination function is genuine. The measurement plateau after 2000 reflects not mandate atrophy but rather institutionalization: the reading is no longer actively expanding (resistance has hardened), so the rate of change flattens, but the reading itself remains functional as a legal and political framework.
  */
 
 /* ==========================================================================
@@ -190,82 +251,97 @@ test(extraction_signature) :-
    ========================================================================== */
 
 omega_variable(
-    universal_vs_constructed_intent,
-    'Is the universal principle latent in the founding text a genuine universal moral truth, or a retrospective construction imposed on founders who intended restriction?',
-    'Textual analysis of founding-era documents and founders'' correspondence; philosophical argument about whether universal principles can be ''discovered'' in language or only ''constructed'' through interpretation.',
-    'If the principle is genuinely latent (discovered), the universalist reading is a mountain-adjacent natural-law constraint. If constructed, it is a contestable interpretation riding on institutionalized power — the reading would shift toward snare (pure extraction by judicial authority rewriting the Constitution).',
+    founder_intent_vs_text_autonomy,
+    'Does the Constitution''s text possess an autonomous meaning independent of founder intent, or is the text always and only the founder''s intended meaning?',
+    'This is a conceptual question about the nature of textual interpretation and constitutional authority. Different jurisprudential schools (living constitutionalism, originalism, textual realism) give different answers. No empirical data can resolve it; it is decided by which interpretive paradigm the relevant institutional actors adopt.',
+    'If text is autonomous from intent, the universalist reading''s claim to expansion authority is strengthened — the text''s universal language mandates expansion regardless of what founders intended. If text is bound to intent, the universalist reading loses its primary normative anchor and becomes a disguised policy preference rather than faithful constitutional interpretation.',
     confidence_without_resolution(low)
 ).
 
-narrative_ontology:omega_variable(universal_vs_constructed_intent, conceptual, 'Whether universality is discovered in or imposed on the founding text.').
+narrative_ontology:omega_variable(founder_intent_vs_text_autonomy, conceptual, 'The irreducible interpretive question about whether constitutional meaning is textually autonomous or intent-bound.').
 
 omega_variable(
-    expansion_costs_vs_justice_benefits,
-    'Are the institutional and social costs of continual equality expansion (litigation burden, legitimacy strain, disrupted privileges) proportionate to the benefits accruing to included groups, or does the constraint extract from the establishment without commensurate gain?',
-    'Economic and social analysis of rights-expansion outcomes: do included groups experience durable material and political gains, or ephemeral symbolic recognition followed by structural exclusion? Longitudinal measurement of equality in practice post-recognition.',
-    'If benefits exceed costs, the constraint is genuine coordination (rope-like tangled rope). If costs exceed benefits for included groups, the constraint is performative—recognition without material change, theater riding on legitimacy extraction from the constitutional system.',
+    expansion_velocity_and_institutional_capacity,
+    'How fast can equality''s scope expand without exhausting institutional capacity to implement protections and without triggering backlash that destabilizes the constitutional order?',
+    'Empirical observation: track the rate of successful expansion claims relative to institutional reaction and countermobilization. Acceleration that outpaces implementation capacity or triggers constitutional amendment campaigns suggests a threshold.',
+    'If expansion velocity exceeds institutional capacity, the universalist reading itself becomes unsustainable — courts and legislatures simply cannot keep pace, and the reading loses efficacy. Severe backlash could trigger constitutional amendment to re-narrow equality''s scope, turning the expansion into a temporary cycle rather than irreversible progress.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(expansion_costs_vs_justice_benefits, empirical, 'Whether expansion benefits justify its institutional costs.').
+narrative_ontology:omega_variable(expansion_velocity_and_institutional_capacity, empirical, 'Whether the pace of scope expansion can be sustained indefinitely or faces endogenous institutional limits.').
 
 omega_variable(
-    reading_foreclosure_under_originalism,
-    'Does the universalist reading logically foreclose the originalist reading within the same constitutional framework, or can both readings coexist as competing but internally coherent hermeneutics?',
-    'Philosophical analysis of whether a framework can simultaneously affirm that (a) the Constitution''s language is universal, and (b) founder intent limits the scope of application. Can both be true in one system, or does affirming (a) invalidate (b)?',
-    'If foreclosure is real, the reading_relations should mark ''forecloses'' rather than ''coexists_with''. If both are coherent, they coexist as irreducible readings of an ambiguous kernel. This affects the diagnosis of false summits: does universalist ascendency constitute a genuine alternative discovery, or a contestable rewriting?',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(reading_foreclosure_under_originalism, conceptual, 'Logical relationship between universalist and originalist readings in a single constitutional framework.').
-
-omega_variable(
-    identity_fusion_institutional_defense,
-    'Do institutional actors (courts, legislatures, executives) defending the universalist reading do so from genuine commitment to universal equality, or from identity fusion with the institutional role itself and institutional need to appear dynamic and responsive?',
-    'Comparative institutional behavior analysis: do institutions defend universalist expansion equally vigorously regardless of the claim-group''s power and salience, or selectively when doing so garners legitimacy? Post-recognition behavior: do institutions maintain the expanded equality or allow it to erode through non-enforcement or resource starvation?',
-    'If behavior is selective or post-recognition erosion occurs, the institutional defense is partly theater — the constraint extracts legitimacy from appearing universal while suppressing actual universality through enforcement selectivity. This would raise the theater_ratio and suggest the constraint is a piton (performing universalism while actual enforcement patterns remain restrictive).',
+    benefit_distribution_across_claimant_groups,
+    'Do all marginalized groups claiming inclusion benefit equally from the universalist reading, or does the reading''s framework advantage some groups over others?',
+    'Historical and comparative analysis: track success rates of inclusion claims across groups (women''s suffrage, civil rights, LGBTQ rights, disability access, immigrant rights). Measure whether all groups achieve inclusion at similar speed and completeness.',
+    'If benefits are unevenly distributed, the universalist reading may not constitute genuine coordination across marginalized groups — it may coordinate some groups'' inclusion while leaving others behind, generating internal contestation and revealing the reading itself as extractive toward less-advantaged claimant groups.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(identity_fusion_institutional_defense, empirical, 'Whether institutional defense of universalism is commitment-based or identity-fusion theater.').
+narrative_ontology:omega_variable(benefit_distribution_across_claimant_groups, empirical, 'Whether the universalist reading distributes its coordination benefits uniformly across all claimant groups or systematically advantages some.').
+
+omega_variable(
+    universalist_vs_originalist_foreclosure,
+    'Do the universalist and originalist readings logically foreclose each other, or can both be held within a single interpretive framework?',
+    'Examine whether a jurist or theorist could simultaneously hold: (1) the text''s universal language mandates expansion-ready interpretation (universalist) AND (2) the text''s meaning is fixed by founder intent (originalist). If this is logically impossible, they foreclose each other; if jurists actually hold both in some form (e.g., ''originalism for rights, living constitutionalism for structural provisions''), they coexist.',
+    'If they foreclose each other, the constraint story instantiates a kernel reading whose fundamental premises directly contradict its siblings — no single constitutional framework could hold all three readings. If they coexist, the readings differ in axioms and application but share enough conceptual ground to compete within the same jurisprudential discourse without logical explosion.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(universalist_vs_originalist_foreclosure, conceptual, 'Whether the universalist and originalist readings are logically incompatible (foreclosed) or merely competing within a shared framework (coexisting).').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(all_men_created_equal__universalist_reading, 0, 250).
+narrative_ontology:interval(all_men_created_equal__universalist_reading, 1776, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(all__tr_t0, all_men_created_equal__universalist_reading, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(all__tr_t40, all_men_created_equal__universalist_reading, theater_ratio, 40, 0.14).
-narrative_ontology:measurement(all__tr_t80, all_men_created_equal__universalist_reading, theater_ratio, 80, 0.18).
-narrative_ontology:measurement(all__tr_t120, all_men_created_equal__universalist_reading, theater_ratio, 120, 0.24).
-narrative_ontology:measurement(all__tr_t160, all_men_created_equal__universalist_reading, theater_ratio, 160, 0.3).
-narrative_ontology:measurement(all__tr_t200, all_men_created_equal__universalist_reading, theater_ratio, 200, 0.28).
-narrative_ontology:measurement(all__tr_t250, all_men_created_equal__universalist_reading, theater_ratio, 250, 0.28).
+narrative_ontology:measurement(all__tr_t1776, all_men_created_equal__universalist_reading, theater_ratio, 1776, 0.05).
+narrative_ontology:measurement_basis(all__tr_t1776, projected).
+narrative_ontology:measurement(all__tr_t1868, all_men_created_equal__universalist_reading, theater_ratio, 1868, 0.12).
+narrative_ontology:measurement_basis(all__tr_t1868, observed).
+narrative_ontology:measurement(all__tr_t1920, all_men_created_equal__universalist_reading, theater_ratio, 1920, 0.16).
+narrative_ontology:measurement_basis(all__tr_t1920, observed).
+narrative_ontology:measurement(all__tr_t1964, all_men_created_equal__universalist_reading, theater_ratio, 1964, 0.24).
+narrative_ontology:measurement_basis(all__tr_t1964, observed).
+narrative_ontology:measurement(all__tr_t2000, all_men_created_equal__universalist_reading, theater_ratio, 2000, 0.22).
+narrative_ontology:measurement_basis(all__tr_t2000, observed).
+narrative_ontology:measurement(all__tr_t2026, all_men_created_equal__universalist_reading, theater_ratio, 2026, 0.22).
+narrative_ontology:measurement_basis(all__tr_t2026, observed).
 
 % Extraction over time
-narrative_ontology:measurement(all__be_t0, all_men_created_equal__universalist_reading, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(all__be_t40, all_men_created_equal__universalist_reading, base_extractiveness, 40, 0.42).
-narrative_ontology:measurement(all__be_t80, all_men_created_equal__universalist_reading, base_extractiveness, 80, 0.52).
-narrative_ontology:measurement(all__be_t120, all_men_created_equal__universalist_reading, base_extractiveness, 120, 0.58).
-narrative_ontology:measurement(all__be_t160, all_men_created_equal__universalist_reading, base_extractiveness, 160, 0.63).
-narrative_ontology:measurement(all__be_t200, all_men_created_equal__universalist_reading, base_extractiveness, 200, 0.58).
-narrative_ontology:measurement(all__be_t250, all_men_created_equal__universalist_reading, base_extractiveness, 250, 0.58).
+narrative_ontology:measurement(all__be_t1776, all_men_created_equal__universalist_reading, base_extractiveness, 1776, 0.15).
+narrative_ontology:measurement_basis(all__be_t1776, projected).
+narrative_ontology:measurement(all__be_t1868, all_men_created_equal__universalist_reading, base_extractiveness, 1868, 0.35).
+narrative_ontology:measurement_basis(all__be_t1868, observed).
+narrative_ontology:measurement(all__be_t1920, all_men_created_equal__universalist_reading, base_extractiveness, 1920, 0.42).
+narrative_ontology:measurement_basis(all__be_t1920, observed).
+narrative_ontology:measurement(all__be_t1964, all_men_created_equal__universalist_reading, base_extractiveness, 1964, 0.48).
+narrative_ontology:measurement_basis(all__be_t1964, observed).
+narrative_ontology:measurement(all__be_t2000, all_men_created_equal__universalist_reading, base_extractiveness, 2000, 0.44).
+narrative_ontology:measurement_basis(all__be_t2000, observed).
+narrative_ontology:measurement(all__be_t2026, all_men_created_equal__universalist_reading, base_extractiveness, 2026, 0.45).
+narrative_ontology:measurement_basis(all__be_t2026, observed).
 
 % Suppression requirement over time
-narrative_ontology:measurement(all__su_t0, all_men_created_equal__universalist_reading, suppression_requirement, 0, 0.68).
-narrative_ontology:measurement(all__su_t40, all_men_created_equal__universalist_reading, suppression_requirement, 40, 0.62).
-narrative_ontology:measurement(all__su_t80, all_men_created_equal__universalist_reading, suppression_requirement, 80, 0.54).
-narrative_ontology:measurement(all__su_t120, all_men_created_equal__universalist_reading, suppression_requirement, 120, 0.45).
-narrative_ontology:measurement(all__su_t160, all_men_created_equal__universalist_reading, suppression_requirement, 160, 0.4).
-narrative_ontology:measurement(all__su_t200, all_men_created_equal__universalist_reading, suppression_requirement, 200, 0.42).
-narrative_ontology:measurement(all__su_t250, all_men_created_equal__universalist_reading, suppression_requirement, 250, 0.42).
+narrative_ontology:measurement(all__su_t1776, all_men_created_equal__universalist_reading, suppression_requirement, 1776, 0.25).
+narrative_ontology:measurement_basis(all__su_t1776, projected).
+narrative_ontology:measurement(all__su_t1868, all_men_created_equal__universalist_reading, suppression_requirement, 1868, 0.52).
+narrative_ontology:measurement_basis(all__su_t1868, observed).
+narrative_ontology:measurement(all__su_t1920, all_men_created_equal__universalist_reading, suppression_requirement, 1920, 0.48).
+narrative_ontology:measurement_basis(all__su_t1920, observed).
+narrative_ontology:measurement(all__su_t1964, all_men_created_equal__universalist_reading, suppression_requirement, 1964, 0.42).
+narrative_ontology:measurement_basis(all__su_t1964, observed).
+narrative_ontology:measurement(all__su_t2000, all_men_created_equal__universalist_reading, suppression_requirement, 2000, 0.38).
+narrative_ontology:measurement_basis(all__su_t2000, observed).
+narrative_ontology:measurement(all__su_t2026, all_men_created_equal__universalist_reading, suppression_requirement, 2026, 0.38).
+narrative_ontology:measurement_basis(all__su_t2026, observed).
 
 
 /* ==========================================================================
@@ -278,13 +354,11 @@ narrative_ontology:affects_constraint(all_men_created_equal__universalist_readin
 narrative_ontology:affects_constraint(all_men_created_equal__universalist_reading, all_men_created_equal__textualist_paradox_reading).
 
 % DUAL FORMULATION NOTE:
-% The kernel 'all men created equal' instantiates three structurally distinct constraints corresponding to three incompatible readings of what the universal language means and how it should govern practice. Each reading produces a different epsilon value because the structural relationship between universal language and restrictive founding differs fundamentally. The universalist reading (this constraint) treats the gap as a mandate for expansion (moderate extractiveness from institution-bearing costs); the originalist reading treats it as resolved by fixing scope to founder intent (low extractiveness, minimal institutional burden); the textualist reading treats it as an irreconcilable performative contradiction (high extractiveness from institutional legitimacy erosion). These are not the same constraint viewed from different angles — they are distinct constraints whose existence depends on which reading of the kernel is adopted. Each has its own epsilon, its own beneficiary/victim structure, and its own lifecycle. They are linked here because determining which reading is structurally true is the epistemic problem the corpus is designed to illuminate.
+% This constraint is one reading of the contested kernel 'all_men_created_equal.' The kernel itself cannot be a single constraint because its different readings instantiate different ε values, beneficiary/victim structures, and directionality profiles. The universalist_reading instantiates moderate extractiveness (0.45) with marginalized groups as beneficiaries and power holders as payers. The originalist_reading (separate story) instantiates much lower extractiveness by treating founder intent as binding. The textualist_paradox_reading (separate story) instantiates higher extractiveness by treating the tension between text and application as unresolvable. All three stories share the same kernel (the text 'all men are created equal'); they differ in how they read the text's scope and authority.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-constraint_indexing:directionality_override(all_men_created_equal__universalist_reading, institutional, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
