@@ -219,6 +219,18 @@ def _wrap_results(batch, id_map, model):
         um = getattr(resp.response, "usage_metadata", None)
         usage = _Usage(getattr(um, "prompt_token_count", 0) or 0,
                        getattr(um, "candidates_token_count", 0) or 0)
+        # Persist the raw datum per cid BEFORE parsing (build_discipline → *Gate the output*):
+        # lets a changed repair/validation path be re-applied to the same draws offline (runbook
+        # §9 A/B loop) and makes a silent empty run visible on disk. Same shape the OpenRouter
+        # driver writes, minus provider fields.
+        try:
+            rd = OUT_DIR / "responses"; rd.mkdir(parents=True, exist_ok=True)
+            (rd / f"{id_map.get(key, key)}.json").write_text(json.dumps({
+                "model": model, "choices": [{"finish_reason": "stop", "message": {"content": text}}],
+                "usage": {"prompt_tokens": usage.input_tokens, "completion_tokens": usage.output_tokens}},
+                ensure_ascii=False), encoding="utf-8")
+        except Exception as e:
+            print(f"  [{id_map.get(key, key)}] raw persist failed: {e}")
         out.append(_Result(key, "succeeded", _Msg(text, model, usage)))
     return out
 
