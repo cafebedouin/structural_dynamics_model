@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "74206765-ca85-44ed-ace8-76b4d0c34280"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.5,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "GPL Derivative Work Trigger â Interface Boundary Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ecosystem_integrators"
+    ],
+    "victims": [
+      "users_expecting_fullstack_source"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ecosystem_integrators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and distribute systems that combine GPL-licensed components with proprietary modules separated by API boundaries. They rely on the legal interpretation that clean APIs block derivative-work status to avoid disclosing source code for their proprietary integrations. Their exit is constrained by the risk of litigation if a court rejects the boundary reading."
+    },
+    {
+      "name": "users_expecting_fullstack_source",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy or use integrated software systems believing that copyleft obligations ensure they can obtain and modify the complete source code. Under this reading, they receive source for the GPL core but not for proprietary modules that sit behind clean APIs, reducing their actual control over the full stack. Their exit is constrained by dependency on integrated systems and lack of legal standing to force disclosure."
+    },
+    {
+      "name": "gpl_rightholders",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold copyright in GPL-licensed code and enforce the license terms. Under this reading, their ability to claim derivative-work status over tightly coupled but API-separated modules is narrowed, limiting their enforcement portfolio to direct modifications and non-API-encapsulated integrations. They can still enforce on direct violators and can choose enforcement targets, giving them arbitrage options, but the reading reduces the scope of what they can enforce."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Enables modular software architecture by allowing distinct components interacting through clean API boundaries to retain separate licensing, solving the collective-action problem of combining open and proprietary codebases without triggering copyleft infection across the entire system.",
+    "transfer_function": "Moves the obligation to disclose source code away from API-boundary-crossing integrators and onto direct modifiers of GPL code, while users lose the expectation of receiving full-stack source for systems that include proprietary modules.",
+    "absent_voices": "Proponents of the broad_copyleft_reading argue that tight coupling through any mechanism including APIs creates a derivative work; their objections are documented in amicus briefs and copyleft enforcement complaints but are structurally disadvantaged in venues where this reading dominates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the interface boundary reading vanished, integrators would face broad copyleft obligations across API boundaries, proprietary kernel modules and microservice boundaries would be reclassified as derivative works, and the mixed-license software ecosystem would contract dramatically as integrators reorganized around monolithic open-source stacks or proprietary alternatives.",
+    "founding_problem": "The need to preserve software modularity and composability while maintaining copyleft for direct modifications, preventing a single copyleft component from automatically claiming source-disclosure rights over an entire integrated system.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Ecosystem integrators and the Linux Foundation technical publications attest that modular kernel architecture requires license boundaries at APIs; the Free Software Conservancy and Software Freedom Law Center dispute that this architectural need overrides the GPL's derivative-work scope, corroborating that the problem is contested rather than settled from outside the beneficiary set."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the interface_boundary_reading of the gpl_derivative_work_trigger kernel. It treats technically clean API boundaries as legal firewalls that prevent the formation of a derivative work under GPL, even when modules are tightly coupled in production. This enables mixed-licensing software ecosystems but leaves users without source for proprietary components that exploit the boundary. The constraint is claimed as scaffold because it functions as transitional support for modular architecture pending broader license-compatibility solutions, not as a permanent steady-state arrangement.",
+    "key_agents": [
+      "ecosystem_integrators: Primary beneficiary (organized/constrained) â gain modular licensing freedom to combine proprietary and GPL components",
+      "users_expecting_fullstack_source: Primary target (moderate/constrained) â lose full-stack source guarantees when proprietary modules sit behind APIs",
+      "gpl_rightholders: Agenda setter (organized/arbitrage) â administer the license boundary and are partially constrained by the reading itself"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.48) because the reading transfers a genuine source-code entitlement from users to integrators without compensation, but it is not total â direct modifications remain copyleft. Suppression is moderate (0.50) because the constraint depends on courts and legal institutions actively enforcing the API-boundary test against broad copyleft claims. Theater is moderate (0.35) because arguments about 'cleanliness' of APIs often exceed technical precision and serve to ritualize a desired legal outcome. Accessibility collapse is moderate (0.60) because alternative licensing arrangements exist but are constrained by the dominance of GPL-family licenses in systems software. Resistance is moderate (0.55) because broad copyleft advocates actively contest the reading in enforcement actions and public advocacy.",
+    "directionality_logic": "ecosystem_integrators are beneficiaries (low d) because the constraint subsidizes their ability to combine proprietary and GPL code without disclosure obligation. users_expecting_fullstack_source are payers (high d) because the constraint extracts source-code rights from them by exempting API-separated modules from copyleft. gpl_rightholders are agenda setters whose structural relationship to this specific reading is ambiguous: the reading narrows their enforcement rights, but they retain authority over the kernel itself; with arbitrage exit options they sit near the symmetric middle.",
+    "perspectival_gap": "Ecosystem integrators experience the constraint as necessary architectural freedom that preserves innovation and investment in proprietary components. Users expecting full-stack source experience the same rule as a loophole that fragments copyleft guarantees across a system boundary. The engine computes this divergence from the structural role declarations and exit options; the scaffold claim does not resolve the dispute.",
+    "mandatrophy_analysis": "Classifying this as scaffold prevents mislabeling it as pure extraction (snare) because it solves a genuine coordination problem â modular architecture would be impossible if every API crossing triggered copyleft infection. It also prevents mislabeling it as pure rope because identifiable users bear the cost of lost source access. The scaffold type captures the transitional intent: the reading is justified as a bridge toward a mature modular licensing ecosystem, not as a permanent equilibrium. If the transitional justification proves false and the reading ossifies, the temporal measurements showing rising theater and stable extraction would support reclassification.",
+    "kernel_context": "This constraint is the interface_boundary_reading of the gpl_derivative_work_trigger kernel, which holds that clean API boundaries block derivative-work status even under tight coupling. Sibling readings include broad_copyleft_reading (linking creates derivation) and narrow_linking_permissive_reading (linking is aggregation; only modifications trigger obligations)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is this constraint a stable legal doctrine or one contested reading of the GPL derivative-work kernel among several live alternatives?",
+      "resolution_mechanism": "Supreme Court or transnational appellate rulings that explicitly adopt or reject the clean-API test in copyleft contexts.",
+      "impact": "If adopted as settled doctrine, the reading stabilizes as a rope or enforcement mechanism; if rejected or persistently contested, it remains a scaffold or tangled rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committing frame uncertainty for interface_boundary_reading"
+    },
+    {
+      "id": "api_boundary_naturalness",
+      "question": "Do clean API boundaries reflect an intrinsic technical property that naturally blocks derivative status, or are they a legally constructed fiction performatively maintained to enable proprietary integration?",
+      "resolution_mechanism": "Comparative legal-technical analysis of how courts distinguish 'clean' from 'unclean' APIs in copyright cases, independent of licensing context.",
+      "impact": "If the boundary is constructed, the constraint's coordination function is weaker and its extraction (lost source expectations) is higher; if intrinsic, the boundary has independent technical legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether API boundaries are natural technical facts or legal constructs"
+    },
+    {
+      "id": "scaffold_transience",
+      "question": "Is the interface boundary reading genuinely transitional toward a comprehensive license-compatibility framework, or has it become a permanent structural accommodation?",
+      "resolution_mechanism": "Observation of whether proponents actively advance a sunset or replacement mechanism, or if the reading has ossified into standard practice without transitional intent.",
+      "impact": "If permanent, reclassification from scaffold to rope or tangled rope; if transitional and actively moving toward replacement, scaffold classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the scaffold's transitional intent is genuine or cover"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "technical_modularity_framework",
+    "drift_state": {
+      "moment": "contemporary_enforcement_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "narrow_linking_permissive_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "clean_api_boundary_blocks_derivative_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "modular_composition_preserves_license_autonomy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "ecosystem_integrators",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

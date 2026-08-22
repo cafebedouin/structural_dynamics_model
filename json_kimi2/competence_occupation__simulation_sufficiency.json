@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "528756c8-8d9c-4ec9-8461-f2a3ca1d3d46"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Sufficient Competence Occupation Claim",
+    "topic_domain": "organizational/safety",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_industry",
+      "training_compliance_bureaucracy",
+      "operational_management"
+    ],
+    "victims": [
+      "frontline_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_industry",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Designs, sells, and maintains simulation platforms, curricula, and fidelity benchmarks. Revenue scales directly with mandated training hours and certification requirements. Invests in studies demonstrating simulation efficacy and in standards bodies that codify fidelity metrics favorable to their technology."
+    },
+    {
+      "name": "training_compliance_bureaucracy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers training mandates, schedules drill frequency, audits fidelity adherence, and maintains compliance records. Budget and headcount scale with the training apparatus. Defines the observable metrics by which competence is judged and defends the sufficiency of simulation against demands for supplementary or alternative mechanisms."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Must attend periodic simulation sessions to maintain certification and role eligibility. Time is diverted from operational duties or rest. Performance in controlled simulation becomes the recorded measure of competence, which may mask decay of real-world judgment and improvisation. Alternative demonstration of competence is not accepted by certifying bodies."
+    },
+    {
+      "name": "operational_management",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives measurable compliance reports that satisfy regulators, insurers, and oversight boards. Can demonstrate due diligence through simulation logs and standardized metrics. Bears the direct cost of simulation procurement and staff downtime, but avoids the greater liability and operational disruption of real-incident-based or apprenticeship-heavy training models."
+    },
+    {
+      "name": "regulatory_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Mandates minimum simulation hours and fidelity standards as a condition of professional license or organizational certification. Treats training compliance as a proxy for public safety. Revises standards based on industry-submitted evidence and post-incident investigations, with limited independent empirical capacity to verify sufficiency claims."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study skill retention and decay across training modalities in high-reliability settings. Some independent studies find persistent decay or negative transfer despite simulation compliance. Their influence depends on access to operational data, publication freedom, and whether their findings are admitted into standards-setting processes dominated by industry-submitted evidence."
+    },
+    {
+      "name": "general_public",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Relies on the competence of frontline operators in aviation, medicine, nuclear power, and emergency response. Has no direct visibility into whether simulation compliance corresponds to actual skill maintenance, and no voice in whether alternative training models should supplement or replace simulation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides repeatable, standardized, safe practice environments for high-risk procedures without exposing lives or equipment to actual danger; allows scheduled, scalable, and auditable competence maintenance across large workforces and dispersed geographies.",
+    "transfer_function": "Moves training budgets and personnel time from operational units to simulation vendors and compliance departments; transfers the observable measure of competence from frontline operational performance to controlled simulation metrics and compliance logs.",
+    "absent_voices": "Frontline operators who experience skill decay or negative transfer despite simulation compliance; independent safety researchers whose findings challenge sufficiency; operational managers who would prefer experiential line audits but lack authority to deviate from the mandated simulation track; the general public who bear the safety consequences but are not in the training standards room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the constraint vanished overnight, training budgets would shift away from simulation vendors, compliance bureaucracies would shrink or reorient, alternative training mechanisms (apprenticeship, hybrid refreshers, operational audit) would compete for legitimacy, and frontline operators would face a different certification landscape. The organizational world would rearrange around a reopened contest for how competence is maintained.",
+    "founding_problem": "High-risk industries needed ways to practice emergency and rare-event procedures without endangering lives, patients, or capital equipment; early training relied heavily on apprenticeship and infrequent real events, producing uneven competence distribution and uncontrolled exposure to risk.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Aviation and nuclear safety historians corroborate the early uneven-competence problem. Independent human-factors researchers and some regulatory inspectors attest that the founding problem is partially solved by simulation but that the current arrangement has drifted toward treating the training proxy as the competence itself; industry-funded efficacy studies and vendor-submitted fidelity benchmarks argue the problem remains fully live and simulation-dependent."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is one reading of the contested kernel competence_occupation: the claim that simulation-based drills are, by themselves, sufficient to occupy the competence kernel and prevent skill decay in high-reliability operators. Under this reading, training compliance becomes the observable proxy for competence, skill decay is treated as solvable through frequency and fidelity optimization, and the simulation industry becomes the primary beneficiary. The reading competes with real_incident_necessity (only actual catastrophic incidents provide authentic conditions) and hybrid_occupation (continuous multi-mechanism exercise without consensus on mix). The structural delta is institutional capture: a genuine coordination function (safe, repeatable practice) is coupled with asymmetric extraction (budget capture, compliance theater, suppression of alternative training models).",
+    "key_agents": [
+      "simulation_industry: Primary beneficiary (powerful/mobile) â captures training budgets through vendor lock-in and standards influence.",
+      "training_compliance_bureaucracy: Agenda-setter (institutional/constrained) â administers the mandate, scales with it, and controls the competence metric.",
+      "frontline_operators: Primary target/payer (moderate/constrained) â bears time cost, potential skill-masking, and career-gatekeeping.",
+      "operational_management: Secondary beneficiary (powerful/constrained) â collects liability coverage and regulatory defensibility.",
+      "regulatory_authority: Agenda-setter (institutional/analytical) â codifies the sufficiency claim into licensure requirements.",
+      "safety_researchers: Analytical observer (institutional/analytical) â produces evidence that may or may not penetrate the standards process.",
+      "general_public: Excluded (powerless/trapped) â relies on the competence but has no voice in how it is maintained."
+    ],
+    "logic_rationale": "Extractiveness rises from 0.22 to 0.58 over the interval because the simulation industry progressively captures standards-setting: early simulation adoption filled a genuine safety gap, but as the industry matured it entrenched frequency/fidelity metrics that favored its own revenue model. Suppression rises from 0.30 to 0.62 as alternative mechanisms (line audits, hybrid refreshers, incident-based learning) are structurally excluded from counting toward competence. Theater rises from 0.10 to 0.45 as compliance logging and box-checking displace genuine skill interrogation. Accessibility collapse (0.55) reflects that alternatives are technically possible but institutionally closed: an operator cannot substitute real-world apprenticeship for mandated sim hours. Resistance (0.48) is moderate because frontline operators and some researchers object, but the compliance bureaucracy and vendor consortium dominate the standards conversation.",
+    "perspectival_gap": "The agenda-setter seats (training compliance, regulatory authority) and the beneficiary seat (simulation industry) should compute toward coordination: they experience the constraint as a necessary, scalable, evidence-based safety architecture. The payer seat (frontline operators) should compute toward extraction: they experience the same constraint as a time-consuming mandate that may not correspond to operational competence, enforced by certification gatekeeping. Operational management sits between, experiencing subsidy (liability cover) and cost (budget drain) simultaneously. The engine should produce divergent per-seat classifications from this structural asymmetry.",
+    "directionality_logic": "Beneficiaries (simulation_industry, training_compliance_bureaucracy, operational_management) receive low directionality: they collect revenue, budget, or liability protection from the constraint and have exit or arbitrage options. The payer (frontline_operators) receives high directionality: they bear the extracted time, potential skill decay masked by compliance, and have constrained exit because certification is mandatory. The excluded agent (general_public) is structurally trapped with no exit from the safety consequences of the arrangement. Directionality is derived from these structural positions without override.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as pure coordination (Rope) by requiring both beneficiaries and victims and active enforcement â the Tangled Rope gate captures that genuine safe-practice value and asymmetric extraction coexist. It prevents mislabeling as pure extraction (Snare) because the coordination function is real and historically grounded: early simulation did solve a genuine uneven-competence problem. The temporal measurements show the drift path from lower extraction to higher extraction, capturing mandatrophy risk without pre-judging the founding problem as dead.",
+    "kernel_context": "This constraint is the simulation_sufficiency reading of the competence_occupation kernel. The kernel asks what mechanism(s) are necessary and sufficient to maintain expert competence in high-reliability roles. Sibling readings: real_incident_necessity (only actual catastrophic incidents suffice) and hybrid_occupation (multi-mechanism continuous exercise required without consensus on mix). This reading treats simulation compliance as the sufficient observable, diverting legitimacy and resources toward the simulation industry."
+  },
+  "omegas": [
+    {
+      "id": "empirical_sufficiency_gap",
+      "question": "Does simulation at current fidelity and frequency actually prevent operational skill decay, or does it produce an illusory competence profile that decouples from real-world performance?",
+      "resolution_mechanism": "Independent longitudinal studies comparing operational performance outcomes of simulation-only, hybrid, and incident-exposed cohorts, with blinding to training modality during competence assessment.",
+      "impact": "If simulation does not prevent decay, the extraction is higher than scored and the coordination function is weaker, pushing classification toward Snare. If simulation does prevent decay, the coordination function is stronger and the current score may overstate extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether simulation efficacy matches the sufficiency claim"
+    },
+    {
+      "id": "industry_capture_of_standards",
+      "question": "Has the simulation industry captured the standards-setting and regulatory update process, or do independent experts maintain control over sufficiency definitions?",
+      "resolution_mechanism": "Funding-flow and revolving-door analysis of standards-body membership; comparison of mandated fidelity metrics against independent human-factors research benchmarks.",
+      "impact": "If capture is confirmed, the directionality of regulatory and compliance seats shifts toward beneficiary, increasing effective extraction for operators. If standards remain independent, the constraint is closer to genuine Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether training standards are captured by vendor interests"
+    },
+    {
+      "id": "alternative_mechanism_exclusion",
+      "question": "Are hybrid and real-incident learning models structurally excluded by budget allocation and mandate design, or merely less preferred in a competitive training marketplace?",
+      "resolution_mechanism": "Regulatory review of whether alternative modalities are permitted as substitutes for mandated simulation hours; budget elasticity analysis in jurisdictions with competing training regimes.",
+      "impact": "If alternatives are structurally excluded, suppression and accessibility_collapse are higher than scored. If alternatives are merely disadvantaged but substitutable, the constraint is less extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of alternatives is structural or preferential"
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "formalized_drill_sufficiency",
+    "drift_state": {
+      "moment": "contemporary_post_certification_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_sufficiency_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "training_compliance_as_competence_proxy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This constraint is one of three structurally distinct readings of the competence_occupation kernel. Each reading makes a competing claim about the mechanism necessary and sufficient to maintain expert competence. They are linked as a constraint family because they share the same kernel (competence maintenance in high-reliability organizations) but have different epsilon values, stakeholder structures, and beneficiary/victim profiles. Decomposition follows the epsilon-invariance principle: the label 'competence occupation' conflates claims with different empirical statuses and extraction levels."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__functional_protection_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "functional_protection",
+    "story_uid": "b7cf3828-50ce-46cb-b53a-9c92335fb19e"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Common Article 3 Functional Protection Floor Regardless of Combatant Status",
+    "topic_domain": "legal/international_humanitarian_law",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "detained_persons",
+      "non_state_detainees"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "detained_persons",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Persons held by parties to armed conflict who receive baseline humane treatment, medical care, and fair-trial guarantees without awaiting a formal combatant-status determination. They cannot exit detention unilaterally and have no alternative protective framework."
+    },
+    {
+      "name": "non_state_detainees",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Members of non-state armed groups detained in international or non-international conflicts who are often denied POW status under state-centric readings. Under this constraint they receive the same minimum protections as state-combatant detainees without the precondition of formal status recognition."
+    },
+    {
+      "name": "detaining_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "State armed forces and organized armed groups that operate detention facilities. They bear the operational and resource costs of providing minimum conditions and judicial guarantees to all detainees regardless of status, and they administer the constraint through standard operating procedures and detention orders."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Committee of the Red Cross monitors places of detention, engages detaining authorities confidentially, and publishes interpretive guidance including the Customary IHL Study that supports the functional-protection reading. It does not benefit financially nor bear compliance costs."
+    },
+    {
+      "name": "war_crimes_tribunals",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "International and hybrid criminal tribunals that adjudicate grave breaches and serious violations of Common Article 3. They reinforce the constraint through case law criminalizing status-independent mistreatment, operating as an external analytical and enforcement reference point."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a universal baseline of humane treatment and fair-trial guarantees for all persons detained in armed conflict, eliminating the need for a prior legal status determination and thereby preventing parties from denying protections through procedural delay or categorical exclusion.",
+    "transfer_function": "Transfers obligations of material care, procedural safeguards, and humane conduct from detaining authorities to detained persons. The compliance costâprovision of food, medical attention, quarters, and judicial guaranteesâis borne by the detaining party.",
+    "absent_voices": "Non-state armed groups that reject international legal frameworks entirely are excluded from the norm-setting conversation. Additionally, military legal advisors from states holding strictly state-centric views are under-represented in human-rights and ICRC fora where the functional reading is elaborated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the status-independent floor vanished, detaining authorities would revert to status-based treatment hierarchies; detainees without recognized combatant status would lose immediate protections during legal limbo, and the ICRC's access and monitoring framework would lose its legal anchor.",
+    "founding_problem": "Armed conflicts produce detainees whose legal status is uncertain or disputed; without a minimum standard independent of status, parties have an incentive to deny protections by delaying or rejecting status determinations, leading to widespread mistreatment in legal grey zones.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ICRC's Customary International Humanitarian Law Study (2005) and subsequent international criminal jurisprudence attest that status disputes continue to delay or deny protections in contemporary conflicts. State military manuals increasingly incorporate status-independent minimums, corroborating the ongoing need from outside the beneficiary population."
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 23,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 46,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 23,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 46,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the functional-protection reading of the contested combatant-status-definition kernel. It holds that Common Article 3 minimum protections apply to all detained persons regardless of combatant status, removing status determination as a precondition for humane treatment. The reading is rival to the state-centric reading (status requires formal state organization and determines POW protections) and the national-liberation reading (non-state groups fighting colonial regimes acquire combatant status under AP I). Key agents: detained persons (primary beneficiaries), non-state detainees (beneficiaries under a state-centric exclusion), detaining authorities (administer the constraint and bear compliance costs), the ICRC (interpretive guardian), and war-crimes tribunals (external enforcement reference).",
+    "key_agents": [
+      "detained_persons: Primary beneficiary (powerless/trapped) â receives baseline protections unconditionally.",
+      "non_state_detainees: Secondary beneficiary (powerless/trapped) â specifically protected against status-based exclusion.",
+      "detaining_authorities: Agenda-setter (institutional/constrained) â administers detention and bears compliance cost.",
+      "icrc: Observer (institutional/analytical) â monitors and interprets the standard.",
+      "war_crimes_tribunals: Observer (institutional/analytical) â adjudicates violations and reinforces the reading through case law."
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint is a baseline protective floor with no rent-seeking intermediary; the compliance cost borne by detaining authorities is coordination cost, not extractive overhead. Suppression is moderate (0.35): the norm is backed by international criminal law and ICRC pressure, but violations remain common and enforcement is geographically uneven. Theater ratio is low (0.20): most compliance activity is functional (material provision, judicial process), though some performative adoption occurs (paper policies without implementation). Accessibility collapse is high (0.70): once the norm is understood, the legal alternativeâdenying protections pending status determinationâis largely collapsed in doctrine, even if practice lags. Resistance is moderate (0.40): some states continue to resist full applicability to non-state actors, producing ongoing doctrinal friction.",
+    "perspectival_gap": "The detained-person seat experiences the constraint as a protective rope: it delivers tangible goods (safety, food, process) without precondition. The detaining-authority seat experiences it as a regulatory burden: it constrains interrogation methods, requires resource expenditure, and subjects officials to criminal liability. Because there is no third-party beneficiary capturing rents, the engine should compute the detaining-authority directionality as near-symmetric (coordination cost) rather than target (extraction), preserving the rope classification for both seats.",
+    "directionality_logic": "Detained persons and non-state detainees are beneficiaries (low d, low Ï). Detaining authorities are agenda-setters who administer the constraint; they are not listed as victims because their cost is coordination cost, not extraction. Their derived directionality sits near symmetric (d â 0.5). The ICRC and tribunals are observers (analytical exit, no directionality). No concentrated beneficiary captures rents, and no concentrated payer suffers extraction.",
+    "mandatrophy_analysis": "The founding problemâstatus uncertainty leaving detainees unprotectedâremains live in contemporary conflicts. The constraint has not atrophied into a piton: compliance is not merely theatrical, the beneficiary set is real and vulnerable, and the agenda-setters bear genuine coordination costs rather than inertia. If the problem were solved (all parties routinely provided universal minimums without legal compulsion), the constraint might become a scaffold or dissolve, but that condition does not obtain.",
+    "kernel_context": "This constraint is the functional-protection reading of the combatant_status_definition kernel. Sibling readings are the state-centric reading (combatant status requires formal state military organization; non-state actors excluded from POW protections) and the national-liberation reading (non-state groups fighting colonial/occupation/racist regimes acquire combatant status under AP I). This reading distinguishes itself by treating humane treatment and fair trial rights as independent of status determination, effectively decoupling baseline protections from the contested definition of combatant status."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_scope",
+      "question": "Does the functional-protection reading's decoupling of minimum protections from combatant status logically resolve the kernel contest, or does it simply shift the locus of dispute to the definition of 'detained person' and the scope of 'armed conflict'?",
+      "resolution_mechanism": "Comparative doctrinal analysis of the three readings' textual grounding in the Geneva Conventions and AP I to see whether the functional reading eliminates the need for a combatant-status definition or merely brackets it.",
+      "impact": "If the reading only brackets the definition, the kernel remains contested and the constraint family persists; if it resolves the kernel, the sibling readings become historically residual rather than live rivals.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the functional reading resolves or merely displaces the kernel contest."
+    },
+    {
+      "id": "customary_vs_conventional_basis",
+      "question": "Is the functional reading's binding force rooted in the 1949 Geneva Conventions as treaty law, or in parallel customary international law that binds even non-parties?",
+      "resolution_mechanism": "Systematic review of state practice and opinio juris since 1949, including national military manuals and judicial decisions, to determine whether the status-independent floor has crystallized as custom independent of treaty ratification.",
+      "impact": "If purely conventional, the constraint's scope is limited to treaty parties; if customary, it attains universal scope and modifies the legal position of non-state actors and non-party states, altering the classification's spatial_scope and directionality derivations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reading's authority derives from treaty text or customary law."
+    },
+    {
+      "id": "non_state_reciprocity_assumption",
+      "question": "Does the constraint's application to non-state armed groups rest on a reciprocal coordination equilibrium, or does it impose a unilateral obligation on detaining authorities without coordinated counterpart?",
+      "resolution_mechanism": "Empirical assessment of non-state group compliance with CA3 minimums across multiple conflicts; if reciprocity is absent, the constraint functions as a one-sided imposition.",
+      "impact": "If unilateral, the detaining-authority seat experiences the constraint as extractive overhead rather than symmetric coordination, raising its effective directionality and potentially shifting the computed type toward tangled rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether non-state actor reciprocity supports the coordination framing."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "geneva_conventions_protective_floor",
+    "drift_state": {
+      "moment": "contemporary_customary_law_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "state_centric_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "national_liberation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "humane_treatment_status_independent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minimum_protections_universal_personhood",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "network": {
+    "affects_constraints": [
+      "combatant_status_definition__state_centric_reading",
+      "combatant_status_definition__national_liberation_reading"
+    ],
+    "dual_formulation_note": "The kernel 'combatant_status_definition' decomposes into three structurally distinct constraints. This story models the functional-protection reading (universal minimums independent of status). Its sibling readings are the state-centric reading (status-dependent exclusions) and the national-liberation reading (status extension for anti-colonial struggles). Each reading has a distinct epsilon, beneficiary structure, and classification; they are linked as a constraint family."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

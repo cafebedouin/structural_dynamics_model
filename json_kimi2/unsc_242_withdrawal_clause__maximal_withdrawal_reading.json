@@ -1,0 +1,295 @@
+{
+  "header": {
+    "constraint_id": "unsc_242_withdrawal_clause__maximal_withdrawal_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unsc_242_max",
+    "story_uid": "a2da5dd8-807c-40a7-9182-36ee398eca43"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.66,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.82,
+    "claimed_type": "rope",
+    "human_readable": "UNSC 242 Maximal Withdrawal Obligation (French Definite Article Reading)",
+    "topic_domain": "international law / diplomatic history / treaty interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dispossessed_territorial_claimants"
+    ],
+    "victims": [
+      "occupying_state"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "dispossessed_territorial_claimants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold an enforceable legal claim under the maximal reading of UNSC 242 and Charter Article 2(4) to full retrocession of all occupied territories; the French definite article reading secures their position against partial-settlement bargaining."
+    },
+    {
+      "name": "occupying_state",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bears the comprehensive obligation to withdraw from all occupied territories under the maximal reading; the French definite article eliminates the discretionary space that the indefinite English article might have offered."
+    },
+    {
+      "name": "un_security_council",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Issued Resolution 242; under this reading, the Council's text (especially the authenticated French version with definite article) imposes a mandatory, non-discretionary withdrawal obligation tied to Charter Article 2(4)."
+    },
+    {
+      "name": "international_court_of_justice",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Judicial arbiter that may be called to interpret the resolution; under this reading, the Court would apply the French definite article and Charter territorial integrity default to reject partial withdrawal arguments."
+    },
+    {
+      "name": "drafting_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The original drafters intended a flexible formula allowing secure boundaries and partial retention; the maximal reading overrides their intent in favor of the textual logic of the definite article, effectively excluding their interpretive authority from the operative meaning."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a uniform, non-discretionary standard for territorial restoration when occupation occurs, eliminating ad hoc bargaining over which territories must be returned and preventing collective-action failure among states seeking to uphold the Charter prohibition on territorial acquisition by force.",
+    "transfer_function": "Moves territorial control comprehensively from occupying state to dispossessed claimant; moves interpretive authority away from drafting states' intent toward the textual default of Charter Article 2(4) and the French definite article.",
+    "absent_voices": "Drafting states who intended a flexible, security-oriented boundary settlement; occupying states advocating for strategic territorial retention; partial-withdrawal jurists who read the indefinite English article as controlling.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the maximal withdrawal obligation vanished, the legal architecture of post-occupation settlement would shift to discretionary, security-based boundary negotiations; dispossessed claimants would lose their enforceable position for full retrocession, and the Charter territorial integrity default would be significantly weakened.",
+    "founding_problem": "The 1967 Middle East war created a crisis over occupied territories where ad hoc political bargaining risked legitimizing territorial acquisition by force; the Council needed a formula that would tie territorial restoration to the Charter's Article 2(4) prohibition without reopening the text for amendment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "International legal scholars outside the beneficiary community (e.g., independent publicists and ICJ jurists) attest that the resolution was drafted to balance multiple aims; occupying states and some drafting-state archives contest that the problem was ever meant to mandate total withdrawal."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "omegas": [
+    {
+      "id": "french_definite_article_travaux_prep",
+      "question": "Do the travaux prÃ©paratoires and simultaneous interpretation records confirm the French definite article was deliberately chosen to mandate comprehensive withdrawal, or was it a by-product of bilingual drafting?",
+      "resolution_mechanism": "Archival review of the 1967 UN Security Council negotiating records and comparison with the English text's indefinite article.",
+      "impact": "If the drafters did not intend comprehensiveness, the maximal reading's natural-law textual logic weakens and the constraint may reclassify as tangled rope (coordination function real but later interpreters layered extraction onto it).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical uncertainty about drafters' intent behind the French definite article"
+    },
+    {
+      "id": "interpretive_authority_locus",
+      "question": "Does the authority to fix the resolution's meaning reside in the authenticated text, the original drafters, the ICJ, or the Security Council itself?",
+      "resolution_mechanism": "Comparative analysis of VCLT Articles 31-33 application to Security Council resolutions and the UN's bilingual authentication practice.",
+      "impact": "If the text alone controls, the constraint remains rope; if an interpreter must actively suppress drafters' intent to sustain the reading, the constraint shifts toward tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conceptual ambiguity about where interpretive authority lies"
+    },
+    {
+      "id": "occupier_reciprocity_benefit",
+      "question": "Can the occupying state ever be a net long-term beneficiary of a strict territorial-integrity rule through reciprocity, reputation, or institutional stability?",
+      "resolution_mechanism": "Game-theoretic and historical analysis of state compliance with territorial-integrity norms over repeated interactions.",
+      "impact": "If the occupier is also a beneficiary in the long run, directionality for the occupier shifts downward toward symmetric; if never, the occupier remains a pure target.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Empirical uncertainty whether the occupier benefits from the norm long-term"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.66
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the maximal-withdrawal reading of the UNSC 242 withdrawal clause kernel. Under this reading, the French definite article ('des territoires') in the authenticated French text of Resolution 242, read against the Charter Article 2(4) territorial integrity default, imposes a mandatory and comprehensive obligation on an occupying state to withdraw from all occupied territories. The English indefinite article ('territories') is subordinated. The beneficiaries are dispossessed territorial claimants who gain an enforceable legal position for full retrocession; the occupying state bears the comprehensive obligation. The constraint is claimed as rope because it coordinates the international community around a non-discretionary standard prohibiting territorial acquisition by force, even though the occupier experiences it as coercive. Sibling readings include the partial-withdrawal reading (indefinite English article, discretionary secure boundaries) and the interpretive-authority-structure reading (contested locus of interpretive power among ICJ, drafters, and occupying state).",
+    "key_agents": [
+      "dispossessed_territorial_claimants: Primary beneficiary (moderate/constrained) â receive enforceable legal position for full territorial retrocession under the maximal reading",
+      "occupying_state: Primary target/payer (institutional/constrained) â bears the mandatory comprehensive withdrawal obligation and associated territorial loss",
+      "un_security_council: Agenda setter (institutional/constrained) â adopted Resolution 242 and maintains the Charter framework within which the maximal reading operates",
+      "international_court_of_justice: Analytical observer (institutional/analytical) â potential adjudicator of the textual dispute without direct territorial stake",
+      "drafting_states: Excluded voice (institutional/analytical) â intended a flexible boundary-security formula; their intent is overridden by the textual logic of the maximal reading"
+    ],
+    "logic_rationale": "Extractiveness (0.85) is authored high because the maximal reading mandates comprehensive territorial retrocession, which constitutes a massive transfer of control from occupier to claimant. Suppression (0.66) reflects the active textual and jurisprudential suppression of the partial-withdrawal alternative; the definite article reading must continuously displace the indefinite-article reading in diplomatic and legal discourse. Theater ratio (0.28) captures the moderate performative dimension of legal argumentation around treaty authentication, though the coordination function (territorial integrity) is substantively real. Accessibility collapse (0.78) is high because once the Charter default and French textual logic are accepted, partial-withdrawal arguments lose structural legal footing. Resistance (0.82) is high because occupying states have consistently resisted full withdrawal in practice. Metrics and claim are independently authored: the claimed rope status reflects the constraint's coordination function for the international community, while the metrics describe the heavy structural load the constraint places on the occupying party.",
+    "perspectival_gap": "The dispossessed claimant seat experiences this constraint as coordination â a clear, enforceable legal standard that solves the collective-action problem of resisting territorial acquisition by force. The occupying state seat experiences the identical constraint as high-extraction coercion that strips territorial control without negotiation. The drafting-state seat experiences it as a misappropriation of their flexible formula. The engine computes these divergences from the beneficiary/victim declarations and exit options: claimants are beneficiaries with constrained exit but legal empowerment; the occupier is a payer with institutional power yet diplomatically constrained exit; drafters are excluded from the current operative text.",
+    "directionality_logic": "Dispossessed territorial claimants are declared beneficiaries (low d, subsidy/empowerment direction). The occupying state is declared victim/payer (high d, target direction). The UN Security Council and ICJ are neither beneficiaries nor victims; their directionality reverts to the institutional power-atom fallback near symmetric (0.5), reflecting their administrative/adjudicative role without direct territorial stake. Drafting states are excluded and do not feed directionality computation.",
+    "mandatrophy_analysis": "The founding problem â preventing territorial acquisition by force and providing a stable post-war settlement rule â remains contested in status. The constraint's mandate has not clearly outlived its function: territorial integrity is still a live coordination problem. The classification as rope (rather than snare) is protected by the genuine coordination function: the constraint solves a real collective-action problem for the community of states by standardizing the post-occupation baseline. The high extraction from the occupier does not by itself convert the constraint to a snare because the extraction is incident to the coordination (restoring the territorial status quo), not a separate rent-seeking mechanism. Were the coordination function shown to be cover for targeted dispossession of one particular occupier, the classification would shift toward snare.",
+    "kernel_context": "This is the maximal-withdrawal reading of the unsc_242_withdrawal_clause kernel. Sibling readings: partial_withdrawal_reading (indefinite English article, secure boundaries, drafters' intent) and interpretive_authority_structure (contested locus of authority among ICJ, drafters, and occupier). This reading is distinguished by its reliance on the French definite article and Charter Article 2(4) to produce a comprehensive, non-discretionary withdrawal obligation."
+  },
+  "network": {
+    "affects_constraints": [
+      "partial_withdrawal_reading",
+      "interpretive_authority_structure"
+    ],
+    "dual_formulation_note": "This constraint is the maximal-withdrawal reading of the UNSC 242 withdrawal clause kernel. It decomposes from the natural-language concept 'UNSC 242 withdrawal obligation' by isolating the specific claim that the French definite article mandates comprehensive territorial retrocession, distinct from the partial-withdrawal reading (indefinite English article) and the interpretive-authority reading (contested locus of meaning). Each reading carries a distinct epsilon and stakeholder structure."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "partial_withdrawal_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "interpretive_authority_structure",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "french_text_controls_withdrawal_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "territorial_integrity_non_discretionary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "un_charter_territorial_integrity_default",
+    "drift_state": {
+      "moment": "contemporary_post_1967_diplomacy",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "dispossessed_territorial_claimants",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

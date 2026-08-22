@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "combatant_status_definition__national_liberation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "csd_nlr",
+    "story_uid": "c60baed8-5604-43bf-9a03-da64ff549d9a"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.7,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AP I Article 1(4) National Liberation Combatant Status",
+    "topic_domain": "international_humanitarian_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_liberation_movements"
+    ],
+    "victims": [
+      "occupying_colonial_regimes"
+    ],
+    "vindicated_propositions": [
+      "self_determination_as_legal_basis",
+      "anti_colonial_legal_order"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 27,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 27,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.42
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the national_liberation_reading of the contested kernel combatant_status_definition. It concerns AP I Article 1(4), which classifies wars against colonial domination, alien occupation, and racist regimes as international armed conflicts and extends combatant statusâand thus POW protections upon captureâto organized non-state armed groups that meet command-and-control criteria. The reading treats this as a genuine legal innovation that closes a protection gap for anti-colonial fighters, while simultaneously recognizing that it structurally extracts sovereignty from occupying and colonial powers by removing their domestic criminal jurisdiction over captured insurgents. Sibling constraints include the state_centric_reading (GC III Article 4, categorical exclusion of non-state actors from combatant status) and the functional_protection_reading (Common Article 3, status-independent minimum guarantees). The claim/metric independence is maintained: the constraint is claimed as tangled_rope because it combines coordination (humanitarian protection) with asymmetric extraction (sovereignty cost to occupiers), and the metrics are authored descriptively without tuning to match the claim.",
+    "key_agents": [
+      "national_liberation_movements: Primary beneficiary (organized/constrained) â receive conditional combatant immunity and POW status if criteria met",
+      "occupying_colonial_regimes: Primary payer (institutional/constrained) â lose domestic criminal jurisdiction over captured insurgents",
+      "ap_i_state_parties: Agenda-setter (institutional/mobile) â maintain the treaty regime and its interpretation",
+      "major_non_party_states: Excluded seat (institutional/mobile) â deliberately outside AP I to avoid the constraint",
+      "icrc: Analytical observer (institutional/analytical) â monitors compliance and promotes the rule"
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high because the constraint removes a core attribute of sovereigntyâcriminal jurisdiction over security threatsâfrom occupying powers and transfers legal immunity to non-state groups. Suppression (0.70) is high because the constraint's persistence depends on actively suppressing the alternative framework (treating insurgents as criminals or terrorists) through treaty obligation, diplomatic pressure, and ICC jurisdiction. Theater ratio (0.35) reflects moderate performativity: some states create parallel detention regimes (military commissions, status-review tribunals) that nominally comply with IHL while functionally denying POW protections. Accessibility collapse (0.42) is moderate because occupying powers retain partial exit via non-ratification, persistent-objector claims, and counter-terrorism reframing. Resistance (0.78) is very high due to sustained opposition from major military powers and the post-9/11 counter-terrorism paradigm.",
+    "perspectival_gap": "The national_liberation_movements seat experiences the constraint as protective subsidy (low directionality, negative effective extractionâthey gain legal status and immunity). The occupying_colonial_regimes seat experiences it as heavy extraction (high directionality, amplified by their global scopeâthey lose jurisdictional autonomy over security threats). The major_non_party_states seat sits near the beneficiary end despite their institutional power because they successfully exited the treaty; their mobile exit options mean they avoid extraction entirely. The engine will compute these divergent seat types from the structural data: the constraint looks like a tangled rope from the system level, like a subsidy from the liberation-movement seat, and like a snare from the occupying-power seat.",
+    "directionality_logic": "Beneficiary declarations map to national_liberation_movements, who receive the legal status, combatant immunity, and POW protections upon capture. Victim declarations map to occupying_colonial_regimes, who bear the sovereignty cost of losing domestic criminal jurisdiction over captured insurgents. The ap_i_state_parties are not declared as beneficiaries because their benefit is diffuse legitimization rather than concentrated rent; they administer the constraint but do not collect its extraction. The major_non_party_states are excluded from the constraint's formal operation and absent from beneficiary/victim arrays, though their structural position (mobile exit) means they experience negligible directionality.",
+    "mandatrophy_analysis": "This constraint avoids snare classification because it carries a genuine coordination function: without Article 1(4), organized non-state fighters in anti-colonial wars would fall into a legal void, vulnerable to summary execution and torture. The incentivization of command hierarchy and open carriage of arms is a real coordination benefit that reduces civilian harm. It avoids rope classification because the extraction is asymmetric: occupying powers bear concentrated costs (loss of criminal jurisdiction, erosion of deterrent effect) that are not offset by equivalent benefits. The high resistance metric signals that the payer seat actively contests the arrangement, which would be unexpected for a pure rope. Tangled rope is the structurally accurate claim because both the coordination mechanism and the asymmetric extraction pass through the same legal form.",
+    "kernel_context": "This constraint is the national_liberation_reading of the combatant_status_definition kernel. It instantiates the AP I Article 1(4) position that organized non-state groups in wars of national liberation are entitled to combatant status and POW protections. Sibling constraints (separate files) include the state_centric_reading (GC III Article 4, categorical state-combatant requirement) and the functional_protection_reading (Common Article 3, status-independent minimum guarantees). The national liberation reading and the state-centric reading are held by different state blocs and coexist in unresolved tension within the international legal order. The national liberation reading structurally influenced the functional protection reading by making the status question politically explosive, thereby increasing the salience of status-independent protective frameworks as a pragmatic alternative."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Does AP I Article 1(4) represent a legally effective extension of combatant status to non-state actors in national liberation conflicts, or does it remain a contested political framing without consistent state practice?",
+      "resolution_mechanism": "Comparative state-practice analysis measuring how many AP I state parties actually grant POW status to captured members of national liberation movements in contemporary conflicts, versus how many invoke counter-terrorism or non-international conflict frameworks instead.",
+      "impact": "If state practice consistently denies such status, the reading's effective extraction is higher on paper than in reality (the constraint extracts asymmetrically only from weak states while strong states ignore it); if practice aligns, the coordination function is genuinely operative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the national liberation reading has achieved consistent legal effect or remains contested political framing."
+    },
+    {
+      "id": "coordination_extraction_ambiguity",
+      "question": "Does Article 1(4) primarily coordinate humanitarian protection for non-state fighters, or does it primarily extract sovereignty from occupying and colonial powers by constraining their domestic criminal jurisdiction?",
+      "resolution_mechanism": "Case-study analysis of conflicts where Article 1(4) was invoked: measure IHL compliance rates by liberation movements that received status versus criminal prosecution rates by occupying powers of those who did not.",
+      "impact": "If liberation movements comply more with IHL when status is granted, the coordination function dominates; if occupying powers bear sovereignty costs without reciprocal compliance gains by insurgents, extraction dominates.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint's coordination or extraction component is structurally dominant."
+    },
+    {
+      "id": "customary_law_extension",
+      "question": "Has Article 1(4) achieved customary international law status beyond AP I state parties, or does its effect remain confined to treaty parties?",
+      "resolution_mechanism": "State practice and opinio juris survey across non-party states, focusing on whether they treat captured liberation fighters as POWs in relevant conflicts and whether they accept the international-armed-conflict classification for national liberation wars.",
+      "impact": "If customary, the constraint's spatial scope and effective extraction expand dramatically to include non-party occupying powers; if purely treaty-based, its extraction is limited to the state-party subset and exit via non-ratification remains structurally viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's legal force extends beyond treaty parties via customary international law."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_centric_reading",
+      "functional_protection_reading"
+    ],
+    "dual_formulation_note": "The combatant_status_definition kernel decomposes into three structurally distinct constraints: the state_centric_reading (GC III Article 4, state monopoly on combatancy), the national_liberation_reading (AP I Article 1(4), conditional non-state combatant status), and the functional_protection_reading (Common Article 3, status-independent minimum guarantees). They share the referent of 'who is protected in armed conflict' but have different epsilon values, beneficiary structures, and legal bases. This story covers the national_liberation_reading only."
+  },
+  "stakeholders": [
+    {
+      "name": "national_liberation_movements",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Non-state armed groups fighting colonial domination, alien occupation, or racist regimes. If they meet organization, command, and conduct criteria under AP I Articles 43 and 44, they receive combatant status and POW protections upon capture, shielding them from domestic criminal prosecution. They must carry arms openly, operate under responsible command, and comply with the laws of war. Exit means abandoning the legal shield and risking treatment as common criminals or unlawful combatants."
+    },
+    {
+      "name": "occupying_colonial_regimes",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "States exercising colonial domination, alien occupation, or enforcing racist regimes. They are obligated to treat captured members of qualifying liberation movements as POWs rather than prosecuting them under domestic criminal law. This constrains their sovereignty over security policy and removes a deterrent tool against insurgency. They resist the constraint through non-ratification of AP I, reservation, or reclassification of conflicts as non-international or counter-terrorism operations."
+    },
+    {
+      "name": "ap_i_state_parties",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "States party to Additional Protocol I that collectively maintain the treaty regime. They set the legal standard through ratification and state practice. Post-colonial states in this group actively championed Article 1(4) as a mechanism to legitimize anti-colonial resistance. They administer the constraint through national implementation and diplomatic defense of the treaty, though they do not personally collect its extraction."
+    },
+    {
+      "name": "major_non_party_states",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Major military powersânotably the United States, Israel, and othersâthat declined to ratify AP I precisely to avoid the Article 1(4) extension of combatant status to non-state actors. They are structurally excluded from the treaty's formal obligations but are the primary target of customary-law extensions of the national liberation reading. Their absence shapes the constraint's uneven geographic scope and limited enforcement reach."
+    },
+    {
+      "name": "icrc",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The International Committee of the Red Cross promotes and monitors compliance with AP I, including Article 1(4). It interprets the criteria for combatant status and advocates for POW protections in all armed conflicts. It neither benefits from nor pays the costs of the constraint's political asymmetries; its institutional purpose is to narrow the gap between the rule and practice through confidential dialogue and public reporting."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Extends the legal framework of international armed conflict to wars of national liberation, ensuring that organized non-state fighters receive combatant immunity and POW status rather than being treated as common criminals, thereby incentivizing compliance with the laws of war by liberation movements through the promise of legal recognition.",
+    "transfer_function": "Transfers legal status and immunity from domestic criminal prosecution from occupying and colonial regimes to organized non-state armed groups meeting command-and-control criteria; the occupying power loses exclusive jurisdiction over captured insurgents.",
+    "absent_voices": "Occupying powers that have not ratified AP Iânotably the United States and Israelâare structurally excluded from the treaty framework but are the primary targets of its customary-law extension; captured insurgents themselves are rarely heard in the diplomatic fora where the rule's scope is negotiated and interpreted.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 1(4) vanished overnight, occupying powers would regain full domestic criminal jurisdiction over captured members of liberation movements; the legal architecture of AP I would contract back to state-only combatancy; and the incentive structure for non-state groups to organize under formal command hierarchies and carry arms openly would weaken significantly.",
+    "founding_problem": "The 1949 Geneva Conventions failed to adequately protect non-state fighters in wars of national liberation, leaving them vulnerable to summary execution, torture, and criminal prosecution as 'terrorists' or 'bandits' by colonial and occupying powers that denied the conflicts international status.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Post-colonial states and the ICRC attest the problem remains live in ongoing occupations and deny the protection gap has closed. Occupying powers and non-party Western states attest the problem was better addressed through Common Article 3 and human rights law, and that Article 1(4) creates more legal and security problems than it solves. Independent international law scholars are split, with significant corroboration from Global South academia but strong contestation from major military powers and their legal advisers."
+  },
+  "gain_flow": "national_liberation_movements",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_colonial_self_determination",
+    "drift_state": {
+      "moment": "contemporary_counterterrorism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "state_centric_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "functional_protection_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wars_of_national_liberation_are_international_conflicts",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_state_liberation_combatants_entitled_to_pow_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

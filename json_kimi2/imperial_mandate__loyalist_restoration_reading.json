@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "imperial_mandate__loyalist_restoration_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "imperial_lr",
+    "story_uid": "b94c8202-de25-4f00-ba3e-5665676c7005"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.83,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Divine Mandate: Unmediated Imperial Sovereignty (Loyalist Restoration Reading)",
+    "topic_domain": "political/constitutional/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_court",
+      "modernizing_elites",
+      "restorationist_oligarchs"
+    ],
+    "victims": [
+      "tokugawa_shogunate",
+      "samurai_class"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 44
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "omegas": [
+    {
+      "id": "divine_mandate_naturality",
+      "question": "Does the imperial mandate derive from an unchangeable cosmological order, or is it a constructed legitimating narrative developed to justify the overthrow of the Tokugawa system?",
+      "resolution_mechanism": "Comparative analysis of political-theology texts before and after the Meiji Restoration; examination of whether the unmediated-sovereignty doctrine appears in pre-Restoration imperial discourse or is synthesized in the 1860s.",
+      "impact": "If the mandate is constructed, the constraint's claimed authority is genealogically contingent and its extraction is politically motivated rather than cosmologically necessary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the divine mandate is natural law or political construction."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the constraint's persistence secured primarily by structural coercion (military, police, legal prohibition of alternatives) or by internalized ideological fusion (subjects identifying the imperial line with the nation itself)?",
+      "resolution_mechanism": "Analysis of post-defeat behavior in 1945: if the constraint collapses immediately upon structural coercion removal, it was structural; if persistent identity patterns continue, it was partially internalized.",
+      "impact": "If internalized, effective suppression exceeds structural measures and the constraint operates more like identity coordination; if purely structural, it is vulnerable to force majeure shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Could the coordination benefit of unified national sovereignty have been achieved without delegitimizing and dissolving the samurai class and domain autonomy?",
+      "resolution_mechanism": "Counterfactual comparison with constitutional monarchies that retained aristocratic intermediaries (e.g., Prussia, Britain) to determine if unified foreign policy required domestic class abolition.",
+      "impact": "If separable, the constraint is tangled rope (coordination with asymmetric extraction); if inseparable, the extraction may be the necessary cost of coordination.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether coordination and extraction are structurally separable."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 33,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 44,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 33,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 44,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 11,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 33,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 44,
+      "value": 0.83
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the loyalist_restoration_reading of the imperial_mandate kernel. The sibling bakufu_delegation_reading treats the same kernel as permitting institutional delegation; this reading treats divine mandate as requiring unmediated imperial sovereignty. Operationalized during the Meiji Restoration, the doctrine delegitimized the Tokugawa shogunate and the samurai class as usurpers, concentrating sovereignty in the emperor while restorationist oligarchs and modernizing elites governed in his name. The claim/metric independence is maintained: the reading is claimed as tangled_rope because it carries a genuine national-unification coordination function alongside asymmetric extraction from displaced intermediaries, while the metrics track the high extraction, high suppression, and rising theater of imperial rule under oligarchic management.",
+    "key_agents": [
+      "restorationist_oligarchs: Primary agenda-setters (institutional/constrained) â craft the state order in the emperor's name and enforce the doctrine.",
+      "imperial_court: Primary beneficiary (institutional/trapped) â gains ritual centrality and nominal sovereignty but is functionally bound to ratify oligarchic decisions.",
+      "tokugawa_shogunate: Primary target (powerful/trapped) â deposed as usurpers; stripped of authority and territorial control.",
+      "samurai_class: Secondary target (organized/constrained) â hereditary status abolished; bear the cost of institutional rupture.",
+      "modernizing_elites: Secondary beneficiaries (moderate/constrained) â gain positions in the centralized military and bureaucracy.",
+      "traditional_confucian_scholars: Excluded voice (moderate/trapped) â had justified shogunal rule; silenced in the new dispensation."
+    ],
+    "logic_rationale": "Extractiveness is high (0.82) because the doctrine strips all autonomous intermediary authority and redirects it to the center. Suppression is slightly higher (0.83) because the constraint's persistence required active military and ideological enforcement against shogunal restoration, samurai revolt, and liberal dissent. Theater_ratio rises to 0.5 because the claim of unmediated imperial governance became increasingly performative as actual governance migrated to oligarchic and bureaucratic hands. Accessibility_collapse is very high (0.88): once the doctrine was embedded in the constitution, state education, and state Shinto, alternatives became virtually unthinkable within the polity. Resistance is substantial (0.72) from the Satsuma Rebellion and the Freedom and People's Rights Movement, but ultimately suppressed.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats (oligarchs, modernizers, court) experience the constraint as necessary national coordination and legitimate restoration; the payer seats (shogunate, samurai) experience it as usurpation and dispossession. The engine computes this divergence from the structural data: low directionality for the imperial court (subsidized by symbolic centrality) and oligarchs (empowered by legitimacy), high directionality for the samurai and shogunate (stripped of status and autonomy).",
+    "directionality_logic": "Beneficiaries declared are imperial_court, modernizing_elites, and restorationist_oligarchs: they receive legitimacy, careers, and governing authority respectively, yielding low derived directionality. Victims declared are tokugawa_shogunate and samurai_class: they lose autonomous political and military status, yielding high derived directionality. The modernizing elites sit at moderate power with constrained exit (dependent on the imperial state), while the samurai sit at organized power with constrained exit (status abolished, conscription imposed). The court is trapped in its symbolic role.",
+    "mandatrophy_analysis": "The founding problem â fragmented sovereignty under foreign pressure â was substantially solved by the 1890s, yet the doctrine intensified rather than sunset. This produces a mandatrophy signal (founding_problem_status: dead, disappearance_verdict: world_rearranges). The classification as tangled_rope rather than piton is supported by the continuing concentration of extraction in identifiable beneficiary seats and the active enforcement requirement; it is not mere inertial performance. The classification as tangled_rope rather than snare is supported by the genuine coordination function of unified sovereignty and diplomatic recognition.",
+    "kernel_context": "Reading of kernel 'imperial_mandate': loyalist_restoration_reading (this file). Sibling: bakufu_delegation_reading. The kernel is the doctrine of imperial legitimacy; the readings split on whether sovereignty is delegable. This reading forecloses the sibling within any single framework."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "bakufu_delegation_reading"
+    ],
+    "dual_formulation_note": "This constraint and bakufu_delegation_reading are dual formulations of the imperial_mandate kernel. They are not the same constraint viewed from different angles; they share the referent (imperial legitimacy) but instantiate structurally distinct constraints with mutually exclusive implications for sovereignty. The loyalist reading forecloses the delegation reading; their epsilon values and victim sets differ accordingly."
+  },
+  "stakeholders": [
+    {
+      "name": "restorationist_oligarchs",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Craft the constitutional and administrative order in the emperor's name. They require the doctrine of unmediated sovereignty to delegitimize the shogunate and justify centralizing reforms, but are themselves constrained to rule through imperial fiction rather than open oligarchic claim."
+    },
+    {
+      "name": "imperial_court",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Restored to political centrality as the fount of legitimacy and the nominal source of all sovereignty. The court gains prestige and budget but is functionally bound to ratify decisions made by the oligarchs; the emperor cannot exit the role without dissolving the polity's foundation."
+    },
+    {
+      "name": "tokugawa_shogunate",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Deposed as usurpers under the new doctrine. Lose all political authority, territorial control, and military capacity. Former retainers are dispersed; the house survives in diminished form but cannot reclaim its former role."
+    },
+    {
+      "name": "samurai_class",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hereditary warrior status abolished as incompatible with direct imperial rule and equality before the throne. Lose tax-exempt stipends, right to bear arms, and social precedence. Bear the direct cost of institutional rupture through the abolition of feudal privileges."
+    },
+    {
+      "name": "modernizing_elites",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gain new positions in the centralized ministries and military. Their authority derives from imperial appointment rather than domainal or feudal status. Benefit from the elimination of intermediary power holders."
+    },
+    {
+      "name": "traditional_confucian_scholars",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Had provided the ideological justification for shogunal rule and the bakuhan system. Under the new doctrine their intellectual framework is delegitimized; they are excluded from constitutional debate and educational authority as the state promulgates its own historical narrative."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves fragmented sovereignty by concentrating legitimacy in a single, unbroken imperial line; eliminates competing claims from regional military houses; provides a unified national actor for diplomatic recognition and modernization.",
+    "transfer_function": "Transfers administrative and military authority from hereditary intermediary bodies (shogunate, domain governments, samurai status) to centralized organs acting in the emperor's name; transfers material surplus from rural producers to state modernization projects.",
+    "absent_voices": "Kokugaku nationalists who sought a purely nativist polity without Western constitutional forms; Tokugawa loyalists who viewed shogunal delegation as historically legitimate; peasant republicans who rejected monarchical sovereignty entirely. These voices were excluded from the Restoration settlement and the constitutional debates.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "The centralized state, the military oath, the constitution, and diplomatic recognition all hinge on the emperor as sovereign. If the doctrine vanished, the state would lose its Grundnorm; regional powers would reassert autonomy; the oligarchs would need a new legitimating principle.",
+    "founding_problem": "Late Tokugawa political fragmentation under the bakuhan system: multiple autonomous military and fiscal centers (shogunate, domains) prevented unified national response to foreign imperialism and domestic crisis.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Restorationist oligarchs cite foreign threat and domestic paralysis. Post-war historians and comparative constitutional scholars outside the imperial-beneficiary framework confirm that the fragmentation problem was substantially resolved by the Meiji state's centralization by the 1890s, and that the doctrine persisted as ideological scaffolding thereafter. No non-beneficiary contemporary source corroborates the claim that fragmentation remained an active threat justifying the doctrine's continued intensity after the 1889 constitution."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unified_imperial_sovereignty",
+    "drift_state": {
+      "moment": "meiji_oligarchic_consolidation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bakufu_delegation_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "divine_mandate_requires_direct_rule",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "intermediary_governance_is_usurpation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}
