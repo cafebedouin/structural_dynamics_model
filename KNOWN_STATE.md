@@ -45,6 +45,48 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-21 — [landed] HANDOFF: two OpenRouter generators IN FLIGHT at session end (stealth #1, nemotron) — resume steps for a cold instance
+**Files:** agent/run_no_scope_stealth.py, prolog/testsets_stealth/, prolog/testsets_nemotron/, json_stealth/, json_nemotron/, prolog/beta_processed_stealth.txt, prolog/beta_processed_nemotron.txt, python/module_boundary_check.py, python/shared/corpus_legs.py, python/corpus_census_check.py, docs/technical/bulk_corpus_generation.md, audits/INVESTIGATIONS.md
+**Tier:** landed
+
+Written at ~19:30 CDT because the operator's session was near its limit; the processes are
+`nohup setsid` children and outlive the session. State at writing (counts are live — re-count):
+- **stealth #1**: `agent.run_no_scope_stealth --n 0 --workers 20` (pid 410864, model
+  `stealth/ox-alpha`, reasoning model_default, FREE). ~370/1004 ok at 19:20, ~2.3/min, ≈ 5 more
+  hours. Log `outputs/no_scope_runs_stealth/full_run.log`; raw responses
+  `outputs/no_scope_runs_stealth/responses/<cid>.json` (persisted BEFORE parsing). `.pl` files
+  appear only when attempt 1 finishes (process_batch_results runs once per attempt); the ladder
+  `prolog/beta_processed_stealth.txt` is the done-list. 5 transport failures so far (2
+  `finish_reason=error`, 3 truncated bodies) — re-queued by the driver's 3-attempt loop.
+- **nemotron**: same driver, `--leg-name nemotron --model nvidia/nemotron-3-ultra-550b-a55b:free
+  --reasoning-effort off --workers 5` (FREE, thinking OFF; ~1 min/story). Log
+  `outputs/no_scope_runs_nemotron/full_run.log`. Expect the Flash-style `stakeholders` omission
+  on a fraction of draws (pilot: 1 of 2) — reruns recover about half per pass.
+- **glm-5.2:free**: PARKED — every call 429 `temporarily rate-limited upstream` (shared pool).
+- **Gemini**: DONE and gated (entry below). Kimi-off: constructible (k2.6 accepts
+  `thinking:{type:disabled}`), NOT started — needs `--leg-suffix` + a thinking-off flag on
+  `run_no_scope_kimi.py`, ≤335-request batches; operator has ~$62 there.
+
+**Resume recipe, per leg, once its driver has exited** (check `pgrep -af run_no_scope_stealth`):
+1. Reruns for the residue: re-issue the SAME command (ladder-driven; `--n 0` regenerates only
+   what is missing). Stop when a pass recovers little.
+2. OQ-58 sweep: `validate_reading_relation_integrity(seeds_on_disk, json_<leg>, testsets_<leg>)`
+   (agent/generate_kernel_corpus.py:1283; the 2026-08-21 Gemini entry shows the call shape).
+3. `classify_corpus('testsets_<leg>', 'pipeline_output.<leg>.json', '<model prefix>')` —
+   prefixes `stealth/ox-alpha`, `nvidia/nemotron-3-ultra-550b-a55b`. GREEN = fingerprint passed.
+4. Register: `module_boundary_check.CORPUS_DIRS` (already done for both), then
+   `shared/corpus_legs.LIVE_LEGS` + `corpus_census_check.STAMPED_FILE_COUNTS` + `--repin --cause
+   "…" --authorized-by "operator 2026-08-21 chat"` (executor-licensed). Then `./scripts/gate.sh`.
+5. Commit by pathspec (never `git add -A`). Close the open INVESTIGATIONS line for stealth with
+   its Fired: bit. Then **stealth #2** (`--leg-suffix 2`, same model/params — the free
+   thinking-on redraw floor) and **nemotron thinking-on** (`--leg-suffix _think`, no
+   `--reasoning-effort`) are the queued runs; extend `python/audits/five_leg_twin_comparison.py`
+   `LEGS` for the multi-leg read.
+Runbook §7c carries the driver contract; `audits/2026-08-21_flash_regime_vs_redraw/` the analysis
+template (`paired_agreement.py` takes leg names as argv).
+
+---
+
 ## 2026-08-21 — [landed] Four gemini-2.5-flash legs (2 redraws × 2 regimes) + the first within-model regime-vs-redraw read; Flash omits `stakeholders` ~1/3 of draws under the current schema
 **Files:** agent/run_no_scope_gemini.py, agent/run_no_scope_stealth.py, agent/generate_kernel_corpus.py, prolog/testsets_flash2/, prolog/testsets_flash3/, prolog/testsets_flash_think/, prolog/testsets_flash_think2/, json_flash2/, json_flash3/, json_flash_think/, json_flash_think2/, python/module_boundary_check.py, audits/2026-08-21_flash_regime_vs_redraw/, docs/technical/bulk_corpus_generation.md
 **Tier:** landed

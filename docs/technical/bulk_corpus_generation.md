@@ -235,6 +235,16 @@ OpenRouter's OpenAI-compatible `/chat/completions`. What a future run needs:
   `python/corpus_census_check.py` `STAMPED_FILE_COUNTS` → `corpus_census_baseline.json` via
   `--repin --cause … --authorized-by …` (operator-authorized) → the multi-leg harnesses.
 
+- **Generalized 2026-08-21 (same driver, any OpenRouter model):** `--leg-name <leg>` writes
+  `testsets_<leg>/` + `json_<leg>/` + `beta_processed_<leg>.txt` with provenance
+  `no_scope_rebuild_<leg>`; `--leg-suffix S` appends for a same-model redraw/regime sibling;
+  `--reasoning-effort off` sends `reasoning.enabled=false` (only for models whose record says
+  `reasoning.mandatory: false`). Witnessed legs: `nemotron` = `nvidia/nemotron-3-ultra-550b-a55b:free`
+  thinking-off (pilot valid on attempt 2, classify GREEN); `glm` = `z-ai/glm-5.2:free` PARKED
+  (upstream shared-pool 429 on every call). Free endpoints: check `GET /models/<id>/endpoints`
+  for a single healthy provider before a run; the `stakeholders` omission seen on Flash also
+  appears on nemotron — expect ladder reruns.
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
