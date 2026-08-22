@@ -18012,6 +18012,46 @@ regions" framing — whether the meta-tools' outputs are where cross-model consi
 
 ---
 
+## OQ-349 — Thinking moves benign constraints toward extraction: is the framework's vocabulary FRAMING the reasoning, or is reasoning NOTICING naturalized extraction?
+
+**Ω-type:** Ω_E (three discriminating arms exist; none run).
+
+**Status:** open — minted 2026-08-22 from the Flash regime legs (WRITEUP addendum d).
+**Priority:** 1
+**Deps:** splits_from OQ-343
+**Files:** `audits/2026-08-21_flash_regime_vs_redraw/noticing_vs_framing.py` (+ `_2026-08-22.txt`), `prompts/constraint_story_generation_prompt_json.md`, `agent/example_platform_commission.json`, `agent/run_no_scope_gemini.py` (`--thinking-budget`), `agent/run_no_scope_stealth.py` (reasoning returned in `message.reasoning` for OpenRouter models).
+
+**Witnessed (gemini-2.5-flash, k=2 per regime, one commit).** Thinking raises authored ε most on
+the constraints where extraction is least plausible — mountains +0.13–0.15, ropes +0.09–0.12, the
+benign stratum (off ε ≤ 0.15) +0.12 with 16% raised ≥0.30 — and not at all on snares (ceiling).
+The thinking-off redraw moves the benign stratum +0.01 (regression-to-mean ruled out). Of 90
+mountains, 10 rose ≥0.30 in both thinking draws: mostly normative absolutes (categorical abolition,
+absolute prohibition, dignity, speech absolutism, equality) — DR's own false-summit class, where a
+re-read as extractive could be the framework NOTICING naturalization — but also a physics
+interpretation (`quantum_formalism__copenhagen_reading`, +0.5 twice) and a historiographical
+thesis (`press_reformation_causation__technological_determinism`, +0.8 twice), which is FRAMING.
+
+**The fork cannot be settled from inside the framework's outputs.** Three arms, cheapest first:
+1. **Reasoning-text census (free).** OpenRouter returns `message.reasoning`; the nemotron
+   thinking-on leg (queued, OQ-347) and stealth persist it. Count, per story whose ε rose ≥0.30
+   over its thinking-off twin, whether the trace invokes the framework's type vocabulary
+   ("snare", "extraction", "false summit", "naturalized") BEFORE arriving at ε, vs. domain
+   reasoning that arrives at extraction without it. Framing predicts the former dominates.
+2. **Frame-varied arm on Flash (~$12–25).** Same seeds, thinking on, with (a) the one-shot
+   example swapped for a low-ε, non-extractive example and (b) the six-type vocabulary removed
+   from the prompt (numeric fields requested neutrally). If the benign-stratum rise tracks the
+   frame, framing; if invariant, noticing. Provenance-tag both arms; never pool with the legs.
+3. **Impossible-extraction seed set (~$5).** ~50 seeds where extraction is impossible by
+   construction (physical law, pure mathematics, logical limits — the corpus has
+   `zero_mathematical_status`, `quantum_formalism`, `number_entry` kernels) run thinking on/off.
+   Any rise is framing; this is the positive control for arm 1's census.
+**Resolution:** arms 1 and 3 run on ≥2 models; arm 2 on Flash. **What it changes:** whether
+thinking-on generation is admissible for the rebuild at all, and whether DR's false-summit claim
+can be read off thinking-on legs (if framing, it cannot — the instrument manufactures the signal
+it reports; build_discipline → *a repair that encodes the tested claim into the instrument*).
+
+---
+
 *Last updated: 2026-08-22. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

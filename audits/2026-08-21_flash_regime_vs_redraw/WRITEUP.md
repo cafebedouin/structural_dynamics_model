@@ -66,3 +66,15 @@ tangled_rope 28% → 34–37%, snare 28% → 32%, `unknown` 16% → 8%, scaffold
 institutional-seat piton 0% → 7–8%. Paired on the same seeds, thinking raises ε on 38% and
 lowers it on 10% (mean +0.065). **Thinking moves the seat toward extraction** — more coercion
 read into the same material, more structure asserted — on one model at k=2. Generality: OQ-343.
+
+**Addendum 2026-08-22 (d) — noticing or framing? (operator).** `noticing_vs_framing.py` →
+`noticing_vs_framing_2026-08-22.txt`. The ε rise under thinking is LARGEST where real extraction is
+least plausible — mountains +0.15/+0.13, ropes +0.09/+0.12 — and ZERO on snares (ε already 0.85);
+the benign stratum (off ε ≤ 0.15) rises +0.12 with 16% of seeds raised ≥0.30. Regression-to-mean
+CONTROL: the thinking-off redraw moves that stratum +0.01 (3% ≥0.10, 1% ≥0.30) — not the cause.
+Named: 10 of 90 mountains rose ≥0.30 in BOTH thinking draws; most are normative absolutes authored
+as mountains (categorical abolition, absolute prohibition, dignity, speech absolutism, equality) —
+the framework's own false-summit class, so re-reading them as snare/tangled_rope is plausibly
+NOTICING by DR's lights; but `quantum_formalism__copenhagen_reading` (+0.53/+0.50) and
+`press_reformation_causation__technological_determinism` (+0.80/+0.80) are FRAMING. Undecidable
+from inside the framework's outputs → OQ-349 (arms that vary the frame).
