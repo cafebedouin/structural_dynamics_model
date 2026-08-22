@@ -145,7 +145,20 @@ def run(args):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     processed = load_processed_log(SONNET_LADDER)
-    pending = [s for s in seeds if s["constraint_id"] not in processed]
+    backfill_ids = None
+    if getattr(args, "backfill_ids", None):
+        # BACKFILL MODE (OQ-345, 2026-08-22): regenerate an explicit id list INSIDE an existing leg,
+        # overwriting in place. The ids are removed from the uniqueness registry (else
+        # unique_constraint_id appends __<uuid8> and the story stops pairing by filename) and the
+        # ladder is ignored for them (they are "done" on the ladder — that is the point). Always
+        # pair with --run-tag so the provenance_source marks the stratum (e.g. +stakeholder_backfill).
+        backfill_ids = set(json.loads(Path(args.backfill_ids).read_text(encoding="utf-8")))
+        pending = [s for s in seeds if s["constraint_id"] in backfill_ids]
+        missing = backfill_ids - {s["constraint_id"] for s in pending}
+        print(f"  backfill: {len(pending)} of {len(backfill_ids)} ids found in the seed pool"
+              + (f"; {len(missing)} NOT in pool: {sorted(missing)[:5]}…" if missing else ""))
+    else:
+        pending = [s for s in seeds if s["constraint_id"] not in processed]
     n = args.n if (args.n and args.n > 0) else len(pending)
     batch_seeds = pending[:n]
     if not batch_seeds:
@@ -154,7 +167,7 @@ def run(args):
 
     # Registry = SONNET dir + sonnet ladder ONLY — never the main testsets/, so cids stay
     # == seed cids and the three sets pair by filename (twin recipe §6).
-    registry = {p.stem for p in SONNET_TESTSETS.glob("*.pl")} | set(processed)
+    registry = ({p.stem for p in SONNET_TESTSETS.glob("*.pl")} | set(processed)) - (backfill_ids or set())
     final_seeds = []
     for s in batch_seeds:
         s["constraint_id"] = unique_constraint_id(s["constraint_id"], registry)
@@ -183,7 +196,7 @@ def run(args):
             client, batch.id, SONNET_JSON, SONNET_TESTSETS, SONNET_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source=PROVENANCE_SOURCE,
+            provenance_source=(f"{PROVENANCE_SOURCE}+{args.run_tag}" if getattr(args, "run_tag", "") else PROVENANCE_SOURCE),
             sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},thinking=disabled,temperature=api_default")
         done = load_processed_log(SONNET_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
@@ -211,6 +224,9 @@ def main():
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--leg-name", default="sonnet", help="model leg name: testsets_<name>/ (sonnet, haiku, ...)")
     ap.add_argument("--leg-suffix", default="", help="append for a same-model redraw leg")
+    ap.add_argument("--run-tag", default="", help="mark this pass: provenance_source no_scope_rebuild_<leg>+<tag>")
+    ap.add_argument("--backfill-ids", default=None,
+                    help="JSON list of constraint_ids to REGENERATE IN PLACE inside the leg (OQ-345); pair with --run-tag")
     ap.add_argument("--poll-interval", type=int, default=POLL_INTERVAL)
     ap.add_argument("--estimate", action="store_true", help="count tokens + price; no generation")
     args = ap.parse_args()
