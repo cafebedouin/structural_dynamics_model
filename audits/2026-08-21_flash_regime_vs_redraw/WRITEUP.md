@@ -50,3 +50,11 @@ input by a band-crossing amount (≥0.10) on about a fifth of seeds, and by ≥0
 a thinking-off redraw pins ε to the hundredth on 94% of seeds. Since χ = ε·f(d)·σ(S), this is
 instability in the one authored quantity every downstream classification multiplies through —
 not a side effect. Fired: live still (the verdict sharpened against the author).
+
+**Addendum 2026-08-22 (b) — do the moves reach the outputs?** `delta_reach.py` →
+`delta_reach_2026-08-22.txt`. A |Δε| ≥ 0.10 move changes the four-seat type vector 73% (off
+floor) / 79% (on floor) / 81% (regime) / 91% (cross-model) of the time, verdict ~55%, h1 ~55%: ε is
+not damped downstream. But with |Δε| < 0.10 the thinking-on floor still flips the type vector
+44% vs 19% thinking-off — thinking destabilizes the whole authored surface, ε being the largest
+single lever. The engine's own redraw churn with ε pinned (thinking-off, |Δε| < 0.10): type vector
+19%, verdict 8%, h1 13% — the CLASSIFICATION floor, distinct from the ε floor.

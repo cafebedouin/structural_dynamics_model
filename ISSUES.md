@@ -17869,6 +17869,11 @@ error bars, and which of the September new-family spends are worth making.
 quantity every classification multiplies through (χ = ε·f(d)·σ). The red-verdict rate doubles
 (6.5–6.8% → 13.4–14.3%) in both thinking-on draws.
 
+**(b) answered 2026-08-22 (WRITEUP addendum b):** a |Δε| ≥ 0.10 move changes the seat-type vector 73–91% of the
+time — not damped; AND with |Δε| < 0.10 the thinking-on floor still flips the type vector 44% vs 19%
+thinking-off, so the instability is broader than ε. Classification floor with ε pinned: type vector 19%,
+verdict 8%, h1 13%.
+
 **Open.** (a) Is it general? The stealth (reasoning mandatory) and kimi legs are thinking-on with
 no off arm; nemotron thinking-on vs its thinking-off leg (free) and a kimi-off leg (k2.6 accepts
 `thinking:{type:disabled}`, INVESTIGATIONS 2026-08-21; ~$25–35) are the two cheap generality
