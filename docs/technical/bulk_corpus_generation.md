@@ -245,6 +245,18 @@ OpenRouter's OpenAI-compatible `/chat/completions`. What a future run needs:
   for a single healthy provider before a run; the `stakeholders` omission seen on Flash also
   appears on nemotron — expect ladder reruns.
 
+## 9. Pending generation-regime changes (operator ruling 2026-08-22)
+
+Fixing generation/evaluation is the task; comparability serves it. `prompt_commit` /
+`schema_commit` in every story's provenance make regime drift TRACKABLE, so edits here are
+allowed mid-series — but **never while a driver is running** (drivers re-read the prompt file per
+attempt, which would make a leg mixed-regime). Log each change with its motivating witness:
+
+- [ ] **Prompt: name the StakeholderRole enum at every "victim" site** (e.g. "at least one
+  victim (stakeholder role: `payer`)"). Witness: 301 `victim` role values across 291 nemotron
+  draws, the only out-of-enum value (KNOWN_STATE 2026-08-22). Held until stealth #1 and nemotron
+  exit. Repair already remaps `victim→payer`, so this is about authoring fidelity, not rescue.
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,

@@ -38,11 +38,27 @@ PERSPECTIVE_ALLOWED = {
     "exit_options", "spatial_scope", "label", "comment",
 }
 MEASUREMENT_ALLOWED = {"metric", "time_point", "value", "id_override"}
+# FALLBACK only — when the caller passes the schema, the allow-list is DERIVED from its
+# top-level `properties` (single source). This static copy rotted once: it was last edited
+# 2026-06-02, the stakeholder layer landed 2026-06-07/10, and for 2.5 months repair_story
+# silently deleted `stakeholders`/`gain_flow`/`fixing_cost`/`six_questions`/`coercion_grid`
+# from EVERY story that entered repair for ANY reason — surfacing downstream as the
+# misleading "'stakeholders' is a required property" (witnessed 2026-08-22 on the
+# nemotron leg's persisted raw responses: 291 draws, all carrying a stakeholders array).
 TOP_LEVEL_ALLOWED = {
     "header", "base_properties", "perspectives", "omegas",
     "measurements", "interval", "commentary", "boltzmann",
     "network", "directionality_overrides", "uke_scope", "cs_structure",
+    "stakeholders", "gain_flow", "fixing_cost", "six_questions", "coercion_grid",
+    "provenance",
 }
+
+# Stakeholder `role` enum drift. The prompt says "victim" ten times (base_properties.victims,
+# "must name at least one victim") and names the role enum once, so prose-following models
+# (Flash, Nemotron; not Claude/Kimi) author role="victim". The schema defines payer = "bears
+# its costs" — the same seat. Mapped like AXIOM_STATUS_REMAP: known drift coerced and COUNTED;
+# any other out-of-enum role is left for validation to reject loudly.
+STAKEHOLDER_ROLE_REMAP = {"victim": "payer"}
 BASE_PROPS_ALLOWED = {
     "extractiveness", "suppression", "theater_ratio", "claimed_type",
     "human_readable", "topic_domain", "requires_active_enforcement",
@@ -129,10 +145,28 @@ def repair_story(story, schema=None, stats=None):
     if not isinstance(story, dict):
         return story
 
-    # Strip unknown top-level fields
-    for k in list(story.keys()):
-        if k not in TOP_LEVEL_ALLOWED:
-            del story[k]
+    # Strip unknown top-level fields — allow-list derived from the schema when available.
+    allowed = TOP_LEVEL_ALLOWED | set((schema or {}).get("properties", {}).keys())
+    dropped = [k for k in story if k not in allowed]
+    for k in dropped:
+        del story[k]
+    if dropped:
+        import sys
+        print(f"[story_repair] dropped top-level key(s) {dropped} (not in schema)", file=sys.stderr)
+        if stats is not None:
+            stats.setdefault("top_level_dropped", []).extend(dropped)
+
+    # Stakeholder role drift (see STAKEHOLDER_ROLE_REMAP).
+    sk = story.get("stakeholders")
+    if isinstance(sk, list):
+        for item in sk:
+            if not isinstance(item, dict):
+                continue
+            for field in ("role", "secondary_role"):   # both carry the StakeholderRole enum
+                if item.get(field) in STAKEHOLDER_ROLE_REMAP:
+                    item[field] = STAKEHOLDER_ROLE_REMAP[item[field]]
+                    if stats is not None:
+                        stats["stakeholder_role_remapped"] = stats.get("stakeholder_role_remapped", 0) + 1
 
     c = story.get("commentary")
     if isinstance(c, dict):

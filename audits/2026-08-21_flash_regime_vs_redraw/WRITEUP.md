@@ -23,7 +23,7 @@ Cost (batch halves of the driver's interactive figure): ≈ $17 / $17 / $15 / $1
 
 ## Three incidental findings, each witnessed in the run logs
 
-1. **Flash omits the schema-required `stakeholders` field in roughly a third of draws** under the 685ed7cf schema (the gate landed `becd0f87`, 2026-06-19, AFTER the June Flash leg). Sonnet (1001/1005) and kimi (1005/1005) passed the same schema. A Gemini-specific prompt-robustness defect; the legs top out at 94–99% because of it.
+1. **[CORRECTED 2026-08-22 — see KNOWN_STATE 2026-08-22: the field was present; `story_repair.py` deleted it. The figures below are repair artifacts, not omission rates.]** ~~Flash omits the schema-required `stakeholders` field in roughly a third of draws~~ under the 685ed7cf schema (the gate landed `becd0f87`, 2026-06-19, AFTER the June Flash leg). Sonnet (1001/1005) and kimi (1005/1005) passed the same schema. A Gemini-specific prompt-robustness defect; the legs top out at 94–99% because of it.
 2. **Attempt 2 of both first passes errored 100% at the batch layer** (272/272, 451/451) and attempt 3 recovered ~40%; the driver recorded no error text. `run_no_scope_gemini` now prints `batch row error: …` (`ef897ae9`); no recurrence in the four reruns since.
 3. **Thinking-on Flash is not just noisier — its authored ε is nearly a coin-flip across draws** (40% exact agreement vs 81% thinking-off), which bears directly on the ε-rail reading (OQ-78): a rail measured on a thinking-on leg is measured against a much wider per-story spread.
 

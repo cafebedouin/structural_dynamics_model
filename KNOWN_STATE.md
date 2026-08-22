@@ -45,6 +45,40 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-22 — [correction-key] "Flash omits `stakeholders`" was FALSE — `story_repair.py` had been deleting the whole stakeholder surface from every repaired story since 2026-06-07; fixed + witnessed
+**Files:** python/story_repair.py, agent/generate_kernel_corpus.py, prompts/constraint_story_generation_prompt_json.md, schemas/constraint_story_schema.json, prolog/testsets_flash2/, prolog/testsets_flash3/, prolog/testsets_flash_think/, prolog/testsets_flash_think2/, prolog/testsets_nemotron/, audits/2026-08-21_flash_regime_vs_redraw/WRITEUP.md, docs/technical/bulk_corpus_generation.md
+**Tier:** correction-key
+
+**Corrects the 2026-08-21 Gemini entry (item 2) and the regime-vs-redraw WRITEUP (incidental finding 1).**
+The nemotron leg is the first whose raw responses were persisted, and they show the failing draws
+DO carry `stakeholders` (290/291, 7–10 items). Mechanism: `repair_story`'s static
+`TOP_LEVEL_ALLOWED` (last edited 2026-06-02) never gained the stakeholder layer (2026-06-07/10),
+so any story entering repair for ANY reason lost `stakeholders`, `gain_flow`, `fixing_cost`,
+`six_questions`, `coercion_grid`; the `becd0f87` conditional gate then reported "required
+property" — the wrong defect, which is why two legs read as model omission. Trigger: prose-
+following models author role=`victim` (schema enum has `payer` = "bears its costs"; the prompt
+says "victim" 10×, names the enum once); `victim` is the ONLY out-of-enum role value (301 uses).
+Claude/Kimi follow the enum, Flash/Nemotron the prose.
+**Fix (this entry):** allow-list derived from the schema's top-level `properties` (static set kept
+as fallback, now complete); `STAKEHOLDER_ROLE_REMAP = {victim: payer}` on `role` and
+`secondary_role`, counted in `stats` like `AXIOM_STATUS_REMAP`; every top-level drop printed.
+**Witness:** re-processing the 291 persisted nemotron failures: 186 validate under the fix, 0/80
+under the stale code (control); residue is genuine item drift (negative `time_horizon`, missing
+`spatial_scope`, `organizational` scope). **Exposure in committed legs (census of json_*):**
+post-gate legs lack `stakeholders` in 0–18 stories each, none with parties (legitimate); the
+June `testsets_haiku` (465/960) and `testsets_flash` (212/960) legs are stakeholder-sparse
+because they PREDATE the gate — carry that when reading `h1_stakeholder` on them.
+**Consequences:** flash2/3/flash_think/flash_think2 and nemotron are short stories the engine
+would have accepted (recoverable by ladder rerun; nemotron also via `--from-responses`, no
+spend). The per-model "~35% failure" figures in the 2026-08-21 entries are repair artifacts,
+NOT prompt-robustness results; the real model-side residue is the `victim` vocabulary.
+**Pending regime change (operator ruling 2026-08-22: fixing generation beats comparability;
+drift is tracked by `prompt_commit`):** name the enum at the prompt's "victim" sites — held
+until the in-flight stealth/nemotron drivers exit (they re-read the prompt per attempt). Logged
+in runbook §9.
+
+---
+
 ## 2026-08-21 — [landed] HANDOFF: two OpenRouter generators IN FLIGHT at session end (stealth #1, nemotron) — resume steps for a cold instance
 **Files:** agent/run_no_scope_stealth.py, prolog/testsets_stealth/, prolog/testsets_nemotron/, json_stealth/, json_nemotron/, prolog/beta_processed_stealth.txt, prolog/beta_processed_nemotron.txt, python/module_boundary_check.py, python/shared/corpus_legs.py, python/corpus_census_check.py, docs/technical/bulk_corpus_generation.md, audits/INVESTIGATIONS.md
 **Tier:** landed
