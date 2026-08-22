@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "e86648ba-0672-4b7c-9dd0-c581cb589a76"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.42,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Whitepaper Electronic Cash Telos Binding",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "low_value_transactors"
+    ],
+    "victims": [
+      "node_operators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    }
+  ],
+  "omegas": [
+    {
+      "id": "whitepaper_authority_scope",
+      "question": "Does the whitepaper's title and introductory framing constitute a permanently binding design constraint, or one negotiable goal among many?",
+      "resolution_mechanism": "Historical and textual analysis of Satoshi's subsequent communications and the whitepaper's internal hierarchy of goals; sociological study of open-source protocol governance norms.",
+      "impact": "If the whitepaper is merely one input, the cash telos loses binding force and the constraint reclassifies toward a rope or piton of community convention; if binding, the extraction from node operators is framed as necessary cost of a legitimate mandate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of whitepaper textual authority"
+    },
+    {
+      "id": "node_operator_cost_centralization",
+      "question": "Does expanded block capacity drive full-node operation into specialized data centers, effectively centralizing validation?",
+      "resolution_mechanism": "Empirical measurement of node count, node hardware requirements, and geographic or network distribution across block size changes.",
+      "impact": "If centralization occurs, the coordination function (decentralized cash) is undermined and the constraint shifts toward snare or piton; if node operation remains distributed, the cost is genuine coordination overhead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether big-block costs centralize node operation"
+    },
+    {
+      "id": "merchant_adoption_verification",
+      "question": "Has the electronic cash arrangement achieved sufficient merchant adoption to validate the coordination benefit claimed for low-value transactors?",
+      "resolution_mechanism": "Payment processor volume data, merchant acceptance surveys, and on-chain transaction pattern analysis distinguishing payments from speculation or remittance.",
+      "impact": "Low merchant adoption would indicate the coordination story is cover for a speculative or transfer arrangement, raising extraction and theater metrics; high adoption supports the tangled_rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Merchant adoption as coordination validation"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "payment_processors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Enable merchant acceptance of Bitcoin payments and benefit from high transaction volume enabled by low on-chain fees. Their business models depend on the protocol maintaining sufficient throughput for small payments, and they are constrained by consensus rules they do not control."
+    },
+    {
+      "name": "low_value_transactors",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use the system for everyday purchases, remittances, and small payments that require low fees to be economically viable. They lack influence over protocol development and depend on the cash-telos arrangement for access."
+    },
+    {
+      "name": "node_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run full validating nodes to secure the network and verify large blocks. They bear increased storage, bandwidth, and processing costs from expanded block capacity, and cannot unilaterally reduce those costs without abandoning the chain."
+    },
+    {
+      "name": "cash_protocol_maintainers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates and developers who enforce the whitepaper's electronic cash purpose through protocol upgrades, consensus coordination, and social norm-setting. They administer the big-block roadmap and mobilize community support for the cash telos."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a peer-to-peer electronic cash system enabling everyday transactions without trusted third parties, prioritizing low fees and merchant payment adoption through expanded on-chain capacity.",
+    "transfer_function": "Moves the infrastructure cost of transaction validation and ledger storage from transactors (who pay low fees) to node operators (who bear increased bandwidth, storage, and processing costs), while payment processors capture transaction volume.",
+    "absent_voices": "Store-of-value proponents prioritizing full-node decentralization and small-block security models; Satoshi Nakamoto, whose 2011 disappearance removed any clarifying authority; economically disadvantaged node operators in bandwidth-constrained regions who are underrepresented in protocol governance.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the cash-telos constraint vanished, protocol development would abandon big-block prioritization, node operating costs would compress, payment processors would lose a dedicated low-fee rail, and merchant adoption strategies would shift to layer-two or alternative chains.",
+    "founding_problem": "The need for trusted third parties in online payments creates friction, censorship risk, and reversibility; the whitepaper proposed a peer-to-peer electronic cash system to solve this.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Cypherpunk literature and early Bitcoin forum posts corroborate the electronic cash goal from outside the current payment-processor beneficiary set; however, economists and distributed-systems researchers contest whether on-chain scaling at 8MB+ sustainably solves it without trading off decentralization, and no neutral authority corroborates that the founding problem remains unsolved by alternatives."
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the electronic_cash_reading of the bitcoin_whitepaper_purpose kernel. Under this reading, the whitepaper's title â 'Bitcoin: A Peer-to-Peer Electronic Cash System' â constitutes a binding design commitment that prioritizes everyday transactional use, low fees, and merchant adoption, operationalized through expanded on-chain capacity (8MB+ blocks). The standing arrangement under contest is the protocol governance and technical structure that enforces this cash telos. The arrangement coordinates genuine electronic cash payments but asymmetrically concentrates infrastructure costs on node operators, who must store and propagate larger blocks. The reading is one of three contested readings of the same whitepaper kernel; it coexists with the store_of_value_reading and the nakamoto_oracle_opacity reading in Bitcoin's ideological discourse.",
+    "key_agents": [
+      "payment_processors: Primary beneficiary (organized/constrained) â capture volume from low-fee on-chain transactions",
+      "low_value_transactors: Primary beneficiary (powerless/constrained) â depend on cheap transactions for everyday use",
+      "node_operators: Primary payer (moderate/constrained) â bear storage and bandwidth costs of expanded blocks",
+      "cash_protocol_maintainers: Agenda setter (organized/mobile) â enforce the cash telos through protocol upgrades and social coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58) is moderate-to-high because the cost of the coordination is borne by a distinct, narrower set of agents (node operators) than those who benefit (transactors and payment processors). Suppression (0.42) reflects protocol-level enforcement of block validity rules and social norms that marginalize small-block alternatives within this reading's community, but it stops short of total exclusion because fork exits remain possible. Theater ratio (0.30) captures the performative element of 'Satoshi's vision' rhetoric without dismissing the real payment coordination that occurs. Accessibility collapse (0.50) is moderate: alternatives like Lightning Network or other chains exist, but within the whitepaper-committed framework they are treated as non-compliant workarounds. Resistance (0.55) reflects ongoing contestation from small-block decentralization advocates and node operators who resist cost imposition.",
+    "perspectival_gap": "From the payment processor and low-value transactor seats, the constraint is necessary coordination that honors the founding purpose; from the node operator seat, it is an asymmetric cost imposition that threatens decentralization. The agenda setter sees a binding mandate from the whitepaper; the payer sees hardware and bandwidth bills. The engine computes this divergence from the structural data â the same protocol rules produce beneficiary-side rope-like experience and payer-side extraction.",
+    "directionality_logic": "Payment processors and low_value_transactors are structural beneficiaries (d near 0.0) because the constraint subsidizes their transaction volume and usability. Node operators are structural payers (d near 1.0) because they absorb the infrastructure costs without direct compensation. Cash protocol maintainers sit near the beneficiary end but with organizational mobility. The directionality derivation from beneficiary/victim declarations plus exit modulation places node operators at high d due to constrained exit â running a node is identity-fused for many and technically costly to exit.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling by separating the genuine coordination function (peer-to-peer electronic cash) from the asymmetric cost transfer (node operator burden). A purely coordination reading would ignore the node operator costs; a purely extraction reading would ignore the merchant and transactor benefits. The tangled_rope classification is warranted only because both elements are structurally present and linked by the same protocol rule.",
+    "kernel_context": "This constraint is the electronic_cash_reading of the bitcoin_whitepaper_purpose kernel. Sibling readings include store_of_value_reading (which subordinates on-chain capacity to full-node decentralization) and nakamoto_oracle_opacity (which treats Satoshi's disappearance as eliminating authoritative interpretation of the whitepaper). The reading asserts the whitepaper title's cash telos is binding and operationalizes it through expanded block capacity."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "whitepaper_cash_telos",
+    "drift_state": {
+      "moment": "contemporary_protocol_governance",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "store_of_value_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electronic_cash_telos_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "low_fee_merchant_adoption_priority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading",
+      "bitcoin_whitepaper_purpose__nakamoto_oracle_opacity"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the bitcoin_whitepaper_purpose kernel. The kernel decomposes into three structurally distinct constraints because the whitepaper's purpose is contested: electronic_cash_reading (large blocks, low fees), store_of_value_reading (small blocks, decentralization), and nakamoto_oracle_opacity (no authoritative interpretation). Each reading has distinct beneficiaries, victims, and epsilon values."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

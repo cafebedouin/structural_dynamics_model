@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "correct_latin__discontinuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cl_discontinuity",
+    "story_uid": "28c9b9c8-52fc-47f1-91a7-270e7337dd22"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Classical Latin Discontinuity Reading",
+    "topic_domain": "historical_linguistics/philology/intellectual_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reconstructive_philologists",
+      "classical_text_editors"
+    ],
+    "victims": [
+      "medieval_latinists",
+      "ecclesiastical_institutions"
+    ],
+    "vindicated_propositions": [
+      "classical_supremacy_doctrine",
+      "textual_reconstruction_methodology"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 500
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_location",
+      "question": "This constraint is the discontinuity_reading of kernel correct_latin; sibling readings (continuity_reading, hybrid_reading) instantiate different constraints with different structural profiles. What would change if a sibling reading were substituted?",
+      "resolution_mechanism": "Compare epsilon, beneficiary/victim structures, and directionality profiles across the constraint family.",
+      "impact": "continuity_reading would empty the victim set and reduce epsilon toward rope; hybrid_reading would moderate epsilon and convert full victims to partial payers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural delta between sibling readings of the correct_latin kernel."
+    },
+    {
+      "id": "rupture_empirical_status",
+      "question": "Is the rupture between Classical and medieval Latin an empirical linguistic fact or an ideological construction of the humanist and nineteenth-century philological tradition?",
+      "resolution_mechanism": "Comparative sociolinguistic analysis of documentary evidence across the 1st-8th centuries CE to determine register continuity versus elite literary rupture.",
+      "impact": "If continuity is established, the constraint's foundational premise is falsified and its authority collapses to mere institutional preference; if rupture is real, the constraint retains empirical grounding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the classical-medieval rupture is empirical or ideological."
+    },
+    {
+      "id": "medieval_legitimacy_exclusion",
+      "question": "Does the exclusion of medieval Latin forms from the legitimate usage set serve a necessary coordination function for classical textual criticism, or is it superfluous to the editorial task?",
+      "resolution_mechanism": "Comparative analysis of editorial methodologies: can classical texts be emended without delegitimizing medieval Latin as a whole?",
+      "impact": "If delegitimization is unnecessary for the coordination function, the measured extraction is pure overhead; if necessary, part of the extraction is the cost of the coordination itself.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether coordination and extraction are structurally separable in this reading."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the suppression of medieval Latin alternatives structural (enforced by editorial boards, hiring committees, and funding agencies) or internalized (scholars have absorbed the corruption narrative as self-evident)?",
+      "resolution_mechanism": "Track whether medieval Latinists challenge the narrative in print; if they self-censor or frame their work apologetically, suppression is internalized.",
+      "impact": "If internalized, effective suppression exceeds the structural measure; the constraint operates even where no explicit enforcement is visible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized suppression mechanism in philological ideology."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The correct_latin kernel concerns what counts as authoritative Latin. The discontinuity_reading claims that legitimate Latin is identical to the Classical form preserved in ancient texts, declares medieval Latin a corrupt deviation, and grounds correction in external reconstruction from textual symbols rather than living practice. This constraint coordinates classical scholars around a single standard but extracts legitimacy from medieval Latinists and ecclesiastical users by defining their language as error. As a kernel reading, it is one of three structurally distinct constraints; the continuity and hybrid readings would produce different epsilon values and victim sets.",
+    "key_agents": [
+      "reconstructive_philologists (agenda_setter/institutional/constrained): administer the standard of correct Latin and collect professional authority from its monopoly",
+      "medieval_latinists (payer/moderate/identity_locked): bear the delegitimization of their object of study and perpetual framing of medieval forms as error",
+      "ecclesiastical_institutions (payer/institutional/constrained): maintain liturgical and canonical traditions that the reading classifies as linguistically corrupt",
+      "classical_text_editors (beneficiary/organized/constrained): produce critical editions justified by the exclusive standard, benefiting from a clear editorial license",
+      "sociolinguistic_observers (observer/analytical/analytical): note that the rupture is an ideological construction and that Latin never ceased being spoken"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.25 to 0.72 over the interval as philology professionalizes and the discontinuity narrative hardens into disciplinary gatekeeping. Suppression is high (0.75) because the constraint persists only through active enforcement: peer review that rejects medievalist frameworks, hiring criteria that privilege classical reconstruction, and editorial standards that treat post-classical forms as corruption. Theater_ratio climbs to 0.55 because an increasing share of philological activity is performance of purity rather than substantive textual improvement. Accessibility_collapse is high (0.70) because once the discontinuity framework is accepted, medieval Latin alternatives become cognitively invisible as legitimate options. Resistance is moderate (0.60) because medievalists and sociolinguists have contested the narrative since the late twentieth century, but institutional authority remains with the reconstructors.",
+    "directionality_logic": "Reconstructive philologists and classical text editors are beneficiaries with constrained or organized exit; the engine derives low directionality for these seats, dampening effective extraction into subsidy or mild coordination cost. Medieval latinists are victims with identity_locked exit, pushing directionality toward the full-target end and amplifying effective extraction. Ecclesiastical institutions are victims with constrained exit at institutional power and global scope, yielding high directionality and significant extraction, though slightly less than identity_locked individuals. The sociolinguistic observer seat is analytical and neither pays nor benefits.",
+    "perspectival_gap": "The agenda_setter and beneficiary seats experience the constraint as necessary coordination: without a stable Classical standard, textual criticism would fragment into arbitrary subjectivity. The payer seats experience it as enforced extraction: their language is declared corrupt, their research framed as error studies, and their identity fused to an object the constraint systematically devalues. The engine computes this divergence from the same structural data; the authored claim (tangled_rope) does not adjudicate the divergence but records that both coordination and extraction are structurally present.",
+    "mandatrophy_analysis": "Without the mandatrophy/resistance axes, this constraint could be misread as a rope if one only looked at the genuine coordination around textual standards, or as a snare if one only looked at the delegitimization of medieval Latin. The temporal measurements show extraction accumulating over centuries while the founding problem (uncertainty in classical readings) became increasingly solvable without the discontinuity premise, pointing toward coordination-to-extraction drift rather than pure extraction from inception. The theater_ratio above 0.5 signals that maintenance has become partly performative, but the coordinated editorial function remains real enough to prevent a pure snare classification.",
+    "kernel_context": "Kernel correct_latin; reading discontinuity_reading (D1: rupture, external reconstruction); siblings continuity_reading (living practice) and hybrid_reading (partial continuity with targeted reform). This reading forecloses both siblings at the axiomatic level by denying any legitimacy to medieval transmission."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_textual_authority",
+    "drift_state": {
+      "moment": "contemporary_linguistics_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "medieval_corruption_axiom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "textual_purity_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "reconstructive_philologists",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Administer the standards of correct Latin through textual criticism, emendation, and editorial practice. Their professional authority, career advancement, and institutional funding depend on the exclusive legitimacy of the Classical form and the delegitimization of medieval deviation."
+    },
+    {
+      "name": "medieval_latinists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Study and teach medieval Latin forms, which the discontinuity reading systematically classifies as corrupt deviations from the Classical standard. Their research is perpetually framed as the study of error or decay, requiring defensive justification, and their scholarly identity is constituted through the very forms the constraint labels illegitimate."
+    },
+    {
+      "name": "ecclesiastical_institutions",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain liturgical, legal, and administrative traditions in medieval and early modern Latin. The discontinuity reading pressures these institutions to treat their own linguistic heritage as defective and to submit to reconstructive philological authority, with reform toward Classical Latin being costly and identity-altering."
+    },
+    {
+      "name": "classical_text_editors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Produce critical editions based on the assumption that the Classical form is the only correct Latin and that medieval manuscripts are corrupt witnesses. They benefit from a clear standard that justifies editorial intervention and professional standing."
+    },
+    {
+      "name": "sociolinguistic_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Observe that Latin never ceased being spoken and that the rupture between Classical and medieval forms is a post-hoc ideological construction rather than a sociolinguistic reality. They note the constraint serves the authority of the reconstructors at the expense of historical continuity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a stable, uniform standard for reading, editing, and emending ancient Latin texts across generations of scholars, solving the problem of how to establish consistent readings when manuscripts disagree.",
+    "transfer_function": "Moves authority over Latin correctness from medieval practitioners and living tradition to the corpus of ancient texts and the philologists who reconstruct them; simultaneously moves scholarly status and institutional resources from medievalists to classical reconstructors.",
+    "absent_voices": "Vernacular and non-literary Latin users of the medieval period; speakers of Romance vernaculars whose linguistic continuity with Latin is denied by the rupture narrative; medieval copyists regarded as incompetent witnesses rather than legitimate language users.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If the discontinuity reading vanished, classical philology would lose its foundational distinction between pure and corrupt Latin, forcing a methodological rearrangement; however, textual editing would still require some standard, so the world would rearrange around an alternative standard rather than remain unchanged.",
+    "founding_problem": "The apparent morphological, syntactic, and lexical divergence of post-classical texts from ancient models created uncertainty about how to establish correct readings in classical authors.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Classical philologists attest the problem is live, citing manuscript corruption. Sociolinguists and medievalists attest the divergence was natural evolution and the 'problem' was manufactured by humanist ideology; corroboration from outside the beneficiary set supports the dead/contested reading."
+  },
+  "gain_flow": "reconstructive_philologists",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The correct_latin kernel decomposes into three structurally distinct constraints: continuity_reading (rope-like, low extraction, no victims), discontinuity_reading (tangled_rope, high extraction, medievalists as victims), and hybrid_reading (intermediate epsilon, partial victims). Each reading has a stable epsilon and its own stakeholder structure; they are linked as a constraint family but are not the same constraint viewed from different angles."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

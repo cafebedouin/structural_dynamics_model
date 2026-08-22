@@ -1,0 +1,279 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "leg_health_prop",
+    "story_uid": "73f1c403-a326-4ed3-9d14-a2f1eaa91b43"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proportionality-Based Legitimacy for Public Health Interventions",
+    "topic_domain": "public health policy / medical ethics / constitutional law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "communities_at_risk"
+    ],
+    "victims": [
+      "individuals_subject_to_intervention"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is the proportionality_reading of the kernel legitimate_health_intervention. How do sibling readings (public_health_primary, bodily_autonomy_primary) alter the structural classification?",
+      "resolution_mechanism": "Comparative analysis across the three authored constraint stories for this kernel; examining victim-set variation and epsilon scaling.",
+      "impact": "If the proportionality reading is the only one with conditional victim sets, it confirms the kernel's inherent framing-sensitivity; if all readings converge on similar victim structures, the kernel may be a single constraint mislabeled as three.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: position of this reading within the contested kernel"
+    },
+    {
+      "id": "disease_severity_extraction_variation",
+      "question": "Does the constraint's effective extractiveness genuinely vary with disease transmissibility and case-fatality rate, or is proportionality invoked uniformly regardless of empirical threat level?",
+      "resolution_mechanism": "Cross-jurisdictional comparative review of proportionality jurisprudence: measure intervention severity against empirical CFR/R0 for the disease at issue in each case.",
+      "impact": "If proportionality is applied uniformly, the conditional structure is theater and extraction is higher than authored; if it genuinely scales, the authored epsilon reflects the constraint's intended operation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether disease characteristics actually modulate extraction or serve as post-hoc rationalization"
+    },
+    {
+      "id": "proportionality_review_efficacy",
+      "question": "Does proportionality review function as a genuine constraint on state power, or as a legitimizing veneer that rubber-stamps predetermined public health measures?",
+      "resolution_mechanism": "Quantitative analysis of judicial outcomes: rate of intervention invalidation on proportionality grounds, controlling for disease severity and political context.",
+      "impact": "If review is largely performative, theater_ratio and suppression rise toward snare territory; if genuinely constraining, the coordination function dominates and extraction is bounded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality limits extraction or legitimizes it"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.65
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the proportionality_reading of the legitimate_health_intervention kernel: a formalized legal doctrine holding that public health coercion is legitimate only when intervention severity is proportionate to disease threat level, with individual autonomy and population harm both weighted by disease characteristics (transmissibility, case-fatality rate). The constraint operates as a conditional authorization structureâcoercion is permitted and enforced when empirical threat crosses a judicially reviewed threshold, but the victim set and epsilon scale with the severity of the disease in question. The standing arrangement under contest is the proportionality framework as it actually functions in constitutional and public health law, not the idealized version.",
+    "key_agents": [
+      "public_health_authorities (agenda_setter, institutional/constrained): design interventions and construct the evidentiary threat profile that proportionality review evaluates",
+      "constitutional_courts (agenda_setter, institutional/analytical): interpret and apply proportionality tests, authorizing or invalidating coercive measures",
+      "individuals_subject_to_intervention (payer, moderate/constrained): bear the autonomy costs of quarantine, mandatory vaccination, or other mandates permitted by proportionality findings",
+      "communities_at_risk (beneficiary, moderate/constrained): receive protective benefit from disease-control measures whose legitimacy is secured through proportionality review",
+      "civil_liberties_advocates (observer, organized/mobile): challenge proportionality determinations and argue that review has become performative during emergencies"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.55 (mid-range, rising over the interval) because proportionality review authorizes real autonomy extraction from individuals subject to intervention, but the amount of extraction is bounded by the threat-level condition. Suppression is 0.60 because the constraint's operation depends on enforcement of mandates against non-compliant individuals. Theater ratio rises to 0.30 because during emergencies judicial deference often converts proportionality review into a legitimizing ritual rather than a genuine constraint. Resistance is high (0.70) because anti-mandate movements and civil liberties groups actively contest the framework. Accessibility collapse is moderate (0.45) because the pure-autonomy and pure-public-health alternatives remain politically visible. Measurements share one time grid to prevent misaligned drift dating.",
+    "perspectival_gap": "The agenda-setter seats (public health authorities, courts) experience the constraint as a necessary coordination mechanism that prevents arbitrary state action while permitting protective measures. The payer seat (individuals subject to intervention) experiences the same structure as the legal mechanism that licenses overriding their bodily autonomy. The beneficiary seat (communities at risk) experiences it as protective subsidy. The engine computes these divergent seat-level classifications from the same structural data.",
+    "directionality_logic": "Communities_at_risk occupy the beneficiary end of the directionality spectrum: the constraint subsidizes their protection by authorizing population-level interventions. Individuals_subject_to_intervention occupy the target end: their autonomy is the resource extracted when proportionality is satisfied. Public health authorities and courts sit near the beneficiary side as administrators who gain legitimacy and enforcement capacity from the framework. Civil liberties advocates sit near symmetric or mildly target-side as they bear the cost of contesting state action without directly receiving the coordination benefit.",
+    "mandatrophy_analysis": "Classifying this as a pure Rope would miss the real extraction of autonomy from mandated individuals. Classifying it as a pure Snare would miss the genuine coordination function: proportionality review solves the collective-action problem of establishing shared legitimacy standards for emergency coercion, preventing both paralysis and unlimited state power. Tangled Rope is the only category that preserves both the coordination role (beneficiaries exist, a real collective problem is solved) and the asymmetric extraction (victims exist, their autonomy is taken). The conditional structureâwhere victimhood and epsilon scale with disease severityâis what distinguishes this from a uniform extraction mechanism.",
+    "kernel_context": "This constraint is the proportionality_reading of kernel legitimate_health_intervention. Sibling readings are bodily_autonomy_primary (coercion never legitimate regardless of threat) and public_health_primary (coercion legitimate whenever population health is served). The proportionality reading mediates by making legitimacy conditional on disease severity, introducing a variable victim set and scalable epsilon. Disagreement is located on whether autonomy is an absolute side-constraint or a balanceable interest, and on whether disease characteristics are empirical inputs to a genuine test or post-hoc rationalizations."
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the kernel legitimate_health_intervention. The proportionality reading mediates between absolute autonomy and population-supremacy readings by making legitimacy conditional on disease severity. Each reading carries a distinct epsilon, victim structure, and directional profile; they form a constraint family linked through mutual affects_constraints edges."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design disease-control interventions and construct the epidemiological threat profile that courts evaluate under proportionality review. They must justify severity by citing transmissibility, case-fatality rate, and healthcare capacity. Their exit is constrained by legal mandates, political oversight, and the requirement to maintain institutional legitimacy."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review whether public health interventions satisfy proportionality tests: legitimate aim, suitability, necessity, and proportionality stricto sensu. Their rulings create binding precedents that determine which disease characteristics justify which intervention severities. They operate through interpretive tradition and legal reasoning, not empirical fieldwork."
+    },
+    {
+      "name": "individuals_subject_to_intervention",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are subjected to mandatory vaccination, quarantine, isolation, or movement restrictions when courts deem the intervention proportionate to disease threat. They may challenge measures in court or seek exemptions, but emergency procedures and judicial deference make successful exit rare during active outbreaks. Their autonomy is the direct cost of the proportionality authorization."
+    },
+    {
+      "name": "communities_at_risk",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive protective benefit from population-level disease control that proportionality review authorizes. Their elevated risk profile is the empirical input that raises the threat level and justifies overriding individual autonomy. They do not administer the constraint but depend on its output for reduced exposure."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Monitor proportionality jurisprudence and litigate or campaign against measures they judge disproportionate. They argue that emergency proportionality review has become a performative rubber stamp and that disease characteristics are manipulated to justify predetermined policies. They represent autonomy interests not captured by population-level risk calculus."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a shared legal framework for determining when state coercion in public health is legitimate, resolving coordination failure between the state's protective capacity and individual rights claims by setting a conditional threshold based on disease severity.",
+    "transfer_function": "Moves decisional authority over bodily autonomy from individuals to public health institutions and courts when empirical disease threat crosses a proportionality threshold; moves legal legitimacy from the judiciary to executive health agencies when courts defer to epidemiological assessments.",
+    "absent_voices": "Individuals who would refuse even demonstrably proportionate interventions on philosophical, religious, or bodily-integrity grounds are often excluded from the proportionality calculus once threat levels are established; future populations who bear the precedent cost of expanded emergency powers are not represented in the current review.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality framework vanished overnight, public health interventions would lose their dominant legitimacy architecture. States would face a binary choice between unchecked coercion (inviting mass resistance and legal chaos) and paralysis (abandoning population-level protection). The legal and political landscape of emergency powers would reorganize around either an autonomy-absolute or public-health-supremacy framing.",
+    "founding_problem": "How to legitimize necessary but coercive public health measures during infectious disease emergencies without authorizing unlimited state power over the body.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Constitutional courts and regional human rights tribunals attest to the need for limiting state power from outside the public health beneficiary set. Civil liberties organizations corroborate that unlimited emergency authority remains a live threat. Public health institutions self-assert the continued necessity of the problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_proportionality_review",
+    "drift_state": {
+      "moment": "post_covid_emergency_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_governs_health_intervention_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "disease_severity_scales_autonomy_weight",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

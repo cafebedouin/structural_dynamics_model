@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3f526124-1f4c-4e4e-9b99-02e2fe0c37da"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.18,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness Transmission â Competence Reading",
+    "topic_domain": "disaster risk management/institutional memory/civil defense",
+    "beneficiaries": [
+      "response_personnel",
+      "inspection_targets",
+      "protected_communities"
+    ],
+    "vindicated_propositions": [
+      "operational_rehearsal_hypothesis",
+      "institutional_memory_embodiment"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This is the competence reading of the preparedness_transmission kernel. It treats civil defense drills and inspections as a functioning coordination mechanism that maintains operational knowledge through generational turnover. Unlike the husk reading (memorial ritual) or hybrid reading (stratified decay), this reading asserts that inspectors recognize novel failure signatures and participants improvise effectively. The constraint coordinates inter-agency disaster response across time by re-validating capability through practice, keeping institutional memory embodied rather than documentary.",
+    "key_agents": [
+      "Civil defense authority (agenda_setter/institutional): designs, mandates, and evaluates drill regimes; bears administrative cost and gains validated institutional function.",
+      "Response personnel (beneficiary/moderate): participate in drills, pay with time and stress, gain validated adaptive competence and career-embedded capability.",
+      "Inspection targets (beneficiary/organized): agencies and facilities subject to readiness inspections; pay compliance burden, gain operational status and structured feedback.",
+      "Protected communities (beneficiary/powerless): populations in hazard zones receiving protective subsidy; indirect beneficiaries with trapped exit from hazard exposure.",
+      "Disaster researchers (observer/analytical): external analysts who evaluate whether drill regimes produce adaptive capacity or ritual compliance."
+    ],
+    "logic_rationale": "Metrics are authored descriptively for a well-functioning preparedness regime. Extractiveness is low-moderate (0.28) because the regime consumes real resources but returns validated competence. Suppression is moderate (0.35) because participation is institutionally mandated and alternatives such as decentralized or ad hoc preparedness are professionally marginalized. Theater ratio is low (0.22) because the competence reading asserts most drill activity is functional rehearsal rather than performance. Accessibility collapse is moderate-high (0.62) because once the premise that competence requires rehearsal is accepted, alternatives like documentation-only training conceptually collapse. Resistance is low (0.18) because participants in a functioning system perceive net benefit. Measurements track a flat-to-slightly-declining trajectory consistent with institutional optimization over the interval.",
+    "perspectival_gap": "The agenda-setter seat experiences the constraint as necessary institutional maintenance with symmetric costs and benefits. Response personnel experience it as professional development with biographical costs but net capability gain. Protected communities experience it as diffuse subsidy â protective capacity they do not directly pay for. The engine computes each seat's effective extraction from these structural positions; no seat is targeted for asymmetric extraction.",
+    "directionality_logic": "Civil defense authority sits near symmetric (d approx 0.5) â it both pays the cost of administering drills and benefits from validated institutional function. Response personnel and inspection targets are beneficiaries (low d) because they gain transferable competence and operational status. Protected communities are strong beneficiaries (very low d) receiving protective subsidy. Disaster researchers are analytical (analytical exit, neutral d). No agent is structurally targeted for extraction; the regime is symmetrically coordinative.",
+    "mandatrophy_analysis": "The R5 founding problem â that disaster response competence atrophies without physical rehearsal â is corroborated as live by independent operations research and disaster sociology. The problem the constraint was built to solve still exists, which prevents mandatrophy mislabeling. If the founding problem were dead and the regime persisted, it would compute as piton or snare; here the live founding problem supports the rope classification.",
+    "kernel_context": "This constraint is the competence reading of the preparedness_transmission kernel. The sibling readings are husk_reading (drills as hollowed memorial ritual) and hybrid_reading (stratified competence with engineering high and civilian coordination decayed). This reading instantiates the constraint as genuine live exercised knowledge; the structural delta is high adaptive capacity, novel signature recognition by inspectors, and effective improvisation under scenario variation."
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_transmission kernel decomposes into three structurally distinct constraints (competence_reading, husk_reading, hybrid_reading) because the same institutional practices (drills and inspections) admit divergent epsilon values depending on whether operational knowledge is live, hollowed, or stratified. This story links to its sibling readings as members of the same constraint family."
+  },
+  "omegas": [
+    {
+      "id": "competence_vs_ritual_ambiguity",
+      "question": "Is the observed drill performance genuinely adaptive competence, or theatrical performance that mimics competence under routine scenarios but would fail under novel stress?",
+      "resolution_mechanism": "Introduce unannounced scenario variations and measure improvisation quality; compare drill outcomes against real-world event performance data.",
+      "impact": "If performance is theatrical under novel stress, extractiveness and theater_ratio rise substantially, shifting classification toward tangled_rope or piton; if genuinely adaptive, the rope classification is sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical test of whether drill competence is adaptive or performative"
+    },
+    {
+      "id": "generational_transfer_efficacy",
+      "question": "Does each generation of personnel actually gain competence through drill participation, or does the regime merely filter for pre-existing aptitude while creating an appearance of training efficacy?",
+      "resolution_mechanism": "Longitudinal tracking of individual responder performance from entry through retirement, controlling for prior experience, comparing drilled versus non-drilled career paths.",
+      "impact": "If drills merely filter rather than build, the coordination function is hollow and the constraint extracts participation-time without returning competence, shifting toward snare or husk classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drills build competence or merely select for it"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is the competence reading of the preparedness_transmission kernel. The husk reading sees the same practices as hollowed ritual, and the hybrid reading sees stratified decay. Which structural features distinguish live competence from performative maintenance?",
+      "resolution_mechanism": "Cross-reading comparison of scenario improvisation rates, inspector cognitive load during evaluations, and post-drill knowledge-retention tests across jurisdictions.",
+      "impact": "The structural elements that distinguish this reading (improvisation, novel signature recognition, generational re-validation) are the empirical boundary between rope and piton/snare classifications for this kernel.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Conceptual boundary between competence and ritual readings"
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "civil_defense_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs, mandates, and evaluates drill and inspection regimes. Authority derives from statutory civil defense mandate and professional emergency management standards. Exit is constrained by legal obligation to maintain preparedness; cannot abandon the regime without statutory change."
+    },
+    {
+      "name": "response_personnel",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Participate in drills and inspections, exercising decision-making under simulated stress. Gain validated operational competence and adaptive capacity. Career path is embedded in civil defense; leaving means exiting the profession and the competence framework."
+    },
+    {
+      "name": "inspection_targets",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Agencies and facilities subject to readiness inspections. Receive structured feedback on preparedness gaps and resource priorities. Compliance is mandatory but yields validated operational status and allocation credibility within the civil defense system."
+    },
+    {
+      "name": "protected_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Populations in hazard zones who depend on competent emergency response. Do not directly participate in drills but are the ultimate beneficiaries of maintained response capability. Geographic and economic constraints make relocation difficult; they cannot opt out of civil defense coverage."
+    },
+    {
+      "name": "disaster_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study preparedness effectiveness across jurisdictions. Evaluate whether drill regimes produce adaptive capacity or ritual compliance. Their findings inform policy but do not determine institutional practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains operational competence across personnel turnover and institutional memory decay by requiring regular physical rehearsal of emergency procedures under variable scenarios, preventing skill atrophy and inter-agency coordination failure.",
+    "transfer_function": "Moves time, attention, and material resources from routine operations into validated readiness exercises; moves competence from experienced personnel to new generations through supervised practice and feedback.",
+    "absent_voices": "Communities that have never experienced disaster and therefore discount preparedness value; personnel who have left the profession and could attest to skill atrophy outside the drill regime; alternative preparedness models such as community-led decentralized response that are not formally recognized in the institutional framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill and inspection regime vanished overnight, operational competence would decay within one personnel turnover cycle, response coordination would fragment, and institutional memory would shift from embodied practice to inert documentation. The civil defense system would rearrange around ad hoc capacity or experience catastrophic failure in the next major event.",
+    "founding_problem": "Disaster response competence cannot be maintained by documentation alone; without regular physical rehearsal, decision-making under uncertainty atrophies and inter-agency coordination fails during crisis.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent disaster sociology research and military operations research attest that skill degradation occurs without rehearsal; however, these researchers sit outside the benefiting civil defense bureaucracy and note that drill design quality, not mere frequency, determines whether the founding problem is actually addressed."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_practice_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "operational_knowledge_requires_rehearsal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_validated_through_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "4576d2f7-d677-43a3-ae4b-91526cbf9a73"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Primary Liability Reading",
+    "topic_domain": "legal/regulatory/technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deployer_entities"
+    ],
+    "victims": [
+      "technology_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "technology_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Create underlying AI models, software libraries, or general-purpose tools that may be deployed by others. Under this liability reading, they face primary tort and regulatory liability for harms arising from downstream deployment, regardless of whether they control the deployment context. They must carry insurance, invest in preemptive safety auditing, or absorb damages. Exit is constrained because liability attaches to the act of creation itself, which cannot be easily relocated or contractually waived against public policy."
+    },
+    {
+      "name": "deployer_entities",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Deploy technology developed by others into specific contexts and user-facing applications. Under developer-primary liability, they externalize liability risk to the creators of the underlying capability, even though they control the deployment environment, user interaction, and fine-tuning. They benefit from lower insurance costs and reduced direct exposure to tort claims while retaining deployment discretion."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Draft and enforce liability frameworks for technology governance. They assign primary liability to developers on the theory that upstream control over model architecture and training data is the most efficient locus for safety investment. They maintain the rule through enforcement actions, standards-setting, and statutory updates."
+    },
+    {
+      "name": "open_source_developers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individual or small-team creators of open-source tools who lack legal resources to defend against liability claims and are structurally absent from regulatory drafting processes, yet their creations are swept into developer-liability regimes."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Assigns responsibility for technology-related harm to the party that created the underlying capability, theoretically incentivizing safer design and clarifying who must answer for defects.",
+    "transfer_function": "Moves liability risk and compliance cost from deployers (who control deployment context) to developers (who created the capability), allowing deployers to externalize downside risk.",
+    "absent_voices": "Open-source developers and individual toolmakers are structurally excluded from regulatory drafting; deployers are present but argue for alternative allocations; end-users harmed by deployments are heard through tort plaintiffs but do not shape the upstream liability assignment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If developer-primary liability vanished overnight, deployers would absorb liability risk, contractual terms between developers and deployers would reprice dramatically, insurance markets would shift coverage from development-phase to deployment-phase, and the incentive structure for building general-purpose tools versus application-specific systems would change.",
+    "founding_problem": "Uncertainty about who compensates victims and pays for remediation when complex technological systems cause harm, and the need to incentivize upstream safety investment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Tort law scholars and regulatory impact assessments outside the deployer community attest that the harm-compensation problem is real, but dispute whether assigning primary liability to developers optimally solves it; open-source advocacy groups and some technology developers argue the problem is misattributed and that deployer control makes them the more efficient liability bearer."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the developer_liability reading of the liability_attribution kernel. It treats developers as the primary bearers of legal liability for harms arising from technology they create, even when deployers control the context of use. Under this reading, developers enter the victim set under regulatory and tort pressure, deployers become beneficiaries of externalized risk, and opacity is framed as a developer-side burden to manage or disclose. Sibling readings include deployer_liability and shared_liability.",
+    "key_agents": [
+      "technology_developers: Primary target (moderate power, constrained exit) â bears extraction via liability assignment",
+      "deployer_entities: Primary beneficiary (powerful, mobile exit) â captures risk externalization",
+      "regulatory_bodies: Agenda setter (institutional, analytical exit) â administers the liability framework",
+      "open_source_developers: Excluded voice (powerless, trapped) â swept into liability without representation"
+    ],
+    "logic_rationale": "Extractiveness is substantial (0.68 at interval end) because developers assume liability costs that may exceed their control over downstream use. Suppression is moderately high (0.62) because alternative arrangements such as contractual waivers or full deployer indemnity are often void as against public policy or displaced by statute. Theater ratio is moderate (0.30): some safety investment is genuine, but a portion of developer compliance activity is performative documentation designed to satisfy liability rules rather than reduce real risk. Resistance (0.55) reflects ongoing industry and scholarly pushback against developer-primary framing.",
+    "perspectival_gap": "The developer seat experiences the constraint as extractive because liability attaches at the moment of creation and is hard to contract away. The deployer seat experiences it as beneficial risk coordination because deployment-side exposure is minimized. The regulatory seat experiences it as genuine coordination toward safer technology. The engine computes these divergences from structural data rather than authored claims.",
+    "directionality_logic": "Technology developers are declared victims (role: payer) with constrained exit options, placing their directionality near the full-target end; effective extraction is amplified for them. Deployer entities are declared beneficiaries with mobile exit, placing their directionality near the beneficiary end; effective extraction is damped or inverted into subsidy. Regulatory bodies occupy an analytical seat with limited direct extraction.",
+    "mandatrophy_analysis": "The founding problem â compensating victims of technological harm and incentivizing safety â remains live. However, the specific developer-primary reading risks mandatrophy if empirical evidence shows that deployer control over context, fine-tuning, and user interaction is the dominant causal factor in realized harms. Should that evidence solidify while the developer-primary rule persists, the constraint would drift toward pure extraction or piton status.",
+    "kernel_context": "This constraint instantiates the developer_liability reading of the liability_attribution kernel. Sibling readings are deployer_liability (deployers bear primary liability as parties with deployment control) and shared_liability (joint distribution along the value chain). This reading structurally distinguishes itself by placing developers in the victim set and deployers in the beneficiary set."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_sibling_delta",
+      "question": "How would the classification change if the kernel were read under the deployer_liability or shared_liability framing instead of developer_liability?",
+      "resolution_mechanism": "Compare the beneficiary/victim sets and directionality vectors across the three sibling readings; the deployer_liability reading would invert the developer/deployer positions, while shared_liability would flatten extraction across the value chain.",
+      "impact": "If the kernel is better captured by a sibling reading, this constraint's epsilon and claimed_type are misattributed to a reading-specific artifact rather than a stable structural feature.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural sensitivity of the constraint to kernel reading choice"
+    },
+    {
+      "id": "opacity_burden_naturality",
+      "question": "Is the developer's burden to manage or disclose opacity a natural feature of creating complex systems, or a constructed liability expansion that benefits deployers?",
+      "resolution_mechanism": "Empirical comparison of liability costs between transparent and opaque systems, and analysis of whether deployer control over training data and deployment context actually creates the opacity.",
+      "impact": "If opacity is deployment-created, the developer-liability reading extracts from developers for a condition they do not control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity burden is naturally developer-owned or constructed"
+    },
+    {
+      "id": "deployer_beneficiary_ambiguity",
+      "question": "Does the developer-liability reading genuinely benefit deployers structurally, or does it merely shift visibility while deployers pay via higher vendor prices and indemnification demands?",
+      "resolution_mechanism": "Examine contractual terms and insurance pricing between developers and deployers to see whether liability costs are passed through.",
+      "impact": "If deployers pay indirectly, the effective extraction is less asymmetric than the victim/beneficiary structure suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether deployer benefit from externalized risk is net or pass-through"
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "developer_as_risk_source",
+    "drift_state": {
+      "moment": "post_generative_ai_regulatory_wave",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_bears_primary_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "opacity_is_upstream_controllable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

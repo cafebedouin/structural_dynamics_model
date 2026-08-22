@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_kernel__study_as_exercise_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "62c12dbb-50df-4ddf-bbb2-20e0e6aeabed"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.15,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Study-as-Exercise Reading of Sacrifice Obligation",
+    "topic_domain": "religious_law/halakhic_authority",
+    "beneficiaries": [
+      "rabbinic_authority",
+      "yeshiva_students",
+      "observant_community"
+    ],
+    "vindicated_propositions": [
+      "torah_study_as_divine_service",
+      "rabbinic_oral_law_authority"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of the sacrifice_obligation_kernel. How would its classification change if the performance_only_reading or messianic_suspension_reading became the dominant communal framework?",
+      "resolution_mechanism": "Historical comparison with communities where performance-only or messianic-waiting frameworks dominate (e.g., Samaritan practice, certain Temple Mount groups).",
+      "impact": "If performance-only dominated, the rabbinic interpretive monopoly would collapse and the constraint would likely reclassify as a scaffold or broken rope; if messianic suspension dominated, extraction would fall to near zero but so would coordination function, producing a piton-like waiting structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural dependence on this reading remaining dominant within the kernel"
+    },
+    {
+      "id": "interpretive_monopoly_extraction_floor",
+      "question": "Does an interpretive monopoly that concentrates legitimacy in rabbinic authority inherently carry a non-zero extractive floor even when no victim is identifiable?",
+      "resolution_mechanism": "Cross-domain comparison with professional licensing and expertise monopolies to determine whether status-concentration constitutes extraction in the DR framework.",
+      "impact": "If yes, the rope classification requires that this floor remain below the Boltzmann threshold; if the floor is substantial, the constraint may compute as tangled_rope despite the absence of a declared victim set.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether monopoly-status without identifiable victims is extractive"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the study_as_exercise_reading of the sacrifice_obligation_kernel: the claim that intellectual engagement with sacrificial law is the legitimate halakhic fulfillment of the biblical commandment under post-Temple conditions. The kernel is contested among four live readings (performance-only, messianic suspension, study-as-exercise, and symbolic archive). This reading asserts near-zero extraction: the substitution is an authorized transformation, not a suspension or a cover for extraction. Rabbinic authority is the primary beneficiary of the interpretive monopoly, but all participants in the study system are net beneficiaries of the coordination. Structurally, this is a commitment-system rope: a coordination mechanism rooted in a fixed textual kernel, mediated by a lineage-based interpretive authority with a functioning interpretation layer (Talmudic discourse).",
+    "key_agents": [
+      "rabbinic_authority (institutional/constrained): Agenda-setter and beneficiary; administers the halakhic substitution and collects interpretive legitimacy.",
+      "yeshiva_students (moderate/identity_locked): Primary beneficiary; their religious identity is fused with study-as-service.",
+      "observant_community (organized/constrained): Diffuse beneficiary; relies on the ruling to avoid a normative crisis.",
+      "temple_mount_activists (organized/constrained): Excluded voice; rejects substitution and demands literal performance."
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.08 (near-zero) because the constraint's primary operation is coordination: it solves the collective problem of maintaining a relationship to sacrifice without a Temple. The rabbinic interpretive monopoly carries a small status premium, but there is no identifiable victim set, no active suppression of alternatives within the halakhic frame, and the theater ratio is low (0.15). The measurement series shows mild institutional drift over two millennia as rabbinic institutions solidify, but the trajectory remains well below rope-to-tangled-rope thresholds. Accessibility collapse is moderate (0.25): once inside the rabbinic epistemic framework, alternatives appear intellectually distant, but they are visible from outside. Resistance is low (0.2) because the reading is hegemonic within Orthodox discourse and faces only marginal activist challenge.",
+    "perspectival_gap": "From the rabbinic agenda-setter seat, the arrangement is the legitimate unfolding of oral law authority, with study as the natural continuation of sacrifice. From the excluded activist seat, the same arrangement is an illegitimate suppression of the literal commandment. The engine will compute near-beneficiary directionality for rabbinic authority, students, and the observant community (all subsidized by the coordination), while the excluded seat sits outside the constraint's directionality derivation because it is not structurally governed by it. The gap is not about metric disagreement but about membership in the framework itself.",
+    "directionality_logic": "All declared beneficiaries (rabbinic authority, yeshiva students, observant community) receive low directionality values because the constraint subsidizes their religious continuity and identity maintenance rather than extracting from them. No victim declarations are authored, so no high-directionality target seat is structurally derived. The excluded temple activists would compute as high-directionality if they were inside the constraint, but their exclusion places them outside the derivation chain. The effective extraction (Ï) for all internal seats is therefore negligible.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy (the descent of coordination into inertial performance) because the founding problem â maintaining continuity with sacrifice after the destruction â remains addressed by live study practice. The constraint is not a piton because there is no atrophied function being theatrically maintained; the study practice is functionally central to the community's religious life. It is not a snare because there is no concentrated extraction and no trapped victim class. The low theater ratio and the absence of a sunset clause are consistent with a rope that has successfully coordinated a long-term adaptation.",
+    "kernel_context": "This constraint is the study_as_exercise_reading of the sacrifice_obligation_kernel. Sibling readings include: performance_only_reading (study is preparatory only), messianic_suspension_reading (obligation is divinely suspended until redemption), and symbolic_archive_reading (the law is cultural-historical memory without binding force). This reading's structural delta is zero extractiveness and no victim set, centering legitimacy in rabbinic interpretive authority."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "divine_commandment_perpetually_binding",
+    "drift_state": {
+      "moment": "post_temple_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "performance_only_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "messianic_suspension_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "symbolic_archive_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "study_fulfills_sacrifice_mitzvah",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "rabbinic_substitution_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "performance_only_reading",
+      "messianic_suspension_reading",
+      "symbolic_archive_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the sacrifice_obligation_kernel family. It shares the referent (the biblical commandment regarding sacrifice) with performance_only_reading, messianic_suspension_reading, and symbolic_archive_reading, but each story carries a distinct epsilon and stakeholder structure corresponding to its reading."
+  },
+  "stakeholders": [
+    {
+      "name": "rabbinic_authority",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Administers the halakhic framework that authorizes study of sacrificial law as fulfillment of the biblical commandment. Derives institutional legitimacy and continuity from this interpretive role. Can exit the formal rabbinate but carries the interpretive tradition with them."
+    },
+    {
+      "name": "yeshiva_students",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Engage in daily study of Temple ritual and sacrifice texts as an act of divine service believed to fulfill the mitzvah. Their religious identity is fused with this practice; exit would mean leaving the communal-religious framework entirely."
+    },
+    {
+      "name": "observant_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Relies on the rabbinic ruling to maintain a relationship with the sacrifice commandment without a Temple. They benefit from the continuity and the avoidance of the crisis of non-fulfillment. Exit to alternative readings is possible but socially costly."
+    },
+    {
+      "name": "temple_mount_activists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for literal performance of sacrifices on the Temple Mount and reject rabbinic substitutions. They are structurally excluded from the halakhic discourse that validates study-as-fulfillment; their objections are treated as outside the normative framework rather than as internal dissent."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Preserves collective continuity with the biblical sacrifice commandment after the loss of the Temple by substituting a widely accessible practice â textual study â for a geographically and institutionally centralized ritual, allowing dispersed communities to participate.",
+    "transfer_function": "Moves the religious obligation from the physical altar to the study hall, and transfers the authority to validate that transfer to the rabbinic interpretive class, which regulates the content and context of the study.",
+    "absent_voices": "Temple Mount activist groups and sectarian movements that demand literal performance are excluded from the normative halakhic conversation; secular scholars who treat the sacrificial code as cultural memory rather than binding law are also outside the framework. Their absence means the consensus around study-as-fulfillment is not tested by the parties who would most directly challenge it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the study-as-exercise framework, the observant community would face a halakhic vacuum regarding the central biblical commandment of sacrifice; the social and liturgical arrangements built around Talmudic study of Temple law would lose their normative anchor, forcing a shift to competing readings (messianic waiting, activist performance, or symbolic identity).",
+    "founding_problem": "The destruction of the Second Temple removed the physical and institutional site for biblical sacrificial worship, threatening the continuity of a core commandment and the cohesion of the community around it.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Talmudic literature (Menahot 110a, Taanit 27b) and Maimonides' codification attest the rabbinic response from within the tradition. External corroboration comes from historians of religion (e.g., Jacob Neusner, Shaye J.D. Cohen) who document the rabbinic substitution strategy as a socio-historical response to the destruction, though they do not affirm its theological validity."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

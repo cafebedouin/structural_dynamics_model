@@ -1,0 +1,244 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__deletionist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "9e682242-bef0-496e-9438-e5cf1ebcf1fc"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.28,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "WP:N as Necessary Epistemic Quality Filter (Deletionist Reading)",
+    "topic_domain": "digital_commons_governance/knowledge_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "global_readership"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "global_readership",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Uses Wikipedia as a reference work and benefits from its curation: spam, vanity, and non-notable topics are filtered out, preserving a high signal-to-noise ratio. They could use other information sources but none replicate the same scale and open-access model."
+    },
+    {
+      "name": "wikipedia_editor_community",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Volunteer editors who write, interpret, and enforce the notability guideline. They propose and debate refinements, patrol new pages, and initiate deletion discussions. Their exit looks like leaving the project or founding a fork, but their identity and effort are embedded in the existing encyclopedia."
+    },
+    {
+      "name": "spam_vanity_contributors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Attempt to add promotional, self-serving, or non-significant content. Their edits are reverted and articles deleted under the notability standard. They are not party to the editorial consensus and are encouraged to use personal blogs or other platforms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents tragedy-of-the-commons degradation in an open collaborative encyclopedia by filtering out promotional, non-verifiable, and trivial content before it accumulates, thereby preserving reader trust and finite volunteer editorial capacity.",
+    "transfer_function": "Moves editorial attention and epistemic trust away from low-quality or self-interested contributors toward the general readership, by enforcing an objective significance threshold that excludes off-mission content.",
+    "absent_voices": "Inclusionist advocates and marginalized-knowledge communities argue that notability criteria encode mainstream-media and academic-prestige biases, systematically excluding legitimate topics from the global South, indigenous knowledge, and non-prominent subjects. They are present in policy debates but hold minority influence under the deletionist framing.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the notability filter vanished overnight, the encyclopedia would accumulate promotional biographies, product advertisements, and vanity pages at a rate that would overwhelm volunteer patrols, degrade reader trust, and shift the project's character toward a directory or social-media platform.",
+    "founding_problem": "Open collaborative encyclopedias face a tragedy of the commons in which unlimited self-promotion, spam, and low-stakes trivia overwhelm finite volunteer editorial capacity and erode reader trust in the epistemic reliability of the work.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent peer-production researchers and digital-commons scholars (e.g., Benjamin Mako Hill, Aaron Shaw) attest the ongoing risk of commons degradation in open collaboration systems; their work originates outside the direct institutional interest of the Wikipedia editor community that administers the guideline."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.28
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the deletionist reading of the Wikipedia Notability Guidelines (WP:N) kernel. Under this reading, WP:N is a genuine coordination mechanismâa ropeâthat prevents epistemic commons degradation by filtering non-notable, promotional, and vanity content. The primary beneficiary is the global readership, which receives a curated, high-reliability reference work. There is no victim set because excluded content is defined as spam or vanity that legitimately fails objective significance thresholds. The constraint is actively enforced through deletion discussions and new-page patrol, but its extraction is minimal and justified as the necessary cost of coordination. Sibling readings (inclusionist, deliberative) treat the same kernel as extraction or perpetual negotiation, respectively; they are modeled as separate constraints.",
+    "key_agents": [
+      "Global readership (beneficiary/organized/mobile): receives quality-controlled encyclopedic content; low directionality.",
+      "Wikipedia editor community (agenda-setter/organized/mobile): authors and enforces the guideline; moderate-low directionality as administrators.",
+      "Spam/vanity contributors (excluded/powerless/mobile): attempt non-compliant contributions; excluded from the consensus but not structurally trapped."
+    ],
+    "logic_rationale": "Base extractiveness is low (0.20 at interval end) because the deletionist reading treats the guideline as solving a genuine coordination problem with minimal overhead. Suppression is low-moderate (0.28) because active enforcement (deletion, patrol) is present but is not coercive extractionâit is the operational cost of the filter. Theater ratio is very low (0.10) because enforcement is functionally oriented toward quality control rather than performative display. Accessibility collapse is moderate (0.60): once the notability standard is understood, alternatives (creating non-notable articles) collapse because they are deleted, but this is a feature of the coordination mechanism, not a trap. Resistance is low (0.15) because the only sustained opposition comes from spammers and marginal vanity editors, not from coordinated legitimate stakeholders.",
+    "perspectival_gap": "The deletionist seat computes a rope because the structural data show a symmetric coordination benefit to readership and low extraction. The inclusionist seat on the same kernel would compute a snare or tangled_rope: it would declare marginalized knowledge producers as victims, identify asymmetric extraction through prestige-biased source requirements, and show higher suppression of legitimate alternatives. The deliberative seat might compute a rope or scaffold depending on whether it treats AfD as ongoing coordination or a transitional deliberative mechanism. The engine's per-seat classification captures this divergence without requiring reconciliation.",
+    "directionality_logic": "Global readership is the declared beneficiary (low d, approaching 0.0) because the constraint subsidizes their access to quality information. The editor community, as agenda-setter, sits at low-moderate d (~0.25): they administer the constraint and absorb coordination costs (time spent on deletion discussions) but are not its targets. Spam/vanity contributors are excluded and bear the cost of deletion, but their exit options are mobile (other platforms, personal blogs) and their power is low; structurally they are not locked targets. Because no victims are declared and no identity-locked agents are present, the derivation chain does not produce high effective extraction for any seat.",
+    "mandatrophy_analysis": "No mandatrophy is declared because the founding problemâcommons degradation under open contributionâremains live. Spam and promotional pressure have not disappeared; if anything, they have intensified with the growth of the platform. The constraint is not a piton because its primary function is still performed (quality filtering) and its theater ratio is negligible. The agenda-setting editor community continues to benefit from the constraint's operation, distinguishing it from an atrophied structure maintained by inertia.",
+    "kernel_context": "This is the deletionist reading of the notability_guidelines kernel. The kernel is the contested WP:N policy text and its associated practices. This reading treats the kernel as a stable, necessary epistemic quality filter. Sibling readings are: inclusionist_reading (WP:N as structural gatekeeping apparatus systematically excluding marginalized knowledge) and deliberative_reading (WP:N as perpetual negotiation process where notability boundaries evolve through AfD deliberation). These siblings are modeled as separate constraints linked via network.affects_constraints."
+  },
+  "omegas": [
+    {
+      "id": "deletionist_inclusionist_framing",
+      "question": "Does the notability guideline function as a genuine quality filter preventing commons degradation, or as a structural gatekeeping apparatus that encodes existing epistemic power and excludes marginalized knowledge?",
+      "resolution_mechanism": "Cross-reading empirical analysis: compare topic-coverage demographics, source-type distributions, and deletion outcomes against independently verified significance metrics; test whether exclusion correlates with topic marginality or merely with promotional intent.",
+      "impact": "If the gatekeeping framing is borne out, the victim set must expand to include marginalized knowledge producers, the extraction profile rises, and the constraint reclassifies toward tangled_rope or snare under the inclusionist reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Contested kernel framing between quality-filter and gatekeeping readings"
+    },
+    {
+      "id": "spam_marginalized_boundary",
+      "question": "Does the guideline's application in practice consistently distinguish spam and vanity from legitimately marginalized but verifiable knowledge, or does it conflate low-coverage topics with low-quality topics?",
+      "resolution_mechanism": "Quantitative audit of deletion outcomes by subject area, geographic origin of topic, and availability of high-prestige sources; compare with a counterfactual significance metric independent of mainstream media coverage.",
+      "impact": "If the boundary is systematically blurred, the deletionist reading's 'no victim' claim fails and the constraint must declare a victim set, altering directionality derivation and effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical ambiguity between spam exclusion and marginalized-knowledge exclusion"
+    },
+    {
+      "id": "coordination_cost_or_extraction",
+      "question": "Is the editorial labor consumed by deletion discussions and notability enforcement a necessary transaction cost of quality coordination, or does it represent extractive overhead that displaces productive content creation?",
+      "resolution_mechanism": "Measure the ratio of editorial hours spent on deletion enforcement versus article improvement; compare with open-collaboration projects that lack notability filters.",
+      "impact": "If enforcement overhead dominates content work, the base extractiveness of the deletionist reading is understated and the constraint edges toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement labor is coordination cost or extractive overhead"
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "notability_guidelines__inclusionist_reading",
+      "notability_guidelines__deliberative_reading"
+    ],
+    "dual_formulation_note": "This constraint is one member of the notability_guidelines constraint family. The kernel (WP:N) decomposes into three structurally distinct constraints under different readings: deletionist (rope), inclusionist (snare/tangled_rope), and deliberative (rope/scaffold). Each has its own epsilon, beneficiary/victim structure, and classification. They are linked because they compete to describe the same institutional arrangement."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "stable_quality_filter",
+    "drift_state": {
+      "moment": "contemporary_inclusionist_challenges",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "inclusionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deliberative_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "commons_degradation_without_filter",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "significance_threshold_as_quality_gate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

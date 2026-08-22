@@ -1,0 +1,310 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "2ea1712e-dc9e-401f-8d9b-57205fac2985"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Regulated Drug Market Legalization",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "licensed_vendors",
+      "drug_consumers",
+      "affected_communities"
+    ],
+    "victims": [
+      "black_market_operators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "state_regulator",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Designs licensing regimes, product quality standards, taxation schedules, and enforcement priorities. Captures tax revenue and exercises discretion over market structure, including the number and location of licensed vendors."
+    },
+    {
+      "name": "licensed_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate legally under state-issued licenses, benefiting from reduced black-market competition and state-enforced barriers to entry. Pay taxes and compliance costs, but gain protected market access and profit margins."
+    },
+    {
+      "name": "drug_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Access quality-controlled substances through licensed channels, avoiding criminalization and adulterated supply. Pay embedded taxes and regulated prices; dependent users face limited exit from the regulatory channel itself."
+    },
+    {
+      "name": "black_market_operators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Previously supplied the market; now targeted by law enforcement for operating outside the licensing regime. Face asset confiscation, prosecution, and exclusion from the formal economy, with high barriers to obtaining licenses."
+    },
+    {
+      "name": "affected_communities",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Experience reduced drug-related violence and street-level disorder due to market formalization, but bear potential externalities from increased visibility of use, advertising, and concentration of retail outlets."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitor substance use trends, product potency, and health outcomes. Advise on regulatory adjustments but do not directly collect revenue or bear enforcement costs through the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a legal, regulated market for psychoactive substances in which product quality is verified, access is channeled through licensed outlets, and consumer safety is separated from criminal supply chains.",
+    "transfer_function": "Moves tax revenue and licensing fees from consumers and licensed vendors to the state, and transfers market share and economic surplus from unlicensed operators to licensed vendors under state protection.",
+    "absent_voices": "Prohibitionist constituencies who view any legalization as moral hazard; unlicensed traditional or small-scale producers excluded by licensing capital requirements; future dependent users whose voices are not represented in initial policy design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the regulatory framework vanished overnight, licensed vendors would lose legal protection and banking access, consumers would return to unregulated supply, black market operators would re-enter, and the state's revenue and enforcement apparatus would lose its primary leverage over the substance market.",
+    "founding_problem": "Criminal drug markets produce violence, unsafe products, and mass incarceration while failing to reduce availability; the state needed a mechanism to separate drug commerce from criminal organization and protect consumers from adulterated supply.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Public health researchers and former law enforcement officials outside the tax-collection apparatus attest that unregulated supply caused measurable harms. However, prohibitionist advocates and some community organizations contest that the founding problem is best solved by legalization, citing potential use-volume increases."
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the legalization reading of the substance_control_authority kernel: state power is used to create a legal commercial market for drugs with quality controls and taxed access, displacing criminal supply. Users exit the criminal-supply victim set and gain quality guarantees; black market operators become the target of enforcement. The state captures tax revenue and exercises regulatory discretion. It is claimed as tangled_rope because the same structure that coordinates safety and tax collection also extracts from excluded operators and concentrates market power in licensed vendors. This reading is one of three decomposed constraints (prohibition_reading, harm_reduction_reading) linked in a constraint family.",
+    "key_agents": [
+      "state_regulator: Agenda-setter (institutional/arbitrage) â designs and enforces the regulatory framework, captures tax revenue",
+      "licensed_vendors: Primary beneficiary (powerful/constrained) â operate within the licensed regime, profit from reduced competition",
+      "drug_consumers: Mixed beneficiary-payer (moderate/constrained) â gain quality/safety, pay taxes and regulated prices",
+      "black_market_operators: Primary target/payer (organized/trapped) â bear enforcement costs and market exclusion",
+      "affected_communities: Secondary beneficiary-payer (organized/constrained) â gain crime reduction, bear use-volume externalities",
+      "public_health_authorities: Analytical observer (institutional/analytical) â monitor outcomes, advise on adjustments"
+    ],
+    "logic_rationale": "Base extractiveness (0.55) reflects the tax and licensing transfer plus the market exclusion of unlicensed sellers. Suppression (0.52 at interval end) captures the persistent need to suppress the unlicensed market to maintain licensed-market viability and price levels. Theater ratio (0.28) acknowledges some performative compliance and revenue-protection enforcement, but the core quality-control function remains operational. Accessibility collapse (0.45) shows unlicensed alternatives are partially closed by enforcement but not eliminated. Resistance (0.40) reflects ongoing black-market adaptation and prohibitionist political opposition.",
+    "directionality_logic": "The state regulator sits near the beneficiary end as agenda-setter and tax collector. Licensed vendors are clear beneficiaries (d low). Consumers are mixed (d mid) because they receive safety benefits while paying tax-embedded prices. Black market operators are the clearest targets (d high) due to active enforcement and exclusion. Affected communities sit near symmetric, experiencing both crime-reduction benefits and use-volume costs.",
+    "perspectival_gap": "Licensed vendors and consumers experience the constraint as coordination (safe supply, legal commerce), while black market operators experience it as extraction backed by state violence. The state sees policy implementation. The engine should compute divergent seat classifications from these structural positions without reconciling them to the authored claim.",
+    "mandatrophy_analysis": "The founding problemâcriminal market violence and unsafe supplyâis partially solved, but the constraint persists as a revenue and regulatory apparatus with concentrated beneficiaries. It has not atrophied into a piton because the coordination function remains substantial, beneficiaries actively maintain it, and the cost of fixing (dismantling the market) is politically significant. The tension between public health coordination and revenue extraction creates drift risk captured in the temporal measurements.",
+    "kernel_context": "This constraint is the legalization_reading of the substance_control_authority kernel. Sibling readings: prohibition_reading (criminalization of use/possession) and harm_reduction_reading (public health acceptance without full commercialization). This reading differs from prohibition by eliminating user criminalization and from harm reduction by embracing commercial market logic, taxation, and supply-chain regulation."
+  },
+  "omegas": [
+    {
+      "id": "legalization_kernel_reading_contest",
+      "question": "Does this constraint represent genuine coordination through market regulation, or is it primarily a revenue-extraction mechanism layered over a public health coordination story?",
+      "resolution_mechanism": "Cross-jurisdictional comparison of tax-rate levels versus health outcomes; structural analysis of whether regulatory barriers exceed what quality control requires.",
+      "impact": "If extraction dominates, classification shifts toward snare; if coordination dominates, it remains tangled_rope or shifts toward rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Core ambiguity of the legalization reading within the substance control kernel."
+    },
+    {
+      "id": "unlicensed_market_suppression_mechanism",
+      "question": "Is suppression of the unlicensed market necessary for consumer safety, or does it primarily protect licensed vendor profitability and state tax revenue?",
+      "resolution_mechanism": "Natural experiments where enforcement intensity varies independently of product safety standards; measurement of adulteration rates in jurisdictions with lower suppression.",
+      "impact": "If suppression is safety-necessary, extraction is lower; if it is rent-protection, extraction is higher and directionality toward black market operators is more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether black-market enforcement serves safety or revenue protection."
+    },
+    {
+      "id": "kernel_sibling_foreclosure",
+      "question": "Does the legalization reading's core premise (state-regulated legal commerce) logically foreclose the prohibition reading's premise (criminalization of use), or do they coexist as policy alternatives?",
+      "resolution_mechanism": "Historical analysis of jurisdictions that have reversed legalization; examination of whether a single legal framework can simultaneously hold criminalization for some substances and legalization for others.",
+      "impact": "If foreclosed, the kernel exhibits irreversibility; if coexisting, the constraint's persistence depends on political contingencies rather than structural lock-in.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between legalization and prohibition readings."
+    }
+  ],
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "This constraint is the legalization reading of the substance_control_authority kernel, decomposed from the prohibition and harm_reduction readings due to structurally distinct epsilon values, beneficiary/victim structures, and coordination mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "state_regulated_commerce",
+    "drift_state": {
+      "moment": "contemporary_post_legalization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legal_commerce_superior_to_prohibition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "licensed_market_quality_guarantee",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

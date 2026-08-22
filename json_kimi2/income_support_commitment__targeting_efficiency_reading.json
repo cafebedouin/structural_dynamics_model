@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "c952adbf-b638-49f2-9aca-e59939472f9e"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.7,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.78,
+    "resistance": 0.5,
+    "claimed_type": "snare",
+    "human_readable": "Universal Basic Income Cannibalization of Targeted Welfare",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deeply_poor_families",
+      "middle_class_beneficiaries"
+    ],
+    "victims": [
+      "deeply_poor_families"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "deeply_poor_families",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Receive a nominal universal basic income payment but lose categorical targeted benefits including housing subsidies, childcare assistance, and nutrition support that previously provided substantially higher total support. Net disposable income falls. Cannot opt out of the universal scheme to retain prior targeted benefits. Dependent on state support with no market alternative."
+    },
+    {
+      "name": "middle_class_beneficiaries",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive the universal basic income payment without losing prior benefits because they were never eligible for deeply targeted programs. Experience net gain or fiscal neutrality. Form a broad political constituency that favors maintaining the universal program over returning to targeted assistance."
+    },
+    {
+      "name": "ubi_policymakers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and advocate for revenue-neutral universal basic income funded by consolidating and reducing targeted programs. Frame the policy as administrative simplification and poverty reduction. Benefit politically from a broad middle-class constituency and the popularity of universal entitlement."
+    },
+    {
+      "name": "anti_poverty_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that replacing targeted categorical benefits with a flat universal payment produces net losses for the deepest poor. Substantively marginalized in the policy design process by the political momentum of the UBI coalition and the simplicity narrative, despite formal consultation appearances."
+    },
+    {
+      "name": "policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Produce distributional analyses comparing targeted and universal transfer regimes. Document that revenue-neutral UBI funded by cannibalizing targeted programs produces net income losses for the poorest households while transferring resources up the distribution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Consolidates fragmented income support programs into a single universal payment, eliminating categorical eligibility determination and reducing administrative overhead of means-testing.",
+    "transfer_function": "Moves net resources from deeply poor families who lose targeted benefits exceeding the universal payment to the broader population who receive universal payments without offsetting losses, under the cover of administrative simplification.",
+    "absent_voices": "Recipients of deeply targeted benefits who experience net income loss are rhetorically present as beneficiaries of simplification but substantively excluded from policy design; anti-poverty advocates warning of distributional harm are drowned out by the universalism narrative.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the universal replacement regime vanished overnight and targeted categorical benefits were restored, deeply poor families would regain higher net support levels, the administrative apparatus of means-testing would reconstitute, and the political coalition of universal middle-class beneficiaries would dissolve.",
+    "founding_problem": "A fragmented welfare state with high administrative overhead, stigma associated with means-testing, incomplete coverage leaving some needy individuals without support, and complex eligibility bureaucracies.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "UBI advocates and some administrative reformers attest the founding problem remains live. Anti-poverty researchers and targeted-program administrators attest the problem is better solved by patching coverage gaps and streamlining administration than by universalizing payments that dilute resources for the poorest. Independent fiscal analyses from nonpartisan budget offices corroborate the distributional trade-off."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the targeting_efficiency_reading of the income_support_commitment kernel. From this reading's perspective, the policy dynamic toward revenue-neutral universal basic income funded by dismantling deeply targeted categorical benefits operates as a snare. The archetype of a parent receiving substantial targeted support illustrates the structural delta: a family receiving significant targeted benefits becomes a net victim under a universal replacement that delivers a lower flat payment. The poor are nominal beneficiaries of the universal transfer because they receive the check, but actual victims of the cannibalization because their net support falls. The constraint persists through political coalition-building among middle-class beneficiaries and the rhetorical packaging of universalism as anti-poverty policy.",
+    "key_agents": [
+      "deeply_poor_families: Primary target (powerless/trapped) â nominal beneficiaries who are actual victims of net extraction",
+      "middle_class_beneficiaries: Primary beneficiary (moderate/mobile) â receive universal payment without offsetting losses",
+      "ubi_policymakers: Agenda-setter (institutional/arbitrage) â designs and enforces the universal replacement",
+      "anti_poverty_advocates: Excluded voice (organized/constrained) â objects but is marginalized in design",
+      "policy_analysts: Analytical observer (analytical/analytical) â documents distributional reversal"
+    ],
+    "logic_rationale": "Extractiveness is high (0.82) because the revenue-neutral UBI extracts from the deepest poor to fund payments for the broader population. Suppression (0.70) reflects the political suppression of targeted alternatives: means-testing is stigmatized as bureaucratic and the poor are reclassified as beneficiaries of simplification rather than victims of cuts. Theater ratio (0.55) captures the growing gap between anti-poverty rhetoric and documented net-income losses. Accessibility collapse (0.78) because universal benefits create a middle-class constituency that makes return to targeting politically nearly impossible. Resistance (0.50) from anti-poverty advocates and fiscal analysts is present but structurally outmatched.",
+    "perspectival_gap": "The agenda-setter and middle-class beneficiary seats experience the constraint as modernization and material gain (low d). The deeply poor seat experiences the same arrangement as extraction disguised by nominal inclusion (high d). The engine computes this divergence from structural data: the directionality override for powerless agents resolves the beneficiary-victim dual classification toward actual victim status.",
+    "directionality_logic": "UBI policymakers and middle-class beneficiaries are structural beneficiaries (low d). Deeply poor families appear in both beneficiary and victim arrays because they receive the nominal universal payment while losing larger targeted benefits; the directionality override for the powerless atom pushes their classification toward the target end to reflect their actual net-loss position. Exit options differentiate the seats: middle-class beneficiaries are mobile, while poor families are trapped in the scheme.",
+    "mandatrophy_analysis": "The classification prevents mislabeling the UBI dynamic as rope or coordination by requiring victim identification and showing that the coordination function of administrative simplification is cover for extraction. The genuine coordination problem of fragmented welfare administration is solved by the constraint's rhetoric but not by its actual operation, which redistributes upward. Mandatrophy is not claimed because the constraint's function has not atrophied; it is operating as designed.",
+    "kernel_context": "This is the targeting_efficiency_reading of the income_support_commitment kernel. It interprets the kernel as requiring concentration of support on demonstrated need. Sibling readings are freedom_floor_reading (unconditional support as autonomy enabler) and dependency_trap_reading (unconditional support as work-disincentive). The targeting reading forecloses the freedom floor reading within its framework because targeted and universal distribution are mutually exclusive interpretations of the commitment."
+  },
+  "omegas": [
+    {
+      "id": "funding_mechanism_ambiguity",
+      "question": "Is the universal basic income funded by cannibalizing targeted programs, or by new progressive taxation that leaves the poor net neutral or better?",
+      "resolution_mechanism": "Legislative text and budget scoring: if the UBI is revenue-neutral through consolidation of existing programs, extraction is high; if funded by new taxes on wealth or high incomes, the distributional picture changes.",
+      "impact": "If funded by new taxation, the constraint's extractiveness drops substantially and the victim classification may dissolve; if funded by cannibalization, the snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UBI is funded by cannibalizing targeted programs or new taxation."
+    },
+    {
+      "id": "targeting_coverage_gap",
+      "question": "Do targeted programs actually leave significant needy populations uncovered, and would a universal program fill those gaps more effectively despite cannibalization?",
+      "resolution_mechanism": "Comparative administrative data on take-up rates, eligibility denials, and unmet need in targeted regimes versus universal pilot programs.",
+      "impact": "If targeting leaves large coverage gaps, the coordination function of universalism is stronger than this reading admits, potentially reclassifying toward tangled_rope; if coverage is already near-complete, the extraction framing holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether targeting leaves coverage gaps that universalism would fill."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_floor_reading",
+      "dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the income_support_commitment kernel, decomposed per the epsilon-invariance principle. The targeting_efficiency_reading interprets the kernel as requiring need-based concentration. Sibling readings interpret the same kernel as unconditional support with different valences (autonomy vs dependency). Each reading instantiates a structurally distinct constraint with its own epsilon and stakeholder structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "need_based_safety_net",
+    "drift_state": {
+      "moment": "contemporary_ubi_advocacy_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "targeting_maximizes_poor_net_income",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "demonstrated_need_legitimizes_transfer",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare"
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_kimi2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "kimi-k2.6",
+    "sampling_params": "max_tokens=32000,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
