@@ -17940,6 +17940,12 @@ from the uniqueness registry, ladder ignored, overwrite in place). Id lists:
 `prolog/kernels/rebuild_2026-06-13/{haiku,flash}_stakeholder_backfill_ids.json` (458 / 210 = the
 "no stakeholders AND has parties" stratum; the 7 / 2 party-less stories keep their originals).
 flash backfill COMPLETE 210/210 (~$2, commit 522def40); haiku backfill running (batch 019aWGkn…, ~$8).
+**haiku diff (2026-08-22, `backfill_diff_haiku_2026-08-22.txt`):** backfilled stratum n=455 —
+`h1_stakeholder` null 100% → 4%; vs the June originals h1 51% / verdict 71% / signature 87% /
+claimed_type 85% / ε 46% (12% ≥0.10), purity_band 2% (purity depends on the stakeholder/coordination
+surface the June stories lacked). Untouched control n=505: 100% on every field except verdict 97% —
+regenerating part of a leg moves ~3% of untouched verdicts through corpus-relative components
+(ensemble fits / alert context); the control is "≈100%" and that residue names the channel.
 **The BEFORE arm for the §9 diff is preserved:** `outputs/pipeline_output.haiku.prebackfill.json`
 (HEAD 7597aa7, 960 stories) and `outputs/pipeline_output.flash.prebackfill.json` (f0ef08a, 960) —
 both engine-coherent with HEAD (no engine file changed in between; `outputs/` is gitignored, so if
@@ -18007,7 +18013,11 @@ stakeholder-sparse), so haiku vs haiku2 is the LARGEST regime change in the set,
 signature 83% / claimed_type 87%, |Δε| median 0.04, **20% ≥0.10** (Flash thinking-on floor: 22%),
 seat-vector churn 66%; marginals identical across the two draws (band-3 34%/34%, mean ε 0.546/0.540,
 paired Δε mean −0.007) — the thinking-on instability reproduced on a second reasoning model with no
-directional shift from the prompt change. stealth3 (launched 10:20, free) gives the pure pair. **Of the
+directional shift from the prompt change. stealth3 (launched 10:20, free) gives the pure pair. **PURE sonnet floor landed (sonnet2 vs sonnet3, both e03e2210, 1002 shared):** h1 72% / verdict 74% /
+signature 94% / claimed_type 94% / ε exact 65%, |Δε| p90 0.06, 4% ≥0.10 — ε pinned like Flash-off — yet
+seat-vector churn 38% (36% with |Δε| < 0.10) vs Flash's 22%: Sonnet's non-ε authored fields churn more
+than Flash's even with ε fixed. Classification floor per model is therefore NOT derivable from the ε
+floor. **Of the
 three 2026-08-22 pairs only flash2 vs flash3 is a pure floor; sonnet3 and haiku3 (`--leg-suffix 3`,
 same commit) launched 2026-08-22 ~10:15 to get the pure Anthropic floors (~$40 + ~$16). Cross-FAMILY ε
 exact-agreement is ~3% (Claude `.x8` vs Flash `.x5` rails) — use |Δε|, never exact match, across
