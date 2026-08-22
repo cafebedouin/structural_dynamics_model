@@ -17980,6 +17980,15 @@ redraw + prompt change; stealth3 at the same commit is the pure thinking-on floo
 (free, before its window closes). Nemotron thinking-on vs its thinking-off leg is the second
 regime pair (free; free-tier cap 1000 req/day).
 
+**Landed 2026-08-22 (first floors).** sonnet2 1003/1005 (~$39.6 batch), haiku2 996/1005 (~$16), both at
+prompt `e03e2210`; the July sonnet leg is at `becd0f87`, so **sonnet vs sonnet2 is redraw + prompt change**
+(the flash-vs-flash2 shape) — read at one engine commit: h1 69% / verdict 71% / signature 89% /
+claimed_type 93% / ε exact 54%, |Δε| median 0.00, p90 0.10, 12% ≥0.10; seat-type vector changes on
+43% of seeds (38% even with |Δε| < 0.10) vs 22% on the Flash thinking-off floor. A PURE sonnet floor
+is sonnet2 vs a sonnet3 (~$40, operator's call); likewise haiku3 (~$16). Cross-FAMILY ε
+exact-agreement is ~3% (Claude `.x8` vs Flash `.x5` rails) — use |Δε|, never exact match, across
+families.
+
 **Steps.** (1) land and certify each floor leg (`classify_corpus` GREEN, OQ-58 sweep, register:
 `CORPUS_DIRS`, `LIVE_LEGS`, `STAMPED_FILE_COUNTS`, census re-pin); (2) reclassify EVERY leg at
 one engine commit; (3) `paired_agreement.py` + `epsilon_distance.py` over all pairs; (4) build the
