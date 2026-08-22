@@ -267,6 +267,23 @@ def estimate(client, seeds, model, cached):
     print("   discount + context cache is what the script uses by default.)")
 
 
+
+def _written_with_tag(json_dir, ids, tag):
+    """Backfill completion is counted from the ARTIFACT, never the ladder: in backfill mode the
+    ladder already lists every target id (they were 'done' in June), so load_processed_log
+    reports success for seeds the pass never wrote. Witnessed 2026-08-22: the flash backfill
+    logged 'complete: 210/210' having written 168; 42 failures were never retried."""
+    out = set()
+    for cid in ids:
+        p = Path(json_dir) / f"{cid}.json"
+        try:
+            if p.exists() and tag and tag in p.read_text(encoding="utf-8"):
+                out.add(cid)
+        except OSError:
+            pass
+    return out
+
+
 def run(args):
     client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
     seeds = json.loads(Path(args.seeds).read_text(encoding="utf-8"))
@@ -326,7 +343,8 @@ def run(args):
                 overwrite=True, id_map=id_map, token_acc=token_acc,
                 provenance_source=(f"{PROVENANCE_SOURCE}+{args.run_tag}" if getattr(args, "run_tag", "") else PROVENANCE_SOURCE),
                 sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=0.1,thinking_budget={THINKING_BUDGET}")
-            done = load_processed_log(FLASH_LADDER)
+            done = (_written_with_tag(FLASH_JSON, [s['constraint_id'] for s in remaining], f"+{args.run_tag}")
+                    if backfill_ids else load_processed_log(FLASH_LADDER))
             remaining = [s for s in remaining if s["constraint_id"] not in done]
             if not remaining:
                 break
