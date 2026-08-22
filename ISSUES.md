@@ -18013,7 +18013,21 @@ stakeholder-sparse), so haiku vs haiku2 is the LARGEST regime change in the set,
 signature 83% / claimed_type 87%, |Δε| median 0.04, **20% ≥0.10** (Flash thinking-on floor: 22%),
 seat-vector churn 66%; marginals identical across the two draws (band-3 34%/34%, mean ε 0.546/0.540,
 paired Δε mean −0.007) — the thinking-on instability reproduced on a second reasoning model with no
-directional shift from the prompt change. stealth3 (launched 10:20, free) gives the pure pair. **PURE sonnet floor landed (sonnet2 vs sonnet3, both e03e2210, 1002 shared):** h1 72% / verdict 74% /
+directional shift from the prompt change. stealth3 (launched 10:20, free) gives the pure pair. **PURE haiku floor landed (haiku2 vs haiku3, both e03e2210, 988 shared):** h1 53% / verdict 77% /
+signature 91% / claimed_type 89% / ε exact 52%, |Δε| p90 0.10, 9% ≥0.10; seat-vector churn 65% (62%
+with ε pinned). **Floor table, thinking-off, ε pinned in all three (2026-08-22):**
+
+| model | h1 | verdict | signature | claimed_type | ε ≥0.10 | seat-vector churn |
+|---|---|---|---|---|---|---|
+| gemini-2.5-flash (flash2/3) | 85% | 89% | 93% | 92% | 6% | 22% |
+| claude-sonnet-5 (sonnet2/3) | 72% | 74% | 94% | 94% | 4% | 38% |
+| claude-haiku-4-5 (haiku2/3) | 53% | 77% | 91% | 89% | 9% | 65% |
+| stealth/ox-alpha thinking-on (stealth/2, prompt change confounded) | 49% | 65% | 83% | 87% | 20% | 66% |
+
+The classification floor is model-specific and NOT derivable from the ε floor; every cross-model
+h1/verdict claim must be read against the noisier of the two models' floors.
+
+**PURE sonnet floor landed (sonnet2 vs sonnet3, both e03e2210, 1002 shared):** h1 72% / verdict 74% /
 signature 94% / claimed_type 94% / ε exact 65%, |Δε| p90 0.06, 4% ≥0.10 — ε pinned like Flash-off — yet
 seat-vector churn 38% (36% with |Δε| < 0.10) vs Flash's 22%: Sonnet's non-ε authored fields churn more
 than Flash's even with ε fixed. Classification floor per model is therefore NOT derivable from the ε
