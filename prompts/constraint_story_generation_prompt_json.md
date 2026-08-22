@@ -130,8 +130,8 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 **Structural rules enforced by the schema** (these require DATA, not metric values):
 
 * **Mountain**: must declare `emerges_naturally: true` — a mountain claim asserts naturality. A mountain with declared beneficiaries must also carry at least one omega documenting the natural-law vs. constructed ambiguity.
-* **Tangled Rope**: must name who is coordinated and who pays — `requires_active_enforcement: true`, at least one beneficiary, at least one victim
-* **Snare**: must name at least one victim
+* **Tangled Rope**: must name who is coordinated and who pays — `requires_active_enforcement: true`, at least one beneficiary, at least one victim (in `stakeholders[]` that agent's `role` is `payer` — `victim` is not a role value)
+* **Snare**: must name at least one victim (stakeholder `role`: `payer`)
 * **Scaffold** (with enforcement): requires `has_sunset_clause: true`
 * **Piton**: extracts from many but persists by inertia — no party benefits enough to maintain it and no party is hurt enough to fix it. Name the `agenda_setter` (who administers it and could change it) and the `payer`s (who bear its diffuse costs). A piton characteristically has **no** stakeholder who meaningfully profits — no concentrated beneficiary capturing the extraction; if one exists, it is a snare, not a piton. Author `theater_ratio` honestly if performative maintenance is present, but theatricality is a symptom, not the test — the test is the cost-asymmetry: the administrator could change it, but the cost to fix exceeds what it bears.
 
@@ -230,7 +230,7 @@ Define the objective metrics of the constraint. These are the structural inputs 
 | Declaration | JSON Field | Purpose |
 |---|---|---|
 | Beneficiary groups | `base_properties.beneficiaries[]` | **REQUIRED for all non-mountain; OPTIONAL on mountain (FSM candidate — see below).** Identifies who benefits. Derives coordination function (required for Tangled Rope and Scaffold gates). Feeds directionality: beneficiaries get low d → low/negative χ. |
-| Victim groups | `base_properties.victims[]` | **REQUIRED for snare and tangled_rope.** Identifies who bears costs. Derives asymmetric extraction (required for Tangled Rope gate). Feeds directionality: victims get high d → high χ. |
+| Victim groups | `base_properties.victims[]` | **REQUIRED for snare and tangled_rope.** Identifies who bears costs. Derives asymmetric extraction (required for Tangled Rope gate). Feeds directionality: victims get high d → high χ. In `stakeholders[]`, the same agents carry `role: payer`. |
 | Active enforcement | `base_properties.requires_active_enforcement` | Required for Tangled Rope gate. |
 | Vindicated propositions | `base_properties.vindicated_propositions[]` | OPTIONAL. Propositions, doctrines, or hypotheses the constraint's operation vindicates (e.g. `constitutional_supremacy_doctrine`). These are NOT beneficiaries — a vindicated proposition collects no rents. Never list a proposition under `beneficiaries`. |
 
@@ -502,7 +502,7 @@ List every agent whose situation the constraint shapes. For each, author an obje
 | Field | Meaning |
 |---|---|
 | `name` | snake_case, domain-specific, identifies a real actor (`low_income_borrowers`, not `affected_parties`) |
-| `role` | one of: `agenda_setter` (sets/administers/enforces), `beneficiary` (collects something without running it), `payer` (bears the costs), `excluded` (would have something to say but is not in the conversation), `observer` (analytical seat) |
+| `role` | one of: `agenda_setter` (sets/administers/enforces), `beneficiary` (collects something without running it), `payer` (bears the costs — this is the role for every agent you list in `base_properties.victims[]`; never write `victim` here), `excluded` (would have something to say but is not in the conversation), `observer` (analytical seat) |
 | `secondary_role` | optional second role, only for a genuinely dual-positioned agent |
 | `agent` | `true` (default) for real actors; `false` for a non-actor entity (a doctrine, an abstract good) listed for completeness |
 | `power` | `powerless`, `moderate`, `powerful`, `organized`, `institutional`, or `analytical` |
