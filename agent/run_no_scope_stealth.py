@@ -72,21 +72,23 @@ RESPONSES_DIR = OUT_DIR / "responses"
 PROVENANCE_SOURCE = "no_scope_rebuild_stealth"
 
 
-def apply_leg_suffix(suffix):
-    """--leg-suffix S rebinds every destination to a SIBLING leg (testsets_stealth<S>/,
-    json_stealth<S>/, beta_processed_stealth<S>.txt, outputs/no_scope_runs_stealth<S>/) and
-    tags provenance_source no_scope_rebuild_stealth<S>. Used for a same-model REDRAW leg (the
-    within-model churn floor) that must pair with testsets_stealth/ by filename while never
-    touching it. The uniqueness registry is the sibling dir only (runbook §6)."""
+def apply_leg(name="stealth", suffix=""):
+    """Rebind every destination to leg <name><suffix>: testsets_<leg>/, json_<leg>/,
+    beta_processed_<leg>.txt, outputs/no_scope_runs_<leg>/, provenance_source
+    no_scope_rebuild_<leg>. --leg-name picks the MODEL leg (any OpenRouter model: glm, nemotron,
+    ...); --leg-suffix S appends for a same-model REDRAW or regime sibling that must pair with
+    the base leg by filename while never touching it. The uniqueness registry is the named dir
+    only (runbook §6)."""
     global STEALTH_TESTSETS, STEALTH_JSON, STEALTH_LADDER, OUT_DIR, RESPONSES_DIR, PROVENANCE_SOURCE
-    if not suffix:
+    leg = f"{name}{suffix}"
+    if leg == "stealth":
         return
-    STEALTH_TESTSETS = REPO_ROOT / "prolog" / f"testsets_stealth{suffix}"
-    STEALTH_JSON = REPO_ROOT / f"json_stealth{suffix}"
-    STEALTH_LADDER = REPO_ROOT / "prolog" / f"beta_processed_stealth{suffix}.txt"
-    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_stealth{suffix}"
+    STEALTH_TESTSETS = REPO_ROOT / "prolog" / f"testsets_{leg}"
+    STEALTH_JSON = REPO_ROOT / f"json_{leg}"
+    STEALTH_LADDER = REPO_ROOT / "prolog" / f"beta_processed_{leg}.txt"
+    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_{leg}"
     RESPONSES_DIR = OUT_DIR / "responses"
-    PROVENANCE_SOURCE = f"no_scope_rebuild_stealth{suffix}"
+    PROVENANCE_SOURCE = f"no_scope_rebuild_{leg}"
 
 
 def _api_key():
@@ -107,7 +109,9 @@ def _headers():
 def _body(seed, static, model, reasoning_effort=None, temperature=None):
     body = {"model": model, "messages": build_messages(seed, static),
             "max_tokens": MAX_OUTPUT_TOKENS}
-    if reasoning_effort:
+    if reasoning_effort == "off":
+        body["reasoning"] = {"enabled": False}   # models whose reasoning is OPTIONAL (glm-5.2, nemotron-3)
+    elif reasoning_effort:
         body["reasoning"] = {"effort": reasoning_effort}
     if temperature is not None:
         body["temperature"] = temperature
@@ -117,7 +121,7 @@ def _body(seed, static, model, reasoning_effort=None, temperature=None):
 def sampling_stamp(reasoning_effort=None, temperature=None):
     """The provenance `sampling_params` string: records what we SET, model_default otherwise."""
     t = "model_default" if temperature is None else str(temperature)
-    r = reasoning_effort or "model_default"
+    r = {"off": "disabled"}.get(reasoning_effort, reasoning_effort or "model_default")
     return f"max_tokens={MAX_OUTPUT_TOKENS},temperature={t},reasoning={r}"
 
 
@@ -281,15 +285,19 @@ def main():
     ap.add_argument("--n", type=int, default=0, help="next N unprocessed (0=all)")
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--workers", type=int, default=SYNC_WORKERS)
-    ap.add_argument("--reasoning-effort", default=None, choices=["low", "high", "max"],
-                    help="override the model's default reasoning effort (stamped in provenance)")
+    ap.add_argument("--reasoning-effort", default=None,
+                    choices=["off", "low", "medium", "high", "xhigh", "max"],
+                    help="override the model's reasoning: 'off' sends reasoning.enabled=false (only "
+                         "for models whose reasoning is optional); else an effort level. Stamped.")
     ap.add_argument("--temperature", type=float, default=None,
                     help="override the model's default temperature (stamped in provenance)")
     ap.add_argument("--estimate", action="store_true", help="rough token count; no generation")
+    ap.add_argument("--leg-name", default="stealth",
+                    help="model leg name: testsets_<name>/ (glm, nemotron, ...); pair with --model")
     ap.add_argument("--leg-suffix", default="",
-                    help="write to sibling leg testsets_stealth<S>/ (same-model redraw leg)")
+                    help="append to the leg name for a same-model redraw / regime sibling")
     args = ap.parse_args()
-    apply_leg_suffix(args.leg_suffix)
+    apply_leg(args.leg_name, args.leg_suffix)
     print(f"  leg: {STEALTH_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE}")
     run(args)
 
