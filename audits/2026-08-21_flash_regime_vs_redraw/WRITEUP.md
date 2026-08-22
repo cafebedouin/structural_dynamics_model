@@ -58,3 +58,11 @@ not damped downstream. But with |Δε| < 0.10 the thinking-on floor still flips 
 44% vs 19% thinking-off — thinking destabilizes the whole authored surface, ε being the largest
 single lever. The engine's own redraw churn with ε pinned (thinking-off, |Δε| < 0.10): type vector
 19%, verdict 8%, h1 13% — the CLASSIFICATION floor, distinct from the ε floor.
+
+**Addendum 2026-08-22 (c) — direction, not only spread (operator: "more thinking generates
+different seats").** `seat_direction.py` → `seat_direction_2026-08-22.txt`. Replicated across
+both thinking-on draws: mean authored ε 0.52 → 0.59, suppression 0.55 → 0.64; powerless-seat
+tangled_rope 28% → 34–37%, snare 28% → 32%, `unknown` 16% → 8%, scaffold 10% → 4–5%;
+institutional-seat piton 0% → 7–8%. Paired on the same seeds, thinking raises ε on 38% and
+lowers it on 10% (mean +0.065). **Thinking moves the seat toward extraction** — more coercion
+read into the same material, more structure asserted — on one model at k=2. Generality: OQ-343.

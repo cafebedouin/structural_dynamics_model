@@ -17869,6 +17869,11 @@ error bars, and which of the September new-family spends are worth making.
 quantity every classification multiplies through (χ = ε·f(d)·σ). The red-verdict rate doubles
 (6.5–6.8% → 13.4–14.3%) in both thinking-on draws.
 
+**Direction (WRITEUP addendum c, 2026-08-22):** replicated in both thinking-on draws — mean ε 0.52→0.59,
+suppression 0.55→0.64, powerless seat tangled_rope 28%→34–37% / snare 28%→32% / unknown 16%→8%,
+institutional seat piton 0%→7–8%; paired Δε up on 38% of seeds, down on 10%. Thinking moves the seat
+TOWARD EXTRACTION, not just around. The generality arms below test whether that is reasoning-general.
+
 **(b) answered 2026-08-22 (WRITEUP addendum b):** a |Δε| ≥ 0.10 move changes the seat-type vector 73–91% of the
 time — not damped; AND with |Δε| < 0.10 the thinking-on floor still flips the type vector 44% vs 19%
 thinking-off, so the instability is broader than ε. Classification floor with ε pinned: type vector 19%,
