@@ -407,3 +407,55 @@ instance may revive it; it is the registered discriminator, not a new OQ. **Drif
 whoever runs it must key the control on `control_membership.json` (the 300 frozen ids), NOT the
 regenerated `never_generated_seeds.json` (drifted to 274 by 2026-06-13) — else the breadth arm
 compares against a 274-story control while believing it is 300.**
+
+## 11. First numbers on §9's timescales (2026-08-21) — and the frontier as the operator now reads it
+
+*Added after the within-model legs of 2026-08-21. Witnesses:
+`audits/2026-08-21_flash_regime_vs_redraw/` (script + raw output); KNOWN_STATE 2026-08-21
+(the four `testsets_flash*` legs). This prose is the summary; the script wins where they differ.*
+
+**What §9 conjectured now has one measured instance per timescale, on one model
+(`gemini-2.5-flash`) over one frozen seed pool (1005 readings), all classified at one engine
+state.** Same-seed agreement between two legs, on the engine's own outputs:
+
+| §9 timescale | instantiated as | h1_band | verdict | signature | authored ε |
+|---|---|---|---|---|---|
+| within-regime drift (the floor) | two thinking-off draws, same prompt/schema commit | 85% | 89% | 93% | 81% |
+| regime punctuation | thinking-off draw vs thinking-on draw (budget 8192) | 59% | 65% | 72% | 34% |
+| — the punctuated regime's own floor | two thinking-on draws | 64% | 71% | 77% | 40% |
+| engine/prompt-config punctuation | thinking-off draw at schema `2e9dff2f` (June) vs `685ed7cf` (Aug) | 72–74% | 79–80% | 87% | 55% |
+
+Three things this licenses, at their width:
+
+- **The regime punctuation is mostly a variance event, not a displacement.** The off-vs-on
+  contrast (59%) sits only a few points below the thinking-on regime's *own* redraw floor (64%):
+  thinking-on draws disagree with each other nearly as much as with a thinking-off draw. The one
+  marginal shift that replicates in both thinking-on draws is the red-verdict rate (6.5–6.8% →
+  13.4–14.3%). §9's "punctuation re-opens discovery" should be read, at least for this kind of
+  punctuation, as *re-opens dispersion over the same class set* — consistent with §6's "drift over
+  a fixed, small set," not with new territory. Whether a *generator* punctuation (a different model
+  family) behaves the same way is the next measurement; the stealth and nemotron legs in flight
+  are that arm, and OQ-71's 1.5× class excess says the answer may differ.
+- **The config punctuation is real and smaller than the regime one** (72–74% vs 85% on h1), and it
+  is confounded with possible model-snapshot drift over two months — so it is an upper bound on
+  "schema change alone."
+- **"Track concepts over time via UUIDs" needs one correction from the rulings that postdate the
+  original conversation.** Per-story UUIDs are surrogate identity only (CLAUDE.md, *Generation is
+  stochastic*; GAP-35): cross-run "same story" identity does not exist, and matched-seed structure
+  is a generation-time decision. The trackable unit is therefore **seed × generator × regime**, and
+  "divergence over time" is §6's well-posed drift: the distribution over the bounded class set
+  moving per seed as the state variables change. That is precisely what the table above measures,
+  and why the redraw floor had to come first — a cross-leg delta is uninterpretable until the
+  within-regime floor is known.
+
+**Speculative tail, fenced as §9 is (operator, 2026-08-21).** Even confined to what the engine
+does now, the interesting program is not scale but *depth*: generate topical constraint stories in
+groups — the kernel/reading families, the designed lineages of OQ-71 — and then turn the engine's
+own meta-tools on the groups rather than on stories (fixed-point networks, orbits and H¹ over
+families, the Boltzmann/MaxEnt fits, trajectory clustering). On this reading the product of a
+mapped conceptual space is not the map but what the meta-tools say about its *regions*: which
+families are draw-stable (situation-fixed) across generators and regimes, which are
+seat-expressive, and where the class-set boundedness of §3 holds or breaks under depth. OQ-71 is
+the first probe of exactly that, and its finding — joint-combination excess, not per-dimension
+proliferation — is the shape to expect. Not witnessed beyond OQ-71 and the table above; recorded so
+the line of reasoning is complete, not so it is believed.
